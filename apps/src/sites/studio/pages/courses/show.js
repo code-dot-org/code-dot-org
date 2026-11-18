@@ -106,6 +106,7 @@ function showCourseOverview() {
         userType={scriptData.user_type}
         participantAudience={courseSummary.participant_audience}
         aiChatToolsDependency={courseSummary.ai_chat_tools_dependency}
+        verifiedInstructorRequired={courseSummary.verified_instructor_required}
         requiresInaccessibleAiModels={
           courseSummary.requires_inaccessible_ai_models
         }

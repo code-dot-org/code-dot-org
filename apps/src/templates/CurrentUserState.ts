@@ -50,6 +50,7 @@ export interface CurrentUserState {
   hasSeenHomepageWelcome: boolean;
   inUSA: boolean;
   isLevelbuilder: boolean;
+  isVerifiedInstructor: boolean | undefined;
   aiChatAccessLevel: AiChatAccessLevel;
   canUseLessonDeepDiveChallenges: boolean;
   blockedAichatProviders: string[];

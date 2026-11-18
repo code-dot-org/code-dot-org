@@ -36,6 +36,7 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     @template = create(:weblab2, name: 'adaptive-progress-template')
     @level = create(:adaptive, adaptive_id: 'progress')
     @unit = create(:script_level, levels: [@level]).script
+    @course = create(:single_unit_course, unit: @unit)
     @student = create(:student)
     sign_in @student
   end
@@ -66,6 +67,15 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     get :show, params: {scriptId: create(:unit).id, levelId: @level.id}
 
     assert_response :not_found
+  end
+
+  test "refuses a student who cannot read the unit" do
+    @course.update!(verified_instructor_required: true)
+
+    assert_no_difference 'UserAdaptiveStep.count' do
+      put_step 'read', started: true
+    end
+    assert_response :forbidden
   end
 
   test "show is empty for a student with no progress" do

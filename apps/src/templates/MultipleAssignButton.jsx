@@ -29,6 +29,7 @@ class MultipleAssignButton extends React.Component {
     participantAudience: PropTypes.string,
     aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
       .isRequired,
+    verifiedInstructorRequired: PropTypes.bool,
     // Redux
     assignToSection: PropTypes.func.isRequired,
     isRtl: PropTypes.bool,
@@ -65,6 +66,7 @@ class MultipleAssignButton extends React.Component {
       isAssigningCourseOnly,
       reassignConfirm,
       aiChatToolsDependency,
+      verifiedInstructorRequired,
     } = this.props;
 
     return (
@@ -93,6 +95,7 @@ class MultipleAssignButton extends React.Component {
             isSingleUnitCourse={isSingleUnitCourse}
             participantAudience={participantAudience}
             aiChatToolsDependency={aiChatToolsDependency}
+            verifiedInstructorRequired={verifiedInstructorRequired}
           />
         )}
       </div>

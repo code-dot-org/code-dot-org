@@ -74,6 +74,7 @@ class UnitOverview extends React.Component {
       Object.values(AiChatToolsDependency)
     ),
     unitRequiresInaccessibleAiModels: PropTypes.bool,
+    verifiedInstructorRequired: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -165,6 +166,7 @@ class UnitOverview extends React.Component {
       isOnTeacherDashboard = false,
       aiChatToolsDependency,
       unitRequiresInaccessibleAiModels,
+      verifiedInstructorRequired,
     } = this.props;
 
     const displayRedirectDialog =
@@ -223,6 +225,7 @@ class UnitOverview extends React.Component {
               teacherResources={teacherResources}
               isMigrated={isMigrated}
               aiChatToolsDependency={aiChatToolsDependency}
+              verifiedInstructorRequired={verifiedInstructorRequired}
             />
             {viewAs === ViewType.Instructor &&
               unitRequiresInaccessibleAiModels && (

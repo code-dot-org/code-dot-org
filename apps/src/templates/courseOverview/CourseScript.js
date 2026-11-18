@@ -36,6 +36,7 @@ class CourseScript extends React.Component {
     showAssignButton: PropTypes.bool,
     participantAudience: PropTypes.string,
     aiChatToolsDependency: PropTypes.string,
+    verifiedInstructorRequired: PropTypes.bool,
     // redux provided
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     selectedSectionId: PropTypes.number,
@@ -94,6 +95,7 @@ class CourseScript extends React.Component {
       showAssignButton,
       participantAudience,
       aiChatToolsDependency,
+      verifiedInstructorRequired,
     } = this.props;
     const {confirmationMessageOpen} = this.state;
 
@@ -168,6 +170,7 @@ class CourseScript extends React.Component {
                 isSingleUnitCourse={false}
                 participantAudience={participantAudience}
                 aiChatToolsDependency={aiChatToolsDependency}
+                verifiedInstructorRequired={verifiedInstructorRequired}
               />
             )}
           </div>

@@ -50,6 +50,7 @@ interface UnitOverviewActionRowProps {
   publishedState: string;
   teacherResources: TeacherResource[];
   aiChatToolsDependency: AiChatToolsDependencyValue;
+  verifiedInstructorRequired?: boolean;
 }
 
 const compilePdfDropdownOptions = (
@@ -92,6 +93,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
   publishedState,
   teacherResources,
   aiChatToolsDependency,
+  verifiedInstructorRequired,
 }) => {
   const [confirmationMessageOpen, setConfirmationMessageOpen] =
     React.useState(false);
@@ -218,6 +220,7 @@ const UnitOverviewActionRow: React.FC<UnitOverviewActionRowProps> = ({
                 isSingleUnitCourse={isSingleUnitCourse}
                 participantAudience={participantAudience}
                 aiChatToolsDependency={aiChatToolsDependency}
+                verifiedInstructorRequired={verifiedInstructorRequired}
               />
             </div>
           )}

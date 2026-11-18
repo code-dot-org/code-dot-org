@@ -128,6 +128,7 @@ class UnitGroup < ApplicationRecord
     version_year
     pilot_experiment
     announcements
+    verified_instructor_required
   )
 
   def to_param
@@ -375,6 +376,7 @@ class UnitGroup < ApplicationRecord
         student_resources: student_resources.filter(&:show_in_resource_ui?).sort_by(&:name).map(&:summarize_for_resources_dropdown),
         is_migrated: has_migrated_unit?,
         has_verified_resources: has_verified_resources?,
+        verified_instructor_required: verified_instructor_required?,
         numbered_units: numbered_units,
         course_versions: summarize_course_versions(user, locale_code),
         show_assign_button: course_assignable?(user),
@@ -678,6 +680,12 @@ class UnitGroup < ApplicationRecord
     has_progress = !!UserScript.find_by(user: user, script: default_units)
     has_pilot_teacher = user.teachers.any? {|t| has_pilot_experiment?(t)}
     (is_assigned || has_progress) && has_pilot_teacher
+  end
+
+  # Any teacher may read the course; a student needs a verified teacher.
+  def has_verified_instructor_access?(user)
+    return false unless user&.persisted?
+    user.teacher? || user.teachers.any?(&:verified_instructor?)
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot

@@ -161,6 +161,7 @@ CurriculumCatalogCard.propTypes = {
   recommendedStretchCurriculum: PropTypes.object,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
+  verifiedInstructorRequired: PropTypes.bool,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -200,6 +201,7 @@ const CustomizableCurriculumCatalogCard = ({
   recommendedStretchCurriculum,
   wide,
   aiChatToolsDependency,
+  verifiedInstructorRequired,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -244,6 +246,7 @@ const CustomizableCurriculumCatalogCard = ({
         <MultipleSectionsAssigner
           assignmentName={courseDisplayNameWithLatestYear}
           aiChatToolsDependency={aiChatToolsDependency}
+          verifiedInstructorRequired={verifiedInstructorRequired}
           onClose={() => setIsAssignDialogOpen(false)}
           sections={sectionsForDropdown}
           participantAudience="student"
@@ -463,6 +466,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
     .isRequired,
+  verifiedInstructorRequired: PropTypes.bool,
   imageSrc: PropTypes.string.isRequired,
   isTranslated: PropTypes.bool,
   isEnglish: PropTypes.bool,

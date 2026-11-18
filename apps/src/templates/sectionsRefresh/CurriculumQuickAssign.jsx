@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {useLocalization} from '@cdo/apps/localization';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import VerifiedInstructorRequiredAlert from '@cdo/apps/templates/VerifiedInstructorRequiredAlert';
 import {
   AiChatToolsDependency,
   LocalizeToI18nLocales,
@@ -338,6 +339,11 @@ export default function CurriculumQuickAssign({
     ? selectedCourseOffering.ai_chat_tools_dependency
     : AiChatToolsDependency.NONE;
 
+  const verifiedInstructorRequired = !!selectedCourseOffering?.course_versions
+    .map(cv => cv[1])
+    .find(version => version.id === sectionCourse?.versionId)
+    ?.verified_instructor_required;
+
   return (
     <div className={moduleStyles.containerWithMarginTop}>
       {isLoading && !isNewSection ? (
@@ -410,6 +416,9 @@ export default function CurriculumQuickAssign({
           {aiChatToolsDependency === AiChatToolsDependency.AVAILABLE && (
             <AssigningAvailableAiChatToolsAlert />
           )}
+          <VerifiedInstructorRequiredAlert
+            verifiedInstructorRequired={verifiedInstructorRequired}
+          />
         </>
       )}
     </div>

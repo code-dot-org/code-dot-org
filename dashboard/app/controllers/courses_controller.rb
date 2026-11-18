@@ -233,7 +233,7 @@ class CoursesController < ApplicationController
   end
 
   private def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :verified_instructor_required, :numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
     cp[:published_state] = Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 

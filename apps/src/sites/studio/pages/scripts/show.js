@@ -148,6 +148,7 @@ function initPage() {
         scriptOverviewPdfUrl={scriptData.scriptOverviewPdfUrl}
         scriptPath={scriptData.scriptPath}
         scriptResourcesPdfUrl={scriptData.scriptResourcesPdfUrl}
+        verifiedInstructorRequired={scriptData.verified_instructor_required}
         isCsdOrCsp={scriptData.isCsd || scriptData.isCsp}
         completedLessonNumber={completedLessonNumber}
         publishedState={scriptData.publishedState}

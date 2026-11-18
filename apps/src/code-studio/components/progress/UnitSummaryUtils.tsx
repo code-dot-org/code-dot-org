@@ -172,6 +172,7 @@ interface UnitData {
   redirect_unit_url: string | null;
   unit_position: number | null;
   requires_inaccessible_ai_models: boolean;
+  verified_instructor_required?: boolean;
 }
 
 export const setUnitSummaryReduxData = (

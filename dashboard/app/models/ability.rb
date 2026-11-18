@@ -386,6 +386,8 @@ class Ability
       if unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
         if unit_group.in_development?
           user.levelbuilder?
+        elsif unit_group.verified_instructor_required? && !unit_group.has_verified_instructor_access?(user)
+          false
         elsif unit_group.pilot?
           unit_group.has_pilot_access?(user)
         else

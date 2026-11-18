@@ -66,6 +66,11 @@ class CourseVersion < ApplicationRecord
   delegate :link, to: :content_root, allow_nil: false
   delegate :localized_assignment_family_title, to: :content_root, allow_nil: false
 
+  # A standalone unit's content root has no such flag.
+  def verified_instructor_required?
+    content_root.is_a?(UnitGroup) && content_root.verified_instructor_required?
+  end
+
   # Seeding method for creating / updating / deleting the CourseVersion for the given
   # potential content root, i.e. a UnitGroup.
   #
@@ -171,6 +176,7 @@ class CourseVersion < ApplicationRecord
         path: content_root.link,
         is_stable: stable?,
         is_recommended: recommended?(locale_code),
+        verified_instructor_required: verified_instructor_required?,
         locales: content_root.supported_locale_names,
         locale_codes: content_root.supported_locale_codes,
         units: units.map do |u|
