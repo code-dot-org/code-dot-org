@@ -48,6 +48,8 @@ export class AssetFetchError extends Error {
       `Unable to read chat asset "${asset.filename}"` +
         (status === undefined ? ' (empty response body)' : ` (HTTP ${status})`)
     );
+    // Under the ES5 build target the instance would keep Error's prototype.
+    Object.setPrototypeOf(this, new.target.prototype);
     this.name = 'AssetFetchError';
   }
 }
