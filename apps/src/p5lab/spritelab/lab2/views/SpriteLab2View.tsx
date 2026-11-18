@@ -171,7 +171,7 @@ import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
-import {useFlyoutDots} from './useFlyoutDots';
+import {DOTS_MARGIN_FACTOR, useFlyoutDots} from './useFlyoutDots';
 import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
@@ -1297,12 +1297,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     undo,
     redo,
   } = useBlocklyWorkspace({
-    enabled: animationsSeeded,
+    // The workspace waits for the preview column's width, so it is laid
+    // out once, at the width it keeps.
+    enabled: animationsSeeded && previewColumnWidth > 0,
     toolboxDefinition: injectedToolbox,
     hiddenBlockTypes: heldBackBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
     readOnly: isViewOnly,
+    flyoutMarginFactor: catalogOn ? DOTS_MARGIN_FACTOR : undefined,
   });
 
   const WorkspaceAlert = useLevelEditMode<SpriteLab2LevelProperties>(
