@@ -20,6 +20,8 @@ export interface PathwayContextValue {
   checkpoint: Checkpoint;
   statusMap: CheckpointStatusMap;
   progress: Progress;
+  /** A teacher is viewing a student's progress: show it, and save and generate nothing. */
+  isViewingStudent: boolean;
   saveGeneratedInstructions: (
     stepId: string,
     content: GeneratedContent

@@ -32,6 +32,7 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
       generatedInstructions: opts.generatedInstructions,
       saveGeneratedInstructions: opts.saveGeneratedInstructions,
       aichatContext: opts.aichatContext,
+      isViewingStudent: opts.isViewingStudent,
     }).then(instructions => {
       if (!cancelled) setResolved(instructions ?? NO_INSTRUCTIONS);
     });
@@ -49,6 +50,7 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
     opts.generatedInstructions,
     opts.saveGeneratedInstructions,
     opts.aichatContext,
+    opts.isViewingStudent,
   ]);
   return {
     instructions: resolved ?? undefined,

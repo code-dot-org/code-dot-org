@@ -60,8 +60,12 @@ export function recordProgressFailure(
 export class ProgressStore {
   private chain: Promise<void> = Promise.resolve();
 
-  async load(key: ProgressKey): Promise<Progress> {
-    const response = await HttpClient.get(`/adaptive_progress?${query(key)}`);
+  /** Loads the caller's progress, or with userId, that of a student they teach. */
+  async load(key: ProgressKey, userId?: number): Promise<Progress> {
+    const user = userId === undefined ? '' : `&user_id=${userId}`;
+    const response = await HttpClient.get(
+      `/adaptive_progress?${query(key)}${user}`
+    );
     const body = (await response.json()) as Partial<Progress>;
     return {...EMPTY_PROGRESS, ...body};
   }

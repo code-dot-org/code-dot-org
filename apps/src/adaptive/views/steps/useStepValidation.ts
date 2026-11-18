@@ -31,6 +31,8 @@ export interface StepValidationOptions
   progress: StepProgress | undefined;
   /** Whether Continue is already open, by work or by chat. */
   continueAllowed: boolean;
+  /** A teacher viewing a student's step: nothing is judged. */
+  isViewingStudent?: boolean;
 }
 
 /**
@@ -45,10 +47,11 @@ export function useStepValidation(options: StepValidationOptions): void {
   // Read at judge time, so a change to the options does not resubscribe.
   const latestOptions = useRef(options);
   latestOptions.current = options;
-  const {chat, step} = options;
-  const adapter = step.validation
-    ? workAdapterFor(step.levelProperties?.appName ?? '')
-    : undefined;
+  const {chat, step, isViewingStudent} = options;
+  const adapter =
+    step.validation && !isViewingStudent
+      ? workAdapterFor(step.levelProperties?.appName ?? '')
+      : undefined;
 
   useChatUnlock({
     pathway: options.pathway,
@@ -60,6 +63,7 @@ export function useStepValidation(options: StepValidationOptions): void {
     progress: options.progress,
     continueAllowed: options.continueAllowed,
     recordAttempt: options.recordValidation,
+    isViewingStudent,
   });
 
   useEffect(() => {

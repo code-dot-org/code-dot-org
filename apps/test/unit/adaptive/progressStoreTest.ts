@@ -52,6 +52,16 @@ describe('ProgressStore', () => {
     );
   });
 
+  it("loads a student's steps for the teacher viewing them", async () => {
+    http.get.mockResolvedValue({json: async () => ({steps: {}})});
+
+    await new ProgressStore().load(key, 77);
+
+    expect(http.get).toHaveBeenCalledWith(
+      '/adaptive_progress?scriptId=11&levelId=98263&user_id=77'
+    );
+  });
+
   it('sends writes one at a time, in order', async () => {
     const first = deferred();
     http.put.mockReturnValueOnce(first.promise);

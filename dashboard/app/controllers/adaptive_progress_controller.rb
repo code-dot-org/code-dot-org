@@ -21,9 +21,16 @@ class AdaptiveProgressController < ApplicationController
   # SkipReason in apps/src/adaptive/progress/model.ts; absent on a check of work.
   SKIP_REASONS = %w[effortDemonstrated limitReached].freeze
 
-  # GET /adaptive_progress?scriptId=&levelId=
+  # GET /adaptive_progress?scriptId=&levelId=[&user_id=]
+  # With user_id, a teacher reads one of their students' progress; writes are
+  # always the caller's own.
   def show
-    render json: @level.progress_json(user_id: current_user.id, script_id: @unit.id)
+    user = current_user
+    if params[:user_id].present?
+      user = User.find_by(id: params[:user_id])
+      return head :forbidden unless user&.student_of?(current_user)
+    end
+    render json: @level.progress_json(user_id: user.id, script_id: @unit.id)
   end
 
   # PUT /adaptive_progress/steps/:step_id/progress

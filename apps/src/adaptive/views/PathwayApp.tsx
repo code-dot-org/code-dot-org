@@ -108,11 +108,13 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       dispatch(sendAdaptiveStepReport(levelId, appType, result, timeMs)),
     [dispatch]
   );
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const {progress, statusMap, ...restProgress} = useProgress(
     pathway,
     progressKey,
     {
       reportLevelStep,
+      viewAsUserId,
     }
   );
   if (!progress) {
@@ -204,6 +206,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   initialCheckpointId,
   initialStepId,
   isFirstVisit,
+  isViewingStudent,
   startStep,
   completeStep,
   leaveStep,
@@ -323,13 +326,14 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       setView({kind: 'map', focusId: nextCheckpoint(pathway, statusMap)});
     }
   }, [view, pathway, statusMap]);
+  // A teacher viewing a student would otherwise start the level as themselves.
   useEffect(() => {
-    if (initialCheckpointId)
+    if (initialCheckpointId && !isViewingStudent)
       dispatch(sendStartedReportIfNotStarted('adaptive'));
-  }, [initialCheckpointId, dispatch]);
+  }, [initialCheckpointId, isViewingStudent, dispatch]);
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
   const openProject = () => {
-    dispatch(sendStartedReportIfNotStarted('adaptive'));
+    if (!isViewingStudent) dispatch(sendStartedReportIfNotStarted('adaptive'));
     setView({kind: 'project'});
   };
   const allCheckpointsComplete = pathway.checkpoints.every(
@@ -394,6 +398,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         checkpoint: playing,
         statusMap,
         progress,
+        isViewingStudent,
         saveGeneratedInstructions,
         recordValidation,
         aiContext,
@@ -405,6 +410,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       playing,
       statusMap,
       progress,
+      isViewingStudent,
       saveGeneratedInstructions,
       recordValidation,
       aiContext,

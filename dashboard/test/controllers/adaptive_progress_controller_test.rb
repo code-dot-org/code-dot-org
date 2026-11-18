@@ -367,6 +367,45 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_empty steps
   end
 
+  test "a teacher reads their student's progress, level steps included" do
+    put_step 'read', started: true
+    create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: ActivityConstants::BEST_PASS_RESULT)
+    teacher = create(:teacher)
+    create(:follower, section: create(:section, user: teacher), student_user: @student)
+    sign_out @student
+    sign_in teacher
+
+    get :show, params: {**params, user_id: @student.id}
+
+    assert_response :success
+    entries = JSON.parse(response.body)['steps']
+    assert_equal 'started', entries['read']['status']
+    assert_equal 'complete', entries['retry']['status']
+  end
+
+  test "a teacher cannot read the progress of someone who is not their student" do
+    put_step 'read', started: true
+    sign_out @student
+    sign_in create(:teacher)
+
+    get :show, params: {**params, user_id: @student.id}
+
+    assert_response :forbidden
+  end
+
+  test "a student cannot read another student's progress by id" do
+    other = create(:student)
+    sign_out @student
+    sign_in other
+    put_step 'read', started: true
+    sign_out other
+    sign_in @student
+
+    get :show, params: {**params, user_id: other.id}
+
+    assert_response :forbidden
+  end
+
   private def params
     {scriptId: @unit.id, levelId: @level.id}
   end

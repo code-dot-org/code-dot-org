@@ -137,6 +137,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     checkpoint,
     statusMap,
     progress,
+    isViewingStudent,
     saveGeneratedInstructions,
     recordValidation,
     aiContext,
@@ -200,6 +201,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     generatedInstructions,
     saveGeneratedInstructions,
     aichatContext: aiContext,
+    isViewingStudent,
   });
   // The lab's own Continue button advances the step. A step whose work is
   // checked waits for work that passes, for enough failed checks that the
@@ -242,6 +244,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     recordValidation: recordStepValidation,
     progress: entry,
     continueAllowed: continueEnabled,
+    isViewingStudent,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share

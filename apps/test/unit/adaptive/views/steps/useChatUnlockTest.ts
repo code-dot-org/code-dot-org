@@ -330,4 +330,11 @@ describe('useChatUnlock', () => {
     unmount();
     expect(listeners).toHaveLength(0);
   });
+
+  it('does not listen while a teacher views a student', () => {
+    const {chat, listeners} = fakeChat();
+    render(chat, {isViewingStudent: true});
+
+    expect(listeners).toHaveLength(0);
+  });
 });

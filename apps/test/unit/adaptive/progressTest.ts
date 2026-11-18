@@ -519,7 +519,7 @@ describe('useProgress', () => {
       intro: 'complete',
       basics: 'available',
     });
-    expect(store.load).toHaveBeenCalledWith(key);
+    expect(store.load).toHaveBeenCalledWith(key, undefined);
   });
 
   it('shows no progress and logs when the load fails', async () => {
@@ -662,6 +662,57 @@ describe('useProgress', () => {
       pass: true,
     });
     expect(reportLevelStep).not.toHaveBeenCalled();
+  });
+
+  it("loads a viewed student's progress and saves nothing, keeping changes on the page", async () => {
+    const store = fakeStore();
+    const reportLevelStep = jest.fn().mockResolvedValue(undefined);
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useProgress(hookPathway, key, {store, reportLevelStep, viewAsUserId: 77})
+    );
+    await waitForNextUpdate();
+    expect(store.load).toHaveBeenCalledWith(key, 77);
+    expect(result.current.isViewingStudent).toBe(true);
+
+    act(() => {
+      result.current.startStep(read);
+      result.current.completeStep(read, 1000);
+      result.current.startStep(sandbox);
+      result.current.completeStep(sandbox, 1000);
+      result.current.saveAnswers(quiz, 1, [{answerId: 'a'}], 0);
+      result.current.saveGeneratedInstructions('try', {
+        instructions: 'Hi',
+        inputsHash: 'ab',
+      });
+      result.current.recordValidation(sandbox, {
+        pass: true,
+        evidenceLevel: 1,
+        reason: 'Yes.',
+      });
+    });
+
+    expect(result.current.statusMap.intro).toBe('complete');
+    expect(store.saveStep).not.toHaveBeenCalled();
+    expect(store.saveInstructions).not.toHaveBeenCalled();
+    expect(store.saveValidation).not.toHaveBeenCalled();
+    expect(reportLevelStep).not.toHaveBeenCalled();
+  });
+
+  it('loads again when the teacher picks another student', async () => {
+    const store = fakeStore();
+    const {rerender, waitForNextUpdate} = renderHook(
+      ({viewAsUserId}: {viewAsUserId: number | null}) =>
+        useProgress(hookPathway, key, {store, viewAsUserId}),
+      {initialProps: {viewAsUserId: 77}}
+    );
+    await waitForNextUpdate();
+    rerender({viewAsUserId: 78});
+    await waitForNextUpdate();
+
+    expect(store.load.mock.calls).toEqual([
+      [key, 77],
+      [key, 78],
+    ]);
   });
 
   it('restores loaded generated instructions', async () => {
