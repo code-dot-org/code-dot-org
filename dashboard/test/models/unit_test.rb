@@ -2395,6 +2395,19 @@ class UnitTest < ActiveSupport::TestCase
     refute unit_without_ai.has_ai_chat_tools?
   end
 
+  test 'has_ai_chat_tools? and requires_ai_chat_tools? query once per instance' do
+    unit = create(:script, name: 'unit-memoized-ai')
+    lesson = create(:lesson, :with_lesson_group, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+
+    assert unit.has_ai_chat_tools?
+    assert unit.requires_ai_chat_tools?
+    assert_queries(0) do
+      assert unit.has_ai_chat_tools?
+      assert unit.requires_ai_chat_tools?
+    end
+  end
+
   # Bandaid: 'csd2-2026' is in
   # Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS. This test goes
   # away with the exemption.
