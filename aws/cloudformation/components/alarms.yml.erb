@@ -148,22 +148,19 @@
   # ---------------------------------------------
   # ActiveJob (delayed_job) Alarms
   #
-  # Metrics come from dashboard/app/jobs/concerns/active_job_metrics.rb, namespace
-  # code-dot-org/ActiveJob, dimension Environment. Two sources publish the same series:
-  #   - bin/cron/report_activejob_metrics on the daemon. It is scheduled every minute; its
-  #     report lands about every other minute.
-  #   - An after_enqueue callback on every host that enqueues a job.
-  # The queue metrics are database queries, so every source reports them correctly.
-  # WorkerCount counts delayed_job.N processes in the local `ps`, so only the daemon reports
-  # a real value; app servers and Kubernetes pods publish 0 on every enqueue.
+  # Metrics are in namespace code-dot-org/ActiveJob, dimension Environment, published by
+  # bin/cron/report_activejob_metrics on the daemon. WorkerCount counts delayed_job.N
+  # processes in the daemon's `ps`, so it cannot see workers on any other host, including
+  # Kubernetes pods.
   # ---------------------------------------------
 
   # Pairs with the two OldestWaitingToStartJobAge alarms created by hand outside this stack
-  # ("Urgent Alert if ActiveJob is Down", "Warn if ActiveJob Queue is Backing Up"), which
-  # catch jobs waiting whatever the cause. This one says whether the cause is missing workers.
+  # ("Urgent Alert if ActiveJob is Down", "Warn if ActiveJob Queue is Backing Up"). Those catch
+  # jobs waiting whatever the cause, but treat missing data as missing, so they go quiet when
+  # nothing publishes. This one says whether the cause is missing workers, and fires when the
+  # daemon stops publishing.
   #
-  # WorkerCount sees only the daemon's workers. Remove or replace this alarm when the daemon
-  # stops running workers, or it will stay in ALARM.
+  # Remove or replace this alarm when the daemon stops running workers, or it will stay in ALARM.
   ActiveJobNoWorkersAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
@@ -172,23 +169,25 @@
       AlarmName: <%="#{stack_name}_activejob_no_workers" %>
       AlarmDescription: >-
         The daemon has reported no delayed_job workers for 5 minutes. Check
-        OldestWaitingToStartJobAge first. If jobs are waiting, the daemon's workers are down
-        (2026-10-29: 25 minutes, workable backlog 81 to 560); run bin/restart-active-job-workers
-        on the daemon. If nothing is waiting, the workers are fine and the daemon's metrics cron
-        has stopped reporting (2026-11-17: 75 minutes); check bin/cron/report_activejob_metrics.
+        OldestWaitingToStartJobAge. Rising: the daemon's workers are down (2026-10-29: 25
+        minutes, workable backlog 81 to 560); run bin/restart-active-job-workers on the daemon.
+        Flat: the workers are fine and the metrics cron has stopped (2026-11-17: 79 minutes of
+        failed runs). No recent data: the cron or the whole daemon is down. In the last two
+        cases, start with the report_activejob_metrics cron monitor in Sentry.
       Namespace: code-dot-org/ActiveJob
       MetricName: WorkerCount
       Dimensions: [{Name: Environment, Value: <%=environment%>}]
-      # Maximum, because the other sources publish 0: Minimum is always 0 and Average under 1.
+      # Maximum, so a 0 published into this series by any other host cannot mask the daemon's
+      # count. App servers have done so on every enqueue.
       Statistic: Maximum
       Period: 60
-      # A healthy series has had up to 3 zero minutes in a row (2026-11-08, one skipped report).
+      # The cron has gone up to 4 minutes between reports while healthy (2026-11-08).
       EvaluationPeriods: 5
       DatapointsToAlarm: 5
       ComparisonOperator: LessThanThreshold
       Threshold: 1
-      # A minute with no data means neither the daemon nor any app server published. Count it as
-      # no workers, so the alarm cannot sit in INSUFFICIENT_DATA while the daemon is down.
+      # No data means the daemon's cron did not report, which is how a whole-daemon outage
+      # looks. Breaching keeps the alarm out of INSUFFICIENT_DATA when that happens.
       TreatMissingData: breaching
 <% end -%>
 
