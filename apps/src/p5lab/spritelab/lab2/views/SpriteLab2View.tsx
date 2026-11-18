@@ -633,6 +633,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // or not its preview shows.
   const [previewColumnWidth, setPreviewColumnWidth] = useState(0);
   const paneWidthPx = previewColumnWidth || DEFAULT_PANE_WIDTH;
+  // Stays true once the width has been reported: a later 0, as when the
+  // lab is hidden, must not take the workspace down.
+  const [columnMeasured, setColumnMeasured] = useState(false);
+  useEffect(() => {
+    if (previewColumnWidth > 0) {
+      setColumnMeasured(true);
+    }
+  }, [previewColumnWidth]);
   const clearOfPane = {right: paneWidthPx};
   // Free play keeps the instructions out of the way: the panel starts
   // collapsed to its tab, which expands it again. The view stays mounted
@@ -1299,7 +1307,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   } = useBlocklyWorkspace({
     // The workspace waits for the preview column's width, so it is laid
     // out once, at the width it keeps.
-    enabled: animationsSeeded && previewColumnWidth > 0,
+    enabled: animationsSeeded && columnMeasured,
     toolboxDefinition: injectedToolbox,
     hiddenBlockTypes: heldBackBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
