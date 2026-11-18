@@ -1141,7 +1141,7 @@ describe('ImagesTab', () => {
       screen.getByRole('dialog', {name: 'How AI made your image'})
     ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
-    expect(screen.getByText('A cat')).toBeTruthy();
+    expect(screen.getByText('“A cat”')).toBeTruthy();
     // Asked for, so it closes unread.
     fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
     expect(screen.queryByRole('dialog')).toBeNull();

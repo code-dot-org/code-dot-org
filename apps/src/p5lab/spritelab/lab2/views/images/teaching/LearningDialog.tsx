@@ -10,6 +10,11 @@ import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {ImageType} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import anotherArt from '@cdo/static/spritelab_lab2/learning/another.svg';
+import evaluateArt from '@cdo/static/spritelab_lab2/learning/evaluate.svg';
+import flowerCardArt from '@cdo/static/spritelab_lab2/learning/flower-card.svg';
+import learnedArt from '@cdo/static/spritelab_lab2/learning/learned.svg';
+import wordsArt from '@cdo/static/spritelab_lab2/learning/words.svg';
 
 import ChunkyPicture, {PictureCrop} from './ChunkyPicture';
 
@@ -35,10 +40,6 @@ interface LearningDialogProps {
 const TITLE = 'How AI made your image';
 // Cells across the picture at each stage of the guess.
 const GUESS_STAGES = [4, 12] as const;
-// Pictures in the training mosaic, and the delay between one appearing and
-// the next.
-const MOSAIC_CELLS = 12;
-const MOSAIC_STAGGER_MS = 90;
 // Dots across the noise the guess starts from.
 const NOISE_CELLS = 12;
 
@@ -107,68 +108,41 @@ interface PanelContent {
   visual: (picture: LearningPicture, prompt: string) => React.ReactNode;
 }
 
-const mosaic = () => (
-  <div className={styles.mosaic} aria-hidden>
-    {Array.from({length: MOSAIC_CELLS}, (_, i) => (
-      <span
-        key={i}
-        className={styles.mosaicCell}
-        style={
-          {'--cell-delay': `${i * MOSAIC_STAGGER_MS}ms`} as React.CSSProperties
-        }
-      >
-        <FontAwesomeV6Icon iconName="image" />
-      </span>
-    ))}
-  </div>
-);
+/** One of the designer's drawings, filling the panel's picture area. */
+const drawing = (src: string) => () =>
+  <img src={src} alt="" className={styles.drawing} />;
 
 const words = (_: LearningPicture, prompt: string) => (
-  <MuiTypography component="p" variant="h5" className={styles.words}>
-    <span className={styles.quote}>“</span>
-    {prompt}
-    <span className={styles.quote}>”</span>
-  </MuiTypography>
+  <>
+    <img src={wordsArt} alt="" className={styles.drawing} />
+    <MuiTypography component="p" variant="h5" className={styles.words}>
+      <span className={styles.wordsText}>“{prompt}”</span>
+    </MuiTypography>
+  </>
 );
 
 const noiseToPicture = (picture: LearningPicture) => (
   <div className={styles.stages}>
-    <Noise />
+    <span className={styles.frame}>
+      <Noise />
+    </span>
     {GUESS_STAGES.map(cells => (
-      <ChunkyPicture
-        key={cells}
-        src={picture.src}
-        cells={cells}
-        crop={picture.crop}
-      />
+      <span key={cells} className={styles.frame}>
+        <ChunkyPicture src={picture.src} cells={cells} crop={picture.crop} />
+      </span>
     ))}
-    <ChunkyPicture src={picture.src} crop={picture.crop} />
-  </div>
-);
-
-const anotherGuess = (picture: LearningPicture) => (
-  <div className={styles.guess}>
-    <ChunkyPicture src={picture.src} crop={picture.crop} />
-    <FontAwesomeV6Icon iconName="dice" className={styles.dice} aria-hidden />
-  </div>
-);
-
-const evaluate = (picture: LearningPicture) => (
-  <div className={styles.guess}>
-    <ChunkyPicture src={picture.src} crop={picture.crop} />
-    <span className={styles.thumbs} aria-hidden>
-      <FontAwesomeV6Icon iconName="thumbs-up" />
-      <FontAwesomeV6Icon iconName="thumbs-down" />
+    <span className={styles.frame}>
+      <ChunkyPicture src={picture.src} crop={picture.crop} />
     </span>
   </div>
 );
 
-// A character's square beside the background's: twice the side, four times
-// the pixels.
+// A character's card beside the background's frame: about twice the side,
+// four times the pixels.
 const sizes = (picture: LearningPicture) => (
-  <div className={styles.sizes} aria-hidden>
-    <span className={classNames(styles.sizeBox, styles.sizeSmall)} />
-    <span className={classNames(styles.sizeBox, styles.sizeLarge)}>
+  <div className={styles.sizes}>
+    <img src={flowerCardArt} alt="" className={styles.sizeSmall} />
+    <span className={classNames(styles.frame, styles.sizeLarge)}>
       <ChunkyPicture src={picture.src} crop={picture.crop} />
     </span>
   </div>
@@ -178,7 +152,7 @@ const CHARACTER_PANELS: PanelContent[] = [
   {
     heading: 'AI learned from examples',
     body: 'During *training*, the AI learned patterns from pictures and their descriptions.',
-    visual: mosaic,
+    visual: drawing(learnedArt),
   },
   {
     heading: 'Your words guide the image',
@@ -193,12 +167,12 @@ const CHARACTER_PANELS: PanelContent[] = [
   {
     heading: 'Try another version',
     body: 'Select Regenerate. The result can be different, even with the same prompt.',
-    visual: anotherGuess,
+    visual: drawing(anotherArt),
   },
   {
     heading: 'Evaluate what the AI made',
     body: 'Does the result match your prompt? Look closely, then rate it.',
-    visual: evaluate,
+    visual: drawing(evaluateArt),
   },
 ];
 
@@ -211,7 +185,7 @@ const BACKGROUND_PANELS: PanelContent[] = [
   {
     heading: 'AI learned from examples',
     body: 'Before you ever used it, the AI was *trained* on many example pictures. It learned patterns from many pictures and the words describing them.',
-    visual: mosaic,
+    visual: drawing(learnedArt),
   },
   {
     heading: 'Your words guide the image',
@@ -226,12 +200,12 @@ const BACKGROUND_PANELS: PanelContent[] = [
   {
     heading: 'Try another picture',
     body: 'Select *Regenerate*. The picture can be different, even with the same prompt.',
-    visual: anotherGuess,
+    visual: drawing(anotherArt),
   },
   {
     heading: 'Evaluate the picture',
     body: 'Look closely. Does it match what you asked for? Then use [thumb up] or [thumb down] to rate it.',
-    visual: evaluate,
+    visual: drawing(evaluateArt),
   },
 ];
 

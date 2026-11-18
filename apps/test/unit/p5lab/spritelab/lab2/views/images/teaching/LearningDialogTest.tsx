@@ -43,7 +43,7 @@ describe('LearningDialog', () => {
     expect(screen.getByRole('status').textContent).toBe('Step 1 of 5');
     expect(screen.queryByRole('button', {name: 'Back'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
-    expect(screen.getByText('A happy cat')).toBeTruthy();
+    expect(screen.getByText('“A happy cat”')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Back'}));
     expect(screen.getByRole('status').textContent).toBe('Step 1 of 5');
     expect(readThrough()).toEqual([

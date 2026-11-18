@@ -1,7 +1,7 @@
-@use "../../checkerboard";
+@use "sass:math";
 @use "../../sentence/sr-only";
 
-// The design-system dialog, wider than its default for the three pictures.
+// The design-system dialog, wider than its default for the pictures.
 .dialog {
   width: 600px;
   max-width: 100%;
@@ -32,12 +32,36 @@
   }
 }
 
+// The designer's drawings are 500 by 200, on white with black shadows, so
+// the picture area is that shape and white in both themes.
 .visual {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 180px;
+  max-width: 500px;
+  aspect-ratio: 5 / 2;
+  border-radius: 8px;
+  background-color: var(--neutral-base-white);
+  overflow: hidden;
+  // The prompt's text is sized against this box.
+  container-type: inline-size;
+}
+
+// The modal styles any image in its content as a banner, with a width, a
+// background and rounded corners. These selectors outrank that rule.
+.visual .drawing,
+.visual .sizeSmall {
+  border-radius: 0;
+  background: none;
+}
+
+.visual .drawing {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .heading {
@@ -54,144 +78,97 @@
   margin: 0 2px;
 }
 
-// Three rows of four pictures, each fading in a little after the last.
-.mosaic {
-  display: grid;
-  grid-template-columns: repeat(4, 56px);
-  gap: 10px;
-  font-size: 32px;
-  color: var(--text-neutral-primary);
-}
-
-.mosaicCell {
+// The prompt, in the drawing's speech bubble: the bubble's box in the
+// drawing's own 500 by 200, less a margin.
+.words {
+  position: absolute;
+  left: math.percentage(math.div(60, 500));
+  right: math.percentage(math.div(60, 500));
+  top: math.percentage(math.div(23, 200));
+  height: math.percentage(math.div(130, 200));
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
-  background-color: var(--background-neutral-secondary);
-  animation: cell-in 0.4s ease-out both;
-  animation-delay: var(--cell-delay, 0ms);
-}
-
-@keyframes cell-in {
-  from {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.words {
   margin: 0;
   text-align: center;
 }
 
-.quote {
-  opacity: 0.5;
+// Doubled to outrank the typography's own color and size. The bubble is
+// white in both themes, and holds four lines of this size at any width.
+.words.words {
+  color: var(--text-neutral-black-fixed);
+  font-size: 4.4cqw;
+  line-height: 1.36;
 }
 
-// The guess from noise through three stages, side by side: four squares
-// that fit the dialog's 552px of content with room to spare.
+// A prompt longer than the bubble's four lines ends in an ellipsis.
+.wordsText {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+// A white card with the outline and hard shadow of the drawings' cards,
+// holding one picture.
+.frame {
+  display: flex;
+  flex: none;
+  box-sizing: border-box;
+  aspect-ratio: 1;
+  border: 2px solid var(--brand-purple-5);
+  border-radius: 7px;
+  background-color: var(--neutral-base-white);
+  box-shadow: 4px 8px 0 var(--neutral-base-black);
+  overflow: hidden;
+}
+
+.noise,
+.chunky {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  object-fit: contain;
+}
+
+// The guess from noise through three stages, side by side. The frames
+// sit a little above the middle, which leaves their shadows room.
 .stages {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 math.percentage(math.div(12, 500)) 2%;
 
-  .chunky {
-    width: 110px;
-    height: 110px;
+  .frame {
+    width: math.percentage(math.div(110, 476));
   }
 }
 
-.noise {
-  width: 110px;
-  height: 110px;
-  border-radius: 8px;
-  image-rendering: pixelated;
-}
-
-.chunky {
-  width: 140px;
-  height: 140px;
-  border-radius: 8px;
-  image-rendering: pixelated;
-  object-fit: contain;
-
-  @include checkerboard.light-checkerboard(14px);
-}
-
-.thumbs {
-  position: absolute;
-  right: -44px;
-  bottom: -8px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 28px;
-  color: var(--text-neutral-primary);
-}
-
-// A character's square and a background's, to scale.
+// A character's card and a background's frame, to scale, standing on one
+// line.
 .sizes {
   display: flex;
   align-items: flex-end;
-  gap: 24px;
+  justify-content: center;
+  gap: math.percentage(math.div(20, 500));
+  width: 100%;
 }
 
-.sizeBox {
-  display: flex;
-  border: 2px solid var(--borders-neutral-primary);
-  border-radius: 8px;
-  background-color: var(--background-neutral-secondary);
-  background-image:
-    linear-gradient(var(--borders-neutral-primary) 1px, transparent 1px),
-    linear-gradient(90deg, var(--borders-neutral-primary) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
-
-.sizeSmall {
-  width: 80px;
-  height: 80px;
+// The card's drawing includes its shadow, which the frame's is level with.
+.visual .sizeSmall {
+  align-self: flex-end;
+  width: math.percentage(math.div(88, 500));
 }
 
 .sizeLarge {
-  width: 160px;
-  height: 160px;
-
-  // No checkerboard here: the box's grid shows through the picture.
-  .chunky {
-    width: 100%;
-    height: 100%;
-    background: none;
-  }
+  width: math.percentage(math.div(159, 500));
+  box-shadow: 8px 8px 0 var(--neutral-base-black);
+  margin-bottom: 8px;
 }
 
-.guess {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .chunky {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-.dice {
-  position: absolute;
-  right: -28px;
-  bottom: -8px;
-  font-size: 40px;
-  color: var(--text-neutral-primary);
-}
-
+// Stretched across the dialog, so the dots are centered in it.
 .dots {
+  align-self: stretch;
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -210,8 +187,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .panel,
-  .mosaicCell {
+  .panel {
     animation: none;
   }
 }
