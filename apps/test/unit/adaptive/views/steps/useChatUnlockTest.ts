@@ -221,6 +221,59 @@ describe('useChatUnlock', () => {
     );
   });
 
+  it('reports a judge that finishes after Continue opened or the step was left, but opens nothing', async () => {
+    let answer: (judgement: unknown) => void = () => {};
+    mockJudgeEffort.mockImplementationOnce(
+      () => new Promise(resolve => (answer = resolve))
+    );
+    const {chat, listeners} = fakeChat();
+    const {options, rerender, waitFor} = render(chat);
+
+    listeners[0](reply(4));
+    rerender({continueAllowed: true});
+    expect(listeners).toHaveLength(0);
+    answer({pass: true, traceId: 't'});
+    await waitFor(() =>
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        'Adaptive Effort Check Passed',
+        expect.objectContaining({replies: 4})
+      )
+    );
+
+    expect(options.recordAttempt).not.toHaveBeenCalled();
+    expect(mockSendUnlocked).not.toHaveBeenCalled();
+    expect(chat.post).not.toHaveBeenCalled();
+  });
+
+  it('runs one judge at a time even after the chat hands back a new handle', async () => {
+    let answer: (judgement: unknown) => void = () => {};
+    mockJudgeEffort.mockImplementationOnce(
+      () => new Promise(resolve => (answer = resolve))
+    );
+    mockJudgeEffort.mockResolvedValueOnce({pass: true, traceId: 't'});
+    const first = fakeChat();
+    const second = fakeChat();
+    const {options, rerender, waitFor} = render(first.chat);
+
+    first.listeners[0](reply(4));
+    rerender({chat: second.chat});
+    expect(first.listeners).toHaveLength(0);
+    second.listeners[0](reply(5));
+    expect(mockJudgeEffort).toHaveBeenCalledTimes(1);
+
+    answer({pass: true, traceId: 't'});
+    await waitFor(() => expect(mockSendEvent).toHaveBeenCalledTimes(1));
+    expect(options.recordAttempt).not.toHaveBeenCalled();
+
+    second.listeners[0](reply(6));
+    await waitFor(() =>
+      expect(options.recordAttempt).toHaveBeenCalledWith(effort(6))
+    );
+    expect(mockJudgeEffort).toHaveBeenCalledTimes(2);
+    expect(second.chat.post).toHaveBeenCalledTimes(1);
+    expect(first.chat.post).not.toHaveBeenCalled();
+  });
+
   it('opens Continue at the limit regardless, once, without a judge', () => {
     const {chat, listeners} = fakeChat();
     const {options, rerender} = render(chat, {

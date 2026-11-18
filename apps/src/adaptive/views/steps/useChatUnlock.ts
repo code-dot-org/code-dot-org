@@ -49,6 +49,8 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
   // Read at reply time, so a change to the options does not resubscribe.
   const latestOptions = useRef(options);
   latestOptions.current = options;
+  // One judge at a time, across resubscribes.
+  const judging = useRef(false);
   const {chat, step, continueAllowed} = options;
   const adapter =
     step.validation && !continueAllowed
@@ -58,8 +60,10 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
 
   useEffect(() => {
     if (!adapter || !observe) return;
-    let judging = false;
-    return observe({chat}, transcript => {
+    // A judge still running when this subscription ends must not open
+    // Continue: the step was left, or it opened some other way.
+    let cancelled = false;
+    const unsubscribe = observe({chat}, transcript => {
       const currentOptions = latestOptions.current;
       if (currentOptions.continueAllowed) return;
       const {effortCheckAt, replyLimit} = chatThresholds();
@@ -91,9 +95,9 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
         if (!hasPassedLimit) unlock('limitReached');
         return;
       }
-      // One judgement at a time; a no is not recorded, and the next reply gets another.
-      if (transcript.replies < effortCheckAt || judging) return;
-      judging = true;
+      // A no is not recorded; the next reply gets another judge.
+      if (transcript.replies < effortCheckAt || judging.current) return;
+      judging.current = true;
       const judgingAt = Date.now();
       judgeEffort({
         pathway: currentOptions.pathway,
@@ -104,7 +108,7 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
         replies: transcript.replies,
         aichatContext: currentOptions.aichatContext,
       }).then(judgement => {
-        judging = false;
+        judging.current = false;
         if (!judgement) return;
         sendAdaptiveEvent(
           judgement.pass
@@ -117,8 +121,13 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
             latencyMs: Date.now() - judgingAt,
           }
         );
+        if (cancelled || latestOptions.current.continueAllowed) return;
         if (judgement.pass) unlock('effortDemonstrated', judgement.traceId);
       });
     });
+    return () => {
+      cancelled = true;
+      unsubscribe();
+    };
   }, [adapter, observe, chat]);
 }
