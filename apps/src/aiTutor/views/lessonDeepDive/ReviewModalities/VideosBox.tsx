@@ -1,20 +1,22 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {FC, useState} from 'react';
+import React, {ComponentType, FC, useState} from 'react';
 
 import {JsonVideoData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
-import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
 
 import styles from './videos-box.module.scss';
 
 interface VideosBoxProps {
   jsonVideos: JsonVideoData[];
+  VideoPlayer: ComponentType<{href: string}>;
 }
 
-const VideoCard: FC<Omit<JsonVideoData, 'key'>> = ({url, description}) => (
+const VideoCard: FC<
+  Omit<JsonVideoData, 'key'> & {VideoPlayer: ComponentType<{href: string}>}
+> = ({url, description, VideoPlayer}) => (
   <div className={styles.card}>
     <div className={styles.videoEmbed}>
-      <TutorVideo href={url} />
+      <VideoPlayer href={url} />
     </div>
     {description && <p className={styles.description}>{description}</p>}
   </div>
@@ -24,7 +26,10 @@ const VideoCard: FC<Omit<JsonVideoData, 'key'>> = ({url, description}) => (
 // video at a time at every width, never two side by side. The single VideoCard
 // is reused as the index changes — the new url flows into <json-video>, whose
 // load() pauses the previous clip before fetching the next.
-const VideoCarousel: FC<{videos: JsonVideoData[]}> = ({videos}) => {
+const VideoCarousel: FC<{
+  videos: JsonVideoData[];
+  VideoPlayer: ComponentType<{href: string}>;
+}> = ({videos, VideoPlayer}) => {
   const [index, setIndex] = useState(0);
   const count = videos.length;
   const goTo = (next: number) => setIndex((next + count) % count);
@@ -41,7 +46,11 @@ const VideoCarousel: FC<{videos: JsonVideoData[]}> = ({videos}) => {
         >
           <FontAwesomeV6Icon iconName="arrow-left" />
         </button>
-        <VideoCard url={current.url} description={current.description} />
+        <VideoCard
+          url={current.url}
+          description={current.description}
+          VideoPlayer={VideoPlayer}
+        />
         <button
           type="button"
           className={classNames(styles.navButton, styles.navNext)}
@@ -67,15 +76,15 @@ const VideoCarousel: FC<{videos: JsonVideoData[]}> = ({videos}) => {
   );
 };
 
-const VideosBox: FC<VideosBoxProps> = ({jsonVideos}) => (
+const VideosBox: FC<VideosBoxProps> = ({jsonVideos, VideoPlayer}) => (
   <div className={styles.container}>
     <p className={styles.overline}>Video</p>
     {jsonVideos.length > 1 ? (
-      <VideoCarousel videos={jsonVideos} />
+      <VideoCarousel videos={jsonVideos} VideoPlayer={VideoPlayer} />
     ) : (
       <div className={styles.list}>
         {jsonVideos.map(({key, ...video}) => (
-          <VideoCard key={key} {...video} />
+          <VideoCard key={key} {...video} VideoPlayer={VideoPlayer} />
         ))}
       </div>
     )}

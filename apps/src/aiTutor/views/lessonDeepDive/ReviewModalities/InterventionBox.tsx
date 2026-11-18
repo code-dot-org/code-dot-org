@@ -12,6 +12,7 @@ import {
   LessonDeepDiveData,
   AssessmentQuestionResult,
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -255,7 +256,9 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             onChallengeStarted={handleChallengeStarted}
           />
         )}
-        {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
+        {selected === 'videos' && (
+          <VideosBox jsonVideos={jsonVideos} VideoPlayer={TutorVideo} />
+        )}
         {selected === 'podcasts' && (
           <PodcastsBox
             lessonId={lessonId}
