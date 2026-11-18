@@ -19,7 +19,7 @@ const LIGHT_BLUE: PaletteColor = {
 };
 export const PAINT_START_COLOR = LIGHT_BLUE.rgba;
 // The colors the limited tools offer, chosen by the designer. The color
-// square opens them as round swatches, five to a row, so each group below
+// square opens them as square swatches, five to a row, so each group below
 // is one row. The eyedropper can still pick any other color from the
 // picture.
 export const PAINT_COLORS: readonly PaletteColor[] = [
@@ -41,11 +41,11 @@ export const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Blue', rgba: [6, 90, 181, 255]},
   LIGHT_BLUE,
 
-  {name: 'Dark purple', rgba: [126, 37, 83, 255]},
-  {name: 'Purple', rgba: [117, 70, 101, 255]},
-  {name: 'Lavender', rgba: [131, 118, 156, 255]},
   {name: 'Pink', rgba: [255, 119, 168, 255]},
-  {name: 'Dark pink', rgba: [173, 31, 113, 255]},
+  {name: 'Dark purple', rgba: [126, 37, 83, 255]},
+  {name: 'Lavender', rgba: [131, 118, 156, 255]},
+  {name: 'Dark brown', rgba: [69, 47, 35, 255]},
+  {name: 'Tan', rgba: [165, 119, 84, 255]},
 ];
 // One brush, the finest on the pixel grid.
 export const PAINT_BRUSH_SIZES: readonly number[] = [1];
