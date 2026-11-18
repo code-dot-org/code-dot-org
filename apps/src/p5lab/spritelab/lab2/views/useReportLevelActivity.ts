@@ -9,15 +9,15 @@ import {KEYBOARD_GAME_KEYS} from './playBar';
  * Sends the level activity event the first time the student acts on a
  * level. A game key pressed while the game plays counts. For any other
  * action, call the returned function.
- *
- * The returned function is the same on every render and every level, so an
- * effect that depends on it does not run again when the level changes.
  */
 export default function useReportLevelActivity(
   levelProperties: LevelProperties,
   playing: boolean
 ): () => void {
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
+  // The function returned must stay the same when the level changes. An
+  // effect that depends on it would otherwise run again, and send the event
+  // for the new level from what the student did on the last one.
   const logLevelActivityRef = useRef(logLevelActivity);
   logLevelActivityRef.current = logLevelActivity;
 
