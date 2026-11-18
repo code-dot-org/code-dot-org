@@ -13,6 +13,7 @@ import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import ColorPicker from './ColorPicker';
+import {checkerCellSize, displayScale} from './displayGrid';
 import {NATIVE_PIXEL_GRID, downsampleToGrid} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
 import {
@@ -35,22 +36,17 @@ import {
 
 import moduleStyles from './pixel-editor.module.scss';
 
-// Internal display-canvas resolution: integer upscale of the backing image,
-// as large as fits this budget. The rendered (CSS) size is independent: the
-// canvas fills this fraction of the viewport, capped, aspect preserved.
-const MAX_DISPLAY_SIZE = 640;
+// The rendered (CSS) size is independent of the display canvas's
+// resolution: the canvas fills this fraction of the viewport, capped,
+// aspect preserved.
 const CSS_HEIGHT_VIEWPORT_FRACTION = 0.68;
 const MAX_CSS_HEIGHT_PX = 720;
 const CSS_WIDTH_VIEWPORT_FRACTION = 0.76;
 const MAX_CSS_WIDTH_PX = 900;
 
-// The checkerboard that shows through transparent pixels. Its cells are
-// this many display px outside pixel mode. In pixel mode a cell is a whole
-// number of art pixels, at least the smaller size. The colors are white
-// and a pale gray (the design system's neutral gray 10) in both the light
-// and the dark theme, the same as wherever else a picture is shown.
-const CHECKER_CELL_PX = 16;
-const MIN_CHECKER_CELL_PX = 4;
+// The checkerboard that shows through transparent pixels. The colors are
+// white and a pale gray (the design system's neutral gray 10) in both the
+// light and the dark theme, the same as wherever else a picture is shown.
 const CHECKER_COLORS = {base: '#ffffff', tint: '#e1e3e6'};
 
 // A bright azure, at the darkest shade that clears 3:1 against the white
@@ -433,9 +429,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       ctx.fillStyle = CHECKER_COLORS.base;
       ctx.fillRect(0, 0, display.width, display.height);
       const scale = scaleRef.current;
-      const cell = pixelModeRef.current
-        ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
-        : CHECKER_CELL_PX;
+      const cell = checkerCellSize(scale, pixelModeRef.current);
       ctx.fillStyle = CHECKER_COLORS.tint;
       for (let y = 0; y * cell < display.height; y++) {
         for (let x = y % 2; x * cell < display.width; x += 2) {
@@ -585,10 +579,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       // The circle preview is also read back per pointer-move.
       preview.getContext('2d', {willReadFrequently: true});
       previewRef.current = preview;
-      scaleRef.current = Math.max(
-        1,
-        Math.floor(MAX_DISPLAY_SIZE / Math.max(backing.width, backing.height))
-      );
+      scaleRef.current = displayScale(backing.width, backing.height);
       // A new picture is a new history.
       undoStackRef.current = [];
       redoStackRef.current = [];

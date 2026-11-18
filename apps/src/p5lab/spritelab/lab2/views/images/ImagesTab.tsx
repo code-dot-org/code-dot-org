@@ -322,6 +322,22 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
+  // A copy of the tools' canvas as Done was pressed, shown over the image's
+  // picture until that picture has been drawn.
+  const [doneCover, setDoneCover] = useState<{
+    key: string;
+    canvas: HTMLCanvasElement;
+  } | null>(null);
+  const releaseDoneCover = useCallback(() => setDoneCover(null), []);
+  const editorSnapshotRef = useRef<(() => HTMLCanvasElement | null) | null>(
+    null
+  );
+  const finishDrawing = () => {
+    const canvas = editorSnapshotRef.current?.();
+    const key = drawing?.target.key;
+    setDoneCover(canvas && key ? {key, canvas} : null);
+    tools.finishDrawing();
+  };
 
   const [uploadError, setUploadError] = useState<{text: string} | null>(null);
   const [uploadStatus, setUploadStatus] = useState('');
@@ -686,6 +702,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 workspaceClassName={live ? styles.paintFrame : undefined}
                 above={above}
                 reserveAbove={!viewOnly}
+                cover={
+                  !live && !generating && doneCover?.key === chosenImage?.key
+                    ? doneCover?.canvas
+                    : undefined
+                }
+                onCoverDone={releaseDoneCover}
                 live={
                   generating
                     ? parts.frame
@@ -746,7 +768,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                         );
                       }
                     : drawing && !paintsInPlace
-                    ? tools.finishDrawing
+                    ? finishDrawing
                     : undefined
                 }
                 drawLabel={
@@ -816,6 +838,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 >
                   {editor => {
                     tools.attachEditor(editor);
+                    editorSnapshotRef.current = editor.snapshot;
                     return (
                       <>
                         {frame(

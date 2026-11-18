@@ -334,11 +334,17 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   }
 }
 
-// The checkerboard shows a picture's transparency.
+// The checkerboard shows a picture's transparency. Its squares are the
+// size the paint tools draw them for the picture when --checker-tile is
+// set, so the checkerboard does not change as the tools open and close.
 .frameFilled {
   border-style: solid;
-
-  @include checkerboard.light-checkerboard(24px);
+  background-color: var(--neutral-base-white);
+  background-image: repeating-conic-gradient(
+    transparent 0 25%,
+    var(--neutral-gray-10) 0 50%
+  );
+  background-size: var(--checker-tile, 24px) var(--checker-tile, 24px);
 }
 
 // The picture's box is the frame's full size, so a stored image smaller
@@ -370,11 +376,15 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
 }
 
 // The editor's canvas fills the frame, so the editor's own border and
-// background are removed. The frame's checkerboard is hidden under the
-// tools: the editor's canvas paints its own, and until it has, a plain
-// neutral background shows through transparent pixels.
+// background are removed.
 .paintFrame {
   border-style: solid;
+}
+
+// A frame whose checkerboard is not sized for the picture hides it under
+// the tools: the editor's canvas paints its own, and until it has, a plain
+// neutral background shows through transparent pixels.
+.paintFrame:not(.frameMatched) {
   background-image: none;
   background-color: var(--background-neutral-secondary);
 }
