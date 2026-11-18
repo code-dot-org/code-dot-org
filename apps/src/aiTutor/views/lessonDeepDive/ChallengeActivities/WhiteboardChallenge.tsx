@@ -31,6 +31,9 @@ const DEFAULT_SOURCES: ReactFlowSketchLabSources = {
 // image lands at a workable size; fitView then frames it.
 const STARTER_IMAGE_MAX_DIMENSION_PX = 600;
 
+// Draws the starter image beneath every node and edge; group nodes use -1.
+const STARTER_IMAGE_Z_INDEX = -1000;
+
 function blobToDataUrl(blob: Blob): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -75,6 +78,7 @@ async function buildStarterImageNode(
     position: {x: 0, y: 0},
     width: Math.round(width * scale),
     height: Math.round(height * scale),
+    zIndex: STARTER_IMAGE_Z_INDEX,
     data: {
       src: dataUrl,
       altText: altText ?? 'Starter image',
