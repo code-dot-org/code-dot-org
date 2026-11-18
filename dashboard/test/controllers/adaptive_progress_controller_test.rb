@@ -240,14 +240,15 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_response :success
     put_validation 'try', {'pass' => true, 'evidenceLevel' => 2, 'reason' => 'Heading added.'}
     put_validation 'try', {'pass' => false, 'evidenceLevel' => 1, 'reason' => 'Not quite.'}
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'skipReason' => 'effortDemonstrated', 'replies' => 4}
 
     history = steps['try']['validationHistory']
     assert_equal(
       {'at' => '2026-11-16T17:00:00Z', 'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'skipReason' => 'limitReached', 'replies' => 8, 'traceId' => 'trace-1'},
       history[0]
     )
-    assert_equal ['limitReached', nil, nil], history.pluck('skipReason')
-    assert_equal [8, nil, nil], history.pluck('replies')
+    assert_equal ['limitReached', nil, nil, 'effortDemonstrated'], history.pluck('skipReason')
+    assert_equal [8, nil, nil, 4], history.pluck('replies')
   end
 
   test "refuses a chat entry with an unknown pass reason, that fails, with evidence, or without its reply count" do

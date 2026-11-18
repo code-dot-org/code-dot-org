@@ -174,7 +174,7 @@
           }
         },
         {
-          "text": "Add one or more blocks under **when run**.",
+          "text": "Add code under **when run** to set up your new scene.",
           "check": {
             "kind": "block",
             "type": [
@@ -189,7 +189,7 @@
           }
         },
         {
-          "text": "Select **Run** to start your quest from the beginning. Play through it to reach **Scene 2**!",
+          "text": "Select **Run** to play from the beginning and test both scenes.",
           "check": {
             "kind": "scene",
             "id": "second-scene"
@@ -197,7 +197,7 @@
         }
       ]
     },
-    "long_instructions": "# Continue the quest!\r\nStart building the next scene of your quest.",
+    "long_instructions": "# Continue the quest!\r\nWhat happens next? Build the next scene of your quest.",
     "header_label": "Continue the quest",
     "embed": "false",
     "instructions_important": "false",

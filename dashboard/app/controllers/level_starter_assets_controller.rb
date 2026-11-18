@@ -4,7 +4,8 @@ class LevelStarterAssetsController < ApplicationController
   before_action :set_level
   skip_before_action :verify_authenticity_token, only: [:destroy]
 
-  VALID_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png .mp3 .wav .pdf)
+  IMAGE_FILE_EXTENSIONS = %w(.jpg .jpeg .gif .png)
+  VALID_FILE_EXTENSIONS = IMAGE_FILE_EXTENSIONS + %w(.mp3 .wav .pdf)
 
   MAX_FILE_SIZE_AI_CHAT = 5_000_000 # 5 MB
   MAX_DIMENSION_PIXELS_AI_CHAT = 2048
@@ -105,7 +106,8 @@ class LevelStarterAssetsController < ApplicationController
     friendly_name = upload.original_filename
     file_ext = File.extname(friendly_name)
 
-    unless VALID_FILE_EXTENSIONS.include?(file_ext)
+    # Only images ignore case; clients look for a lowercase .pdf, for one.
+    unless VALID_FILE_EXTENSIONS.include?(file_ext) || IMAGE_FILE_EXTENSIONS.include?(file_ext.downcase)
       head :unprocessable_entity
       return nil
     end

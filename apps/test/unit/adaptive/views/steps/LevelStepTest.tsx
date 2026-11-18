@@ -19,10 +19,10 @@ let mockProgress: {steps: {[stepId: string]: {status?: string}}} = {
 };
 let mockBuildRequested = false;
 const mockSetBuildRequested = jest.fn();
+let mockAiAvailable = false;
 
-const mockAdaptiveAiEnabled = jest.fn(() => false);
-jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
-  isAdaptiveAiEnabled: () => mockAdaptiveAiEnabled(),
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: () => mockAiAvailable,
 }));
 jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
   usePathwayContext: () => ({
@@ -182,6 +182,7 @@ describe('LevelStep (LevelPlayer)', () => {
   afterEach(() => {
     mockProgress = {steps: {}};
     mockBuildRequested = false;
+    mockAiAvailable = false;
     restoreRedux();
     jest.clearAllMocks();
     Object.assign(sourcesState, baseSourcesState);
@@ -201,15 +202,14 @@ describe('LevelStep (LevelPlayer)', () => {
     );
   }
 
-  it("gives the tutor the shell's model only while adaptive AI is on", () => {
+  it("gives the tutor the shell's model only while the shell makes AI calls", () => {
     renderStep();
     expect(screen.getByText('tutor: default')).toBeInTheDocument();
-    mockAdaptiveAiEnabled.mockReturnValue(true);
+    mockAiAvailable = true;
     renderStep();
     expect(
       screen.getByText('tutor: gemini-3.5-flash-lite')
     ).toBeInTheDocument();
-    mockAdaptiveAiEnabled.mockReturnValue(false);
   });
 
   it('sets hideNonInstructionTabs on viewProperties passed to the lab view', () => {

@@ -240,8 +240,11 @@ describe('useStepValidation', () => {
     const progress = failed(1);
     const {recordValidation} = render(chat, {}, {progress});
     expect(mockUseChatUnlock).toHaveBeenLastCalledWith({
+      pathway: expect.anything(),
       checkpoint: expect.anything(),
       step,
+      instructions: undefined,
+      aichatContext: expect.objectContaining({currentLevelId: 1}),
       chat,
       progress,
       continueAllowed: false,
