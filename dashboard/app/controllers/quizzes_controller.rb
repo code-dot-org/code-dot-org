@@ -58,7 +58,11 @@ class QuizzesController < ApplicationController
         raise StaleQuizError unless params[:version].to_s == @level.saved_version.to_s
         @level.replace_placements!(placement_params, delete_question_ids: delete_question_ids_param)
       end
-      @level.assign_attributes(present_configuration_updates)
+      updates = present_configuration_updates
+      if updates.key?(:purpose) && updates[:purpose] != 'exam' && @level.exam? && @level.lock_level?
+        raise "This Quiz must stay an exam while it is the last level of a lockable lesson."
+      end
+      @level.assign_attributes(updates)
       @level.advance_saved_version
       @level.save!
     end
