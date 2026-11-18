@@ -311,6 +311,11 @@ button.chipWord {
   & + & {
     border-top: 1px solid var(--border-neutral-secondary);
   }
+
+  // The first heading sits as far from the box's top as from its side.
+  &:first-child {
+    padding-top: 0;
+  }
 }
 
 // The arrows are always there; one with nowhere to go is disabled.
