@@ -3,12 +3,15 @@ import {useCallback, useEffect, useRef} from 'react';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
-import {GAME_KEYS} from './playBar';
+import {KEYBOARD_GAME_KEYS} from './playBar';
 
 /**
- * Sends the level activity event at the student's first action on a level:
- * a game key pressed while the game plays, or a call of the function
- * returned. The function keeps one identity across renders and levels.
+ * Sends the level activity event the first time the student acts on a
+ * level. A game key pressed while the game plays counts. For any other
+ * action, call the returned function.
+ *
+ * The returned function is the same on every render and every level, so an
+ * effect that depends on it does not run again when the level changes.
  */
 export default function useReportLevelActivity(
   levelProperties: LevelProperties,
@@ -25,7 +28,7 @@ export default function useReportLevelActivity(
       return;
     }
     const onKeyDown = (event: KeyboardEvent) => {
-      if (GAME_KEYS.has(event.key)) {
+      if (KEYBOARD_GAME_KEYS.has(event.key)) {
         logLevelActivityRef.current();
       }
     };

@@ -28,8 +28,9 @@ export function arrowSetFor(state: ControlsState): ArrowSet {
 
 export type GameKey = 'left' | 'right' | 'up' | 'down';
 
-// The keys a game typically reads (p5 listens for them on window).
-export const GAME_KEYS = new Set([
+// `KeyboardEvent.key` values. Older browsers report the space bar as
+// 'Spacebar'.
+export const KEYBOARD_GAME_KEYS = new Set([
   'ArrowLeft',
   'ArrowRight',
   'ArrowUp',

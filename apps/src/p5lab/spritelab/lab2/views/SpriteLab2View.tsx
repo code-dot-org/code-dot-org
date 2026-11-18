@@ -166,7 +166,12 @@ import DiscoverBlocksButton, {
 import FreeplayIntroDialog from './FreeplayIntroDialog';
 import ImagesTab from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
-import {ArrowSet, arrowSetFor, ControlsState, GAME_KEYS} from './playBar';
+import {
+  ArrowSet,
+  arrowSetFor,
+  ControlsState,
+  KEYBOARD_GAME_KEYS,
+} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
@@ -1607,7 +1612,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     const swallow = (e: KeyboardEvent) => {
-      if (GAME_KEYS.has(e.key)) {
+      if (KEYBOARD_GAME_KEYS.has(e.key)) {
         e.stopPropagation();
       }
     };
@@ -1628,7 +1633,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       const target = e.target instanceof Element ? e.target : null;
       if (
         isTargetEditable(e.target) ||
-        (GAME_KEYS.has(e.key) && target?.closest(INTERACTIVE_CONTROLS))
+        (KEYBOARD_GAME_KEYS.has(e.key) && target?.closest(INTERACTIVE_CONTROLS))
       ) {
         e.stopPropagation();
       }
@@ -2199,8 +2204,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     generationLimit === undefined
       ? undefined
       : generationLimit - generationCount;
-  // hasEdited cannot stand in for these: the lab changes the project itself
-  // as some levels load.
+  // Only what the student did. hasEdited is also true when the lab changed
+  // the project while the level loaded.
   const studentEdited =
     canUndo || !!drawingHistory?.canUndo || generationCount > 0;
   useEffect(() => {
