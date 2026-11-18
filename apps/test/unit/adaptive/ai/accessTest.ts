@@ -1,4 +1,7 @@
-import {isAdaptiveAiAvailable} from '@cdo/apps/adaptive/ai/access';
+import {
+  isAdaptiveAiAvailable,
+  isAdaptiveAiEnabled,
+} from '@cdo/apps/adaptive/ai/access';
 import DCDO from '@cdo/apps/dcdo';
 import {getStore} from '@cdo/apps/redux';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
@@ -17,6 +20,15 @@ const setUp = (flag: boolean, accessLevel: string | undefined) => {
     getState: () => ({currentUser: {aiChatAccessLevel: accessLevel}}),
   });
 };
+
+describe('isAdaptiveAiEnabled', () => {
+  it('is the flag alone, whatever the access', () => {
+    setUp(true, AiChatAccessLevels.DISABLED);
+    expect(isAdaptiveAiEnabled()).toBe(true);
+    setUp(false, AiChatAccessLevels.ENABLED);
+    expect(isAdaptiveAiEnabled()).toBe(false);
+  });
+});
 
 describe('isAdaptiveAiAvailable', () => {
   it('is off by the flag whatever the access', () => {

@@ -17,7 +17,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {isAdaptiveAiAvailable} from '../ai/access';
+import {isAdaptiveAiEnabled} from '../ai/access';
 import {
   sendAdaptiveEvent,
   sendFinalProjectClicked,
@@ -362,9 +362,10 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       }}
     />
   );
-  // The tutor in Weblab2 steps goes through the AI gateway while the shell makes its own calls.
+  // The tutor in Weblab2 steps goes through the AI gateway while adaptive AI
+  // is on; the tutor checks the student's access itself.
   useEffect(() => {
-    setAiGatewayOptIn(isAdaptiveAiAvailable());
+    setAiGatewayOptIn(isAdaptiveAiEnabled());
     return () => setAiGatewayOptIn(false);
   }, []);
 
