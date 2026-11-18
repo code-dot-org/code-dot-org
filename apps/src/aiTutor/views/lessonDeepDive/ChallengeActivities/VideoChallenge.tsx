@@ -11,6 +11,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {requestEvaluation} from './requestEvaluation';
+import {STICKER_SECTIONS} from './stickers';
 import VideoCanvas, {VideoCanvasMode} from './VideoCanvas';
 
 import styles from './video-challenge.module.scss';
@@ -189,6 +190,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         recordedAudioBlob={recordedAudioBlob}
         setRecordedAudioBlob={setRecordedAudioBlob}
         timeLimitSeconds={60}
+        stickerSections={STICKER_SECTIONS}
       />
     </div>
   );
