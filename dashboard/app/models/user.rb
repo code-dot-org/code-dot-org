@@ -305,7 +305,7 @@ class User < ApplicationRecord
   has_many :ai_lesson_summaries, dependent: :destroy
   has_many :lesson_insights, foreign_key: 'student_id', dependent: :destroy
 
-  # Deleted at purge (DeleteAccountsHelper), not on soft delete, so undestroy keeps them.
+  # Deleted by Services::User::PiiScrubber, not on soft delete, so undestroy keeps them.
   has_many :user_practice_problem_attempts, dependent: nil
 
   has_many :challenge_responses, dependent: nil
