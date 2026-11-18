@@ -5,21 +5,93 @@ import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import LessonDeepDiveContainer from '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer';
 import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  WelcomeBox: () => <div>welcome</div>,
+  WelcomeBox: ({onNext}: {onNext: () => void}) => (
+    <div>
+      welcome
+      <button type="button" onClick={onNext}>
+        skip
+      </button>
+    </div>
+  ),
   LevelsAttemptedBox: () => <div>levels-attempted</div>,
   TimeSpentBox: () => <div>time-spent</div>,
   ValidatedLevelsBox: () => <div>validated-levels</div>,
   LessonSummaryCard: () => <div>lesson-summary</div>,
-  PreSkillsCheck: () => <div>pre-skills-check</div>,
+  PreSkillsCheck: ({
+    onKeepPracticing,
+    onTestSkills,
+  }: {
+    onKeepPracticing: () => void;
+    onTestSkills: () => void;
+  }) => (
+    <div>
+      pre-skills-check
+      <button type="button" onClick={onKeepPracticing}>
+        keep practicing
+      </button>
+      <button type="button" onClick={onTestSkills}>
+        test skills
+      </button>
+    </div>
+  ),
   TutorSummaryBox: () => <div>tutor-summary</div>,
-  NextStepPicker: () => <div>next-step</div>,
-  ReflectionBox: () => <div>reflection</div>,
+  NextStepPicker: ({
+    onPractice,
+    onChallenge,
+  }: {
+    onPractice: () => void;
+    onChallenge: () => void;
+  }) => (
+    <div>
+      next-step
+      <button type="button" onClick={onPractice}>
+        practice
+      </button>
+      <button type="button" onClick={onChallenge}>
+        challenge
+      </button>
+    </div>
+  ),
+  ReflectionBox: ({
+    onSubmitComplete,
+  }: {
+    onSubmitComplete: (data: {
+      objectiveReflections: Record<string, string>;
+      success: string;
+      struggle: string;
+    }) => void;
+  }) => (
+    <div>
+      reflection
+      <button
+        type="button"
+        onClick={() =>
+          onSubmitComplete({
+            objectiveReflections: {'1': 'confident', '2': 'lost'},
+            success: 'I understood loops',
+            struggle: ' ',
+          })
+        }
+      >
+        submit reflection
+      </button>
+    </div>
+  ),
 }));
+
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
+
+const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox',
@@ -218,4 +290,90 @@ describe('LessonDeepDiveContainer without challenges', () => {
     renderContainer('next-step');
     expect(screen.queryByText('next-step')).not.toBeInTheDocument();
   });
+});
+
+describe('LessonDeepDiveContainer Tutor+ analytics', () => {
+  beforeEach(() => {
+    jest.useFakeTimers();
+    experiments.setEnabled(experiments.LESSON_TUTOR, true);
+    mockChallengesEnabled = true;
+    sendEventMock.mockReset();
+  });
+
+  afterEach(() => {
+    jest.useRealTimers();
+    experiments.setEnabled(experiments.LESSON_TUTOR, false);
+  });
+
+  it('reports a recap card click with its position', () => {
+    renderContainer();
+    fireEvent.click(screen.getByRole('button', {name: 'skip'}));
+
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_RECAP_CARD_VIEWED,
+      {lesson_id: LESSON_DATA.lessonId, card_index: 1}
+    );
+    expect(screen.getByText('levels-attempted')).toBeInTheDocument();
+  });
+
+  it('reports each rating and the submitted reflection', () => {
+    renderContainer('reflection');
+    fireEvent.click(screen.getByRole('button', {name: 'submit reflection'}));
+
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_OBJECTIVE_RATED,
+      {lesson_id: LESSON_DATA.lessonId, objective_id: '1', rating: 'confident'}
+    );
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_OBJECTIVE_RATED,
+      {lesson_id: LESSON_DATA.lessonId, objective_id: '2', rating: 'lost'}
+    );
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_REFLECTION_SUBMITTED,
+      {
+        lesson_id: LESSON_DATA.lessonId,
+        has_success_note: true,
+        has_confusion_note: false,
+      }
+    );
+  });
+
+  it('does not report auto-advance or arrow-key navigation', () => {
+    renderContainer();
+    act(() => jest.runOnlyPendingTimers());
+    act(() => fireEvent.keyDown(window, {key: 'ArrowRight'}));
+
+    expect(sendEventMock).not.toHaveBeenCalled();
+  });
+
+  it.each(['practice', 'challenge'])(
+    'reports choosing %s on the next-step screen',
+    choice => {
+      renderContainer('next-step');
+      fireEvent.click(screen.getByRole('button', {name: choice}));
+
+      expect(sendEventMock).toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN,
+        {lesson_id: LESSON_DATA.lessonId, choice, source: 'next_step_screen'}
+      );
+      expect(screen.getByText('intervention')).toBeInTheDocument();
+    }
+  );
+
+  it.each([
+    ['keep practicing', 'keep_practicing', 'intervention'],
+    ['test skills', 'test_skills', 'skills-check'],
+  ])(
+    'reports "%s" on the pre-skills-check screen',
+    (buttonName, choice, nextScreen) => {
+      renderContainer('pre-skills-check');
+      fireEvent.click(screen.getByRole('button', {name: buttonName}));
+
+      expect(sendEventMock).toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_PRACTICE_NEXT_CHOSEN,
+        {lesson_id: LESSON_DATA.lessonId, choice}
+      );
+      expect(screen.getByText(nextScreen)).toBeInTheDocument();
+    }
+  );
 });

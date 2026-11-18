@@ -86,6 +86,8 @@ interface ReactionChipsProps {
   // Called with the new tallies whenever the viewer changes a reaction, so an
   // owning view can keep its own copy in sync. Unused when readOnly.
   onReactionsChange?: (reactions: Reaction[]) => void;
+  // Called once the server has accepted a new reaction from the viewer.
+  onReactionAdded?: (emoji: string) => void;
 }
 
 // A row of emoji reaction chips, each an emoji and its count, highlighted
@@ -98,6 +100,7 @@ const ReactionChips: FC<ReactionChipsProps> = ({
   reactions,
   readOnly = false,
   onReactionsChange,
+  onReactionAdded,
 }) => {
   const [items, setItems] = useState<Reaction[]>(reactions);
   // Emoji with an in-flight request, to keep a chip from firing a second,
@@ -160,7 +163,12 @@ const ReactionChips: FC<ReactionChipsProps> = ({
       ? addReaction(api.transport, responseId, emoji)
       : removeReaction(api.transport, responseId, emoji);
     request
-      .then(serverReactions => applyItems(serverReactions))
+      .then(serverReactions => {
+        applyItems(serverReactions);
+        if (nowReacted) {
+          onReactionAdded?.(emoji);
+        }
+      })
       .catch(() => applyItems(previous))
       .finally(() =>
         setPending(prev => {
