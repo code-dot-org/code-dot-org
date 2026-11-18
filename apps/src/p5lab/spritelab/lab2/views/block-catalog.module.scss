@@ -17,6 +17,8 @@ $band-inset: 8px;
 .dialogHost .dialog {
   @include chrome.panel;
 
+  // The background of the lab's other dialogs.
+  background-color: var(--background-neutral-primary);
   width: 760px;
   max-width: calc(100vw - 32px);
   display: flex;
@@ -215,6 +217,17 @@ $band-inset: 8px;
   display: flex;
   justify-content: flex-end;
   padding: 12px 24px;
+}
+
+// White on the dark dialog, so it reads apart from the purple Add block.
+// Doubled to outrank the button's own colors.
+.doneButton.doneButton {
+  background-color: var(--neutral-base-white);
+  color: var(--neutral-base-black);
+
+  &:hover {
+    background-color: var(--neutral-gray-10);
+  }
 }
 
 // Across the toolbox's foot, at the column's width (CatalogBand.tsx).

@@ -26,7 +26,7 @@ describe('Hoai2026Congrats', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {
-        name: 'Discover even more blocks in Sprite Lab',
+        name: 'Discover More',
       })
     ).toBeInTheDocument();
     expect(
@@ -56,7 +56,7 @@ describe('Hoai2026Congrats', () => {
   it('shows a picture on the students card, with no name to read out', () => {
     renderDialog();
     const students = screen.getByRole('region', {
-      name: 'Discover even more blocks in Sprite Lab',
+      name: 'Discover More',
     });
     expect(within(students).getByAltText('')).toBeInTheDocument();
   });
