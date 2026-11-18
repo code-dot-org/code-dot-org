@@ -184,7 +184,7 @@ export interface PixelEditorProps {
   onHistoryChange?: (history: PixelEditorHistory) => void;
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
-  // The only colors offered: the color square opens these as round
+  // The only colors offered: the color square opens these as square
   // swatches, in place of the spectrum picker.
   palette?: readonly PaletteColor[];
   // The color the editor opens on. Absent, it is the palette's first

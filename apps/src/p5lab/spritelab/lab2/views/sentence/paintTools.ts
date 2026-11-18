@@ -18,10 +18,9 @@ const LIGHT_BLUE: PaletteColor = {
   rgba: [41, 173, 255, 255],
 };
 export const PAINT_START_COLOR = LIGHT_BLUE.rgba;
-// The colors the limited tools offer, chosen by the designer. The color
-// square opens them as square swatches, five to a row, so each group below
-// is one row. The eyedropper can still pick any other color from the
-// picture.
+// The colors the limited tools offer. The color square opens them as
+// square swatches, five to a row, so each group below is one row. The
+// eyedropper can still pick any other color from the picture.
 export const PAINT_COLORS: readonly PaletteColor[] = [
   {name: 'Black', rgba: [0, 0, 0, 255]},
   {name: 'Dark gray', rgba: [95, 87, 79, 255]},
