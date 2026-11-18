@@ -19,6 +19,12 @@ import {
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import i18n from '@cdo/locale';
 
+// This is only used by the Vigenere Cipher widget; including it here because
+// that is currently implemented as a static JS asset which can't include
+// dependencies. If we eventually incorporate the widget into the apps build,
+// we can make this dependency more targeted.
+import 'jquery-ui/ui/widgets/slider';
+
 export function showInstructionsDialog() {
   showDialog(
     <LegacyInstructionsDialog
