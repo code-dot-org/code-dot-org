@@ -25,7 +25,6 @@ import {
   CompletedChatMessage,
   PendingChatMessage,
 } from '@cdo/apps/aichat/types';
-import WaitingAnimation from '@cdo/apps/aichat/views/WaitingAnimation';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -44,6 +43,7 @@ import scrambleJSON from '@cdo/static/tutor/scramble_example.json';
 import sortJSON from '@cdo/static/tutor/sort_example.json';
 
 import {useAiTutorModelParameters} from '../../../hooks/useAiTutorModelParameters';
+import ThinkingDots from '../Animations/ThinkingDots';
 import {
   LessonDeepDiveData,
   practiceProblemValidator,
@@ -335,7 +335,7 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
         )}
         {isSubmitted && (
           <div className={styles.feedback}>
-            <WaitingAnimation shouldDisplay={feedbackLoading} />
+            {feedbackLoading && <ThinkingDots />}
             {feedback && !feedbackLoading && (
               <SafeMarkdown unwrapped localized={false} markdown={feedback} />
             )}
