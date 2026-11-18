@@ -1,7 +1,8 @@
-import React, {
-  Dispatch,
-  FC,
-  SetStateAction,
+import {
+  type Dispatch,
+  type ElementRef,
+  type FC,
+  type SetStateAction,
   useCallback,
   useEffect,
   useLayoutEffect,
@@ -9,6 +10,8 @@ import React, {
   useState,
 } from 'react';
 import {Image as KonvaImage, Layer, Stage, Transformer} from 'react-konva';
+
+import {type Sticker, type StickerSection} from '../types';
 
 import CanvasSticker from './CanvasSticker';
 import CanvasText, {TransformerNode} from './CanvasText';
@@ -21,7 +24,6 @@ import {
   TEXT_FONT_STYLE,
 } from './canvasTextUtils';
 import EditToolbar from './EditToolbar';
-import {Sticker, StickerSection} from './stickers';
 
 import styles from './video-canvas.module.scss';
 
@@ -29,8 +31,8 @@ import styles from './video-canvas.module.scss';
 // a take
 export type VideoCanvasMode = 'edit' | 'recording' | 'preview';
 
-type LayerNode = React.ElementRef<typeof Layer>;
-type ImageNode = React.ElementRef<typeof KonvaImage>;
+type LayerNode = ElementRef<typeof Layer>;
+type ImageNode = ElementRef<typeof KonvaImage>;
 
 const TEXT_ANCHORS = [...CORNER_ANCHORS, 'middle-left', 'middle-right'];
 const ROTATION_SNAPS = [0, 90, 180, 270];
@@ -54,8 +56,8 @@ const CountdownRing: FC<CountdownRingProps> = ({
     timeRemaining <= 5
       ? '#ff4444'
       : timeRemaining <= 10
-      ? '#ffd600'
-      : '#ffffff';
+        ? '#ffd600'
+        : '#ffffff';
 
   return (
     <div
@@ -110,7 +112,7 @@ function getCoverCrop(
   sourceWidth: number,
   sourceHeight: number,
   targetWidth: number,
-  targetHeight: number
+  targetHeight: number,
 ) {
   const sourceRatio = sourceWidth / sourceHeight;
   const targetRatio = targetWidth / targetHeight;
@@ -193,7 +195,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     if (!navigator.mediaDevices?.getUserMedia) {
       setError(
         'Camera recording is not available on this page. ' +
-          'Try opening the page over HTTPS.'
+          'Try opening the page over HTTPS.',
       );
       return;
     }
@@ -210,7 +212,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     } catch {
       setError(
         'Camera or microphone access was denied. ' +
-          'Please allow access in your browser settings and try again.'
+          'Please allow access in your browser settings and try again.',
       );
     }
   }, [attachStream]);
@@ -261,7 +263,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
             videoWidth,
             videoHeight,
             stageSize.width,
-            stageSize.height
+            stageSize.height,
           ),
         });
         layerNode.draw();
@@ -401,7 +403,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
         rotation: 0,
       });
     },
-    [stageSize, addItem]
+    [stageSize, addItem],
   );
 
   const addSticker = useCallback(
@@ -417,7 +419,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
         rotation: 0,
       });
     },
-    [stageSize, addItem]
+    [stageSize, addItem],
   );
 
   const deleteSelected = useCallback(() => {
@@ -429,10 +431,10 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
     (id: string, changes: Partial<CanvasTextItem | CanvasStickerItem>) =>
       setItems(prev =>
         prev.map(item =>
-          item.id === id ? ({...item, ...changes} as CanvasItem) : item
-        )
+          item.id === id ? ({...item, ...changes} as CanvasItem) : item,
+        ),
       ),
-    []
+    [],
   );
 
   const selectedIsSticker =
@@ -543,7 +545,7 @@ const VideoCanvas: FC<VideoCanvasProps> = ({
                     onSelect={() => setSelectedId(item.id)}
                     onChange={changes => updateItem(item.id, changes)}
                   />
-                )
+                ),
               )}
             </Layer>
             <Layer>

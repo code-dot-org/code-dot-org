@@ -4,7 +4,7 @@ import {
   MIN_TEXT_WIDTH,
   resizeText,
   textStyleAttrs,
-} from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/canvasTextUtils';
+} from '../canvasTextUtils';
 
 describe('contrastColor', () => {
   it('pairs light colors with black and dark colors with white', () => {

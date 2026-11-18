@@ -1,9 +1,18 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button, IconButton, Tooltip, Typography} from '@mui/material';
-import React, {FC, ReactNode, Ref, useId, useRef, useState} from 'react';
+import {
+  type FC,
+  type ReactNode,
+  type Ref,
+  useId,
+  useRef,
+  useState,
+} from 'react';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+
+import {type Sticker, type StickerSection} from '../types';
 
 import {NewCanvasText, TEXT_STYLES, TextStyle} from './canvasTextUtils';
-import {Sticker, StickerSection} from './stickers';
 
 import styles from './edit-toolbar.module.scss';
 
