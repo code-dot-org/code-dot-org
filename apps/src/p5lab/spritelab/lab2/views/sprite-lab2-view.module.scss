@@ -614,20 +614,6 @@ $arrow-gap: 6px;
   }
 }
 
-// Restart buttons in the play area's top-right corner; the playspace keeps
-// the game clear of them (CONTROLS_INSET repeats the inset). The overlay
-// ignores pointer events; these buttons accept them.
-.playControls {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-  pointer-events: auto;
-}
-
 .playspacePrompt {
   position: absolute;
   transform: translateY(-100%);

@@ -66,9 +66,6 @@ const CROSS_SIZE = {
 };
 // Under the preview the cross sits this far below the box.
 const PREVIEW_CROSS_GAP = 2 * MARGIN;
-// The restart buttons' inset from the play area's top-right corner, as the
-// stylesheet's .playControls has it.
-const CONTROLS_INSET = 8;
 // The preview column's share of the browser's width.
 const PREVIEW_WIDTH_SHARE = 1 / 3;
 // Under PREVIEW_MIN_PX the column widens, up to the max share, and the
@@ -119,27 +116,15 @@ function centeredIn(area: Size): Placement {
  * Where the play view goes in an overlay of `size`, clear of a guide hung
  * from a bottom corner: centered when that clears the guide, else beside or
  * above it, whichever leaves the box bigger. `reserveBelow` is room kept
- * under the box (the play bar); `reserveTop`, room kept over it.
+ * under the box (the play bar).
  */
 export function playPlacement(
   size: Size,
   guideSize?: {width: number; height: number} | null,
   reserveBelow = 0,
   reserveLeft = 0,
-  guideSide: 'left' | 'right' = 'right',
-  reserveTop = 0
+  guideSide: 'left' | 'right' = 'right'
 ): Placement {
-  if (reserveTop) {
-    // Place within the area under the reserve, then shift down.
-    const inner = playPlacement(
-      {w: size.w, h: size.h - reserveTop},
-      guideSize,
-      reserveBelow,
-      reserveLeft,
-      guideSide
-    );
-    return {...inner, y: inner.y + reserveTop};
-  }
   if (reserveLeft) {
     // Place within the area right of the reserve, then shift back.
     const inner = playPlacement(
@@ -211,64 +196,18 @@ type PlayLayout = {box: Placement; cross: {x: number; y: number} | null};
  * with the cross centered in the room to its right, or under the box when
  * that leaves the box bigger.
  * `cross` is its size; null means there is none. `reserveBottom` is the
- * bar's room. `corner` is the size of the restart
- * buttons in the top-right corner: a box that would reach under them is
- * placed below them instead.
+ * bar's room.
  */
 export function playLayout(
   size: Size,
   guideSize: {width: number; height: number} | null,
   guideSide: 'left' | 'right',
   reserveBottom: number,
-  cross: Size | null,
-  corner: Size | null = null
-): PlayLayout {
-  const laid = playLayoutUnder(
-    size,
-    guideSize,
-    guideSide,
-    reserveBottom,
-    cross
-  );
-  if (!corner) {
-    return laid;
-  }
-  const cornerLeft = size.w - CONTROLS_INSET - corner.w - MARGIN;
-  const cornerBottom = CONTROLS_INSET + corner.h + MARGIN;
-  const {box} = laid;
-  const underCorner =
-    box.x + CANVAS * box.scale > cornerLeft && box.y < cornerBottom;
-  return underCorner
-    ? playLayoutUnder(
-        size,
-        guideSize,
-        guideSide,
-        reserveBottom,
-        cross,
-        cornerBottom
-      )
-    : laid;
-}
-
-/** playLayout with `reserveTop` kept clear over the box. */
-function playLayoutUnder(
-  size: Size,
-  guideSize: {width: number; height: number} | null,
-  guideSide: 'left' | 'right',
-  reserveBottom: number,
-  cross: Size | null,
-  reserveTop = 0
+  cross: Size | null
 ): PlayLayout {
   if (!cross) {
     return {
-      box: playPlacement(
-        size,
-        guideSize,
-        reserveBottom,
-        0,
-        guideSide,
-        reserveTop
-      ),
+      box: playPlacement(size, guideSize, reserveBottom, 0, guideSide),
       cross: null,
     };
   }
@@ -277,14 +216,7 @@ function playLayoutUnder(
   // sides, so it stays centered; the guide, hung from the stage's corner,
   // then stands that much nearer the narrowed edge.
   const edge = cross.w + 2 * MARGIN;
-  let beside = playPlacement(
-    size,
-    guideSize,
-    reserveBottom,
-    0,
-    guideSide,
-    reserveTop
-  );
+  let beside = playPlacement(size, guideSize, reserveBottom, 0, guideSide);
   if (size.w - (beside.x + CANVAS * beside.scale) < edge) {
     const guideIn =
       guideSize && guideSize.width > edge
@@ -295,8 +227,7 @@ function playLayoutUnder(
       guideIn,
       reserveBottom,
       0,
-      guideSide,
-      reserveTop
+      guideSide
     );
     beside = {...inner, x: inner.x + edge};
   }
@@ -305,8 +236,7 @@ function playLayoutUnder(
     guideSize,
     reserveBottom + cross.h + MARGIN,
     0,
-    guideSide,
-    reserveTop
+    guideSide
   );
   if (stacked.scale > beside.scale) {
     const boxSide = CANVAS * stacked.scale;
@@ -345,8 +275,6 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
-  // Over the play area's corner, outside the box so they keep their size.
-  controls?: React.ReactNode;
   // Over the box's bottom edge, unscaled.
   prompt?: React.ReactNode;
   // Filled with a function that reads a sprite's line aloud.
@@ -384,7 +312,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   fadeTrigger = 0,
   covered = false,
   boxRef,
-  controls,
   prompt,
   speakRef,
   bottomBar,
@@ -473,25 +400,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     bottomBarObserver.current = observer;
   }, []);
   useEffect(() => () => bottomBarObserver.current?.disconnect(), []);
-  // The restart buttons' size, so the box keeps clear of their corner. The
-  // last size stands while they are away: the box is placed against it as
-  // play opens, before they are measured again.
-  const [controlsSize, setControlsSize] = useState<Size | null>(null);
-  const controlsObserver = useRef<ResizeObserver | null>(null);
-  const controlsRef = useCallback((el: HTMLDivElement | null) => {
-    controlsObserver.current?.disconnect();
-    controlsObserver.current = null;
-    if (!el || typeof ResizeObserver === 'undefined') {
-      return;
-    }
-    const observer = new ResizeObserver(entries => {
-      const rect = entries[0].contentRect;
-      setControlsSize({w: rect.width, h: rect.height});
-    });
-    observer.observe(el);
-    controlsObserver.current = observer;
-  }, []);
-  useEffect(() => () => controlsObserver.current?.disconnect(), []);
 
   const dispatch = useAppDispatch();
   // The location-picker block puts us in "selecting" mode; while active, the
@@ -766,14 +674,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
 
   const playing =
     mode === 'play'
-      ? playLayout(
-          size,
-          cardGuide,
-          side,
-          bottomRoom,
-          crossSize,
-          controls ? controlsSize : null
-        )
+      ? playLayout(size, cardGuide, side, bottomRoom, crossSize)
       : null;
   const placement: Placement = playing ? playing.box : previewPlacement;
   const {x, y, scale} = placement;
@@ -1043,11 +944,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           <p key={entry.id}>{entry.text}</p>
         ))}
       </div>
-      {mode === 'play' && controls && (
-        <div ref={controlsRef} className={moduleStyles.playControls}>
-          {controls}
-        </div>
-      )}
       {mode === 'preview' && columnHeader && measured && (
         <div
           className={moduleStyles.columnHeader}
