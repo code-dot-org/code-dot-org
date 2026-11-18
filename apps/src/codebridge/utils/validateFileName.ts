@@ -58,7 +58,6 @@ export const validateFileName = ({
     if (!extension || extension === fileName) {
       return codebridgeI18n.noFileExtensionError();
     }
-    // Only images ignore case; Python Lab, for one, finds only lowercase .py.
     if (SUPPORTED_IMAGE_EXTENSIONS.includes(extension.toLowerCase())) {
       extension = extension.toLowerCase();
     }

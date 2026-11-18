@@ -115,7 +115,6 @@ export default function useImageUpload({
 
   const [openFileInput, FileInput] = useHiddenFileInput(
     handleFile,
-    // Extensions match case-insensitively, so .PNG and .JPG are pickable too.
     [...ACCEPTED_TYPES, '.png', '.jpg', '.jpeg'].join(','),
     false
   );
