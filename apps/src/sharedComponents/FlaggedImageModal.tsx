@@ -9,11 +9,6 @@ import i18n from '@cdo/locale';
 
 import moduleStyles from './FlaggedImageModal.module.scss';
 
-const SIGNED_OUT_TITLE = 'Image Not Allowed';
-const SIGNED_OUT_MESSAGE =
-  'This image was flagged as inappropriate by our content moderation. Please choose a different image.';
-const SIGNED_OUT_BUTTON_TEXT = 'OK';
-
 interface FlaggedImageModalProps {
   appName: string;
   onAccept: (appName: string) => void | Promise<void>;
@@ -27,6 +22,7 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   errorMessage,
   appName,
 }) => {
+  // We can't flag signed out projects as flagged, so we never allow signed out users to accept a flagged image.
   const isSignedOut = useAppSelector(
     state => state.currentUser.signInState === SignInState.SignedOut
   );
@@ -70,15 +66,19 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
         onClose={() => onCancel(appName)}
         title={
           isSignedOut
-            ? SIGNED_OUT_TITLE
+            ? 'Inappropriate Image'
             : i18n.animationPicker_flaggedImageModalTitle()
         }
-        description={isSignedOut ? SIGNED_OUT_MESSAGE : undefined}
+        description={
+          isSignedOut
+            ? 'This image has been flagged as inappropriate. Please choose a different image.'
+            : undefined
+        }
         customContent={isSignedOut ? undefined : acceptanceTerms}
         primaryButtonProps={
           isSignedOut
             ? {
-                children: SIGNED_OUT_BUTTON_TEXT,
+                children: 'OK',
                 onClick: () => onCancel(appName),
               }
             : {
