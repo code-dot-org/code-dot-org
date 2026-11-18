@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-17 01:31:17 UTC",
+    "serialized_at": "2026-11-17 22:04:44 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -10776,6 +10776,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "guide_to_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "intro_to_programming_day_1"
       }
     },
@@ -10957,6 +10963,12 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "design_your_program_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "guide_to_programming_levels"
       }
     },
     {

@@ -1,4 +1,7 @@
-import {ChatHandle} from '@cdo/apps/aichat/host/ChatHostContext';
+import {
+  ChatHandle,
+  ChatTranscript,
+} from '@cdo/apps/aichat/host/ChatHostContext';
 
 import {ValidationAttempt} from '../../progress/model';
 
@@ -28,10 +31,21 @@ export type WorkObserver = (
   listener: (work: StepWork) => void
 ) => () => void;
 
+/**
+ * Subscribes `listener` to the chat's transcript at each reply the tutor
+ * finishes on the open step from now on, and returns the unsubscribe.
+ */
+export type ReplyObserver = (
+  handles: LabHandles,
+  listener: (transcript: ChatTranscript) => void
+) => () => void;
+
 /** How a lab takes part in checking its work. */
 export interface WorkAdapter {
   /** How the lab reports work. */
   observeWork: WorkObserver;
+  /** How the lab reports the student talking with its tutor, if it does. */
+  observeReplies?: ReplyObserver;
   /**
    * How the lab tells the student a validation check has begun and waits for it, if it does.
    * Returns a callback to be invoked when the check is complete.
@@ -41,5 +55,10 @@ export interface WorkAdapter {
   reportAttempt?: (
     handles: LabHandles,
     attempt: Omit<ValidationAttempt, 'at'>
+  ) => void;
+  /** How the lab tells the student Continue opened on their chat, if it does. */
+  reportUnlock?: (
+    handles: LabHandles,
+    check: Omit<ValidationAttempt, 'at'>
   ) => void;
 }

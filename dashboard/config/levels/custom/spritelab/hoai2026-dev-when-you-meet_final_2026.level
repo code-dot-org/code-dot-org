@@ -175,7 +175,7 @@
         }
       ]
     },
-    "long_instructions": "# When you meet\r\nAnother **event**: when your player touches the other character, something happens.",
+    "long_instructions": "# When the characters meet\r\nUse an event to make something happen when your player touches another character.",
     "header_label": "When you meet",
     "embed": "false",
     "instructions_important": "false",

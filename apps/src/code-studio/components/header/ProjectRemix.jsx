@@ -20,13 +20,15 @@ class ProjectRemix extends React.Component {
     inRestrictedShareMode: PropTypes.bool,
     isBlockedAbuse: PropTypes.bool,
     exceedsAbuseThreshold: PropTypes.bool,
+    isBlockedShareFailure: PropTypes.bool,
     onChangedWidth: PropTypes.func,
   };
 
   remixBlocked = (props = this.props) =>
     props.inRestrictedShareMode ||
     props.isBlockedAbuse ||
-    props.exceedsAbuseThreshold;
+    props.exceedsAbuseThreshold ||
+    props.isBlockedShareFailure;
 
   // Re-measure the header width if remix availability changes,
   // as the remix button takes up space in the header.
@@ -108,6 +110,11 @@ export default connect(
     isBlockedAbuse: !!(state.lab && state.lab.isBlockedAbuse),
     exceedsAbuseThreshold: !!(
       state.project && state.project.exceedsAbuseThreshold
+    ),
+    isBlockedShareFailure: !!(
+      state.lab &&
+      state.lab.shareFailure &&
+      !(state.lab.channel && state.lab.channel.isOwner)
     ),
   }),
   {refreshProjectName}

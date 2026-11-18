@@ -60,6 +60,13 @@ describe('ProjectRemix', () => {
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
+  it("does not render for a non-owner when the project's text is flagged", () => {
+    const wrapper = shallow(
+      <ProjectRemix {...defaultProps} isBlockedShareFailure />
+    );
+    expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
   it('reports a width change when it stops being blocked', () => {
     const onChangedWidth = sinon.spy();
     const wrapper = shallow(

@@ -26,6 +26,7 @@ import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
 import SpriteLab2View from './SpriteLab2View';
+import useShareCheck, {checksOnLoad} from './useShareCheck';
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const isLevelEditMode = getIsLevelEditMode();
@@ -149,6 +150,8 @@ const SpriteLab2Container: React.FunctionComponent<
       updateSources(prev => ({...prev, ...patch}), forceSave),
     [updateSources]
   );
+
+  useShareCheck(channel?.id, checksOnLoad(levelProperties));
 
   useEffect(() => {
     if (loadError) {

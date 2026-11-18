@@ -4,6 +4,7 @@ import {
   moderationFallbackReason,
   sendAdaptiveEvent,
   sendAiStaticFallbackUsed,
+  sendContinueUnlocked,
   setAdaptiveMetricsContext,
 } from '@cdo/apps/adaptive/metricsHelpers';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
@@ -59,6 +60,27 @@ describe('adaptive metrics', () => {
     );
     expect(moderationFallbackReason('flagged')).toBe(
       'outputFlaggedByModeration'
+    );
+  });
+
+  it('sends an unlock with its reason as the value, the step and the counts', () => {
+    setAdaptiveMetricsContext({pathwayId: 'p', levelId: 1, scriptId: 2});
+    const step = {id: 's', title: 'S', kind: 'level', level: 'lvl'} as Step;
+    sendContinueUnlocked('limitReached', {id: 'c'} as Checkpoint, step, {
+      validationAttempts: 2,
+      replies: 10,
+    });
+    expect(analyticsReporter.sendEvent).toHaveBeenLastCalledWith(
+      'Adaptive Continue Unlocked',
+      expect.objectContaining({
+        checkpointId: 'c',
+        stepId: 's',
+        reason: 'limitReached',
+        validationAttempts: 2,
+        replies: 10,
+      }),
+      true,
+      'limitReached'
     );
   });
 
