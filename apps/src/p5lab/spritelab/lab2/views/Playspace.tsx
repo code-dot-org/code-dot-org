@@ -50,9 +50,11 @@ const PLAY_FOCUS_MS = 1000;
 const CANVAS = 400;
 const MARGIN = 12;
 // The editor strip's height ($editor-strip-height): the header over the
-// preview column, and the bar pinned to the overlay's foot, the editors'
-// scene bar's twin.
+// preview column.
 const EDITOR_STRIP_PX = 41;
+// The height ($foot-height) of the bar pinned to the overlay's foot, the
+// editors' scene bar's twin, until the bar is measured.
+const FOOT_BAR_PX = 53;
 // The arrow cross: three keys and two gaps across, as the stylesheet's
 // .arrowCross has them; the same size in every mode.
 const CROSS_KEY = 38;
@@ -454,7 +456,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   useEffect(() => () => belowObserver.current?.disconnect(), []);
   // The bar at the stage's foot is measured, because its buttons stack in
   // a narrow column and the bar grows taller to hold them.
-  const [bottomBarHeight, setBottomBarHeight] = useState(EDITOR_STRIP_PX);
+  const [bottomBarHeight, setBottomBarHeight] = useState(FOOT_BAR_PX);
   const bottomBarObserver = useRef<ResizeObserver | null>(null);
   const bottomBarRef = useCallback((el: HTMLDivElement | null) => {
     bottomBarObserver.current?.disconnect();
@@ -465,7 +467,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     const observer = new ResizeObserver(() => {
       // offsetHeight is the bar's full height, padding and border
       // included. That is how much room the bar takes up under the stage.
-      setBottomBarHeight(el.offsetHeight || EDITOR_STRIP_PX);
+      setBottomBarHeight(el.offsetHeight || FOOT_BAR_PX);
     });
     observer.observe(el);
     bottomBarObserver.current = observer;

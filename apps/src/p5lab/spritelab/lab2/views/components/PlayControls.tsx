@@ -9,7 +9,7 @@ interface PlayControlsProps {
   onRestartScene?: (event: React.MouseEvent<HTMLElement>) => void;
 }
 
-/** The restart buttons shown over the play area while playing. */
+/** The restart buttons shown beside Stop while playing. */
 const PlayControls: React.FunctionComponent<PlayControlsProps> = ({
   onRestartGame,
   onRestartScene,

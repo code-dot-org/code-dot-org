@@ -24,6 +24,9 @@ $list-share: 0.2;
 // The frame's rounded corners, and the border inside them.
 $frame-radius: 12px;
 $frame-border: 2px;
+// One row of the paint tools, and the space between it and the frame.
+$tools-row-height: 34px;
+$tools-row-gap: 8px;
 
 // The tab starts at the top of the editors' strip, which lies over its
 // first two columns; the pane column carries its own header there.
@@ -148,8 +151,10 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   color: var(--text-neutral-quaternary);
 }
 
-// The plus: a brand square like a dialog header's icon.
-.newButton {
+// The plus: a brand square like a dialog header's icon. The trash can is
+// the same size.
+.newButton,
+.deleteButton {
   flex: none;
   width: 40px;
   height: 40px;
@@ -157,20 +162,22 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   font-size: 20px;
 }
 
-// The trash can, in a row pinned to the column's bottom.
+// The trash can, in a row along the pane's foot, the height of the bars
+// at the foot of the other tabs.
 .listFooter {
   display: flex;
   flex: none;
   align-items: center;
   justify-content: flex-start;
-  min-height: 36px;
+  box-sizing: border-box;
+  height: strip.$foot-height;
   // A hairline separates the delete button's row from the images above.
-  // The row reaches past the list on both sides, through the tab's padding
-  // on the left and the gap between the columns on the right, so the
-  // hairline runs the full width of the list's pane. The padding keeps
-  // the button where it was.
-  margin: auto (-$column-gap) 0 (-$pad);
-  padding: 8px $column-gap 0 $pad;
+  // The row reaches past the list on three sides, through the tab's
+  // padding on the left and below and the gap between the columns on the
+  // right, so the hairline runs the full width of the list's pane. The
+  // padding keeps the button in line with the tiles.
+  margin: auto (-$column-gap) (-$pad) (-$pad);
+  padding: 0 $column-gap 0 $pad;
   border-top: 1px solid var(--border-neutral-primary);
 }
 
@@ -281,10 +288,9 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   min-width: 0;
   min-height: 0;
   // The well runs through the gap between the columns, so its gray reaches
-  // the hairline at the pane's left edge. The extra padding keeps its
-  // contents where they were.
+  // the hairline at the pane's left edge.
   margin: (-$pad) (-$column-gap) (-$pad) 0;
-  padding: $pad (16px + $column-gap) $pad 16px;
+  padding: $pad;
   background-color: var(--background-neutral-secondary);
 }
 
@@ -351,12 +357,16 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   object-fit: contain;
 }
 
-// The drawing tools, across the column above the frame.
+// The drawing tools, across the column above the frame. The row keeps
+// the height of one row of tools while it is empty.
 .above {
   display: flex;
+  flex: none;
   justify-content: center;
+  box-sizing: border-box;
   width: 100%;
-  padding-bottom: 8px;
+  min-height: $tools-row-height + $tools-row-gap;
+  padding-bottom: $tools-row-gap;
 }
 
 // The editor's canvas fills the frame, so the editor's own border and

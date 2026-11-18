@@ -29,6 +29,9 @@ interface ImageFrameProps {
   workspaceClassName?: string;
   /** Above the frame, across the column. */
   above?: React.ReactNode;
+  /** Keeps the row above the frame when it is empty, so the frame does not
+      move when the paint tools open. */
+  reserveAbove?: boolean;
   /** Over the frame, positioned by its own class. */
   overlay?: React.ReactNode;
   /** A tip shown over the frame's bottom part while a picture is made. */
@@ -44,6 +47,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   generating,
   workspaceClassName,
   above,
+  reserveAbove,
   overlay,
   tip,
   under,
@@ -57,7 +61,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   const aboveRef = useRef<HTMLDivElement>(null);
   const underRef = useRef<HTMLDivElement>(null);
   const [frameSide, setFrameSide] = useState<number>();
-  const hasAbove = !!above;
+  const hasAbove = !!above || !!reserveAbove;
   const hasUnder = !!under;
   useLayoutEffect(() => {
     const column = columnRef.current;
@@ -93,7 +97,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   return (
     <div className={styles.frameWell}>
       <div ref={columnRef} className={styles.frameColumn}>
-        {above && (
+        {hasAbove && (
           <div ref={aboveRef} className={styles.above}>
             {above}
           </div>

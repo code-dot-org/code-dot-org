@@ -685,6 +685,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 frame={shownFrame}
                 workspaceClassName={live ? styles.paintFrame : undefined}
                 above={above}
+                reserveAbove={!viewOnly}
                 live={
                   generating
                     ? parts.frame
@@ -885,7 +886,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         />
       ) : (
         <>
-          <ImageFrame image={null} />
+          <ImageFrame image={null} reserveAbove={!viewOnly} />
           {!viewOnly && (
             <section
               className={styles.pane}

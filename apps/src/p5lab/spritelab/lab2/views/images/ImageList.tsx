@@ -330,6 +330,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
             variant="contained"
             color="error"
             size="small"
+            className={styles.deleteButton}
             aria-label="Delete image"
             disabled={disabled}
             onClick={() => setConfirming(true)}

@@ -2516,24 +2516,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             onColumnWidth={setPreviewColumnWidth}
             side="right"
             columnShare={PREVIEW_SHARE}
-            controls={
-              <PlayControls
-                // On a pinned-scene level the game is that one scene, so there
-                // is no whole-game restart.
-                onRestartGame={
-                  pinnedSceneId
-                    ? undefined
-                    : event => handleRestartClick(event, handleRestartGame)
-                }
-                // On the scene the game starts on, restarting the scene is
-                // restarting the game, so the one button is enough.
-                onRestartScene={
-                  pinnedSceneId || playHasLeftTheFirstScene
-                    ? event => handleRestartClick(event, handleRestartScene)
-                    : undefined
-                }
-              />
-            }
             prompt={
               <PromptBar
                 prompt={activePrompt}
@@ -2553,6 +2535,26 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                     onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
                     playSceneHidden={activeScene.id === scenes[0].id}
                   />
+                  {playspaceMode === 'play' && (
+                    <PlayControls
+                      // On a pinned-scene level the game is that one scene,
+                      // so there is no whole-game restart.
+                      onRestartGame={
+                        pinnedSceneId
+                          ? undefined
+                          : event =>
+                              handleRestartClick(event, handleRestartGame)
+                      }
+                      // On the scene the game starts on, restarting the scene
+                      // is restarting the game, so the one button is enough.
+                      onRestartScene={
+                        pinnedSceneId || playHasLeftTheFirstScene
+                          ? event =>
+                              handleRestartClick(event, handleRestartScene)
+                          : undefined
+                      }
+                    />
+                  )}
                 </div>
                 <AskAiIndicator
                   status={askAiStatus}
