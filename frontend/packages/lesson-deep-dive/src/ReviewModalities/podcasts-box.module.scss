@@ -42,8 +42,13 @@ $purple: var(--background-brand-purple-primary);
 }
 
 @keyframes pulse {
-  0%, 100% { transform: scaleY(1); }
-  50%       { transform: scaleY(0.5); }
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.5);
+  }
 }
 
 .barAnimating {
