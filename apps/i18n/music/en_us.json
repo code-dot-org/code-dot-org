@@ -84,6 +84,7 @@
   "select": "Select",
   "undo": "Undo",
   "redo": "Redo",
+  "soundRemoved": "No longer available. Plays as silence.",
   "soundsFilterPacks": "Packs",
   "soundsFilterSounds": "Sounds",
   "soundsFilterAll": "All",

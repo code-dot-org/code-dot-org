@@ -186,11 +186,13 @@ export default class MusicPlayer {
       blockId: 'preview',
       soundType: 'beat',
     };
+    const sample = this.soundEventToSamples(preview)[0];
+    if (!sample) {
+      onStop?.();
+      return;
+    }
     this.analyticsReporter?.onSoundPlayed(id);
-    this.audioPlayer.playSampleImmediately(
-      this.soundEventToSamples(preview)[0],
-      onStop
-    );
+    this.audioPlayer.playSampleImmediately(sample, onStop);
   }
 
   previewChord(
@@ -346,6 +348,10 @@ export default class MusicPlayer {
     const soundData = library.getSoundForId(event.id);
     if (!soundData) {
       this.metricsReporter.logWarning('No sound for ID: ' + event.id);
+      return [];
+    }
+
+    if (library.isSoundRemoved(event.id)) {
       return [];
     }
 

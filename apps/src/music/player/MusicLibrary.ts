@@ -168,7 +168,7 @@ export default class MusicLibrary {
   // Determine the available sound types available in this library.
   // Only currently-allowed sounds from packs are included.
   private determineAvailableSoundTypes() {
-    const folders = this.getAvailableSounds();
+    const folders = this.getPlayableSounds();
 
     this.availableSoundTypes = {};
 
@@ -193,7 +193,7 @@ export default class MusicLibrary {
 
     // The fallback is the first available pack's first available non-preview sound.
     // We will skip restricted folders unless it's the currently selected pack.
-    const firstFolder = this.getAvailableSounds()[0];
+    const firstFolder = this.getPlayableSounds()[0];
     const firstSound = firstFolder?.sounds.find(
       sound => sound.type !== 'preview'
     );
@@ -279,6 +279,15 @@ export default class MusicLibrary {
         (!folder.restricted || this.currentPackId === folder.id) &&
         folder.id !== DEFAULT_PACK
     );
+  }
+
+  // The available sounds a student can choose, which excludes a removed pack.
+  getPlayableSounds() {
+    return this.getAvailableSounds().filter(folder => !folder.removed);
+  }
+
+  isSoundRemoved(id: string): boolean {
+    return !!this.getFolderForSoundId(id)?.removed;
   }
 
   getRestrictedPacks(): SoundFolder[] {
@@ -491,8 +500,8 @@ export interface SoundFolder {
   color?: string;
   restricted?: boolean;
   // A removed pack is left out of the pack picker, but projects and levels
-  // that already chose it keep it. Only restricted (artist) packs can be
-  // removed.
+  // that already chose it keep it, with its sounds playing as silence of the
+  // same length. Only restricted (artist) packs can be removed.
   removed?: boolean;
   sounds: SoundData[];
   bpm?: number;

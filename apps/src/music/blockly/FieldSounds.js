@@ -5,6 +5,7 @@ import color from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
+import musicI18n from '../locale';
 import MusicRegistry from '../MusicRegistry';
 import MusicLibrary from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
@@ -12,6 +13,8 @@ import SoundsPanel from '../views/SoundsPanel';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;
+// Font Awesome's volume-slash icon.
+const SILENT_ICON_CODE = '\u{F2E2}';
 
 /**
  * A custom field that renders the sample previewing and choosing UI, used in
@@ -220,13 +223,17 @@ class FieldSounds extends BlocklyCore.Field {
       height: 20,
     });
 
-    const soundType = MusicLibrary.getInstance()?.getSoundForId(
-      this.getValue()
-    )?.type;
+    const library = MusicLibrary.getInstance();
+    const soundType = library?.getSoundForId(this.getValue())?.type;
+    const isSilent = !!library?.isSoundRemoved(this.getValue());
 
     if (soundType === 'vocal') {
       this.textElement.setAttribute('font-style', 'italic');
     }
+    if (isSilent) {
+      this.textElement.setAttribute('opacity', '0.6');
+    }
+    this.setTooltip(isSilent ? musicI18n.soundRemoved() : null);
 
     // Attach the actual text.
     this.textElement.appendChild(document.createTextNode(fieldText));
@@ -260,25 +267,33 @@ class FieldSounds extends BlocklyCore.Field {
       },
       this.backgroundElement
     );
+    if (isSilent) {
+      this.rect.setAttribute('stroke', color.neutral_light);
+      this.rect.setAttribute('stroke-dasharray', '3 2');
+    }
 
     let iconElement;
 
-    // Add an icon for the sound type.
+    // Add an icon for the sound type, or a muted icon for a silent sound.
     if (soundType) {
       iconElement = BlocklyCore.utils.dom.createSvgElement('text', {
         fill: color.neutral_light,
-        x: 5 + SoundStyle[soundType].marginLeft,
+        x: 5 + (isSilent ? 0 : SoundStyle[soundType].marginLeft),
         y: 16,
         width: 20,
         height: 20,
       });
 
       iconElement.setAttribute('style', 'font-family: "Font Awesome 6 Pro"');
-      iconElement.classList.add(SoundStyle[soundType].classNameFill);
+      if (!isSilent) {
+        iconElement.classList.add(SoundStyle[soundType].classNameFill);
+      }
 
       // Attach the actual text.
       iconElement.appendChild(
-        document.createTextNode(SoundStyle[soundType].iconCode)
+        document.createTextNode(
+          isSilent ? SILENT_ICON_CODE : SoundStyle[soundType].iconCode
+        )
       );
     }
 
