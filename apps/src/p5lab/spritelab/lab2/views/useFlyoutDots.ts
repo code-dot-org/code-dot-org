@@ -9,9 +9,6 @@ import {installFlyoutDots} from '../blockly/flyoutDots';
 import {usedBlockTypes} from '../newBlocks';
 import {Scene} from '../types';
 
-// Room in the flyout's margin for the dots beside added blocks.
-export const DOTS_MARGIN_FACTOR = 2;
-
 export function useFlyoutDots({
   enabled,
   added,

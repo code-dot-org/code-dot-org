@@ -8,12 +8,14 @@ interface PaintPlaceholderProps {
       painted before the first frame; an <img> of the URL would take a
       frame to show, which reads as a flash of the empty frame. */
   picture?: HTMLImageElement | HTMLCanvasElement;
-  src: string;
+  /** The picture's address, for when it has not been decoded. */
+  src?: string;
   pixelated?: boolean;
 }
 
-/** What the frame shows over the tools' canvas until they have decoded
-    their own copy of the picture. */
+/** A picture laid over the frame until what is under it has been drawn:
+    over the tools' canvas while they decode their own copy, and over the
+    stored picture as the tools close. */
 const PaintPlaceholder: React.FunctionComponent<PaintPlaceholderProps> = ({
   picture,
   src,

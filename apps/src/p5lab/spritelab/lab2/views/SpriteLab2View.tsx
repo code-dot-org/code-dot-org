@@ -72,6 +72,7 @@ import {
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {endKeyboardNavigation} from '../blockly/endKeyboardNavigation';
+import {FLYOUT_DOTS_MARGIN_FACTOR} from '../blockly/flyoutDots';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {codeFromSavedScene} from '../blockly/savedSceneCode';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
@@ -171,7 +172,7 @@ import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
-import {DOTS_MARGIN_FACTOR, useFlyoutDots} from './useFlyoutDots';
+import {useFlyoutDots} from './useFlyoutDots';
 import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
@@ -457,7 +458,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
-  const [animationsSeeded, setAnimationsSeeded] = useState(false);
+  const [seeded, setSeeded] = useState(false);
+  // The preview column's width, which the playspace reports whether or not
+  // its preview shows.
+  const [previewColumnWidth, setPreviewColumnWidth] = useState(0);
+  // Stays true once the width has been reported, so a later 0 cannot
+  // dispose of the workspace.
+  const [columnMeasured, setColumnMeasured] = useState(false);
+  useEffect(() => {
+    if (previewColumnWidth > 0) {
+      setColumnMeasured(true);
+    }
+  }, [previewColumnWidth]);
+  // The lab's parts start together, once the project's images are seeded
+  // and the preview column's width is known: the workspace is then laid
+  // out once, at the width it keeps.
+  const animationsSeeded = seeded && columnMeasured;
   // Jump transition: the cover blanks the playspace while the target loads;
   // fadeTrigger increments on landing to play the fade-from-black.
   const [jumpCover, setJumpCover] = useState(false);
@@ -629,18 +645,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // The right-hand inset the editors leave empty for the preview column.
   const clearOfPreview = {right: previewWidth};
   // The Images tab's pane column, headed AI, at the right, is as wide as
-  // the preview column is or would be, which the playspace reports whether
-  // or not its preview shows.
-  const [previewColumnWidth, setPreviewColumnWidth] = useState(0);
+  // the preview column is or would be.
   const paneWidthPx = previewColumnWidth || DEFAULT_PANE_WIDTH;
-  // Stays true once the width has been reported: a later 0, as when the
-  // lab is hidden, must not take the workspace down.
-  const [columnMeasured, setColumnMeasured] = useState(false);
-  useEffect(() => {
-    if (previewColumnWidth > 0) {
-      setColumnMeasured(true);
-    }
-  }, [previewColumnWidth]);
   const clearOfPane = {right: paneWidthPx};
   // Free play keeps the instructions out of the way: the panel starts
   // collapsed to its tab, which expands it again. The view stays mounted
@@ -1125,7 +1131,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
     };
     if (savedSongs.length === 0) {
-      setAnimationsSeeded(true);
+      setSeeded(true);
     } else {
       musicSeededRef.current = true;
       musicOptions().then(music => {
@@ -1133,7 +1139,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           return;
         }
         dispatch(setMusicProjects(withUnavailableSongs(music, savedSongs)));
-        setAnimationsSeeded(true);
+        setSeeded(true);
       });
     }
     return () => {
@@ -1305,15 +1311,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     undo,
     redo,
   } = useBlocklyWorkspace({
-    // The workspace waits for the preview column's width, so it is laid
-    // out once, at the width it keeps.
-    enabled: animationsSeeded && columnMeasured,
+    enabled: animationsSeeded,
     toolboxDefinition: injectedToolbox,
     hiddenBlockTypes: heldBackBlocks,
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
     readOnly: isViewOnly,
-    flyoutMarginFactor: catalogOn ? DOTS_MARGIN_FACTOR : undefined,
+    flyoutMarginFactor: catalogOn ? FLYOUT_DOTS_MARGIN_FACTOR : undefined,
   });
 
   const WorkspaceAlert = useLevelEditMode<SpriteLab2LevelProperties>(
@@ -2419,8 +2423,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
               pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
-              // The code keeps clear of the preview's column.
-              ...clearOfPreview,
+              // The code keeps clear of the preview's column on every tab,
+              // so the workspace keeps one width.
+              right: previewColumnWidth,
             }}
           >
             {animationsSeeded && (

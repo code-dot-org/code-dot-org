@@ -322,22 +322,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
-  // A copy of the tools' canvas as Done was pressed, shown over the image's
-  // picture until that picture has been drawn.
-  const [doneCover, setDoneCover] = useState<{
-    key: string;
-    canvas: HTMLCanvasElement;
-  } | null>(null);
-  const releaseDoneCover = useCallback(() => setDoneCover(null), []);
-  const editorSnapshotRef = useRef<(() => HTMLCanvasElement | null) | null>(
-    null
-  );
-  const finishDrawing = () => {
-    const canvas = editorSnapshotRef.current?.();
-    const key = drawing?.target.key;
-    setDoneCover(canvas && key ? {key, canvas} : null);
-    tools.finishDrawing();
-  };
+  const {closedPicture, releaseClosedPicture} = tools;
+  // The copy belongs to the image the tools closed on.
+  useEffect(() => releaseClosedPicture, [chosenId, releaseClosedPicture]);
 
   const [uploadError, setUploadError] = useState<{text: string} | null>(null);
   const [uploadStatus, setUploadStatus] = useState('');
@@ -703,11 +690,13 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 above={above}
                 reserveAbove={!viewOnly}
                 cover={
-                  !live && !generating && doneCover?.key === chosenImage?.key
-                    ? doneCover?.canvas
+                  !live &&
+                  !generating &&
+                  closedPicture?.key === chosenImage?.key
+                    ? closedPicture?.canvas
                     : undefined
                 }
-                onCoverDone={releaseDoneCover}
+                onCoverDone={releaseClosedPicture}
                 live={
                   generating
                     ? parts.frame
@@ -768,7 +757,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                         );
                       }
                     : drawing && !paintsInPlace
-                    ? finishDrawing
+                    ? tools.finishDrawing
                     : undefined
                 }
                 drawLabel={
@@ -838,7 +827,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 >
                   {editor => {
                     tools.attachEditor(editor);
-                    editorSnapshotRef.current = editor.snapshot;
                     return (
                       <>
                         {frame(

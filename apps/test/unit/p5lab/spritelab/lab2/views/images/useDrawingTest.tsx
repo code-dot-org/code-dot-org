@@ -115,6 +115,24 @@ describe('useDrawing', () => {
     expect(tools().placeholderPicture).toBeUndefined();
   });
 
+  it('hands over a copy of the canvas when Done closes the tools, and not when a picture replaces the drawing', async () => {
+    const {tools} = setup();
+    const copy = document.createElement('canvas');
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({save: jest.fn(), snapshot: () => copy});
+    await act(async () => tools().finishDrawing());
+    expect(tools().drawing).toBeNull();
+    expect(tools().closedPicture).toEqual({key: target.key, canvas: copy});
+    act(() => tools().releaseClosedPicture());
+    expect(tools().closedPicture).toBeNull();
+
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({save: jest.fn(), snapshot: () => copy});
+    act(() => tools().abandonDrawing());
+    expect(tools().drawing).toBeNull();
+    expect(tools().closedPicture).toBeNull();
+  });
+
   it('uploads the file at most every few seconds, and on the last save', async () => {
     jest.useFakeTimers();
     jest.setSystemTime(100000);

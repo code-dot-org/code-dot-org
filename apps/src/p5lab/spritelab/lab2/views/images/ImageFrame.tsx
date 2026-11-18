@@ -8,7 +8,10 @@ import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
 import {standingFrameIndex} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import StripFrame from '@cdo/apps/p5lab/spritelab/lab2/views/StripFrame';
-import {checkerCellFraction} from '@cdo/apps/pixelEditor/displayGrid';
+import {
+  checkerCellFraction,
+  pixelGridFor,
+} from '@cdo/apps/pixelEditor/displayGrid';
 
 import PaintPlaceholder from './PaintPlaceholder';
 import {ProjectImage} from './projectImages';
@@ -47,25 +50,41 @@ interface ImageFrameProps {
   onCoverDone?: () => void;
 }
 
-// A canvas is this size until something is drawn on it.
+// A canvas is this size until its size is set, which the frame's pictures
+// do as they are drawn.
 const NEW_CANVAS_SIZE = {width: 300, height: 150};
 // A picture that has not been drawn after this many animation frames is
 // taken to have failed, and the cover is dropped.
 const COVER_MAX_FRAMES = 30;
 
-/** The side of a checkerboard square behind `image` as the paint tools
-    draw it, as a fraction of the picture's longer side. */
-function checkerFractionOf(image: ProjectImage | null): number | undefined {
-  const size = image?.props.frameSize;
+/**
+ * The frame's checkerboard as the paint tools draw it behind `image`: the
+ * tile's side, and where the tiles start so that one starts at the
+ * picture's corner. Undefined for a picture of unknown size.
+ */
+function checkerOf(image: ProjectImage | null): React.CSSProperties {
+  // The tools open one frame of a character set, and all of anything else.
+  const size =
+    image?.sheet?.frameSize ??
+    image?.props.sourceSize ??
+    image?.props.frameSize;
   if (!size) {
-    return undefined;
+    return {};
   }
-  const grid = image.props.pixelGridSize;
-  return checkerCellFraction(
-    size.x / (grid || 1),
-    size.y / (grid || 1),
-    !!grid
-  );
+  const grid = pixelGridFor(size.x, size.y, image?.props.pixelGridSize);
+  const width = size.x / (grid ?? 1);
+  const height = size.y / (grid ?? 1);
+  const longer = Math.max(width, height);
+  // A tile is two squares a side, as a share of the frame's side.
+  const tile = 2 * checkerCellFraction(width, height, !!grid);
+  // The picture is centered in the frame. A background position in percent
+  // moves the tiles by that share of the frame's side less one tile.
+  const start = (side: number) => `${(50 * (1 - side / longer)) / (1 - tile)}%`;
+  return {
+    '--checker-tile': `${100 * tile}%`,
+    '--checker-x': start(width),
+    '--checker-y': start(height),
+  } as React.CSSProperties;
 }
 
 const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
@@ -124,7 +143,8 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
     // row that appears later is watched from then on.
   }, [hasAbove, hasUnder]);
   const filled = live ? !generating : !!image;
-  const checkerFraction = checkerFractionOf(image);
+  const checker = checkerOf(image);
+  const checkerMatched = Object.keys(checker).length > 0;
 
   const pictureRef = useRef<HTMLDivElement>(null);
   const onCoverDoneRef = useRef(onCoverDone);
@@ -136,7 +156,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
     const drawn = () => {
       const picture = pictureRef.current?.querySelector('img, canvas');
       if (picture instanceof HTMLImageElement) {
-        return picture.complete;
+        return picture.complete && picture.naturalWidth > 0;
       }
       if (picture instanceof HTMLCanvasElement) {
         return (
@@ -172,19 +192,10 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
             className={classNames(
               styles.frame,
               filled && styles.frameFilled,
-              checkerFraction !== undefined && styles.frameMatched,
+              checkerMatched && styles.frameMatched,
               workspaceClassName
             )}
-            style={
-              {
-                width: frameSide,
-                height: frameSide,
-                // A checkerboard tile is two squares a side.
-                ...(checkerFraction !== undefined && {
-                  '--checker-tile': `${200 * checkerFraction}%`,
-                }),
-              } as React.CSSProperties
-            }
+            style={{width: frameSide, height: frameSide, ...checker}}
           >
             {/* role="img" is on the picture's own box, not the frame, so
                 controls the frame holds are not hidden from assistive
@@ -223,11 +234,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
                 ) : null)}
             </div>
             {cover && (
-              <PaintPlaceholder
-                picture={cover}
-                src=""
-                pixelated={image?.pixelated}
-              />
+              <PaintPlaceholder picture={cover} pixelated={image?.pixelated} />
             )}
             {overlay}
             {/* A live region, so a screen reader hears each tip as it

@@ -13,7 +13,7 @@ import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import ColorPicker from './ColorPicker';
-import {checkerCellSize, displayScale} from './displayGrid';
+import {checkerCellSize, displayScale, pixelGridFor} from './displayGrid';
 import {NATIVE_PIXEL_GRID, downsampleToGrid} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
 import {
@@ -536,15 +536,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       backing.height = height;
       const ctx = backing.getContext('2d', {willReadFrequently: true});
       ctx?.drawImage(source, 0, 0);
-      // Trust the metadata only when it divides the image cleanly (a resize
-      // elsewhere would otherwise smear the downsample). A grid of 1 is
-      // pixel art already at its logical size: nothing to downsample.
-      const grid =
-        knownPixelGrid &&
-        width % knownPixelGrid === 0 &&
-        height % knownPixelGrid === 0
-          ? knownPixelGrid
-          : null;
+      // A grid of 1 is pixel art already at its logical size: nothing to
+      // downsample.
+      const grid = pixelGridFor(width, height, knownPixelGrid);
       const raster =
         grid && grid > 1 ? ctx?.getImageData(0, 0, width, height) : null;
       if (raster && grid) {

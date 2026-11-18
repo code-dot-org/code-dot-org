@@ -1,6 +1,7 @@
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 @use './editor-strip' as strip;
+@use 'sass:math';
 
 // A browser draws scrollbars, and its own menus and fields, for a light page
 // unless color-scheme tells it the page is dark. The theme sets its colors
@@ -42,6 +43,8 @@
 // bar's buttons: five of them, centered, clear the footer's controls.
 // Under it, the lab's row moves up and the footer has its own row.
 $share-one-row-min-width: 1180px;
+// The height of the footer's controls.
+$share-footer-control: 26px;
 
 .labRowShareView {
   @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
@@ -53,7 +56,8 @@ $share-one-row-min-width: 1180px;
 @media screen and (min-width: $share-one-row-min-width) {
   // `html` so this outranks the page's own footer rule on a dark page.
   :global(html body.spritelab2-share #page-small-footer .small-footer-base) {
-    margin-bottom: 13px;
+    // Centers the footer's controls on the bar's row.
+    margin-bottom: math.div(strip.$foot-height - $share-footer-control, 2);
     // The footer's box is wider than its controls and lies over the bar's
     // buttons, so only the controls take clicks.
     pointer-events: none;

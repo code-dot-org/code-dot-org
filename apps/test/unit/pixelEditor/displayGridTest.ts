@@ -2,6 +2,7 @@ import {
   checkerCellFraction,
   checkerCellSize,
   displayScale,
+  pixelGridFor,
 } from '@cdo/apps/pixelEditor/displayGrid';
 
 describe('displayGrid', () => {
@@ -22,9 +23,16 @@ describe('displayGrid', () => {
   });
 
   it("gives a cell's side as a fraction of the picture's longer side", () => {
-    expect(checkerCellFraction(64, 64, true)).toBeCloseTo(1 / 64);
-    expect(checkerCellFraction(90, 60, true)).toBeCloseTo(1 / 90);
-    expect(checkerCellFraction(320, 320, true)).toBeCloseTo(2 / 320);
-    expect(checkerCellFraction(1024, 512, false)).toBeCloseTo(16 / 1024);
+    expect(checkerCellFraction(64, 64, true)).toBeCloseTo(1 / 64, 10);
+    expect(checkerCellFraction(90, 60, true)).toBeCloseTo(1 / 90, 10);
+    expect(checkerCellFraction(320, 320, true)).toBeCloseTo(2 / 320, 10);
+    expect(checkerCellFraction(1024, 512, false)).toBeCloseTo(16 / 1024, 10);
+  });
+
+  it('takes a known grid only when it divides the picture cleanly', () => {
+    expect(pixelGridFor(640, 640, 10)).toBe(10);
+    expect(pixelGridFor(64, 64, 1)).toBe(1);
+    expect(pixelGridFor(645, 640, 10)).toBeNull();
+    expect(pixelGridFor(640, 640)).toBeNull();
   });
 });

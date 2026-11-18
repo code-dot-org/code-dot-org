@@ -19,3 +19,14 @@
 @mixin light-checkerboard($cell) {
   @include checkerboard($cell, var(--neutral-gray-10), var(--neutral-base-white));
 }
+
+// The light checkerboard as the paint editor draws it, its first square
+// tinted. $tile is two squares a side and may be a custom property.
+@mixin light-checkerboard-tiles($tile) {
+  background-color: var(--neutral-base-white);
+  background-image: repeating-conic-gradient(
+    transparent 0 25%,
+    var(--neutral-gray-10) 0 50%
+  );
+  background-size: $tile $tile;
+}
