@@ -19,7 +19,14 @@ class SectionTest < ActiveSupport::TestCase
   test 'lesson_tutor_available? is true for a section assigned an AIF course' do
     unit_group = create(:single_unit_course, :with_course_offering, family_name: 'ai-tutor-section', version_year: '2026')
     unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    unit_group.first_unit.update!(tutor_plus_available: true)
     assert create(:section, unit_group: unit_group).lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a section assigned an AIF course whose units lack tutor_plus_available' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'ai-no-tutor-section', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    refute create(:section, unit_group: unit_group).lesson_tutor_available?
   end
 
   test 'lesson_tutor_available? is false for a section assigned a non-AI course' do

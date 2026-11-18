@@ -1617,6 +1617,7 @@ class LessonTest < ActiveSupport::TestCase
   private def ai_course_unit(marketing_initiative)
     unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-course-#{marketing_initiative.downcase}", version_year: '2026')
     unit_group.course_version.course_offering.update!(marketing_initiative: marketing_initiative)
+    unit_group.first_unit.update!(tutor_plus_available: true)
     unit_group.first_unit
   end
 end

@@ -33,9 +33,9 @@ class LessonsControllerTest < ActionController::TestCase
 
     User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
     User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(true)
-    # The lesson tutor deep dive is scoped to AIF/AID student courses, so tutor
-    # tests need a course whose offering carries an AI marketing initiative.
-    @ai_script = create(:script, name: 'ai-unit-1')
+    # The lesson tutor deep dive is scoped to units with tutor_plus_available in
+    # AIF/AID student courses, so tutor tests need both.
+    @ai_script = create(:script, name: 'ai-unit-1', tutor_plus_available: true)
     @ai_course = create(:single_unit_course, :with_course_offering, unit: @ai_script)
     @ai_course.course_version.course_offering.update!(marketing_initiative: 'AIF')
     ai_lesson_group = create(:lesson_group, script: @ai_script)

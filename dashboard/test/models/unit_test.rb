@@ -2780,6 +2780,7 @@ class UnitTest < ActiveSupport::TestCase
     %w[AIF AID].each_with_index do |initiative, i|
       unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-tutor-#{i}", version_year: '2026')
       unit_group.course_version.course_offering.update!(marketing_initiative: initiative)
+      unit_group.first_unit.update!(tutor_plus_available: true)
       assert unit_group.first_unit.lesson_tutor_available?, "expected #{initiative} course to offer the lesson tutor"
     end
   end
@@ -2787,17 +2788,25 @@ class UnitTest < ActiveSupport::TestCase
   test 'lesson_tutor_available? is false for non-AI course offerings' do
     unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai', version_year: '2026')
     unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
+    unit_group.first_unit.update!(tutor_plus_available: true)
     refute unit_group.first_unit.lesson_tutor_available?
   end
 
   test 'lesson_tutor_available? is false for PL courses even with an AI marketing initiative' do
     unit_group = create(:single_unit_course, :pl_course, :with_course_offering, family_name: 'ai-pl', version_year: '2026')
     unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    unit_group.first_unit.update!(tutor_plus_available: true)
     refute unit_group.first_unit.lesson_tutor_available?
   end
 
   test 'lesson_tutor_available? is false for a unit with no course version' do
-    refute create(:unit).lesson_tutor_available?
+    refute create(:unit, tutor_plus_available: true).lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for an AIF unit without tutor_plus_available' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'ai-no-tutor', version_year: '2026')
+    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+    refute unit_group.first_unit.lesson_tutor_available?
   end
 
   private def has_unlaunched_unit?(units)
