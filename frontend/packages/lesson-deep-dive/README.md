@@ -150,7 +150,7 @@ The msw fixture's unit and section ids are invented. To regenerate it, request
 the bootstrap route above as a teacher.
 
 To see the AI Assessment panel in dashboard mode, set
-`openai_measures_of_learning_api_key` in `locals.yml` and submit a final
+`openai_lesson_deep_dive_api_key` in `locals.yml` and submit a final
 response through the student flow.
 
 ### Styling, and what it is not
