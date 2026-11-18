@@ -103,7 +103,7 @@ export default function useImageUpload({
       if (!file || !kind) {
         return;
       }
-      if (!ACCEPTED_TYPES.includes(file.type)) {
+      if (!ACCEPTED_TYPES.includes(file.type.toLowerCase())) {
         onError(UPLOAD_ERRORS.wrongType);
         return;
       }
@@ -152,7 +152,7 @@ export default function useImageUpload({
 
   const [openFileInput, FileInput] = useHiddenFileInput(
     handleFile,
-    ACCEPTED_TYPES.join(','),
+    [...ACCEPTED_TYPES, '.png', '.jpg', '.jpeg'].join(','),
     false
   );
 
