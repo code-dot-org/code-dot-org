@@ -1,9 +1,9 @@
 import {fireEvent, render, screen} from '@testing-library/react';
-import {type Mock, vi} from 'vitest';
+import {vi} from 'vitest';
 
 import VideosBox from '../VideosBox';
 
-const mockTutorVideo = vi.fn() as Mock;
+const mockTutorVideo = vi.fn();
 
 const MockVideoPlayer = (props: {href: string}) => {
   mockTutorVideo(props);
