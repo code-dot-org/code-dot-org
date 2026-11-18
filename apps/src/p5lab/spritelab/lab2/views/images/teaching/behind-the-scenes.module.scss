@@ -68,6 +68,12 @@
   font-size: 13px;
   line-height: 1.5;
   user-select: text;
+
+  // Named so they outrank the lab's rule against selecting its text.
+  p,
+  span {
+    user-select: text;
+  }
 }
 
 .promptNote {
