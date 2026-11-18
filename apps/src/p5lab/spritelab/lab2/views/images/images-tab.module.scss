@@ -522,6 +522,14 @@ $list-button-icon: 20px;
   gap: 10px;
 }
 
+// A label too long for one line in a narrow pane wraps, and its button
+// grows to hold it. Nested under the pane to outrank the library button's
+// fixed height.
+.pane .paneBottom button {
+  height: auto;
+  line-height: 1.25;
+}
+
 // The quieter neutral: Generate is the main call to action. Nested under
 // the pane to outrank the library button's own colors.
 .pane .drawButton {
