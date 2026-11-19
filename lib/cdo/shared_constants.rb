@@ -756,6 +756,8 @@ module SharedConstants
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   STUDENT_SNAPSHOT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  # Tutor+ only. OpenAI publishes no dated snapshot of this model.
+  LESSON_DEEP_DIVE_MODEL_VERSION = 'gpt-6-luna'
 
   AI_EVALUATION_TYPES = {
     SINGLE_STUDENT: 'single_student',
