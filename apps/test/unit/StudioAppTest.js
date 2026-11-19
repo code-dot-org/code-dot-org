@@ -5,6 +5,7 @@ import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import project from '@cdo/apps/code-studio/initApp/project';
+import localization from '@cdo/apps/localization';
 import * as redux from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
@@ -632,6 +633,62 @@ describe('StudioApp', () => {
       codeDifferentStub.returns(false);
       expect(studio.validateCodeChanged()).to.be.false;
       expect(codeDifferentStub).to.have.been.called;
+    });
+  });
+
+  describe('The StudioApp.setStartBlocks_ function', () => {
+    const sayXml = text =>
+      '<xml><block type="gamelab_spriteSay">' +
+      '<value name="TEXT"><block type="text">' +
+      `<field name="TEXT">${text}</field>` +
+      '</block></value></block></xml>';
+
+    let studio, loadBlocksStub;
+    beforeEach(() => {
+      studio = studioApp();
+      loadBlocksStub = sinon.stub(studio, 'loadBlocks');
+      sinon.stub(studio, 'arrangeBlockPosition').callsFake(xml => xml);
+      sinon.stub(localization, 'isLocalizeJS').returns(true);
+      sinon
+        .stub(localization, 'translate')
+        .callsFake(text => (text === 'Hello' ? 'Hola' : text));
+    });
+
+    afterEach(() => {
+      studio.loadBlocks.restore();
+      studio.arrangeBlockPosition.restore();
+      localization.isLocalizeJS.restore();
+      localization.translate.restore();
+    });
+
+    it('translates authored start blocks', () => {
+      studio.setStartBlocks_({level: {startBlocks: sayXml('Hello')}}, true);
+      expect(loadBlocksStub.firstCall.args[0]).to.contain('Hola');
+    });
+
+    it('loads a last attempt untranslated', () => {
+      const lastAttempt = sayXml('Hello');
+      studio.setStartBlocks_(
+        {level: {startBlocks: sayXml('Hello'), lastAttempt}},
+        true
+      );
+      expect(loadBlocksStub.firstCall.args[0]).to.equal(lastAttempt);
+      expect(localization.translate).to.have.not.been.calledWith('Hello');
+    });
+
+    it('translates authored start blocks when resetting', () => {
+      studio.setStartBlocks_(
+        {level: {startBlocks: sayXml('Hello'), lastAttempt: sayXml('Hi')}},
+        false
+      );
+      expect(loadBlocksStub.firstCall.args[0]).to.contain('Hola');
+    });
+
+    it('leaves start blocks alone when localization is off', () => {
+      localization.isLocalizeJS.returns(false);
+      const startBlocks = sayXml('Hello');
+      studio.setStartBlocks_({level: {startBlocks}}, true);
+      expect(loadBlocksStub.firstCall.args[0]).to.equal(startBlocks);
     });
   });
 });

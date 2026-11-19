@@ -553,10 +553,7 @@ StudioApp.prototype.init = function (config) {
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
     // Hook the blockly environment into the localization engine
-    if (
-      localization.isLocalizeJS() ||
-      experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)
-    ) {
+    if (isLocalizingBlocks()) {
       localization.on('change', info => {
         const blockDefinitions =
           BlocklyUtils.getBlockDefinitionsForUpdatedLocale(info.rtl);
@@ -1350,7 +1347,7 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source) {
-  loadBlocksToWorkspace(Blockly.mainBlockSpace, localizeBlockStrings(source));
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
 };
 
 /**
@@ -2926,6 +2923,13 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
   this.checkForEmptyBlocks_ = checkBlocks;
 };
 
+function isLocalizingBlocks() {
+  return (
+    localization.isLocalizeJS() ||
+    experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)
+  );
+}
+
 /**
  * Add the starting block(s).  Don't load lastAttempt for Jigsaw levels or the
  * level will advance as soon as it's loaded.
@@ -2944,8 +2948,15 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     startBlocks = stripUserCreated(startBlocks);
   }
   // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
-  if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
-    startBlocks = config.level.lastAttempt || startBlocks;
+  if (
+    loadLastAttempt &&
+    config.levelGameName !== 'Jigsaw' &&
+    config.level.lastAttempt
+  ) {
+    startBlocks = config.level.lastAttempt;
+  } else if (isLocalizingBlocks() && stringIsXml(startBlocks)) {
+    // A last attempt is the student's own work and loads as saved.
+    startBlocks = localizeBlockStrings(startBlocks);
   }
 
   // Only used in Sprite Lab.
