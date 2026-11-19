@@ -18,15 +18,12 @@ module Services
         app_info = Cdo::UserAgentParser.new.parse_app(user_agent)
         return unless app_info
 
-        anonymous_level_client = ::AnonymousLevel::Client.find_or_create_by(anon_user_id:) do |client|
+        ::AnonymousLevel::Client.find_or_create_by!(anon_user_id:) do |client|
           client.name           = app_info.name
           client.install_source = app_info.install_source
         end
-      rescue ActiveRecord::RecordNotUnique
-        anonymous_level_client
       rescue ActiveRecord::RecordInvalid => exception
         raise unless exception.record.errors.of_kind?(:anon_user_id, :taken)
-        anonymous_level_client
       end
     end
   end

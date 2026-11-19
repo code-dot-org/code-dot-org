@@ -97,39 +97,27 @@ class Services::AnonymousLevel::ClientRecordingTest < ActiveSupport::TestCase
       end
     end
 
-    context 'when another request creates matching client first' do
-      before do
-        AnonymousLevel::Client.stubs(:find_or_create_by).with(anon_user_id:).raises(ActiveRecord::RecordNotUnique.new)
+    context 'when another request creates matching client before this one validates' do
+      # Inserts the other request's row after this one's lookup missed it.
+      let(:other_request) do
+        ->(client) {AnonymousLevel::Client.insert!({anon_user_id: client.anon_user_id, name: client.name})}
       end
+
+      before {AnonymousLevel::Client.set_callback(:validation, :before, other_request)}
+      after {AnonymousLevel::Client.skip_callback(:validation, :before, other_request)}
 
       it 'returns nil' do
         _(record_client).must_be_nil
       end
     end
 
-    context 'when uniqueness validation detects matching client created by another request' do
-      before do
-        create(:anonymous_level_client, :amazon_mobile_app, anon_user_id:)
-        # find_or_create_by finds through a relation; missing the row there is what the race looks like.
-        AnonymousLevel::Client.const_get(:ActiveRecord_Relation).any_instance.stubs(:find_by).returns(nil)
-      end
-
-      it 'returns unsaved client' do
-        client = record_client
-
-        _(client).wont_be :persisted?
-        _(client.errors[:anon_user_id]).must_include 'has already been taken'
-      end
-    end
-
     context 'when client fails another validation' do
       let(:anon_user_id) {'invalid'}
 
-      it 'returns unsaved client without raising' do
-        client = record_client
+      it 'raises validation error' do
+        error = _ {record_client}.must_raise ActiveRecord::RecordInvalid
 
-        _(client).wont_be :persisted?
-        _(client.errors[:anon_user_id]).must_include 'is invalid'
+        _(error.record.errors[:anon_user_id]).must_include 'is invalid'
       end
     end
   end
