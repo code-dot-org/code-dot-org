@@ -576,7 +576,6 @@ $list-button-icon: 20px;
   margin-right: 10px;
   font-size: 16px;
   font-weight: 600;
-  user-select: none;
 }
 
 // Nested under the bar to outrank the library button's own colors.
@@ -651,7 +650,6 @@ $list-button-icon: 20px;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  user-select: none;
 
   &:hover {
     border-color: var(--border-neutral-secondary);
@@ -697,7 +695,6 @@ $frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
 
 .frameGroupTitle {
   color: var(--text-neutral-quaternary);
-  user-select: none;
 }
 
 .frameGroupTiles {

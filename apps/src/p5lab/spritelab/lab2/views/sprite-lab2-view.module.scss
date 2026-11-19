@@ -26,6 +26,36 @@
   width: 100%;
   height: 100%;
   min-height: 0;
+  // The lab is controls, not text to copy, so a drag across it selects
+  // nothing. Safari reads only the prefixed property.
+  -webkit-user-select: none;
+  user-select: none;
+
+  // code-studio.css sets `p, pre, span` back to selectable, so they are
+  // named too. `:where` adds no specificity, so an ordinary class in a
+  // part of the lab can make its text selectable again.
+  :where(p, pre, span) {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  // The instructions are text to copy, and a field's text is selected to
+  // change it.
+  :global(#instructions),
+  :global(#instructions) *,
+  input,
+  textarea {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
+  // The panel around the instructions also has the id `instructions`, so
+  // the rule above matches its header. The header is a label, not text to
+  // copy.
+  :global(#instructions .panelContainerHeader) * {
+    -webkit-user-select: none;
+    user-select: none;
+  }
 
   .tabShell {
     flex: 1;
@@ -120,14 +150,6 @@ $tab-item-height: 34px;
   // The tabs are distinct destinations, not a continuous strip: separate them
   // enough to be told apart at a glance.
   gap: 10px;
-  // Tab labels and controls, not text to copy. code-studio.css sets
-  // `p, pre, span` back to selectable, so the labels are named too.
-  user-select: none;
-
-  span,
-  p {
-    user-select: none;
-  }
 }
 
 
@@ -166,24 +188,6 @@ $z-over-blockly: 71;
   color: var(--text-neutral-quaternary);
   border: 1px solid var(--borders-neutral-primary);
   border-top: none;
-  // The tabs and the bar's title are controls and a label, not text to
-  // copy. code-studio.css sets `p, pre, span` back to selectable, so they
-  // are named too. Safari reads only the prefixed property.
-  -webkit-user-select: none;
-  user-select: none;
-
-  span,
-  p {
-    -webkit-user-select: none;
-    user-select: none;
-  }
-
-  // A field's text is selected to change it.
-  input,
-  textarea {
-    -webkit-user-select: text;
-    user-select: text;
-  }
 }
 
 // The editors' strip: a column header beside it draws the line between
@@ -290,18 +294,6 @@ $z-over-blockly: 71;
   line-height: 1;
 }
 
-// The scene dropdown's name is a control, not text to copy, wherever the
-// dropdown stands. code-studio.css sets `p, span` back to selectable, so
-// the name's span is named too.
-.sceneDropdown {
-  user-select: none;
-
-  span,
-  p {
-    user-select: none;
-  }
-}
-
 // The trigger reads as one of the bar's buttons. Higher specificity than
 // the dropdown's own container rules.
 .sceneDropdown > button.sceneTrigger {
@@ -334,7 +326,6 @@ $z-over-blockly: 71;
 .sceneMenu {
   margin: 0;
   padding: 4px 0;
-  user-select: none;
   min-width: 200px;
   max-height: 60vh;
   overflow-y: auto;
