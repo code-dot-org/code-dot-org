@@ -25,21 +25,9 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   packFolder,
 }) => {
   const library = MusicLibrary.getInstance();
-
-  if (packFolder.removed) {
-    return (
-      <div
-        className={classNames(
-          moduleStyles.currentPack,
-          moduleStyles.currentPackRemoved
-        )}
-        title={musicI18n.packRemovedDescription()}
-      >
-        <FontAwesomeV6Icon iconName="volume-slash" iconStyle="solid" />
-        <Typography variant="body4">{musicI18n.packRemoved()}</Typography>
-      </div>
-    );
-  }
+  const removedDescription = packFolder.removed
+    ? musicI18n.packRemovedDescription()
+    : undefined;
 
   let packImageSrc = null;
 
@@ -53,12 +41,26 @@ const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
   }
 
   return (
-    <div data-notranslate className={moduleStyles.currentPack}>
+    <div
+      data-notranslate
+      className={classNames(
+        moduleStyles.currentPack,
+        packFolder.removed && moduleStyles.currentPackRemoved
+      )}
+      title={removedDescription}
+    >
       {packImageSrc && (
         <img
           src={packImageSrc}
           className={moduleStyles.buttonWideImage}
           alt=""
+        />
+      )}
+      {packFolder.removed && (
+        <FontAwesomeV6Icon
+          iconName="circle-info"
+          iconStyle="solid"
+          title={removedDescription}
         />
       )}
       <Typography variant="body4">

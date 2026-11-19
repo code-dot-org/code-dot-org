@@ -85,7 +85,6 @@
   "undo": "Undo",
   "redo": "Redo",
   "soundRemoved": "No longer available. Plays as silence.",
-  "packRemoved": "Song pack removed",
   "packRemovedDescription": "This song pack is no longer available. Its sounds play as silence.",
   "soundsFilterPacks": "Packs",
   "soundsFilterSounds": "Sounds",
