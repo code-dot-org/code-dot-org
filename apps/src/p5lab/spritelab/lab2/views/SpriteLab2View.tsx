@@ -1215,8 +1215,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // cleanup): the reseed effect's deps churn on every animation
   // write, which would cancel a pending watcher mid-load.
   const cancelRerunWatchRef = useRef<() => void>();
-  // Latest restart-scene handler, for the watcher's async callback.
   const restartSceneRef = useRef<() => void>(() => {});
+  // Restarts the scene while the game plays, and runs the preview otherwise.
+  const rerunStageRef = useRef<() => void>(() => {});
   useEffect(() => () => cancelRerunWatchRef.current?.(), []);
   const rerunWhenAnimationsLoaded = useCallback(() => {
     cancelRerunWatchRef.current?.();
@@ -1233,7 +1234,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     const finish = () => {
       cancel();
-      restartSceneRef.current();
+      rerunStageRef.current();
     };
     const unsubscribe = store.subscribe(() => allLoaded() && finish());
     // Give up quietly if a load never completes; the playspace stays stale,
@@ -1993,7 +1994,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ownsTop(levelProperties.addBlocks ?? [], block.getRootBlock()) ||
         ownTypes.has(block.type),
     });
-    runLocalScene(activeScene);
+    if (isPlayingRef.current) {
+      runLocalScene(activeScene);
+    } else {
+      runProgram();
+    }
     // After the load, so the blocks sit below what the workspace holds.
     addLevelBlocks();
   }, [
@@ -2009,6 +2014,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     loadCode,
     levelProperties.levelMode,
     runLocalScene,
+    runProgram,
     sourcesReinitializedCount,
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
@@ -2090,6 +2096,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [runScene, defaultPlaySceneId]);
   restartSceneRef.current = handleRestartScene;
+  rerunStageRef.current = () =>
+    isPlayingRef.current ? handleRestartScene() : runProgram();
   const playHasLeftTheFirstScene =
     !!onStageSceneId && onStageSceneId !== defaultPlaySceneId;
 
