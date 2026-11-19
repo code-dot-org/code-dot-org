@@ -40,6 +40,7 @@ import {
 } from './characterAnimations';
 import {
   animationNames,
+  decodableAnimations,
   filterAnimationsToNames,
   loadedAnimations,
   trimAnimationListImages,
@@ -1162,9 +1163,11 @@ export default class SpriteLab2Engine extends SpriteLab {
    * queue so overlapping re-runs can't interleave across the preload await.
    */
   rerun() {
-    this.rerunQueue_ = (this.rerunQueue_ || Promise.resolve()).then(() =>
-      this.doRerun_()
-    );
+    this.rerunQueue_ = (this.rerunQueue_ || Promise.resolve())
+      .then(() => this.doRerun_())
+      // A run that fails is reported here, so the runs queued after it still
+      // happen.
+      .catch(error => console.error('SpriteLab2 run failed:', error));
     return this.rerunQueue_;
   }
 
@@ -1330,16 +1333,28 @@ export default class SpriteLab2Engine extends SpriteLab {
       ? filterAnimationsToNames(animationList, this.referencedImages)
       : animationList;
     const preloaded = await this.p5Wrapper.preloadSpriteImages(
-      loadedAnimations(
-        await trimAnimationListImages(scoped, {
-          keepNames: animationNames(animationList),
-          upscalePixelArt: true,
-        })
+      await this.withoutUndecodableImages_(
+        loadedAnimations(
+          await trimAnimationListImages(scoped, {
+            keepNames: animationNames(animationList),
+            upscalePixelArt: true,
+          })
+        )
       ),
       {multiFrame: true}
     );
     this.pruneUnusedPreloads_(scoped);
     return preloaded;
+  }
+
+  // p5 never reports an image that fails to load, so a preload given one
+  // would never finish. An image p5 already has is not decoded again.
+  withoutUndecodableImages_(list) {
+    const preloaded = this.p5Wrapper.preloadedSprites || {};
+    return decodableAnimations(
+      list,
+      props => preloaded[props.name]?.dataURI === props.dataURI
+    );
   }
 
   // Frees decoded images the current scene can't reference; a later scene
@@ -1373,11 +1388,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       propsByKey: {[key]: list.propsByKey[key]},
     };
     await this.p5Wrapper.preloadSpriteImages(
-      loadedAnimations(
-        await trimAnimationListImages(single, {
-          keepNames: animationNames(list),
-          upscalePixelArt: true,
-        })
+      await this.withoutUndecodableImages_(
+        loadedAnimations(
+          await trimAnimationListImages(single, {
+            keepNames: animationNames(list),
+            upscalePixelArt: true,
+          })
+        )
       ),
       {multiFrame: true}
     );
