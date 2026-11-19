@@ -2,6 +2,8 @@ import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {MemoryRouter} from 'react-router-dom';
 import {vi} from 'vitest';
 
+import {ChallengeTypes} from '@code-dot-org/shared-constants';
+
 import {type Challenge} from '../../types';
 import ChallengeBox from '../ChallengeBox';
 
@@ -27,7 +29,7 @@ const renderVideoChallenge = async () => {
       <ChallengeBox
         lessonId={42}
         challenge={fakeChallenge}
-        challengeType="video"
+        challengeType={ChallengeTypes.VIDEO}
         WhiteboardChallenge={() => null}
         transcribeAudio={vi.fn()}
         stickerSections={[]}
