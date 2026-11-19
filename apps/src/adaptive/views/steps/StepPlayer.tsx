@@ -87,8 +87,7 @@ function withAnswers(
 }
 
 /**
- * The index in `steps` of the step with `stepId`, or of the first of
- * `steps` after it in the checkpoint when it is not among them; -1 if none.
+ * Index of step to play; -1 if none.
  */
 function indexAtOrAfter(checkpoint: Checkpoint, steps: Step[], stepId: string) {
   const exact = steps.findIndex(s => s.id === stepId);
@@ -102,7 +101,7 @@ function indexAtOrAfter(checkpoint: Checkpoint, steps: Step[], stepId: string) {
  * Plays a checkpoint's visible steps in order, then reports the checkpoint
  * finished. A step behind a showIf appears once its answer is in, so the
  * current step is tracked by id rather than position. A teacher viewing a
- * student is shown only the steps with something of the student's in them.
+ * student is only shown interactive steps (e.g. no panel or video steps).
  */
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,

@@ -43,7 +43,7 @@ interface CheckpointCardProps {
   /** What the student has shown, for explaining a skipped checkpoint. */
   evidence: PathwayEvidence;
   onStart: () => void;
-  /** Offers a locked checkpoint too, to a teacher viewing a student. */
+  /** Allows teachers to view locked checkpoints. */
   canOpenLocked?: boolean;
   /** Zooms the map onto another checkpoint. */
   onSelectCheckpoint: (id: string) => void;

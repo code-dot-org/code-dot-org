@@ -142,7 +142,6 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     // there stays on it, since the app remounts once their progress loads.
     initialProject = true;
   } else if (urlCheckpointId) {
-    // A teacher viewing a student may open what the student has not unlocked.
     if (
       statusMap[urlCheckpointId] === 'locked' &&
       !restProgress.isViewingStudent

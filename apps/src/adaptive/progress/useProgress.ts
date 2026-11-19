@@ -38,9 +38,8 @@ interface ProgressOptions {
   store?: ProgressStore;
   reportLevelStep?: LevelStepReporter;
   /**
-   * A student whose progress a teacher is viewing. Their progress is loaded
-   * and nothing is saved: changes stay on the page, so the teacher can still
-   * move through the steps.
+   * A student whose progress a teacher is viewing.
+   * No progress is saved when this is set.
    */
   viewAsUserId?: number | null;
 }

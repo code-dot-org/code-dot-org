@@ -203,8 +203,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     aichatContext: aiContext,
     isViewingStudent,
   });
-  // The lab's own Continue button advances the step, always for a teacher
-  // viewing a student. Otherwise a step whose work is checked waits for work
+  // The lab's Continue button advances the step (always for a teacher
+  // viewing a student). A step whose work is checked waits for work
   // that passes, for enough failed checks that the judge may be at fault, or
   // for the chat to reach its reply limit, unless no judge can run: the shell
   // makes no AI calls, or the lab takes no part in checking.

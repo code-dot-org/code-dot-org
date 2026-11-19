@@ -35,7 +35,6 @@ export interface ChatUnlockOptions extends LabHandles {
   continueAllowed: boolean;
   /** Appends a chat entry to the step's validation history. */
   recordAttempt: (attempt: Omit<ValidationAttempt, 'at'>) => void;
-  /** A teacher viewing a student's step: their chat judges nothing. */
   isViewingStudent?: boolean;
 }
 

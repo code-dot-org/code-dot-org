@@ -49,10 +49,6 @@ export interface StepInstructionsOptions {
   ) => void;
   /** The shell's own context, not the mounted chat's. */
   aichatContext: AichatContext;
-  /**
-   * A teacher is viewing a student: show what the student was last shown,
-   * even if their project has since changed, and generate nothing.
-   */
   isViewingStudent?: boolean;
 }
 

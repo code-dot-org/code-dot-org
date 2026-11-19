@@ -29,7 +29,6 @@ interface QuestionsStepProps {
   answers: StepAnswers;
   onSaveAnswers: (questionId: number, answers: Answer[]) => void;
   onComplete: () => void;
-  /** A teacher viewing a student: nothing is submitted; Continue pages through. */
   isViewingStudent?: boolean;
 }
 

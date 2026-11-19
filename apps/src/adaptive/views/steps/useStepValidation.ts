@@ -31,7 +31,6 @@ export interface StepValidationOptions
   progress: StepProgress | undefined;
   /** Whether Continue is already open, by work or by chat. */
   continueAllowed: boolean;
-  /** A teacher viewing a student's step: nothing is judged. */
   isViewingStudent?: boolean;
 }
 
