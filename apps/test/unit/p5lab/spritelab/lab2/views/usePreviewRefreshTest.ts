@@ -35,11 +35,66 @@ describe('usePreviewRefresh', () => {
     expect(runPreview).not.toHaveBeenCalled();
   });
 
+  it('does not bring a dropped preview back when play ends early', () => {
+    const {runPreview, result, rerender} = render();
+    result.current();
+    jest.advanceTimersByTime(100);
+    rerender({playing: true});
+    jest.advanceTimersByTime(200);
+    rerender({playing: false});
+    jest.advanceTimersByTime(1000);
+    expect(runPreview).not.toHaveBeenCalled();
+  });
+
+  it('does nothing when its timer fires during play before being cleared', () => {
+    const {runPreview, result, rerender} = render();
+    result.current();
+    const clearTimeoutSpy = jest
+      .spyOn(window, 'clearTimeout')
+      .mockImplementation(() => {});
+    rerender({playing: true});
+    jest.advanceTimersByTime(400);
+    clearTimeoutSpy.mockRestore();
+    expect(runPreview).not.toHaveBeenCalled();
+  });
+
+  it('schedules nothing for a request made during a short play', () => {
+    const {runPreview, result, rerender} = render(true);
+    result.current();
+    jest.advanceTimersByTime(200);
+    rerender({playing: false});
+    jest.advanceTimersByTime(1000);
+    expect(runPreview).not.toHaveBeenCalled();
+  });
+
   it('ignores a request made while the game plays', () => {
     const {runPreview, result} = render(true);
     result.current();
     jest.advanceTimersByTime(1000);
     expect(runPreview).not.toHaveBeenCalled();
+  });
+
+  it('runs the preview function of the latest render', () => {
+    const first = jest.fn();
+    const second = jest.fn();
+    const {result, rerender} = renderHook(
+      ({runPreview}: {runPreview: () => void}) =>
+        usePreviewRefresh(runPreview, false),
+      {initialProps: {runPreview: first}}
+    );
+    result.current();
+    rerender({runPreview: second});
+    jest.advanceTimersByTime(400);
+    expect(first).not.toHaveBeenCalled();
+    expect(second).toHaveBeenCalledTimes(1);
+  });
+
+  it('returns the same function on every render', () => {
+    const {result, rerender} = render();
+    const first = result.current;
+    rerender({playing: true});
+    rerender({playing: false});
+    expect(result.current).toBe(first);
   });
 
   it('runs the preview for a request made after play ends', () => {
