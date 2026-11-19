@@ -91,6 +91,7 @@ export interface LabState {
   // (profanity or PII), or null if the project is clean or unfiltered.
   // A non-null value blocks the lab view and the share dialog.
   shareFailure: ShareFailure | null;
+  shareCheckPending: boolean;
   // If this lab/project is blocked for project non-owners (excluding owner's teacher).
   projectSharingDisabled: boolean | undefined;
   overrideValidations: Validation[] | undefined;
@@ -114,6 +115,7 @@ const initialState: LabState = {
   isShareView: undefined,
   isBlockedAbuse: undefined,
   shareFailure: null,
+  shareCheckPending: false,
   projectSharingDisabled: undefined,
   overrideValidations: undefined,
   permissions: [],
@@ -356,6 +358,9 @@ const labSlice = createSlice({
     setShareFailure(state, action: PayloadAction<ShareFailure | null>) {
       state.shareFailure = action.payload;
     },
+    setShareCheckPending(state, action: PayloadAction<boolean>) {
+      state.shareCheckPending = action.payload;
+    },
     setIsFullScreenView(state, action: PayloadAction<boolean>) {
       state.isFullScreenView = action.payload;
     },
@@ -567,6 +572,7 @@ export const {
   setIsTeacherOfProjectOwner,
   setIsBlockedAbuse,
   setShareFailure,
+  setShareCheckPending,
   setIsFullScreenView,
 } = labSlice.actions;
 

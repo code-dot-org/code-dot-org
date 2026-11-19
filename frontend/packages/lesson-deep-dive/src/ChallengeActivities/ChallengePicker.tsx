@@ -24,12 +24,14 @@ interface ChallengePickerProps {
     pickedChallengeType: string | null,
   ) => void;
   onReviewInstead?: () => void;
+  onModalityChange?: (modality: Modality) => void;
 }
 
 const ChallengePicker: FC<ChallengePickerProps> = ({
   lessonId,
   challengeSetCallback,
   onReviewInstead,
+  onModalityChange,
 }) => {
   const [challenges, setChallenges] = useState<Challenge[]>([]);
   const [loadFailed, setLoadFailed] = useState(false);
@@ -38,10 +40,14 @@ const ChallengePicker: FC<ChallengePickerProps> = ({
   const navigate = useNavigate();
   const api = useApiClient();
 
-  const handleModalityChange = useCallback((next: Modality) => {
-    setModality(next);
-    setChallengeIndex(0);
-  }, []);
+  const handleModalityChange = useCallback(
+    (next: Modality) => {
+      setModality(next);
+      setChallengeIndex(0);
+      onModalityChange?.(next);
+    },
+    [onModalityChange],
+  );
 
   useEffect(() => {
     let cancelled = false;

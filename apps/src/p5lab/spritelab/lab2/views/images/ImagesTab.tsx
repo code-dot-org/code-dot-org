@@ -37,6 +37,7 @@ import {
   FREEPLAY_TOOLS,
   PAINT_BRUSH_SIZES,
   PAINT_COLORS,
+  PAINT_START_COLOR,
   PAINT_TOOLBAR,
   PAINT_TOOLS,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/paintTools';
@@ -97,6 +98,7 @@ interface ImagesTabProps {
   generationsLeft?: number;
   /** Called when a generation request is sent to the model. */
   onGenerate?: () => void;
+  onGenerateFailed?: () => void;
   /** Students may add images, draw on them and delete them. */
   editingOffered?: boolean;
   /** No New button, even where `editingOffered` would show one: the
@@ -162,6 +164,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   levelId,
   generationsLeft,
   onGenerate,
+  onGenerateFailed,
   editingOffered,
   noNewImages,
   noDeletingImages,
@@ -620,6 +623,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           ratingRequired={ratingRequired}
           generationsLeft={generationsLeft}
           onGenerateStart={onGenerate}
+          onGenerateFailed={onGenerateFailed}
           onBusyChange={setBusy}
           onKeep={handleKeep}
           onReady={offerStory}
@@ -799,6 +803,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   }
                   tools={limitedTools ? PAINT_TOOLS : FREEPLAY_TOOLS}
                   palette={limitedTools ? PAINT_COLORS : undefined}
+                  startColor={limitedTools ? PAINT_START_COLOR : undefined}
                   brushSizes={
                     limitedTools ? PAINT_BRUSH_SIZES : FREEPLAY_BRUSH_SIZES
                   }

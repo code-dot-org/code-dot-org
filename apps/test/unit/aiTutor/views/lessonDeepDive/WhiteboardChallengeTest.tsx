@@ -137,6 +137,7 @@ const fakeBlob = new Blob(['png-bytes'], {type: 'image/png'});
 const createdResponse = {
   id: 7,
   assets: [{id: 9, asset_type: 'whiteboard_image'}],
+  attempt_number: 1,
 };
 
 // WhiteboardChallenge is a controlled component: the explanation-type
@@ -166,7 +167,7 @@ const Harness: FC<{
   const [, setChallengeResponseId] = useState(0);
   // Submit now lives in ChallengeBox's top bar; the harness stands in for it,
   // holding the submit ref and reflecting submittability on a "Submit" button.
-  const submitRef = useRef<(() => Promise<boolean>) | null>(null);
+  const submitRef = useRef<(() => Promise<number | null>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
   const [canSubmit, setCanSubmit] = useState(false);
   return (

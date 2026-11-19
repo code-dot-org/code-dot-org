@@ -28,6 +28,10 @@ export default function LessonTutorProgressBubble({
       userId,
       userType,
     });
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_OPENED, {
+      lesson_id: lessonId,
+      source: 'lesson',
+    });
   };
 
   return (

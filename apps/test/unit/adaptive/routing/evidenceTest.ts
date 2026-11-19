@@ -232,14 +232,24 @@ describe('computeEvidence', () => {
 
   it("ignores a look at the step's chat, whatever it says", () => {
     const progress = checked('build-page', [1]);
-    progress.steps['build-page'].validationHistory!.push({
-      at: '2026-10-22T10:06:00Z',
-      pass: true,
-      evidenceLevel: 0,
-      reason: 'Go on.',
-      skipReason: 'limitReached',
-      replies: 8,
-    });
+    progress.steps['build-page'].validationHistory!.push(
+      {
+        at: '2026-10-22T10:05:00Z',
+        pass: true,
+        evidenceLevel: 0,
+        reason: 'Go on.',
+        skipReason: 'effortDemonstrated',
+        replies: 4,
+      },
+      {
+        at: '2026-10-22T10:06:00Z',
+        pass: true,
+        evidenceLevel: 0,
+        reason: 'Go on.',
+        skipReason: 'limitReached',
+        replies: 8,
+      }
+    );
     expect(computeEvidence(pathway, progress)).toEqual({
       build: {
         skillId: 'build',

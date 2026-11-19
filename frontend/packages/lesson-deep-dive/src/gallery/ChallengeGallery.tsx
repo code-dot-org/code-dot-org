@@ -15,6 +15,15 @@ import styles from './challenge-gallery.module.scss';
 
 interface ChallengeGalleryProps {
   tutorGalleryData: TutorGalleryData;
+  // Analytics hooks. sectionId is the section selected when the action
+  // happened, or null in the "My projects" view.
+  onViewed?: (sectionId: number | null, unitId: number) => void;
+  onVisibilityToggled?: (
+    sectionId: number | null,
+    responseId: number,
+    approved: boolean,
+  ) => void;
+  onReactionAdded?: (sectionId: number | null, responseId: number) => void;
 }
 
 const hasVideoAsset = (response: ChallengeResponse) =>
@@ -33,7 +42,12 @@ const projectIdFromLocation = () => {
 // the selected section's work, or the signed-in user's own submissions in
 // the "My projects" view. Clicking a project opens its project page in
 // place.
-const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
+const ChallengeGallery: FC<ChallengeGalleryProps> = ({
+  tutorGalleryData,
+  onViewed,
+  onVisibilityToggled,
+  onReactionAdded,
+}) => {
   const {
     units,
     sections,
@@ -54,6 +68,11 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
   );
 
   const api = useApiClient();
+
+  // Reports the page open once, with the initial selection.
+  useEffect(() => {
+    onViewed?.(sectionId, unitId);
+  }, []);
 
   useEffect(() => {
     const onPopState = () => setProjectId(projectIdFromLocation());
@@ -140,6 +159,7 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
 
   const updateResponseApproved = async (id: number, approved: boolean) => {
     await setApproved(api.transport, id, approved);
+    onVisibilityToggled?.(sectionId, id, approved);
     setResponses(prev =>
       prev
         ? prev.map(response =>
@@ -233,6 +253,9 @@ const ChallengeGallery: FC<ChallengeGalleryProps> = ({tutorGalleryData}) => {
           onBack={() => navigateToProject(null)}
           onOpenProject={navigateToProject}
           onReactionsChange={updateResponseReactions}
+          onReactionAdded={responseId =>
+            onReactionAdded?.(sectionId, responseId)
+          }
         />
       </div>
     );

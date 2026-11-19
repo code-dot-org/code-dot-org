@@ -564,8 +564,14 @@ class Section < ApplicationRecord
     return unit_group.try(:default_unit_group_units).try(:first).try(:script)
   end
 
-  def summarize_without_students
-    summarize(include_students: false)
+  def summarize_without_students(student_count: nil)
+    summarize(include_students: false, student_count: student_count)
+  end
+
+  # Distinct student counts for many sections in one query, keyed by section
+  # id. A section with no students has no key.
+  def self.student_counts(sections)
+    where(id: sections).joins(:students).unscope(:order).group(:id).distinct.count('users.id')
   end
 
   # Provides some information about a section. This provides a more concise set of information than
@@ -676,7 +682,10 @@ class Section < ApplicationRecord
   # role: defaults to :reading (replica), but callers that just wrote data this same request
   # (e.g. right after Section#add_student) should pass :writing to read their own write back
   # from the primary, since the replica may not have caught up yet.
-  def summarize(include_students: true, role: :reading)
+  #
+  # student_count: a count the caller already has, from Section.student_counts,
+  # so summarizing many sections does not count each one separately.
+  def summarize(include_students: true, role: :reading, student_count: nil)
     ActiveRecord::Base.connected_to(role: role) do
       ai_chat_dependency = assigned_ai_chat_tools_dependency
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
@@ -694,12 +703,13 @@ class Section < ApplicationRecord
 
       selected_unit = unit_group&.single_unit_course? ? unit_group.first_unit : script
 
-      # Remove ordering from scope when not including full
-      # list of students, in order to improve query performance.
-      unique_students = include_students ?
-        students.distinct(&:id) :
-        students.unscope(:order).distinct(&:id)
-      num_students = unique_students.size
+      unique_students = students.distinct(&:id) if include_students
+      num_students =
+        if include_students
+          unique_students.size
+        else
+          student_count || students.unscope(:order).distinct.count
+        end
 
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
       primary_instructor = {

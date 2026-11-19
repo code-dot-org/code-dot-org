@@ -184,10 +184,12 @@ export interface PixelEditorProps {
   onHistoryChange?: (history: PixelEditorHistory) => void;
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
-  // The only colors offered: the color square opens these as round
-  // swatches, in place of the spectrum picker. The first is the color the
-  // editor opens on.
+  // The only colors offered: the color square opens these as square
+  // swatches, in place of the spectrum picker.
   palette?: readonly PaletteColor[];
+  // The color the editor opens on. Absent, it is the palette's first
+  // color, or the editor's own blue when there is no palette.
+  startColor?: RGBA;
   // The brush sizes to offer, in BRUSH_SIZES order; all four when absent.
   // The editor opens on the first; one alone shows no size buttons.
   brushSizes?: readonly number[];
@@ -223,6 +225,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   onHistoryChange,
   canvasClassName,
   palette,
+  startColor,
   brushSizes,
   toolbarGroups,
   children,
@@ -259,7 +262,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     brushSizes ? shownBrushSizes[0] ?? BRUSH_SIZES[0] : BRUSH_SIZES[1]
   );
   const [color, setColor] = useState<RGBA>(
-    () => palette?.[0]?.rgba ?? DEFAULT_COLOR
+    () => startColor ?? palette?.[0]?.rgba ?? DEFAULT_COLOR
   );
   const [loaded, setLoaded] = useState(false);
   // Bumped as each picture lands, so a new picture given to a mounted
@@ -677,6 +680,13 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   }, []);
 
   const canvasAreaRef = useRef<HTMLDivElement | null>(null);
+  // The host places the canvas and can take it off the page and put it
+  // back. The element it puts back is new, so it is sized and painted again.
+  const [canvasArea, setCanvasArea] = useState<HTMLDivElement | null>(null);
+  const attachCanvasArea = useCallback((area: HTMLDivElement | null) => {
+    canvasAreaRef.current = area;
+    setCanvasArea(area);
+  }, []);
 
   // Layout effect: size and paint the canvas BEFORE the browser paints the
   // newly-mounted panel, or its first frame flashes default-sized. The
@@ -734,7 +744,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     const observer = new ResizeObserver(size);
     observer.observe(area);
     return () => observer.disconnect();
-  }, [loaded, loadVersion, repaint, fit]);
+  }, [loaded, loadVersion, repaint, fit, canvasArea]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -1601,7 +1611,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     ),
     canvas: (
       <div
-        ref={canvasAreaRef}
+        ref={attachCanvasArea}
         data-pixel-editor=""
         className={classNames(moduleStyles.canvasArea, canvasClassName)}
       >

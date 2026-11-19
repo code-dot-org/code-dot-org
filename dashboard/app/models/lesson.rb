@@ -784,12 +784,9 @@ class Lesson < ApplicationRecord
 
   # For a given set of students, determine when the given lesson is locked for
   # each student.
-  # The design of a lockable lesson is that there is (optionally) some number of
-  # non-LevelGroup levels, followed by a single LevelGroup. This last one is the
-  # only one which is truly locked/unlocked. The lesson is considered locked if
-  # and only if the final assessment level is locked. When in this state, the UI
-  # will show the entire lesson as being locked, but if you know the URL of the other
-  # levels, you're still able to go to them and submit answers.
+  # A lockable lesson ends in its assessment, a LevelGroup or exam Quiz, which
+  # holds each student's lock state. Every level in the lesson is locked while
+  # that state is locked.
   def lockable_state(students)
     return unless lockable?
 

@@ -412,7 +412,7 @@ class UsersHelperTest < ActionView::TestCase
     # for user_2
     sublevel1_user_level_2 = create(:user_level, user: user_2, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180)
     sublevel2_user_level_2 = create(:user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300)
-    # Travel forward to ensure teacher_feedback.updated_at > user_level.updated_at,
+    # Travel forward to ensure teacher_feedback.created_at > user_level.updated_at,
     # making the teacher_feedback_new flag deterministically true.
     travel 1.second
     create(:teacher_feedback, student: user_2, teacher: teacher, level: sublevel2, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking)
@@ -500,6 +500,39 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal expected_progress[0][user_3.id], progress[user_3.id]
 
     assert_equal expected_progress[1], last_progress_times
+    travel_back
+  end
+
+  def test_teacher_feedback_not_new_after_student_resubmits_and_views_it
+    student = create(:user)
+    teacher = create(:teacher)
+    section = create(:section, teacher: teacher)
+    section.students << student
+
+    script = create(:script)
+    lesson_group = create(:lesson_group, script: script)
+    lesson = create(:lesson, script: script, lesson_group: lesson_group)
+    level = create(:weblab)
+    create(:script_level, script: script, levels: [level], lesson: lesson, assessment: true)
+
+    user_level = create(:user_level, user: student, level: level, script: script, best_result: ActivityConstants::FREE_PLAY_RESULT)
+
+    travel 1.second
+    feedback = create(:teacher_feedback, student: student, teacher: teacher, level: level, script: script, comment: 'Add a subheading.')
+    progress, _ = script_progress_for_users([student], script)
+    assert progress[student.id][level.id][:teacher_feedback_new]
+
+    travel 1.second
+    user_level.update!(attempts: user_level.attempts + 1)
+    progress, _ = script_progress_for_users([student], script)
+    assert_nil progress[student.id][level.id][:teacher_feedback_new]
+
+    # Viewing feedback saves the feedback record, which must not mark it new.
+    travel 1.second
+    feedback.increment_visit_count
+    progress, _ = script_progress_for_users([student], script)
+    assert_nil progress[student.id][level.id][:teacher_feedback_new]
+  ensure
     travel_back
   end
 

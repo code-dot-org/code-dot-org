@@ -13,6 +13,8 @@ import classNames from 'classnames';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
@@ -77,11 +79,22 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   // (the drawing, or the recording) lives in the active modality component.
   // The modality reports whether it can be submitted through
   // onSubmittableChange, and registers its submit/reset handlers on these
-  // refs so the top bar can drive them. Submit resolves true once the
-  // response is created.
+  // refs so the top bar can drive them. Submit resolves the server's
+  // attempt number once the response is saved, or null on failure.
   const [canSubmit, setCanSubmit] = useState(false);
-  const submitRef = useRef<(() => Promise<boolean>) | null>(null);
+  const submitRef = useRef<(() => Promise<number | null>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
+
+  const startTimeRef = useRef(Date.now());
+
+  const logRestart = (action: 'choose_different' | 'start_over') => {
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_RESTARTED, {
+      lesson_id: lessonId,
+      challenge_id: challenge.id,
+      action,
+      had_work: canSubmit || compositionState !== CompositionStates.INITIAL,
+    });
+  };
 
   // Video challenges are recordings top to bottom, so the record button
   // always applies; whiteboard challenges only need it for an audio
@@ -186,6 +199,8 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   // submission/feedback state, and the active modality clears its own work
   // (the drawing or the recording) through the registered reset handler.
   const handleStartOver = () => {
+    logRestart('start_over');
+    startTimeRef.current = Date.now();
     resetRef.current?.();
     setSubmitted(false);
     setShowConfirmation(false);
@@ -215,12 +230,25 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   // On failure the modality shows its own error; return to composing.
   const handleSubmitClick = async () => {
     setShowConfirmation(true);
-    if (!(await submitRef.current?.())) {
+    const attemptNumber = await submitRef.current?.();
+    if (!attemptNumber) {
       setShowConfirmation(false);
+      return;
     }
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_SUBMITTED, {
+      lesson_id: lessonId,
+      challenge_id: challenge.id,
+      type: challengeType,
+      attempt_number: attemptNumber,
+      duration_seconds: Math.round((Date.now() - startTimeRef.current) / 1000),
+    });
   };
 
   const navigate = useNavigate();
+  const handleChooseDifferent = () => {
+    logRestart('choose_different');
+    navigate('/intervention');
+  };
   const handleViewGallery = () => navigate('/gallery');
 
   const switchExplanationType = (type: string) => {
@@ -451,7 +479,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                       iconName="arrow-left"
                     />
                   }
-                  onClick={() => navigate('/intervention')}
+                  onClick={handleChooseDifferent}
                 >
                   Choose a different challenge
                 </MuiButton>

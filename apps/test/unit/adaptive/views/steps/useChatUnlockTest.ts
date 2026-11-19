@@ -1,7 +1,11 @@
 import {renderHook} from '@testing-library/react-hooks';
 
+import {judgeEffort} from '@cdo/apps/adaptive/ai/validation/judgeEffort';
 import {UNLOCK_MESSAGES} from '@cdo/apps/adaptive/ai/validation/unlockMessages';
-import {sendContinueUnlocked} from '@cdo/apps/adaptive/metricsHelpers';
+import {
+  sendAdaptiveEvent,
+  sendContinueUnlocked,
+} from '@cdo/apps/adaptive/metricsHelpers';
 import {ValidationAttempt} from '@cdo/apps/adaptive/progress/model';
 import {LevelStep} from '@cdo/apps/adaptive/types';
 import {
@@ -12,17 +16,24 @@ import {
   ChatHandle,
   ChatTranscript,
 } from '@cdo/apps/aichat/host/ChatHostContext';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/adaptive/ai/validation/chatThresholds', () => ({
-  chatThresholds: () => ({replyLimit: 8}),
+  chatThresholds: () => ({effortCheckAt: 4, replyLimit: 8}),
+}));
+jest.mock('@cdo/apps/adaptive/ai/validation/judgeEffort', () => ({
+  judgeEffort: jest.fn(),
 }));
 jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
   ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
+  sendAdaptiveEvent: jest.fn(),
   sendContinueUnlocked: jest.fn(),
 }));
 jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({getState: () => ({lab2Project: {projectSources: {}}})}),
 }));
+const mockJudgeEffort = judgeEffort as jest.Mock;
+const mockSendEvent = sendAdaptiveEvent as jest.Mock;
 const mockSendUnlocked = sendContinueUnlocked as jest.Mock;
 
 const step = {
@@ -40,12 +51,21 @@ const reply = (count: number): ChatTranscript => ({
   replies: count,
   text: `Student: ${count}`,
 });
+const effort = (replies = 4): Omit<ValidationAttempt, 'at'> => ({
+  pass: true,
+  evidenceLevel: 0,
+  reason: UNLOCK_MESSAGES.effortDemonstrated,
+  skipReason: 'effortDemonstrated',
+  replies,
+  traceId: 't',
+});
 const limit: Omit<ValidationAttempt, 'at'> = {
   pass: true,
   evidenceLevel: 0,
   reason: UNLOCK_MESSAGES.limitReached,
   skipReason: 'limitReached',
   replies: 8,
+  traceId: undefined,
 };
 const work: ValidationAttempt = {
   at: 'now',
@@ -75,8 +95,16 @@ const render = (
   overrides: Partial<ChatUnlockOptions> = {}
 ) => {
   const options: ChatUnlockOptions = {
+    pathway: {skills: {}, checkpoints: []} as never,
     checkpoint,
     step,
+    instructions: 'Add a heading.',
+    aichatContext: {
+      clientType: AiChatClientTypes.ADAPTIVE,
+      currentLevelId: 1,
+      scriptId: 2,
+      channelId: undefined,
+    },
     chat,
     progress: undefined,
     continueAllowed: false,
@@ -90,18 +118,163 @@ const render = (
 };
 
 describe('useChatUnlock', () => {
-  beforeEach(() => mockSendUnlocked.mockReset());
+  beforeEach(() => {
+    mockJudgeEffort.mockReset();
+    mockSendEvent.mockReset();
+    mockSendUnlocked.mockReset();
+  });
 
-  it('does nothing before the limit', () => {
+  it('does nothing before the first threshold', () => {
     const {chat, listeners} = fakeChat();
     const {options} = render(chat);
-    listeners[0](reply(7));
+    listeners[0](reply(3));
+    expect(mockJudgeEffort).not.toHaveBeenCalled();
+    expect(options.recordAttempt).not.toHaveBeenCalled();
+    expect(chat.post).not.toHaveBeenCalled();
+  });
+
+  it('judges the chat at the first threshold and opens Continue when the effort is real', async () => {
+    mockJudgeEffort.mockResolvedValue({pass: true, traceId: 't'});
+    const {chat, listeners} = fakeChat();
+    const {options, waitFor} = render(chat, {
+      progress: {timeSpent: 0, validationHistory: [work]},
+    });
+
+    listeners[0](reply(4));
+    await waitFor(() =>
+      expect(options.recordAttempt).toHaveBeenCalledWith(effort())
+    );
+
+    expect(mockJudgeEffort).toHaveBeenCalledWith(
+      expect.objectContaining({
+        step,
+        instructions: 'Add a heading.',
+        transcript: 'Student: 4',
+        replies: 4,
+      })
+    );
+    expect(mockSendEvent).toHaveBeenCalledWith(
+      'Adaptive Effort Check Passed',
+      expect.objectContaining({
+        stepId: 'build',
+        replies: 4,
+        validationAttempts: 1,
+        latencyMs: expect.any(Number),
+      })
+    );
+    expect(mockSendUnlocked).toHaveBeenCalledWith(
+      'effortDemonstrated',
+      checkpoint,
+      step,
+      {validationAttempts: 1, replies: 4}
+    );
+    expect(chat.post).toHaveBeenCalledWith(
+      expect.objectContaining({
+        notificationType: 'info',
+        text: UNLOCK_MESSAGES.effortDemonstrated,
+      })
+    );
+  });
+
+  it('records nothing on a no, reports it, and judges again at the next reply', async () => {
+    mockJudgeEffort.mockResolvedValue({pass: false, traceId: 't'});
+    const {chat, listeners} = fakeChat();
+    const {options, waitFor} = render(chat);
+
+    listeners[0](reply(4));
+    await waitFor(() =>
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        'Adaptive Effort Check Failed',
+        expect.objectContaining({replies: 4, validationAttempts: 0})
+      )
+    );
+    expect(options.recordAttempt).not.toHaveBeenCalled();
+    expect(mockSendUnlocked).not.toHaveBeenCalled();
+    expect(chat.post).not.toHaveBeenCalled();
+
+    listeners[0](reply(5));
+    await waitFor(() => expect(mockJudgeEffort).toHaveBeenCalledTimes(2));
+    expect(mockJudgeEffort).toHaveBeenLastCalledWith(
+      expect.objectContaining({replies: 5})
+    );
+  });
+
+  it('judges again at the next reply when the judge gave no answer, and not while one is running', async () => {
+    let answer: (judgement: unknown) => void = () => {};
+    mockJudgeEffort.mockImplementationOnce(
+      () => new Promise(resolve => (answer = resolve))
+    );
+    mockJudgeEffort.mockResolvedValueOnce({pass: true, traceId: 't'});
+    const {chat, listeners} = fakeChat();
+    const {options, waitFor} = render(chat);
+
+    listeners[0](reply(4));
+    listeners[0](reply(5));
+    expect(mockJudgeEffort).toHaveBeenCalledTimes(1);
+    answer(undefined);
+    await waitFor(() => expect(mockJudgeEffort).toHaveBeenCalledTimes(1));
+    expect(options.recordAttempt).not.toHaveBeenCalled();
+
+    listeners[0](reply(6));
+    await waitFor(() =>
+      expect(options.recordAttempt).toHaveBeenCalledWith(effort(6))
+    );
+  });
+
+  it('reports a judge that finishes after Continue opened or the step was left, but opens nothing', async () => {
+    let answer: (judgement: unknown) => void = () => {};
+    mockJudgeEffort.mockImplementationOnce(
+      () => new Promise(resolve => (answer = resolve))
+    );
+    const {chat, listeners} = fakeChat();
+    const {options, rerender, waitFor} = render(chat);
+
+    listeners[0](reply(4));
+    rerender({continueAllowed: true});
+    expect(listeners).toHaveLength(0);
+    answer({pass: true, traceId: 't'});
+    await waitFor(() =>
+      expect(mockSendEvent).toHaveBeenCalledWith(
+        'Adaptive Effort Check Passed',
+        expect.objectContaining({replies: 4})
+      )
+    );
+
     expect(options.recordAttempt).not.toHaveBeenCalled();
     expect(mockSendUnlocked).not.toHaveBeenCalled();
     expect(chat.post).not.toHaveBeenCalled();
   });
 
-  it('opens Continue at the limit, records it, reports it and tells the student, once', () => {
+  it('runs one judge at a time even after the chat hands back a new handle', async () => {
+    let answer: (judgement: unknown) => void = () => {};
+    mockJudgeEffort.mockImplementationOnce(
+      () => new Promise(resolve => (answer = resolve))
+    );
+    mockJudgeEffort.mockResolvedValueOnce({pass: true, traceId: 't'});
+    const first = fakeChat();
+    const second = fakeChat();
+    const {options, rerender, waitFor} = render(first.chat);
+
+    first.listeners[0](reply(4));
+    rerender({chat: second.chat});
+    expect(first.listeners).toHaveLength(0);
+    second.listeners[0](reply(5));
+    expect(mockJudgeEffort).toHaveBeenCalledTimes(1);
+
+    answer({pass: true, traceId: 't'});
+    await waitFor(() => expect(mockSendEvent).toHaveBeenCalledTimes(1));
+    expect(options.recordAttempt).not.toHaveBeenCalled();
+
+    second.listeners[0](reply(6));
+    await waitFor(() =>
+      expect(options.recordAttempt).toHaveBeenCalledWith(effort(6))
+    );
+    expect(mockJudgeEffort).toHaveBeenCalledTimes(2);
+    expect(second.chat.post).toHaveBeenCalledTimes(1);
+    expect(first.chat.post).not.toHaveBeenCalled();
+  });
+
+  it('opens Continue at the limit regardless, once, without a judge', () => {
     const {chat, listeners} = fakeChat();
     const {options, rerender} = render(chat, {
       progress: {timeSpent: 0, validationHistory: [work]},
@@ -109,6 +282,7 @@ describe('useChatUnlock', () => {
 
     listeners[0](reply(8));
 
+    expect(mockJudgeEffort).not.toHaveBeenCalled();
     expect(options.recordAttempt).toHaveBeenCalledWith(limit);
     expect(mockSendUnlocked).toHaveBeenCalledWith(
       'limitReached',
@@ -132,7 +306,6 @@ describe('useChatUnlock', () => {
     });
     listeners[0](reply(9));
     expect(options.recordAttempt).toHaveBeenCalledTimes(1);
-    expect(mockSendUnlocked).toHaveBeenCalledTimes(1);
   });
 
   it('listens only while Continue is locked, with a chat, a validation block and a lab that reports its chat, and stops when unmounted', () => {

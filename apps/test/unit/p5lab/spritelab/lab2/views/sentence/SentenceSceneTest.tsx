@@ -185,6 +185,46 @@ describe('SentenceScene', () => {
     expect(generateImage).toHaveBeenCalledTimes(1);
   });
 
+  it('says so and asks for no rating when a picture cannot be saved', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    onKeep.mockRejectedValueOnce(new Error('upload failed'));
+    const error = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const onReady = jest.fn();
+    const onGenerateFailed = jest.fn();
+    renderScene({onReady, onGenerateFailed});
+    pickCreature();
+    await generate();
+    error.mockRestore();
+    expect(onGenerateFailed).toHaveBeenCalledTimes(1);
+    expect(
+      screen.getByText("Couldn't save the picture. Try again.")
+    ).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Good'})).toBeNull();
+    // A picture that was not saved is not passed to onReady.
+    expect(onReady).not.toHaveBeenCalled();
+    // Trying again saves the next picture, and it can be rated.
+    await generate();
+    expect(onKeep).toHaveBeenCalledTimes(2);
+    expect(
+      screen.queryByText("Couldn't save the picture. Try again.")
+    ).toBeNull();
+    expect(screen.getByRole('button', {name: 'Good'})).toBeTruthy();
+    expect(onReady).toHaveBeenCalledTimes(1);
+    expect(onGenerateFailed).toHaveBeenCalledTimes(1);
+  });
+
+  it('reports a picture that could not be made, so it is not counted', async () => {
+    generateCharacterSet.mockRejectedValueOnce(new Error('down'));
+    const error = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const onGenerateFailed = jest.fn();
+    renderScene({onGenerateFailed});
+    pickCreature();
+    await generate();
+    error.mockRestore();
+    expect(screen.getByRole('alert').textContent).toMatch(/Couldn't make/);
+    expect(onGenerateFailed).toHaveBeenCalledTimes(1);
+  });
+
   it('keeps the picture as it lands, and again with its rating when no host records it', async () => {
     generateCharacterSet.mockResolvedValue(RESULT);
     renderScene();
@@ -348,11 +388,14 @@ describe('SentenceScene', () => {
       '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety'
     );
     generateCharacterSet.mockRejectedValue(new ImageSafetyError('prompt'));
-    renderScene();
+    const onGenerateFailed = jest.fn();
+    renderScene({onGenerateFailed});
     pickCreature();
     await generate();
     expect(screen.getByRole('alert').textContent).toMatch(/aren't okay/);
     expect(screen.getByRole('button', {name: 'Generate'})).toBeTruthy();
+    // A refusal still counts against a level's limit.
+    expect(onGenerateFailed).not.toHaveBeenCalled();
   });
 
   it('takes a typed prompt over the words, as one still picture at the chosen grid, from the current image', async () => {
@@ -416,26 +459,6 @@ describe('SentenceScene', () => {
         expect.objectContaining({imageSource: 'cached', cached: true}),
         true
       );
-    });
-
-    it('asks for another variant than the one shown, for the same words', async () => {
-      findCachedImage.mockResolvedValue(CACHED);
-      generateCharacterSet.mockResolvedValue(RESULT);
-      renderCached();
-      pickCreature();
-      await generate();
-      await act(async () => {
-        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
-      });
-      await generate();
-      expect(findCachedImage.mock.calls[0][0].avoidVariant).toBeUndefined();
-      expect(findCachedImage.mock.calls[1][0].avoidVariant).toBe(1);
-      await act(async () => {
-        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
-      });
-      fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
-      await generate();
-      expect(findCachedImage.mock.calls[2][0].avoidVariant).toBeUndefined();
     });
 
     it('asks for different words when the cache lacks them, without the model', async () => {

@@ -1,7 +1,13 @@
-@use "../../checkerboard";
 @use "../../sentence/sr-only";
 
-// The design-system dialog, wider than its default for the three pictures.
+// The drawings are 500 by 200 pixels. The design system's modal is never
+// narrower than 600 pixels, which fits them, so the picture area shows a
+// drawing at its own size and the positions below are in the drawing's
+// pixels.
+$art-width: 500px;
+$art-height: 200px;
+$panel-gap: 20px;
+
 .dialog {
   width: 600px;
   max-width: 100%;
@@ -16,7 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: $panel-gap;
   padding: 8px 0;
   animation: panel-in 0.3s ease-out;
 }
@@ -32,12 +38,56 @@
   }
 }
 
+// The drawings are on white with black shadows, so the picture area is
+// white in both themes.
 .visual {
+  position: relative;
   display: flex;
+  flex: none;
   align-items: center;
   justify-content: center;
+  width: $art-width;
+  max-width: 100%;
+  height: $art-height;
+  border-radius: 8px;
+  background-color: var(--background-neutral-white-fixed);
+  overflow: hidden;
+}
+
+// The modal styles any image in its content as a banner: full width,
+// centered, with a background and rounded corners. These selectors outrank
+// that rule.
+.visual .drawing,
+.visual .sizeSmall {
+  border-radius: 0;
+  background: none;
+}
+
+.visual .drawing {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  min-height: 180px;
+  height: 100%;
+}
+
+.copyStack {
+  display: grid;
+  width: 100%;
+
+  > * {
+    grid-area: 1 / 1;
+  }
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $panel-gap;
+}
+
+.copyHidden {
+  visibility: hidden;
 }
 
 .heading {
@@ -54,144 +104,103 @@
   margin: 0 2px;
 }
 
-// Three rows of four pictures, each fading in a little after the last.
-.mosaic {
-  display: grid;
-  grid-template-columns: repeat(4, 56px);
-  gap: 10px;
-  font-size: 32px;
-  color: var(--text-neutral-primary);
-}
-
-.mosaicCell {
+// The prompt, in the drawing's speech bubble. The bubble fills rows 23 to
+// 153 of the drawing; the text keeps clear of its round ends.
+.words {
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  top: 23px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 8px;
-  background-color: var(--background-neutral-secondary);
-  animation: cell-in 0.4s ease-out both;
-  animation-delay: var(--cell-delay, 0ms);
-}
-
-@keyframes cell-in {
-  from {
-    opacity: 0;
-    transform: scale(0.6);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.words {
   margin: 0;
   text-align: center;
 }
 
-.quote {
-  opacity: 0.5;
+// Doubled to outrank the typography's own color. The bubble is white in
+// both themes.
+.words.words {
+  color: var(--text-neutral-black-fixed);
 }
 
-// The guess from noise through three stages, side by side: four squares
-// that fit the dialog's 552px of content with room to spare.
+// Four lines of the prompt fit in the bubble. A longer prompt ends in an
+// ellipsis.
+.wordsText {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  overflow-wrap: anywhere;
+}
+
+// A white box around one picture. Its border and its offset shadow copy
+// the cards in the drawings.
+.frame {
+  display: flex;
+  flex: none;
+  box-sizing: border-box;
+  aspect-ratio: 1;
+  border: 2px solid var(--brand-purple-5);
+  border-radius: 7px;
+  background-color: var(--background-neutral-white-fixed);
+  box-shadow: 4px 8px 0 var(--background-neutral-black-fixed);
+  overflow: hidden;
+}
+
+.noise,
+.chunky {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  object-fit: contain;
+}
+
+// The picture at each stage from noise to finished, side by side, at the
+// size and spacing of the design. The bottom padding centers the frames
+// together with their shadows.
 .stages {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 12px 4px;
 
-  .chunky {
+  .frame {
     width: 110px;
-    height: 110px;
   }
 }
 
-.noise {
-  width: 110px;
-  height: 110px;
-  border-radius: 8px;
-  image-rendering: pixelated;
-}
-
-.chunky {
-  width: 140px;
-  height: 140px;
-  border-radius: 8px;
-  image-rendering: pixelated;
-  object-fit: contain;
-
-  @include checkerboard.light-checkerboard(14px);
-}
-
-.thumbs {
-  position: absolute;
-  right: -44px;
-  bottom: -8px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 28px;
-  color: var(--text-neutral-primary);
-}
-
-// A character's square and a background's, to scale.
+// A character's card and a background's frame, to scale, with their
+// bottoms level.
 .sizes {
   display: flex;
   align-items: flex-end;
-  gap: 24px;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
 }
 
-.sizeBox {
-  display: flex;
-  border: 2px solid var(--borders-neutral-primary);
-  border-radius: 8px;
-  background-color: var(--background-neutral-secondary);
-  background-image:
-    linear-gradient(var(--borders-neutral-primary) 1px, transparent 1px),
-    linear-gradient(90deg, var(--borders-neutral-primary) 1px, transparent 1px);
-  background-size: 20px 20px;
+.visual .sizeSmall {
+  align-self: flex-end;
+  width: 88px;
 }
 
-.sizeSmall {
-  width: 80px;
-  height: 80px;
-}
+// flower-card.svg has its shadow inside the image, and .sizeLarge's shadow
+// is outside its box. A bottom margin the size of the shadow puts the two
+// shadows level.
+$large-shadow: 8px;
 
 .sizeLarge {
-  width: 160px;
-  height: 160px;
-
-  // No checkerboard here: the box's grid shows through the picture.
-  .chunky {
-    width: 100%;
-    height: 100%;
-    background: none;
-  }
+  width: 159px;
+  box-shadow: $large-shadow $large-shadow 0
+    var(--background-neutral-black-fixed);
+  margin-bottom: $large-shadow;
 }
 
-.guess {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .chunky {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-.dice {
-  position: absolute;
-  right: -28px;
-  bottom: -8px;
-  font-size: 40px;
-  color: var(--text-neutral-primary);
-}
-
+// Stretched across the dialog, so the dots are centered in it.
 .dots {
+  align-self: stretch;
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -210,8 +219,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .panel,
-  .mosaicCell {
+  .panel {
     animation: none;
   }
 }

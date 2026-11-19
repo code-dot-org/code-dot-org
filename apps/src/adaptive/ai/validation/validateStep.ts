@@ -12,7 +12,8 @@ import {
 } from '../../metricsHelpers';
 import {ValidationAttempt} from '../../progress/model';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../../types';
-import {generate, isAdaptiveAiEnabled, moderateOutput} from '../generate';
+import {isAdaptiveAiAvailable} from '../access';
+import {generate, moderateOutput} from '../generate';
 import {ADAPTIVE_MODELS} from '../models';
 
 import {
@@ -48,7 +49,7 @@ export interface ValidateStepOptions {
 /**
  * The attempt judging the work, or undefined when there is nothing to
  * record: the step has no validation block, the measured skill describes
- * no evidence levels, adaptive AI is off, or the judge failed. The caller
+ * no evidence levels, the shell makes no AI calls, or the judge failed. The caller
  * records the attempt and tells the student.
  */
 export async function validateStep({
@@ -67,7 +68,10 @@ export async function validateStep({
   const skill = pathway.skills[validation.measures.skillId];
   const described = skill?.evidenceLevels;
   if (!skill || !described) return undefined;
-  if (!isAdaptiveAiEnabled()) return undefined;
+  if (!isAdaptiveAiAvailable()) {
+    sendAiStaticFallbackUsed('validation', 'aiUnavailable', checkpoint, step);
+    return undefined;
+  }
   onJudging?.();
 
   const prompt = buildValidationPrompt({
