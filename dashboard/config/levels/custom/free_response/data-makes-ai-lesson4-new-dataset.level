@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check for Understanding",
-    "long_instructions": "## Visitor Photos\r\n\r\n| Data card | Visitor Photos |\r\n|---|---|\r\n| **Who collected it** | Park visitors on safari drives |\r\n| **When** | Daytime, dry season only |\r\n| **Records** | 500 |\r\n&nbsp;\r\n\r\nDr. Osei trains a model on the Visitor Photos records.\r\n\r\nCan this model predict whether elephants will visit the waterhole on a night in the wet season? Why or why not?",
+    "long_instructions": "## Visitor Photos\r\n\r\n| Data card | Visitor Photos |\r\n|---|---|\r\n| **Who collected it** | Park visitors on safari drives |\r\n| **When** | Daytime, dry season only |\r\n| **Records** | 500 |\r\n&nbsp;\r\n\r\nDr. Osei trains a model on the Visitor Photos records.\r\n\r\nDo you think this model will accurately predict whether elephants visit on a night in the wet season? Why or why not?",
     "stay_on_level_after_submit": "false",
     "height": "200",
     "allow_user_uploads": "false",
@@ -20,7 +20,7 @@
     "skip_sound": true,
     "placeholder": "Write your response here"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-28 18:11:42 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:12:00 +0000\",\"changed\":[\"title\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:42:16 +0000\",\"changed\":[\"stay_on_level_after_submit\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:43:09 +0000\",\"changed\":[\"title\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 16:28:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23979,\"changed_by_email\":\"kyra.patton+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-10-28 18:11:42 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:12:00 +0000\",\"changed\":[\"title\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:42:16 +0000\",\"changed\":[\"stay_on_level_after_submit\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:43:09 +0000\",\"changed\":[\"title\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 16:28:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23979,\"changed_by_email\":\"kyra.patton+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-19 03:28:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
