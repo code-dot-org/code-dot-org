@@ -65,7 +65,7 @@ class QuizzesController < ApplicationController
         raise "This Quiz must stay an exam while it is the last level of a lockable lesson."
       end
       if updates[:purpose] == 'exam' && !@level.exam?
-        problems = @level.exam_placement_problems
+        problems = @level.exam_lesson_position_problems
         raise "This Quiz cannot be an exam because #{problems.join('; ')}." if problems.any?
       end
       @level.assign_attributes(updates)

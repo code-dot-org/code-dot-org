@@ -88,7 +88,7 @@ class ParentLevelsChildLevel < ApplicationRecord
       error_message = "BubbleChoice level #{parent_level.name.dump} cannot contain #{child_level.type} level #{child_level.name.dump}"
       add_child_error(error_message)
     end
-    # An exam may only be the last level of a lockable lesson; see Quiz#exam_placement_problems.
+    # An exam may only be the last level of a lockable lesson; see Quiz#exam_lesson_position_problems.
     if child_level.is_a?(Quiz) && child_level.exam?
       add_child_error("exam Quiz #{child_level.name.dump} cannot be a child of #{parent_level&.name.inspect}")
     end

@@ -156,8 +156,9 @@ class Quiz < Level
 
   # An exam must be the last level of a lockable lesson, which is what makes
   # it teacher-released, and never a sublevel. Returns one message for each
-  # current placement that breaks this, whatever this Quiz's purpose.
-  def exam_placement_problems
+  # lesson or parent level that uses this Quiz in a way that breaks this,
+  # whatever this Quiz's purpose.
+  def exam_lesson_position_problems
     problems = script_levels.includes(:script, lesson: :script_levels).filter_map do |sl|
       next unless sl.lesson
       place = "lesson \"#{sl.lesson.key}\" of unit \"#{sl.script&.name}\""
