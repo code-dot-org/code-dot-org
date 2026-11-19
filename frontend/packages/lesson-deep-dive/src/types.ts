@@ -1,5 +1,7 @@
 import type {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
 
+import type {VocabularyItem} from './ReviewModalities/VocabularyFlashcards';
+
 // Same shape as apps' HttpClient ResponseValidator; local so typecheck never crawls apps.
 export type ResponseValidator<ResponseType> = (
   bodyJson: Record<string, unknown> | unknown[],
@@ -293,4 +295,27 @@ export const practiceProblemValidator: ResponseValidator<
     problem_text: p.problem_text,
     solution: p.solution,
   }));
+};
+
+export type LessonProgressCounts = {
+  levelsTotalCount: number;
+  levelsAttemptedCount: number;
+  validatedLevelsTotalCount: number;
+  validatedLevelsCorrectCount: number;
+  validatedLevelsIncorrectCount: number;
+};
+
+export type LessonDeepDiveData = {
+  lessonId: number;
+  lessonName: string;
+  lessonSummary: string;
+  vocabulary: VocabularyItem[];
+  objectives: LessonObjective[];
+  assessmentAnalysis: AssessmentQuestionResult[];
+  jsonVideos: JsonVideoData[];
+  practiceProblems: PracticeProblem[];
+  progressCounts: LessonProgressCounts;
+  timeSpentSeconds: number;
+  unitLabel: string | null;
+  nextLessonUrl: string | null;
 };

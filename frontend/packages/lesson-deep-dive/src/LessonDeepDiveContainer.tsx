@@ -1,34 +1,36 @@
 import {
-  FizzyButton,
-  InterventionBox,
-  LessonSummaryCard,
-  LevelsAttemptedBox,
-  NextStepPicker,
-  PreSkillsCheck,
-  ReflectionBox,
-  ReflectionData,
-  ReflectionValue,
-  SkillsCheck,
-  TimeSpentBox,
-  TutorSummaryBox,
-  ValidatedLevelsBox,
-  WelcomeBox,
-} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
+  type ComponentType,
+  type FC,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
-import {useLessonDeepDiveChallengesEnabled} from '@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled';
-import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import experiments from '@cdo/apps/util/experiments';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
+import {useApiClient} from '@code-dot-org/core/api';
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
 
-import TutorChat from './ReviewModalities/TutorChat';
-import TutorFeedback from './SkillsCheck/TutorFeedback';
-import {LessonDeepDiveData} from './types';
+import {generatePodcast} from './api';
+import FizzyButton from './FizzyButton';
+import LessonSummaryCard from './LessonSummaryCard';
+import NextStepPicker from './NextStepPicker';
+import PreSkillsCheck from './PreSkillsCheck';
+import ReflectionBox from './Reflection/ReflectionBox';
+import {type TutorChatComponent} from './ReviewModalities/Chat';
+import InterventionBox, {type CardId} from './ReviewModalities/InterventionBox';
+import {type VideoPlayerComponent} from './ReviewModalities/VideosBox';
+import SkillsCheck, {type TutorFeedbackProps} from './SkillsCheck/SkillsCheck';
+import LevelsAttemptedBox from './StudentLessonStats/LevelsAttemptedBox';
+import TimeSpentBox from './StudentLessonStats/TimeSpentBox';
+import ValidatedLevelsBox from './StudentLessonStats/ValidatedLevelsBox';
+import TutorSummaryBox from './TutorSummaryBox';
+import {
+  type LessonDeepDiveData,
+  type ReflectionData,
+  type ReflectionValue,
+} from './types';
+import WelcomeBox from './WelcomeBox';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
@@ -143,41 +145,51 @@ const RECAP_VARIANTS: RecapVariant[] = [
 
 interface LessonDeepDiveContainerProps {
   lessonDeepDiveData: LessonDeepDiveData;
+  challengesEnabled: boolean;
+  VideoPlayer: VideoPlayerComponent;
+  TutorChat: TutorChatComponent;
+  TutorFeedback: ComponentType<TutorFeedbackProps>;
+  onModalitySelected?: (modality: CardId) => void;
 }
 
 const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   lessonDeepDiveData,
+  challengesEnabled,
+  VideoPlayer,
+  TutorChat,
+  TutorFeedback,
+  onModalitySelected,
 }) => {
+  const api = useApiClient();
   const {screenId: screenParam} = useParams<{screenId: string}>();
   const navigate = useNavigate();
   const [reflectionData, setReflectionData] = useState<ReflectionData | null>(
-    null
+    null,
   );
   const [nextStepChoice, setNextStepChoice] = useState<
     'practice' | 'challenge'
   >('practice');
-  const challengesEnabled = useLessonDeepDiveChallengesEnabled();
   // The next-step screen only offers a choice between practice and a challenge.
   const screenIds: readonly BoxId[] = useMemo(
     () =>
       challengesEnabled ? BOX_IDS : BOX_IDS.filter(id => id !== 'next-step'),
-    [challengesEnabled]
+    [challengesEnabled],
   );
 
   // Both values are fixed for the lifetime of this component instance.
   const colorOffset = useMemo(
     () => Math.floor(Math.random() * GRADIENT_CYCLE.length),
-    []
+    [],
   );
   const variant = useMemo(
     () => RECAP_VARIANTS[Math.floor(Math.random() * RECAP_VARIANTS.length)],
-    []
+    [],
   );
 
   // Validate the URL param against the known screen list; fall back to
   // 'welcome' so a stale or hand-typed URL doesn't crash the container.
   const currentScreenId: BoxId = (screenIds as readonly string[]).includes(
-    screenParam ?? ''
+    screenParam ?? '',
   )
     ? (screenParam as BoxId)
     : 'welcome';
@@ -186,7 +198,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const getGradient = useCallback(
     (slotOffset: number) =>
       GRADIENT_CYCLE[(colorOffset + slotOffset) % GRADIENT_CYCLE.length],
-    [colorOffset]
+    [colorOffset],
   );
   const goToNext = useCallback(() => {
     const next = screenIds[currentIndex + 1];
@@ -224,18 +236,15 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   // and PodcastsBox retrieves it later.
   const handleContinue = useCallback(() => {
     if (currentScreenId === 'reflection' && !reflectionData) {
-      HttpClient.post(
-        '/ai_student_podcasts/generate_podcast',
-        JSON.stringify({
-          lesson_id: lessonDeepDiveData.lessonId,
-          objective_ids: lessonDeepDiveData.objectives.map(o => o.id),
-        }),
-        true, // useAuthenticityToken
-        {'Content-Type': 'application/json'}
+      generatePodcast(
+        api.transport,
+        lessonDeepDiveData.lessonId,
+        lessonDeepDiveData.objectives.map(o => o.id),
       ).catch(() => {});
     }
     goToNext();
   }, [
+    api,
     currentScreenId,
     reflectionData,
     lessonDeepDiveData.lessonId,
@@ -258,33 +267,14 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       ];
       for (const level of priority) {
         const match = lessonDeepDiveData.objectives.find(
-          o => data.objectiveReflections[o.id] === level
+          o => data.objectiveReflections[o.id] === level,
         );
         if (match) return match.description;
       }
       return undefined;
     },
-    [lessonDeepDiveData.objectives]
+    [lessonDeepDiveData.objectives],
   );
-
-  const userId = useAppSelector(state => state.currentUser.userId);
-  const reportModalityClick = useCallback(
-    (modality: string) =>
-      analyticsReporter.sendEvent(
-        EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
-        {
-          modality,
-          lessonId: lessonDeepDiveData.lessonId,
-          lessonName: lessonDeepDiveData.lessonName,
-          userId,
-        }
-      ),
-    [lessonDeepDiveData.lessonId, lessonDeepDiveData.lessonName, userId]
-  );
-
-  if (!experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR)) {
-    return null;
-  }
 
   const isStoryScreen = STORY_SCREENS.has(currentScreenId);
   const isLast = currentIndex === screenIds.length - 1;
@@ -424,9 +414,9 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
               nextStepChoice === 'challenge' ? 'challenge' : null
             }
             challengeEnabled={challengesEnabled}
-            VideoPlayer={TutorVideo}
+            VideoPlayer={VideoPlayer}
             TutorChat={TutorChat}
-            onModalitySelected={reportModalityClick}
+            onModalitySelected={onModalitySelected}
             onDone={goToNext}
           />
         );

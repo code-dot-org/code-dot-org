@@ -1,28 +1,43 @@
-import {render, screen, act, fireEvent} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
+import {vi} from 'vitest';
 
-import LessonDeepDiveContainer from '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer';
-import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import experiments from '@cdo/apps/util/experiments';
-import HttpClient from '@cdo/apps/util/HttpClient';
+import LessonDeepDiveContainer from '../LessonDeepDiveContainer';
+import {type LessonDeepDiveData} from '../types';
 
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  WelcomeBox: () => <div>welcome</div>,
-  LevelsAttemptedBox: () => <div>levels-attempted</div>,
-  TimeSpentBox: () => <div>time-spent</div>,
-  ValidatedLevelsBox: () => <div>validated-levels</div>,
-  LessonSummaryCard: () => <div>lesson-summary</div>,
-  PreSkillsCheck: () => <div>pre-skills-check</div>,
-  SkillsCheck: () => <div>skills-check</div>,
-  TutorSummaryBox: () => <div>tutor-summary</div>,
-  NextStepPicker: () => <div>next-step</div>,
-  ReflectionBox: () => <div>reflection</div>,
-  InterventionBox: ({
+vi.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {request: vi.fn()}};
+  return {useApiClient: () => client};
+});
+
+vi.mock('../WelcomeBox', () => ({default: () => <div>welcome</div>}));
+vi.mock('../StudentLessonStats/LevelsAttemptedBox', () => ({
+  default: () => <div>levels-attempted</div>,
+}));
+vi.mock('../StudentLessonStats/TimeSpentBox', () => ({
+  default: () => <div>time-spent</div>,
+}));
+vi.mock('../StudentLessonStats/ValidatedLevelsBox', () => ({
+  default: () => <div>validated-levels</div>,
+}));
+vi.mock('../LessonSummaryCard', () => ({
+  default: () => <div>lesson-summary</div>,
+}));
+vi.mock('../PreSkillsCheck', () => ({
+  default: () => <div>pre-skills-check</div>,
+}));
+vi.mock('../SkillsCheck/SkillsCheck', () => ({
+  default: () => <div>skills-check</div>,
+}));
+vi.mock('../TutorSummaryBox', () => ({
+  default: () => <div>tutor-summary</div>,
+}));
+vi.mock('../NextStepPicker', () => ({default: () => <div>next-step</div>}));
+vi.mock('../Reflection/ReflectionBox', () => ({
+  default: () => <div>reflection</div>,
+}));
+vi.mock('../ReviewModalities/InterventionBox', () => ({
+  default: ({
     onModalitySelected,
   }: {
     onModalitySelected: (modality: string) => void;
@@ -33,26 +48,8 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ),
 }));
 
-const mockUserId = 7;
-jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
-  useAppSelector: () => mockUserId,
-}));
-
-jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
-  __esModule: true,
-  default: {sendEvent: jest.fn()},
-}));
-
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {post: jest.fn().mockResolvedValue(undefined)},
-}));
-
-let mockChallengesEnabled = true;
-jest.mock('@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled', () => ({
-  useLessonDeepDiveChallengesEnabled: () => mockChallengesEnabled,
-}));
+const onModalitySelected = vi.fn();
+let challengesEnabled = true;
 
 const LESSON_DATA: LessonDeepDiveData = {
   lessonId: 1,
@@ -81,24 +78,30 @@ function renderContainer(initialScreen = 'welcome') {
       <Routes>
         <Route
           path=":screenId"
-          element={<LessonDeepDiveContainer lessonDeepDiveData={LESSON_DATA} />}
+          element={
+            <LessonDeepDiveContainer
+              lessonDeepDiveData={LESSON_DATA}
+              challengesEnabled={challengesEnabled}
+              VideoPlayer={() => null}
+              TutorChat={() => null}
+              TutorFeedback={() => null}
+              onModalitySelected={onModalitySelected}
+            />
+          }
         />
       </Routes>
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 }
 
 describe('LessonDeepDiveContainer story card sequence', () => {
   beforeEach(() => {
-    jest.useFakeTimers();
-    experiments.setEnabled(experiments.LESSON_TUTOR, true);
-    mockChallengesEnabled = true;
-    (HttpClient.post as jest.Mock).mockClear();
+    vi.useFakeTimers();
+    challengesEnabled = true;
   });
 
   afterEach(() => {
-    jest.useRealTimers();
-    experiments.setEnabled(experiments.LESSON_TUTOR, false);
+    vi.useRealTimers();
   });
 
   it('starts on the welcome card', () => {
@@ -108,7 +111,7 @@ describe('LessonDeepDiveContainer story card sequence', () => {
 
   it('auto-advances to the next card when the timer fires', () => {
     renderContainer();
-    act(() => jest.runOnlyPendingTimers());
+    act(() => vi.runOnlyPendingTimers());
     expect(screen.getByText('levels-attempted')).toBeInTheDocument();
   });
 
@@ -121,7 +124,7 @@ describe('LessonDeepDiveContainer story card sequence', () => {
       'lesson-summary',
     ];
     for (const card of order) {
-      act(() => jest.runOnlyPendingTimers());
+      act(() => vi.runOnlyPendingTimers());
       expect(screen.getByText(card)).toBeInTheDocument();
     }
   });
@@ -130,11 +133,11 @@ describe('LessonDeepDiveContainer story card sequence', () => {
     renderContainer();
     // advance through welcome → levels-attempted → time-spent → validated-levels → lesson-summary
     for (let i = 0; i < 4; i++) {
-      act(() => jest.runOnlyPendingTimers());
+      act(() => vi.runOnlyPendingTimers());
     }
     expect(screen.getByText('lesson-summary')).toBeInTheDocument();
     // no pending timer should fire from lesson-summary
-    act(() => jest.runOnlyPendingTimers());
+    act(() => vi.runOnlyPendingTimers());
     expect(screen.getByText('lesson-summary')).toBeInTheDocument();
   });
 
@@ -157,7 +160,7 @@ describe('LessonDeepDiveContainer story card sequence', () => {
     act(() => fireEvent.keyDown(window, {key: 'ArrowRight'}));
     expect(screen.getByText('levels-attempted')).toBeInTheDocument();
     // timer fires from levels-attempted, not welcome
-    act(() => jest.runOnlyPendingTimers());
+    act(() => vi.runOnlyPendingTimers());
     expect(screen.getByText('time-spent')).toBeInTheDocument();
   });
 
@@ -179,12 +182,7 @@ describe('LessonDeepDiveContainer story card sequence', () => {
 
 describe('LessonDeepDiveContainer URL param routing', () => {
   beforeEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR, true);
-    mockChallengesEnabled = true;
-  });
-
-  afterEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR, false);
+    challengesEnabled = true;
   });
 
   it.each([
@@ -202,15 +200,7 @@ describe('LessonDeepDiveContainer URL param routing', () => {
   it('reports the modality a student picks on the intervention screen', () => {
     renderContainer('intervention');
     fireEvent.click(screen.getByRole('button', {name: 'intervention'}));
-    expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
-      EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
-      {
-        modality: 'challenge',
-        lessonId: LESSON_DATA.lessonId,
-        lessonName: LESSON_DATA.lessonName,
-        userId: mockUserId,
-      }
-    );
+    expect(onModalitySelected).toHaveBeenCalledWith('challenge');
   });
 
   it('falls back to welcome when :screenId is not a known screen', () => {
@@ -221,12 +211,7 @@ describe('LessonDeepDiveContainer URL param routing', () => {
 
 describe('LessonDeepDiveContainer without challenges', () => {
   beforeEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR, true);
-    mockChallengesEnabled = false;
-  });
-
-  afterEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR, false);
+    challengesEnabled = false;
   });
 
   it('skips next-step going forward from reflection', () => {

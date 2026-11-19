@@ -3,7 +3,7 @@
 // /s/aif1-v2-2025/lessons/1/tutor, plus practice_problems#index. Regenerate
 // with the queries in README.md if the contract changes.
 //
-// What Rails sends differs from apps/src/aiTutor/views/lessonDeepDive/types.ts
+// What Rails sends differs from src/types.ts
 // (LessonDeepDiveData):
 //   - `practiceProblems` and `nextLessonUrl` are declared but never sent.
 //   - `objectives[].id` and `vocabulary[].id` are declared string, sent int.

@@ -1,37 +1,37 @@
-import {useApiClient} from '@code-dot-org/core/api';
-import {
-  Challenge,
-  ChallengeBox,
-  listChallenges,
-} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useCallback, useEffect, useState} from 'react';
+import {type ComponentType, type FC, useEffect, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
-import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
-import {getClientApi} from '@cdo/apps/aichat/api/client';
-import {useLessonDeepDiveChallengesEnabled} from '@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled';
-import {
-  AiChatClientTypes,
-  ChallengeTypes,
-} from '@cdo/generated-scripts/sharedConstants';
+import {useApiClient} from '@code-dot-org/core/api';
+import {ChallengeTypes} from '@code-dot-org/shared-constants';
 
-import {STICKER_SECTIONS} from './stickers';
-import WhiteboardChallenge from './WhiteboardChallenge';
+import {listChallenges} from '../api';
+import {type Challenge, type StickerSection} from '../types';
+
+import ChallengeBox, {type WhiteboardChallengeProps} from './ChallengeBox';
 
 import styles from '../lesson-deep-dive-container.module.scss';
 
 interface ChallengeRouteProps {
   lessonId: number;
+  challengesEnabled: boolean;
+  WhiteboardChallenge: ComponentType<WhiteboardChallengeProps>;
+  transcribeAudio: (audio: Blob) => Promise<string>;
+  stickerSections: StickerSection[];
 }
 
-const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
+const ChallengeRoute: FC<ChallengeRouteProps> = ({
+  lessonId,
+  challengesEnabled,
+  WhiteboardChallenge,
+  transcribeAudio,
+  stickerSections,
+}) => {
   const {challengeId, modality} = useParams<{
     challengeId: string;
     modality: string;
   }>();
   const navigate = useNavigate();
   const api = useApiClient();
-  const challengesEnabled = useLessonDeepDiveChallengesEnabled();
   const [challenge, setChallenge] = useState<Challenge | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
 
@@ -56,21 +56,6 @@ const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
     };
   }, [api, lessonId, challengeId, navigate]);
 
-  const transcribeAudio = useCallback(
-    async (audio: Blob) => {
-      AichatContextManager.setContext({
-        clientType: AiChatClientTypes.LESSON_DEEP_DIVE,
-        currentLevelId: null,
-        scriptId: null,
-        channelId: undefined,
-        lessonId,
-      });
-      const aichatClientApi = await getClientApi();
-      return aichatClientApi.transcribeAudio(audio);
-    },
-    [lessonId]
-  );
-
   if (!challengesEnabled) {
     return null;
   }
@@ -92,7 +77,7 @@ const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
             challengeType={challengeType}
             WhiteboardChallenge={WhiteboardChallenge}
             transcribeAudio={transcribeAudio}
-            stickerSections={STICKER_SECTIONS}
+            stickerSections={stickerSections}
           />
         ) : null}
       </div>
