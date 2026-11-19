@@ -146,47 +146,44 @@ const HTML_COLORS = [
   'yellowgreen',
 ];
 
-export type LocalizedColorCache = {
-  [localizedColor: string]: string;
-};
+// Translated colour name, lowercased, to its HTML colour name. Rebuilt lazily
+// because drawBackground asks every frame and each translate touches the DOM.
+let cache: Map<string, string> | null = null;
 
-/**
- * This is the localized color cache that maps locales to mappings from a
- * localized color name to the standard html color name.
- */
-export const localizedColorCache: {
-  [locale: string]: LocalizedColorCache;
-} = {};
+// A dictionary arriving or a language switch makes the cached names stale.
+localization.on('change', () => {
+  cache = null;
+});
 
-/**
- * This gives us a hash that maps localized color names to the standard html
- * color name.
- */
-export const localizedColors: (locale?: string) => LocalizedColorCache = (
-  locale?: string
-) => {
-  locale ||= localization.locale;
-  if (!localizedColorCache[locale]) {
-    localizedColorCache[locale] = Object.fromEntries(
-      HTML_COLORS.map(htmlColor => [
-        localization.translate(htmlColor, ['html-color']),
-        htmlColor,
-      ])
-    );
+function normalize(name: string): string {
+  return name.trim().toLowerCase();
+}
+
+function localizedColors(): Map<string, string> {
+  if (!cache) {
+    cache = new Map();
+    for (const htmlColor of HTML_COLORS) {
+      const localized = normalize(
+        localization.translate(htmlColor, ['html-color'])
+      );
+      // Colours sharing a translation (aqua and cyan) render alike; keep the
+      // first rather than let list order decide silently.
+      if (!cache.has(localized)) {
+        cache.set(localized, htmlColor);
+      }
+    }
   }
-
-  return localizedColorCache[localization.locale];
-};
+  return cache;
+}
 
 /**
- * This will return the real html color string for any localized html color
- * name that we can determine for the current locale.
+ * Returns the HTML colour name for a colour name in the current language.
+ * HTML colour names, hex and other CSS colour forms pass through unchanged.
  */
-export const unlocalizeColor = (localizedColor: string, locale?: string) => {
-  // Ignore hex colors
-  if (localizedColor.match(/^#[0-9a-fA-F]{6}$/)) {
-    return localizedColor;
+export function unlocalizeColor(color: string): string {
+  const name = normalize(color);
+  if (HTML_COLORS.includes(name)) {
+    return color;
   }
-
-  return localizedColors(locale)[localizedColor] || localizedColor;
-};
+  return localizedColors().get(name) ?? color;
+}
