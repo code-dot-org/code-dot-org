@@ -40,7 +40,8 @@ const transport = createKyTransport({
 });
 ```
 
-Handles CSRF injection on non-GET requests, FormData detection,
+Handles CSRF injection on non-GET requests, FormData and Blob bodies
+(sent unchanged; a Blob keeps its own content type),
 JSON/text content negotiation, and abort signals. Errors are
 normalized to `ApiError`.
 
