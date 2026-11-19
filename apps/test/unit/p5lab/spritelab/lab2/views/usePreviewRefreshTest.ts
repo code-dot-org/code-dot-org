@@ -2,12 +2,11 @@ import {renderHook} from '@testing-library/react-hooks';
 
 import usePreviewRefresh from '@cdo/apps/p5lab/spritelab/lab2/views/usePreviewRefresh';
 
-const render = (onPlayTab = false) => {
+const render = (playing = false) => {
   const runPreview = jest.fn();
   const hook = renderHook(
-    ({onPlayTab}: {onPlayTab: boolean}) =>
-      usePreviewRefresh(runPreview, onPlayTab),
-    {initialProps: {onPlayTab}}
+    ({playing}: {playing: boolean}) => usePreviewRefresh(runPreview, playing),
+    {initialProps: {playing}}
   );
   return {runPreview, ...hook};
 };
@@ -31,12 +30,12 @@ describe('usePreviewRefresh', () => {
     const {runPreview, result, rerender} = render();
     result.current();
     jest.advanceTimersByTime(100);
-    rerender({onPlayTab: true});
+    rerender({playing: true});
     jest.advanceTimersByTime(1000);
     expect(runPreview).not.toHaveBeenCalled();
   });
 
-  it('ignores a request made on the Play tab', () => {
+  it('ignores a request made while the game plays', () => {
     const {runPreview, result} = render(true);
     result.current();
     jest.advanceTimersByTime(1000);
@@ -45,7 +44,7 @@ describe('usePreviewRefresh', () => {
 
   it('runs the preview for a request made after play ends', () => {
     const {runPreview, result, rerender} = render(true);
-    rerender({onPlayTab: false});
+    rerender({playing: false});
     result.current();
     jest.advanceTimersByTime(400);
     expect(runPreview).toHaveBeenCalledTimes(1);
