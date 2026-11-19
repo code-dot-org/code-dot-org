@@ -110,23 +110,23 @@
   );
 }
 
+// The chip's word sits on the same baseline as the sentence's own words.
 .chip {
   position: relative;
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: 6px;
   // The vertical margin is the room between the sentence's lines.
   margin: 6px 2px;
   padding: 4px 26px 4px 6px;
   border: 1px solid var(--border-neutral-primary);
   border-radius: 999px;
-  font-weight: 600;
   line-height: 1.4;
   // The page's background and text colors for every slot; a chip carries
   // no slot-specific color.
   background-color: var(--background-neutral-primary);
   color: var(--text-neutral-primary);
-  vertical-align: middle;
+  vertical-align: baseline;
   animation: chip-land 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -151,6 +151,7 @@
 
 .colorDot {
   flex: none;
+  align-self: center;
   width: 0.9em;
   height: 0.9em;
   border-radius: 50%;
@@ -164,7 +165,7 @@
 // taller than the sentence's line.
 .chipWord {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: 6px;
   margin: 0;
   padding: 0;
@@ -310,6 +311,11 @@ button.chipWord {
   & + & {
     border-top: 1px solid var(--border-neutral-secondary);
   }
+
+  // The first heading sits as far from the box's top as from its side.
+  &:first-child {
+    padding-top: 0;
+  }
 }
 
 // The arrows are always there; one with nowhere to go is disabled.
@@ -414,7 +420,6 @@ button.chipWord {
   color: var(--text-neutral-primary);
   font: inherit;
   font-size: 16px;
-  font-weight: 600;
   padding: 4px 16px 4px 10px;
   cursor: grab;
   transition:
