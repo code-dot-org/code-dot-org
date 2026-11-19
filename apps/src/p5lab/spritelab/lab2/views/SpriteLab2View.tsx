@@ -171,12 +171,7 @@ import DiscoverBlocksButton, {
 import FreeplayIntroDialog from './FreeplayIntroDialog';
 import ImagesTab, {UploadWarningSettings} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
-import {
-  ArrowSet,
-  arrowSetFor,
-  ControlsState,
-  KEYBOARD_GAME_KEYS,
-} from './playBar';
+import {ArrowSet, arrowSetFor, ControlsState, GAME_KEY_VALUES} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
@@ -1682,7 +1677,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     const swallow = (e: KeyboardEvent) => {
-      if (KEYBOARD_GAME_KEYS.has(e.key)) {
+      if (GAME_KEY_VALUES.has(e.key)) {
         e.stopPropagation();
       }
     };
@@ -1703,7 +1698,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       const target = e.target instanceof Element ? e.target : null;
       if (
         isTargetEditable(e.target) ||
-        (KEYBOARD_GAME_KEYS.has(e.key) && target?.closest(INTERACTIVE_CONTROLS))
+        (GAME_KEY_VALUES.has(e.key) && target?.closest(INTERACTIVE_CONTROLS))
       ) {
         e.stopPropagation();
       }
@@ -2301,7 +2296,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     });
 
   return (
-    // The handlers only watch what the student does, for analytics.
     <div
       className={classNames(
         moduleStyles.labRow,
@@ -2309,6 +2303,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       )}
       onPointerDownCapture={levelAnalytics.reportActivity}
       onKeyDownCapture={levelAnalytics.reportActivity}
+      // The shared instructions panel renders Continue, so its press is
+      // caught here, by the button's id.
       onClickCapture={event => {
         if (
           event.target instanceof Element &&

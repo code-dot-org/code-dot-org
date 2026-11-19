@@ -26,7 +26,6 @@ export function imageOrigin(
   return 'other';
 }
 
-/** How many of the list's images have each origin. */
 export function countImageOrigins(
   list: RuntimeAnimationList
 ): Record<ImageOrigin, number> {

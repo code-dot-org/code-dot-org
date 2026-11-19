@@ -396,7 +396,8 @@ describe('useImageWriter', () => {
       trimmed: false,
     });
     expect(quiet).not.toHaveProperty('sourceUrl');
-    // The first edit cleared the generation; the image still began as one.
+    // Store the first edit, so the second edit starts from an image with no
+    // `generation`. `fromGeneration` must still be true.
     propsByKey.k1 = {...propsByKey.k1, ...quiet};
     await act(async () => {
       await writer().saveEdited(target, 'data:image/png;base64,AB', {});

@@ -6,19 +6,19 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {isOnScreenGameKey, KEYBOARD_GAME_KEYS} from './playBar';
+import {GAME_KEY_VALUES, isOnScreenGameKey} from './playBar';
 
 export interface LevelAnalytics {
-  /** Call for anything the student does on the level. */
   reportActivity: () => void;
-  /** Call when the student presses Continue or Finish. */
+  /** Sends the level-complete event with `details`, once per visit. */
   reportCompleted: (details: Record<string, unknown>) => void;
 }
 
 /**
  * Analytics for one visit to a level: the shared Level Activity event at the
  * student's first action, an event when they complete the level, and an
- * event when the visit ends. The view is mounted once per visit.
+ * event when the visit ends. A visit runs from this hook's mount to its
+ * unmount, or to the page unload if that comes first.
  *
  * Nothing is sent while `enabled` is false, or for a standalone project,
  * which the shared event leaves out as well.
@@ -39,8 +39,9 @@ export default function useLevelAnalytics(
     keyboardPresses: 0,
     buttonPresses: 0,
   });
-  // The latest values, for the callbacks below, which must keep their
-  // identity through the visit.
+  // Read through a ref so that `send` and `counted` never change. The effect
+  // that ends the visit depends on them, and its cleanup would end the visit
+  // early if they did.
   const latest = useRef({logLevelActivity, levelProperties, unitName, enabled});
   latest.current = {logLevelActivity, levelProperties, unitName, enabled};
 
@@ -92,7 +93,7 @@ export default function useLevelAnalytics(
       return;
     }
     const onKeyDown = (event: KeyboardEvent) => {
-      if (!KEYBOARD_GAME_KEYS.has(event.key) || event.repeat) {
+      if (!GAME_KEY_VALUES.has(event.key) || event.repeat) {
         return;
       }
       if (isOnScreenGameKey(event)) {

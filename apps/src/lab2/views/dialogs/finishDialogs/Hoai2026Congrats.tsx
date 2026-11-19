@@ -25,7 +25,6 @@ const DESTINATIONS = {
   professionalLearning: 'https://code.org/en-US/professional-learning',
 };
 
-/** What the student did with the dialog; `shown` is sent as it opens. */
 type FinishDialogAction =
   | 'shown'
   | 'close'
@@ -37,9 +36,6 @@ type FinishDialogAction =
   | 'certificate'
   | 'professional_learning';
 
-// Sent before the action is carried out. The certificate and the remix leave
-// the page, and the analytics client sends what it has queued as a page is
-// left.
 const report = (action: FinishDialogAction) =>
   analyticsReporter.sendEvent(EVENTS.HOAI2026_FINISH_DIALOG, {action}, true);
 
@@ -144,7 +140,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
         onClose();
       }}
       closeLabel="Close"
-      // The one button is the quiet kind: it keeps the student where they are.
+      // Low emphasis, because this button keeps the student on the page.
       primaryButtonProps={{
         children: 'Keep playing',
         variant: 'outlined',
@@ -174,8 +170,8 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                 Discover more in Sprite Lab
               </Typography>
               <div>
-                {/* A remix of this game, as the header's Remix button makes;
-                held while the project may not be remixed. */}
+                {/* Makes a remix of this game, like the header's Remix button.
+                Disabled while the project may not be remixed. */}
                 <MuiButton
                   variant="contained"
                   color="white"
@@ -189,6 +185,8 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                   }
                   disabled={!onRemix || shareDisabled}
                   onClick={() => {
+                    // Reported before the remix leaves the page. The Statsig
+                    // client sends its queued events as a page is left.
                     report('open_sprite_lab');
                     onRemix?.();
                   }}
@@ -261,7 +259,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
               text="Print it with your name on it."
             >
               {/* The unit's own finish page, so it opens in place of the lab
-              as the lab's Finish would; held while the unit has none. */}
+              as the lab's Finish would. Disabled while the unit has none. */}
               <MuiButton
                 variant="outlined"
                 color="secondary"
