@@ -77,6 +77,7 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   default: ({
     checkpoint,
     initialStepId,
+    onStartStep,
     onCompleteStep,
     onExit,
     onFinish,
@@ -87,6 +88,7 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   }: {
     checkpoint: {title: string; steps: unknown[]};
     initialStepId?: string;
+    onStartStep: (step: unknown) => void;
     onCompleteStep: (step: unknown, timeMs: number) => void;
     onExit: () => void;
     onFinish: () => void;
@@ -102,6 +104,9 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
       {projectName && <span>step project: {projectName}</span>}
       <button type="button" onClick={onExit}>
         exit
+      </button>
+      <button type="button" onClick={() => onStartStep(checkpoint.steps[0])}>
+        start step
       </button>
       <button
         type="button"
@@ -124,6 +129,14 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
       )}
     </div>
   ),
+}));
+jest.mock('@cdo/apps/lab2/views/alerts/teacherViewingStudentProject', () => ({
+  __esModule: true,
+  default: ({
+    getAlertText,
+  }: {
+    getAlertText: (name: string) => React.ReactElement;
+  }) => <div role="alert">{getAlertText('Doug Funnie')}</div>,
 }));
 jest.mock('@cdo/apps/lab2/views/Loading', () => ({
   __esModule: true,
@@ -423,6 +436,57 @@ describe('PathwayApp', () => {
 
       expect(screen.getByText('map screen')).toBeTruthy();
       expect(window.location.search).toBe('');
+    });
+
+    describe('while a teacher views a student', () => {
+      beforeEach(() =>
+        mockUseAppSelector.mockImplementation(selector =>
+          selector({progress: {viewAsUserId: 77}, lab: {}})
+        )
+      );
+
+      it('opens a URL checkpoint the student has not unlocked, with an alert that stays once a step starts', async () => {
+        window.history.replaceState({}, '', '?checkpoint=next&step=next-step');
+
+        await renderSettled();
+
+        expect(screen.getByText(/playing Next/)).toBeTruthy();
+        expect(screen.getByRole('alert').textContent).toBe(
+          'Doug Funnie has not unlocked this checkpoint'
+        );
+        act(() => screen.getByText('start step').click());
+        expect(screen.getByRole('alert')).toBeTruthy();
+        expect(mockDispatch).not.toHaveBeenCalledWith({
+          startedReport: 'adaptive',
+        });
+      });
+
+      it('shows no alert on a checkpoint the student has unlocked', async () => {
+        window.history.replaceState(
+          {},
+          '',
+          '?checkpoint=intro&step=intro-step'
+        );
+
+        await renderSettled();
+
+        expect(screen.getByText(/playing Intro/)).toBeTruthy();
+        expect(screen.queryByRole('alert')).toBeNull();
+      });
+
+      it('sends no started milestone when the teacher opens a checkpoint from the map', async () => {
+        mockLoad.mockResolvedValue({
+          steps: {'intro-step': {status: 'started', timeSpent: 0}},
+        });
+        await renderSettled();
+
+        act(() => screen.getByText('start intro').click());
+
+        expect(screen.getByText(/playing Intro/)).toBeTruthy();
+        expect(mockDispatch).not.toHaveBeenCalledWith({
+          startedReport: 'adaptive',
+        });
+      });
     });
 
     it('navigates back to the map when the browser fires popstate with no checkpoint', async () => {

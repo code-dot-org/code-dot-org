@@ -106,7 +106,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onTabChange,
   projectName,
 }) => {
-  const {pathway, progress, statusMap} = usePathwayContext();
+  const {pathway, progress, statusMap, isViewingStudent} = usePathwayContext();
   const steps = useMemo(
     () => visibleSteps(checkpoint, progress),
     [checkpoint, progress]
@@ -252,6 +252,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             answers={progress.steps[step.id]?.answers ?? NO_ANSWERS}
             onSaveAnswers={saveAnswers}
             onComplete={advance}
+            isViewingStudent={isViewingStudent}
           />
         );
       case 'review':

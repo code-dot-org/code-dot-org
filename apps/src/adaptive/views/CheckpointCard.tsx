@@ -43,6 +43,8 @@ interface CheckpointCardProps {
   /** What the student has shown, for explaining a skipped checkpoint. */
   evidence: PathwayEvidence;
   onStart: () => void;
+  /** Offers a locked checkpoint too, to a teacher viewing a student. */
+  canOpenLocked?: boolean;
   /** Zooms the map onto another checkpoint. */
   onSelectCheckpoint: (id: string) => void;
 }
@@ -54,6 +56,7 @@ const CheckpointCard: React.FunctionComponent<CheckpointCardProps> = ({
   statusMap,
   evidence,
   onStart,
+  canOpenLocked = false,
   onSelectCheckpoint,
 }) => {
   const skills = (checkpoint.skillIds || [])
@@ -165,10 +168,16 @@ const CheckpointCard: React.FunctionComponent<CheckpointCardProps> = ({
         </>
       )}
 
-      {status !== 'locked' && (
+      {status !== 'locked' ? (
         <MuiButton variant="contained" onClick={onStart}>
           {ACTION_LABELS[status]}
         </MuiButton>
+      ) : (
+        canOpenLocked && (
+          <MuiButton variant="outlined" onClick={onStart}>
+            View
+          </MuiButton>
+        )
       )}
     </div>
   );

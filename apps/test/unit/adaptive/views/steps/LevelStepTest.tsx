@@ -20,6 +20,7 @@ let mockProgress: {steps: {[stepId: string]: {status?: string}}} = {
 let mockBuildRequested = false;
 const mockSetBuildRequested = jest.fn();
 let mockAiAvailable = false;
+let mockIsViewingStudent = false;
 
 jest.mock('@cdo/apps/adaptive/ai/access', () => ({
   isAdaptiveAiAvailable: () => mockAiAvailable,
@@ -36,6 +37,7 @@ jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
     checkpoint: {id: 'ck', title: 'CK', steps: []},
     statusMap: {},
     progress: mockProgress,
+    isViewingStudent: mockIsViewingStudent,
     saveGeneratedInstructions: jest.fn(),
     aiContext: undefined,
   }),
@@ -124,6 +126,10 @@ jest.mock('../../../../../lab2EntryPoints', () => {
     };
   }) {
     const tutor = levelProperties?.aiTutorModelParameters;
+    const navigation = React.useContext(
+      require('@cdo/apps/lab2/views/components/Instructions/ExternalNavigationContext')
+        .ExternalNavigationContext
+    );
     return React.createElement(
       'div',
       null,
@@ -141,6 +147,11 @@ jest.mock('../../../../../lab2EntryPoints', () => {
         'p',
         null,
         `tutor: ${tutor ? tutor.selectedModelId : 'default'}`
+      ),
+      React.createElement(
+        'p',
+        null,
+        `continue: ${navigation?.enabled ? 'enabled' : 'disabled'}`
       )
     );
   }
@@ -183,6 +194,7 @@ describe('LevelStep (LevelPlayer)', () => {
     mockProgress = {steps: {}};
     mockBuildRequested = false;
     mockAiAvailable = false;
+    mockIsViewingStudent = false;
     restoreRedux();
     jest.clearAllMocks();
     Object.assign(sourcesState, baseSourcesState);
@@ -210,6 +222,23 @@ describe('LevelStep (LevelPlayer)', () => {
     expect(
       screen.getByText('tutor: gemini-3.5-flash-lite')
     ).toBeInTheDocument();
+  });
+
+  it('keeps Continue on a checked step locked for the student and open for a teacher viewing them', () => {
+    mockAiAvailable = true;
+    const checked = {
+      ...makeLevelStep(),
+      project: true,
+      validation: {condition: 'Has a heading.', measures: {skillId: 'build'}},
+    } as LevelStepContent;
+
+    const {unmount} = renderStep(checked);
+    expect(screen.getByText('continue: disabled')).toBeInTheDocument();
+    unmount();
+
+    mockIsViewingStudent = true;
+    renderStep(checked);
+    expect(screen.getByText('continue: enabled')).toBeInTheDocument();
   });
 
   it('sets hideNonInstructionTabs on viewProperties passed to the lab view', () => {
