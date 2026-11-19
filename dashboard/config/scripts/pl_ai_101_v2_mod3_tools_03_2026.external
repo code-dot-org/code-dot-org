@@ -3,15 +3,15 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Exploring AI Tools
+# Exploring AI Apps
 
-Below are examples of AI tools designed to support educators and school leaders with tasks such as lesson planning, assessment creation, communication, and administrative work.
+Below are examples of AI apps designed to support educators and school leaders with tasks such as lesson planning, assessment creation, communication, and administrative work.
 
-**Choose one or more tools to try.** Try using it for a real task, such as drafting a lesson plan, creating an assessment, or writing a parent email.
+**Choose one or more apps to try.** Try using it for a real task, such as drafting a lesson plan, creating an assessment, or writing a parent email.
 
-👉 Click a logo to visit the tool's website and explore its features.
+👉 Click a logo to visit the app's website and explore its features.
 
-**Note:** These tools vary in cost, features, and access. If one isn't a good fit, try another.
+**Note:** These apps vary in cost, features, and access. If one isn't a good fit, try another.
 
 ---
 
@@ -77,7 +77,7 @@ style="max-width:180px; max-height:80px; object-fit:contain;"></a>
 <div>
 <div style="font-size:22px; font-weight:700; margin-bottom:6px;">Diffit</div>
 <div style="font-size:16px; line-height:1.5;">
-A teacher tool that generates and adapts instructional materials at different reading levels, helping educators differentiate content and make grade-level learning accessible to all students.
+A teacher app that generates and adapts instructional materials at different reading levels, helping educators differentiate content and make grade-level learning accessible to all students.
 </div>
 </div>
 
@@ -150,6 +150,6 @@ style="max-width:180px; max-height:80px; object-fit:contain;"></a>
 
 <br>
 
->**💬 Quick Reflection:** What's one way you can integrate one tool you tried today into your regular teaching practice?
+>**💬 Quick Reflection:** What's one way you can integrate one app you tried today into your regular teaching practice?
 
 MARKDOWN
