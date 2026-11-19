@@ -245,6 +245,31 @@ class LessonsController < ApplicationController
         end
       end
 
+      script_levels = @lesson.script_levels.includes(:levels)
+      exam_script_levels = script_levels.select(&:exam_quiz?)
+      problems = []
+      if exam_script_levels.any?
+        problems << "the lesson is not lockable" unless @lesson.lockable
+        misplaced_exam_script_levels = exam_script_levels - [@lesson.script_levels.last]
+        misplaced_exam_script_levels.each do |script_level|
+          exam = script_level.levels.find {|level| level.is_a?(Quiz) && level.exam?}
+          problems << "#{exam.name.dump} is not the last level"
+        end
+      end
+      if @lesson.lockable
+        script_levels.flat_map(&:levels).each do |level|
+          problems << "#{level.name.dump} is not an exam" if level.is_a?(Quiz) && !level.exam?
+          next unless level.is_a?(BubbleChoice)
+          level.sublevels.each do |sublevel|
+            problems << "#{sublevel.name.dump} is a sublevel of #{level.name.dump}" if sublevel.is_a?(Quiz)
+          end
+        end
+      end
+      if problems.any?
+        @lesson.errors.add(:base, "An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: #{problems.join('; ')}.")
+        raise ActiveRecord::RecordInvalid.new(@lesson)
+      end
+
       @lesson.script.prevent_new_duplicate_levels(old_dup_level_keys)
       @lesson.script.fix_lesson_positions
     end

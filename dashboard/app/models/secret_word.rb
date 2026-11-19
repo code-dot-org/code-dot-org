@@ -15,8 +15,8 @@
 class SecretWord < ApplicationRecord
   include Seeded
 
-  def self.setup
-    secret_words = load_csv Dashboard::Application.config.secret_words_csv
+  def self.setup(csv = Dashboard::Application.config.secret_words_csv)
+    secret_words = load_csv csv
     transaction do
       reset_db
       SecretWord.import! secret_words
