@@ -1961,7 +1961,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (isPlayingRef.current) {
       runLocalScene(activeScene);
     } else {
-      // Not playing: the preview, which stays on its first frame.
       runProgram();
     }
     // After the load, so the blocks sit below what the workspace holds.
