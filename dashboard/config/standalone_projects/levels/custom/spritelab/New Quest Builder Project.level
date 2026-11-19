@@ -156,7 +156,12 @@
     "header_label": "Free play",
     "is_project_level": true,
     "block_catalog": true,
-    "catalog_blocks_in_toolbox": [
+    "blocks_always_in_toolbox": [
+      "spritelab2_setAsPlatformPlayer",
+      "gamelab_setBackgroundImageAs",
+      "gamelab_checkTouching",
+      "spritelab2_beginsBehavior",
+      "spritelab2_goToScene",
       "spritelab2_burst",
       "spritelab2_playSound",
       "gamelab_spriteSay",

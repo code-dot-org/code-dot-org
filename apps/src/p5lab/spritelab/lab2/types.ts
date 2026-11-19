@@ -171,9 +171,11 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   worldKeepsRoles?: string[];
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts), apart from the ones in
-      catalogBlocksInToolbox. */
+      blocksAlwaysInToolbox. */
   blockCatalog?: boolean;
-  catalogBlocksInToolbox?: string[];
+  /** These stay in the toolbox even when the catalog has an entry for
+      them. */
+  blocksAlwaysInToolbox?: string[];
   /** Blocks built on earlier levels cannot be deleted here, in any scene
       the level opens (blockLocks.ts). The blocks under a stack this level adds can,
       and so can the toolbox blocks no earlier level required. */

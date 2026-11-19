@@ -272,7 +272,7 @@ describe('newBlockTypes', () => {
 describe('inToolboxBlockTypes', () => {
   it('is the blocks the level lists and the chosen ones in a lesson', () => {
     const added = inToolboxBlockTypes(
-      level({catalogBlocksInToolbox: ['spritelab2_burst']}),
+      level({blocksAlwaysInToolbox: ['spritelab2_burst']}),
       ['gamelab_spriteSay'],
       ['spritelab2_setWeather']
     );
@@ -282,7 +282,7 @@ describe('inToolboxBlockTypes', () => {
   it('also keeps the blocks a standalone project uses', () => {
     const added = inToolboxBlockTypes(
       level({
-        catalogBlocksInToolbox: ['spritelab2_burst'],
+        blocksAlwaysInToolbox: ['spritelab2_burst'],
         isProjectLevel: true,
       }),
       new Set(['gamelab_spriteSay']),
@@ -293,6 +293,16 @@ describe('inToolboxBlockTypes', () => {
       'gamelab_spriteSay',
       'spritelab2_setWeather',
     ]);
+  });
+
+  it('keeps a listed block in the toolbox even when the catalog has an entry for it', () => {
+    const entries = catalogEntries([WITH_HELP]);
+    const inToolbox = inToolboxBlockTypes(
+      level({blocksAlwaysInToolbox: [WITH_HELP]}),
+      [],
+      []
+    );
+    expect([...heldBackBlockTypes(entries, inToolbox)]).toEqual([]);
   });
 
   it('is only the chosen blocks on a level that lists none', () => {

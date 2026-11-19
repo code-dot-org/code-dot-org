@@ -107,7 +107,7 @@ export function inToolboxBlockTypes(
   used: Iterable<string>
 ): Set<string> {
   return new Set([
-    ...(level.catalogBlocksInToolbox ?? []),
+    ...(level.blocksAlwaysInToolbox ?? []),
     ...chosen,
     ...(level.isProjectLevel ? used : []),
   ]);
