@@ -115,11 +115,6 @@
       + "         Compression: <span class='" + compressionClass + "'>" + compression + "</span>\n";
   }
 
-// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
-  function escapeRegExp(str) {
-    return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  }
-
   function compress() {
     var poemDisplay = poemText;
     var dict = editor.getValue().split("\n").slice(0, MAX_DICT_ENTRIES);
@@ -137,7 +132,7 @@
 
     validRules.forEach(function (rule, i) {
       if (rule !== "") {
-        poemDisplay = poemDisplay.replace(new RegExp(escapeRegExp(rule), "gi"), dictEntries[i]);
+        poemDisplay = window.TextCompression.replaceRule(poemDisplay, rule, dictEntries[i]);
       }
     });
 
