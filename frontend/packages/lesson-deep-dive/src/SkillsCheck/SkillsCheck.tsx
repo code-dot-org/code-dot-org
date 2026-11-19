@@ -1,17 +1,6 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
-  Match,
-  MatchSolution,
-  MultipleChoice,
-  MultiSolution,
-  PracticeProblem,
-  ReflectionData,
-  Scramble,
-  ScrambleSolution,
-  Sort,
-} from '@code-dot-org/lesson-deep-dive';
-import React, {
-  FC,
+  type ComponentType,
+  type FC,
   useCallback,
   useEffect,
   useMemo,
@@ -19,36 +8,39 @@ import React, {
   useState,
 } from 'react';
 
-import {postAichatCompletionMessage} from '@cdo/apps/aichat/aichatApi';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {useApiClient} from '@code-dot-org/core/api';
 import {
-  AichatContext,
-  CompletedChatMessage,
-  PendingChatMessage,
-} from '@cdo/apps/aichat/types';
-import WaitingAnimation from '@cdo/apps/aichat/views/WaitingAnimation';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import {createUuid} from '@cdo/apps/utils';
-import {
-  AiChatClientTypes,
-  AiInteractionStatus as Status,
   LessonObjectiveReflectionValues,
   PracticeProblemDeliveryContext,
   PracticeProblemTypes,
-} from '@cdo/generated-scripts/sharedConstants';
-import matchJSON from '@cdo/static/tutor/match_example.json';
-import multiSingleJson from '@cdo/static/tutor/multiple_choice_example.json';
-import multiMultiJson from '@cdo/static/tutor/multiple_choice_multi_select.json';
-import scrambleJSON from '@cdo/static/tutor/scramble_example.json';
-import sortJSON from '@cdo/static/tutor/sort_example.json';
+} from '@code-dot-org/shared-constants';
 
-import {useAiTutorModelParameters} from '../../../hooks/useAiTutorModelParameters';
 import {
-  LessonDeepDiveData,
-  practiceProblemValidator,
-  userPracticeProblemAttemptValidator,
+  listPracticeProblemAttempts,
+  listPracticeProblems,
+  savePracticeProblemAttempt,
+  updatePracticeProblemAttemptFeedback,
+} from '../api';
+import {type VocabularyItem} from '../ReviewModalities/VocabularyFlashcards';
+import {
+  type LessonObjective,
+  type MatchSolution,
+  type MultiSolution,
+  type PracticeProblem,
+  type ReflectionData,
+  type ScrambleSolution,
 } from '../types';
+
+import matchJSON from './examples/match_example.json';
+import multiSingleJson from './examples/multiple_choice_example.json';
+import multiMultiJson from './examples/multiple_choice_multi_select.json';
+import scrambleJSON from './examples/scramble_example.json';
+import sortJSON from './examples/sort_example.json';
+import Match from './QuestionTypes/Match';
+import MultipleChoice from './QuestionTypes/MultipleChoice';
+import Scramble from './QuestionTypes/Scramble';
+import Sort from './QuestionTypes/Sort';
 
 import styles from './skills-check.module.scss';
 
@@ -60,14 +52,22 @@ const PROBLEMS: PracticeProblem[] = [
   sortJSON as PracticeProblem,
 ];
 
+export interface TutorFeedbackProps {
+  systemPrompt: string;
+  userMessage: string;
+  lessonId: number;
+  onFeedback: (feedback: string) => void;
+}
+
 interface SkillsCheckProps {
   lessonId: number;
   lessonName: string;
   lessonSummary: string;
-  vocabulary: LessonDeepDiveData['vocabulary'];
-  objectives: LessonDeepDiveData['objectives'];
+  vocabulary: VocabularyItem[];
+  objectives: LessonObjective[];
   reflectionData: ReflectionData | null;
   onComplete: () => void;
+  TutorFeedback: ComponentType<TutorFeedbackProps>;
 }
 
 const SkillsCheck: FC<SkillsCheckProps> = ({
@@ -78,7 +78,9 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
   objectives,
   reflectionData,
   onComplete,
+  TutorFeedback,
 }) => {
+  const api = useApiClient();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
@@ -86,18 +88,17 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
     (MultiSolution | ScrambleSolution | MatchSolution)[] | null
   >(null);
   const [feedback, setFeedback] = useState<string | null>(null);
-  const [feedbackLoading, setFeedbackLoading] = useState(false);
   const [practiceProblems, setPracticeProblems] = useState(PROBLEMS);
   const [problemAttemptId, setProblemAttemptId] = useState(0);
   const [problemFetchLoading, setProblemFetchLoading] = useState(true);
 
   const currentProblem = useMemo(
     () => practiceProblems[currentIndex],
-    [practiceProblems, currentIndex]
+    [practiceProblems, currentIndex],
   );
   const isLast = useMemo(
     () => currentIndex === practiceProblems.length - 1,
-    [practiceProblems, currentIndex]
+    [practiceProblems, currentIndex],
   );
 
   const goToNext = useCallback(() => {
@@ -106,7 +107,6 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
     setIsSubmitted(false);
     setIsCorrect(false);
     setFeedback(null);
-    setFeedbackLoading(false);
     setProblemAttemptId(0);
   }, []);
 
@@ -132,28 +132,12 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
             o =>
               `- "${o.description}": ${
                 reflectionData.objectiveReflections[o.id] ?? 'not rated'
-              }`
+              }`,
           )
           .join('\n');
     }
     return prompt;
   }, [lessonName, lessonSummary, vocabulary, objectives, reflectionData]);
-
-  const {modelParameters, loading} = useAiTutorModelParameters({
-    aiTutorSystemPrompt: getSystemPrompt(),
-    aiTutorJsonSchema: undefined,
-  });
-
-  const aichatContext: AichatContext = useMemo(
-    () => ({
-      clientType: AiChatClientTypes.LESSON_DEEP_DIVE,
-      currentLevelId: null,
-      scriptId: null,
-      channelId: undefined,
-      lessonId,
-    }),
-    [lessonId]
-  );
 
   const createUserMessage = useCallback(
     () =>
@@ -164,81 +148,43 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
       `Correct answer: ${JSON.stringify(currentProblem.solution)}\n` +
       `Student's answer: ${JSON.stringify(studentAnswer)}\n` +
       `Tell the student if they got it right or wrong, then explain the answer.`,
-    [isCorrect, currentProblem, studentAnswer]
+    [isCorrect, currentProblem, studentAnswer],
   );
 
   const createPracticeProblemAttempt = useCallback(() => {
-    if (currentProblem.id < 1) {
+    if (currentProblem.id < 1 || studentAnswer === null) {
       return;
     }
-    const body = JSON.stringify({
+    savePracticeProblemAttempt(api.transport, {
       practice_problem_id: currentProblem.id,
       correct: isCorrect,
       delivery_context_type:
         PracticeProblemDeliveryContext.AI_TUTOR_LESSON_DEEP_DIVE,
       attempt: {solution: studentAnswer},
       delivery_context_metadata: {lesson_id: lessonId},
-    });
-    HttpClient.post(`/user_practice_problem_attempts/`, body, true, {
-      'Content-Type': 'application/json',
     })
-      .then(response => response.json())
-      .then(json => {
-        setProblemAttemptId(json.id);
+      .then(attempt => {
+        setProblemAttemptId(attempt.id);
       })
       .catch(error => console.log(error));
-  }, [currentProblem, isCorrect, lessonId, studentAnswer]);
+  }, [api, currentProblem, isCorrect, lessonId, studentAnswer]);
 
   const updateAttemptFeedback = useCallback(() => {
     if (feedback && problemAttemptId < 1) {
-      const body = JSON.stringify({
-        ai_feedback: feedback,
-      });
-      HttpClient.put(
-        `/user_practice_problem_attempts/${problemAttemptId}`,
-        body,
-        true,
-        {
-          'Content-Type': 'application/json',
-        }
+      updatePracticeProblemAttemptFeedback(
+        api.transport,
+        problemAttemptId,
+        feedback,
       ).catch(error => console.log(error));
     }
-  }, [feedback, problemAttemptId]);
-
-  const getAIFeedback = useCallback(async () => {
-    if (!modelParameters || loading) return;
-    const msg: PendingChatMessage & {updateId: string} = {
-      role: Role.USER,
-      status: Status.UNKNOWN,
-      chatMessageText: createUserMessage(),
-      timestamp: Date.now(),
-      updateId: createUuid(),
-    };
-    setFeedbackLoading(true);
-    try {
-      const messages: CompletedChatMessage[] =
-        await postAichatCompletionMessage(
-          msg,
-          [],
-          {...modelParameters},
-          aichatContext
-        );
-      setFeedback(messages[messages.length - 1].chatMessageText);
-    } catch (error) {
-      console.log(error);
-    }
-    setFeedbackLoading(false);
-  }, [modelParameters, loading, createUserMessage, aichatContext]);
+  }, [api, feedback, problemAttemptId]);
 
   const createPracticeProblemAttemptRef = useRef(createPracticeProblemAttempt);
   createPracticeProblemAttemptRef.current = createPracticeProblemAttempt;
-  const getAIFeedbackRef = useRef(getAIFeedback);
-  getAIFeedbackRef.current = getAIFeedback;
 
   useEffect(() => {
     if (studentAnswer !== null) {
       createPracticeProblemAttemptRef.current();
-      getAIFeedbackRef.current();
     }
   }, [studentAnswer]);
 
@@ -253,34 +199,21 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
       .filter(
         ([, value]) =>
           value === LessonObjectiveReflectionValues.LOST ||
-          value === LessonObjectiveReflectionValues.UNSURE
+          value === LessonObjectiveReflectionValues.UNSURE,
       )
       .map(([objectiveId]) => objectiveId);
   }, [reflectionData, objectives]);
 
   const fetchPracticeProblems = useCallback(() => {
-    const params = new URLSearchParams();
-    objectiveIds.forEach(id => params.append('objective_ids[]', id));
-    const query = params.toString();
-    HttpClient.fetchJson<PracticeProblem[]>(
-      `/practice_problems?${query}`,
-      {},
-      practiceProblemValidator
-    )
-      .then(response => {
-        const problems = response.value;
-        if (!problems || problems.length === 0) return;
-        const attemptParams = new URLSearchParams();
-        problems.forEach(p =>
-          attemptParams.append('problem_ids[]', String(p.id))
-        );
-        return HttpClient.fetchJson(
-          `/user_practice_problem_attempts?${attemptParams.toString()}`,
-          {},
-          userPracticeProblemAttemptValidator
-        ).then(attemptsResponse => {
+    listPracticeProblems(api.transport, objectiveIds)
+      .then(problems => {
+        if (problems.length === 0) return;
+        return listPracticeProblemAttempts(
+          api.transport,
+          problems.map(p => p.id),
+        ).then(attempts => {
           const attemptedIds = new Set(
-            attemptsResponse.value?.map(a => a.practice_problem_id) ?? []
+            attempts.map(a => a.practice_problem_id),
           );
           const filteredProbs = problems.filter(p => !attemptedIds.has(p.id));
           if (filteredProbs && filteredProbs.length > 0) {
@@ -291,7 +224,7 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
       .finally(() => {
         setProblemFetchLoading(false);
       });
-  }, [objectiveIds]);
+  }, [api, objectiveIds]);
 
   useEffect(() => {
     fetchPracticeProblems();
@@ -335,9 +268,13 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
         )}
         {isSubmitted && (
           <div className={styles.feedback}>
-            <WaitingAnimation shouldDisplay={feedbackLoading} />
-            {feedback && !feedbackLoading && (
-              <SafeMarkdown unwrapped localized={false} markdown={feedback} />
+            {studentAnswer !== null && (
+              <TutorFeedback
+                systemPrompt={getSystemPrompt()}
+                userMessage={createUserMessage()}
+                lessonId={lessonId}
+                onFeedback={setFeedback}
+              />
             )}
           </div>
         )}

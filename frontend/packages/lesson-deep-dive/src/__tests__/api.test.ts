@@ -5,8 +5,12 @@ import {
   generatePodcast,
   getPodcast,
   listChallenges,
+  listPracticeProblemAttempts,
+  listPracticeProblems,
   saveLessonObjectiveReflection,
   saveLessonReflection,
+  savePracticeProblemAttempt,
+  updatePracticeProblemAttemptFeedback,
   uploadChallengeResponseAsset,
 } from '../api';
 
@@ -102,6 +106,89 @@ describe('uploadChallengeResponseAsset', () => {
       url: '/challenge_response_assets/9/upload',
       body: data,
       headers: {'Content-Type': 'video/webm'},
+    });
+  });
+});
+
+describe('listPracticeProblems', () => {
+  it('should request the problems for the objectives and return them validated', async () => {
+    const {transport, request} = makeTransport();
+    request.mockResolvedValue([
+      {
+        id: 4,
+        key: 'mammals',
+        problem_type: 'sort',
+        active: true,
+        problem_text: 'Sort the animals.',
+        solution: [],
+      },
+    ]);
+
+    const problems = await listPracticeProblems(transport, ['a', 'b']);
+
+    expect(request).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/practice_problems?objective_ids%5B%5D=a&objective_ids%5B%5D=b',
+    });
+    expect(problems).toEqual([
+      {
+        id: 4,
+        type: 'sort',
+        active: true,
+        problem_text: 'Sort the animals.',
+        solution: [],
+      },
+    ]);
+  });
+});
+
+describe('listPracticeProblemAttempts', () => {
+  it('should request the attempts for the problems', async () => {
+    const {transport, request} = makeTransport();
+    request.mockResolvedValue([{id: 1, practice_problem_id: 4}]);
+
+    const attempts = await listPracticeProblemAttempts(transport, [4, 5]);
+
+    expect(request).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/user_practice_problem_attempts?problem_ids%5B%5D=4&problem_ids%5B%5D=5',
+    });
+    expect(attempts).toEqual([{id: 1, practice_problem_id: 4}]);
+  });
+});
+
+describe('savePracticeProblemAttempt', () => {
+  it('should post the attempt', async () => {
+    const {transport, request} = makeTransport();
+    request.mockResolvedValue({id: 11});
+    const body = {
+      practice_problem_id: 4,
+      correct: true,
+      delivery_context_type: 'ai_tutor_lesson_deep_dive',
+      attempt: {solution: [{option: 'koala', correct: true}]},
+      delivery_context_metadata: {lesson_id: 42},
+    };
+
+    expect(await savePracticeProblemAttempt(transport, body)).toEqual({id: 11});
+
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/user_practice_problem_attempts/',
+      body,
+    });
+  });
+});
+
+describe('updatePracticeProblemAttemptFeedback', () => {
+  it('should put the feedback on the attempt', async () => {
+    const {transport, request} = makeTransport();
+
+    await updatePracticeProblemAttemptFeedback(transport, 11, 'Well done.');
+
+    expect(request).toHaveBeenCalledWith({
+      method: 'PUT',
+      url: '/user_practice_problem_attempts/11',
+      body: {ai_feedback: 'Well done.'},
     });
   });
 });

@@ -1,0 +1,28 @@
+{
+  "id": -2,
+  "type": "multiple_choice_multi_select",
+  "active": true,
+  "problem_text": "Which of the following is a mammal?",
+  "solution": [
+    {
+      "option": "koala",
+      "correct": true
+    },
+    {
+      "option": "lobster",
+      "correct": false
+    },
+    {
+      "option": "goldfish",
+      "correct": false
+    },
+    {
+      "option": "frog",
+      "correct": false
+    },
+    {
+      "option": "panda",
+      "correct": true
+    }
+  ]
+}

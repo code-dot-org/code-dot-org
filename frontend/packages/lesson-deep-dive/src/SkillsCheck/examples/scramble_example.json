@@ -1,0 +1,24 @@
+{
+  "id": -3,
+  "type": "scramble",
+  "active": true,
+  "problem_text": "Arrange these animals from smallest to largest",
+  "solution": [
+    {
+      "option": "butterfly",
+      "correct": 0
+    },
+    {
+      "option": "tiger",
+      "correct": 2
+    },
+    {
+      "option": "guinea pig",
+      "correct": 1
+    },
+    {
+      "option": "elephant",
+      "correct": 3
+    }
+  ]
+}
