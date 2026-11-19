@@ -1,45 +1,32 @@
-import {Challenge} from '@code-dot-org/lesson-deep-dive';
-import {fireEvent, render, screen, waitFor} from '@testing-library/react';
-import '@testing-library/jest-dom';
-import React from 'react';
+import {render, screen, waitFor} from '@testing-library/react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
+import {vi} from 'vitest';
 
-import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
-import ChallengeRoute from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeRoute';
+import {type Challenge} from '../../types';
+import ChallengeRoute from '../ChallengeRoute';
 
-import {request} from '../../../../util/stubCoreApi';
+const request = vi.hoisted(() => vi.fn());
 
-let mockChallengesEnabled = true;
-jest.mock('@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled', () => ({
-  useLessonDeepDiveChallengesEnabled: () => mockChallengesEnabled,
-}));
+vi.mock('@code-dot-org/core/api', () => {
+  const client = {transport: {request}};
+  return {useApiClient: () => client};
+});
 
-const mockTranscribeAudio = jest.fn();
-jest.mock('@cdo/apps/aichat/api/client', () => ({
-  __esModule: true,
-  getClientApi: jest.fn(async () => ({transcribeAudio: mockTranscribeAudio})),
-}));
-
-const mockAudio = new Blob(['audio-bytes'], {type: 'audio/webm'});
-jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
-  ChallengeBox: ({
+vi.mock('../ChallengeBox', () => ({
+  default: ({
     challenge,
     challengeType,
-    transcribeAudio,
   }: {
     challenge: Challenge;
     challengeType: string;
-    transcribeAudio: (audio: Blob) => Promise<string>;
   }) => (
     <div>
       challenge-{challenge.id} type-{challengeType}
-      <button type="button" onClick={() => transcribeAudio(mockAudio)}>
-        Transcribe
-      </button>
     </div>
   ),
 }));
+
+let challengesEnabled = true;
 
 const fakeChallenge: Challenge = {
   id: 7,
@@ -60,26 +47,34 @@ function renderRoute({
       <Routes>
         <Route
           path="/challenge/:challengeId/:modality"
-          element={<ChallengeRoute lessonId={lessonId} />}
+          element={
+            <ChallengeRoute
+              lessonId={lessonId}
+              challengesEnabled={challengesEnabled}
+              WhiteboardChallenge={() => null}
+              transcribeAudio={vi.fn()}
+              stickerSections={[]}
+            />
+          }
         />
         <Route path="/intervention" element={<div>intervention</div>} />
       </Routes>
-    </MemoryRouter>
+    </MemoryRouter>,
   );
 }
 
 describe('ChallengeRoute', () => {
   beforeEach(() => {
     request.mockReset();
-    mockChallengesEnabled = true;
+    challengesEnabled = true;
   });
 
   it('renders nothing when challenges are disabled', () => {
-    mockChallengesEnabled = false;
+    challengesEnabled = false;
     request.mockResolvedValue([fakeChallenge]);
     renderRoute();
     expect(
-      screen.queryByRole('button', {name: 'Back to practice'})
+      screen.queryByRole('button', {name: 'Back to practice'}),
     ).not.toBeInTheDocument();
   });
 
@@ -96,7 +91,7 @@ describe('ChallengeRoute', () => {
     request.mockResolvedValue([fakeChallenge]);
     renderRoute({challengeId: '7', modality: 'video'});
     await waitFor(() =>
-      expect(screen.getByText('challenge-7 type-video')).toBeInTheDocument()
+      expect(screen.getByText('challenge-7 type-video')).toBeInTheDocument(),
     );
   });
 
@@ -104,7 +99,7 @@ describe('ChallengeRoute', () => {
     request.mockResolvedValue([fakeChallenge]);
     renderRoute({challengeId: '999'});
     await waitFor(() =>
-      expect(screen.getByText('intervention')).toBeInTheDocument()
+      expect(screen.getByText('intervention')).toBeInTheDocument(),
     );
   });
 
@@ -113,28 +108,9 @@ describe('ChallengeRoute', () => {
     renderRoute();
     await waitFor(() =>
       expect(
-        screen.getByText(/Couldn't load this challenge/)
-      ).toBeInTheDocument()
+        screen.getByText(/Couldn't load this challenge/),
+      ).toBeInTheDocument(),
     );
-  });
-
-  it('transcribes audio through the aichat client in the lesson context', async () => {
-    request.mockResolvedValue([fakeChallenge]);
-    const setContext = jest.spyOn(AichatContextManager, 'setContext');
-    renderRoute();
-
-    fireEvent.click(await screen.findByRole('button', {name: 'Transcribe'}));
-
-    await waitFor(() =>
-      expect(mockTranscribeAudio).toHaveBeenCalledWith(mockAudio)
-    );
-    expect(setContext).toHaveBeenCalledWith({
-      clientType: 'lesson-deep-dive',
-      currentLevelId: null,
-      scriptId: null,
-      channelId: undefined,
-      lessonId: 42,
-    });
   });
 
   it('passes "whiteboard" as the challengeType when the URL modality is not "video"', async () => {
@@ -147,8 +123,8 @@ describe('ChallengeRoute', () => {
     renderRoute({challengeId: '8', modality: 'whiteboard'});
     await waitFor(() =>
       expect(
-        screen.getByText('challenge-8 type-whiteboard')
-      ).toBeInTheDocument()
+        screen.getByText('challenge-8 type-whiteboard'),
+      ).toBeInTheDocument(),
     );
   });
 });

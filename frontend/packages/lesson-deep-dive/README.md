@@ -2,10 +2,29 @@
 
 Post-lesson review flow for AI Tutor+ students.
 
-The feature's source still lives at `apps/src/aiTutor/views/lessonDeepDive/`.
-This package currently ships nothing; it hosts a dev shell that renders that
-code in a browser without Rails and without webpack, ahead of moving the views
-in.
+The package holds the whole flow: the recap cards, reflection, the review
+modalities, the challenges, the skills check and the project gallery. It reads
+and writes through `useApiClient` from `@code-dot-org/core/api`.
+
+## What the host provides
+
+`apps/src/aiTutor/views/TutorApp.tsx` is the host. It declares the routes and
+passes each package component the few things the package cannot import from
+`apps/`:
+
+| Prop                  | Supplied by apps                                              |
+| --------------------- | ------------------------------------------------------------- |
+| `challengesEnabled`   | `useLessonDeepDiveChallengesEnabled` (user flag, experiment)  |
+| `onModalitySelected`  | sends the modality-clicked analytics event                    |
+| `VideoPlayer`         | `jsonVideo/TutorVideo`                                        |
+| `TutorChat`           | wraps Lab2's `AiTutorChat`                                    |
+| `TutorFeedback`       | asks the tutor about a skills check answer, renders the reply |
+| `WhiteboardChallenge` | the Sketch Lab whiteboard                                     |
+| `transcribeAudio`     | the aichat transcription call                                 |
+| `stickerSections`     | the sticker images under `apps/static/tutor/stickers`         |
+
+The `lesson-tutor` experiment gate also stays in `TutorApp`. The page entry,
+`apps/src/sites/studio/pages/lessons/tutor.js`, mounts the `ApiClientProvider`.
 
 ## Dev shell
 
@@ -106,8 +125,8 @@ The page payload is a fixture in both modes. Studio embeds
 JSON endpoint exists to proxy. `src/dev/fixtures.ts` holds a payload harvested
 from a local Rails dashboard rather than an invented one.
 
-The wire shape differs from `LessonDeepDiveData` in
-`apps/src/aiTutor/views/lessonDeepDive/types.ts`: Rails never sends
+The wire shape differs from `LessonDeepDiveData` in `src/types.ts`: Rails never
+sends
 `practiceProblems` or `nextLessonUrl`, sends `objectives[].id` and
 `vocabulary[].id` as integers where the type says string, and adds
 `question_text`, `student_response` and `aiReasoning` to each

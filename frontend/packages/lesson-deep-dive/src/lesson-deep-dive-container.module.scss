@@ -47,7 +47,9 @@ $purple: hsl(271deg 58% 65%);
   letter-spacing: 0.06em;
   cursor: pointer;
   user-select: none;
-  transition: color 0.15s ease, background-color 0.15s ease;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
 
   &:hover {
     color: rgba(255 255 255 / 0.75);

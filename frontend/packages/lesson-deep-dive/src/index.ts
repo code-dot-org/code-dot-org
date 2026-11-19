@@ -2,10 +2,12 @@
 // Export all public symbols from this file.
 export {default as AudioRecorder} from './ChallengeActivities/AudioRecorder';
 export {default as ChallengeBox} from './ChallengeActivities/ChallengeBox';
+export {default as ChallengeRoute} from './ChallengeActivities/ChallengeRoute';
 export type {WhiteboardChallengeProps} from './ChallengeActivities/ChallengeBox';
 export {default as Challenges} from './ChallengeActivities/Challenges';
 export {default as FizzyButton} from './FizzyButton';
 export {default as InterventionBox} from './ReviewModalities/InterventionBox';
+export {default as LessonDeepDiveContainer} from './LessonDeepDiveContainer';
 export {default as LessonSummaryCard} from './LessonSummaryCard';
 export {default as LevelsAttemptedBox} from './StudentLessonStats/LevelsAttemptedBox';
 export {default as Match} from './SkillsCheck/QuestionTypes/Match';
@@ -42,6 +44,7 @@ export type {
   ChallengeResponse,
   ChallengeResponseAsset,
   JsonVideoData,
+  LessonDeepDiveData,
   LessonObjective,
   MatchSolution,
   MultiSolution,
