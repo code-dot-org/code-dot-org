@@ -92,7 +92,7 @@ const BLOCKLY_DIV_ID = 'blockly-div';
  * TODO: Split up this component into a pure view and class/component that manages
  * application state.
  */
-class UnconnectedMusicView extends React.Component {
+export class UnconnectedMusicView extends React.Component {
   static propTypes = {
     levelProperties: PropTypes.object.isRequired,
     initialSources: PropTypes.object,
@@ -104,7 +104,6 @@ class UnconnectedMusicView extends React.Component {
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
     isRtl: PropTypes.bool,
-    packId: PropTypes.string,
     setPackId: PropTypes.func,
     isPlaying: PropTypes.bool,
     setIsPlaying: PropTypes.func,
@@ -890,8 +889,10 @@ class UnconnectedMusicView extends React.Component {
     // Also save the current pack and block mode to sources as part of labConfig.
     sourcesToSave.labConfig ??= {};
     sourcesToSave.labConfig.music ??= {};
-    if (this.props.packId) {
-      sourcesToSave.labConfig.music.packId = this.props.packId;
+    // Read the pack from the library: redux props lag a pack set in this tick.
+    const packId = this.library?.getCurrentPackId();
+    if (packId) {
+      sourcesToSave.labConfig.music.packId = packId;
     }
     sourcesToSave.labConfig.music.blockMode = this.props.blockMode;
 
@@ -907,7 +908,7 @@ class UnconnectedMusicView extends React.Component {
     ) {
       saveGeneratedSongMetadata(
         this.props.channel?.id,
-        this.props.packId,
+        packId,
         this.props.playbackEvents,
         this.props.orderedFunctions,
         this.props.lastMeasure
@@ -1044,7 +1045,6 @@ const MusicView = connect(
 
     isRtl: state.isRtl,
 
-    packId: state.music.packId,
     blockMode: getBlockMode(state),
     isPlaying: state.music.isPlaying,
     selectedBlockId: state.music.selectedBlockId,
