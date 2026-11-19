@@ -188,24 +188,6 @@ $z-over-blockly: 71;
   color: var(--text-neutral-quaternary);
   border: 1px solid var(--borders-neutral-primary);
   border-top: none;
-  // The tabs and the bar's title are controls and a label, not text to
-  // copy. code-studio.css sets `p, pre, span` back to selectable, so they
-  // are named too. Safari reads only the prefixed property.
-  -webkit-user-select: none;
-  user-select: none;
-
-  span,
-  p {
-    -webkit-user-select: none;
-    user-select: none;
-  }
-
-  // A field's text is selected to change it.
-  input,
-  textarea {
-    -webkit-user-select: text;
-    user-select: text;
-  }
 }
 
 // The editors' strip: a column header beside it draws the line between
