@@ -1,5 +1,5 @@
 import {
-  addedBlockTypes,
+  inToolboxBlockTypes,
   catalogEntries,
   heldBackBlockTypes,
   newBlockTypes,
@@ -269,10 +269,10 @@ describe('newBlockTypes', () => {
   });
 });
 
-describe('addedBlockTypes', () => {
-  it('is the starting blocks and the chosen ones in a lesson', () => {
-    const added = addedBlockTypes(
-      level({catalogStartBlocks: ['spritelab2_burst']}),
+describe('inToolboxBlockTypes', () => {
+  it('is the blocks the level lists and the chosen ones in a lesson', () => {
+    const added = inToolboxBlockTypes(
+      level({catalogBlocksInToolbox: ['spritelab2_burst']}),
       ['gamelab_spriteSay'],
       ['spritelab2_setWeather']
     );
@@ -280,8 +280,11 @@ describe('addedBlockTypes', () => {
   });
 
   it('also keeps the blocks a standalone project uses', () => {
-    const added = addedBlockTypes(
-      level({catalogStartBlocks: ['spritelab2_burst'], isProjectLevel: true}),
+    const added = inToolboxBlockTypes(
+      level({
+        catalogBlocksInToolbox: ['spritelab2_burst'],
+        isProjectLevel: true,
+      }),
       new Set(['gamelab_spriteSay']),
       new Set(['spritelab2_setWeather', 'spritelab2_burst'])
     );
@@ -292,7 +295,7 @@ describe('addedBlockTypes', () => {
     ]);
   });
 
-  it('is only the chosen blocks on a level with no starting blocks', () => {
-    expect([...addedBlockTypes(level({}), ['a'], ['b'])]).toEqual(['a']);
+  it('is only the chosen blocks on a level that lists none', () => {
+    expect([...inToolboxBlockTypes(level({}), ['a'], ['b'])]).toEqual(['a']);
   });
 });

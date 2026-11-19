@@ -61,7 +61,7 @@ import {
 } from '../ai/images/imageGeneration';
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {
-  addedBlockTypes,
+  inToolboxBlockTypes,
   catalogEntries,
   heldBackBlockTypes,
   newBlockTypes,
@@ -174,7 +174,7 @@ import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
-import {useFlyoutDots, useSeenBlockTypes} from './useFlyoutDots';
+import {useFlyoutDots, useBlockTypesUsedThisVisit} from './useFlyoutDots';
 import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
@@ -539,13 +539,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // play area.
   const speakRef = useRef<((text: string) => void) | null>(null);
   const [showStartOver, setShowStartOver] = useState(false);
-  // The new-block catalog: the unit's new blocks stay out of the toolbox
-  // until the student adds them from the dialog. Off in the levelbuilder's
+  // The new-block catalog: the new blocks stay out of the toolbox until the
+  // student adds them from the dialog. Off in the levelbuilder's
   // edit modes, whose saves would carry its flags into every student's
   // start sources.
   const catalogOn = !!levelProperties.blockCatalog && !isLevelEditMode;
   // The catalog's blocks are the ones no earlier level of the lesson
-  // required (blockCatalog.ts); outside a lesson there are none.
+  // required (blockCatalog.ts).
   const {levelPropertiesMap} = useLevelProperties();
   // getCurrentLevels returns a new list every time it is called. shallowEqual
   // compares the ids one by one, so this value only changes when the lesson's
@@ -618,14 +618,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
 
-  const seenBlocks = useSeenBlockTypes(scenes);
-  const addedBlocks = useMemo(
-    () => addedBlockTypes(levelProperties, chosenBlockSet, seenBlocks),
-    [levelProperties, chosenBlockSet, seenBlocks]
+  const blocksUsedThisVisit = useBlockTypesUsedThisVisit(scenes);
+  const inToolboxBlocks = useMemo(
+    () =>
+      inToolboxBlockTypes(levelProperties, chosenBlockSet, blocksUsedThisVisit),
+    [levelProperties, chosenBlockSet, blocksUsedThisVisit]
   );
   const heldBackBlocks = useMemo(
-    () => heldBackBlockTypes(catalog, addedBlocks),
-    [catalog, addedBlocks]
+    () => heldBackBlockTypes(catalog, inToolboxBlocks),
+    [catalog, inToolboxBlocks]
   );
 
   // Create the pinned scene on first load, and again after Start Over (the
@@ -2220,7 +2221,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useFlyoutDots({
     enabled: catalogOn,
     added: chosenBlockSet,
-    seen: seenBlocks,
+    usedThisVisit: blocksUsedThisVisit,
     workspaceVersion,
     getWorkspace: getMainWorkspace,
   });
@@ -2363,7 +2364,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {showBlockCatalog && (
         <BlockCatalogDialog
           entries={catalog}
-          chosen={addedBlocks}
+          inToolbox={inToolboxBlocks}
           onAdd={addCatalogBlock}
           onClose={() => setShowBlockCatalog(false)}
         />

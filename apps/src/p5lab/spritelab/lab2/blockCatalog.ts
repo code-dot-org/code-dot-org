@@ -1,5 +1,6 @@
-// The free play level's catalog of new blocks: the unit's new blocks start
-// out of the toolbox and join it one at a time as the student adds them.
+// The catalog of new blocks, on the free play level and in a standalone
+// project: its blocks start out of the toolbox, apart from the ones the
+// level lists, and join it one at a time as the student adds them.
 
 import {filterToolboxBlocks} from '@cdo/apps/blockly/utils/toolbox';
 
@@ -95,30 +96,29 @@ export function catalogEntries(
 }
 
 /**
- * The catalog blocks that are in the toolbox: the ones the level starts
- * with and the ones the student chose. A standalone project also keeps
- * every block it has used, so a project from before it had a catalog loses
- * none.
+ * The block types that count as in the toolbox: the ones the level lists
+ * and the ones the student chose. A standalone project also keeps every
+ * block it has used: one saved before standalone projects had a catalog has
+ * chosen none.
  */
-export function addedBlockTypes(
+export function inToolboxBlockTypes(
   level: SpriteLab2LevelProperties,
   chosen: Iterable<string>,
   used: Iterable<string>
 ): Set<string> {
   return new Set([
-    ...(level.catalogStartBlocks ?? []),
+    ...(level.catalogBlocksInToolbox ?? []),
     ...chosen,
     ...(level.isProjectLevel ? used : []),
   ]);
 }
 
-/** The catalog blocks that are not in the toolbox. */
 export function heldBackBlockTypes(
   entries: readonly CatalogEntry[],
-  added: ReadonlySet<string>
+  inToolbox: ReadonlySet<string>
 ): Set<string> {
   return new Set(
-    entries.map(entry => entry.type).filter(type => !added.has(type))
+    entries.map(entry => entry.type).filter(type => !inToolbox.has(type))
   );
 }
 

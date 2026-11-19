@@ -1,7 +1,7 @@
 import {renderHook} from '@testing-library/react-hooks';
 
 import {Scene} from '@cdo/apps/p5lab/spritelab/lab2/types';
-import {useSeenBlockTypes} from '@cdo/apps/p5lab/spritelab/lab2/views/useFlyoutDots';
+import {useBlockTypesUsedThisVisit} from '@cdo/apps/p5lab/spritelab/lab2/views/useFlyoutDots';
 
 const sceneWith = (...types: string[]): Scene =>
   ({
@@ -10,10 +10,12 @@ const sceneWith = (...types: string[]): Scene =>
     source: {blocks: {blocks: types.map(type => ({type}))}},
   } as unknown as Scene);
 
-describe('useSeenBlockTypes', () => {
+describe('useBlockTypesUsedThisVisit', () => {
   it('holds the blocks the project uses', () => {
     const {result} = renderHook(() =>
-      useSeenBlockTypes([sceneWith('spritelab2_whenRun', 'spritelab2_burst')])
+      useBlockTypesUsedThisVisit([
+        sceneWith('spritelab2_whenRun', 'spritelab2_burst'),
+      ])
     );
     expect([...result.current].sort()).toEqual([
       'spritelab2_burst',
@@ -23,7 +25,7 @@ describe('useSeenBlockTypes', () => {
 
   it('keeps a block after the project stops using it', () => {
     const view = renderHook(
-      (props: {scenes: Scene[]}) => useSeenBlockTypes(props.scenes),
+      (props: {scenes: Scene[]}) => useBlockTypesUsedThisVisit(props.scenes),
       {initialProps: {scenes: [sceneWith('spritelab2_burst')]}}
     );
     view.rerender({scenes: [sceneWith('gamelab_spriteSay')]});
@@ -35,7 +37,7 @@ describe('useSeenBlockTypes', () => {
 
   it('keeps the same set while nothing new is used', () => {
     const view = renderHook(
-      (props: {scenes: Scene[]}) => useSeenBlockTypes(props.scenes),
+      (props: {scenes: Scene[]}) => useBlockTypesUsedThisVisit(props.scenes),
       {initialProps: {scenes: [sceneWith('spritelab2_burst')]}}
     );
     const first = view.result.current;

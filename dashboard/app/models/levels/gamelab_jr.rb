@@ -51,7 +51,7 @@ class GamelabJr < Gamelab
     callouts
     objectives
     block_catalog
-    catalog_start_blocks
+    catalog_blocks_in_toolbox
     lock_earlier_blocks
     freeplay_intro
     no_project

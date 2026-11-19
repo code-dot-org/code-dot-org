@@ -156,7 +156,7 @@
     "header_label": "Free play",
     "is_project_level": true,
     "block_catalog": true,
-    "catalog_start_blocks": [
+    "catalog_blocks_in_toolbox": [
       "spritelab2_burst",
       "spritelab2_playSound",
       "gamelab_spriteSay",

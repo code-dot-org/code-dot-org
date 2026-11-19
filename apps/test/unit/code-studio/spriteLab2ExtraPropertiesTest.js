@@ -9,7 +9,7 @@ describe('camelize', () => {
   it('matches the server camelization for every editable key', () => {
     const expected = {
       block_catalog: 'blockCatalog',
-      catalog_start_blocks: 'catalogStartBlocks',
+      catalog_blocks_in_toolbox: 'catalogBlocksInToolbox',
       lock_earlier_blocks: 'lockEarlierBlocks',
       freeplay_intro: 'freeplayIntro',
       objectives: 'objectives',
