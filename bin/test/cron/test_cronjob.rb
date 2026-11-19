@@ -48,14 +48,14 @@ describe 'bin/cronjob' do
 
     it 'sends an ok check-in if cronjob returns status 0' do
       Sentry.expects(:capture_check_in).with('demo', :ok, has_entry(:check_in_id, 'check-in-1')).once
-      Sentry.expects(:capture_message).never
+      Sentry.expects(:capture_exception).never
       bin_cronjob(command: 'exit 0')
     end
 
     it 'sends an error check-in and an event carrying stderr if cronjob fails' do
       Sentry.expects(:capture_check_in).with('demo', :error, has_entry(:check_in_id, 'check-in-1')).once
-      Sentry.expects(:capture_message).with(
-        'cronjob >&2 echo hello_badger && exit 1 returned 1',
+      Sentry.expects(:capture_exception).with(
+        all_of(instance_of(Cdo::Sentry::CronjobFailed), responds_with(:message, "cronjob >&2 echo hello_badger && exit 1 returned 1\nhello_badger\n")),
         has_entries(fingerprint: ['cronjob >&2 echo hello_badger && exit 1 returned 1'], extra: has_entry(:stderr, "hello_badger\n"))
       ).once
       bin_cronjob(command: '>&2 echo hello_badger && exit 1')
@@ -63,7 +63,7 @@ describe 'bin/cronjob' do
 
     it 'reports the only_one guard aborting like any other failure' do
       Sentry.expects(:capture_check_in).with('demo', :error, has_entry(:check_in_id, 'check-in-1')).once
-      Sentry.expects(:capture_message).with(anything, has_entry(:extra, has_entry(:stderr, "Script already running\n"))).once
+      Sentry.expects(:capture_exception).with(anything, has_entry(:extra, has_entry(:stderr, "Script already running\n"))).once
       bin_cronjob(command: ">&2 echo 'Script already running' && exit 1")
     end
   end
