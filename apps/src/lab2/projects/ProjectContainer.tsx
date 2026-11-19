@@ -91,7 +91,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   ]);
 
   useEffect(() => {
-    window.addEventListener('beforeunload', event => {
+    const saveBeforeUnload = (event: BeforeUnloadEvent) => {
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
@@ -104,11 +104,13 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
         projectManager.hasUnsavedChanges() &&
         !isReadOnly
       ) {
-        projectManager.cleanUp();
+        projectManager.flushSave(/* forceNewVersion */ false, 'unload');
         event.preventDefault();
         event.returnValue = '';
       }
-    });
+    };
+    window.addEventListener('beforeunload', saveBeforeUnload);
+    return () => window.removeEventListener('beforeunload', saveBeforeUnload);
   }, [isReadOnly]);
 
   useEffect(() => {
