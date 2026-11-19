@@ -85,7 +85,7 @@ interface GeneratedPicture {
   generationId: string;
 }
 
-// Not crypto.randomUUID: jsdom lacks it.
+// Not crypto.randomUUID: jsdom lacks it, so the unit tests would have to mock it.
 const newGenerationId = (): string =>
   `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
 

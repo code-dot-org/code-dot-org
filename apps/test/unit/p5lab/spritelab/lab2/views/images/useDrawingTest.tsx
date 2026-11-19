@@ -79,7 +79,7 @@ describe('useDrawing', () => {
 
   it.each([
     ['blank', {key: null, imageType: 'sprite' as const}],
-    ['existing', target],
+    ['other', target],
     ['generated', {key: 'k2', imageType: 'sprite' as const}],
   ])("reports a %s drawing's first edit once", async (origin, drawTarget) => {
     jest.useFakeTimers();

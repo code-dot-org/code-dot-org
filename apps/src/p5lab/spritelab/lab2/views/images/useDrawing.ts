@@ -29,9 +29,9 @@ const STROKE_SAVE_MS = 800;
 // is finished. The project's own save keeps its own throttle.
 const UPLOAD_GAP_MS = 5000;
 
-/** What the tools opened on: a blank canvas, an AI-made picture, or any
-    other image (a drawing, an upload, a hand-edited AI picture). */
-type DrawingOrigin = 'blank' | 'generated' | 'existing';
+/** What the tools opened on. `other` is an image that is neither blank nor
+    AI-made: a drawing, an upload, or a hand-edited AI picture. */
+type DrawingOrigin = 'blank' | 'generated' | 'other';
 
 /** A drawing in progress: what it writes to, and what the editor opened. */
 export interface Drawing {
@@ -170,8 +170,9 @@ export default function useDrawing({
   // generated picture replaced the image while it was being drawn on.
   const openedOnGenerationRef = useRef<ImageProps['generation']>();
   const drawingIdRef = useRef(0);
-  // Analytics for the open drawing; null once its first edit is reported.
-  const unreportedDrawRef = useRef<{
+  // What the open drawing's first edit will report; null once that edit has
+  // been reported.
+  const firstEditReportRef = useRef<{
     origin: DrawingOrigin;
     target: ImageTarget;
   } | null>(null);
@@ -245,12 +246,12 @@ export default function useDrawing({
         ? images.find(image => image.key === target.key)
         : undefined;
       openedOnGenerationRef.current = existing?.props.generation;
-      unreportedDrawRef.current = {
+      firstEditReportRef.current = {
         origin: !existing?.src
           ? 'blank'
           : existing.props.generation
           ? 'generated'
-          : 'existing',
+          : 'other',
         target,
       };
       leaveAfterSaveRef.current = false;
@@ -323,9 +324,9 @@ export default function useDrawing({
   }, []);
 
   const scheduleStrokeSave = useCallback(() => {
-    const unreported = unreportedDrawRef.current;
+    const unreported = firstEditReportRef.current;
     if (unreported) {
-      unreportedDrawRef.current = null;
+      firstEditReportRef.current = null;
       analyticsReporter.sendEvent(
         EVENTS.HOAI2026_IMAGE_DRAW,
         {

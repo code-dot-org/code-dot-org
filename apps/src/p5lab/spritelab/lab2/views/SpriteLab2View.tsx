@@ -413,7 +413,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const releaseRemovedImages = useReleaseRemovedImages();
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
-  // A share link or a teacher's view plays the game without the student
+  // No analytics where someone can play the game but is not a student
   // working on the level.
   const levelAnalytics = useLevelAnalytics(
     levelProperties,
