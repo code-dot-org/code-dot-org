@@ -198,7 +198,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_11_18_120000) do
 
   create_table "anonymous_level_clients", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "anon_user_id", limit: 36, null: false
-    t.string "app_name"
+    t.string "name"
     t.string "install_source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -2754,7 +2754,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_11_18_120000) do
     t.index ["user_level_id", "step_id"], name: "index_user_adaptive_steps_on_user_level_id_and_step_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at", precision: nil
     t.datetime "anonymized_at", precision: nil
