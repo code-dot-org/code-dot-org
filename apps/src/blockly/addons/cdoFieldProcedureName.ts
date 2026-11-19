@@ -4,11 +4,9 @@ import localization from '@cdo/apps/localization';
 
 import {BLOCK_TYPES} from '../constants';
 import {
-  isTranslatable,
   onRegistryChange,
+  translateProcedureName,
 } from '../utils/localization/procedureNameRegistry';
-
-const BEHAVIOR_PREFIX = '[behavior]';
 
 /**
  * Holds the canonical (author-given) procedure or behavior name as its value,
@@ -29,26 +27,10 @@ export default class CdoFieldProcedureName extends BlocklyCore.FieldLabel {
   private registryUnsubscribe_?: () => void;
 
   protected override getDisplayText_(): string {
-    const canonical = (this.getValue() as string | null) ?? '';
-    if (!canonical || !isTranslatable(canonical)) {
-      return canonical;
-    }
-    // Behavior names share the same English strings as procedures ("walk",
-    // "jump", etc.) but need distinct translator entries because the target
-    // wording can differ. Send a prefixed source with an extra label and
-    // strip the prefix if the translator kept it; if they dropped it, trust
-    // the returned text verbatim.
-    if (this.getSourceBlock()?.type === BLOCK_TYPES.behaviorGet) {
-      const translated = localization.translate(
-        `${BEHAVIOR_PREFIX} ${canonical}`,
-        ['blockly-procedure-name', 'blockly-behavior']
-      );
-      if (translated.startsWith(BEHAVIOR_PREFIX)) {
-        return translated.slice(BEHAVIOR_PREFIX.length).trim();
-      }
-      return translated;
-    }
-    return localization.translate(canonical, ['blockly-procedure-name']);
+    return translateProcedureName(
+      (this.getValue() as string | null) ?? '',
+      this.getSourceBlock()?.type === BLOCK_TYPES.behaviorGet
+    );
   }
 
   override initView(): void {

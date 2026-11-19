@@ -32,6 +32,7 @@ import CdoFieldLabel from './addons/cdoFieldLabel';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldProcedureName from './addons/cdoFieldProcedureName';
+import CdoFieldProcedureNameInput from './addons/cdoFieldProcedureNameInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
@@ -254,6 +255,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     ['field_number', CdoFieldNumber],
     ['field_parameter', CdoFieldParameter],
     ['field_procedure_name', CdoFieldProcedureName],
+    ['field_procedure_name_input', CdoFieldProcedureNameInput],
     ['field_variable', CdoFieldVariable],
   ];
   // Tell Blockly to use our custom versions of fields

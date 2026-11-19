@@ -4,7 +4,9 @@ import {
   isTranslatable,
   onRegistryChange,
   setCurriculumProcedureNames,
+  translateProcedureName,
 } from '@cdo/apps/blockly/utils/localization/procedureNameRegistry';
+import localization from '@cdo/apps/localization';
 
 import setBlocklyGlobal from '../../../../util/setupBlocklyGlobal';
 
@@ -168,5 +170,53 @@ describe('setCurriculumProcedureNames', () => {
     await flush();
     expect(listener).toHaveBeenCalledTimes(1);
     unsubscribe();
+  });
+});
+
+describe('translateProcedureName', () => {
+  const translations: {[source: string]: string} = {
+    jump: 'saltar',
+    '[behavior] jump': '[behavior] brincando',
+    '[behavior] spin': 'girando',
+  };
+
+  beforeEach(() => {
+    jest
+      .spyOn(localization, 'translate')
+      .mockImplementation(
+        (text: unknown) => (translations[text as string] ?? text) as never
+      );
+    setCurriculumProcedureNames({
+      toolbox: {
+        kind: 'flyoutToolbox',
+        contents: ['jump', 'spin'].map(name => ({
+          kind: 'block',
+          type: 'procedures_callnoreturn',
+          extraState: {name},
+        })),
+      },
+    });
+  });
+
+  afterEach(() => {
+    setCurriculumProcedureNames({});
+    jest.restoreAllMocks();
+  });
+
+  it('translates a procedure name', () => {
+    expect(translateProcedureName('jump', false)).toBe('saltar');
+  });
+
+  it('translates a behavior name through its own entry', () => {
+    expect(translateProcedureName('jump', true)).toBe('brincando');
+  });
+
+  it('trusts a behavior translation that dropped the prefix', () => {
+    expect(translateProcedureName('spin', true)).toBe('girando');
+  });
+
+  it('leaves a name the level did not author alone', () => {
+    expect(translateProcedureName('my dance', false)).toBe('my dance');
+    expect(localization.translate).not.toHaveBeenCalled();
   });
 });

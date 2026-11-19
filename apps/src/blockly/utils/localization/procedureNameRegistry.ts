@@ -3,6 +3,7 @@ import {
   PROCEDURE_DEFINITION_TYPES,
   stringIsXml,
 } from '@cdo/apps/blockly/constants';
+import localization from '@cdo/apps/localization';
 import {parseElement} from '@cdo/apps/xml';
 
 import {convertXmlToJson} from '../serialization/xmlToJson';
@@ -43,6 +44,34 @@ export function onRegistryChange(listener: RegistryListener): () => void {
 
 export function isTranslatable(name: string): boolean {
   return translatable.has(name);
+}
+
+const BEHAVIOR_PREFIX = '[behavior]';
+
+/**
+ * The name to display for a procedure or behavior: its translation when the
+ * level authored it, otherwise the name as stored.
+ */
+export function translateProcedureName(
+  name: string,
+  isBehavior: boolean
+): string {
+  if (!name || !isTranslatable(name)) {
+    return name;
+  }
+  if (!isBehavior) {
+    return localization.translate(name, ['blockly-procedure-name']);
+  }
+  // A behavior may be worded differently from a procedure of the same
+  // English name, so it gets its own translator entry. A translator who
+  // dropped the prefix still returned the translation.
+  const translated = localization.translate(`${BEHAVIOR_PREFIX} ${name}`, [
+    'blockly-procedure-name',
+    'blockly-behavior',
+  ]);
+  return translated.startsWith(BEHAVIOR_PREFIX)
+    ? translated.slice(BEHAVIOR_PREFIX.length).trim()
+    : translated;
 }
 
 const CALLER_TYPES: readonly string[] = [

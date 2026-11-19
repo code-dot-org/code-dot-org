@@ -30,7 +30,7 @@ export const blocks = BlocklyCore.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type: 'field_input',
+        type: 'field_procedure_name_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
