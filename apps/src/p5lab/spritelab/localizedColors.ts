@@ -166,8 +166,8 @@ function localizedColors(): Map<string, string> {
       const localized = normalize(
         localization.translate(htmlColor, ['html-color'])
       );
-      // Colours sharing a translation (aqua and cyan) render alike; keep the
-      // first rather than let list order decide silently.
+      // Colours that share a translation, such as aqua and cyan, render
+      // alike; the first in HTML_COLORS keeps it.
       if (!cache.has(localized)) {
         cache.set(localized, htmlColor);
       }

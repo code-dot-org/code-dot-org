@@ -933,7 +933,7 @@ exports.createJsWrapperBlockCreator = function (
 
     blockly.Blocks[blockName] = {
       helpUrl: getHelpUrl(docFunc), // optional param
-      // blockText defined blocks are already localized
+      // getBlockDefinitionsForUpdatedLocale translates blockText blocks.
       isLocalized: true,
       init: function () {
         this.setStyle(style || BlockStyles.DEFAULT);

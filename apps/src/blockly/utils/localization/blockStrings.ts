@@ -1,3 +1,8 @@
+// Translates the strings that Sprite Lab start blocks say, print or prompt.
+// A gamelab_textJoin chain is one sentence split across blocks, with
+// gamelab_textVariableJoin blocks for its variables. It is translated as a
+// single string with %N per variable, then rebuilt in the translation's order.
+
 import localization from '@cdo/apps/localization';
 
 const LOCALIZE_BLOCK_STRINGS_BLOCKS = [
@@ -15,10 +20,6 @@ const LOCALIZE_BLOCK_JOIN_VARIABLE_BLOCKS = ['gamelab_textVariableJoin'];
 
 const STRING_LABELS = ['blockly-block', 'gamelab-string'];
 
-// A flattened piece of a textJoin chain: either a static text run or a
-// placeholder for a variable-join block. For variable tokens we retain the
-// original block element so its mutations, titles, and attributes can be
-// re-emitted in the reassembled chain.
 type ChainToken = {kind: 'text'; text: string} | {kind: 'var'; block: Element};
 
 function directChildren(el: Element, tagName: string): Element[] {
@@ -31,10 +32,7 @@ function inputBlock(valueEl: Element): Element | null {
   return directChildren(valueEl, 'block')[0] || null;
 }
 
-// Blockly XML has two equivalent spellings for field elements: <title> in the
-// older dialect (as in example.xml) and <field> in the modern dialect (as in
-// example2.xml). A single document generally uses one consistently, but we
-// accept either on reads and emit whichever the document is already using.
+// Older Blockly XML spells a field <title>.
 const FIELD_TAGS = ['field', 'title'];
 
 function findField(el: Element, name: string): Element | null {
@@ -60,12 +58,10 @@ function setFieldText(el: Element, name: string, value: string): void {
   }
 }
 
-// Detect the field spelling the document uses so rebuilt chains match.
 function detectFieldTag(doc: Document): string {
   return doc.querySelector('field') ? 'field' : 'title';
 }
 
-// Follow the TEXT2 value input to the next block in the chain.
 function nextChainBlock(el: Element): Element | null {
   for (const value of directChildren(el, 'value')) {
     if (value.getAttribute('name') === 'TEXT2') {
@@ -75,9 +71,8 @@ function nextChainBlock(el: Element): Element | null {
   return null;
 }
 
-// True when every child of a chain block is something the rebuild reproduces:
-// fields, a mutation where allowed, and a TEXT2 input holding at most one
-// plain block. Shadows, next connections and comments would be lost.
+// The rebuild reproduces only fields, a mutation and a TEXT2 block; a
+// shadow, next connection or comment would be lost.
 function isRebuildable(el: Element, allowMutation: boolean): boolean {
   for (const child of Array.from(el.children)) {
     const tag = child.tagName.toLowerCase();
@@ -97,13 +92,11 @@ function isRebuildable(el: Element, allowMutation: boolean): boolean {
   return true;
 }
 
-// A flattened chain, plus the original join and terminal text elements whose
-// attributes (id, deletable, movable, ...) the rebuilt blocks inherit.
+// joins and tail are the original blocks whose attributes the rebuilt blocks
+// inherit.
 type Chain = {tokens: ChainToken[]; joins: Element[]; tail: Element | null};
 
-// Walk the textJoin / textVariableJoin / text chain and produce an ordered
-// stream of text runs and variable placeholders. Returns null when the chain
-// holds anything the rebuild cannot reproduce, so the caller leaves it alone.
+// Returns null when the chain holds anything the rebuild cannot reproduce.
 function flattenChain(block: Element): Chain | null {
   const tokens: ChainToken[] = [];
   const joins: Element[] = [];
@@ -126,16 +119,15 @@ function flattenChain(block: Element): Chain | null {
       tail = current;
       current = null;
     } else {
-      // A variables_get, function call, etc. has no TEXT2 to continue the
-      // chain, so a translation that moves it cannot be rebuilt.
+      // A variables_get or call has no TEXT2, so it can only end a chain and
+      // a translation that moves it cannot be built.
       return null;
     }
   }
   return {tokens: normalizeTokens(tokens), joins, tail};
 }
 
-// Merge adjacent text runs and guarantee the sequence begins and ends with a
-// text token so the builder can always pair them with variable tokens.
+// The result alternates text, var, text, ..., starting and ending with text.
 function normalizeTokens(tokens: ChainToken[]): ChainToken[] {
   const merged: ChainToken[] = [];
   for (const tok of tokens) {
@@ -155,9 +147,6 @@ function normalizeTokens(tokens: ChainToken[]): ChainToken[] {
   return merged;
 }
 
-// Render the token stream as a source string with %1, %2, ... in place of
-// variable tokens. Returns the string alongside the ordered variable blocks
-// those placeholders refer to.
 function chainToSourceString(tokens: ChainToken[]): {
   source: string;
   vars: Element[];
@@ -175,8 +164,6 @@ function chainToSourceString(tokens: ChainToken[]): {
   return {source: pieces.join(''), vars};
 }
 
-// Split a translated string back into tokens, resolving %N against the
-// ordered variable blocks from the original chain.
 function parseTranslated(translated: string, vars: Element[]): ChainToken[] {
   const tokens: ChainToken[] = [];
   const regex = /%(\d+)/g;
@@ -191,7 +178,7 @@ function parseTranslated(translated: string, vars: Element[]): ChainToken[] {
     if (idx >= 0 && idx < vars.length) {
       tokens.push({kind: 'var', block: vars[idx]});
     } else {
-      // Placeholder is out of range; keep the raw %N so a developer notices.
+      // An out-of-range %N stays visible as text.
       tokens.push({kind: 'text', text: match[0]});
     }
     lastIndex = regex.lastIndex;
@@ -200,9 +187,7 @@ function parseTranslated(translated: string, vars: Element[]): ChainToken[] {
   return normalizeTokens(tokens);
 }
 
-// Shallow-clone a variable-join block, preserving its attributes and field
-// children but dropping the TEXT2 continuation so the caller can splice in
-// the new continuation from the rebuilt chain.
+// Copies a variable-join block without its TEXT2 input.
 function cloneVarHeader(block: Element): Element {
   const clone = block.cloneNode(false) as Element;
   for (const child of Array.from(block.children)) {
@@ -214,9 +199,8 @@ function cloneVarHeader(block: Element): Element {
   return clone;
 }
 
-// Copies attributes other than type from an original chain block. A rebuilt
-// block with no original counterpart takes the chain head's attributes minus
-// its id, so lock flags such as deletable="false" still apply.
+// A rebuilt block with no original counterpart takes the chain head's
+// attributes minus its id, so lock flags such as deletable="false" apply.
 function inheritAttributes(
   block: Element,
   original: Element | undefined | null,
@@ -241,9 +225,6 @@ function makeTextBlock(doc: Document, fieldTag: string, text: string): Element {
   return block;
 }
 
-// Recursively build a new chain from a normalized token stream. Tokens always
-// arrive as text, (var, text)*, so each recursive step consumes a (text, var)
-// pair and descends into the remainder, or terminates with a lone text block.
 // The k-th join built inherits the attributes of the k-th original join.
 function buildChain(
   doc: Document,
@@ -335,16 +316,10 @@ function localizeValueInput(
 }
 
 /**
- * Takes the XML that is meant to be serialized and replaces the string
- * inputs to certain blocks, defined by the LOCALIZE_BLOCK_STRINGS_BLOCKS
- * array, with translated versions of those strings. It returns the reformed
- * XML so that it is what gets serialized instead.
- *
- * Plain <block type="text"> inputs to qualifying blocks drive the set of
- * translatable strings. After processing those, we propagate their
- * translations to any other <block type="text"> in the program whose TEXT
- * matches a known source string, so identical literals stay consistent
- * regardless of where the user wired them.
+ * Returns start-block XML with the strings given to the blocks in
+ * LOCALIZE_BLOCK_STRINGS_BLOCKS translated. Any other text block holding
+ * one of those same strings gets the same translation. JSON, or XML that
+ * does not parse, is returned unchanged.
  */
 export function localizeBlockStrings(xml: string): string {
   const parser = new DOMParser();
@@ -365,10 +340,8 @@ export function localizeBlockStrings(xml: string): string {
     }
   }
 
-  // Propagate the translations we already performed to every other plain
-  // text block in the program. Only exact-match sources are translated:
-  // we never send a fresh string, so asset names and other literals that
-  // happen to live in text blocks pass through untouched.
+  // Only strings already translated above are reused, so asset names and
+  // other text-block literals are never sent for translation.
   for (const block of Array.from(doc.querySelectorAll('block[type="text"]'))) {
     if (processed.has(block)) continue;
     const source = fieldText(block, 'TEXT');

@@ -563,7 +563,6 @@ StudioApp.prototype.init = function (config) {
           customInputTypes: Blockly.SourceCustomInputTypes,
         });
 
-        // Also localize the base init blocks
         Object.entries(BlocklyCore.Blocks).forEach(([key, blockDefinition]) => {
           if (blockDefinition.init) {
             BlocklyCore.Blocks[key] =
@@ -1349,8 +1348,7 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source) {
-  // Whatever is loaded now is not known to be the authored start blocks;
-  // setStartBlocks_ re-establishes tracking when it is.
+  // setStartBlocks_ tracks again when what it loaded is the authored blocks.
   if (!this.relocalizingStartBlocks_) {
     this.untrackStartBlocks_();
   }
@@ -3069,8 +3067,8 @@ StudioApp.prototype.untrackStartBlocks_ = function () {
 /**
  * Reloads the authored start blocks translated into the current locale, if
  * the workspace still holds them unedited and the translation differs.
- * Returns true if it reloaded. Must run in the same turn as the pristine
- * check it makes; nothing the student does can interleave.
+ * Returns true if it reloaded. The check and the reload happen in one
+ * synchronous call, so no edit can land between them.
  */
 StudioApp.prototype.relocalizeStartBlocks_ = function () {
   window.clearTimeout(this.relocalizeTimer_);
@@ -3127,8 +3125,9 @@ StudioApp.prototype.relocalizeStartBlocksWhenIdle_ = function () {
 };
 
 /**
- * Re-snapshots after a refresh renamed variables. Only valid in the turn
- * that verified the workspace was still pristine.
+ * Retakes the snapshot after a refresh, which renames variables. Call only
+ * in the same synchronous turn as a relocalizeStartBlocks_ that found the
+ * workspace unedited.
  */
 StudioApp.prototype.snapshotStartBlocks_ = function () {
   if (this.loadedStartBlocks_) {

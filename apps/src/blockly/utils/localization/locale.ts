@@ -63,13 +63,11 @@ export function getBlockDefinitionsForUpdatedLocale(
 
     (args || []).forEach((arg, i) => {
       if (arg.options) {
-        // Deep clone the argument
+        // A copy, so the English options in sourceArgs stay as they are.
         args[i] = {...args[i]};
 
         args[i].options = arg.options.map(item => {
-          // Sometimes the options list is just an array of strings rather than
-          // a tuple of a label and an id. This is typically true of grid/image
-          // dropdowns.
+          // Grid and image dropdowns list plain strings.
           if (!Array.isArray(item)) {
             return item;
           }

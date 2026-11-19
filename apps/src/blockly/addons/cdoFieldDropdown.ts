@@ -107,9 +107,8 @@ export default class CdoFieldDropdown extends BlocklyCore.FieldDropdown {
     this.fromXml(field);
   }
 
-  /**
-   * Updates to ensure that the popup div does not translate the items.
-   */
+  // The options are already translated; LocalizeJS must not translate the
+  // menu again.
   showEditor_(e?: MouseEvent) {
     super.showEditor_(e);
 

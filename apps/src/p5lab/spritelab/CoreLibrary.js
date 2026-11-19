@@ -93,7 +93,6 @@ export default class CoreLibrary {
 
   drawBackground() {
     if (typeof this.background === 'string') {
-      // Determine if we should reverse the localization of the color
       this.p5.background(unlocalizeColor(this.background));
     } else {
       this.p5.background('white');

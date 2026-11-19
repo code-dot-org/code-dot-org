@@ -9,18 +9,10 @@ import {
 } from '../utils/localization/procedureNameRegistry';
 
 /**
- * Holds the canonical (author-given) procedure or behavior name as its value,
- * while rendering a translated form when the name is registered as
- * translatable. Used by procedures_callnoreturn and behavior_get for their
- * NAME field so that:
- *   - serialization (extraState, saveExtraState) sees only the canonical name
- *   - getProcedureModel / findProcedureModel_ lookups key on the canonical name
- *   - level solution-matching still compares canonical strings
- *   - the student sees a translated label when the curriculum declares one
- *
- * FieldLabel semantics are preserved: the field is not serializable on its own
- * (the block's extraState carries the name), and setFieldValue('NAME', x) still
- * stores x as-is.
+ * The NAME field of procedures_callnoreturn and gamelab_behavior_get. Its
+ * value is the name as stored, which serialization, procedure lookups and
+ * solution checks use; it displays the translation when the level authored
+ * the name.
  */
 export default class CdoFieldProcedureName extends BlocklyCore.FieldLabel {
   private localeListener_?: () => void;
