@@ -14,6 +14,7 @@ import {
   getCurrentLevel,
   getCurrentLevels,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {setInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
@@ -165,7 +166,7 @@ import DiscoverBlocksButton, {
   DISCOVER_BLOCKS_BUTTON_ID,
 } from './DiscoverBlocksButton';
 import FreeplayIntroDialog from './FreeplayIntroDialog';
-import ImagesTab from './images/ImagesTab';
+import ImagesTab, {UploadWarningSettings} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
@@ -453,6 +454,50 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     return undefined;
   }, [channelId, levelProperties.name]);
+
+  const isTeacher = useAppSelector(
+    state => state.currentUser.userType === 'teacher'
+  );
+  const {inRestrictedShareMode, teacherHasConfirmedUploadWarning} =
+    currentSources;
+  const uploadWarningSettings: UploadWarningSettings | undefined = useMemo(
+    () =>
+      isLevelEditMode
+        ? undefined
+        : {
+            alreadyAgreed: !!(isTeacher
+              ? teacherHasConfirmedUploadWarning
+              : inRestrictedShareMode),
+            isTeacher,
+            onConfirm: () =>
+              patchSources(
+                isTeacher
+                  ? {teacherHasConfirmedUploadWarning: true}
+                  : {inRestrictedShareMode: true},
+                true
+              ),
+          },
+    [
+      isTeacher,
+      teacherHasConfirmedUploadWarning,
+      inRestrictedShareMode,
+      patchSources,
+    ]
+  );
+
+  useEffect(() => {
+    dispatch(setInRestrictedShareMode(!!inRestrictedShareMode));
+  }, [dispatch, inRestrictedShareMode]);
+
+  // Clear restricted share mode when the component unmounts,
+  // as we could be going to a non-Sprite Lab 2 level which
+  // does not set inRestrictedShareMode.
+  useEffect(
+    () => () => {
+      dispatch(setInRestrictedShareMode(false));
+    },
+    [dispatch]
+  );
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
@@ -2463,6 +2508,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   !!uploadImage &&
                   !isBlockedAbuse
                 }
+                uploadWarningSettings={uploadWarningSettings}
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}

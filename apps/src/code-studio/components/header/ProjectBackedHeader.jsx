@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import ProjectRemix from './ProjectRemix';
@@ -8,11 +9,15 @@ import ProjectShare from './ProjectShare';
 // and should be used with the version of ScriptName that
 // places a last_modified time below the lesson name
 export default class ProjectBackedHeader extends React.Component {
+  static propTypes = {
+    onChangedWidth: PropTypes.func,
+  };
+
   render() {
     return (
       <div style={styles.projectButtons}>
         <ProjectShare />
-        <ProjectRemix lightStyle />
+        <ProjectRemix lightStyle onChangedWidth={this.props.onChangedWidth} />
       </div>
     );
   }
