@@ -1463,6 +1463,126 @@ class LessonsControllerTest < ActionController::TestCase
     assert script_level.assessment
   end
 
+  test 'can add exam Quiz as the last level of a lockable lesson' do
+    sign_in @levelbuilder
+    @lesson.update!(lockable: true)
+    activity, section = create_activity_and_section(@lesson)
+
+    first_level = create(:level)
+    exam = create(:quiz, purpose: 'exam')
+    @update_params['activities'] = activities_json(
+      activity, section, [
+        {activitySectionPosition: 1, activeId: first_level.id, levels: [{id: first_level.id, name: first_level.name}]},
+        {activitySectionPosition: 2, activeId: exam.id, assessment: true, levels: [{id: exam.id, name: exam.name}]},
+      ]
+    )
+    put :update, params: @update_params
+    assert_response :success
+  end
+
+  test 'cannot add exam Quiz to a lesson that is not lockable' do
+    sign_in @levelbuilder
+    activity, section = create_activity_and_section(@lesson)
+
+    exam = create(:quiz, purpose: 'exam')
+    @update_params['activities'] = activities_json(
+      activity, section, [
+        {activitySectionPosition: 1, activeId: exam.id, levels: [{id: exam.id, name: exam.name}]},
+      ]
+    )
+    put :update, params: @update_params
+    assert_response :not_acceptable
+    assert_includes response.body, 'An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: the lesson is not lockable.'
+  end
+
+  test 'cannot add exam Quiz before the last level of a lesson' do
+    sign_in @levelbuilder
+    @lesson.update!(lockable: true)
+    activity, section = create_activity_and_section(@lesson)
+
+    exam = create(:quiz, purpose: 'exam')
+    level_group = create(:level_group)
+    @update_params['activities'] = activities_json(
+      activity, section, [
+        {activitySectionPosition: 1, activeId: exam.id, levels: [{id: exam.id, name: exam.name}]},
+        {activitySectionPosition: 2, activeId: level_group.id, assessment: true, levels: [{id: level_group.id, name: level_group.name}]},
+      ]
+    )
+    put :update, params: @update_params
+    assert_response :not_acceptable
+    assert_includes response.body, "An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: #{exam.name.dump} is not the last level."
+  end
+
+  test 'cannot add a Quiz that is not an exam to a lockable lesson' do
+    sign_in @levelbuilder
+    @lesson.update!(lockable: true)
+    activity, section = create_activity_and_section(@lesson)
+
+    practice = create(:quiz, purpose: 'practice')
+    level_group = create(:level_group)
+    @update_params['activities'] = activities_json(
+      activity, section, [
+        {activitySectionPosition: 1, activeId: practice.id, levels: [{id: practice.id, name: practice.name}]},
+        {activitySectionPosition: 2, activeId: level_group.id, assessment: true, levels: [{id: level_group.id, name: level_group.name}]},
+      ]
+    )
+    put :update, params: @update_params
+    assert_response :not_acceptable
+    assert_includes response.body, "An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: #{practice.name.dump} is not an exam."
+  end
+
+  test 'cannot add a BubbleChoice with a Quiz sublevel to a lockable lesson' do
+    sign_in @levelbuilder
+    @lesson.update!(lockable: true)
+    activity, section = create_activity_and_section(@lesson)
+
+    practice = create(:quiz, purpose: 'practice')
+    bubble_choice = create(:bubble_choice_level)
+    ParentLevelsChildLevel.create!(parent_level: bubble_choice, child_level: practice, kind: ParentLevelsChildLevel::SUBLEVEL)
+    level_group = create(:level_group)
+    @update_params['activities'] = activities_json(
+      activity, section, [
+        {activitySectionPosition: 1, activeId: bubble_choice.id, levels: [{id: bubble_choice.id, name: bubble_choice.name}]},
+        {activitySectionPosition: 2, activeId: level_group.id, assessment: true, levels: [{id: level_group.id, name: level_group.name}]},
+      ]
+    )
+    put :update, params: @update_params
+    assert_response :not_acceptable
+    assert_includes response.body, "#{practice.name.dump} is a sublevel of #{bubble_choice.name.dump}."
+  end
+
+  test 'cannot make a lesson lockable while it holds a Quiz that is not an exam' do
+    sign_in @levelbuilder
+    _activity, section = create_activity_and_section(@lesson)
+    practice = create(:quiz, purpose: 'practice')
+    section.script_levels.create(position: 1, activity_section_position: 1, lesson: @lesson, script: @lesson.script, levels: [practice])
+    section.script_levels.create(position: 2, activity_section_position: 2, lesson: @lesson, script: @lesson.script, levels: [create(:level_group)], assessment: true)
+
+    put :update, params: @update_params.merge(lockable: true)
+    assert_response :not_acceptable
+    assert_includes response.body, "#{practice.name.dump} is not an exam."
+    refute @lesson.reload.lockable
+  end
+
+  test 'cannot make a lesson containing an exam Quiz unlockable' do
+    sign_in @levelbuilder
+    @lesson.update!(lockable: true)
+    _activity, section = create_activity_and_section(@lesson)
+    section.script_levels.create(
+      position: 1,
+      activity_section_position: 1,
+      lesson: @lesson,
+      script: @lesson.script,
+      levels: [create(:quiz, purpose: 'exam')],
+      assessment: true
+    )
+
+    put :update, params: @update_params.merge(lockable: false)
+    assert_response :not_acceptable
+    assert_includes response.body, 'An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: the lesson is not lockable.'
+    assert @lesson.reload.lockable
+  end
+
   test 'move script level to previous activity' do
     sign_in @levelbuilder
 
@@ -1940,5 +2060,24 @@ class LessonsControllerTest < ActionController::TestCase
     activity = create(:lesson_activity, lesson: lesson)
     section = create(:activity_section, lesson_activity: activity)
     create(:script_level, script: lesson.script, lesson: lesson, activity_section: section)
+  end
+
+  private def create_activity_and_section(lesson)
+    activity = lesson.lesson_activities.create(name: 'activity name', position: 1, key: 'activity-key')
+    section = activity.activity_sections.create(name: 'section name', position: 1, key: 'section-key')
+    [activity, section]
+  end
+
+  private def activities_json(activity, section, script_levels)
+    [
+      {
+        id: activity.id,
+        name: 'activity name',
+        position: 1,
+        activitySections: [
+          {id: section.id, name: 'section name', position: 1, scriptLevels: script_levels}
+        ]
+      }
+    ].to_json
   end
 end

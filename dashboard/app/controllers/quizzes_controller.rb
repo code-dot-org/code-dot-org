@@ -59,9 +59,18 @@ class QuizzesController < ApplicationController
         @level.replace_placements!(placement_params, delete_question_ids: delete_question_ids_param)
       end
       updates = present_configuration_updates
+
+      # Once an exam Quiz is the last level of a lockable lesson, its purpose can't
+      # change until it's removed from that lesson; nor can a Quiz become an exam
+      # anywhere else.
       if updates.key?(:purpose) && updates[:purpose] != 'exam' && @level.exam? && @level.lock_level?
         raise "This Quiz must stay an exam while it is the last level of a lockable lesson."
       end
+      if updates[:purpose] == 'exam' && !@level.exam?
+        problems = @level.exam_lesson_position_problems
+        raise "This Quiz cannot be an exam because #{problems.join('; ')}." if problems.any?
+      end
+
       @level.assign_attributes(updates)
       @level.advance_saved_version
       @level.save!

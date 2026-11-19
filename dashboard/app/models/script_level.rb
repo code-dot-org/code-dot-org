@@ -372,6 +372,10 @@ class ScriptLevel < ApplicationRecord
     return level.properties["anonymous"] == "true"
   end
 
+  def exam_quiz?
+    levels.any? {|l| l.is_a?(Quiz) && l.exam?}
+  end
+
   def activity_guide_level?
     return false if level.nil? || level.properties.nil?
 
