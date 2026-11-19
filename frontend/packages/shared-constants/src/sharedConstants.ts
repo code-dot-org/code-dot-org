@@ -695,6 +695,7 @@ export const AllowedHostnameSuffixes = [
   "api.waqi.info",
   "dataservice.accuweather.com",
   "data.weather.gov.hk",
+  "opendataapi.dmi.dk",
   "noaa.gov",
   "api.foursquare.com",
   "api.opencagedata.com",
