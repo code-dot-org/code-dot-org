@@ -217,6 +217,8 @@ const EVENTS = {
   SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
   SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
   LEVEL_ACTIVITY: 'Level Activity',
+  LEVEL_COMPLETED: 'Level Completed',
+  LEVEL_SESSION_END: 'Level Session End',
 
   // Check for understanding
   CFU_NAMES_TOGGLED_ON: 'Summary Page Names Toggled On',
@@ -483,8 +485,6 @@ const EVENTS = {
   HOAI2026_IMAGE_VERDICT: 'hoai2026-image-verdict',
   HOAI2026_IMAGE_VERDICT_REASON: 'hoai2026-image-verdict-reason',
   HOAI2026_IMAGE_DRAW: 'hoai2026-image-draw',
-  HOAI2026_LEVEL_COMPLETE: 'hoai2026-level-complete',
-  HOAI2026_LEVEL_SESSION_END: 'hoai2026-level-session-end',
   HOAI2026_FINISH_DIALOG: 'hoai2026-finish-dialog',
 
   // Moderate model output image
