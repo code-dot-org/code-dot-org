@@ -20,7 +20,7 @@ const DESTINATIONS = {
   elementary: 'https://studio.code.org/courses/k5-ai-data-2024/units/1/reset',
   middleSchool:
     'https://code.org/en-US/curriculum/artificial-intelligence-discoveries',
-  professionalLearning: 'https://code.org/en-US/professional-learning',
+  elevate: 'https://aka.ms/ElevateHourofAI',
 };
 
 /** Button props that make an external link of a destination, in a new tab. */
@@ -209,7 +209,8 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                 busy={showShareSpinner}
               />
             ) : (
-              <Typography variant="body2" className={styles.offerText}>
+              <Typography variant="body2" className={styles.unavailable}>
+                <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
                 This game can't be shared right now.
               </Typography>
             )}
@@ -232,14 +233,14 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
           </Offer>
           <Offer
             icon="lightbulb"
-            title="Professional learning"
-            text="Learn to teach computer science and AI."
+            title="Elevate your Hour of AI"
+            text="Prepare to lead an Hour of AI."
           >
             <MuiButton
               variant="outlined"
               color="secondary"
               endIcon={<ExternalIcon />}
-              {...linkProps(DESTINATIONS.professionalLearning)}
+              {...linkProps(DESTINATIONS.elevate)}
             >
               Learn more
             </MuiButton>

@@ -3,10 +3,10 @@
 // height. Wider than the modal's own cap, for the cards side by side.
 .dialog {
   --gap: 14px;
-  --card-padding: 22px 28px;
+  --card-padding: 24px;
   --picture-height: 96px;
   --row-padding: 14px 18px;
-  --offer-padding: 14px 20px;
+  --offer-padding: 18px;
 
   box-sizing: border-box;
   width: min(1120px, calc(100vw - 32px));
@@ -29,10 +29,10 @@
 @media (max-height: 800px) {
   .dialog {
     --gap: 8px;
-    --card-padding: 12px 22px;
+    --card-padding: 14px;
     --picture-height: 36px;
     --row-padding: 9px 16px;
-    --offer-padding: 10px 18px;
+    --offer-padding: 12px;
 
     > div:nth-of-type(1),
     > div:nth-of-type(3) {
@@ -247,6 +247,21 @@ $ground-shown: 10px;
 .offer .offerText {
   margin: 0 0 4px;
   color: var(--text-neutral-secondary);
+}
+
+// The offers of a row are equally tall. Each one's button sits at the
+// bottom, so the buttons line up when one offer's text takes more lines.
+.offer > :last-child {
+  margin-top: auto;
+}
+
+// Stands where the Copy link button would, at a button's height.
+.offer .unavailable {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  color: var(--text-neutral-tertiary);
 }
 
 @media (max-width: 760px) {
