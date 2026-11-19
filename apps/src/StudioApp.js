@@ -15,9 +15,9 @@ import {
   appendSharedFunctionsToState,
   highlightBlock,
   loadBlocksToWorkspace,
+  localizeBlockInitDefinition,
   localizeBlockStrings,
   processToolboxXml,
-  localizeBlockInitDefinition,
 } from '@cdo/apps/blockly/utils';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
