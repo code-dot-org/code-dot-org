@@ -75,29 +75,63 @@ function nextChainBlock(el: Element): Element | null {
   return null;
 }
 
+// True when every child of a chain block is something the rebuild reproduces:
+// fields, a mutation where allowed, and a TEXT2 input holding at most one
+// plain block. Shadows, next connections and comments would be lost.
+function isRebuildable(el: Element, allowMutation: boolean): boolean {
+  for (const child of Array.from(el.children)) {
+    const tag = child.tagName.toLowerCase();
+    if (FIELD_TAGS.includes(tag)) continue;
+    if (tag === 'mutation' && allowMutation) continue;
+    if (tag === 'value' && child.getAttribute('name') === 'TEXT2') {
+      const inner = Array.from(child.children);
+      if (
+        inner.length === 0 ||
+        (inner.length === 1 && inner[0].tagName.toLowerCase() === 'block')
+      ) {
+        continue;
+      }
+    }
+    return false;
+  }
+  return true;
+}
+
+// A flattened chain, plus the original join and terminal text elements whose
+// attributes (id, deletable, movable, ...) the rebuilt blocks inherit.
+type Chain = {tokens: ChainToken[]; joins: Element[]; tail: Element | null};
+
 // Walk the textJoin / textVariableJoin / text chain and produce an ordered
-// stream of text runs and variable placeholders.
-function flattenChain(block: Element): ChainToken[] {
+// stream of text runs and variable placeholders. Returns null when the chain
+// holds anything the rebuild cannot reproduce, so the caller leaves it alone.
+function flattenChain(block: Element): Chain | null {
   const tokens: ChainToken[] = [];
+  const joins: Element[] = [];
+  let tail: Element | null = null;
   let current: Element | null = block;
   while (current) {
     const type = current.getAttribute('type') || '';
     if (LOCALIZE_BLOCK_JOIN_BLOCKS.includes(type)) {
+      if (!isRebuildable(current, false)) return null;
       tokens.push({kind: 'text', text: fieldText(current, 'TEXT1')});
+      joins.push(current);
       current = nextChainBlock(current);
     } else if (LOCALIZE_BLOCK_JOIN_VARIABLE_BLOCKS.includes(type)) {
+      if (!isRebuildable(current, true)) return null;
       tokens.push({kind: 'var', block: current});
       current = nextChainBlock(current);
     } else if (type === 'text') {
+      if (!isRebuildable(current, false)) return null;
       tokens.push({kind: 'text', text: fieldText(current, 'TEXT')});
+      tail = current;
       current = null;
     } else {
-      // Anything else (variables_get, a function call, etc.) ends flattening
-      // since we cannot safely re-emit it inside a rebuilt chain.
-      current = null;
+      // A variables_get, function call, etc. has no TEXT2 to continue the
+      // chain, so a translation that moves it cannot be rebuilt.
+      return null;
     }
   }
-  return normalizeTokens(tokens);
+  return {tokens: normalizeTokens(tokens), joins, tail};
 }
 
 // Merge adjacent text runs and guarantee the sequence begins and ends with a
@@ -180,6 +214,23 @@ function cloneVarHeader(block: Element): Element {
   return clone;
 }
 
+// Copies attributes other than type from an original chain block. A rebuilt
+// block with no original counterpart takes the chain head's attributes minus
+// its id, so lock flags such as deletable="false" still apply.
+function inheritAttributes(
+  block: Element,
+  original: Element | undefined | null,
+  fallback: Element | undefined
+): void {
+  const source = original || fallback;
+  if (!source) return;
+  for (const attr of Array.from(source.attributes)) {
+    if (attr.name === 'type') continue;
+    if (!original && attr.name === 'id') continue;
+    block.setAttribute(attr.name, attr.value);
+  }
+}
+
 function makeTextBlock(doc: Document, fieldTag: string, text: string): Element {
   const block = doc.createElement('block');
   block.setAttribute('type', 'text');
@@ -193,13 +244,18 @@ function makeTextBlock(doc: Document, fieldTag: string, text: string): Element {
 // Recursively build a new chain from a normalized token stream. Tokens always
 // arrive as text, (var, text)*, so each recursive step consumes a (text, var)
 // pair and descends into the remainder, or terminates with a lone text block.
+// The k-th join built inherits the attributes of the k-th original join.
 function buildChain(
   doc: Document,
   fieldTag: string,
-  tokens: ChainToken[]
+  tokens: ChainToken[],
+  chain: Chain,
+  depth: number = 0
 ): Element {
   if (tokens.length === 1 && tokens[0].kind === 'text') {
-    return makeTextBlock(doc, fieldTag, tokens[0].text);
+    const textBlock = makeTextBlock(doc, fieldTag, tokens[0].text);
+    inheritAttributes(textBlock, chain.tail, chain.joins[0]);
+    return textBlock;
   }
 
   const first = tokens[0];
@@ -209,6 +265,7 @@ function buildChain(
 
   const joinBlock = doc.createElement('block');
   joinBlock.setAttribute('type', LOCALIZE_BLOCK_JOIN_BLOCKS[0]);
+  inheritAttributes(joinBlock, chain.joins[depth], chain.joins[0]);
   const field1 = doc.createElement(fieldTag);
   field1.setAttribute('name', 'TEXT1');
   field1.textContent = firstText;
@@ -223,7 +280,7 @@ function buildChain(
       : doc.createElement('block');
   const innerValue = doc.createElement('value');
   innerValue.setAttribute('name', 'TEXT2');
-  innerValue.appendChild(buildChain(doc, fieldTag, rest));
+  innerValue.appendChild(buildChain(doc, fieldTag, rest, chain, depth + 1));
   varHeader.appendChild(innerValue);
 
   outerValue.appendChild(varHeader);
@@ -262,14 +319,16 @@ function localizeValueInput(
   }
 
   if (LOCALIZE_BLOCK_JOIN_BLOCKS.includes(type)) {
-    const tokens = flattenChain(innerBlock);
-    const {source, vars} = chainToSourceString(tokens);
+    const chain = flattenChain(innerBlock);
+    if (!chain) return;
+    const {source, vars} = chainToSourceString(chain.tokens);
     if (source === '') return;
     const translated = localization.translate(source, STRING_LABELS);
     const rebuilt = buildChain(
       doc,
       fieldTag,
-      parseTranslated(translated, vars)
+      parseTranslated(translated, vars),
+      chain
     );
     replaceInputBlock(valueEl, rebuilt);
   }
