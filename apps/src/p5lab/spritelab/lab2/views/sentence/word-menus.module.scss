@@ -1,15 +1,5 @@
 @use "sr-only";
 
-// Chips and words are controls, not text to copy; the page gives p and
-// span user-select: text.
-.menus,
-.readOnly {
-  &,
-  * {
-    user-select: none;
-  }
-}
-
 .menus {
   display: flex;
   flex-direction: column;
