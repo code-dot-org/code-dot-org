@@ -5,6 +5,16 @@
   max-width: 100%;
 }
 
+// The words scroll when they are long. A browser draws that scrollbar for
+// a light page unless color-scheme tells it the dialog is dark.
+:global([data-theme='Dark']) .dialog {
+  color-scheme: dark;
+}
+
+:global([data-theme='Light']) .dialog {
+  color-scheme: light;
+}
+
 // The thumbnail beside the intro, then the switch, then the words.
 .body {
   align-self: stretch;

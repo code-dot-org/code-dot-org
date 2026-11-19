@@ -325,6 +325,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
+  const {closedPicture, releaseClosedPicture} = tools;
+  // The canvas copy kept when Done closed the tools is for one image, so it
+  // is dropped when another image is chosen.
+  useEffect(() => {
+    if (closedPicture && closedPicture.key !== chosenId) {
+      releaseClosedPicture();
+    }
+  }, [chosenId, closedPicture, releaseClosedPicture]);
 
   const [uploadError, setUploadError] = useState<{text: string} | null>(null);
   const [uploadStatus, setUploadStatus] = useState('');
@@ -689,6 +697,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 frame={shownFrame}
                 workspaceClassName={live ? styles.paintFrame : undefined}
                 above={above}
+                reserveAbove={!viewOnly}
+                cover={
+                  !live &&
+                  !generating &&
+                  closedPicture?.key === chosenImage?.key
+                    ? closedPicture?.canvas
+                    : undefined
+                }
+                onCoverDone={releaseClosedPicture}
                 live={
                   generating
                     ? parts.frame
@@ -890,7 +907,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         />
       ) : (
         <>
-          <ImageFrame image={null} />
+          <ImageFrame image={null} reserveAbove={!viewOnly} />
           {!viewOnly && (
             <section
               className={styles.pane}

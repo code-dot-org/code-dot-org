@@ -74,6 +74,11 @@ export interface DrawingTools {
       painted: a copy of the previous drawing's canvas, or the picture
       decoded ahead. */
   placeholderPicture: HTMLImageElement | HTMLCanvasElement | undefined;
+  /** The paint tools' canvas as it was when Done closed them, with the key
+      of its image. The frame shows it until the image's saved picture has
+      been drawn. */
+  closedPicture: {key: string; canvas: HTMLCanvasElement} | null;
+  releaseClosedPicture: () => void;
   /** The last pause-save failed; it is tried again at the next pause,
       Done or tab change. */
   saveFailed: boolean;
@@ -129,6 +134,9 @@ export default function useDrawing({
   const drawingRef = useRef(drawing);
   drawingRef.current = drawing;
   const [saveFailed, setSaveFailed] = useState(false);
+  const [closedPicture, setClosedPicture] =
+    useState<DrawingTools['closedPicture']>(null);
+  const releaseClosedPicture = useCallback(() => setClosedPicture(null), []);
   // The drawing that a generated picture replaced while a save of it was
   // still in flight; that save must not set the image's pixels back to the
   // drawing.
@@ -181,6 +189,15 @@ export default function useDrawing({
     setDrawing(null);
   }, []);
 
+  const closeAfterDone = useCallback(
+    (key = drawingRef.current?.target.key) => {
+      const canvas = editorRef.current?.snapshot();
+      setClosedPicture(key && canvas ? {key, canvas} : null);
+      stopDrawing();
+    },
+    [stopDrawing]
+  );
+
   const abandonDrawing = useCallback(() => {
     abandonedDrawingIdRef.current = drawingRef.current?.id ?? null;
     stopDrawing();
@@ -218,6 +235,7 @@ export default function useDrawing({
         : undefined;
       openedOnGenerationRef.current = existing?.props.generation;
       leaveAfterSaveRef.current = false;
+      setClosedPicture(null);
       const id = ++drawingIdRef.current;
       if (existing?.sheet) {
         const {src, frameSize, poses} = existing.sheet;
@@ -419,14 +437,15 @@ export default function useDrawing({
           pending.final
         );
       } else if (final && drawingRef.current?.id === saved.id) {
-        stopDrawing();
+        // A new image's key is in `saved` before it is in `drawingRef`.
+        closeAfterDone(saved.target.key);
       } else if (nextFrameRef.current !== null) {
         const next = nextFrameRef.current;
         nextFrameRef.current = null;
         await openFrame(next);
       }
     },
-    [storePicture, saveEdited, stopDrawing, openFrame]
+    [storePicture, saveEdited, closeAfterDone, openFrame]
   );
 
   const selectFrame = useCallback(
@@ -488,9 +507,9 @@ export default function useDrawing({
       leaveAfterSaveRef.current = true;
       editorRef.current?.save();
     } else {
-      stopDrawing();
+      closeAfterDone();
     }
-  }, [stopDrawing]);
+  }, [closeAfterDone]);
 
   // Leaving the tab is Done: what was drawn is saved and the tools close.
   useEffect(() => {
@@ -517,6 +536,8 @@ export default function useDrawing({
     openedOnGeneration: openedOnGenerationRef.current,
     adoptGeneration,
     placeholderPicture: previousCanvasRef.current?.canvas ?? drawing?.picture,
+    closedPicture,
+    releaseClosedPicture,
     saveFailed,
     startDrawing,
     leaveDrawing,

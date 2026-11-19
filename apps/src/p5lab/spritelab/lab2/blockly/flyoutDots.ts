@@ -3,6 +3,8 @@ import * as BlocklyCore from 'blockly/core';
 import moduleStyles from './flyout-dots.module.scss';
 
 export const DOT_CLASS = 'spritelab2FlyoutDot';
+// How much wider the flyout's margin is, to hold the dots.
+export const FLYOUT_DOTS_MARGIN_FACTOR = 2;
 // When a block's first row cannot be measured, the dot centers this far
 // down it.
 const FIRST_ROW_PX = 36;
