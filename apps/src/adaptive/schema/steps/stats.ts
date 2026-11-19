@@ -5,7 +5,8 @@ import {stepBaseSchema} from './base';
 /** The figures a stats step can show, in the order it shows them. */
 export const STAT_KINDS = [
   'checkpoints',
-  'timeSpent',
+  'aiChangesAccepted',
+  'aiChangesRejected',
   'skills',
   'destinations',
 ] as const;
@@ -13,7 +14,8 @@ export const STAT_KINDS = [
 /**
  * A step that shows the student's progress so far under a heading of its
  * own, with a logo above when the content names one: checkpoints completed,
- * time spent, a ring per skill, and a ring per destination.
+ * the tutor's changes accepted and rejected, a ring per skill, and a ring
+ * per destination.
  */
 export const statsStepSchema = stepBaseSchema.extend({
   kind: z.literal('stats'),

@@ -391,6 +391,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     () =>
       playing && {
         pathway,
+        progressKey,
         checkpoint: playing,
         statusMap,
         progress,
@@ -402,6 +403,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       },
     [
       pathway,
+      progressKey,
       playing,
       statusMap,
       progress,
