@@ -36,6 +36,7 @@ export type CodebridgeContextType = {
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   aiTutorSystemPrompt?: string;
+  aiTutorStartMode?: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   aiTutorDisabled?: boolean;
   onAssetUploaded?: (asset: ChatAsset, assetUrl: string) => void;

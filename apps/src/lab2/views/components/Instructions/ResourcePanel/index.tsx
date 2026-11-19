@@ -162,6 +162,8 @@ type ResourcePanelProps = InstructionsProps & {
   styleNavigationAsBubble?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  /** Levelbuilder start mode: show the AI Tutor whatever the level sets, and accept its changes without a commit description. */
+  aiTutorStartMode?: boolean;
   tutorVideos?: JsonVideoFileMetadata[];
   documentationUrl?: string;
   /** Only display the sidebar and hide all tabs. */
@@ -203,6 +205,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   styleNavigationAsBubble = false,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
+  aiTutorStartMode = false,
   tutorVideos,
   documentationUrl,
   sidebarOnly = false,
@@ -287,11 +290,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const hasAiTutorPromptSettings =
     (levelProperties.aiTutorPromptSettings?.answerTypes?.length ?? 0) > 0;
   const aiTutorVisible =
-    !levelProperties.hideAiTutor &&
+    (!levelProperties.hideAiTutor || aiTutorStartMode) &&
     shouldShowAiTutor({
       appName,
       isTutorLevel:
-        levelProperties.aiTutorAvailable || hasAiTutorPromptSettings,
+        levelProperties.aiTutorAvailable ||
+        hasAiTutorPromptSettings ||
+        aiTutorStartMode,
       aiChatAccessLevel: aiChatAccessLevel,
     });
   const aiChatDisabledState = useAiChatDisabledState({
@@ -397,6 +402,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         onAssetRemoved,
         initialWelcomeMessage,
         disableCommitMessages:
+          aiTutorStartMode ||
           levelProperties.aiTutorPromptSettings?.disableCommitMessages,
       };
       if (usesSharedInstructionsDrawer) {
