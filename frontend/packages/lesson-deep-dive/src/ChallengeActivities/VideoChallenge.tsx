@@ -1,36 +1,38 @@
-import {useApiClient} from '@code-dot-org/core/api';
 import {
-  Challenge,
-  createChallengeResponse,
-  requestEvaluation,
-  uploadChallengeResponseAsset,
-  VideoCanvas,
-  VideoCanvasMode,
-} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useEffect, useRef, useState} from 'react';
+  type Dispatch,
+  type FC,
+  type MutableRefObject,
+  type SetStateAction,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
-import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
-import {getClientApi} from '@cdo/apps/aichat/api/client';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import {useApiClient} from '@code-dot-org/core/api';
 
-import {STICKER_SECTIONS} from './stickers';
+import {createChallengeResponse, uploadChallengeResponseAsset} from '../api';
+import {type Challenge, type StickerSection} from '../types';
+
+import {requestEvaluation} from './requestEvaluation';
+import VideoCanvas, {type VideoCanvasMode} from './VideoCanvas';
 
 import styles from './video-challenge.module.scss';
 
 interface VideoChallengeProps {
   submitted: boolean;
-  submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
+  submitCallback: Dispatch<SetStateAction<boolean>>;
   isRecording: boolean;
-  setIsRecording: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsRecording: Dispatch<SetStateAction<boolean>>;
   hasRecording: boolean;
-  setHasRecording: React.Dispatch<React.SetStateAction<boolean>>;
+  setHasRecording: Dispatch<SetStateAction<boolean>>;
   challenge: Challenge | null;
-  lessonId: number;
-  setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
-  setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
+  setEvaluationStatus: Dispatch<SetStateAction<string>>;
+  setChallengeResponseId: Dispatch<SetStateAction<number>>;
   onSubmittableChange: (canSubmit: boolean) => void;
-  submitRef: React.MutableRefObject<(() => Promise<boolean>) | null>;
-  resetRef: React.MutableRefObject<(() => void) | null>;
+  submitRef: MutableRefObject<(() => Promise<boolean>) | null>;
+  resetRef: MutableRefObject<(() => void) | null>;
+  transcribeAudio: (audio: Blob) => Promise<string>;
+  stickerSections: StickerSection[];
 }
 
 const VideoChallenge: FC<VideoChallengeProps> = ({
@@ -40,13 +42,14 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   setIsRecording,
   hasRecording,
   setHasRecording,
-  lessonId,
   challenge = null,
   setEvaluationStatus,
   setChallengeResponseId,
   onSubmittableChange,
   submitRef,
   resetRef,
+  transcribeAudio,
+  stickerSections,
 }) => {
   const api = useApiClient();
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
@@ -60,26 +63,14 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
   const mode: VideoCanvasMode = isRecording
     ? 'recording'
     : hasRecording
-    ? 'preview'
-    : 'edit';
-  const clientType = AiChatClientTypes.LESSON_DEEP_DIVE;
-
-  // Initialize the ChatEventLogger with the current context, whenever it updates.
-  useEffect(() => {
-    AichatContextManager.setContext({
-      clientType,
-      currentLevelId: null,
-      scriptId: null,
-      channelId: undefined,
-      lessonId,
-    });
-  }, [clientType, lessonId]);
+      ? 'preview'
+      : 'edit';
 
   const handleSubmit = async (): Promise<boolean> => {
     if (!recordedBlob || !challenge) return false;
     setIsUploading(true);
     try {
-      const text = await transcribeAudio();
+      const text = await transcribeRecording();
       const challengeResponse = await createChallengeResponse(api.transport, {
         transcript: text,
         challenge_id: challenge.id,
@@ -94,14 +85,14 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         api.transport,
         assetId,
         recordedBlob,
-        'video/webm'
+        'video/webm',
       );
 
       // Fire-and-forget: the evaluation result goes to the teacher, not the
       // student, so the submission flow does not wait on it.
       const status = await requestEvaluation(
         api.transport,
-        challengeResponse.id
+        challengeResponse.id,
       );
       setEvaluationStatus(status);
       setChallengeResponseId(challengeResponse.id);
@@ -118,15 +109,13 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     }
   };
 
-  const transcribeAudio = async (timedOut = false) => {
+  const transcribeRecording = async () => {
     if (!recordedAudioBlob) return null;
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
     try {
-      const aichatClientApi = await getClientApi();
-      const text = await aichatClientApi.transcribeAudio(recordedAudioBlob);
-      return text;
+      return await transcribeAudio(recordedAudioBlob);
     } catch (error) {
       console.log(error);
       return null;
@@ -173,7 +162,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         recordedAudioBlob={recordedAudioBlob}
         setRecordedAudioBlob={setRecordedAudioBlob}
         timeLimitSeconds={60}
-        stickerSections={STICKER_SECTIONS}
+        stickerSections={stickerSections}
       />
     </div>
   );

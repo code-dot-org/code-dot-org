@@ -1,6 +1,8 @@
 // Public API for @code-dot-org/lesson-deep-dive
 // Export all public symbols from this file.
 export {default as AudioRecorder} from './ChallengeActivities/AudioRecorder';
+export {default as ChallengeBox} from './ChallengeActivities/ChallengeBox';
+export type {WhiteboardChallengeProps} from './ChallengeActivities/ChallengeBox';
 export {default as Challenges} from './ChallengeActivities/Challenges';
 export {default as FizzyButton} from './FizzyButton';
 export {default as InterventionBox} from './ReviewModalities/InterventionBox';
@@ -18,8 +20,6 @@ export {default as Scramble} from './SkillsCheck/QuestionTypes/Scramble';
 export {default as Sort} from './SkillsCheck/QuestionTypes/Sort';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
 export {default as TutorSummaryBox} from './TutorSummaryBox';
-export {default as VideoCanvas} from './ChallengeActivities/VideoCanvas';
-export type {VideoCanvasMode} from './ChallengeActivities/VideoCanvas';
 export {default as ValidatedLevelsBox} from './StudentLessonStats/ValidatedLevelsBox';
 export {default as VideoRecorder} from './ChallengeActivities/VideoRecorder';
 export {default as VideosBox} from './ReviewModalities/VideosBox';

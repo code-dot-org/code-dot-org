@@ -2,7 +2,7 @@
 // canvas, none available in jsdom. Like the real recorder, a stop delivers
 // its blob a tick later, and only then enters 'preview'.
 
-import React, {FC, useEffect, useRef, useState} from 'react';
+import {type FC, useEffect, useRef, useState} from 'react';
 
 export const recordedVideoBlob = new Blob(['video-bytes'], {
   type: 'video/webm',
