@@ -3,17 +3,12 @@ import '@testing-library/jest-dom';
 import React, {FC, useRef, useState} from 'react';
 
 import VideoChallenge from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/VideoChallenge';
-import HttpClient from '@cdo/apps/util/HttpClient';
 
+import {request} from '../../../../util/stubCoreApi';
 import {
   recordedAudioBlob,
   recordedVideoBlob,
 } from '../../../../util/stubVideoCanvas';
-
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {post: jest.fn(), put: jest.fn()},
-}));
 
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
@@ -27,8 +22,6 @@ jest.mock('@cdo/apps/aichat/api/client', () => ({
   getClientApi: jest.fn(async () => ({transcribeAudio: mockTranscribeAudio})),
 }));
 
-const post = HttpClient.post as jest.Mock;
-const put = HttpClient.put as jest.Mock;
 const createdResponse = {
   id: 7,
   challenge_id: 5,
@@ -109,8 +102,7 @@ const VideoHarness: FC<{
 
 describe('VideoChallenge', () => {
   beforeEach(() => {
-    post.mockReset();
-    put.mockReset();
+    request.mockReset();
     mockTranscribeAudio.mockReset();
     mockTranscribeAudio.mockResolvedValue('Hello this is a recording');
   });
@@ -204,8 +196,7 @@ describe('VideoChallenge', () => {
   });
 
   it('transcribes the audio blob, creates a response, and uploads the video blob', async () => {
-    post.mockResolvedValue({json: async () => createdResponse});
-    put.mockResolvedValue({});
+    request.mockResolvedValue(createdResponse);
     const submitCallback = jest.fn();
 
     render(<VideoHarness submitCallback={submitCallback} />);
@@ -216,39 +207,36 @@ describe('VideoChallenge', () => {
     await waitFor(() => expect(submitCallback).toHaveBeenCalledWith(true));
 
     expect(mockTranscribeAudio).toHaveBeenCalledWith(recordedAudioBlob);
-    expect(post).toHaveBeenCalledWith(
-      '/challenge_responses',
-      JSON.stringify({
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/challenge_responses',
+      body: {
         transcript: 'Hello this is a recording',
         challenge_id: 5,
         is_final: true,
         assets: [{asset_type: 'video'}],
-      }),
-      true,
-      {'Content-Type': 'application/json'}
-    );
-    expect(put).toHaveBeenCalledWith(
-      '/challenge_response_assets/9/upload',
-      recordedVideoBlob,
-      true,
-      {'Content-Type': 'video/webm'}
-    );
+      },
+    });
+    expect(request).toHaveBeenCalledWith({
+      method: 'PUT',
+      url: '/challenge_response_assets/9/upload',
+      body: recordedVideoBlob,
+      headers: {'Content-Type': 'video/webm'},
+    });
     // Kicks off AI evaluation after the upload, fire-and-forget.
-    expect(post).toHaveBeenCalledWith(
-      '/challenge_responses/7/evaluate',
-      '',
-      true
-    );
+    expect(request).toHaveBeenCalledWith({
+      method: 'POST',
+      url: '/challenge_responses/7/evaluate',
+    });
   });
 
   it('disables submit while upload is in progress', async () => {
     let resolvePost!: (value: unknown) => void;
-    post.mockReturnValue(
+    request.mockReturnValueOnce(
       new Promise(resolve => {
         resolvePost = resolve;
       })
     );
-    put.mockResolvedValue({});
 
     render(<VideoHarness submitCallback={jest.fn()} />);
 
@@ -263,13 +251,13 @@ describe('VideoChallenge', () => {
     // resolution in act() flushes the effect that reports submittability
     // back up to the (stand-in) top bar.
     await act(async () => {
-      resolvePost({json: async () => createdResponse});
+      resolvePost(createdResponse);
     });
     expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
   });
 
   it('re-enables submit after an upload error so the user can retry', async () => {
-    post.mockRejectedValue(new Error('Network error'));
+    request.mockRejectedValue(new Error('Network error'));
     const submitCallback = jest.fn();
 
     render(<VideoHarness submitCallback={submitCallback} />);

@@ -1,4 +1,7 @@
-import {Challenge, ChallengeResponse} from '@code-dot-org/lesson-deep-dive';
+import {
+  Challenge,
+  ChallengeResponseDetail,
+} from '@code-dot-org/lesson-deep-dive';
 import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
@@ -6,13 +9,9 @@ import React from 'react';
 import ChallengeBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeBox';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
-jest.mock('@cdo/apps/util/HttpClient', () => ({
-  __esModule: true,
-  default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},
-}));
+import {request} from '../../../../util/stubCoreApi';
 
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
@@ -72,9 +71,6 @@ jest.mock('@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas', () => {
   };
 });
 
-const fetchJson = HttpClient.fetchJson as jest.Mock;
-const post = HttpClient.post as jest.Mock;
-const put = HttpClient.put as jest.Mock;
 const snapshot = createSketchSnapshotBlob as jest.Mock;
 
 const fakeChallenge: Challenge = {
@@ -95,8 +91,8 @@ const createdResponse = {
 // `/challenge_responses/<id>`. Only evaluation_status and student_feedback
 // vary across polls; the rest is filler the component doesn't read.
 const fakeChallengeResponse = (
-  overrides: Partial<ChallengeResponse> = {}
-): ChallengeResponse => ({
+  overrides: Partial<ChallengeResponseDetail> = {}
+): ChallengeResponseDetail => ({
   id: 7,
   challenge_id: 1,
   user_id: 1,
@@ -112,14 +108,26 @@ const fakeChallengeResponse = (
   created_at: '2024-01-01T12:00:00Z',
   assets: [{id: 9, asset_type: 'whiteboard_image', download_url: null}],
   reactions: [],
+  viewer_role: 'owner',
+  question: 'Draw a flowchart of the algorithm.',
+  evaluated_at: null,
+  evaluation_result: null,
+  rubric: [],
   ...overrides,
 });
+
+// Answers the polling GET with `poll` and every other request (create,
+// upload, evaluate) with the created response.
+const respondWith = (poll: ChallengeResponseDetail) =>
+  request.mockImplementation(async ({method}: {method: string}) =>
+    method === 'GET' ? poll : createdResponse
+  );
 
 // Selects the text explanation modality (WhiteboardChallenge only reports
 // canSubmit once an explanation modality is chosen), draws on the
 // whiteboard, and submits, past the point where ChallengeBox has created
 // the response and kicked off evaluation (setEvaluationStatus only
-// resolves to PENDING when the /evaluate POST reports response.ok).
+// resolves to PENDING when the evaluation request succeeds).
 const submitWhiteboardChallenge = async () => {
   await waitFor(() =>
     expect(
@@ -163,19 +171,15 @@ const tick = async (ms: number) => {
 
 describe('ChallengeBox', () => {
   beforeEach(() => {
-    fetchJson.mockReset();
-    post.mockReset();
-    put.mockReset();
+    request.mockReset();
     snapshot.mockReset();
   });
 
   it('shows the waiting-for-feedback text and image once the response is submitted', async () => {
-    fetchJson.mockResolvedValue({value: fakeChallengeResponse()});
+    respondWith(fakeChallengeResponse());
     snapshot.mockResolvedValue({
       blob: new Blob(['png-bytes'], {type: 'image/png'}),
     });
-    post.mockResolvedValue({ok: true, json: async () => createdResponse});
-    put.mockResolvedValue({});
 
     render(
       <ChallengeBox
@@ -222,14 +226,12 @@ describe('ChallengeBox', () => {
 
   it('shows a canned message and stops polling when the feedback is flagged', async () => {
     jest.useFakeTimers();
-    fetchJson.mockResolvedValue({
-      value: fakeChallengeResponse({evaluation_status: 'feedback_violation'}),
-    });
+    respondWith(
+      fakeChallengeResponse({evaluation_status: 'feedback_violation'})
+    );
     snapshot.mockResolvedValue({
       blob: new Blob(['png-bytes'], {type: 'image/png'}),
     });
-    post.mockResolvedValue({ok: true, json: async () => createdResponse});
-    put.mockResolvedValue({});
 
     render(
       <ChallengeBox
@@ -263,17 +265,15 @@ describe('ChallengeBox', () => {
 
   it('displays the feedback once evaluation succeeds', async () => {
     jest.useFakeTimers();
-    fetchJson.mockResolvedValue({
-      value: fakeChallengeResponse({
+    respondWith(
+      fakeChallengeResponse({
         evaluation_status: 'success',
         student_feedback: 'Great job explaining the flowchart!',
-      }),
-    });
+      })
+    );
     snapshot.mockResolvedValue({
       blob: new Blob(['png-bytes'], {type: 'image/png'}),
     });
-    post.mockResolvedValue({ok: true, json: async () => createdResponse});
-    put.mockResolvedValue({});
 
     render(
       <ChallengeBox
@@ -327,17 +327,15 @@ describe('ChallengeBox', () => {
 
   it('returns to a compose state, feedback still visible, when Respond Again is clicked', async () => {
     jest.useFakeTimers();
-    fetchJson.mockResolvedValue({
-      value: fakeChallengeResponse({
+    respondWith(
+      fakeChallengeResponse({
         evaluation_status: 'success',
         student_feedback: 'Great job explaining the flowchart!',
-      }),
-    });
+      })
+    );
     snapshot.mockResolvedValue({
       blob: new Blob(['png-bytes'], {type: 'image/png'}),
     });
-    post.mockResolvedValue({ok: true, json: async () => createdResponse});
-    put.mockResolvedValue({});
 
     render(
       <ChallengeBox
@@ -396,17 +394,18 @@ describe('ChallengeBox', () => {
         student_feedback: 'Great job explaining the flowchart!',
       }),
     ];
-    fetchJson.mockImplementation((url: string) => {
-      expect(url).toBe('/challenge_responses/7');
-      const next =
-        pollResponses.length > 1 ? pollResponses.shift()! : pollResponses[0];
-      return Promise.resolve({value: next});
-    });
+    request.mockImplementation(
+      async ({method, url}: {method: string; url: string}) => {
+        if (method !== 'GET') return createdResponse;
+        expect(url).toBe('/challenge_responses/7');
+        return pollResponses.length > 1
+          ? pollResponses.shift()!
+          : pollResponses[0];
+      }
+    );
     snapshot.mockResolvedValue({
       blob: new Blob(['png-bytes'], {type: 'image/png'}),
     });
-    post.mockResolvedValue({ok: true, json: async () => createdResponse});
-    put.mockResolvedValue({});
 
     render(
       <ChallengeBox
@@ -423,8 +422,7 @@ describe('ChallengeBox', () => {
       ).toBeInTheDocument()
     );
     const pollCallsSoFar = () =>
-      fetchJson.mock.calls.filter(([url]) => url === '/challenge_responses/7')
-        .length;
+      request.mock.calls.filter(([{method}]) => method === 'GET').length;
     // No polling has happened yet.
     expect(pollCallsSoFar()).toBe(0);
 
