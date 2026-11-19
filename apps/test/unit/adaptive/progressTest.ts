@@ -218,6 +218,14 @@ describe('validationAllowsContinue', () => {
     expect(
       continueUnlockReason({timeSpent: 0, validationHistory: [chat]})
     ).toBe('limitReached');
+    expect(
+      continueUnlockReason({
+        timeSpent: 0,
+        validationHistory: [
+          {...chat, skipReason: 'effortDemonstrated', replies: 4},
+        ],
+      })
+    ).toBe('effortDemonstrated');
   });
 
   it('counts only work toward the three failures, and names work before chat', () => {

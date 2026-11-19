@@ -58,6 +58,8 @@ class ChallengeResponsesController < ApplicationController
   #
   # Atomically creates a response and one asset row per requested asset_type,
   # then returns presigned S3 upload URLs the client PUTs the asset bytes to.
+  # attempt_number counts the user's final responses to this challenge,
+  # this one included.
   def create
     permitted = challenge_response_params
     asset_params = permitted.delete(:assets) || []
@@ -66,7 +68,8 @@ class ChallengeResponsesController < ApplicationController
       @challenge_response.challenge_response_assets.build(asset_type: asset[:asset_type])
     end
     @challenge_response.save!
-    render json: @challenge_response.summarize(assets_for_upload: true), status: :created
+    attempt_number = ChallengeResponse.where(user_id: current_user.id, challenge_id: @challenge_response.challenge_id, is_final: true).count
+    render json: @challenge_response.summarize(assets_for_upload: true).merge(attempt_number:), status: :created
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
   end

@@ -73,6 +73,31 @@ describe('useDrawing', () => {
     expect(saveEdited.mock.calls[1]![1]).toBe('data:b');
   });
 
+  it('says nothing on the next drawing when a left drawing fails to save', async () => {
+    const {saveEdited, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    // The editor hands its pixels over as soon as it is asked to save.
+    tools().attachEditor({
+      save: () => tools().handleSave('data:a', {}),
+      snapshot: () => null,
+    });
+    let fail: (error: Error) => void = () => undefined;
+    saveEdited.mockImplementationOnce(
+      () => new Promise<string>((_resolve, reject) => (fail = reject))
+    );
+    act(() => tools().scheduleStrokeSave());
+    act(() => tools().leaveDrawing(true));
+    expect(saveEdited).toHaveBeenCalledTimes(1);
+    await act(() => tools().startDrawing(target));
+    const next = editor();
+    tools().attachEditor(next);
+    await act(async () => fail(new Error('down')));
+    expect(tools().saveFailed).toBe(false);
+    // The next drawing was not drawn on, so leaving it saves nothing.
+    act(() => tools().leaveDrawing());
+    expect(next.save).not.toHaveBeenCalled();
+  });
+
   it('saves unsaved strokes when the tab goes away', async () => {
     const {tools, unmount} = setup();
     await act(() => tools().startDrawing(target));

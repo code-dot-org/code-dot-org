@@ -377,6 +377,8 @@ $list-button-icon: 20px;
 .above {
   display: flex;
   flex: none;
+  // The save notice takes a row of its own under the tools.
+  flex-wrap: wrap;
   justify-content: center;
   box-sizing: border-box;
   width: 100%;

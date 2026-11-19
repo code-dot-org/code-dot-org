@@ -662,6 +662,13 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   }, []);
 
   const canvasAreaRef = useRef<HTMLDivElement | null>(null);
+  // The host places the canvas and can take it off the page and put it
+  // back. The element it puts back is new, so it is sized and painted again.
+  const [canvasArea, setCanvasArea] = useState<HTMLDivElement | null>(null);
+  const attachCanvasArea = useCallback((area: HTMLDivElement | null) => {
+    canvasAreaRef.current = area;
+    setCanvasArea(area);
+  }, []);
 
   // Layout effect: size and paint the canvas BEFORE the browser paints the
   // newly-mounted panel, or its first frame flashes default-sized. The
@@ -719,7 +726,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     const observer = new ResizeObserver(size);
     observer.observe(area);
     return () => observer.disconnect();
-  }, [loaded, loadVersion, repaint, fit]);
+  }, [loaded, loadVersion, repaint, fit, canvasArea]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -1586,7 +1593,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     ),
     canvas: (
       <div
-        ref={canvasAreaRef}
+        ref={attachCanvasArea}
         data-pixel-editor=""
         className={classNames(moduleStyles.canvasArea, canvasClassName)}
       >

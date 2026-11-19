@@ -2203,6 +2203,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     () => setGenerationCount(count => count + 1),
     []
   );
+  // A failed generation does not count toward the level's limit.
+  const subtractFailedGeneration = useCallback(
+    () => setGenerationCount(count => Math.max(count - 1, 0)),
+    []
+  );
   const oneImage = isOneImageMode(levelProperties.levelMode);
   const generationLimit = generationLimitForMode(levelProperties.levelMode);
   const generationsLeft =
@@ -2461,6 +2466,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}
+                onGenerateFailed={subtractFailedGeneration}
                 editingOffered={!oneImage}
                 noNewImages={levelProperties.levelMode?.noNewImages}
                 noDeletingImages={levelProperties.levelMode?.noDeletingImages}

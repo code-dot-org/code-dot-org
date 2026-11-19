@@ -43,11 +43,19 @@ vi.mock('../ChallengePicker', () => ({
   ),
 }));
 
-function renderChallenges(lessonId = 42) {
+function renderChallenges(lessonId = 42, onChallengeStarted = vi.fn()) {
   render(
     <MemoryRouter initialEntries={['/']}>
       <Routes>
-        <Route path="/" element={<Challenges lessonId={lessonId} />} />
+        <Route
+          path="/"
+          element={
+            <Challenges
+              lessonId={lessonId}
+              onChallengeStarted={onChallengeStarted}
+            />
+          }
+        />
         <Route
           path="/challenge/:id/:type"
           element={<div>challenge-page</div>}
@@ -73,5 +81,22 @@ describe('Challenges', () => {
     renderChallenges();
     fireEvent.click(screen.getByRole('button', {name: 'cancel'}));
     expect(screen.queryByText('challenge-page')).not.toBeInTheDocument();
+  });
+
+  it('reports the started challenge before navigating', () => {
+    const onChallengeStarted = vi.fn();
+    renderChallenges(42, onChallengeStarted);
+    fireEvent.click(screen.getByRole('button', {name: 'start'}));
+    expect(onChallengeStarted).toHaveBeenCalledWith(
+      expect.objectContaining({id: 5}),
+      'video',
+    );
+  });
+
+  it('does not report a start when the callback fires with a null challenge', () => {
+    const onChallengeStarted = vi.fn();
+    renderChallenges(42, onChallengeStarted);
+    fireEvent.click(screen.getByRole('button', {name: 'cancel'}));
+    expect(onChallengeStarted).not.toHaveBeenCalled();
   });
 });

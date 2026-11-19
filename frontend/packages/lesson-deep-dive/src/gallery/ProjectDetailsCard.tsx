@@ -15,6 +15,7 @@ interface ProjectDetailsCardProps {
   unitPosition: number | null;
   // Forwards this project's reaction changes up toward the gallery.
   onReactionsChange?: (reactions: Reaction[]) => void;
+  onReactionAdded?: (emoji: string) => void;
 }
 
 interface DetailTag {
@@ -47,6 +48,7 @@ const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
   detail,
   unitPosition,
   onReactionsChange,
+  onReactionAdded,
 }) => (
   <div className={styles.detailsWrapper}>
     <div className={styles.detailsCard}>
@@ -107,6 +109,7 @@ const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
         responseId={detail.id}
         reactions={detail.reactions}
         onReactionsChange={onReactionsChange}
+        onReactionAdded={onReactionAdded}
       />
     </div>
   </div>
