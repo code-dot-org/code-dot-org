@@ -1144,6 +1144,7 @@ module SharedConstants
     'api.waqi.info',               # Air quality data - API key required 🔑
     'dataservice.accuweather.com', # Weather data - API key required 🔑
     'data.weather.gov.hk',         # Hong Kong weather
+    'opendataapi.dmi.dk',          # Danish Meteorological Institute - Public API
     'noaa.gov',                    # Weather/climate data - API key required 🔑
 
     # === PLACES & GEOGRAPHY ===
