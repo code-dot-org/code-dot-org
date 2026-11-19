@@ -51,6 +51,9 @@ export interface SerializedAnimationProps {
   edited?: boolean;
   /** Present on AI-generated images. */
   generation?: ImageGenerationMetadata;
+  /** True for an image that began as an AI-generated picture. Kept through
+      a hand edit, which clears `generation`. */
+  fromGeneration?: boolean;
   /** Present on a character set: where each pose lives in the sheet. */
   poses?: AnimationPoses;
   /** An upload moderation flagged and the student kept anyway. */

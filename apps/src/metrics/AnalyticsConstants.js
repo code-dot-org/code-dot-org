@@ -483,6 +483,9 @@ const EVENTS = {
   HOAI2026_IMAGE_VERDICT: 'hoai2026-image-verdict',
   HOAI2026_IMAGE_VERDICT_REASON: 'hoai2026-image-verdict-reason',
   HOAI2026_IMAGE_DRAW: 'hoai2026-image-draw',
+  HOAI2026_LEVEL_COMPLETE: 'hoai2026-level-complete',
+  HOAI2026_LEVEL_SESSION_END: 'hoai2026-level-session-end',
+  HOAI2026_FINISH_DIALOG: 'hoai2026-finish-dialog',
 
   // Moderate model output image
   MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',

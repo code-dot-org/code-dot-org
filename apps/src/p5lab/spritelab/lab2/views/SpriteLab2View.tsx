@@ -13,12 +13,12 @@ import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
   getCurrentLevels,
+  nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {setInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
-import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -31,6 +31,7 @@ import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import HeaderActionButton from '@cdo/apps/lab2/views/components/HeaderActionButton';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import {instructionsContinueButtonElementId} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 import {useLevelProperties} from '@cdo/apps/lab2/views/LevelPropertiesWrapper';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
@@ -81,6 +82,7 @@ import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
+import {countImageOrigins, originOfImageInRole} from '../imageOrigin';
 import {
   removeImageReferences,
   collectImageReferences,
@@ -169,12 +171,18 @@ import DiscoverBlocksButton, {
 import FreeplayIntroDialog from './FreeplayIntroDialog';
 import ImagesTab, {UploadWarningSettings} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
-import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
+import {
+  ArrowSet,
+  arrowSetFor,
+  ControlsState,
+  KEYBOARD_GAME_KEYS,
+} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
 import {useFlyoutDots} from './useFlyoutDots';
+import useLevelAnalytics from './useLevelAnalytics';
 import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
@@ -271,16 +279,6 @@ const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 // Focused controls own the game keys pressed on them (see the
 // swallowOnControls effect).
 const INTERACTIVE_CONTROLS = 'button, a, input, select, textarea';
-
-// The keys a game typically reads (p5 listens for them on window).
-const GAME_KEYS = new Set([
-  'ArrowLeft',
-  'ArrowRight',
-  'ArrowUp',
-  'ArrowDown',
-  ' ',
-  'Spacebar',
-]);
 
 // Levelbuilder edit modes (start, toolbox, exemplar) run without a project
 // channel; generated images upload to the level's starter assets instead.
@@ -408,23 +406,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     state => getCurrentLevels(state)?.[0]?.id as string | undefined
   );
   const scriptId = useAppSelector(state => state.progress.scriptId);
+  const hasNextLevel = useAppSelector(
+    state => nextLevelId(state) !== undefined
+  );
   const isRunning = useAppSelector(state => state.runState.isRunning);
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const releaseRemovedImages = useReleaseRemovedImages();
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
   // A share link or a teacher's view plays the game without the student
   // working on the level.
-  const logLevelActivity = useLevelActivityMetrics(levelProperties);
-  useEffect(() => {
-    if (
-      (hasEdited || hasRun) &&
-      !isShareView &&
-      !isViewOnly &&
-      !isLevelEditMode
-    ) {
-      logLevelActivity();
-    }
-  }, [hasEdited, hasRun, isShareView, isViewOnly, logLevelActivity]);
+  const levelAnalytics = useLevelAnalytics(
+    levelProperties,
+    activeTab === 'Play',
+    !isShareView && !isViewOnly && !isLevelEditMode
+  );
   const blocklySettings = useBlocklySettings();
   const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
@@ -1687,7 +1682,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     const swallow = (e: KeyboardEvent) => {
-      if (GAME_KEYS.has(e.key)) {
+      if (KEYBOARD_GAME_KEYS.has(e.key)) {
         e.stopPropagation();
       }
     };
@@ -1708,7 +1703,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       const target = e.target instanceof Element ? e.target : null;
       if (
         isTargetEditable(e.target) ||
-        (GAME_KEYS.has(e.key) && target?.closest(INTERACTIVE_CONTROLS))
+        (KEYBOARD_GAME_KEYS.has(e.key) && target?.closest(INTERACTIVE_CONTROLS))
       ) {
         e.stopPropagation();
       }
@@ -2298,12 +2293,30 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setShowCatalogArrow(false);
   };
 
+  const reportLevelCompleted = () =>
+    levelAnalytics.reportCompleted({
+      finish: !hasNextLevel,
+      levelImageOrigin: originOfImageInRole(animationList, levelImageRole),
+      imageOrigins: countImageOrigins(animationList),
+    });
+
   return (
+    // The handlers only watch what the student does, for analytics.
     <div
       className={classNames(
         moduleStyles.labRow,
         isShareView && moduleStyles.labRowShareView
       )}
+      onPointerDownCapture={levelAnalytics.reportActivity}
+      onKeyDownCapture={levelAnalytics.reportActivity}
+      onClickCapture={event => {
+        if (
+          event.target instanceof Element &&
+          event.target.closest(`#${instructionsContinueButtonElementId}`)
+        ) {
+          reportLevelCompleted();
+        }
+      }}
     >
       {scenesDialog && (
         <ScenesDialog
@@ -2376,7 +2389,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {levelProperties.useSecondaryFinishButton && !isShareView && (
         <HeaderActionButton
           buttonColor="success"
-          onClick={() => dispatch(continueOrFinishLesson())}
+          onClick={() => {
+            reportLevelCompleted();
+            dispatch(continueOrFinishLesson());
+          }}
         >
           I'm finished
         </HeaderActionButton>

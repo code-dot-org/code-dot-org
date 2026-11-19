@@ -119,6 +119,7 @@ describe('useImageWriter', () => {
       role: 'hero',
       subject: 'character',
       categories: [],
+      fromGeneration: true,
     });
   });
 
@@ -156,6 +157,7 @@ describe('useImageWriter', () => {
       categories: [],
       trimmed: false,
       edited: false,
+      fromGeneration: false,
     });
     expect(patch.generation).toBeUndefined();
     expect(patch.pixelGridSize).toBeUndefined();
@@ -389,12 +391,18 @@ describe('useImageWriter', () => {
     expect(quiet).toMatchObject({
       dataURI: 'data:image/png;base64,AA',
       generation: undefined,
+      fromGeneration: true,
       edited: true,
       trimmed: false,
     });
     expect(quiet).not.toHaveProperty('sourceUrl');
+    // The first edit cleared the generation; the image still began as one.
+    propsByKey.k1 = {...propsByKey.k1, ...quiet};
     await act(async () => {
       await writer().saveEdited(target, 'data:image/png;base64,AB', {});
+    });
+    expect(repointAnimation.mock.calls[1][2]).toMatchObject({
+      fromGeneration: true,
     });
     expect(uploadImage).toHaveBeenCalledTimes(1);
     const loud = repointAnimation.mock.calls[1][2] as Record<string, unknown>;
@@ -420,6 +428,7 @@ describe('useImageWriter', () => {
     expect(patch).toMatchObject({
       pixelGridSize: 1,
       edited: true,
+      fromGeneration: false,
       frameCount: 1,
       role: 'hero',
     });

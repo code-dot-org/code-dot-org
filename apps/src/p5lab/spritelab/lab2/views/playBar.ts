@@ -26,6 +26,16 @@ export function arrowSetFor(state: ControlsState): ArrowSet {
   return state.gravity > 0 ? 'jump' : 'jumpDown';
 }
 
+// The keys a game typically reads (p5 listens for them on window).
+export const KEYBOARD_GAME_KEYS = new Set([
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowUp',
+  'ArrowDown',
+  ' ',
+  'Spacebar',
+]);
+
 export type GameKey = 'left' | 'right' | 'up' | 'down';
 
 const KEY_EVENT_INIT: Record<GameKey, KeyboardEventInit> = {
@@ -42,7 +52,18 @@ const KEY_EVENT_INIT: Record<GameKey, KeyboardEventInit> = {
  */
 export function dispatchGameKey(type: 'keydown' | 'keyup', key: GameKey) {
   const init = KEY_EVENT_INIT[key];
-  window.dispatchEvent(
-    new KeyboardEvent(type, {...init, which: init.keyCode, bubbles: true})
-  );
+  const event = new KeyboardEvent(type, {
+    ...init,
+    which: init.keyCode,
+    bubbles: true,
+  });
+  onScreenKeyEvents.add(event);
+  window.dispatchEvent(event);
+}
+
+const onScreenKeyEvents = new WeakSet<Event>();
+
+/** Whether a key event came from the on-screen arrows, not the keyboard. */
+export function isOnScreenGameKey(event: Event): boolean {
+  return onScreenKeyEvents.has(event);
 }
