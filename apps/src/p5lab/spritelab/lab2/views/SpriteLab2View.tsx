@@ -177,6 +177,7 @@ import {useFlyoutDots} from './useFlyoutDots';
 import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
+import usePreviewRefresh from './usePreviewRefresh';
 import useProjectPicture from './useProjectPicture';
 import useReleaseRemovedImages from './useReleaseRemovedImages';
 import useSceneEditing from './useSceneEditing';
@@ -259,9 +260,6 @@ function getScenes(sources: Sources): Scene[] {
     },
   ];
 }
-
-// Debounce between a workspace edit and the live-preview re-run.
-const RUN_DEBOUNCE_MS = 400;
 
 // Sprites come from the Images tab, so a new project starts with no
 // animations.
@@ -1462,14 +1460,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch]
   );
 
-  // Debounce re-runs so we don't restart the program on every keystroke/drag.
-  const runTimer = useRef<number>();
-  const scheduleRun = useCallback(() => {
-    if (runTimer.current) {
-      window.clearTimeout(runTimer.current);
-    }
-    runTimer.current = window.setTimeout(runProgram, RUN_DEBOUNCE_MS);
-  }, [runProgram]);
+  const scheduleRun = usePreviewRefresh(runProgram, activeTab === 'Play');
 
   // Run one scene: the open scene compiles from the live workspace, others
   // headless from saved sources. Cover/fade comes from the engine's jump
