@@ -33,7 +33,8 @@ protocol.
 
 ```bash
 # Standalone dev server with mode picker for all 5 app modes (port 5173).
-# URL params: ?mode=<appMode>, ?guides=K5, ?tts=<bcp47-locale>.
+# URL params: ?mode=<appMode>, ?guides=K5, ?tts=<bcp47-locale>,
+# ?localizeSave (send unrecognized phrases to the LocalizeJS TMS).
 yarn turbo run dev --filter=@code-dot-org/oceans-lab
 
 # Library build (used by consumers).

@@ -2,7 +2,11 @@ import {useState} from 'react';
 import {createRoot} from 'react-dom/client';
 
 import {initializeCore} from '@code-dot-org/core';
-import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
+import {
+  createLocalizationPlugin,
+  localization,
+  useLocales,
+} from '@code-dot-org/core/plugins/localization';
 
 import OceansLab from './App';
 import {AppMode, type AppModeValue} from './oceans/constants';
@@ -11,7 +15,24 @@ import {AppMode, type AppModeValue} from './oceans/constants';
 // 16 px base and diverges from the curriculum path.
 import './oceans/styles/oceansLab.css';
 
-initializeCore({plugins: [localizationPlugin]});
+/**
+ * The AI Foundations LocalizeJS project, which holds the oceans strings. The
+ * Rails layout loads the same project for /courses/oceans; the key will come
+ * from Rails once the studio route needs one of its own.
+ */
+const OCEANS_LOCALIZE_KEY = 'zM53S8yC4TNgU';
+
+initializeCore({
+  plugins: [
+    createLocalizationPlugin({
+      key: OCEANS_LOCALIZE_KEY,
+      // ?localizeSave sends unrecognized phrases to the TMS.
+      saveNewPhrases: new URLSearchParams(window.location.search).has(
+        'localizeSave',
+      ),
+    }),
+  ],
+});
 
 /** All playable modes in sequence, used by the mode picker and onContinue handler. */
 const APP_MODES: {id: AppModeValue; label: string}[] = [
@@ -21,6 +42,30 @@ const APP_MODES: {id: AppModeValue; label: string}[] = [
   {id: AppMode.CreaturesVTrash, label: 'Creatures vs Trash'},
   {id: AppMode.CreaturesVTrashDemo, label: 'Creatures Demo'},
 ];
+
+/** Language picker fed by the LocalizeJS project's language list. */
+const LanguagePicker = () => {
+  const {locale, locales, isReady} = useLocales();
+
+  return (
+    <label style={{marginLeft: 'auto', whiteSpace: 'nowrap'}}>
+      Language{' '}
+      <select
+        value={locale}
+        disabled={!isReady || locales.length < 2}
+        onChange={event => {
+          localization.locale = event.target.value;
+        }}
+      >
+        {locales.map(info => (
+          <option key={info.value} value={info.value}>
+            {info.text}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+};
 
 /** Read initial mode from ?mode= URL param, fallback to FishVTrash. */
 function getInitialMode(): AppModeValue {
@@ -37,7 +82,8 @@ function getInitialMode(): AppModeValue {
  *   - content-box sizing reset for #container-react (matches the curriculum
  *     path's Rails defaults; the studio applies the same reset).
  *
- * A compact mode-picker and URL-param support (?mode=, ?guides=, ?tts=) are
+ * A compact mode-picker, a language picker and URL-param support (?mode=,
+ * ?guides=, ?tts=, ?localizeSave) are
  * added for local development and Playwright testing without changing the
  * dimensions or box-model of the embedded lab.
  */
@@ -89,6 +135,7 @@ function DemoShell() {
             {m.label}
           </label>
         ))}
+        <LanguagePicker />
       </div>
 
       {/* Lab area — mirrors the studio OceansContainer exactly: same shell /

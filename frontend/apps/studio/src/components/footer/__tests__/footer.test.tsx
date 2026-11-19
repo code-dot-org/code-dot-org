@@ -29,9 +29,19 @@ const {mockLocalization, mockSiteConfig} = vi.hoisted(() => {
   return {mockLocalization, mockSiteConfig};
 });
 
-vi.mock('@code-dot-org/core/plugins/localization', () => ({
-  localization: mockLocalization,
-}));
+vi.mock('@code-dot-org/core/plugins/localization', async importOriginal => {
+  const actual =
+    await importOriginal<
+      typeof import('@code-dot-org/core/plugins/localization')
+    >();
+  return {
+    localization: mockLocalization,
+    useLocales: () =>
+      actual.useLocales(
+        mockLocalization as unknown as Parameters<typeof actual.useLocales>[0],
+      ),
+  };
+});
 
 // Expose mockSiteConfig as the CodeStudioConfig named export that the
 // component and footerLinks module import.
