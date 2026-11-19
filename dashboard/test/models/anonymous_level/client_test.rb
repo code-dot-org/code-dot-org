@@ -4,6 +4,10 @@ class AnonymousLevel::ClientTest < ActiveSupport::TestCase
   let(:anon_user_id) {Cdo::AnonUserId.generate}
 
   describe 'validations' do
+    it 'is valid with anonymous user ID and name' do
+      _(build(:anonymous_level_client)).must_be :valid?
+    end
+
     it 'requires anonymous user ID' do
       client = build(:anonymous_level_client, anon_user_id: nil)
 
@@ -29,6 +33,13 @@ class AnonymousLevel::ClientTest < ActiveSupport::TestCase
         _(duplicate).wont_be :valid?
         _(duplicate.errors[:anon_user_id]).must_include 'has already been taken'
       end
+    end
+
+    it 'requires name' do
+      client = build(:anonymous_level_client, name: nil)
+
+      _(client).wont_be :valid?
+      _(client.errors[:name]).must_include 'is required'
     end
   end
 end

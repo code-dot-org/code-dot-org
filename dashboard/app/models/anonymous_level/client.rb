@@ -30,4 +30,5 @@ class AnonymousLevel::Client < ApplicationRecord
   )
 
   validates :anon_user_id, presence: true, format: {with: Cdo::AnonUserId::FORMAT}, uniqueness: true
+  validates :name, presence: true
 end

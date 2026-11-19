@@ -1681,6 +1681,7 @@ FactoryBot.define do
 
   factory :anonymous_level_client, class: 'AnonymousLevel::Client' do
     anon_user_id {Cdo::AnonUserId.generate}
+    name {Faker::Lorem.word.capitalize}
 
     trait :amazon_mobile_app do
       name {SharedConstants::MOBILE_APP_NAME}
