@@ -1347,8 +1347,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     return preloaded;
   }
 
-  // p5 never reports an image that fails to load, so a preload given one
-  // would never finish. An image p5 already has is not decoded again.
+  // p5.loadImage calls neither of its callbacks for an image the browser
+  // cannot decode, so preloadSpriteImages would never finish. An image p5
+  // already has is not decoded again.
   withoutUndecodableImages_(list) {
     const preloaded = this.p5Wrapper.preloadedSprites || {};
     return decodableAnimations(

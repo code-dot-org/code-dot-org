@@ -117,13 +117,13 @@ describe('SpriteLab2 loadedAnimations', () => {
 });
 
 describe('SpriteLab2 decodableAnimations', () => {
-  // jsdom's Image fires neither load nor error. This one loads a source
-  // that contains "good" and fails any other.
   let realImage;
   let decoded;
   beforeEach(() => {
     realImage = global.Image;
     decoded = [];
+    // jsdom's Image fires neither load nor error, so the tests use an Image
+    // that loads a source containing "good" and fails any other.
     global.Image = class {
       set src(value) {
         decoded.push(value);

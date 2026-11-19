@@ -1,8 +1,8 @@
 import SpriteLab2Engine from '@cdo/apps/p5lab/spritelab/lab2/SpriteLab2Engine';
 
 describe('SpriteLab2Engine rerun', () => {
-  // The queue only needs these two methods, so they are called on a plain
-  // object in place of a whole engine.
+  // `rerun` only calls `doRerun_`, so the tests put the two on a plain object
+  // in place of a whole engine.
   const makeEngine = doRerun => ({
     rerun: SpriteLab2Engine.prototype.rerun,
     doRerun_: doRerun,

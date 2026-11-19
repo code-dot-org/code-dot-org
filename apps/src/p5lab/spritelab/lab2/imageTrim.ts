@@ -266,7 +266,6 @@ export function loadedAnimations(
   return {orderedKeys, propsByKey};
 }
 
-/** Whether the browser can decode the image at this dataURI or URL. */
 function canDecode(source: string): Promise<boolean> {
   return new Promise<boolean>(resolve => {
     const img = new Image();
@@ -276,13 +275,9 @@ function canDecode(source: string): Promise<boolean> {
   });
 }
 
-/**
- * The animation list without the images the browser cannot decode. An image
- * that skipCheck returns true for is kept without being decoded.
- */
 export async function decodableAnimations(
   list: RuntimeAnimationList,
-  skipCheck: (props: RuntimeAnimationProps) => boolean = () => false
+  isKnownDecodable: (props: RuntimeAnimationProps) => boolean = () => false
 ): Promise<RuntimeAnimationList> {
   const keys = list.orderedKeys || [];
   const keep = await Promise.all(
@@ -291,7 +286,7 @@ export async function decodableAnimations(
       if (!props?.dataURI) {
         return false;
       }
-      if (skipCheck(props) || (await canDecode(props.dataURI))) {
+      if (isKnownDecodable(props) || (await canDecode(props.dataURI))) {
         return true;
       }
       console.warn(`SpriteLab2 could not decode the image "${props.name}".`);
