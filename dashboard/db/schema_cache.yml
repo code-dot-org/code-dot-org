@@ -731,7 +731,7 @@ columns:
     default_function: 
     collation: utf8mb4_unicode_ci
     comment: 
-  anonymous_level_geos:
+  anonymous_level_clients:
   - *9
   - &25 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: anon_user_id
@@ -748,6 +748,27 @@ columns:
     default_function: 
     collation: utf8mb4_unicode_ci
     comment: 
+  - &73 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: name
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: install_source
+    sql_type_metadata: *3
+    'null': true
+    default: 
+    default_function: 
+    collation: utf8mb4_unicode_ci
+    comment: 
+  - *12
+  - *13
+  anonymous_level_geos:
+  - *9
+  - *25
   - &137 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: country
     sql_type_metadata: *3
@@ -856,7 +877,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - &73 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &74 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: properties
     sql_type_metadata: *11
     'null': true
@@ -3221,14 +3242,7 @@ columns:
   - *28
   jit_pl_concepts:
   - *9
-  - &75 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: name
-    sql_type_metadata: *3
-    'null': true
-    default: 
-    default_function: 
-    collation: utf8mb4_unicode_ci
-    comment: 
+  - *73
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: display_name
     sql_type_metadata: *3
@@ -3237,11 +3251,11 @@ columns:
     default_function: 
     collation: utf8mb4_unicode_ci
     comment: 
-  - *73
+  - *74
   - *12
   - *13
   jit_pl_concepts_json_videos:
-  - &74 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+  - &75 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: jit_pl_concept_id
     sql_type_metadata: *14
     'null': false
@@ -3258,7 +3272,7 @@ columns:
     collation: 
     comment: 
   jit_pl_concepts_lessons:
-  - *74
+  - *75
   - &90 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lesson_id
     sql_type_metadata: *14
@@ -3268,7 +3282,7 @@ columns:
     collation: 
     comment: 
   jit_pl_concepts_resources:
-  - *74
+  - *75
   - &78 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: resource_id
     sql_type_metadata: *14
@@ -3278,7 +3292,7 @@ columns:
     collation: 
     comment: 
   jit_pl_concepts_rubrics:
-  - *74
+  - *75
   - &146 !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: rubric_id
     sql_type_metadata: *14
@@ -3289,8 +3303,8 @@ columns:
     comment: 
   jit_pl_exemplars:
   - *9
-  - *75
   - *73
+  - *74
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: jit_pl_concept_id
     sql_type_metadata: *14
@@ -3324,7 +3338,7 @@ columns:
   - *78
   jit_pl_misconceptions:
   - *9
-  - *75
+  - *73
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: ai_context
     sql_type_metadata: *17
@@ -3333,8 +3347,8 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - *73
   - *74
+  - *75
   - *12
   - *13
   jit_pl_misconceptions_json_videos:
@@ -3352,9 +3366,9 @@ columns:
   - *78
   jit_pl_teaching_tips:
   - *9
-  - *75
   - *73
   - *74
+  - *75
   - *12
   - *13
   jit_pl_teaching_tips_resources:
@@ -7571,7 +7585,7 @@ columns:
     default_function: 
     collation: 
     comment: 
-  - *73
+  - *74
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: lesson_group_id
     sql_type_metadata: *2
@@ -9351,6 +9365,7 @@ primary_keys:
   aidiff_message_feedbacks: id
   aidiff_messages: id
   aidiff_threads: id
+  anonymous_level_clients: id
   anonymous_level_geos: id
   anonymous_level_progresses: id
   ar_internal_metadata: key
@@ -9616,6 +9631,7 @@ data_sources:
   aidiff_message_feedbacks: true
   aidiff_messages: true
   aidiff_threads: true
+  anonymous_level_clients: true
   anonymous_level_geos: true
   anonymous_level_progresses: true
   ar_internal_metadata: true
@@ -10386,6 +10402,23 @@ indexes:
     unique: false
     columns:
     - user_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where: 
+    type: 
+    using: :btree
+    include: 
+    nulls_not_distinct: 
+    comment: 
+    valid: true
+  anonymous_level_clients:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: anonymous_level_clients
+    name: index_anonymous_level_clients_on_anon_user_id
+    unique: true
+    columns:
+    - anon_user_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -18563,7 +18596,7 @@ indexes:
     nulls_not_distinct: 
     comment: 
     valid: true
-version: 20261116120000
+version: 20261118120000
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
