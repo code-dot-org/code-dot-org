@@ -3,7 +3,7 @@ import {Typography} from '@mui/material';
 import React from 'react';
 import {createPortal} from 'react-dom';
 
-import {getStore} from '@cdo/apps/code-studio/redux';
+import {getStore} from '@cdo/apps/redux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 

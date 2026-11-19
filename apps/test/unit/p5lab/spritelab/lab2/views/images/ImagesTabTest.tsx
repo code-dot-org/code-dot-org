@@ -219,7 +219,7 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 // Signed-out students are not offered a flagged picture at all. The warning
 // reads sign-in state off the store, not through a selector hook.
 let signInState = 'SignedIn';
-jest.mock('@cdo/apps/code-studio/redux', () => ({
+jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({getState: () => ({currentUser: {signInState}})}),
 }));
 const moderate = jest.fn<Promise<string>, unknown[]>();
