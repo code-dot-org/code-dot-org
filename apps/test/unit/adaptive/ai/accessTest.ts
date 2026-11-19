@@ -1,5 +1,6 @@
 import {
   isAdaptiveAiAvailable,
+  isAdaptiveAiDown,
   isAdaptiveAiEnabled,
 } from '@cdo/apps/adaptive/ai/access';
 import DCDO from '@cdo/apps/dcdo';
@@ -27,6 +28,16 @@ describe('isAdaptiveAiEnabled', () => {
     expect(isAdaptiveAiEnabled()).toBe(true);
     setUp(false, AiChatAccessLevels.ENABLED);
     expect(isAdaptiveAiEnabled()).toBe(false);
+  });
+});
+
+describe('isAdaptiveAiDown', () => {
+  it('reads the outage flag, defaulting to up', () => {
+    mockGet.mockReturnValue(true);
+    expect(isAdaptiveAiDown()).toBe(true);
+    expect(mockGet).toHaveBeenCalledWith('adaptive-ai-outage', false);
+    mockGet.mockReturnValue(false);
+    expect(isAdaptiveAiDown()).toBe(false);
   });
 });
 
