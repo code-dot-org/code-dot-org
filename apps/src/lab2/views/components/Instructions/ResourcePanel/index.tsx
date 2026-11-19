@@ -395,7 +395,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         disabledState: aiChatDisabledState,
         onAssetUploaded,
         onAssetRemoved,
-        initialWelcomeMessage,
+        initialWelcomeMessage: levelProperties.disableAiTutorWelcome
+          ? undefined
+          : initialWelcomeMessage,
         disableCommitMessages:
           levelProperties.aiTutorPromptSettings?.disableCommitMessages,
       };
