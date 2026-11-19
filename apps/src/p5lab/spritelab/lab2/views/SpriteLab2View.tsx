@@ -18,6 +18,7 @@ import {setInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -411,6 +412,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const releaseRemovedImages = useReleaseRemovedImages();
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
+  // A share link or a teacher's view plays the game without the student
+  // working on the level.
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
+  useEffect(() => {
+    if (
+      (hasEdited || hasRun) &&
+      !isShareView &&
+      !isViewOnly &&
+      !isLevelEditMode
+    ) {
+      logLevelActivity();
+    }
+  }, [hasEdited, hasRun, isShareView, isViewOnly, logLevelActivity]);
   const blocklySettings = useBlocklySettings();
   const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
