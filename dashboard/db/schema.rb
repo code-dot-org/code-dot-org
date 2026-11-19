@@ -198,12 +198,7 @@ ActiveRecord::Schema[7.1].define(version: 2026_11_18_120000) do
 
   create_table "anonymous_level_clients", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "anon_user_id", limit: 36, null: false
-    t.string "os_name"
-    t.string "os_version"
-    t.string "browser_name"
-    t.string "browser_version"
     t.string "app_name"
-    t.string "app_version"
     t.string "install_source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
