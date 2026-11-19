@@ -6,7 +6,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {GAME_KEY_VALUES, isOnScreenGameKey} from './playBar';
+import {ARROW_AND_SPACE_KEYS, isOnScreenGameKey} from './playBar';
 
 export interface LevelAnalytics {
   reportActivity: () => void;
@@ -17,8 +17,9 @@ export interface LevelAnalytics {
 /**
  * Analytics for one visit to a level: the shared Level Activity event at the
  * student's first action, an event when they complete the level, and an
- * event when the visit ends. A visit runs from this hook's mount to its
- * unmount, or to the page unload if that comes first.
+ * event when the visit ends, if the student did anything. A visit runs from
+ * this hook's mount to its unmount, or to the page unload if that comes
+ * first.
  *
  * Nothing is sent while `enabled` is false, or for a standalone project,
  * which the shared event leaves out as well.
@@ -93,7 +94,7 @@ export default function useLevelAnalytics(
       return;
     }
     const onKeyDown = (event: KeyboardEvent) => {
-      if (!GAME_KEY_VALUES.has(event.key) || event.repeat) {
+      if (!ARROW_AND_SPACE_KEYS.has(event.key) || event.repeat) {
         return;
       }
       if (isOnScreenGameKey(event)) {

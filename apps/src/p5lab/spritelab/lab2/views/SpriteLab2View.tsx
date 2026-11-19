@@ -171,7 +171,12 @@ import DiscoverBlocksButton, {
 import FreeplayIntroDialog from './FreeplayIntroDialog';
 import ImagesTab, {UploadWarningSettings} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
-import {ArrowSet, arrowSetFor, ControlsState, GAME_KEY_VALUES} from './playBar';
+import {
+  ArrowSet,
+  arrowSetFor,
+  ControlsState,
+  ARROW_AND_SPACE_KEYS,
+} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
@@ -1677,7 +1682,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     const swallow = (e: KeyboardEvent) => {
-      if (GAME_KEY_VALUES.has(e.key)) {
+      if (ARROW_AND_SPACE_KEYS.has(e.key)) {
         e.stopPropagation();
       }
     };
@@ -1698,7 +1703,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       const target = e.target instanceof Element ? e.target : null;
       if (
         isTargetEditable(e.target) ||
-        (GAME_KEY_VALUES.has(e.key) && target?.closest(INTERACTIVE_CONTROLS))
+        (ARROW_AND_SPACE_KEYS.has(e.key) &&
+          target?.closest(INTERACTIVE_CONTROLS))
       ) {
         e.stopPropagation();
       }

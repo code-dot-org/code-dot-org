@@ -26,8 +26,7 @@ export function arrowSetFor(state: ControlsState): ArrowSet {
   return state.gravity > 0 ? 'jump' : 'jumpDown';
 }
 
-// The `KeyboardEvent.key` values of the arrow keys and space.
-export const GAME_KEY_VALUES = new Set([
+export const ARROW_AND_SPACE_KEYS = new Set([
   'ArrowLeft',
   'ArrowRight',
   'ArrowUp',
