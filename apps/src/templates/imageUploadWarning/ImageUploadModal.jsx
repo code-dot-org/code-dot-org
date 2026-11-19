@@ -16,14 +16,10 @@ export default function ImageUploadModal({
   isTeacher,
   confirmUploadWarning,
   hasVersionHistory = true,
-  includeFeaturedWarning = false,
 }) {
   const [noPIIConfirmed, setNoPIIConfirmed] = useState(false);
   const [restrictedShareConfirmed, setRestrictedShareConfirmed] =
     useState(false);
-  const [featuredWarningConfirmed, setFeaturedWarningConfirmed] = useState(
-    includeFeaturedWarning ? false : true
-  );
 
   const isConfirmButtonEnabled = isTeacher
     ? noPIIConfirmed
@@ -61,16 +57,6 @@ export default function ImageUploadModal({
               label={msg.animationPicker_confirmRestrictedShare()}
             />
           )}
-          {!isTeacher && includeFeaturedWarning && (
-            <Checkbox
-              name="featuredWarningConfirmed"
-              checked={featuredWarningConfirmed}
-              onChange={() =>
-                setFeaturedWarningConfirmed(!featuredWarningConfirmed)
-              }
-              label={'This project can not be submitted to be featured.'}
-            />
-          )}
           <Typography
             id="dsco-dialog-description"
             variant="body4"
@@ -78,9 +64,7 @@ export default function ImageUploadModal({
           >
             {isTeacher && (
               <>
-                {includeFeaturedWarning
-                  ? 'Note: projects with images uploaded by students cannot be remixed or submitted to be featured.'
-                  : msg.animationPicker_warnNoRemix()}
+                {msg.animationPicker_warnNoRemix()}
                 <br />
               </>
             )}
@@ -109,5 +93,4 @@ ImageUploadModal.propTypes = {
   confirmUploadWarning: PropTypes.func.isRequired,
   isTeacher: PropTypes.bool.isRequired,
   hasVersionHistory: PropTypes.bool,
-  includeFeaturedWarning: PropTypes.bool,
 };
