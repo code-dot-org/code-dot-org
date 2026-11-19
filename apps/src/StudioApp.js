@@ -2938,6 +2938,21 @@ function isLocalizingBlocks() {
 }
 
 /**
+ * Records the procedure and behavior names the level authored, so their
+ * caller blocks may display a translation. A last attempt is never read:
+ * names the student made render as typed.
+ */
+StudioApp.prototype.registerCurriculumProcedureNames_ = function (config) {
+  if (!isLocalizingBlocks()) {
+    return;
+  }
+  BlocklyUtils.setCurriculumProcedureNames({
+    startBlocks: this.getStartBlocks_(config, false).startBlocks,
+    toolbox: Blockly.mainBlockSpace?.options?.languageTree,
+  });
+};
+
+/**
  * Add the starting block(s).  Don't load lastAttempt for Jigsaw levels or the
  * level will advance as soon as it's loaded.
  * @param loadLastAttempt If true, try to load config.lastAttempt.
@@ -3248,6 +3263,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
+  this.registerCurriculumProcedureNames_(config);
   this.setStartBlocks_(config, true);
 
   // In some cases, resize events fire too early. For example, see:

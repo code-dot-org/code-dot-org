@@ -15,6 +15,7 @@ export * from './legacy/blockLimits';
 export * from './localization/blockDefinitions';
 export * from './localization/blockStrings';
 export * from './localization/locale';
+export * from './localization/procedureNameRegistry';
 export * from './localization/startBlocks';
 export * from './localization/variables';
 export * from './serialization/hooks';

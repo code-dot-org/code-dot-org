@@ -105,7 +105,6 @@ import {
   setThemeAndRenderBlocks,
   strip,
 } from './utils';
-import {handleFinishedLoading as registerCurriculumProcedureNames} from './utils/localization/procedureNameRegistry';
 
 const options: {contextMenu: true; shortcut: true} = {
   contextMenu: true,
@@ -748,10 +747,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     // blocks back to the correct positions after a browser window resize.
     // See: https://github.com/google/blockly/issues/8637
     workspace.addChangeListener(storeWorkspaceWidth);
-    // On initial load, record the procedure/behavior definition names that
-    // came with the level so their caller blocks can render a translated
-    // display while continuing to store and key on the canonical name.
-    workspace.addChangeListener(registerCurriculumProcedureNames);
     // Jigsaw blocks have additional path SVGs that need to be filled with
     // a pattern image.
     if (optOptionsExtended.isJigsaw) {
@@ -812,9 +807,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     const hiddenDefinitionWorkspace =
       new Blockly.Workspace() as ExtendedWorkspace;
     hiddenDefinitionWorkspace.addChangeListener(disableOrphans);
-    hiddenDefinitionWorkspace.addChangeListener(
-      registerCurriculumProcedureNames
-    );
     // The hidden definition workspace is not rendered, so do not try to add
     // svg frames around the definitions.
     hiddenDefinitionWorkspace.noFunctionBlockFrame = true;

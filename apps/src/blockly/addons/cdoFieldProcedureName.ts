@@ -55,9 +55,7 @@ export default class CdoFieldProcedureName extends BlocklyCore.FieldLabel {
     super.initView();
     this.localeListener_ = () => this.forceRerender();
     localization.on('change', this.localeListener_);
-    // Pick up names that arrive after this field first rendered — e.g.,
-    // flyout/toolbox caller blocks whose definition registers only once the
-    // hidden workspace finishes loading.
+    // The toolbox renders at inject, before the level's names are set.
     this.registryUnsubscribe_ = onRegistryChange(() => this.forceRerender());
   }
 

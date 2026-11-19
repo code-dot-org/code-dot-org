@@ -747,6 +747,60 @@ describe('StudioApp', () => {
       });
     });
 
+    describe('registerCurriculumProcedureNames_', () => {
+      const defineXml = name =>
+        '<xml><block type="procedures_defnoreturn">' +
+        `<field name="NAME">${name}</field></block></xml>`;
+      let mainBlockSpace;
+      beforeEach(() => {
+        mainBlockSpace = Blockly.mainBlockSpace;
+        Blockly.mainBlockSpace = {
+          options: {
+            languageTree: {
+              kind: 'categoryToolbox',
+              contents: [
+                {
+                  kind: 'category',
+                  contents: [
+                    {
+                      kind: 'block',
+                      type: 'procedures_callnoreturn',
+                      extraState: {name: 'from toolbox'},
+                    },
+                  ],
+                },
+              ],
+            },
+          },
+        };
+      });
+
+      afterEach(() => {
+        Blockly.mainBlockSpace = mainBlockSpace;
+        BlocklyUtils.setCurriculumProcedureNames({});
+      });
+
+      it('registers authored names but never the last attempt', () => {
+        studio.registerCurriculumProcedureNames_({
+          level: {
+            startBlocks: defineXml('authored'),
+            lastAttempt: defineXml('mine'),
+          },
+        });
+        expect(BlocklyUtils.isTranslatable('authored')).to.be.true;
+        expect(BlocklyUtils.isTranslatable('from toolbox')).to.be.true;
+        expect(BlocklyUtils.isTranslatable('mine')).to.be.false;
+      });
+
+      it('registers nothing when localization is off', () => {
+        localization.isLocalizeJS.returns(false);
+        studio.registerCurriculumProcedureNames_({
+          level: {startBlocks: defineXml('authored')},
+        });
+        expect(BlocklyUtils.isTranslatable('authored')).to.be.false;
+      });
+    });
+
     describe('relocalizeStartBlocks_', () => {
       const loadAuthored = () =>
         studio.setStartBlocks_({level: {startBlocks: sayXml('Hello')}}, true);
