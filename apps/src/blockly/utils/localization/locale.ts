@@ -3,6 +3,7 @@ import localization from '@cdo/apps/localization';
 
 import {refreshWorkspace} from '../workspace/refresh';
 
+import {translate} from './blockDefinitions';
 import {localizeVariables} from './variables';
 
 /**
@@ -73,8 +74,12 @@ export function getBlockDefinitionsForUpdatedLocale(
             return item;
           }
 
+          // Image options carry an object, not text, in the display slot.
           const [text, ...rest] = item;
-          return [localization.translate(text, ['blockly-block']), ...rest];
+          if (typeof text !== 'string') {
+            return item;
+          }
+          return [translate(text, ['blockly-block']), ...rest];
         });
       }
     });
