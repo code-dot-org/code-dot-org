@@ -1,4 +1,3 @@
-/* A 12px info icon that shows a tooltip on hover or keyboard focus. */
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton, Tooltip} from '@mui/material';
 import React from 'react';

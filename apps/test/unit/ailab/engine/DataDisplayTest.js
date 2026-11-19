@@ -323,6 +323,18 @@ describe('DataDisplay', () => {
     expect(screen.queryByRole('rowheader', {name: /test row/})).toBeNull();
   });
 
+  test('marks no rows when the saved split no longer fits the dataset', () => {
+    renderWithProviders(createElement(DataDisplay), {
+      store: levelStore(),
+      project: {
+        ...levelProject(),
+        accuracyCheckRowIndices: [2, ANIMALS.length],
+      },
+    });
+    expect(screen.queryByText('Test rows')).toBeNull();
+    expect(screen.queryByRole('rowheader', {name: /test row/})).toBeNull();
+  });
+
   describe('with an id column', () => {
     const NAMED = ANIMALS.map((row, index) => ({
       ...row,

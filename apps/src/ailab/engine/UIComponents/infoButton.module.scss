@@ -1,4 +1,7 @@
+@use 'sass:math';
+
 $info-icon-size: 12px;
+$min-target-size: 24px;
 
 // Doubled, to outrank the theme's extraSmall padding and icon size.
 .infoButton.infoButton {
@@ -12,5 +15,12 @@ $info-icon-size: 12px;
     width: $info-icon-size;
     font-size: $info-icon-size;
     line-height: $info-icon-size;
+  }
+
+  // Clicks within 24px of the icon still land, without moving the layout.
+  &::before {
+    content: '';
+    position: absolute;
+    inset: math.div($info-icon-size - $min-target-size, 2);
   }
 }

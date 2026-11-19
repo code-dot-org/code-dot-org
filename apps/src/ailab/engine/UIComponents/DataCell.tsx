@@ -34,12 +34,12 @@ const DataCell = ({
     );
   }
 
-  const header = value === '' ? `Row ${rowNumber}` : String(value);
+  const blankIdLabel = value === '' ? `Row ${rowNumber}` : undefined;
   return (
     <th
       scope="row"
       aria-label={
-        isTestRow ? testRowLabel(header) : value === '' ? header : undefined
+        isTestRow ? testRowLabel(blankIdLabel ?? value) : blankIdLabel
       }
       className={classNames(
         tableStyles.indexCell,
