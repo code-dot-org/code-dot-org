@@ -27,6 +27,8 @@ import {
 } from '@cdo/apps/aichat/types';
 import WaitingAnimation from '@cdo/apps/aichat/views/WaitingAnimation';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
@@ -230,13 +232,37 @@ const SkillsCheck: FC<SkillsCheckProps> = ({
     setFeedbackLoading(false);
   }, [modelParameters, loading, createUserMessage, aichatContext]);
 
+  const logAnswer = useCallback(() => {
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_SKILLS_CHECK_ANSWERED, {
+      lesson_id: lessonId,
+      question_id: currentProblem.id,
+      question_type: currentProblem.type,
+      is_correct: isCorrect,
+    });
+    if (isLast) {
+      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_SKILLS_CHECK_COMPLETED, {
+        lesson_id: lessonId,
+        questions_answered: currentIndex + 1,
+      });
+    }
+  }, [lessonId, currentProblem, isCorrect, isLast, currentIndex]);
+
   const createPracticeProblemAttemptRef = useRef(createPracticeProblemAttempt);
   createPracticeProblemAttemptRef.current = createPracticeProblemAttempt;
   const getAIFeedbackRef = useRef(getAIFeedback);
   getAIFeedbackRef.current = getAIFeedback;
+  const logAnswerRef = useRef(logAnswer);
+  logAnswerRef.current = logAnswer;
+
+  useEffect(() => {
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_SKILLS_CHECK_STARTED, {
+      lesson_id: lessonId,
+    });
+  }, [lessonId]);
 
   useEffect(() => {
     if (studentAnswer !== null) {
+      logAnswerRef.current();
       createPracticeProblemAttemptRef.current();
       getAIFeedbackRef.current();
     }

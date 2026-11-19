@@ -1,0 +1,36 @@
+name 'pl-aif-y2-u2-l6-feature-to-prediticon'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# From Features to a Prediction
+
+So what does this actually look like in Python? The features your students just saw, frequency, volume, brightness, become values in a dictionary. 
+
+But a dictionary just holds information, it doesn't predict anything by itself.
+
+That's what a conditional does, the same tool from Lesson 6's thermostat, just checking a feature instead of a temperature.
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+if note["frequency"] &gt; 400:<br>
+&nbsp;&nbsp;print("violin")<br>
+else:<br>
+&nbsp;&nbsp;print("cello")
+  </div>
+</div>
+
+One feature gets you this far. But a cello and a violin can share a frequency, so the actual lab asks students to check more than one feature at once, by nesting a conditional inside another.
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+if note["frequency"] &gt; 100:<br>
+&nbsp;&nbsp;if note["brightness"] &gt; 50:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;...
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <p>&#128161; <strong>Teacher tip:</strong> this nested pattern is exactly what the lab's Coding Tip shows students. If a student is stuck writing a flat if/elif chain that only checks one feature, point them back to this: nesting an if inside an if is how you combine two features into one prediction.</p>
+</div>
+MARKDOWN

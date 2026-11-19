@@ -37,6 +37,7 @@ import {
   FREEPLAY_TOOLS,
   PAINT_BRUSH_SIZES,
   PAINT_COLORS,
+  PAINT_START_COLOR,
   PAINT_TOOLBAR,
   PAINT_TOOLS,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/paintTools';
@@ -97,6 +98,7 @@ interface ImagesTabProps {
   generationsLeft?: number;
   /** Called when a generation request is sent to the model. */
   onGenerate?: () => void;
+  onGenerateFailed?: () => void;
   /** Students may add images, draw on them and delete them. */
   editingOffered?: boolean;
   /** No New button, even where `editingOffered` would show one: the
@@ -162,6 +164,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   levelId,
   generationsLeft,
   onGenerate,
+  onGenerateFailed,
   editingOffered,
   noNewImages,
   noDeletingImages,
@@ -322,6 +325,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
+  const {closedPicture, releaseClosedPicture} = tools;
+  // The canvas copy kept when Done closed the tools is for one image, so it
+  // is dropped when another image is chosen.
+  useEffect(() => {
+    if (closedPicture && closedPicture.key !== chosenId) {
+      releaseClosedPicture();
+    }
+  }, [chosenId, closedPicture, releaseClosedPicture]);
 
   const [uploadError, setUploadError] = useState<{text: string} | null>(null);
   const [uploadStatus, setUploadStatus] = useState('');
@@ -620,6 +631,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           ratingRequired={ratingRequired}
           generationsLeft={generationsLeft}
           onGenerateStart={onGenerate}
+          onGenerateFailed={onGenerateFailed}
           onBusyChange={setBusy}
           onKeep={handleKeep}
           onReady={offerStory}
@@ -685,6 +697,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 frame={shownFrame}
                 workspaceClassName={live ? styles.paintFrame : undefined}
                 above={above}
+                reserveAbove={!viewOnly}
+                cover={
+                  !live &&
+                  !generating &&
+                  closedPicture?.key === chosenImage?.key
+                    ? closedPicture?.canvas
+                    : undefined
+                }
+                onCoverDone={releaseClosedPicture}
                 live={
                   generating
                     ? parts.frame
@@ -799,6 +820,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   }
                   tools={limitedTools ? PAINT_TOOLS : FREEPLAY_TOOLS}
                   palette={limitedTools ? PAINT_COLORS : undefined}
+                  startColor={limitedTools ? PAINT_START_COLOR : undefined}
                   brushSizes={
                     limitedTools ? PAINT_BRUSH_SIZES : FREEPLAY_BRUSH_SIZES
                   }
@@ -885,7 +907,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         />
       ) : (
         <>
-          <ImageFrame image={null} />
+          <ImageFrame image={null} reserveAbove={!viewOnly} />
           {!viewOnly && (
             <section
               className={styles.pane}

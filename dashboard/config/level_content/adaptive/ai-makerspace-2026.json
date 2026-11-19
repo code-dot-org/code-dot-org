@@ -172,7 +172,8 @@
               "id": 213,
               "type": "freeResponse",
               "text": "Brainstorm your website",
-              "placeholder": "What website would you love to have, or what problem could a website help with? Jot down a few ideas. Any idea counts, even a rough one, and nothing here is final.",
+              "descriptionText": "What website would you love to have, or what problem could a website help with? Jot down a few ideas. Any idea counts, even a rough one, and nothing here is final.",
+              "placeholder": "I want a website that...",
               "plan": "ideas"
             },
             {

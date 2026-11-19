@@ -30,6 +30,7 @@ import HyperparameterField from './HyperparameterField';
 import IdColumnField from './IdColumnField';
 import LabelField from './LabelField';
 import PretrainedField from './PretrainedField';
+import TestRowsField from './TestRowsField';
 import {useDatasetColumns} from './useDatasetColumns';
 
 import moduleStyles from './edit-ailab-mode.module.scss';
@@ -104,6 +105,7 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
   const selectedTrainer =
     (mode.trainer as string | undefined) ?? DEFAULT_TRAINER;
   const hyperparameterLocked = isSetByHiddenTesting(mode, 'hyperparameters');
+  const testRowsLocked = isSetByHiddenTesting(mode, 'testRows');
 
   let columnsHelperMessage: string | undefined;
   if (!selectedDataset) {
@@ -296,6 +298,15 @@ const AilabModeFields: React.FunctionComponent<AilabModeFieldsProps> = ({
           helperMessage="Students cannot continue past the results step until the model reaches this accuracy. Leave blank for no requirement."
           errorMessage={accuracyError}
           size="s"
+        />
+      </div>
+      <div className={moduleStyles.fieldArea}>
+        <TestRowsField
+          key={String(testRowsLocked)}
+          mode={mode}
+          datasetRowCount={columns?.rowCount}
+          disabled={testRowsLocked}
+          onChange={changeMode}
         />
       </div>
 

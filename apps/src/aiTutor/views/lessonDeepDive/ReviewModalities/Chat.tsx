@@ -1,8 +1,10 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {ReflectionData} from '@code-dot-org/lesson-deep-dive';
-import React, {FC, useCallback, useMemo, useState} from 'react';
+import React, {FC, useCallback, useMemo, useRef, useState} from 'react';
 
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import {LessonDeepDiveData, AssessmentQuestionResult} from '../types';
 
@@ -27,7 +29,16 @@ const Chat: FC<ChatProps> = ({
   objectives,
   reflectionData,
 }) => {
-  const hiddenContextCallback = useCallback(async () => '', []);
+  const sentCountRef = useRef(0);
+  // The chat editor calls this once per message the student sends.
+  const hiddenContextCallback = useCallback(async () => {
+    sentCountRef.current += 1;
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHAT_MESSAGE_SENT, {
+      lesson_id: lessonId,
+      message_index: sentCountRef.current,
+    });
+    return '';
+  }, [lessonId]);
 
   const contextIntro = useMemo(() => {
     if (!reflectionData) return null;

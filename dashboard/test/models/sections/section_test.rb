@@ -1336,6 +1336,31 @@ class SectionTest < ActiveSupport::TestCase
     assert_includes summarized_section[:students], student.summarize
   end
 
+  test 'student_counts: one distinct count per section, none for an empty section' do
+    with_students = create(:section, script: nil, unit_group: nil)
+    student = create(:student)
+    create(:follower, section: with_students, student_user: student)
+    create(:follower, section: with_students, student_user: student)
+    create(:follower, section: with_students)
+    empty = create(:section, script: nil, unit_group: nil)
+
+    counts = nil
+    assert_queries(1) {counts = Section.student_counts([with_students, empty])}
+    assert_equal({with_students.id => 2}, counts)
+  end
+
+  test 'summarize_without_students: uses a given student count instead of counting' do
+    section = create(:section, script: nil, unit_group: nil)
+    create(:follower, section: section)
+
+    summarized = section.summarize_without_students(student_count: 7)
+    assert_equal 7, summarized[:numberOfStudents]
+    assert_equal 7, summarized[:studentCount]
+    assert_nil summarized[:students]
+
+    assert_equal 1, section.summarize_without_students[:studentCount]
+  end
+
   test 'summarize: section with sharing disabled and script with project sharing' do
     script = create(:script, :in_single_unit_course, project_sharing: true)
     section = create(:section, sharing_disabled: true, script: script, unit_group: script.original_unit_group)
