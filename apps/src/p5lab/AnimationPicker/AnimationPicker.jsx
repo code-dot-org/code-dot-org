@@ -280,16 +280,21 @@ class AnimationPicker extends React.Component {
       });
   };
 
-  handleCancelFlaggedImage = () => {
+  handleCancelFlaggedImage = (appName, isSignedOut) => {
     this.setState({
       showFlaggedModal: false,
       pendingUploadData: null,
       flaggedModalError: null,
     });
-    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
-      UploaderType: 'Animation Picker',
-      ProjectType: this.props.projectType,
-    });
+    analyticsReporter.sendEvent(
+      isSignedOut
+        ? EVENTS.SIGNED_OUT_FLAGGED_CUSTOM_IMAGE
+        : EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      {
+        UploaderType: 'Animation Picker',
+        ProjectType: this.props.projectType,
+      }
+    );
     this.props.onClose(); // Close the entire AnimationPicker
   };
 

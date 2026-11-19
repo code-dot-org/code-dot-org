@@ -219,6 +219,12 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
     select({animationList: animationList(), lab: labState}),
   useAppDispatch: () => jest.fn(),
 }));
+// Signed-out students are not offered a flagged picture at all. The warning
+// reads sign-in state off the store, not through a selector hook.
+let signInState = 'SignedIn';
+jest.mock('@cdo/apps/redux', () => ({
+  getStore: () => ({getState: () => ({currentUser: {signInState}})}),
+}));
 const moderate = jest.fn<Promise<string>, unknown[]>();
 jest.mock('@cdo/apps/util/moderateImage', () => ({
   moderateImage: (...args: unknown[]) => moderate(...args),
@@ -342,6 +348,7 @@ describe('ImagesTab', () => {
     sceneOverrides = {};
     lastRateResult = undefined;
     labState = {channel: {id: 'c1'}};
+    signInState = 'SignedIn';
     moderate.mockReset().mockResolvedValue('safe');
     httpPost.mockClear();
   });
@@ -1646,6 +1653,25 @@ describe('ImagesTab', () => {
         expect.anything(),
         expect.anything()
       );
+    });
+
+    it('offers a signed-out student no way to keep a flagged picture', async () => {
+      signInState = 'SignedOut';
+      moderate.mockResolvedValue('flagged');
+      await pickCharacter();
+      expect(screen.queryByRole('button', {name: /^accept$/i})).toBeNull();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^ok$/i}));
+      });
+      await settle();
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(httpPost).not.toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        expect.anything(),
+        expect.anything(),
+        expect.anything()
+      );
+      expect(screen.getByRole('button', {name: 'Upload image'})).toBeEnabled();
     });
 
     it('checks nothing it has already refused for its size', async () => {
