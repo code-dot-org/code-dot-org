@@ -263,6 +263,17 @@ describe('AssetManager image moderation', () => {
     expect(HttpClient.post).not.toHaveBeenCalled();
     expect(setFlaggedFilename).not.toHaveBeenCalled();
     expect(screen.getByRole('button', {name: /upload file/i})).toBeEnabled();
+    expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
+      EVENTS.SIGNED_OUT_FLAGGED_CUSTOM_IMAGE,
+      {
+        UploaderType: 'AssetManager',
+        ProjectType: 'applab',
+      }
+    );
+    expect(analyticsReporter.sendEvent).not.toHaveBeenCalledWith(
+      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      expect.anything()
+    );
   });
 
   it('accepts flagged image: flags channel, writes metadata, disables uploads', async () => {

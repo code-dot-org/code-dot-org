@@ -452,6 +452,8 @@ const EVENTS = {
   ACCEPT_FLAGGED_CUSTOM_IMAGE:
     'User accepts and uploads a flagged custom image',
   CANCEL_FLAGGED_CUSTOM_IMAGE: 'User cancels upload of flagged custom image',
+  SIGNED_OUT_FLAGGED_CUSTOM_IMAGE:
+    'Signed out user cannot upload a flagged custom image',
 
   // Sprite Lab in Lab2 image generation
   HOAI2026_IMAGE_PROMPT: 'hoai2026-image-prompt',

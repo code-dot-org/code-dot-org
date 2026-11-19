@@ -12,7 +12,7 @@ import moduleStyles from './FlaggedImageModal.module.scss';
 interface FlaggedImageModalProps {
   appName: string;
   onAccept: (appName: string) => void | Promise<void>;
-  onCancel: (appName: string) => void;
+  onCancel: (appName: string, isSignedOut: boolean) => void;
   errorMessage?: string;
 }
 
@@ -22,7 +22,7 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
   errorMessage,
   appName,
 }) => {
-  // We can't flag signed out projects as flagged, so we never allow signed out users to accept a flagged image.
+  // Flagging a project requires sign-in, so signed-out user's project can't be flagged.
   // The store is read directly because this component may be mounted without a redux provider.
   const isSignedOut =
     getStore().getState().currentUser?.signInState !== SignInState.SignedIn;
@@ -63,7 +63,7 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
     <div className={moduleStyles.stackingWrapper}>
       <Modal
         id="image-flagged-modal"
-        onClose={() => onCancel(appName)}
+        onClose={() => onCancel(appName, isSignedOut)}
         title={
           isSignedOut
             ? 'Error: Inappropriate Image'
@@ -79,7 +79,7 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
           isSignedOut
             ? {
                 children: 'OK',
-                onClick: () => onCancel(appName),
+                onClick: () => onCancel(appName, isSignedOut),
               }
             : {
                 children: i18n.accept(),
@@ -92,7 +92,7 @@ const FlaggedImageModal: React.FC<FlaggedImageModalProps> = ({
             ? undefined
             : {
                 children: i18n.cancel(),
-                onClick: () => onCancel(appName),
+                onClick: () => onCancel(appName, isSignedOut),
               }
         }
       />
