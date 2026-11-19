@@ -37,9 +37,6 @@ module Slack
     'teacher-tools-on-call': 'S07FB3XSAR5'
   }.freeze
 
-  SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
-  SLACK_BOT_TOKEN = CDO.methods.include?(:slack_bot_token) ? CDO.slack_bot_token.freeze : nil
-
   # Returns a mention tag '<@id>' for a user based on their email.
   # @param email [String] The email of the Slack user.
   # @raise [RuntimeError] If the Slack API call fails or the email does not
@@ -174,7 +171,7 @@ module Slack
   private_class_method def self.get_channel_id(channel_name)
     return CHANNEL_IDS[channel_name] if CHANNEL_IDS[channel_name]
 
-    raise "CDO.slack_token undefined" if SLACK_TOKEN.nil?
+    raise "CDO.slack_token undefined" if slack_token.nil?
     # Documentation at https://api.slack.com/methods/conversations.list.
     url = "https://slack.com/api/conversations.list?limit=1000&types=public_channel&exclude_archived=true"
     parsed_channels = post_to_slack(url)
@@ -201,11 +198,20 @@ module Slack
       gsub(/<br\/?>/, "\n")
   end
 
+  # The tokens are AWS secrets. Read them on use, so that loading this file
+  # does not need AWS credentials.
+  private_class_method def self.slack_token
+    CDO.slack_token if CDO.methods.include?(:slack_token)
+  end
+
+  private_class_method def self.slack_bot_token
+    CDO.slack_bot_token if CDO.methods.include?(:slack_bot_token)
+  end
+
   private_class_method def self.post_to_slack(url, payload = nil)
-    if SLACK_BOT_TOKEN && SLACK_BOT_TOKEN != ''
-      token = SLACK_BOT_TOKEN
-    else
-      # TODO: Remove after deprecating legacy SLACK_TOKEN
+    token = slack_bot_token
+    if !token || token == ''
+      # TODO: Remove after deprecating legacy slack_token
       opts = {
         error_class: "Slack integration [warn]",
         error_message: "Using legacy token",
@@ -213,7 +219,7 @@ module Slack
       }
       Honeybadger.notify_cronjob_error opts
 
-      token = SLACK_TOKEN
+      token = slack_token
     end
 
     headers = {

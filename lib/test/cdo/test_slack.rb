@@ -43,6 +43,25 @@ class SlackTest < Minitest::Test
     assert Slack.join_room(FAKE_CHANNEL)
   end
 
+  def test_post_to_slack_uses_bot_token
+    CDO.stubs(:slack_bot_token).returns('fake-bot-token')
+    CDO.stubs(:slack_token).returns('fake-legacy-token')
+    Net::HTTP.any_instance.expects(:request).with do |req|
+      req['Authorization'] == 'Bearer fake-bot-token'
+    end.returns(stub(body: '{"ok": true}'))
+    assert Slack.remind('fake-user-id', '0', FAKE_MESSAGE)
+  end
+
+  def test_post_to_slack_falls_back_to_legacy_token
+    CDO.stubs(:slack_bot_token).returns('')
+    CDO.stubs(:slack_token).returns('fake-legacy-token')
+    Honeybadger.expects(:notify_cronjob_error)
+    Net::HTTP.any_instance.expects(:request).with do |req|
+      req['Authorization'] == 'Bearer fake-legacy-token'
+    end.returns(stub(body: '{"ok": true}'))
+    assert Slack.remind('fake-user-id', '0', FAKE_MESSAGE)
+  end
+
   def test_update_topic_with_error_response
     Slack.stubs(:post_to_slack).returns(false)
     refute Slack.update_topic(FAKE_CHANNEL, FAKE_TOPIC)

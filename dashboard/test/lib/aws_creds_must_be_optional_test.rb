@@ -19,15 +19,9 @@ class AWSCredsMustBeOptionalTest < ActiveSupport::TestCase
       'AWS_SESSION_TOKEN' => '',
     }
 
-    # Please do not add to this list. Instead, seek to remove from the list.
-    # Then you will see that it is not the list that grows, it is your mind.
-    LEGACY_SECRETS_THAT_ALREADY_BREAK_THINGS = %w(
-      slack_bot_token
-    ).map {|secret| "CDO_#{secret}"}.index_with('')
-
     # Start a new `rails runner` process and make sure it boots w/o AWS access
     stdout, stderr, status = Open3.capture3(
-      {**ENV_VARS, **LEGACY_SECRETS_THAT_ALREADY_BREAK_THINGS},
+      ENV_VARS,
       'bin/rails',
       'runner',
       <<~RUBY,
