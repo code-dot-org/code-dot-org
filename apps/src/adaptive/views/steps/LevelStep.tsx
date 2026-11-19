@@ -247,7 +247,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   // adaptive-specific overrides: step-specific instructions, always hide share
   // and remix, spotlight the instructions on a first visit in place of the
   // lab's product tours and tutor welcome, and pathway-specific tutor context
-  // that gets appendd to the level system prompt.
+  // that gets appended to the level system prompt.
   const viewProperties = useMemo<LevelProperties>(() => {
     const context = buildTutorContext({
       pathway,
