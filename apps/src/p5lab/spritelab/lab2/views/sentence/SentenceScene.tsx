@@ -14,7 +14,6 @@ import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding'
 import {
   CachedImage,
   findCachedImage,
-  sentencePath,
   ImageSource,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
@@ -254,28 +253,19 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
   // The pictures whose reveal animation has already played.
   const revealedPictureIds = useRef(new Set<string>());
-  // The cached variant shown last for a filling, so Generate again shows
-  // another.
-  const lastCachedRef = useRef<{path: string; variant: number}>();
 
   // The cached picture for the sentence as filled, when there is one.
-  const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
-    const wordIds = sentenceWordIds(sentence, choices);
-    const path = sentencePath(sentence.id, wordIds, style);
-    const last = lastCachedRef.current;
-    const found = await findCachedImage({
-      sentenceId: sentence.id,
-      wordIds,
-      style,
-      characterSet: canAnimate,
-      avoidVariant: last?.path === path ? last.variant : undefined,
-      baseUrl: imageCacheUrl,
-    });
-    if (found) {
-      lastCachedRef.current = {path, variant: found.variant};
-    }
-    return found;
-  }, [sentence, choices, style, canAnimate, imageCacheUrl]);
+  const findCached = useCallback(
+    (): Promise<CachedImage | undefined> =>
+      findCachedImage({
+        sentenceId: sentence.id,
+        wordIds: sentenceWordIds(sentence, choices),
+        style,
+        characterSet: canAnimate,
+        baseUrl: imageCacheUrl,
+      }),
+    [sentence, choices, style, canAnimate, imageCacheUrl]
+  );
 
   const persist = useCallback(
     async (picture: GeneratedPicture, pictureVerdict: Verdict | null) => {
