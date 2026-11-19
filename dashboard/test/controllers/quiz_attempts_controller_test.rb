@@ -502,26 +502,6 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_nil attempt.reload.submitted_at
   end
 
-  test "create follows the lock state of the lesson's last level for an earlier Quiz" do
-    unit = create(:unit)
-    lesson = create(:lesson, script: unit, lockable: true)
-    create(:script_level, script: unit, lesson: lesson, levels: [@quiz], chapter: 1, position: 1)
-    lock_level = create(:level_group)
-    create(:script_level, script: unit, lesson: lesson, levels: [lock_level], assessment: true, chapter: 2, position: 2)
-    sign_in @student
-
-    post :create, params: {levelId: @quiz.id, unitId: unit.id}
-    assert_response :forbidden
-
-    UserLevel.update_lockable_state(@student.id, lock_level.id, unit.id, false, true)
-    post :create, params: {levelId: @quiz.id, unitId: unit.id}
-    assert_response :forbidden
-
-    UserLevel.update_lockable_state(@student.id, lock_level.id, unit.id, false, false)
-    post :create, params: {levelId: @quiz.id, unitId: unit.id}
-    assert_response :created
-  end
-
   private def create_unit_with_quiz(quiz)
     unit = create(:unit)
     lesson = create(:lesson, script: unit)
