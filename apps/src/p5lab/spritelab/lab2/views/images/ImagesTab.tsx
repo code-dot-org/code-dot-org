@@ -37,6 +37,7 @@ import {
   FREEPLAY_TOOLS,
   PAINT_BRUSH_SIZES,
   PAINT_COLORS,
+  PAINT_START_COLOR,
   PAINT_TOOLBAR,
   PAINT_TOOLS,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/paintTools';
@@ -802,6 +803,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   }
                   tools={limitedTools ? PAINT_TOOLS : FREEPLAY_TOOLS}
                   palette={limitedTools ? PAINT_COLORS : undefined}
+                  startColor={limitedTools ? PAINT_START_COLOR : undefined}
                   brushSizes={
                     limitedTools ? PAINT_BRUSH_SIZES : FREEPLAY_BRUSH_SIZES
                   }
