@@ -3,10 +3,17 @@ import type {Transport} from '@code-dot-org/core/api';
 import {
   challengeResponseValidator,
   challengeValidator,
+  practiceProblemValidator,
+  userPracticeProblemAttemptValidator,
   type Challenge,
   type ChallengeResponse,
   type ChallengeResponseAsset,
+  type MatchSolution,
+  type MultiSolution,
+  type PracticeProblem,
   type ReflectionValue,
+  type ScrambleSolution,
+  type UserPracticeProblemAttempt,
 } from './types';
 
 export type CreateChallengeResponseRequest = {
@@ -55,6 +62,67 @@ export async function uploadChallengeResponseAsset(
     url: `/challenge_response_assets/${assetId}/upload`,
     body: data,
     headers: {'Content-Type': contentType},
+  });
+}
+
+/** GET /practice_problems */
+export async function listPracticeProblems(
+  transport: Transport,
+  objectiveIds: string[],
+): Promise<PracticeProblem[]> {
+  const params = new URLSearchParams();
+  objectiveIds.forEach(id => params.append('objective_ids[]', id));
+  const raw = await transport.request<unknown[]>({
+    method: 'GET',
+    url: `/practice_problems?${params.toString()}`,
+  });
+  return practiceProblemValidator(raw);
+}
+
+/** GET /user_practice_problem_attempts */
+export async function listPracticeProblemAttempts(
+  transport: Transport,
+  problemIds: number[],
+): Promise<UserPracticeProblemAttempt[]> {
+  const params = new URLSearchParams();
+  problemIds.forEach(id => params.append('problem_ids[]', String(id)));
+  const raw = await transport.request<unknown[]>({
+    method: 'GET',
+    url: `/user_practice_problem_attempts?${params.toString()}`,
+  });
+  return userPracticeProblemAttemptValidator(raw);
+}
+
+export type SavePracticeProblemAttemptRequest = {
+  practice_problem_id: number;
+  correct: boolean;
+  delivery_context_type: string;
+  attempt: {solution: (MultiSolution | ScrambleSolution | MatchSolution)[]};
+  delivery_context_metadata: {lesson_id: number};
+};
+
+/** POST /user_practice_problem_attempts */
+export async function savePracticeProblemAttempt(
+  transport: Transport,
+  request: SavePracticeProblemAttemptRequest,
+): Promise<{id: number}> {
+  return transport.request<{id: number}>({
+    method: 'POST',
+    url: '/user_practice_problem_attempts/',
+    body: request,
+  });
+}
+
+/** PUT /user_practice_problem_attempts/:id */
+export async function updatePracticeProblemAttemptFeedback(
+  transport: Transport,
+  attemptId: number,
+  feedback: string,
+): Promise<void> {
+  await transport.request<unknown>({
+    method: 'PUT',
+    url: `/user_practice_problem_attempts/${attemptId}`,
+    body: {ai_feedback: feedback},
   });
 }
 

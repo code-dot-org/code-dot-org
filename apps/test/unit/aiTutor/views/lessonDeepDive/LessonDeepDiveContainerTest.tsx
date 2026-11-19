@@ -18,6 +18,7 @@ jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ValidatedLevelsBox: () => <div>validated-levels</div>,
   LessonSummaryCard: () => <div>lesson-summary</div>,
   PreSkillsCheck: () => <div>pre-skills-check</div>,
+  SkillsCheck: () => <div>skills-check</div>,
   TutorSummaryBox: () => <div>tutor-summary</div>,
   NextStepPicker: () => <div>next-step</div>,
   ReflectionBox: () => <div>reflection</div>,
@@ -42,11 +43,6 @@ jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
   __esModule: true,
   default: {sendEvent: jest.fn()},
 }));
-
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/SkillsCheck/SkillsCheck',
-  () => ({__esModule: true, default: () => <div>skills-check</div>})
-);
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,

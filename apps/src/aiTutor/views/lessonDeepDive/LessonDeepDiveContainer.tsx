@@ -8,6 +8,7 @@ import {
   ReflectionBox,
   ReflectionData,
   ReflectionValue,
+  SkillsCheck,
   TimeSpentBox,
   TutorSummaryBox,
   ValidatedLevelsBox,
@@ -26,7 +27,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
 import TutorChat from './ReviewModalities/TutorChat';
-import SkillsCheck from './SkillsCheck/SkillsCheck';
+import TutorFeedback from './SkillsCheck/TutorFeedback';
 import {LessonDeepDiveData} from './types';
 
 import styles from './lesson-deep-dive-container.module.scss';
@@ -443,6 +444,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             objectives={lessonDeepDiveData.objectives}
             reflectionData={reflectionData}
             onComplete={goToNext}
+            TutorFeedback={TutorFeedback}
           />
         );
       case 'tutor-summary':

@@ -17,6 +17,8 @@ export {default as PreSkillsCheck} from './PreSkillsCheck';
 export {default as ReflectionBox} from './Reflection/ReflectionBox';
 export {requestEvaluation} from './ChallengeActivities/requestEvaluation';
 export {default as Scramble} from './SkillsCheck/QuestionTypes/Scramble';
+export {default as SkillsCheck} from './SkillsCheck/SkillsCheck';
+export type {TutorFeedbackProps} from './SkillsCheck/SkillsCheck';
 export {default as Sort} from './SkillsCheck/QuestionTypes/Sort';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
 export {default as TutorSummaryBox} from './TutorSummaryBox';

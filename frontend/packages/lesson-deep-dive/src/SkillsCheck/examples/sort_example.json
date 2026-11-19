@@ -1,0 +1,28 @@
+{
+  "id": -5,
+  "type": "sort",
+  "active": true,
+  "problem_text": "Sort the following animals by type",
+  "solution": [
+    {
+      "option": "tiger",
+      "correct": "mammal"
+    },
+    {
+      "option": "corn snake",
+      "correct": "reptile"
+    },
+    {
+      "option": "leopard gecko",
+      "correct": "reptile"
+    },
+    {
+      "option": "koala",
+      "correct": "mammal"
+    },
+    {
+      "option": "goose",
+      "correct": "bird"
+    }
+  ]
+}
