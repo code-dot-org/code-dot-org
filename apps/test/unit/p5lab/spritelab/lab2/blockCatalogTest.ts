@@ -1,4 +1,5 @@
 import {
+  addedBlockTypes,
   catalogEntries,
   heldBackBlockTypes,
   newBlockTypes,
@@ -24,10 +25,10 @@ describe('catalogEntries', () => {
 });
 
 describe('heldBackBlockTypes', () => {
-  it('is the catalog less the chosen blocks', () => {
+  it('is the catalog less the blocks in the toolbox', () => {
     const entries = catalogEntries([WITH_HELP]);
-    expect([...heldBackBlockTypes(entries, undefined)]).toEqual([WITH_HELP]);
-    expect([...heldBackBlockTypes(entries, [WITH_HELP])]).toEqual([]);
+    expect([...heldBackBlockTypes(entries, new Set())]).toEqual([WITH_HELP]);
+    expect([...heldBackBlockTypes(entries, new Set([WITH_HELP]))]).toEqual([]);
   });
 });
 
@@ -215,6 +216,16 @@ describe('newBlockTypes', () => {
     ]);
   });
 
+  it('is everything the level offers when no level comes before it', () => {
+    const only = level({
+      toolboxDefinition: toolbox('gamelab_spriteSay', 'spritelab2_burst'),
+    });
+    expect(newBlockTypes(only, [])).toEqual([
+      'gamelab_spriteSay',
+      'spritelab2_burst',
+    ]);
+  });
+
   it('is what no earlier level required, in toolbox order', () => {
     const first = level({
       toolboxDefinition: toolbox('gamelab_spriteSay'),
@@ -255,5 +266,33 @@ describe('newBlockTypes', () => {
       'spritelab2_setCameraZoom',
       'spritelab2_setWeather',
     ]);
+  });
+});
+
+describe('addedBlockTypes', () => {
+  it('is the starting blocks and the chosen ones in a lesson', () => {
+    const added = addedBlockTypes(
+      level({catalogStartBlocks: ['spritelab2_burst']}),
+      ['gamelab_spriteSay'],
+      ['spritelab2_setWeather']
+    );
+    expect([...added]).toEqual(['spritelab2_burst', 'gamelab_spriteSay']);
+  });
+
+  it('also keeps the blocks a standalone project uses', () => {
+    const added = addedBlockTypes(
+      level({catalogStartBlocks: ['spritelab2_burst'], isProjectLevel: true}),
+      new Set(['gamelab_spriteSay']),
+      new Set(['spritelab2_setWeather', 'spritelab2_burst'])
+    );
+    expect([...added]).toEqual([
+      'spritelab2_burst',
+      'gamelab_spriteSay',
+      'spritelab2_setWeather',
+    ]);
+  });
+
+  it('is only the chosen blocks on a level with no starting blocks', () => {
+    expect([...addedBlockTypes(level({}), ['a'], ['b'])]).toEqual(['a']);
   });
 });

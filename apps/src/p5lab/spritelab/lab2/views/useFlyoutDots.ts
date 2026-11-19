@@ -9,21 +9,8 @@ import {installFlyoutDots} from '../blockly/flyoutDots';
 import {usedBlockTypes} from '../newBlocks';
 import {Scene} from '../types';
 
-export function useFlyoutDots({
-  enabled,
-  added,
-  scenes,
-  workspaceVersion,
-  getWorkspace,
-}: {
-  enabled: boolean;
-  /** Block types added from the catalog. */
-  added: ReadonlySet<string>;
-  scenes: Scene[];
-  /** Bumps when the workspace is re-injected. */
-  workspaceVersion: number;
-  getWorkspace: () => BlocklyCore.WorkspaceSvg | null | undefined;
-}): void {
+/** The block types the project has used at any time during this visit. */
+export function useSeenBlockTypes(scenes: Scene[]): ReadonlySet<string> {
   const used = useMemo(() => usedBlockTypes(scenes), [scenes]);
   const [seen, setSeen] = useState<ReadonlySet<string>>(new Set());
   useEffect(() => {
@@ -33,7 +20,25 @@ export function useFlyoutDots({
         : new Set([...current, ...used])
     );
   }, [used]);
+  return seen;
+}
 
+export function useFlyoutDots({
+  enabled,
+  added,
+  seen,
+  workspaceVersion,
+  getWorkspace,
+}: {
+  enabled: boolean;
+  /** Block types added from the catalog. */
+  added: ReadonlySet<string>;
+  /** Block types the project has used during this visit. */
+  seen: ReadonlySet<string>;
+  /** Bumps when the workspace is re-injected. */
+  workspaceVersion: number;
+  getWorkspace: () => BlocklyCore.WorkspaceSvg | null | undefined;
+}): void {
   useEffect(() => {
     if (!workspaceVersion || !enabled || added.size === 0) {
       return;

@@ -155,6 +155,15 @@
     },
     "header_label": "Free play",
     "is_project_level": true,
+    "block_catalog": true,
+    "catalog_start_blocks": [
+      "spritelab2_burst",
+      "spritelab2_playSound",
+      "gamelab_spriteSay",
+      "spritelab2_setCameraZoom",
+      "spritelab2_restartScene",
+      "spritelab2_showTitle"
+    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 

@@ -172,6 +172,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The new blocks start out of the toolbox, offered through the new-block
       catalog instead (blockCatalog.ts). */
   blockCatalog?: boolean;
+  /** Catalog blocks that are in the toolbox before the student adds any. */
+  catalogStartBlocks?: string[];
   /** Blocks built on earlier levels cannot be deleted here, in any scene
       the level opens (blockLocks.ts). The blocks under a stack this level adds can,
       and so can the toolbox blocks no earlier level required. */

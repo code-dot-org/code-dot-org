@@ -61,6 +61,7 @@ import {
 } from '../ai/images/imageGeneration';
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {
+  addedBlockTypes,
   catalogEntries,
   heldBackBlockTypes,
   newBlockTypes,
@@ -173,7 +174,7 @@ import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
-import {useFlyoutDots} from './useFlyoutDots';
+import {useFlyoutDots, useSeenBlockTypes} from './useFlyoutDots';
 import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
@@ -280,6 +281,8 @@ const GAME_KEYS = new Set([
   ' ',
   'Spacebar',
 ]);
+
+const NO_EARLIER_LEVELS: readonly SpriteLab2LevelProperties[] = [];
 
 // Levelbuilder edit modes (start, toolbox, exemplar) run without a project
 // channel; generated images upload to the level's starter assets instead.
@@ -564,22 +567,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           .map(id => levelPropertiesMap[id] as SpriteLab2LevelProperties)
           .filter(Boolean);
   }, [lessonLevelIds, levelPropertiesMap, levelProperties.id]);
+  // A standalone project has no earlier levels, so every block it offers
+  // that has help is in its catalog.
+  const catalogEarlierLevels = levelProperties.isProjectLevel
+    ? NO_EARLIER_LEVELS
+    : earlierLevels;
   const catalog = useMemo(
     () =>
-      catalogOn && earlierLevels
-        ? catalogEntries(newBlockTypes(levelProperties, earlierLevels))
+      catalogOn && catalogEarlierLevels
+        ? catalogEntries(newBlockTypes(levelProperties, catalogEarlierLevels))
         : [],
-    [catalogOn, earlierLevels, levelProperties]
+    [catalogOn, catalogEarlierLevels, levelProperties]
   );
   const chosenBlocks = currentSources.chosenBlocks;
   const chosenBlockSet = useMemo(
     () => new Set(chosenBlocks ?? []),
     [chosenBlocks]
-  );
-  // Catalog blocks the student has yet to add.
-  const heldBackBlocks = useMemo(
-    () => heldBackBlockTypes(catalog, chosenBlocks),
-    [catalog, chosenBlocks]
   );
   const inAiPilot = useAppSelector(
     state =>
@@ -614,6 +617,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const pictures = usePicturesSheet({ready: labReady});
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
+
+  const seenBlocks = useSeenBlockTypes(scenes);
+  const addedBlocks = useMemo(
+    () => addedBlockTypes(levelProperties, chosenBlockSet, seenBlocks),
+    [levelProperties, chosenBlockSet, seenBlocks]
+  );
+  const heldBackBlocks = useMemo(
+    () => heldBackBlockTypes(catalog, addedBlocks),
+    [catalog, addedBlocks]
+  );
 
   // Create the pinned scene on first load, and again after Start Over (the
   // reinit count is in the deps). On a project with no scenes the pinned
@@ -2207,7 +2220,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useFlyoutDots({
     enabled: catalogOn,
     added: chosenBlockSet,
-    scenes,
+    seen: seenBlocks,
     workspaceVersion,
     getWorkspace: getMainWorkspace,
   });
@@ -2350,7 +2363,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {showBlockCatalog && (
         <BlockCatalogDialog
           entries={catalog}
-          chosen={chosenBlockSet}
+          chosen={addedBlocks}
           onAdd={addCatalogBlock}
           onClose={() => setShowBlockCatalog(false)}
         />

@@ -94,12 +94,29 @@ export function catalogEntries(
   });
 }
 
-/** The catalog blocks the student has not added to the toolbox. */
+/**
+ * The catalog blocks that are in the toolbox: the ones the level starts
+ * with and the ones the student chose. A standalone project also keeps
+ * every block it has used, so a project from before it had a catalog loses
+ * none.
+ */
+export function addedBlockTypes(
+  level: SpriteLab2LevelProperties,
+  chosen: Iterable<string>,
+  used: Iterable<string>
+): Set<string> {
+  return new Set([
+    ...(level.catalogStartBlocks ?? []),
+    ...chosen,
+    ...(level.isProjectLevel ? used : []),
+  ]);
+}
+
+/** The catalog blocks that are not in the toolbox. */
 export function heldBackBlockTypes(
   entries: readonly CatalogEntry[],
-  chosen: readonly string[] | undefined
+  added: ReadonlySet<string>
 ): Set<string> {
-  const added = new Set(chosen ?? []);
   return new Set(
     entries.map(entry => entry.type).filter(type => !added.has(type))
   );
