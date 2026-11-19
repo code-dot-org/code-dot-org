@@ -9,6 +9,7 @@ jest.mock('@cdo/apps/pixelEditor/pixelArt', () => ({
 
 import {
   animationNames,
+  decodableAnimations,
   filterAnimationsToNames,
   findOpaqueBounds,
   getImageThumbnail,
@@ -112,6 +113,71 @@ describe('SpriteLab2 loadedAnimations', () => {
       orderedKeys: [],
       propsByKey: {},
     });
+  });
+});
+
+describe('SpriteLab2 decodableAnimations', () => {
+  let realImage;
+  let decoded;
+  beforeEach(() => {
+    realImage = global.Image;
+    decoded = [];
+    // jsdom's Image fires neither load nor error, so the tests use an Image
+    // that loads a source containing "good" and fails any other.
+    global.Image = class {
+      set src(value) {
+        decoded.push(value);
+        setTimeout(
+          () => (value.includes('good') ? this.onload() : this.onerror()),
+          0
+        );
+      }
+    };
+    jest.spyOn(console, 'warn').mockImplementation(() => {});
+  });
+  afterEach(() => {
+    global.Image = realImage;
+    jest.restoreAllMocks();
+  });
+
+  const list = {
+    orderedKeys: ['a', 'b', 'c', 'd'],
+    propsByKey: {
+      a: {name: 'wizard', dataURI: 'data:image/png;base64,good1'},
+      b: {name: 'broken', dataURI: 'data:image/png;base64,AAAA'},
+      c: {name: 'pending'},
+      d: {name: 'cat', dataURI: 'data:image/png;base64,good2'},
+    },
+  };
+
+  it('drops the images that fail to decode, in order', async () => {
+    const out = await decodableAnimations(list);
+    expect(out.orderedKeys).toEqual(['a', 'd']);
+    expect(Object.keys(out.propsByKey)).toEqual(['a', 'd']);
+    expect(out.propsByKey.a).toBe(list.propsByKey.a);
+    expect(console.warn).toHaveBeenCalledTimes(1);
+    expect(console.warn.mock.calls[0][0]).toContain('broken');
+  });
+
+  it('keeps an image the caller vouches for, without decoding it', async () => {
+    const out = await decodableAnimations(
+      list,
+      props => props.name === 'broken'
+    );
+    expect(out.orderedKeys).toEqual(['a', 'b', 'd']);
+    expect(decoded).toEqual([
+      'data:image/png;base64,good1',
+      'data:image/png;base64,good2',
+    ]);
+    expect(console.warn).not.toHaveBeenCalled();
+  });
+
+  it('leaves the given list untouched and handles an empty one', async () => {
+    await decodableAnimations(list);
+    expect(list.orderedKeys).toEqual(['a', 'b', 'c', 'd']);
+    expect(
+      await decodableAnimations({orderedKeys: [], propsByKey: {}})
+    ).toEqual({orderedKeys: [], propsByKey: {}});
   });
 });
 
