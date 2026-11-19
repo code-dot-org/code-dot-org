@@ -33,11 +33,9 @@ class LessonsControllerTest < ActionController::TestCase
 
     User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
     User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(true)
-    # The lesson tutor deep dive is scoped to AIF/AID student courses, so tutor
-    # tests need a course whose offering carries an AI marketing initiative.
-    @ai_script = create(:script, name: 'ai-unit-1')
+    # The lesson tutor deep dive is scoped to units with tutor_plus_available.
+    @ai_script = create(:script, name: 'ai-unit-1', tutor_plus_available: true)
     @ai_course = create(:single_unit_course, :with_course_offering, unit: @ai_script)
-    @ai_course.course_version.course_offering.update!(marketing_initiative: 'AIF')
     ai_lesson_group = create(:lesson_group, script: @ai_script)
     @ai_lesson = create(
       :lesson,
@@ -142,17 +140,17 @@ class LessonsControllerTest < ActionController::TestCase
 
   # signed out users are redirected to sign in for tutor
   test_user_gets_response_for :tutor, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: nil, response: :redirect, name: 'signed out user is redirected to sign in for tutor'
-  test_user_gets_response_for :tutor, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor in an AIF/AID course'
-  test_user_gets_response_for :tutor, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view tutor in an AIF/AID course'
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor in a tutor_plus_available unit'
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: :teacher, response: :success, name: 'teacher can view tutor in a tutor_plus_available unit'
 
-  # tutor is not available outside AIF/AID student courses
-  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :not_found, name: 'student cannot view tutor in a non-AI course'
-  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :teacher, response: :not_found, name: 'teacher cannot view tutor in a non-AI course'
+  # tutor is not available in units without tutor_plus_available
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :not_found, name: 'student cannot view tutor in a unit without tutor_plus_available'
+  test_user_gets_response_for :tutor, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :teacher, response: :not_found, name: 'teacher cannot view tutor in a unit without tutor_plus_available'
 
   # the tutor gallery follows the same access rules as tutor
   test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: nil, response: :redirect, name: 'signed out user is redirected to sign in for tutor gallery'
-  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor gallery in an AIF/AID course'
-  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :not_found, name: 'student cannot view tutor gallery in a non-AI course'
+  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @ai_course.name, unit_position: 1, lesson_position: @ai_lesson.relative_position}}, user: :student, response: :success, name: 'student can view tutor gallery in a tutor_plus_available unit'
+  test_user_gets_response_for :tutor_gallery, params: -> {{course_course_name: @course.name, unit_position: 1, lesson_position: @lesson.relative_position}}, user: :student, response: :not_found, name: 'student cannot view tutor gallery in a unit without tutor_plus_available'
 
   # limit access to lesson plans in pilots
   test_user_gets_response_for :show, response: :not_found, user: nil,
