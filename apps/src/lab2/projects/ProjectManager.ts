@@ -750,8 +750,6 @@ export default class ProjectManager {
       this.metricsReporter.logWarning('Project too large to save');
     } else {
       // Otherwise, we log the error, including the message as details.
-      // WebKit stacks carry no "Name: message" header line, so errorMessage is
-      // the only place the message survives there.
       this.metricsReporter.logError(errorMessage, error, {
         message: error.message,
         saveTrigger: trigger,
@@ -776,8 +774,7 @@ export default class ProjectManager {
     }
   }
 
-  // Size of the save payload on the wire, which bounds which transports can
-  // carry it.
+  // Returns the size of the save payload on the wire.
   private static payloadBytes(sources: ProjectSources): number {
     return new TextEncoder().encode(JSON.stringify(sources)).length;
   }
