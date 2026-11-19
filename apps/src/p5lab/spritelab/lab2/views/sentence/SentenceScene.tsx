@@ -32,6 +32,7 @@ import {
   CHARACTER_STRIP_FRAME_COUNT,
   stripCellOrigin,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {createUuid} from '@cdo/apps/utils';
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 import BehindTheScenes from '../images/teaching/BehindTheScenes';
@@ -84,10 +85,6 @@ interface GeneratedPicture {
   /** Joins this picture's analytics events to the prompt event. */
   generationId: string;
 }
-
-// Not crypto.randomUUID: jsdom lacks it, so the unit tests would have to mock it.
-const newGenerationId = (): string =>
-  `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`;
 
 /** Settings from the Advanced popover: a typed prompt that replaces the
     chosen words, a coarser pixel grid, and the current picture as the
@@ -336,7 +333,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         return;
       }
     }
-    const generationId = newGenerationId();
+    const generationId = createUuid();
     // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,

@@ -149,7 +149,7 @@ describe('Hoai2026Congrats', () => {
     press('button', 'Keep playing');
     press('button', 'Close');
     expect(reportedActions()).toEqual([
-      'open_sprite_lab',
+      'open_quest_builder_standalone',
       'elementary',
       'middle_school',
       'copy_link',
