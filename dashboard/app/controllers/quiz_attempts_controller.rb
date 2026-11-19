@@ -36,6 +36,7 @@ class QuizAttemptsController < ApplicationController
     level = Quiz.find(params[:levelId])
     unit = Unit.find(params[:unitId])
     raise ActiveRecord::RecordNotFound unless level.script_levels.exists?(script_id: unit.id)
+    return render_locked if level.locked_for?(current_user, unit.id)
 
     # Unique index is the integrity guarantee; retry so a concurrent create
     # resumes the "winner"'s row instead of 400ing.
@@ -68,6 +69,7 @@ class QuizAttemptsController < ApplicationController
   def update
     attempt = QuizAttempt.find(params[:id])
     raise ActiveRecord::RecordNotFound unless attempt.user_id == current_user.id
+    return render_locked if attempt.level&.locked_for?(current_user, attempt.unit_id)
 
     # The client's current answer for each question it's answered - this
     # wins over what was autosaved.
@@ -105,6 +107,10 @@ class QuizAttemptsController < ApplicationController
     render status: :ok, json: quiz_attempt_json(attempt)
   rescue StandardError => exception
     render status: :bad_request, json: {error: exception.message}
+  end
+
+  private def render_locked
+    render status: :forbidden, json: {error: 'lesson is locked'}
   end
 
   private def latest_attempt(level_id, unit_id, user = current_user)

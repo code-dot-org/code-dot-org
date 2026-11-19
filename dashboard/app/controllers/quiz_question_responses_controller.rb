@@ -8,6 +8,9 @@ class QuizQuestionResponsesController < ApplicationController
   def create
     attempt = QuizAttempt.find(params[:quizAttemptId])
     raise ActiveRecord::RecordNotFound unless attempt.user_id == current_user.id
+    if attempt.level&.locked_for?(current_user, attempt.unit_id)
+      return render status: :forbidden, json: {error: 'lesson is locked'}
+    end
 
     # The question must be on this attempt's quiz.
     question = QuizQuestion.find(params[:quizQuestionId])
