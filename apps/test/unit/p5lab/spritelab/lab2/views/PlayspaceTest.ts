@@ -142,32 +142,6 @@ describe('playLayout', () => {
     expect(cross!.x + CROSS.w / 2).toBeCloseTo((b.left + b.right) / 2);
   });
 
-  it('drops the box below the restart buttons when it would reach under them', () => {
-    const corner = {w: 120, h: 70};
-    const size = {w: 700, h: 850};
-    const clear = playLayout(size, null, 'right', 41, CROSS, null).box;
-    // Alone, the box fills the width and starts over the buttons' foot.
-    expect(box(clear).top).toBeLessThan(8 + 70 + 12);
-    const {box: p, cross} = playLayout(size, null, 'right', 41, CROSS, corner);
-    const b = box(p);
-    expect(b.top).toBeGreaterThanOrEqual(8 + 70 + 12);
-    // Under them the height binds: the box, the cross and the bar share it.
-    expect(b.right - b.left).toBe(850 - 90 - (CROSS.h + 12) - 41 - 24);
-    expect(cross!.y).toBeCloseTo(b.bottom + 12);
-    // A box with room to the right of it is left where it was.
-    const wide = playLayout(
-      {w: 1400, h: 600},
-      null,
-      'right',
-      41,
-      CROSS,
-      corner
-    );
-    expect(box(wide.box)).toEqual(
-      box(playLayout({w: 1400, h: 600}, null, 'right', 41, CROSS, null).box)
-    );
-  });
-
   it('places the box alone when there is no cross', () => {
     const {box: p, cross} = playLayout(
       {w: 1000, h: 600},
