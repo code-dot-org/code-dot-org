@@ -11,10 +11,10 @@ We'll dive into more of the vocabulary around AI in Module 2, Understanding AI, 
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Artificial Intelligence (AI):</strong> A broad term for computer systems designed to perform tasks that usually require human thinking, such as recognizing patterns, making decisions, or understanding language.</p>
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Generative AI:</strong> A type of AI that can create new content, like text, images, video, audio, or computer code.</p>
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Large Language Models (LLMs):</strong> Very large computer programs trained on huge amounts of text. They are especially good at understanding questions and generating human-like written responses.</p>
-<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>AI Chatbots:</strong> The conversational tools (the chat interface) that people use to interact with AI models, usually by typing or speaking.</p>
+<p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>AI Chatbots:</strong> The conversational apps (the chat interface) that people use to interact with AI models, usually by typing or speaking.</p>
 </div>
 
-You may be familiar with one or more of the following AI tools:
+You may be familiar with one or more of the following AI apps:
 
 <div style="display:flex;justify-content:space-between;align-items:center;width:95%;margin:20pt auto;padding:0 5px;">
 <div style="width:20%;text-align:center;">
@@ -32,9 +32,9 @@ You may be familiar with one or more of the following AI tools:
 </div>
 
 All of these are:
-* Generative AI tools
+* Generative AI applications
 * Built using Large Language Models
 * Accessed through an AI chatbot interface
 
-Most consumer AI tools, including all of the above, are now **multimodal**, meaning they can work with more than just text. They can understand and create content using text, images, audio, and sometimes video.
+Most consumer AI apps, including all of the above, are now **multimodal**, meaning they can work with more than just text. They can understand and create content using text, images, audio, and sometimes video.
 MARKDOWN

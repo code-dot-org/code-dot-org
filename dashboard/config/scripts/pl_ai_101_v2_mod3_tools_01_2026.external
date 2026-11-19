@@ -3,23 +3,23 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Education Specific Tools
+# Education Specific Apps
 
-LLMs are powerful tools that can generate text, summarize information, and respond to a wide range of prompts. While they can be useful in education, they are not always designed with schools, teachers, or students in mind.
+LLMs are powerful apps that can generate text, summarize information, and respond to a wide range of prompts. While they can be useful in education, they are not always designed with schools, teachers, or students in mind.
 
-To address this, many companies have developed education-specific AI tools. These tools often use the same underlying technology as LLMs but are designed specifically for teaching and learning.
+To address this, many companies have developed education-specific AI apps. These apps often use the same underlying technology as LLMs but are designed specifically for teaching and learning.
 
-Education-specific AI tools may include features such as:
+Education-specific AI apps may include features such as:
 * Built-in guardrails that limit inappropriate or unsafe use
 * Stronger privacy protections aligned to school requirements
 * Features and interfaces tailored to educator needs
 
-When evaluating these tools, look for ones that:
+When evaluating these apps, look for ones that:
 * Prioritize student privacy
 * Provide teacher controls or visibility
 * Support learning and critical thinking, not just answer generation
 
-Like any AI tool, education-specific AI tools should be used thoughtfully and with professional judgment.
+Like any AI tool, education-specific AI apps should be used thoughtfully and with professional judgment.
 
 <br>
 
