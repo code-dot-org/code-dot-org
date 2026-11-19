@@ -182,9 +182,15 @@
   border-color: var(--border-neutral-primary);
 }
 
-.indexCell.testRow {
-  box-shadow: inset mixins.$test-row-marker-width 0 0
-    mixins.$test-row-marker-color;
+// Over the cell's bottom border, so adjacent test rows join into one bar.
+.indexCell.testRow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: 0;
+  width: mixins.$test-row-marker-width;
+  background-color: mixins.$test-row-marker-color;
 }
 
 .indexHeader {

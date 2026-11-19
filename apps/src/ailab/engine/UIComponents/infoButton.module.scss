@@ -1,0 +1,16 @@
+$info-icon-size: 12px;
+
+// Doubled, to outrank the theme's extraSmall padding and icon size.
+.infoButton.infoButton {
+  padding: 0;
+  min-width: $info-icon-size;
+  min-height: $info-icon-size;
+  width: $info-icon-size;
+  height: $info-icon-size;
+
+  i {
+    width: $info-icon-size;
+    font-size: $info-icon-size;
+    line-height: $info-icon-size;
+  }
+}

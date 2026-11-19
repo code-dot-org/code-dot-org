@@ -17,15 +17,33 @@
   padding: 0 20px;
 }
 
+.titleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
 .card .title {
   margin: 0;
   font-weight: 600;
   overflow-wrap: anywhere;
 }
 
-.card .subtitle {
+.card .rowNumber {
   margin: 0;
   color: var(--text-neutral-tertiary);
+}
+
+.testRowMark {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.card .testRowText {
+  color: var(--text-neutral-secondary);
 }
 
 .list {

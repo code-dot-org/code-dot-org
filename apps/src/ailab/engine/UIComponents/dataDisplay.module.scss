@@ -54,12 +54,11 @@
   color: var(--text-neutral-quaternary);
 }
 
-.header .testRowLegend {
+.testRowLegend {
   display: flex;
   align-items: center;
   gap: 6px;
   white-space: nowrap;
-  color: var(--text-neutral-quaternary);
 }
 
 .testRowSwatch {
@@ -67,6 +66,10 @@
   width: mixins.$test-row-marker-width;
   height: 12px;
   background-color: mixins.$test-row-marker-color;
+}
+
+.header .testRowLegendText {
+  color: var(--text-neutral-primary);
 }
 
 .tableContainer {

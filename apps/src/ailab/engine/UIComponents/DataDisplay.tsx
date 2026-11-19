@@ -14,9 +14,12 @@ import {useTestRows} from '../useTestRows';
 
 import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';
+import InfoButton from './InfoButton';
 import TableFilter from './TableFilter';
 
 import styles from './dataDisplay.module.scss';
+
+const TEST_ROWS_TOOLTIP = 'These rows will be set aside for testing.';
 
 const DataDisplay = () => {
   const dispatch = useAppDispatch();
@@ -69,16 +72,17 @@ const DataDisplay = () => {
           {isTable && testRows.size > 0 && (
             <>
               <span className={styles.separator} aria-hidden="true" />
-              {/* Each test row's number says so to screen readers. */}
-              <Typography
-                component="span"
-                variant="body4"
-                className={styles.testRowLegend}
-                aria-hidden="true"
-              >
-                <span className={styles.testRowSwatch} />
-                Test rows
-              </Typography>
+              <div className={styles.testRowLegend}>
+                <span className={styles.testRowSwatch} aria-hidden="true" />
+                <Typography
+                  component="span"
+                  variant="body4"
+                  className={styles.testRowLegendText}
+                >
+                  Test rows
+                </Typography>
+                <InfoButton about="test rows" tooltip={TEST_ROWS_TOOLTIP} />
+              </div>
             </>
           )}
         </div>

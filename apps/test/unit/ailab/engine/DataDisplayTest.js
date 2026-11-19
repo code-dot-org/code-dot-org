@@ -294,6 +294,7 @@ describe('DataDisplay', () => {
       ).toEqual(['3, test row', '8, test row']);
       expect(screen.getByRole('rowheader', {name: '4'})).toBeTruthy();
       expect(screen.getByText('Test rows')).toBeTruthy();
+      expect(button('About test rows')).toBeTruthy();
     });
 
     test('names a test row on its card, and drops the legend', () => {
@@ -305,6 +306,14 @@ describe('DataDisplay', () => {
       fireEvent.click(button('Next card'));
       fireEvent.click(button('Next card'));
       expect(screen.getByRole('group', {name: 'Row 3 Test row'})).toBeTruthy();
+      expect(button('About test rows').tabIndex).toBe(0);
+
+      fireEvent.click(button('Next card'));
+      const leavingCardInfo = screen.getByRole('button', {
+        name: 'About test rows',
+        hidden: true,
+      });
+      expect(leavingCardInfo.tabIndex).toBe(-1);
     });
   });
 
@@ -376,7 +385,7 @@ describe('DataDisplay', () => {
       fireEvent.click(button('Next card'));
       fireEvent.click(button('Next card'));
       expect(
-        screen.getByRole('group', {name: 'pet 3 Row 3 · Test row'})
+        screen.getByRole('group', {name: 'pet 3 Row 3 Test row'})
       ).toBeTruthy();
     });
 

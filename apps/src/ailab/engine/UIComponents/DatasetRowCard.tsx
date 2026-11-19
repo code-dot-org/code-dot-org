@@ -8,6 +8,8 @@ import {useProject} from '../ProjectContext';
 import {getDatasetId, getIdColumn} from '../selectors';
 import type {DataRow} from '../types';
 
+import InfoButton from './InfoButton';
+
 import styles from './datasetRowCard.module.scss';
 import appStyles from '../app.module.scss';
 
@@ -30,15 +32,10 @@ const DatasetRowCard = ({
     idColumn && row[idColumn] !== ''
       ? getLocalizedValue(row[idColumn], datasetId)
       : undefined;
-  const subtitle = [
-    name !== undefined && `Row ${rowNumber}`,
-    isTestRow && 'Test row',
-  ]
-    .filter(Boolean)
-    .join(' · ');
   const {project} = useProject();
   const titleId = useId();
-  const subtitleId = useId();
+  const rowNumberId = useId();
+  const testRowId = useId();
   const detailsRef = useRef<HTMLDListElement>(null);
 
   // Coming back to a row would otherwise keep where its list was scrolled.
@@ -81,26 +78,51 @@ const DatasetRowCard = ({
     <div
       className={styles.card}
       role="group"
-      aria-labelledby={subtitle ? `${titleId} ${subtitleId}` : titleId}
+      aria-labelledby={[
+        titleId,
+        name !== undefined && rowNumberId,
+        isTestRow && testRowId,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       aria-roledescription="slide"
     >
       <div className={styles.heading}>
-        <Typography
-          id={titleId}
-          component="h3"
-          variant="body1"
-          className={styles.title}
-        >
-          {name ?? `Row ${rowNumber}`}
-        </Typography>
-        {subtitle && (
+        <div className={styles.titleRow}>
           <Typography
-            id={subtitleId}
+            id={titleId}
+            component="h3"
+            variant="body1"
+            className={styles.title}
+          >
+            {name ?? `Row ${rowNumber}`}
+          </Typography>
+          {isTestRow && (
+            <div className={styles.testRowMark}>
+              <Typography
+                id={testRowId}
+                component="span"
+                variant="body3"
+                className={styles.testRowText}
+              >
+                Test row
+              </Typography>
+              <InfoButton
+                about="test rows"
+                tooltip="This row will be set aside for testing."
+                tabIndex={isCurrent ? 0 : -1}
+              />
+            </div>
+          )}
+        </div>
+        {name !== undefined && (
+          <Typography
+            id={rowNumberId}
             component="p"
             variant="body3"
-            className={styles.subtitle}
+            className={styles.rowNumber}
           >
-            {subtitle}
+            {`Row ${rowNumber}`}
           </Typography>
         )}
       </div>
