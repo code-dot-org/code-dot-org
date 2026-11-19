@@ -15,6 +15,7 @@ import {useNavigate} from 'react-router-dom';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useApiClient} from '@code-dot-org/core/api';
+import {ChallengeTypes} from '@code-dot-org/shared-constants';
 
 import aiTutorAvatar from '../gallery/ai-tutor-avatar.png';
 import {getChallengeResponse} from '../gallery/api';
@@ -67,7 +68,7 @@ export interface WhiteboardChallengeProps {
 interface ChallengeBoxProps {
   lessonId: number;
   challenge: Challenge;
-  challengeType: 'video' | 'whiteboard';
+  challengeType: string;
   WhiteboardChallenge: ComponentType<WhiteboardChallengeProps>;
   transcribeAudio: (audio: Blob) => Promise<string>;
   stickerSections: StickerSection[];
@@ -130,10 +131,11 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   // always applies; whiteboard challenges only need it for an audio
   // explanation.
   const isRecordable =
-    challengeType === 'video' || explanationType === ExplanationTypes.AUDIO;
+    challengeType === ChallengeTypes.VIDEO ||
+    explanationType === ExplanationTypes.AUDIO;
   // Video previews return to edit first; audio re-records in one click
   const isVideoPreview =
-    challengeType === 'video' && hasRecording && !isRecording;
+    challengeType === ChallengeTypes.VIDEO && hasRecording && !isRecording;
 
   const handleRecordClick = () => {
     if (isVideoPreview) {
@@ -343,7 +345,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     </div>
                   </div>
                 )}
-              {challengeType === 'whiteboard' &&
+              {challengeType === ChallengeTypes.WHITEBOARD &&
                 compositionState !== CompositionStates.VIEWING_FEEDBACK && (
                   <div className={styles.whiteboardButtonContainer}>
                     {compositionState !==
@@ -510,7 +512,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
           <div className={styles.activityColumn}>
             <div className={styles.activityRow}>
               <div className={styles.activityColumnTwo}>
-                {challengeType === 'whiteboard' ? (
+                {challengeType === ChallengeTypes.WHITEBOARD ? (
                   <WhiteboardChallenge
                     challengeId={challenge?.id ?? null}
                     submitted={submitted}
