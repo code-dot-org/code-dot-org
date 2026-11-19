@@ -722,6 +722,48 @@ describe('PathwayApp', () => {
       expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
     });
 
+    it('opens the project when the URL names it', async () => {
+      window.history.replaceState({}, '', '?checkpoint=project&step=project');
+
+      await renderSettled();
+
+      expect(screen.getByText('playing My Project')).toBeTruthy();
+    });
+
+    it('stays on the project when the teacher picks another student', async () => {
+      let viewAsUserId = 77;
+      mockUseAppSelector.mockImplementation(selector =>
+        selector({progress: {viewAsUserId}, lab: {}})
+      );
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      // A new element each time, so the rerender reaches PathwayApp.
+      const app = () => (
+        <PathwayApp
+          pathway={pathway}
+          progressKey={progressKey}
+          levelProperties={levelProperties}
+        />
+      );
+      let rerender: (ui: React.ReactElement) => void = () => {};
+      await act(async () => {
+        rerender = render(app()).rerender;
+      });
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+      // The real player writes the project into the URL.
+      window.history.replaceState({}, '', '?checkpoint=project&step=project');
+
+      viewAsUserId = 78;
+      await act(async () => rerender(app()));
+      await act(async () => {
+        await Promise.resolve();
+      });
+
+      expect(mockLoad).toHaveBeenCalledTimes(2);
+      expect(screen.getByText('playing My Project')).toBeTruthy();
+    });
+
     it('passes the project tab as active to StepPlayer in project view', async () => {
       mockLoad.mockResolvedValue({
         steps: {'intro-step': {status: 'started', timeSpent: 0}},

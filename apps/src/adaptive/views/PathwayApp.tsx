@@ -130,13 +130,18 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
 
   let initialCheckpointId: string | undefined;
   let initialStepId: string | undefined;
+  let initialProject = false;
   // A step with generatedInstructions but no status doesn't count as started.
   // Only a checkpoint's steps count; time on the project screen does not.
   const hasProgress = pathway.checkpoints.some(c =>
     c.steps.some(s => progress.steps[s.id]?.status)
   );
 
-  if (urlCheckpointId) {
+  if (urlCheckpointId === 'project') {
+    // The project screen writes this; a teacher who picks another student
+    // there stays on it, since the app remounts once their progress loads.
+    initialProject = true;
+  } else if (urlCheckpointId) {
     // A teacher viewing a student may open what the student has not unlocked.
     if (
       statusMap[urlCheckpointId] === 'locked' &&
@@ -175,6 +180,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       statusMap={statusMap}
       initialCheckpointId={initialCheckpointId}
       initialStepId={initialStepId}
+      initialProject={initialProject}
       isFirstVisit={!hasProgress}
       {...restProgress}
     />
@@ -190,6 +196,8 @@ type LoadedPathwayAppProps = PathwayAppProps &
     initialCheckpointId?: string;
     /** Step within initialCheckpointId to start on. */
     initialStepId?: string;
+    /** Open the project screen on mount, over any initial checkpoint. */
+    initialProject?: boolean;
     isFirstVisit: boolean;
   };
 
@@ -210,6 +218,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   statusMap,
   initialCheckpointId,
   initialStepId,
+  initialProject = false,
   isFirstVisit,
   isViewingStudent,
   startStep,
@@ -232,7 +241,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     [pathway, progress]
   );
   const [view, setView] = useState<View>(
-    initialCheckpointId
+    initialProject
+      ? {kind: 'project'}
+      : initialCheckpointId
       ? {kind: 'step', checkpointId: initialCheckpointId, stepId: initialStepId}
       : {kind: 'map'}
   );
