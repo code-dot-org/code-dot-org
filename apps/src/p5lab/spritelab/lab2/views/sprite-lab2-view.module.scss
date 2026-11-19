@@ -136,14 +136,6 @@ $tab-item-height: 34px;
   // The tabs are distinct destinations, not a continuous strip: separate them
   // enough to be told apart at a glance.
   gap: 10px;
-  // Tab labels and controls, not text to copy. code-studio.css sets
-  // `p, pre, span` back to selectable, so the labels are named too.
-  user-select: none;
-
-  span,
-  p {
-    user-select: none;
-  }
 }
 
 
@@ -288,18 +280,6 @@ $z-over-blockly: 71;
   line-height: 1;
 }
 
-// The scene dropdown's name is a control, not text to copy, wherever the
-// dropdown stands. code-studio.css sets `p, span` back to selectable, so
-// the name's span is named too.
-.sceneDropdown {
-  user-select: none;
-
-  span,
-  p {
-    user-select: none;
-  }
-}
-
 // The trigger reads as one of the bar's buttons. Higher specificity than
 // the dropdown's own container rules.
 .sceneDropdown > button.sceneTrigger {
@@ -332,7 +312,6 @@ $z-over-blockly: 71;
 .sceneMenu {
   margin: 0;
   padding: 4px 0;
-  user-select: none;
   min-width: 200px;
   max-height: 60vh;
   overflow-y: auto;
