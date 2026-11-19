@@ -42,6 +42,7 @@ class ProjectsController < ApplicationController
     [
       :projects__id___id,
       :projects__storage_id___storage_id,
+      :projects__uuid___uuid,
       :projects__value___value,
       :projects__project_type___project_type,
       :projects__published_at___published_at,
@@ -69,7 +70,7 @@ class ProjectsController < ApplicationController
     @featured_project_table_rows = []
     project_featured_project_combo_data.each do |project_details|
       project_details_value = JSON.parse(project_details[:value])
-      channel = get_project_channel_id(project_details[:storage_id], project_details[:id])
+      channel = get_project_channel_id_from_row(project_details)
       status = get_featured_project_status(project_details[:featured_at], project_details[:unfeatured_at])
       featured_project_row = {
         projectName: project_details_value['name'],

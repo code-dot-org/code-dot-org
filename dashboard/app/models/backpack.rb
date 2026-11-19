@@ -41,6 +41,24 @@ class Backpack < ApplicationRecord
     get_project_channel_id(storage_id_for_user_id(user_id), project_id)
   end
 
+  # Channels of every backpack of one user, keyed by app type, with one storage
+  # id lookup and one projects read shared by all of them.
+  def self.channels_by_app_type(user_id)
+    backpacks = where(user_id: user_id).order(:id).includes(:game).to_a
+    return {} if backpacks.empty?
+
+    storage_id = storage_id_for_user_id(user_id)
+    uuids = Projects.get_by_ids(backpacks.map(&:project_id)).select_hash(:id, :uuid)
+    backpacks.each_with_object({}) do |backpack, channels|
+      app_type = backpack.game_id ? backpack.game&.name&.downcase : SharedConstants::UNIVERSAL_APP_TYPE
+      # A backpack whose game no longer exists cannot be keyed by app type.
+      next unless app_type
+      channels[app_type] = get_project_channel_id_from_row(
+        storage_id: storage_id, id: backpack.project_id, uuid: uuids[backpack.project_id]
+      )
+    end
+  end
+
   private_class_method def self.create_with_project(user_id, game_id, ip)
     project = Projects.new(storage_id_for_user_id(user_id))
     encrypted_id = project.create({hidden: true}, ip: ip, type: 'backpack')

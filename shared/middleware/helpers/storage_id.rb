@@ -105,18 +105,26 @@ def storage_encrypt_id(id)
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
 end
 
+# Channel id of a project known only by id. Reads the project row for its
+# uuid; a caller that already holds the row should use
+# get_project_channel_id_from_row instead.
 def get_project_channel_id(storage_id, project_id)
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i
   raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
+
+  return storage_encrypt_channel_id(storage_id, project_id) unless DCDO.get('project-uuid-in-url', false)
+
   project = Projects.table.where(id: project_id).first || Project.find_by(id: project_id)
+  (project && project[:uuid]) || storage_encrypt_channel_id(storage_id, project_id)
+end
 
-  # return uuid if it exists
-  return project[:uuid] if DCDO.get('project-uuid-in-url', false) && project && project[:uuid]
-
-  # otherwise, continue to use the old encryption method
-  storage_encrypt_channel_id(storage_id, project_id)
+# Channel id of a project row the caller already holds. The row must carry
+# :storage_id, :id and :uuid, so a select that lists columns needs uuid.
+def get_project_channel_id_from_row(row)
+  return row[:uuid] if row[:uuid] && DCDO.get('project-uuid-in-url', false)
+  storage_encrypt_channel_id(row[:storage_id], row[:id])
 end
 
 def storage_encrypt_channel_id(storage_id, project_id)
