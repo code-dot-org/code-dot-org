@@ -125,7 +125,8 @@ class ActivitiesController < ApplicationController
       track_progress
 
       # If a student is submitting work on an AI-enabled level, and their teachers haven't opted-out, trigger the AI evaluation job.
-      if params[:submitted] == 'true' && current_user &&
+      if params[:submitted] == 'true' &&
+          current_user &&
           AiRubricConfig.ai_enabled?(@script_level) &&
           Policies::Ai.ai_rubrics_enabled_for_script_level?(current_user, @script_level)
         metadata = {
