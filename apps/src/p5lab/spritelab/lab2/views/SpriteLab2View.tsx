@@ -490,6 +490,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     dispatch(setInRestrictedShareMode(!!inRestrictedShareMode));
   }, [dispatch, inRestrictedShareMode]);
 
+  // Clear restricted share mode when the component unmounts,
+  // as we could be going to a non-Sprite Lab 2 level which
+  // does not set inRestrictedShareMode.
+  useEffect(
+    () => () => {
+      dispatch(setInRestrictedShareMode(false));
+    },
+    [dispatch]
+  );
+
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
