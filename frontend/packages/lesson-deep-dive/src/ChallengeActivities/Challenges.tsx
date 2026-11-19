@@ -8,18 +8,26 @@ import ChallengePicker from './ChallengePicker';
 interface ChallengesProps {
   lessonId: number;
   onReviewInstead?: () => void;
+  onModalityChange?: (modality: 'video' | 'whiteboard') => void;
+  onChallengeStarted?: (challenge: Challenge, challengeType: string) => void;
 }
 
-const Challenges: FC<ChallengesProps> = ({lessonId, onReviewInstead}) => {
+const Challenges: FC<ChallengesProps> = ({
+  lessonId,
+  onReviewInstead,
+  onModalityChange,
+  onChallengeStarted,
+}) => {
   const navigate = useNavigate();
 
   const challengeSetCallback = useCallback(
     (pickedChallenge: Challenge | null, pickedChallengeType: string | null) => {
       if (pickedChallenge && pickedChallengeType) {
+        onChallengeStarted?.(pickedChallenge, pickedChallengeType);
         navigate(`/challenge/${pickedChallenge.id}/${pickedChallengeType}`);
       }
     },
-    [navigate],
+    [navigate, onChallengeStarted],
   );
 
   return (
@@ -27,6 +35,7 @@ const Challenges: FC<ChallengesProps> = ({lessonId, onReviewInstead}) => {
       lessonId={lessonId}
       challengeSetCallback={challengeSetCallback}
       onReviewInstead={onReviewInstead}
+      onModalityChange={onModalityChange}
     />
   );
 };

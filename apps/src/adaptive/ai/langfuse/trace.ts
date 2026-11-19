@@ -19,6 +19,7 @@ const MAX_ERROR_MESSAGE_LENGTH = 1_000;
 export type TraceName =
   | 'adaptive-instructions'
   | 'adaptive-validation'
+  | 'adaptive-effort'
   | 'adaptive-project';
 
 export type TraceOutcome = 'success' | 'schema_mismatch' | 'error';

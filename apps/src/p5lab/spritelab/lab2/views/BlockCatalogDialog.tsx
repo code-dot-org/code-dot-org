@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
-import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 
 import {CatalogEntry} from '../blockCatalog';
 
@@ -50,7 +49,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
       >
         <div className={moduleStyles.header}>
           <div className={moduleStyles.headerIcon} aria-hidden="true">
-            <FontAwesomeV6Icon iconName="compass" />
+            <FontAwesomeV6Icon iconName="magnifying-glass-plus" />
           </div>
           <div>
             <h2>{TITLE}</h2>
@@ -129,7 +128,6 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
                     <MuiButton
                       variant="contained"
                       color="primary"
-                      sx={getRunButtonSx(null)}
                       startIcon={<FontAwesomeV6Icon iconName="plus" />}
                       onClick={() => onAdd(selected.type)}
                     >
@@ -142,7 +140,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
           </div>
         </div>
         <div className={moduleStyles.footer}>
-          <MuiButton variant="outlined" color="secondary" onClick={onClose}>
+          <MuiButton variant="contained" color="secondary" onClick={onClose}>
             Done
           </MuiButton>
         </div>

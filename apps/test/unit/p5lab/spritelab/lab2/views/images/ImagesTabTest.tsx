@@ -120,6 +120,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
     imageUrl,
     tools,
     palette,
+    startColor,
     knownPixelGrid,
     brushSizes,
     onEdit,
@@ -130,6 +131,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
     imageUrl?: string;
     tools?: readonly string[];
     palette?: readonly unknown[];
+    startColor?: readonly number[];
     knownPixelGrid?: number;
     brushSizes?: readonly number[];
     onEdit?: () => void;
@@ -154,6 +156,7 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
         </button>
         <span>{tools ? `${tools.length} tools` : 'all tools'}</span>
         <span>{palette ? `${palette.length} colors` : 'every color'}</span>
+        <span>starts on {startColor?.join(' ') ?? 'its own color'}</span>
         <span>grid {knownPixelGrid ?? 'none'}</span>
         <span>{brushSizes?.length ?? 'all'} brush sizes</span>
         <span>drawing {imageUrl}</span>
@@ -209,10 +212,23 @@ const animationList = () => ({
   orderedKeys: Object.keys(propsByKey),
   propsByKey,
 });
+// Uploads are moderated only when there is a channel.
+let labState: Record<string, unknown> = {channel: {id: 'c1'}};
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: (select: (state: unknown) => unknown) =>
-    select({animationList: animationList(), lab: {}}),
+    select({animationList: animationList(), lab: labState}),
   useAppDispatch: () => jest.fn(),
+}));
+const moderate = jest.fn<Promise<string>, unknown[]>();
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImage: (...args: unknown[]) => moderate(...args),
+}));
+const httpPost = jest.fn((...args: unknown[]) =>
+  Promise.resolve({json: async () => ({abuse_score: 0})} as Response)
+);
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  __esModule: true,
+  default: {post: (...args: unknown[]) => httpPost(...args)},
 }));
 const params: Record<string, string> = {};
 jest.mock('@cdo/apps/code-studio/utils', () => ({
@@ -282,13 +298,17 @@ function fileInput(container: HTMLElement) {
   return container.querySelector('#file-input') as HTMLInputElement;
 }
 
+async function settle() {
+  await act(async () => {
+    await new Promise(resolve => setTimeout(resolve, 0));
+  });
+}
+
 async function pickFile(container: HTMLElement, file: File) {
   await act(async () => {
     fireEvent.change(fileInput(container), {target: {files: [file]}});
   });
-  await act(async () => {
-    await new Promise(resolve => setTimeout(resolve, 0));
-  });
+  await settle();
 }
 
 function renderTab(
@@ -321,6 +341,9 @@ describe('ImagesTab', () => {
     endSession.mockReset();
     sceneOverrides = {};
     lastRateResult = undefined;
+    labState = {channel: {id: 'c1'}};
+    moderate.mockReset().mockResolvedValue('safe');
+    httpPost.mockClear();
   });
 
   it('opens a level about one image on the place it will go, and lands it there', async () => {
@@ -1053,7 +1076,8 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
     // The eyedropper is among the tools; the colors are the fixed swatches.
     expect(screen.getByText('4 tools')).toBeTruthy();
-    expect(screen.getByText('10 colors')).toBeTruthy();
+    expect(screen.getByText('20 colors')).toBeTruthy();
+    expect(screen.getByText('starts on 41 173 255 255')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     saveEdited.mockResolvedValue('k1');
     await act(async () => {
@@ -1121,7 +1145,7 @@ describe('ImagesTab', () => {
       screen.getByRole('dialog', {name: 'How AI made your image'})
     ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
-    expect(screen.getByText('A cat')).toBeTruthy();
+    expect(screen.getByText('“A cat”')).toBeTruthy();
     // Asked for, so it closes unread.
     fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
     expect(screen.queryByRole('dialog')).toBeNull();
@@ -1513,6 +1537,133 @@ describe('ImagesTab', () => {
       await pickFile(container, pngFile());
       expect(pressed()).toEqual(['Block 1']);
       expect(await screen.findByText('drawing uploaded.png')).toBeTruthy();
+    });
+
+    const pickCharacter = async (file = pngFile()) => {
+      const view = renderTab({editingOffered: true, enableImageUpload: true});
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      await pickFile(view.container, file);
+      return view;
+    };
+
+    it('checks the picture as picked, before storing anything', async () => {
+      moderate.mockImplementation(async () => {
+        expect(acceptUploaded).not.toHaveBeenCalled();
+        return 'safe';
+      });
+      await pickCharacter();
+      expect(moderate).toHaveBeenCalledWith(
+        expect.objectContaining({name: 'My Cat.png', type: 'image/png'}),
+        'spritelab',
+        {uploaderType: 'SpriteLab2'}
+      );
+      expect(acceptUploaded).toHaveBeenCalled();
+    });
+
+    it('stores the picture when the check cannot be made', async () => {
+      moderate.mockResolvedValue('error');
+      await pickCharacter();
+      expect(acceptUploaded).toHaveBeenCalled();
+      expect(screen.queryByRole('alert')).toBeNull();
+    });
+
+    it('stores nothing until the student answers for a flagged picture', async () => {
+      moderate.mockResolvedValue('flagged');
+      await pickCharacter();
+      expect(
+        screen.getByText('Warning: Inappropriate Image')
+      ).toBeInTheDocument();
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      // The warning blocks a second pick: there is one pending slot for it.
+      expect(
+        screen.getByRole('button', {name: 'Upload image', hidden: true})
+      ).toBeDisabled();
+    });
+
+    it('stores a flagged picture the student keeps, and flags the project', async () => {
+      moderate.mockResolvedValue('flagged');
+      acceptUploaded.mockImplementation(async () => {
+        propsByKey.k1 = {name: 'Sprite 1', categories: []};
+        return 'k1';
+      });
+      await pickCharacter();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^accept$/i}));
+      });
+      await settle();
+      expect(acceptUploaded).toHaveBeenCalledWith(
+        expect.anything(),
+        expect.objectContaining({flagged: true})
+      );
+      expect(httpPost).toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        JSON.stringify({type: 'flag'}),
+        true,
+        expect.anything()
+      );
+    });
+
+    it('stores nothing when the student turns down a flagged picture', async () => {
+      moderate.mockResolvedValue('flagged');
+      await pickCharacter();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^cancel$/i}));
+      });
+      await settle();
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(httpPost).not.toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        expect.anything(),
+        expect.anything(),
+        expect.anything()
+      );
+      expect(screen.queryByRole('alert')).toBeNull();
+      expect(screen.getByRole('button', {name: 'Upload image'})).toBeEnabled();
+      // Focus goes back to the button that opened the file dialog, which the
+      // dialog's disableRestoreFocus would otherwise have dropped.
+      expect(document.activeElement).toBe(
+        screen.getByRole('button', {name: 'Upload image'})
+      );
+    });
+
+    it('leaves the project unflagged when storing an accepted picture fails', async () => {
+      moderate.mockResolvedValue('flagged');
+      acceptUploaded.mockRejectedValue(new Error('no'));
+      await pickCharacter();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^accept$/i}));
+      });
+      await settle();
+      expect(screen.getByRole('alert').textContent).toMatch(
+        /couldn't be added/
+      );
+      expect(httpPost).not.toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        expect.anything(),
+        expect.anything(),
+        expect.anything()
+      );
+    });
+
+    it('checks nothing it has already refused for its size', async () => {
+      await pickCharacter(pngFile('Huge.png', 6 * 1024 * 1024));
+      expect(moderate).not.toHaveBeenCalled();
+    });
+
+    it('checks nothing that holds no picture', async () => {
+      decodeImage.mockRejectedValueOnce(new Error('not an image'));
+      await pickCharacter(pngFile('Notes.png'));
+      expect(moderate).not.toHaveBeenCalled();
+    });
+
+    it('checks nothing when there is no project to flag', async () => {
+      labState = {};
+      await pickCharacter();
+      expect(moderate).not.toHaveBeenCalled();
+      expect(acceptUploaded).toHaveBeenCalled();
     });
   });
 });

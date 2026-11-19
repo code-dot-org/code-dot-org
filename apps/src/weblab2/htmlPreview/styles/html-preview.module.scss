@@ -10,6 +10,11 @@
   grid-template-rows: 40px 1fr;
 }
 
+// Without the header, the preview takes the whole height.
+.previewContainerNoHeader {
+  grid-template-rows: 1fr;
+}
+
 // Fixed, not absolute: an ancestor that clips its overflow would cut off the
 // header and its exit button.
 .fullScreenPanelContainer {

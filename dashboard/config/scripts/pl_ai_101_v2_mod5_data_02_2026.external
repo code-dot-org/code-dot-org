@@ -3,16 +3,16 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Evaluating AI Tools for Classroom Use
+# Evaluating AI Apps for Classroom Use
 
-Before using any AI tool with students or as part of your teaching practice, it’s important to evaluate whether it meets safety, privacy, and instructional needs. This is true whether or not the tool was initially designed to be used in an educational setting.
+Before using any AI app with students or as part of your teaching practice, it’s important to evaluate whether it meets safety, privacy, and instructional needs. This is true whether or not the app was initially designed to be used in an educational setting.
 
 <br>
 
 <div style="width:80%; max-width:900px; margin:0 auto; font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#292F36;">
 
 <div style="font-size:24px; font-weight:800; margin-bottom:12px; text-align:center;">
-Evaluating an AI Tool for Classroom Use
+Evaluating an AI App for Classroom Use
 </div>
 
 <div style="border:1px solid #D9DDE3; border-radius:16px; overflow:hidden; background:#FFFFFF; box-shadow:0 4px 12px rgba(41,47,54,0.06);">
@@ -25,9 +25,9 @@ Evaluating an AI Tool for Classroom Use
 <div style="padding:16px;">
 <div style="font-weight:800; font-size:18px; margin-bottom:6px;">Check for an Educational Focus</div>
 <div style="font-size:15px; line-height:1.5;">
-<div>☐ Confirm the tool is designed for educational use</div>
+<div>☐ Confirm the app is designed for educational use</div>
 <div>☐ Identify features such as teacher controls, student safeguards, or classroom alignment</div>
-<div style="margin-top:6px;">➡️ If the tool is not education-specific, proceed with caution.</div>
+<div style="margin-top:6px;">➡️ If the app is not education-specific, proceed with caution.</div>
 </div>
 </div>
 </div>
@@ -41,9 +41,9 @@ Evaluating an AI Tool for Classroom Use
 <div style="font-weight:800; font-size:18px; margin-bottom:6px;">Review Documentation and Support Materials</div>
 <div style="font-size:15px; line-height:1.5;">
 <div>☐ Read help articles, guides, or support pages</div>
-<div>☐ Identify how the tool is intended to be used</div>
+<div>☐ Identify how the app is intended to be used</div>
 <div>☐ Locate information about safety features</div>
-<div>☐ Review how the tool handles data</div>
+<div>☐ Review how the app handles data</div>
 <div style="margin-top:6px;">➡️ Clear, transparent documentation is a positive sign.</div>
 </div>
 </div>
@@ -61,7 +61,7 @@ Evaluating an AI Tool for Classroom Use
 <div>☐ Confirm references to educational use</div>
 <div>☐ Check for compliance with laws (e.g., FERPA, COPPA)</div>
 <div>☐ Identify how user data is collected, stored, and used</div>
-<div style="margin-top:6px;">➡️ If this information is unclear or missing, reconsider using the tool.</div>
+<div style="margin-top:6px;">➡️ If this information is unclear or missing, reconsider using the app.</div>
 </div>
 </div>
 </div>
@@ -91,10 +91,10 @@ Evaluating an AI Tool for Classroom Use
 <div style="padding:16px;">
 <div style="font-weight:800; font-size:18px; margin-bottom:6px;">Follow School and District Guidance</div>
 <div style="font-size:15px; line-height:1.5;">
-<div>☐ Verify whether the tool is approved by your school or district</div>
+<div>☐ Verify whether the app is approved by your school or district</div>
 <div>☐ Follow local policies and guidelines for AI use</div>
 <div>☐ Consult administration if unsure about appropriate use</div>
-<div style="margin-top:6px;">➡️ When in doubt, check before using the tool.</div>
+<div style="margin-top:6px;">➡️ When in doubt, check before using the app.</div>
 </div>
 </div>
 </div>
@@ -106,5 +106,5 @@ Evaluating an AI Tool for Classroom Use
 <iframe src="https://micahkennedy.github.io/pulse_check/?Script=AI101&Version_Year=2026&Unit=unit5&Level=les1lev17&Activity_Type=resource" width="480" height="56" style="border:none;overflow:hidden;"></iframe>
 <br>
 
-Always follow your school or district’s policies regarding AI use. Stay informed about local laws, approved tools, and any guidance provided by your administration.
+Always follow your school or district’s policies regarding AI use. Stay informed about local laws, approved apps, and any guidance provided by your administration.
 MARKDOWN

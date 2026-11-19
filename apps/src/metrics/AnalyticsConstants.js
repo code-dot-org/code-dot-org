@@ -359,6 +359,29 @@ const EVENTS = {
   LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
   LESSON_TUTOR_PROGRESS_BUBBLE_CLICK: 'Lesson Tutor Progress Bubble Click',
 
+  // Tutor+
+  TUTOR_PLUS_OPENED: 'tutor_plus_opened',
+  TUTOR_PLUS_RECAP_CARD_VIEWED: 'tutor_plus_recap_card_viewed',
+  TUTOR_PLUS_OBJECTIVE_RATED: 'tutor_plus_objective_rated',
+  TUTOR_PLUS_REFLECTION_SUBMITTED: 'tutor_plus_reflection_submitted',
+  TUTOR_PLUS_NEXT_STEP_CHOSEN: 'tutor_plus_next_step_chosen',
+  TUTOR_PLUS_PRACTICE_MODALITY_SELECTED:
+    'tutor_plus_practice_modality_selected',
+  TUTOR_PLUS_CHAT_MESSAGE_SENT: 'tutor_plus_chat_message_sent',
+  TUTOR_PLUS_PRACTICE_DONE: 'tutor_plus_practice_done',
+  TUTOR_PLUS_PRACTICE_NEXT_CHOSEN: 'tutor_plus_practice_next_chosen',
+  TUTOR_PLUS_SKILLS_CHECK_STARTED: 'tutor_plus_skills_check_started',
+  TUTOR_PLUS_SKILLS_CHECK_ANSWERED: 'tutor_plus_skills_check_answered',
+  TUTOR_PLUS_SKILLS_CHECK_COMPLETED: 'tutor_plus_skills_check_completed',
+  TUTOR_PLUS_CHALLENGE_TYPE_SELECTED: 'tutor_plus_challenge_type_selected',
+  TUTOR_PLUS_CHALLENGE_STARTED: 'tutor_plus_challenge_started',
+  TUTOR_PLUS_CHALLENGE_RESTARTED: 'tutor_plus_challenge_restarted',
+  TUTOR_PLUS_CHALLENGE_SUBMITTED: 'tutor_plus_challenge_submitted',
+  TUTOR_PLUS_GALLERY_VIEWED: 'tutor_plus_gallery_viewed',
+  TUTOR_PLUS_GALLERY_VISIBILITY_TOGGLED:
+    'tutor_plus_gallery_visibility_toggled',
+  TUTOR_PLUS_GALLERY_REACTION_ADDED: 'tutor_plus_gallery_reaction_added',
+
   // Javalab
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
   JAVALAB_TEST_PASSED: 'Javalab Test Passed',
@@ -783,6 +806,9 @@ const EVENTS = {
   ADAPTIVE_INSTRUCTIONS_GENERATED: 'Adaptive Instructions Generated',
   ADAPTIVE_WORK_VALIDATION_PASSED: 'Adaptive Work Validation Passed',
   ADAPTIVE_WORK_VALIDATION_FAILED: 'Adaptive Work Validation Failed',
+  ADAPTIVE_EFFORT_CHECK_PASSED: 'Adaptive Effort Check Passed',
+  ADAPTIVE_EFFORT_CHECK_FAILED: 'Adaptive Effort Check Failed',
+  ADAPTIVE_CONTINUE_UNLOCKED: 'Adaptive Continue Unlocked',
   ADAPTIVE_AI_STATIC_FALLBACK_USED: 'Adaptive AI Static Fallback Used',
 
   // Teacher and Permanent promotion events

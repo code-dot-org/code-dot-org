@@ -49,7 +49,7 @@ interface ColorPickerProps {
   // Recently used colors, in first-seen order; shown as one row under the
   // spectrum, after the permanent transparent swatch.
   recentColors?: RGBA[];
-  // A fixed set of colors. The popover then offers these as round swatches
+  // A fixed set of colors. The popover then offers these as square swatches
   // and nothing else: no spectrum, no recent colors, no transparent.
   palette?: readonly PaletteColor[];
   // The popover opened.

@@ -630,22 +630,89 @@ class LessonsControllerTest < ActionController::TestCase
     assert_nil @lesson.generate_outline
   end
 
-  test 'cannot update lockable if last level is not a levelgroup and an assessment' do
+  test 'cannot update lockable if last level is not a LevelGroup or exam Quiz and an assessment' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create(:script, :in_single_unit_course, :with_levels)
     lesson = unit.lessons.first
 
-    error = assert_raises RuntimeError do
-      post :update, params: {
-        id: lesson.id,
-        name: lesson.name,
-        lockable: true
-      }
-    end
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
 
-    assert_includes error.message, "The last level in a lockable lesson must be a LevelGroup and an assessment."
+    assert_response :not_acceptable
+    assert_includes response.body, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
+  end
+
+  test 'cannot update lockable if last level is an exam Quiz but not an assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create(:script, :in_single_unit_course, :with_lessons, lessons_count: 1)
+    lesson = unit.lessons.first
+    create(
+      :script_level,
+      assessment: false,
+      activity_section: lesson.activity_sections.first,
+      levels: [create(:quiz, purpose: 'exam')]
+    )
+
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
+
+    assert_response :not_acceptable
+    assert_includes response.body, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
+  end
+
+  test 'can update lockable if last level is an exam Quiz and assessment' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create(:script, :in_single_unit_course, :with_lessons, lessons_count: 1)
+    lesson = unit.lessons.first
+    create(
+      :script_level,
+      assessment: true,
+      activity_section: lesson.activity_sections.first,
+      levels: [create(:quiz, purpose: 'exam')]
+    )
+
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
+
+    assert_response :success
+  end
+
+  test 'cannot update lockable if last level is a Quiz that is not an exam' do
+    sign_in @levelbuilder
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    unit = create(:script, :in_single_unit_course, :with_lessons, lessons_count: 1)
+    lesson = unit.lessons.first
+    create(
+      :script_level,
+      assessment: true,
+      activity_section: lesson.activity_sections.first,
+      levels: [create(:quiz, purpose: 'practice')]
+    )
+
+    post :update, params: {
+      id: lesson.id,
+      name: lesson.name,
+      lockable: true
+    }
+
+    assert_response :not_acceptable
+    assert_includes response.body, "The last level in a lockable lesson must be a LevelGroup or an exam Quiz, with its Assessment checkbox checked."
   end
 
   test 'can update lockable if last level is levelgroup and assessment' do
