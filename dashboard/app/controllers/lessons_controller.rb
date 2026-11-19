@@ -259,6 +259,10 @@ class LessonsController < ApplicationController
       if @lesson.lockable
         script_levels.flat_map(&:levels).each do |level|
           problems << "#{level.name.dump} is not an exam" if level.is_a?(Quiz) && !level.exam?
+          next unless level.is_a?(BubbleChoice)
+          level.sublevels.each do |sublevel|
+            problems << "#{sublevel.name.dump} is a sublevel of #{level.name.dump}" if sublevel.is_a?(Quiz)
+          end
         end
       end
       if problems.any?

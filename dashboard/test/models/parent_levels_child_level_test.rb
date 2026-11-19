@@ -122,4 +122,14 @@ class ParentLevelsChildLevelTest < ActiveSupport::TestCase
     end
     ParentLevelsChildLevel.create!(parent_level: parent, child_level: create(:quiz, purpose: 'practice'), kind: ParentLevelsChildLevel::SUBLEVEL)
   end
+
+  test 'a Quiz cannot be a sublevel of a BubbleChoice in a lockable lesson' do
+    parent = create(:bubble_choice_level)
+    create(:script_level, levels: [parent], lesson: create(:lesson, lockable: true))
+    quiz = create(:quiz, purpose: 'practice')
+    e = assert_raises ActiveRecord::RecordInvalid do
+      ParentLevelsChildLevel.create!(parent_level: parent, child_level: quiz, kind: ParentLevelsChildLevel::SUBLEVEL)
+    end
+    assert_includes e.message, "Quiz #{quiz.name.dump} cannot be a sublevel of #{parent.name.dump}, which is in a lockable lesson"
+  end
 end

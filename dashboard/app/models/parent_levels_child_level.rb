@@ -92,6 +92,10 @@ class ParentLevelsChildLevel < ApplicationRecord
     if child_level.is_a?(Quiz) && child_level.exam?
       add_child_error("exam Quiz #{child_level.name.dump} cannot be a child of #{parent_level&.name.inspect}")
     end
+    # The lesson lock doesn't reach a Quiz that is only a sublevel; see Quiz#locked_for?.
+    if kind == SUBLEVEL && child_level.is_a?(Quiz) && parent_level&.script_levels&.any? {|script_level| script_level.lesson&.lockable}
+      add_child_error("Quiz #{child_level.name.dump} cannot be a sublevel of #{parent_level.name.dump}, which is in a lockable lesson")
+    end
     if kind == PROJECT_TEMPLATE
       add_child_error('level cannot be its own project template level') if child_level == parent_level
       add_child_error("template level type #{child_level.type} does not match level type #{parent_level.type}") unless child_level.type == parent_level.type

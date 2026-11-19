@@ -1533,6 +1533,26 @@ class LessonsControllerTest < ActionController::TestCase
     assert_includes response.body, "An exam Quiz must be the last level of a lockable lesson, and no other Quiz may be in one: #{practice.name.dump} is not an exam."
   end
 
+  test 'cannot add a BubbleChoice with a Quiz sublevel to a lockable lesson' do
+    sign_in @levelbuilder
+    @lesson.update!(lockable: true)
+    activity, section = create_activity_and_section(@lesson)
+
+    practice = create(:quiz, purpose: 'practice')
+    bubble_choice = create(:bubble_choice_level)
+    ParentLevelsChildLevel.create!(parent_level: bubble_choice, child_level: practice, kind: ParentLevelsChildLevel::SUBLEVEL)
+    level_group = create(:level_group)
+    @update_params['activities'] = activities_json(
+      activity, section, [
+        {activitySectionPosition: 1, activeId: bubble_choice.id, levels: [{id: bubble_choice.id, name: bubble_choice.name}]},
+        {activitySectionPosition: 2, activeId: level_group.id, assessment: true, levels: [{id: level_group.id, name: level_group.name}]},
+      ]
+    )
+    put :update, params: @update_params
+    assert_response :not_acceptable
+    assert_includes response.body, "#{practice.name.dump} is a sublevel of #{bubble_choice.name.dump}."
+  end
+
   test 'cannot make a lesson lockable while it holds a Quiz that is not an exam' do
     sign_in @levelbuilder
     _activity, section = create_activity_and_section(@lesson)
