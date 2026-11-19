@@ -161,11 +161,11 @@ interface SentenceSceneProps {
   /** The student turned Animated on or off. */
   onAnimatedChange?: (animated: boolean) => void;
   /** Called with each generated picture as soon as it is ready, to store
-      it. */
+      it. A picture it rejects is not shown. */
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
-  /** Called with each generated picture before it is shown. The scene
-      keeps showing that the picture is being made until the returned
-      promise resolves, and shows the picture then. */
+  /** Called with each stored picture before it is shown. The scene keeps
+      showing that the picture is being made until the returned promise
+      resolves, and shows the picture then. */
   onReady?: (result: GeneratedImageResult) => Promise<void> | void;
   /** Called when the student rates the kept picture; resolves true once
       the verdict is on its record. Without it, or when it resolves false,
@@ -174,6 +174,7 @@ interface SentenceSceneProps {
   onRate?: (verdict: Verdict) => boolean | Promise<boolean>;
   /** Called when a generation request is sent to the model. */
   onGenerateStart?: () => void;
+  onGenerateFailed?: () => void;
   /** The scene is making or keeping a picture, or has stopped; a host can
       hold its other controls still meanwhile. */
   onBusyChange?: (busy: boolean) => void;
@@ -210,6 +211,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onReady,
   onRate,
   onGenerateStart,
+  onGenerateFailed,
   onBusyChange,
   ratingRequired = false,
   method = 'scene',
@@ -288,9 +290,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         : picture.result;
       try {
         await onKeep(result);
+        return true;
       } catch (e) {
         console.error('Saving the image failed:', e);
         setError("Couldn't save the picture. Try again.");
+        return false;
       } finally {
         setSaving(false);
       }
@@ -434,9 +438,18 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         prompt,
         sent,
       };
-      // The picture is stored while the host holds it back, so that
-      // leaving the page during the wait does not lose it.
-      const stored = persist(entry, null);
+      // Save before `onReady`, which can wait before the picture is shown,
+      // so the picture is not lost if the student leaves the page during
+      // that wait.
+      const saved = await persist(entry, null);
+      if (run !== runRef.current) {
+        return;
+      }
+      if (!saved) {
+        onGenerateFailed?.();
+        setMode('edit');
+        return;
+      }
       await onReady?.(entry.result);
       if (run !== runRef.current) {
         return;
@@ -444,7 +457,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       setChosenPicture(entry);
       setMode('result');
       playSound('reveal');
-      await stored;
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -458,6 +470,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       } else {
         console.error('Image generation failed:', e);
         setError("Couldn't make the picture. Try again.");
+        onGenerateFailed?.();
       }
       setMode('edit');
     }
@@ -471,6 +484,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     generatesCharacterSet,
     method,
     onGenerateStart,
+    onGenerateFailed,
     exhausted,
     advanced,
     persist,
