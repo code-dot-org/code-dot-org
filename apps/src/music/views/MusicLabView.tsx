@@ -59,6 +59,7 @@ import useUpdateAnalytics from './hooks/useUpdateAnalytics';
 import useUpdatePlayer from './hooks/useUpdatePlayer';
 import MusicPlayView from './MusicPlayView';
 import PackDialog from './PackDialog';
+import PackRemovedAlert from './PackRemovedAlert';
 import Timeline from './Timeline';
 
 import moduleStyles from './music-view.module.scss';
@@ -451,14 +452,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   {WARNING_BANNER_MESSAGES.VIEWING_VERSION}
                 </div>
               )}
-              {isPackRemoved && (
-                <div
-                  id="packRemovedBanner"
-                  className={moduleStyles.warningBanner}
-                >
-                  {WARNING_BANNER_MESSAGES.MUSIC_PACK_REMOVED}
-                </div>
-              )}
+              {isPackRemoved && <PackRemovedAlert key={packId} />}
               {isStartMode && (
                 <div
                   id="startSourcesWarningBanner"
