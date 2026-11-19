@@ -193,7 +193,9 @@ export default class MusicLibrary {
 
     // The fallback is the first available pack's first available non-preview sound.
     // We will skip restricted folders unless it's the currently selected pack.
-    const firstFolder = this.getPlayableSounds()[0];
+    // A level may allow only a removed pack's sounds, so fall back to those.
+    const firstFolder =
+      this.getPlayableSounds()[0] || this.getAvailableSounds()[0];
     const firstSound = firstFolder?.sounds.find(
       sound => sound.type !== 'preview'
     );

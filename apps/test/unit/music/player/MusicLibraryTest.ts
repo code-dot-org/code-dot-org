@@ -66,4 +66,12 @@ describe('MusicLibrary removed packs', () => {
     expect(ids(library.getPlayableSounds())).toEqual(['built_in']);
     expect(library.getDefaultSound()).toBe('built_in/beat');
   });
+
+  it('defaults to a removed sound when a level allows only those', () => {
+    const library = createLibrary();
+    library.setCurrentPackId('removed_artist');
+    library.setAllowedSounds({removed_artist: ['beat']});
+
+    expect(library.getDefaultSound()).toBe('removed_artist/beat');
+  });
 });
