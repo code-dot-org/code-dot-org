@@ -9,6 +9,7 @@ export {default as Match} from './SkillsCheck/QuestionTypes/Match';
 export {default as MultipleChoice} from './SkillsCheck/QuestionTypes/MultipleChoice';
 export {default as NextStepPicker} from './NextStepPicker';
 export {default as PersonalizedWelcomeBox} from './PersonalizedWelcomeBox';
+export {default as PodcastsBox} from './ReviewModalities/PodcastsBox';
 export {default as PreSkillsCheck} from './PreSkillsCheck';
 export {default as ReflectionBox} from './Reflection/ReflectionBox';
 export {default as Scramble} from './SkillsCheck/QuestionTypes/Scramble';

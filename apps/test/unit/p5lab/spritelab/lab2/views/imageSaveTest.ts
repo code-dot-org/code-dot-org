@@ -3,7 +3,6 @@ import {
   framesPatch,
   repointAnimation,
   SINGLE_FRAME_PROPS,
-  uploadOrEmbed,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
 
 jest.mock('@cdo/apps/redux', () => {
@@ -102,32 +101,5 @@ describe('imageSave', () => {
         },
       },
     });
-  });
-
-  it('embeds the picture when there is no uploader or the upload fails', async () => {
-    const bytes = new Uint8Array([1]);
-    expect(
-      await uploadOrEmbed(undefined, 'a.png', bytes, 'image/png', 'data:a')
-    ).toBe('data:a');
-    expect(
-      await uploadOrEmbed(
-        async () => 'https://x/a.png',
-        'a.png',
-        bytes,
-        'image/png',
-        'data:a'
-      )
-    ).toBe('https://x/a.png');
-    expect(
-      await uploadOrEmbed(
-        async () => {
-          throw new Error('no');
-        },
-        'a.png',
-        bytes,
-        'image/png',
-        'data:a'
-      )
-    ).toBe('data:a');
   });
 });

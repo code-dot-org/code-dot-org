@@ -13,7 +13,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
     @openai_api_key = 'test-openai-key'
     @elevenlabs_api_key = 'test-elevenlabs-key'
 
-    CDO.stubs(:openai_lesson_summaries_api_key).returns(@openai_api_key)
+    CDO.stubs(:openai_lesson_deep_dive_api_key).returns(@openai_api_key)
     CDO.stubs(:elevenlabs_api_key).returns(@elevenlabs_api_key)
     CDO.stubs(:dashboard_hostname).returns('test.code.org')
 
