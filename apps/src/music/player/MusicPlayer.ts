@@ -351,6 +351,7 @@ export default class MusicPlayer {
       return [];
     }
 
+    // A removed sound is expected, so it is silent without a warning.
     if (library.isSoundRemoved(event.id)) {
       return [];
     }

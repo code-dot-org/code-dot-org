@@ -278,6 +278,7 @@ class FieldSounds extends BlocklyCore.Field {
     if (soundType) {
       iconElement = BlocklyCore.utils.dom.createSvgElement('text', {
         fill: color.neutral_light,
+        // marginLeft centers the type's own glyph, which a silent sound does not draw.
         x: 5 + (isSilent ? 0 : SoundStyle[soundType].marginLeft),
         y: 16,
         width: 20,
