@@ -889,7 +889,8 @@ export class UnconnectedMusicView extends React.Component {
     // Also save the current pack and block mode to sources as part of labConfig.
     sourcesToSave.labConfig ??= {};
     sourcesToSave.labConfig.music ??= {};
-    // Read the pack from the library: redux props lag a pack set in this tick.
+    // A save can run right after the pack is set. The library has the new pack
+    // at once; a redux prop would get it only after the next render.
     const packId = this.library?.getCurrentPackId();
     if (packId) {
       sourcesToSave.labConfig.music.packId = packId;
