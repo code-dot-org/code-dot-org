@@ -486,6 +486,7 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
 
       body = JSON.parse(options[:body])
       assert_equal AiStudentPodcastsHelper::OPENAI_MODEL, body['model']
+      assert_equal 'none', body['reasoning_effort']
       assert_equal 'system', body['messages'].first['role']
       assert_equal 'prompt-here', body['messages'].first['content']
 
