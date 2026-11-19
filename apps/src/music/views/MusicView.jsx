@@ -889,8 +889,6 @@ export class UnconnectedMusicView extends React.Component {
     // Also save the current pack and block mode to sources as part of labConfig.
     sourcesToSave.labConfig ??= {};
     sourcesToSave.labConfig.music ??= {};
-    // A save can run right after the pack is set, before the next render.
-    // The library already has the new pack by then.
     const packId = this.library?.getCurrentPackId();
     if (packId) {
       sourcesToSave.labConfig.music.packId = packId;
