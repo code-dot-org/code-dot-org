@@ -12,6 +12,7 @@ import {
   continueUnlockReason,
   skippedAttempts,
   validationAllowsContinue,
+  studentWorkSteps,
   visibleSteps,
   workAttempts,
 } from '@cdo/apps/adaptive/progress';
@@ -282,6 +283,29 @@ describe('workAttempts, skippedAttempts and latestValidation', () => {
     expect(
       latestValidation({timeSpent: 0, validationHistory: [chat]})
     ).toBeUndefined();
+  });
+});
+
+describe('studentWorkSteps', () => {
+  const level = (id: string) =>
+    ({id, title: id, kind: 'level', level: id} as Step);
+  const video = (id: string) =>
+    ({id, title: id, kind: 'video', videoKey: id} as unknown as Step);
+  const ids = (cp: Checkpoint) =>
+    studentWorkSteps(cp, EMPTY_PROGRESS).map(s => s.id);
+
+  it('drops panels and videos, keeping the steps with student work', () => {
+    const cp = checkpoint('mixed', undefined, [
+      panels('read'),
+      video('watch'),
+      level('try'),
+    ]);
+    expect(ids(cp)).toEqual(['try']);
+  });
+
+  it('keeps every step of a checkpoint with no student work', () => {
+    const cp = checkpoint('reading', undefined, [panels('a'), panels('b')]);
+    expect(ids(cp)).toEqual(['a', 'b']);
   });
 });
 

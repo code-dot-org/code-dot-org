@@ -4,7 +4,7 @@
 
 import {hashString} from '@cdo/apps/utils';
 
-import {Checkpoint} from '../types';
+import {Checkpoint, Step} from '../types';
 
 export type CheckpointStatus =
   | 'locked'
@@ -162,6 +162,24 @@ export function visibleSteps(checkpoint: Checkpoint, progress: Progress) {
     const latest = progress.steps[stepId]?.answers?.[questionId]?.at(-1);
     return latest?.answerId === choiceId;
   });
+}
+
+// Kinds that hold something of the student's: their work, or their stats.
+const STUDENT_STEP_KINDS: ReadonlySet<Step['kind']> = new Set([
+  'level',
+  'questions',
+  'review',
+  'stats',
+]);
+
+/**
+ * The visible steps a teacher viewing a student is shown: those with
+ * something of the student's in them, or every visible step if none has.
+ */
+export function studentWorkSteps(checkpoint: Checkpoint, progress: Progress) {
+  const steps = visibleSteps(checkpoint, progress);
+  const withWork = steps.filter(step => STUDENT_STEP_KINDS.has(step.kind));
+  return withWork.length > 0 ? withWork : steps;
 }
 
 /**
