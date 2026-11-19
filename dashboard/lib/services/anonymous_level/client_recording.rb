@@ -19,7 +19,7 @@ module Services
         return unless app_info
 
         anonymous_level_client = ::AnonymousLevel::Client.find_or_create_by(anon_user_id:) do |client|
-          client.name =           app_info.name
+          client.name           = app_info.name
           client.install_source = app_info.install_source
         end
       rescue ActiveRecord::RecordNotUnique
