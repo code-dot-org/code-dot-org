@@ -3,6 +3,7 @@
 // Matches the other alerts shown at the top of the workspace.
 .inWorkspaceContainer {
   border-bottom: variables.$default-border;
+  border-bottom-color: var(--border-warning-mid);
   border-radius: 0;
   padding-block: 0;
   height: 39px;
