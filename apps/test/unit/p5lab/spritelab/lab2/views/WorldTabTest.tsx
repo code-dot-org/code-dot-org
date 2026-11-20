@@ -364,6 +364,16 @@ describe('the world size choices', () => {
     expect(screen.getAllByRole('gridcell')).toHaveLength(600);
   });
 
+  it('name each size by its squares', () => {
+    renderTab({world: createEmptyWorld(), onResize: jest.fn()});
+    const wide = screen.getByLabelText('Wide') as HTMLSelectElement;
+    expect([...wide.options].map(option => option.textContent)).toEqual([
+      '10 squares',
+      '20 squares',
+      '30 squares',
+    ]);
+  });
+
   it('make the world larger at once', () => {
     const onResize = jest.fn();
     renderTab({world: createEmptyWorld(), onResize});

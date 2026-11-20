@@ -33,12 +33,6 @@ const GRID_PIXELS = 528;
 // scrolls instead (cells get too small to paint).
 const MIN_GRID_PIXELS = 320;
 
-// The choices for how many screens wide or tall a world is.
-const SCREEN_COUNT_ITEMS = Array.from({length: MAX_WORLD_SCREENS}, (_, i) => ({
-  value: String(i + 1),
-  text: i === 0 ? '1 screen' : `${i + 1} screens`,
-}));
-
 // The space between the grid and the size choices beside it.
 const SIZE_CHOICES_GAP_PX = 16;
 
@@ -404,6 +398,16 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     [world, sceneSize]
   );
   const screens = worldScreens(world);
+  // A size is chosen in screens and named by its squares: 10, 20 or 30 for
+  // screens of 10.
+  const sizeItems = useMemo(
+    () =>
+      Array.from({length: MAX_WORLD_SCREENS}, (_, i) => ({
+        value: String(i + 1),
+        text: `${(i + 1) * sceneSize} squares`,
+      })),
+    [sceneSize]
+  );
   // A smaller size waiting on the student's say-so, since it erases squares.
   const [pendingResize, setPendingResize] = useState<{
     screens: WorldScreens;
@@ -1055,7 +1059,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                 labelText="Wide"
                 size="s"
                 color={themeMode === 'dark' ? 'white' : 'black'}
-                items={SCREEN_COUNT_ITEMS}
+                items={sizeItems}
                 selectedValue={String(screens.wide)}
                 onChange={event =>
                   requestResize({...screens, wide: Number(event.target.value)})
@@ -1066,7 +1070,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
                 labelText="Tall"
                 size="s"
                 color={themeMode === 'dark' ? 'white' : 'black'}
-                items={SCREEN_COUNT_ITEMS}
+                items={sizeItems}
                 selectedValue={String(screens.tall)}
                 onChange={event =>
                   requestResize({...screens, tall: Number(event.target.value)})
