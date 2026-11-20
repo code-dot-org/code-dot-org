@@ -22,7 +22,8 @@
     "encrypted": "false",
     "level_mode": {
       "kind": "freeplay",
-      "startTab": "Images"
+      "startTab": "Images",
+      "worldSizes": true
     },
     "image_role_defaults": {
       "sprite": "hero",

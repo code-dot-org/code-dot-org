@@ -1,6 +1,7 @@
 import {RuntimeAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
 import {
   createEmptyWorld,
+  resizeWorldScreens,
   World,
   WorldCell,
 } from '@cdo/apps/p5lab/spritelab/lab2/world';
@@ -206,5 +207,16 @@ describe('paintPattern', () => {
     const rows = painted.grid.filter(cells => cells.some(Boolean)).length;
     expect(rows).toBe(10);
     expect(painted.grid[0].filter(Boolean)).toHaveLength(10);
+  });
+
+  it("anchors to the floor of a taller world's first screen, and keeps its size", () => {
+    const tall = resizeWorldScreens(createEmptyWorld(10), {wide: 2, tall: 2});
+    const painted = paintPattern(tall, ['S.', 'BB'], cells) as World;
+    expect(occupied(painted)).toEqual([
+      '18,0:firstCharacter',
+      '19,0:newBlock',
+      '19,1:newBlock',
+    ]);
+    expect(painted.screenCells).toBe(10);
   });
 });

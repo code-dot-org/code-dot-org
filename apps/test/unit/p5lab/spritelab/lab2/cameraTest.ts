@@ -94,4 +94,48 @@ describe('camera', () => {
     const right = backgroundFrame(2, cameraFocus(2, {x: 400, y: 200}));
     expect(left.x - right.x).toBe(200);
   });
+
+  describe('in a world larger than one screen', () => {
+    // Three screens wide and two tall.
+    const world = {left: 0, top: -400, right: 1200, bottom: 400};
+
+    it('follows the player across it and stops at its edges', () => {
+      expect(cameraFocus(1, {x: 600, y: 0}, world)).toEqual({x: 600, y: 0});
+      expect(cameraFocus(1, {x: 20, y: 380}, world)).toEqual({x: 200, y: 200});
+      expect(cameraFocus(1, {x: 1190, y: -390}, world)).toEqual({
+        x: 1000,
+        y: -200,
+      });
+    });
+
+    it('draws the background as ever when the world is one screen', () => {
+      const oneScreen = {left: 0, top: 0, right: 400, bottom: 400};
+      const focus = cameraFocus(2, {x: 300, y: 100}, oneScreen);
+      expect(backgroundFrame(2, focus, oneScreen)).toEqual(
+        backgroundFrame(2, focus)
+      );
+    });
+
+    it('starts on the first screen with no player to follow', () => {
+      expect(cameraFocus(1, null, world)).toEqual({x: 200, y: 200});
+    });
+
+    it('keeps the background over the whole screen from one corner to the other', () => {
+      [
+        {x: 200, y: 200},
+        {x: 600, y: 0},
+        {x: 1000, y: -200},
+      ].forEach(focus => {
+        const frame = backgroundFrame(1, focus, world);
+        expect(frame.x).toBeLessThanOrEqual(0);
+        expect(frame.y).toBeLessThanOrEqual(0);
+        expect(frame.x + frame.size).toBeGreaterThanOrEqual(400);
+        expect(frame.y + frame.size).toBeGreaterThanOrEqual(400);
+      });
+      // The background moves as the camera does.
+      expect(backgroundFrame(1, {x: 200, y: 200}, world).x).toBeGreaterThan(
+        backgroundFrame(1, {x: 1000, y: 200}, world).x
+      );
+    });
+  });
 });

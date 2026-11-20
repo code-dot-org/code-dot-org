@@ -623,3 +623,43 @@ describe('platformPhysics hazard distances', () => {
     ).toBe(Infinity);
   });
 });
+
+describe('platformPhysics in a world larger than one screen', () => {
+  // Two screens wide and two tall: the top is one screen above zero.
+  const world = {width: 800, height: 400, top: -400};
+  const stepIn = (sprite: PhysicsSprite, gravity: number, vx = 0, vy = 0) => {
+    sprite.position.y += sprite.velocity.y + vy;
+    sprite.position.x += vx;
+    resolvePlatformPhysics(
+      [{sprite, x: sprite.position.x, y: sprite.position.y}],
+      [],
+      world,
+      gravity
+    );
+  };
+
+  it('lets a player walk past the first screen to the far edge', () => {
+    const player = makeSprite(380, 375);
+    for (let i = 0; i < 200; i++) {
+      stepIn(player, PLATFORM_GRAVITY, 3);
+    }
+    expect(player.position.x).toBe(800 - 12.5);
+    expect(feet(player)).toBe(400);
+  });
+
+  it('rests a player under flipped gravity on the top of the world', () => {
+    const player = makeSprite(100, 0);
+    for (let i = 0; i < 200; i++) {
+      stepIn(player, -PLATFORM_GRAVITY);
+    }
+    expect(player.position.y - 25).toBeCloseTo(-400);
+  });
+
+  it('stops a weightless player at the top of the world', () => {
+    const player = makeSprite(100, 0);
+    for (let i = 0; i < 200; i++) {
+      stepIn(player, 0, 0, -5);
+    }
+    expect(player.position.y - 25).toBeCloseTo(-400);
+  });
+});
