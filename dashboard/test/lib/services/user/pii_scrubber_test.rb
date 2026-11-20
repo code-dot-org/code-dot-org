@@ -120,6 +120,37 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
       end
     end
 
+    context 'when user has practice problem attempts' do
+      it 'deletes them and leaves other users\' attempts' do
+        attempt = create(:user_practice_problem_attempt, user: user)
+        other = create(:user_practice_problem_attempt)
+
+        scrub_pii
+
+        refute UserPracticeProblemAttempt.exists?(attempt.id)
+        assert UserPracticeProblemAttempt.exists?(other.id)
+      end
+    end
+
+    context 'when user has challenge responses' do
+      before do
+        AWS::S3.stubs(:user_content_bucket).returns('test-user-content')
+      end
+
+      it 'deletes them with their assets and S3 objects, and leaves other users\' responses' do
+        response = create(:challenge_response, user: user)
+        asset = create(:challenge_response_asset, challenge_response: response)
+        other_asset = create(:challenge_response_asset)
+        AWS::S3.expects(:delete_from_bucket).with('test-user-content', asset.s3_key).once
+
+        scrub_pii
+
+        refute ChallengeResponse.exists?(response.id)
+        refute ChallengeResponseAsset.exists?(asset.id)
+        assert ChallengeResponseAsset.exists?(other_asset.id)
+      end
+    end
+
     context 'when user is not soft-deleted' do
       let(:soft_deleted_user) {false}
 
