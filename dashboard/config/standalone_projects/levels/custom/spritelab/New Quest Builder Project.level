@@ -22,6 +22,7 @@
     "encrypted": "false",
     "level_mode": {
       "kind": "freeplay",
+      "startTab": "Images",
       "worldSizes": true
     },
     "image_role_defaults": {
