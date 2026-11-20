@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-19 03:31:56 UTC",
+    "serialized_at": "2026-11-20 04:16:44 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -66,13 +66,13 @@
     },
     {
       "key": "lesson-2",
-      "name": "How Does the Model Decide?",
+      "name": "Reading a Decision Tree",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students work as data scientists and learn to read a decision tree. A husky-or-wolf system calls a husky a wolf. Its training pictures show the shortcut it found, so students see that a prediction comes from the data. Students then trace monsters from Lesson 1 through a decision tree. In groups, they act out a human decision tree that predicts the wrong category for a platypus, and they propose one question that fixes it. In Recycling Robot Trace, each student traces three items through a tree in Sketch Lab, finds the wrong prediction and marks where a new question would fix it.",
+        "overview": "Students take on the role of data scientists as they learn to read and trace decision trees. They explore how training data can lead to mistakes, act out a human decision tree, and suggest questions to improve its predictions. Finally, they use Sketch Lab to trace a recycling robot’s decisions and identify where its tree needs a fix.",
         "preparation": "- Print the Human Decision Tree Cards (one set for each group: three question cards and five animal data cards).\n- Put each group's animal data cards in order, with the platypus card last.\n- Read the Human Decision Tree: Teacher Guide and plan a clear space for each group.",
         "student_overview": "How does a decision tree reach an answer? You will follow items through a decision tree, one question at a time, to see how it makes a prediction. Then you'll check the tree's predictions against what each item really is."
       },
@@ -107,7 +107,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Students are Data Scientists for a wildlife park that wants to predict when elephants will visit a waterhole. They help Dr. Osei, the park's data scientist, turn camera photos into records. Each record is one row of data about one photo, such as the season, the time of day and whether elephants came. Students then test four models trained on different records. They explain why a model may predict poorly for a case its records left out. They also learn about PAWS, a real model trained on ranger patrol records.",
+        "overview": "Students are Data Scientists for a wildlife park that wants to predict when elephants will visit a waterhole. They help Dr. Osei, the park's data scientist, turn camera photos into records. A record is all the data about one photo, such as the season, the time of day and whether elephants came. Students then test four models trained on different records. They explain why a model may predict poorly for a case its records left out. They also learn about PAWS, a real model trained on ranger patrol records.",
         "preparation": "- Print one copy of the Data Makes AI - Lesson 4 - Activity Guide for each student.",
         "student_overview": "Today you are a Data Scientist on Dr. Osei's team at a wildlife park. The park wants a model that predicts when elephants will visit the waterhole. Your job is to choose the records the model needs. Then see what happens when some records are missing."
       },
@@ -125,7 +125,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "Students act as Data Scientists and decide what information a model is trained on. Pairs explore the Smart Room Inspector, an app that predicts whether a bedroom is Clean Enough or a Total Disaster. They turn the number of items on a room’s floor into categories and discover that someone has to decide where each category starts and ends. Then they choose features from room data and sketch their own decision trees. A surprise room that every tree gets wrong shows that a model can only find patterns in the data people choose to collect.",
+        "overview": "**How do people’s choices about a dataset shape what a model can predict?**\n\nStudents act as data scientists, choosing which data to use to train a model. Using the Smart Room Inspector, they decide what makes a room clean or messy, choose features, and sketch decision trees. A surprise room challenges their predictions and shows why the data people collect matters.",
         "preparation": "- print one activity guide per pair",
         "student_overview": "In this lesson, you’ll use an app that predicts if a bedroom is **Clean Enough** or a **Total Disaster**. You’ll choose the features that help the most and turn numbers into categories. Then you’ll draw a decision tree that sorts rooms. Last, you’ll test your tree on a surprise room. Can it predict the right label?"
       },
@@ -144,7 +144,7 @@
       "relative_position": 6,
       "properties": {
         "overview": "**How can two copies of the same app give different answers?**\n\nIn this lesson, students work as data scientists and audit Playlist Bot, an app that picks songs for the school dance. In Song Piles, groups line up song cards by release year and lay a pencil at a cutoff year. Students see that every Banger sits on one side, and that the person who chose the cutoff shaped what counts as a good dance song. In AI Lab, pairs test the school's bot with a new hit, Soda Pop, and find the question that decided its prediction. They sort and filter a second bot's records to check balance, then test it with Soda Pop. The same app gives different answers because each bot was trained on different records. Pairs record their audit on a Model Card, and each student writes who the school's bot might leave out.",
-        "preparation": "- Print the Song Piles Cards handout (one set of 10 song cards for each group) and cut out the cards.\n- Print the Model Card handout (one for each student).",
+        "preparation": "- Print the Song Piles handout (one set of 10 song cards for each group) and cut out the cards.\n- Print the Model Card handout (one for each student).",
         "student_overview": "How can two copies of the same app give different answers? You'll check Playlist Bot, an app that picks songs for the school dance. You'll sort its song records. Then you'll test two versions of the bot with the same new song. Last, you'll find out who its records leave out."
       },
       "seeding_key": {
@@ -779,53 +779,169 @@
       }
     },
     {
-      "key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470",
+      "key": "fc2d64ce-0401-49fc-8347-fb27e484e592",
       "position": 1,
       "properties": {
-        "name": "Project Day One"
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470",
+        "lesson_activity.key": "fc2d64ce-0401-49fc-8347-fb27e484e592",
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026"
       }
     },
     {
-      "key": "756c8864-73a6-4f4c-b920-8db805d5edd2",
+      "key": "befa7f31-2609-44f9-a67e-e6f87fcbf9db",
       "position": 2,
       "properties": {
-        "name": "Project Day Two"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2",
+        "lesson_activity.key": "befa7f31-2609-44f9-a67e-e6f87fcbf9db",
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026"
       }
     },
     {
-      "key": "0270e4bb-c486-40fd-bdf1-16af147be2c0",
+      "key": "31c464f0-6323-4243-a1d8-e96c6c59d836",
       "position": 3,
       "properties": {
-        "name": "Project Day Three"
+        "duration": 5,
+        "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "0270e4bb-c486-40fd-bdf1-16af147be2c0",
+        "lesson_activity.key": "31c464f0-6323-4243-a1d8-e96c6c59d836",
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026"
       }
     },
     {
-      "key": "72b62c54-3294-4aa9-a279-3d9f25236dad",
-      "position": 4,
+      "key": "43700f6b-f824-40cd-b931-2dcead1216f6",
+      "position": 1,
       "properties": {
-        "name": "Project Day Four"
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "72b62c54-3294-4aa9-a279-3d9f25236dad",
-        "lesson.key": "lesson-12",
+        "lesson_activity.key": "43700f6b-f824-40cd-b931-2dcead1216f6",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "f82c79bb-a360-4db7-905b-d3502dd04ccf",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f82c79bb-a360-4db7-905b-d3502dd04ccf",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "244672d7-f185-46ec-9c3c-2ffdafbb6df3",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "244672d7-f185-46ec-9c3c-2ffdafbb6df3",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "45bf6949-5062-4ef0-a27a-d7437891e258",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45bf6949-5062-4ef0-a27a-d7437891e258",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "244185be-cda7-4c1c-9e05-04312b684c7d",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "244185be-cda7-4c1c-9e05-04312b684c7d",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "85d9374b-5b10-4a2a-9862-f0a84d11c33f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85d9374b-5b10-4a2a-9862-f0a84d11c33f",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "e3c1c06c-057a-46b6-bfc0-61cf0cffb373",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3c1c06c-057a-46b6-bfc0-61cf0cffb373",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "3b4ecccd-a493-4c24-b544-2c1f280b58f9",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3b4ecccd-a493-4c24-b544-2c1f280b58f9",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026"
+      }
+    },
+    {
+      "key": "eb48520c-6389-4c6f-8e9c-2d5b7055a7a3",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb48520c-6389-4c6f-8e9c-2d5b7055a7a3",
+        "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026"
       }
@@ -961,7 +1077,7 @@
       "key": "2c3c0c6f-0f52-4358-a1d7-83591f0b659a",
       "position": 2,
       "properties": {
-        "description": "Researchers built this AI system to see if people would trust it. It sorts pictures into Husky or Wolf. Look at picture C. It's a husky, but the system said Wolf. Next, we'll look at the pictures the system was trained on.\n",
+        "description": "Researchers built this AI system to see if people would trust it. It sorts pictures into Husky or Wolf. Look at picture C. It's a husky, but the system said Wolf. Next, we'll look at the pictures the system was trained on.",
         "remarks": true,
         "tips": [
           {
@@ -979,7 +1095,7 @@
       "key": "38b27072-2d28-48bd-b2f3-6ace421530f3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What features do you think the system focused on?*\n\nTurn and Talk: Give partners two minutes, then take two or three answers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students compare what the system used with what a person would use. Listen for the snow in every wolf picture, then features like ears, eyes or fur. If students only talk about the animals, ask, \"Is there anything outside of the wolf itself that is the same in every wolf picture?\""
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What features do you think the system focused on to sort a wolf from a husky?\n\nTurn and Talk: Give partners two minutes, then take two or three answers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students compare what the system used with what a person would use. Listen for the snow in every wolf picture, then features like ears, eyes or fur. If students only talk about the animals, ask, \"Is there anything outside of the wolf itself that is the same in every wolf picture?\""
       },
       "seeding_key": {
         "activity_section.key": "38b27072-2d28-48bd-b2f3-6ace421530f3",
@@ -1019,7 +1135,7 @@
       "key": "74e42715-2f31-4b0f-ae66-57d91d4f874e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that the questions from Lesson 1 form a decision tree, which reaches a prediction one question at a time.\n\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that the questions from Lesson 1 form a decision tree, which reaches a prediction one question at a time.",
         "duration": "5",
         "name": "Meet the Decision Tree"
       },
@@ -1063,11 +1179,23 @@
       }
     },
     {
-      "key": "fdf7c9e3-f60f-4fac-9a9a-764f72c88785",
+      "key": "483a753d-e975-42c0-86ac-56ddb2df4c28",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that a decision tree can only use its questions to classify, so an animal whose questions don't fit will get a wrong prediction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of four to ten. Give each group a clear space.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group three question cards and five animal data cards. Keep the animal data cards face down in a stack, with the platypus last.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the Human Decision Tree video.",
-        "duration": "20",
+        "description": "We all make predictions every day. You see dark clouds and predict it will rain. You hear the bell and predict lunch is next. You smell popcorn and predict someone is watching a movie. Each time, you use what you notice to make your best guess.\nAI systems make predictions too. A decision tree asks questions about features, one at a time. The prediction is the label it reaches based on those features, like the monster's type on the last slide.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "483a753d-e975-42c0-86ac-56ddb2df4c28",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
+      "key": "fdf7c9e3-f60f-4fac-9a9a-764f72c88785",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that a decision tree can only use its questions to classify, so an animal whose questions don't fit will get a wrong prediction.",
+        "duration": "15",
         "name": "Human Decision Tree"
       },
       "seeding_key": {
@@ -1077,7 +1205,7 @@
     },
     {
       "key": "e892b06c-8494-4b3a-a7be-bc1e1f1a7c91",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "We just traced our first decision tree. Now we're going to create one in the classroom. Some of you will be Askers. Each Asker holds a question card and asks its question. Everyone else is a Traveler. Each Traveler holds an animal data card and answers from it. Let's see how it works.",
         "remarks": true
@@ -1088,8 +1216,19 @@
       }
     },
     {
+      "key": "dadb8aee-9eb9-4748-aa49-2617ce29f17e",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of four to ten. Give each group a clear space.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group three question cards and five animal data cards. Keep the animal data cards face down in a stack, with the platypus last.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the Human Decision Tree video."
+      },
+      "seeding_key": {
+        "activity_section.key": "dadb8aee-9eb9-4748-aa49-2617ce29f17e",
+        "lesson_activity.key": "20ce9651-7300-43a2-a305-c2f3c5c028d4"
+      }
+    },
+    {
       "key": "155b7be9-2283-4107-bcc0-965266e019cc",
-      "position": 7,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each group pick three Askers. Each Asker takes one question card and stands in the spot shown on it. Everyone else is a Traveler. Go over the three lines on the slide. Travelers line up by the stack of animal data cards. One at a time, each takes the top card and walks to Question One.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that Askers stand a few steps apart, in the order on their cards. Ask an Asker, \"What do you ask, and where do you send each answer?\"",
         "tips": [
@@ -1106,7 +1245,7 @@
     },
     {
       "key": "cee5b0e8-18da-4a95-af28-22a9158f0d60",
-      "position": 8,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Leave this slide up while groups play.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Bring the class together after every group has walked the platypus card. Display the facts."
       },
@@ -1117,7 +1256,7 @@
     },
     {
       "key": "b739250f-5cc3-45d7-8b7f-5fd45a9d9956",
-      "position": 9,
+      "position": 11,
       "properties": {
         "description": "Our tree called the platypus a Reptile. Read these facts about platypuses. What kind of animal is a platypus?",
         "remarks": true
@@ -1129,9 +1268,11 @@
     },
     {
       "key": "d2802347-228c-4fa6-9bac-239963076f83",
-      "position": 10,
+      "position": 12,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which question put the platypus on the wrong path?\n\nTurn and Talk: Groups stay where they are. Give them one minute.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students trace the platypus's path to find where the tree first went wrong. Listen for \"Does it lay eggs?\" If groups blame \"Does it have fins?\", ask, \"Where did the platypus first go a different way than the dog?\""
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which question put the platypus on the wrong path?\n\nTurn and Talk: Give them one minute.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students trace the platypus's path to find where the tree first went wrong. Listen for \"Does it lay eggs?\" If groups blame \"Does it have fins?\", ask, \"Where did the platypus first go a different way than the dog?\"",
+        "duration": "5",
+        "name": "Fix the Tree"
       },
       "seeding_key": {
         "activity_section.key": "d2802347-228c-4fa6-9bac-239963076f83",
@@ -1140,7 +1281,7 @@
     },
     {
       "key": "eecff242-1f3c-4c0b-b303-b00f3123e7e5",
-      "position": 11,
+      "position": 13,
       "properties": {
         "description": "Here's the tree with one new question. Now the platypus says Yes to \"Does it make milk?\" and reaches Mammal. The tree only uses the questions it was given. People chose these questions, so people can fix them.",
         "remarks": true
@@ -1152,7 +1293,7 @@
     },
     {
       "key": "55108c54-14fb-4da1-a742-1ac874b817bc",
-      "position": 12,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that tracing each item's path shows which question led to a wrong prediction.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1: Students trace three items through the Recycling Robot tree and move each one next to the bin it predicts. Then they drag the wrench to the spot where a new question would fix the wrong prediction.",
         "duration": "10",
@@ -1166,10 +1307,10 @@
     },
     {
       "key": "d6a99310-aae3-4a93-9713-9b01d75586a9",
-      "position": 13,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who name a bin without following the questions. Ask, \"Which questions did the water bottle answer on its way to Trash?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students how to save their sketch in Level 1.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If a student can't find their sketch, have them open their Downloads folder and look for the newest file.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students how to upload: click Add/Remove Attachments, then Upload File, and choose the sketch from the Downloads folder.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 2: Students upload their sketch and answer one question: what question they would add to help the robot sort better.",
-        "progression_name": "Recycling Robot Free Response"
+        "progression_name": "Recycling Robot Trace"
       },
       "seeding_key": {
         "activity_section.key": "d6a99310-aae3-4a93-9713-9b01d75586a9",
@@ -1178,7 +1319,7 @@
     },
     {
       "key": "50e32087-eca9-492d-85f3-af6c3758e9eb",
-      "position": 14,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that each student uploaded a sketch before answering. Look for answers that name the new question but not where it goes. Ask, \"Which answer leads to your new question?\"",
         "tips": [
@@ -1197,7 +1338,7 @@
       "key": "cffabd3b-c03e-48be-8a73-1ce842469b01",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 3: Students open the End of Lesson Survey link and answer each question. While they work, complete the Teacher End of Lesson Survey linked on the same level."
       },
       "seeding_key": {
         "activity_section.key": "cffabd3b-c03e-48be-8a73-1ce842469b01",
@@ -1208,22 +1349,11 @@
       "key": "48e0df53-e67c-4c31-8e40-6467775038b6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 3: Students open the End of Lesson Survey link and answer each question. While they work, complete the Teacher End of Lesson Survey linked on the same level.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.",
         "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
         "activity_section.key": "48e0df53-e67c-4c31-8e40-6467775038b6",
-        "lesson_activity.key": "aee70778-6c24-4d28-8f28-1edbfef69918"
-      }
-    },
-    {
-      "key": "04f58e9a-5261-4779-8b5e-98bb06f77399",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
-      },
-      "seeding_key": {
-        "activity_section.key": "04f58e9a-5261-4779-8b5e-98bb06f77399",
         "lesson_activity.key": "aee70778-6c24-4d28-8f28-1edbfef69918"
       }
     },
@@ -1423,7 +1553,7 @@
       "key": "620adcd6-207c-4209-8cc8-0e77f52795ce",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that each photo becomes one record, with features they can see and a label they want to predict.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Learning from Examples? activity guide.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that each photo becomes one record, with features they can see and a label they want to predict.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Learning from Examples activity guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1440,7 +1570,7 @@
       "key": "9c17b5cf-a1a9-4dc9-bc2a-9c628ba91a8b",
       "position": 2,
       "properties": {
-        "description": "Today you're Data Scientists on a team at a wildlife park. A data scientist uses data to answer questions. The park's data scientist, Dr. Osei, wants your help. You meet Dr. Osei, turn each camera photo into a record, and then find a matching record in AI Lab.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 3:\n- **Level 1:** Students click each of the four questions and read Dr. Osei's answers, including what a camera trap is.\n- **Level 2:** Students click each of the six cameras, look at its photo, and fill in one card per photo: Season, Time of Day, Water Level, Temperature and Elephants Visit. The table below the map should end with six records.\n- **Level 3:** Students look through the record cards, find a record that matches one of their photos, and write it in the For the Record section of the activity guide. Students circle the label in their record.",
+        "description": "Today you're Data Scientists on a team at a wildlife park. A data scientist uses data to answer questions. The park's data scientist, Dr. Osei, wants your help. You meet Dr. Osei, turn each camera photo into a record, and then explore Dr. Osei's records in AI Studio.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to complete Levels 1 through 3:\n- **Level 1:** Students click each of the four questions and read Dr. Osei's answers, including what a camera trap is.\n- **Level 2:** Students click each of the six cameras, look at its photo, and fill in one card per photo: Season, Time of Day, Water Level, Temperature and Elephants Visit. The table below the map should end with six records.\n- **Level 3:** Students explore Dr. Osei's Camera Trap Records: they switch between Table and Cards, try one Filter, and copy a record that matches one of their photos into the For the Record section of the activity guide.",
         "progression_name": "For the Record"
       },
       "seeding_key": {
@@ -1452,7 +1582,7 @@
       "key": "0838309d-1614-4417-8c24-638aa4ac9fda",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who check each card against the photo. Ask: \"What in the photo tells you the Season?\" Look for students who compare the categories on a record card with their photo. Ask: \"How do you know this record matches your photo?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define record.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review feature and label."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who check each card against the photo. Ask: \"What in the photo tells you the Season?\" Look for students who compare the categories on a record card with their photo. Ask: \"How do you know this record matches your photo?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**\n\nWhat did you find in the Camera Trap Records?\n\nWhy does one line on every card look different?\n* *Turn and Talk: partners take one minute per question, then two or three pairs share with the class.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students name what they noticed while exploring, before the class names it together. Listen for: each card is one photo, Filter shows only some records, and Elephants Visit looks different. If students only say \"it's pink,\" ask, \"What does Elephants Visit tell Dr. Osei that the other lines don't?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demo the Dataset tab while students watch. Open Lesson 4, Level 3 on the projector.\n- Click Table, then Cards, to show the same records two ways.\n- Click Filter, choose Season: Dry, and click Done. Point to the number of rows at the top.\n- Click Clear filter."
       },
       "seeding_key": {
         "activity_section.key": "0838309d-1614-4417-8c24-638aa4ac9fda",
@@ -1463,7 +1593,7 @@
       "key": "116716ac-41d6-4dfa-8727-2f42be4e91ca",
       "position": 4,
       "properties": {
-        "description": "AI Lab shows records as cards, just like the ones you filled in. The pink line is the label: what the model predicts. The blue lines are the features: what it uses to predict. AI Lab numbers each card, like Row 3 here. You circled the label in your own record in Level 3.",
+        "description": "Each card is one record: all the data about one photo. In the table view, each record shows as one row. Filter shows only the records you pick, so you can look for patterns. The pink line on each card is the label: what the model predicts. The other lines are the features: what the model uses to predict. When you test a model, AI Studio shows the features in blue at the top. AI Studio numbers each card, like Row 1 here.",
         "remarks": true
       },
       "seeding_key": {
@@ -1475,7 +1605,7 @@
       "key": "95a04d04-3213-4692-bde6-b3fc6e471bea",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**\n\nWhich part of your record is the label?\n\nWhy isn't Elephants Visit a feature?\n* *Turn and Talk: partners take one minute per question, then two or three pairs share with the class.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students separate what the model predicts from what it uses to predict. Listen for: Elephants Visit is what we want to know, and the features are what we can see in the photo. If students say \"it's pink,\" ask, \"Why would AI Lab make it look different?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define training data."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review feature and label.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students circle the label in the For the Record section of their activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why isn't Elephants Visit a feature?\n* *Turn and Talk: partners take one minute, then two or three pairs share with the class.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students separate what the model predicts from what it uses to predict. Listen for: Elephants Visit is what Dr. Osei wants to know, and the features are what the camera can see. If students say \"it's pink,\" ask, \"What does Dr. Osei need to know before the elephants arrive?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define record.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define training data."
       },
       "seeding_key": {
         "activity_section.key": "95a04d04-3213-4692-bde6-b3fc6e471bea",
@@ -1486,7 +1616,7 @@
       "key": "9b49a0e3-6ee1-4830-bf5a-b9e0b96137bb",
       "position": 6,
       "properties": {
-        "description": "You have been working with records. A model is trained on a stack of records like the ones you filled in and found in AI Lab. Training data is the set or collection of data used to train an AI model to recognize patterns or make predictions. Next, the job is to choose which records go in the stack.",
+        "description": "You have been working with records. A model is trained on a stack of records like the ones you filled in and explored in AI Studio. Training data is the set or collection of data used to train an AI model to recognize patterns or make predictions. Next, the job is to choose which records go in the stack.",
         "remarks": true
       },
       "seeding_key": {
@@ -1511,7 +1641,7 @@
       "key": "53191621-616d-4b7f-9842-05e95d380ed0",
       "position": 8,
       "properties": {
-        "description": "Dr. Osei's model has to work all year, day and night. It must get these three cases right. Each pretrained model you test was trained on different records. Enter the same three cases in each one.Each model has a data card that says who collected its records and when. Enter all three cases in each of the first three models. Check which cases each model gives an answer for, then read its data card.",
+        "description": "Dr. Osei's model has to work all year, day and night. It must get these three cases right. Each pretrained model you test was trained on different records. Enter the same three cases in each one. None of these models was trained on your photos. Each model has a data card that says who collected its records and when. Enter all three cases in each of the first three models. Check which cases each model gives an answer for, then read its data card. The tree asks one question at a time. Each answer sends the case down a branch until it reaches a prediction.",
         "remarks": true
       },
       "seeding_key": {
@@ -1523,7 +1653,7 @@
       "key": "f40ff77c-65ca-4f11-81bf-6b5c3b3f24c1",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 4 to complete Levels 4 through 6:\n- **Level 4:** Students enter the three cases in Rangers by Day. Case 1 can't be entered, because its records have no Night. Case 2 gives Yes. Case 3 gives No.\n- **Level 5:** Students enter the three cases in Dry Season Only. Case 1 gives Yes. Cases 2 and 3 can't be entered, because its records have no Wet season.\n- **Level 6:** Students enter the three cases in Wet Season Cameras. Case 1 can't be entered, because its records have no Dry season. Case 2 gives Yes. Case 3 gives No.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Demo the Testing tab while students watch. Open Lesson 4, Level 4 on the projector.\n- Point to Predict and based on at the top: the label is pink and the features are blue.\n- In the Make a prediction panel, set Season to Dry, Time of Day to Afternoon, Water Level to Low and Temperature to Hot. Click Predict.\n- Point to each step of the path in the AI predicts panel.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 4 to complete Levels 4 through 6:\n- **Level 4:** Students enter the three cases in Rangers by Day. Case 1 can't be entered, because its records were all collected during the day. Case 2 gives Yes. Case 3 gives No.\n- **Level 5:** Students enter the three cases in Dry Season Only. Case 1 gives Yes. Cases 2 and 3 can't be entered, because its records are all from the dry season.\n- **Level 6:** Students enter the three cases in Wet Season Cameras. Case 1 can't be entered, because its records are all from the wet season. Case 2 gives Yes. Case 3 gives No.",
         "progression_name": "Which Data Works"
       },
       "seeding_key": {
@@ -1535,7 +1665,7 @@
       "key": "9a4ba04e-7336-4cda-bfbd-2a9f88a05e5d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who read the data card after a case fails. Ask: \"What does this data card say about when the records were collected?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**\n\nWhich case did each model get wrong?\n\nWhy did each model get a different case wrong?\n* *Turn and Talk: partners talk for two minutes, then one pair per model shares.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students tie each failure to what that model's records left out. Listen for: no night records, no wet-season records, no dry-season records. If students say \"the model is bad,\" ask, \"What was missing from its records?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which set of training data do you think will work for the job?\n* *Popcorn Share: take four or five quick picks with a reason.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students commit to a prediction using what each set of records includes. Listen for: the data with both seasons and night. If students pick another card, ask, \"Which case would it miss?\""
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who read the data card after a case fails. Ask: \"What does this data card say about when the records were collected?\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**\n\nWhich case could each model not answer?\n\nWhy did each model miss a different case?\n* *Turn and Talk: partners talk for two minutes, then one pair per model shares.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students tie each failure to what that model's records left out. Listen for: no night records, no wet-season records, no dry-season records. If students say \"the model is bad,\" ask, \"What was missing from its records?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which training data would get all three cases right?\n* *Popcorn Share: take four or five quick picks with a reason.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students commit to a prediction using what each set of records includes. Listen for: the data with both seasons and night. If students pick another card, ask, \"Which case would it miss?\""
       },
       "seeding_key": {
         "activity_section.key": "9a4ba04e-7336-4cda-bfbd-2a9f88a05e5d",
@@ -1573,20 +1703,8 @@
       }
     },
     {
-      "key": "d4861b11-2d76-48e6-a465-5de8a2e9b247",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 9: Students flip the two flashcards, training data and record.",
-        "progression_name": "Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "d4861b11-2d76-48e6-a465-5de8a2e9b247",
-        "lesson_activity.key": "51095042-461a-45ca-bf2a-d9aa533e16da"
-      }
-    },
-    {
       "key": "3e380c08-7c39-455d-bec7-54f5952b4c50",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
@@ -1597,7 +1715,7 @@
     },
     {
       "key": "a211fbaf-020c-4ccd-b20e-8baac14bf5c9",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "End of Lesson Survey"
       },
@@ -1610,7 +1728,7 @@
       "key": "1c84ffc3-e06a-4897-ac61-ae3b2ce0dff0",
       "position": 1,
       "properties": {
-        "description": "\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n* Imagine your parent or guardian walks into this room. Do they say it's clean enough or a total disaster?\n* What do you say?\n* Why might you disagree?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface that \"cleanliness\" is subjective and depends on different thresholds. To make a machine understand them, we must establish a clear label—which is the exact answer or category you are trying to predict (just like an email filter trying to predict if a message is \"spam\" or \"not spam\").\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n* Imagine your parent or guardian walks into this room. Do they say it's clean enough or a total disaster?\n* What do you say?\n* Why might you disagree?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that people judge \"clean\" differently. Listen for the different things each person looks at first, like the floor or the bed.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "1c84ffc3-e06a-4897-ac61-ae3b2ce0dff0",
@@ -1621,7 +1739,7 @@
       "key": "b18f0466-44f7-484f-9e91-5d6eb9ee075a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student/group a copy of the Curating a Dataset activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Revisit the vocabulary term label, as introduced in Lesson 2.\n\n"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Revisit the vocabulary term label, as introduced in Lesson 2."
       },
       "seeding_key": {
         "activity_section.key": "b18f0466-44f7-484f-9e91-5d6eb9ee075a",
@@ -1658,7 +1776,7 @@
       "key": "8f1283c6-60c2-42bd-8eb6-ec14d3379a83",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who disagree with a prediction. Ask them what information in the photo the app might be using to make that prediction.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n\nDo you agree with every prediction made by the app?\n\nWhat information do you think the app is using to make its prediction?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students start to wonder what the app was trained on, because that question drives the rest of the lesson. Listen for guesses like clothes, dishes or the bed. Accept them, but don't confirm them yet."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who disagree with a prediction. Ask them what information in the photo the app might be using to make that prediction.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n-  Do you agree with every prediction made by the app?\n- What information do you think the app is using to make its prediction?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students start to wonder what the app was trained on, because that question drives the rest of the lesson. Listen for guesses like clothes, dishes or the bed. Accept them, but don't confirm them yet."
       },
       "seeding_key": {
         "activity_section.key": "8f1283c6-60c2-42bd-8eb6-ec14d3379a83",
@@ -1712,7 +1830,7 @@
       "key": "94f08459-fff2-4928-b50c-8e094d49762b",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch rooms near a boundary, like Room Four (7 items) and Room Seven (9 items). Ask pairs to move a cutoff by one or two and see which rooms switch categories. Encourage students to click Sort by items on floor to see a different view.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n\nHow did you decide where to put the line between your categories?\n\nHow might these categories affect the prediction made by the app?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that people decide where the lines between categories go, and those choices can change a prediction. Ask a few pairs with different cutoffs to share which room made them put the line there. Listen for: a room near a line could get a different prediction. If students say the categories don't matter because the numbers stay the same, ask, \"Which category is Room Seven (9 items) in for you? Would a rule like 'Lots of items means Total Disaster' change its prediction?\""
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch rooms near a boundary, like Room Four (7 items) and Room Seven (9 items). Ask pairs to move a cutoff by one or two and see which rooms switch categories. Encourage students to click Sort by items on floor to see a different view.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n\n- How did you decide where to put the line between your categories?\n- How might these categories affect the prediction made by the app?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that people decide where the lines between categories go, and those choices can change a prediction. Ask a few pairs with different cutoffs to share which room made them put the line there. Listen for: a room near a line could get a different prediction. If students say the categories don't matter because the numbers stay the same, ask, \"Which category is Room Seven (9 items) in for you? Would a rule like 'Lots of items means Total Disaster' change its prediction?\""
       },
       "seeding_key": {
         "activity_section.key": "94f08459-fff2-4928-b50c-8e094d49762b",
@@ -1723,10 +1841,10 @@
       "key": "279c6855-8308-45a0-a5f2-1cc91043ddce",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that some features sort the rooms better than others, and that a dataset only holds the features someone chose to collect.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 3 to complete Levels 3–4.\n- **Level 3:** A Sketch Lab level in which students look at six photos and list features in the activity guide that would help judge whether a room is clean.\n- **Level 4:** An AI Lab level on which students look at a dataset someone made from these photos. They choose which features are most important.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students discover that some features sort the rooms better than others, and that a dataset only holds the features someone chose to collect.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 3.\n- **Level 3:** A Sketch Lab level in which students look at six photos and list features in the activity guide that would help judge whether a room is clean.",
         "duration": "15",
         "name": "Curating a Dataset",
-        "progression_name": "Curating a Dataset"
+        "progression_name": "Identify Data Features"
       },
       "seeding_key": {
         "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce",
@@ -1737,7 +1855,8 @@
       "key": "97b0287b-ad59-4c1a-87da-9f05b24f5158",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students who write \"messy\" or \"dirty\" as a feature. That's the label, not a feature. Ask, \"What makes it look messy?\" Also check how students handle Room Four. If a pair notices the laundry is clean, ask them which feature on their list would catch that. In Level 4, ask pairs how the four features in the dataset compare to their own list. Pairs who notice something from their list is missing, like what's on the floor rather than how much, are already on the way to understanding how purposeful choices about a dataset shape what a model predicts.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give pairs about five minutes to sketch a decision tree in the activity guide using one or more features from Level 4. Point out the checklist above the drawing space: a question about one feature at the top, one branch for each category, and a label at the end of every branch. Each pair should also write one sentence for each feature explaining why they used it. Leave the Level 4 dataset on screen or remind students they can look at it.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check how trees handle Room Four. It has Extreme floor mess but is labeled Clean Enough, so it breaks a lot of first-draft trees. Ask pairs to trace Room Four through their tree and see where it ends up. Also look for pairs who kept Posters on Wall, and ask them to explain why.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students who write \"messy\" or \"dirty\" as a feature. That's the label, not a feature. Ask, \"What makes it look messy?\" Also check how students handle Room Four. If a pair notices the laundry is clean, ask them which feature on their list would catch that.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4.\n- **Level 4:** An AI Studio level in which students look at the dataset someone made from the Level 3 photos. They number the four features in the activity guide from most to least important.",
+        "progression_name": "Curating a Dataset",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1825,7 +1944,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "On target: students should be able to name a specific missing feature and connect it to a mistake the app could make (\"They didn't include what's under the bed, so the app would call a room clean even if it's hiding trash\").\n\nBelow target: students name a missing feature without explaining what the app loses, or say the app should \"just look harder.\"\n"
+            "markdown": "On target: students should be able to name a specific missing feature and connect it to a mistake the app could make (\"They didn't include what's under the bed, so the app would call a room clean even if it's hiding trash\").\n\nBelow target: students name a missing feature without explaining what the app loses, or say the app should \"just look harder.\""
           }
         ]
       },
@@ -2179,16 +2298,10 @@
       "key": "bb3934a5-6c3e-4610-874e-94e65d71db45",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students read past scenes and guess what features the pre-visualization team looked at when deciding whether to Just Film It or Create a Rough Draft.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should ideally be in groups of three for this activity so that they can compare and contrast their unique trees later in the lesson.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students browse the dataset in Cards view and read at least three Rough Draft cards and three Just Film It cards. They write down what they think the team was looking at when it made each decision.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Many students will read only the scene description and skip the features listed. Ask them which features on the card back up their guess. A few students may notice that the word \"real\" shows up in a lot of descriptions. Don't confirm or explain it; ask them to keep an eye on it.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students read past scenes and guess what features the pre-visualization team looked at when deciding whether to Just Film It or Create a Rough Draft.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of three for this activity so that they can compare and contrast their unique trees.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students browse the dataset in Cards view. Have them use the Filter option to different views of the data. Have them predict which features seem most important based on their reading of the data.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Many students will read only the scene description and skip the features listed. Ask them which features on the card back up their guess. A few students may notice that the word \"real\" shows up in a lot of descriptions. Don't confirm or explain it; ask them to keep an eye on it.\n",
         "duration": "5",
         "name": "Meet the Data",
-        "progression_name": "Meet the Data",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If the level opens in Table view, have students click Cards at the top of the dataset."
-          }
-        ]
+        "progression_name": "Meet the Data"
       },
       "seeding_key": {
         "activity_section.key": "bb3934a5-6c3e-4610-874e-94e65d71db45",
@@ -2199,7 +2312,7 @@
       "key": "e5964b9b-cad5-4ea4-8bc9-965021177c0f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What observations did you make about the scene dataset?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share the guesses they wrote in Level 1. Some will point to action, like stunts and crashes. Others will point to feeling, like scary or serious scenes. Acknowledge both kinds and don't settle which is right; the next levels test them. If a student brings up the scene descriptions, ask: If you couldn't read the description, which features would you look at?\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What observations did you make about the scene dataset?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share the guesses they wrote in Level 1. Some will point to action, like stunts and crashes. Others will point to feeling, like scary or serious scenes. Acknowledge both kinds and don't settle which is right; the next levels test them. If a student brings up the scene descriptions, ask: If you couldn't read the description, which features would you look at?"
       },
       "seeding_key": {
         "activity_section.key": "e5964b9b-cad5-4ea4-8bc9-965021177c0f",
@@ -2210,14 +2323,14 @@
       "key": "527ad147-af0b-49e9-920c-a64e79dabfa6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students train two trees on the same scenes using different features. They compare the results.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2 to train their first decision tree using the Mostly Talking, Mood, and Indoors or Outdoors features. The second decision tree should be trained using the Stunt, Moving Vehicles, and Something Gets Destroyed features.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that Predict says Decision before students train. Then check that each tree uses only the three features listed in the activity guide. Students often leave extra features checked from the first tree when they train the second one.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students train two trees on the same scenes using different features. They compare the results.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2 to train their first decision tree using the Mostly Talking, Mood, and Indoors or Outdoors features. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that Predict says Decision before students train. Then check that each tree uses only the three features listed in the activity guide. Students often leave extra features checked from the first tree when they train the second one.",
         "duration": "10",
         "name": "Training Decision Trees",
         "progression_name": "Training Decision Trees",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "To start the second tree, students can click the Dataset tab at the top of the Workspace to return to the data view. Once there, they can uncheck the first three features, and check the new three. Students can click the All results button to see both trees' accuracy at a glance."
+            "markdown": "Once students have trained the tree using the features in the Tree 1 row of their Activity Guide, return to the slides in order to walk through the next steps together as guided practice. They will have the opportunity to train a second tree using the skills that they learn in the walkthrough."
           }
         ]
       },
@@ -2230,11 +2343,11 @@
       "key": "9c8156a7-a07d-4cac-a97f-52342b19638f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the numbers on each leaf. Each check mark is a test scene the tree got right, and each X is one it got wrong. Count the checks together to show where the accuracy number comes from.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students where the Accuracy button is, and have them record one correct and one incorrect test scene in the activity guide.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the numbers on each leaf. Each check mark is a test scene the tree got right, and each X is one it got wrong. Count the checks together to show where the accuracy number comes from.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students click one of the end nodes on the decision tree in order to bring up a breakdown of the data that got filtered into it. Have them experiment with toggling between correct and incorrect predictions.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Scorecard opens on the Correct tab. Point out the Incorrect tab so students can find the tree's mistakes."
+            "markdown": "There are a lot of options within the scorecard which can be confusing for now. Just have students focus on looking at the correct / incorrect predictions."
           }
         ]
       },
@@ -2244,21 +2357,38 @@
       }
     },
     {
-      "key": "404ff160-c0aa-4b1e-bad4-8383cac9f487",
+      "key": "8c613cdd-987b-493c-8a90-8225260a0d80",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Both trees learned from the same scenes. Why did one do better?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The point here is for students to see that the data didn't change, only the features did. Many will start with \"the second tree had better features.\" Ask what makes them better for this team's job. Students should notice that the second tree's features describe what makes a scene hard or risky to film, while the first tree's describe how a scene looks or feels. Connect this back to the warm-up by asking: Which of these features match what Clint said his team looks for? If a student says the tree should just read the scene description, point out that the tree never sees the description, only the features.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students where the Accuracy button is, and have them record one correct and one incorrect test scene in the activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While the decision nodes contained information only about testing / training data that got sorted into that branch of the decision tree, the Scorecard contains information about how all of the test data performed within the decision tree."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "404ff160-c0aa-4b1e-bad4-8383cac9f487",
+        "activity_section.key": "8c613cdd-987b-493c-8a90-8225260a0d80",
+        "lesson_activity.key": "982513d0-d281-4318-9c5e-c0adefeb4a87"
+      }
+    },
+    {
+      "key": "4b483896-b9ea-4c15-93f9-382028f6c0ec",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once students have recorded the accuracy number and examples for their first decision tree, have them click the Start over button to train a second tree. The features to use are listed in the Tree 2 row in the students' activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Both trees learned from the same scenes. Why did one do better?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The point here is for students to see that the data didn't change, only the features did. Many will start with \"the second tree had better features.\" Ask what makes them better for this team's job. Students should notice that the second tree's features describe what makes a scene hard or risky to film, while the first tree's describe how a scene looks or feels. Connect this back to the warm-up by asking: Which of these features match what Clint said his team looks for? If a student says the tree should just read the scene description, point out that the tree never sees the description, only the features."
+      },
+      "seeding_key": {
+        "activity_section.key": "4b483896-b9ea-4c15-93f9-382028f6c0ec",
         "lesson_activity.key": "982513d0-d281-4318-9c5e-c0adefeb4a87"
       }
     },
     {
       "key": "9f7bb7a3-170e-41d7-bca6-e1e48a004a91",
-      "position": 7,
+      "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students try other combinations of features and test whether adding more features makes a better tree.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 3. Students train several trees using different combinations of features and use the All results button to compare them. Ask them to check whether adding more features actually makes a tree better.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students who select all six features and stop. Ask them to find a smaller set that does just as well. If a student is stuck below 75%, ask which features describe what makes a scene hard to film.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students try other combinations of features and test whether adding more features makes a better tree.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 3. Students train several trees using different combinations of features and use the All results button to compare them. Ask them to check whether adding more features actually makes a tree better.",
         "duration": "5",
         "name": "Training Different Features",
         "progression_name": "Training Different Features"
@@ -2270,9 +2400,9 @@
     },
     {
       "key": "2b2cc690-50e2-4d6b-b314-c722ac5c18e4",
-      "position": 8,
+      "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Were there any features that did not help when you trained your tree?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students find that adding features doesn't always make a better tree. Adding Mood or Indoors or Outdoors to the three action features rarely raises the score, and sometimes the tree just ignores them. When students argue over a few points, remind them the score comes from only 8 test scenes. Then ask: Which tree would you trust with a scene it has never seen?\n"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students who select all six features and stop. Ask them to find a smaller set that does just as well. If a student is stuck below 75%, ask which features describe what makes a scene hard to film.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** [Think-Pair-Share] Were there any features that did not help when you trained your tree?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students find that adding features doesn't always make a better tree. Adding Mood or Indoors or Outdoors to the three action features rarely raises the score, and sometimes the tree just ignores them. When students argue over a few points, remind them the score comes from only 8 test scenes. Then ask: Which tree would you trust with a scene it has never seen?"
       },
       "seeding_key": {
         "activity_section.key": "2b2cc690-50e2-4d6b-b314-c722ac5c18e4",
@@ -2281,12 +2411,12 @@
     },
     {
       "key": "6c6a9fba-e7e6-405f-9c85-ba5ea9d4a5fd",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students use their tree to make a prediction for a new scene and watch the path it takes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 4. Students enter a scene into Make a Prediction, press Predict, then press Replay to watch the tree's path.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Steer students away from the Random button. It creates scenes that make no sense, like an indoor scene that is mostly talking while something gets destroyed. Ask students to describe a real scene from a movie they know and enter that instead.\n",
-        "duration": "5",
-        "name": "Making a Prediction",
-        "progression_name": "Make a Prediction"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students use their tree to make a prediction for a new scene and watch the path it takes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 4. Students invent their own scene in their activity guide, then enter a scene's features into the Make a Prediction box, press Predict, then analyze how the tree sorts it.",
+        "duration": "10",
+        "name": "Invent a Scene",
+        "progression_name": "Invent a Scene"
       },
       "seeding_key": {
         "activity_section.key": "6c6a9fba-e7e6-405f-9c85-ba5ea9d4a5fd",
@@ -2294,10 +2424,21 @@
       }
     },
     {
-      "key": "9e8b0a3d-918a-4f82-b6ec-5d1abb3c4087",
-      "position": 10,
+      "key": "f20e8213-cc0e-4d10-b16c-71c93ef84951",
+      "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Each teammate adds a different new feature to the same base data, so the team can compare how one added feature changes a tree.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each teammate chooses a different feature: Movie Budget, Famous Actor, or Can It Be Filmed Again.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 5. Students choose their assigned feature and train a tree with their best features from Level 3 plus the new one.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** The new feature also shows up in the Predict menu. Make sure Predict still says Decision\n",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Steer students away from the Random button. It creates scenes that make no sense, like an indoor scene that is mostly talking while something gets destroyed. Ask students to describe a real scene from a movie they know and enter that instead."
+      },
+      "seeding_key": {
+        "activity_section.key": "f20e8213-cc0e-4d10-b16c-71c93ef84951",
+        "lesson_activity.key": "982513d0-d281-4318-9c5e-c0adefeb4a87"
+      }
+    },
+    {
+      "key": "9e8b0a3d-918a-4f82-b6ec-5d1abb3c4087",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Each students selects a new feature to add to the same base data. They compare how one added feature changes a tree and test it using one or more of the challenge scenes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each students chooses one of the different features to add to the dataset: Movie Budget, Famous Actor, or Can It Be Filmed Again.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 5. Students choose their assigned feature and train a tree with their best features from Level 3 plus the new one.",
         "duration": "5",
         "name": "Add a Feature",
         "progression_name": "Add a Feature",
@@ -2314,16 +2455,13 @@
       }
     },
     {
-      "key": "99be952e-01b9-49ce-9889-cd9cd06b15f6",
-      "position": 11,
+      "key": "5fccaf5f-fc88-4ce0-9698-a80e2250dc58",
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Teams run the same three scenes through trees that each have a different added feature, and find where their trees disagree.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have teams fill in the Your Features section in the Activity Guide for all three scenes and agree on one set of answers before anyone presses Predict\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If teammates disagree about a feature, such as whether a crushed car counts as a moving vehicle, give them 30 seconds to argue it out and decide. Once teams have results, ask the Famous Actor teammate why a feature that sounds important didn't change anything. Suggest the Movie Budget teammate filter the dataset to Movie Budget: Small and look at which stunts were just filmed.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Did your team's trees disagree on any Challenge Scenes? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Most teams will find their trees disagree on the car crush. Push students to trace the answer back to the data: in past small-budget movies, risky scenes like this one were often just filmed. The tree learned what past teams decided, not what each scene needed. When students say the data shows small movies don't plan, ask: Is that true about filmmaking, or true about these 79 scenes?\n",
-        "duration": "5",
-        "name": "Challenge Scenes",
-        "progression_name": "Limited Features"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Point out to students that the new feature also shows up in the Predict menu. Make sure Predict (label) still says Decision and that students didn't change that accidentally when updating features.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Did your new tree disagree on any Challenge Scenes? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Most teams will find their trees disagree on the car crush. Push students to trace the answer back to the data: in past small-budget movies, risky scenes like this one were often just filmed. The tree learned what past teams decided, not what each scene needed. When students say the data shows small movies don't plan, ask: Is that true about filmmaking, or true about these 79 scenes?"
       },
       "seeding_key": {
-        "activity_section.key": "99be952e-01b9-49ce-9889-cd9cd06b15f6",
+        "activity_section.key": "5fccaf5f-fc88-4ce0-9698-a80e2250dc58",
         "lesson_activity.key": "982513d0-d281-4318-9c5e-c0adefeb4a87"
       }
     },
@@ -2393,10 +2531,16 @@
       "key": "c2d7feb1-cc7d-4efa-b101-3fe78470d0b9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students get to know the marketing data and form a first guess about what makes a clip a hit.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 8, Levels 1 - 2:\n\n* **Level 1**: Students browse the clips in Cards view and write one pattern in their activity guide.\n\n* **Level 2**: Students train the tree and write down its accuracy.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 1, ask students which reasons from the warm-up board show up as features on the cards. Some will notice that most hits have a famous actor, or that behind-the-scenes clips are rare. On Level 2, check that Predict says Result and that only the four listed features are selected. Every student should see 66.67%. If a student's number is different, check their features first.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students get to know the marketing data and examine how test data using the model performs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 8, Levels 1 - 2:\n- **Level 1:** Students browse the clips in Cards view and write one pattern they notice in their activity guide.\n- **Level 2:** Students examine a trained tree and uncover which test items were incorrectly predicted.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 1, ask students which reasons provided in the warm-up video show up as features on the cards. Some will notice that most hits have a famous actor, or that behind-the-scenes clips are rare. On Level 2, check that Predict says Result and that only the four listed features are selected. Every student should see 66.67%. If a student's number is different, check which features they used to train the model.",
         "duration": "10",
-        "name": "Train and Test",
-        "progression_name": "Train and Test"
+        "name": "Testing a Decision Tree",
+        "progression_name": "Testing a Decision Tree",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The next slide will walk through the steps that students should perform to see the incorrectly labeled data more explicitly."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "c2d7feb1-cc7d-4efa-b101-3fe78470d0b9",
@@ -2404,27 +2548,16 @@
       }
     },
     {
-      "key": "5e29c7ad-646c-4c97-828a-7337e24a4cba",
+      "key": "28dd3ff2-528a-4997-9713-bf08cd53774f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model the three steps on the projector before students try them. Point out that the tree tested itself on 9 clips it never trained on, and these are the ones it got wrong.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students find the three wrong clips and, for each one, write a guess in their activity guide about why the tree got it wrong.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model these steps that can be used to find the model's mistakes. Point out that the tree tested itself on 9 clips it never trained on, and these are the ones it got wrong.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Expand columns shows the clip's description and every feature, even ones the tree didn't train on. Students will need both later when they trace."
+            "markdown": "Expand columns shows the clip's description and every feature, even ones the tree didn't train on. Students will need this skill in order to trace incorrect predictions back to data."
           }
         ]
-      },
-      "seeding_key": {
-        "activity_section.key": "5e29c7ad-646c-4c97-828a-7337e24a4cba",
-        "lesson_activity.key": "e20dffde-67f9-487d-8a5e-bb1ec392e307"
-      }
-    },
-    {
-      "key": "28dd3ff2-528a-4997-9713-bf08cd53774f",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which wrong clip surprises you most?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question gives students a reason to trace. Most guesses will be about the clips themselves, like \"the tree doesn't know dances are funny.\" Collect two or three guesses without judging them. If students start blaming the computer, ask: Where did the tree learn its rules in the first place? That's the question the next part of the lesson answers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define tracing.\n"
       },
       "seeding_key": {
         "activity_section.key": "28dd3ff2-528a-4997-9713-bf08cd53774f",
@@ -2432,17 +2565,28 @@
       }
     },
     {
+      "key": "1559109b-2091-40de-8ce2-f39ebb84e2f6",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which wrong clip surprises you most?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question gives students a reason to trace. Most guesses will be about the clips themselves, like \"the tree doesn't know dances are funny.\" Collect two or three guesses without judging them. If students start blaming the computer, ask: Where did the tree learn its rules in the first place? That's the question the next part of the lesson answers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define tracing.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define test data."
+      },
+      "seeding_key": {
+        "activity_section.key": "1559109b-2091-40de-8ce2-f39ebb84e2f6",
+        "lesson_activity.key": "e20dffde-67f9-487d-8a5e-bb1ec392e307"
+      }
+    },
+    {
       "key": "12bf2694-df6f-4abb-91fb-30a42cd936ab",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn what tracing means and the three steps they'll use.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3. Students follow along on their own screens as you model each step of the tracing process.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the path aloud as it replays: Famous Actor? Yes. Clip Type? Behind the Scenes or Interview. Funny? Yes. Clip Type?\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students practice how to trace from prediction back through a decision tree to the original data.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3. Students follow along on their own screens as you model each step of the tracing process.",
         "duration": "15",
         "name": "Trace a Mistake",
         "progression_name": "Trace a Mistake",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The following steps describe the tracing process:\n\n1. What did it predict? Enter the clip and press Predict.\n\n2. What path did it take? Press Replay and follow the questions.\n\n3. What clips taught it that? Check the Training rows, then filter the Dataset.\n\n**Note**: Long labels get cut off, like \"Behind the Sc...\". Show students how to read the full label so they don't skip a step.\n"
+            "markdown": "The following steps describe the tracing process:\n\n1. What did it predict? Enter the clip and press Predict.\n\n2. What path did it take? Press Replay and follow the questions.\n\n3. What clips taught it that? Check the Training rows, then filter the Dataset.\n\nNote: Long labels get cut off, like \"Behind the Sc...\". Show students that they can hover over it to read the full label so they don't skip a step."
           }
         ]
       },
@@ -2452,19 +2596,19 @@
       }
     },
     {
-      "key": "7995e555-dcd3-4f80-a2f1-2fc5cd336961",
+      "key": "6cf45f50-347c-4c61-8b18-a1d558e1923a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model clicking the last step and switching from Test rows to Training rows. Read the four clips aloud. All four are older behind-the-scenes clips, and all four were Meh.\n\n**Say**: These four clips are the whole reason the tree said Meh. It's doing exactly what the training clips taught it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model the filter, then have students count with you. There are 9 behind-the-scenes clips. Eight were Meh, and the dance clip is the only Hit.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should enter the following features:\n\n* Clip Type: Behind the Scenes\n* Length: Short\n* Famous Actor: Yes\n* Funny: Yes\n\n**Say:** Refer to the Trace a Mistake section in your activity guide and enter in the feature values that you see for Level 3.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students how to click the replay button to go through the questions that the decision tree asks in order to sort the data. Record these in the Activity Guide.\n\n**Say:** Let's watch the path that the data travels to get to the prediction.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students how to click the decision node, and how to switch from Test rows to Training rows. Click Expand columns to the read the four clips aloud. All four are behind-the-scenes clips, and all four were Meh.\n\n**Say:** These four clips seem to be the reason the tree predicted \"Meh\" for our test data– it's doing what the training clips taught it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students how to navigate back to the Dataset and how to filter the data for Behind the Scenes clips. Together with the students, count the clips that are filtered. There are 9 behind-the-scenes clips. Eight were \"Meh\", and the dance clip is the only \"Hit\".",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The filter allows one condition at a time. Pick the feature that matters most for the clip you're tracing.\n"
+            "markdown": "The filter allows one condition at a time. Pick the feature that matters most for the clip you're tracing."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "7995e555-dcd3-4f80-a2f1-2fc5cd336961",
+        "activity_section.key": "6cf45f50-347c-4c61-8b18-a1d558e1923a",
         "lesson_activity.key": "e20dffde-67f9-487d-8a5e-bb1ec392e307"
       }
     },
@@ -2472,7 +2616,7 @@
       "key": "ef9e327f-8e6f-4929-911a-f562bdd6b9fd",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** The tree's rule says behind-the-scenes clips are Meh. Where did that rule come from?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should come away seeing that the tree followed its training data exactly. It never saw a behind-the-scenes clip that was a hit, so it had no way to predict one. When students say \"the tree is bad,\" push them to describe what the tree would need to see to get this clip right. This is the first kind of mistake: the data didn't have enough examples. Connect it back to Catherine's video and the idea that patterns can go out of date.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 4. Pairs follow the same three steps and fill in their second trace card.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Many pairs get stuck here, because every step on the path makes sense. That's the point. Ask: Look at the long interviews that aren't funny. Which ones were hits? Only the premiere clip was. Then ask whether any feature, even the two the tree didn't use, sets it apart. None do. Only the description, \"on premiere night,\" explains it.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** The tree's rule says Behind the Scenes clips are \"Meh\". Where did that rule come from?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should come away seeing that the tree followed its training data exactly. It never saw a behind-the-scenes clip that was a hit, so it had no way to predict one. When students say \"the tree is bad,\" push them to describe what the tree would need to see to get this clip right. This is the first kind of mistake: the data didn't have enough examples. Connect it back to Catherine's video and the idea that patterns can go out of date.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 4. Pairs follow the same three steps and fill in their second trace card.",
         "progression_name": "Trace Another Mistake"
       },
       "seeding_key": {
@@ -2481,13 +2625,13 @@
       }
     },
     {
-      "key": "1ae168a6-591d-4785-beff-9c5050db450c",
+      "key": "7b8ae129-9078-4aba-be80-7364ffd995ee",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**\n\n* Did the tree do anything wrong?\n\n* What was missing?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This mistake is different from the dance clip. The tree followed its data, and similar interviews really were Meh. The data never recorded the thing that made this clip a hit. Push students past \"the tree needs more interviews\" by asking: If we added ten more interviews, would the tree know about premiere night? Students should arrive at the idea that the data is missing a feature.\n"
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Pairs might get stuck here because every step on the path makes sense. Tell them to look at the long interviews that aren't funny. Which ones were hits? Only the premiere clip was. In this case, the description \"on premiere night\" might explains why it was misclassified. Since this is not one of the features that the dataset is using, it shows a possible issue with the data features that were curated and therefore the way that the tree was trained.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**\n\n* Did the tree do anything wrong?\n* What was missing?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This mistake is different from the dance clip. The tree followed its data, and similar interviews really were Meh. The data never recorded the thing that made this clip a hit. Push students past \"the tree needs more interviews\" by asking: If we added ten more interviews, would the tree know about premiere night? Students should arrive at the idea that the data is missing a feature."
       },
       "seeding_key": {
-        "activity_section.key": "1ae168a6-591d-4785-beff-9c5050db450c",
+        "activity_section.key": "7b8ae129-9078-4aba-be80-7364ffd995ee",
         "lesson_activity.key": "e20dffde-67f9-487d-8a5e-bb1ec392e307"
       }
     },
@@ -2495,7 +2639,9 @@
       "key": "ea70e57d-bf4a-4b23-8cb1-95ae6bc72017",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students change the training data, retrain, and see whether a prediction changes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5. Each partner chooses a different change, writes a prediction in the activity guide, then trains with Clip Type, Length, Famous Actor, and Funny.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure students write their prediction before they train. Students who add hits or remove flops will see the dance clip leave the Incorrect tab, and the accuracy will rise to 77.78%. Students who add interviews will see nothing change, and the accuracy will stay at 66.67%. Ask those students: Why didn't four more interviews help?\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students change the training data, retrain, and see whether a prediction changes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5. Have students choose one of the proposed changes to the clips that the traced earlier. They write a prediction in the activity guide, train with the appropriate features, and analyze the result..\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure students write their prediction before they train. Students who add hits or remove flops will see the Silly Dance clip leave the Incorrect tab, and the accuracy will rise to 77.78%. Students who add interviews for the Premiere Night clip will see nothing change, and the accuracy will stay at 66.67%. Ask those students: Why didn't four more interviews help?",
+        "duration": "10",
+        "name": "Test a Fix",
         "progression_name": "Test a Fix",
         "tips": [
           {
@@ -2513,7 +2659,7 @@
       "key": "93686380-88d8-4d93-8377-648ad477dfca",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which mistakes could changing the data fix? Which couldn't?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect the results back to the two kinds of mistakes discussed throughout this lesson. Adding or removing examples fixed the dance clip, which was missing examples. No number of new interviews fixed the premiere clip, because the reason it was a hit was never a feature. The second question has no single right answer. Students who prefer adding hits often say removing data throws away information; students who prefer removing flops say old clips don't reflect what people like now. Press both sides to explain what each change does to the tree.\n"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which mistakes could changing the data fix? Which couldn't?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect the results back to the two kinds of mistakes discussed throughout this lesson. Adding or removing examples fixed the dance clip, which was missing examples. No number of new interviews fixed the premiere clip, because the reason it was a hit was never a feature. The second question has no single right answer. Students who prefer adding hits often say removing data throws away information; students who prefer removing flops say old clips don't reflect what people like now. Press both sides to explain what each change does to the tree."
       },
       "seeding_key": {
         "activity_section.key": "93686380-88d8-4d93-8377-648ad477dfca",
@@ -2529,7 +2675,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Look closely at the last two blanks. Strong answers point to specific evidence from the training data and name a change that matches it, like \"it never saw a behind-the-scenes hit, so I'd add newer ones that were hits,\" or \"it had no way to know about premiere night, so I'd add a feature for big events.\" Answers like \"add more data\" or \"make it smarter\" show a student who knows the data matters but hasn't connected it to this specific mistake yet. Ask them: Which clips in the Training rows taught the tree that answer?"
+            "markdown": "Strong answers name a specific prediction and the data that caused it. For example: \"The tree called the dance clip Meh because every behind-the-scenes clip in the training data was Meh. It never saw one that was a hit.\" Some students will use the premiere-night interview instead: \"Every long interview in the data was Meh, and nothing in the data said it was premiere night.\" Both work. Answers like \"the data was bad\" or \"it didn't have enough data\" show a student who knows data matters but hasn't connected it to a specific mistake yet. Ask them: Which clips in the training data taught the tree that answer?"
           }
         ]
       },
@@ -3261,78 +3407,180 @@
       }
     },
     {
-      "key": "5b40336e-26a8-4d96-9261-e58a2cb64086",
+      "key": "901bba75-e6a2-448c-870b-b7e107d06a0b",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "5b40336e-26a8-4d96-9261-e58a2cb64086",
-        "lesson_activity.key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470"
+        "activity_section.key": "901bba75-e6a2-448c-870b-b7e107d06a0b",
+        "lesson_activity.key": "fc2d64ce-0401-49fc-8347-fb27e484e592"
       }
     },
     {
-      "key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e",
+      "key": "a4a05ddb-da52-42f8-b264-129444cf0121",
+      "position": 1,
+      "properties": {
+        "name": "Meet the Data",
+        "progression_name": "Meet the Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "a4a05ddb-da52-42f8-b264-129444cf0121",
+        "lesson_activity.key": "befa7f31-2609-44f9-a67e-e6f87fcbf9db"
+      }
+    },
+    {
+      "key": "0687cfc9-4499-45b6-861d-a4969b3761db",
       "position": 2,
       "properties": {
-        "progression_name": "Day One"
+        "name": "Training a Model",
+        "progression_name": "Training a Model"
       },
       "seeding_key": {
-        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e",
-        "lesson_activity.key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470"
+        "activity_section.key": "0687cfc9-4499-45b6-861d-a4969b3761db",
+        "lesson_activity.key": "befa7f31-2609-44f9-a67e-e6f87fcbf9db"
       }
     },
     {
-      "key": "6cc9cc17-2a96-446a-8fce-2093a6d37636",
-      "position": 3,
-      "properties": {
-        "progression_name": "Project Guide - Choosing a Dataset"
-      },
-      "seeding_key": {
-        "activity_section.key": "6cc9cc17-2a96-446a-8fce-2093a6d37636",
-        "lesson_activity.key": "5d3ab0c6-38f7-41f0-833f-f7d614d92470"
-      }
-    },
-    {
-      "key": "33fac1df-07ad-4ad6-ae56-14820e52b37f",
+      "key": "bc5058db-5d5e-42aa-88c6-5b79050f1673",
       "position": 1,
       "properties": {
-        "progression_name": "Day Two"
+        "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
-        "activity_section.key": "33fac1df-07ad-4ad6-ae56-14820e52b37f",
-        "lesson_activity.key": "756c8864-73a6-4f4c-b920-8db805d5edd2"
+        "activity_section.key": "bc5058db-5d5e-42aa-88c6-5b79050f1673",
+        "lesson_activity.key": "31c464f0-6323-4243-a1d8-e96c6c59d836"
       }
     },
     {
-      "key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803",
-      "position": 1,
-      "properties": {
-        "progression_name": "User Day Three"
-      },
-      "seeding_key": {
-        "activity_section.key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803",
-        "lesson_activity.key": "0270e4bb-c486-40fd-bdf1-16af147be2c0"
-      }
-    },
-    {
-      "key": "64ca4158-a11f-4e2a-b19d-a4af840cb3e4",
+      "key": "6456cc1b-6620-4cea-94a9-39938374f11c",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "64ca4158-a11f-4e2a-b19d-a4af840cb3e4",
-        "lesson_activity.key": "72b62c54-3294-4aa9-a279-3d9f25236dad"
+        "activity_section.key": "6456cc1b-6620-4cea-94a9-39938374f11c",
+        "lesson_activity.key": "43700f6b-f824-40cd-b931-2dcead1216f6"
       }
     },
     {
-      "key": "052ac931-7996-4a23-8be4-709e1541d32b",
+      "key": "dcd3dd50-cdc8-47d3-b448-b585d8907087",
+      "position": 1,
+      "properties": {
+        "name": "Find the Problem",
+        "progression_name": "Find the Problem"
+      },
+      "seeding_key": {
+        "activity_section.key": "dcd3dd50-cdc8-47d3-b448-b585d8907087",
+        "lesson_activity.key": "f82c79bb-a360-4db7-905b-d3502dd04ccf"
+      }
+    },
+    {
+      "key": "2f97a3e0-ea5b-486d-b7ef-07efa62a6d22",
       "position": 2,
       "properties": {
-        "progression_name": "Day Four"
+        "name": "Training a Model",
+        "progression_name": "Training a Model"
       },
       "seeding_key": {
-        "activity_section.key": "052ac931-7996-4a23-8be4-709e1541d32b",
-        "lesson_activity.key": "72b62c54-3294-4aa9-a279-3d9f25236dad"
+        "activity_section.key": "2f97a3e0-ea5b-486d-b7ef-07efa62a6d22",
+        "lesson_activity.key": "f82c79bb-a360-4db7-905b-d3502dd04ccf"
+      }
+    },
+    {
+      "key": "169ca579-e9ca-4600-8a24-b330f513dcaf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "169ca579-e9ca-4600-8a24-b330f513dcaf",
+        "lesson_activity.key": "244672d7-f185-46ec-9c3c-2ffdafbb6df3"
+      }
+    },
+    {
+      "key": "520ec337-5b3e-4fdf-9b7f-6709aa207e71",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "520ec337-5b3e-4fdf-9b7f-6709aa207e71",
+        "lesson_activity.key": "45bf6949-5062-4ef0-a27a-d7437891e258"
+      }
+    },
+    {
+      "key": "6ee77ed1-ed8c-4b6e-b4a6-3111e3add91c",
+      "position": 1,
+      "properties": {
+        "name": "User Profiles",
+        "progression_name": "User Profiles"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ee77ed1-ed8c-4b6e-b4a6-3111e3add91c",
+        "lesson_activity.key": "244185be-cda7-4c1c-9e05-04312b684c7d"
+      }
+    },
+    {
+      "key": "37210762-b723-4249-9353-c3e5e50f55ce",
+      "position": 2,
+      "properties": {
+        "name": "Test and Trust",
+        "progression_name": "Test and Trust"
+      },
+      "seeding_key": {
+        "activity_section.key": "37210762-b723-4249-9353-c3e5e50f55ce",
+        "lesson_activity.key": "244185be-cda7-4c1c-9e05-04312b684c7d"
+      }
+    },
+    {
+      "key": "d21ff9b5-2fd0-4223-9e15-252f40078b08",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d21ff9b5-2fd0-4223-9e15-252f40078b08",
+        "lesson_activity.key": "85d9374b-5b10-4a2a-9862-f0a84d11c33f"
+      }
+    },
+    {
+      "key": "8875f6ca-96ec-4c0a-8b26-82bf57344ce5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8875f6ca-96ec-4c0a-8b26-82bf57344ce5",
+        "lesson_activity.key": "e3c1c06c-057a-46b6-bfc0-61cf0cffb373"
+      }
+    },
+    {
+      "key": "5b62abff-5caa-4340-a747-24adb39ec3e3",
+      "position": 1,
+      "properties": {
+        "name": "New User",
+        "progression_name": "New User"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b62abff-5caa-4340-a747-24adb39ec3e3",
+        "lesson_activity.key": "3b4ecccd-a493-4c24-b544-2c1f280b58f9"
+      }
+    },
+    {
+      "key": "aeae7d53-f96a-4428-ab97-1e53da9d88d0",
+      "position": 2,
+      "properties": {
+        "name": "User Testing",
+        "progression_name": "User Testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "aeae7d53-f96a-4428-ab97-1e53da9d88d0",
+        "lesson_activity.key": "3b4ecccd-a493-4c24-b544-2c1f280b58f9"
+      }
+    },
+    {
+      "key": "c0895c33-c121-4e6f-bfef-7794cddb02b4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c0895c33-c121-4e6f-bfef-7794cddb02b4",
+        "lesson_activity.key": "eb48520c-6389-4c6f-8e9c-2d5b7055a7a3"
       }
     }
   ],
@@ -3519,7 +3767,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Recycling Robot Free Response"
+        "progression": "Recycling Robot Trace"
       },
       "bonus": false,
       "seeding_key": {
@@ -3827,28 +4075,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Vocabulary"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-makes-ai-lesson4-vocab-flashcards"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "d4861b11-2d76-48e6-a465-5de8a2e9b247"
-      },
-      "level_keys": [
-        "data-makes-ai-lesson4-vocab-flashcards"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3866,7 +4092,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3888,7 +4114,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3910,12 +4136,12 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Curating a Dataset"
+        "progression": "Identify Data Features"
       },
       "bonus": false,
       "seeding_key": {
@@ -3932,9 +4158,9 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "progression": "Curating a Dataset"
@@ -3947,14 +4173,14 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce"
+        "activity_section.key": "97b0287b-ad59-4c1a-87da-9f05b24f5158"
       },
       "level_keys": [
         "data-makes-ai-lesson5-ai-studio"
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -3976,7 +4202,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3998,7 +4224,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4020,7 +4246,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4042,7 +4268,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4064,7 +4290,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4086,7 +4312,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4108,7 +4334,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4130,7 +4356,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4152,7 +4378,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4174,12 +4400,12 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Make a Prediction"
+        "progression": "Invent a Scene"
       },
       "bonus": false,
       "seeding_key": {
@@ -4196,7 +4422,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4218,7 +4444,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4240,7 +4466,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4262,12 +4488,12 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Train and Test"
+        "progression": "Testing a Decision Tree"
       },
       "bonus": false,
       "seeding_key": {
@@ -4284,12 +4510,12 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Train and Test"
+        "progression": "Testing a Decision Tree"
       },
       "bonus": false,
       "seeding_key": {
@@ -4306,7 +4532,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4328,7 +4554,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4350,7 +4576,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4372,7 +4598,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4394,7 +4620,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4416,7 +4642,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4438,7 +4664,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 50,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4460,7 +4686,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 51,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4482,7 +4708,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 52,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4504,7 +4730,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 53,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4526,7 +4752,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4548,7 +4774,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4570,7 +4796,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4592,7 +4818,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4614,7 +4840,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4636,7 +4862,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4658,7 +4884,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4679,7 +4905,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4700,7 +4926,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4722,12 +4948,12 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Day One"
+        "progression": "Meet the Data"
       },
       "bonus": false,
       "seeding_key": {
@@ -4737,19 +4963,19 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e"
+        "activity_section.key": "a4a05ddb-da52-42f8-b264-129444cf0121"
       },
       "level_keys": [
         "data-makes-ai-project-data-choice-1"
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Day One"
+        "progression": "Training a Model"
       },
       "bonus": false,
       "seeding_key": {
@@ -4759,63 +4985,63 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e"
+        "activity_section.key": "0687cfc9-4499-45b6-861d-a4969b3761db"
       },
       "level_keys": [
         "data-makes-ai-lesson12-sketch-lab-choice"
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 65,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Day Two"
+        "progression": "Training a Model"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "data-makes-ai-project-data-choice-alternatives"
+          "data-makes-ai-lesson12-tree1-choice"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "33fac1df-07ad-4ad6-ae56-14820e52b37f"
+        "activity_section.key": "0687cfc9-4499-45b6-861d-a4969b3761db"
       },
       "level_keys": [
-        "data-makes-ai-project-data-choice-alternatives"
+        "data-makes-ai-lesson12-tree1-choice"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Training a Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson12-sketch-lab-tree1-choice"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "0687cfc9-4499-45b6-861d-a4969b3761db"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson12-sketch-lab-tree1-choice"
       ]
     },
     {
       "chapter": 67,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "User Day Three"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-makes-ai-project-choice-weblab"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803"
-      },
-      "level_keys": [
-        "data-makes-ai-project-choice-weblab"
-      ]
-    },
-    {
-      "chapter": 68,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Day Four"
+        "progression": "End of Lesson Survey"
       },
       "bonus": false,
       "seeding_key": {
@@ -4825,10 +5051,208 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "052ac931-7996-4a23-8be4-709e1541d32b"
+        "activity_section.key": "bc5058db-5d5e-42aa-88c6-5b79050f1673"
       },
       "level_keys": [
         "data-makes-ai-lesson12-survey"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Find the Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson13-problem-choice"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "dcd3dd50-cdc8-47d3-b448-b585d8907087"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson13-problem-choice"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Find the Problem"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson13-sketch-lab-problem-choice"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "dcd3dd50-cdc8-47d3-b448-b585d8907087"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson13-sketch-lab-problem-choice"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Training a Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-alternatives"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "2f97a3e0-ea5b-486d-b7ef-07efa62a6d22"
+      },
+      "level_keys": [
+        "data-makes-ai-project-data-choice-alternatives"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Training a Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson13-sketch-lab-tree2-choice"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "2f97a3e0-ea5b-486d-b7ef-07efa62a6d22"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson13-sketch-lab-tree2-choice"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "User Profiles"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-project-choice-weblab"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "6ee77ed1-ed8c-4b6e-b4a6-3111e3add91c"
+      },
+      "level_keys": [
+        "data-makes-ai-project-choice-weblab"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Test and Trust"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson14-users-choice"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "37210762-b723-4249-9353-c3e5e50f55ce"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson14-users-choice"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Test and Trust"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson14-sketch-lab-try-choice"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "37210762-b723-4249-9353-c3e5e50f55ce"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson14-sketch-lab-try-choice"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "New User"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson15-new-user-choice"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "5b62abff-5caa-4340-a747-24adb39ec3e3"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson15-new-user-choice"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "User Testing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson15-sketch-lab-reflect-choice"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "aeae7d53-f96a-4428-ab97-1e53da9d88d0"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson15-sketch-lab-reflect-choice"
       ]
     }
   ],
@@ -5099,18 +5523,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "data-makes-ai-lesson4-vocab-flashcards",
-        "script_level.level_keys": [
-          "data-makes-ai-lesson4-vocab-flashcards"
-        ],
-        "lesson.key": "lesson-4",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "d4861b11-2d76-48e6-a465-5de8a2e9b247"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "data-makes-ai-lesson4-survey",
         "script_level.level_keys": [
           "data-makes-ai-lesson4-survey"
@@ -5166,7 +5578,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "279c6855-8308-45a0-a5f2-1cc91043ddce"
+        "activity_section.key": "97b0287b-ad59-4c1a-87da-9f05b24f5158"
       }
     },
     {
@@ -5598,7 +6010,7 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e"
+        "activity_section.key": "a4a05ddb-da52-42f8-b264-129444cf0121"
       }
     },
     {
@@ -5610,31 +6022,31 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "f58ac65b-a84d-456c-893b-f8cc4444ef8e"
+        "activity_section.key": "0687cfc9-4499-45b6-861d-a4969b3761db"
       }
     },
     {
       "seeding_key": {
-        "level.key": "data-makes-ai-project-data-choice-alternatives",
+        "level.key": "data-makes-ai-lesson12-tree1-choice",
         "script_level.level_keys": [
-          "data-makes-ai-project-data-choice-alternatives"
+          "data-makes-ai-lesson12-tree1-choice"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "33fac1df-07ad-4ad6-ae56-14820e52b37f"
+        "activity_section.key": "0687cfc9-4499-45b6-861d-a4969b3761db"
       }
     },
     {
       "seeding_key": {
-        "level.key": "data-makes-ai-project-choice-weblab",
+        "level.key": "data-makes-ai-lesson12-sketch-lab-tree1-choice",
         "script_level.level_keys": [
-          "data-makes-ai-project-choice-weblab"
+          "data-makes-ai-lesson12-sketch-lab-tree1-choice"
         ],
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "37abf82b-a1a7-42f4-be18-e80bb3ad0803"
+        "activity_section.key": "0687cfc9-4499-45b6-861d-a4969b3761db"
       }
     },
     {
@@ -5646,7 +6058,115 @@
         "lesson.key": "lesson-12",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "052ac931-7996-4a23-8be4-709e1541d32b"
+        "activity_section.key": "bc5058db-5d5e-42aa-88c6-5b79050f1673"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson13-problem-choice",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson13-problem-choice"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "dcd3dd50-cdc8-47d3-b448-b585d8907087"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson13-sketch-lab-problem-choice",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson13-sketch-lab-problem-choice"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "dcd3dd50-cdc8-47d3-b448-b585d8907087"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-data-choice-alternatives",
+        "script_level.level_keys": [
+          "data-makes-ai-project-data-choice-alternatives"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "2f97a3e0-ea5b-486d-b7ef-07efa62a6d22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson13-sketch-lab-tree2-choice",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson13-sketch-lab-tree2-choice"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "2f97a3e0-ea5b-486d-b7ef-07efa62a6d22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-project-choice-weblab",
+        "script_level.level_keys": [
+          "data-makes-ai-project-choice-weblab"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "6ee77ed1-ed8c-4b6e-b4a6-3111e3add91c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson14-users-choice",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson14-users-choice"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "37210762-b723-4249-9353-c3e5e50f55ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson14-sketch-lab-try-choice",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson14-sketch-lab-try-choice"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "37210762-b723-4249-9353-c3e5e50f55ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson15-new-user-choice",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson15-new-user-choice"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "5b62abff-5caa-4340-a747-24adb39ec3e3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson15-sketch-lab-reflect-choice",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson15-sketch-lab-reflect-choice"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "aeae7d53-f96a-4428-ab97-1e53da9d88d0"
       }
     }
   ],
@@ -5930,7 +6450,7 @@
       }
     },
     {
-      "name": "Curating a Dataset",
+      "name": "Curating Your Own Dataset",
       "url": "https://docs.google.com/presentation/d/17m6QvaH0yHPX-evvyhdYdc4igCFCatNi9alqshge0FQ/",
       "key": "curating_a_dataset",
       "properties": {
@@ -5944,7 +6464,7 @@
       }
     },
     {
-      "name": "Curating a Dataset",
+      "name": "Curating Your Own Dataset",
       "url": "https://docs.google.com/document/d/1-WmBzv3qkyICOPHIbDCs_Cv5PbZkqr8KkNyK1NZXx_w/",
       "key": "curating_a_dataset_1",
       "properties": {
@@ -6028,7 +6548,7 @@
       }
     },
     {
-      "name": "How Does the Model Decide?",
+      "name": "Reading a Decision Tree",
       "url": "https://docs.google.com/presentation/d/18ck34UoG5dU-RxUHvs_EB4oIuOIUDiP6C6oJOM8j0co/",
       "key": "how_does_the_model_decide_",
       "properties": {
@@ -6123,6 +6643,20 @@
       },
       "seeding_key": {
         "resource.key": "monster_sorter_cards"
+      }
+    },
+    {
+      "name": " Song Cards",
+      "url": "https://docs.google.com/document/d/13TAcNDsZVJXljS8sUudvqtYhj74AOchEnlvkIvAX7XA",
+      "key": "song_cards",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "song_cards"
       }
     },
     {
@@ -6383,6 +6917,12 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "balanced_vs_unbalanced_data_-_activity_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "song_cards"
       }
     },
     {

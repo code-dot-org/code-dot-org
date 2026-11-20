@@ -1,0 +1,12 @@
+name 'data-makes-ai-lesson12-sketch-lab-tree1-choice'
+display_name 'Add Tree 1'
+description 'Click the same dataset you chose in Meet the Data. Your Project Map for it will open.'
+
+sublevels
+level 'data-makes-ai-lesson12-sketch-lab-tree1-snacks'
+level 'data-makes-ai-lesson12-sketch-lab-tree1-run-or-pass'
+level 'data-makes-ai-lesson12-sketch-lab-tree1-study-playlist'
+level 'data-makes-ai-lesson12-sketch-lab-tree1-video-games'
+level 'data-makes-ai-lesson12-sketch-lab-tree1-board-games'
+
+uses_lab2

@@ -1,0 +1,29 @@
+name 'PLGuide_L4_Test'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Misconceptions to Watch For
+
+Teachers new to this unit often bring a few beliefs that can work against it. Each one below comes from the unit's lesson plans and teacher notes.
+
+## "I need a strong math or computer science background."
+
+The unit uses tables, yes/no questions, and percentages. Every concept starts with an unplugged activity before students open AI Studio.
+
+## "Vocabulary should be memorized first."
+
+Terms come after the experience and help students explain precisely. Drilling definitions pulls attention away from the reasoning the unit builds.
+
+## "Wrong guesses should be corrected right away."
+
+Early predictions are hypotheses the lesson tests. The teacher notes ask you to hold off on confirming answers so students find the reason themselves.
+
+## "A higher accuracy score means a better model."
+
+Accuracy only measures whether a model matches its labels, often on a small test set. A model can score well and still fail some people.
+
+## "The unplugged activities are optional warm-ups."
+
+Card sorts and the Human Decision Tree build the ideas that the AI Studio work depends on. Skipping them makes the later lessons harder.
+MARKDOWN
