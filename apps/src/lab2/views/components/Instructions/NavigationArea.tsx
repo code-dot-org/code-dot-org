@@ -1,5 +1,6 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {ToastAnnouncer} from '@code-dot-org/component-library/toast';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -310,6 +311,18 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     hasEdited,
   ]);
 
+  // Only a finished checklist is announced, both when it is completed and
+  // when its level is opened.
+  const readyMessage =
+    objectivesDone && continueEnabled
+      ? `Level complete! The ${buttonText} button is ready.`
+      : null;
+  // Outside the keyed content and rendered when the rest is not, so the
+  // region stays mounted.
+  const readyAnnouncer = (
+    <ToastAnnouncer message={readyMessage} announcementId={id} />
+  );
+
   // If we can't show the continue button or the feedback message and the level is not submittable, don't render anything to avoid displaying a blank space.
   if (
     !submittable &&
@@ -317,83 +330,86 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     !continueEnabled &&
     !feedbackMessage
   ) {
-    return null;
+    return readyAnnouncer;
   }
 
   return (
-    <div
-      key={useMessageIndex + ' - ' + feedbackMessage}
-      id="instructions-feedback"
-      className={classNames(
-        className,
-        showSecondaryFinishButton && moduleStyles.feedbackBottom
-      )}
-    >
+    <>
+      {readyAnnouncer}
       <div
-        id="instructions-feedback-message"
-        className={classNames(styleAsBubble && moduleStyles.bubble)}
-        data-theme={overrideTheme || defaultTheme}
-      >
-        {feedbackMessage && (
-          <div ref={feedbackRef} tabIndex={-1}>
-            <EnhancedSafeMarkdown
-              markdown={feedbackMessage}
-              className={classNames(
-                moduleStyles.markdownText,
-                markdownClassName
-              )}
-              handleInstructionsTextClick={handleInstructionsTextClick}
-            />
-          </div>
+        key={useMessageIndex + ' - ' + feedbackMessage}
+        id="instructions-feedback"
+        className={classNames(
+          className,
+          showSecondaryFinishButton && moduleStyles.feedbackBottom
         )}
-        <div id={resourcePanelNavigationButtonElementId}>
-          {submittable ? (
-            <SubmitButton
-              levelId={id}
-              appName={appName}
-              className={moduleStyles.buttonInstruction}
-              enabled={submitEnabled}
-              tooltipMessage={submitTooltip}
-            />
-          ) : externalNavigation?.callout ? (
-            <div className={moduleStyles.externalPromptBox}>
-              <strong>{externalNavigation.callout.heading}</strong>
-              <span>{externalNavigation.callout.body}</span>
+      >
+        <div
+          id="instructions-feedback-message"
+          className={classNames(styleAsBubble && moduleStyles.bubble)}
+          data-theme={overrideTheme || defaultTheme}
+        >
+          {feedbackMessage && (
+            <div ref={feedbackRef} tabIndex={-1}>
+              <EnhancedSafeMarkdown
+                markdown={feedbackMessage}
+                className={classNames(
+                  moduleStyles.markdownText,
+                  markdownClassName
+                )}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+              />
+            </div>
+          )}
+          <div id={resourcePanelNavigationButtonElementId}>
+            {submittable ? (
+              <SubmitButton
+                levelId={id}
+                appName={appName}
+                className={moduleStyles.buttonInstruction}
+                enabled={submitEnabled}
+                tooltipMessage={submitTooltip}
+              />
+            ) : externalNavigation?.callout ? (
+              <div className={moduleStyles.externalPromptBox}>
+                <strong>{externalNavigation.callout.heading}</strong>
+                <span>{externalNavigation.callout.body}</span>
+                <ContinueButton
+                  disabled={!continueEnabled}
+                  variant={variant}
+                  color={color}
+                  buttonColor={buttonColor}
+                  endIcon={externalNavigation.endIcon ?? endIcon}
+                  tooltipMessage={continueTooltip}
+                  hideIfDisabled={hideContinueIfDisabled}
+                  onContinue={handleContinue}
+                >
+                  {buttonText}
+                </ContinueButton>
+              </div>
+            ) : (
               <ContinueButton
                 disabled={!continueEnabled}
                 variant={variant}
                 color={color}
                 buttonColor={buttonColor}
-                endIcon={externalNavigation.endIcon ?? endIcon}
+                endIcon={externalNavigation?.endIcon ?? endIcon}
                 tooltipMessage={continueTooltip}
                 hideIfDisabled={hideContinueIfDisabled}
                 onContinue={handleContinue}
               >
                 {buttonText}
               </ContinueButton>
+            )}
+          </div>
+          {showTts && feedbackMessage && !hideContinueIfDisabled && (
+            <div className={moduleStyles.ttsContainer}>
+              <TextToSpeech text={feedbackMessage} />
             </div>
-          ) : (
-            <ContinueButton
-              disabled={!continueEnabled}
-              variant={variant}
-              color={color}
-              buttonColor={buttonColor}
-              endIcon={externalNavigation?.endIcon ?? endIcon}
-              tooltipMessage={continueTooltip}
-              hideIfDisabled={hideContinueIfDisabled}
-              onContinue={handleContinue}
-            >
-              {buttonText}
-            </ContinueButton>
           )}
         </div>
-        {showTts && feedbackMessage && !hideContinueIfDisabled && (
-          <div className={moduleStyles.ttsContainer}>
-            <TextToSpeech text={feedbackMessage} />
-          </div>
-        )}
       </div>
-    </div>
+    </>
   );
 };
 

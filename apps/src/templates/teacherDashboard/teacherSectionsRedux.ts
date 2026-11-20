@@ -356,14 +356,15 @@ const sectionSlice = createSlice({
         state.studentSectionIds = studentSectionIds;
         state.plSectionIds = plSectionIds;
 
-        state.sectionOrder = getFilteredSectionOrderIds(
-          sections,
-          action.payload.sectionOrder || state.sectionOrder
-        );
         state.sections = {
           ...state.sections,
           ..._.keyBy(sections, 'id'),
         };
+        // Callers may pass only new sections, so order all of them.
+        state.sectionOrder = getFilteredSectionOrderIds(
+          Object.values(state.sections),
+          action.payload.sectionOrder || state.sectionOrder
+        );
       },
       prepare(
         sections,

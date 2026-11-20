@@ -105,6 +105,8 @@ export interface Sources extends ProjectSources {
   chosenBlocks?: string[];
   /** The free play intro has been dismissed. */
   freeplayIntroSeen?: boolean;
+  inRestrictedShareMode?: boolean;
+  teacherHasConfirmedUploadWarning?: boolean;
 }
 
 /** A single-frame image a level gives the project: a lab asset by URL. */

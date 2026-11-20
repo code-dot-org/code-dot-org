@@ -14,6 +14,7 @@ import {
   getCurrentLevel,
   getCurrentLevels,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {setInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
@@ -165,7 +166,7 @@ import DiscoverBlocksButton, {
   DISCOVER_BLOCKS_BUTTON_ID,
 } from './DiscoverBlocksButton';
 import FreeplayIntroDialog from './FreeplayIntroDialog';
-import ImagesTab from './images/ImagesTab';
+import ImagesTab, {UploadWarningSettings} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
 import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
@@ -176,6 +177,7 @@ import {useFlyoutDots} from './useFlyoutDots';
 import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
+import usePreviewRefresh from './usePreviewRefresh';
 import useProjectPicture from './useProjectPicture';
 import useReleaseRemovedImages from './useReleaseRemovedImages';
 import useSceneEditing from './useSceneEditing';
@@ -258,9 +260,6 @@ function getScenes(sources: Sources): Scene[] {
     },
   ];
 }
-
-// Debounce between a workspace edit and the live-preview re-run.
-const RUN_DEBOUNCE_MS = 400;
 
 // Sprites come from the Images tab, so a new project starts with no
 // animations.
@@ -453,6 +452,50 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     return undefined;
   }, [channelId, levelProperties.name]);
+
+  const isTeacher = useAppSelector(
+    state => state.currentUser.userType === 'teacher'
+  );
+  const {inRestrictedShareMode, teacherHasConfirmedUploadWarning} =
+    currentSources;
+  const uploadWarningSettings: UploadWarningSettings | undefined = useMemo(
+    () =>
+      isLevelEditMode
+        ? undefined
+        : {
+            alreadyAgreed: !!(isTeacher
+              ? teacherHasConfirmedUploadWarning
+              : inRestrictedShareMode),
+            isTeacher,
+            onConfirm: () =>
+              patchSources(
+                isTeacher
+                  ? {teacherHasConfirmedUploadWarning: true}
+                  : {inRestrictedShareMode: true},
+                true
+              ),
+          },
+    [
+      isTeacher,
+      teacherHasConfirmedUploadWarning,
+      inRestrictedShareMode,
+      patchSources,
+    ]
+  );
+
+  useEffect(() => {
+    dispatch(setInRestrictedShareMode(!!inRestrictedShareMode));
+  }, [dispatch, inRestrictedShareMode]);
+
+  // Clear restricted share mode when the component unmounts,
+  // as we could be going to a non-Sprite Lab 2 level which
+  // does not set inRestrictedShareMode.
+  useEffect(
+    () => () => {
+      dispatch(setInRestrictedShareMode(false));
+    },
+    [dispatch]
+  );
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
@@ -1172,8 +1215,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // cleanup): the reseed effect's deps churn on every animation
   // write, which would cancel a pending watcher mid-load.
   const cancelRerunWatchRef = useRef<() => void>();
-  // Latest restart-scene handler, for the watcher's async callback.
   const restartSceneRef = useRef<() => void>(() => {});
+  // Restarts the scene while the game plays, and runs the preview otherwise.
+  const rerunStageRef = useRef<() => void>(() => {});
   useEffect(() => () => cancelRerunWatchRef.current?.(), []);
   const rerunWhenAnimationsLoaded = useCallback(() => {
     cancelRerunWatchRef.current?.();
@@ -1190,7 +1234,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     const finish = () => {
       cancel();
-      restartSceneRef.current();
+      rerunStageRef.current();
     };
     const unsubscribe = store.subscribe(() => allLoaded() && finish());
     // Give up quietly if a load never completes; the playspace stays stale,
@@ -1417,14 +1461,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch]
   );
 
-  // Debounce re-runs so we don't restart the program on every keystroke/drag.
-  const runTimer = useRef<number>();
-  const scheduleRun = useCallback(() => {
-    if (runTimer.current) {
-      window.clearTimeout(runTimer.current);
-    }
-    runTimer.current = window.setTimeout(runProgram, RUN_DEBOUNCE_MS);
-  }, [runProgram]);
+  const scheduleRun = usePreviewRefresh(runProgram, activeTab === 'Play');
 
   // Run one scene: the open scene compiles from the live workspace, others
   // headless from saved sources. Cover/fade comes from the engine's jump
@@ -1957,7 +1994,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ownsTop(levelProperties.addBlocks ?? [], block.getRootBlock()) ||
         ownTypes.has(block.type),
     });
-    runLocalScene(activeScene);
+    if (isPlayingRef.current) {
+      runLocalScene(activeScene);
+    } else {
+      runProgram();
+    }
     // After the load, so the blocks sit below what the workspace holds.
     addLevelBlocks();
   }, [
@@ -1973,6 +2014,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     loadCode,
     levelProperties.levelMode,
     runLocalScene,
+    runProgram,
     sourcesReinitializedCount,
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
@@ -2054,6 +2096,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [runScene, defaultPlaySceneId]);
   restartSceneRef.current = handleRestartScene;
+  rerunStageRef.current = () =>
+    isPlayingRef.current ? handleRestartScene() : runProgram();
   const playHasLeftTheFirstScene =
     !!onStageSceneId && onStageSceneId !== defaultPlaySceneId;
 
@@ -2463,6 +2507,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   !!uploadImage &&
                   !isBlockedAbuse
                 }
+                uploadWarningSettings={uploadWarningSettings}
                 levelId={levelProperties.id}
                 generationsLeft={generationsLeft}
                 onGenerate={countGeneration}

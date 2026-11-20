@@ -54,9 +54,16 @@ jest.mock('@cdo/apps/lab2/views/components/AiTutorChat', () => ({
   __esModule: true,
   default: () => null,
 }));
+const mockTutorDrawer = jest.fn(
+  (_props: {initialWelcomeMessage?: string}) => null
+);
 jest.mock(
   '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/AiTutorChatWithInstructionsDrawer/AiTutorChatWithInstructionDrawer',
-  () => ({__esModule: true, default: () => null})
+  () => ({
+    __esModule: true,
+    default: (props: {initialWelcomeMessage?: string}) =>
+      mockTutorDrawer(props),
+  })
 );
 // aichat/redux itself is transitively imported by several paths.
 jest.mock('@cdo/apps/aichat/redux', () => ({
@@ -310,6 +317,24 @@ describe('ResourcePanel — tabs', () => {
       expect(
         screen.queryByRole('button', {name: 'Instructions'})
       ).not.toBeInTheDocument();
+    });
+
+    it('passes the welcome message to the tutor', () => {
+      renderPanel({}, {...tutorProps, initialWelcomeMessage: 'Hi!'});
+      expect(mockTutorDrawer).toHaveBeenCalledWith(
+        expect.objectContaining({initialWelcomeMessage: 'Hi!'})
+      );
+    });
+
+    it('drops the welcome message when the level disables it', () => {
+      renderPanel(
+        {disableAiTutorWelcome: true},
+        {...tutorProps, initialWelcomeMessage: 'Hi!'}
+      );
+      expect(mockTutorDrawer).toHaveBeenCalled();
+      expect(mockTutorDrawer).not.toHaveBeenCalledWith(
+        expect.objectContaining({initialWelcomeMessage: 'Hi!'})
+      );
     });
 
     it('drops the AI Tutor tab when the level hides it', () => {
