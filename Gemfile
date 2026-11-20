@@ -69,6 +69,7 @@ gem 'xxhash'
 # See https://github.com/googleapis/google-api-ruby-client/blob/main/google-api-client/OVERVIEW.md
 gem 'google-apis-core'
 
+gem 'google-apis-analytics_v3'
 gem 'google-apis-classroom_v1'
 gem 'google-apis-youtube_v3'
 
