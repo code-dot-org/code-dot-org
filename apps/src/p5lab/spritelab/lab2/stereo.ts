@@ -69,12 +69,13 @@ type Painter = Pick<
   | 'drawImage'
 >;
 
-/** Draw the two eyes side by side onto `out`, left then right, each
-    `width` by `height` in backing px, with `gap` px left clear between
-    them. The background is drawn larger than an eye's picture by its shift
-    on every side, so neither eye sees its edge. The foreground is only as
-    wide as one eye's picture, so each picture is clipped to the part that
-    the shifted foreground covers. */
+/** Draw each eye's picture side by side onto `out`, left then right, each
+    `width` by `height`, with `gap` left clear between them. Sizes and
+    shifts are in device px: canvas px times the pixel density. The
+    background is drawn larger than an eye's picture by its shift on every
+    side, so neither eye sees its edge. The foreground is only as wide as
+    one eye's picture, so each picture is clipped to the part that the
+    shifted foreground covers. */
 export function drawStereoPair(
   out: Painter,
   layers: StereoLayers,
