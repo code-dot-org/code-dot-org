@@ -161,7 +161,6 @@ describe('weblab2Adapter', () => {
       notificationType: 'info',
       includeInChatHistory: false,
       hideTimestamp: true,
-      pending: true,
       text: 'Checking your work...',
     });
     expect(chat.disableSend).toHaveBeenCalledTimes(1);
