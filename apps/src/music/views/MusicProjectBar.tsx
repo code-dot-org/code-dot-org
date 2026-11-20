@@ -58,7 +58,7 @@ const MusicProjectBar: React.FC<{
         {!isLoading && packFolder?.removed && (
           <Typography className={styles.packRemoved} variant="body4">
             <FontAwesomeV6Icon
-              iconName="triangle-exclamation"
+              iconName="exclamation-circle"
               iconStyle="solid"
             />
             {musicI18n.packRemovedDescription()}
