@@ -23,6 +23,7 @@ import {
 } from './modelHelpers';
 import {
   cropToContent,
+  cropToSquare,
   flattenOntoGround,
   removeBackground,
   removeKeyColor,
@@ -405,6 +406,10 @@ export async function generateImage(
     if (maxPx) {
       blob = await downscaleToFit(blob, maxPx);
     }
+  }
+  // After the pixel pass, so the square is cut on the art's own grid.
+  if (imageType === 'block') {
+    blob = await cropToSquare(blob);
   }
   await imageVerdict;
   return {
