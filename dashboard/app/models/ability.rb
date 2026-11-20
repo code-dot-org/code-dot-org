@@ -537,6 +537,8 @@ class Ability
 
       can [:edit_manifest, :update_manifest, :index, :show, :update, :destroy], :dataset
 
+      can [:create], :ailab_dataset
+
       can :manage, :widget2
 
       can [:validate_form, :validate_library_question], :pd_foorm
