@@ -7248,12 +7248,25 @@ RememberedSocketRecord = (function() {
 })();
 
 Editor.prototype.replace = function(before, after, updates) {
-  var dropletDocument, operation;
+  var dropletDocument, operation, ref1;
   if (updates == null) {
     updates = [];
   }
   dropletDocument = before.start.getDocument();
   if (dropletDocument != null) {
+    // A lasso over the replaced tokens would no longer reach its own end token.
+    if (this.lassoSelection != null) {
+      if (this.draggingBlock === this.lassoSelection) {
+        this.draggingBlock = this.draggingOffset = null;
+        if ((ref1 = this.lastHighlightPath) != null) {
+          if (typeof ref1.deactivate === "function") {
+            ref1.deactivate();
+          }
+        }
+        this.lastHighlight = this.lastHighlightPath = null;
+      }
+      this.lassoSelection = null;
+    }
     operation = dropletDocument.replace(before, after, updates.concat(this.getPreserves(dropletDocument)));
     this.pushUndo({
       operation: operation,
