@@ -163,6 +163,12 @@ const AiChatAccessControls: React.FC = () => {
         courseAssigned: section.courseVersionName,
         uiLocation: 'aiSettingsTeacherDashboardTab',
       });
+      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGES_TOGGLED, {
+        section_id: section.id,
+        course_id: section.courseId,
+        unit_id: section.unitId,
+        enabled: newValue,
+      });
     } catch (error) {
       setChallengeToggle(previousValue);
     }
