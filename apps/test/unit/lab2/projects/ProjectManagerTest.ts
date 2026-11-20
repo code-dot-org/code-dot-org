@@ -987,6 +987,62 @@ describe('ProjectManager', () => {
       post.restore();
     }
   });
+
+  it('tags a source save failure with what triggered it', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    sourcesStore.save.rejects(new TypeError('Failed to fetch'));
+    const metricsReporter = stubObject<LabMetricsReporter>(
+      new LabMetricsReporter()
+    );
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+      metricsReporter,
+    });
+    await projectManager.load();
+
+    await projectManager.save(UPDATED_SOURCE);
+    await projectManager.flushSave(/* forceNewVersion */ false, 'unload');
+
+    const triggers = metricsReporter.logError
+      .getCalls()
+      .map(call => (call.args[2] as {saveTrigger: string}).saveTrigger);
+    expect(triggers).to.deep.equal(['autosave', 'unload']);
+  });
+
+  it('reports payload size and connectivity with a source save failure', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    sourcesStore.save.rejects(new TypeError('Failed to fetch'));
+    const metricsReporter = stubObject<LabMetricsReporter>(
+      new LabMetricsReporter()
+    );
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+      metricsReporter,
+    });
+    await projectManager.load();
+
+    await projectManager.save(UPDATED_SOURCE);
+
+    sinon.assert.calledOnce(metricsReporter.logError);
+    const details = metricsReporter.logError.firstCall.args[2] as {
+      payloadBytes: number;
+      navigatorOnline: boolean;
+      visibilityState: string;
+    };
+    expect(details.payloadBytes).to.equal(
+      new TextEncoder().encode(JSON.stringify(UPDATED_SOURCE)).length
+    );
+    expect(details.navigatorOnline).to.equal(navigator.onLine);
+    expect(details.visibilityState).to.equal(document.visibilityState);
+  });
 });
 
 // Helper functions
