@@ -398,8 +398,6 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     [world, sceneSize]
   );
   const screens = worldScreens(world);
-  // A size is chosen in screens and named by its squares: 10, 20 or 30 for
-  // screens of 10.
   const sizeItems = useMemo(
     () =>
       Array.from({length: MAX_WORLD_SCREENS}, (_, i) => ({
