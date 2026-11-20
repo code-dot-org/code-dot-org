@@ -100,7 +100,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // saving already encountered an issue. We also can skip this in read only mode,
       // as we never save in read only mode. Python Lab turns the workspace read-only
       // while it runs, which does not make the edits already made any less worth
-      // writing, so isReadOnlyForSaving ignores that state.
+      // writing, so isReadOnlyAndShouldNotBeSaved ignores that state.
       if (
         projectManager &&
         !projectManager.isForceReloading() &&
