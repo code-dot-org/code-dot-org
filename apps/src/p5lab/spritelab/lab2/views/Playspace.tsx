@@ -23,7 +23,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
 import {getImageThumbnail} from '../imageTrim';
-import {STEREO_GAP, stereoPairPlacement} from '../stereo';
+import {STEREO_GAP_PX, stereoPairPlacement} from '../stereo';
 
 import {keepFocusOffAfterMousePress} from './blurAfterPointerClick';
 
@@ -691,6 +691,16 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     : null;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
+  // The width the stereo pair may fill. In play: the stage, stopping at the
+  // arrow cross when the cross is beside the box. In preview: the box.
+  const crossIsBeside = !!cross && cross.x >= x + boxSide;
+  const stereoRoom =
+    mode === 'play'
+      ? {
+          left: MARGIN,
+          width: (crossIsBeside && cross ? cross.x : size.w) - 2 * MARGIN,
+        }
+      : {left: x, width: boxSide};
   const previewWidth = mode === 'preview' && measured ? columnWidth : 0;
   const reportColumnWidth = useRef(onColumnWidth);
   reportColumnWidth.current = onColumnWidth;
@@ -846,7 +856,8 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           opacity: visible ? 1 : 0,
           // Hairline seam so a white game canvas reads against a white page
           // in light mode. A shadow, not a border, so the 400x400 geometry
-          // the transform and pointer math rely on stays untouched.
+          // the transform and pointer math rely on stays untouched. Not in
+          // stereo, where the pair is seen and the box is not.
           boxShadow: stereoCanvasRef
             ? undefined
             : '0 0 0 1px var(--borders-neutral-primary)',
@@ -921,30 +932,17 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           <div key={fadeTrigger} className={moduleStyles.sceneFade} />
         )}
       </div>
-      {/* Beside the box, not inside it, so that the two views can be wider
-          than the box. */}
+      {/* Outside the box element, which clips its children, so the stereo
+          pair can be wider than the box. */}
       {stereoCanvasRef && (
         <canvas
           ref={stereoCanvasRef}
           className={moduleStyles.stereoCanvas}
-          width={2 * CANVAS + STEREO_GAP}
+          width={2 * CANVAS + STEREO_GAP_PX}
           height={CANVAS}
           aria-hidden="true"
           style={{
-            ...stereoPairPlacement(
-              {y, side: boxSide},
-              // The stage while the game plays, up to the arrows when they
-              // are beside the box; the box in the preview.
-              mode === 'play'
-                ? {
-                    left: MARGIN,
-                    width:
-                      (cross && cross.x >= x + boxSide ? cross.x : size.w) -
-                      2 * MARGIN,
-                  }
-                : {left: x, width: boxSide},
-              CANVAS
-            ),
+            ...stereoPairPlacement({y, side: boxSide}, stereoRoom, CANVAS),
             opacity: visible ? 1 : 0,
           }}
         />

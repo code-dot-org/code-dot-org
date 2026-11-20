@@ -3,7 +3,7 @@ import {
   drawMono,
   drawStereoPair,
   layerShifts,
-  STEREO_GAP,
+  STEREO_GAP_PX,
   stereoFromQuery,
   stereoPairPlacement,
 } from '@cdo/apps/p5lab/spritelab/lab2/stereo';
@@ -108,7 +108,7 @@ describe('drawStereoPair with a gap', () => {
 });
 
 describe('stereoPairPlacement', () => {
-  const pairWidth = (view: number) => view * (2 + STEREO_GAP / 400);
+  const pairWidth = (view: number) => view * (2 + STEREO_GAP_PX / 400);
 
   it('gives each view the size of the box when the room is wide enough', () => {
     const placed = stereoPairPlacement(
@@ -122,7 +122,7 @@ describe('stereoPairPlacement', () => {
     expect(placed.left).toBeCloseTo(12 + (1400 - pairWidth(600)) / 2);
   });
 
-  it('shrinks the views to fit a narrower room, centered down the box', () => {
+  it('shrinks the views to fit a narrower room, centered vertically on the box', () => {
     const placed = stereoPairPlacement(
       {y: 20, side: 400},
       {left: 100, width: 400},
@@ -130,7 +130,7 @@ describe('stereoPairPlacement', () => {
     );
     expect(placed.width).toBeCloseTo(400);
     expect(placed.left).toBeCloseTo(100);
-    expect(placed.height).toBeCloseTo(400 / (2 + STEREO_GAP / 400));
+    expect(placed.height).toBeCloseTo(400 / (2 + STEREO_GAP_PX / 400));
     expect(placed.top).toBeCloseTo(20 + (400 - placed.height) / 2);
   });
 });

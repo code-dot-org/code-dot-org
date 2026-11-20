@@ -8,8 +8,8 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const DEFAULT_EYE_PX = 6;
-/** The space between the two views, in px of a 400px view. */
-export const STEREO_GAP = 8;
+/** The space between the two eyes' pictures, in canvas px. */
+export const STEREO_GAP_PX = 8;
 // How far the sprite plane comes forward per unit of zoom, as a share of
 // the eye offset.
 const ZOOM_POP_RATE = 0.5;
@@ -125,7 +125,7 @@ export function drawMono(
   out.restore();
 }
 
-export interface PairPlacement {
+export interface StereoPairPlacement {
   left: number;
   top: number;
   width: number;
@@ -133,22 +133,28 @@ export interface PairPlacement {
 }
 
 /**
- * Where the pair is shown. Each view is as large as the game's box when
- * `room` is wide enough for two of them and the gap, and smaller when it
- * is not. The pair is centered across `room` and down the box.
+ * The stereo pair's position and size on the page, in CSS px. `box` is the
+ * square the game normally fills; `room` is the horizontal span the pair
+ * may use; `canvasSide` is the game canvas's side in canvas px. Each
+ * picture is `box.side` square when `room` fits two of them and the gap,
+ * and smaller otherwise. The pair is centered horizontally in `room` and
+ * vertically on `box`.
  */
 export function stereoPairPlacement(
   box: {y: number; side: number},
   room: {left: number; width: number},
-  viewPixels: number
-): PairPlacement {
-  const widthPerView = 2 + STEREO_GAP / viewPixels;
-  const view = Math.max(0, Math.min(box.side, room.width / widthPerView));
-  const width = view * widthPerView;
+  canvasSide: number
+): StereoPairPlacement {
+  const pairWidthInViews = 2 + STEREO_GAP_PX / canvasSide;
+  const viewSide = Math.max(
+    0,
+    Math.min(box.side, room.width / pairWidthInViews)
+  );
+  const width = viewSide * pairWidthInViews;
   return {
     left: room.left + (room.width - width) / 2,
-    top: box.y + (box.side - view) / 2,
+    top: box.y + (box.side - viewSide) / 2,
     width,
-    height: view,
+    height: viewSide,
   };
 }

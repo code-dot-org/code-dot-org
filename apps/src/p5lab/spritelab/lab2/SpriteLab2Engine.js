@@ -79,7 +79,7 @@ import {
   synthPresetOf,
 } from './soundEffects';
 import {drawSpeechBubble} from './speechBubble';
-import {drawMono, drawStereoPair, layerShifts, STEREO_GAP} from './stereo';
+import {drawMono, drawStereoPair, layerShifts, STEREO_GAP_PX} from './stereo';
 import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
@@ -1291,7 +1291,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     // The eye offset and the gap are in logical px; the layers are at
     // backing size.
     const density = width / APP_WIDTH;
-    const gap = Math.round(STEREO_GAP * density);
+    const gap = Math.round(STEREO_GAP_PX * density);
     const pairWidth = 2 * width + gap;
     if (stereo.canvas.width !== pairWidth || stereo.canvas.height !== height) {
       stereo.canvas.width = pairWidth;
