@@ -480,8 +480,8 @@ export class UnconnectedMusicView extends React.Component {
     this.isLevelLoadInProgress = false;
   }
 
-  // The sounds in the code decide the pack ahead of the saved pack, which
-  // may be missing or name a pack the code does not use.
+  // A restricted pack found among the code's sounds is used in place of the
+  // saved pack, which may be missing or name a pack the code does not use.
   getPackId = (levelData, sources) =>
     levelData?.packId ||
     findRestrictedPackInSource(sources?.source, this.library) ||

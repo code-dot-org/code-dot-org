@@ -16,8 +16,9 @@ export function isOnDefaultPack(labConfig?: MusicPackConfig): boolean {
 }
 
 /**
- * The restricted pack that the sounds in a project's saved code come from.
- * A project's sounds can come from only one restricted pack, its own.
+ * The restricted pack whose sounds a project's saved code uses. A project
+ * can use sounds from at most one restricted pack, so the first one found
+ * is the answer.
  */
 export function findRestrictedPackInSource(
   source: string | undefined,
