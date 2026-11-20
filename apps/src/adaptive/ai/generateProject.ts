@@ -1,6 +1,6 @@
 // A generated project: the template rewritten around the student's answers
 // by one model call, laid over the template's sources. No answers, no
-// editable files, adaptive AI off, a failed call, answers that do not clear
+// editable files, no AI, a failed call, answers that do not clear
 // moderation or a result that does not all mean nothing is generated, and
 // the template stands.
 
@@ -19,12 +19,8 @@ import {checkpointPlan} from '../project/plan';
 import {applyGeneratedFiles, editableFiles} from '../project/projectGeneration';
 import {Checkpoint, LevelStep, Pathway} from '../types';
 
-import {
-  generate,
-  isAdaptiveAiEnabled,
-  moderateInput,
-  moderateOutput,
-} from './generate';
+import {isAdaptiveAiAvailable} from './access';
+import {generate, moderateInput, moderateOutput} from './generate';
 import {ADAPTIVE_MODELS} from './models';
 import {
   PROJECT_PROMPT_VERSION,
@@ -67,7 +63,10 @@ export async function generateProject({
   aichatContext,
 }: GenerateProjectOptions): Promise<GeneratedProject | undefined> {
   if (!step.projectPrompt || !step.project) return undefined;
-  if (!isAdaptiveAiEnabled()) return undefined;
+  if (!isAdaptiveAiAvailable()) {
+    sendAiStaticFallbackUsed('project', 'aiUnavailable', checkpoint, step);
+    return undefined;
+  }
   const plan = checkpointPlan(checkpoint, progress);
   const files = editableFiles(sources);
   if (plan.answers.length === 0 || files.length === 0) return undefined;

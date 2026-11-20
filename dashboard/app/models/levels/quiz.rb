@@ -144,6 +144,33 @@ class Quiz < Level
     end
   end
 
+  def exam?
+    purpose == 'exam'
+  end
+
+  def lock_level?
+    script_levels.includes(lesson: :script_levels).any? do |script_level|
+      script_level.lesson&.lockable && script_level.lesson.script_levels.last == script_level
+    end
+  end
+
+  # An exam must be the last level of a lockable lesson, which is what makes
+  # it teacher-released, and never a sublevel. Returns one message for each
+  # lesson or parent level that uses this Quiz in a way that breaks this,
+  # whatever this Quiz's purpose.
+  def exam_lesson_position_problems
+    problems = script_levels.includes(:script, lesson: :script_levels).filter_map do |sl|
+      next unless sl.lesson
+      place = "lesson \"#{sl.lesson.key}\" of unit \"#{sl.script&.name}\""
+      if !sl.lesson.lockable
+        "#{place} is not lockable"
+      elsif sl.lesson.script_levels.last != sl
+        "it is not the last level in #{place}"
+      end
+    end
+    problems + parent_levels.map {|parent| "it is a sublevel of \"#{parent.name}\""}
+  end
+
   # Placements are quiz-owned join rows; questions stay shared bank content.
   def clone_with_name(new_name, editor_experiment: nil)
     ActiveRecord::Base.transaction do

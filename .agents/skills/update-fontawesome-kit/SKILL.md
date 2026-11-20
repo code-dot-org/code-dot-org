@@ -13,7 +13,7 @@ What a finished update must contain (all of it, or the icons are not usable):
 
 1. The kit's `css/` and `webfonts/` in `s3://cdo-dsco/assets/font-awesome-pro/<unix-ts>/`.
 2. The new timestamp in `frontend/packages/component-library-styles/font.scss`,
-   `frontend/packages/fonts/src/loader/index.ts`, `shared/css/font.scss`.
+   `frontend/packages/fonts/src/fontAwesome/index.ts`, `shared/css/font.scss`.
 3. `kitIcons` in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` matching the
    kit exactly. This is the only list of custom icon names; there is no separate TS type.
 4. The custom icons storybook (`.../fontAwesomeV6Icon/stories/FontAwesomeV6Icon.story.tsx`, story

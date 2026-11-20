@@ -106,9 +106,9 @@ USER ${USERNAME}
 ENV \
   BUNDLE_DEPLOYMENT= \
   BUNDLE_WITHOUT=
-RUN --mount=type=cache,id=cdo-dev-bundle-cache,sharing=locked,uid=1000,gid=1000,target=/usr/local/bundle/ruby/3.2.0/cache \
+RUN --mount=type=cache,id=cdo-dev-bundle-cache,sharing=locked,uid=1000,gid=1000,target=/usr/local/bundle/ruby/3.3.0/cache \
   set -eux \
-  && test "$(ruby -e 'print RbConfig::CONFIG["ruby_version"]')" = 3.2.0 \
+  && test "$(ruby -e 'print RbConfig::CONFIG["ruby_version"]')" = 3.3.0 \
   && bundle install --jobs "${BUNDLE_JOBS:-$(nproc)}" \
   && bundle check \
   && rm -rf ~/.bundle "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git

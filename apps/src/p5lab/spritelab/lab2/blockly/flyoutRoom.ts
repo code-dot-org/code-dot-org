@@ -69,21 +69,15 @@ export function observeToolboxWidth(
 /**
  * Multiply the flyout's margin, which sets how far its blocks sit from its
  * left edge. The next show() lays the blocks out at the new margin.
- * Returns an undo.
  */
 export function widenFlyoutMargin(
   workspace: BlocklyCore.WorkspaceSvg | null | undefined,
   factor: number
-): () => void {
+): void {
   // Typed read-only; Blockly reads it per layout, so an instance value
   // takes effect.
   const flyout = flyoutOf(workspace) as unknown as {MARGIN: number} | null;
-  if (!flyout) {
-    return () => {};
+  if (flyout) {
+    flyout.MARGIN *= factor;
   }
-  const base = flyout.MARGIN;
-  flyout.MARGIN = base * factor;
-  return () => {
-    flyout.MARGIN = base;
-  };
 }

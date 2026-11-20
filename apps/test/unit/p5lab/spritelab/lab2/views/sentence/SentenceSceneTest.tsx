@@ -49,10 +49,7 @@ const RESULT = {
 // A host that lays every part out, with buttons for the callbacks.
 const layout = (parts: SentenceSceneParts) => (
   <div>
-    <div>
-      {parts.frame}
-      {parts.cachedTag}
-    </div>
+    <div>{parts.frame}</div>
     {parts.behindTheScenes}
     <section ref={parts.panelRef} tabIndex={-1} aria-label="Make your picture">
       {parts.status}
@@ -186,6 +183,46 @@ describe('SentenceScene', () => {
     fireEvent.click(screen.getByRole('checkbox', {name: 'Animated'}));
     await generate();
     expect(generateImage).toHaveBeenCalledTimes(1);
+  });
+
+  it('says so and asks for no rating when a picture cannot be saved', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    onKeep.mockRejectedValueOnce(new Error('upload failed'));
+    const error = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const onReady = jest.fn();
+    const onGenerateFailed = jest.fn();
+    renderScene({onReady, onGenerateFailed});
+    pickCreature();
+    await generate();
+    error.mockRestore();
+    expect(onGenerateFailed).toHaveBeenCalledTimes(1);
+    expect(
+      screen.getByText("Couldn't save the picture. Try again.")
+    ).toBeTruthy();
+    expect(screen.queryByRole('button', {name: 'Good'})).toBeNull();
+    // A picture that was not saved is not passed to onReady.
+    expect(onReady).not.toHaveBeenCalled();
+    // Trying again saves the next picture, and it can be rated.
+    await generate();
+    expect(onKeep).toHaveBeenCalledTimes(2);
+    expect(
+      screen.queryByText("Couldn't save the picture. Try again.")
+    ).toBeNull();
+    expect(screen.getByRole('button', {name: 'Good'})).toBeTruthy();
+    expect(onReady).toHaveBeenCalledTimes(1);
+    expect(onGenerateFailed).toHaveBeenCalledTimes(1);
+  });
+
+  it('reports a picture that could not be made, so it is not counted', async () => {
+    generateCharacterSet.mockRejectedValueOnce(new Error('down'));
+    const error = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const onGenerateFailed = jest.fn();
+    renderScene({onGenerateFailed});
+    pickCreature();
+    await generate();
+    error.mockRestore();
+    expect(screen.getByRole('alert').textContent).toMatch(/Couldn't make/);
+    expect(onGenerateFailed).toHaveBeenCalledTimes(1);
   });
 
   it('keeps the picture as it lands, and again with its rating when no host records it', async () => {
@@ -351,11 +388,14 @@ describe('SentenceScene', () => {
       '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety'
     );
     generateCharacterSet.mockRejectedValue(new ImageSafetyError('prompt'));
-    renderScene();
+    const onGenerateFailed = jest.fn();
+    renderScene({onGenerateFailed});
     pickCreature();
     await generate();
     expect(screen.getByRole('alert').textContent).toMatch(/aren't okay/);
     expect(screen.getByRole('button', {name: 'Generate'})).toBeTruthy();
+    // A refusal still counts against a level's limit.
+    expect(onGenerateFailed).not.toHaveBeenCalled();
   });
 
   it('takes a typed prompt over the words, as one still picture at the chosen grid, from the current image', async () => {
@@ -377,6 +417,49 @@ describe('SentenceScene', () => {
     expect(sendEvent).toHaveBeenCalledWith(
       'hoai2026-image-prompt',
       expect.objectContaining({method: 'freeText'}),
+      true
+    );
+  });
+
+  it('marks a generation over a picture as a regenerate, and ties its rating to it', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene();
+    pickCreature();
+    await generate();
+    await generate();
+    const prompts = sendEvent.mock.calls.filter(
+      ([name]) => name === 'hoai2026-image-prompt'
+    );
+    expect(prompts.map(([, payload]) => payload.regenerate)).toEqual([
+      false,
+      true,
+    ]);
+    const {generationId} = prompts[1][1];
+    expect(generationId).not.toBe(prompts[0][1].generationId);
+    await act(async () => {
+      fireEvent.click(screen.getByRole('button', {name: 'Good'}));
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Explain'}));
+    for (const name of [
+      'hoai2026-image-verdict',
+      'hoai2026-image-verdict-reason',
+    ]) {
+      expect(sendEvent).toHaveBeenCalledWith(
+        name,
+        expect.objectContaining({generationId}),
+        true
+      );
+    }
+  });
+
+  it('marks the first generation as a regenerate when it replaces an AI picture', async () => {
+    generateCharacterSet.mockResolvedValue(RESULT);
+    renderScene({replacesGenerated: true});
+    pickCreature();
+    await generate();
+    expect(sendEvent).toHaveBeenCalledWith(
+      'hoai2026-image-prompt',
+      expect.objectContaining({regenerate: true}),
       true
     );
   });
@@ -414,32 +497,11 @@ describe('SentenceScene', () => {
         jest.advanceTimersByTime(1);
       });
       expect(screen.getByText('Your picture is ready.')).toBeTruthy();
-      expect(screen.getByText('cached')).toBeTruthy();
       expect(sendEvent).toHaveBeenCalledWith(
         'hoai2026-image-prompt',
         expect.objectContaining({imageSource: 'cached', cached: true}),
         true
       );
-    });
-
-    it('asks for another variant than the one shown, for the same words', async () => {
-      findCachedImage.mockResolvedValue(CACHED);
-      generateCharacterSet.mockResolvedValue(RESULT);
-      renderCached();
-      pickCreature();
-      await generate();
-      await act(async () => {
-        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
-      });
-      await generate();
-      expect(findCachedImage.mock.calls[0][0].avoidVariant).toBeUndefined();
-      expect(findCachedImage.mock.calls[1][0].avoidVariant).toBe(1);
-      await act(async () => {
-        jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
-      });
-      fireEvent.click(screen.getByRole('button', {name: 'dragon'}));
-      await generate();
-      expect(findCachedImage.mock.calls[2][0].avoidVariant).toBeUndefined();
     });
 
     it('asks for different words when the cache lacks them, without the model', async () => {

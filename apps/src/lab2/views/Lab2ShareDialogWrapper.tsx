@@ -17,6 +17,7 @@ import {
 import SubmitProjectDialog from '@cdo/apps/templates/projects/submitProjectDialog/SubmitProjectDialog';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {ProjectSubmissionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {ShareDialogId} from '../types';
 
@@ -50,12 +51,18 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
   const thumbnailUrl = null;
   const isAbusive = useAppSelector(state => !!state.lab.isBlockedAbuse);
   const canShareSocial = isSignedIn && is13Plus;
+  const inRestrictedShareMode = useAppSelector(
+    state => state.project.inRestrictedShareMode
+  );
 
   const [submissionStatus, setSubmissionStatus] = useState<
     SubmissionStatusType | undefined
   >(undefined);
 
   const shareFailure = useAppSelector(state => state.lab.shareFailure);
+  const shareCheckPending = useAppSelector(
+    state => state.lab.shareCheckPending
+  );
 
   const fetchSubmissionStatusHandleError = (
     channelId: string,
@@ -77,10 +84,18 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
 
   useEffect(() => {
     // Only signed-in users can submit projects to be considered for the featured project gallery.
-    if (channelId && projectType && isSignedIn) {
+    // Refetched on every open, as the project's eligibility can change while the
+    // dialog is closed.
+    if (isDialogOpen && channelId && projectType && isSignedIn) {
       fetchSubmissionStatusHandleError(channelId, projectType);
     }
-  }, [channelId, isSignedIn, projectType]);
+  }, [channelId, isSignedIn, projectType, isDialogOpen]);
+
+  // Restricted share mode overrides the fetched submission status,
+  // as it can be set after the user loads the page.
+  const effectiveSubmissionStatus = inRestrictedShareMode
+    ? ProjectSubmissionStatus.RESTRICTED_SHARE_MODE
+    : submissionStatus;
 
   const dispatch = useAppDispatch();
   const onCloseSubmitProjectDialog = useCallback(() => {
@@ -116,9 +131,10 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         finishUrl={finishUrl}
         projectType={projectType}
         onSubmitClick={onSubmitClick}
-        submissionStatus={submissionStatus}
+        submissionStatus={effectiveSubmissionStatus}
         userSharingDisabled={userSharingDisabled}
         shareFailure={shareFailure}
+        shareCheckPending={shareCheckPending}
         isAbusive={isAbusive}
       />
     ) : (

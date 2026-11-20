@@ -30,7 +30,10 @@ import {RootState} from '../types/redux';
 import {NetworkError} from '../util/HttpClient';
 import {AppDispatch} from '../util/reduxHooks';
 
-import {PROJECT_TYPES_WITH_SHARE_FILTERING} from './constants';
+import {
+  ABUSE_SCORE_BLOCK_THRESHOLD,
+  PROJECT_TYPES_WITH_SHARE_FILTERING,
+} from './constants';
 import Lab2Registry from './Lab2Registry';
 import {
   getInitialValidationState,
@@ -88,6 +91,7 @@ export interface LabState {
   // (profanity or PII), or null if the project is clean or unfiltered.
   // A non-null value blocks the lab view and the share dialog.
   shareFailure: ShareFailure | null;
+  shareCheckPending: boolean;
   // If this lab/project is blocked for project non-owners (excluding owner's teacher).
   projectSharingDisabled: boolean | undefined;
   overrideValidations: Validation[] | undefined;
@@ -111,6 +115,7 @@ const initialState: LabState = {
   isShareView: undefined,
   isBlockedAbuse: undefined,
   shareFailure: null,
+  shareCheckPending: false,
   projectSharingDisabled: undefined,
   overrideValidations: undefined,
   permissions: [],
@@ -323,9 +328,9 @@ const labSlice = createSlice({
       state.channel = action.payload.channel;
       state.levelProperties = levelProperties;
       state.initialSources = action.payload.initialSources;
-      if (typeof action.payload.abuseScore === 'number') {
-        state.isBlockedAbuse = action.payload.abuseScore >= 15 ? true : false;
-      }
+      state.isBlockedAbuse =
+        typeof action.payload.abuseScore === 'number' &&
+        action.payload.abuseScore >= ABUSE_SCORE_BLOCK_THRESHOLD;
       state.shareFailure = action.payload.shareFailure ?? null;
       state.projectSharingDisabled =
         action.payload.sharingDisabled &&
@@ -352,6 +357,9 @@ const labSlice = createSlice({
     },
     setShareFailure(state, action: PayloadAction<ShareFailure | null>) {
       state.shareFailure = action.payload;
+    },
+    setShareCheckPending(state, action: PayloadAction<boolean>) {
+      state.shareCheckPending = action.payload;
     },
     setIsFullScreenView(state, action: PayloadAction<boolean>) {
       state.isFullScreenView = action.payload;
@@ -564,6 +572,7 @@ export const {
   setIsTeacherOfProjectOwner,
   setIsBlockedAbuse,
   setShareFailure,
+  setShareCheckPending,
   setIsFullScreenView,
 } = labSlice.actions;
 

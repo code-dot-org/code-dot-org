@@ -14,7 +14,6 @@ import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding'
 import {
   CachedImage,
   findCachedImage,
-  sentencePath,
   ImageSource,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
@@ -33,6 +32,7 @@ import {
   CHARACTER_STRIP_FRAME_COUNT,
   stripCellOrigin,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {createUuid} from '@cdo/apps/utils';
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 import BehindTheScenes from '../images/teaching/BehindTheScenes';
@@ -82,8 +82,8 @@ interface GeneratedPicture {
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
-  /** Served from the cache rather than drawn by the model. */
-  cached: boolean;
+  /** Joins this picture's analytics events to the prompt event. */
+  generationId: string;
 }
 
 /** Settings from the Advanced popover: a typed prompt that replaces the
@@ -112,9 +112,6 @@ export interface SentenceSceneParts {
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
   frameFilled: boolean;
-  /** A reviewer's mark over a picture served from the cache, while the
-      cache is filled in; comes out before ship. */
-  cachedTag: React.ReactNode;
   /** The Behind the scenes button, once there is a picture. */
   behindTheScenes: React.ReactNode;
   /** The screen reader's status line. */
@@ -166,11 +163,11 @@ interface SentenceSceneProps {
   /** The student turned Animated on or off. */
   onAnimatedChange?: (animated: boolean) => void;
   /** Called with each generated picture as soon as it is ready, to store
-      it. */
+      it. A picture it rejects is not shown. */
   onKeep: (result: GeneratedImageResult) => Promise<void> | void;
-  /** Called with each generated picture before it is shown. The scene
-      keeps showing that the picture is being made until the returned
-      promise resolves, and shows the picture then. */
+  /** Called with each stored picture before it is shown. The scene keeps
+      showing that the picture is being made until the returned promise
+      resolves, and shows the picture then. */
   onReady?: (result: GeneratedImageResult) => Promise<void> | void;
   /** Called when the student rates the kept picture; resolves true once
       the verdict is on its record. Without it, or when it resolves false,
@@ -179,6 +176,7 @@ interface SentenceSceneProps {
   onRate?: (verdict: Verdict) => boolean | Promise<boolean>;
   /** Called when a generation request is sent to the model. */
   onGenerateStart?: () => void;
+  onGenerateFailed?: () => void;
   /** The scene is making or keeping a picture, or has stopped; a host can
       hold its other controls still meanwhile. */
   onBusyChange?: (busy: boolean) => void;
@@ -186,6 +184,8 @@ interface SentenceSceneProps {
   ratingRequired?: boolean;
   /** Analytics: which surface generated. */
   method?: string;
+  /** Analytics: the image being replaced is an AI-made picture. */
+  replacesGenerated?: boolean;
   /** Lays the parts out. */
   layout: (parts: SentenceSceneParts) => React.ReactNode;
   /** How the word menus lay their words out; the carousel unless given. */
@@ -215,9 +215,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onReady,
   onRate,
   onGenerateStart,
+  onGenerateFailed,
   onBusyChange,
   ratingRequired = false,
   method = 'scene',
+  replacesGenerated = false,
   layout,
   wordLayout,
   compactBehindTheScenes,
@@ -257,28 +259,19 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   const exhausted = generationsLeft !== undefined && generationsLeft <= 0;
   // The pictures whose reveal animation has already played.
   const revealedPictureIds = useRef(new Set<string>());
-  // The cached variant shown last for a filling, so Generate again shows
-  // another.
-  const lastCachedRef = useRef<{path: string; variant: number}>();
 
   // The cached picture for the sentence as filled, when there is one.
-  const findCached = useCallback(async (): Promise<CachedImage | undefined> => {
-    const wordIds = sentenceWordIds(sentence, choices);
-    const path = sentencePath(sentence.id, wordIds, style);
-    const last = lastCachedRef.current;
-    const found = await findCachedImage({
-      sentenceId: sentence.id,
-      wordIds,
-      style,
-      characterSet: canAnimate,
-      avoidVariant: last?.path === path ? last.variant : undefined,
-      baseUrl: imageCacheUrl,
-    });
-    if (found) {
-      lastCachedRef.current = {path, variant: found.variant};
-    }
-    return found;
-  }, [sentence, choices, style, canAnimate, imageCacheUrl]);
+  const findCached = useCallback(
+    (): Promise<CachedImage | undefined> =>
+      findCachedImage({
+        sentenceId: sentence.id,
+        wordIds: sentenceWordIds(sentence, choices),
+        style,
+        characterSet: canAnimate,
+        baseUrl: imageCacheUrl,
+      }),
+    [sentence, choices, style, canAnimate, imageCacheUrl]
+  );
 
   const persist = useCallback(
     async (picture: GeneratedPicture, pictureVerdict: Verdict | null) => {
@@ -293,9 +286,11 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         : picture.result;
       try {
         await onKeep(result);
+        return true;
       } catch (e) {
         console.error('Saving the image failed:', e);
         setError("Couldn't save the picture. Try again.");
+        return false;
       } finally {
         setSaving(false);
       }
@@ -338,17 +333,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         return;
       }
     }
+    const generationId = createUuid();
     // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
+        generationId,
         promptText: prompt,
         method: typedPrompt ? 'freeText' : method,
         imageType,
+        imageSubject,
         ...(typedPrompt ? {} : {sentenceId: sentence.id, choices}),
         style,
         imageSource,
         cached: !!cached,
+        regenerate: !!chosenPicture || replacesGenerated,
       },
       true
     );
@@ -438,11 +437,20 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
-        cached: !!cached,
+        generationId,
       };
-      // The picture is stored while the host holds it back, so that
-      // leaving the page during the wait does not lose it.
-      const stored = persist(entry, null);
+      // Save before `onReady`, which can wait before the picture is shown,
+      // so the picture is not lost if the student leaves the page during
+      // that wait.
+      const saved = await persist(entry, null);
+      if (run !== runRef.current) {
+        return;
+      }
+      if (!saved) {
+        onGenerateFailed?.();
+        setMode('edit');
+        return;
+      }
       await onReady?.(entry.result);
       if (run !== runRef.current) {
         return;
@@ -450,7 +458,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       setChosenPicture(entry);
       setMode('result');
       playSound('reveal');
-      await stored;
     } catch (e) {
       if (run !== runRef.current) {
         return;
@@ -464,6 +471,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       } else {
         console.error('Image generation failed:', e);
         setError("Couldn't make the picture. Try again.");
+        onGenerateFailed?.();
       }
       setMode('edit');
     }
@@ -476,7 +484,10 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     style,
     generatesCharacterSet,
     method,
+    replacesGenerated,
+    chosenPicture,
     onGenerateStart,
+    onGenerateFailed,
     exhausted,
     advanced,
     persist,
@@ -493,6 +504,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
           verdict: next,
+          generationId: chosenPicture?.generationId,
           promptText: chosenPicture?.prompt,
           imageType,
         },
@@ -514,6 +526,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
         {
           reasons,
+          generationId: chosenPicture?.generationId,
           promptText: chosenPicture?.prompt,
           imageType,
         },
@@ -691,12 +704,6 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         panelRef,
         frame,
         frameFilled: !!chosenPicture && !generating,
-        // Keyed like the reveal, so each picture shows it afresh.
-        cachedTag: chosenPicture?.cached && !generating && (
-          <span key={`cached-${chosenPicture.id}`} className={styles.cachedTag}>
-            cached
-          </span>
-        ),
         behindTheScenes,
         status: statusNode,
         sentence: sentenceNode,

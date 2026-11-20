@@ -1,11 +1,12 @@
 import {Button as MuiButton} from '@mui/material';
-import React, {useRef} from 'react';
+import React from 'react';
 
 import Video from '@cdo/apps/standaloneVideo/Video';
 
 import {VideoStep as VideoStepContent} from '../../types';
 
 import styles from './stepPlayer.module.scss';
+import videoStyles from '@cdo/apps/standaloneVideo/video.module.scss';
 
 interface VideoStepProps {
   step: VideoStepContent;
@@ -18,19 +19,26 @@ const VideoStep: React.FunctionComponent<VideoStepProps> = ({
   continueLabel,
   onComplete,
 }) => {
-  const host = useRef<HTMLDivElement>(null);
   return (
-    <div ref={host} className={styles.videoHost}>
-      <Video
-        src={step.src}
-        download={step.download}
-        thumbnail={step.thumbnail}
-        containerRef={host}
-      >
-        <MuiButton variant="contained" onClick={onComplete}>
-          {continueLabel}
-        </MuiButton>
-      </Video>
+    <div className={styles.videoHost}>
+      <div className={styles.videoFrame}>
+        <Video
+          src={step.src}
+          download={step.download}
+          thumbnail={step.thumbnail}
+        >
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            className={videoStyles.buttonNext}
+            onClick={onComplete}
+            type="button"
+          >
+            {continueLabel}
+          </MuiButton>
+        </Video>
+      </div>
     </div>
   );
 };

@@ -3,14 +3,23 @@
 // height. Wider than the modal's own cap, for the cards side by side.
 .dialog {
   --gap: 14px;
-  --card-padding: 22px 28px;
+  --card-and-offer-padding: 22px;
   --picture-height: 96px;
   --row-padding: 14px 18px;
-  --offer-padding: 14px 20px;
 
   box-sizing: border-box;
   width: min(1120px, calc(100vw - 32px));
   max-width: none;
+}
+
+// The content scrolls on a small window. A browser draws that scrollbar for
+// a light page unless color-scheme tells it the dialog is dark.
+:global([data-theme='Dark']) .dialog {
+  color-scheme: dark;
+}
+
+:global([data-theme='Light']) .dialog {
+  color-scheme: light;
 }
 
 // On a short window the modal's own rows give up some of their padding
@@ -19,10 +28,9 @@
 @media (max-height: 800px) {
   .dialog {
     --gap: 8px;
-    --card-padding: 12px 22px;
+    --card-and-offer-padding: 12px;
     --picture-height: 36px;
     --row-padding: 9px 16px;
-    --offer-padding: 10px 18px;
 
     > div:nth-of-type(1),
     > div:nth-of-type(3) {
@@ -59,7 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: var(--card-padding);
+  padding: var(--card-and-offer-padding);
   border-radius: 12px;
   color: var(--text-neutral-white-fixed);
 }
@@ -109,6 +117,12 @@
   color: inherit;
 }
 
+// Moved up by the empty space above its letters, so a card's first line is
+// as far from the top edge as from the left.
+.card .eyebrow {
+  margin-top: -4px;
+}
+
 // Sized so the longer card title stays on one line down to the smallest
 // supported width.
 .cardTitle {
@@ -116,12 +130,36 @@
   line-height: 1.2;
 }
 
+// The picture's width and the height of its brick ground, in its own
+// pixels, and how much of that ground stays in view.
+$picture-width: 572;
+$ground-rows: 31;
+$ground-shown: 10px;
+
+// Fills what the card has left: the height comes from the card, not from
+// the picture.
 .picture {
-  flex: 1 1 auto;
+  position: relative;
+  flex: 1 1 0;
   min-height: var(--picture-height);
   margin-top: auto;
+  overflow: hidden;
   border-radius: 8px;
-  background: var(--background-neutral-white-fixed);
+}
+
+// As wide as the box and at its bottom edge, so a short box crops the top.
+.picture img {
+  position: absolute;
+  bottom: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: auto;
+
+  // A percentage margin is a share of the box's width, so the second term
+  // is the ground's height at any size.
+  margin-bottom: calc(
+    #{$ground-shown} - 100% * #{$ground-rows} / #{$picture-width}
+  );
 }
 
 .resources {
@@ -185,7 +223,9 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  padding: var(--offer-padding);
+  // One pixel less than a card's padding, to make up for the border, so an
+  // offer's content is inset the same distance as a card's.
+  padding: calc(var(--card-and-offer-padding) - 1px);
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 12px;
 }
@@ -201,7 +241,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0;
+
+  // Moved up by the empty space above its letters, as a card's first line
+  // is. In em, because the font size changes with the window width.
+  margin: -0.28em 0 0;
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: var(--text-neutral-primary);
 }
@@ -213,6 +256,29 @@
 .offer .offerText {
   margin: 0 0 4px;
   color: var(--text-neutral-secondary);
+}
+
+// At the bottom of the offer, so the offers' buttons line up when one
+// offer's text takes more lines.
+.offerAction {
+  margin-top: auto;
+}
+
+// At least as tall as the Copy link button it stands in for.
+.offer .cannotShare {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-content: center;
+  align-items: start;
+  column-gap: 12px;
+  min-height: 40px;
+  color: var(--text-neutral-tertiary);
+
+  // The icon takes the text's line height, so it sits level with the first
+  // line when the text takes two.
+  i {
+    line-height: inherit;
+  }
 }
 
 @media (max-width: 760px) {

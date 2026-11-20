@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-11-17T07:21:11.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Your Feedback",
+    "long_instructions": "What was the most confusing or frustrating part of training decision trees today?",
+    "stay_on_level_after_submit": "false",
+    "height": "100",
+    "placeholder": "Write your response here",
+    "allow_user_uploads": "false",
+    "submittable": "true",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_nov-2026-beta-test"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-17T07:21:11.319+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson7-FRQ\\\"\"],\"cloned_from\":\"data-makes-ai-lesson7-FRQ\"},{\"changed_at\":\"2026-11-17 08:11:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"},{\"changed_at\":\"2026-11-17 08:29:50 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":887,\"changed_by_email\":\"bryan@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

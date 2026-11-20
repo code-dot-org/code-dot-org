@@ -356,8 +356,8 @@ export interface LevelProperties {
   aiTutorModelParameters?: AiTutorModelParameters;
   levelSystemPrompt?: string;
   /**
-   * Show the instructions in the AI Tutor tab, pinned above the chat as a
-   * message from the tutor, and don't show the separate Instructions tab.
+   * Show the instructions in the AI Tutor tab, pinned open above the chat,
+   * and don't show the separate Instructions tab.
    */
   showInstructionsInAiTutor?: boolean;
   /**
@@ -367,8 +367,11 @@ export interface LevelProperties {
   spotlightInstructions?: boolean;
   // Suppress every product tour, automatic or replayed from student resources.
   disableProductTours?: boolean;
+  // Don't open the AI Tutor chat with the lab's welcome message.
+  disableAiTutorWelcome?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
+  hideAiTutor?: boolean;
   isAssessment?: boolean;
   type?: string;
   starterAssets?: {[key: string]: string};

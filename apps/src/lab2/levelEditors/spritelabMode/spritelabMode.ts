@@ -50,6 +50,7 @@ const IMAGE_KEYS: (keyof LevelMode)[] = [
 
 const IMAGE_TAB_KEYS: (keyof LevelMode)[] = [
   'learning',
+  'enableImageUpload',
   'imageSource',
   'oneImage',
 ];
@@ -128,6 +129,7 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
     // A false flag reads the same as no flag, so only true is stored.
     case 'imageFirst':
     case 'learning':
+    case 'enableImageUpload':
     case 'oneImage':
     case 'noNewImages':
     case 'noDeletingImages':
@@ -199,8 +201,10 @@ export function fieldApplies(
     // kind is "world", or when it lists World among its extra tabs.
     case 'paletteRoles':
       return kind === 'world' || !!mode.extraTabs?.includes('World');
-    // Both act on a picture the student makes, so they need an Images tab.
+    // All three act on a picture the student makes, so they need an Images
+    // tab.
     case 'learning':
+    case 'enableImageUpload':
     case 'imageSource':
       return (
         kind === 'image' || kind === 'freeplay' || mode.imageFirst === true
@@ -277,6 +281,17 @@ export function setLearning(
   learning: boolean
 ): Partial<LevelMode> {
   return setJsonObjectValue(mode, 'learning', learning || undefined);
+}
+
+export function setEnableImageUpload(
+  mode: Partial<LevelMode>,
+  enableImageUpload: boolean
+): Partial<LevelMode> {
+  return setJsonObjectValue(
+    mode,
+    'enableImageUpload',
+    enableImageUpload || undefined
+  );
 }
 
 /** Unset reads as 'cached', so the default is stored by storing nothing. */

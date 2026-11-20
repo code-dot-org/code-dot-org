@@ -54,9 +54,16 @@ jest.mock('@cdo/apps/lab2/views/components/AiTutorChat', () => ({
   __esModule: true,
   default: () => null,
 }));
+const mockTutorDrawer = jest.fn(
+  (_props: {initialWelcomeMessage?: string}) => null
+);
 jest.mock(
   '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/AiTutorChatWithInstructionsDrawer/AiTutorChatWithInstructionDrawer',
-  () => ({__esModule: true, default: () => null})
+  () => ({
+    __esModule: true,
+    default: (props: {initialWelcomeMessage?: string}) =>
+      mockTutorDrawer(props),
+  })
 );
 // aichat/redux itself is transitively imported by several paths.
 jest.mock('@cdo/apps/aichat/redux', () => ({
@@ -78,8 +85,9 @@ jest.mock('@cdo/apps/lab2/views/components/rubrics/RubricWrapper', () => ({
   useRubric: () => ({showRubric: false}),
 }));
 
+const mockShouldShowAiTutor = jest.fn(() => false);
 jest.mock('@cdo/apps/aichat/helpers/aiChatAccess', () => ({
-  shouldShowAiTutor: () => false,
+  shouldShowAiTutor: () => mockShouldShowAiTutor(),
 }));
 
 jest.mock('@cdo/apps/aichat/hooks/useAiChatDisabledState', () => ({
@@ -210,7 +218,7 @@ function makeLevelProperties(
   } as LevelProperties;
 }
 
-describe('ResourcePanel — hideNonInstructionTabs', () => {
+describe('ResourcePanel — tabs', () => {
   let store: Store;
 
   beforeEach(() => {
@@ -237,12 +245,14 @@ describe('ResourcePanel — hideNonInstructionTabs', () => {
   });
 
   function renderPanel(
-    levelPropertiesOverrides: Partial<LevelProperties> = {}
+    levelPropertiesOverrides: Partial<LevelProperties> = {},
+    panelProps: Partial<React.ComponentProps<typeof ResourcePanel>> = {}
   ) {
     const levelProperties = makeLevelProperties(levelPropertiesOverrides);
     return render(
       <Provider store={store}>
         <ResourcePanel
+          {...panelProps}
           levelProperties={levelProperties}
           isRunning={false}
           hasRun={false}
@@ -289,5 +299,65 @@ describe('ResourcePanel — hideNonInstructionTabs', () => {
     expect(
       screen.getByRole('button', {name: 'Instructions'})
     ).toBeInTheDocument();
+  });
+
+  describe('with the AI Tutor on', () => {
+    const tutorProps = {
+      hiddenContextCallback: async () => '',
+      hasInstructionsDrawer: true,
+    };
+    beforeEach(() => mockShouldShowAiTutor.mockReturnValue(true));
+    afterEach(() => mockShouldShowAiTutor.mockReturnValue(false));
+
+    it('shows the AI Tutor tab, in place of Instructions when they show there', () => {
+      renderPanel({showInstructionsInAiTutor: true}, tutorProps);
+      expect(
+        screen.getByRole('button', {name: 'AI Tutor'})
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByRole('button', {name: 'Instructions'})
+      ).not.toBeInTheDocument();
+    });
+
+    it('passes the welcome message to the tutor', () => {
+      renderPanel({}, {...tutorProps, initialWelcomeMessage: 'Hi!'});
+      expect(mockTutorDrawer).toHaveBeenCalledWith(
+        expect.objectContaining({initialWelcomeMessage: 'Hi!'})
+      );
+    });
+
+    it('drops the welcome message when the level disables it', () => {
+      renderPanel(
+        {disableAiTutorWelcome: true},
+        {...tutorProps, initialWelcomeMessage: 'Hi!'}
+      );
+      expect(mockTutorDrawer).toHaveBeenCalled();
+      expect(mockTutorDrawer).not.toHaveBeenCalledWith(
+        expect.objectContaining({initialWelcomeMessage: 'Hi!'})
+      );
+    });
+
+    it('drops the AI Tutor tab when the level hides it', () => {
+      renderPanel({hideAiTutor: true}, tutorProps);
+      expect(
+        screen.queryByRole('button', {name: 'AI Tutor'})
+      ).not.toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: 'Instructions'})
+      ).toBeInTheDocument();
+    });
+
+    it('keeps instructions in their own tab when the level hides the tutor they would show in', () => {
+      renderPanel(
+        {hideAiTutor: true, showInstructionsInAiTutor: true},
+        tutorProps
+      );
+      expect(
+        screen.queryByRole('button', {name: 'AI Tutor'})
+      ).not.toBeInTheDocument();
+      expect(
+        screen.getByRole('button', {name: 'Instructions'})
+      ).toBeInTheDocument();
+    });
   });
 });

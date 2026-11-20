@@ -13,7 +13,7 @@
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": "Students build a website in Web Lab about something they care about, with AI as a co-creator. Student pathways are unique based on a quick Skill Check that finds their starting point, then they choose which skills to learn, practice and apply next.",
   "professional_learning_program": null,
-  "video": null,
+  "video": "https://www.youtube-nocookie.com/embed/S3XhKYwtW1g/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=S3XhKYwtW1g&wmode=transparent",
   "published_date": null,
   "self_paced_pl_course_offering_key": null,
   "ai_teaching_assistant_available": false,
