@@ -59,6 +59,7 @@ window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
 window.dashboard.createCallouts =
   require('@cdo/apps/code-studio/callouts').default;
 window.dashboard.hashEmail = hashEmail;
+window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompletions');
 window.dashboard.popupWindow = require('@cdo/apps/code-studio/popup-window');
 window.dashboard.reporting = require('@cdo/apps/code-studio/reporting');
 window.dashboard.header = require('@cdo/apps/code-studio/header');

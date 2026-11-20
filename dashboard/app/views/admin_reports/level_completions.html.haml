@@ -1,0 +1,38 @@
+- content_for(:head) do
+  = stylesheet_link_tag    'jquery.handsontable.full', media: 'all'
+  = javascript_include_tag 'jquery.handsontable.full'
+
+%h1 Level Completions
+
+%form{method: 'get'}
+  %h2
+    From
+    %input#dateFrom{type: 'date', name: 'start_date', value: params[:start_date], style: 'position: relative;'}
+    To
+    %input#dateTo{type: 'date', name: 'end_date', value: params[:end_date], style: 'position: relative;'}
+    Filter
+    %input#filter{name: 'filter', value: params[:filter]}
+
+    %br
+
+    %input{type: 'submit', value: 'Submit'}
+
+%br
+
+- if params[:start_date] && params[:end_date]
+  %h2
+    #samplingMessage{style: 'color: red; display: none'} CAUTION: Data is sampled.
+    #{link_to 'Download CSV', {:format => :csv}}
+#completionTable{style: 'display: none'}
+
+:css
+  .htNumeric { font-family: monospace; }
+
+:javascript
+  var headers = #{ headers.try(:to_json)};
+  var data = #{ data.try(:to_json)};
+  window.dashboard.levelCompletions.hideAndShowDomElements(
+      #{ @is_sampled }, #{ params[:start_date].present? });
+  window.dashboard.levelCompletions.populateTable(headers, data);
+
+= render partial: 'home/admin'

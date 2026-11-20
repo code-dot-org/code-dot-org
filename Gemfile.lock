@@ -477,6 +477,8 @@ GEM
     gherkin (5.1.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
+    google-apis-analytics_v3 (0.13.0)
+      google-apis-core (>= 0.11.0, < 2.a)
     google-apis-classroom_v1 (0.21.0)
       google-apis-core (>= 0.9.1, < 2.a)
     google-apis-core (0.11.3)
@@ -1280,6 +1282,7 @@ DEPENDENCIES
   full-name-splitter!
   gemoji
   geocoder
+  google-apis-analytics_v3
   google-apis-classroom_v1
   google-apis-core
   google-apis-youtube_v3
