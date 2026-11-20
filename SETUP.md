@@ -21,9 +21,9 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.3.14
-     node --version     # --> latest v20.x.x, at least v20.19 (Vite requires it)
-     yarn --version     # --> any version; "not found" means you must rerun 'corepack enable'
+     ruby --version     # --> Should match `.ruby-version`
+     node --version     # --> Should match `.nvmrc`
+     yarn --version     # --> Should match `packageManager` field in `apps/package.json`; "not found" means you must rerun 'corepack enable'
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
      ```
