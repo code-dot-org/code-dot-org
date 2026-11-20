@@ -3,7 +3,7 @@
 // height. Wider than the modal's own cap, for the cards side by side.
 .dialog {
   --gap: 14px;
-  --box-padding: 22px;
+  --card-and-offer-padding: 22px;
   --picture-height: 96px;
   --row-padding: 14px 18px;
 
@@ -28,7 +28,7 @@
 @media (max-height: 800px) {
   .dialog {
     --gap: 8px;
-    --box-padding: 12px;
+    --card-and-offer-padding: 12px;
     --picture-height: 36px;
     --row-padding: 9px 16px;
 
@@ -67,7 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: var(--box-padding);
+  padding: var(--card-and-offer-padding);
   border-radius: 12px;
   color: var(--text-neutral-white-fixed);
 }
@@ -115,6 +115,13 @@
 .card .cardTitle {
   margin: 0;
   color: inherit;
+}
+
+// A line of text has empty space above its letters. The first line of a
+// card is moved up by that much, so its letters are as far from the top
+// edge as from the left.
+.card .eyebrow {
+  margin-top: -4px;
 }
 
 // Sized so the longer card title stays on one line down to the smallest
@@ -217,8 +224,9 @@ $ground-shown: 10px;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  // Less the border, so an offer's content starts as far in as a card's.
-  padding: calc(var(--box-padding) - 1px);
+  // Padding plus the 1px border equals a card's padding, so an offer's
+  // content is inset the same distance as a card's.
+  padding: calc(var(--card-and-offer-padding) - 1px);
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 12px;
 }
@@ -234,7 +242,9 @@ $ground-shown: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0;
+
+  // Moved up like a card's first line; the space grows with the font.
+  margin: -0.28em 0 0;
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: var(--text-neutral-primary);
 }
@@ -254,8 +264,7 @@ $ground-shown: 10px;
   margin-top: auto;
 }
 
-// As tall as the Copy link button it replaces. One line of text sits in
-// the middle of that height.
+// At least as tall as the Copy link button it stands in for.
 .offer .cannotShare {
   display: grid;
   grid-template-columns: auto 1fr;
