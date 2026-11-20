@@ -481,7 +481,8 @@ export class UnconnectedMusicView extends React.Component {
   }
 
   // The saved pack may be missing, or name a pack that none of the code's
-  // sounds come from. A restricted pack that they do come from is used then.
+  // sounds come from. In either case, use the first restricted pack that
+  // the code's sounds do come from, if there is one.
   getPackId = (levelData, sources) => {
     if (levelData?.packId) {
       return levelData.packId;

@@ -15,10 +15,6 @@ export function isOnDefaultPack(labConfig?: MusicPackConfig): boolean {
   return labConfig?.music?.packId === DEFAULT_PACK;
 }
 
-/**
- * The restricted packs whose sounds a project's saved code uses, in the
- * order found.
- */
 export function findRestrictedPacksInSource(
   source: string | undefined,
   library: MusicLibrary
@@ -48,6 +44,8 @@ function collectRestrictedPacks(
   for (const [key, value] of Object.entries(node)) {
     if (key === FIELD_SOUNDS_NAME && typeof value === 'string') {
       const folder = library.getFolderForSoundId(value);
+      // The default pack is marked restricted, but a project on it uses no
+      // restricted sounds.
       if (folder?.restricted && folder.id !== DEFAULT_PACK) {
         packIds.add(folder.id);
       }
