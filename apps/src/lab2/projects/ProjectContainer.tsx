@@ -97,10 +97,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
       // We skip this if we are already force reloading, as that will occur when
-      // saving already encountered an issue. We also can skip this in read only mode,
-      // as we never save in read only mode. Python Lab turns the workspace read-only
-      // while it runs, which does not make the edits already made any less worth
-      // writing, so isReadOnlyAndShouldNotBeSaved ignores that state.
+      // saving already encountered an issue. We also usually skip this in read only mode.
+      // Some read only states are still saveable
+      // (such as running a python lab program), which isReadOnlyForSave validates.
       if (
         projectManager &&
         !projectManager.isForceReloading() &&

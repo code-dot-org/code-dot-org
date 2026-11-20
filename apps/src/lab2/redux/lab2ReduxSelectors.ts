@@ -91,9 +91,7 @@ export const isReadOnlyWorkspace = (state: RootState) =>
   isTemporarilyReadOnlyWorkspace(state);
 
 // Whether the workspace is read-only for a reason that also means pending edits
-// must not be written. Checking the non-running reason directly rather than
-// subtracting running from the whole, so a workspace that is both running and
-// read-only for another reason still blocks the save.
+// must not be written.
 export const isReadOnlyAndShouldNotBeSaved = (state: RootState) =>
   isPermanentlyReadOnlyWorkspace(state) ||
   isTemporarilyReadOnlyAndShouldNotBeSaved(state);
