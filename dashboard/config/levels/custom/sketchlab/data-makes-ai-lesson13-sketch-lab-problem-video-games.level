@@ -1,0 +1,20 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-20T04:12:30.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "data-makes-ai-lesson12-sketch-lab-template",
+    "long_instructions": "## Find the Problem\r\nGoal: Pick a move that fixes the problem you found.\r\n\r\n1. Drag your Data Scientist to **Prepare Stop 1**.\r\n2. Use **Find the Problem** in your guide to answer questions a–d.\r\n3. For question e, open your **Data Moves Reference**. Drag the red oval around one move. Write why you picked it.\r\n\r\nYou are done when Prepare Stop 1 has an answer for a–e. Go to the next level.",
+    "hide_share_and_remix": "false",
+    "display_name": "Project Map: Video Game Night",
+    "bubble_choice_description": "This dataset contains qualities about different video games.",
+    "thumbnail_url": "https://images.code.org/1093666e98e1066eea05c1d3440b7c92-k4d-videogames.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:30.029+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-tree1-video-games\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-tree1-video-games\"},{\"changed_at\":\"2026-11-20 04:13:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>
