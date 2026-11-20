@@ -154,7 +154,6 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   useEffect(() => {
     if (buildProject) setBuildRequested(false);
   }, [buildProject, setBuildRequested]);
-  // A built project's lab waits for the sparkle to come to rest.
   const [settled, setSettled] = useState(false);
   const settle = useCallback(() => setSettled(true), []);
   // Keyed on the project's strings, not the channel, which changes on every save.

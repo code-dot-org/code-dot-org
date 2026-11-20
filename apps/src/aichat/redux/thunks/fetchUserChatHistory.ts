@@ -50,8 +50,7 @@ export const fetchUserChatHistory = createAsyncThunk(
       );
 
       if (isOwnHistory) {
-        // Saved events carry the remove ids of the page load that logged
-        // them, which this page load's counter hands out again.
+        // Saved remove ids would collide with this page load's counter.
         thunkAPI.dispatch(
           setOwnChatHistory(
             chatHistoryApiResponse.map(event =>

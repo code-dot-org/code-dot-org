@@ -6,13 +6,10 @@ import SparklePulse from '@cdo/apps/aiTutor/views/lessonDeepDive/Animations/Spar
 import styles from './stepPlayer.module.scss';
 
 interface GeneratingProjectProps {
-  /** True once the project and instructions are ready for the lab. */
   ready: boolean;
-  /** Called once the sparkle comes to rest after `ready`. */
   onSettled: () => void;
 }
 
-/** Stands in for the lab while a project step builds the student's project. */
 const GeneratingProject: React.FunctionComponent<GeneratingProjectProps> = ({
   ready,
   onSettled,
