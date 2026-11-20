@@ -3,8 +3,27 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import Hoai2026Congrats from '@cdo/apps/lab2/views/dialogs/finishDialogs/Hoai2026Congrats';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
+jest.mock('@cdo/apps/util/copyToClipboard', () => jest.fn());
+jest.mock('@cdo/apps/util/trackEvent', () => jest.fn());
+
+const sendEvent = analyticsReporter.sendEvent as jest.Mock;
+const reportedActions = () =>
+  sendEvent.mock.calls.map(([name, payload, withProject]) => {
+    expect(name).toBe(EVENTS.HOAI2026_FINISH_DIALOG);
+    expect(withProject).toBe(true);
+    return payload.action;
+  });
 
 describe('Hoai2026Congrats', () => {
+  beforeEach(() => sendEvent.mockClear());
+
   const renderDialog = (
     props: Partial<React.ComponentProps<typeof Hoai2026Congrats>> = {}
   ) =>
@@ -107,5 +126,42 @@ describe('Hoai2026Congrats', () => {
     renderDialog({onClose});
     screen.getByRole('button', {name: 'Keep playing'}).click();
     expect(onClose).toHaveBeenCalled();
+  });
+
+  it('reports that it was shown, once', () => {
+    const view = renderDialog();
+    view.rerender(
+      <Hoai2026Congrats
+        onClose={jest.fn()}
+        shareUrl="https://studio.code.org/projects/spritelab2/abc"
+        projectType="spritelab"
+      />
+    );
+    expect(reportedActions()).toEqual(['shown']);
+  });
+
+  it('reports each call to action as it is pressed', () => {
+    renderDialog();
+    sendEvent.mockClear();
+    const press = (role: 'button' | 'link', name: RegExp | string) =>
+      fireEvent.click(screen.getByRole(role, {name}));
+    press('button', 'Open Sprite Lab');
+    press('link', /How AI Makes Decisions/);
+    press('link', /AI Discoveries/);
+    press('button', 'Copy link');
+    press('link', 'Certificate');
+    press('link', 'Learn more');
+    press('button', 'Keep playing');
+    press('button', 'Close');
+    expect(reportedActions()).toEqual([
+      'open_quest_builder_standalone',
+      'elementary',
+      'middle_school',
+      'copy_link',
+      'certificate',
+      'elevate_hour_of_ai',
+      'keep_playing',
+      'close',
+    ]);
   });
 });
