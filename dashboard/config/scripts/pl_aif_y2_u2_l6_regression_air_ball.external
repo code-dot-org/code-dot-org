@@ -3,43 +3,50 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h1>Section 5: Classification, Start to Finish</h1>
-
-<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; font-size: 13px; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 8-9</div>
-
-<p>This section prepares you to teach two curriculum lessons, the classification half of the unit's build-and-test arc, mirroring Section 4's regression arc. Students build a nearest-neighbors classifier by hand, then in code, before learning that "how good is this model?" has no single answer, it depends on which kind of mistake costs more.</p>
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 8:</b> Building Classifiers</div>
-  <a href="PASTE_UNIT_2_LESSON_8_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 8</a>
-</div>
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 9:</b> Testing Classifiers</div>
-  <a href="PASTE_UNIT_2_LESSON_9_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 9</a>
-</div>
-
-<hr>
-
-<p><b>In this section, you'll:</b></p>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Learn the nearest-neighbors algorithm: to label something new, look at the most similar examples you've already seen</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Get ahead of a real misconception: more neighbors isn't always better</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Compare two classifiers using accuracy, recall, and precision, and see why the "more accurate" model isn't automatically the better one</div>
-<div style="font-size: 16px;">&bull; Tune a confidence threshold yourself and watch recall and precision trade off against each other</div>
+# Facilitating Evaluating the Impact of Models
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Notice as you explore:</b> both lessons use a deliberately higher-stakes framing than Section 4 did, late mail is an inconvenience, a toxic berry is a real safety risk. That shift in stakes is what makes the precision/recall trade-off actually matter, not just a formula to memorize.</div>
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> as students work through the three scenarios, let them take their time. If a pair gets stuck comparing two models, don't jump to the "right" answer, prompt them to first name what's actually different between the two models' outputs.</div>
 </div>
 
-<hr>
+## Watch for: "The More Accurate Model Is the Right One"
 
-<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 1</div>
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 2</div>
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 3</div>
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 4</div>
-  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 5</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 6</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 7</div>
+<div style="display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 260px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9888;&#65039; Stuck</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students answer every comparison question by pointing at whichever model minimizes error, without asking what the model is actually used for.</div>
+  </div>
+  <div style="flex: 1; min-width: 260px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9989; Strong</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students say a model is "right" when it avoids causing harm, not just when it minimizes error, or they say the right choice depends on the context the model is used in.</div>
+  </div>
 </div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p>If any student responses touch on fairness or safety without using those words, call them out before moving on. You can say something like: "We're going to explore two principles that help us evaluate the output of models to make sure they aren't harmful."</p>
+</div>
+
+## Career Journeys: AI Safety Engineer
+
+<div style="display: flex; gap: 16px; align-items: center; background-color: #F7F7FB; border-radius: 10px; padding: 16px 20px; margin: 16px 0; flex-wrap: wrap;">
+  <img src="https://images.code.org/94e525a6c1512c3224bb75e712faffe9-image-1795120246162.png" alt="graduation cap and gown icon" style="width: 120px; border-radius: 8px; flex-shrink: 0;">
+  <div style="flex: 1; min-width: 200px; font-size: 16px; line-height: 1.5;">An AI safety engineer works to evaluate ML technologies to make sure they're safe, fair, and minimize harm in the context they're being used in. Fairness and safety aren't abstract values in this lesson, they're literally someone's job.</div>
+</div>
+
+## Wrap Up: Beyond Fairness and Safety
+
+Close by pushing students past the two vocabulary terms to their own values.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>Discuss:</b> What principles other than fairness and safety are important to you when evaluating the output of an ML model?</p>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> if students are struggling, reframe it: "Aside from being unfair or unsafe, are there other ways a model can be harmful?" If they're still stuck, offer one of these real examples:</div>
+  <div style="margin-top: 8px; font-size: 16px; line-height: 1.5;">&bull; A music recommendation model that only plays what you already listen to might mean you never discover new songs, a problem if you value variety.</div>
+  <div style="margin-top: 4px; font-size: 16px; line-height: 1.5;">&bull; Social media personalization can inadvertently promote polarization, a problem if you value shared perspectives.</div>
+  <div style="margin-top: 4px; font-size: 16px; line-height: 1.5;">&bull; Algorithms can inadvertently expose personal information from the data they were trained on, a problem if you value privacy.</div>
+</div>
+
+
 MARKDOWN
