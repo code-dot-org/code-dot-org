@@ -142,6 +142,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     checkpoint,
     statusMap,
     progress,
+    isViewingStudent,
     saveGeneratedInstructions,
     recordValidation,
     aiContext,
@@ -207,16 +208,18 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     generatedInstructions,
     saveGeneratedInstructions,
     aichatContext: aiContext,
+    isViewingStudent,
   });
-  // The lab's own Continue button advances the step. A step whose work is
-  // checked waits for work that passes, for enough failed checks that the
-  // judge may be at fault, or for the chat to reach its reply limit, unless no
-  // judge can run: the shell makes no AI calls, or the lab takes no part in
-  // checking.
+  // The lab's Continue button advances the step (always for a teacher
+  // viewing a student). A step whose work is checked waits for work
+  // that passes, for enough failed checks that the judge may be at fault, or
+  // for the chat to reach its reply limit, unless no judge can run: the shell
+  // makes no AI calls, or the lab takes no part in checking.
   const entry = progress.steps[step.id];
   const unlockReason = continueUnlockReason(entry);
   const aiAvailable = isAdaptiveAiAvailable();
   const continueEnabled =
+    isViewingStudent ||
     !step.validation ||
     !aiAvailable ||
     !workAdapterFor(levelProperties.appName) ||
@@ -250,6 +253,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     recordValidation: recordStepValidation,
     progress: entry,
     continueAllowed: continueEnabled,
+    isViewingStudent,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share

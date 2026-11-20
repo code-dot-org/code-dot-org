@@ -52,6 +52,16 @@ describe('ProgressStore', () => {
     );
   });
 
+  it("loads a student's steps for the teacher viewing them", async () => {
+    http.get.mockResolvedValue({json: async () => ({steps: {}})});
+
+    await new ProgressStore().load(key, 77);
+
+    expect(http.get).toHaveBeenCalledWith(
+      '/adaptive_progress?scriptId=11&levelId=98263&user_id=77'
+    );
+  });
+
   it('loads the AI change counts, and gives undefined when that fails', async () => {
     const counts = {accepted: 3, rejected: 1};
     http.get.mockResolvedValueOnce({json: async () => counts});
@@ -65,6 +75,16 @@ describe('ProgressStore', () => {
     http.get.mockRejectedValueOnce(new Error('offline'));
     expect(await store.loadAiMetrics(key)).toBeUndefined();
     expect(mockLogError).toHaveBeenCalled();
+  });
+
+  it("loads a student's AI change counts for the teacher viewing them", async () => {
+    http.get.mockResolvedValueOnce({json: async () => ({})});
+
+    await new ProgressStore().loadAiMetrics(key, 77);
+
+    expect(http.get).toHaveBeenCalledWith(
+      '/adaptive_progress/ai_metrics?scriptId=11&levelId=98263&user_id=77'
+    );
   });
 
   it('sends writes one at a time, in order', async () => {

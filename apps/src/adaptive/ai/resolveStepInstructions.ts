@@ -49,6 +49,7 @@ export interface StepInstructionsOptions {
   ) => void;
   /** The shell's own context, not the mounted chat's. */
   aichatContext: AichatContext;
+  isViewingStudent?: boolean;
 }
 
 /**
@@ -66,8 +67,12 @@ export async function resolveStepInstructions({
   generatedInstructions,
   saveGeneratedInstructions,
   aichatContext,
+  isViewingStudent = false,
 }: StepInstructionsOptions): Promise<string | undefined> {
   if (!step.instructionsPrompt || !step.project) return authoredInstructions;
+  if (isViewingStudent) {
+    return generatedInstructions?.instructions ?? authoredInstructions;
+  }
   if (sources === undefined) return authoredInstructions;
   if (!isAdaptiveAiAvailable()) {
     sendAiStaticFallbackUsed('instructions', 'aiUnavailable', checkpoint, step);

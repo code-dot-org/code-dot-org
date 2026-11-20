@@ -62,7 +62,7 @@ describe('StatsStep', () => {
     expect(screen.getByRole('heading', {name: 'Great job!'})).toBeTruthy();
     expect(screen.getByText('Keep it up.')).toBeTruthy();
     expect(await screen.findByText('4')).toBeTruthy();
-    expect(loadAiMetrics).toHaveBeenCalledWith(progressKey);
+    expect(loadAiMetrics).toHaveBeenCalledWith(progressKey, undefined);
     expect(screen.getByText('1')).toBeTruthy();
     expect(screen.getByText('2')).toBeTruthy();
     expect(
@@ -105,6 +105,30 @@ describe('StatsStep', () => {
     const logo = document.querySelector('img');
     expect(logo?.getAttribute('src')).toBe('https://images.code.org/logo.svg');
     expect(logo?.getAttribute('alt')).toBe('');
+  });
+
+  it("loads the viewed student's AI changes for a teacher", async () => {
+    render(
+      <PathwayContext.Provider
+        value={
+          {
+            pathway,
+            progressKey,
+            statusMap: {a: 'complete'},
+            progress: {steps: {}},
+            viewAsUserId: 77,
+          } as unknown as PathwayContextValue
+        }
+      >
+        <StatsStep
+          step={step}
+          continueLabel="Continue"
+          onComplete={jest.fn()}
+        />
+      </PathwayContext.Provider>
+    );
+    expect(await screen.findByText('4')).toBeTruthy();
+    expect(loadAiMetrics).toHaveBeenCalledWith(progressKey, 77);
   });
 
   it('leaves out the AI changes while they load and when they fail to', async () => {

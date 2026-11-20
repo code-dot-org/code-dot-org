@@ -77,6 +77,7 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   default: ({
     checkpoint,
     initialStepId,
+    onStartStep,
     onCompleteStep,
     onExit,
     onFinish,
@@ -87,6 +88,7 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
   }: {
     checkpoint: {title: string; steps: unknown[]};
     initialStepId?: string;
+    onStartStep: (step: unknown) => void;
     onCompleteStep: (step: unknown, timeMs: number) => void;
     onExit: () => void;
     onFinish: () => void;
@@ -102,6 +104,9 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
       {projectName && <span>step project: {projectName}</span>}
       <button type="button" onClick={onExit}>
         exit
+      </button>
+      <button type="button" onClick={() => onStartStep(checkpoint.steps[0])}>
+        start step
       </button>
       <button
         type="button"
@@ -124,6 +129,14 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
       )}
     </div>
   ),
+}));
+jest.mock('@cdo/apps/lab2/views/alerts/teacherViewingStudentProject', () => ({
+  __esModule: true,
+  default: ({
+    getAlertText,
+  }: {
+    getAlertText: (name: string) => React.ReactElement;
+  }) => <div role="alert">{getAlertText('Doug Funnie')}</div>,
 }));
 jest.mock('@cdo/apps/lab2/views/Loading', () => ({
   __esModule: true,
@@ -425,6 +438,74 @@ describe('PathwayApp', () => {
       expect(window.location.search).toBe('');
     });
 
+    describe('while a teacher views a student', () => {
+      beforeEach(() =>
+        mockUseAppSelector.mockImplementation(selector =>
+          selector({progress: {viewAsUserId: 77}, lab: {}})
+        )
+      );
+
+      it('returns to the map instead of finishing the lesson', async () => {
+        mockLoad.mockResolvedValue({
+          steps: {'intro-step': {status: 'complete', timeSpent: 0}},
+        });
+        await renderSettled({...pathway, finish});
+
+        act(() => screen.getByText("I'm finished!").click());
+        act(() => screen.getByRole('button', {name: 'Finish'}).click());
+        expect(screen.getByText('playing Wrap up')).toBeTruthy();
+        act(() => screen.getByText('finish').click());
+
+        expect(screen.getByText('map screen')).toBeTruthy();
+        expect(mockDispatch).not.toHaveBeenCalledWith({
+          type: 'continueOrFinishLesson',
+        });
+      });
+
+      it('opens a URL checkpoint the student has not unlocked, with an alert that stays once a step starts', async () => {
+        window.history.replaceState({}, '', '?checkpoint=next&step=next-step');
+
+        await renderSettled();
+
+        expect(screen.getByText(/playing Next/)).toBeTruthy();
+        expect(screen.getByRole('alert').textContent).toBe(
+          'Doug Funnie has not unlocked this checkpoint'
+        );
+        act(() => screen.getByText('start step').click());
+        expect(screen.getByRole('alert')).toBeTruthy();
+        expect(mockDispatch).not.toHaveBeenCalledWith({
+          startedReport: 'adaptive',
+        });
+      });
+
+      it('shows no alert on a checkpoint the student has unlocked', async () => {
+        window.history.replaceState(
+          {},
+          '',
+          '?checkpoint=intro&step=intro-step'
+        );
+
+        await renderSettled();
+
+        expect(screen.getByText(/playing Intro/)).toBeTruthy();
+        expect(screen.queryByRole('alert')).toBeNull();
+      });
+
+      it('sends no started milestone when the teacher opens a checkpoint from the map', async () => {
+        mockLoad.mockResolvedValue({
+          steps: {'intro-step': {status: 'started', timeSpent: 0}},
+        });
+        await renderSettled();
+
+        act(() => screen.getByText('start intro').click());
+
+        expect(screen.getByText(/playing Intro/)).toBeTruthy();
+        expect(mockDispatch).not.toHaveBeenCalledWith({
+          startedReport: 'adaptive',
+        });
+      });
+    });
+
     it('navigates back to the map when the browser fires popstate with no checkpoint', async () => {
       window.history.replaceState({}, '', '?checkpoint=intro&step=intro-step');
       await renderSettled();
@@ -656,6 +737,48 @@ describe('PathwayApp', () => {
 
       expect(screen.getByText('playing My Project')).toBeTruthy();
       expect(mockDispatch).toHaveBeenCalledWith({startedReport: 'adaptive'});
+    });
+
+    it('opens the project when the URL names it', async () => {
+      window.history.replaceState({}, '', '?checkpoint=project&step=project');
+
+      await renderSettled();
+
+      expect(screen.getByText('playing My Project')).toBeTruthy();
+    });
+
+    it('stays on the project when the teacher picks another student', async () => {
+      let viewAsUserId = 77;
+      mockUseAppSelector.mockImplementation(selector =>
+        selector({progress: {viewAsUserId}, lab: {}})
+      );
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'started', timeSpent: 0}},
+      });
+      // A new element each time, so the rerender reaches PathwayApp.
+      const app = () => (
+        <PathwayApp
+          pathway={pathway}
+          progressKey={progressKey}
+          levelProperties={levelProperties}
+        />
+      );
+      let rerender: (ui: React.ReactElement) => void = () => {};
+      await act(async () => {
+        rerender = render(app()).rerender;
+      });
+      act(() => screen.getByRole('button', {name: 'My project tab'}).click());
+      // The real player writes the project into the URL.
+      window.history.replaceState({}, '', '?checkpoint=project&step=project');
+
+      viewAsUserId = 78;
+      await act(async () => rerender(app()));
+      await act(async () => {
+        await Promise.resolve();
+      });
+
+      expect(mockLoad).toHaveBeenCalledTimes(2);
+      expect(screen.getByText('playing My Project')).toBeTruthy();
     });
 
     it('passes the project tab as active to StepPlayer in project view', async () => {

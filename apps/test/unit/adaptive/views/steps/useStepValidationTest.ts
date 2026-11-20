@@ -106,7 +106,11 @@ const baseOptions = (chat: ChatHandle | undefined) => ({
 const render = (
   chat: ChatHandle | undefined,
   stepOverrides: Partial<LevelStep> = {},
-  extra: {progress?: StepProgress; continueAllowed?: boolean} = {}
+  extra: {
+    progress?: StepProgress;
+    continueAllowed?: boolean;
+    isViewingStudent?: boolean;
+  } = {}
 ) => {
   const options = baseOptions(chat);
   const hook = renderHook(() =>
@@ -281,5 +285,15 @@ describe('useStepValidation', () => {
     expect(listeners).toHaveLength(1);
     unmount();
     expect(listeners).toHaveLength(0);
+  });
+
+  it('judges nothing, and tells the chat unlock hook so, while a teacher views a student', () => {
+    const {chat, listeners} = fakeChat();
+    render(chat, {}, {isViewingStudent: true});
+
+    expect(listeners).toHaveLength(0);
+    expect(mockUseChatUnlock).toHaveBeenLastCalledWith(
+      expect.objectContaining({isViewingStudent: true})
+    );
   });
 });

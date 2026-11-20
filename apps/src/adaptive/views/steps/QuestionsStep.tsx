@@ -29,6 +29,7 @@ interface QuestionsStepProps {
   answers: StepAnswers;
   onSaveAnswers: (questionId: number, answers: Answer[]) => void;
   onComplete: () => void;
+  isViewingStudent?: boolean;
 }
 
 const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
@@ -36,6 +37,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   answers,
   onSaveAnswers,
   onComplete,
+  isViewingStudent = false,
 }) => {
   const {questions} = step;
   const [index, setIndex] = useState(0);
@@ -113,6 +115,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   const isAdvancing = feedback === 'correct';
 
   const handleSubmit = () => {
+    if (isViewingStudent) return;
     if (isAdvancing || completedRef.current || !question) return;
 
     if (question.type === 'MultipleChoiceQuestion') {
@@ -153,12 +156,13 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     }
   };
 
-  const isDisabled =
-    question?.type === 'MultipleChoiceQuestion'
-      ? !selectedChoiceId || (isOtherPicked && !otherText.trim())
-      : question?.type === 'freeResponse'
-      ? !freeResponseText.trim()
-      : true;
+  const isDisabled = isViewingStudent
+    ? true
+    : question?.type === 'MultipleChoiceQuestion'
+    ? !selectedChoiceId || (isOtherPicked && !otherText.trim())
+    : question?.type === 'freeResponse'
+    ? !freeResponseText.trim()
+    : true;
 
   const questionLabel =
     questions.length > 1
@@ -275,6 +279,18 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
         >
           {isLastQuestion ? 'Submit' : 'Next'}
         </MuiButton>
+        {isViewingStudent && (
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            type="button"
+            endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+            onClick={advance}
+          >
+            Continue
+          </MuiButton>
+        )}
       </div>
     </div>
   );

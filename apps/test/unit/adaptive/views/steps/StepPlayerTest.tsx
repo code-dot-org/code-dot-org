@@ -643,4 +643,46 @@ describe('StepPlayer', () => {
       expect(screen.getByText('level: starter build: false')).toBeTruthy();
     });
   });
+
+  describe('while a teacher views a student', () => {
+    const work = (id: string) =>
+      ({id, title: id, kind: 'level', level: id} as unknown as Step);
+    const reading = (id: string, kind: 'panels' | 'video') =>
+      ({id, title: id, kind} as unknown as Step);
+    const mixed: Checkpoint = {
+      ...checkpoint,
+      steps: [
+        reading('read', 'panels'),
+        work('try'),
+        reading('watch', 'video'),
+        work('build'),
+      ],
+    };
+
+    it('plays only the steps with student work, then finishes', () => {
+      const {calls, onFinish} = renderPlayer(
+        {checkpoint: mixed},
+        {isViewingStudent: true}
+      );
+
+      expect(screen.getByText(/level: try/)).toBeTruthy();
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+      expect(screen.getByText(/level: build/)).toBeTruthy();
+      fireEvent.click(screen.getByRole('button', {name: 'Continue'}));
+
+      expect(onFinish).toHaveBeenCalled();
+      expect(
+        calls.filter(([name]) => name === 'start').map(([, step]) => step)
+      ).toEqual([mixed.steps[1], mixed.steps[3]]);
+    });
+
+    it('starts on the next step with work when resuming at a skipped one', () => {
+      renderPlayer(
+        {checkpoint: mixed, initialStepId: 'watch'},
+        {isViewingStudent: true}
+      );
+
+      expect(screen.getByText(/level: build/)).toBeTruthy();
+    });
+  });
 });

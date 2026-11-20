@@ -37,6 +37,11 @@ export type LevelStepReporter = (
 interface ProgressOptions {
   store?: ProgressStore;
   reportLevelStep?: LevelStepReporter;
+  /**
+   * A student whose progress a teacher is viewing.
+   * No progress is saved when this is set.
+   */
+  viewAsUserId?: number | null;
 }
 
 // The server rounds each save up to whole seconds; match it.
@@ -45,17 +50,22 @@ const toSeconds = (ms: number) => Math.ceil(ms / 1000);
 export function useProgress(
   pathway: Pathway,
   key: ProgressKey,
-  {store = serverProgressStore, reportLevelStep}: ProgressOptions = {}
+  {
+    store = serverProgressStore,
+    reportLevelStep,
+    viewAsUserId = null,
+  }: ProgressOptions = {}
 ) {
   // Undefined until the stored progress has been loaded.
   const [progress, setProgress] = useState<Progress>();
   // Destructure key so its members can be used as primitive deps.
   const {scriptId, levelId} = key;
+  const isViewingStudent = viewAsUserId !== null;
 
   useEffect(() => {
     let cancelled = false;
     setProgress(undefined);
-    store.load({scriptId, levelId}).then(
+    store.load({scriptId, levelId}, viewAsUserId ?? undefined).then(
       loaded => {
         recordProgressOk('load');
         if (!cancelled) setProgress(loaded);
@@ -68,7 +78,7 @@ export function useProgress(
     return () => {
       cancelled = true;
     };
-  }, [store, scriptId, levelId]);
+  }, [store, scriptId, levelId, viewAsUserId]);
 
   const {evidence, statusMap} = usePathwayStatus(pathway, progress);
 
@@ -87,6 +97,8 @@ export function useProgress(
       change: (entry?: StepProgress) => StepProgress,
       write: StepWrite
     ) => {
+      // A viewing teacher's clicks are not the student's progress, here or on the server.
+      if (isViewingStudent) return;
       updateStep(step.id, change);
       if (step.kind !== 'level') {
         store.saveStep({scriptId, levelId}, step.id, write);
@@ -104,7 +116,7 @@ export function useProgress(
         error => recordProgressFailure('level_step', error, step.id)
       );
     },
-    [updateStep, store, scriptId, levelId, reportLevelStep]
+    [updateStep, isViewingStudent, store, scriptId, levelId, reportLevelStep]
   );
 
   const startStep = useCallback(
@@ -177,6 +189,7 @@ export function useProgress(
 
   const saveGeneratedInstructions = useCallback(
     (id: string, content: GeneratedContent) => {
+      if (isViewingStudent) return;
       updateStep(id, entry => ({
         timeSpent: 0,
         ...entry,
@@ -184,12 +197,13 @@ export function useProgress(
       }));
       store.saveInstructions({scriptId, levelId}, id, content);
     },
-    [updateStep, store, scriptId, levelId]
+    [updateStep, isViewingStudent, store, scriptId, levelId]
   );
 
   /** Appends a check of a project step's work, dated now until the server's time arrives with the next load. */
   const recordValidation = useCallback(
     (step: Step, attempt: Omit<ValidationAttempt, 'at'>) => {
+      if (isViewingStudent) return;
       const dated = {...attempt, at: new Date().toISOString()};
       updateStep(step.id, entry => ({
         timeSpent: 0,
@@ -198,12 +212,14 @@ export function useProgress(
       }));
       store.saveValidation({scriptId, levelId}, step.id, attempt);
     },
-    [updateStep, store, scriptId, levelId]
+    [updateStep, isViewingStudent, store, scriptId, levelId]
   );
 
   return {
     progress,
     isLoading: progress === undefined,
+    isViewingStudent,
+    viewAsUserId,
     statusMap,
     /** What the student has shown in each skill, which the status map is routed on. */
     evidence,

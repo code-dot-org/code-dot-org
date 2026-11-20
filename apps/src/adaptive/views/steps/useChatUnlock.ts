@@ -35,6 +35,7 @@ export interface ChatUnlockOptions extends LabHandles {
   continueAllowed: boolean;
   /** Appends a chat entry to the step's validation history. */
   recordAttempt: (attempt: Omit<ValidationAttempt, 'at'>) => void;
+  isViewingStudent?: boolean;
 }
 
 /**
@@ -51,9 +52,9 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
   latestOptions.current = options;
   // One judge at a time, across resubscribes.
   const judging = useRef(false);
-  const {chat, step, continueAllowed} = options;
+  const {chat, step, continueAllowed, isViewingStudent} = options;
   const adapter =
-    step.validation && !continueAllowed
+    step.validation && !continueAllowed && !isViewingStudent
       ? workAdapterFor(step.levelProperties?.appName ?? '')
       : undefined;
   const observe = adapter?.observeReplies;

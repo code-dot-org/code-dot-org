@@ -31,7 +31,7 @@ const StatsStep: React.FunctionComponent<StatsStepProps> = ({
   continueLabel,
   onComplete,
 }) => {
-  const {pathway, progressKey, statusMap} = usePathwayContext();
+  const {pathway, progressKey, statusMap, viewAsUserId} = usePathwayContext();
   const destinations = getDestinationProgress(pathway, statusMap);
   const skills = getSkillProgress(pathway, statusMap);
   const headingRef = useRef<HTMLHeadingElement>(null);
@@ -41,13 +41,15 @@ const StatsStep: React.FunctionComponent<StatsStepProps> = ({
   const [aiMetrics, setAiMetrics] = useState<AiMetrics>();
   useEffect(() => {
     let cancelled = false;
-    serverProgressStore.loadAiMetrics(progressKey).then(counts => {
-      if (!cancelled) setAiMetrics(counts);
-    });
+    serverProgressStore
+      .loadAiMetrics(progressKey, viewAsUserId ?? undefined)
+      .then(counts => {
+        if (!cancelled) setAiMetrics(counts);
+      });
     return () => {
       cancelled = true;
     };
-  }, [progressKey]);
+  }, [progressKey, viewAsUserId]);
 
   // A figure with nothing behind it is left out rather than shown empty.
   const items: {[kind in (typeof STAT_KINDS)[number]]: React.ReactNode} = {
