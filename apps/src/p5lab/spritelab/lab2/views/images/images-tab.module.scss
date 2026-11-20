@@ -393,10 +393,12 @@ $list-button-icon: 20px;
 }
 
 // .frameMatched marks a frame whose checkerboard matches the paint tools'
-// own. Any other frame hides its checkerboard while the tools are open:
-// the editor's canvas draws its own, and until it has, a plain background
-// shows through transparent pixels.
-.paintFrame:not(.frameMatched) {
+// own. Any other frame that shows a picture (.frameFilled) hides its
+// checkerboard while the tools are open: the tools' canvas draws its own,
+// and until it has, a plain background shows through transparent pixels.
+// The tools can still be open while a picture is being generated; that
+// frame has no checkerboard to hide, so the rule leaves it alone.
+.paintFrame.frameFilled:not(.frameMatched) {
   background-image: none;
   background-color: var(--background-neutral-secondary);
 }
