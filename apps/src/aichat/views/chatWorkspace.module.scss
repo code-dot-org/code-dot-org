@@ -19,12 +19,6 @@ $tabs-default-spacing: 4px;
   scroll-margin-top: 0.6rem;
 }
 
-// Matches the size-s Alert's gap between its icon and text.
-.pendingDots {
-  vertical-align: middle;
-  margin-right: 0.5rem;
-}
-
 .teacherFlaggedMessage {
   outline: 2px solid var(--borders-error-primary);
   border-radius: 0.375rem;
