@@ -47,14 +47,53 @@ const GUIDE_ARROW_CLASS: Record<string, string> = {
   UpperFarRight: 'ocean-guide__arrow--upper-far-right',
 };
 
+// Minimum time to read a completed message before advancing.
+const GUIDE_CONTINUE_DELAY_MS = 500;
+
 class Guide extends React.Component<Record<string, never>> {
   guideDialogRef = React.createRef<HTMLDivElement>();
   lastFocusedGuideId: string | null = null;
+  lastTypingGuideId: string | null = null;
+  typingSpedUp = false;
+  canContinueAt = 0;
+
+  componentDidMount() {
+    this.lastTypingGuideId = guide.getCurrentGuide()?.id ?? null;
+    // Catch clicks outside the dialog too (including guides without a scrim).
+    document.addEventListener('click', this.onDocumentClick, true);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('click', this.onDocumentClick, true);
+  }
+
+  onDocumentClick = () => {
+    if (guide.getCurrentGuide() && !getState().guideShowing) {
+      this.typingSpedUp = true;
+    }
+  };
+
+  // Use Typist's delay generator so the speed changes mid-message without
+  // remounting Typist, which would restart the typing animation.
+  getTypingDelay = (
+    mean: number,
+    std: number,
+    {defDelayGenerator}: Typist.CurrentTextProps,
+  ): number =>
+    Number(defDelayGenerator(mean, std)) / (this.typingSpedUp ? 3 : 1);
 
   componentDidUpdate() {
     // Focus the dialog only when the guide changes, not on every re-render
     const currentGuide = guide.getCurrentGuide();
     const currentGuideId = currentGuide ? currentGuide.id : null;
+
+
+    // A new message always starts at the original typing speed.
+    if (currentGuideId !== this.lastTypingGuideId) {
+      this.typingSpedUp = false;
+      this.canContinueAt = 0;
+      this.lastTypingGuideId = currentGuideId;
+    }
 
     if (
       currentGuideId !== this.lastFocusedGuideId &&
@@ -70,12 +109,16 @@ class Guide extends React.Component<Record<string, never>> {
       this.lastFocusedGuideId = null;
     }
   }
-  onTypingDone() {
-    clearInterval(
-      getState().guideTypingTimer as ReturnType<typeof setInterval>,
-    );
-    setState({guideShowing: true, guideTypingTimer: undefined});
-  }
+  onTypingDone = () => {
+  // Start the 500ms pause after typing finishes
+  this.canContinueAt = Date.now() + GUIDE_CONTINUE_DELAY_MS;
+
+  clearInterval(
+    getState().guideTypingTimer as ReturnType<typeof setInterval>,
+  );
+
+  setState({guideShowing: true, guideTypingTimer: undefined});
+  };
 
   onGuideKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === ' ' || e.key === 'Enter' || e.key === 'Spacebar') {
@@ -87,6 +130,10 @@ class Guide extends React.Component<Record<string, never>> {
   onGuideClick = () => {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
+    const isTyping = !!currentGuide && !state.guideShowing;
+    if (isTyping) {
+      this.typingSpedUp = true;
+    }
 
     if (this.attemptTextToSpeechTextToSpeech(true)) {
       // This click started text to speech.
@@ -97,7 +144,8 @@ class Guide extends React.Component<Record<string, never>> {
         },
         {skipCallback: true},
       );
-    } else {
+     } else if (!isTyping && (Date.now() >= this.canContinueAt)) {
+      // Only dismiss after the current message has finished typing.
       // Make sure we don't try and dismiss a guide if it's
       // not modal.
       if (currentGuide && !currentGuide.noDimBackground) {
@@ -245,6 +293,7 @@ class Guide extends React.Component<Record<string, never>> {
                     <Typist
                       avgTypingDelay={35}
                       stdTypingDelay={15}
+                      delayGenerator={this.getTypingDelay}
                       cursor={{show: false}}
                       onTypingDone={this.onTypingDone}
                     >
