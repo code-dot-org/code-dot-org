@@ -11,7 +11,7 @@ A computer can only "see" numbers. Below is the same grid of bits your students 
   <iframe
     src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/seeing-through-bits-reveal.html"
     width="100%"
-    height="800"
+    height="900"
     frameborder="0"
     scrolling="no"
     title="Seeing Through Bits: click to fill in bits and reveal a hidden image">
@@ -19,7 +19,7 @@ A computer can only "see" numbers. Below is the same grid of bits your students 
 </div>
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <p>&#128161; <strong>Teacher tip:</strong> the real Activity Guide has five variations (Clock, Lightbulb, Music Note, Moon, Eye), this demo uses the Moon variation so you can experience exactly what one group of students sees. If you want different groups to reveal different images in your own classroom, print the other four variations from the Activity Guide.</p>
+  <p>&#128161; <strong>Teacher tip:</strong> the real <a href="https://docs.google.com/document/d/15-orA3zXPU74IXL82Xf5oFJae-8CPdXJPlq0-GJFl5s/edit?usp=sharing" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">Activity Guide</a> has five variations (Clock, Lightbulb, Music Note, Moon, Eye), this demo uses the Moon variation so you can experience exactly what one group of students sees. If you want different groups to reveal different images in your own classroom, print the other four variations from the Activity Guide.</p>
 </div>
 
 Though a computer can only "see" numbers, those numbers can represent something about the world, like light or color. That's what a representation is: a way of describing real-world information with data computers can understand. In this example, the sequence of numbers represents an entire image.

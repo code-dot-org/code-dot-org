@@ -928,7 +928,7 @@
             "id": "vgn3-n-61",
             "type": "text",
             "data": {
-              "text": "Train your model. Click Save to put Tree 1 in your Backpack. Then add it here.",
+              "text": "Train your model. Click Save image to put Tree 1 in your Backpack. Then add it here.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -973,7 +973,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "My rule and Tree 1 are different at ",
+              "label": "My rule and Tree 1 are alike or different because ",
               "textAlign": "left",
               "backgroundColor": "#ffffff",
               "fontSize": "medium"
@@ -1286,7 +1286,7 @@
             "id": "vgn3-n-103",
             "type": "text",
             "data": {
-              "text": "Open the Study Playlist (Fixed) dataset. Keep your two features, or add more. Train Tree 2. Click Save to put it in your Backpack. Then add it here.",
+              "text": "Open the Study Playlist (Fixed) dataset. Keep your two features, or add more. Train Tree 2. Click Save image to put it in your Backpack. Then add it here.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -4043,6 +4043,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-17T04:46:34.648+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-template\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-template\"},{\"changed_at\":\"2026-11-17 04:49:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 19:40:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:13:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:35:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:14:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:16:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:17:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:33:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-17T04:46:34.648+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-template\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-template\"},{\"changed_at\":\"2026-11-17 04:49:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 19:40:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:13:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:35:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:14:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:16:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:17:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:33:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 02:28:42 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

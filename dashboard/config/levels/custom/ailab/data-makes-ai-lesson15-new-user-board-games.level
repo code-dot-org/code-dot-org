@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-20T04:12:31.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"datasets\": [\r\n    \"SC1-L12-board-games-fixed\"\r\n  ],\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"**New User**\\n\\nGoal: Test your model for someone new.\\n\\n1. In **Predict** and **Using**, choose the label and Tree 2 features from **Tree 1 vs. Tree 2** in your guide.\\n2. Click **Train model**.\\n\\nYou are done when your tree shows. Go to the **Testing** tab.\",\r\n  \"results\": \"**New User**\\n\\nGoal: Test your model for someone new.\\n\\n> Ms. Ito's game club meets for three hours on Fridays. They want to try Eclipse. It plays up to 6 people, takes over an hour, is for ages 14 and up, and came out in 2011.\\n\\n1. In **Make a Prediction**, choose a category for each feature that fits this user. Write them in **New User** in your guide.\\n2. Click **Predict**. Write the prediction.\\n3. Compare the prediction to what this user needs. Write ✓ if it fits or ✗ if it doesn't.\\n\\nYou are done when New User in your guide is full.\"\r\n}",
+    "display_name": "Board Games",
+    "bubble_choice_description": "This dataset contains qualities about different board games.",
+    "thumbnail_url": "https://images.code.org/af352195a5a3b3366da22e55e5e7cc68-board-game.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:31.955+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-project-board-alternative\\\"\"],\"cloned_from\":\"data-makes-ai-project-board-alternative\"},{\"changed_at\":\"2026-11-20 04:14:34 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:50 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:47:27 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

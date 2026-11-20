@@ -3,43 +3,51 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-<h1>Section 5: Classification, Start to Finish</h1>
+# Building Models Ethically
 
-<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; font-size: 13px; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lessons 8-9</div>
+In Lesson 11, your students judged models other people built. Now they build one themselves, and the question changes: when a model makes a decision, who is responsible for it? In curriculum Lesson 12, students build regression models to help a school pick snacks for its vending machine.
 
-<p>This section prepares you to teach two curriculum lessons, the classification half of the unit's build-and-test arc, mirroring Section 4's regression arc. Students build a nearest-neighbors classifier by hand, then in code, before learning that "how good is this model?" has no single answer, it depends on which kind of mistake costs more.</p>
+## The Vending Machine Problem
 
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 8:</b> Building Classifiers</div>
-  <a href="PASTE_UNIT_2_LESSON_8_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 8</a>
+Your students get a school vending machine with room for 5 snacks and a list of 10 possible ones. Each snack has a price, shelf life, calories, protein, allergen count, spice level, and a popularity rating from students. The school wants a regression model to predict ratings, then stock the 5 snacks with the highest predicted ratings.
+
+Try the school's first attempt below, then decide who should answer for what it did.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/snack-model-accountability.html"
+    width="100%"
+    height="1600"
+    frameborder="0"
+    scrolling="no"
+    title="Read a regression model that predicts snack ratings from price, then decide who is accountable for its decisions">
+  </iframe>
 </div>
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
-  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 9:</b> Testing Classifiers</div>
-  <a href="PASTE_UNIT_2_LESSON_9_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 13px;">View Curriculum Lesson 9</a>
-</div>
-
-<hr>
-
-<p><b>In this section, you'll:</b></p>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Learn the nearest-neighbors algorithm: to label something new, look at the most similar examples you've already seen</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Get ahead of a real misconception: more neighbors isn't always better</div>
-<div style="margin-bottom: 6px; font-size: 16px;">&bull; Compare two classifiers using accuracy, recall, and precision, and see why the "more accurate" model isn't automatically the better one</div>
-<div style="font-size: 16px;">&bull; Tune a confidence threshold yourself and watch recall and precision trade off against each other</div>
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Notice as you explore:</b> both lessons use a deliberately higher-stakes framing than Section 4 did, late mail is an inconvenience, a toxic berry is a real safety risk. That shift in stakes is what makes the precision/recall trade-off actually matter, not just a formula to memorize.</div>
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> if your students struggle to read the chart, trace the regression line from left to right with your finger and point out that as price goes up, the rating goes up. Then gesture the opposite relationship so they can see what a downward line would have meant.</div>
 </div>
 
-<hr>
+## Two Words to Anchor the Lesson
 
-<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 1</div>
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 2</div>
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 3</div>
-  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 4</div>
-  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px;">Section 5</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 6</div>
-  <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 7</div>
+<div style="display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 260px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">Interpretability</div>
+    <div style="font-size: 16px; line-height: 1.5;">The ability to understand why a model made the decisions it did.</div>
+  </div>
+  <div style="flex: 1; min-width: 260px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">Accountability</div>
+    <div style="font-size: 16px; line-height: 1.5;">The principle that people should be responsible for a model's decisions and its effects.</div>
+  </div>
+</div>
+
+The two ideas connect. The easier a model is to interpret, the easier it is to say who should have caught a problem. Your students will feel this in the lab, where they pick a model and have to defend the choice.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>Discussion question:</b> a student says the model itself should be held accountable. How would you respond?</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 16px 20px; margin: 16px 0; border-left: 4px solid #ACA8EA;">
+  <div style="font-size: 16px; line-height: 1.5;">&#10145;&#65039; <b>In the lesson plan:</b> your students work through this in the warm up. <a href="PASTE_UNIT_2_LESSON_12_URL_HERE">Open Lesson 12</a></div>
 </div>
 MARKDOWN
