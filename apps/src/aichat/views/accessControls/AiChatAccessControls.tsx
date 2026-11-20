@@ -1,5 +1,6 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import Tags from '@code-dot-org/component-library/tags';
 import Toggle from '@code-dot-org/component-library/toggle';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -249,9 +250,12 @@ const AiChatAccessControls: React.FC = () => {
             </div>
             {showChallengeToggle && (
               <div className={style.rowContainer}>
-                <Typography className={style.semiBold} variant="body2">
-                  AI Tutor+ Challenges
-                </Typography>
+                <div className={style.labelWithTag}>
+                  <Typography className={style.semiBold} variant="body2">
+                    AI Tutor+ Challenges
+                  </Typography>
+                  <Tags tagsList={[{label: 'New', color: 'pink'}]} size="s" />
+                </div>
                 <Toggle
                   id="uitest-ai-challenge-section-toggle"
                   name="aiChallengeSectionToggle"

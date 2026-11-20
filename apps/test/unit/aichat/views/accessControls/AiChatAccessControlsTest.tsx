@@ -96,6 +96,11 @@ describe('AiChatAccessControls AI Tutor+ Challenges toggle', () => {
     expect(challengeToggle()).not.toBeChecked();
   });
 
+  it('is tagged as new', () => {
+    renderControls();
+    expect(screen.getByText('New')).toBeInTheDocument();
+  });
+
   it('is hidden when AI chat is essential only', () => {
     renderControls({aiChatAccessLevel: AiChatAccessLevels.ESSENTIAL_ONLY});
     expect(challengeToggle()).not.toBeInTheDocument();
