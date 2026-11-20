@@ -71,17 +71,49 @@ describe('drawStereoPair', () => {
     );
     const images = out.calls.filter(([name]) => name === 'drawImage');
     expect(images).toEqual([
-      // Left eye: background left, sprites right, clipped to the left half.
+      // Left eye: background left, sprites right.
       ['drawImage', background, -8, -4, 408, 408],
       ['drawImage', foreground, 2, 0, 400, 400],
       // Right eye: the reverse, in the right half.
       ['drawImage', background, 400, -4, 408, 408],
       ['drawImage', foreground, 398, 0, 400, 400],
     ]);
+    // Each eye is clipped to where its shifted sprite layer reaches: the
+    // left eye loses its left 2px, the right eye its right 2px.
     const clips = out.calls.filter(([name]) => name === 'rect');
     expect(clips).toEqual([
-      ['rect', 0, 0, 400, 400],
-      ['rect', 400, 0, 400, 400],
+      ['rect', 2, 0, 398, 400],
+      ['rect', 400, 0, 398, 400],
+    ]);
+  });
+
+  it('clips to whole px when the shift is a fraction', () => {
+    const out = painter();
+    drawStereoPair(
+      out,
+      {background, foreground},
+      {background: 4, foreground: -1.5},
+      400,
+      400
+    );
+    expect(out.calls.filter(([name]) => name === 'rect')).toEqual([
+      ['rect', 2, 0, 398, 400],
+      ['rect', 400, 0, 398, 400],
+    ]);
+  });
+
+  it('clips the inner edges when the sprite layer sits behind the screen', () => {
+    const out = painter();
+    drawStereoPair(
+      out,
+      {background, foreground},
+      {background: 4, foreground: 2},
+      400,
+      400
+    );
+    expect(out.calls.filter(([name]) => name === 'rect')).toEqual([
+      ['rect', 0, 0, 398, 400],
+      ['rect', 402, 0, 398, 400],
     ]);
   });
 });
