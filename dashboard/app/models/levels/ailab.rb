@@ -34,7 +34,6 @@ class Ailab < Level
     uses_lab2
   )
 
-  DATASETS_MANIFEST_PATH = apps_dir('src', 'ailab', 'engine', 'datasets-manifest.json')
   LAB2_INSTRUCTIONS_PATH = apps_dir('src', 'ailab', 'engine', 'lab2-instructions.json')
 
   REQUIRE_ACCURACY_RANGE = (0..100)
@@ -47,7 +46,7 @@ class Ailab < Level
   before_save {properties.delete('long_instructions') if uses_lab2?}
 
   def self.dataset_ids
-    @dataset_ids ||= JSON.parse(File.read(DATASETS_MANIFEST_PATH))['datasets'].pluck('id')
+    AilabDatasets.ids
   end
 
   def self.lab2_instructions
