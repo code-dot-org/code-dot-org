@@ -3,6 +3,8 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 const AI_FOUNDATIONS_URL =
@@ -37,8 +39,15 @@ const AiFoundationsCallout: React.FC<AiFoundationsCalloutProps> = ({
   }
 
   const handleClose = () => {
+    analyticsReporter.sendEvent(EVENTS.AI_FOUNDATIONS_CALLOUT_DISMISSED, {
+      page,
+    });
     trySetLocalStorage(storageKey, 'true');
     setDismissed(true);
+  };
+
+  const handleClick = () => {
+    analyticsReporter.sendEvent(EVENTS.AI_FOUNDATIONS_CALLOUT_CLICKED, {page});
   };
 
   return (
@@ -54,6 +63,7 @@ const AiFoundationsCallout: React.FC<AiFoundationsCalloutProps> = ({
           href={AI_FOUNDATIONS_URL}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={handleClick}
           variant="contained"
           color="primary"
           size="small"
