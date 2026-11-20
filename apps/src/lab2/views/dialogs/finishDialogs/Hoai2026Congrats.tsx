@@ -22,7 +22,7 @@ const DESTINATIONS = {
   elementary: 'https://studio.code.org/courses/k5-ai-data-2024/units/1/reset',
   middleSchool:
     'https://code.org/en-US/curriculum/artificial-intelligence-discoveries',
-  professionalLearning: 'https://code.org/en-US/professional-learning',
+  elevate: 'https://aka.ms/ElevateHourofAI',
 };
 
 type FinishDialogAction =
@@ -34,7 +34,7 @@ type FinishDialogAction =
   | 'middle_school'
   | 'copy_link'
   | 'certificate'
-  | 'professional_learning';
+  | 'elevate_hour_of_ai';
 
 const report = (action: FinishDialogAction) =>
   analyticsReporter.sendEvent(EVENTS.HOAI2026_FINISH_DIALOG, {action}, true);
@@ -93,7 +93,7 @@ const Offer: React.FunctionComponent<{
       <Typography variant="body2" className={styles.offerText}>
         {text}
       </Typography>
-      {children}
+      <div className={styles.offerAction}>{children}</div>
     </section>
   );
 };
@@ -243,7 +243,8 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                   onCopy={() => report('copy_link')}
                 />
               ) : (
-                <Typography variant="body2" className={styles.offerText}>
+                <Typography variant="body3" className={styles.cannotShare}>
+                  <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
                   This game can't be shared right now.
                 </Typography>
               )}
@@ -267,15 +268,15 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
             </Offer>
             <Offer
               icon="lightbulb"
-              title="Professional learning"
-              text="Learn to teach computer science and AI."
+              title="Elevate your Hour of AI"
+              text="Prepare to lead an Hour of AI."
             >
               <MuiButton
                 variant="outlined"
                 color="secondary"
                 endIcon={<ExternalIcon />}
-                onClick={() => report('professional_learning')}
-                {...linkProps(DESTINATIONS.professionalLearning)}
+                onClick={() => report('elevate_hour_of_ai')}
+                {...linkProps(DESTINATIONS.elevate)}
               >
                 Learn more
               </MuiButton>

@@ -63,6 +63,7 @@ import {
 } from '../ai/images/imageGeneration';
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {
+  inToolboxBlockTypes,
   catalogEntries,
   heldBackBlockTypes,
   newBlockTypes,
@@ -181,11 +182,12 @@ import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
-import {useFlyoutDots} from './useFlyoutDots';
+import {useFlyoutDots, useBlockTypesUsedThisVisit} from './useFlyoutDots';
 import useLevelAnalytics from './useLevelAnalytics';
 import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
+import usePreviewRefresh from './usePreviewRefresh';
 import useProjectPicture from './useProjectPicture';
 import useReleaseRemovedImages from './useReleaseRemovedImages';
 import useSceneEditing from './useSceneEditing';
@@ -269,9 +271,6 @@ function getScenes(sources: Sources): Scene[] {
   ];
 }
 
-// Debounce between a workspace edit and the live-preview re-run.
-const RUN_DEBOUNCE_MS = 400;
-
 // Sprites come from the Images tab, so a new project starts with no
 // animations.
 const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
@@ -279,6 +278,8 @@ const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 // Focused controls own the game keys pressed on them (see the
 // swallowOnControls effect).
 const INTERACTIVE_CONTROLS = 'button, a, input, select, textarea';
+
+const NO_EARLIER_LEVELS: readonly SpriteLab2LevelProperties[] = [];
 
 // Levelbuilder edit modes (start, toolbox, exemplar) run without a project
 // channel; generated images upload to the level's starter assets instead.
@@ -545,13 +546,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // play area.
   const speakRef = useRef<((text: string) => void) | null>(null);
   const [showStartOver, setShowStartOver] = useState(false);
-  // The new-block catalog: the unit's new blocks stay out of the toolbox
-  // until the student adds them from the dialog. Off in the levelbuilder's
+  // The new-block catalog: the new blocks stay out of the toolbox until the
+  // student adds them from the dialog. Off in the levelbuilder's
   // edit modes, whose saves would carry its flags into every student's
   // start sources.
   const catalogOn = !!levelProperties.blockCatalog && !isLevelEditMode;
   // The catalog's blocks are the ones no earlier level of the lesson
-  // required (blockCatalog.ts); outside a lesson there are none.
+  // required (blockCatalog.ts).
   const {levelPropertiesMap} = useLevelProperties();
   // getCurrentLevels returns a new list every time it is called. shallowEqual
   // compares the ids one by one, so this value only changes when the lesson's
@@ -573,22 +574,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           .map(id => levelPropertiesMap[id] as SpriteLab2LevelProperties)
           .filter(Boolean);
   }, [lessonLevelIds, levelPropertiesMap, levelProperties.id]);
+  // A standalone project has no earlier levels, so every block it offers
+  // that has help is in its catalog.
+  const catalogEarlierLevels = levelProperties.isProjectLevel
+    ? NO_EARLIER_LEVELS
+    : earlierLevels;
   const catalog = useMemo(
     () =>
-      catalogOn && earlierLevels
-        ? catalogEntries(newBlockTypes(levelProperties, earlierLevels))
+      catalogOn && catalogEarlierLevels
+        ? catalogEntries(newBlockTypes(levelProperties, catalogEarlierLevels))
         : [],
-    [catalogOn, earlierLevels, levelProperties]
+    [catalogOn, catalogEarlierLevels, levelProperties]
   );
   const chosenBlocks = currentSources.chosenBlocks;
   const chosenBlockSet = useMemo(
     () => new Set(chosenBlocks ?? []),
     [chosenBlocks]
-  );
-  // Catalog blocks the student has yet to add.
-  const heldBackBlocks = useMemo(
-    () => heldBackBlockTypes(catalog, chosenBlocks),
-    [catalog, chosenBlocks]
   );
   const inAiPilot = useAppSelector(
     state =>
@@ -623,6 +624,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const pictures = usePicturesSheet({ready: labReady});
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
+
+  const blocksUsedThisVisit = useBlockTypesUsedThisVisit(scenes);
+  const inToolboxBlocks = useMemo(
+    () =>
+      inToolboxBlockTypes(levelProperties, chosenBlockSet, blocksUsedThisVisit),
+    [levelProperties, chosenBlockSet, blocksUsedThisVisit]
+  );
+  const heldBackBlocks = useMemo(
+    () => heldBackBlockTypes(catalog, inToolboxBlocks),
+    [catalog, inToolboxBlocks]
+  );
 
   // Create the pinned scene on first load, and again after Start Over (the
   // reinit count is in the deps). On a project with no scenes the pinned
@@ -1226,8 +1238,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // cleanup): the reseed effect's deps churn on every animation
   // write, which would cancel a pending watcher mid-load.
   const cancelRerunWatchRef = useRef<() => void>();
-  // Latest restart-scene handler, for the watcher's async callback.
   const restartSceneRef = useRef<() => void>(() => {});
+  // Restarts the scene while the game plays, and runs the preview otherwise.
+  const rerunStageRef = useRef<() => void>(() => {});
   useEffect(() => () => cancelRerunWatchRef.current?.(), []);
   const rerunWhenAnimationsLoaded = useCallback(() => {
     cancelRerunWatchRef.current?.();
@@ -1244,7 +1257,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     const finish = () => {
       cancel();
-      restartSceneRef.current();
+      rerunStageRef.current();
     };
     const unsubscribe = store.subscribe(() => allLoaded() && finish());
     // Give up quietly if a load never completes; the playspace stays stale,
@@ -1471,14 +1484,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [dispatch]
   );
 
-  // Debounce re-runs so we don't restart the program on every keystroke/drag.
-  const runTimer = useRef<number>();
-  const scheduleRun = useCallback(() => {
-    if (runTimer.current) {
-      window.clearTimeout(runTimer.current);
-    }
-    runTimer.current = window.setTimeout(runProgram, RUN_DEBOUNCE_MS);
-  }, [runProgram]);
+  const scheduleRun = usePreviewRefresh(runProgram, activeTab === 'Play');
 
   // Run one scene: the open scene compiles from the live workspace, others
   // headless from saved sources. Cover/fade comes from the engine's jump
@@ -2012,7 +2018,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         ownsTop(levelProperties.addBlocks ?? [], block.getRootBlock()) ||
         ownTypes.has(block.type),
     });
-    runLocalScene(activeScene);
+    if (isPlayingRef.current) {
+      runLocalScene(activeScene);
+    } else {
+      runProgram();
+    }
     // After the load, so the blocks sit below what the workspace holds.
     addLevelBlocks();
   }, [
@@ -2028,6 +2038,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     loadCode,
     levelProperties.levelMode,
     runLocalScene,
+    runProgram,
     sourcesReinitializedCount,
     // A re-injected workspace is empty, whatever caused it.
     workspaceVersion,
@@ -2109,6 +2120,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
   }, [runScene, defaultPlaySceneId]);
   restartSceneRef.current = handleRestartScene;
+  rerunStageRef.current = () =>
+    isPlayingRef.current ? handleRestartScene() : runProgram();
   const playHasLeftTheFirstScene =
     !!onStageSceneId && onStageSceneId !== defaultPlaySceneId;
 
@@ -2217,7 +2230,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useFlyoutDots({
     enabled: catalogOn,
     added: chosenBlockSet,
-    scenes,
+    usedThisVisit: blocksUsedThisVisit,
     workspaceVersion,
     getWorkspace: getMainWorkspace,
   });
@@ -2379,7 +2392,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {showBlockCatalog && (
         <BlockCatalogDialog
           entries={catalog}
-          chosen={chosenBlockSet}
+          inToolbox={inToolboxBlocks}
           onAdd={addCatalogBlock}
           onClose={() => setShowBlockCatalog(false)}
         />

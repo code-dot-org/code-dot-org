@@ -66,10 +66,15 @@ describe('Hoai2026Congrats', () => {
     expect(certificate).toHaveAttribute('href', '/congrats?s=hoai2026-dev');
     // In place of the lab, as the lab's Finish would go.
     expect(certificate).not.toHaveAttribute('target');
-    expect(screen.getByRole('link', {name: 'Learn more'})).toHaveAttribute(
-      'href',
-      'https://code.org/en-US/professional-learning'
-    );
+    const elevate = screen.getByRole('region', {
+      name: 'Elevate your Hour of AI',
+    });
+    expect(
+      within(elevate).getByText('Prepare to lead an Hour of AI.')
+    ).toBeInTheDocument();
+    const learnMore = within(elevate).getByRole('link', {name: 'Learn more'});
+    expect(learnMore).toHaveAttribute('href', 'https://aka.ms/ElevateHourofAI');
+    expect(learnMore).toHaveAttribute('target', '_blank');
   });
 
   it('shows a picture on the students card, with no name to read out', () => {
@@ -154,7 +159,7 @@ describe('Hoai2026Congrats', () => {
       'middle_school',
       'copy_link',
       'certificate',
-      'professional_learning',
+      'elevate_hour_of_ai',
       'keep_playing',
       'close',
     ]);
