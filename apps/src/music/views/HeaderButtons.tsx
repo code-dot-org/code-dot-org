@@ -54,7 +54,7 @@ const CurrentPack = React.forwardRef<HTMLDivElement, CurrentPackProps>(
         {packFolder.removed && (
           <FontAwesomeV6Icon
             id={REMOVED_PACK_ICON_ID}
-            iconName="circle-info"
+            iconName="exclamation-circle"
             iconStyle="solid"
           />
         )}
