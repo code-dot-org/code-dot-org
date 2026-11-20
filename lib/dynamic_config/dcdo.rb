@@ -90,6 +90,8 @@ class DCDO < DynamicConfigBase
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
       'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false),
       'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
+      # Replaces every adaptive level with an outage page, for when all AI providers are down.
+      'adaptive-ai-outage': DCDO.get('adaptive-ai-outage', false),
       # Seconds the adaptive shell waits on one model call before giving up.
       'adaptive-ai-timeout-seconds': DCDO.get('adaptive-ai-timeout-seconds', 45),
       # Tutor replies on a checked step from which a judge rates the student's effort, and after which Continue opens regardless of the work.
