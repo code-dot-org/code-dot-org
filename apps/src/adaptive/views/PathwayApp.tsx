@@ -370,7 +370,12 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   const {dialog: finishDialogContent, checkpoint: finishCheckpoint} =
     pathway.finish ?? {};
   const [finishAsked, setFinishAsked] = useState(false);
-  const finishLevel = () => dispatch(continueOrFinishLesson());
+  // A viewing teacher must not report success or leave the student's level.
+  const finishLevel = () => {
+    if (!isViewingStudent) return dispatch(continueOrFinishLesson());
+    clearUrl();
+    setView({kind: 'map'});
+  };
   const enterFinish = () => {
     if (!finishCheckpoint) return finishLevel();
     clearUrl();

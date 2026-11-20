@@ -445,6 +445,23 @@ describe('PathwayApp', () => {
         )
       );
 
+      it('returns to the map instead of finishing the lesson', async () => {
+        mockLoad.mockResolvedValue({
+          steps: {'intro-step': {status: 'complete', timeSpent: 0}},
+        });
+        await renderSettled({...pathway, finish});
+
+        act(() => screen.getByText("I'm finished!").click());
+        act(() => screen.getByRole('button', {name: 'Finish'}).click());
+        expect(screen.getByText('playing Wrap up')).toBeTruthy();
+        act(() => screen.getByText('finish').click());
+
+        expect(screen.getByText('map screen')).toBeTruthy();
+        expect(mockDispatch).not.toHaveBeenCalledWith({
+          type: 'continueOrFinishLesson',
+        });
+      });
+
       it('opens a URL checkpoint the student has not unlocked, with an alert that stays once a step starts', async () => {
         window.history.replaceState({}, '', '?checkpoint=next&step=next-step');
 
