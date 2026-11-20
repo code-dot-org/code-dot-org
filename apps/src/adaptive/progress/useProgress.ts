@@ -97,8 +97,9 @@ export function useProgress(
       change: (entry?: StepProgress) => StepProgress,
       write: StepWrite
     ) => {
-      updateStep(step.id, change);
+      // A viewing teacher's clicks are not the student's progress, here or on the server.
       if (isViewingStudent) return;
+      updateStep(step.id, change);
       if (step.kind !== 'level') {
         store.saveStep({scriptId, levelId}, step.id, write);
         return;
@@ -188,12 +189,12 @@ export function useProgress(
 
   const saveGeneratedInstructions = useCallback(
     (id: string, content: GeneratedContent) => {
+      if (isViewingStudent) return;
       updateStep(id, entry => ({
         timeSpent: 0,
         ...entry,
         generatedInstructions: content,
       }));
-      if (isViewingStudent) return;
       store.saveInstructions({scriptId, levelId}, id, content);
     },
     [updateStep, isViewingStudent, store, scriptId, levelId]
@@ -202,13 +203,13 @@ export function useProgress(
   /** Appends a check of a project step's work, dated now until the server's time arrives with the next load. */
   const recordValidation = useCallback(
     (step: Step, attempt: Omit<ValidationAttempt, 'at'>) => {
+      if (isViewingStudent) return;
       const dated = {...attempt, at: new Date().toISOString()};
       updateStep(step.id, entry => ({
         timeSpent: 0,
         ...entry,
         validationHistory: [...(entry?.validationHistory ?? []), dated],
       }));
-      if (isViewingStudent) return;
       store.saveValidation({scriptId, levelId}, step.id, attempt);
     },
     [updateStep, isViewingStudent, store, scriptId, levelId]

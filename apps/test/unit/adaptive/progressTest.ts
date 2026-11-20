@@ -688,7 +688,7 @@ describe('useProgress', () => {
     expect(reportLevelStep).not.toHaveBeenCalled();
   });
 
-  it("loads a viewed student's progress and saves nothing, keeping changes on the page", async () => {
+  it("loads a viewed student's progress and leaves it as loaded, on the page and the server", async () => {
     const store = fakeStore();
     const reportLevelStep = jest.fn().mockResolvedValue(undefined);
     const {result, waitForNextUpdate} = renderHook(() =>
@@ -697,6 +697,8 @@ describe('useProgress', () => {
     await waitForNextUpdate();
     expect(store.load).toHaveBeenCalledWith(key, 77);
     expect(result.current.isViewingStudent).toBe(true);
+    const loaded = result.current.progress;
+    const statusMap = result.current.statusMap;
 
     act(() => {
       result.current.startStep(read);
@@ -715,7 +717,9 @@ describe('useProgress', () => {
       });
     });
 
-    expect(result.current.statusMap.intro).toBe('complete');
+    expect(result.current.progress).toBe(loaded);
+    expect(result.current.statusMap).toEqual(statusMap);
+    expect(result.current.statusMap.intro).not.toBe('complete');
     expect(store.saveStep).not.toHaveBeenCalled();
     expect(store.saveInstructions).not.toHaveBeenCalled();
     expect(store.saveValidation).not.toHaveBeenCalled();
