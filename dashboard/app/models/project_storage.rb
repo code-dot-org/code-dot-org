@@ -39,4 +39,37 @@ class ProjectStorage < ApplicationRecord
   scope :anonymous, -> {where(user_id: nil)}
   scope :without_geo, -> {where.missing(:geo)}
   scope :with_projects, -> {where(Project.where(Project.arel_table[:storage_id].eq(arel_table[:id])).arel.exists)}
+
+  # Replaces storage_id_for_user_id. Like it, a nil user_id matches an arbitrary anonymous storage.
+  def self.storage_id_for_user_id(user_id)
+    where(user_id: user_id).pick(:id)
+  end
+
+  # Replaces user_id_for_storage_id.
+  def self.user_id_for_storage_id(storage_id)
+    where(id: storage_id).pick(:user_id)
+  end
+
+  # Replaces get_storage_ids_by_user_ids.
+  def self.storage_ids_by_user_id(user_ids)
+    where(user_id: user_ids).pluck(:user_id, :id).to_h
+  end
+
+  # Replaces get_user_ids_by_storage_ids, which takes user ids despite its name.
+  def self.user_ids_by_storage_id(user_ids)
+    where(user_id: user_ids).pluck(:id, :user_id).to_h
+  end
+
+  # Replaces update_annoymous_user_storage_id.
+  def self.claim_anonymous(storage_id, user_id)
+    anonymous.where(id: storage_id).update_all(user_id: user_id)
+  end
+
+  # Replaces create_storage_id_for_user.
+  def self.create_for_user(user_id = nil, anon_user_id: nil)
+    create!(user_id: user_id, anon_user_id: anon_user_id).id
+  rescue ActiveRecord::RecordNotUnique
+    # A concurrent request created this user's storage first.
+    storage_id_for_user_id(user_id) || raise("no user storage id on second try")
+  end
 end
