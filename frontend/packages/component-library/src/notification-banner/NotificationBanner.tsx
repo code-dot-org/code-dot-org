@@ -1,33 +1,42 @@
-import {Paper, Stack, Typography, IconButton, Box} from '@mui/material';
+import {Paper, Typography, IconButton} from '@mui/material';
 import classNames from 'classnames';
 import {forwardRef, ReactNode} from 'react';
 
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 
-import {NotificationBannerVariant, NotificationBannerStyle} from './types';
+import {
+  NotificationBannerFillStyle,
+  NotificationBannerSentiment,
+} from './types';
 
 import styles from './notificationBanner.module.scss';
 
 export interface NotificationBannerProps {
-  /** Variant color/sentiment */
-  variant: NotificationBannerVariant;
-  /** Style option: subtle (primary bg) or filled (tinted bg/color border) */
-  style?: NotificationBannerStyle;
+  /** Sentiment color. Matches the Figma Sentiment axis. */
+  sentiment: NotificationBannerSentiment;
+  /** Fill. `none` is a neutral surface; `color` tints the surface with the sentiment. */
+  fillStyle?: NotificationBannerFillStyle;
   /** Banner title */
   title: ReactNode;
-  /** Banner description/body content */
+  /** Banner description */
   description?: ReactNode;
-  /** Banner children (alternative to description) */
+  /** Banner children, used when description is omitted */
   children?: ReactNode;
-  /** FontAwesome icon props (required) */
+  /** Font Awesome icon. Figma's Icon Name is `iconName`; the library icon also needs a style. */
   icon: FontAwesomeV6IconProps;
-  /** Action buttons (typically 1-2 buttons in a horizontal Stack) */
+  /**
+   * Action buttons. Figma's Has Actions boolean shows a fixed pair of buttons;
+   * callers pass the real buttons instead.
+   */
   actions?: ReactNode;
-  /** Close handler - if provided, renders close IconButton */
+  /**
+   * Close handler. Figma's Is Dismissible boolean only shows the control;
+   * passing a handler shows it and handles the click.
+   */
   onClose?: () => void;
-  /** ARIA role - 'status' for advisory info, 'alert' for urgent */
+  /** ARIA role. `status` for advisory info, `alert` for urgent. */
   role?: 'status' | 'alert';
-  /** Full width container (default: true) */
+  /** Stretch to the container width. Default true. */
   fullWidth?: boolean;
   /** Custom className */
   className?: string;
@@ -36,14 +45,13 @@ export interface NotificationBannerProps {
 }
 
 /**
- * Notification Banner component built on MUI Paper/Stack.
- * Displays inline notifications with variant colors, optional actions, and accessibility support.
+ * Inline page-level banner. Built on MUI Paper, Typography, and IconButton.
  */
 const NotificationBanner = forwardRef<HTMLDivElement, NotificationBannerProps>(
   (
     {
-      variant,
-      style = 'subtle',
+      sentiment,
+      fillStyle = 'none',
       title,
       description,
       children,
@@ -61,67 +69,70 @@ const NotificationBanner = forwardRef<HTMLDivElement, NotificationBannerProps>(
     const bodyContent = description || children;
     const ariaLive = role === 'alert' ? 'assertive' : 'polite';
 
-    const bannerClassName = classNames(
-      styles.banner,
-      styles[style],
-      styles[variant],
-      fullWidth && styles.fullWidth,
-      className,
-    );
-
-    const iconContainerClassName = classNames(
-      styles.iconContainer,
-      styles[variant],
-    );
-
     return (
       <Paper
         ref={ref}
         component="div"
         role={role}
         aria-live={ariaLive}
-        className={bannerClassName}
-        id={id}
         elevation={0}
+        id={id}
+        className={classNames(
+          styles.banner,
+          styles[fillStyle],
+          styles[sentiment],
+          fullWidth && styles.fullWidth,
+          className,
+        )}
         {...rest}
       >
-        <Stack direction="row" spacing={2} alignItems="center">
-          <Box className={iconContainerClassName}>
-            <FontAwesomeV6Icon {...icon} />
-          </Box>
+        <div className={styles.row}>
+          <div className={styles.iconWrap}>
+            <div
+              className={classNames(styles.iconContainer, styles[sentiment])}
+            >
+              <FontAwesomeV6Icon {...icon} />
+            </div>
+          </div>
 
-          <Stack direction="column" spacing={0.5} className={styles.content}>
-            <Typography variant="h6" component="h3" className={styles.title}>
-              {title}
-            </Typography>
-
-            {bodyContent && (
-              <Typography variant="body3" component="div">
-                {bodyContent}
+          <div className={styles.main}>
+            <div className={styles.text}>
+              <Typography
+                variant="body1"
+                component="h3"
+                className={styles.title}
+              >
+                {title}
               </Typography>
-            )}
-          </Stack>
 
-          {(actions || onClose) && (
-            <Stack direction="row" spacing={0.5} className={styles.actions}>
-              {actions}
-              {onClose && (
-                <IconButton
-                  size="small"
-                  onClick={onClose}
-                  aria-label="Close notification"
-                  className={styles.closeButton}
+              {bodyContent && (
+                <Typography
+                  variant="body3"
+                  component="div"
+                  className={styles.description}
                 >
-                  <FontAwesomeV6Icon
-                    iconName="xmark"
-                    iconStyle="solid"
-                    aria-hidden="true"
-                  />
-                </IconButton>
+                  {bodyContent}
+                </Typography>
               )}
-            </Stack>
-          )}
-        </Stack>
+            </div>
+
+            {actions && <div className={styles.actions}>{actions}</div>}
+          </div>
+        </div>
+
+        {onClose && (
+          <IconButton
+            onClick={onClose}
+            aria-label="Close notification"
+            className={styles.closeButton}
+          >
+            <FontAwesomeV6Icon
+              iconName="xmark"
+              iconStyle="solid"
+              aria-hidden="true"
+            />
+          </IconButton>
+        )}
       </Paper>
     );
   },

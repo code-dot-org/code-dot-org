@@ -6,6 +6,32 @@ import {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import NotificationBanner, {
   NotificationBannerProps,
 } from '../NotificationBanner';
+import {NotificationBannerFillStyle} from '../types';
+
+type StoryArgs = NotificationBannerProps & {
+  showActions?: boolean;
+};
+
+const actionsFor = (fillStyle: NotificationBannerFillStyle) =>
+  fillStyle === 'color' ? (
+    <>
+      <Button variant="outlined" color="primary" size="small">
+        Button
+      </Button>
+      <Button variant="contained" color="secondary" size="small">
+        Button
+      </Button>
+    </>
+  ) : (
+    <>
+      <Button variant="outlined" color="secondary" size="small">
+        Button
+      </Button>
+      <Button variant="contained" color="primary" size="small">
+        Button
+      </Button>
+    </>
+  );
 
 export default {
   title: 'DesignSystem/NotificationBanner',
@@ -14,121 +40,94 @@ export default {
     docs: {
       description: {
         component:
-          'Notification Banner component for displaying inline notifications with variant colors, optional actions, and accessibility support.',
+          'Inline banner for persistent page-level messaging. Sentiment and fill follow the CADS Notification Banner component set.',
       },
     },
   },
   argTypes: {
-    variant: {
+    sentiment: {
       control: 'select',
       options: [
-        'primary',
         'brand',
-        'info',
+        'pink',
+        'neutral',
         'success',
-        'warning',
         'error',
-        'ai',
-        'gray',
+        'warning',
+        'info',
       ],
-      description: 'Variant color/sentiment',
     },
-    style: {
+    fillStyle: {
       control: 'select',
-      options: ['subtle', 'filled'],
-      description: 'Style option: subtle (white bg) or filled (tinted bg)',
+      options: ['none', 'color'],
     },
-    title: {
-      control: 'text',
-      description: 'Banner title',
-    },
-    description: {
-      control: 'text',
-      description: 'Banner description/body content',
-    },
-    icon: {
-      control: false,
-      description: 'FontAwesome icon props',
-    },
-    actions: {
-      control: false,
-      description: 'Action buttons',
-    },
-    onClose: {
-      action: 'closed',
-      description: 'Close handler',
-    },
+    title: {control: 'text'},
+    description: {control: 'text'},
+    icon: {control: false},
+    actions: {control: false},
+    showActions: {control: 'boolean'},
     role: {
       control: 'select',
       options: ['status', 'alert'],
-      description: 'ARIA role',
     },
-    fullWidth: {
-      control: 'boolean',
-      description: 'Full width container',
-    },
+    fullWidth: {control: 'boolean'},
   },
-} as Meta<NotificationBannerProps>;
+} as Meta<StoryArgs>;
 
-const Template: StoryFn<NotificationBannerProps> = args => (
-  <NotificationBanner {...args} />
+const Template: StoryFn<StoryArgs> = ({
+  showActions = true,
+  fillStyle = 'none',
+  ...args
+}) => (
+  <div style={{width: 800}}>
+    <NotificationBanner
+      {...args}
+      fillStyle={fillStyle}
+      actions={showActions ? actionsFor(fillStyle) : undefined}
+    />
+  </div>
 );
 
 export const Default = Template.bind({});
 Default.args = {
-  variant: 'info',
-  style: 'subtle',
+  sentiment: 'brand',
+  fillStyle: 'none',
+  showActions: true,
   title: 'This is a title',
   description: 'This is additional descriptive text.',
-  icon: {iconName: 'circle-info', iconStyle: 'solid'},
+  icon: {iconName: 'smile', iconStyle: 'solid'},
 };
 
-export const AllVariants = () => {
-  const variants: Array<{
-    variant: NotificationBannerProps['variant'];
+export const NoActions = Template.bind({});
+NoActions.args = {
+  ...Default.args,
+  showActions: false,
+};
+
+export const Dismissible = Template.bind({});
+Dismissible.args = {
+  ...Default.args,
+  onClose: () => undefined,
+};
+
+export const AllSentiments = () => {
+  const sentiments: Array<{
+    sentiment: NotificationBannerProps['sentiment'];
     icon: FontAwesomeV6IconProps;
-    title: string;
   }> = [
+    {sentiment: 'brand', icon: {iconName: 'smile', iconStyle: 'solid'}},
+    {sentiment: 'pink', icon: {iconName: 'heart', iconStyle: 'solid'}},
     {
-      variant: 'primary',
-      icon: {iconName: 'smile', iconStyle: 'solid'},
-      title: 'Primary (Purple)',
-    },
-    {
-      variant: 'brand',
-      icon: {iconName: 'smile', iconStyle: 'solid'},
-      title: 'Brand (Teal)',
-    },
-    {
-      variant: 'info',
-      icon: {iconName: 'circle-info', iconStyle: 'solid'},
-      title: 'Info',
-    },
-    {
-      variant: 'success',
+      sentiment: 'success',
       icon: {iconName: 'circle-check', iconStyle: 'solid'},
-      title: 'Success',
     },
+    {sentiment: 'error', icon: {iconName: 'circle-xmark', iconStyle: 'solid'}},
     {
-      variant: 'warning',
+      sentiment: 'warning',
       icon: {iconName: 'triangle-exclamation', iconStyle: 'solid'},
-      title: 'Warning',
     },
-    {
-      variant: 'error',
-      icon: {iconName: 'circle-xmark', iconStyle: 'solid'},
-      title: 'Error',
-    },
-    {
-      variant: 'ai',
-      icon: {iconName: 'robot', iconStyle: 'solid'},
-      title: 'AI',
-    },
-    {
-      variant: 'gray',
-      icon: {iconName: 'smile', iconStyle: 'solid'},
-      title: 'Gray',
-    },
+    {sentiment: 'info', icon: {iconName: 'circle-info', iconStyle: 'solid'}},
+    {sentiment: 'neutral', icon: {iconName: 'smile', iconStyle: 'solid'}},
   ];
 
   return (
@@ -140,67 +139,26 @@ export const AllVariants = () => {
         alignItems: 'start',
       }}
     >
-      <div>
-        <h3 style={{marginBottom: '1rem'}}>Subtle Style</h3>
-        <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
-          {variants.map(({variant, icon, title}) => (
-            <NotificationBanner
-              key={`subtle-${variant}`}
-              variant={variant}
-              style="subtle"
-              title={title}
-              description="This is additional descriptive text."
-              icon={icon}
-            />
-          ))}
+      {(['none', 'color'] as const).map(fillStyle => (
+        <div key={fillStyle}>
+          <h3 style={{marginBottom: '1rem'}}>
+            {fillStyle === 'none' ? 'No fill' : 'Color fill'}
+          </h3>
+          <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+            {sentiments.map(({sentiment, icon}) => (
+              <NotificationBanner
+                key={`${fillStyle}-${sentiment}`}
+                sentiment={sentiment}
+                fillStyle={fillStyle}
+                title="This is a title"
+                description="This is additional descriptive text."
+                icon={icon}
+                actions={actionsFor(fillStyle)}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-      <div>
-        <h3 style={{marginBottom: '1rem'}}>Filled Style</h3>
-        <div style={{display: 'flex', flexDirection: 'column', gap: '1rem'}}>
-          {variants.map(({variant, icon, title}) => (
-            <NotificationBanner
-              key={`filled-${variant}`}
-              variant={variant}
-              style="filled"
-              title={title}
-              description="This is additional descriptive text."
-              icon={icon}
-            />
-          ))}
-        </div>
-      </div>
+      ))}
     </div>
   );
-};
-
-export const WithActions = Template.bind({});
-WithActions.args = {
-  variant: 'info',
-  style: 'subtle',
-  title: 'More Opportunities for Feedback',
-  description:
-    'Each lesson now includes a quick 2-question survey to give insights to the curriculum team on how the lesson went in your classroom.',
-  icon: {iconName: 'envelope', iconStyle: 'solid'},
-  actions: (
-    <>
-      <Button variant="outlined" color="tertiary" size="small">
-        Button
-      </Button>
-      <Button variant="contained" color="primary" size="small">
-        Button
-      </Button>
-    </>
-  ),
-};
-
-export const WithClose = Template.bind({});
-WithClose.args = {
-  variant: 'warning',
-  style: 'subtle',
-  title: "You're in a newer version of this course",
-  description:
-    'We noticed you have progress in an older version of this course. You can go back to that version any time by using the dropdown below to select the version of the course you want.',
-  icon: {iconName: 'triangle-exclamation', iconStyle: 'solid'},
-  onClose: () => console.log('Close clicked'),
 };
