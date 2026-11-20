@@ -89,6 +89,8 @@ const ColumnAnalysis = () => {
   return (
     <section
       id="column-analysis"
+      data-tour-anchor="column-analysis"
+      data-tour-label="Column analysis panel"
       className={styles.panel}
       aria-labelledby="column-analysis-heading"
     >
@@ -107,6 +109,8 @@ const ColumnAnalysis = () => {
           color="tertiary"
           size="extraSmall"
           aria-label="Close column analysis"
+          data-tour-anchor="column-analysis-close-button"
+          data-tour-label="Column analysis: close button"
           // Selecting the current column again deselects it.
           onClick={() => dispatch(setCurrentColumn(columnDetails.id))}
         >

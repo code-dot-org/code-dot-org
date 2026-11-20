@@ -1,0 +1,5 @@
+// Above MUI dialogs and popovers (z-index 1300), for a step that points
+// inside one. The tour editor sits at 1350.
+.shepherd-element.tour-step-above-dialog {
+  z-index: 1340;
+}

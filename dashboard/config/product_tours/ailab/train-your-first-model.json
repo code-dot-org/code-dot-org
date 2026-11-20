@@ -1,0 +1,44 @@
+{
+  "id": "train-your-first-model",
+  "name": "Train your first model",
+  "steps": [
+    {
+      "id": "step-column",
+      "anchor": "column-header",
+      "anchorLabel": "Any column header",
+      "title": "Look at a column",
+      "text": "Click a column header to see how its values are spread.",
+      "requirement": {
+        "type": "click"
+      }
+    },
+    {
+      "id": "step-predict",
+      "anchor": "predict-dropdown",
+      "anchorLabel": "Predict dropdown",
+      "title": "Pick what to predict",
+      "text": "Choose the column you want the model to guess.",
+      "placement": "left"
+    },
+    {
+      "id": "step-train",
+      "anchor": "train-button",
+      "anchorLabel": "Train model button",
+      "title": "Train",
+      "text": "Train the model. The tour goes on when training finishes.",
+      "placement": "left",
+      "requirement": {
+        "type": "event",
+        "event": "ailab-model-trained"
+      }
+    },
+    {
+      "id": "step-test",
+      "anchor": "workspace-tab-testing",
+      "anchorLabel": "Testing tab",
+      "title": "Test it",
+      "text": "Open the testing view to see how well the model predicts.",
+      "placement": "bottom"
+    }
+  ]
+}

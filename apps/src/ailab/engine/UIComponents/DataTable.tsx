@@ -165,6 +165,8 @@ const DataTable = ({
                     className={styles.headerButton}
                     aria-pressed={columnId === currentColumn}
                     onClick={() => handleSetCurrentColumn(columnId)}
+                    data-tour-anchor="column-header"
+                    data-tour-label="Any column header"
                   >
                     <Typography
                       component="span"

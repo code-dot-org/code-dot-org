@@ -769,6 +769,56 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal @program, assigns[:level_view_options_map][@level.id][:start_blocks]
   end
 
+  test "should get edit blocks for the product tour editor" do
+    level = create(:ailab)
+    get :edit_blocks, params: {id: level.id, type: 'authored_tours'}
+    assert_response :success
+    assert_equal 'authored_tours', assigns[:level_view_options_map][level.id][:edit_blocks]
+  end
+
+  test "should save tour references and library tours, and show them on the edit page" do
+    Dir.mktmpdir do |dir|
+      ProductTour.stubs(:directory).returns(Pathname.new(dir))
+      level = create(:ailab)
+      tour = {id: 'meet-ai-lab', name: 'Meet AI Lab', steps: [{id: 'step-1', title: 'Welcome', text: 'Hi'}]}
+      post :update_product_tours, params: {id: level.id}, body: {
+        tourReferences: [{id: 'meet-ai-lab', autoStart: true}],
+        tours: [tour],
+        deletedTourIds: []
+      }.to_json
+      assert_response :success
+      assert_equal [{'id' => 'meet-ai-lab', 'autoStart' => true}], level.reload.properties['tour_references']
+      assert_equal 'Meet AI Lab', JSON.parse(File.read(File.join(dir, 'meet-ai-lab.json')))['name']
+
+      get :edit, params: {id: level.id}
+      assert_response :success
+      assert_select '#authored-tours-container li', /Meet AI Lab\s+\(starts on its own\)/
+      assert_select '#authored-tours-container a[href=?]', edit_blocks_level_path(level, :authored_tours)
+    end
+  end
+
+  test "should not delete a library tour that another level uses" do
+    Dir.mktmpdir do |dir|
+      ProductTour.stubs(:directory).returns(Pathname.new(dir))
+      File.write(File.join(dir, 'shared.json'), {id: 'shared', name: 'Shared', steps: []}.to_json)
+      create(:ailab, properties: {tour_references: [{id: 'shared', autoStart: false}]})
+      level = create(:ailab)
+      post :update_product_tours, params: {id: level.id}, body: {tourReferences: [], tours: [], deletedTourIds: ['shared']}.to_json
+      assert_response :conflict
+      assert File.exist?(File.join(dir, 'shared.json'))
+    end
+  end
+
+  test "should reject a library tour with a bad id" do
+    Dir.mktmpdir do |dir|
+      ProductTour.stubs(:directory).returns(Pathname.new(dir))
+      level = create(:ailab)
+      post :update_product_tours, params: {id: level.id}, body: {tourReferences: [], tours: [{id: '../escape', name: 'x', steps: []}]}.to_json
+      assert_response :bad_request
+      assert_empty Dir.children(dir)
+    end
+  end
+
   test "should load file contents when editing a dsl defined level" do
     level_path = "#{Rails.root}/config/scripts/test_demo_level.external"
     contents = File.read(level_path)

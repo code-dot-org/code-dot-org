@@ -90,6 +90,7 @@ const DatasetCardDeck = ({rows}: DatasetCardDeckProps) => {
       <nav className={styles.pager} aria-label="Card navigation">
         <PagerButton
           label="Previous card"
+          tourAnchor="card-previous-button"
           icon="chevron-left"
           disabled={position === 0}
           onClick={() => goToCard(position - 1)}
@@ -105,6 +106,7 @@ const DatasetCardDeck = ({rows}: DatasetCardDeckProps) => {
         </Typography>
         <PagerButton
           label="Next card"
+          tourAnchor="card-next-button"
           icon="chevron-right"
           disabled={position === total - 1}
           onClick={() => goToCard(position + 1)}

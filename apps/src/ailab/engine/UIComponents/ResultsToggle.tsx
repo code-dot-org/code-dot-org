@@ -13,7 +13,13 @@ interface ResultsToggleProps {
 }
 
 const ResultsToggle = ({grade, onChange, counts}: ResultsToggleProps) => (
-  <div role="group" aria-label="Show rows" className={styles.toggle}>
+  <div
+    role="group"
+    aria-label="Show rows"
+    data-tour-anchor="results-toggle"
+    data-tour-label="Correct and incorrect toggle"
+    className={styles.toggle}
+  >
     <SegmentedButtons
       size="xs"
       className={styles.segments}

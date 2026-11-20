@@ -9,7 +9,7 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import {ToastProvider} from '@code-dot-org/component-library/toast';
 import classNames from 'classnames';
-import React, {useEffect, useRef} from 'react';
+import React, {Suspense, useEffect, useRef} from 'react';
 import {useSelector} from 'react-redux';
 
 // The drawer's own weight sits behind a lazy boundary inside this component,
@@ -17,7 +17,9 @@ import {useSelector} from 'react-redux';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
+import AuthoredTourRunner from '@cdo/apps/lab2/productTours/authored/AuthoredTourRunner';
 import {
+  getAppOptionsEditBlocks,
   getAppOptionsLevelId,
   getAppOptionsTheme,
   getIsShareView,
@@ -37,7 +39,7 @@ import {capitalizeFirstLetter} from '@cdo/apps/util/capitalizeFirstLetter';
 import useElementSize from '@cdo/apps/util/hooks/useElementSize';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {PERMISSIONS} from '../constants';
+import {AUTHORED_TOURS, PERMISSIONS} from '../constants';
 import ErrorBoundary from '../ErrorBoundary';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import useLoadLevelProperties from '../hooks/useLoadLevelProperties';
@@ -54,6 +56,13 @@ import {ProjectBlockedUI} from './ProjectBlockedUI';
 import ScreenAnalyticsOverlay from './ScreenAnalyticsOverlay';
 
 import moduleStyles from './Lab2Wrapper.module.scss';
+
+const isEditingAuthoredTours = getAppOptionsEditBlocks() === AUTHORED_TOURS;
+const AuthoredTourEditor = React.lazy(() =>
+  import(
+    /* webpackChunkName: "authored-tour-editor" */ '../productTours/authored/editor/index.js'
+  ).then(({AuthoredTourEditor}) => ({default: AuthoredTourEditor}))
+);
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;
@@ -215,9 +224,15 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
                 />
               )}
               <ScreenAnalyticsOverlay />
+              <AuthoredTourRunner />
             </ToastProvider>
           </LabContentWidthProvider>
         </div>
+        {isEditingAuthoredTours && (
+          <Suspense fallback={null}>
+            <AuthoredTourEditor />
+          </Suspense>
+        )}
         {hostedDrawerConfig && (
           <AiDiffFloatingActionButton inline {...hostedDrawerConfig} />
         )}

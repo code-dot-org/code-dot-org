@@ -346,7 +346,11 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
             />
           </div>
         )}
-        <div id={resourcePanelNavigationButtonElementId}>
+        <div
+          id={resourcePanelNavigationButtonElementId}
+          data-tour-anchor="resource-panel-navigation"
+          data-tour-label="Continue button area"
+        >
           {submittable ? (
             <SubmitButton
               levelId={id}

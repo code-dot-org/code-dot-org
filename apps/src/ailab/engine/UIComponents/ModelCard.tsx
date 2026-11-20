@@ -56,7 +56,12 @@ const ModelCard = () => {
           alt={I18n.t('aiBotAltText')}
         />
       </div>
-      <div id="uitest-model-card" className={styles.card}>
+      <div
+        id="uitest-model-card"
+        data-tour-anchor="model-card"
+        data-tour-label="Model card"
+        className={styles.card}
+      >
         <h3 className={styles.name}>{trainedModelDetails.name}</h3>
         <div className={styles.section}>
           <h5 className={styles.heading}>{I18n.t('modelCardAccuracy')}</h5>

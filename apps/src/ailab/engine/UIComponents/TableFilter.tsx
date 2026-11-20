@@ -75,7 +75,12 @@ const TableFilter = ({view, menuAlign = 'right'}: TableFilterProps) => {
   };
 
   return (
-    <div ref={anchorRef} className={styles.root}>
+    <div
+      ref={anchorRef}
+      data-tour-anchor="table-filter"
+      data-tour-label="Filter"
+      className={styles.root}
+    >
       {filter ? (
         <div className={styles.tag}>
           <button
@@ -173,6 +178,8 @@ const TableFilter = ({view, menuAlign = 'right'}: TableFilterProps) => {
             size="extraSmall"
             disabled={!canClear}
             onClick={clearFromMenu}
+            data-tour-anchor="filter-clear-button"
+            data-tour-label="Filter menu: Clear filter button"
           >
             Clear filter
           </Button>
@@ -182,6 +189,8 @@ const TableFilter = ({view, menuAlign = 'right'}: TableFilterProps) => {
             color="secondary"
             size="extraSmall"
             onClick={closeMenu}
+            data-tour-anchor="filter-done-button"
+            data-tour-label="Filter menu: Done button"
           >
             {menuChecked.length ? `Done (${menuChecked.length})` : 'Done'}
           </Button>

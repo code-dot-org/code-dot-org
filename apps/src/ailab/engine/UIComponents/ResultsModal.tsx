@@ -65,7 +65,13 @@ const ResultsModal = ({initialTab, onClose}: ResultsModalProps) => {
         ]}
       />
       <div className={styles.actionRow}>
-        <Button variant="contained" color="primary" onClick={onClose}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={onClose}
+          data-tour-anchor="results-back-button"
+          data-tour-label="Results: Back to Testing button"
+        >
           Back to Testing
         </Button>
       </div>

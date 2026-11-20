@@ -30,6 +30,8 @@ const ColumnsButton = ({showAllColumns, onToggle}: ColumnsButtonProps) => (
       )
     }
     onClick={onToggle}
+    data-tour-anchor="columns-button"
+    data-tour-label="Expand or collapse columns button"
   >
     {showAllColumns ? 'Collapse columns' : 'Expand columns'}
   </Button>

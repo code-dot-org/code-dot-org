@@ -72,7 +72,11 @@ const TrainingModal = () => {
             : 'animationDescriptionsTesting'
         )}
       </p>
-      <div className={styles.content}>
+      <div
+        className={styles.content}
+        data-tour-anchor="training-animation"
+        data-tour-label="Training: animation"
+      >
         {isTraining ? (
           <TrainModel onFinished={showTesting} />
         ) : (
@@ -80,13 +84,21 @@ const TrainingModal = () => {
         )}
       </div>
       <div className={styles.actionRow}>
-        <Button variant="outlined" color="secondary" onClick={closeModal}>
+        <Button
+          variant="outlined"
+          color="secondary"
+          onClick={closeModal}
+          data-tour-anchor="training-back-button"
+          data-tour-label="Training: Cancel or Back to dataset button"
+        >
           {isInProgress ? 'Cancel' : 'Back to dataset'}
         </Button>
         <Button
           variant="contained"
           color="primary"
           onClick={isTraining ? showTesting : showResults}
+          data-tour-anchor="training-continue-button"
+          data-tour-label="Training: Skip or Continue button"
           endIcon={
             <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
           }

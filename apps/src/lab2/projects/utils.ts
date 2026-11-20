@@ -1,4 +1,8 @@
-import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
+import {
+  AUTHORED_TOURS,
+  START_SOURCES,
+  TOOLBOX_BLOCKS,
+} from '@cdo/apps/lab2/constants';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
@@ -58,6 +62,12 @@ export function getAppOptionsEditBlocks(): string | undefined {
 
 export function getIsStartMode() {
   return getAppOptionsEditBlocks() === START_SOURCES;
+}
+
+/** Whether a levelbuilder is editing product tours beside the running lab.
+    The tour editor owns the header then, for its Save button. */
+export function getIsAuthoringTours() {
+  return getAppOptionsEditBlocks() === AUTHORED_TOURS;
 }
 
 /** Whether a levelbuilder is editing the level's start sources, toolbox or

@@ -299,7 +299,12 @@ const DecisionTree = ({overlay, saveImageToBackpack}: DecisionTreeProps) => {
   );
 
   return (
-    <div id="uitest-decision-tree" className={styles.decisionTree}>
+    <div
+      id="uitest-decision-tree"
+      data-tour-anchor="decision-tree"
+      data-tour-label="Decision tree"
+      className={styles.decisionTree}
+    >
       {Object.entries(HIDDEN_WORDS).map(([word, text]) => (
         <span key={word} id={wordId(word)} hidden>
           {text}
@@ -442,6 +447,8 @@ const DecisionTree = ({overlay, saveImageToBackpack}: DecisionTreeProps) => {
                     openOnEnterOrSpace(event, placed.id);
                   }}
                   onClick={() => setOpenNodeId(placed.id)}
+                  data-tour-anchor="tree-node"
+                  data-tour-label="Any node in the decision tree"
                   className={styles.nodeSlot}
                   style={{left: placed.x + placed.width / 2, top: placed.y}}
                 >

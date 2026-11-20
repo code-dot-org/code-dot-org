@@ -123,7 +123,12 @@ const TestPanel = () => {
   };
 
   return (
-    <div id="test-panel" className={styles.panel}>
+    <div
+      id="test-panel"
+      data-tour-anchor="test-panel"
+      data-tour-label="Test panel"
+      className={styles.panel}
+    >
       <section className={styles.card}>
         <Typography
           variant="label3"
@@ -132,7 +137,13 @@ const TestPanel = () => {
         >
           Make a prediction
         </Typography>
-        <div className={styles.fields}>{selectedFeatures.map(renderField)}</div>
+        <div
+          className={styles.fields}
+          data-tour-anchor="prediction-inputs"
+          data-tour-label="Prediction inputs"
+        >
+          {selectedFeatures.map(renderField)}
+        </div>
         <div className={styles.actionRow}>
           <Button
             variant="contained"
@@ -140,6 +151,8 @@ const TestPanel = () => {
             size="small"
             disabled={!predictAvailable}
             onClick={() => train.onClickPredict(trainedModel, project)}
+            data-tour-anchor="predict-button"
+            data-tour-label="Predict button"
           >
             Predict
           </Button>
@@ -151,6 +164,8 @@ const TestPanel = () => {
               <FontAwesomeV6Icon iconName="shuffle" aria-hidden="true" />
             }
             onClick={onClickRandom}
+            data-tour-anchor="random-button"
+            data-tour-label="Random button"
           >
             Random
           </Button>

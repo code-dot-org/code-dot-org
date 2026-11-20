@@ -454,6 +454,7 @@ Dashboard::Application.routes.draw do
         get 'build_quiz_questions'
         get 'get_serialized_maze'
         post 'update_properties'
+        post 'update_product_tours'
         post 'update_blocks/:type', to: 'levels#update_blocks', as: 'update_blocks'
         post 'clone'
         post 'update_start_code'

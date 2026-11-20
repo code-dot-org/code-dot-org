@@ -31,6 +31,8 @@ const UploadedFileChip = ({
         className={styles.select}
         aria-pressed={isSelected}
         onClick={onSelect}
+        data-tour-anchor="uploaded-dataset"
+        data-tour-label="Uploaded file"
         {...focusHandlers}
       >
         <span className={styles.fileIcon}>
@@ -51,6 +53,8 @@ const UploadedFileChip = ({
         className={styles.remove}
         aria-label={`Remove ${fileName}`}
         onClick={onRemove}
+        data-tour-anchor="remove-uploaded-dataset"
+        data-tour-label="Remove uploaded file button"
       >
         <FontAwesomeV6Icon iconName="xmark" aria-hidden="true" />
       </button>

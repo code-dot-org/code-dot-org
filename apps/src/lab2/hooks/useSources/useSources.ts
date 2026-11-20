@@ -7,7 +7,10 @@ import {setChannel as setChannelAction} from '@cdo/apps/lab2/lab2Redux';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {getSourcesStoreForApp} from '@cdo/apps/lab2/projects/sourcesStoreForApp';
-import {getIsLevelEditMode} from '@cdo/apps/lab2/projects/utils';
+import {
+  getIsAuthoringTours,
+  getIsLevelEditMode,
+} from '@cdo/apps/lab2/projects/utils';
 import type {
   Channel,
   LevelProperties,
@@ -23,6 +26,7 @@ import configureHeader from './configureHeader';
 import setProjectCallbacks from './setProjectCallbacks';
 
 const isLevelEditMode = getIsLevelEditMode();
+const isAuthoringTours = getIsAuthoringTours();
 
 export interface UseSourcesInput<T extends ProjectSources> {
   /** Level properties for the current level */
@@ -397,7 +401,7 @@ export default function useSources<T extends ProjectSources>({
   );
 
   useEffect(() => {
-    if (isLevelEditMode) {
+    if (isLevelEditMode || isAuthoringTours) {
       return;
     }
     dispatch(clearHeader());

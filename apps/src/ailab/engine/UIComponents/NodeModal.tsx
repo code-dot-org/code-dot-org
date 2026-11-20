@@ -111,7 +111,13 @@ const NodeModal = ({tree, nodeId, onClose}: NodeModalProps) => {
         </div>
       </div>
       <div className={styles.actionRow}>
-        <Button variant="contained" color="primary" onClick={onClose}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={onClose}
+          data-tour-anchor="node-details-back-button"
+          data-tour-label="Node details: Back to Testing button"
+        >
           Back to Testing
         </Button>
       </div>

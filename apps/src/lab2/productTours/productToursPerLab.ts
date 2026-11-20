@@ -33,6 +33,13 @@ export interface ProductTourConfig {
   shouldShowOnLevel?: (levelProperties: LevelProperties) => boolean;
 }
 
+// What the student resources tab needs to list and replay a tour. Authored
+// tours fit this too; their name is the tour's id.
+export type WalkthroughTour = Pick<
+  ProductTourConfig,
+  'displayName' | 'metricName' | 'getSteps'
+> & {name: string};
+
 export const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> =
   {
     [ProductTour.ResourcePanelOnboarding]: {
@@ -125,4 +132,11 @@ export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
   ],
   sketchlab: [ProductTourConfigurations[ProductTour.SketchlabIntroReactFlow]],
   weblab2: [ProductTourConfigurations[ProductTour.Weblab2Intro]],
+};
+
+// Authored library tours that every level of the lab lists in the student
+// resources tab, by tour id. Other library tours appear only on the levels
+// that reference them.
+export const ListedAuthoredToursPerLab: Partial<Record<AppName, string[]>> = {
+  ailab: ['meet-the-ai-lab'],
 };

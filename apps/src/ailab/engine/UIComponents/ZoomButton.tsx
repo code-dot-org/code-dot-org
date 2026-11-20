@@ -9,6 +9,7 @@ interface ZoomButtonProps {
   disabled?: boolean;
   disabledHint?: string;
   tabbable?: boolean;
+  tourAnchor?: string;
 }
 
 const ZoomButton = ({
@@ -18,13 +19,18 @@ const ZoomButton = ({
   disabled,
   disabledHint,
   tabbable = true,
+  tourAnchor,
 }: ZoomButtonProps) => (
   <Tooltip
     title={disabled && disabledHint ? disabledHint : label}
     placement="right"
   >
-    {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- a disabled button takes no pointer events or focus, so the span carries its tooltip */}
-    <span tabIndex={disabled && tabbable ? 0 : undefined}>
+    <span
+      // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- a disabled button takes no pointer events or focus, so the span carries its tooltip
+      tabIndex={disabled && tabbable ? 0 : undefined}
+      data-tour-anchor={tourAnchor}
+      data-tour-label={label}
+    >
       <IconButton
         aria-label={label}
         tabIndex={tabbable ? 0 : -1}

@@ -16,6 +16,7 @@ interface DatasetTileProps {
   isSelected: boolean;
   disabled?: boolean;
   onClick: () => void;
+  tourAnchor?: string;
 }
 
 const DatasetTile = ({
@@ -25,6 +26,7 @@ const DatasetTile = ({
   isSelected,
   disabled = false,
   onClick,
+  tourAnchor,
 }: DatasetTileProps) => {
   const [imageFailed, setImageFailed] = useState(false);
   const {focusVisible, focusHandlers} = useFocusVisible();
@@ -37,6 +39,8 @@ const DatasetTile = ({
       aria-pressed={isSelected}
       disabled={disabled}
       onClick={onClick}
+      data-tour-anchor={tourAnchor}
+      data-tour-label="Any dataset tile"
       {...focusHandlers}
     >
       <span className={styles.cover}>

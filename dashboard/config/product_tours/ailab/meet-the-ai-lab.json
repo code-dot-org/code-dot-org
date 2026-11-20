@@ -1,0 +1,42 @@
+{
+  "id": "meet-the-ai-lab",
+  "name": "Meet the AI Lab",
+  "steps": [
+    {
+      "id": "step-welcome",
+      "title": "Welcome to the AI Lab",
+      "text": "Here you train a model to make predictions from a dataset. This tour shows you around."
+    },
+    {
+      "id": "step-tabs",
+      "anchor": "workspace-tabs",
+      "anchorLabel": "Workspace tabs",
+      "title": "Two views",
+      "text": "Explore and train on the dataset in one view, then test your model in the other.",
+      "placement": "bottom"
+    },
+    {
+      "id": "step-dataset",
+      "anchor": "dataset",
+      "anchorLabel": "Dataset",
+      "title": "Your dataset",
+      "text": "Each row is one example. Each column is something you know about it."
+    },
+    {
+      "id": "step-train-panel",
+      "anchor": "train-panel",
+      "anchorLabel": "Train panel",
+      "title": "Train a model",
+      "text": "Choose what to predict and what to use, then train.",
+      "placement": "left"
+    },
+    {
+      "id": "step-resources",
+      "anchor": "resource-panel-tabs",
+      "anchorLabel": "Resource panel tabs",
+      "title": "Find this tour again",
+      "text": "Replay any tour from the Resources tab.",
+      "placement": "right"
+    }
+  ]
+}

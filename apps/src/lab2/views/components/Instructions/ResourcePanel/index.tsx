@@ -23,11 +23,12 @@ import {aiTutorModelParametersFor} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import {getLabShortcuts} from '@cdo/apps/lab2/keyboardShortcuts/shortcutsPerLab';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {getAuthoredWalkthroughTours} from '@cdo/apps/lab2/productTours/authored/authoredWalkthroughTours';
 import {
   isTourAvailableOnLevel,
   isTourEnabledOnLevel,
-  ProductTourConfig,
   ToursPerLab,
+  WalkthroughTour,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
 import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
 import {
@@ -308,8 +309,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
 
   const {levelTours, otherAvailableTours} = useMemo(() => {
     const toursForLab = ToursPerLab[levelProperties.appName as AppName] || [];
-    const levelTours: ProductTourConfig[] = [];
-    const otherAvailableTours: ProductTourConfig[] = [];
+    const authored = getAuthoredWalkthroughTours(levelProperties);
+    const levelTours: WalkthroughTour[] = authored.levelTours;
+    const otherAvailableTours: WalkthroughTour[] = authored.otherTours;
     toursForLab.forEach(tour => {
       if (isTourEnabledOnLevel(tour.name, levelProperties)) {
         levelTours.push(tour);
@@ -681,6 +683,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     <>
       <div
         id={resourcePanelInstructionsElementId}
+        data-tour-anchor="resource-panel"
+        data-tour-label="Resource panel"
         className={classNames(styles.resourcePanel, className)}
       >
         <div
@@ -735,7 +739,12 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 </Tooltip>
               )}
             </div>
-            <nav id={resourcePanelTabsElementId} className={styles.tabs}>
+            <nav
+              id={resourcePanelTabsElementId}
+              data-tour-anchor="resource-panel-tabs"
+              data-tour-label="Resource panel tabs"
+              className={styles.tabs}
+            >
               {getTypedKeys(availableTabs).map(tab => (
                 <Tooltip
                   title={getTabInfo(tab).title}
@@ -749,6 +758,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 >
                   <div
                     id={`resource-panel-tab-${tab}`}
+                    data-tour-anchor={`resource-panel-tab-${tab}`}
+                    data-tour-label={`${getTabInfo(tab).title} tab`}
                     className={
                       tab === Tabs.AiTutor
                         ? styles.tabWithNotificationDot
@@ -795,6 +806,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
           </div>
           <div
             id={resourcePanelLinksElementId}
+            data-tour-anchor="resource-panel-links"
+            data-tour-label="Extra links"
             className={classNames(styles.bottomTabs)}
           >
             <ResourcePanelExtraLinks levelId={levelId} theme={theme} />

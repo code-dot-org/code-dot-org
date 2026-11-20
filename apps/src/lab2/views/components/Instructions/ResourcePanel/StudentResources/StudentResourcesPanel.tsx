@@ -2,15 +2,15 @@ import {Typography} from '@mui/material';
 import React from 'react';
 
 import {KeyboardShortcutCategories} from '@cdo/apps/lab2/keyboardShortcuts/types';
-import {ProductTourConfig} from '@cdo/apps/lab2/productTours/productToursPerLab';
+import {WalkthroughTour} from '@cdo/apps/lab2/productTours/productToursPerLab';
 
 import GuidedWalkthroughs from './GuidedWalkthroughs';
 
 import styles from './student-resources-panel.module.scss';
 
 interface StudentResourcesPanelProps {
-  levelTours: ProductTourConfig[];
-  otherAvailableTours: ProductTourConfig[];
+  levelTours: WalkthroughTour[];
+  otherAvailableTours: WalkthroughTour[];
   shortcuts?: KeyboardShortcutCategories;
 }
 

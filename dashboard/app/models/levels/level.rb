@@ -1026,6 +1026,13 @@ class Level < ApplicationRecord
     properties_camelized[:helpVideos] = related_videos.map(&:summarize)
     properties_camelized[:type] = type
     properties_camelized[:appName] = game&.app
+    if game&.app
+      product_tours = ProductTour.all(game.app)
+      if product_tours.any?
+        properties_camelized[:productTourLibrary] = product_tours
+        properties_camelized[:productTourUsage] = ProductTour.usage(game.app) if current_user&.permission?(UserPermission::LEVELBUILDER)
+      end
+    end
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
     properties_camelized[:finishUrl] = script_level.next_level_or_redirect_path_for_user(current_user, unit_group_unit: unit_group_unit) if script_level

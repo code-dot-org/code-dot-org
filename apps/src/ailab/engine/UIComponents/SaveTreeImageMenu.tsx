@@ -86,7 +86,11 @@ const SaveTreeImageMenu = ({
 
   return (
     <Tooltip title={LABEL} placement="right">
-      <span ref={menuRef}>
+      <span
+        ref={menuRef}
+        data-tour-anchor="save-tree-image"
+        data-tour-label="Save tree image button"
+      >
         <ActionDropdown
           name="ailab-save-tree-image"
           labelText={LABEL}

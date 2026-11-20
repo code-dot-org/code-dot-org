@@ -5,7 +5,7 @@ import {Tour} from 'shepherd.js';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {TriggerSource} from '@cdo/apps/lab2/productTours/constants';
-import {ProductTourConfig} from '@cdo/apps/lab2/productTours/productToursPerLab';
+import {WalkthroughTour} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {createTourWithSteps} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
@@ -15,8 +15,8 @@ import styles from './guided-walkthroughs.module.scss';
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
 interface GuidedWalkthroughsProps {
-  levelTours: ProductTourConfig[];
-  otherAvailableTours: ProductTourConfig[];
+  levelTours: WalkthroughTour[];
+  otherAvailableTours: WalkthroughTour[];
 }
 
 const GuidedWalkthroughs: React.FC<GuidedWalkthroughsProps> = ({
@@ -86,7 +86,7 @@ const GuidedWalkthroughs: React.FC<GuidedWalkthroughsProps> = ({
     }
   };
 
-  const renderTourChip = (tour: ProductTourConfig, type: 'level' | 'other') => (
+  const renderTourChip = (tour: WalkthroughTour, type: 'level' | 'other') => (
     <div key={tour.name} className={styles.tourChip}>
       <Typography variant="body3">{tour.displayName}</Typography>
       <IconButton

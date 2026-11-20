@@ -144,6 +144,8 @@ const PanelButtons = ({
             size="small"
             onClick={onClickPrev}
             disabled={!panelButtons.prev.enabled}
+            data-tour-anchor="workspace-back-button"
+            data-tour-label="Workspace back button"
           >
             {panelButtons.prev.text}
           </Button>
@@ -166,6 +168,8 @@ const PanelButtons = ({
         <div className={styles.next}>
           <Button
             id="uitest-continue-button"
+            data-tour-anchor="workspace-continue-button"
+            data-tour-label="Workspace continue button"
             variant="contained"
             color="primary"
             size="small"

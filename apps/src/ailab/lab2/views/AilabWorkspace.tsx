@@ -24,6 +24,10 @@ import {
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  AILAB_MODEL_TRAINED,
+  reportTourEvent,
+} from '@cdo/apps/lab2/productTours/authored/tourEvents';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
 import type ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
@@ -168,6 +172,7 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
     validator.latestAccuracy = accuracy;
     progressManager?.resetValidation();
     progressManager?.updateProgress();
+    reportTourEvent(AILAB_MODEL_TRAINED);
   };
 
   const dynamicInstructionsContent = useMemo(() => {

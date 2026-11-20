@@ -89,6 +89,8 @@ const TrainingResultCard = () => {
             <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
           }
           onClick={() => dispatch(setCurrentPanel('results'))}
+          data-tour-anchor="test-model-button"
+          data-tour-label="Test model button"
         >
           Test model
         </Button>

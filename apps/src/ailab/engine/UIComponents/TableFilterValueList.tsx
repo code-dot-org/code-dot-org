@@ -49,6 +49,8 @@ const TableFilterValueList = ({
           color="tertiary"
           size="extraSmall"
           onClick={onBack}
+          data-tour-anchor="filter-back-button"
+          data-tour-label="Filter menu: Back to columns button"
         >
           <FontAwesomeV6Icon
             iconName="chevron-left"
@@ -68,6 +70,8 @@ const TableFilterValueList = ({
         ref={listRef}
         role="group"
         aria-labelledby={headingId}
+        data-tour-anchor="filter-values"
+        data-tour-label="Filter menu: values"
         className={styles.list}
       >
         {options.map(option => (

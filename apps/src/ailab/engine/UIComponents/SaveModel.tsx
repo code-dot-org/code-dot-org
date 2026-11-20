@@ -122,7 +122,12 @@ const SaveModel = () => {
   const columnCount = getColumnFields().length;
 
   return (
-    <div id="uitest-model-card-form" className={shared.panel}>
+    <div
+      id="uitest-model-card-form"
+      data-tour-anchor="model-card-form"
+      data-tour-label="Model card form"
+      className={shared.panel}
+    >
       <Statement />
       <ScrollableContent tinted={true}>
         <div key={nameField.id} className={shared.cardRow}>
@@ -134,6 +139,8 @@ const SaveModel = () => {
           <div>
             <input
               id="uitest-model-name-input"
+              data-tour-anchor="model-name-field"
+              data-tour-label="Model name field"
               onChange={event =>
                 handleChange(event, nameField.id, nameField.isColumn)
               }
@@ -196,6 +203,8 @@ const SaveModel = () => {
           <span
             onClick={toggleColumnDescriptions}
             onKeyDown={toggleColumnDescriptions}
+            data-tour-anchor="column-descriptions-toggle"
+            data-tour-label="Column descriptions toggle"
             className={styles.toggle}
             role="button"
             tabIndex={0}

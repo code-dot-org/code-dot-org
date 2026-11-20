@@ -318,24 +318,28 @@ const TreeCanvas = ({
         <div role="group" aria-label="Zoom" className={styles.toolGroup}>
           <ZoomButton
             label="Zoom in"
+            tourAnchor="zoom-in-button"
             tabbable={toolbarTabbable}
             iconName="plus"
             onClick={() => zoomBy(ZOOM_STEP)}
           />
           <ZoomButton
             label="Zoom out"
+            tourAnchor="zoom-out-button"
             tabbable={toolbarTabbable}
             iconName="minus"
             onClick={() => zoomBy(1 / ZOOM_STEP)}
           />
           <ZoomButton
             label="Zoom to fit"
+            tourAnchor="zoom-to-fit-button"
             tabbable={toolbarTabbable}
             iconName="expand"
             onClick={() => zoomTo(contentRect)}
           />
           <ZoomButton
             label="Zoom to your path"
+            tourAnchor="zoom-to-path-button"
             tabbable={toolbarTabbable}
             iconName="arrows-minimize"
             onClick={() => pathBounds && zoomTo(pathBounds)}

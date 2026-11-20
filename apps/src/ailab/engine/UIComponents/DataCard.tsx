@@ -70,7 +70,12 @@ const DataCard = () => {
       : null;
 
   return (
-    <div id="data-card" className={styles.panel}>
+    <div
+      id="data-card"
+      data-tour-anchor="dataset-details"
+      data-tour-label="Dataset details card"
+      className={styles.panel}
+    >
       <div className={styles.header}>
         <Typography component="h3" variant="overline2" className={styles.title}>
           About this data
@@ -142,6 +147,8 @@ const DataCard = () => {
           }
           disabled={!canUseDataset}
           onClick={() => dispatch(setCurrentPanel('datasetView'))}
+          data-tour-anchor="use-dataset-button"
+          data-tour-label="Use this dataset button"
         >
           Use this dataset
         </Button>

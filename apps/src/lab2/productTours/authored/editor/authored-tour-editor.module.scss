@@ -1,0 +1,407 @@
+// Above MUI dialogs and popovers (z-index 1300), so the editor stays usable
+// while one is open in the lab.
+.editor {
+  position: relative;
+  z-index: 1350;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 340px;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border-left: 1px solid var(--borders-neutral-primary);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 32px 1fr 32px;
+  align-items: center;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--borders-neutral-primary);
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.headerAction {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  min-width: 0;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-top: 1px solid var(--borders-neutral-primary);
+}
+
+.footerButton {
+  flex: 1;
+}
+
+.hint {
+  margin: 0;
+  color: var(--text-neutral-secondary);
+}
+
+.warning {
+  margin: 0;
+  color: var(--text-warning-primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rowDetail {
+  color: var(--text-neutral-secondary);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 16px;
+  text-align: center;
+}
+
+.emptyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--background-neutral-septenary);
+  color: var(--text-neutral-white-fixed);
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-weight: 600;
+}
+
+.tourCard {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 4px 4px 0;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+
+  &:has(> button.tourCardText:hover) {
+    border-color: var(--borders-neutral-strong);
+  }
+}
+
+.tourCardText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  min-width: 0;
+  margin: 0;
+  padding: 6px 12px;
+  background: none;
+  color: inherit;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+
+  &:is(div) {
+    cursor: default;
+  }
+}
+
+.tourCardActions {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cardButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 0;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  background: var(--background-neutral-primary);
+  color: inherit;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--borders-neutral-strong);
+  }
+
+  > :last-child {
+    flex-shrink: 0;
+    color: var(--text-neutral-secondary);
+  }
+}
+
+.cardButtonText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.stepNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  background: var(--background-neutral-septenary);
+  color: var(--text-neutral-white-fixed);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tourHeading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timelineItem {
+  position: relative;
+
+  // The rail joining one step's number to the next, centered under it.
+  &:not(:last-child) {
+    padding-bottom: 10px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 23px;
+      width: 1px;
+      height: 10px;
+      background: var(--borders-neutral-strong);
+    }
+  }
+}
+
+.usedOn {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--borders-neutral-primary);
+
+  h3 {
+    margin: 0;
+    color: var(--text-neutral-secondary);
+    text-transform: uppercase;
+  }
+}
+
+.usedOnList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stepper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 4px;
+  margin: 0;
+  padding: 8px 12px;
+  background: var(--background-neutral-secondary);
+  border-bottom: 1px solid var(--borders-neutral-primary);
+  list-style: none;
+}
+
+.stepperItem {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child)::after {
+    content: '';
+    width: 12px;
+    height: 1px;
+    background: var(--borders-neutral-strong);
+  }
+}
+
+.stepperNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--background-brand-primary);
+  }
+}
+
+.stepperNumberCurrent {
+  background: var(--background-brand-primary);
+  color: var(--text-neutral-white-fixed);
+  border-color: var(--background-brand-primary);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.targetBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  background: var(--background-neutral-secondary);
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+}
+
+.helperWarning {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  color: var(--text-neutral-secondary);
+}
+
+.warningIcon {
+  color: var(--text-warning-primary);
+}
+
+.buttonRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.textArea {
+  width: 100%;
+  margin: 0;
+  padding: 8px;
+  box-sizing: border-box;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  font: inherit;
+  resize: vertical;
+
+  &:disabled {
+    background: var(--background-neutral-secondary);
+    color: var(--text-neutral-secondary);
+    resize: none;
+  }
+}
+
+// Above the lab and its dialogs, so every pickable part shows its outline.
+.pickerLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.anchorOutline {
+  position: fixed;
+  box-sizing: border-box;
+  border: 2px dashed var(--borders-brand-teal-primary);
+  border-radius: 4px;
+}
+
+.anchorOutlineHovered {
+  border-style: solid;
+  background: color-mix(
+    in srgb,
+    var(--background-brand-teal-primary) 20%,
+    transparent
+  );
+}
+
+.anchorLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 2px 6px;
+  background: var(--background-brand-teal-primary);
+  color: var(--text-neutral-white-fixed);
+  border-radius: 2px 0 4px;
+  white-space: nowrap;
+}
+
+.picking,
+.picking * {
+  cursor: crosshair !important;
+}

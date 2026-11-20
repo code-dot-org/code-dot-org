@@ -50,7 +50,12 @@ const DataDisplay = () => {
   };
 
   return (
-    <div id="data-display" className={styles.panel}>
+    <div
+      id="data-display"
+      data-tour-anchor="dataset"
+      data-tour-label="Dataset"
+      className={styles.panel}
+    >
       <div className={styles.header}>
         <div className={styles.summary}>
           <Typography component="h3" variant="label2" className={styles.title}>
@@ -70,6 +75,8 @@ const DataDisplay = () => {
           <div
             role="group"
             aria-label="Dataset view"
+            data-tour-anchor="dataset-view-toggle"
+            data-tour-label="Table and cards toggle"
             className={styles.viewToggle}
           >
             <SegmentedButtons
@@ -78,11 +85,13 @@ const DataDisplay = () => {
               onChange={onLayoutChange}
               buttons={[
                 {
+                  id: 'ailab-dataset-layout-table',
                   value: 'table',
                   label: 'Table',
                   iconLeft: {iconName: 'table', iconStyle: 'solid'},
                 },
                 {
+                  id: 'ailab-dataset-layout-cards',
                   value: 'cards',
                   label: 'Cards',
                   iconLeft: {iconName: 'cards-blank', iconStyle: 'solid'},

@@ -91,6 +91,13 @@ jest.mock('@cdo/apps/lab2/productTours/useResourcePanelTours', () => ({
   default: () => undefined,
 }));
 
+jest.mock(
+  '@cdo/apps/lab2/productTours/authored/authoredWalkthroughTours',
+  () => ({
+    getAuthoredWalkthroughTours: () => ({levelTours: [], otherTours: []}),
+  })
+);
+
 jest.mock('@cdo/apps/lab2/productTours/productToursPerLab', () => ({
   ToursPerLab: {},
   isTourAvailableOnLevel: () => false,

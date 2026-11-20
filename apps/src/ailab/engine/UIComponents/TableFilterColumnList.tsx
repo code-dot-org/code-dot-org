@@ -49,6 +49,8 @@ const TableFilterColumnList = ({
                   [styles.filtered]: isFiltered,
                 })}
                 onClick={() => onSelect(column)}
+                data-tour-anchor="filter-column"
+                data-tour-label="Filter menu: any column"
               >
                 <Typography component="span" variant="label3">
                   {columnName(column)}

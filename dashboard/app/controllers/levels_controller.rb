@@ -330,6 +330,36 @@ class LevelsController < ApplicationController
     render json: {redirect: level_url(@level)}
   end
 
+  # POST /levels/:id/update_product_tours
+  # Saves which library tours the level uses, and the library tours edited
+  # beside it, in one request from the levelbuilder Save button.
+  def update_product_tours
+    changes = JSON.parse(request.body.read)
+    lab = @level.game.app
+    references = changes['tourReferences'] || []
+    deleted_ids = changes['deletedTourIds'] || []
+
+    usage = ProductTour.usage(lab)
+    in_use = deleted_ids.select do |tour_id|
+      usage[tour_id].any? {|level| level[:id] != @level.id} ||
+        references.any? {|reference| reference['id'] == tour_id}
+    end
+    if in_use.any?
+      return render status: :conflict, json: {error: "Tours still used by levels: #{in_use.join(', ')}"}
+    end
+
+    Level.transaction do
+      @level.properties['tour_references'] = references
+      @level.log_changes(current_user)
+      @level.save!
+      (changes['tours'] || []).each {|tour| ProductTour.write(lab, tour)}
+      deleted_ids.each {|tour_id| ProductTour.delete(lab, tour_id)}
+    end
+    render json: {redirect: level_url(@level)}
+  rescue ProductTour::InvalidTour => exception
+    render status: :bad_request, json: {error: exception.message}
+  end
+
   # PATCH/PUT /levels/1
   # PATCH/PUT /levels/1.json
   def update

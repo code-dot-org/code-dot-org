@@ -26,7 +26,12 @@ const Results = ({saveImageToBackpack}: ResultsProps) => {
 
   return (
     <div className={styles.container}>
-      <div id="results" className={styles.results}>
+      <div
+        id="results"
+        data-tour-anchor="results"
+        data-tour-label="Testing view"
+        className={styles.results}
+      >
         <ResultsBar />
         {hasTree ? (
           <DecisionTree

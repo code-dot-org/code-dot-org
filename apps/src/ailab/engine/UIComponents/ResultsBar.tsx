@@ -40,6 +40,8 @@ const ResultsBar = () => {
             className={styles.accuracyButton}
             aria-label={`View ${accuracy} Accuracy details`}
             onClick={() => setOpenTab('scorecard')}
+            data-tour-anchor="accuracy-button"
+            data-tour-label="Accuracy button"
           >
             <span className={styles.accuracyIcon}>
               <FontAwesomeV6Icon iconName="clipboard-list-check" />
@@ -57,6 +59,8 @@ const ResultsBar = () => {
               />
             }
             onClick={() => setOpenTab('allResults')}
+            data-tour-anchor="all-results-button"
+            data-tour-label="All results button"
           >
             All results
           </Button>

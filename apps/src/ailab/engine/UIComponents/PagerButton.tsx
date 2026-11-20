@@ -9,6 +9,7 @@ interface PagerButtonProps {
   disabled: boolean;
   onClick: () => void;
   onKeyDown: (event: KeyboardEvent) => void;
+  tourAnchor?: string;
 }
 
 const PagerButton = ({
@@ -17,6 +18,7 @@ const PagerButton = ({
   disabled,
   onClick,
   onKeyDown,
+  tourAnchor,
 }: PagerButtonProps) => (
   <IconButton
     variant="outlined"
@@ -27,6 +29,7 @@ const PagerButton = ({
     className={classNames({[iconButtonClasses.disabled]: disabled})}
     onClick={onClick}
     onKeyDown={onKeyDown}
+    data-tour-anchor={tourAnchor}
   >
     <FontAwesomeV6Icon iconName={icon} aria-hidden="true" />
   </IconButton>

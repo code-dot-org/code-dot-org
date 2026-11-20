@@ -83,6 +83,8 @@ const ColumnHeader = ({
             color={selected ? 'inherit' : 'secondary'}
             size="extraSmall"
             onClick={() => view.toggleSort(column)}
+            data-tour-anchor="column-sort"
+            data-tour-label="Any column sort button"
           >
             <FontAwesomeV6Icon
               iconName={

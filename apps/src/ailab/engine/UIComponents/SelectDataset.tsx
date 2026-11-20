@@ -123,7 +123,12 @@ const SelectDataset = () => {
   const assetPath = getAssetPath();
 
   return (
-    <div id="select-dataset" className={styles.panel}>
+    <div
+      id="select-dataset"
+      data-tour-anchor="dataset-picker"
+      data-tour-label="Dataset picker"
+      className={styles.panel}
+    >
       <div className={styles.header}>
         <Typography component="h3" variant="overline2" className={styles.title}>
           Choose a dataset
@@ -138,6 +143,7 @@ const SelectDataset = () => {
             rowCount={dataset.rowCount}
             isSelected={name === dataset.name}
             onClick={() => handleDatasetClick(dataset.id)}
+            tourAnchor="dataset-tile"
           />
         ))}
       </div>
@@ -163,6 +169,8 @@ const SelectDataset = () => {
               />
             }
             onClick={() => fileInputRef.current!.click()}
+            data-tour-anchor="upload-dataset-button"
+            data-tour-label="Upload CSV button"
           >
             {I18n.t('selectDatasetUploadFileButton', {fileType: 'CSV'})}
           </Button>

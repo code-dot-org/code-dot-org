@@ -98,7 +98,12 @@ const TrainPanel = () => {
       : 'Choose one or more';
 
   return (
-    <div id="train-panel" className={styles.panel}>
+    <div
+      id="train-panel"
+      data-tour-anchor="train-panel"
+      data-tour-label="Train panel"
+      className={styles.panel}
+    >
       <div className={styles.header}>
         <Typography component="h3" variant="overline2" className={styles.title}>
           Train
@@ -107,7 +112,11 @@ const TrainPanel = () => {
       <div className={styles.content}>
         <div className={styles.card}>
           <div className={styles.fields}>
-            <div className={styles.field}>
+            <div
+              className={styles.field}
+              data-tour-anchor="predict-dropdown"
+              data-tour-label="Predict dropdown"
+            >
               <FieldLabel
                 text="Predict"
                 tooltip="What you want your model to predict."
@@ -126,7 +135,11 @@ const TrainPanel = () => {
                 disabled={labelIsPreset}
               />
             </div>
-            <div className={classNames(styles.field, styles.featuresField)}>
+            <div
+              className={classNames(styles.field, styles.featuresField)}
+              data-tour-anchor="using-dropdown"
+              data-tour-label="Using dropdown"
+            >
               <FieldLabel
                 text="Using"
                 tooltip="What your model will use to make a prediction."
@@ -161,6 +174,8 @@ const TrainPanel = () => {
           {!hasTrainingResult && !pretrained && (
             <div className={styles.actionRow}>
               <Button
+                data-tour-anchor="train-button"
+                data-tour-label="Train model button"
                 variant="contained"
                 color="primary"
                 size="small"

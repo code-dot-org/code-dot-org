@@ -22,6 +22,11 @@ import type {AiTutorModelParameters} from '@cdo/apps/aichat/types';
 import type {AilabProject} from '@cdo/apps/ailab/engine/types';
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import type {
+  AuthoredTour,
+  TourReference,
+  TourUsage,
+} from '@cdo/apps/lab2/productTours/authored/types';
 import {AiTutorPromptSettings} from '@cdo/apps/weblab2/types';
 
 import {lab2EntryPoints} from '../../lab2EntryPoints';
@@ -335,6 +340,11 @@ export interface LevelProperties {
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
   productTours?: string[];
+  // Every authored tour of the level's lab.
+  productTourLibrary?: AuthoredTour[];
+  tourReferences?: TourReference[];
+  // Sent to levelbuilders only.
+  productTourUsage?: TourUsage;
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;

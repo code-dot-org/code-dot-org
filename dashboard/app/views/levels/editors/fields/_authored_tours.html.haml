@@ -1,0 +1,23 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#authored-tours-container"}}
+  Product Tours
+
+#authored-tours-container.in.collapse
+  - library = ProductTour.all(@level.game&.app).index_by {|tour| tour['id']}
+  - references = @level.properties['tour_references'] || []
+  %p
+    A product tour walks a student through the lab one step at a time. Tours
+    live in a library shared by every level of this lab; a level picks the ones
+    it uses.
+  - if references.empty?
+    %p This level uses no tours from the library.
+  - else
+    %ul
+      - references.each do |reference|
+        - tour = library[reference['id']]
+        %li
+          = tour ? tour['name'] : "#{reference['id']} (missing from the library)"
+          = "(#{reference['autoStart'] ? 'starts on its own' : 'from the resource panel'})"
+  - if @level.persisted?
+    %p= link_to 'Edit tours in the lab', edit_blocks_level_path(@level, :authored_tours), target: '_blank', rel: 'noopener'
+  - else
+    %p Save the level to add tours.

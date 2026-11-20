@@ -53,12 +53,19 @@ const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
           }
           describeChild
         >
-          <div role="group" aria-label="Workspace view" className={styles.tabs}>
+          <div
+            role="group"
+            aria-label="Workspace view"
+            data-tour-anchor="workspace-tabs"
+            data-tour-label="Workspace tabs"
+            className={styles.tabs}
+          >
             <SegmentedButtons
               size="xs"
               selectedButtonValue={openTab.panel}
               onChange={onTabChange}
               buttons={TABS.map(tab => ({
+                id: `ailab-workspace-tab-${tab.panel}`,
                 value: tab.panel,
                 label: tab.label,
                 iconLeft: {iconName: tab.iconName, iconStyle: 'solid'},
@@ -81,6 +88,8 @@ const WorkspaceHeader = ({onStartOver}: WorkspaceHeaderProps) => {
           }
           onClick={onStartOver}
           className={styles.startOver}
+          data-tour-anchor="start-over-button"
+          data-tour-label="Start over button"
         >
           Start over
         </Button>

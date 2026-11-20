@@ -19,6 +19,10 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
 import {useLevelProperties} from '../views/LevelPropertiesWrapper';
 
+import {getIsAuthoringTours} from './utils';
+
+const isAuthoringTours = getIsAuthoringTours();
+
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   children,
   channelId,
@@ -59,7 +63,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     let promise: any;
     // Before loading, clear the header so we don't accidentally show share and remix
     // for a level that does not allow it.
-    dispatch(clearHeader());
+    if (!isAuthoringTours) {
+      dispatch(clearHeader());
+    }
     if (currentLevelId) {
       // If we have a level id, set up the lab with that level. If we also have a channel id,
       // we will load the project based on that channel id, otherwise we will look up a channel id
@@ -114,6 +120,9 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   useEffect(() => {
     // Ensure the header is cleared when we have a change,
     // then possibly load a new header if the level has one.
+    if (isAuthoringTours) {
+      return;
+    }
     dispatch(clearHeader());
     // If there is no channel, we can't load a header.
     if (loadedChannelId && isOwnerOfChannel) {

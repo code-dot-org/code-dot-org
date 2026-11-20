@@ -80,6 +80,9 @@ const projectReduxSlice = createSlice({
     setProjectUpdatedSaved: state => {
       state.projectUpdatedStatus = projectUpdatedStatuses.saved;
     },
+    setProjectUpdatedUnsaved: state => {
+      state.projectUpdatedStatus = projectUpdatedStatuses.default;
+    },
     setProjectUpdatedAt: (state, action: PayloadAction<string>) => {
       state.projectUpdatedAt = action.payload;
       state.projectUpdatedStatus = projectUpdatedStatuses.saved;
@@ -120,6 +123,7 @@ export const {
   closeWorkspaceAlert,
   setProjectUpdatedSaving,
   setProjectUpdatedSaved,
+  setProjectUpdatedUnsaved,
   setProjectUpdatedAt,
   refreshProjectName,
   setShowTryAgainDialog,

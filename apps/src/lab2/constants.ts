@@ -20,6 +20,7 @@ export const START_SOURCES = 'start_sources';
 export const TOOLBOX_BLOCKS = 'toolbox_blocks';
 export const EDIT_EXEMPLAR = 'edit_exemplar';
 export const WIDGET2_SOURCES = 'widget2_sources';
+export const AUTHORED_TOURS = 'authored_tours';
 
 export const PROJECT_TYPES_USING_NEW_SHARE_DIALOG: ProjectType[] = [
   'music',

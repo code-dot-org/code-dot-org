@@ -82,6 +82,7 @@ const TreeMiniMap = ({tree, datasetId, counts, onReplay}: TreeMiniMapProps) => {
       <Tooltip title="Replay training">
         <IconButton
           aria-label="Replay training"
+          data-tour-anchor="replay-training-button"
           onClick={onReplay}
           size="extraSmall"
           color="secondary"

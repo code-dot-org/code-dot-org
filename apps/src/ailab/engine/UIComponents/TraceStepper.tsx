@@ -86,6 +86,8 @@ const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
             <FontAwesomeV6Icon iconName="forward-step" aria-hidden="true" />
           }
           aria-label="Skip to the answer"
+          data-tour-anchor="path-skip-button"
+          data-tour-label="Prediction path: Skip button"
           onClick={skip}
         >
           Skip
@@ -97,6 +99,8 @@ const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
           size="extraSmall"
           startIcon={<FontAwesomeV6Icon iconName="play" aria-hidden="true" />}
           aria-label="Replay from the start"
+          data-tour-anchor="path-replay-button"
+          data-tour-label="Prediction path: Replay button"
           onClick={replay}
         >
           Replay
@@ -108,6 +112,8 @@ const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
           color="tertiary"
           size="extraSmall"
           aria-label="Previous step"
+          data-tour-anchor="path-previous-step"
+          data-tour-label="Prediction path: previous step button"
           aria-disabled={atStart}
           className={classNames({[iconButtonClasses.disabled]: atStart})}
           onClick={() => goTo(step - 1)}
@@ -119,6 +125,8 @@ const TraceStepper = ({step, stepCount, onReplay}: TraceStepperProps) => {
           color="tertiary"
           size="extraSmall"
           aria-label="Next step"
+          data-tour-anchor="path-next-step"
+          data-tour-label="Prediction path: next step button"
           aria-disabled={atEnd}
           className={classNames({[iconButtonClasses.disabled]: atEnd})}
           onClick={() => goTo(step + 1)}
