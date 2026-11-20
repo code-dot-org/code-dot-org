@@ -44,6 +44,9 @@ export interface LevelMode {
       without leaving the level. The level still opens on its kind's first
       tab. Names that are not editor tabs are ignored. */
   extraTabs?: string[];
+  /** The tab the level opens on, in place of its kind's first. Ignored
+      unless the level shows that tab. */
+  startTab?: Tab;
   /** The Images tab has no New button: the student can regenerate or draw
       on the images it lists, but cannot add one. */
   noNewImages?: boolean;
@@ -97,7 +100,10 @@ export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
       tabs.push(tab);
     }
   });
-  return tabs;
+  const start = mode.startTab;
+  return start && tabs.includes(start)
+    ? [start, ...tabs.filter(tab => tab !== start)]
+    : tabs;
 }
 
 /** Whether the level is a world level: its work is placing images on the
