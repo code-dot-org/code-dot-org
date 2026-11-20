@@ -1,0 +1,57 @@
+{
+  "name": "SC1-L12-v2-video-games-fixed",
+  "card": {
+    "description": "A family game-night app suggests video games. Each record is one real game. The label says if two or more people can play the game together in one room. You can also choose Kid Friendly? or Made by Nintendo? as the label.",
+    "source": "Game titles, years, genres, platforms, ratings and co-op facts. We collected them by hand from Wikipedia and esrb.org.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the app's predictions to get ideas for games to try at a family game night.",
+      "potentialMisuses": "The list leaves out many games, and one person picked them. Do not use it to decide which games to buy."
+    }
+  },
+  "defaultLabelColumn": "Couch Co-op?",
+  "defaultIdColumn": "Game",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Game",
+      "description": "What is the game called?"
+    },
+    {
+      "type": "categorical",
+      "id": "Genre",
+      "description": "What kind of game is it? A Platformer has jumping levels. RPG means role-playing game."
+    },
+    {
+      "type": "categorical",
+      "id": "Platform Type",
+      "description": "What kind of device was the game first made for?"
+    },
+    {
+      "type": "categorical",
+      "id": "Part of a Series",
+      "description": "Is the game part of a series with other games?"
+    },
+    {
+      "type": "categorical",
+      "id": "Era",
+      "description": "When did the game come out?"
+    },
+    {
+      "type": "categorical",
+      "id": "Kid Friendly?",
+      "description": "Is the game rated E (Everyone) or E10+? Does it have an easier setting or no way to lose?"
+    },
+    {
+      "type": "categorical",
+      "id": "Made by Nintendo?",
+      "description": "Did Nintendo publish this game?"
+    },
+    {
+      "type": "categorical",
+      "id": "Couch Co-op?",
+      "description": "Can two or more people play together in one room? They can share one screen or link their devices. This is what the app predicts."
+    }
+  ]
+}

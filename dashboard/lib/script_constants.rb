@@ -146,6 +146,7 @@ module ScriptConstants
       MINECRAFT_AI_NAME = 'generation-ai'.freeze,
       MINECRAFT_SHOW_NAME = 'show-must-go-on'.freeze,
       MINECRAFT_NIGHT_NAME = 'firstnight-mc'.freeze,
+      MINECRAFT_FIELD_AGENT_NAME = 'fieldagent-mc'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       FROZEN_NAME = 'frozen'.freeze,
@@ -236,6 +237,7 @@ module ScriptConstants
       MINECRAFT_AI_NAME,
       MINECRAFT_SHOW_NAME,
       MINECRAFT_NIGHT_NAME,
+      MINECRAFT_FIELD_AGENT_NAME,
     ],
   }.freeze
 

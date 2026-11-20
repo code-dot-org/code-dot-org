@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-20T04:12:29.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"datasets\": [\r\n    \"SC1-L12-study-playlist-fixed\"\r\n  ],\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"**Test for My Users**\\n\\nGoal: Test your model for two users.\\n\\n1. In **Predict** and **Using**, choose the label and Tree 2 features from **Tree 1 vs. Tree 2** in your guide.\\n2. Click **Train model**.\\n\\nYou are done when your tree shows. Go to the **Testing** tab.\",\r\n  \"results\": \"**Test for My Users**\\n\\nGoal: Test your model for two users.\\n\\nDo these steps for each of your two users.\\n1. In **Make a Prediction**, choose the category your user would pick for each feature. Write them in **Test for My User** in your guide.\\n2. Click **Predict**. Write the prediction.\\n3. Compare the prediction to what your user needs. Write ✓ if it fits or ✗ if it doesn't.\\n4. Click **Save image** (the camera under your tree). Click **Save to Backpack**.\\n\\nYou are done when Test for My User has both users and your Backpack has a tree for each user.\"\r\n}",
+    "display_name": "Study Playlist",
+    "bubble_choice_description": "This dataset contains different song qualities that might be in a study playlist.",
+    "thumbnail_url": "https://images.code.org/3d0b6b2913fa592cdcab3d0592378aef-study-music.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:29.140+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-project-study-alternative\\\"\"],\"cloned_from\":\"data-makes-ai-project-study-alternative\"},{\"changed_at\":\"2026-11-20 04:14:27 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:47 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:47:21 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

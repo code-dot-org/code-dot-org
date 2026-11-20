@@ -1,0 +1,12 @@
+name 'data-makes-ai-lesson14-users-choice'
+display_name 'Test for My Users'
+description 'Click the same dataset you chose in Meet the Data.'
+
+sublevels
+level 'data-makes-ai-lesson14-users-snacks'
+level 'data-makes-ai-lesson14-users-run-or-pass'
+level 'data-makes-ai-lesson14-users-study-playlist'
+level 'data-makes-ai-lesson14-users-video-games'
+level 'data-makes-ai-lesson14-users-board-games'
+
+uses_lab2

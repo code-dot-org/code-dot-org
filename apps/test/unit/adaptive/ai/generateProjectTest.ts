@@ -1,24 +1,31 @@
+import {isAdaptiveAiAvailable} from '@cdo/apps/adaptive/ai/access';
 import {
   generate,
-  isAdaptiveAiEnabled,
   moderateInput,
   moderateOutput,
 } from '@cdo/apps/adaptive/ai/generate';
 import {generateProject} from '@cdo/apps/adaptive/ai/generateProject';
 import {PROJECT_PROMPT_VERSION} from '@cdo/apps/adaptive/ai/projectPrompt';
+import {sendAiStaticFallbackUsed} from '@cdo/apps/adaptive/metricsHelpers';
 import {Progress} from '@cdo/apps/adaptive/progress/model';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: jest.fn(() => true),
+}));
 jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   generate: jest.fn(),
-  isAdaptiveAiEnabled: jest.fn(() => true),
   moderateInput: jest.fn(async () => 'ok'),
   moderateOutput: jest.fn(async () => 'ok'),
 }));
 const mockLogWarning = jest.fn();
+jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
+  ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
+  sendAiStaticFallbackUsed: jest.fn(),
+}));
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
@@ -28,7 +35,7 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   },
 }));
 const mockGenerate = generate as jest.Mock;
-const mockEnabled = isAdaptiveAiEnabled as jest.Mock;
+const mockAvailable = isAdaptiveAiAvailable as jest.Mock;
 const mockModerate = moderateInput as jest.Mock;
 const mockModerateOutput = moderateOutput as jest.Mock;
 
@@ -125,7 +132,7 @@ const resolve = (
 beforeEach(() => {
   jest.clearAllMocks();
   mockGenerate.mockReset();
-  mockEnabled.mockReturnValue(true);
+  mockAvailable.mockReturnValue(true);
   mockModerate.mockResolvedValue('ok');
   mockModerateOutput.mockResolvedValue('ok');
 });
@@ -186,11 +193,17 @@ describe('generateProject', () => {
     expect(await resolve()).toBeUndefined();
   });
 
-  it('asks nothing, not even moderation, when adaptive AI is off', async () => {
-    mockEnabled.mockReturnValue(false);
+  it('asks nothing, not even moderation, and counts the fallback while the shell makes no AI calls', async () => {
+    mockAvailable.mockReturnValue(false);
     expect(await resolve()).toBeUndefined();
     expect(mockModerate).not.toHaveBeenCalled();
     expect(mockGenerate).not.toHaveBeenCalled();
+    expect(sendAiStaticFallbackUsed).toHaveBeenCalledWith(
+      'project',
+      'aiUnavailable',
+      checkpoint,
+      step
+    );
   });
 
   it('moderates what the student typed, not what they picked, before the call', async () => {

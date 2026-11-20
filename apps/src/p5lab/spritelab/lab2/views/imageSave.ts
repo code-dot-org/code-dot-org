@@ -8,10 +8,7 @@ import {
   SET_INITIAL_ANIMATION_LIST,
   setAnimationName,
 } from '@cdo/apps/p5lab/redux/animationList';
-import {
-  GeneratedImageResult,
-  UploadImageFunction,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {GeneratedImageResult} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {RuntimeAnimationProps} from '@cdo/apps/p5lab/spritelab/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 import {createUuid} from '@cdo/apps/utils';
@@ -71,25 +68,6 @@ export function createNamedAnimation(
     dispatch(setAnimationName(key, name) as unknown as AnyAction);
   }
   return key;
-}
-
-/** The uploaded URL, or the data URI itself when there is no uploader or
-    the upload fails; a data URI source persists in the project sources. */
-export async function uploadOrEmbed(
-  uploadImage: UploadImageFunction | undefined,
-  filename: string,
-  bytes: Uint8Array,
-  mediaType: string,
-  dataURI: string
-): Promise<string> {
-  if (!uploadImage) {
-    return dataURI;
-  }
-  try {
-    return await uploadImage(filename, bytes, mediaType);
-  } catch {
-    return dataURI;
-  }
 }
 
 /**

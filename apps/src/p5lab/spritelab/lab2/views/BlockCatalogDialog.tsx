@@ -6,7 +6,6 @@ import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
-import {getRunButtonSx} from '@cdo/apps/templates/runButtonSx';
 
 import {CatalogEntry} from '../blockCatalog';
 
@@ -16,8 +15,8 @@ const TITLE = 'Discover blocks';
 
 interface BlockCatalogDialogProps {
   entries: readonly CatalogEntry[];
-  /** Block types already added to the toolbox. */
-  chosen: ReadonlySet<string>;
+  /** Block types already in the toolbox. */
+  inToolbox: ReadonlySet<string>;
   onAdd: (type: string) => void;
   onClose: () => void;
 }
@@ -28,17 +27,18 @@ interface BlockCatalogDialogProps {
  */
 const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
   entries,
-  chosen,
+  inToolbox,
   onAdd,
   onClose,
 }) => {
   const mode = useThemeMode();
   // Opens on the first block not yet added, so the next choice is in view.
   const [selectedType, setSelectedType] = useState(
-    () => (entries.find(entry => !chosen.has(entry.type)) ?? entries[0])?.type
+    () =>
+      (entries.find(entry => !inToolbox.has(entry.type)) ?? entries[0])?.type
   );
   const selected = entries.find(entry => entry.type === selectedType);
-  const added = !!selected && chosen.has(selected.type);
+  const added = !!selected && inToolbox.has(selected.type);
 
   return (
     <div className={moduleStyles.dialogHost}>
@@ -50,7 +50,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
       >
         <div className={moduleStyles.header}>
           <div className={moduleStyles.headerIcon} aria-hidden="true">
-            <FontAwesomeV6Icon iconName="compass" />
+            <FontAwesomeV6Icon iconName="magnifying-glass-plus" />
           </div>
           <div>
             <h2>{TITLE}</h2>
@@ -72,7 +72,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
                   <span className={moduleStyles.listTitle}>
                     {entry.help.title}
                   </span>
-                  {chosen.has(entry.type) && (
+                  {inToolbox.has(entry.type) && (
                     <span
                       className={moduleStyles.added}
                       role="img"
@@ -129,7 +129,6 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
                     <MuiButton
                       variant="contained"
                       color="primary"
-                      sx={getRunButtonSx(null)}
                       startIcon={<FontAwesomeV6Icon iconName="plus" />}
                       onClick={() => onAdd(selected.type)}
                     >
@@ -142,7 +141,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
           </div>
         </div>
         <div className={moduleStyles.footer}>
-          <MuiButton variant="outlined" color="secondary" onClick={onClose}>
+          <MuiButton variant="contained" color="secondary" onClick={onClose}>
             Done
           </MuiButton>
         </div>

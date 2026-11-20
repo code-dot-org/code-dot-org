@@ -11,6 +11,7 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert CertificateImage.prefilled_title_course?('frozen')
     assert CertificateImage.prefilled_title_course?('starwars')
     assert CertificateImage.prefilled_title_course?('mc')
+    assert CertificateImage.prefilled_title_course?('fieldagent-mc')
     assert CertificateImage.prefilled_title_course?('mee')
     assert CertificateImage.prefilled_title_course?('mee_empathy')
     assert CertificateImage.prefilled_title_course?('mee_timecraft')
@@ -19,6 +20,7 @@ class CertificateImageTest < ActiveSupport::TestCase
 
   def test_course_templates
     assert_equal 'MC_Hour_Of_Code_Certificate.png', CertificateImage.certificate_template_for('mc')
+    assert_equal 'MC_Hour_Of_AI_Certificate_Field_Agent.png', CertificateImage.certificate_template_for('fieldagent-mc')
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('frozen')
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('starwars')
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('flappy')
@@ -37,6 +39,8 @@ class CertificateImageTest < ActiveSupport::TestCase
   def test_image_generation
     mc_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'mc')
     assert_image mc_certificate_image, 1754, 1235, 'PNG'
+    field_agent_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'fieldagent-mc')
+    assert_image field_agent_certificate_image, 1754, 1235, 'PNG'
     quest_builder_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'quest-builder-2026')
     assert_image quest_builder_certificate_image, 1754, 1235, 'PNG'
     ai_makerspace_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'ai-makerspace-2026')

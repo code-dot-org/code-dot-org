@@ -1,0 +1,101 @@
+// Must match QUARTER_TURN_MS in SparklePulse.tsx.
+$quarter-turn: 0.8s;
+$pulse: 2 * $quarter-turn;
+
+// The sparkle's center: the mean of its four inner corners.
+$sparkle-center: 12.256px 6.497px;
+
+.icon {
+  color: var(--sentiment-information-50);
+}
+
+.spin {
+  transform-box: view-box;
+  transform-origin: $sparkle-center;
+}
+
+// A four-point star repeats every 90deg, so the loop spans one quarter-turn.
+// Its delay puts it at 45deg when spin-start ends and hands off to it.
+.thinking {
+  .spin {
+    animation:
+      spin-loop $quarter-turn linear $quarter-turn * 0.5 infinite,
+      spin-start $quarter-turn cubic-bezier(0.5, 0, 0.75, 0.5);
+  }
+
+  .fade {
+    animation: pulse-fade $pulse ease-in-out infinite;
+  }
+}
+
+// The thinking animations stay listed so they are not restarted.
+// SparklePulse.tsx sets the start time of the two stop animations.
+.stopping {
+  // spin-stop's curve begins at the loop's speed and slows to rest.
+  .spin {
+    animation:
+      spin-loop $quarter-turn linear $quarter-turn * 0.5 infinite,
+      spin-start $quarter-turn cubic-bezier(0.5, 0, 0.75, 0.5),
+      spin-stop $quarter-turn cubic-bezier(0.25, 0.5, 0.5, 1) forwards;
+  }
+
+  .fade {
+    animation:
+      pulse-fade $pulse ease-in-out infinite,
+      pulse-fade-stop $quarter-turn ease-in-out forwards;
+  }
+}
+
+@keyframes spin-loop {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes spin-start {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes spin-stop {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+// Full and dimmest fall on the spin's halfway points.
+@keyframes pulse-fade {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
+}
+
+@keyframes pulse-fade-stop {
+  from {
+    opacity: var(--pulse-stop-from);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thinking .spin,
+  .stopping .spin {
+    animation: none;
+  }
+}

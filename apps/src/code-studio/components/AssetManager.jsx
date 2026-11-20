@@ -271,16 +271,21 @@ export default class AssetManager extends React.Component {
       });
   };
 
-  handleCancelFlaggedImage = () => {
+  handleCancelFlaggedImage = (appName, isSignedOut) => {
     this.setState({
       showFlaggedModal: false,
       pendingUploadData: null,
       flaggedModalError: null,
     });
-    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
-      UploaderType: 'AssetManager',
-      ProjectType: this.state.projectType,
-    });
+    analyticsReporter.sendEvent(
+      isSignedOut
+        ? EVENTS.SIGNED_OUT_FLAGGED_CUSTOM_IMAGE
+        : EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      {
+        UploaderType: 'AssetManager',
+        ProjectType: this.state.projectType,
+      }
+    );
   };
 
   onUploadDone = result => {

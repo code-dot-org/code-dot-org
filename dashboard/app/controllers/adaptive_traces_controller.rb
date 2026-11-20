@@ -6,11 +6,11 @@ require 'cdo/aws/metrics'
 class AdaptiveTracesController < ApplicationController
   before_action :authenticate_user!
 
-  TRACE_NAMES = %w[adaptive-instructions adaptive-validation adaptive-project].freeze
+  TRACE_NAMES = %w[adaptive-instructions adaptive-validation adaptive-effort adaptive-project].freeze
   OUTCOMES = %w[success schema_mismatch error].freeze
   # Unknown metadata keys are dropped rather than refused, so a client ahead of
   # or behind this list still gets its trace recorded.
-  METADATA_KEYS = %w[pathwayId checkpointId stepId scriptId inputsHash promptVersion responseId workAt instructionsTraceId].freeze
+  METADATA_KEYS = %w[pathwayId checkpointId stepId scriptId inputsHash promptVersion responseId workAt instructionsTraceId replies].freeze
   USAGE_KEYS = %w[input output total].freeze
   TRACE_ID_FORMAT = /\A\h{32}\z/
   # The prompt carries the student's project source; longer text is cut, not refused.

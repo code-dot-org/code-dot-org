@@ -26,6 +26,7 @@ import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
 import SpriteLab2View from './SpriteLab2View';
+import useShareCheck, {checksOnLoad} from './useShareCheck';
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const isLevelEditMode = getIsLevelEditMode();
@@ -49,15 +50,16 @@ function getToolboxEditSources(
   return {source: toolboxToWorkspaceBlocks(definition)};
 }
 
-// Saved flags for the block catalog and free play intro are not student
-// edits: Continue and the Run/Edit prompt read hasEdited.
-const CATALOG_KEYS: ReadonlySet<keyof Sources> = new Set<keyof Sources>([
+// Keys that are not considered student edits.
+const BOOKKEEPING_KEYS: ReadonlySet<keyof Sources> = new Set<keyof Sources>([
   'chosenBlocks',
   'freeplayIntroSeen',
+  'inRestrictedShareMode',
+  'teacherHasConfirmedUploadWarning',
 ]);
 const isStudentEdit = (prev: Sources, next: Sources) =>
   (Object.keys({...prev, ...next}) as (keyof Sources)[]).some(
-    key => !CATALOG_KEYS.has(key) && prev[key] !== next[key]
+    key => !BOOKKEEPING_KEYS.has(key) && prev[key] !== next[key]
   );
 
 const SpriteLab2Container: React.FunctionComponent<
@@ -148,6 +150,8 @@ const SpriteLab2Container: React.FunctionComponent<
       updateSources(prev => ({...prev, ...patch}), forceSave),
     [updateSources]
   );
+
+  useShareCheck(channel?.id, checksOnLoad(levelProperties));
 
   useEffect(() => {
     if (loadError) {

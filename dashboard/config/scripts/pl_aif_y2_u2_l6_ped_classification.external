@@ -1,0 +1,53 @@
+name 'pl-aif-y2-u2-l6-ped-classification'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Building Models Ethically
+
+In Lesson 11, your students judged models other people built. Now they build one themselves, and the question changes: when a model makes a decision, who is responsible for it? In curriculum Lesson 12, students build regression models to help a school pick snacks for its vending machine.
+
+## The Vending Machine Problem
+
+Your students get a school vending machine with room for 5 snacks and a list of 10 possible ones. Each snack has a price, shelf life, calories, protein, allergen count, spice level, and a popularity rating from students. The school wants a regression model to predict ratings, then stock the 5 snacks with the highest predicted ratings.
+
+Try the school's first attempt below, then decide who should answer for what it did.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/snack-model-accountability.html"
+    width="100%"
+    height="1600"
+    frameborder="0"
+    scrolling="no"
+    title="Read a regression model that predicts snack ratings from price, then decide who is accountable for its decisions">
+  </iframe>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> if your students struggle to read the chart, trace the regression line from left to right with your finger and point out that as price goes up, the rating goes up. Then gesture the opposite relationship so they can see what a downward line would have meant.</div>
+</div>
+
+## Two Words to Anchor the Lesson
+
+<div style="display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 260px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">Interpretability</div>
+    <div style="font-size: 16px; line-height: 1.5;">The ability to understand why a model made the decisions it did.</div>
+  </div>
+  <div style="flex: 1; min-width: 260px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">Accountability</div>
+    <div style="font-size: 16px; line-height: 1.5;">The principle that people should be responsible for a model's decisions and its effects.</div>
+  </div>
+</div>
+
+The two ideas connect. The easier a model is to interpret, the easier it is to say who should have caught a problem. Your students will feel this in the lab, where they pick a model and have to defend the choice.
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>Discussion question:</b> a student says the model itself should be held accountable. How would you respond?</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 16px 20px; margin: 16px 0; border-left: 4px solid #ACA8EA;">
+  <div style="font-size: 16px; line-height: 1.5;">&#10145;&#65039; <b>In the lesson plan:</b> your students work through this in the warm up. <a href="PASTE_UNIT_2_LESSON_12_URL_HERE">Open Lesson 12</a></div>
+</div>
+MARKDOWN

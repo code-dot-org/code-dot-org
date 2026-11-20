@@ -1,7 +1,11 @@
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
-import {CheckpointStatus, CheckpointStatusMap} from './progress/model';
+import {
+  CheckpointStatus,
+  CheckpointStatusMap,
+  ContinueUnlockReason,
+} from './progress/model';
 import {Checkpoint, Pathway, Step} from './types';
 
 type Properties = {[key: string]: string | number | boolean | undefined};
@@ -42,7 +46,11 @@ export function stepProperties(checkpoint: Checkpoint, step: Step) {
   };
 }
 
-export type AiFallbackFeature = 'instructions' | 'project' | 'validation';
+export type AiFallbackFeature =
+  | 'instructions'
+  | 'project'
+  | 'validation'
+  | 'effort';
 
 /** The student got the shell without an AI part it would have had. */
 export function sendAiStaticFallbackUsed(
@@ -55,6 +63,20 @@ export function sendAiStaticFallbackUsed(
     EVENTS.ADAPTIVE_AI_STATIC_FALLBACK_USED,
     {...stepProperties(checkpoint, step), feature, reason},
     feature
+  );
+}
+
+/** Continue opened on a checked step; sent once per step, when it opens. */
+export function sendContinueUnlocked(
+  reason: ContinueUnlockReason,
+  checkpoint: Checkpoint,
+  step: Step,
+  properties: {validationAttempts: number; replies?: number}
+) {
+  sendAdaptiveEvent(
+    EVENTS.ADAPTIVE_CONTINUE_UNLOCKED,
+    {...stepProperties(checkpoint, step), reason, ...properties},
+    reason
   );
 }
 
