@@ -14,6 +14,7 @@ import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {BlockMode} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
+import {getPackIdForSources} from '../utils/pack';
 
 import moduleStyles from './MiniMusicPlayer.module.scss';
 
@@ -70,11 +71,14 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
       playerRef.current?.stopSong();
 
+      const projectSources = await sourcesStoreRef.current.load(project.id);
+
       // If there is a pack ID, give the player its BPM and key.
       const currentLibrary = MusicLibrary.getInstance();
-      const packId = project.labConfig?.music.packId || null;
       if (currentLibrary) {
-        currentLibrary.setCurrentPackId(packId);
+        currentLibrary.setCurrentPackId(
+          getPackIdForSources(projectSources, currentLibrary) || null
+        );
         playerRef.current?.updateConfiguration(
           currentLibrary.getBPM(),
           currentLibrary.getKey()
@@ -82,7 +86,6 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
       }
 
       // Load code
-      const projectSources = await sourcesStoreRef.current.load(project.id);
       workspaceRef.current.loadCode(
         JSON.parse(projectSources.source as string)
       );

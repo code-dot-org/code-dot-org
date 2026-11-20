@@ -1,5 +1,8 @@
 import MusicLibrary, {LibraryJson} from '@cdo/apps/music/player/MusicLibrary';
-import {findRestrictedPacksInSource} from '@cdo/apps/music/utils/pack';
+import {
+  findRestrictedPacksInSource,
+  getPackIdForSources,
+} from '@cdo/apps/music/utils/pack';
 
 const pack = (id: string, restricted: boolean, src: string) => ({
   id,
@@ -110,5 +113,61 @@ describe('findRestrictedPacksInSource', () => {
     ]) {
       expect(findRestrictedPacksInSource(source, library)).toEqual([]);
     }
+  });
+});
+
+describe('getPackIdForSources', () => {
+  const savedPack = (packId: string) => ({music: {packId}});
+
+  it('uses the pack of the sounds in the code when no pack is saved', () => {
+    expect(
+      getPackIdForSources(
+        {source: sourceWithBlocks(playSound('song/verse'))},
+        library
+      )
+    ).toBe('song');
+  });
+
+  it('uses the pack of the sounds in the code when the saved pack is another', () => {
+    expect(
+      getPackIdForSources(
+        {
+          source: sourceWithBlocks(playSound('song/verse')),
+          labConfig: savedPack('song2'),
+        },
+        library
+      )
+    ).toBe('song');
+  });
+
+  it('keeps the saved pack when some of the sounds in the code are from it', () => {
+    expect(
+      getPackIdForSources(
+        {
+          source: sourceWithBlocks(
+            playSound('song/verse'),
+            playSound('song2/chorus')
+          ),
+          labConfig: savedPack('song2'),
+        },
+        library
+      )
+    ).toBe('song2');
+  });
+
+  it('uses the saved pack when the code has no sound from a restricted pack', () => {
+    expect(
+      getPackIdForSources(
+        {
+          source: sourceWithBlocks(playSound('drums/beat')),
+          labConfig: savedPack('default'),
+        },
+        library
+      )
+    ).toBe('default');
+  });
+
+  it('has no pack for a project with nothing saved', () => {
+    expect(getPackIdForSources(undefined, library)).toBeUndefined();
   });
 });

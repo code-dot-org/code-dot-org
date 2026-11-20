@@ -12,6 +12,7 @@ import {defaultMetadata} from './DefaultMusic';
 import MusicLibrary from './player/MusicLibrary';
 import MusicPlayer from './player/MusicPlayer';
 import {MusicLabConfig} from './types';
+import {getPackIdForSources} from './utils/pack';
 
 /**
  * Given information about a student project, manages loading code and playing the project song.
@@ -124,10 +125,9 @@ class ProjectPlayer {
       const sources = await this.sourcesStore.load(channelId);
       const labConfig = sources.labConfig as MusicLabConfig;
       // Prepare library so sounds are available during code execution.
-      await this.prepareLibrary(
-        labConfig.music.library,
-        labConfig.music.packId
-      );
+      const library = await this.getLibrary(labConfig.music.library);
+      const packId = getPackIdForSources(sources, library);
+      this.usePack(library, packId);
 
       this.workspace.loadCode(JSON.parse(sources.source as string));
       this.workspace.compileSong(labConfig.music.blockMode);
@@ -139,7 +139,7 @@ class ProjectPlayer {
         playbackEvents,
         orderedFunctions,
         lastMeasure,
-        packId: labConfig.music.packId,
+        packId,
         libraryName: labConfig.music.library,
       };
     } catch (e) {
@@ -155,12 +155,14 @@ class ProjectPlayer {
     }
   }
 
-  private async prepareLibrary(libraryName?: string, packId?: string) {
-    let library = MusicLibrary.getInstance();
-    if (!library) {
-      library = await MusicLibrary.loadLibrary(libraryName || 'launch2024');
-    }
+  private async getLibrary(libraryName?: string) {
+    return (
+      MusicLibrary.getInstance() ||
+      (await MusicLibrary.loadLibrary(libraryName || 'launch2024'))
+    );
+  }
 
+  private usePack(library: MusicLibrary, packId?: string) {
     if (packId) {
       library.setCurrentPackId(packId);
     }
@@ -169,7 +171,7 @@ class ProjectPlayer {
   }
 
   private async prepareLibraryFromMetadata(metadata: MusicMetadata) {
-    await this.prepareLibrary(metadata.libraryName, metadata.packId);
+    this.usePack(await this.getLibrary(metadata.libraryName), metadata.packId);
     return metadata;
   }
 }
