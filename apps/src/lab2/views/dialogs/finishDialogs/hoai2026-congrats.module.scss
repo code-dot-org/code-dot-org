@@ -117,9 +117,8 @@
   color: inherit;
 }
 
-// A line of text has empty space above its letters. The first line of a
-// card is moved up by that much, so its letters are as far from the top
-// edge as from the left.
+// Moved up by the empty space above its letters, so a card's first line is
+// as far from the top edge as from the left.
 .card .eyebrow {
   margin-top: -4px;
 }
@@ -224,8 +223,8 @@ $ground-shown: 10px;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  // Padding plus the 1px border equals a card's padding, so an offer's
-  // content is inset the same distance as a card's.
+  // One pixel less than a card's padding, to make up for the border, so an
+  // offer's content is inset the same distance as a card's.
   padding: calc(var(--card-and-offer-padding) - 1px);
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 12px;
@@ -243,7 +242,8 @@ $ground-shown: 10px;
   align-items: center;
   gap: 10px;
 
-  // Moved up like a card's first line; the space grows with the font.
+  // Moved up by the empty space above its letters, as a card's first line
+  // is. In em, because the font size changes with the window width.
   margin: -0.28em 0 0;
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: var(--text-neutral-primary);
