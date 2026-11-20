@@ -3,7 +3,7 @@
 export function installDropletLassoGuard(editor) {
   const replace = editor.replace;
   editor.replace = function (...args) {
-    if (this.lassoSelection != null) {
+    if (this.lassoSelection) {
       if (this.draggingBlock === this.lassoSelection) {
         this.draggingBlock = this.draggingOffset = null;
         this.lastHighlightPath?.deactivate?.();

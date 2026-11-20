@@ -1,7 +1,7 @@
 import '../../lib/ace/src-noconflict/ace';
-import droplet from '../../lib/droplet/droplet-full';
-
 import {installDropletLassoGuard} from '@cdo/apps/dropletLassoGuard';
+
+import droplet from '../../lib/droplet/droplet-full';
 
 // Sentry APPS-4MT and APPS-WH.
 describe('installDropletLassoGuard', () => {
