@@ -21,7 +21,8 @@ class MemoryAdapter
     nil
   end
 
-  def all
+  # Reads are always consistent; the keyword exists to match DynamoDBAdapter#all.
+  def all(consistent_read: false)
     ret = {}
     @hash.each_key do |k|
       ret[k] = get(k)
