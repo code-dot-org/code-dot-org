@@ -143,7 +143,8 @@ const VersionHistoryRow: React.FunctionComponent<
               <span role="img" aria-label="AI Version Save">
                 <FontAwesomeV6Icon
                   iconFamily="kit"
-                  iconName="ai-head-solid"
+                  iconStyle="solid"
+                  iconName="tutor"
                   className={moduleStyles.aiSaveIcon}
                 />
               </span>

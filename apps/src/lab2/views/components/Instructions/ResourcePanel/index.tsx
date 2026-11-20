@@ -1,5 +1,6 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
   kitIcons,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton, Tooltip} from '@mui/material';
@@ -109,9 +110,19 @@ export interface BackpackProps {
   addFileHandler?: AddFileHandler;
 }
 
-const builtInTabInfo: {[key in Tabs]: {title: string; icon: string}} = {
+type TabInfo = {
+  title: string;
+  icon: string;
+  iconStyle?: FontAwesomeV6IconProps['iconStyle'];
+};
+
+const builtInTabInfo: {[key in Tabs]: TabInfo} = {
   [Tabs.Instructions]: {title: commonI18n.instructions(), icon: 'info-circle'},
-  [Tabs.AiTutor]: {title: commonI18n.aiTutor(), icon: 'ai-head-solid'},
+  [Tabs.AiTutor]: {
+    title: commonI18n.aiTutor(),
+    icon: 'tutor',
+    iconStyle: 'solid',
+  },
   [Tabs.StudentRubric]: {
     title: commonI18n.rubric(),
     icon: 'clipboard-list',
@@ -488,14 +499,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   const availableTabs = buildAvailableTabs();
 
   const extraTabInfo = useMemo(() => {
-    const info: {[id: string]: {title: string; icon: string}} = {};
+    const info: {[id: string]: TabInfo} = {};
     validExtraTabs.forEach(tab => {
       info[tab.id] = {title: tab.title, icon: tab.icon};
     });
     return info;
   }, [validExtraTabs]);
 
-  const getTabInfo = (tab: string): {title: string; icon: string} => {
+  const getTabInfo = (tab: string): TabInfo => {
     if (Object.hasOwn(builtInTabInfo, tab)) {
       return builtInTabInfo[tab as Tabs];
     }
@@ -773,6 +784,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                     >
                       <FontAwesomeV6Icon
                         iconName={getTabInfo(tab).icon}
+                        iconStyle={getTabInfo(tab).iconStyle}
                         iconFamily={
                           kitIcons.has(getTabInfo(tab).icon) ? 'kit' : undefined
                         }
