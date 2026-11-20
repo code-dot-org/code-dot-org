@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'jquery-ui/ui/widgets/selectmenu';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';

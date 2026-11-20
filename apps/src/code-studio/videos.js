@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'jquery-ui/ui/widgets/tabs';
 import _ from 'lodash';
 import React from 'react';
 import videojs from 'video.js';

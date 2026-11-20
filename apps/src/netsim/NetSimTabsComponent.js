@@ -7,6 +7,7 @@
  */
 
 import $ from 'jquery';
+import 'jquery-ui/ui/widgets/tabs';
 
 var NetSimTabType = require('./NetSimConstants').NetSimTabType;
 var NetSimDnsTab = require('./NetSimDnsTab');
