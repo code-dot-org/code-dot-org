@@ -379,7 +379,8 @@ GEM
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
     daemons (1.1.9)
-    dalli (2.7.6)
+    dalli (3.2.17)
+      logger
     dalli-elasticache (1.0.1)
       dalli (>= 2.0.0)
     database_cleaner-active_record (2.1.0)
@@ -1265,7 +1266,7 @@ DEPENDENCIES
   csv
   cucumber
   daemons (= 1.1.9)
-  dalli
+  dalli (~> 3.0)
   dalli-elasticache
   database_cleaner-active_record (~> 2.1.0)
   debug (>= 1.0.0)
