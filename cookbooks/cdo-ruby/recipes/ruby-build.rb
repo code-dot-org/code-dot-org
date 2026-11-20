@@ -4,8 +4,7 @@
 #   https://www.ruby-lang.org/en/documentation/installation/#ruby-build
 #   https://github.com/rbenv/ruby-build#readme
 
-# Target a version of ruby-build which includes our target Ruby version, which
-# as of late 2026 is 3.3.14
+# Target a version of ruby-build which includes our target Ruby version.
 RUBY_BUILD_VERSION = '20261119'.freeze
 
 remote_file "/tmp/ruby-build-#{RUBY_BUILD_VERSION}.tar.gz" do
