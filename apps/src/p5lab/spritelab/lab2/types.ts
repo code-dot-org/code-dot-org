@@ -169,9 +169,12 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       these roles can be erased or painted over only after another has been
       placed. Unset, no role is kept this way. */
   worldKeepsRoles?: string[];
-  /** The new blocks start out of the toolbox, offered through the new-block
-      catalog instead (blockCatalog.ts). */
+  /** The blocks no earlier level of the lesson required start out of the
+      toolbox, and the student adds them from the block catalog
+      (blockCatalog.ts). The ones in blocksAlwaysInToolbox are in the toolbox
+      from the start. */
   blockCatalog?: boolean;
+  blocksAlwaysInToolbox?: string[];
   /** Blocks built on earlier levels cannot be deleted here, in any scene
       the level opens (blockLocks.ts). The blocks under a stack this level adds can,
       and so can the toolbox blocks no earlier level required. */
