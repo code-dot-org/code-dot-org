@@ -209,7 +209,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                 busy={showShareSpinner}
               />
             ) : (
-              <Typography variant="body2" className={styles.cannotShare}>
+              <Typography variant="body3" className={styles.cannotShare}>
                 <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
                 This game can't be shared right now.
               </Typography>

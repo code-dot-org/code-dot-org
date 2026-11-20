@@ -3,10 +3,9 @@
 // height. Wider than the modal's own cap, for the cards side by side.
 .dialog {
   --gap: 14px;
-  --card-padding: 24px;
+  --box-padding: 22px;
   --picture-height: 96px;
   --row-padding: 14px 18px;
-  --offer-padding: 18px;
 
   box-sizing: border-box;
   width: min(1120px, calc(100vw - 32px));
@@ -29,10 +28,9 @@
 @media (max-height: 800px) {
   .dialog {
     --gap: 8px;
-    --card-padding: 14px;
+    --box-padding: 12px;
     --picture-height: 36px;
     --row-padding: 9px 16px;
-    --offer-padding: 12px;
 
     > div:nth-of-type(1),
     > div:nth-of-type(3) {
@@ -69,7 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: var(--card-padding);
+  padding: var(--box-padding);
   border-radius: 12px;
   color: var(--text-neutral-white-fixed);
 }
@@ -219,7 +217,8 @@ $ground-shown: 10px;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  padding: var(--offer-padding);
+  // Less the border, so an offer's content starts as far in as a card's.
+  padding: calc(var(--box-padding) - 1px);
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 12px;
 }
@@ -255,13 +254,22 @@ $ground-shown: 10px;
   margin-top: auto;
 }
 
-// As tall as the Copy link button it replaces.
+// As tall as the Copy link button it replaces. One line of text sits in
+// the middle of that height.
 .offer .cannotShare {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-content: center;
+  align-items: start;
+  column-gap: 12px;
   min-height: 40px;
   color: var(--text-neutral-tertiary);
+
+  // The icon takes the text's line height, so it sits level with the first
+  // line when the text takes two.
+  i {
+    line-height: inherit;
+  }
 }
 
 @media (max-width: 760px) {
