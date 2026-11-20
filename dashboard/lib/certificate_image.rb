@@ -158,8 +158,11 @@ class CertificateImage
     if prefilled_title_course?(course)
       # only need to fill in student name
       style =
-        if template_file == 'hour_of_ai_certificate.png'
+        case template_file
+        when 'hour_of_ai_certificate.png'
           {y: -109, font: 'Helvetica bold', color: 'rgb(31, 25, 118)'}
+        when 'quest_builder_hour_of_ai_certificate.png', 'ai_makerspace_hour_of_ai_certificate.png'
+          {y: -103, font: 'Helvetica bold', color: 'rgb(0, 0, 0)'}
         else
           {y: course == '20-hour' ? -125 : -120}
         end
@@ -342,6 +345,10 @@ class CertificateImage
       'MC_Hour_Of_Code_Certificate_mee_estate.png'
     elsif course == ScriptConstants::MIX_MOVE_AI_2025
       'mix_move_hour_of_ai_certificate.png'
+    elsif course == ScriptConstants::QUEST_BUILDER_2026
+      'quest_builder_hour_of_ai_certificate.png'
+    elsif course == ScriptConstants::AI_MAKERSPACE_2026
+      'ai_makerspace_hour_of_ai_certificate.png'
     elsif course == ScriptConstants::MUSIC_JAM_2024
       'music_hoc_certificate.png'
     elsif [ScriptConstants::OCEANS_NAME, 'ui-test-oceans'].include?(course)
