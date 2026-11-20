@@ -111,6 +111,8 @@ export interface Notification extends BaseChatEvent {
   includeInChatHistory?: boolean;
   /** Shows the alert without the time it was posted. */
   hideTimestamp?: boolean;
+  /** Shows the alert with a waiting animation in place of its icon. */
+  pending?: boolean;
   files?: ProjectFile[];
   commitDescription?: string;
 }

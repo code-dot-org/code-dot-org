@@ -29,6 +29,7 @@ export const weblab2Adapter: WorkAdapter = {
       notificationType: 'info',
       includeInChatHistory: false,
       hideTimestamp: true,
+      pending: true,
       text: 'Checking your work...',
     });
     chat.disableSend();

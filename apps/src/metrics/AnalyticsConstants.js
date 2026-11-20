@@ -778,6 +778,10 @@ const EVENTS = {
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
 
+  // AI Foundations callout
+  AI_FOUNDATIONS_CALLOUT_CLICKED: 'AI Foundations Callout Clicked',
+  AI_FOUNDATIONS_CALLOUT_DISMISSED: 'AI Foundations Callout Dismissed',
+
   // Pair programming
   PAIRING_ADD_PARTNER_BUTTON_CLICKED:
     'Add pair programming partner button clicked',
