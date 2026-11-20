@@ -79,4 +79,12 @@ describe('GameLab Shapes', function () {
     expect(propsByKey['123'].flagged).toBe(true);
     expect(propsByKey['123'].dataURI).toBeUndefined();
   });
+
+  it('keeps the mark of an image that began as an AI picture', function () {
+    const {propsByKey} = getSerializedAnimationList({
+      orderedKeys: ['123'],
+      propsByKey: {123: {name: 'a', edited: true, fromGeneration: true}},
+    });
+    expect(propsByKey['123'].fromGeneration).toBe(true);
+  });
 });

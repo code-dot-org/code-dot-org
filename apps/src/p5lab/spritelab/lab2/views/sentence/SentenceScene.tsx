@@ -32,6 +32,7 @@ import {
   CHARACTER_STRIP_FRAME_COUNT,
   stripCellOrigin,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {createUuid} from '@cdo/apps/utils';
 
 import AnimatedSheetPreview from '../AnimatedSheetPreview';
 import BehindTheScenes from '../images/teaching/BehindTheScenes';
@@ -81,6 +82,8 @@ interface GeneratedPicture {
   prompt: string;
   /** The words as the model got them, for "Behind the scenes". */
   sent: SentPrompts;
+  /** Joins this picture's analytics events to the prompt event. */
+  generationId: string;
 }
 
 /** Settings from the Advanced popover: a typed prompt that replaces the
@@ -181,6 +184,8 @@ interface SentenceSceneProps {
   ratingRequired?: boolean;
   /** Analytics: which surface generated. */
   method?: string;
+  /** Analytics: the image being replaced is an AI-made picture. */
+  replacesGenerated?: boolean;
   /** Lays the parts out. */
   layout: (parts: SentenceSceneParts) => React.ReactNode;
   /** How the word menus lay their words out; the carousel unless given. */
@@ -214,6 +219,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   onBusyChange,
   ratingRequired = false,
   method = 'scene',
+  replacesGenerated = false,
   layout,
   wordLayout,
   compactBehindTheScenes,
@@ -327,17 +333,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         return;
       }
     }
+    const generationId = createUuid();
     // true attaches the project context for per-level breakdowns.
     analyticsReporter.sendEvent(
       EVENTS.HOAI2026_IMAGE_PROMPT,
       {
+        generationId,
         promptText: prompt,
         method: typedPrompt ? 'freeText' : method,
         imageType,
+        imageSubject,
         ...(typedPrompt ? {} : {sentenceId: sentence.id, choices}),
         style,
         imageSource,
         cached: !!cached,
+        regenerate: !!chosenPicture || replacesGenerated,
       },
       true
     );
@@ -427,6 +437,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         dataURI: bytesToDataURI(result.uint8Array, result.mediaType),
         prompt,
         sent,
+        generationId,
       };
       // Save before `onReady`, which can wait before the picture is shown,
       // so the picture is not lost if the student leaves the page during
@@ -473,6 +484,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     style,
     generatesCharacterSet,
     method,
+    replacesGenerated,
+    chosenPicture,
     onGenerateStart,
     onGenerateFailed,
     exhausted,
@@ -491,6 +504,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         EVENTS.HOAI2026_IMAGE_VERDICT,
         {
           verdict: next,
+          generationId: chosenPicture?.generationId,
           promptText: chosenPicture?.prompt,
           imageType,
         },
@@ -512,6 +526,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         EVENTS.HOAI2026_IMAGE_VERDICT_REASON,
         {
           reasons,
+          generationId: chosenPicture?.generationId,
           promptText: chosenPicture?.prompt,
           imageType,
         },
