@@ -31,7 +31,7 @@ export interface ChatTranscript {
 /** A notification as a host may post it; the chat sets its id and time. */
 export type HostNotification = Pick<
   Notification,
-  'text' | 'includeInChatHistory' | 'hideTimestamp' | 'pending'
+  'text' | 'includeInChatHistory' | 'hideTimestamp'
 > & {
   notificationType: 'hostMessage' | 'info' | 'success' | 'warning' | 'error';
 };
