@@ -15,8 +15,8 @@ const TITLE = 'Discover blocks';
 
 interface BlockCatalogDialogProps {
   entries: readonly CatalogEntry[];
-  /** Block types already added to the toolbox. */
-  chosen: ReadonlySet<string>;
+  /** Block types already in the toolbox. */
+  inToolbox: ReadonlySet<string>;
   onAdd: (type: string) => void;
   onClose: () => void;
 }
@@ -27,17 +27,18 @@ interface BlockCatalogDialogProps {
  */
 const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
   entries,
-  chosen,
+  inToolbox,
   onAdd,
   onClose,
 }) => {
   const mode = useThemeMode();
   // Opens on the first block not yet added, so the next choice is in view.
   const [selectedType, setSelectedType] = useState(
-    () => (entries.find(entry => !chosen.has(entry.type)) ?? entries[0])?.type
+    () =>
+      (entries.find(entry => !inToolbox.has(entry.type)) ?? entries[0])?.type
   );
   const selected = entries.find(entry => entry.type === selectedType);
-  const added = !!selected && chosen.has(selected.type);
+  const added = !!selected && inToolbox.has(selected.type);
 
   return (
     <div className={moduleStyles.dialogHost}>
@@ -71,7 +72,7 @@ const BlockCatalogDialog: React.FunctionComponent<BlockCatalogDialogProps> = ({
                   <span className={moduleStyles.listTitle}>
                     {entry.help.title}
                   </span>
-                  {chosen.has(entry.type) && (
+                  {inToolbox.has(entry.type) && (
                     <span
                       className={moduleStyles.added}
                       role="img"
