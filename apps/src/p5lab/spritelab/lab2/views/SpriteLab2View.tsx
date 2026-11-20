@@ -413,8 +413,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const releaseRemovedImages = useReleaseRemovedImages();
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
-  // No analytics where someone can play the game but is not a student
-  // working on the level.
+  // Analytics only for a student working on their own level: not for someone
+  // playing or viewing another person's project, nor in level edit mode.
   const levelAnalytics = useLevelAnalytics(
     levelProperties,
     activeTab === 'Play',

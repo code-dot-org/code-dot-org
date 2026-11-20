@@ -103,8 +103,8 @@ describe('useLevelAnalytics', () => {
         {
           durationSeconds: 90,
           completed: true,
-          keyboardPresses: 2,
-          buttonPresses: 1,
+          keyboardPressesWhilePlaying: 2,
+          buttonPressesWhilePlaying: 1,
           ...context,
         },
         true,

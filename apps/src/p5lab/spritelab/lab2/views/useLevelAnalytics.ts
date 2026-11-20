@@ -14,6 +14,7 @@ export interface LevelAnalytics {
   reportCompleted: (details: Record<string, unknown>) => void;
 }
 
+// TODO: move into a shared lab2 hook; Dance Party's useReportAnalytics tracks a visit the same way.
 /**
  * Analytics for one visit to a level: the shared Level Activity event at the
  * student's first action, an event when they complete the level, and an
@@ -37,8 +38,8 @@ export default function useLevelAnalytics(
     active: false,
     completed: false,
     ended: false,
-    keyboardPresses: 0,
-    buttonPresses: 0,
+    keyboardPressesWhilePlaying: 0,
+    buttonPressesWhilePlaying: 0,
   });
   // Read through a ref so that `send` and `counted` never change. The effect
   // that ends the visit depends on them, and its cleanup would end the visit
@@ -98,9 +99,9 @@ export default function useLevelAnalytics(
         return;
       }
       if (isOnScreenGameKey(event)) {
-        visit.current.buttonPresses++;
+        visit.current.buttonPressesWhilePlaying++;
       } else {
-        visit.current.keyboardPresses++;
+        visit.current.keyboardPressesWhilePlaying++;
       }
       reportActivity();
     };
@@ -118,8 +119,8 @@ export default function useLevelAnalytics(
       send(EVENTS.HOAI2026_LEVEL_SESSION_END, {
         durationSeconds: Math.round((Date.now() - startedAt) / 1000),
         completed,
-        keyboardPresses: visit.current.keyboardPresses,
-        buttonPresses: visit.current.buttonPresses,
+        keyboardPressesWhilePlaying: visit.current.keyboardPressesWhilePlaying,
+        buttonPressesWhilePlaying: visit.current.buttonPressesWhilePlaying,
       });
     };
     // beforeunload comes before pagehide, when the analytics client sends
