@@ -72,6 +72,10 @@ module Cdo
         PII_CLASSIFICATIONS = %i[public confidential restricted].freeze
         SQL_INDENT = ' ' * 2
 
+        # Used to control which operations are executed automatically on test vs production.
+        PROVISION_OPERATIONS = %i[add update drop].freeze
+        PLAN_KEY_BY_OPERATION = {add: :to_add, update: :to_update, drop: :to_drop}.freeze
+
         # Human-readable descriptions for the numeric `state` column of
         # SVV_MV_INFO. States 0/1 are healthy (the view refreshes, either by
         # full recompute or incrementally); states >= 100 mean the view can no
@@ -296,12 +300,16 @@ module Cdo
         # wait.
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] e.g., :production, :test
+        # @param only [Array<String>, nil] optional FQN allowlist — when given, rebuilds only this
+        #   model's views named in the list.
         # @return [Hash{String => String}] fqn => Redshift Data API statement_id
-        def create_or_replace_views(client:, environment_type:)
+        def create_or_replace_views(client:, environment_type:, only: nil)
           env = environment_type.to_s
           statements = {}
 
           rendered_ddls(environment_type: env).each do |fqn, info|
+            next unless only.nil? || only.include?(fqn)
+
             drop_sql = "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"
             create_sql = info[:sql]
             comment_sql = "COMMENT ON COLUMN #{fqn}.#{info[:first_column]} IS '#{self.class.ddl_hash(create_sql)}'"
@@ -396,32 +404,65 @@ module Cdo
         #   yield(:submitted, table_name, [fqn, ...])      # after async submit for one model
         #   yield(:skipped, table_name)                    # comment hash matches desired DDL
         #   yield(:error, table_name, exception)           # submit raised; provisioning continues
+        #   yield(:deferred, table_name)                   # source table mid-load; left for a later run
         #   yield(:drop_batch_submitted, [fqn, ...])       # after async submit of the orphan-drop batch
         #
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol, String] :production or :test
         # @param models [Enumerable<Class>] ActiveRecord model classes to provision
-        # @return [Hash] the `plan_provisioning` keys, plus :failed (table names whose submit raised)
-        #   and :statements (`{fqn => statement_id}`)
-        def self.provision_all_views(client:, environment_type:, models:)
+        # @param operations [Array<Symbol>] Which of the pending operations to execute (`:add`, `:update`, `:drop`).
+        # @param require_synced_sources [Boolean] when true, leaves a Model's Views alone unless Zero ETL
+        #   reports its source table `Synced`.
+        # @return [Hash] the `plan_provisioning` keys, plus :failed (table names whose submit raised),
+        #   :statements (`{fqn => statement_id}`), :declined (`{add:, update:, drop:}` of the FQNs each
+        #   omitted operation would have touched) and :deferred (table names whose source is not `Synced`)
+        def self.provision_all_views(
+          client:, environment_type:, models:, operations: PROVISION_OPERATIONS, require_synced_sources: false
+        )
           # Keep the committed `.sql.erb` templates in lockstep with the models on every provision.
           generate_all_ddl_templates(models: models)
 
+          synced_tables =
+            if require_synced_sources
+              ZeroEtl.synced_table_names(client: client, environment_type: environment_type)
+            end
+
           plan = plan_provisioning(client: client, environment_type: environment_type, models: models)
           unchanged_fqns = Set.new(plan[:unchanged])
-          result = plan.merge(failed: [], statements: {})
+          declined = PROVISION_OPERATIONS.to_h do |operation|
+            [operation, operations.include?(operation) ? [] : plan[PLAN_KEY_BY_OPERATION.fetch(operation)]]
+          end
+          allowed_fqns = Set.new(
+            PROVISION_OPERATIONS.
+              select {|operation| operation != :drop && operations.include?(operation)}.
+              flat_map {|operation| plan[PLAN_KEY_BY_OPERATION.fetch(operation)]}
+          )
+          result = plan.merge(failed: [], statements: {}, declined: declined, deferred: [])
 
           models.map {|model| new(model)}.each do |gen|
             table_name = gen.view_name
             gen_fqns = gen.expected_view_fqns(environment_type)
+            changed_fqns = gen_fqns.reject {|fqn| unchanged_fqns.include?(fqn)}
 
-            if gen_fqns.any? && gen_fqns.all? {|fqn| unchanged_fqns.include?(fqn)}
+            if gen_fqns.any? && changed_fqns.empty?
               yield(:skipped, table_name) if block_given?
               next
             end
 
+            # Whatever `operations` excludes is reported once in `result[:declined]` rather than per Model.
+            provisionable_fqns = changed_fqns.select {|fqn| allowed_fqns.include?(fqn)}
+            next if provisionable_fqns.empty?
+
+            if synced_tables && !synced_tables.include?(table_name)
+              result[:deferred] << table_name
+              yield(:deferred, table_name) if block_given?
+              next
+            end
+
             begin
-              submitted = gen.create_or_replace_views(client: client, environment_type: environment_type)
+              submitted = gen.create_or_replace_views(
+                client: client, environment_type: environment_type, only: provisionable_fqns
+              )
               result[:statements].merge!(submitted)
               yield(:submitted, table_name, submitted.keys) if block_given?
             rescue StandardError => exception
@@ -435,7 +476,7 @@ module Cdo
           # are mutually independent and idempotent (`DROP ... IF EXISTS`), so splitting them across
           # independent, unordered batches is safe. `batch_execute_async` returns one statement id per
           # batch.
-          if result[:to_drop].any?
+          if operations.include?(:drop) && result[:to_drop].any?
             drop_sqls = result[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
             client.batch_execute_async(drop_sqls, allow_separate_transactions: true).each_with_index do |statement_id, batch_index|
               result[:statements]["__drop_orphans___#{batch_index}"] = statement_id
