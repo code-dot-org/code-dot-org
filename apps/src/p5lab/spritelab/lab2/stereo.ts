@@ -71,9 +71,10 @@ type Painter = Pick<
 
 /** Draw the two eyes side by side onto `out`, left then right, each
     `width` by `height` in backing px, with `gap` px left clear between
-    them. The background is overscanned by its shift so neither eye sees
-    its edge. The sprite layer is one view wide, so each eye is clipped to
-    the part of its view that the shifted sprite layer covers. */
+    them. The background is drawn larger than an eye's picture by its shift
+    on every side, so neither eye sees its edge. The foreground is only as
+    wide as one eye's picture, so each picture is clipped to the part that
+    the shifted foreground covers. */
 export function drawStereoPair(
   out: Painter,
   layers: StereoLayers,
@@ -89,7 +90,8 @@ export function drawStereoPair(
   [-1, 1].forEach((side, index) => {
     const left = index * (width + gap);
     const foregroundLeft = left + side * shifts.foreground;
-    // Whole px, so a partly covered column at the edge is left out.
+    // Round the clip inward to whole px, so a pixel column that the
+    // foreground only partly covers is not drawn.
     const clipLeft = Math.ceil(Math.max(left, foregroundLeft));
     const clipRight = Math.floor(
       Math.min(left + width, foregroundLeft + width)
