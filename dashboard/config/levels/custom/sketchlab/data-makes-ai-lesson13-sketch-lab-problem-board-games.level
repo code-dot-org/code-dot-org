@@ -1,0 +1,20 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-20T04:12:31.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "data-makes-ai-lesson12-sketch-lab-template-board-games",
+    "long_instructions": "## Find the Problem\r\nGoal: Pick a move that fixes the problem you found.\r\n\r\n1. Drag your Data Scientist to **Prepare Stop 1**.\r\n2. Use **Find the Problem** in your guide to answer questions a–d.\r\n3. For question e, open your **Data Moves Reference**. Drag the red oval around one move. Write why you picked it.\r\n\r\nYou are done when Prepare Stop 1 has an answer for a–e. Go to the next level.",
+    "hide_share_and_remix": "false",
+    "display_name": "Project Map: Board Games",
+    "bubble_choice_description": "This dataset contains qualities about different board games.",
+    "thumbnail_url": "https://images.code.org/631e19ba8c9568489a630402f680ab07-k4e-boardgames.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:31.254+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-tree1-board-games\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-tree1-board-games\"},{\"changed_at\":\"2026-11-20 04:13:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>
