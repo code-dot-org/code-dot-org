@@ -1,0 +1,9 @@
+.waiting {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: var(--background-neutral-tertiary);
+  border-radius: 16px;
+  box-sizing: border-box;
+}

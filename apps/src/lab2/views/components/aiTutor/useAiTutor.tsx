@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
-import {WaitingAnimation} from '@cdo/apps/aichat/views/WaitingAnimation';
+import {TutorWaitingAnimation} from '@cdo/apps/aichat/views/TutorWaitingAnimation';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {defaultAiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
@@ -98,7 +98,7 @@ export function useAiTutor(
   );
 
   const AiTutorResponse = loading ? (
-    <WaitingAnimation
+    <TutorWaitingAnimation
       shouldDisplay={true}
       className={moduleStylesShrink.waitingAnimation}
     />

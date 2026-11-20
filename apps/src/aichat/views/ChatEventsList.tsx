@@ -15,6 +15,7 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {selectIsWaitingForChatResponse} from '../redux';
 import {
@@ -28,6 +29,7 @@ import {
 import {ChatDisabled} from './ChatDisabled';
 import ChatEventView from './ChatEventView';
 import EmptyStudentChatHistory from './EmptyStudentChatHistory';
+import TutorWaitingAnimation from './TutorWaitingAnimation';
 import WaitingAnimation from './WaitingAnimation';
 
 import moduleStyles from './chatWorkspace.module.scss';
@@ -326,7 +328,11 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                 </ErrorBoundary>
               );
             })}
-            <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+            {clientType === AiChatClientTypes.AI_TUTOR ? (
+              <TutorWaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+            ) : (
+              <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
+            )}
           </>
         )}
       </div>
