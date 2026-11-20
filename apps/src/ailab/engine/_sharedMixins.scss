@@ -165,3 +165,14 @@ $modal-margin: 24px;
 }
 
 $mark-transition: 0.16s ease;
+
+// The transparent border keeps the dot visible in forced colors, which drop its fill.
+@mixin leaf-dot($size) {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: $size;
+  height: $size;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-color: var(--leaf-color);
+}
