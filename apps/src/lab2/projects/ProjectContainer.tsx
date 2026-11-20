@@ -12,7 +12,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setUpWithLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {isReadOnlyForSaving} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {isReadOnlyAndShouldNotBeSaved} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -41,9 +41,10 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const isOwnerOfChannel = useAppSelector(
     state => state.lab.channel && state.lab.channel.isOwner
   );
+  const isReadOnlyForSave = useAppSelector(isReadOnlyAndShouldNotBeSaved);
 
   const dispatch = useAppDispatch();
-  const isReadOnlyForSave = useAppSelector(isReadOnlyForSaving);
+
   const managesOwnProject =
     lab2EntryPoints[levelProperties.appName]?.managesOwnProject;
 
