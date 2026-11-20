@@ -19,6 +19,7 @@ const PackRemovedAlert: React.FunctionComponent = () => {
       className={moduleStyles.inWorkspaceContainer}
       text={WARNING_BANNER_MESSAGES.MUSIC_PACK_REMOVED}
       type="warning"
+      isImmediateImportance={false}
       size="xs"
       onClose={() => setIsDismissed(true)}
     />
