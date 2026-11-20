@@ -120,7 +120,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
                 data-theme="Dark"
               >
                 <FontAwesomeV6Icon
-                  iconName="triangle-exclamation"
+                  iconName="exclamation-circle"
                   iconStyle="solid"
                 />
                 {WARNING_BANNER_MESSAGES.MUSIC_PACK_REMOVED}
