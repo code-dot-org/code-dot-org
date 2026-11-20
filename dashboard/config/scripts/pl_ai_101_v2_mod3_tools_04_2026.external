@@ -3,11 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# AI Tools Integrated into Everyday Platforms
+# AI Apps Integrated into Everyday Platforms
 
-In addition to standalone AI tools designed for education, AI is increasingly being built directly into the platforms educators already use—such as Google Docs, Microsoft Word, email tools, and learning management systems.
+In addition to standalone AI apps designed for education, AI is increasingly being built directly into the platforms educators already use—such as Google Docs, Microsoft Word, email apps, and learning management systems.
 
-Because these tools are embedded in familiar platforms, they are often:
+Because these apps are embedded in familiar platforms, they are often:
 * Easier to access and use during everyday tasks
 * More seamlessly integrated into lesson planning, communication, and feedback
 * Used more frequently, sometimes without intentional planning
@@ -20,6 +20,6 @@ Image: Google
 </div>
 <br>
 
-> **💬 Quick Reflection:** Where have you notice AI being integrated into an existing tool you use?
+> **💬 Quick Reflection:** Where have you noticed AI being integrated into an existing tool you use?
 
 MARKDOWN

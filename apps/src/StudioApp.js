@@ -3,7 +3,6 @@ import {EventEmitter} from 'events';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {
@@ -33,7 +32,10 @@ import {
 } from '@cdo/apps/templates/currentUserRedux';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
 import {white, workspace_running_background} from '@cdo/apps/util/color';
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import {availableContentWidth} from '@cdo/apps/util/taDrawerInset';
 import {LocalizeToI18nLocales} from '@cdo/generated-scripts/sharedConstants';
@@ -379,10 +381,7 @@ StudioApp.prototype.init = function (config) {
           })}
         />
       </Provider>,
-      document.body.appendChild(document.createElement('div')),
-      {
-        legacyReactDomRender: true,
-      }
+      document.body.appendChild(document.createElement('div'))
     );
   }
 
@@ -636,10 +635,7 @@ StudioApp.prototype.init = function (config) {
         levelId={config.serverLevelId}
         unitId={config.serverScriptId}
       />,
-      startDialogDiv,
-      {
-        legacyReactDomRender: true,
-      }
+      startDialogDiv
     );
   }
 
@@ -767,13 +763,12 @@ StudioApp.prototype.getSettingsHandler = function () {
     container.id = 'settings-modal';
     document.body.appendChild(container);
     const close = () => {
-      ReactDOM.unmountComponentAtNode(container);
+      unmountReactRoot(container);
       container.remove();
     };
     createReactRoot(
       React.createElement(SettingsModal, {onClose: close}),
-      container,
-      {legacyReactDomRender: true}
+      container
     );
   };
 };
@@ -784,7 +779,7 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
     container.id = 'showVersionsModal';
     document.body.appendChild(container);
     const close = () => {
-      ReactDOM.unmountComponentAtNode(container);
+      unmountReactRoot(container);
       container.remove();
     };
     createReactRoot(
@@ -796,8 +791,7 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
         isReadOnly: !!config.readonlyWorkspace,
         onClose: close,
       }),
-      container,
-      {legacyReactDomRender: true}
+      container
     );
   };
 };
@@ -1084,9 +1078,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     channel: project.getCurrentId(),
   };
 
-  createReactRoot(<SmallFooter {...reactProps} />, footerDiv, {
-    legacyReactDomRender: true,
-  });
+  createReactRoot(<SmallFooter {...reactProps} />, footerDiv);
 };
 
 /**
@@ -2404,10 +2396,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
               appType: project.getStandaloneApp(),
               isLegacyShare: !!options.isLegacyShare,
             }),
-            div,
-            {
-              legacyReactDomRender: true,
-            }
+            div
           );
         }
       }
@@ -3239,9 +3228,7 @@ StudioApp.prototype.displayWorkspaceAlert = function (
     },
     alertContents
   );
-  createReactRoot(workspaceAlert, container[0], {
-    legacyReactDomRender: true,
-  });
+  createReactRoot(workspaceAlert, container[0]);
 
   return container[0];
 };
@@ -3280,19 +3267,17 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   }
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
-  createReactRoot(playspaceAlert, renderElement, {
-    legacyReactDomRender: true,
-  });
+  createReactRoot(playspaceAlert, renderElement);
 
   return renderElement;
 };
 
 /**
- * Remove an alert from the DOM. This is just an alias for ReactDOM.unmountComponentAtNode.
+ * Remove an alert from the DOM. This is just an alias for unmountReactRoot.
  * @param {Node} alert
  */
 StudioApp.prototype.closeAlert = function (alert) {
-  ReactDOM.unmountComponentAtNode(alert);
+  unmountReactRoot(alert);
 };
 
 /**

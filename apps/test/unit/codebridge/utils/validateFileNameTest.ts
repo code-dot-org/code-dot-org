@@ -123,6 +123,34 @@ describe('validateFileName', function () {
       })}`
     );
 
+    // Image file types match regardless of case; others do not.
+    expect(
+      validateFileName({
+        fileName: 'CAT.PNG',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes: ['png'],
+      })
+    ).toBeUndefined();
+    expect(
+      validateFileName({
+        fileName: 'DATA.CSV',
+        folderId: DEFAULT_FOLDER_ID,
+        projectFiles: testProject.files,
+        validationFile,
+        isStartMode: false,
+        validFileTypes,
+      })
+    ).toEqual(
+      `${codebridgeI18n.invalidFileType({
+        fileType: 'CSV',
+      })} ${codebridgeI18n.validFileTypesInfo({
+        validFileTypes: validFileTypesString,
+      })}`
+    );
+
     // Name with multiple periods is invalid (ex. test.file.py).
     expect(
       validateFileName({

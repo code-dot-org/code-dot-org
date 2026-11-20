@@ -56,6 +56,14 @@ class AiPodcastsSafetyHelperTest < ActionView::TestCase
     AiPodcastsSafetyHelper::ToxicityDetector.new.find_toxicity('any-text', 'Model')
   end
 
+  test "find_toxicity sets reasoning effort to none on both the unstructured and structured requests" do
+    AichatOpenaiResponsesHelper::Client.any_instance.expects(:request_chat_completion).twice.with do |_input, _temperature, kwargs|
+      kwargs[:options][:reasoning] == {effort: 'none'}
+    end.returns(stubbed_response(@invalid_json)).then.returns(stubbed_response(@structured_ok_json))
+
+    assert_nil AiPodcastsSafetyHelper::ToxicityDetector.new.find_toxicity('any-text', 'Model')
+  end
+
   test "StubbedToxicityDetector flags only the literal text 'Damn'" do
     detector = AiPodcastsSafetyHelper::StubbedToxicityDetector.new
 

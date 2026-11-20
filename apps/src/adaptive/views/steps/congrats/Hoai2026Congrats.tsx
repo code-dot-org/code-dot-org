@@ -8,10 +8,13 @@ import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import CopiedTooltip from '@cdo/apps/sharedComponents/CopiedTooltip';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import heroImage from '@cdo/static/hoai2026/adaptive/ai-makerspace-celebration.png';
 
+import {sendAdaptiveEvent} from '../../../metricsHelpers';
 import {usePathwayProject} from '../../../project/usePathwayProject';
 import {usePathwayContext} from '../../PathwayContext';
 import {CongratsPanelProps} from '../CongratsStep';
@@ -23,12 +26,20 @@ const DESCRIPTION_WITH_CHALLENGE =
   'Want to keep going? Join the Building with AI Challenge, a national competition for high school teams. Build your project over eight weeks and submit by Feb 1, 2027.';
 const DESCRIPTION_WITHOUT_CHALLENGE =
   'You created a website with your own vision and design using AI. Keep exploring and building with AI to create even more amazing projects!';
-const IMAGE_URL =
-  'https://images.code.org/dc6583670c742dbc656e3e805cafee15-ai-makerspace-congrats-image.png';
 
 const ELEVATE_URL = 'https://code.org/hour-of-ai';
 const AI_FOUNDATIONS_URL =
   'https://code.org/en-US/curriculum/artificial-intelligence-foundations';
+
+type CongratsLink =
+  | 'buildersChallenge'
+  | 'copyShareLink'
+  | 'certificate'
+  | 'elevateHourOfAi'
+  | 'aiFoundations';
+
+const sendLinkClicked = (link: CongratsLink) =>
+  sendAdaptiveEvent(EVENTS.ADAPTIVE_CONGRATS_LINK_CLICKED, {link});
 
 const EXTERNAL_ICON = (
   <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
@@ -63,14 +74,16 @@ const Card: React.FunctionComponent<CardProps> = ({
 
 const ExternalLinkButton: React.FunctionComponent<{
   href: string;
+  link: CongratsLink;
   size?: 'extraSmall' | 'medium';
   children: React.ReactNode;
-}> = ({href, size = 'extraSmall', children}) => (
+}> = ({href, link, size = 'extraSmall', children}) => (
   <MuiButton
     variant="outlined"
     color="secondary"
     size={size}
     href={href}
+    onClick={() => sendLinkClicked(link)}
     target="_blank"
     rel="noopener noreferrer"
     endIcon={EXTERNAL_ICON}
@@ -84,6 +97,7 @@ const CopyLinkButton: React.FunctionComponent<{shareUrl: string}> = ({
 }) => {
   const [copiedAt, setCopiedAt] = useState<number | null>(null);
   const copy = useCallback(() => {
+    sendLinkClicked('copyShareLink');
     copyToClipboard(
       shareUrl,
       () => setCopiedAt(Date.now()),
@@ -147,9 +161,13 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
               : DESCRIPTION_WITHOUT_CHALLENGE}
           </MuiTypography>
         </div>
-        <img src={IMAGE_URL} alt="" className={styles.heroImage} />
+        <img src={heroImage} alt="" className={styles.heroImage} />
         {showChallenge && (
-          <ExternalLinkButton href={challengeUrl} size="medium">
+          <ExternalLinkButton
+            href={challengeUrl}
+            link="buildersChallenge"
+            size="medium"
+          >
             Learn about the Building with AI Challenge
           </ExternalLinkButton>
         )}
@@ -173,7 +191,10 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
             variant="outlined"
             color="secondary"
             size="extraSmall"
-            onClick={onComplete}
+            onClick={() => {
+              sendLinkClicked('certificate');
+              onComplete();
+            }}
           >
             Certificate
           </MuiButton>
@@ -185,7 +206,7 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
               title="Elevate your Hour of AI"
               description="Prepare to lead an Hour of AI."
             >
-              <ExternalLinkButton href={ELEVATE_URL}>
+              <ExternalLinkButton href={ELEVATE_URL} link="elevateHourOfAi">
                 Learn more
               </ExternalLinkButton>
             </Card>
@@ -194,7 +215,10 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
               title="AI Foundations"
               description="Bring AI to your classroom."
             >
-              <ExternalLinkButton href={AI_FOUNDATIONS_URL}>
+              <ExternalLinkButton
+                href={AI_FOUNDATIONS_URL}
+                link="aiFoundations"
+              >
                 Learn more
               </ExternalLinkButton>
             </Card>

@@ -1027,7 +1027,10 @@ class User < ApplicationRecord
   end
 
   def can_pair?
-    sections_as_student.any?(&:pairing_allowed)
+    # The header asks this on every page; section membership tolerates database replica lag.
+    ActiveRecord::Base.connected_to(role: :reading) do
+      sections_as_student.any?(&:pairing_allowed)
+    end
   end
 
   def can_pair_with?(other_user)

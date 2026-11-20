@@ -13,6 +13,7 @@ import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import ColorPicker from './ColorPicker';
+import {checkerCellSize, displayScale, pixelGridFor} from './displayGrid';
 import {NATIVE_PIXEL_GRID, downsampleToGrid} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
 import {
@@ -35,22 +36,17 @@ import {
 
 import moduleStyles from './pixel-editor.module.scss';
 
-// Internal display-canvas resolution: integer upscale of the backing image,
-// as large as fits this budget. The rendered (CSS) size is independent: the
-// canvas fills this fraction of the viewport, capped, aspect preserved.
-const MAX_DISPLAY_SIZE = 640;
+// The rendered (CSS) size is independent of the display canvas's
+// resolution: the canvas fills this fraction of the viewport, capped,
+// aspect preserved.
 const CSS_HEIGHT_VIEWPORT_FRACTION = 0.68;
 const MAX_CSS_HEIGHT_PX = 720;
 const CSS_WIDTH_VIEWPORT_FRACTION = 0.76;
 const MAX_CSS_WIDTH_PX = 900;
 
-// The checkerboard that shows through transparent pixels. Its cells are
-// this many display px outside pixel mode. In pixel mode a cell is a whole
-// number of art pixels, at least the smaller size. The colors are white
-// and a pale gray (the design system's neutral gray 10) in both the light
-// and the dark theme, the same as wherever else a picture is shown.
-const CHECKER_CELL_PX = 16;
-const MIN_CHECKER_CELL_PX = 4;
+// The checkerboard that shows through transparent pixels. The colors are
+// white and a pale gray (the design system's neutral gray 10) in both the
+// light and the dark theme, the same as wherever else a picture is shown.
 const CHECKER_COLORS = {base: '#ffffff', tint: '#e1e3e6'};
 
 // A bright azure, at the darkest shade that clears 3:1 against the white
@@ -184,10 +180,12 @@ export interface PixelEditorProps {
   onHistoryChange?: (history: PixelEditorHistory) => void;
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
-  // The only colors offered: the color square opens these as round
-  // swatches, in place of the spectrum picker. The first is the color the
-  // editor opens on.
+  // The only colors offered: the color square opens these as square
+  // swatches, in place of the spectrum picker.
   palette?: readonly PaletteColor[];
+  // The color the editor opens on. Absent, it is the palette's first
+  // color, or the editor's own blue when there is no palette.
+  startColor?: RGBA;
   // The brush sizes to offer, in BRUSH_SIZES order; all four when absent.
   // The editor opens on the first; one alone shows no size buttons.
   brushSizes?: readonly number[];
@@ -223,6 +221,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   onHistoryChange,
   canvasClassName,
   palette,
+  startColor,
   brushSizes,
   toolbarGroups,
   children,
@@ -259,7 +258,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     brushSizes ? shownBrushSizes[0] ?? BRUSH_SIZES[0] : BRUSH_SIZES[1]
   );
   const [color, setColor] = useState<RGBA>(
-    () => palette?.[0]?.rgba ?? DEFAULT_COLOR
+    () => startColor ?? palette?.[0]?.rgba ?? DEFAULT_COLOR
   );
   const [loaded, setLoaded] = useState(false);
   // Bumped as each picture lands, so a new picture given to a mounted
@@ -433,9 +432,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       ctx.fillStyle = CHECKER_COLORS.base;
       ctx.fillRect(0, 0, display.width, display.height);
       const scale = scaleRef.current;
-      const cell = pixelModeRef.current
-        ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
-        : CHECKER_CELL_PX;
+      const cell = checkerCellSize(scale, pixelModeRef.current);
       ctx.fillStyle = CHECKER_COLORS.tint;
       for (let y = 0; y * cell < display.height; y++) {
         for (let x = y % 2; x * cell < display.width; x += 2) {
@@ -542,15 +539,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       backing.height = height;
       const ctx = backing.getContext('2d', {willReadFrequently: true});
       ctx?.drawImage(source, 0, 0);
-      // Trust the metadata only when it divides the image cleanly (a resize
-      // elsewhere would otherwise smear the downsample). A grid of 1 is
-      // pixel art already at its logical size: nothing to downsample.
-      const grid =
-        knownPixelGrid &&
-        width % knownPixelGrid === 0 &&
-        height % knownPixelGrid === 0
-          ? knownPixelGrid
-          : null;
+      // A grid of 1 is pixel art already at its logical size: nothing to
+      // downsample.
+      const grid = pixelGridFor(width, height, knownPixelGrid);
       const raster =
         grid && grid > 1 ? ctx?.getImageData(0, 0, width, height) : null;
       if (raster && grid) {
@@ -585,10 +576,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       // The circle preview is also read back per pointer-move.
       preview.getContext('2d', {willReadFrequently: true});
       previewRef.current = preview;
-      scaleRef.current = Math.max(
-        1,
-        Math.floor(MAX_DISPLAY_SIZE / Math.max(backing.width, backing.height))
-      );
+      scaleRef.current = displayScale(backing.width, backing.height);
       // A new picture is a new history.
       undoStackRef.current = [];
       redoStackRef.current = [];
@@ -677,6 +665,13 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   }, []);
 
   const canvasAreaRef = useRef<HTMLDivElement | null>(null);
+  // The host places the canvas and can take it off the page and put it
+  // back. The element it puts back is new, so it is sized and painted again.
+  const [canvasArea, setCanvasArea] = useState<HTMLDivElement | null>(null);
+  const attachCanvasArea = useCallback((area: HTMLDivElement | null) => {
+    canvasAreaRef.current = area;
+    setCanvasArea(area);
+  }, []);
 
   // Layout effect: size and paint the canvas BEFORE the browser paints the
   // newly-mounted panel, or its first frame flashes default-sized. The
@@ -734,7 +729,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     const observer = new ResizeObserver(size);
     observer.observe(area);
     return () => observer.disconnect();
-  }, [loaded, loadVersion, repaint, fit]);
+  }, [loaded, loadVersion, repaint, fit, canvasArea]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -1601,7 +1596,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     ),
     canvas: (
       <div
-        ref={canvasAreaRef}
+        ref={attachCanvasArea}
         data-pixel-editor=""
         className={classNames(moduleStyles.canvasArea, canvasClassName)}
       >

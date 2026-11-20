@@ -48,9 +48,53 @@ describe('ProjectRemix', () => {
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
+  it('does not render when the project is in restricted share mode', () => {
+    const wrapper = shallow(
+      <ProjectRemix {...defaultProps} inRestrictedShareMode />
+    );
+    expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
   it('does not render when lab2 project is blocked for abuse', () => {
     const wrapper = shallow(<ProjectRemix {...defaultProps} isBlockedAbuse />);
     expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
+  it("does not render for a non-owner when the project's text is flagged", () => {
+    const wrapper = shallow(
+      <ProjectRemix {...defaultProps} isBlockedShareFailure />
+    );
+    expect(wrapper.isEmptyRender()).to.be.true;
+  });
+
+  it('reports a width change when it stops being blocked', () => {
+    const onChangedWidth = sinon.spy();
+    const wrapper = shallow(
+      <ProjectRemix
+        {...defaultProps}
+        inRestrictedShareMode
+        onChangedWidth={onChangedWidth}
+      />
+    );
+
+    wrapper.setProps({inRestrictedShareMode: false});
+
+    expect(onChangedWidth.calledOnce).to.be.true;
+  });
+
+  it('reports no width change while it stays blocked', () => {
+    const onChangedWidth = sinon.spy();
+    const wrapper = shallow(
+      <ProjectRemix
+        {...defaultProps}
+        inRestrictedShareMode
+        onChangedWidth={onChangedWidth}
+      />
+    );
+
+    wrapper.setProps({isBlockedAbuse: true});
+
+    expect(onChangedWidth.called).to.be.false;
   });
 
   it('will attempt serverside remix when possible', () => {

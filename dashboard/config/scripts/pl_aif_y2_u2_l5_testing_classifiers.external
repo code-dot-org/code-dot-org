@@ -5,21 +5,36 @@ description 'description here'
 markdown <<MARKDOWN
 # Testing Classifiers
 
-Lesson 9 opens with two classifiers built to identify toxic berries. A ranger needs to know: which one is actually better?
+Lesson 9 shifts from building a classifier to judging one. The scenario: the Park Service is testing two classification models they built to help visitors identify toxic berries out on the trail. Students will play the role of the person deciding which model the Park Service should actually use.
 
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Accuracy:</strong> the proportion of all of a classifier's predictions that are correct.</div>
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/e4253de75cae02256e355cfd829c084e-image-1794953885788.png" alt="Berry images from the Testing Classifiers slides, showing the berries students evaluate in the Berry Picking activity" style="width: 55%; border-radius: 10px;">
 </div>
 
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Recall:</strong> out of all the data that actually has a certain label, the proportion the model correctly identified.</div>
+Before students see any numbers, they pick a berry, then find out whether it was actually toxic. That single reveal is the hook: it's easy to guess wrong, and it sets up why testing a classifier carefully matters more than trusting it by feel.
+
+## Lesson Vocabulary
+
+Three terms carry this lesson, click each card to see its definition:
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/testing-classifiers-metrics-flip-cards.html"
+    width="100%"
+    height="280"
+    frameborder="0"
+    scrolling="no"
+    title="Testing classifiers vocabulary flip cards: accuracy, recall, precision">
+  </iframe>
 </div>
 
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Precision:</strong> out of all the times a classifier predicted a certain label, the proportion that were correct.</div>
-</div>
+## Comparing Two Models
 
-The real numbers from the Berry Picking Activity Guide:
+Students fill in the <a href="https://docs.google.com/document/d/1pKPWUtMn1pJg4rVCihWpw77FoOBzjFRiST8qgA-ylS4/edit?usp=sharing" target="_blank" style="color: #4C42CF; font-weight: 700;">Berry Picking Activity Guide</a> using 10 test berries, each with a known Actual label plus a prediction from Model A and a prediction from Model B.
+
+Students count up correct predictions first, which naturally favors Model B: 80% accuracy beats Model A's 70%. At this point, ask the room which model they'd recommend. Most will say Model B. That's intentional, the rest of the lesson complicates that answer.
+
+### The Real Numbers from the Berry Picking Activity Guide
 
 <div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
   <table style="width: 100%; border-collapse: collapse;">
@@ -38,13 +53,21 @@ The real numbers from the Berry Picking Activity Guide:
   </table>
 </div>
 
-Model B looks better on accuracy alone. But for identifying something toxic, recall matters more, missing a toxic berry is far worse than over-flagging a safe one. Model A's lower accuracy is the better choice here.
+### Which Model Should the Park Service Use?
+
+Model B looks better on accuracy alone. But recall is what matters most here: Model A catches every single toxic berry (100% recall), while Model B misses two of the five toxic berries it was tested on. For a model meant to keep someone from eating something toxic, a missed detection is far more costly than an overcautious one. The Berry Picking Activity Guide's own exemplar recommends Model A for exactly this reason, even though its accuracy is lower and its precision means it over-flags some safe berries as toxic.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> if students argue for Model B because its accuracy is higher, push back in the moment, before revealing the recommendation: "Which kind of mistake would you rather make here, calling a safe berry toxic, or calling a toxic berry safe?" That question is the entire lesson in one sentence.</div>
+</div>
+
+## Confidence Thresholds
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
   <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Confidence threshold:</strong> the confidence level at which a classifier will predict a given label.</div>
 </div>
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> a classifier doesn't just say "toxic" or "not toxic," it outputs a confidence score. The threshold is where you draw the line between the two labels, and where you draw it is a real design choice, not a fixed rule.</div>
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> a classifier doesn't just say "toxic" or "not toxic," it outputs a confidence score. The threshold is where you draw the line between the two labels, and where you draw it is a real design choice, not a fixed rule. In Levels 1-2, students tune a threshold themselves and watch recall and precision trade off against each other in real time.</div>
 </div>
 MARKDOWN

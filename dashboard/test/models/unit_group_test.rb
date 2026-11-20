@@ -1180,8 +1180,22 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     unit.levels.first.update!(ai_tutor_available: true)
 
+    # The answer is memoized per instance, so ask a fresh one.
+    unit_group = UnitGroup.find(unit_group.id)
     assert unit_group.has_ai_chat_tools?
     refute unit_group.requires_ai_chat_tools?
+  end
+
+  test 'has_ai_chat_tools? and requires_ai_chat_tools? query once per instance' do
+    unit = create(:unit, :with_levels, levels_count: 1)
+    unit_group = create(:unit_group, :with_unit, unit: unit)
+
+    refute unit_group.has_ai_chat_tools?
+    refute unit_group.requires_ai_chat_tools?
+    assert_queries(0) do
+      refute unit_group.has_ai_chat_tools?
+      refute unit_group.requires_ai_chat_tools?
+    end
   end
 
   test 'requires_ai_chat_tools? returns true for essential ai chat level types' do

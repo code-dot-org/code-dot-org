@@ -1,0 +1,17 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-17T15:20:17.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"lesson09_virtual_production_mashups\"\r\n  ],\r\n  \"hyperparameters\": {\r\n    \"maxDepth\": 3\r\n  },\r\n  \"label\": \"Filming Location\",\r\n  \"idColumn\": null\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"This is the Virtual Production dataset with original **and combined** features.\\n\\nExperiment with training a model with a combination of original and combined features.\",\r\n  \"results\": \"Review the accuracy of your model.\\n\\nHow does it compare to the accuracy of your model in the previous level? Why do you think that is?\"\r\n}"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-17T15:20:17.642+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson9-ai-studio\\\"\"],\"cloned_from\":\"data-makes-ai-lesson9-ai-studio\"},{\"changed_at\":\"2026-11-17 15:20:25 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 15:20:47 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:56:36 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-18 15:34:00 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23979,\"changed_by_email\":\"kyra.patton+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-18 15:35:59 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23979,\"changed_by_email\":\"kyra.patton+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>
