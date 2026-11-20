@@ -12,7 +12,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setUpWithLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {isReadOnlyForSaving} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -43,7 +43,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   );
 
   const dispatch = useAppDispatch();
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isReadOnlyForSave = useAppSelector(isReadOnlyForSaving);
   const managesOwnProject =
     lab2EntryPoints[levelProperties.appName]?.managesOwnProject;
 
@@ -97,12 +97,14 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // If we need to force a save, prevent navigation so we can save first.
       // We skip this if we are already force reloading, as that will occur when
       // saving already encountered an issue. We also can skip this in read only mode,
-      // as we never save in read only mode.
+      // as we never save in read only mode. Python Lab turns the workspace read-only
+      // while it runs, which does not make the edits already made any less worth
+      // writing, so isReadOnlyForSaving ignores that state.
       if (
         projectManager &&
         !projectManager.isForceReloading() &&
         projectManager.hasUnsavedChanges() &&
-        !isReadOnly
+        !isReadOnlyForSave
       ) {
         projectManager.flushSave(/* forceNewVersion */ false, 'unload');
         event.preventDefault();
@@ -111,7 +113,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     };
     window.addEventListener('beforeunload', saveBeforeUnload);
     return () => window.removeEventListener('beforeunload', saveBeforeUnload);
-  }, [isReadOnly]);
+  }, [isReadOnlyForSave]);
 
   useEffect(() => {
     // Ensure the header is cleared when we have a change,

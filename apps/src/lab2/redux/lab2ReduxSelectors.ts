@@ -46,9 +46,14 @@ export const isPermanentlyReadOnlyWorkspace = (state: RootState) => {
   return !isOwner || isFrozen || isWidgetView;
 };
 
-// Returns true if the workspace is temporarily read-only.
-// This includes runtime and version states, but excludes permanent states like ownership.
-export const isTemporarilyReadOnlyWorkspace = (state: RootState) => {
+// Returns true if the workspace is read-only because code is running or validating.
+const isRunningReadOnlyWorkspace = (state: RootState) =>
+  (state.lab2System.isRunning || state.lab2System.isValidating) &&
+  shouldBeReadonlyWhileRunning(state);
+
+// Returns true if the workspace is temporarily read-only for a reason other than
+// running, meaning the sources on screen are not the user's working copy.
+const isOtherTemporarilyReadOnlyWorkspace = (state: RootState) => {
   const isEditMode = !!getAppOptionsEditBlocks();
   const isEditingExemplar = getAppOptionsEditingExemplar();
 
@@ -62,13 +67,7 @@ export const isTemporarilyReadOnlyWorkspace = (state: RootState) => {
   const isAiTutorVersion = state.lab2Project.viewingAiTutorVersion;
   const readOnlyPredictLevel = isReadOnlyPredictLevel(state);
 
-  // Also check for temporary read-only state (running/validating).
-  const isRunningAndReadonly =
-    (state.lab2System.isRunning || state.lab2System.isValidating) &&
-    shouldBeReadonlyWhileRunning(state);
-
   return (
-    isRunningAndReadonly ||
     hasSubmitted ||
     isViewingOldVersion ||
     isAiTutorVersion ||
@@ -76,10 +75,34 @@ export const isTemporarilyReadOnlyWorkspace = (state: RootState) => {
   );
 };
 
+// Returns true if the workspace is temporarily read-only.
+// This includes runtime and version states, but excludes permanent states like ownership.
+export const isTemporarilyReadOnlyWorkspace = (state: RootState) => {
+  const isEditMode = !!getAppOptionsEditBlocks();
+  const isEditingExemplar = getAppOptionsEditingExemplar();
+
+  // Edit modes should always be editable.
+  if (isEditMode || isEditingExemplar) {
+    return false;
+  }
+
+  return (
+    isRunningReadOnlyWorkspace(state) ||
+    isOtherTemporarilyReadOnlyWorkspace(state)
+  );
+};
+
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) =>
   isPermanentlyReadOnlyWorkspace(state) ||
   isTemporarilyReadOnlyWorkspace(state);
+
+// Whether a pending save should be abandoned rather than written. Running and
+// validating make the workspace read-only without making the edits already made
+// any less the user's, so saving ignores that state alone.
+export const isReadOnlyForSaving = (state: RootState) =>
+  isPermanentlyReadOnlyWorkspace(state) ||
+  isOtherTemporarilyReadOnlyWorkspace(state);
 
 // If the level should show an exemplar link, the exemplar link is the current url
 // with the query parameter exemplar=true at the end.
