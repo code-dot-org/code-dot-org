@@ -76,6 +76,7 @@ import {
   setAiGenerateState,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
+import {findRestrictedPacksInSource} from '../utils/pack';
 import SoundUploader from '../utils/SoundUploader';
 
 import Callouts from './Callouts';
@@ -294,7 +295,10 @@ export class UnconnectedMusicView extends React.Component {
       try {
         this.stopSong();
         const restoredPackId =
-          this.props.projectSources.labConfig?.music?.packId || null;
+          this.getPackId(
+            this.props.levelProperties.levelData,
+            this.props.projectSources
+          ) || null;
         this.library.setCurrentPackId(restoredPackId);
         this.props.setPackId(restoredPackId);
         const workspaceCode = JSON.parse(currProjectSource);
@@ -349,7 +353,7 @@ export class UnconnectedMusicView extends React.Component {
 
     this.library.setAllowedSounds(levelData?.sounds);
 
-    let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
+    let packId = this.getPackId(levelData, initialSources);
 
     // Prevent "Select a track" dialog from special mode.
     if (isToolboxMode || isStartMode || isEditingExemplar) {
@@ -475,6 +479,22 @@ export class UnconnectedMusicView extends React.Component {
     this.props.setStartingPlayheadPosition(1);
     this.isLevelLoadInProgress = false;
   }
+
+  // The saved pack may be missing, or name a pack that none of the code's
+  // sounds come from.
+  getPackId = (levelData, sources) => {
+    if (levelData?.packId) {
+      return levelData.packId;
+    }
+    const savedPackId = sources?.labConfig?.music?.packId;
+    const packsInCode = findRestrictedPacksInSource(
+      sources?.source,
+      this.library
+    );
+    return packsInCode.includes(savedPackId)
+      ? savedPackId
+      : packsInCode[0] || savedPackId;
+  };
 
   // Load the library and initialize the music player, if not already loaded.
   loadAndInitializePlayer = async libraryName => {
