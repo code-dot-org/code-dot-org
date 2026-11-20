@@ -16,45 +16,43 @@ export function isOnDefaultPack(labConfig?: MusicPackConfig): boolean {
 }
 
 /**
- * The restricted pack whose sounds a project's saved code uses. A project
- * can use sounds from at most one restricted pack, so the first one found
- * is the answer.
+ * The restricted packs whose sounds a project's saved code uses, in the
+ * order found.
  */
-export function findRestrictedPackInSource(
+export function findRestrictedPacksInSource(
   source: string | undefined,
   library: MusicLibrary
-): string | undefined {
+): string[] {
   if (!source) {
-    return undefined;
+    return [];
   }
   let code: unknown;
   try {
     code = JSON.parse(source);
   } catch {
-    return undefined;
+    return [];
   }
-  return findRestrictedPack(code, library);
+  const packIds = new Set<string>();
+  collectRestrictedPacks(code, library, packIds);
+  return Array.from(packIds);
 }
 
-function findRestrictedPack(
+function collectRestrictedPacks(
   node: unknown,
-  library: MusicLibrary
-): string | undefined {
+  library: MusicLibrary,
+  packIds: Set<string>
+): void {
   if (!node || typeof node !== 'object') {
-    return undefined;
+    return;
   }
   for (const [key, value] of Object.entries(node)) {
     if (key === FIELD_SOUNDS_NAME && typeof value === 'string') {
       const folder = library.getFolderForSoundId(value);
-      if (folder?.restricted) {
-        return folder.id;
+      if (folder?.restricted && folder.id !== DEFAULT_PACK) {
+        packIds.add(folder.id);
       }
     } else {
-      const packId = findRestrictedPack(value, library);
-      if (packId) {
-        return packId;
-      }
+      collectRestrictedPacks(value, library, packIds);
     }
   }
-  return undefined;
 }

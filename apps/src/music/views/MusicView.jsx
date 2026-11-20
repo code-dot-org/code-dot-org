@@ -76,7 +76,7 @@ import {
   setAiGenerateState,
 } from '../redux/musicRedux';
 import {Key} from '../utils/Notes';
-import {findRestrictedPackInSource} from '../utils/pack';
+import {findRestrictedPacksInSource} from '../utils/pack';
 import SoundUploader from '../utils/SoundUploader';
 
 import Callouts from './Callouts';
@@ -480,12 +480,21 @@ export class UnconnectedMusicView extends React.Component {
     this.isLevelLoadInProgress = false;
   }
 
-  // A restricted pack found among the code's sounds is used in place of the
-  // saved pack, which may be missing or name a pack the code does not use.
-  getPackId = (levelData, sources) =>
-    levelData?.packId ||
-    findRestrictedPackInSource(sources?.source, this.library) ||
-    sources?.labConfig?.music?.packId;
+  // The saved pack may be missing, or name a pack that none of the code's
+  // sounds come from. A restricted pack that they do come from is used then.
+  getPackId = (levelData, sources) => {
+    if (levelData?.packId) {
+      return levelData.packId;
+    }
+    const savedPackId = sources?.labConfig?.music?.packId;
+    const packsInCode = findRestrictedPacksInSource(
+      sources?.source,
+      this.library
+    );
+    return packsInCode.includes(savedPackId)
+      ? savedPackId
+      : packsInCode[0] || savedPackId;
+  };
 
   // Load the library and initialize the music player, if not already loaded.
   loadAndInitializePlayer = async libraryName => {
