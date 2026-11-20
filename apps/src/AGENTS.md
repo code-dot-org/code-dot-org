@@ -17,6 +17,13 @@ all of `apps/src/`. Subdirectories may add stricter rules.
   alternatives.
 - Say it once, and keep it true to the code it sits on: update or delete it in
   the same change as the thing it describes.
+- No made-up words. A name invented while writing the change, for a piece of
+  the code ("the host") or for what it does ("held back"), means nothing to the
+  next reader. When a comment exists to explain a name, change the name.
+- The author cannot check these rules alone. Before a push that adds or changes
+  a comment, run the `comment-check` skill, in which someone who has not seen
+  the change reads the comments. Examples of flagged comments and their fixes
+  are in `.agents/skills/comment-check/examples.md`.
 - "allowlist"/"blocklist", not "whitelist"/"blacklist".
 - Worked good/bad examples: `apps/src/sketchlab/reactFlow/AGENTS.md`.
 
