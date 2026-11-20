@@ -37,29 +37,31 @@ class SecretsConfigTest < Minitest::Test
   # Helper method which allows tests to easily mock a single secret being
   # returned by all invocations
   def stub_secret(str)
-    client = Aws::SecretsManager::Client.new(
-      stub_responses: {
-        get_secret_value: lambda do |_|
-          {secret_string: str}
-        end
-      }
-    )
-    config.cdo_secrets = Cdo::Secrets.new(client: client)
+    stub_multiple_secrets(Hash.new(str))
   end
 
   # Helper method which allows tests to pass a hash of (key,secret) pairs, so
   # that specific secrets can be returned on specific invocations
   def stub_multiple_secrets(secret_strings)
-    client = Aws::SecretsManager::Client.new(
+    @client = Aws::SecretsManager::Client.new(
       stub_responses: {
+        batch_get_secret_value: lambda do |context|
+          ids = context.params[:secret_id_list]
+          {secret_values: ids.filter_map {|id| secret_strings[id] && {name: id, secret_string: secret_strings[id]}}}
+        end,
         get_secret_value: lambda do |context|
-          secret_id = context.params[:secret_id]
-          return 'ResourceNotFoundException' unless secret_strings.key?(secret_id)
-          {secret_string: secret_strings[secret_id]}
+          str = secret_strings[context.params[:secret_id]]
+          str ? {secret_string: str} : 'ResourceNotFoundException'
         end
       }
     )
-    config.cdo_secrets = Cdo::Secrets.new(client: client)
+    config.cdo_secrets = Cdo::Secrets.new(client: @client)
+  end
+
+  def batch_requests
+    @client.api_requests.
+      select {|req| req[:operation_name] == :batch_get_secret_value}.
+      map {|req| req[:params][:secret_id_list]}
   end
 
   def test_secret_tag
@@ -97,6 +99,17 @@ class SecretsConfigTest < Minitest::Test
     YAML
     assert_equal 'foo!', config.foo
     assert_equal 'bar!', config.bar
+  end
+
+  def test_secrets_fetched_in_one_batch
+    stub_multiple_secrets('/cdo/foo' => 'foo!', '/cdo/bar' => 'bar!')
+    load_configuration <<~YAML
+      foo: !Secret
+      bar: !Secret
+    YAML
+    assert_equal 'foo!', config.foo
+    assert_equal 'bar!', config.bar
+    assert_equal [%w(/cdo/foo /cdo/bar)], batch_requests
   end
 
   def test_clear_secrets
