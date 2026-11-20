@@ -18,8 +18,8 @@ export function isOnDefaultPack(labConfig?: MusicPackConfig): boolean {
 }
 
 /**
- * The saved pack may be missing, or name a pack that none of the code's
- * sounds come from.
+ * A project's saved pack ID may be missing, or name a pack that none of
+ * the sounds in the project's code come from.
  */
 export function getPackIdForSources(
   sources: Partial<ProjectSources> | undefined,
