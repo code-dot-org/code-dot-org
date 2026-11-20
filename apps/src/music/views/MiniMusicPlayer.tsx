@@ -43,7 +43,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
     undefined
   );
-  const [playedPackIds, setPlayedPackIds] = useState<{
+  const [packIdsFromSources, setPackIdsFromSources] = useState<{
     [projectId: string]: string | null;
   }>({});
   const latestPlayRequest = useRef(0);
@@ -90,7 +90,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
           currentLibrary.getBPM(),
           currentLibrary.getKey()
         );
-        setPlayedPackIds(packIds => ({...packIds, [project.id]: packId}));
+        setPackIdsFromSources(packIds => ({...packIds, [project.id]: packId}));
       }
 
       // Load code
@@ -169,11 +169,11 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   return (
     <div className={moduleStyles.miniMusicPlayer}>
       {projects.map(project => {
-        // The pack saved on the channel may be missing or wrong, so the pack
-        // a project last played under is shown once it is known.
+        // The channel's saved pack ID may be missing, or name a pack that none
+        // of the project's sounds come from.
         const packId =
-          project.id in playedPackIds
-            ? playedPackIds[project.id]
+          project.id in packIdsFromSources
+            ? packIdsFromSources[project.id]
             : project?.labConfig?.music.packId;
         const packDetails = packId ? getPackDetails(packId) : undefined;
 
