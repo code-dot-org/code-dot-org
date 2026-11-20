@@ -31,3 +31,10 @@
     margin: 0;
   }
 }
+
+.packRemoved {
+  display: flex;
+  align-items: baseline;
+  gap: 0.375rem;
+  color: var(--text-warning-primary-fixed);
+}
