@@ -1,9 +1,10 @@
 import '../../lib/ace/src-noconflict/ace';
 import droplet from '../../lib/droplet/droplet-full';
 
-// Sentry APPS-4MT and APPS-WH: a lasso selection was left pointing at tokens
-// that a reparse had replaced, and dragging it threw from Editor.hitTest.
-describe('droplet lasso selection', () => {
+import {installDropletLassoGuard} from '@cdo/apps/dropletLassoGuard';
+
+// Sentry APPS-4MT and APPS-WH.
+describe('installDropletLassoGuard', () => {
   const TAB_KEY = 9;
   let editor, errors, onError;
 
@@ -39,6 +40,7 @@ describe('droplet lasso selection', () => {
     const container = document.createElement('div');
     document.body.appendChild(container);
     editor = new droplet.Editor(container, {mode: 'javascript', palette: []});
+    installDropletLassoGuard(editor);
     editor.setValue('foo(1);\nbar(2);\nbaz(3);\n');
     // jsdom has no layout, so give the block canvas a size for pointer events.
     const rect = () => ({left: 0, top: 0, right: 800, bottom: 600});
