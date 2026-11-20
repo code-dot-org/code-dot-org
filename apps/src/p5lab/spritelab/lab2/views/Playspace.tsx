@@ -23,6 +23,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
 import {getImageThumbnail} from '../imageTrim';
+import {STEREO_GAP_PX, stereoPairPlacement} from '../stereo';
 
 import {keepFocusOffAfterMousePress} from './blurAfterPointerClick';
 
@@ -296,6 +297,9 @@ interface PlayspaceProps {
   columnShare?: number;
   /** The width of the preview column, reported in every mode. */
   onColumnWidth?: (width: number) => void;
+  /** Given, the game shows as a side-by-side stereo pair drawn into this
+      canvas (the engine's setStereoOutput) in place of its own canvas. */
+  stereoCanvasRef?: React.RefObject<HTMLCanvasElement>;
 }
 
 /**
@@ -319,6 +323,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   side = 'right',
   columnShare = PREVIEW_WIDTH_SHARE,
   onColumnWidth,
+  stereoCanvasRef,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -686,6 +691,16 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     : null;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
+  // The width the stereo pair may fill. In play: the stage, stopping at the
+  // arrow cross when the cross is beside the box. In preview: the box.
+  const crossIsBeside = !!cross && cross.x >= x + boxSide;
+  const stereoRoom =
+    mode === 'play'
+      ? {
+          left: MARGIN,
+          width: (crossIsBeside && cross ? cross.x : size.w) - 2 * MARGIN,
+        }
+      : {left: x, width: boxSide};
   const previewWidth = mode === 'preview' && measured ? columnWidth : 0;
   const reportColumnWidth = useRef(onColumnWidth);
   reportColumnWidth.current = onColumnWidth;
@@ -795,7 +810,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       )}
       <div
         ref={boxRef}
-        className={moduleStyles.playspaceBox}
+        className={classNames(
+          moduleStyles.playspaceBox,
+          stereoCanvasRef && moduleStyles.stereoBox
+        )}
         // A keyboard stop for players: game keys arrive via window listeners
         // regardless of focus, but focus needs somewhere harmless to rest
         // after the tab-bar buttons (a focused button turns Space into its
@@ -838,8 +856,11 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           opacity: visible ? 1 : 0,
           // Hairline seam so a white game canvas reads against a white page
           // in light mode. A shadow, not a border, so the 400x400 geometry
-          // the transform and pointer math rely on stays untouched.
-          boxShadow: '0 0 0 1px var(--borders-neutral-primary)',
+          // the transform and pointer math rely on stays untouched. Not in
+          // stereo, where the pair is seen and the box is not.
+          boxShadow: stereoCanvasRef
+            ? undefined
+            : '0 0 0 1px var(--borders-neutral-primary)',
           transition: slide
             ? `transform ${SLIDE_MS}ms ease, opacity ${FADE_MS}ms ease-in`
             : `opacity ${FADE_MS}ms ease-in`,
@@ -859,7 +880,10 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         <div
           ref={canvasRef}
           id="divGameLab"
-          className={moduleStyles.playspaceCanvas}
+          className={classNames(
+            moduleStyles.playspaceCanvas,
+            stereoCanvasRef && moduleStyles.playspaceCanvasHidden
+          )}
         />
         {/* Click-to-play: a transparent catcher over the live preview so a
             click opens Play on this scene. Only in preview and never while
@@ -908,6 +932,21 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           <div key={fadeTrigger} className={moduleStyles.sceneFade} />
         )}
       </div>
+      {/* Outside the box element, which clips its children, so the stereo
+          pair can be wider than the box. */}
+      {stereoCanvasRef && (
+        <canvas
+          ref={stereoCanvasRef}
+          className={moduleStyles.stereoCanvas}
+          width={2 * CANVAS + STEREO_GAP_PX}
+          height={CANVAS}
+          aria-hidden="true"
+          style={{
+            ...stereoPairPlacement({y, side: boxSide}, stereoRoom, CANVAS),
+            opacity: visible ? 1 : 0,
+          }}
+        />
+      )}
       {/* Outside the box: role="application" hides what is inside it from
           screen readers, so anything to be read must sit beside it. */}
       {prompt && (

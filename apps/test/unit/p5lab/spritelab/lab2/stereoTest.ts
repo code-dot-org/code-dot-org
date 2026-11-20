@@ -1,0 +1,179 @@
+import {
+  DEFAULT_EYE_PX,
+  drawMono,
+  drawStereoPair,
+  layerShifts,
+  STEREO_GAP_PX,
+  stereoFromQuery,
+  stereoPairPlacement,
+} from '@cdo/apps/p5lab/spritelab/lab2/stereo';
+
+describe('stereoFromQuery', () => {
+  it('is off without the parameter, or with it turned off', () => {
+    expect(stereoFromQuery(undefined)).toBeNull();
+    expect(stereoFromQuery('')).toBeNull();
+    expect(stereoFromQuery('0')).toBeNull();
+    expect(stereoFromQuery('false')).toBeNull();
+  });
+
+  it('takes the default eye offset for a bare switch', () => {
+    expect(stereoFromQuery('1')).toEqual({eye: DEFAULT_EYE_PX});
+    expect(stereoFromQuery('true')).toEqual({eye: DEFAULT_EYE_PX});
+  });
+
+  it('takes a larger number as the eye offset in px', () => {
+    expect(stereoFromQuery('10')).toEqual({eye: 10});
+  });
+});
+
+describe('layerShifts', () => {
+  it('keeps the sprite plane on the screen at zoom 1, the background behind', () => {
+    expect(layerShifts(6, 1)).toEqual({background: 6, foreground: -0});
+  });
+
+  it('brings the sprite plane forward as the camera zooms in', () => {
+    expect(layerShifts(6, 3).foreground).toBeLessThan(0);
+    expect(layerShifts(6, 3).background).toBe(6);
+  });
+});
+
+// A painter that records what it draws where.
+function painter() {
+  const calls: unknown[][] = [];
+  const record =
+    (name: string) =>
+    (...args: unknown[]) =>
+      calls.push([name, ...args]);
+  return {
+    calls,
+    save: record('save'),
+    restore: record('restore'),
+    setTransform: record('setTransform'),
+    clearRect: record('clearRect'),
+    beginPath: record('beginPath'),
+    rect: record('rect'),
+    clip: record('clip'),
+    drawImage: record('drawImage'),
+  };
+}
+const background = {} as CanvasImageSource;
+const foreground = {} as CanvasImageSource;
+
+describe('drawStereoPair', () => {
+  it('draws each eye in its own half with the layers shifted apart', () => {
+    const out = painter();
+    drawStereoPair(
+      out,
+      {background, foreground},
+      {background: 4, foreground: -2},
+      400,
+      400
+    );
+    const images = out.calls.filter(([name]) => name === 'drawImage');
+    expect(images).toEqual([
+      // Left eye: the background shifted left, the foreground shifted right.
+      ['drawImage', background, -8, -4, 408, 408],
+      ['drawImage', foreground, 2, 0, 400, 400],
+      // Right eye: the reverse.
+      ['drawImage', background, 400, -4, 408, 408],
+      ['drawImage', foreground, 398, 0, 400, 400],
+    ]);
+    // Each eye's picture is clipped to where its shifted foreground reaches:
+    // the left eye loses its left 2px, the right eye its right 2px.
+    const clips = out.calls.filter(([name]) => name === 'rect');
+    expect(clips).toEqual([
+      ['rect', 2, 0, 398, 400],
+      ['rect', 400, 0, 398, 400],
+    ]);
+  });
+
+  it('clips to whole px when the shift is a fraction', () => {
+    const out = painter();
+    drawStereoPair(
+      out,
+      {background, foreground},
+      {background: 4, foreground: -1.5},
+      400,
+      400
+    );
+    expect(out.calls.filter(([name]) => name === 'rect')).toEqual([
+      ['rect', 2, 0, 398, 400],
+      ['rect', 400, 0, 398, 400],
+    ]);
+  });
+
+  it('clips the inner edges when the foreground sits behind the screen', () => {
+    const out = painter();
+    drawStereoPair(
+      out,
+      {background, foreground},
+      {background: 4, foreground: 2},
+      400,
+      400
+    );
+    expect(out.calls.filter(([name]) => name === 'rect')).toEqual([
+      ['rect', 0, 0, 398, 400],
+      ['rect', 402, 0, 398, 400],
+    ]);
+  });
+});
+
+describe('drawStereoPair with a gap', () => {
+  it('moves the right eye over by the gap and clears the whole pair', () => {
+    const out = painter();
+    drawStereoPair(
+      out,
+      {background, foreground},
+      {background: 0, foreground: 0},
+      400,
+      400,
+      8
+    );
+    expect(out.calls.filter(([name]) => name === 'rect')).toEqual([
+      ['rect', 0, 0, 400, 400],
+      ['rect', 408, 0, 400, 400],
+    ]);
+    expect(out.calls.filter(([name]) => name === 'clearRect')).toEqual([
+      ['clearRect', 0, 0, 808, 400],
+    ]);
+  });
+});
+
+describe('stereoPairPlacement', () => {
+  const pairWidth = (view: number) => view * (2 + STEREO_GAP_PX / 400);
+
+  it('gives each view the size of the box when the room is wide enough', () => {
+    const placed = stereoPairPlacement(
+      {y: 50, side: 600},
+      {left: 12, width: 1400},
+      400
+    );
+    expect(placed.height).toBe(600);
+    expect(placed.width).toBeCloseTo(pairWidth(600));
+    expect(placed.top).toBe(50);
+    expect(placed.left).toBeCloseTo(12 + (1400 - pairWidth(600)) / 2);
+  });
+
+  it('shrinks the views to fit a narrower room, centered vertically on the box', () => {
+    const placed = stereoPairPlacement(
+      {y: 20, side: 400},
+      {left: 100, width: 400},
+      400
+    );
+    expect(placed.width).toBeCloseTo(400);
+    expect(placed.left).toBeCloseTo(100);
+    expect(placed.height).toBeCloseTo(400 / (2 + STEREO_GAP_PX / 400));
+    expect(placed.top).toBeCloseTo(20 + (400 - placed.height) / 2);
+  });
+});
+
+describe('drawMono', () => {
+  it('lays the layers back over each other unshifted', () => {
+    const out = painter();
+    drawMono(out, {background, foreground}, 400, 400);
+    expect(out.calls.filter(([name]) => name === 'drawImage')).toEqual([
+      ['drawImage', background, 0, 0, 400, 400],
+      ['drawImage', foreground, 0, 0, 400, 400],
+    ]);
+  });
+});

@@ -136,6 +136,7 @@ import spriteLab2Reducer, {
 } from '../redux/spriteLab2Redux';
 import {sceneMetadataFor} from '../sceneThumbnails';
 import SpriteLab2Engine from '../SpriteLab2Engine';
+import {stereoFromQuery} from '../stereo';
 import {
   SpriteLab2LevelProperties,
   Scene,
@@ -511,6 +512,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
 
   const engineRef = useRef<SpriteLab2Engine | null>(null);
   const [engineReady, setEngineReady] = useState(false);
+  // Side-by-side stereo output, asked for on the URL (stereo.ts).
+  const stereo = useMemo(() => stereoFromQuery(), []);
+  const stereoCanvasRef = useRef<HTMLCanvasElement>(null);
+  useEffect(() => {
+    if (engineReady && stereo) {
+      engineRef.current?.setStereoOutput(stereoCanvasRef.current, stereo.eye);
+    }
+  }, [engineReady, stereo]);
   const [animationsSeeded, setAnimationsSeeded] = useState(false);
   // The stage: the preview beside Code and World, centered to play; Images
   // takes the whole width.
@@ -2615,6 +2624,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           <Playspace
             boxRef={playspaceRef}
             mode={playspaceMode}
+            stereoCanvasRef={stereo ? stereoCanvasRef : undefined}
             columnHeader={<EditorStrip title="Preview" />}
             onColumnWidth={setPreviewColumnWidth}
             side="right"
