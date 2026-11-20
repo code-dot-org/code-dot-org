@@ -18,8 +18,8 @@ const VerifiedResourcesNotification = ({inLesson}) => {
   }
   return (
     <NotificationBanner
-      variant="warning"
-      style="filled"
+      sentiment="warning"
+      fillStyle="color"
       fullWidth={false}
       title={i18n.verifiedResourcesNotice()}
       className={classNames(

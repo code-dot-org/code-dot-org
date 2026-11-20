@@ -105,7 +105,7 @@ const JoinSectionSuccessNotification = ({
 
   return (
     <NotificationBanner
-      variant="success"
+      sentiment="success"
       className={styles.banner}
       icon={SUCCESS_ICON}
       title={i18n.sectionsNotificationSuccess()}
@@ -123,7 +123,7 @@ JoinSectionSuccessNotification.propTypes = {
 
 const LeaveSectionSuccessNotification = ({sectionName, sectionId, onClose}) => (
   <NotificationBanner
-    variant="success"
+    sentiment="success"
     className={styles.banner}
     icon={SUCCESS_ICON}
     title={i18n.sectionsNotificationSuccess()}
@@ -139,7 +139,7 @@ LeaveSectionSuccessNotification.propTypes =
 
 const JoinSectionNotFoundNotification = ({sectionId, onClose}) => (
   <NotificationBanner
-    variant="error"
+    sentiment="error"
     role="alert"
     className={styles.banner}
     icon={ERROR_ICON}
@@ -155,7 +155,7 @@ JoinSectionNotFoundNotification.propTypes = {
 
 const JoinSectionFullNotification = ({sectionId, sectionCapacity, onClose}) => (
   <NotificationBanner
-    variant="error"
+    sentiment="error"
     role="alert"
     className={styles.banner}
     icon={ERROR_ICON}
@@ -175,7 +175,7 @@ JoinSectionFullNotification.propTypes = {
 
 const JoinSectionRestrictedNotification = ({sectionId, onClose}) => (
   <NotificationBanner
-    variant="error"
+    sentiment="error"
     role="alert"
     className={styles.banner}
     icon={ERROR_ICON}
@@ -191,7 +191,7 @@ JoinSectionRestrictedNotification.propTypes = {
 
 const JoinSectionFailNotification = ({sectionId, onClose}) => (
   <NotificationBanner
-    variant="error"
+    sentiment="error"
     role="alert"
     className={styles.banner}
     icon={ERROR_ICON}
@@ -205,7 +205,7 @@ JoinSectionFailNotification.propTypes =
 
 const JoinSectionOwnedNotification = ({sectionId, onClose}) => (
   <NotificationBanner
-    variant="error"
+    sentiment="error"
     role="alert"
     className={styles.banner}
     icon={ERROR_ICON}
@@ -219,7 +219,7 @@ JoinSectionOwnedNotification.propTypes =
 
 const JoinSectionParticipantNotification = ({sectionId, onClose}) => (
   <NotificationBanner
-    variant="error"
+    sentiment="error"
     role="alert"
     className={styles.banner}
     icon={ERROR_ICON}
@@ -235,7 +235,7 @@ JoinSectionParticipantNotification.propTypes =
 
 const JoinSectionExistsNotification = ({sectionName, onClose}) => (
   <NotificationBanner
-    variant="success"
+    sentiment="success"
     className={styles.banner}
     icon={SUCCESS_ICON}
     title={i18n.sectionsNotificationSuccess()}

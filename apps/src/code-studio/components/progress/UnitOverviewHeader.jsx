@@ -177,8 +177,8 @@ class UnitOverviewHeader extends Component {
               styles.notificationBanner,
               'announcement-notification'
             )}
-            variant="warning"
-            style="filled"
+            sentiment="warning"
+            fillStyle="color"
             icon={WARNING_ICON}
             title={i18n.redirectCourseVersionWarningDetails()}
             onClose={this.handleDismissRedirectWarning}
@@ -190,8 +190,8 @@ class UnitOverviewHeader extends Component {
               styles.notificationBanner,
               'announcement-notification'
             )}
-            variant="warning"
-            style="filled"
+            sentiment="warning"
+            fillStyle="color"
             icon={WARNING_ICON}
             title={i18n.wrongCourseVersionWarningNotice()}
             description={versionWarningDetails}
@@ -204,8 +204,8 @@ class UnitOverviewHeader extends Component {
               styles.notificationBanner,
               'announcement-notification'
             )}
-            variant="warning"
-            style="filled"
+            sentiment="warning"
+            fillStyle="color"
             icon={WARNING_ICON}
             title={i18n.hiddenUnitWarningNotice()}
             description={i18n.hiddenUnitWarningDetails()}

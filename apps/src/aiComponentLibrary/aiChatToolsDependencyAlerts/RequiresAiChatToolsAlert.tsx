@@ -41,8 +41,8 @@ const RequiresAiChatToolsAlert: React.FC = () => {
       )}
       {aiChatAccessLevel === AiChatAccessLevels.DISABLED && (
         <NotificationBanner
-          variant="error"
-          style="filled"
+          sentiment="error"
+          fillStyle="color"
           className={styles.chatToolsAlert}
           title=""
           description={
