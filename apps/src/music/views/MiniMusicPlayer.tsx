@@ -14,6 +14,7 @@ import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import {BlockMode} from '../constants';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
+import {getPackIdForSources} from '../utils/pack';
 
 import moduleStyles from './MiniMusicPlayer.module.scss';
 
@@ -42,6 +43,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
     undefined
   );
+  const [packIdsFromSources, setPackIdsFromSources] = useState<{
+    [projectId: string]: string | null;
+  }>({});
+  const latestPlayRequest = useRef(0);
 
   // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
@@ -70,19 +75,25 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
       playerRef.current?.stopSong();
 
-      // If there is a pack ID, give the player its BPM and key.
+      const playRequest = ++latestPlayRequest.current;
+      const projectSources = await sourcesStoreRef.current.load(project.id);
+      if (playRequest !== latestPlayRequest.current) {
+        return;
+      }
+
       const currentLibrary = MusicLibrary.getInstance();
-      const packId = project.labConfig?.music.packId || null;
       if (currentLibrary) {
+        const packId =
+          getPackIdForSources(projectSources, currentLibrary) || null;
         currentLibrary.setCurrentPackId(packId);
         playerRef.current?.updateConfiguration(
           currentLibrary.getBPM(),
           currentLibrary.getKey()
         );
+        setPackIdsFromSources(packIds => ({...packIds, [project.id]: packId}));
       }
 
       // Load code
-      const projectSources = await sourcesStoreRef.current.load(project.id);
       workspaceRef.current.loadCode(
         JSON.parse(projectSources.source as string)
       );
@@ -113,6 +124,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
           });
         }
       );
+
+      if (playRequest !== latestPlayRequest.current) {
+        return;
+      }
 
       // Play sounds
       playerRef.current?.playSong(playbackEvents);
@@ -154,7 +169,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   return (
     <div className={moduleStyles.miniMusicPlayer}>
       {projects.map(project => {
-        const packId = project?.labConfig?.music.packId;
+        // The channel's saved pack ID may be missing, or name a pack that none
+        // of the project's sounds come from.
+        const packId =
+          project.id in packIdsFromSources
+            ? packIdsFromSources[project.id]
+            : project?.labConfig?.music.packId;
         const packDetails = packId ? getPackDetails(packId) : undefined;
 
         return (

@@ -1,3 +1,5 @@
+import type {ProjectSources} from '@cdo/apps/lab2/types';
+
 import {FIELD_SOUNDS_NAME} from '../blockly/constants';
 import {DEFAULT_PACK} from '../constants';
 import type MusicLibrary from '../player/MusicLibrary';
@@ -15,11 +17,26 @@ export function isOnDefaultPack(labConfig?: MusicPackConfig): boolean {
   return labConfig?.music?.packId === DEFAULT_PACK;
 }
 
+/**
+ * A project's saved pack ID may be missing, or name a pack that none of
+ * the sounds in the project's code come from.
+ */
+export function getPackIdForSources(
+  sources: Partial<ProjectSources> | undefined,
+  library: MusicLibrary
+): string | undefined {
+  const savedPackId = sources?.labConfig?.music?.packId || undefined;
+  const packsInCode = findRestrictedPacksInSource(sources?.source, library);
+  return savedPackId && packsInCode.includes(savedPackId)
+    ? savedPackId
+    : packsInCode[0] || savedPackId;
+}
+
 export function findRestrictedPacksInSource(
-  source: string | undefined,
+  source: ProjectSources['source'] | undefined,
   library: MusicLibrary
 ): string[] {
-  if (!source) {
+  if (typeof source !== 'string') {
     return [];
   }
   let code: unknown;

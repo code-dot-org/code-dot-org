@@ -36,9 +36,9 @@ describe('MusicView', () => {
   });
 
   describe('getPackId', () => {
-    const savedPack = packId => ({music: {packId}});
+    const sources = {source: sourceWithSounds('song/verse')};
 
-    const getPackId = (levelData, sources) => {
+    const getPackId = levelData => {
       const view = new UnconnectedMusicView({
         blockMode: 'Simple2',
         levelProperties: {levelData},
@@ -48,61 +48,11 @@ describe('MusicView', () => {
     };
 
     it("uses the level's pack ahead of the project's", () => {
-      expect(
-        getPackId(
-          {packId: 'level'},
-          {
-            source: sourceWithSounds('song/verse'),
-            labConfig: savedPack('saved'),
-          }
-        )
-      ).toBe('level');
+      expect(getPackId({packId: 'level'})).toBe('level');
     });
 
-    it('uses the pack of the sounds in the code when no pack is saved', () => {
-      expect(getPackId({}, {source: sourceWithSounds('song/verse')})).toBe(
-        'song'
-      );
-    });
-
-    it('uses the pack of the sounds in the code when the saved pack is another', () => {
-      expect(
-        getPackId(
-          {},
-          {
-            source: sourceWithSounds('song/verse'),
-            labConfig: savedPack('song2'),
-          }
-        )
-      ).toBe('song');
-    });
-
-    it('keeps the saved pack when some of the sounds in the code are from it', () => {
-      expect(
-        getPackId(
-          {},
-          {
-            source: sourceWithSounds('song/verse', 'song2/chorus'),
-            labConfig: savedPack('song2'),
-          }
-        )
-      ).toBe('song2');
-    });
-
-    it('uses the saved pack when the code has no sound from a restricted pack', () => {
-      expect(
-        getPackId(
-          {},
-          {
-            source: sourceWithSounds('drums/beat'),
-            labConfig: savedPack('saved'),
-          }
-        )
-      ).toBe('saved');
-    });
-
-    it('has no pack for a project with nothing saved', () => {
-      expect(getPackId({}, undefined)).toBeUndefined();
+    it("uses the project's pack on a level without one", () => {
+      expect(getPackId({})).toBe('song');
     });
   });
 
