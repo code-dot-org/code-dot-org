@@ -81,6 +81,15 @@ describe('cleanLevelMode', () => {
     ).toEqual({kind: 'freeplay'});
   });
 
+  it('keeps a start tab, and drops one that is not a tab', () => {
+    expect(cleanLevelMode({kind: 'freeplay', startTab: 'Images'}).mode).toEqual(
+      {kind: 'freeplay', startTab: 'Images'}
+    );
+    const {mode, removed} = cleanLevelMode({kind: 'freeplay', startTab: 'Art'});
+    expect(mode).toEqual({kind: 'freeplay'});
+    expect(removed).toEqual(['startTab: "Art"']);
+  });
+
   it('keeps the one-image flag', () => {
     expect(cleanLevelMode({kind: 'image', oneImage: true}).mode).toEqual({
       kind: 'image',
