@@ -33,38 +33,37 @@ const MusicProjectBar: React.FC<{
 
   return (
     <div className={classNames(styles.container, className)}>
-      {isLoading ? (
-        <div className={styles.loadingIcon}>
-          <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
-        </div>
-      ) : (
-        packImageUrl && (
-          <img
-            src={packImageUrl}
-            className={styles.image}
-            alt={packFolder?.name}
-          />
-        )
-      )}
-      <div className={styles.text}>
-        <Typography variant="body3" gutterBottom>
-          {isLoading ? 'Loading...' : title}
-        </Typography>
-        {packFolder && (
-          <Typography variant="body4" gutterBottom>
-            {`${packFolder.name} - ${packFolder.artist}`}
-          </Typography>
-        )}
-        {!isLoading && packFolder?.removed && (
-          <Typography className={styles.packRemoved} variant="body4">
-            <FontAwesomeV6Icon
-              iconName="exclamation-circle"
-              iconStyle="solid"
+      <div className={styles.row}>
+        {isLoading ? (
+          <div className={styles.loadingIcon}>
+            <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
+          </div>
+        ) : (
+          packImageUrl && (
+            <img
+              src={packImageUrl}
+              className={styles.image}
+              alt={packFolder?.name}
             />
-            {musicI18n.packRemovedDescription()}
-          </Typography>
+          )
         )}
+        <div className={styles.text}>
+          <Typography variant="body3" gutterBottom>
+            {isLoading ? 'Loading...' : title}
+          </Typography>
+          {packFolder && (
+            <Typography variant="body4" gutterBottom>
+              {`${packFolder.name} - ${packFolder.artist}`}
+            </Typography>
+          )}
+        </div>
       </div>
+      {!isLoading && packFolder?.removed && (
+        <Typography className={styles.packRemoved} variant="body4">
+          <FontAwesomeV6Icon iconName="exclamation-circle" iconStyle="solid" />
+          {musicI18n.packRemovedDescription()}
+        </Typography>
+      )}
     </div>
   );
 };
