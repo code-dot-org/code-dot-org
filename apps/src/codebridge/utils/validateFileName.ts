@@ -2,6 +2,7 @@ import {INVALID_NAME_ERROR} from '@codebridge/constants';
 import {FolderId, ProjectFile} from '@codebridge/types';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
+import {SUPPORTED_IMAGE_EXTENSIONS} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {isDuplicateFileName, DuplicateFileError} from './isDuplicateFileName';
@@ -53,9 +54,12 @@ export const validateFileName = ({
   if (selectedFileType) {
     // Skip extension validation since the extension comes from the dropdown.
   } else {
-    const extension = fileName.split('.').pop();
+    let extension = fileName.split('.').pop();
     if (!extension || extension === fileName) {
       return codebridgeI18n.noFileExtensionError();
+    }
+    if (SUPPORTED_IMAGE_EXTENSIONS.includes(extension.toLowerCase())) {
+      extension = extension.toLowerCase();
     }
 
     if (validFileTypes && !validFileTypes.includes(extension)) {

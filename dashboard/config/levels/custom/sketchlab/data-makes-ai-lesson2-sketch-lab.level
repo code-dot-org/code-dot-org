@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Recycling Robot\r\n\r\nA new robot is designed to classify items that people through away into the following categories: **TRASH**, **RECYCLE**, and **COMPOST**\r\n\r\nRead the directions on the canvas and help to test the decision tree that the robot uses to classify items.",
+    "long_instructions": "#Recycling Robot\r\n\r\nA new robot is designed to classify items that people throw away into these categories: **TRASH**, **RECYCLE**, and **COMPOST**.\r\n\r\n**Directions:** Use the decision tree to classify each item in the squares.\r\n 1. Drag each item along the path to classify it as **TRASH**, **RECYCLE**, or **COMPOST**.\r\n 2. Drag the wrench to the place where you would add a question to fix the decision tree.\r\n\r\n*When you finish your sketch, click Download to save it to your computer.*",
     "hide_share_and_remix": "false",
     "require_edit_to_continue": "true",
     "start_sources": {
@@ -61,8 +61,8 @@
               "altText": "recycling-robot-plastic-bottle-1"
             },
             "position": {
-              "x": 450.73282481024205,
-              "y": 623.2298218308312
+              "x": 321.3303384522805,
+              "y": 621.6322602708564
             },
             "width": 123.15461058225554,
             "height": 120.58482625995669,
@@ -72,26 +72,6 @@
             },
             "dragging": false,
             "zIndex": 8
-          },
-          {
-            "id": "c3b0fccd-923a-433c-b21d-83e5b573920e",
-            "type": "image",
-            "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson2-sketch-lab/uuid/270f4c25-1e49-4769-86de-bf5150d53c54.jpg",
-              "altText": "Gemini_Generated_Image_4vgywq4vgywq4vgy"
-            },
-            "position": {
-              "x": 316.0708474620114,
-              "y": 623.2259509100264
-            },
-            "width": 121.16406561035785,
-            "height": 117.86397048747273,
-            "measured": {
-              "width": 121,
-              "height": 118
-            },
-            "dragging": false,
-            "zIndex": 9
           },
           {
             "id": "7cd0c8aa-9629-4930-a4c3-81fe17fe2b65",
@@ -107,10 +87,10 @@
               "x": 22.856979940109227,
               "y": 583.6006286912701
             },
-            "width": 841.6365405441827,
+            "width": 709.4609447658265,
             "height": 172.4265865608764,
             "measured": {
-              "width": 842,
+              "width": 709,
               "height": 172
             },
             "dragging": false,
@@ -144,7 +124,7 @@
             "data": {
               "shapeType": "diamond",
               "label": "",
-              "backgroundColor": "#ededed",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "locked": true
             },
             "position": {
@@ -254,7 +234,7 @@
             "data": {
               "shapeType": "diamond",
               "label": "",
-              "backgroundColor": "#ededed",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "locked": true
             },
             "position": {
@@ -276,7 +256,7 @@
             "data": {
               "shapeType": "diamond",
               "label": "",
-              "backgroundColor": "#ededed",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "locked": true
             },
             "position": {
@@ -298,7 +278,7 @@
             "data": {
               "shapeType": "diamond",
               "label": "",
-              "backgroundColor": "#ededed",
+              "backgroundColor": "var(--sketchlab-bg-gray)",
               "locked": true
             },
             "position": {
@@ -648,67 +628,44 @@
             "id": "dc8ff60c-16d5-4466-a397-06d0441d8931",
             "type": "text",
             "data": {
-              "text": "Directions: Classify each of the items below according to the decision tree. \n\n * Drag the items 1-4 along the nodes to classify them. \n * Describe a new object for item 5 and classify it.\n * Drag the wrench to a place you would want to fix in the decision tree.",
+              "text": "Directions: Use the decision tree to classify each of the items in the squares. \n\n * Drag the items items below along the path to classify them. \n * Drag the wrench to a place you would want to fix in the decision tree.",
               "strokeColor": "transparent",
               "fontSize": "large",
               "textAlign": "left",
               "locked": true
             },
             "position": {
-              "x": 25.019691301480975,
-              "y": 456.0229189255454
+              "x": 31.378160433718676,
+              "y": 446.3795645416066
             },
-            "width": 762.0083431779987,
-            "height": 55.441613311374795,
+            "width": 778.2262196650935,
+            "height": 132.67957433306685,
             "measured": {
-              "width": 762,
-              "height": 55
+              "width": 778,
+              "height": 133
             },
             "dragging": false,
             "zIndex": 4
           },
           {
-            "id": "b68e6c06-61c6-4b95-ba7f-3eb83fa843c6",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Describe your own unique item here",
-              "backgroundColor": "#f8efdd",
-              "fontSize": "small",
-              "strokeColor": "#887c63"
-            },
-            "position": {
-              "x": 587.6919208130721,
-              "y": 621.0531366268742
-            },
-            "width": 125.07768230788918,
-            "height": 124.02727327441755,
-            "measured": {
-              "width": 125,
-              "height": 124
-            },
-            "dragging": false,
-            "zIndex": 7
-          },
-          {
             "id": "4b2082b1-a6bf-4809-aa2b-4cb2e4b1159d",
             "type": "text",
             "data": {
-              "text": "1.",
+              "text": "Banana Peel",
               "strokeColor": "transparent",
-              "fontSize": "large",
+              "fontSize": "medium",
               "fontColor": "#ffffff",
               "locked": true
             },
             "position": {
-              "x": 11.159892189480729,
-              "y": 583.2443852045485
+              "x": 41.65878287901006,
+              "y": 582.2761609064432
             },
-            "width": 80,
-            "height": 40,
+            "width": 119.21286874438718,
+            "height": 43.38878098056,
             "measured": {
-              "width": 80,
-              "height": 40
+              "width": 119,
+              "height": 43
             },
             "dragging": false,
             "zIndex": 4
@@ -717,20 +674,20 @@
             "id": "d37dfdd1-fc72-49f8-8bc2-22ccec376412",
             "type": "text",
             "data": {
-              "text": "2.",
+              "text": "Soda Can",
               "strokeColor": "transparent",
-              "fontSize": "large",
+              "fontSize": "medium",
               "fontColor": "#ffffff",
               "locked": true
             },
             "position": {
-              "x": 154.0691407733657,
+              "x": 180.6951667729462,
               "y": 583.2443852045485
             },
-            "width": 80,
+            "width": 118.728744406907,
             "height": 40,
             "measured": {
-              "width": 80,
+              "width": 119,
               "height": 40
             },
             "dragging": false,
@@ -740,66 +697,20 @@
             "id": "c2b8507e-340d-4aee-9720-24009ab8e0d0",
             "type": "text",
             "data": {
-              "text": "3.",
+              "text": "Water Bottle",
               "strokeColor": "transparent",
-              "fontSize": "large",
+              "fontSize": "medium",
               "fontColor": "#ffffff",
               "locked": true
             },
             "position": {
-              "x": 292.01186973220706,
-              "y": 584.0721384753892
+              "x": 323.96310093170376,
+              "y": 580.344494835448
             },
-            "width": 80,
+            "width": 121.63342542684171,
             "height": 40,
             "measured": {
-              "width": 80,
-              "height": 40
-            },
-            "dragging": false,
-            "zIndex": 4
-          },
-          {
-            "id": "e497dbdb-0794-4c07-b9fc-8399dd05d491",
-            "type": "text",
-            "data": {
-              "text": "4.",
-              "strokeColor": "transparent",
-              "fontSize": "large",
-              "fontColor": "#ffffff",
-              "locked": true
-            },
-            "position": {
-              "x": 424.988079066005,
-              "y": 583.2443852045486
-            },
-            "width": 80,
-            "height": 40,
-            "measured": {
-              "width": 80,
-              "height": 40
-            },
-            "dragging": false,
-            "zIndex": 4
-          },
-          {
-            "id": "bfec8108-1092-45e0-b3f6-73ebd4bb8104",
-            "type": "text",
-            "data": {
-              "text": "5.",
-              "strokeColor": "transparent",
-              "fontSize": "large",
-              "fontColor": "#ffffff",
-              "locked": true
-            },
-            "position": {
-              "x": 562.9308080248463,
-              "y": 583.2443852045485
-            },
-            "width": 80,
-            "height": 40,
-            "measured": {
-              "width": 80,
+              "width": 122,
               "height": 40
             },
             "dragging": false,
@@ -813,8 +724,8 @@
               "altText": "wrench (2)"
             },
             "position": {
-              "x": 721.777850823236,
-              "y": 621.428899198309
+              "x": 582.8180509480547,
+              "y": 620.1422343846499
             },
             "width": 127.64234458238582,
             "height": 122.25750203110385,
@@ -824,29 +735,6 @@
             },
             "dragging": false,
             "zIndex": 6
-          },
-          {
-            "id": "39be5194-51c2-4d0c-a2a8-6da4b47ff3a0",
-            "type": "text",
-            "data": {
-              "text": "6.",
-              "strokeColor": "transparent",
-              "fontSize": "large",
-              "fontColor": "#ffffff",
-              "locked": true
-            },
-            "position": {
-              "x": 703.0223854864778,
-              "y": 584.1833161023865
-            },
-            "width": 80,
-            "height": 40,
-            "measured": {
-              "width": 80,
-              "height": 40
-            },
-            "dragging": false,
-            "zIndex": 4
           },
           {
             "id": "37e36865-e2ee-4fa7-83bc-0fcda46212fa",
@@ -1033,8 +921,8 @@
               "locked": true
             },
             "position": {
-              "x": 9.896750831522667,
-              "y": 273.3618709253896
+              "x": 15.568313256593655,
+              "y": 326.6745577210569
             },
             "width": 160,
             "height": 120,
@@ -1055,8 +943,8 @@
               "locked": true
             },
             "position": {
-              "x": 153.67729554944913,
-              "y": 308.0366655654663
+              "x": 160.48317045953434,
+              "y": 361.3493523611336
             },
             "width": 425.2920192921068,
             "height": 51.618626921425744,
@@ -1245,9 +1133,9 @@
           }
         ],
         "viewport": {
-          "x": 67.69242152945299,
-          "y": -280.90598828925647,
-          "zoom": 1.208089457604309
+          "x": -218.9591843874466,
+          "y": -840.871364869613,
+          "zoom": 2
         }
       }
     },
@@ -1285,6 +1173,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-21 15:25:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 18:36:46 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 18:53:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 18:59:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:01:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:02:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:09:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:16:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:21:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:06:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:06:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:14:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:17:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:26:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 01:19:08 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-21 15:25:06 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 18:36:46 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 18:53:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 18:59:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:01:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:02:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:09:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:16:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-21 19:21:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:06:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:06:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:14:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:17:28 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-22 19:26:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 01:19:08 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-19 00:51:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-19 01:00:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-19 01:10:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-19 02:08:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-19 02:15:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-19 02:21:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-19 02:22:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-19 02:23:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

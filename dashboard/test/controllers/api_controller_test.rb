@@ -1381,6 +1381,23 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 1, UserLevel.where(user_id: outside_student.id, script_id: @script.id).count
   end
 
+  test "mass_progress_reset rejects the whole request if any student is a demo student" do
+    demo_student = create(:student, :in_email_section)
+    DemoStudent.create!(user: demo_student, demo_type: 'high')
+    Policies::DemoSections.reset_cache!
+    demo_section = create(:section, user: @teacher, login_type: 'email', demo_type: 'high')
+    demo_section.add_student(demo_student)
+    UserLevel.create!(user: @student_1, script: @script, level: @level, best_result: 100)
+    UserLevel.create!(user: demo_student, script: @script, level: @level, best_result: 100)
+
+    post :mass_progress_reset, params: {unit_ids: [@script.id], student_ids: [@student_1.id, demo_student.id]}
+
+    assert_response :forbidden
+    assert_equal 'Cannot reset progress for demo students', JSON.parse(response.body)['error']
+    assert_equal 1, UserLevel.where(user_id: @student_1.id, script_id: @script.id).count
+    assert_equal 1, UserLevel.where(user_id: demo_student.id, script_id: @script.id).count
+  end
+
   test "mass_progress_reset returns forbidden if not signed in" do
     sign_out @teacher
 
@@ -1426,6 +1443,46 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal section.id, response["id"]
     assert_equal teacher.name, response["teacherName"]
     assert_equal 0, response["students"].length
+  end
+
+  test "teacher_panel_section returns archived section when passed its section id" do
+    teacher = create(:teacher)
+    sign_in teacher
+    create(:section, user: teacher, login_type: 'word')
+    archived_section = create(:section, user: teacher, login_type: 'word', hidden: true)
+    create(:follower, section: archived_section)
+
+    get :teacher_panel_section, params: {
+      section_id: archived_section.id
+    }
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal archived_section.id, response["id"]
+    assert_equal 1, response["students"].length
+  end
+
+  test "teacher_panel_section returns archived section when it is the teacher's only section and its id is passed" do
+    teacher = create(:teacher)
+    sign_in teacher
+    archived_section = create(:section, user: teacher, login_type: 'word', hidden: true)
+
+    get :teacher_panel_section, params: {
+      section_id: archived_section.id
+    }
+
+    assert_response :success
+    assert_equal archived_section.id, JSON.parse(@response.body)["id"]
+  end
+
+  test "teacher_panel_section returns no_content when no section id is passed and teacher's only section is archived" do
+    teacher = create(:teacher)
+    sign_in teacher
+    create(:section, user: teacher, login_type: 'word', hidden: true)
+
+    get :teacher_panel_section
+
+    assert_response :no_content
   end
 
   test "teacher_panel_section returns no_content when passed section id not owned by logged in teacher" do

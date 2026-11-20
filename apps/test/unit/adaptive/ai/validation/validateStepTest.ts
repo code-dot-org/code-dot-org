@@ -1,17 +1,37 @@
-import {generate, isAdaptiveAiEnabled} from '@cdo/apps/adaptive/ai/generate';
+import {isAdaptiveAiAvailable} from '@cdo/apps/adaptive/ai/access';
+import {generate, moderateOutput} from '@cdo/apps/adaptive/ai/generate';
 import {
+  PLAIN_REASONS,
   validateStep,
   withOpener,
 } from '@cdo/apps/adaptive/ai/validation/validateStep';
+import {sendAiStaticFallbackUsed} from '@cdo/apps/adaptive/metricsHelpers';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: jest.fn(() => true),
+}));
 jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   generate: jest.fn(),
-  isAdaptiveAiEnabled: jest.fn(() => true),
+  moderateOutput: jest.fn(async () => 'ok'),
+}));
+jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
+  ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
+  sendAiStaticFallbackUsed: jest.fn(),
+}));
+const mockLogWarning = jest.fn();
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {
+    getInstance: () => ({
+      getMetricsReporter: () => ({logWarning: mockLogWarning}),
+    }),
+  },
 }));
 const mockGenerate = generate as jest.Mock;
-const mockEnabled = isAdaptiveAiEnabled as jest.Mock;
+const mockAvailable = isAdaptiveAiAvailable as jest.Mock;
+const mockModerateOutput = moderateOutput as jest.Mock;
 
 const step: LevelStep = {
   id: 'build',
@@ -69,7 +89,9 @@ const options = {
 describe('validateStep', () => {
   beforeEach(() => {
     mockGenerate.mockReset();
-    mockEnabled.mockReturnValue(true);
+    mockAvailable.mockReturnValue(true);
+    mockModerateOutput.mockResolvedValue('ok');
+    mockLogWarning.mockClear();
   });
 
   it('judges the work under the validation trace and shapes the verdict as an attempt', async () => {
@@ -96,6 +118,7 @@ describe('validateStep', () => {
     });
     const call = mockGenerate.mock.calls[0][0];
     expect(call.trace.name).toBe('adaptive-validation');
+    expect(call.model).toBe('gemini-3.1-flash-lite');
     expect(call.trace.metadata).toMatchObject({
       pathwayId: 'p',
       checkpointId: 'basics',
@@ -106,6 +129,44 @@ describe('validateStep', () => {
     expect(call.prompt).toContain('=== index.html ===\n<h1>Bakery</h1>');
     expect(call.prompt).toContain('Student: Add a heading');
   });
+
+  it('moderates the reason before the student reads it', async () => {
+    mockGenerate.mockResolvedValue({
+      output: {pass: true, evidenceLevel: 3, reason: 'Success! Nice heading.'},
+      traceId: 'trace-1',
+    });
+    await validateStep(options);
+    expect(mockModerateOutput).toHaveBeenCalledWith(
+      'Success! Nice heading.',
+      options.aichatContext
+    );
+  });
+
+  it.each([
+    [true, PLAIN_REASONS.pass],
+    [false, PLAIN_REASONS.fail],
+  ])(
+    "keeps the verdict (pass %s) under a plain reason, and logs it, when the judge's reason does not clear moderation",
+    async (pass, plain) => {
+      mockGenerate.mockResolvedValue({
+        output: {pass, evidenceLevel: 1, reason: 'Rude.'},
+        traceId: 'trace-1',
+      });
+      mockModerateOutput.mockResolvedValue('flagged');
+
+      const attempt = await validateStep(options);
+
+      expect(attempt).toEqual({
+        pass,
+        evidenceLevel: 1,
+        reason: plain,
+        traceId: 'trace-1',
+      });
+      expect(mockLogWarning).toHaveBeenCalledWith(
+        expect.objectContaining({moderation: 'flagged', traceId: 'trace-1'})
+      );
+    }
+  );
 
   it('rates at the highest described evidence level at or below what the judge said', async () => {
     mockGenerate.mockResolvedValue({
@@ -157,11 +218,60 @@ describe('validateStep', () => {
     expect(
       await validateStep({...options, pathway: unscaled, onJudging})
     ).toBeUndefined();
-    mockEnabled.mockReturnValue(false);
+    mockAvailable.mockReturnValue(false);
     expect(await validateStep({...options, onJudging})).toBeUndefined();
+    expect(sendAiStaticFallbackUsed).toHaveBeenCalledWith(
+      'validation',
+      'aiUnavailable',
+      checkpoint,
+      step
+    );
     expect(onJudging).toHaveBeenCalledTimes(1);
     expect(mockGenerate).toHaveBeenCalledTimes(1);
     expect(validation).toBeDefined();
+  });
+});
+
+describe('validateStep fallbacks', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockAvailable.mockReturnValue(true);
+    mockModerateOutput.mockResolvedValue('ok');
+  });
+
+  it('sends a fallback when the judge gives no verdict', async () => {
+    mockGenerate.mockResolvedValue({traceId: 'trace-2'});
+    await validateStep(options);
+    expect(sendAiStaticFallbackUsed).toHaveBeenCalledWith(
+      'validation',
+      'modelErrorOrInvalidOutput',
+      checkpoint,
+      step
+    );
+  });
+
+  it("sends a fallback when the judge's reason is replaced", async () => {
+    mockGenerate.mockResolvedValue({
+      output: {pass: false, evidenceLevel: 0, reason: 'Bad words.'},
+      traceId: 'trace-2',
+    });
+    mockModerateOutput.mockResolvedValue('flagged');
+    await validateStep(options);
+    expect(sendAiStaticFallbackUsed).toHaveBeenCalledWith(
+      'validation',
+      'outputFlaggedByModeration',
+      checkpoint,
+      step
+    );
+  });
+
+  it('sends nothing when the verdict stands as written', async () => {
+    mockGenerate.mockResolvedValue({
+      output: {pass: true, evidenceLevel: 1, reason: 'Fine.'},
+      traceId: 'trace-2',
+    });
+    await validateStep(options);
+    expect(sendAiStaticFallbackUsed).not.toHaveBeenCalled();
   });
 });
 

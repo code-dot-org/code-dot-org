@@ -5,17 +5,6 @@
   min-height: 0;
 }
 
-.mapBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  min-height: 40px;
-  padding: 4px 16px;
-  border-bottom: 1px solid var(--borders-neutral-primary);
-  background: var(--background-neutral-secondary);
-}
-
 .mapBody {
   display: flex;
   flex: 1;
@@ -60,4 +49,19 @@
   scrollbar-gutter: stable;
   border-left: 1px solid var(--borders-neutral-primary);
   background: var(--background-neutral-secondary);
+}
+
+.sideNoSelection {
+  background: var(--background-neutral-primary);
+}
+
+.sideEmptyPrompt {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sideEmptyText {
+  color: var(--text-neutral-secondary);
 }

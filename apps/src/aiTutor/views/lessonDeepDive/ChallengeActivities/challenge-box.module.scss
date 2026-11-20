@@ -111,6 +111,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: auto !important;
   border-radius: 12px !important;
   flex-basis: 0;
   flex-grow: 1;
@@ -286,11 +287,11 @@
   height: 40px;
   background-color: var(--background-neutral-white-fixed);
   border-radius: var(--shape-round);
+}
 
-  img {
-    width: 30px;
-    height: 20px;
-  }
+.feedbackAvatarIcon {
+  font-size: 20px;
+  color: var(--sentiment-information-50);
 }
 
 .feedbackHeaderContent{

@@ -18,7 +18,6 @@ import {
   ChatHostContext,
 } from '@cdo/apps/aichat/host/ChatHostContext';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {
   Lab2EntryPoint,
@@ -30,10 +29,12 @@ import Loading from '@cdo/apps/lab2/views/Loading';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {lab2EntryPoints} from '../../../../lab2EntryPoints';
-import {isAdaptiveAiEnabled} from '../../ai/generate';
+import {isAdaptiveAiAvailable} from '../../ai/access';
+import {ADAPTIVE_MODELS} from '../../ai/models';
 import {buildTutorContext} from '../../ai/tutorContext';
 import {workAdapterFor} from '../../ai/validation/adapters';
-import {latestValidation} from '../../progress/model';
+import {chatThresholds} from '../../ai/validation/chatThresholds';
+import {continueUnlockReason, latestValidation} from '../../progress/model';
 import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
@@ -200,12 +201,26 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     saveGeneratedInstructions,
     aichatContext: aiContext,
   });
+  // The lab's own Continue button advances the step. A step whose work is
+  // checked waits for work that passes, for enough failed checks that the
+  // judge may be at fault, or for the chat to reach its reply limit, unless no
+  // judge can run: the shell makes no AI calls, or the lab takes no part in
+  // checking.
+  const entry = progress.steps[step.id];
+  const unlockReason = continueUnlockReason(entry);
+  const aiAvailable = isAdaptiveAiAvailable();
+  const continueEnabled =
+    !step.validation ||
+    !aiAvailable ||
+    !workAdapterFor(levelProperties.appName) ||
+    unlockReason !== undefined;
   // Each build the student accepts is checked against the step's condition,
   // the verdict recorded on the step and told in the chat, through the
-  // handle the lab's chat hands back.
+  // handle the lab's chat hands back. The chat's replies open Continue on
+  // the reply limit alone.
   const [chat, setChat] = useState<ChatHandle>();
   const chatHost = useMemo(() => ({onChatReady: setChat}), []);
-  const latestValidationAttempt = latestValidation(progress.steps[step.id]);
+  const latestValidationAttempt = latestValidation(entry);
   const recordStepValidation = useCallback(
     (attempt: Parameters<typeof recordValidation>[1]) =>
       recordValidation(step, attempt),
@@ -225,12 +240,14 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     aichatContext: aiContext,
     chat,
     recordValidation: recordStepValidation,
+    progress: entry,
+    continueAllowed: continueEnabled,
   });
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share
   // and remix, spotlight the instructions on a first visit in place of the
-  // lab's product tours, and pathway-specific tutor context that gets appendd
-  // to the level system prompt.
+  // lab's product tours and tutor welcome, and pathway-specific tutor context
+  // that gets appended to the level system prompt.
   const viewProperties = useMemo<LevelProperties>(() => {
     const context = buildTutorContext({
       pathway,
@@ -240,7 +257,10 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       project: step.project
         ? {name: projectName, description: projectDescription}
         : undefined,
+      instructions,
       latestValidationAttempt,
+      continueUnlocked: unlockReason,
+      chatThresholds: chatThresholds(),
     });
     const own = levelProperties.levelSystemPrompt;
     return {
@@ -251,8 +271,15 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       hideNonInstructionTabs: true,
       spotlightInstructions: firstVisit,
       disableProductTours: true,
+      disableAiTutorWelcome: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
+      // The tutor on the shell's own model, through the gateway; stock otherwise.
+      ...(aiAvailable && {
+        aiTutorModelParameters: {
+          selectedModelId: ADAPTIVE_MODELS.STANDARD,
+        },
+      }),
     };
   }, [
     pathway,
@@ -264,28 +291,23 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectDescription,
     instructions,
     latestValidationAttempt,
+    unlockReason,
     firstVisit,
+    aiAvailable,
   ]);
 
-  // The lab's own Continue button advances the step. A step whose work is
-  // checked waits for work that passes, unless no judge can run: adaptive AI
-  // is off, or the lab takes no part in checking.
-  const checked =
-    !step.validation ||
-    !isAdaptiveAiEnabled() ||
-    !workAdapterFor(levelProperties.appName) ||
-    !!latestValidationAttempt?.pass;
   const navigation = useMemo(
     () => ({
       label: continueLabel,
-      enabled: checked,
-      tooltip: checked
+      enabled: continueEnabled,
+      tooltip: continueEnabled
         ? undefined
         : 'Continue unlocks once your work on this step meets its goal.',
       endIcon: <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />,
       onContinue: onComplete,
+      callout: undefined,
     }),
-    [continueLabel, checked, onComplete]
+    [continueLabel, continueEnabled, onComplete]
   );
 
   // Stands in for ProjectContainer's level-change reset, which steps bypass.
@@ -293,19 +315,6 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   useEffect(() => {
     dispatch(resetProjectMetadata());
   }, [dispatch]);
-
-  // The lab saves through the registry, so the manager must be registered
-  // before the lab mounts and reads it. The hook flushes saves on unmount.
-  const [registered, setRegistered] = useState(false);
-  useEffect(() => {
-    if (!projectManager) return;
-    Lab2Registry.getInstance().setProjectManager(projectManager);
-    setRegistered(true);
-    return () => {
-      Lab2Registry.getInstance().clearProjectManager();
-      setRegistered(false);
-    };
-  }, [projectManager]);
 
   if (loadError) {
     return (
@@ -323,10 +332,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     currentSources === EMPTY_SOURCES ? undefined : currentSources;
 
   const ready =
-    currentSources !== undefined &&
-    (!projectManager || registered) &&
-    projectReady &&
-    instructionsReady;
+    currentSources !== undefined && projectReady && instructionsReady;
   // The project and the instructions can each take a model call; say so
   // instead of "slow".
   const loadingText =

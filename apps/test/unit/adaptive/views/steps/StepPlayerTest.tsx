@@ -10,8 +10,19 @@ import {
 import StepPlayer from '@cdo/apps/adaptive/views/steps/StepPlayer';
 import Lab2ProgressTimer from '@cdo/apps/lab2/utils/Lab2ProgressTimer';
 
-jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
-  isAdaptiveAiEnabled: () => true,
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: () => true,
+}));
+
+// A loaded project with nothing in it, so a review step builds without asking.
+jest.mock('@cdo/apps/adaptive/project/usePathwayProject', () => ({
+  usePathwayProject: () => ({
+    sources: {source: ''},
+    projectManager: null,
+    isLoading: false,
+    isEditable: true,
+    editProject: jest.fn(),
+  }),
 }));
 
 // Reports whether a build is requested of it when it mounts.
@@ -45,18 +56,18 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
   __esModule: true,
   default: ({
     title,
-    onViewSkillTree,
+    onViewSkillMap,
     onFinish,
   }: {
     title: string;
-    onViewSkillTree?: () => void;
+    onViewSkillMap?: () => void;
     onFinish?: () => void;
   }) => (
     <div>
       header: {title}
-      {onViewSkillTree && (
-        <button type="button" onClick={onViewSkillTree}>
-          View skill tree
+      {onViewSkillMap && (
+        <button type="button" onClick={onViewSkillMap}>
+          View skill map
         </button>
       )}
       {onFinish && (
@@ -64,6 +75,36 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
           I'm finished!
         </button>
       )}
+    </div>
+  ),
+}));
+
+jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
+  __esModule: true,
+  default: ({
+    activeTab,
+    onTabChange,
+    projectName,
+    skills,
+    timeSpentSeconds,
+  }: {
+    activeTab: string;
+    onTabChange: (tab: string) => void;
+    projectName?: string;
+    skills?: unknown[];
+    timeSpentSeconds?: number;
+  }) => (
+    <div>
+      tab bar: {activeTab}
+      {projectName && <span>tab project: {projectName}</span>}
+      {skills !== undefined && (
+        <span>
+          tab stats: {skills.length} skills, {timeSpentSeconds}s
+        </span>
+      )}
+      <button type="button" onClick={() => onTabChange('map')}>
+        go to map tab
+      </button>
     </div>
   ),
 }));
@@ -91,7 +132,8 @@ describe('StepPlayer', () => {
   afterEach(() => now.mockRestore());
 
   const renderPlayer = (
-    props: Partial<React.ComponentProps<typeof StepPlayer>> = {}
+    props: Partial<React.ComponentProps<typeof StepPlayer>> = {},
+    contextOverrides: Partial<PathwayContextValue> = {}
   ) => {
     const calls: unknown[][] = [];
     const record =
@@ -102,7 +144,14 @@ describe('StepPlayer', () => {
     const onFinish = jest.fn();
     render(
       <PathwayContext.Provider
-        value={{progress: {steps: {}}} as unknown as PathwayContextValue}
+        value={
+          {
+            pathway: {checkpoints: [], skills: {}},
+            statusMap: {},
+            progress: {steps: {}},
+            ...contextOverrides,
+          } as unknown as PathwayContextValue
+        }
       >
         <StepPlayer
           checkpoint={checkpoint}
@@ -140,7 +189,7 @@ describe('StepPlayer', () => {
     const {calls, onExit} = renderPlayer();
 
     now.mockReturnValue(3500);
-    fireEvent.click(screen.getByRole('button', {name: 'View skill tree'}));
+    fireEvent.click(screen.getByRole('button', {name: 'View skill map'}));
 
     expect(calls).toEqual([
       ['start', checkpoint.steps[0]],
@@ -159,7 +208,7 @@ describe('StepPlayer', () => {
     now.mockReturnValue(8000);
     timer.startIdle();
     now.mockReturnValue(9000);
-    fireEvent.click(screen.getByRole('button', {name: 'View skill tree'}));
+    fireEvent.click(screen.getByRole('button', {name: 'View skill map'}));
 
     expect(calls).toEqual([
       ['start', checkpoint.steps[0]],
@@ -197,6 +246,65 @@ describe('StepPlayer', () => {
   it('offers no way to the final project without a handler for it', () => {
     renderPlayer();
     expect(screen.queryByRole('button', {name: "I'm finished!"})).toBeNull();
+  });
+
+  describe('tab bar', () => {
+    it('is hidden when no activeTab prop is given', () => {
+      renderPlayer();
+      expect(screen.queryByText(/tab bar:/)).toBeNull();
+    });
+
+    it('shows the tab bar with the active tab when activeTab and onTabChange are given', () => {
+      const onTabChange = jest.fn();
+      renderPlayer({activeTab: 'project', onTabChange});
+      expect(screen.getByText('tab bar: project')).toBeTruthy();
+    });
+
+    it('records leave time then calls onTabChange when a tab is clicked', () => {
+      const onTabChange = jest.fn();
+      const {calls} = renderPlayer({activeTab: 'project', onTabChange});
+
+      now.mockReturnValue(3000);
+      fireEvent.click(screen.getByRole('button', {name: 'go to map tab'}));
+
+      expect(calls).toContainEqual(['leave', checkpoint.steps[0], 2000]);
+      expect(onTabChange).toHaveBeenCalledWith('map');
+    });
+
+    it('passes projectName through to the tab bar', () => {
+      const onTabChange = jest.fn();
+      renderPlayer({
+        activeTab: 'project',
+        onTabChange,
+        projectName: 'Cool Website',
+      });
+      expect(screen.getByText('tab project: Cool Website')).toBeTruthy();
+    });
+
+    it('passes skill progress and time spent from context to the tab bar', () => {
+      const onTabChange = jest.fn();
+      renderPlayer(
+        {activeTab: 'project', onTabChange},
+        {
+          pathway: {
+            checkpoints: [
+              {
+                id: 'cp',
+                title: 'CP',
+                description: '',
+                steps: [],
+                skillIds: ['html'],
+              },
+            ],
+            skills: {html: {id: 'html', title: 'HTML', description: ''}},
+          } as unknown as PathwayContextValue['pathway'],
+          statusMap: {cp: 'complete'},
+          progress: {steps: {s: {timeSpent: 90}}},
+        }
+      );
+      // 1 skill (html), 90 seconds total
+      expect(screen.getByText('tab stats: 1 skills, 90s')).toBeTruthy();
+    });
   });
 
   describe('URL parameters', () => {
@@ -335,7 +443,13 @@ describe('StepPlayer', () => {
         const [progress, setProgress] = useState(initial);
         return (
           <PathwayContext.Provider
-            value={{progress} as unknown as PathwayContextValue}
+            value={
+              {
+                pathway: {checkpoints: []},
+                statusMap: {},
+                progress,
+              } as unknown as PathwayContextValue
+            }
           >
             <StepPlayer
               checkpoint={branched}
@@ -457,7 +571,9 @@ describe('StepPlayer', () => {
           <PathwayContext.Provider
             value={
               {
+                pathway: {checkpoints: [], project: {templateLevel: 'site'}},
                 progress,
+                statusMap: {},
                 checkpoint: planned,
                 buildRequested,
                 setBuildRequested,

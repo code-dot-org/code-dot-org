@@ -1,24 +1,81 @@
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {
   getToolboxDefinition,
+  isBlockInfo,
+  isStaticCategoryInfo,
   makeDynamicCategory,
 } from '@cdo/apps/blockly/utils/toolbox';
 
-import {GO_TO_EXTERNAL_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToExternalScene';
+import {BURST_BLOCK_TYPE} from '../blockDefinitions/burst';
+import {
+  CLICKED_SPRITE_BLOCK_TYPE,
+  TOUCHED_SPRITE_BLOCK_TYPE,
+} from '../blockDefinitions/eventSprites';
 import {GO_TO_SCENE_BLOCK_TYPE} from '../blockDefinitions/goToScene';
+import {PLAY_MUSIC_BLOCK_TYPE} from '../blockDefinitions/playMusic';
+import {PLAY_SOUND_BLOCK_TYPE} from '../blockDefinitions/playSound';
+import {PLAY_SOUND_EFFECT_BLOCK_TYPE} from '../blockDefinitions/playSoundEffect';
 import {RESTART_SCENE_BLOCK_TYPE} from '../blockDefinitions/restartScene';
+import {SET_WEATHER_BLOCK_TYPE} from '../blockDefinitions/setWeather';
+import {SHOW_TITLE_BLOCK_TYPE} from '../blockDefinitions/showTitle';
 import {THE_PLAYER_BLOCK_TYPE} from '../blockDefinitions/thePlayer';
+import {THE_PLAYER_2_BLOCK_TYPE} from '../blockDefinitions/thePlayer2';
+import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 
+import {AI_BLOCK_TYPES, AI_CATEGORY} from './aiBlocks';
+import {filterToSupportedSharedBlocks} from './supportedSharedBlocks';
 import {ToolboxInfo} from './types';
+
+// Sprite sockets that start filled in the complete toolbox, as an authored
+// toolbox fills them: block type -> input name -> shadow block type.
+const SPRITE_SHADOWS: {[type: string]: {[input: string]: string}} = {
+  [BURST_BLOCK_TYPE]: {ORIGIN: 'gamelab_allSpritesWithAnimation'},
+};
+
+function withSpriteShadows(def: ToolboxInfo): ToolboxInfo {
+  def.contents.forEach(category => {
+    if (!isStaticCategoryInfo(category)) {
+      return;
+    }
+    category.contents.filter(isBlockInfo).forEach(block => {
+      const shadows = block.type && SPRITE_SHADOWS[block.type];
+      if (!shadows) {
+        return;
+      }
+      block.inputs = Object.fromEntries(
+        Object.entries(shadows).map(([input, type]) => [
+          input,
+          {shadow: {type}},
+        ])
+      );
+    });
+  });
+  return def;
+}
 
 // Where the lab-owned blocks live in the complete toolbox.
 const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
+  World: [
+    SET_WEATHER_BLOCK_TYPE,
+    BURST_BLOCK_TYPE,
+    PLAY_SOUND_BLOCK_TYPE,
+    PLAY_SOUND_EFFECT_BLOCK_TYPE,
+    PLAY_MUSIC_BLOCK_TYPE,
+  ],
   Sprites: [
     'spritelab2_makePlatformPlayer',
     'spritelab2_makePlatformBlocks',
     'spritelab2_makeSpriteAtGrid',
+    'spritelab2_makeSpriteAtPosition',
     'spritelab2_setAsPlatformPlayer',
+    'spritelab2_setAsPlatformPlayer2',
     THE_PLAYER_BLOCK_TYPE,
+    THE_PLAYER_2_BLOCK_TYPE,
+  ],
+  Events: [
+    WHEN_PLAYER_BLOCK_TYPE,
+    TOUCHED_SPRITE_BLOCK_TYPE,
+    CLICKED_SPRITE_BLOCK_TYPE,
   ],
   Behaviors: [
     'spritelab2_beginsBehavior',
@@ -28,11 +85,13 @@ const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
   ],
   'Game Design': [
     GO_TO_SCENE_BLOCK_TYPE,
-    GO_TO_EXTERNAL_SCENE_BLOCK_TYPE,
     RESTART_SCENE_BLOCK_TYPE,
-    'spritelab2_setPlatformGravity',
+    SHOW_TITLE_BLOCK_TYPE,
+    'spritelab2_setPlatformJumpHeight',
+    'spritelab2_setPlatformGravityDirection',
     'spritelab2_setCameraZoom',
   ],
+  [AI_CATEGORY]: AI_BLOCK_TYPES,
 };
 
 // Blocks registered outside the DB block pool (Blockly core, blocksCommon,
@@ -67,21 +126,19 @@ const COMMON_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
 };
 
 /**
- * Every available block sorted by category: the level's DB block pool plus
- * the lab-owned and common blocks. Toolbox editing leads with the category
- * marker blocks; start mode appends the dynamic Variables/Functions
- * categories instead. Behaviors stays static: the dynamic flyout can't read
- * static contents from JSON toolboxes yet (getLevelToolboxBlocks/CT-8).
+ * Returns the complete toolbox definition for the given shared blocks and mode.
+ * Filters out any shared blocks that are not supported by Sprite Lab in lab2.
  */
 export function getCompleteToolboxDefinition(
   sharedBlocksByCategory: {[category: string]: string[]},
   forToolboxEditing: boolean
 ): ToolboxInfo {
+  const supportedShared = filterToSupportedSharedBlocks(sharedBlocksByCategory);
   const merged: {[category: string]: string[]} = {
     ...(forToolboxEditing
       ? {Categories: [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic]}
       : {}),
-    ...sharedBlocksByCategory,
+    ...supportedShared,
   };
   [LAB_BLOCKS_BY_CATEGORY, COMMON_BLOCKS_BY_CATEGORY].forEach(byCategory =>
     Object.entries(byCategory).forEach(([name, types]) => {
@@ -90,14 +147,19 @@ export function getCompleteToolboxDefinition(
     })
   );
   if (forToolboxEditing) {
-    return getToolboxDefinition(merged, 'categoryToolbox');
+    return withSpriteShadows(getToolboxDefinition(merged, 'categoryToolbox'));
   }
-  // Variable blocks come from the dynamic category's flyout instead.
+  // Variable blocks come from the dynamic category's flyout instead, which
+  // ends with the pool's own, such as show variable.
   delete merged.Variables;
-  const def = getToolboxDefinition(merged, 'categoryToolbox');
-  def.contents.push(
-    makeDynamicCategory('Variables', 'VARIABLE'),
-    makeDynamicCategory('Functions', 'PROCEDURE')
+  const def = withSpriteShadows(
+    getToolboxDefinition(merged, 'categoryToolbox')
   );
+  const variables = makeDynamicCategory('Variables', 'VARIABLE');
+  variables.contents = (supportedShared.Variables || []).map(type => ({
+    kind: 'block',
+    type,
+  }));
+  def.contents.push(variables, makeDynamicCategory('Functions', 'PROCEDURE'));
   return def;
 }

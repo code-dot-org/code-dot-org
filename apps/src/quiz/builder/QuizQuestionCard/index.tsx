@@ -19,6 +19,8 @@ import styles from './quiz-question-card.module.scss';
 
 interface QuizQuestionCardProps {
   question: QuizBuilderQuestion;
+  // The page the question is on in the quiz being built.
+  page: number;
   isExpanded: boolean;
   onExpandedChange: (expanded: boolean) => void;
   error?: string | null;
@@ -28,6 +30,9 @@ interface QuizQuestionCardProps {
   ) => Promise<number | undefined>;
   onRemove: (id: number) => Promise<boolean>;
   onDirtyChange?: (id: number, isDirty: boolean) => void;
+  // The question card's options menu. isBusy is true while
+  // the card is saving or removing the question.
+  menu?: (isBusy: boolean) => React.ReactNode;
 }
 
 function toDraft(question: QuizBuilderQuestion): QuizQuestionDraft {
@@ -83,12 +88,14 @@ function toPayload(draft: QuizQuestionDraft): QuizQuestionPayload {
 // state, saved or discarded independently of the rest of the outline.
 const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
   question,
+  page,
   isExpanded,
   onExpandedChange,
   error,
   onSave,
   onRemove,
   onDirtyChange,
+  menu,
 }) => {
   const [draft, setDraft] = useState(() => toDraft(question));
   const [isSaving, setIsSaving] = useState(false);
@@ -162,6 +169,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
       onSave={handleSave}
       onDiscard={handleDiscard}
       onRemove={handleRemove}
+      menu={menu?.(isBusy)}
       nested
       neverSaved={neverSaved}
     >
@@ -194,7 +202,7 @@ const QuizQuestionCard: React.FunctionComponent<QuizQuestionCardProps> = ({
           {
             value: 'usage',
             text: 'Usage',
-            tabContent: <UsageTab question={question} />,
+            tabContent: <UsageTab question={question} page={page} />,
           },
         ]}
         onChange={() => {}}

@@ -1,0 +1,41 @@
+name 'pl-aif-y2-u2-l3-describing-data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Describing Data
+
+Lesson 3 opens with real data: 80 adults were surveyed on their favorite music genre. Students look at the results, then collect and graph their own class's preferences to compare.
+
+## Sample graph
+
+<img src="https://images.code.org/44d1b99553c2d99a56582d59f2929743-image-1793812231739.png" alt="graph of number of students who like different music genres" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
+
+---
+## Lesson Vocabulary
+
+Four terms carry this lesson, click each card to see its definition:
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/describing-data-flip-cards.html"
+    width="100%"
+    height="520"
+    frameborder="0"
+    scrolling="no"
+    title="Describing data vocabulary flip cards: categorical data, numerical data, correlation, outlier">
+  </iframe>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> watch for students who just read numbers off the chart without interpreting them. "It looks like about 11 people" isn't the finish line, push toward "Hip Hop was the most popular genre" or "Pop and Rock were about equally liked."</div>
+</div>
+
+The lesson then shifts from categorical to numerical data entirely: whether an artist's social media following predicts their Spotify streams, plotted on a scatter plot instead of a bar chart. Artists with more followers tend to have more streams, a positive correlation, both values rising together. An outlier here would be an artist with unexpectedly high followers but low streams, or the reverse, worth discussing what might explain it, not just spotting that it's there.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> correlation only applies to numerical data, not categorical. If a student tries to describe a "correlation" in the music genre data, that's a good moment to clarify the distinction.</div>
+</div>
+
+
+MARKDOWN

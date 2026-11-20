@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-04T20:19:21.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "display_name": "Fitness App Model",
+    "bubble_choice_description": "Use AI Studio to analyze and trace the model used by the app",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"lesson10_fitness_app\"\r\n  ],\r\n  \"label\": \"Day Type\"\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"##Data Card\\n**About This Data**: Days are logged by students using the StepStreak fitness app. Each day is labeled Active Day or Rest Day. Data comes from each phone's step counter, which tracks steps, walking minutes, and floors climbed. Students also wrote down what they did that day.\\n\\n**Features the app uses**: Steps, Walking Minutes, and Floors Climbed\",\r\n  \"results\": \"##Filter & Trace\\n1. Click the **Accuracy** button and filter the test data by one feature at a time.\\n2. Use the **Make a Prediction** pane to test how data travels through the decision tree.\"\r\n}",
+    "thumbnail_url": "https://images.code.org/a2dae43daa054af3c147635fb263ac96-data-makes-ai-lesson-10-marisol-marisol-mid-stroke-in-an-indoor-competition-pool-1.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-04 20:19:33 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 20:20:11 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 20:35:55 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 20:36:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 20:38:45 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 20:53:55 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 14:51:17 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 15:21:03 +0000\",\"changed\":[],\"changed_by_id\":22403,\"changed_by_email\":\"alex.brown@code.org\"},{\"changed_at\":\"2026-11-05 15:21:21 +0000\",\"changed\":[\"tts_long_instructions_override\"],\"changed_by_id\":22403,\"changed_by_email\":\"alex.brown@code.org\"},{\"changed_at\":\"2026-11-05 15:22:20 +0000\",\"changed\":[\"short_instructions\"],\"changed_by_id\":22403,\"changed_by_email\":\"alex.brown@code.org\"},{\"changed_at\":\"2026-11-05 19:53:32 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 23:10:36 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

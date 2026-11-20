@@ -904,6 +904,25 @@ describe('QuizAttemptWorkspace', () => {
       );
     });
 
+    it("makes the questions a keyboard-focusable region when the student hasn't submitted", () => {
+      renderWorkspace({hookState: {attempt: null}, viewAsUserId: 99});
+
+      expect(
+        screen.getByRole('region', {name: 'Student answers'})
+      ).toHaveAttribute('tabindex', '0');
+    });
+
+    it('leaves the scroll area alone once the student has submitted, since the results card takes focus', () => {
+      renderWorkspace({
+        hookState: {attempt: {...ATTEMPT, submittedAt: '2026-01-01T00:00:00Z'}},
+        viewAsUserId: 99,
+      });
+
+      expect(
+        screen.queryByRole('region', {name: 'Student answers'})
+      ).not.toBeInTheDocument();
+    });
+
     it("fetches the student's attempt rather than the teacher's own", () => {
       renderWorkspace({viewAsUserId: 99});
       expect(mockUseQuizAttempt).toHaveBeenCalledWith(

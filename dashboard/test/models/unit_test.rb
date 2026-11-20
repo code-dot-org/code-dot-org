@@ -74,22 +74,10 @@ class UnitTest < ActiveSupport::TestCase
       CourseOffering.get_from_cache(name)
     end
 
-    # Rails 7.1 renamed the underlying method from `execute` to
-    # `raw_execute`, so temporarily support both versions.
-    # TODO infra: simplify this once we're fully updated to Rails 7.1
-    execute_method_name =
-      if Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 0
-        :execute
-      elsif Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 1
-        :raw_execute
-      else
-        throw "remove this temporary transitional logic before upgrading beyond Rails 7.1"
-      end
-
     # ActiveRecord collection association still references an active DB
     # connection, even when the data is already eager loaded. Best we can do
     # is ensure that no queries are executed on the active connection.
-    ActiveRecord::Base.connection.stubs(execute_method_name).raises('Database disconnected')
+    ActiveRecord::Base.connection.stubs(:raw_execute).raises('Database disconnected')
   end
 
   test 'can setup migrated unit with new models' do
@@ -2407,6 +2395,19 @@ class UnitTest < ActiveSupport::TestCase
     refute unit_without_ai.has_ai_chat_tools?
   end
 
+  test 'has_ai_chat_tools? and requires_ai_chat_tools? query once per instance' do
+    unit = create(:script, name: 'unit-memoized-ai')
+    lesson = create(:lesson, :with_lesson_group, script: unit)
+    create(:script_level, script: unit, lesson: lesson, levels: [create(:weblab2)])
+
+    assert unit.has_ai_chat_tools?
+    assert unit.requires_ai_chat_tools?
+    assert_queries(0) do
+      assert unit.has_ai_chat_tools?
+      assert unit.requires_ai_chat_tools?
+    end
+  end
+
   # Bandaid: 'csd2-2026' is in
   # Unit::NAMES_EXEMPT_FROM_ESSENTIAL_AI_CHAT_TOOLS. This test goes
   # away with the exemption.
@@ -2788,28 +2789,23 @@ class UnitTest < ActiveSupport::TestCase
     assert_raises(RuntimeError) {unit.update_lesson_outlines([{'key' => 'a'}])}
   end
 
-  test 'lesson_tutor_available? is true for AIF and AID student courses' do
-    %w[AIF AID].each_with_index do |initiative, i|
-      unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-tutor-#{i}", version_year: '2026')
-      unit_group.course_version.course_offering.update!(marketing_initiative: initiative)
-      assert unit_group.first_unit.lesson_tutor_available?, "expected #{initiative} course to offer the lesson tutor"
-    end
-  end
+  test 'lesson_tutor_available? is true for a unit with tutor_plus_available' do
+    assert create(:unit, tutor_plus_available: true).lesson_tutor_available?
 
-  test 'lesson_tutor_available? is false for non-AI course offerings' do
-    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai', version_year: '2026')
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'tutor-plus', version_year: '2026')
     unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
-    refute unit_group.first_unit.lesson_tutor_available?
+    unit_group.first_unit.update!(tutor_plus_available: true)
+    assert unit_group.first_unit.lesson_tutor_available?
   end
 
-  test 'lesson_tutor_available? is false for PL courses even with an AI marketing initiative' do
-    unit_group = create(:single_unit_course, :pl_course, :with_course_offering, family_name: 'ai-pl', version_year: '2026')
-    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
-    refute unit_group.first_unit.lesson_tutor_available?
-  end
-
-  test 'lesson_tutor_available? is false for a unit with no course version' do
+  test 'lesson_tutor_available? is false for a unit without tutor_plus_available' do
     refute create(:unit).lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for PL courses even with tutor_plus_available' do
+    unit_group = create(:single_unit_course, :pl_course, :with_course_offering, family_name: 'tutor-plus-pl', version_year: '2026')
+    unit_group.first_unit.update!(tutor_plus_available: true)
+    refute unit_group.first_unit.lesson_tutor_available?
   end
 
   private def has_unlaunched_unit?(units)

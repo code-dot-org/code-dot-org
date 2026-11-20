@@ -76,6 +76,7 @@ class Section < ApplicationRecord
     avatar_emoji: :confidential,
     ai_chat_access_level: :confidential,
     demo_type: :confidential,
+    ai_challenge_enabled: :confidential,
   )
 
   include SerializedProperties
@@ -563,8 +564,14 @@ class Section < ApplicationRecord
     return unit_group.try(:default_unit_group_units).try(:first).try(:script)
   end
 
-  def summarize_without_students
-    summarize(include_students: false)
+  def summarize_without_students(student_count: nil)
+    summarize(include_students: false, student_count: student_count)
+  end
+
+  # Distinct student counts for many sections in one query, keyed by section
+  # id. A section with no students has no key.
+  def self.student_counts(sections)
+    where(id: sections).joins(:students).unscope(:order).group(:id).distinct.count('users.id')
   end
 
   # Provides some information about a section. This provides a more concise set of information than
@@ -608,8 +615,10 @@ class Section < ApplicationRecord
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
         demo_type: demo_type,
-        at_risk_age_gated_date: at_risk_age_gated_student&.at_risk_age_gated_date,
-        at_risk_age_gated_us_state: at_risk_age_gated_student&.us_state,
+        # These CAP fields are deprecated, but the frontend API clients still expect them.
+        # TODO: Remove these fields once the frontend is updated to no longer require them.
+        at_risk_age_gated_date: nil,
+        at_risk_age_gated_us_state: nil,
       }
     end
   end
@@ -660,6 +669,8 @@ class Section < ApplicationRecord
         assigned_ai_chat_tools_dependency: ai_chat_dependency,
         assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
         ai_chat_access_level: ai_chat_access_level,
+        ai_challenge_enabled: ai_challenge_enabled,
+        lesson_tutor_available: lesson_tutor_available?,
       }
     end
   end
@@ -671,7 +682,10 @@ class Section < ApplicationRecord
   # role: defaults to :reading (replica), but callers that just wrote data this same request
   # (e.g. right after Section#add_student) should pass :writing to read their own write back
   # from the primary, since the replica may not have caught up yet.
-  def summarize(include_students: true, role: :reading)
+  #
+  # student_count: a count the caller already has, from Section.student_counts,
+  # so summarizing many sections does not count each one separately.
+  def summarize(include_students: true, role: :reading, student_count: nil)
     ActiveRecord::Base.connected_to(role: role) do
       ai_chat_dependency = assigned_ai_chat_tools_dependency
       base_url = CDO.studio_url('/teacher_dashboard/sections/')
@@ -689,12 +703,13 @@ class Section < ApplicationRecord
 
       selected_unit = unit_group&.single_unit_course? ? unit_group.first_unit : script
 
-      # Remove ordering from scope when not including full
-      # list of students, in order to improve query performance.
-      unique_students = include_students ?
-        students.distinct(&:id) :
-        students.unscope(:order).distinct(&:id)
-      num_students = unique_students.size
+      unique_students = students.distinct(&:id) if include_students
+      num_students =
+        if include_students
+          unique_students.size
+        else
+          student_count || students.unscope(:order).distinct.count
+        end
 
       serialized_section_instructors = ActiveModelSerializers::SerializableResource.new(section_instructors, each_serializer: Api::V1::SectionInstructorInfoSerializer).as_json
       primary_instructor = {
@@ -702,8 +717,6 @@ class Section < ApplicationRecord
         name: teacher.name,
         ltiRosterSyncEnabled: teacher&.properties&.[]("lti_roster_sync_enabled")
       }
-
-      at_risk_student = at_risk_age_gated_student
 
       login_type_name = I18n.t(login_type, scope: [:section, :type], default: login_type)
       if login_type == LOGIN_TYPE_LTI_V1
@@ -746,14 +759,18 @@ class Section < ApplicationRecord
           post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
           code_review_expires_at: code_review_expires_at,
           sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
-          at_risk_age_gated_date: at_risk_student&.at_risk_age_gated_date,
-          at_risk_age_gated_us_state: at_risk_student&.us_state,
+          # These CAP fields are deprecated, but the frontend API clients still expect them.
+          # TODO: Remove these fields once the frontend is updated to no longer require them.
+          at_risk_age_gated_date: nil,
+          at_risk_age_gated_us_state: nil,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
           demo_type: demo_type,
           assigned_ai_chat_tools_dependency: ai_chat_dependency,
           assigned_required_inaccessible_ai_models: required_inaccessible_ai_models?(ai_chat_dependency),
           ai_chat_access_level: ai_chat_access_level,
+          ai_challenge_enabled: ai_challenge_enabled,
+          lesson_tutor_available: lesson_tutor_available?,
         }
       )
     end
@@ -895,6 +912,10 @@ class Section < ApplicationRecord
     return false unless dependency == SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL]
     assigned = script || unit_group
     !!assigned&.requires_inaccessible_ai_models?(user)
+  end
+
+  def lesson_tutor_available?
+    !!(script&.lesson_tutor_available? || unit_group&.lesson_tutor_available?)
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,
@@ -1071,14 +1092,6 @@ class Section < ApplicationRecord
 
   def lti?
     lti_section.present?
-  end
-
-  # @return The first student we found which is at risk of being age gated.
-  def at_risk_age_gated_student
-    # Archived sections are not at risk of being age gated.
-    return if hidden
-    # Find any student at risk of being age gated and return the date.
-    students.find(&:at_risk_age_gated_date)
   end
 
   private def soft_delete_lti_section

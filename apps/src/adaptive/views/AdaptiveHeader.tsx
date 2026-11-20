@@ -1,4 +1,4 @@
-// The adaptive level's header: an optional way back to the skill tree, a
+// The adaptive level's header: an optional way back to the skill map, a
 // title with the project's save status, and an optional way to the final
 // project. It draws into the page header's slot, or inline above the lab
 // until that slot exists.
@@ -10,19 +10,10 @@ import {createPortal} from 'react-dom';
 import {useSelector} from 'react-redux';
 
 import {ADAPTIVE_HEADER_ID} from '@cdo/apps/code-studio/components/header/AdaptiveHeaderPortal';
+import {SAVE_STATUS_ICONS} from '@cdo/apps/code-studio/components/header/saveStatusIcons';
 import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 
 import styles from './adaptiveHeader.module.scss';
-
-const SAVE_ICONS: Record<
-  ProjectState['projectUpdatedStatus'],
-  {iconName: string; title: string}
-> = {
-  default: {iconName: 'cloud', title: 'Not saved'},
-  saving: {iconName: 'cloud-arrow-up', title: 'Saving'},
-  saved: {iconName: 'cloud-check', title: 'Saved'},
-  error: {iconName: 'cloud-exclamation', title: 'Save failed'},
-};
 
 function useHeaderSlot(): HTMLElement | null {
   const [slot, setSlot] = useState(() =>
@@ -45,34 +36,34 @@ function useHeaderSlot(): HTMLElement | null {
 
 interface AdaptiveHeaderProps {
   title: string;
-  /** Shows "View skill tree" when given. */
-  onViewSkillTree?: () => void;
+  /** Shows "View skill map" when given. */
+  onViewSkillMap?: () => void;
   /** Shows "I'm finished!" when given. */
   onFinish?: () => void;
 }
 
 const AdaptiveHeader: React.FunctionComponent<AdaptiveHeaderProps> = ({
   title,
-  onViewSkillTree,
+  onViewSkillMap,
   onFinish,
 }) => {
   const slot = useHeaderSlot();
   const status = useSelector(
     (state: {project: ProjectState}) => state.project.projectUpdatedStatus
   );
-  const saveIcon = SAVE_ICONS[status];
+  const saveIcon = SAVE_STATUS_ICONS[status];
 
   const bar = (
     <div className={styles.bar} data-theme="Light">
-      {onViewSkillTree && (
+      {onViewSkillMap && (
         <MuiButton
           variant="contained"
           color="secondary"
           size="extraSmall"
           startIcon={<FontAwesomeV6Icon iconName="sitemap" />}
-          onClick={onViewSkillTree}
+          onClick={onViewSkillMap}
         >
-          View skill tree
+          View skill map
         </MuiButton>
       )}
       <div className={styles.title}>
@@ -84,11 +75,19 @@ const AdaptiveHeader: React.FunctionComponent<AdaptiveHeaderProps> = ({
         >
           {title}
         </MuiTypography>
-        <FontAwesomeV6Icon
-          iconName={saveIcon.iconName}
-          title={saveIcon.title}
-          className={styles.saveIcon}
-        />
+        <span
+          aria-live="polite"
+          aria-atomic="true"
+          aria-label={saveIcon.title}
+          role="status"
+        >
+          <FontAwesomeV6Icon
+            iconName={saveIcon.iconName}
+            title={saveIcon.title}
+            className={styles.saveIcon}
+            aria-hidden
+          />
+        </span>
       </div>
       {onFinish && (
         <MuiButton

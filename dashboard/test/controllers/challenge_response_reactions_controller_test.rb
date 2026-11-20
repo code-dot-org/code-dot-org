@@ -16,7 +16,7 @@ class ChallengeResponseReactionsControllerTest < ActionController::TestCase
   # react to) the author's final submission; the outsider shares no section.
   let(:section) {create(:section)}
   before do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
+    User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(true)
     create(:follower, section:, student_user: student)
     create(:follower, section:, student_user: other_student)
   end
@@ -29,9 +29,9 @@ class ChallengeResponseReactionsControllerTest < ActionController::TestCase
       end
     end
 
-    context 'without lesson deep dive access' do
+    context 'without lesson deep dive challenge access' do
       before do
-        User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+        User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(false)
         sign_in other_student
       end
 

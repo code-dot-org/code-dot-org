@@ -2,15 +2,21 @@ import {act, renderHook} from '@testing-library/react-hooks';
 
 import {
   EMPTY_PROGRESS,
-  Progress,
   isComplete,
   latestValidation,
+  Progress,
   stepIdToResume,
+  stepsCompleteShare,
   totalTimeSpent,
   useProgress,
+  continueUnlockReason,
+  skippedAttempts,
+  validationAllowsContinue,
   visibleSteps,
+  workAttempts,
 } from '@cdo/apps/adaptive/progress';
 import {ProgressStore} from '@cdo/apps/adaptive/progress/progressStore';
+import {usePathwayStatus} from '@cdo/apps/adaptive/progress/usePathwayStatus';
 import {computeEvidence} from '@cdo/apps/adaptive/routing/evidence';
 import {routeStatusMap} from '@cdo/apps/adaptive/routing/route';
 import {Checkpoint, Pathway, Step} from '@cdo/apps/adaptive/types';
@@ -20,7 +26,12 @@ const mockLogError = jest.fn();
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
-    getInstance: () => ({getMetricsReporter: () => ({logError: mockLogError})}),
+    getInstance: () => ({
+      getMetricsReporter: () => ({
+        logError: mockLogError,
+        incrementCounter: jest.fn(),
+      }),
+    }),
   },
 }));
 
@@ -162,6 +173,115 @@ describe('stepIdToResume', () => {
         two: {status: 'started', timeSpent: 0},
       })
     ).toBe('two');
+  });
+});
+
+describe('validationAllowsContinue', () => {
+  const attempt = (pass: boolean) => ({
+    at: '2026-01-01T00:00:00Z',
+    pass,
+    evidenceLevel: 0,
+    reason: '',
+  });
+  const entry = (...passes: boolean[]) => ({
+    timeSpent: 0,
+    validationHistory: passes.map(attempt),
+  });
+
+  it('holds before any check', () => {
+    expect(validationAllowsContinue(undefined)).toBe(false);
+    expect(validationAllowsContinue({timeSpent: 0})).toBe(false);
+  });
+
+  it('opens once any check passes, even if a later one fails', () => {
+    expect(validationAllowsContinue(entry(false, true))).toBe(true);
+    expect(validationAllowsContinue(entry(true, false))).toBe(true);
+  });
+
+  it('holds after fewer than three failed checks', () => {
+    expect(validationAllowsContinue(entry(false, false))).toBe(false);
+  });
+
+  it('opens after three failed checks', () => {
+    expect(validationAllowsContinue(entry(false, false, false))).toBe(true);
+  });
+
+  it('opens on a chat entry, naming its pass reason', () => {
+    const chat = {
+      at: '2026-01-01T00:00:00Z',
+      pass: true,
+      evidenceLevel: 0,
+      reason: '',
+      skipReason: 'limitReached' as const,
+      replies: 8,
+    };
+    expect(
+      continueUnlockReason({timeSpent: 0, validationHistory: [chat]})
+    ).toBe('limitReached');
+    expect(
+      continueUnlockReason({
+        timeSpent: 0,
+        validationHistory: [
+          {...chat, skipReason: 'effortDemonstrated', replies: 4},
+        ],
+      })
+    ).toBe('effortDemonstrated');
+  });
+
+  it('counts only work toward the three failures, and names work before chat', () => {
+    const chat = {
+      at: '',
+      pass: true,
+      evidenceLevel: 0,
+      reason: '',
+      skipReason: 'limitReached' as const,
+      replies: 8,
+    };
+    const failedTwice = entry(false, false);
+    expect(continueUnlockReason(undefined)).toBeUndefined();
+    expect(continueUnlockReason(failedTwice)).toBeUndefined();
+    expect(
+      continueUnlockReason({
+        ...entry(true),
+        validationHistory: [chat, ...entry(true).validationHistory],
+      })
+    ).toBe('validationPassed');
+    expect(
+      continueUnlockReason({
+        ...entry(false, false, false),
+        validationHistory: [
+          ...entry(false, false, false).validationHistory,
+          chat,
+        ],
+      })
+    ).toBe('failedValidations');
+  });
+});
+
+describe('workAttempts, skippedAttempts and latestValidation', () => {
+  const work = {at: '1', pass: false, evidenceLevel: 1, reason: 'Not quite!'};
+  const old = {at: '0', pass: false, evidenceLevel: 0, reason: 'Old.'};
+  const chat = {
+    at: '2',
+    pass: true,
+    evidenceLevel: 0,
+    reason: 'Go on.',
+    skipReason: 'limitReached' as const,
+    replies: 8,
+  };
+  const entry = {timeSpent: 0, validationHistory: [old, work, chat]};
+
+  it('reads an entry with no pass reason as work, and keeps the kinds apart', () => {
+    expect(workAttempts(entry)).toEqual([old, work]);
+    expect(skippedAttempts(entry)).toEqual([chat]);
+    expect(workAttempts(undefined)).toEqual([]);
+  });
+
+  it('takes the latest check of work, never a chat check', () => {
+    expect(latestValidation(entry)).toBe(work);
+    expect(
+      latestValidation({timeSpent: 0, validationHistory: [chat]})
+    ).toBeUndefined();
   });
 });
 
@@ -554,5 +674,76 @@ describe('useProgress', () => {
     expect(
       result.current.progress?.steps.project.generatedInstructions
     ).toEqual(generatedInstructions);
+  });
+});
+
+describe('usePathwayStatus', () => {
+  it('reads undefined progress as empty', () => {
+    const {result} = renderHook(() => usePathwayStatus(pathway, undefined));
+
+    expect(result.current.statusMap).toEqual(
+      statusMapOf(pathway, EMPTY_PROGRESS)
+    );
+  });
+
+  it('routes the progress it is given', () => {
+    const progress = progressOf(['intro'], ['a']);
+    const {result} = renderHook(() => usePathwayStatus(pathway, progress));
+
+    expect(result.current.statusMap).toEqual(statusMapOf(pathway, progress));
+  });
+});
+
+describe('stepsCompleteShare', () => {
+  const checkpoint = {
+    id: 'c',
+    steps: [
+      {id: 'a', kind: 'markdown'},
+      {id: 'b', kind: 'markdown'},
+      {
+        id: 'only-if',
+        kind: 'markdown',
+        showIf: {stepId: 'a', questionId: 1, choiceId: 'x'},
+      },
+      {id: 'd', kind: 'markdown'},
+    ],
+  } as never;
+
+  it('is the complete share of the visible steps', () => {
+    expect(stepsCompleteShare(checkpoint, {steps: {}})).toBe(0);
+    expect(
+      stepsCompleteShare(checkpoint, {
+        steps: {a: {timeSpent: 0, status: 'complete'}},
+      })
+    ).toBeCloseTo(1 / 3);
+    expect(
+      stepsCompleteShare(checkpoint, {
+        steps: {
+          a: {timeSpent: 0, status: 'complete'},
+          b: {timeSpent: 0, status: 'started'},
+          d: {timeSpent: 0, status: 'complete'},
+        },
+      })
+    ).toBeCloseTo(2 / 3);
+  });
+
+  it('counts a conditional step once its choice shows it', () => {
+    expect(
+      stepsCompleteShare(checkpoint, {
+        steps: {
+          a: {
+            timeSpent: 0,
+            status: 'complete',
+            answers: {1: [{answerId: 'x'}]},
+          },
+        },
+      })
+    ).toBeCloseTo(1 / 4);
+  });
+
+  it('is 0 for a checkpoint with no visible steps', () => {
+    expect(stepsCompleteShare({id: 'e', steps: []} as never, {steps: {}})).toBe(
+      0
+    );
   });
 });

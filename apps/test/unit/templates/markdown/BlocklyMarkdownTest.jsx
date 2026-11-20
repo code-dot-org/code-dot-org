@@ -40,12 +40,11 @@ const renderInstructions = markdown =>
 
 describe('BlocklyMarkdown', () => {
   describe('base element mappings', () => {
-    it('renders --- as a design-system divider', () => {
+    it('renders --- as a separator', () => {
       renderInstructions('above\n\n---\n\nbelow');
 
-      // The DSCO Divider renders an <hr> (role separator) carrying its hashed
-      // module class.
-      expect(screen.getByRole('separator').className).toMatch(/divider/);
+      // The legacy `divider` module class and MUI's `MuiDivider-root` both match.
+      expect(screen.getByRole('separator').className).toMatch(/divider/i);
     });
 
     it('renders a link as a design-system link', () => {
@@ -113,10 +112,10 @@ describe('BlocklyMarkdown', () => {
       expect(wrapper.getElementsByTagName('br')).toHaveLength(1);
     });
 
-    it('renders an <hr/> tag as the same design-system divider', () => {
+    it('renders an <hr/> tag as a separator', () => {
       renderInstructions('above\n\n<hr/>\n\nbelow');
 
-      expect(screen.getByRole('separator').className).toMatch(/divider/);
+      expect(screen.getByRole('separator').className).toMatch(/divider/i);
     });
 
     it('renders an <img> tag, keeping its sizing attribute', () => {

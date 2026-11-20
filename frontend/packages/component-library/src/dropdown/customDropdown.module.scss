@@ -553,7 +553,8 @@
             width: 1.75rem;
           }
 
-          span {
+          // Only the label: a tag after it keeps its own typography.
+          > span {
             @include typography.body-one;
             color: inherit;
             margin-bottom: 0;
@@ -613,7 +614,7 @@
             width: 1.5rem;
           }
 
-          span {
+          > span {
             @include typography.body-two;
             color: inherit;
             margin-bottom: 0;
@@ -673,7 +674,7 @@
             width: 1.25rem;
           }
 
-          span {
+          > span {
             @include typography.body-three;
             color: inherit;
             margin-bottom: 0;
@@ -729,7 +730,7 @@
             width: 1rem;
           }
 
-          span {
+          > span {
             @include typography.body-four;
             color: inherit;
             margin-bottom: 0;

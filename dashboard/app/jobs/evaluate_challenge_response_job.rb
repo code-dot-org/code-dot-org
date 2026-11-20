@@ -68,7 +68,7 @@ class EvaluateChallengeResponseJob < ApplicationJob
     filter_student_content!
 
     response = ChallengeEvaluationOpenaiHelper::Client.new(
-      CDO.openai_measures_of_learning_api_key, MODEL
+      CDO.openai_lesson_deep_dive_api_key, MODEL
     ).request_evaluation(
       ChallengeEvaluationPromptHelper.messages(challenge_response),
       ChallengeEvaluationPromptHelper.response_format(challenge)

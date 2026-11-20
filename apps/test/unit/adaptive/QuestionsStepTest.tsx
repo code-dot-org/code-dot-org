@@ -303,6 +303,24 @@ describe('QuestionsStep', () => {
       );
     });
 
+    it('shows descriptionText above the textarea and describes it', () => {
+      renderStep(
+        {},
+        {
+          ...freeResponseStep,
+          questions: [
+            {
+              ...frQuestion(1, 'Reflect'),
+              descriptionText: 'Any idea counts.',
+            },
+          ],
+        }
+      );
+      expect(screen.getByRole('textbox')).toHaveAccessibleDescription(
+        'Any idea counts.'
+      );
+    });
+
     it('disables Submit when the textarea is empty', () => {
       renderStep({}, freeResponseStep);
       expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();

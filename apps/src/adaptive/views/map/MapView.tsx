@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {CheckpointStatusMap} from '../../progress';
+import {CheckpointStatusMap} from '../../progress/model';
 import {Pathway} from '../../types';
 
 import DestinationsMap from './DestinationsMap';
@@ -17,11 +17,14 @@ export type MapFit = 'whole' | 'width';
 export interface MapProps {
   pathway: Pathway;
   statusMap: CheckpointStatusMap;
+  /** Share of each checkpoint's steps complete, drawn on an in-progress node. */
+  stepShares?: {[checkpointId: string]: number};
   /** Checkpoint the map is zoomed onto, if any. */
   focusId?: string;
   /** Defaults to 'whole'. */
   fit?: MapFit;
-  onSelect: (id: string) => void;
+  /** Leaving it out makes the map read-only. */
+  onSelect?: (id: string) => void;
   tourFocusIds?: string[];
 }
 

@@ -28,9 +28,6 @@ runs:
           .ruby-version
           Gemfile
           Gemfile.lock
-          .python-version
-          pyproject.toml
-          uv.lock
           docker/build/Dockerfile
           docker/deps/Dockerfile
           docker/scripts/install-node.sh

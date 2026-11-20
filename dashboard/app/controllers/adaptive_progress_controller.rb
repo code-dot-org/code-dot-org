@@ -18,32 +18,31 @@ class AdaptiveProgressController < ApplicationController
   OTHER_CHOICE_ID = 'other'
   # REVIEW_DECISIONS in apps/src/adaptive/schema/steps/review.ts.
   REVIEW_DECISIONS = %w[build skip].freeze
+  # SkipReason in apps/src/adaptive/progress/model.ts; absent on a check of work.
+  SKIP_REASONS = %w[effortDemonstrated limitReached].freeze
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
-    rows = adaptive_user_level&.user_adaptive_steps || []
-    steps = rows.filter_map {|row| (entry = row_json(row)) && [row.step_id, entry]}.to_h
-    steps.merge!(level_step_progress) {|_step_id, entry, progress| entry.merge(progress)}
-    render json: {steps: steps}
+    render json: @level.progress_json(user_id: current_user.id, script_id: @unit.id)
   end
 
   # PUT /adaptive_progress/steps/:step_id/progress
   def update_progress
     body = request.request_parameters
     step = @level.find_step(params[:step_id])
-    return head :unprocessable_entity unless step
+    return reject_save('unknown_step') unless step
 
     # Progress on level-backed steps is in UserLevel.
-    return head :unprocessable_entity if step['kind'] == 'level'
+    return reject_save('level_step') if step['kind'] == 'level'
 
     if body.key?('answers')
       answers = student_responses(step, body['answers'])
-      return head :unprocessable_entity unless answers
+      return reject_save('invalid_answers') unless answers
     end
 
     if body.key?('timeSinceLastSave')
       seconds = time_spent_seconds(body['timeSinceLastSave'])
-      return head :unprocessable_entity unless seconds
+      return reject_save('invalid_time_spent') unless seconds
     end
 
     row = step_row(step)
@@ -61,30 +60,41 @@ class AdaptiveProgressController < ApplicationController
   def update_generated_instructions
     step = @level.find_step(params[:step_id])
     # Only a project step with a prompt generates instructions.
-    return head :unprocessable_entity unless step && step['kind'] == 'level' && step['project'] == true && step['instructionsPrompt'].present?
+    return reject_save('not_instructions_step') unless step && step['kind'] == 'level' && step['project'] == true && step['instructionsPrompt'].present?
 
     instructions = request.request_parameters['generatedInstructions']
-    return head :unprocessable_entity unless valid_json_value?(instructions)
+    return reject_save('invalid_generated_instructions') unless valid_json_value?(instructions)
 
     row = step_row(step)
     row.update!(generated_instructions: instructions)
 
-    render json: row_json(row)
+    render json: row.step_json
   end
 
   # PUT /adaptive_progress/steps/:step_id/validation_history
-  # Appends one check of a project step's work.
+  # Appends one check of a project step's work, or of its chat.
   def update_validation_history
     step = @level.find_step(params[:step_id])
-    return head :unprocessable_entity unless step && step['kind'] == 'level' && step['project'] == true && step['validation'].is_a?(Hash)
+    return reject_save('not_validation_step') unless step && step['kind'] == 'level' && step['project'] == true && step['validation'].is_a?(Hash)
 
     attempt = validation_attempt(step, request.request_parameters['attempt'])
-    return head :unprocessable_entity unless attempt
+    return reject_save('invalid_validation_attempt') unless attempt
 
     row = step_row(step)
     row.record_validation!(attempt)
 
-    render json: row_json(row)
+    render json: row.step_json
+  end
+
+  # Grouped by reason: a spike means the client and the content have drifted apart.
+  private def reject_save(reason)
+    Observability::Errors.report(
+      error_class: 'AdaptiveProgressRejected',
+      error_message: "Adaptive progress save rejected: #{reason}",
+      fingerprint: "AdaptiveProgressRejected:#{reason}",
+      context: {reason: reason, step_id: params[:step_id], level_id: @level.id, script_id: @unit.id}
+    )
+    head :unprocessable_entity
   end
 
   private def load_adaptive
@@ -118,28 +128,6 @@ class AdaptiveProgressController < ApplicationController
     user_level
   end
 
-  # Step id => progress, for each level step the student has a UserLevel on.
-  private def level_step_progress
-    levels = @level.step_levels
-    user_levels = UserLevel.where(user_id: current_user.id, script_id: @unit.id, level_id: levels.values.map(&:id)).index_by(&:level_id)
-    levels.filter_map {|step_id, level| [step_id, user_level_json(user_levels[level.id])] if user_levels[level.id]}.to_h
-  end
-
-  private def row_json(row)
-    return nil unless row.progress || row.generated_instructions || row.validation_history
-    entry = {'timeSpent' => 0}.merge(row.progress_json)
-    entry['generatedInstructions'] = row.generated_instructions if row.generated_instructions
-    entry['validationHistory'] = row.validation_history if row.validation_history
-    entry
-  end
-
-  private def user_level_json(user_level)
-    {
-      'status' => user_level.passing? ? 'complete' : 'started',
-      'timeSpent' => user_level.time_spent || 0,
-    }
-  end
-
   private def valid_json_value?(value)
     (value.is_a?(Hash) || value.is_a?(Array)) && value.to_json.bytesize <= MAX_JSON_BYTES
   end
@@ -151,25 +139,34 @@ class AdaptiveProgressController < ApplicationController
 
   # The attempt as stored, dated now, or nil if it does not fit: pass is a
   # boolean, the evidence level is 0 or one the measured skill describes,
-  # the reason fits, and the trace id, if any, is a short string.
+  # the reason fits, the trace id, if any, is a short string, and a chat
+  # entry names a known skip reason, passes, carries no evidence, and counts
+  # its replies.
   private def validation_attempt(step, attempt)
     return nil unless attempt.is_a?(Hash)
     pass = attempt['pass']
     level = attempt['evidenceLevel']
     reason = attempt['reason']
     trace_id = attempt['traceId']
+    skip_reason = attempt['skipReason']
+    replies = attempt['replies']
     return nil unless [true, false].include?(pass)
     return nil unless level.is_a?(Integer) && level >= 0
     skill_evidence_levels = @level.content&.dig('skills', step.dig('validation', 'measures', 'skillId'), 'evidenceLevels')
     return nil unless skill_evidence_levels.is_a?(Hash) && (level.zero? || skill_evidence_levels.key?(level.to_s))
     return nil unless reason.is_a?(String) && reason.length <= MAX_TEXT_LENGTH
     return nil unless trace_id.nil? || (trace_id.is_a?(String) && trace_id.length <= 255)
+    return nil unless skip_reason.nil? || SKIP_REASONS.include?(skip_reason)
+    return nil unless replies.nil? || (replies.is_a?(Integer) && replies >= 0)
+    return nil if skip_reason && (!pass || !level.zero? || replies.nil?)
     {
       'at' => Time.zone.now.utc.iso8601,
       'pass' => pass,
       'evidenceLevel' => level,
       'reason' => reason,
       'traceId' => trace_id,
+      'skipReason' => skip_reason,
+      'replies' => replies,
     }.compact
   end
 

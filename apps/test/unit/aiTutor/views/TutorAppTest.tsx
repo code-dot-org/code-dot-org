@@ -1,20 +1,59 @@
 import {TutorGalleryData} from '@code-dot-org/lesson-deep-dive';
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {MemoryRouter} from 'react-router-dom';
 
 import {LessonDeepDiveData} from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
 import TutorApp from '@cdo/apps/aiTutor/views/TutorApp';
-import experiments from '@cdo/apps/util/experiments';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
+
+const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
+
+let mockChallengesEnabled = true;
+jest.mock('@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled', () => ({
+  useLessonDeepDiveChallengesEnabled: () => mockChallengesEnabled,
+}));
 
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/LessonDeepDiveContainer',
   () => ({__esModule: true, default: () => <div>lesson-deep-dive</div>})
 );
 
+// The stub's buttons stand in for the gallery's analytics callbacks.
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
-  ChallengeGallery: () => <div>challenge-gallery</div>,
+  ChallengeGallery: ({
+    onViewed,
+    onVisibilityToggled,
+    onReactionAdded,
+  }: {
+    onViewed: (sectionId: number | null, unitId: number) => void;
+    onVisibilityToggled: (
+      sectionId: number | null,
+      responseId: number,
+      approved: boolean
+    ) => void;
+    onReactionAdded: (sectionId: number | null, responseId: number) => void;
+  }) => (
+    <div>
+      challenge-gallery
+      <button type="button" onClick={() => onViewed(3, 1)}>
+        view
+      </button>
+      <button type="button" onClick={() => onVisibilityToggled(3, 9, true)}>
+        toggle
+      </button>
+      <button type="button" onClick={() => onReactionAdded(3, 9)}>
+        react
+      </button>
+    </div>
+  ),
 }));
 
 jest.mock(
@@ -72,11 +111,7 @@ function renderAt(
 
 describe('TutorApp routing', () => {
   beforeEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
-  });
-
-  afterEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+    mockChallengesEnabled = true;
   });
 
   describe('index redirect', () => {
@@ -126,10 +161,48 @@ describe('TutorApp routing', () => {
       expect(screen.queryByText('challenge-gallery')).not.toBeInTheDocument();
     });
 
-    it('does not render the gallery route when lesson-tutor-challenge is off', () => {
-      experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+    it('does not render the gallery route when challenges are disabled', () => {
+      mockChallengesEnabled = false;
       renderAt('/gallery');
       expect(screen.queryByText('challenge-gallery')).not.toBeInTheDocument();
     });
+  });
+});
+
+describe('TutorApp gallery analytics', () => {
+  beforeEach(() => {
+    mockChallengesEnabled = true;
+    sendEventMock.mockReset();
+  });
+
+  const clickAll = () => {
+    for (const name of ['view', 'toggle', 'react']) {
+      fireEvent.click(screen.getByRole('button', {name}));
+    }
+  };
+
+  it('reports gallery events for teachers', () => {
+    renderAt('/gallery', LESSON_DATA, {...GALLERY_DATA, is_teacher: true});
+    clickAll();
+
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_GALLERY_VIEWED,
+      {section_id: 3, unit_id: 1}
+    );
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_GALLERY_VISIBILITY_TOGGLED,
+      {section_id: 3, project_id: 9, is_visible: true}
+    );
+    expect(sendEventMock).toHaveBeenCalledWith(
+      EVENTS.TUTOR_PLUS_GALLERY_REACTION_ADDED,
+      {section_id: 3, project_id: 9}
+    );
+  });
+
+  it('does not report gallery events for students', () => {
+    renderAt('/gallery');
+    clickAll();
+
+    expect(sendEventMock).not.toHaveBeenCalled();
   });
 });

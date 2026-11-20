@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ChallengeEvaluationPromptHelperTest < ActiveSupport::TestCase
-  let(:challenge) {create(:challenge, :with_rubric)}
+  let(:challenge) {create(:challenge)}
   let(:challenge_response) do
     create(:challenge_response, challenge:, student_text: 'It equals 4', transcript: 'I counted on my fingers')
   end
@@ -88,7 +88,7 @@ class ChallengeEvaluationPromptHelperTest < ActiveSupport::TestCase
     end
 
     it 'raises when the challenge has no rubric levels' do
-      challenge.update!(rubric: nil)
+      challenge.update_column(:rubric, nil)
 
       _ {ChallengeEvaluationPromptHelper.response_format(challenge)}.must_raise ArgumentError
     end

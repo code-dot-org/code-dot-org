@@ -55,7 +55,11 @@ module QuizQuestionSerialization
   # level: nil is legitimate - QuizQuestionsController renders a bank question
   # independent of any one quiz. The keyword args let a bulk caller (index) pass
   # values it already computed instead of a query per question.
-  private def quiz_question_json(question, level: nil, attached_to_other_quizzes: UNSET, used_in_published_unit: UNSET, page: UNSET)
+  private def quiz_question_json(question, level: nil, attached_to_other_quizzes: UNSET, used_in_published_unit: UNSET, page: UNSET, answered: UNSET)
+    if attached_to_other_quizzes.equal?(UNSET)
+      attached_to_other_quizzes = level ? question.levels.where.not(id: level.id).exists? : question.levels.exists?
+    end
+    answered = question.quiz_question_responses.exists? if answered.equal?(UNSET)
     {
       id: question.id,
       type: question.type,
@@ -63,14 +67,16 @@ module QuizQuestionSerialization
       **question.builder_content_json,
       explanation: question.explanation,
       standards: question.standards.map(&:summarize_for_lesson_edit),
-      attachedToOtherQuizzes:
-        if attached_to_other_quizzes.equal?(UNSET)
-          level ? question.levels.where.not(id: level.id).exists? : question.levels.exists?
-        else
-          attached_to_other_quizzes
-        end,
+      attachedToOtherQuizzes: attached_to_other_quizzes,
       usedInPublishedUnit: used_in_published_unit.equal?(UNSET) ? question.used_in_published_unit? : used_in_published_unit,
+      # No other quiz uses it and no student has answered it; see QuizQuestion#referenced?.
+      deletable: !attached_to_other_quizzes && !answered,
       page: page.equal?(UNSET) ? level&.placements&.find_by(quiz_question_id: question.id)&.page : page,
     }
+  end
+
+  # The ids among question_ids that have a student response, for a bulk caller.
+  private def answered_question_ids(question_ids)
+    QuizQuestionResponse.where(quiz_question_id: question_ids).distinct.pluck(:quiz_question_id).to_set
   end
 end

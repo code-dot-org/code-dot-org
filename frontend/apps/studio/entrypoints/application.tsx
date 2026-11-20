@@ -4,11 +4,13 @@ import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
 import {initializeCore} from '@code-dot-org/core';
+import {analyticsPlugin} from '@code-dot-org/core/plugins/analytics';
 import {consentPlugin} from '@code-dot-org/core/plugins/consent';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
-import {injectFontAwesome} from '@code-dot-org/fonts';
+import {injectFontAwesome} from '@code-dot-org/fonts/fontAwesome';
 
+import {isMobileBuild} from '@/config/buildMode';
 import {enableMocks} from '@/modules/mocks/enableMocks';
 import router from '@/modules/router';
 import queryClient from '@/modules/router/queryClient';
@@ -18,11 +20,18 @@ const mount = document.getElementById('vite-root');
 
 if (typeof window !== 'undefined') {
   initializeCore({
-    plugins: [localizationPlugin, observabilityPlugin, consentPlugin],
+    // consentPlugin before analyticsPlugin: analytics waits for consent to settle.
+    plugins: [
+      localizationPlugin,
+      observabilityPlugin,
+      consentPlugin,
+      analyticsPlugin,
+    ],
   });
   // Import FontAwesome into the `base` layer (declared below `mui` in
   // __root.tsx) so MUI's layered styleOverrides win over FA's base icon rules.
-  injectFontAwesome({layer: 'base'});
+  // The mobile build has no layers (see __root.tsx) and links the sheets.
+  injectFontAwesome(isMobileBuild() ? undefined : {layer: 'base'});
 }
 
 // MSW (if enabled via VITE_API_MODE=msw) must be running before any fetch

@@ -59,10 +59,11 @@ export async function fetchShareFailure(
   channelId: string
 ): Promise<ShareFailure | null> {
   const {value} = await HttpClient.fetchJson<{
-    share_failure: ShareFailure | false;
+    // Null for a non-English viewer: viewer_language_only skips the English check.
+    share_failure: ShareFailure | false | null;
     intl_share_failure: ShareFailure | false | null;
     language: string;
-  }>(`${rootUrl}/${channelId}/share-failure`);
+  }>(`${rootUrl}/${channelId}/share-failure?viewer_language_only=true`);
   const failure =
     value.language === 'en' ? value.share_failure : value.intl_share_failure;
   return failure || null;

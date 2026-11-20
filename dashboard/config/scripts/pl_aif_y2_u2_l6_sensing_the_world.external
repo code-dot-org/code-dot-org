@@ -1,0 +1,49 @@
+name 'pl-aif-y2-u2-l6-sensing-the-world'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Sensing the World
+
+The lesson opens with Atlas, a robot that places boards, grabs bags, and does backflips. It can look like it senses the world the way a human does.
+
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/65c0acc9040efd2355b10cac6cf8e051-image-1795018632516.png" alt="Atlas, a humanoid robot, balancing on scaffolding while handling a wooden board" style="width: 55%; border-radius: 10px;">
+  <p><em>Slide 3, the "Atlas Gets a Grip" still</em></p>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <p>&#128161; <strong>Teacher tip:</strong> when you ask what senses Atlas would need, strong answers connect a specific task, placing the board, grabbing the bag, the backflip, to a specific sense: sight, touch, balance. If students stall, narrow the question: "What senses would help you do what Atlas just did?"</p>
+</div>
+
+## How Robots Sense the World
+
+<img src="https://images.code.org/a1a564b9f61992ff3ca22ceb6c455031-image-1795018800388.png" alt="a black box with a 1 and a white box with a 0 represting bits" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+A computer has no eyes, no ears, only numbers, specifically, ones and zeros called **bits**. When a computer "sees" an image, it isn't looking at a picture the way a person does, it's reading a grid of those bits, where each one stands for whether a pixel is light or dark. 
+
+That gap between what looks like a picture to us and what's actually just numbers to a computer is exactly what your students experience hands-on in the next level, filling in a grid of bits themselves and watching an image appear.
+
+This is what a **representation** is: a way of describing something real, a picture, a sound, anything, with data a computer can understand. Every classifier your students build this unit, from nearest neighbors to the cello-and-violin one coming up later in this lesson, starts with that same move: choosing a representation before a computer can sense anything at all.
+
+## Lesson Vocabulary
+
+Two terms carry this lesson, click each card to see its definition:
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/sensing-world-vocab-flip-cards.html"
+    width="100%"
+    height="280"
+    frameborder="0"
+    scrolling="no"
+    title="Sensing the world vocabulary flip cards: multimodal model, representation">
+  </iframe>
+</div>
+
+
+
+Today's two activities explore two of those input types: images, through the "Seeing" activity next, and sound, through the "Hearing" activity after that.
+
+
+MARKDOWN

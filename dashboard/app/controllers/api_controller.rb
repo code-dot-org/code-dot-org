@@ -402,7 +402,7 @@ class ApiController < ApplicationController
   # POST /api/mass_progress_reset
   # Deletes progress for every (student, unit) pair in the given lists. Only
   # allowed for students who are currently in one of the signed-in teacher's
-  # sections.
+  # sections, and never for demo students.
   def mass_progress_reset
     return head :forbidden unless current_user
 
@@ -416,6 +416,12 @@ class ApiController < ApplicationController
     authorized_student_ids = current_user.students.where(id: student_ids).distinct.pluck(:id)
     return head :forbidden unless authorized_student_ids.sort == student_ids.uniq.sort
 
+    # Every teacher's demo section shares the same demo students, so their
+    # progress is not one teacher's to delete.
+    if Policies::DemoSections.any_demo_student_durable?(authorized_student_ids)
+      return render json: {error: 'Cannot reset progress for demo students'}, status: :forbidden
+    end
+
     User.delete_progress_for_units(user_ids: authorized_student_ids, unit_ids: unit_ids)
 
     render json: {success: true}
@@ -424,7 +430,7 @@ class ApiController < ApplicationController
   # Get /api/teacher_panel_section
   def teacher_panel_section
     prevent_caching
-    teacher_sections = current_user&.sections_instructed&.where(hidden: false)
+    teacher_sections = current_user&.sections_instructed
 
     if teacher_sections.blank?
       head :no_content
@@ -434,14 +440,18 @@ class ApiController < ApplicationController
     section_id = params[:section_id].present? ? params[:section_id].to_i : nil
 
     if section_id
+      # An explicitly named section is served even when archived (hidden).
       section = teacher_sections.find_by(id: section_id)
       if section.present?
-        render json: section.summarize if section.present?
+        render json: section.summarize
         return
       end
-    elsif teacher_sections.length == 1
-      render json: teacher_sections[0].summarize
-      return
+    else
+      visible_sections = teacher_sections.where(hidden: false)
+      if visible_sections.length == 1
+        render json: visible_sections[0].summarize
+        return
+      end
     end
 
     head :no_content

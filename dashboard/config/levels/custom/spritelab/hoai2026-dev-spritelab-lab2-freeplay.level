@@ -50,7 +50,11 @@
           "contents": [
             {
               "kind": "block",
-              "type": "spritelab2_setPlatformGravity"
+              "type": "spritelab2_setPlatformJumpHeight"
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setPlatformGravityDirection"
             },
             {
               "kind": "block",
@@ -111,7 +115,14 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_burst"
+              "type": "spritelab2_burst",
+              "inputs": {
+                "ORIGIN": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",
@@ -208,7 +219,14 @@
             },
             {
               "kind": "block",
-              "type": "spritelab2_burst"
+              "type": "spritelab2_burst",
+              "inputs": {
+                "ORIGIN": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              }
             },
             {
               "kind": "block",

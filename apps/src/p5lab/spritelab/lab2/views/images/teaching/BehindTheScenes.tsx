@@ -1,21 +1,26 @@
 // A Behind the scenes button that opens a dialog showing the picture and
 // the full prompt the model received; for a character set, a second view
-// shows the prompts sent for the other poses.
+// shows the prompts sent for the other poses. A second button leads on to
+// the picture's "How AI made your image" story, when there is one to tell.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
+import {createPortal} from 'react-dom';
 
 import {FrameSize} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
 import {POSE_MARK, SentPrompts} from '../../sentence/sentPrompts';
 
+import {LearningStory} from './useLearningStory';
+
 import styles from './behind-the-scenes.module.scss';
 
 const TITLE = 'Behind the scenes';
+const STORY_BUTTON = 'How AI made this';
 const VIEWS = [
   ['picture', 'First picture'],
   ['poses', 'Other poses'],
@@ -41,6 +46,10 @@ interface BehindTheScenesProps {
   disabled?: boolean;
   /** The icon alone, for a header with no room for the title. */
   compact?: boolean;
+  /** The picture's story, offered when there is one and a teller. */
+  story?: LearningStory;
+  /** Opens the story in place of this dialog. */
+  onTellStory?: (story: LearningStory) => void;
 }
 
 const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
@@ -48,14 +57,25 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
   picture,
   disabled,
   compact,
+  story,
+  onTellStory,
 }) => {
-  const [open, setOpen] = useState(false);
   const [view, setView] = useState<View>('picture');
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  // Where the open dialog is drawn: the nearest element that sets a theme.
+  // The button can sit in a bar that is layered under the page header, and
+  // a dialog drawn there could not cover the header with its backdrop.
+  const [dialogHost, setDialogHost] = useState<Element | null>(null);
+  const setOpen = (open: boolean) =>
+    setDialogHost(
+      open ? triggerRef.current?.closest('[data-theme]') ?? document.body : null
+    );
   const openDialog = () => {
     setView('picture');
     setOpen(true);
   };
   const triggerProps = {
+    ref: triggerRef,
     variant: 'text',
     color: 'tertiary',
     size: 'small',
@@ -109,55 +129,69 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           {TITLE}
         </MuiButton>
       )}
-      {open && (
-        <MuiDialog
-          title={TITLE}
-          className={styles.dialog}
-          customContent={
-            <div className={styles.body}>
-              <div className={styles.lead}>
-                {picture && (
-                  <div
-                    className={classNames(
-                      styles.thumb,
-                      picture.pixelated && styles.pixelArt,
-                      // The strip is scaled so its first frame fills the
-                      // box; the later frames fall past the box's right
-                      // edge and are clipped.
-                      picture.sheet && styles.thumbStrip
-                    )}
-                    style={{backgroundImage: `url(${picture.src})`}}
-                    role="img"
-                    aria-label={picture.name ?? 'Your picture'}
+      {dialogHost &&
+        createPortal(
+          <Modal
+            title={TITLE}
+            className={styles.dialog}
+            customContent={
+              <div className={styles.body}>
+                <div className={styles.lead}>
+                  {picture && (
+                    <div className={styles.thumbBox}>
+                      <div
+                        className={classNames(
+                          styles.thumb,
+                          picture.pixelated && styles.pixelArt,
+                          // The strip is scaled so its first frame fills the
+                          // box; the later frames fall past the box's right
+                          // edge and are clipped.
+                          picture.sheet && styles.thumbStrip
+                        )}
+                        style={{backgroundImage: `url(${picture.src})`}}
+                        role="img"
+                        aria-label={picture.name ?? 'Your picture'}
+                      />
+                    </div>
+                  )}
+                  <p id="dsco-dialog-description" className={styles.intro}>
+                    We sent the AI these words. It made a picture to match them.
+                    The first sentence is yours; the rest is what the lab adds
+                    every time.
+                  </p>
+                </div>
+                {sent.poses && (
+                  <SegmentedButtons
+                    size="s"
+                    className={styles.views}
+                    buttons={VIEWS.map(([value, label]) => ({value, label}))}
+                    selectedButtonValue={view}
+                    onChange={value => setView(value as View)}
                   />
                 )}
-                <p id="dsco-dialog-description" className={styles.intro}>
-                  We sent the AI these words. It made a picture to match them.
-                  The first sentence is yours; the rest is what the lab adds
-                  every time.
-                </p>
-              </div>
-              {sent.poses && (
-                <SegmentedButtons
-                  size="s"
-                  className={styles.views}
-                  buttons={VIEWS.map(([value, label]) => ({value, label}))}
-                  selectedButtonValue={view}
-                  onChange={value => setView(value as View)}
-                />
-              )}
-              {/* No tabIndex needed: browsers make a scrollable container
+                {/* No tabIndex needed: browsers make a scrollable container
                   keyboard-focusable on their own. */}
-              <div className={styles.promptFrame}>{promptView}</div>
-            </div>
-          }
-          onClose={() => setOpen(false)}
-          primaryButtonProps={{
-            children: 'Got it',
-            onClick: () => setOpen(false),
-          }}
-        />
-      )}
+                <div className={styles.promptFrame}>{promptView}</div>
+              </div>
+            }
+            onClose={() => setOpen(false)}
+            secondaryButtonProps={
+              story &&
+              onTellStory && {
+                children: STORY_BUTTON,
+                onClick: () => {
+                  setOpen(false);
+                  onTellStory(story);
+                },
+              }
+            }
+            primaryButtonProps={{
+              children: 'Got it',
+              onClick: () => setOpen(false),
+            }}
+          />,
+          dialogHost
+        )}
     </>
   );
 };

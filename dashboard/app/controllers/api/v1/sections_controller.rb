@@ -22,7 +22,9 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
   # Get the set of sections taught by the current user
   def index
     prevent_caching
-    render json: current_user.sections_instructed.map(&:summarize_without_students)
+    sections = current_user.sections_instructed.includes(section_instructors: {instructor: :primary_contact_info}).to_a
+    counts = Section.student_counts(sections)
+    render json: sections.map {|section| section.summarize_without_students(student_count: counts.fetch(section.id, 0))}
   end
 
   # GET /api/v1/sections/<id>
@@ -450,6 +452,14 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     render json: {result: 'success'}
   rescue ActiveRecord::RecordInvalid
     render json: {result: 'invalid ai_chat_access_level'}, status: :bad_request
+  end
+
+  # POST /api/v1/sections/<id>/ai_challenge_enabled
+  def set_ai_challenge_enabled
+    enabled = ActiveModel::Type::Boolean.new.cast(params[:ai_challenge_enabled])
+    return render json: {result: 'invalid ai_challenge_enabled'}, status: :bad_request if enabled.nil?
+    @section.update!(ai_challenge_enabled: enabled)
+    render json: {result: 'success'}
   end
 
   # GET /api/v1/sections/<id>/suggested_lesson

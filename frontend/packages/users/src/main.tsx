@@ -17,6 +17,8 @@ import {
 } from '@code-dot-org/component-library/themes';
 import {initializeCore} from '@code-dot-org/core';
 import {QueryClientProvider} from '@code-dot-org/core/api';
+import {analyticsPlugin} from '@code-dot-org/core/plugins/analytics';
+import {consentPlugin} from '@code-dot-org/core/plugins/consent';
 import {localizationPlugin} from '@code-dot-org/core/plugins/localization';
 import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
 import {injectFontAwesome} from '@code-dot-org/fonts';
@@ -31,7 +33,15 @@ import {
 } from './fixtures';
 import UsersSettingsPage from './UsersSettingsPage';
 
-initializeCore({plugins: [localizationPlugin, observabilityPlugin]});
+initializeCore({
+  // No app-config meta and no OneTrust here: analytics logs to the console.
+  plugins: [
+    localizationPlugin,
+    observabilityPlugin,
+    consentPlugin,
+    analyticsPlugin,
+  ],
+});
 // FontAwesome icon webfont — dev host only (Studio injects it); without it DSCO
 // controls render as blank boxes.
 injectFontAwesome();

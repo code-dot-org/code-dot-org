@@ -1,0 +1,24 @@
+{
+  "name": "adaptive-dev",
+  "script_names": [
+    "adaptive-dev"
+  ],
+  "original_script_names": [
+    "adaptive-dev"
+  ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "adaptive-dev",
+    "numbered_units": "auto",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

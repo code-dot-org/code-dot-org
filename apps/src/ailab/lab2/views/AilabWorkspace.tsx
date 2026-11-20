@@ -187,22 +187,27 @@ const AilabWorkspace: React.FC<AilabWorkspaceProps> = ({
 
   return (
     <div id="ailab-lab2" className={styles.ailab} data-notranslate>
-      <ResourcePanel
-        className={styles.resourcePanel}
-        levelProperties={levelProperties}
-        isRunning={false}
-        hasRun={false}
-        hasEdited={hasEdited}
-        validationTooltip={
-          mode?.requireAccuracy
-            ? `Train a model with at least ${mode.requireAccuracy}% accuracy`
-            : undefined
-        }
-        dynamicInstructions={dynamicInstructionsContent}
-        backpackProps={BACKPACK_PROPS}
-        settings={[themeSetting]}
-      />
-      <div className={styles.divider} />
+      {/* Mounted with its instructions, or the panel would open on another tab. */}
+      {dynamicInstructionsKey && (
+        <>
+          <ResourcePanel
+            className={styles.resourcePanel}
+            levelProperties={levelProperties}
+            isRunning={false}
+            hasRun={false}
+            hasEdited={hasEdited}
+            validationTooltip={
+              mode?.requireAccuracy
+                ? `Train a model with at least ${mode.requireAccuracy}% accuracy`
+                : undefined
+            }
+            dynamicInstructions={dynamicInstructionsContent}
+            backpackProps={BACKPACK_PROPS}
+            settings={[themeSetting]}
+          />
+          <div className={styles.divider} />
+        </>
+      )}
       <div className={styles.workspace}>
         <div className={styles.root}>
           <Provider store={store}>

@@ -9,10 +9,14 @@
   white-space: nowrap;
 }
 
+// The hairline keeps a new scene's white picture visible on the menu; the
+// theme's variables may not reach this div, hence the fallback.
 .menuThumb {
+  box-sizing: border-box;
   width: 28px;
   height: 28px;
   margin-right: 8px;
+  border: 1px solid var(--borders-neutral-primary, rgb(0 0 0 / 20%));
   border-radius: 2px;
   object-fit: cover;
 }

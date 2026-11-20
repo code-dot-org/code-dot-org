@@ -4,6 +4,7 @@ import {buildSchoolData} from '@code-dot-org/core/api';
 
 import {
   CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
   SELECT_A_SCHOOL,
   SELECT_COUNTRY,
   schoolInfoInvalid,
@@ -63,6 +64,17 @@ describe('schoolInfoInvalid', () => {
     );
   });
 
+  it('accepts the non-school setting once the US zip is valid', () => {
+    const nonSchool = {
+      country: 'US',
+      schoolId: NO_SCHOOL_SETTING,
+      schoolName: '',
+      schoolsList: [],
+    };
+    expect(schoolInfoInvalid({...nonSchool, schoolZip: '98101'})).toBe(false);
+    expect(schoolInfoInvalid({...nonSchool, schoolZip: ''})).toBe(true);
+  });
+
   it('rejects a US school id that is not in the fetched list', () => {
     expect(
       schoolInfoInvalid({
@@ -87,6 +99,12 @@ describe('schoolInfoInvalid', () => {
         schoolZip: '98101',
         schoolId: CLICK_TO_ADD,
         schoolName: 'New School',
+      },
+      {
+        ...BLANK,
+        country: 'US',
+        schoolZip: '98101',
+        schoolId: NO_SCHOOL_SETTING,
       },
     ];
     for (const state of submittable) {

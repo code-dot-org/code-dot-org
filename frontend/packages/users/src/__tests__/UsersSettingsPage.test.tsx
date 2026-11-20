@@ -742,6 +742,7 @@ describe('UsersSettingsPage — Educator Profile tab across a type change', () =
     fireEvent.change(within(dialog).getByLabelText(/email address/i), {
       target: {value: 'ada@example.com'},
     });
+    fireEvent.click(within(dialog).getByRole('radio', {name: 'Yes'}));
     fireEvent.click(
       within(dialog).getByRole('button', {name: /change to educator/i}),
     );

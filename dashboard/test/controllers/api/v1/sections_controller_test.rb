@@ -111,6 +111,20 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal expected, returned_json
   end
 
+  test 'index counts students and loads instructors once, not once per section' do
+    3.times {create(:follower, section: create(:section, user: @teacher, login_type: 'word'))}
+
+    sign_in @teacher
+    queries = capture_queries {get :index}
+    assert_response :success
+
+    assert_equal 1, queries.grep(/COUNT\(DISTINCT `users`\.`id`\)/).size, queries.join("\n")
+    assert_equal 1, queries.grep(/FROM `section_instructors`/).size, queries.join("\n")
+    # @teacher is shared by every test in this class, so do not cache its
+    # sections on it.
+    assert_equal User.find(@teacher.id).sections_instructed.map(&:summarize_without_students).as_json, returned_json
+  end
+
   # It's easy to accidentally grant admins permission to `index` all sections
   # in the database - a huge query that we don't want to permit.  Admin users
   # should therefore only get their own sections when indexing sections,
@@ -1662,6 +1676,34 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   test 'set ai_chat_access_level fails when passed nil' do
     sign_in @teacher
     post :set_ai_chat_access_level, params: {id: @section.id, ai_chat_access_level: nil}
+    assert_response :bad_request
+  end
+
+  test 'can set ai_challenge_enabled by the section teacher' do
+    sign_in @teacher
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: true}
+    assert_response :success
+    assert @section.reload.ai_challenge_enabled
+
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: false}
+    assert_response :success
+    refute @section.reload.ai_challenge_enabled
+  end
+
+  test 'cannot set ai_challenge_enabled by a different teacher' do
+    sign_in @following_teacher
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: true}
+    assert_response :forbidden
+  end
+
+  test 'set ai_challenge_enabled returns 403 when signed out' do
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: true}
+    assert_response :forbidden
+  end
+
+  test 'set ai_challenge_enabled fails when passed nil' do
+    sign_in @teacher
+    post :set_ai_challenge_enabled, params: {id: @section.id, ai_challenge_enabled: nil}
     assert_response :bad_request
   end
 

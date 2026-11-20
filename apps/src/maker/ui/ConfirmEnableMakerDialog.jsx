@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {MuiCustomDialog as CustomDialog} from '@code-dot-org/component-library/dialog';
+import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';

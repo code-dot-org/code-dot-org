@@ -15,13 +15,12 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import {unified} from 'unified';
 
-import {Typography, type TypographyProps} from '@mui/material';
+import {Divider, Typography, type TypographyProps} from '@mui/material';
 
 import {
   componentSizeToBodyTextSizeMap,
   type BodyTextSizeVariant,
 } from '@code-dot-org/component-library/common/constants';
-import Divider from '@code-dot-org/component-library/divider';
 import Link from '@code-dot-org/component-library/link';
 
 import {
@@ -182,9 +181,10 @@ const baseComponents = (
   em: muiText('em', 'em'),
   a: makeLink(bodyVariant),
   p: makeParagraph(bodyVariant),
-  // `---` renders as a themed design-system divider. (Divider is not yet
-  // MUI-migrated, so the DSCO component is the design-system component here.)
-  hr: ({className, style}) => <Divider className={className} style={style} />,
+  // Full width keeps a rule below a floated image instead of beside it.
+  hr: ({className, style}) => (
+    <Divider className={className} style={style} sx={{width: '100%'}} />
+  ),
 });
 
 const NO_EXTENSIONS: MarkdownExtension[] = [];

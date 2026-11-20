@@ -5,15 +5,10 @@ import React from 'react';
 import InterventionBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/InterventionBox';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import experiments from '@cdo/apps/util/experiments';
 
 // The modality content components pull in heavy dependencies (audio, video,
 // chat, redux) that are irrelevant to the navigation behavior under test, so
 // each is replaced with a lightweight marker whose text we can assert on.
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/Challenges',
-  () => () => <div>challenge content</div>
-);
 jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/Chat',
   () => () => <div>chat content</div>
@@ -22,12 +17,34 @@ jest.mock(
   '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/VideosBox',
   () => () => <div>videos content</div>
 );
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ReviewModalities/PodcastsBox',
-  () => () => <div>podcasts content</div>
-);
 jest.mock('@code-dot-org/lesson-deep-dive', () => ({
   ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  Challenges: ({
+    onReviewInstead,
+    onModalityChange,
+    onChallengeStarted,
+  }: {
+    onReviewInstead: () => void;
+    onModalityChange: (modality: 'video' | 'whiteboard') => void;
+    onChallengeStarted: (challenge: {id: number}, type: string) => void;
+  }) => (
+    <div>
+      challenge content
+      <button type="button" onClick={onReviewInstead}>
+        review instead
+      </button>
+      <button type="button" onClick={() => onModalityChange('whiteboard')}>
+        pick whiteboard
+      </button>
+      <button
+        type="button"
+        onClick={() => onChallengeStarted({id: 5}, 'whiteboard')}
+      >
+        start challenge
+      </button>
+    </div>
+  ),
+  PodcastsBox: () => <div>podcasts content</div>,
   VocabularyFlashcards: () => <div>flashcards content</div>,
 }));
 
@@ -49,10 +66,15 @@ const LESSON_NAME = 'Variables';
 
 interface RenderOpts {
   focusTopic?: string;
+  challengeEnabled?: boolean;
   onDone?: () => void;
 }
 
-function renderInterventionBox({focusTopic, onDone}: RenderOpts = {}) {
+function renderInterventionBox({
+  focusTopic,
+  challengeEnabled = true,
+  onDone,
+}: RenderOpts = {}) {
   render(
     <InterventionBox
       lessonId={LESSON_ID}
@@ -64,6 +86,7 @@ function renderInterventionBox({focusTopic, onDone}: RenderOpts = {}) {
       jsonVideos={[]}
       reflectionData={null}
       focusTopic={focusTopic}
+      challengeEnabled={challengeEnabled}
       onDone={onDone}
     />
   );
@@ -72,16 +95,10 @@ function renderInterventionBox({focusTopic, onDone}: RenderOpts = {}) {
 describe('InterventionBox', () => {
   beforeEach(() => {
     sendEventMock.mockReset();
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
   });
 
-  afterEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
-  });
-
-  it('Does not list the Challenge option in the practice menu if no experiment', () => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
-    renderInterventionBox();
+  it('Does not list the Challenge option when challenges are disabled', () => {
+    renderInterventionBox({challengeEnabled: false});
     expect(
       screen.queryByRole('button', {name: /I want a challenge instead/i})
     ).not.toBeInTheDocument();
@@ -162,6 +179,7 @@ describe('InterventionBox', () => {
           jsonVideos={[]}
           reflectionData={null}
           initialSelection="challenge"
+          challengeEnabled
         />
       );
       expect(screen.getByText('challenge content')).toBeInTheDocument();
@@ -257,6 +275,100 @@ describe('InterventionBox', () => {
       expect(
         screen.queryByRole('button', {name: /Done/i})
       ).not.toBeInTheDocument();
+    });
+  });
+
+  describe('Tutor+ analytics', () => {
+    it('reports a modality picked from the grid with source "picker"', () => {
+      renderInterventionBox();
+      fireEvent.click(screen.getByRole('button', {name: /Watch a video/i}));
+
+      expect(sendEventMock).toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_PRACTICE_MODALITY_SELECTED,
+        {lesson_id: LESSON_ID, modality: 'videos', source: 'picker'}
+      );
+    });
+
+    it('reports a modality picked from the nav bar with source "tab_switch"', () => {
+      renderInterventionBox();
+      fireEvent.click(screen.getByRole('button', {name: /Watch a video/i}));
+      fireEvent.click(screen.getByRole('button', {name: /^Chat$/i}));
+
+      expect(sendEventMock).toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_PRACTICE_MODALITY_SELECTED,
+        {lesson_id: LESSON_ID, modality: 'chat', source: 'tab_switch'}
+      );
+    });
+
+    it('reports switching to a challenge as a next step, not a modality', () => {
+      renderInterventionBox();
+      fireEvent.click(
+        screen.getByRole('button', {name: /I want a challenge instead/i})
+      );
+
+      expect(sendEventMock).toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN,
+        {lesson_id: LESSON_ID, choice: 'challenge', source: 'practice_screen'}
+      );
+      expect(sendEventMock).not.toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_PRACTICE_MODALITY_SELECTED,
+        expect.anything()
+      );
+    });
+
+    it('reports switching back from the challenge picker to practice', () => {
+      renderInterventionBox();
+      fireEvent.click(
+        screen.getByRole('button', {name: /I want a challenge instead/i})
+      );
+      fireEvent.click(screen.getByRole('button', {name: 'review instead'}));
+
+      expect(sendEventMock).toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN,
+        {lesson_id: LESSON_ID, choice: 'practice', source: 'challenge_screen'}
+      );
+    });
+
+    it('reports the challenge type and the started challenge', () => {
+      renderInterventionBox();
+      fireEvent.click(
+        screen.getByRole('button', {name: /I want a challenge instead/i})
+      );
+      fireEvent.click(screen.getByRole('button', {name: 'pick whiteboard'}));
+      fireEvent.click(screen.getByRole('button', {name: 'start challenge'}));
+
+      expect(sendEventMock).toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_CHALLENGE_TYPE_SELECTED,
+        {lesson_id: LESSON_ID, type: 'whiteboard'}
+      );
+      expect(sendEventMock).toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_CHALLENGE_STARTED,
+        {lesson_id: LESSON_ID, challenge_id: 5, type: 'whiteboard'}
+      );
+    });
+
+    it('reports Done with the distinct modalities used and the time spent', () => {
+      jest.useFakeTimers();
+      try {
+        renderInterventionBox({onDone: jest.fn()});
+        fireEvent.click(screen.getByRole('button', {name: /Watch a video/i}));
+        fireEvent.click(screen.getByRole('button', {name: /^Chat$/i}));
+        fireEvent.click(screen.getByRole('button', {name: /^Video$/i}));
+        jest.advanceTimersByTime(90_000);
+
+        fireEvent.click(screen.getByRole('button', {name: /Done/i}));
+
+        expect(sendEventMock).toHaveBeenCalledWith(
+          EVENTS.TUTOR_PLUS_PRACTICE_DONE,
+          {
+            lesson_id: LESSON_ID,
+            modalities_used: ['videos', 'chat'],
+            duration_seconds: 90,
+          }
+        );
+      } finally {
+        jest.useRealTimers();
+      }
     });
   });
 });

@@ -1,0 +1,30 @@
+// The fonts the CodeAI Android app's own pages draw (frontend/apps/studio's
+// launcher and offline routes): Geist and Space Grotesk in the weights those
+// pages use, in the Latin subset of their English text. The app bundles them,
+// so its pages draw them offline.
+@use '@fontsource/geist/scss/mixins' as Geist;
+@use '@fontsource/space-grotesk/scss/mixins' as SpaceGrotesk;
+@include Geist.faces(
+  $family: 'Geist',
+  $styles: normal,
+  $weights: (
+    400,
+    500,
+    600,
+    700,
+  ),
+  $subsets: latin,
+  $formats: woff2,
+  $display: block
+);
+@include SpaceGrotesk.faces(
+  $family: 'Space Grotesk',
+  $styles: normal,
+  $weights: (
+    500,
+    600,
+  ),
+  $subsets: latin,
+  $formats: woff2,
+  $display: block
+);

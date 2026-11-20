@@ -20,7 +20,7 @@ const MapStats: React.FunctionComponent<MapStatsProps> = ({
   skills,
   timeSpentSeconds,
 }) => (
-  <div className={styles.stats}>
+  <div className={styles.stats} role="group" aria-label="Progress summary">
     {skills.length > 0 && <ProgressRings rings={skills} />}
     <Tooltip title="Time Spent" arrow>
       <MuiTypography

@@ -180,21 +180,27 @@ export default function ResetProgressDialog({
   return (
     <Modal
       title={i18n.resetProgressConfirmTitle()}
-      description={i18n.resetProgressConfirmWarning({unitName})}
       customContent={
-        askForReason && (
-          <div className={styles.reasonField}>
-            <TextField
-              name="reset-progress-reason"
-              label={i18n.resetProgressReasonLabel()}
-              value={reason}
-              onChange={event => setReason(event.target.value)}
-              helperMessage={i18n.resetProgressReasonRequired()}
-              maxLength={REASON_MAX_LENGTH}
-              required
-            />
-          </div>
-        )
+        <>
+          {/* Modal's description prop takes only plain text. */}
+          <Typography id="dsco-dialog-description" variant="body2" gutterBottom>
+            {i18n.resetProgressConfirmWarning({unitName})}{' '}
+            <strong>{i18n.resetProgressCannotBeUndone()}</strong>
+          </Typography>
+          {askForReason && (
+            <div className={styles.reasonField}>
+              <TextField
+                name="reset-progress-reason"
+                label={i18n.resetProgressReasonLabel()}
+                value={reason}
+                onChange={event => setReason(event.target.value)}
+                helperMessage={i18n.resetProgressReasonRequired()}
+                maxLength={REASON_MAX_LENGTH}
+                required
+              />
+            </div>
+          )}
+        </>
       }
       customBottomContent={
         hasError && (

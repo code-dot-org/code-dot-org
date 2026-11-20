@@ -233,6 +233,41 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_nil UserAdaptiveStep.find_by(step_id: 'try').progress
   end
 
+  test "chat entries are appended to the validation history with their pass reason and reply count" do
+    travel_to Time.utc(2026, 11, 16, 17) do
+      put_validation 'try', {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'skipReason' => 'limitReached', 'replies' => 8, 'traceId' => 'trace-1'}
+    end
+    assert_response :success
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 2, 'reason' => 'Heading added.'}
+    put_validation 'try', {'pass' => false, 'evidenceLevel' => 1, 'reason' => 'Not quite.'}
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'skipReason' => 'effortDemonstrated', 'replies' => 4}
+
+    history = steps['try']['validationHistory']
+    assert_equal(
+      {'at' => '2026-11-16T17:00:00Z', 'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'skipReason' => 'limitReached', 'replies' => 8, 'traceId' => 'trace-1'},
+      history[0]
+    )
+    assert_equal ['limitReached', nil, nil, 'effortDemonstrated'], history.pluck('skipReason')
+    assert_equal [8, nil, nil, 4], history.pluck('replies')
+  end
+
+  test "refuses a chat entry with an unknown pass reason, that fails, with evidence, or without its reply count" do
+    chat = {'pass' => true, 'evidenceLevel' => 0, 'reason' => 'Go on.', 'skipReason' => 'limitReached', 'replies' => 8}
+    [
+      chat.merge('skipReason' => 'teacher'),
+      chat.merge('pass' => false),
+      chat.merge('evidenceLevel' => 1),
+      chat.except('replies'),
+      chat.merge('replies' => '5'),
+      chat.merge('replies' => -1),
+    ].each do |attempt|
+      assert_no_difference 'UserAdaptiveStep.count' do
+        put_validation 'try', attempt
+      end
+      assert_response :unprocessable_entity, attempt.to_s
+    end
+  end
+
   test "only the last validation attempts are kept" do
     25.times do |i|
       put_validation 'try', {'pass' => false, 'evidenceLevel' => 0, 'reason' => "Try #{i}"}
@@ -265,6 +300,27 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
       end
       assert_response :unprocessable_entity, "#{step_id} #{attempt}"
     end
+  end
+
+  test "a refused save is reported with its reason, step and level" do
+    Observability::Errors.expects(:report).with(
+      error_class: 'AdaptiveProgressRejected',
+      error_message: 'Adaptive progress save rejected: invalid_validation_attempt',
+      fingerprint: 'AdaptiveProgressRejected:invalid_validation_attempt',
+      context: {reason: 'invalid_validation_attempt', step_id: 'try', level_id: @level.id, script_id: @unit.id}
+    )
+
+    put_validation 'try', {'pass' => true, 'evidenceLevel' => 3, 'reason' => 'Fine.'}
+
+    assert_response :unprocessable_entity
+  end
+
+  test "an accepted save reports nothing" do
+    Observability::Errors.expects(:report).never
+
+    put_step 'read', started: true
+
+    assert_response :success
   end
 
   test "level steps take their state from the step level's user level" do

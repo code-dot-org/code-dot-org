@@ -35,10 +35,11 @@ ChatClient.log "A user has invoked bin/terminate_build on this environment's dae
 # ps -C sh -o pid,pgid,args
 #
 # PID  PGID COMMAND
-# 22641 22641 /bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/staging/Gemfile bundle exec /home/ubuntu/staging/bin/cronjob /home/ubuntu/staging/aws/ci_build dev+build@code.org
+# 22641 22641 /bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/staging/Gemfile SENTRY_MONITOR_SCHEDULE=\*/1\ \*\ \*\ \*\ \* SENTRY_MONITOR_SLUG=ci_build bundle exec /home/ubuntu/staging/bin/cronjob /home/ubuntu/staging/aws/ci_build dev+build@code.org
 
-# Command issued by cron to execute the continuous deployment system.
-BUILD_COMMAND = "/bin/sh -c BUNDLE_GEMFILE=/home/ubuntu/#{CDO.env}/Gemfile bundle exec /home/ubuntu/#{CDO.env}/bin/cronjob /home/ubuntu/#{CDO.env}/aws/ci_build dev+build@code.org".freeze
+# Tail of the command issued by cron to execute the continuous deployment system. The environment
+# assignments ahead of it are set by the cdo-apps crontab template and change as monitors are added.
+BUILD_COMMAND = "bundle exec /home/ubuntu/#{CDO.env}/bin/cronjob /home/ubuntu/#{CDO.env}/aws/ci_build dev+build@code.org".freeze
 # Flag file at the root of the project indicating that a build is currently executing.
 STARTED = "/home/ubuntu/#{CDO.env}/build-started".freeze
 
@@ -48,7 +49,7 @@ begin
   # Remove the first line of output (column headers) and find the line representing the parent build process.
   build_process_info = process_list.lines.drop(1).select {|line| line.include? BUILD_COMMAND}.first
   raise "The aws/ci_build process is not currently running" unless build_process_info
-  process_id, process_group_id = build_process_info.delete_suffix(BUILD_COMMAND + "\n").split
+  process_id, process_group_id = build_process_info.split
   raise "Process ID of the parent build process - #{process_id} - should be the same as the Process Group ID - #{process_group_id}" unless process_id == process_group_id
 
   CDO.log.info 'Killing the following aws/ci_build process and all of its child processes:'

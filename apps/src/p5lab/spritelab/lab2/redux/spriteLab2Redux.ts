@@ -4,9 +4,7 @@ import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 // In display order: the scene-editing tabs (grouped behind the scene
 // picker), then Images, then Play.
 export const ALL_TABS = ['World', 'Code', 'Images', 'Play'] as const;
-// 'Scenes' is the scene gallery: a full-workspace view reached from the
-// scene picker, with no button of its own in the bar.
-export type Tab = (typeof ALL_TABS)[number] | 'Scenes';
+export type Tab = (typeof ALL_TABS)[number];
 
 // Redux mirror of the scenes (full data lives in project sources), so the
 // scene selector and the go-to-scene dropdown can read it reactively.
@@ -15,14 +13,6 @@ export interface SceneMetadata {
   name: string;
   /** A picture of the scene, when it has one (sceneThumbnails.ts). */
   thumbnail?: string;
-}
-
-// A scene from a section-mate's project, offered by the go-to-external-scene
-// block's dropdown. key = "<channel>:<sceneId>" (the value the block stores);
-// label is what the dropdown shows.
-export interface ExternalSceneOption {
-  key: string;
-  label: string;
 }
 
 // One of the user's Music Lab projects, offered by the play-music block's
@@ -49,7 +39,6 @@ export interface SpriteLab2State {
   activeTab: Tab;
   hasRun: boolean;
   scenes: SceneMetadata[];
-  externalScenes: ExternalSceneOption[];
   musicProjects: MusicProjectOption[];
   prompt: ActivePrompt | null;
   askAi: AskAiStatus | null;
@@ -59,7 +48,6 @@ const initialState: SpriteLab2State = {
   activeTab: 'Code',
   hasRun: false,
   scenes: [],
-  externalScenes: [],
   musicProjects: [],
   prompt: null,
   askAi: null,
@@ -77,12 +65,6 @@ const spriteLab2Slice = createSlice({
     },
     setScenes: (state, action: PayloadAction<SceneMetadata[]>) => {
       state.scenes = action.payload;
-    },
-    setExternalScenes: (
-      state,
-      action: PayloadAction<ExternalSceneOption[]>
-    ) => {
-      state.externalScenes = action.payload;
     },
     setMusicProjects: (state, action: PayloadAction<MusicProjectOption[]>) => {
       state.musicProjects = action.payload;
@@ -117,7 +99,6 @@ export const {
   setActiveTab,
   setHasRun,
   setScenes,
-  setExternalScenes,
   setMusicProjects,
   showPrompt,
   clearPrompt,

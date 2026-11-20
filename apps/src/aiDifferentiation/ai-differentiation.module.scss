@@ -339,31 +339,6 @@ $sidebar-tooltip-z-index: 2010;
   justify-content: flex-end;
 }
 
-.floatingActionButton {
-  position: fixed;
-  left: $fab-left * 1px;
-  bottom: $fab-bottom * 1px;
-  height: $fab-height * 1px;
-  width: 48px;
-  background-size: 60px;
-  padding: 0;
-  background-color: transparent;
-  border-width: 0;
-  border-radius: 50%;
-  z-index: 1000;
-
-  img {
-    opacity: 1;
-  }
-
-  .floatingActionButtonTag {
-    position: absolute;
-    width: 25px;
-    left: 33px;
-    top: -8px;
-  }
-}
-
 .aiBotImg {
   width: 42px;
   height: 68px;

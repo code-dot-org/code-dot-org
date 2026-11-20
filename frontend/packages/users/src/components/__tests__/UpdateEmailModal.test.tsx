@@ -10,12 +10,21 @@ import {MALFORMED_EMAIL, WRONG_PASSWORD} from '../../fixtures/errorBodies';
 import {GENERIC_ERROR} from '../modalErrors';
 import UpdateEmailModal from '../UpdateEmailModal';
 
-function renderModal(onClose = vi.fn(), isTeacher = false) {
+function renderModal(
+  onClose = vi.fn(),
+  isTeacher = false,
+  requiresPassword = true,
+) {
   const client = createQueryClient({queries: {retry: false}});
   render(
     <QueryClientProvider client={client}>
       <ToastProvider politeness="polite">
-        <UpdateEmailModal open onClose={onClose} isTeacher={isTeacher} />
+        <UpdateEmailModal
+          open
+          onClose={onClose}
+          isTeacher={isTeacher}
+          requiresPassword={requiresPassword}
+        />
       </ToastProvider>
     </QueryClientProvider>,
   );
@@ -34,6 +43,12 @@ describe('UpdateEmailModal', () => {
     renderModal();
     expect(newEmailField()).toBeInTheDocument();
     expect(currentPasswordField()).toBeInTheDocument();
+  });
+
+  it('omits the current-password field when the account has no password', () => {
+    renderModal(vi.fn(), false, false);
+    expect(newEmailField()).toBeInTheDocument();
+    expect(screen.queryByLabelText('Current password')).toBeNull();
   });
 
   it('submits the hashed email and current password, then toasts and closes', async () => {
@@ -144,26 +159,11 @@ describe('UpdateEmailModal', () => {
       expect(screen.queryByRole('radiogroup')).not.toBeInTheDocument();
     });
 
-    it('should require an answer from a teacher before sending anything', async () => {
-      let requested = false;
-      mockServer.use(
-        http.patch('*/users/email', () => {
-          requested = true;
-          return HttpResponse.json({});
-        }),
-      );
-      const {onClose} = renderModal(vi.fn(), true);
-
-      fillAndSubmit();
-
-      expect(
-        await screen.findByText('This field is required.'),
-      ).toBeInTheDocument();
-      expect(screen.getByRole('radiogroup')).toHaveAccessibleDescription(
-        'This field is required.',
-      );
-      expect(requested).toBe(false);
-      expect(onClose).not.toHaveBeenCalled();
+    it('should keep the submit button disabled until a teacher answers', () => {
+      renderModal(vi.fn(), true);
+      expect(submitButton()).toBeDisabled();
+      fireEvent.click(screen.getByRole('radio', {name: 'Yes'}));
+      expect(submitButton()).toBeEnabled();
     });
 
     it("should send a teacher's answer with the email change", async () => {

@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-09-13T01:51:40.000Z",
   "level_num": "custom",
@@ -13,7 +12,7 @@
           "name": "main.py",
           "contents": "# 1. Explain what your calculator does to the user\n\n\n# 2. Get input from the user. \n\n\n# 3. Calculate the result. Use input variables in the formula.\n\n\n# 4. Print the result with units and guidance\n\n",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "folders": {
@@ -24,7 +23,7 @@
     },
     "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMr+j9gxv17dyo14\na42252fHLddFalYKq8zHVFnFORTmrf3WyNDz1Gix8GuTvG/Dr+rVwocVdb4Z\nbPkLAWVRKRihXooU8rE3yC8LcSH1PcjSzu8Eis0rYw+QLFjcA90L1aRqk0xT\n9mhKyaQgcJIMCFacES7xFNrgNI8Mk2jIGj+kOlkm1mtvO60b0wPyxQcDV+wo\nmEvceiUyVqcAP0cdDm95i9FvRzKPpLZ1VDe+Ualb6Rg/o+zEIAJUH5cgO5OW\nx6zIuIv6REdm06LMxv5lYikUnRWR1lqQldmpKgoJr2jMfm6rIM9Lq18z0io5\nIHt+oZrvJoNkYY8y/IyBuau8/7gPEr+7ZXwrK8ANFUu73ewHnlbyW5kjJQTs\nBhIbjapVK8jlcbhigxD14/qEnSfdfu5N54rHNp5RPppm6a6Idd6cHFigwTS7\nMzaRRquw0qtdrGnpBtR9nQj7PuIQeRzQtb984y+bF6IGnAq1SU+mk+V2Fteh\nOHEmrNrmeUy/DQMU9mu93ErizEuGGt3BmpfswbjLz1xYJgaTe+OAUQeXR/hW\n1UZ0iOxJYwJWrxA1vWzROxAISqge22oF3O+IVFu2mcBxMC6vkWHsasHpWI0l\nhaPp70uF1ds2xvI2cIWBPF73mznZ5/hegJ7C2GPp2+TqbrqAh1sLXGTfsEVt\nI0bBP8LFi5+vzMvHcsGBwisp1oFKgMJlQ++aq3ImzPRYcbhSDRxYXiD7qS6I\nwtcawUto357uDytek+4hT3DJRGP7MoYZMDH1ilJYhi9gVYnQ9GikkGpoKP0i\n4SaGgOKvVhdG8DO+AvE9BN3vodAhCxVzb7H2wRvEwKtJu0u5M3kawdaDCLj4\nkg+76aBYqXjEOwKDGEqWmaWNiFVyYH7pKlj9df0VFoy7C51rkovulpA0vQAi\nIARxXjfjxM4pQ6NxGSY1WdoaKkcAkOnDUTpsrrv5cYscTLxPPZrHFRxkU9RH\noewbRaCBNKSSUVkydyUA02oAz1BzT1QYtiBZa/hSc5tehAkdwVwiGT16o7Zt\n2lPN4vE/zVdSkKS3dYYPDeuZPNRKSjtGnoEIOwsGeOUc9fyHpSXVVOcjZdsc\n2JJ+BeXtgkzzgSEM//O4wNoLj+9j+7/obtoQiahLZ4QsufDFSjiFdiOy80un\n7iY/Ulj5GwoMExtANLfIXSV5VcJPANK/PeUsX6U7Oh536JyNiT349cmEdEOc\ntQsrkh/r83OyTkzSaVsOH7SD36N7OAQixkWKgy1OQlCH0r/H4p5Iat0LeZQJ\nNXShic4FTdAsxSbP+uHmL6CE5hoiNYSyGoDsiQ/Fw5zwZXSpgVC+/qXGgtWF\nTxZtiWfM4cdhu3yd0RMWtHqeggKtpIYQ1/ZJTOKkMbUMzRg/6rCq+8JC3Tu6\nJ8SBVu2BqcsCdgQMV+YBtro1dQ7SqlVkAR2wsJOWkI4jPIggLz+kPiqVVXyZ\nDjvKJNkTHV7l9WvY7w/1FCDN8FKcu70v1FYxPWFU\n",
     "encrypted": "false",
-    "long_instructions": "## Custom Calculator\r\n\r\nUse your plan to program a custom calculator that:\r\n\r\n* asks the user for input\r\n* converts inputs to the correct data type using `str()`, `int()`, or `float()`\r\n* uses a formula with arithmetic operators \r\n* prints a clear result with units and user guidance\r\n",
+    "long_instructions": "## Make: Custom Calculator\r\n\r\nUse your plan to program a custom calculator that:\r\n\r\n* asks the user for input\r\n* converts inputs to the correct data type using `str()`, `int()`, or `float()`\r\n* uses a formula with arithmetic operators \r\n* prints a clear result with units and user guidance\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -42,8 +41,17 @@
       ],
       "answerTypeCustomizations": {
       }
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import ast\nimport contextlib\nimport io\nfrom unittest import TestCase\nfrom unittest.mock import patch\n\n\nclass TestMakeCustomCalculator(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Parse the source for required patterns, then run it with\n        mocked input() and capture the output.\"\"\"\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n        cls.tree = ast.parse(cls.source)\n\n        input_call_count = sum(\n            1 for n in ast.walk(cls.tree)\n            if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == \"input\"\n        )\n        mock_answers = [str(10 + i) for i in range(max(input_call_count, 1))]\n\n        cls.namespace = {}\n        stdout = io.StringIO()\n        cls.run_error = None\n        try:\n            with patch(\"builtins.input\", side_effect=mock_answers), contextlib.redirect_stdout(stdout):\n                exec(compile(cls.source, \"main.py\", \"exec\"), cls.namespace)\n        except Exception as e:\n            cls.run_error = e\n        cls.stdout_text = stdout.getvalue()\n        cls.stdout_before_input, cls.stdout_after_input = cls._split_output_around_first_input(cls.tree, cls.source)\n\n    @staticmethod\n    def _split_output_around_first_input(tree, source):\n        \"\"\"Best-effort: find the line number of the first input() call,\n        then separate printed output into before/after that point by\n        re-running twice -- once stopping input() early to force a\n        failure after any pre-input prints, once running fully.\"\"\"\n        return None, None  # see note below; not used by current tests\n\n    def test_asks_for_input(self):\n        \"\"\"Asks the user for input\"\"\"\n        has_input_call = any(\n            isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == \"input\"\n            for n in ast.walk(self.tree)\n        )\n        self.assertTrue(\n            has_input_call,\n            \"We didn't find any input() calls. Ask the user for input to use in your calculator.\"\n        )\n\n    def test_runs_without_error(self):\n        \"\"\"Runs without crashing\"\"\"\n        self.assertIsNone(\n            self.run_error,\n            f\"Your program raised an error while running: {self.run_error}.\"\n        )\n\n    def test_converts_input_with_type_functions(self):\n        \"\"\"Converts input using str(), int(), or float()\"\"\"\n        called_names = {\n            n.func.id for n in ast.walk(self.tree)\n            if isinstance(n, ast.Call) and isinstance(n.func, ast.Name)\n        }\n        self.assertTrue(\n            called_names & {\"str\", \"int\", \"float\"},\n            \"We didn't find str(), int(), or float() being used anywhere. Convert your input() values to the correct data type.\"\n        )\n\n    def test_uses_arithmetic_formula(self):\n        \"\"\"Uses a formula with arithmetic operators\"\"\"\n        arithmetic_ops = (ast.Add, ast.Sub, ast.Mult, ast.Div, ast.Mod, ast.Pow, ast.FloorDiv)\n        has_arithmetic = any(\n            isinstance(n, ast.BinOp) and isinstance(n.op, arithmetic_ops)\n            for n in ast.walk(self.tree)\n        )\n        self.assertTrue(\n            has_arithmetic,\n            \"We didn't find any arithmetic (+, -, *, /, %, etc.) being used in a formula. Use one to calculate your result.\"\n        )\n\n    def test_prints_a_result(self):\n        \"\"\"Prints a result to the user\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        self.assertTrue(\n            self.stdout_text.strip(),\n            \"Your program didn't print anything. Make sure you print the result, with units and guidance.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-13 02:03:52 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:04:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:05:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:10:09 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-13 02:03:52 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:04:04 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:05:45 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-13 02:10:09 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-17 20:47:22 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:48:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

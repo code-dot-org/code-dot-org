@@ -8,12 +8,28 @@ const OBJECTIVES = {
   title: 'Play',
   items: [
     {id: 'play', text: 'Press Play.', check: {kind: 'play' as const}},
-    {id: 'rate', text: 'Rate it.', check: {kind: 'rated' as const}},
+    {
+      id: 'rate',
+      text: 'Rate it.',
+      check: {kind: 'rated' as const},
+      shownWhen: {kind: 'generated' as const},
+    },
   ],
 };
 const IMAGES = {sprite: 0, background: 0, block: 0};
+const ONE_SPRITE = {sprite: 1, background: 0, block: 0};
 
-function Checklist({everPlayed}: {everPlayed: boolean}) {
+function Checklist({
+  everPlayed,
+  generated = true,
+  rated = false,
+  completedBefore = false,
+}: {
+  everPlayed: boolean;
+  generated?: boolean;
+  rated?: boolean;
+  completedBefore?: boolean;
+}) {
   const state = useObjectives({
     objectives: OBJECTIVES,
     images: IMAGES,
@@ -21,10 +37,53 @@ function Checklist({everPlayed}: {everPlayed: boolean}) {
     grid: [[null]],
     imagesForRole: {},
     everPlayed,
+    generated: generated ? ONE_SPRITE : IMAGES,
+    rated,
+    runtime: EMPTY_RUNTIME,
+    completedBefore,
+  });
+  return (
+    <div>
+      {state.items.map(i => `${i.id}:${i.done}`).join(' ')}
+      {state.allDone && ' all'}
+    </div>
+  );
+}
+
+// A checklist whose first item is checked the whole time: placing something
+// in the world. Its second is checked once: pressing Run.
+const WORK_OBJECTIVES = {
+  items: [
+    {id: 'place', text: 'Place something.', check: {kind: 'world' as const}},
+    {id: 'play', text: 'Press Play.', check: {kind: 'play' as const}},
+  ],
+};
+const PLACED = [[{image: 'Hero', kind: 'sprite' as const}]];
+const EMPTY = [[null]];
+
+function WorkChecklist({
+  placed,
+  everPlayed,
+}: {
+  placed: boolean;
+  everPlayed: boolean;
+}) {
+  const state = useObjectives({
+    objectives: WORK_OBJECTIVES,
+    images: IMAGES,
+    grid: placed ? PLACED : EMPTY,
+    imagesForRole: {},
+    everPlayed,
+    generated: IMAGES,
     rated: false,
     runtime: EMPTY_RUNTIME,
   });
-  return <div>{state.items.map(i => `${i.id}:${i.done}`).join(' ')}</div>;
+  return (
+    <div>
+      {state.items.map(i => `${i.id}:${i.done}`).join(' ')}
+      {state.allDone && ' all'}
+    </div>
+  );
 }
 
 describe('useObjectives', () => {
@@ -50,5 +109,71 @@ describe('useObjectives', () => {
     } finally {
       spy.mockRestore();
     }
+  });
+
+  it('keeps an item out until its shownWhen check holds, then keeps it', () => {
+    const view = render(<Checklist everPlayed={true} generated={false} />);
+    expect(view.container.textContent).toBe('play:true all');
+    view.rerender(<Checklist everPlayed={true} generated={true} />);
+    expect(view.container.textContent).toBe('play:true rate:false');
+    // The check can stop holding, as a hand edit clears a picture's
+    // generation record; the item stays.
+    view.rerender(<Checklist everPlayed={true} generated={false} />);
+    expect(view.container.textContent).toBe('play:true rate:false');
+    view.rerender(<Checklist everPlayed={true} generated={true} rated />);
+    expect(view.container.textContent).toBe('play:true rate:true all');
+  });
+
+  it('ticks the steps about an earlier visit when the level was completed before', () => {
+    // Nothing done on this visit, and the level's progress has not arrived.
+    const view = render(<Checklist everPlayed={false} generated={false} />);
+    expect(view.container.textContent).toBe('play:false');
+    // The progress arrives: the level was completed on an earlier visit.
+    view.rerender(
+      <Checklist everPlayed={false} generated={false} completedBefore />
+    );
+    expect(view.container.textContent).toBe('play:true all');
+    // The rating step was hidden when the level was completed, so it was
+    // never done. When a picture is generated now it appears un-ticked.
+    view.rerender(<Checklist everPlayed={false} generated completedBefore />);
+    expect(view.container.textContent).toBe('play:true rate:false');
+  });
+
+  it('keeps both kinds of tick when a completed level opens with work already in the project', () => {
+    // One step is read from the project and one is about the earlier
+    // visit. Both are found on the first pass, by separate updates.
+    function Both() {
+      const state = useObjectives({
+        objectives: {
+          items: [
+            {id: 'place', text: '', check: {kind: 'world' as const}},
+            {id: 'play', text: '', check: {kind: 'play' as const}},
+          ],
+        },
+        images: IMAGES,
+        grid: [[{image: 'Hero', kind: 'sprite' as const}]],
+        imagesForRole: {},
+        everPlayed: false,
+        generated: IMAGES,
+        rated: false,
+        runtime: EMPTY_RUNTIME,
+        completedBefore: true,
+      });
+      return <div>{state.items.map(i => `${i.id}:${i.done}`).join(' ')}</div>;
+    }
+    const view = render(<Both />);
+    expect(view.container.textContent).toBe('place:true play:true');
+  });
+
+  it('unchecks an item when its work is undone, and keeps an item that only has to pass once', () => {
+    const view = render(<WorkChecklist placed={true} everPlayed={true} />);
+    expect(view.container.textContent).toBe('place:true play:true all');
+    // The placed thing is removed, so its item is unchecked. Pressing Play
+    // is something that happened, so its item stays checked.
+    view.rerender(<WorkChecklist placed={false} everPlayed={false} />);
+    expect(view.container.textContent).toBe('place:false play:true');
+    // Placed again: checked again.
+    view.rerender(<WorkChecklist placed={true} everPlayed={false} />);
+    expect(view.container.textContent).toBe('place:true play:true all');
   });
 });

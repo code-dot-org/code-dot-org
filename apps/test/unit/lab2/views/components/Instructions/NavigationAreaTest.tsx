@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -35,6 +35,7 @@ interface ContinueButtonMockProps {
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
   endIcon?: React.ReactNode;
+  buttonColor?: string;
   onContinue: () => void;
 }
 interface SubmitButtonMockProps {
@@ -53,12 +54,14 @@ jest.mock(
       disabled,
       tooltipMessage,
       endIcon,
+      buttonColor,
       onContinue,
     }: ContinueButtonMockProps) => (
       <button
         type="button"
         data-disabled={String(disabled)}
         data-tooltip={tooltipMessage}
+        data-button-color={buttonColor}
         onClick={onContinue}
       >
         {endIcon}
@@ -276,6 +279,49 @@ describe('NavigationArea', () => {
       );
       expect(screen.getByRole('button')).toHaveTextContent('Submit');
     });
+
+    describe('with a callout box', () => {
+      const callout = {
+        heading: 'Stuck or want to get better at something?',
+        body: 'Practice a skill on your skill map, then come back.',
+      };
+
+      it('renders the heading and body text', () => {
+        renderWithHost({
+          label: 'Practice skills',
+          enabled: true,
+          onContinue: jest.fn(),
+          callout,
+        });
+        expect(screen.getByText(callout.heading)).toBeInTheDocument();
+        expect(screen.getByText(callout.body)).toBeInTheDocument();
+      });
+
+      it('still renders the button inside the callout box', () => {
+        renderWithHost({
+          label: 'Practice skills',
+          enabled: true,
+          onContinue: jest.fn(),
+          callout,
+        });
+        expect(screen.getByRole('button')).toHaveTextContent('Practice skills');
+      });
+
+      it('calls onContinue when the button is clicked', () => {
+        const onContinue = jest.fn();
+        renderWithHost({enabled: true, onContinue, callout});
+
+        fireEvent.click(screen.getByRole('button'));
+
+        expect(onContinue).toHaveBeenCalledTimes(1);
+      });
+
+      it('does not render heading or body text without a callout', () => {
+        renderWithHost({enabled: true, onContinue: jest.fn()});
+        expect(screen.queryByText(callout.heading)).toBeNull();
+        expect(screen.queryByText(callout.body)).toBeNull();
+      });
+    });
   });
 
   describe('continuing without external navigation', () => {
@@ -285,6 +331,68 @@ describe('NavigationArea', () => {
       fireEvent.click(screen.getByRole('button'));
 
       expect(continueOrFinishLesson).toHaveBeenCalledTimes(1);
+    });
+  });
+
+  describe('announcing Continue', () => {
+    const READY = /Level complete! The .+ button is ready\./;
+    const nextFrame = () =>
+      new Promise(resolve => requestAnimationFrame(resolve));
+    const atLevel = (props: Partial<Parameters<typeof NavigationArea>[0]>) => (
+      <ThemeProvider>
+        <Provider store={store}>
+          <NavigationArea
+            levelProperties={makeLevelProperties()}
+            isRunning={false}
+            hasRun={false}
+            hasEdited={false}
+            {...props}
+          />
+        </Provider>
+      </ThemeProvider>
+    );
+
+    it('announces Continue once the checklist is done', async () => {
+      const {rerender} = render(
+        atLevel({objectivesDone: false, hideContinueIfDisabled: true})
+      );
+      expect(screen.queryByText(READY)).toBeNull();
+      rerender(atLevel({objectivesDone: true, hideContinueIfDisabled: true}));
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('announces on opening a level whose checklist is done', async () => {
+      render(atLevel({objectivesDone: true}));
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('announces again on entering another finished level', async () => {
+      const {rerender} = render(
+        atLevel({
+          levelProperties: makeLevelProperties({id: 1}),
+          objectivesDone: true,
+        })
+      );
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+      rerender(
+        atLevel({
+          levelProperties: makeLevelProperties({id: 2}),
+          objectivesDone: true,
+        })
+      );
+      expect(screen.queryByText(READY)).toBeNull();
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('says nothing when Continue turns on without a checklist', async () => {
+      const {rerender} = render(atLevel({requireRun: true}));
+      rerender(atLevel({requireRun: true, hasRun: true}));
+      await act(nextFrame);
+      expect(screen.getByRole('button')).toHaveAttribute(
+        'data-disabled',
+        'false'
+      );
+      expect(screen.queryByText(READY)).toBeNull();
     });
   });
 
@@ -754,6 +862,26 @@ describe('NavigationArea', () => {
       mockGetLessonCount.mockReturnValue(3);
       renderDefault({textVariant: 'simple'});
       expect(screen.getByRole('button', {name: 'Finish'})).toBeInTheDocument();
+    });
+  });
+
+  describe('continueButtonColor', () => {
+    it('colors Continue in the success green', () => {
+      renderDefault({continueButtonColor: 'success'});
+      expect(
+        screen.getByRole('button', {name: 'Continue to Level 2'})
+      ).toHaveAttribute('data-button-color', 'success');
+    });
+
+    it("leaves the last level's outlined Finish its own look", () => {
+      mockGetNextLevel.mockReturnValue(undefined);
+      renderDefault({
+        continueButtonColor: 'success',
+        levelProperties: makeLevelProperties({useSecondaryFinishButton: true}),
+      });
+      expect(screen.getByRole('button', {name: 'Finish'})).not.toHaveAttribute(
+        'data-button-color'
+      );
     });
   });
 });

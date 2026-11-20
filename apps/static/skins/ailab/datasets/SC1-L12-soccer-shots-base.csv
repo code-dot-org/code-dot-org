@@ -1,0 +1,61 @@
+Shot,Distance,Angle,Body Part,Under Pressure,Play Type,First Half?,First Time?,Goal?
+Shot 01,Close,Central,Foot,No,Open Play,No,Yes,Goal
+Shot 02,Medium,Wide,Head,No,Set Piece,No,No,No Goal
+Shot 03,Close,Central,Foot,No,Open Play,No,Yes,Goal
+Shot 04,Far,Wide,Foot,No,Open Play,Yes,No,Goal
+Shot 05,Close,Central,Foot,No,Open Play,Yes,Yes,Goal
+Shot 06,Far,Wide,Foot,Yes,Set Piece,Yes,No,No Goal
+Shot 07,Far,Wide,Foot,Yes,Open Play,No,No,Goal
+Shot 08,Close,Wide,Foot,No,Open Play,Yes,Yes,No Goal
+Shot 09,Close,Wide,Foot,No,Open Play,No,No,No Goal
+Shot 10,Medium,Wide,Foot,Yes,Open Play,No,No,No Goal
+Shot 11,Close,Central,Foot,Yes,Open Play,Yes,Yes,Goal
+Shot 12,Medium,Wide,Foot,No,Open Play,Yes,Yes,No Goal
+Shot 13,Medium,Central,Foot,Yes,Open Play,Yes,Yes,No Goal
+Shot 14,Far,Central,Foot,Yes,Open Play,No,Yes,No Goal
+Shot 15,Far,Central,Head,No,Set Piece,No,No,No Goal
+Shot 16,Medium,Wide,Foot,No,Open Play,Yes,Yes,No Goal
+Shot 17,Close,Central,Foot,No,Open Play,No,Yes,Goal
+Shot 18,Medium,Wide,Foot,No,Open Play,Yes,No,Goal
+Shot 19,Close,Central,Foot,Yes,Open Play,No,Yes,Goal
+Shot 20,Far,Wide,Foot,Yes,Open Play,Yes,No,No Goal
+Shot 21,Medium,Wide,Foot,No,Open Play,No,No,Goal
+Shot 22,Far,Central,Foot,No,Set Piece,No,No,No Goal
+Shot 23,Close,Wide,Head,Yes,Open Play,No,No,No Goal
+Shot 24,Close,Wide,Foot,Yes,Open Play,Yes,Yes,Goal
+Shot 25,Close,Wide,Head,Yes,Set Piece,No,No,Goal
+Shot 26,Medium,Wide,Foot,Yes,Set Piece,No,Yes,Goal
+Shot 27,Far,Central,Foot,Yes,Open Play,No,No,No Goal
+Shot 28,Close,Central,Foot,No,Open Play,No,Yes,Goal
+Shot 29,Close,Wide,Head,Yes,Open Play,No,No,No Goal
+Shot 30,Close,Central,Head,Yes,Set Piece,No,No,No Goal
+Shot 31,Close,Wide,Head,No,Set Piece,No,No,No Goal
+Shot 32,Far,Central,Foot,No,Set Piece,Yes,Yes,No Goal
+Shot 33,Far,Wide,Foot,Yes,Open Play,No,No,No Goal
+Shot 34,Medium,Central,Head,No,Open Play,No,No,No Goal
+Shot 35,Close,Wide,Foot,Yes,Open Play,Yes,No,No Goal
+Shot 36,Close,Central,Head,Yes,Open Play,No,No,No Goal
+Shot 37,Close,Wide,Foot,No,Open Play,Yes,Yes,Goal
+Shot 38,Far,Central,Foot,Yes,Open Play,No,Yes,No Goal
+Shot 39,Far,Central,Foot,No,Open Play,Yes,No,No Goal
+Shot 40,Close,Central,Foot,No,Open Play,Yes,Yes,Goal
+Shot 41,Close,Central,Head,No,Open Play,Yes,No,Goal
+Shot 42,Close,Wide,Foot,Yes,Open Play,No,Yes,Goal
+Shot 43,Far,Wide,Foot,Yes,Set Piece,No,No,No Goal
+Shot 44,Far,Central,Foot,No,Open Play,No,No,No Goal
+Shot 45,Medium,Wide,Foot,Yes,Open Play,Yes,No,Goal
+Shot 46,Far,Central,Foot,Yes,Open Play,No,No,No Goal
+Shot 47,Close,Wide,Foot,No,Set Piece,Yes,Yes,Goal
+Shot 48,Medium,Central,Foot,Yes,Open Play,No,Yes,No Goal
+Shot 49,Close,Wide,Head,Yes,Set Piece,Yes,No,No Goal
+Shot 50,Close,Central,Head,Yes,Set Piece,Yes,No,No Goal
+Shot 51,Medium,Wide,Head,No,Open Play,Yes,No,No Goal
+Shot 52,Close,Central,Head,No,Open Play,No,No,Goal
+Shot 53,Close,Central,Foot,No,Open Play,Yes,Yes,Goal
+Shot 54,Close,Central,Foot,Yes,Set Piece,No,Yes,Goal
+Shot 55,Close,Wide,Head,Yes,Set Piece,No,No,Goal
+Shot 56,Close,Wide,Head,Yes,Set Piece,No,No,No Goal
+Shot 57,Close,Wide,Head,Yes,Set Piece,Yes,No,No Goal
+Shot 58,Close,Wide,Foot,Yes,Open Play,Yes,Yes,No Goal
+Shot 59,Close,Wide,Foot,No,Open Play,No,Yes,Goal
+Shot 60,Far,Central,Foot,No,Set Piece,Yes,No,No Goal

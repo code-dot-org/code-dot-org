@@ -1,0 +1,1306 @@
+{
+  "script": {
+    "name": "decision-tree-beta-test",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-11-17 07:21:28 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "decision-tree-beta-test"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "How to Train Your Decision Tree",
+      "name": "How to Train Your Decision Tree",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Students take on the role of data scientists working with the previsualization team from the Amazon Studios career tour. This team decides which movie scenes get a 3D rough draft before filming. After meeting the team in a short video, students explore a dataset of past scenes labeled Rough Draft or Just Film It. They train various decision trees on the same scenes using different features, and compare what makes a scene risky to film. They finish by naming an assumption the data makes about real movies.",
+        "student_overview": "You’ll work as a data scientist helping a movie team decide which scenes need a rough draft before filming. You’ll train decision trees using different features and find out which ones help the model make good choices. Then your team will each add a new feature and test your trees on scenes they’ve never seen. "
+      },
+      "seeding_key": {
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test"
+      }
+    },
+    {
+      "key": "Testing and Tracing Predictions",
+      "name": "Testing and Tracing Predictions",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "In this lesson, students learn that a model's mistakes are not random. Every prediction a decision tree makes can be traced back to the training data that produced it. Working as data scientists for a movie studio's marketing team, students build the skill of tracing: reasoning backward from a wrong prediction to the specific examples that taught it. Through tracing, they discover that mistakes come from the data in different ways. Sometimes the data doesn't have enough of the right examples, and sometimes it never recorded the information that mattered.\n",
+        "student_overview": "When an AI model makes a mistake, where does it come from? In this lesson, you'll learn to trace a model's wrong answer back to the data that taught it. You'll find out that different problems in the data cause different kinds of mistakes, and that some can be fixed by changing the data while others can't."
+      },
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "92a115ce-2e33-4604-acbb-09474ce2b030",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "92a115ce-2e33-4604-acbb-09474ce2b030",
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test"
+      }
+    },
+    {
+      "key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469",
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test"
+      }
+    },
+    {
+      "key": "8776ad89-44b1-46b8-878f-e5afb24e811f",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8776ad89-44b1-46b8-878f-e5afb24e811f",
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test"
+      }
+    },
+    {
+      "key": "3b0b7aad-0e98-48c0-b180-b240eb6dc4d0",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3b0b7aad-0e98-48c0-b180-b240eb6dc4d0",
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test"
+      }
+    },
+    {
+      "key": "3da8d2de-c021-4f64-b466-730dda06fa19",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19",
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test"
+      }
+    },
+    {
+      "key": "f8c46884-76fe-430e-925c-939ee03256fc",
+      "position": 3,
+      "properties": {
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f8c46884-76fe-430e-925c-939ee03256fc",
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "f26be069-7cc8-4843-95ba-c09e11e37068",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students see that a movie is a system made of many teams, and that the next three lessons are about helping those teams.\n\n**Video:** Show the \"Amazon Future Engineer\" clip from 01:39 - 02:18. It introduces film-making careers and explains that filmmaking is a system with many parts. Questions to consider with the video:\n* How is film-making like a system?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect the idea of a system to the work ahead: many teams, each making decisions that affect the others. Listen for students naming parts beyond the actors and director, such as the visual effects artists, sound designers, engineers, and computer scientists from the video. If answers stay at \"lots of people work on movies,\" ask: What happens to the rest of the movie if one team makes a bad call?\n\n**Say**: For the next three lessons, you're going to be acting in the role of a data scientist working with teams behind the camera.\n\n**Say**: Clint's team builds a 3D rough draft of a scene before anyone films it. In movies, that's called pre-visualization.\n\n**Video:** Show the \"Pre-visualization\" clip from 00:55-01:27. Questions to consider with the video:\n\n* If you could ask only ONE question about a scene to decide, what would you ask?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Each question a student shares is a feature. Listen for questions about what makes a scene hard or dangerous, like \"Is there a stunt?\" or \"Does something crash?\" Also listen for questions about how it looks or feels, like \"Is it scary?\" Students will get to test some of these features in AI Studio.\n\n**Say**: Let's hear how Clint's team decides which scenes get a rough draft.\n\n**Video:** Show the \"Which Scenes Get Chosen?\" clip from 03:00-03:21. Questions to consider with the video:\n\n* Did your question match what the pre-visualization team looks for?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that an expert decides by looking at several things at once: how complex the scene is, how much tech is involved, safety, and whether you only get one chance. That's the reason a decision tree asks more than one question. Some students may catch \"only one chance to get it right\" which will turn out to be a strong feature that helps guide decision trees that they will create today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f26be069-7cc8-4843-95ba-c09e11e37068",
+        "lesson_activity.key": "92a115ce-2e33-4604-acbb-09474ce2b030"
+      }
+    },
+    {
+      "key": "8a5cb02f-1c24-4348-85f3-ca9769237949",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student/group a copy of the Train Your Decision Tree activity guide.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8a5cb02f-1c24-4348-85f3-ca9769237949",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "415e80e8-a4a5-44f8-abcd-8c6c62b76b43",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students read past scenes and guess what features the pre-visualization team looked at when deciding whether to Just Film It or Create a Rough Draft.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should ideally be in groups of three for this activity so that they can compare and contrast their unique trees later in the lesson.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students browse the dataset in Cards view and read at least three Rough Draft cards and three Just Film It cards. They write down what they think the team was looking at when it made each decision.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Many students will read only the scene description and skip the features listed. Ask them which features on the card back up their guess. A few students may notice that the word \"real\" shows up in a lot of descriptions. Don't confirm or explain it; ask them to keep an eye on it.\n",
+        "duration": "5",
+        "name": "Meet the Data",
+        "progression_name": "Meet the Data",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If the level opens in Table view, have students click Cards at the top of the dataset."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "415e80e8-a4a5-44f8-abcd-8c6c62b76b43",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "f1a3f49f-7381-4161-b356-0649d5ae5e06",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What observations did you make about the scene dataset?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share the guesses they wrote in Level 1. Some will point to action, like stunts and crashes. Others will point to feeling, like scary or serious scenes. Acknowledge both kinds and don't settle which is right; the next levels test them. If a student brings up the scene descriptions, ask: If you couldn't read the description, which features would you look at?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1a3f49f-7381-4161-b356-0649d5ae5e06",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "02159bb3-1c69-4684-85a4-80bba5e36c79",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students train two trees on the same scenes using different features. They compare the results.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2 to train their first decision tree using the Mostly Talking, Mood, and Indoors or Outdoors features. The second decision tree should be trained using the Stunt, Moving Vehicles, and Something Gets Destroyed features.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that Predict says Decision before students train. Then check that each tree uses only the three features listed in the activity guide. Students often leave extra features checked from the first tree when they train the second one.\n",
+        "duration": "10",
+        "name": "Training Decision Trees",
+        "progression_name": "Training Decision Trees",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To start the second tree, students can click the Dataset tab at the top of the Workspace to return to the data view. Once there, they can uncheck the first three features, and check the new three. Students can click the All results button to see both trees' accuracy at a glance."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "02159bb3-1c69-4684-85a4-80bba5e36c79",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "e2fd4f61-494b-44ed-bddd-8c78a3e9b979",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the numbers on each leaf. Each check mark is a test scene the tree got right, and each X is one it got wrong. Count the checks together to show where the accuracy number comes from.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students where the Accuracy button is, and have them record one correct and one incorrect test scene in the activity guide.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The Scorecard opens on the Correct tab. Point out the Incorrect tab so students can find the tree's mistakes."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2fd4f61-494b-44ed-bddd-8c78a3e9b979",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "2b89694b-d879-4c18-b1d3-3ed5c6a4c47f",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Both trees learned from the same scenes. Why did one do better?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The point here is for students to see that the data didn't change, only the features did. Many will start with \"the second tree had better features.\" Ask what makes them better for this team's job. Students should notice that the second tree's features describe what makes a scene hard or risky to film, while the first tree's describe how a scene looks or feels. Connect this back to the warm-up by asking: Which of these features match what Clint said his team looks for? If a student says the tree should just read the scene description, point out that the tree never sees the description, only the features.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b89694b-d879-4c18-b1d3-3ed5c6a4c47f",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "e5533912-6de0-44a2-a1b1-d537e96e9ac5",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students try other combinations of features and test whether adding more features makes a better tree.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 3. Students train several trees using different combinations of features and use the All results button to compare them. Ask them to check whether adding more features actually makes a tree better.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students who select all six features and stop. Ask them to find a smaller set that does just as well. If a student is stuck below 75%, ask which features describe what makes a scene hard to film.\n",
+        "duration": "5",
+        "name": "Training Different Features",
+        "progression_name": "Training Different Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5533912-6de0-44a2-a1b1-d537e96e9ac5",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "d1b67877-d6cd-4ec4-8680-5780a23e18ec",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Were there any features that did not help when you trained your tree?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students find that adding features doesn't always make a better tree. Adding Mood or Indoors or Outdoors to the three action features rarely raises the score, and sometimes the tree just ignores them. When students argue over a few points, remind them the score comes from only 8 test scenes. Then ask: Which tree would you trust with a scene it has never seen?\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1b67877-d6cd-4ec4-8680-5780a23e18ec",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "2c781094-0c16-4b51-bbb8-805cc4032d70",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students use their tree to make a prediction for a new scene and watch the path it takes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 4. Students enter a scene into Make a Prediction, press Predict, then press Replay to watch the tree's path.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Steer students away from the Random button. It creates scenes that make no sense, like an indoor scene that is mostly talking while something gets destroyed. Ask students to describe a real scene from a movie they know and enter that instead.\n",
+        "duration": "5",
+        "name": "Making a Prediction",
+        "progression_name": "Make a Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c781094-0c16-4b51-bbb8-805cc4032d70",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "8fa15d75-e12d-4b83-9217-3957d47c10f6",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Each teammate adds a different new feature to the same base data, so the team can compare how one added feature changes a tree.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each teammate chooses a different feature: Movie Budget, Famous Actor, or Can It Be Filmed Again.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 5. Students choose their assigned feature and train a tree with their best features from Level 3 plus the new one.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** The new feature also shows up in the Predict menu. Make sure Predict still says Decision\n",
+        "duration": "5",
+        "name": "Add a Feature",
+        "progression_name": "Add a Feature",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In a group of two, each student tests one feature. In a group of four, two students can share a feature."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8fa15d75-e12d-4b83-9217-3957d47c10f6",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "2f8592f3-cd0c-42a9-9fb0-8006ef3d722d",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Teams run the same three scenes through trees that each have a different added feature, and find where their trees disagree.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have teams fill in the Your Features section in the Activity Guide for all three scenes and agree on one set of answers before anyone presses Predict\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If teammates disagree about a feature, such as whether a crushed car counts as a moving vehicle, give them 30 seconds to argue it out and decide. Once teams have results, ask the Famous Actor teammate why a feature that sounds important didn't change anything. Suggest the Movie Budget teammate filter the dataset to Movie Budget: Small and look at which stunts were just filmed.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Did your team's trees disagree on any Challenge Scenes? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Most teams will find their trees disagree on the car crush. Push students to trace the answer back to the data: in past small-budget movies, risky scenes like this one were often just filmed. The tree learned what past teams decided, not what each scene needed. When students say the data shows small movies don't plan, ask: Is that true about filmmaking, or true about these 79 scenes?\n",
+        "duration": "5",
+        "name": "Challenge Scenes",
+        "progression_name": "Limited Features"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f8592f3-cd0c-42a9-9fb0-8006ef3d722d",
+        "lesson_activity.key": "e2cfbad5-1a32-4b37-bd15-0f1413f2f469"
+      }
+    },
+    {
+      "key": "f698bd2f-d237-4343-a70a-253b32d04735",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students name an assumption built into the training data, back it up with something they saw today, and suggest a feature that could help.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 6 to answer the Check for Understanding free response question.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If a student is stuck on the first blank, ask them to think back to a Challenge Scene where their team's trees disagreed. Ask: Why might past movie teams have made that call?\n",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Look for two things in student responses:\n\n* Does the student name an assumption, not just a problem? Strong answers say something about real movies that the data takes for granted, and back it up with a scene or tree from today. For example: \"Small-budget movies don't need to plan risky scenes. I think this because the Movie Budget tree said Just Film It for the car crush.\" Answers about the data being \"bad\" or the tree being \"wrong\" show the student sees a problem but hasn't yet named what the data assumes. Ask them: What did past movie teams believe when they made that decision?\n\n* Does the feature connect to the assumption? Strong answers name a feature and say why it would help, such as \"Can It Be Filmed Again, because a dam leap only happens once.\" Naming a feature without a reason is a good start. A feature with no link to the assumption, like \"Mood,\" suggests the student is guessing.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f698bd2f-d237-4343-a70a-253b32d04735",
+        "lesson_activity.key": "8776ad89-44b1-46b8-878f-e5afb24e811f"
+      }
+    },
+    {
+      "key": "68c07adf-1cdf-4266-bdf0-dd5b921154b9",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "68c07adf-1cdf-4266-bdf0-dd5b921154b9",
+        "lesson_activity.key": "8776ad89-44b1-46b8-878f-e5afb24e811f"
+      }
+    },
+    {
+      "key": "f5e15c61-af35-411b-bc59-fe0869cf7cdf",
+      "position": 3,
+      "properties": {
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5e15c61-af35-411b-bc59-fe0869cf7cdf",
+        "lesson_activity.key": "8776ad89-44b1-46b8-878f-e5afb24e811f"
+      }
+    },
+    {
+      "key": "902d21e2-8a61-4b8b-908c-89643bde8e21",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Last lesson, you helped the rough draft team plan scenes before filming. Today you're working with a team that comes in later, once there are clips to share.\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students make a quick prediction and explain their reasons. Their reasons are features they'll see in today's data.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Have students vote with a show of hands, then call on a few to explain.\n\n* Which clip will more people like? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The vote matters less than the reasons behind it. Students will say things like \"it's funny,\" \"it's short,\" or \"a famous actor is in it.\" If the class splits, ask: How could the marketing team find out who was right?\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How does the digital marketing team decide which clips to use?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Catherine works like a decision tree: she looks at how past clips did and makes a rule, like \"funny bloopers beat trailers, so post more funny clips.\" Students may suggest that a new kind of clip could get popular, or that something could happen that the numbers don't show. Students will find real examples in the data today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "902d21e2-8a61-4b8b-908c-89643bde8e21",
+        "lesson_activity.key": "3b0b7aad-0e98-48c0-b180-b240eb6dc4d0"
+      }
+    },
+    {
+      "key": "e0857dae-5bdf-414c-9de3-22b38a8a834f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student/group a copy of the Testing and Tracing Predictions activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "e0857dae-5bdf-414c-9de3-22b38a8a834f",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "db281042-a510-4d2b-badf-f71855c7fd40",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students get to know the marketing data and form a first guess about what makes a clip a hit.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 8, Levels 1 - 2:\n\n* **Level 1**: Students browse the clips in Cards view and write one pattern in their activity guide.\n\n* **Level 2**: Students train the tree and write down its accuracy.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 1, ask students which reasons from the warm-up board show up as features on the cards. Some will notice that most hits have a famous actor, or that behind-the-scenes clips are rare. On Level 2, check that Predict says Result and that only the four listed features are selected. Every student should see 66.67%. If a student's number is different, check their features first.\n",
+        "duration": "10",
+        "name": "Train and Test",
+        "progression_name": "Train and Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "db281042-a510-4d2b-badf-f71855c7fd40",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "824fc6b6-d955-4c1a-81af-438633fc079b",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model the three steps on the projector before students try them. Point out that the tree tested itself on 9 clips it never trained on, and these are the ones it got wrong.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students find the three wrong clips and, for each one, write a guess in their activity guide about why the tree got it wrong.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Expand columns shows the clip's description and every feature, even ones the tree didn't train on. Students will need both later when they trace."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "824fc6b6-d955-4c1a-81af-438633fc079b",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "c0a41c60-f8e7-4c75-9365-38ab9fbf4e15",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which wrong clip surprises you most?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question gives students a reason to trace. Most guesses will be about the clips themselves, like \"the tree doesn't know dances are funny.\" Collect two or three guesses without judging them. If students start blaming the computer, ask: Where did the tree learn its rules in the first place? That's the question the next part of the lesson answers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define tracing.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c0a41c60-f8e7-4c75-9365-38ab9fbf4e15",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "b5fe8314-1805-4520-807d-e6c31bcc81bb",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn what tracing means and the three steps they'll use.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3. Students follow along on their own screens as you model each step of the tracing process.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the path aloud as it replays: Famous Actor? Yes. Clip Type? Behind the Scenes or Interview. Funny? Yes. Clip Type?\n",
+        "duration": "15",
+        "name": "Trace a Mistake",
+        "progression_name": "Trace a Mistake",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The following steps describe the tracing process:\n\n1. What did it predict? Enter the clip and press Predict.\n\n2. What path did it take? Press Replay and follow the questions.\n\n3. What clips taught it that? Check the Training rows, then filter the Dataset.\n\n**Note**: Long labels get cut off, like \"Behind the Sc...\". Show students how to read the full label so they don't skip a step.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b5fe8314-1805-4520-807d-e6c31bcc81bb",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "b52f3ba7-b204-4aa2-bb6c-ae92dc506054",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model clicking the last step and switching from Test rows to Training rows. Read the four clips aloud. All four are older behind-the-scenes clips, and all four were Meh.\n\n**Say**: These four clips are the whole reason the tree said Meh. It's doing exactly what the training clips taught it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Model the filter, then have students count with you. There are 9 behind-the-scenes clips. Eight were Meh, and the dance clip is the only Hit.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The filter allows one condition at a time. Pick the feature that matters most for the clip you're tracing.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b52f3ba7-b204-4aa2-bb6c-ae92dc506054",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "143467d2-cdb3-440b-bc13-b525127d8189",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** The tree's rule says behind-the-scenes clips are Meh. Where did that rule come from?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should come away seeing that the tree followed its training data exactly. It never saw a behind-the-scenes clip that was a hit, so it had no way to predict one. When students say \"the tree is bad,\" push them to describe what the tree would need to see to get this clip right. This is the first kind of mistake: the data didn't have enough examples. Connect it back to Catherine's video and the idea that patterns can go out of date.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 4. Pairs follow the same three steps and fill in their second trace card.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Many pairs get stuck here, because every step on the path makes sense. That's the point. Ask: Look at the long interviews that aren't funny. Which ones were hits? Only the premiere clip was. Then ask whether any feature, even the two the tree didn't use, sets it apart. None do. Only the description, \"on premiere night,\" explains it.",
+        "progression_name": "Trace Another Mistake"
+      },
+      "seeding_key": {
+        "activity_section.key": "143467d2-cdb3-440b-bc13-b525127d8189",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "84cc88ff-3deb-4001-a839-a69bf8cd7a31",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**\n\n* Did the tree do anything wrong?\n\n* What was missing?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This mistake is different from the dance clip. The tree followed its data, and similar interviews really were Meh. The data never recorded the thing that made this clip a hit. Push students past \"the tree needs more interviews\" by asking: If we added ten more interviews, would the tree know about premiere night? Students should arrive at the idea that the data is missing a feature.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "84cc88ff-3deb-4001-a839-a69bf8cd7a31",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "a44d137a-073f-4f62-b4e3-7568c2b54910",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students change the training data, retrain, and see whether a prediction changes.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5. Each partner chooses a different change, writes a prediction in the activity guide, then trains with Clip Type, Length, Famous Actor, and Funny.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure students write their prediction before they train. Students who add hits or remove flops will see the dance clip leave the Incorrect tab, and the accuracy will rise to 77.78%. Students who add interviews will see nothing change, and the accuracy will stay at 66.67%. Ask those students: Why didn't four more interviews help?\n",
+        "progression_name": "Test a Fix",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "All three datasets keep the same 9 test clips, so any change in accuracy comes from the training data, not from different test clips."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a44d137a-073f-4f62-b4e3-7568c2b54910",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "f61ac6bf-2d04-43dc-98b3-d4911e69c404",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which mistakes could changing the data fix? Which couldn't?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect the results back to the two kinds of mistakes discussed throughout this lesson. Adding or removing examples fixed the dance clip, which was missing examples. No number of new interviews fixed the premiere clip, because the reason it was a hit was never a feature. The second question has no single right answer. Students who prefer adding hits often say removing data throws away information; students who prefer removing flops say old clips don't reflect what people like now. Press both sides to explain what each change does to the tree.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f61ac6bf-2d04-43dc-98b3-d4911e69c404",
+        "lesson_activity.key": "3da8d2de-c021-4f64-b466-730dda06fa19"
+      }
+    },
+    {
+      "key": "00fa41ee-2a0a-48ef-b329-f89f95d46514",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 6. Students answer on their own.",
+        "progression_name": "Check for Understanding",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Look closely at the last two blanks. Strong answers point to specific evidence from the training data and name a change that matches it, like \"it never saw a behind-the-scenes hit, so I'd add newer ones that were hits,\" or \"it had no way to know about premiere night, so I'd add a feature for big events.\" Answers like \"add more data\" or \"make it smarter\" show a student who knows the data matters but hasn't connected it to this specific mistake yet. Ask them: Which clips in the Training rows taught the tree that answer?"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "00fa41ee-2a0a-48ef-b329-f89f95d46514",
+        "lesson_activity.key": "f8c46884-76fe-430e-925c-939ee03256fc"
+      }
+    },
+    {
+      "key": "278ea3aa-2dd4-4e0f-96c1-078fcb647fe2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** How would you answer the Question of the Day now?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers should point to something students traced today: missing examples, or a feature the data never recorded. If someone answers \"the computer messed up,\" ask which step in their trace shows that. Every step in today's traces followed the training data exactly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "278ea3aa-2dd4-4e0f-96c1-078fcb647fe2",
+        "lesson_activity.key": "f8c46884-76fe-430e-925c-939ee03256fc"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Meet the Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio0_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "415e80e8-a4a5-44f8-abcd-8c6c62b76b43"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson7-ai-studio0_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Training Decision Trees"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio2_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "02159bb3-1c69-4684-85a4-80bba5e36c79"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson7-ai-studio2_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Training Different Features"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio4_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "e5533912-6de0-44a2-a1b1-d537e96e9ac5"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson7-ai-studio4_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make a Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio3_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "2c781094-0c16-4b51-bbb8-805cc4032d70"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson7-ai-studio3_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add a Feature"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio5_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "8fa15d75-e12d-4b83-9217-3957d47c10f6"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson7-ai-studio5_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-FRQ_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "f698bd2f-d237-4343-a70a-253b32d04735"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson7-FRQ_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-survey_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "f5e15c61-af35-411b-bc59-fe0869cf7cdf"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson7-survey_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Train and Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-meet_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "db281042-a510-4d2b-badf-f71855c7fd40"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson8-meet_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Train and Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-train_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "db281042-a510-4d2b-badf-f71855c7fd40"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson8-train_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Trace a Mistake"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-trace_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "b5fe8314-1805-4520-807d-e6c31bcc81bb"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson8-trace_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Trace Another Mistake"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-trace-pairs_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "143467d2-cdb3-440b-bc13-b525127d8189"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson8-trace-pairs_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Test a Fix"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-choice_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "a44d137a-073f-4f62-b4e3-7568c2b54910"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson8-choice_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-frq_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "00fa41ee-2a0a-48ef-b329-f89f95d46514"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson8-frq_nov-2026-beta-test"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-survey_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "278ea3aa-2dd4-4e0f-96c1-078fcb647fe2"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson8-survey_nov-2026-beta-test"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson7-ai-studio0_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio0_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "415e80e8-a4a5-44f8-abcd-8c6c62b76b43"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson7-ai-studio2_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio2_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "02159bb3-1c69-4684-85a4-80bba5e36c79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson7-ai-studio4_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio4_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "e5533912-6de0-44a2-a1b1-d537e96e9ac5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson7-ai-studio3_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio3_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "2c781094-0c16-4b51-bbb8-805cc4032d70"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson7-ai-studio5_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-ai-studio5_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "8fa15d75-e12d-4b83-9217-3957d47c10f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson7-FRQ_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-FRQ_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "f698bd2f-d237-4343-a70a-253b32d04735"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson7-survey_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson7-survey_nov-2026-beta-test"
+        ],
+        "lesson.key": "How to Train Your Decision Tree",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "f5e15c61-af35-411b-bc59-fe0869cf7cdf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson8-meet_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-meet_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "db281042-a510-4d2b-badf-f71855c7fd40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson8-train_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-train_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "db281042-a510-4d2b-badf-f71855c7fd40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson8-trace_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-trace_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "b5fe8314-1805-4520-807d-e6c31bcc81bb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson8-trace-pairs_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-trace-pairs_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "143467d2-cdb3-440b-bc13-b525127d8189"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson8-choice_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-choice_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "a44d137a-073f-4f62-b4e3-7568c2b54910"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson8-frq_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-frq_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "00fa41ee-2a0a-48ef-b329-f89f95d46514"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson8-survey_nov-2026-beta-test",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson8-survey_nov-2026-beta-test"
+        ],
+        "lesson.key": "Testing and Tracing Predictions",
+        "lesson_group.key": "",
+        "script.name": "decision-tree-beta-test",
+        "activity_section.key": "278ea3aa-2dd4-4e0f-96c1-078fcb647fe2"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[KEY] How to Train Your Decision Tree",
+      "url": "https://docs.google.com/document/d/1gimnykDQ89j19Ac92bncJV3IwF9kGsgvVWbST45ugNo/",
+      "key": "_key_how_to_train_your_decision_tree",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_key_how_to_train_your_decision_tree"
+      }
+    },
+    {
+      "name": "[KEY] Testing and Tracing Predictions",
+      "url": "https://docs.google.com/document/d/1pvLh4VlLxup3-qfARs66vzPnmZImoUDVWRwy1T8YWOE/",
+      "key": "_key_testing_and_tracing_predictions",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_testing_and_tracing_predictions"
+      }
+    },
+    {
+      "name": "How to Train Your Decision Tree",
+      "url": "https://docs.google.com/presentation/d/1pisi04CGsbrORLp3xj34vN7Wo2QIiiIoQ_2kJp-vTNo/",
+      "key": "how_to_train_your_decision_tree",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_train_your_decision_tree"
+      }
+    },
+    {
+      "name": "How to Train Your Decision Tree",
+      "url": "https://docs.google.com/document/d/1tXRqzBTvHkZcNqqgwdG5a9Rwp_0HEB20kSfSLPB87vo/",
+      "key": "how_to_train_your_decision_tree_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "how_to_train_your_decision_tree_1"
+      }
+    },
+    {
+      "name": "Testing and Tracing Predictions",
+      "url": "https://docs.google.com/presentation/d/1dxw4NiF2qK4CTYZ8zbd2lvxa6vDa-XLUFp-owgtDHHQ/",
+      "key": "testing_and_tracing_predictions",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "testing_and_tracing_predictions"
+      }
+    },
+    {
+      "name": "Testing and Tracing Predictions",
+      "url": "https://docs.google.com/document/d/1VaPQW3Ryv9qba2Tzx4KnOExbRjNOEgsnOZJOre8nWto/",
+      "key": "testing_and_tracing_predictions_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "testing_and_tracing_predictions_1"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "How to Train Your Decision Tree",
+        "resource.key": "_key_how_to_train_your_decision_tree"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "How to Train Your Decision Tree",
+        "resource.key": "how_to_train_your_decision_tree"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "How to Train Your Decision Tree",
+        "resource.key": "how_to_train_your_decision_tree_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "resource.key": "_key_testing_and_tracing_predictions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "resource.key": "testing_and_tracing_predictions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "resource.key": "testing_and_tracing_predictions_1"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "test_data",
+      "word": "Test data",
+      "definition": "examples kept out of training and used to check how well a model works",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "test_data"
+      }
+    },
+    {
+      "key": "tracing",
+      "word": "Tracing",
+      "definition": "following a prediction backward, through the tree's questions, to the training data that produced it",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "tracing"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "vocabulary.key": "test_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "vocabulary.key": "tracing"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "12bda7eb-238d-40eb-bc5e-809fed8f5421",
+      "properties": {
+        "description": "Test a decision tree using test data"
+      },
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "objective.key": "12bda7eb-238d-40eb-bc5e-809fed8f5421"
+      }
+    },
+    {
+      "key": "38362c69-3d8d-4072-892d-1e9dcade6b77",
+      "properties": {
+        "description": "Explain how changing the training data changes a prediction"
+      },
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "objective.key": "38362c69-3d8d-4072-892d-1e9dcade6b77"
+      }
+    },
+    {
+      "key": "4cbfa4d9-35b6-4e28-89f2-10b8e6ca048f",
+      "properties": {
+        "description": "Train a decision tree"
+      },
+      "seeding_key": {
+        "lesson.key": "How to Train Your Decision Tree",
+        "objective.key": "4cbfa4d9-35b6-4e28-89f2-10b8e6ca048f"
+      }
+    },
+    {
+      "key": "574dc1d6-9e63-4cf2-9c0f-550571720371",
+      "properties": {
+        "description": "Trace a wrong prediction back to the training data"
+      },
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "objective.key": "574dc1d6-9e63-4cf2-9c0f-550571720371"
+      }
+    },
+    {
+      "key": "8c7aa68d-a216-4f61-81e1-19184b5768bf",
+      "properties": {
+        "description": "Name a real-world assumption a model can make from its training data"
+      },
+      "seeding_key": {
+        "lesson.key": "How to Train Your Decision Tree",
+        "objective.key": "8c7aa68d-a216-4f61-81e1-19184b5768bf"
+      }
+    },
+    {
+      "key": "ed23d4b4-9084-40bc-8b26-ec810cd015e6",
+      "properties": {
+        "description": "Identify the features that affect a model’s predictions"
+      },
+      "seeding_key": {
+        "lesson.key": "How to Train Your Decision Tree",
+        "objective.key": "ed23d4b4-9084-40bc-8b26-ec810cd015e6"
+      }
+    }
+  ],
+  "objectives_script_levels": [
+
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "How to Train Your Decision Tree",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "HS-ALG-PS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-07"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Testing and Tracing Predictions",
+        "framework.shortcode": "csta2026",
+        "standard.shortcode": "MS-ALG-ML-08"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

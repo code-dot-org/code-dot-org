@@ -68,6 +68,14 @@
       "import": "./dist/breadcrumbs/index.mjs",
       "require": "./dist/breadcrumbs/index.js"
     },
+    "./cardButton": {
+      "types": {
+        "import": "./dist/cardButton/index.d.ts",
+        "require": "./dist/cardButton/index.d.ts"
+      },
+      "import": "./dist/cardButton/index.mjs",
+      "require": "./dist/cardButton/index.js"
+    },
     "./carousel": {
       "types": {
         "import": "./dist/carousel/index.d.ts",
@@ -304,6 +312,14 @@
       "import": "./dist/popover/index.mjs",
       "require": "./dist/popover/index.js"
     },
+    "./progressWidget": {
+      "types": {
+        "import": "./dist/progressWidget/index.d.ts",
+        "require": "./dist/progressWidget/index.d.ts"
+      },
+      "import": "./dist/progressWidget/index.mjs",
+      "require": "./dist/progressWidget/index.js"
+    },
     "./radioButton": {
       "types": {
         "import": "./dist/radioButton/index.d.ts",
@@ -311,6 +327,14 @@
       },
       "import": "./dist/radioButton/index.mjs",
       "require": "./dist/radioButton/index.js"
+    },
+    "./scrollFade": {
+      "types": {
+        "import": "./dist/scrollFade/index.d.ts",
+        "require": "./dist/scrollFade/index.d.ts"
+      },
+      "import": "./dist/scrollFade/index.mjs",
+      "require": "./dist/scrollFade/index.js"
     },
     "./segmentedButtons": {
       "types": {

@@ -1,4 +1,4 @@
-export const NODE_RADIUS = 34;
+export const NODE_RADIUS = 40;
 
 export interface NodePosition {
   id: string;
