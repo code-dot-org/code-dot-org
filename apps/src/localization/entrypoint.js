@@ -83,7 +83,6 @@ const live = [
   '/courses/express-2024',
   '/courses/pre-express-2024',
   '/courses/k5-onlinepd-2024',
-  '/courses/teaching-csf-2025',
   '/courses/coursea-2024',
   '/courses/courseb-2024',
   '/courses/coursec-2024',
