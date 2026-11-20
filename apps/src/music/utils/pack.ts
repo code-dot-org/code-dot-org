@@ -18,8 +18,8 @@ export function isOnDefaultPack(labConfig?: MusicPackConfig): boolean {
 }
 
 /**
- * The pack a project's saved sources should load with. The saved pack may be
- * missing, or name a pack that none of the code's sounds come from.
+ * The saved pack may be missing, or name a pack that none of the code's
+ * sounds come from.
  */
 export function getPackIdForSources(
   sources: Partial<ProjectSources> | undefined,

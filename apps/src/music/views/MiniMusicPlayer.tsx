@@ -73,7 +73,8 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
       const projectSources = await sourcesStoreRef.current.load(project.id);
 
-      // If there is a pack ID, give the player its BPM and key.
+      // Select the project's pack, or none, and give the player the BPM and
+      // key that result.
       const currentLibrary = MusicLibrary.getInstance();
       if (currentLibrary) {
         currentLibrary.setCurrentPackId(
