@@ -13,6 +13,7 @@ import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
   getCurrentLevels,
+  nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {setInRestrictedShareMode} from '@cdo/apps/code-studio/projectRedux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -30,6 +31,7 @@ import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
 import HeaderActionButton from '@cdo/apps/lab2/views/components/HeaderActionButton';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
+import {instructionsContinueButtonElementId} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 import {useLevelProperties} from '@cdo/apps/lab2/views/LevelPropertiesWrapper';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
@@ -61,6 +63,7 @@ import {
 } from '../ai/images/imageGeneration';
 import useGameAudio from '../audioFeedback/useGameAudio';
 import {
+  inToolboxBlockTypes,
   catalogEntries,
   heldBackBlockTypes,
   newBlockTypes,
@@ -80,6 +83,7 @@ import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
+import {countImageOrigins, originOfImageInRole} from '../imageOrigin';
 import {
   removeImageReferences,
   collectImageReferences,
@@ -168,12 +172,18 @@ import DiscoverBlocksButton, {
 import FreeplayIntroDialog from './FreeplayIntroDialog';
 import ImagesTab, {UploadWarningSettings} from './images/ImagesTab';
 import {createNamedAnimation} from './imageSave';
-import {ArrowSet, arrowSetFor, ControlsState} from './playBar';
+import {
+  ArrowSet,
+  arrowSetFor,
+  ControlsState,
+  ARROW_AND_SPACE_KEYS,
+} from './playBar';
 import Playspace, {PlayspaceMode} from './Playspace';
 import ScenesDialog from './ScenesDialog';
 import useBlocklyWorkspace, {BLOCKLY_DIV_ID} from './useBlocklyWorkspace';
 import useDocumentHidden from './useDocumentHidden';
-import {useFlyoutDots} from './useFlyoutDots';
+import {useFlyoutDots, useBlockTypesUsedThisVisit} from './useFlyoutDots';
+import useLevelAnalytics from './useLevelAnalytics';
 import useLevelBlocks from './useLevelBlocks';
 import {useObjectives, usePlayProgress} from './useObjectives';
 import usePicturesSheet from './usePicturesSheet';
@@ -269,15 +279,7 @@ const EMPTY_ANIMATION_LIST = {orderedKeys: [], propsByKey: {}};
 // swallowOnControls effect).
 const INTERACTIVE_CONTROLS = 'button, a, input, select, textarea';
 
-// The keys a game typically reads (p5 listens for them on window).
-const GAME_KEYS = new Set([
-  'ArrowLeft',
-  'ArrowRight',
-  'ArrowUp',
-  'ArrowDown',
-  ' ',
-  'Spacebar',
-]);
+const NO_EARLIER_LEVELS: readonly SpriteLab2LevelProperties[] = [];
 
 // Levelbuilder edit modes (start, toolbox, exemplar) run without a project
 // channel; generated images upload to the level's starter assets instead.
@@ -405,10 +407,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     state => getCurrentLevels(state)?.[0]?.id as string | undefined
   );
   const scriptId = useAppSelector(state => state.progress.scriptId);
+  const hasNextLevel = useAppSelector(
+    state => nextLevelId(state) !== undefined
+  );
   const isRunning = useAppSelector(state => state.runState.isRunning);
   const isBlockedAbuse = useAppSelector(state => state.lab.isBlockedAbuse);
   const releaseRemovedImages = useReleaseRemovedImages();
   const hasRun = useAppSelector(state => state.spriteLab2.hasRun);
+  // Analytics only for a student working on their own level: not for someone
+  // playing or viewing another person's project, nor in level edit mode.
+  const levelAnalytics = useLevelAnalytics(
+    levelProperties,
+    activeTab === 'Play',
+    !isShareView && !isViewOnly && !isLevelEditMode
+  );
   const blocklySettings = useBlocklySettings();
   const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
@@ -534,13 +546,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // play area.
   const speakRef = useRef<((text: string) => void) | null>(null);
   const [showStartOver, setShowStartOver] = useState(false);
-  // The new-block catalog: the unit's new blocks stay out of the toolbox
-  // until the student adds them from the dialog. Off in the levelbuilder's
+  // The new-block catalog: the new blocks stay out of the toolbox until the
+  // student adds them from the dialog. Off in the levelbuilder's
   // edit modes, whose saves would carry its flags into every student's
   // start sources.
   const catalogOn = !!levelProperties.blockCatalog && !isLevelEditMode;
   // The catalog's blocks are the ones no earlier level of the lesson
-  // required (blockCatalog.ts); outside a lesson there are none.
+  // required (blockCatalog.ts).
   const {levelPropertiesMap} = useLevelProperties();
   // getCurrentLevels returns a new list every time it is called. shallowEqual
   // compares the ids one by one, so this value only changes when the lesson's
@@ -562,22 +574,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           .map(id => levelPropertiesMap[id] as SpriteLab2LevelProperties)
           .filter(Boolean);
   }, [lessonLevelIds, levelPropertiesMap, levelProperties.id]);
+  // A standalone project has no earlier levels, so every block it offers
+  // that has help is in its catalog.
+  const catalogEarlierLevels = levelProperties.isProjectLevel
+    ? NO_EARLIER_LEVELS
+    : earlierLevels;
   const catalog = useMemo(
     () =>
-      catalogOn && earlierLevels
-        ? catalogEntries(newBlockTypes(levelProperties, earlierLevels))
+      catalogOn && catalogEarlierLevels
+        ? catalogEntries(newBlockTypes(levelProperties, catalogEarlierLevels))
         : [],
-    [catalogOn, earlierLevels, levelProperties]
+    [catalogOn, catalogEarlierLevels, levelProperties]
   );
   const chosenBlocks = currentSources.chosenBlocks;
   const chosenBlockSet = useMemo(
     () => new Set(chosenBlocks ?? []),
     [chosenBlocks]
-  );
-  // Catalog blocks the student has yet to add.
-  const heldBackBlocks = useMemo(
-    () => heldBackBlockTypes(catalog, chosenBlocks),
-    [catalog, chosenBlocks]
   );
   const inAiPilot = useAppSelector(
     state =>
@@ -612,6 +624,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const pictures = usePicturesSheet({ready: labReady});
 
   const scenes = useMemo(() => getScenes(currentSources), [currentSources]);
+
+  const blocksUsedThisVisit = useBlockTypesUsedThisVisit(scenes);
+  const inToolboxBlocks = useMemo(
+    () =>
+      inToolboxBlockTypes(levelProperties, chosenBlockSet, blocksUsedThisVisit),
+    [levelProperties, chosenBlockSet, blocksUsedThisVisit]
+  );
+  const heldBackBlocks = useMemo(
+    () => heldBackBlockTypes(catalog, inToolboxBlocks),
+    [catalog, inToolboxBlocks]
+  );
 
   // Create the pinned scene on first load, and again after Start Over (the
   // reinit count is in the deps). On a project with no scenes the pinned
@@ -1665,7 +1688,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     const swallow = (e: KeyboardEvent) => {
-      if (GAME_KEYS.has(e.key)) {
+      if (ARROW_AND_SPACE_KEYS.has(e.key)) {
         e.stopPropagation();
       }
     };
@@ -1686,7 +1709,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       const target = e.target instanceof Element ? e.target : null;
       if (
         isTargetEditable(e.target) ||
-        (GAME_KEYS.has(e.key) && target?.closest(INTERACTIVE_CONTROLS))
+        (ARROW_AND_SPACE_KEYS.has(e.key) &&
+          target?.closest(INTERACTIVE_CONTROLS))
       ) {
         e.stopPropagation();
       }
@@ -2206,7 +2230,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useFlyoutDots({
     enabled: catalogOn,
     added: chosenBlockSet,
-    scenes,
+    usedThisVisit: blocksUsedThisVisit,
     workspaceVersion,
     getWorkspace: getMainWorkspace,
   });
@@ -2283,12 +2307,31 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setShowCatalogArrow(false);
   };
 
+  const reportLevelCompleted = () =>
+    levelAnalytics.reportCompleted({
+      finish: !hasNextLevel,
+      levelImageOrigin: originOfImageInRole(animationList, levelImageRole),
+      imageOrigins: countImageOrigins(animationList),
+    });
+
   return (
     <div
       className={classNames(
         moduleStyles.labRow,
         isShareView && moduleStyles.labRowShareView
       )}
+      onPointerDownCapture={levelAnalytics.reportActivity}
+      onKeyDownCapture={levelAnalytics.reportActivity}
+      // The shared instructions panel renders Continue, so its press is
+      // caught here, by the button's id.
+      onClickCapture={event => {
+        if (
+          event.target instanceof Element &&
+          event.target.closest(`#${instructionsContinueButtonElementId}`)
+        ) {
+          reportLevelCompleted();
+        }
+      }}
     >
       {scenesDialog && (
         <ScenesDialog
@@ -2349,7 +2392,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {showBlockCatalog && (
         <BlockCatalogDialog
           entries={catalog}
-          chosen={chosenBlockSet}
+          inToolbox={inToolboxBlocks}
           onAdd={addCatalogBlock}
           onClose={() => setShowBlockCatalog(false)}
         />
@@ -2361,7 +2404,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {levelProperties.useSecondaryFinishButton && !isShareView && (
         <HeaderActionButton
           buttonColor="success"
-          onClick={() => dispatch(continueOrFinishLesson())}
+          onClick={() => {
+            reportLevelCompleted();
+            dispatch(continueOrFinishLesson());
+          }}
         >
           I'm finished
         </HeaderActionButton>

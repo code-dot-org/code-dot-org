@@ -5,6 +5,8 @@
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {toImage} from '@cdo/apps/imageUtils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {standingFrameIndex} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {DEFAULT_IMAGE_STYLE} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 import {blankPaintImage} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
@@ -26,6 +28,10 @@ const STROKE_SAVE_MS = 800;
 // image happens at most once per this gap, and once more when the drawing
 // is finished. The project's own save keeps its own throttle.
 const UPLOAD_GAP_MS = 5000;
+
+/** What the tools opened on. `other` is an image that is neither blank nor
+    AI-made: a drawing, an upload, or a hand-edited AI picture. */
+type DrawingOrigin = 'blank' | 'generated' | 'other';
 
 /** A drawing in progress: what it writes to, and what the editor opened. */
 export interface Drawing {
@@ -164,6 +170,12 @@ export default function useDrawing({
   // generated picture replaced the image while it was being drawn on.
   const openedOnGenerationRef = useRef<ImageProps['generation']>();
   const drawingIdRef = useRef(0);
+  // What the open drawing's first edit will report; null once that edit has
+  // been reported.
+  const firstEditReportRef = useRef<{
+    origin: DrawingOrigin;
+    target: ImageTarget;
+  } | null>(null);
   // A copy of the previous drawing's canvas, shown until the next image's
   // editor has painted, and which drawing the copy came from.
   const previousCanvasRef = useRef<{
@@ -234,6 +246,14 @@ export default function useDrawing({
         ? images.find(image => image.key === target.key)
         : undefined;
       openedOnGenerationRef.current = existing?.props.generation;
+      firstEditReportRef.current = {
+        origin: !existing?.src
+          ? 'blank'
+          : existing.props.generation
+          ? 'generated'
+          : 'other',
+        target,
+      };
       leaveAfterSaveRef.current = false;
       setClosedPicture(null);
       const id = ++drawingIdRef.current;
@@ -304,6 +324,19 @@ export default function useDrawing({
   }, []);
 
   const scheduleStrokeSave = useCallback(() => {
+    const unreported = firstEditReportRef.current;
+    if (unreported) {
+      firstEditReportRef.current = null;
+      analyticsReporter.sendEvent(
+        EVENTS.HOAI2026_IMAGE_DRAW,
+        {
+          origin: unreported.origin,
+          imageType: unreported.target.imageType,
+          imageSubject: unreported.target.subject,
+        },
+        true
+      );
+    }
     dirtyRef.current = true;
     clearIdleTimer();
     idleTimerRef.current = window.setTimeout(() => {
