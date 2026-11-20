@@ -21,8 +21,9 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
     - *Important*: When done, check for correct versions of these dependencies:
 
      ```sh
-     ruby --version     # --> ruby 3.1.7
-     node --version     # --> v20.18.3
+     ruby --version     # --> ruby 3.3.12
+     node --version     # --> latest v20.x.x, at least v20.19 (Vite requires it)
+     yarn --version     # --> any version; "not found" means you must rerun 'corepack enable'
      git-lfs --version  #  >= git-lfs/3.0
      uv --version       #  >= 0.5.8
      ```
@@ -253,6 +254,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. Install the latest version of [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
     1. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
     1. `node --version` Double check the version of node you are using. If it is wrong, then try restarting your terminal.
+        - If restarting your terminal does not resolve the issue, you may need to completely restart VS Code's WSL terminal by running `wsl --shutdown`
 1. Ensure rbenv and ruby-build are properly installed
     1. run `rbenv init` and follow the instructions.
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
@@ -270,6 +272,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. `curl -LsSf https://astral.sh/uv/install.sh | sh`
         - alternatively, if you prefer pipx and have it configured path-wise: `pipx install uv`
 1. Enable **corepack** to install **yarn**: `corepack enable`
+    - Corepack installs `yarn` into the active Node version only. Rerun `corepack enable` after every `nvm install` of a new Node version.
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:
         1. `export CHROME_BIN=$(which chromium-browser)`
