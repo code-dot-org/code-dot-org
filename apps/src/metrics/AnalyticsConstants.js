@@ -807,6 +807,7 @@ const EVENTS = {
   ADAPTIVE_FREE_RESPONSE_ANSWERED: 'Adaptive Free Response Answered',
   ADAPTIVE_FINAL_PROJECT_BUTTON_CLICKED:
     'Adaptive Final Project Button Clicked',
+  ADAPTIVE_CONGRATS_LINK_CLICKED: 'Adaptive Congrats Link Clicked',
   ADAPTIVE_FIRST_PROMPT_SUBMITTED: 'Adaptive First Prompt Submitted',
   ADAPTIVE_PROJECT_GENERATED: 'Adaptive Project Generated',
   ADAPTIVE_INSTRUCTIONS_GENERATED: 'Adaptive Instructions Generated',
