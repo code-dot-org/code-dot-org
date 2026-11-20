@@ -1,10 +1,9 @@
 module Cdo
-  # Provisions the non-root `writer` and `reader` application MySQL users for non-AWS systems (continuous integration
-  # builds, local development environments, k8s, etc.), mirroring what the Custom::SQLUser CloudFormation Lambda
-  # (aws/cloudformation/lambdas/sql-user/index.js) provisions against the Aurora cluster in AWS environments.
+  # Provisions the non-root `writer` and `reader` application MySQL users on the deployments that run community-edition
+  # MySQL (developer's workstation, the mysqld on default adhoc configuration, the continuous integration container).
+  # The custom SQLUser CloudFormation Resource provisions these users on deployments provisioned via CloudFormation AND
+  # that have an Aurora MySQL cluster.
   module SqlUserProvisioner
-    # Privileges granted to each application user.
-    #
     # KEEP THESE PERMISSIONS IN SYNC with CloudFormation `aws/cloudformation/components/database.yml.erb`.
     PRIVILEGES = {
       writer: [
@@ -20,16 +19,20 @@ module Cdo
     # databases (dashboard_test1, dashboard_test2, ...) used for parallel CI.
     GRANT_DATABASES = %w[dashboard pegasus].freeze
 
-    # Match the Lambda: users may connect from any host.
+    # Users may connect from any host.
     CLIENT_HOST = '%'.freeze
 
     # MySQL "Access denied for user", which is how a user that was never created presents.
     # https://dev.mysql.com/doc/mysql-errors/8.0/en/server-error-reference.html
     ACCESS_DENIED = 1045
 
-    # The ordered SQL statements that create/update one user and grant its
-    # privileges, mirroring the Lambda. The block escapes a string for use inside
-    # SQL single quotes (e.g. Mysql2::Client#escape) and must not add the
+    # The value that `CDO.db_cluster_id` is set to when the database provisioned for the current deployment is NOT
+    # an Aurora cluster.
+    # KEEP THIS VALUE IN SYNC with NO_DB_CLUSTER in `aws/cloudformation/components/database.yml.erb`.
+    NO_DB_CLUSTER = 'none'.freeze
+
+    # The ordered SQL statements that create/update one user and grant its privileges, mirroring the Lambda. The block
+    # escapes a string for use inside SQL single quotes (e.g. Mysql2::Client#escape) and must not add the
     # surrounding quotes.
     def self.statements_for(name:, password:, privileges:, host: CLIENT_HOST, databases: GRANT_DATABASES)
       quoted_password = "'#{yield(password.to_s)}'"
@@ -49,17 +52,11 @@ module Cdo
     # privileges:}) using `admin_client`, anything responding to #query and
     # #escape such as a Mysql2::Client. Idempotent, like the Lambda: only ever
     # GRANTs, never REVOKEs.
-    #
-    # A user whose username equals `admin_username` is skipped rather than
-    # stripped down to these privileges, so pointing a credential at the admin
-    # login (e.g. config not yet updated to a non-root user) is a no-op instead of
-    # locking out the superuser. Returns {provisioned: [username, ...], skipped:
-    # [username, ...]}.
     def self.provision!(admin_client:, admin_username:, users:)
       result = {provisioned: [], skipped: []}
       users.each do |user|
         if user[:username] == admin_username
-          result[:skipped] << user[:username]
+          result[:skipped] << user[:username] # Don't downgrade admin user's permissions.
           next
         end
         statements_for(
@@ -72,10 +69,23 @@ module Cdo
       result
     end
 
+    # Whether this deployment's database server is an Aurora cluster.
+    def self.aurora_cluster?
+      cluster_id = CDO.db_cluster_id.to_s.strip
+      !cluster_id.empty? && cluster_id != NO_DB_CLUSTER
+    end
+
+    # Provision the application writer and reader SQL users, or return nil where CloudFormation provisions them.
     def self.provision_from_config!
-      require 'mysql2'
+      return nil if aurora_cluster?
 
       admin_credential = CDO.db_credential_admin
+      unless admin_credential.is_a?(Hash) && !admin_credential['username'].to_s.empty?
+        raise 'No `db_credential_admin` configured, and no Aurora cluster whose Custom::SQLUser Resources would ' \
+          'provision the writer and reader users instead.'
+      end
+
+      require 'mysql2'
       admin_client = Mysql2::Client.new(
         host: CDO.db_endpoint_writer,
         port: CDO.db_endpoint_writer_port,
@@ -99,10 +109,7 @@ module Cdo
       end
     end
 
-    # The configured application users that MySQL refuses to authenticate, for callers that want to
-    # point a developer at `db:provision_sql_users` before an access-denied error surfaces somewhere
-    # far from its cause. Empty when every user can log in, and also when the check cannot run at
-    # all: an unreachable database is a different failure, reported by whatever needed it.
+    # Check whether the application SQL users can login successfully with the configured credentials.
     def self.unauthenticated_users
       require 'mysql2'
 
