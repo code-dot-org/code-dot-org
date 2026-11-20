@@ -29,7 +29,7 @@ type FinishDialogAction =
   | 'shown'
   | 'close'
   | 'keep_playing'
-  | 'open_sprite_lab'
+  | 'open_quest_builder_standalone'
   | 'elementary'
   | 'middle_school'
   | 'copy_link'
@@ -140,7 +140,6 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
         onClose();
       }}
       closeLabel="Close"
-      // Low emphasis, because this button keeps the student on the page.
       primaryButtonProps={{
         children: 'Keep playing',
         variant: 'outlined',
@@ -183,10 +182,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                   }
                   disabled={!onRemix || shareDisabled}
                   onClick={() => {
-                    // Report before `onRemix`, which leaves the page. The analytics
-                    // client sends its queued events as the page is left, so this
-                    // one is not lost.
-                    report('open_sprite_lab');
+                    report('open_quest_builder_standalone');
                     onRemix?.();
                   }}
                 >
