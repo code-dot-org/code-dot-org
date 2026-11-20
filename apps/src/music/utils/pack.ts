@@ -44,8 +44,8 @@ function collectRestrictedPacks(
   for (const [key, value] of Object.entries(node)) {
     if (key === FIELD_SOUNDS_NAME && typeof value === 'string') {
       const folder = library.getFolderForSoundId(value);
-      // The default pack is marked restricted, but a project on it uses no
-      // restricted sounds.
+      // The library marks the default pack as restricted, but choosing it
+      // means choosing no restricted pack, so its sounds do not count.
       if (folder?.restricted && folder.id !== DEFAULT_PACK) {
         packIds.add(folder.id);
       }
