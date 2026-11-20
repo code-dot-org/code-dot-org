@@ -4,7 +4,7 @@ import type {Store} from 'redux';
 
 import {TestDataLocations, DEFAULT_TEST_ROWS_PERCENT} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
-import {splitRowIndices} from './helpers/trainingSplit';
+import {describesDataset, splitRowIndices} from './helpers/trainingSplit';
 import {getRandomInt} from './helpers/utils';
 import {convertValueForTraining} from './helpers/valueConversion';
 import {
@@ -227,25 +227,6 @@ const describeRun = (run?: TrainerOutput): TrainingRun | undefined =>
 
 const onClickTrain = (): TrainingRun | undefined =>
   describeRun(trainingState.trainer?.startTraining());
-
-/*
-  Whether a saved split still describes this dataset: every index names a row,
-  and some rows are left over to train on. If the rowCount has changed, 
-  the split may no longer be valid.
-*/
-const describesDataset = (
-  accuracyCheckRowIndices: number[],
-  rowCount: number
-): boolean => {
-  const reserved = new Set(accuracyCheckRowIndices);
-  return (
-    reserved.size > 0 &&
-    reserved.size < rowCount &&
-    [...reserved].every(
-      index => Number.isInteger(index) && index >= 0 && index < rowCount
-    )
-  );
-};
 
 /*
   Rebuilds the model a saved project describes, on the split it was graded

@@ -10,6 +10,8 @@ import DataDisplay from '@cdo/apps/ailab/engine/UIComponents/DataDisplay';
 import {ANIMAL_COLUMNS, ANIMALS, levelProject, levelStore} from './levelStore';
 import {renderWithProviders} from './renderWithProviders';
 
+import tableStyles from '@cdo/apps/ailab/engine/UIComponents/dataTable.module.scss';
+
 function renderDisplay() {
   const store = levelStore();
   const project = levelProject();
@@ -38,6 +40,17 @@ describe('DataDisplay', () => {
     expect(screen.getByRole('table')).toBeTruthy();
     expect(button('Table').getAttribute('aria-pressed')).toBe('true');
     expect(screen.queryByLabelText('Next card')).toBeNull();
+  });
+
+  test('freezes the row numbers as the table scrolls sideways', () => {
+    renderDisplay();
+    const numberCells = [
+      screen.getByRole('columnheader', {name: 'Row'}),
+      ...screen.getAllByRole('rowheader'),
+    ];
+    numberCells.forEach(cell =>
+      expect(cell.classList.contains(tableStyles.frozenIndex)).toBe(true)
+    );
   });
 
   test('cards shows one dataset row and steps to the next', () => {
@@ -265,6 +278,63 @@ describe('DataDisplay', () => {
     );
   });
 
+  describe('after a run', () => {
+    const renderTested = () =>
+      renderWithProviders(createElement(DataDisplay), {
+        store: levelStore(),
+        project: {...levelProject(), accuracyCheckRowIndices: [2, 7]},
+      });
+
+    test('marks the rows the model is tested on, with a legend', () => {
+      renderTested();
+      expect(
+        screen
+          .getAllByRole('rowheader', {name: /test row/})
+          .map(header => header.getAttribute('aria-label'))
+      ).toEqual(['3, test row', '8, test row']);
+      expect(screen.getByRole('rowheader', {name: '4'})).toBeTruthy();
+      expect(screen.getByText('Test rows')).toBeTruthy();
+      expect(button('About test rows')).toBeTruthy();
+    });
+
+    test('names a test row on its card, and drops the legend', () => {
+      renderTested();
+      fireEvent.click(button('Cards'));
+      expect(screen.queryByText('Test rows')).toBeNull();
+      expect(screen.getByRole('group', {name: 'Row 1'})).toBeTruthy();
+
+      fireEvent.click(button('Next card'));
+      fireEvent.click(button('Next card'));
+      expect(screen.getByRole('group', {name: 'Row 3 Test row'})).toBeTruthy();
+      expect(button('About test rows').tabIndex).toBe(0);
+
+      fireEvent.click(button('Next card'));
+      const leavingCardInfo = screen.getByRole('button', {
+        name: 'About test rows',
+        hidden: true,
+      });
+      expect(leavingCardInfo.tabIndex).toBe(-1);
+    });
+  });
+
+  test('marks no rows before a run', () => {
+    renderDisplay();
+    expect(screen.queryByText('Test rows')).toBeNull();
+    expect(screen.queryByRole('rowheader', {name: /test row/})).toBeNull();
+  });
+
+  test('marks no rows when the saved split no longer fits the dataset', () => {
+    renderWithProviders(createElement(DataDisplay), {
+      store: levelStore(),
+      project: {
+        ...levelProject(),
+        accuracyCheckRowIndices: [2, ANIMALS.length],
+      },
+    });
+    expect(screen.queryByText('Test rows')).toBeNull();
+    expect(screen.queryByRole('rowheader', {name: /test row/})).toBeNull();
+  });
+
   describe('with an id column', () => {
     const NAMED = ANIMALS.map((row, index) => ({
       ...row,
@@ -304,6 +374,31 @@ describe('DataDisplay', () => {
       expect(
         Array.from(card.querySelectorAll('dt'), term => term.textContent)
       ).toEqual(['animal, used as the label', 'legs, used as a feature']);
+    });
+
+    test('says a test row is one in its row header', () => {
+      renderWithProviders(createElement(DataDisplay), {
+        store: levelStore(
+          {idColumn: 'name'},
+          [NAMED[0], {...NAMED[1], name: ''}, ...NAMED.slice(2)],
+          NAMED_COLUMNS
+        ),
+        project: {...levelProject(), accuracyCheckRowIndices: [1, 2]},
+      });
+      expect(
+        screen.getByRole('rowheader', {name: 'Row 2, test row'})
+      ).toBeTruthy();
+      expect(
+        screen.getByRole('rowheader', {name: 'pet 3, test row'})
+      ).toBeTruthy();
+      expect(screen.getByRole('rowheader', {name: 'pet 1'})).toBeTruthy();
+
+      fireEvent.click(button('Cards'));
+      fireEvent.click(button('Next card'));
+      fireEvent.click(button('Next card'));
+      expect(
+        screen.getByRole('group', {name: 'pet 3 Row 3 Test row'})
+      ).toBeTruthy();
     });
 
     test('names a row with a blank id by its row number', () => {
