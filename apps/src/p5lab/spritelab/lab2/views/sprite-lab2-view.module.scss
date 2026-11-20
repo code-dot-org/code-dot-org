@@ -652,22 +652,19 @@ $arrow-gap: 6px;
   height: 400px;
 }
 
-// Side-by-side stereo (?stereo): the game canvas keeps drawing unseen and
-// the pair shows at half size across the box's middle, on black.
+// Side-by-side stereo (?stereo): the game canvas keeps drawing unseen, and
+// the pair shows over the box, placed and sized inline.
 .playspaceCanvasHidden {
   visibility: hidden;
 }
 
 .stereoBox {
-  background: var(--background-neutral-black-fixed);
+  background: none;
 }
 
 .stereoCanvas {
   position: absolute;
-  top: 100px;
-  left: 0;
-  width: 400px;
-  height: 200px;
+  background: var(--background-neutral-black-fixed);
   pointer-events: none;
 }
 

@@ -23,6 +23,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 
 import {getImageThumbnail} from '../imageTrim';
+import {STEREO_GAP, stereoPairPlacement} from '../stereo';
 
 import {keepFocusOffAfterMousePress} from './blurAfterPointerClick';
 
@@ -846,7 +847,9 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           // Hairline seam so a white game canvas reads against a white page
           // in light mode. A shadow, not a border, so the 400x400 geometry
           // the transform and pointer math rely on stays untouched.
-          boxShadow: '0 0 0 1px var(--borders-neutral-primary)',
+          boxShadow: stereoCanvasRef
+            ? undefined
+            : '0 0 0 1px var(--borders-neutral-primary)',
           transition: slide
             ? `transform ${SLIDE_MS}ms ease, opacity ${FADE_MS}ms ease-in`
             : `opacity ${FADE_MS}ms ease-in`,
@@ -871,15 +874,6 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
             stereoCanvasRef && moduleStyles.playspaceCanvasHidden
           )}
         />
-        {stereoCanvasRef && (
-          <canvas
-            ref={stereoCanvasRef}
-            className={moduleStyles.stereoCanvas}
-            width={2 * CANVAS}
-            height={CANVAS}
-            aria-hidden="true"
-          />
-        )}
         {/* Click-to-play: a transparent catcher over the live preview so a
             click opens Play on this scene. Only in preview and never while
             picking a location; the game canvas stays non-interactive beneath. */}
@@ -927,6 +921,34 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           <div key={fadeTrigger} className={moduleStyles.sceneFade} />
         )}
       </div>
+      {/* Beside the box, not inside it, so that the two views can be wider
+          than the box. */}
+      {stereoCanvasRef && (
+        <canvas
+          ref={stereoCanvasRef}
+          className={moduleStyles.stereoCanvas}
+          width={2 * CANVAS + STEREO_GAP}
+          height={CANVAS}
+          aria-hidden="true"
+          style={{
+            ...stereoPairPlacement(
+              {y, side: boxSide},
+              // The stage while the game plays, up to the arrows when they
+              // are beside the box; the box in the preview.
+              mode === 'play'
+                ? {
+                    left: MARGIN,
+                    width:
+                      (cross && cross.x >= x + boxSide ? cross.x : size.w) -
+                      2 * MARGIN,
+                  }
+                : {left: x, width: boxSide},
+              CANVAS
+            ),
+            opacity: visible ? 1 : 0,
+          }}
+        />
+      )}
       {/* Outside the box: role="application" hides what is inside it from
           screen readers, so anything to be read must sit beside it. */}
       {prompt && (

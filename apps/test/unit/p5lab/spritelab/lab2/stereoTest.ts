@@ -3,7 +3,9 @@ import {
   drawMono,
   drawStereoPair,
   layerShifts,
+  STEREO_GAP,
   stereoFromQuery,
+  stereoPairPlacement,
 } from '@cdo/apps/p5lab/spritelab/lab2/stereo';
 
 describe('stereoFromQuery', () => {
@@ -81,6 +83,55 @@ describe('drawStereoPair', () => {
       ['rect', 0, 0, 400, 400],
       ['rect', 400, 0, 400, 400],
     ]);
+  });
+});
+
+describe('drawStereoPair with a gap', () => {
+  it('moves the right eye over by the gap and clears the whole pair', () => {
+    const out = painter();
+    drawStereoPair(
+      out,
+      {background, foreground},
+      {background: 0, foreground: 0},
+      400,
+      400,
+      8
+    );
+    expect(out.calls.filter(([name]) => name === 'rect')).toEqual([
+      ['rect', 0, 0, 400, 400],
+      ['rect', 408, 0, 400, 400],
+    ]);
+    expect(out.calls.filter(([name]) => name === 'clearRect')).toEqual([
+      ['clearRect', 0, 0, 808, 400],
+    ]);
+  });
+});
+
+describe('stereoPairPlacement', () => {
+  const pairWidth = (view: number) => view * (2 + STEREO_GAP / 400);
+
+  it('gives each view the size of the box when the room is wide enough', () => {
+    const placed = stereoPairPlacement(
+      {y: 50, side: 600},
+      {left: 12, width: 1400},
+      400
+    );
+    expect(placed.height).toBe(600);
+    expect(placed.width).toBeCloseTo(pairWidth(600));
+    expect(placed.top).toBe(50);
+    expect(placed.left).toBeCloseTo(12 + (1400 - pairWidth(600)) / 2);
+  });
+
+  it('shrinks the views to fit a narrower room, centered down the box', () => {
+    const placed = stereoPairPlacement(
+      {y: 20, side: 400},
+      {left: 100, width: 400},
+      400
+    );
+    expect(placed.width).toBeCloseTo(400);
+    expect(placed.left).toBeCloseTo(100);
+    expect(placed.height).toBeCloseTo(400 / (2 + STEREO_GAP / 400));
+    expect(placed.top).toBeCloseTo(20 + (400 - placed.height) / 2);
   });
 });
 

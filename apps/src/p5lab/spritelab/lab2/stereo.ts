@@ -8,6 +8,8 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
 
 export const DEFAULT_EYE_PX = 6;
+/** The space between the two views, in px of a 400px view. */
+export const STEREO_GAP = 8;
 // How far the sprite plane comes forward per unit of zoom, as a share of
 // the eye offset.
 const ZOOM_POP_RATE = 0.5;
@@ -68,21 +70,23 @@ type Painter = Pick<
 >;
 
 /** Draw the two eyes side by side onto `out`, left then right, each
-    `width` by `height` in backing px. The background is overscanned by its
-    shift so neither eye sees its edge. */
+    `width` by `height` in backing px, with `gap` px left clear between
+    them. The background is overscanned by its shift so neither eye sees
+    its edge. */
 export function drawStereoPair(
   out: Painter,
   layers: StereoLayers,
   shifts: LayerShifts,
   width: number,
-  height: number
+  height: number,
+  gap = 0
 ): void {
   out.save();
   out.setTransform(1, 0, 0, 1, 0, 0);
-  out.clearRect(0, 0, 2 * width, height);
+  out.clearRect(0, 0, 2 * width + gap, height);
   const over = Math.abs(shifts.background);
   [-1, 1].forEach((side, index) => {
-    const left = index * width;
+    const left = index * (width + gap);
     out.save();
     out.beginPath();
     out.rect(left, 0, width, height);
@@ -119,4 +123,32 @@ export function drawMono(
   out.drawImage(layers.background, 0, 0, width, height);
   out.drawImage(layers.foreground, 0, 0, width, height);
   out.restore();
+}
+
+export interface PairPlacement {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+}
+
+/**
+ * Where the pair is shown. Each view is as large as the game's box when
+ * `room` is wide enough for two of them and the gap, and smaller when it
+ * is not. The pair is centered across `room` and down the box.
+ */
+export function stereoPairPlacement(
+  box: {y: number; side: number},
+  room: {left: number; width: number},
+  viewPixels: number
+): PairPlacement {
+  const widthPerView = 2 + STEREO_GAP / viewPixels;
+  const view = Math.max(0, Math.min(box.side, room.width / widthPerView));
+  const width = view * widthPerView;
+  return {
+    left: room.left + (room.width - width) / 2,
+    top: box.y + (box.side - view) / 2,
+    width,
+    height: view,
+  };
 }
