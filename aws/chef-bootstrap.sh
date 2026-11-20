@@ -14,6 +14,7 @@ set -o errexit
 # -v [chef_version]
 # -l [chef_license_key]
 # -e [environment]
+# -p [cookbook_s3_url]
 # -z: Use local-mode Chef client.
 #
 # Prerequisites:
@@ -31,7 +32,7 @@ NODE_NAME=$(hostname)
 S3_BUCKET=cdo-dist
 
 # Parse options
-while getopts ":b:n:r:v:e:l:z" opt; do
+while getopts ":b:n:r:v:e:l:p:z" opt; do
   case "${opt}" in
     e)
       ENVIRONMENT=${OPTARG}
@@ -50,6 +51,9 @@ while getopts ":b:n:r:v:e:l:z" opt; do
       ;;
     l)
       CHEF_LICENSE_KEY=${OPTARG}
+      ;;
+    p)
+      REPO_COOKBOOK_URL=${OPTARG}
       ;;
     z)
       LOCAL_MODE=1
@@ -136,7 +140,7 @@ if [ "${LOCAL_MODE}" = "1" ]; then
 
   mkdir -p ${CHEF_REPO_PATH}/{cookbooks,environments}
   # Install branch-specific Chef cookbooks from s3.
-  REPO_COOKBOOK_URL=s3://${S3_BUCKET}/${CHEF_KEY}/${BRANCH}.tar.gz
+  REPO_COOKBOOK_URL=${REPO_COOKBOOK_URL:-s3://${S3_BUCKET}/${CHEF_KEY}/${BRANCH}.tar.gz}
   aws s3 cp ${REPO_COOKBOOK_URL} - | tar xz -C ${CHEF_REPO_PATH}
 
   # Boilerplate `adhoc` environment for local Chef.

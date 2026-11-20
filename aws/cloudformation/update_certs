@@ -22,6 +22,9 @@ require_relative '../../deployment'
 require 'active_support/core_ext/module/remove_method'
 
 require 'acmesmith/command'
+require 'open3'
+
+ACMESMITH_CONFIG = ENV['BASIC_ENGINEER_ADHOC'] == '1' ? './acmesmith-basic-engineer.yml' : './acmesmith.yml'
 
 unless ARGV.length >= 1
   puts "Usage: #{$0} common_name [san_1] [san_2] [...]"
@@ -33,7 +36,8 @@ required_certs = ARGV.dup
 
 def get_certificate_expiration(common_name)
   # Run the Acmesmith command using Ruby's system-level command execution and capture its output
-  certificate_info = `acmesmith show-certificate #{common_name}`
+  certificate_info, status = Open3.capture2('acmesmith', '--config', ACMESMITH_CONFIG, 'show-certificate', common_name)
+  raise 'Could not read certificate' unless status.success?
   not_after_line = certificate_info.split("\n").find {|line| line.include?('Not After')}
   not_after = DateTime.parse(not_after_line.split(': ').last)
   return not_after
@@ -45,7 +49,7 @@ begin
 
   CDO.log.info "Checking for existing certificate for #{common_name}..."
   begin
-    Acmesmith::Command.start ['current', common_name]
+    Acmesmith::Command.start ['--config', ACMESMITH_CONFIG, 'current', common_name]
   rescue
     raise 'cert not found'
   end
@@ -67,5 +71,5 @@ rescue => exception
   end
 
   CDO.log.info "Requesting new certificate for #{required_certs}"
-  Acmesmith::Command.start ['order'].concat(required_certs)
+  Acmesmith::Command.start ['--config', ACMESMITH_CONFIG, 'order'].concat(required_certs)
 end

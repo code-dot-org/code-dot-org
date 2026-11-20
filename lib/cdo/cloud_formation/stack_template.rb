@@ -29,6 +29,10 @@ module Cdo::CloudFormation
       @tags = []
     end
 
+    def execution_role_path
+      "admin/CloudFormation#{ENV['ADMIN'] ? 'Admin' : 'Service'}"
+    end
+
     # Returns the fully-rendered template as a string.
     def render(filename: self.filename)
       erb_file(filename)

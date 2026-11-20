@@ -73,3 +73,36 @@ unset AWS_PROFILE
 ### domain_redirect
 
 "domain_redirect.yml.erb" describes a generic domain redirect stack, and is used with "domain_redirect_deploy.sh"
+
+### Restricted BasicEngineer adhocs
+
+The infrastructure repository's `aws/identity-center/basic-engineer/` templates
+provide a dedicated CloudFormation execution role and a fixed EC2 instance profile.
+Deploy those first and provision the separate ACME account described there.
+
+For a new single-instance adhoc with a local database:
+
+```sh
+BASIC_ENGINEER_ADHOC=1 RAILS_ENV=adhoc STACK_NAME=adhoc-be-example bundle exec rake adhoc:start
+```
+
+Keep the same variables for `adhoc:stop`, `adhoc:start_inactive_instance` and
+`adhoc:delete`. This mode requires the `adhoc-be-` prefix and rejects RDS, frontend,
+CDN, load-balancer and alarm options. It does not migrate existing adhocs.
+
+The engineer passes only the dedicated execution role to CloudFormation.
+CloudFormation can pass only the fixed instance role to EC2; it cannot create or
+modify IAM roles. The instance role cannot pass roles or deploy stacks. The template
+therefore imports `BasicEngineer-AdhocInstanceProfile` instead of creating its usual
+application policies and instance profile. `ADMIN=1` cannot override this choice.
+
+Bootstrap inputs and certificates use separate S3 paths so this access cannot modify
+inputs consumed by more privileged legacy adhocs. The restricted certificate client
+uses `acmesmith-basic-engineer.yml`; the legacy configuration remains the default.
+Without `BASIC_ENGINEER_ADHOC=1`, existing commands keep their current behavior.
+
+Run the focused, database-independent tests with:
+
+```sh
+bundle exec ruby lib/test/cdo/cloud_formation/test_basic_engineer_adhoc.rb
+```

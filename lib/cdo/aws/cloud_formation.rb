@@ -234,13 +234,11 @@ module AWS
     end
 
     private def base_options
-      # All stacks use the same shared Service Role for CloudFormation resource-management permissions.
-      # Pass `ADMIN=1` to update admin resources with a privileged Service Role.
-      role_name = "CloudFormation#{ENV['ADMIN'] ? 'Admin' : 'Service'}"
+      # CloudFormation uses the selected role for resource changes, independently of the caller policy.
       account = Aws::STS::Client.new.get_caller_identity.account
       {
         stack_name: stack_name,
-        role_arn: "arn:aws:iam::#{account}:role/admin/#{role_name}"
+        role_arn: "arn:aws:iam::#{account}:role/#{stack.execution_role_path}"
       }
     end
 

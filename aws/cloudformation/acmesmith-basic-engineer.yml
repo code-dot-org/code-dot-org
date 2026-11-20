@@ -1,0 +1,9 @@
+directory: https://acme-v02.api.letsencrypt.org/directory
+storage:
+  type: s3
+  region: us-east-1
+  bucket: cdo-dist
+  # A separate ACME account cannot revoke certificates issued by the legacy account.
+  prefix: ssl/basic-engineer
+challenge_responders:
+  - route53: {}

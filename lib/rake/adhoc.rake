@@ -16,7 +16,8 @@ namespace :adhoc do
         database: ENV.fetch('DATABASE', nil),
         frontends: ENV.fetch('FRONTENDS', nil),
         cdn_enabled: ENV.fetch('CDN_ENABLED', nil),
-        alarms: ENV.fetch('ALARMS', nil)
+        alarms: ENV.fetch('ALARMS', nil),
+        basic_engineer: ENV['BASIC_ENGINEER_ADHOC'] == '1'
       )),
       log: CDO.log,
       verbose: ENV.fetch('VERBOSE', nil),

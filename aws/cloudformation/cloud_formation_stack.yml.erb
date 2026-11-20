@@ -74,6 +74,7 @@ Resources:
   # applied to both daemon and frontends.
   # ---------------------------------------------
 
+<% unless basic_engineer_adhoc? -%>
   CDOPolicy:
     Type: AWS::IAM::ManagedPolicy
     Properties:
@@ -274,6 +275,8 @@ Resources:
               - 'aps:RemoteWrite'
             Resource: '*'
 
+<% end -%>
+
   # ---------------------------------------------
   # Frontend Servers
   # ---------------------------------------------
@@ -470,6 +473,7 @@ Resources:
   # Daemon Server
   # ---------------------------------------------
 
+<% unless basic_engineer_adhoc? -%>
   DaemonRole:
     Type: AWS::IAM::Role
     Properties:
@@ -724,6 +728,7 @@ Resources:
   DaemonInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties: {Roles: [!Ref DaemonRole]}
+<% end -%>
 
 <% if daemon -%>
   <%=daemon%>:
@@ -739,7 +744,13 @@ Resources:
       # Temporarily hardcode the Ubuntu 20 image just for production-daemon, so we can gradually roll out the update.
       ImageId: <%=IMAGE_ID%>
       InstanceType: !Ref <%=frontends ? 'DaemonInstanceType' : 'InstanceType' %>
+<% if basic_engineer_adhoc? -%>
+      # The pre-created role cannot acquire the permissions in a caller-supplied template.
+      IamInstanceProfile: !ImportValue BasicEngineer-AdhocInstanceProfile
+      MetadataOptions: {HttpTokens: required, HttpPutResponseHopLimit: 1}
+<% else -%>
       IamInstanceProfile: !Ref DaemonInstanceProfile
+<% end -%>
       KeyName: <%=SSH_KEY_NAME%>
       Tags:
         - {Key: Name, Value: <%=frontends ? "#{environment}-daemon" : "!Ref 'AWS::StackName'"%>}

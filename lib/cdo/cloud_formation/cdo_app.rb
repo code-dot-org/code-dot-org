@@ -85,7 +85,25 @@ module Cdo::CloudFormation
       tags.push(key: 'owner', value: Aws::STS::Client.new.get_caller_identity.arn) if rack_env?(:adhoc)
     end
 
+    def basic_engineer_adhoc?
+      options.basic_engineer == true
+    end
+
+    def execution_role_path
+      return 'engineering/BasicEngineerAdhocCloudFormation' if basic_engineer_adhoc?
+      super
+    end
+
+    def chef_key
+      # Legacy adhocs have broader instance roles, so their bootstrap inputs must stay separate.
+      basic_engineer_adhoc? ? 'adhoc/basic-engineer/chef' : CHEF_KEY
+    end
+
     def render(*)
+      if basic_engineer_adhoc?
+        raise 'BASIC_ENGINEER_ADHOC requires RAILS_ENV=adhoc and an adhoc-be-* stack name.' unless rack_env?(:adhoc) && stack_name.start_with?('adhoc-be-')
+        raise 'BasicEngineer adhocs support a single instance with a local database only.' if frontends || database || cdn_enabled || load_balancer || alarms || options.console
+      end
       check_branch!
       persist_op_tags
       super
@@ -172,11 +190,11 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
         unless dry_run
           Aws::S3::Client.new.put_object(
             bucket: S3_BUCKET,
-            key: "#{CHEF_KEY}/bootstrap-#{stack_name}.sh",
+            key: "#{chef_key}/bootstrap-#{stack_name}.sh",
             body: File.read(aws_dir('chef-bootstrap.sh'))
           )
         end
-        "s3://$S3_BUCKET/#{CHEF_KEY}/bootstrap-$STACK.sh"
+        "s3://$S3_BUCKET/#{chef_key}/bootstrap-$STACK.sh"
       end
     end
 
@@ -192,7 +210,8 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
               subdomain('origin')
           end
         end
-        "s3://#{S3_BUCKET}/ssl/certs/#{subdomain}"
+        prefix = basic_engineer_adhoc? ? 'ssl/basic-engineer' : 'ssl'
+        "s3://#{S3_BUCKET}/#{prefix}/certs/#{subdomain}"
       end
     end
 
@@ -207,13 +226,13 @@ To specify an alternate branch name, run `rake adhoc:start branch=BRANCH`."
               RakeUtils.bundle_exec 'berks', 'package', tmp.path
               Aws::S3::Client.new.put_object(
                 bucket: S3_BUCKET,
-                key: "#{CHEF_KEY}/#{branch}.tar.gz",
+                key: "#{chef_key}/#{branch}.tar.gz",
                 body: tmp.read
               )
             end
           end
         end
-        "s3://#{S3_BUCKET}/#{CHEF_KEY}/#{branch}.tar.gz"
+        "s3://#{S3_BUCKET}/#{chef_key}/#{branch}.tar.gz"
       end
     end
 
