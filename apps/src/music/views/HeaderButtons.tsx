@@ -197,7 +197,11 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       {/* Show static pack information. */}
       {!allowPackSelection && packFolder && (
         <RemovedPackTooltip packFolder={packFolder}>
-          <CurrentPack packFolder={packFolder} />
+          {/* Focusable so keyboard users can open the tooltip. */}
+          <CurrentPack
+            packFolder={packFolder}
+            tabIndex={packFolder.removed ? 0 : undefined}
+          />
         </RemovedPackTooltip>
       )}
       {/* Show Start Over button, possibly with pack information inside it. */}
