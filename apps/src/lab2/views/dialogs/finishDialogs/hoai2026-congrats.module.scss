@@ -249,14 +249,14 @@ $ground-shown: 10px;
   color: var(--text-neutral-secondary);
 }
 
-// The offers of a row are equally tall. Each one's button sits at the
-// bottom, so the buttons line up when one offer's text takes more lines.
-.offer > :last-child {
+// At the bottom of the offer, so the offers' buttons line up when one
+// offer's text takes more lines.
+.offerAction {
   margin-top: auto;
 }
 
-// Stands where the Copy link button would, at a button's height.
-.offer .unavailable {
+// As tall as the Copy link button it replaces.
+.offer .cannotShare {
   display: flex;
   align-items: center;
   gap: 8px;

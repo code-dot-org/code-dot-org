@@ -75,7 +75,7 @@ const Offer: React.FunctionComponent<{
       <Typography variant="body2" className={styles.offerText}>
         {text}
       </Typography>
-      {children}
+      <div className={styles.offerAction}>{children}</div>
     </section>
   );
 };
@@ -209,7 +209,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                 busy={showShareSpinner}
               />
             ) : (
-              <Typography variant="body2" className={styles.unavailable}>
+              <Typography variant="body2" className={styles.cannotShare}>
                 <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
                 This game can't be shared right now.
               </Typography>
