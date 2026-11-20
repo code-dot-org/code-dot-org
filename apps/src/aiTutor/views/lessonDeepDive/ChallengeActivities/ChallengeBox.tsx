@@ -17,7 +17,8 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
-import aiTutorAvatar from '@cdo/static/tutor/ai-tutor-avatar.png';
+
+import SparklePulse from '../Animations/SparklePulse';
 
 import VideoChallenge from './VideoChallenge';
 import WhiteboardChallenge from './WhiteboardChallenge';
@@ -74,6 +75,12 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   );
   const [challengeResponse, setChallengeResponse] =
     useState<ChallengeResponse | null>(null);
+  // An evaluation result held back until the waiting animation comes to rest.
+  const [pendingOutcome, setPendingOutcome] = useState<{
+    response: ChallengeResponse;
+    status: string;
+    text: string | null;
+  } | null>(null);
 
   // "Submit" lives in the bottom bar, but the work being submitted
   // (the drawing, or the recording) lives in the active modality component.
@@ -176,13 +183,8 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
             if (!outcome) {
               return;
             }
-            setChallengeResponse(value);
             setPolling(false);
-            setShowConfirmation(false);
-            setEvaluationStatus(outcome.status);
-            setEvaluationText(outcome.text);
-            setEvaluationDatetime(formatTimestamp(value.created_at));
-            setCompositionState(CompositionStates.VIEWING_FEEDBACK);
+            setPendingOutcome({response: value, ...outcome});
           })
           .catch(error => {
             console.error(error);
@@ -194,6 +196,19 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
       setShowConfirmation(false);
     }
   }, [polling, evaluationStatus, challengeResponseId]);
+
+  const revealOutcome = () => {
+    if (!pendingOutcome) {
+      return;
+    }
+    setChallengeResponse(pendingOutcome.response);
+    setShowConfirmation(false);
+    setEvaluationStatus(pendingOutcome.status);
+    setEvaluationText(pendingOutcome.text);
+    setEvaluationDatetime(formatTimestamp(pendingOutcome.response.created_at));
+    setCompositionState(CompositionStates.VIEWING_FEEDBACK);
+    setPendingOutcome(null);
+  };
 
   // "Start over" clears the current attempt: the parent resets the shared
   // submission/feedback state, and the active modality clears its own work
@@ -214,6 +229,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
     setCanSubmit(false);
     setCompositionState(CompositionStates.INITIAL);
     setChallengeResponse(null);
+    setPendingOutcome(null);
   };
 
   const handleIteration = () => {
@@ -275,17 +291,11 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
           </div>
           {showConfirmation ? (
             <div className={styles.waitingDisplay}>
-              <svg width="81" height="77" viewBox="0 0 81 77" fill="none">
-                <circle cx="42.7176" cy="13.12" r="13.12" fill="#34BD43" />
-                <path
-                  d="M58.5385 14.9649C60.1166 12.2316 64.0619 12.2316 65.6399 14.9649L79.754 39.4111C81.332 42.1445 79.3594 45.5611 76.2033 45.5611H47.9752C44.8191 45.5611 42.8464 42.1445 44.4245 39.4111L58.5385 14.9649Z"
-                  fill="#4C42CF"
-                />
-                <path
-                  d="M19.0937 22.7066C18.3039 21.8763 17.08 21.6292 16.0295 22.0782C14.979 22.5273 14.312 23.5828 14.3665 24.7274L15.2591 44.0513L1.26111 57.4029C0.430805 58.1927 0.183651 59.4165 0.632714 60.467C1.08178 61.5175 2.13724 62.1846 3.28188 62.1301L22.6103 61.248L35.9724 75.2415C36.7472 76.0658 37.971 76.3129 39.0215 75.8639C40.072 75.4148 40.7391 74.3594 40.6846 73.2147L39.8025 53.8863L53.796 40.5242C54.6203 39.7494 54.8674 38.5256 54.4184 37.4751C53.9693 36.4246 52.9138 35.7575 51.7692 35.812L32.4453 36.7046L19.0937 22.7066Z"
-                  fill="#0099F3"
-                />
-              </svg>
+              <SparklePulse
+                size={96}
+                phase={pendingOutcome ? 'ready' : 'thinking'}
+                onStopped={revealOutcome}
+              />
               <Typography variant="body3">
                 Tutor is writing feedback...
               </Typography>
@@ -316,7 +326,12 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
                     <div className={styles.feedbackWidget}>
                       <div className={styles.feedbackHeader}>
                         <div className={styles.feedbackAvatar}>
-                          <img src={aiTutorAvatar} alt="" />
+                          <FontAwesomeV6Icon
+                            iconFamily="kit"
+                            iconStyle="solid"
+                            iconName="tutor"
+                            className={styles.feedbackAvatarIcon}
+                          />
                         </div>
                         <div className={styles.feedbackHeaderContent}>
                           <Typography variant="body3">Tutor</Typography>

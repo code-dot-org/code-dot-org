@@ -14,6 +14,7 @@ class MinimalProjectHeader extends React.Component {
     inRestrictedShareMode: PropTypes.bool,
     isBlockedAbuse: PropTypes.bool,
     exceedsAbuseThreshold: PropTypes.bool,
+    onChangedWidth: PropTypes.func,
     isBlockedShareFailure: PropTypes.bool,
   };
 
@@ -25,6 +26,7 @@ class MinimalProjectHeader extends React.Component {
       isBlockedShareFailure,
       legacyProjectName,
       lab2ProjectName,
+      onChangedWidth,
     } = this.props;
     // Only one of legacyProjectName and lab2ProjectName will be defined.
     const projectName = legacyProjectName || lab2ProjectName;
@@ -44,7 +46,7 @@ class MinimalProjectHeader extends React.Component {
             </div>
           )}
         </div>
-        <ProjectRemix />
+        <ProjectRemix onChangedWidth={onChangedWidth} />
       </div>
     );
   }

@@ -420,7 +420,7 @@ class Lesson < ApplicationRecord
   end
 
   # The lesson tutor deep dive is available only for lessons with a lesson plan
-  # (assessments/surveys are excluded) that belong to an AIF/AID student course.
+  # (assessments/surveys are excluded) in a unit that offers it.
   def lesson_tutor_available?
     has_lesson_plan && !!script&.lesson_tutor_available?
   end

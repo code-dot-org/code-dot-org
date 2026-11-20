@@ -347,6 +347,7 @@ class Unit < ApplicationRecord
     generate_authoring_rules
     simple_progress
     simple_progress_image
+    tutor_plus_available
   )
 
   def self.starwars_unit
@@ -1484,6 +1485,7 @@ class Unit < ApplicationRecord
         tts: tts?,
         simpleProgress: simple_progress?,
         simpleProgressImage: simple_progress_image,
+        tutorPlusAvailable: tutor_plus_available?,
         deprecated: deprecated?,
         is_migrated: is_migrated?,
         scriptPath: unit_path,
@@ -1821,7 +1823,8 @@ class Unit < ApplicationRecord
       :include_student_lesson_plans,
       :use_legacy_lesson_plans,
       :enable_blockly_keyboard_navigation,
-      :simple_progress
+      :simple_progress,
+      :tutor_plus_available,
     ]
 
     result = {}
@@ -2009,12 +2012,10 @@ class Unit < ApplicationRecord
     unit_group&.pl_course?
   end
 
-  # The lesson tutor deep dive is scoped to the AI Foundations (AIF) and AI
-  # Discovery (AID) student curricula. PL/facilitator courses are excluded even
-  # if they carry an AI marketing initiative.
+  # PL/facilitator courses never offer the lesson tutor deep dive.
   def lesson_tutor_available?
     return false if pl_course?
-    !!get_course_version&.course_offering&.ai_initiative?
+    !!tutor_plus_available?
   end
 
   # returns true if the user is a levelbuilder, or a teacher with any pilot
