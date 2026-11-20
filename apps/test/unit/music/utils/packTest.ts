@@ -140,6 +140,18 @@ describe('getPackIdForSources', () => {
     ).toBe('song');
   });
 
+  it('uses the pack of the sounds in the code when the saved pack is the default pack', () => {
+    expect(
+      getPackIdForSources(
+        {
+          source: sourceWithBlocks(playSound('song/verse')),
+          labConfig: savedPack('default'),
+        },
+        library
+      )
+    ).toBe('song');
+  });
+
   it('keeps the saved pack when some of the sounds in the code are from it', () => {
     expect(
       getPackIdForSources(

@@ -20,6 +20,10 @@ const pack = (id: string, restricted: boolean) => ({
 });
 
 describe('ProjectPlayer', () => {
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
   it('loads a project saved without its pack under the pack of its sounds', async () => {
     const library = new MusicLibrary('test', {
       id: 'test',

@@ -25,7 +25,7 @@ export function getPackIdForSources(
   sources: Partial<ProjectSources> | undefined,
   library: MusicLibrary
 ): string | undefined {
-  const savedPackId = sources?.labConfig?.music?.packId;
+  const savedPackId = sources?.labConfig?.music?.packId || undefined;
   const packsInCode = findRestrictedPacksInSource(sources?.source, library);
   return savedPackId && packsInCode.includes(savedPackId)
     ? savedPackId

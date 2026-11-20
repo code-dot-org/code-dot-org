@@ -8,6 +8,8 @@ import MiniMusicPlayer from '@cdo/apps/music/views/MiniMusicPlayer';
 
 const mockLoadCode = jest.fn();
 const mockLoadSources = jest.fn();
+const mockPlaySong = jest.fn();
+const mockPreloadSounds = jest.fn();
 
 jest.mock('@cdo/apps/lab2/projects/SourcesStore', () => ({
   SourcesStore: jest.fn(() => ({load: mockLoadSources})),
@@ -34,40 +36,59 @@ jest.mock('@cdo/apps/music/player/MusicPlayer', () =>
   jest.fn(() => ({
     stopSong: jest.fn(),
     updateConfiguration: jest.fn(),
-    preloadSounds: jest.fn(),
-    playSong: jest.fn(),
+    preloadSounds: mockPreloadSounds,
+    playSong: mockPlaySong,
   }))
 );
 
-const pack = (id: string, restricted: boolean) => ({
+const pack = (id: string, name: string, restricted: boolean) => ({
   id,
-  name: id,
+  name,
+  artist: `${name} artist`,
   path: id,
   imageSrc: '',
   restricted,
   sounds: [{name: 'verse', src: 'verse', length: 1, type: 'beat'}],
 });
 
+const sourcesWithSound = (sound: string) => ({
+  source: JSON.stringify({
+    blocks: {blocks: [{type: 'play_sound', fields: {sound}}]},
+  }),
+  labConfig: {music: {library: 'test', blockMode: 'Simple2'}},
+});
+
 describe('MiniMusicPlayer', () => {
-  it('plays a project saved without its pack under the pack of its sounds', async () => {
-    const library = new MusicLibrary('test', {
+  let library: MusicLibrary;
+  let setCurrentPackId: jest.SpyInstance;
+
+  beforeEach(() => {
+    library = new MusicLibrary('test', {
       id: 'test',
       name: 'test',
       imageSrc: '',
       path: 'test',
-      packs: [pack('song', true), pack('drums', false)],
+      packs: [
+        pack('song', 'First song', true),
+        pack('song2', 'Second song', true),
+        pack('drums', 'Drums', false),
+      ],
       instruments: [],
       kits: [],
     } as unknown as LibraryJson);
     jest.spyOn(MusicLibrary, 'loadLibrary').mockResolvedValue(library);
     jest.spyOn(MusicLibrary, 'getInstance').mockReturnValue(library);
-    const setCurrentPackId = jest.spyOn(library, 'setCurrentPackId');
-    mockLoadSources.mockResolvedValue({
-      source: JSON.stringify({
-        blocks: {blocks: [{type: 'play_sound', fields: {sound: 'song/verse'}}]},
-      }),
-      labConfig: {music: {library: 'test', blockMode: 'Simple2'}},
-    });
+    setCurrentPackId = jest.spyOn(library, 'setCurrentPackId');
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+    mockLoadSources.mockReset();
+    mockPreloadSounds.mockReset();
+  });
+
+  it('plays a project saved without its pack under the pack of its sounds, and shows that pack', async () => {
+    mockLoadSources.mockResolvedValue(sourcesWithSound('song/verse'));
 
     render(
       <MiniMusicPlayer
@@ -75,12 +96,72 @@ describe('MiniMusicPlayer', () => {
         libraryName="test"
       />
     );
-    await userEvent.click(await screen.findByText('My song'));
+    await screen.findByText('My song');
+    expect(screen.queryByText(/First song/)).not.toBeInTheDocument();
 
-    await waitFor(() => expect(mockLoadCode).toHaveBeenCalledTimes(1));
+    await userEvent.click(screen.getByText('My song'));
+
+    await waitFor(() => expect(mockPlaySong).toHaveBeenCalledTimes(1));
     expect(setCurrentPackId).toHaveBeenLastCalledWith('song');
     expect(setCurrentPackId.mock.invocationCallOrder[0]).toBeLessThan(
       mockLoadCode.mock.invocationCallOrder[0]
     );
+    expect(screen.getByText(/First song/)).toBeInTheDocument();
+  });
+
+  it('plays only the project clicked last when an earlier one loads later', async () => {
+    let finishFirstLoad: (sources: object) => void = () => {};
+    mockLoadSources.mockImplementation((channelId: string) =>
+      channelId === 'channel1'
+        ? new Promise(resolve => (finishFirstLoad = resolve))
+        : Promise.resolve(sourcesWithSound('song2/verse'))
+    );
+
+    render(
+      <MiniMusicPlayer
+        projects={[
+          {id: 'channel1', name: 'My song'} as Channel,
+          {id: 'channel2', name: 'Other song'} as Channel,
+        ]}
+        libraryName="test"
+      />
+    );
+    await userEvent.click(await screen.findByText('My song'));
+    await userEvent.click(screen.getByText('Other song'));
+    await waitFor(() => expect(mockPlaySong).toHaveBeenCalledTimes(1));
+
+    finishFirstLoad(sourcesWithSound('song/verse'));
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    expect(mockLoadCode).toHaveBeenCalledTimes(1);
+    expect(mockPlaySong).toHaveBeenCalledTimes(1);
+    expect(setCurrentPackId).toHaveBeenLastCalledWith('song2');
+  });
+
+  it('plays only the project clicked last when an earlier one is still loading its sounds', async () => {
+    let finishFirstPreload: () => void = () => {};
+    mockLoadSources.mockResolvedValue(sourcesWithSound('song/verse'));
+    mockPreloadSounds.mockImplementationOnce(
+      () => new Promise<void>(resolve => (finishFirstPreload = resolve))
+    );
+
+    render(
+      <MiniMusicPlayer
+        projects={[
+          {id: 'channel1', name: 'My song'} as Channel,
+          {id: 'channel2', name: 'Other song'} as Channel,
+        ]}
+        libraryName="test"
+      />
+    );
+    await userEvent.click(await screen.findByText('My song'));
+    await waitFor(() => expect(mockPreloadSounds).toHaveBeenCalledTimes(1));
+    await userEvent.click(screen.getByText('Other song'));
+    await waitFor(() => expect(mockPlaySong).toHaveBeenCalledTimes(1));
+
+    finishFirstPreload();
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    expect(mockPlaySong).toHaveBeenCalledTimes(1);
   });
 });

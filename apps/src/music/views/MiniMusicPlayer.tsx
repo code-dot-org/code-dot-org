@@ -43,6 +43,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const [currentProjectId, setCurrentProjectId] = useState<string | undefined>(
     undefined
   );
+  const [playedPackIds, setPlayedPackIds] = useState<{
+    [projectId: string]: string | null;
+  }>({});
+  const latestPlayRequest = useRef(0);
 
   // Setup library and workspace, and analyticsReporter on mount
   const onMount = useCallback(async () => {
@@ -71,17 +75,22 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
 
       playerRef.current?.stopSong();
 
+      const playRequest = ++latestPlayRequest.current;
       const projectSources = await sourcesStoreRef.current.load(project.id);
+      if (playRequest !== latestPlayRequest.current) {
+        return;
+      }
 
       const currentLibrary = MusicLibrary.getInstance();
       if (currentLibrary) {
-        currentLibrary.setCurrentPackId(
-          getPackIdForSources(projectSources, currentLibrary) || null
-        );
+        const packId =
+          getPackIdForSources(projectSources, currentLibrary) || null;
+        currentLibrary.setCurrentPackId(packId);
         playerRef.current?.updateConfiguration(
           currentLibrary.getBPM(),
           currentLibrary.getKey()
         );
+        setPlayedPackIds(packIds => ({...packIds, [project.id]: packId}));
       }
 
       // Load code
@@ -115,6 +124,10 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
           });
         }
       );
+
+      if (playRequest !== latestPlayRequest.current) {
+        return;
+      }
 
       // Play sounds
       playerRef.current?.playSong(playbackEvents);
@@ -156,7 +169,12 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   return (
     <div className={moduleStyles.miniMusicPlayer}>
       {projects.map(project => {
-        const packId = project?.labConfig?.music.packId;
+        // The pack saved on the channel may be missing or wrong, so the pack
+        // a project last played under is shown once it is known.
+        const packId =
+          project.id in playedPackIds
+            ? playedPackIds[project.id]
+            : project?.labConfig?.music.packId;
         const packDetails = packId ? getPackDetails(packId) : undefined;
 
         return (
