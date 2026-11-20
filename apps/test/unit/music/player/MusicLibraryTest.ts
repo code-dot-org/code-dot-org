@@ -28,10 +28,11 @@ function createLibrary(): MusicLibrary {
     folders: [],
     instruments: [],
     kits: [],
+    // Artist packs come before built-in ones in the real library.
     packs: [
-      folder('built_in', false, true),
-      folder('artist', true),
       folder('removed_artist', true, true),
+      folder('built_in', false),
+      folder('artist', true),
     ],
   };
   return new MusicLibrary('test', libraryJson);
@@ -50,18 +51,27 @@ describe('MusicLibrary removed packs', () => {
     library.setCurrentPackId('removed_artist');
 
     expect(ids(library.getRestrictedPacks())).toEqual([
+      'removed_artist',
       'artist',
-      'removed_artist',
-    ]);
-    expect(ids(library.getAvailableSounds())).toEqual([
-      'built_in',
-      'removed_artist',
     ]);
     expect(library.isSoundIdAvailable('removed_artist/beat')).toBe(true);
   });
 
-  it('does not remove a built-in pack', () => {
+  it('makes sounds of a removed pack silent and not choosable', () => {
     const library = createLibrary();
-    expect(ids(library.getAvailableSounds())).toEqual(['built_in']);
+    library.setCurrentPackId('removed_artist');
+
+    expect(library.isSoundRemoved('removed_artist/beat')).toBe(true);
+    expect(library.isSoundRemoved('built_in/beat')).toBe(false);
+    expect(ids(library.getPlayableSounds())).toEqual(['built_in']);
+    expect(library.getDefaultSound()).toBe('built_in/beat');
+  });
+
+  it('defaults to a removed sound when a level allows only those', () => {
+    const library = createLibrary();
+    library.setCurrentPackId('removed_artist');
+    library.setAllowedSounds({removed_artist: ['beat']});
+
+    expect(library.getDefaultSound()).toBe('removed_artist/beat');
   });
 });

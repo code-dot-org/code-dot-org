@@ -49,6 +49,7 @@ export enum WARNING_BANNER_MESSAGES {
   VIEWING_EXEMPLAR = 'You are viewing an example solution.',
   VIEWING_VERSION = 'You are viewing an older version of this project. To continue working, you can either restore this version or go back to the current version.',
   EDITING_WIDGET2 = 'You are editing a widget2 ({widgetId}).  Changes will affect all levels that use it.',
+  MUSIC_PACK_REMOVED = 'A song pack this project used is no longer available. Some sounds may play as silence as a result.',
 }
 
 // Default height of the predict question free response text area.

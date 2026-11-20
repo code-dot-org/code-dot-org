@@ -109,6 +109,16 @@
       &ThinBorder {
         border-width: 1px;
       }
+
+      &Silent {
+        border-style: dashed;
+        background-image: repeating-linear-gradient(
+          -45deg,
+          transparent 0 4px,
+          var(--background-neutral-quinary) 4px 8px
+        );
+        background-color: transparent;
+      }
     }
 
     .tracksContainer {
