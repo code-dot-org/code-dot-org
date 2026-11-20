@@ -210,6 +210,17 @@ class Ailab < Level
     parsed_mode if parsed_mode.is_a?(Hash)
   end
 
+  private def valid_test_rows?(test_rows)
+    return false unless test_rows.is_a?(Hash) && test_rows.size == 1
+
+    unit, amount = test_rows.first
+    case unit
+    when 'count' then amount.is_a?(Integer) && amount >= 1
+    when 'percent' then amount.is_a?(Numeric) && amount.positive? && amount < 100
+    else false
+    end
+  end
+
   private def validate_lab2_mode
     return unless JSONValue.value(uses_lab2) == true
 
@@ -236,6 +247,10 @@ class Ailab < Level
       unless accuracy.is_a?(Numeric) && REQUIRE_ACCURACY_RANGE.cover?(accuracy)
         errors.add(:mode, 'must have a required accuracy from 0 to 100.')
       end
+    end
+
+    if parsed_mode.key?('testRows') && !valid_test_rows?(parsed_mode['testRows'])
+      errors.add(:mode, 'must test on a whole number of rows of at least 1, or a percentage of rows above 0 and below 100.')
     end
 
     if parsed_mode['pretrained'] == true

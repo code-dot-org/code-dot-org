@@ -34,11 +34,16 @@ import {ADAPTIVE_MODELS} from '../../ai/models';
 import {buildTutorContext} from '../../ai/tutorContext';
 import {workAdapterFor} from '../../ai/validation/adapters';
 import {chatThresholds} from '../../ai/validation/chatThresholds';
-import {continueUnlockReason, latestValidation} from '../../progress/model';
+import {
+  continueUnlockReason,
+  latestValidation,
+  workAttempts,
+} from '../../progress/model';
 import {projectInfoFromChannel} from '../../project/projectInfo';
 import {LevelStep as LevelStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
 
+import GeneratingProject from './GeneratingProject';
 import {useGenerateProject} from './useGenerateProject';
 import {useStepInstructions} from './useStepInstructions';
 import {useStepValidation} from './useStepValidation';
@@ -154,6 +159,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   useEffect(() => {
     if (buildProject) setBuildRequested(false);
   }, [buildProject, setBuildRequested]);
+  const [settled, setSettled] = useState(false);
+  const settle = useCallback(() => setSettled(true), []);
   // Keyed on the project's strings, not the channel, which changes on every save.
   const {name: projectName, description: projectDescription} =
     projectInfoFromChannel(step.project ? channel : undefined);
@@ -224,6 +231,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   const [chat, setChat] = useState<ChatHandle>();
   const chatHost = useMemo(() => ({onChatReady: setChat}), []);
   const latestValidationAttempt = latestValidation(entry);
+  const checkedBuilds = workAttempts(entry).length;
   const recordStepValidation = useCallback(
     (attempt: Parameters<typeof recordValidation>[1]) =>
       recordValidation(step, attempt),
@@ -250,8 +258,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   // Assemble the level properties to provide to the lab: the level's own, plus
   // adaptive-specific overrides: step-specific instructions, always hide share
   // and remix, spotlight the instructions on a first visit in place of the
-  // lab's product tours, and pathway-specific tutor context that gets appendd
-  // to the level system prompt.
+  // lab's product tours and tutor welcome, and pathway-specific tutor context
+  // that gets appended to the level system prompt.
   const viewProperties = useMemo<LevelProperties>(() => {
     const context = buildTutorContext({
       pathway,
@@ -263,6 +271,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
         : undefined,
       instructions,
       latestValidationAttempt,
+      checkedBuilds,
       continueUnlocked: unlockReason,
       chatThresholds: chatThresholds(),
     });
@@ -275,6 +284,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       hideNonInstructionTabs: true,
       spotlightInstructions: firstVisit,
       disableProductTours: true,
+      disableAiTutorWelcome: true,
       longInstructions: instructions,
       levelSystemPrompt: own ? `${own}\n\n${context}` : context,
       // The tutor on the shell's own model, through the gateway; stock otherwise.
@@ -294,6 +304,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     projectDescription,
     instructions,
     latestValidationAttempt,
+    checkedBuilds,
     unlockReason,
     firstVisit,
     aiAvailable,
@@ -344,7 +355,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
       : undefined;
   return (
     <div className={styles.levelHost}>
-      {ready ? (
+      {ready && (!buildProject || settled) ? (
         <ExternalNavigationContext.Provider value={navigation}>
           <ChatHostContext.Provider value={chatHost}>
             <Suspense fallback={<Loading isLoading />}>
@@ -356,6 +367,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
             </Suspense>
           </ChatHostContext.Provider>
         </ExternalNavigationContext.Provider>
+      ) : buildProject ? (
+        <GeneratingProject ready={ready} onSettled={settle} />
       ) : (
         <Loading isLoading loadingText={loadingText} />
       )}

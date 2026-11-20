@@ -8,6 +8,8 @@ import {useProject} from '../ProjectContext';
 import {getDatasetId, getIdColumn} from '../selectors';
 import type {DataRow} from '../types';
 
+import InfoButton from './InfoButton';
+
 import styles from './datasetRowCard.module.scss';
 import appStyles from '../app.module.scss';
 
@@ -15,9 +17,15 @@ interface DatasetRowCardProps {
   isCurrent: boolean;
   rowNumber: number;
   row: DataRow;
+  isTestRow: boolean;
 }
 
-const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
+const DatasetRowCard = ({
+  isCurrent,
+  rowNumber,
+  row,
+  isTestRow,
+}: DatasetRowCardProps) => {
   const datasetId = useAppSelector(state => getDatasetId(state) || 'unknown');
   const idColumn = useAppSelector(getIdColumn);
   const name =
@@ -27,6 +35,7 @@ const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
   const {project} = useProject();
   const titleId = useId();
   const rowNumberId = useId();
+  const testRowId = useId();
   const detailsRef = useRef<HTMLDListElement>(null);
 
   // Coming back to a row would otherwise keep where its list was scrolled.
@@ -69,20 +78,43 @@ const DatasetRowCard = ({isCurrent, rowNumber, row}: DatasetRowCardProps) => {
     <div
       className={styles.card}
       role="group"
-      aria-labelledby={
-        name === undefined ? titleId : `${titleId} ${rowNumberId}`
-      }
+      aria-labelledby={[
+        titleId,
+        name !== undefined && rowNumberId,
+        isTestRow && testRowId,
+      ]
+        .filter(Boolean)
+        .join(' ')}
       aria-roledescription="slide"
     >
       <div className={styles.heading}>
-        <Typography
-          id={titleId}
-          component="h3"
-          variant="body1"
-          className={styles.title}
-        >
-          {name ?? `Row ${rowNumber}`}
-        </Typography>
+        <div className={styles.titleRow}>
+          <Typography
+            id={titleId}
+            component="h3"
+            variant="body1"
+            className={styles.title}
+          >
+            {name ?? `Row ${rowNumber}`}
+          </Typography>
+          {isTestRow && (
+            <div className={styles.testRowMark}>
+              <Typography
+                id={testRowId}
+                component="span"
+                variant="body3"
+                className={styles.testRowText}
+              >
+                Test row
+              </Typography>
+              <InfoButton
+                about="test rows"
+                tooltip="This row will be set aside for testing."
+                tabIndex={isCurrent ? 0 : -1}
+              />
+            </div>
+          )}
+        </div>
         {name !== undefined && (
           <Typography
             id={rowNumberId}

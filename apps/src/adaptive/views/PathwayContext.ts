@@ -13,14 +13,18 @@ import {
   Progress,
   ValidationAttempt,
 } from '../progress/model';
+import {ProgressKey} from '../progress/progressStore';
 import {Checkpoint, Pathway, Step} from '../types';
 
 export interface PathwayContextValue {
   pathway: Pathway;
+  progressKey: ProgressKey;
   checkpoint: Checkpoint;
   statusMap: CheckpointStatusMap;
   progress: Progress;
   isViewingStudent: boolean;
+  /** The student a teacher is viewing, or null for the student themself. */
+  viewAsUserId: number | null;
   saveGeneratedInstructions: (
     stepId: string,
     content: GeneratedContent

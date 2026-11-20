@@ -25,12 +25,18 @@ class AdaptiveProgressController < ApplicationController
   # With user_id, a teacher reads one of their students' progress; writes are
   # always the caller's own.
   def show
-    user = current_user
-    if params[:user_id].present?
-      user = User.find_by(id: params[:user_id])
-      return head :forbidden unless user&.student_of?(current_user)
-    end
+    user = viewed_user
+    return head :forbidden unless user
     render json: @level.progress_json(user_id: user.id, script_id: @unit.id)
+  end
+
+  # Retrieve metrics about the current user's AI use on the adaptive tutorial.
+  # This is used for the wrap up settings.
+  # GET /adaptive_progress/ai_metrics?scriptId=&levelId=[&user_id=]
+  def ai_metrics
+    user = viewed_user
+    return head :forbidden unless user
+    render json: @level.ai_metrics(user_id: user.id, script_id: @unit.id)
   end
 
   # PUT /adaptive_progress/steps/:step_id/progress
@@ -102,6 +108,13 @@ class AdaptiveProgressController < ApplicationController
       context: {reason: reason, step_id: params[:step_id], level_id: @level.id, script_id: @unit.id}
     )
     head :unprocessable_entity
+  end
+
+  # The caller, or with user_id, a student of theirs; nil if they teach no such student.
+  private def viewed_user
+    return current_user if params[:user_id].blank?
+    user = User.find_by(id: params[:user_id])
+    user if user&.student_of?(current_user)
   end
 
   private def load_adaptive

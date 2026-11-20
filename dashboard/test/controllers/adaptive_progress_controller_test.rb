@@ -406,6 +406,53 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "ai metrics are zero for a student with no chat" do
+    get :ai_metrics, params: params
+
+    assert_response :success
+    assert_equal({'accepted' => 0, 'rejected' => 0}, JSON.parse(response.body))
+  end
+
+  test "ai metrics count the student's decisions in this pathway's level steps and unit" do
+    log_chat_event @sandbox, 'aiTutorVersionActionAccept'
+    log_chat_event @sandbox, 'aiTutorVersionActionAccept'
+    log_chat_event @template, 'aiTutorVersionActionReject'
+    log_chat_event @sandbox, 'success'
+    log_chat_event create(:weblab2), 'aiTutorVersionActionAccept'
+    log_chat_event @sandbox, 'aiTutorVersionActionReject', script_id: create(:unit).id
+    log_chat_event @sandbox, 'aiTutorVersionActionReject', user: create(:student)
+
+    get :ai_metrics, params: params
+
+    assert_equal({'accepted' => 2, 'rejected' => 1}, JSON.parse(response.body))
+  end
+
+  test "a teacher reads their student's ai metrics, and no one else's" do
+    log_chat_event @sandbox, 'aiTutorVersionActionAccept'
+    teacher = create(:teacher)
+    create(:follower, section: create(:section, user: teacher), student_user: @student)
+    sign_out @student
+    sign_in teacher
+
+    get :ai_metrics, params: {**params, user_id: @student.id}
+    assert_equal({'accepted' => 1, 'rejected' => 0}, JSON.parse(response.body))
+
+    get :ai_metrics, params: {**params, user_id: create(:student).id}
+    assert_response :forbidden
+  end
+
+  test "ai metrics refuse an adaptive level that is not in the unit" do
+    get :ai_metrics, params: {scriptId: create(:unit).id, levelId: @level.id}
+
+    assert_response :not_found
+  end
+
+  private def log_chat_event(level, notification_type, user: @student, script_id: @unit.id)
+    create(:aichat_event, user: user, level_id: level.id, script_id: script_id,
+      aichat_event: {'notificationType' => notification_type, 'text' => 'Done.', 'timestamp' => 1}
+    )
+  end
+
   private def params
     {scriptId: @unit.id, levelId: @level.id}
   end

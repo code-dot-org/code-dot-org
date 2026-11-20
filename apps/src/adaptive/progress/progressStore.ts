@@ -32,7 +32,12 @@ const query = ({scriptId, levelId}: ProgressKey) =>
 
 type PutRoute = 'progress' | 'generated_instructions' | 'validation_history';
 
-export type ProgressRoute = PutRoute | 'load' | 'level_step';
+export type ProgressRoute = PutRoute | 'load' | 'level_step' | 'ai_metrics';
+
+export interface AiMetrics {
+  accepted: number;
+  rejected: number;
+}
 
 export function recordProgressOk(route: ProgressRoute) {
   countAdaptive('Adaptive.ProgressRequest', {Route: route, Outcome: 'ok'});
@@ -68,6 +73,24 @@ export class ProgressStore {
     );
     const body = (await response.json()) as Partial<Progress>;
     return {...EMPTY_PROGRESS, ...body};
+  }
+
+  async loadAiMetrics(
+    key: ProgressKey,
+    userId?: number
+  ): Promise<AiMetrics | undefined> {
+    const user = userId === undefined ? '' : `&user_id=${userId}`;
+    try {
+      const response = await HttpClient.get(
+        `/adaptive_progress/ai_metrics?${query(key)}${user}`
+      );
+      const counts = (await response.json()) as AiMetrics;
+      recordProgressOk('ai_metrics');
+      return counts;
+    } catch (error) {
+      recordProgressFailure('ai_metrics', error);
+      return undefined;
+    }
   }
 
   saveStep(key: ProgressKey, stepId: string, write: StepWrite): Promise<void> {

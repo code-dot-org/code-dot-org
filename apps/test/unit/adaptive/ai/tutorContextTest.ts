@@ -93,6 +93,7 @@ describe('buildTutorContext', () => {
       step: checkedStep,
       statusMap,
       instructions: '**Add a heading** to the top of the page.',
+      checkedBuilds: 1,
       chatThresholds: thresholds,
     });
 
@@ -105,10 +106,13 @@ describe('buildTutorContext', () => {
       'The step is checked only when the student accepts a build from you; talking alone is never checked. If they are struggling, or unsure why they have not met the goal yet, offer to build.'
     );
     expect(context).toContain(
+      '- Code the student types into the editor is never checked either. If they changed the code themselves and nothing happened, tell them so and offer a build that keeps their changes.'
+    );
+    expect(context).toContain(
       '- Continue is locked until a build meets the goal.'
     );
     expect(context).toContain(
-      'never to be told to the student: after 4 of your replies a judge reads this chat and opens Continue if the student is genuinely trying, and after 8 replies Continue opens regardless.'
+      'never to be told to the student: after 4 of your replies a judge reads this chat and opens Continue if the student is genuinely trying, after 8 replies Continue opens regardless, and after 3 accepted builds that miss the goal Continue opens as well; builds checked so far: 1.'
     );
   });
 

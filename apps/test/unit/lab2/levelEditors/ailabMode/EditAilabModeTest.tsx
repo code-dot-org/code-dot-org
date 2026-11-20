@@ -259,7 +259,7 @@ describe('EditAilabMode', () => {
 
   it('drops the training options saved with the testing view hidden', () => {
     const savedMode = renderEditor(
-      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}}'
+      '{"hideTestingView": true, "requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}, "testRows": {"count": 5}}'
     );
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
@@ -269,7 +269,7 @@ describe('EditAilabMode', () => {
 
   it('clears and locks the training options while the testing view is hidden', () => {
     const savedMode = renderEditor(
-      '{"requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}}'
+      '{"requireAccuracy": 70, "hideSave": true, "hyperparameters": {"k": 5}, "testRows": {"count": 5}}'
     );
     const accuracy = screen.getByRole('spinbutton', {
       name: /Required accuracy/,
@@ -279,21 +279,30 @@ describe('EditAilabMode', () => {
     });
     const k = () =>
       screen.getByRole('spinbutton', {name: /Number of neighbors \(k\)/});
+    const testRowsUnit = () => screen.getByRole('combobox', {name: 'Test on'});
+    const testRows = () =>
+      screen.getByRole('spinbutton', {name: /rows to test on/});
     const hideTestingView = screen.getByRole('checkbox', {
       name: 'Hide training and testing so students only explore the dataset',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave, k()].forEach(field => expect(field).toBeDisabled());
-    [accuracy, k()].forEach(field => expect(field).toHaveValue(null));
+    [accuracy, hideSave, k(), testRowsUnit(), testRows()].forEach(field =>
+      expect(field).toBeDisabled()
+    );
+    [accuracy, k(), testRows()].forEach(field =>
+      expect(field).toHaveValue(null)
+    );
     expect(JSON.parse(savedMode())).toEqual({
       hideTestingView: true,
       trainer: 'knn',
     });
 
     fireEvent.click(hideTestingView);
-    [accuracy, hideSave, k()].forEach(field => expect(field).toBeEnabled());
-    expect(k()).toHaveValue(null);
+    [accuracy, hideSave, k(), testRowsUnit(), testRows()].forEach(field =>
+      expect(field).toBeEnabled()
+    );
+    [k(), testRows()].forEach(field => expect(field).toHaveValue(null));
     expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
   });
 
@@ -358,6 +367,85 @@ describe('EditAilabMode', () => {
 
     fireEvent.change(accuracy, {target: {value: '150'}});
     expect(accuracy).toBeInvalid();
+  });
+
+  it('sets the rows to test on as a percentage or a number of rows', () => {
+    const savedMode = renderEditor(null);
+    const unit = screen.getByRole('combobox', {name: 'Test on'});
+    expect(unit).toHaveValue('percent');
+
+    fireEvent.change(
+      screen.getByRole('spinbutton', {name: /Percentage of rows to test on/}),
+      {target: {value: '20'}}
+    );
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      testRows: {percent: 20},
+    });
+
+    fireEvent.change(unit, {target: {value: 'count'}});
+    const count = screen.getByRole('spinbutton', {
+      name: /Number of rows to test on/,
+    });
+    expect(count).toHaveValue(20);
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      testRows: {count: 20},
+    });
+
+    fireEvent.change(count, {target: {value: ''}});
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+  });
+
+  it('does not save rows to test on outside the range of their unit, and blocks the form', () => {
+    const savedMode = renderEditor('{"testRows": {"count": 5}}');
+    const unit = screen.getByRole('combobox', {name: 'Test on'});
+    const amount = () =>
+      screen.getByRole<HTMLInputElement>('spinbutton', {
+        name: /rows to test on/,
+      });
+    expect(unit).toHaveValue('count');
+    expect(amount()).toHaveValue(5);
+
+    fireEvent.change(amount(), {target: {value: '2.5'}});
+    expect(
+      screen.getByText('Enter a whole number of at least 1.')
+    ).toBeInTheDocument();
+    expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+
+    expect(amount().checkValidity()).toBe(false);
+
+    fireEvent.change(unit, {target: {value: 'percent'}});
+    expect(amount().checkValidity()).toBe(true);
+    expect(JSON.parse(savedMode())).toEqual({
+      trainer: 'knn',
+      testRows: {percent: 2.5},
+    });
+
+    ['0', '100'].forEach(percent => {
+      fireEvent.change(amount(), {target: {value: percent}});
+      expect(
+        screen.getByText('Enter a number above 0 and below 100.')
+      ).toBeInTheDocument();
+      expect(amount().checkValidity()).toBe(false);
+      expect(JSON.parse(savedMode())).toEqual({trainer: 'knn'});
+    });
+  });
+
+  it('blocks the form when the rows to test on leave none in the dataset to train on', async () => {
+    serveFiles(FILES);
+    renderEditor('{"datasets": ["zoo"], "testRows": {"count": 2}}');
+    await columnsLoaded();
+    const count = screen.getByRole<HTMLInputElement>('spinbutton', {
+      name: /Number of rows to test on/,
+    });
+    expect(
+      screen.getByText('Enter fewer than 2, the number of rows in the dataset.')
+    ).toBeInTheDocument();
+    expect(count.checkValidity()).toBe(false);
+
+    fireEvent.change(count, {target: {value: '1'}});
+    expect(count.checkValidity()).toBe(true);
   });
 
   it('saves k-nearest neighbors when no trainer is set', () => {

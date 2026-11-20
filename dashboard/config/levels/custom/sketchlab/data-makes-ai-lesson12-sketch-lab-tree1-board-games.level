@@ -1,0 +1,20 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-20T02:30:46.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "data-makes-ai-lesson12-sketch-lab-template-board-games",
+    "long_instructions": "## Add Tree 1\r\nGoal: Put Tree 1 on your map. Compare it to your rule.\r\n\r\n1. Drag your Data Scientist to **Define Stop 5**.\r\n2. Open your **Backpack**. Add Tree 1 to the \"Add Tree 1 from your Backpack\" box.\r\n3. Trace your user's path on Tree 1. Check that it ends at the prediction you wrote in Tree 1 in your guide.\r\n4. Finish the sentence: \"My rule and Tree 1 are alike or different because ...\"\r\n\r\nYou are done when Tree 1 is on your map and Define Stop 5 has an answer.",
+    "hide_share_and_remix": "false",
+    "display_name": "Project Map: Board Games",
+    "bubble_choice_description": "This dataset contains qualities about different board games.",
+    "thumbnail_url": "https://images.code.org/631e19ba8c9568489a630402f680ab07-k4e-boardgames.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T02:30:46.884+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-board-games\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-board-games\"},{\"changed_at\":\"2026-11-20 02:31:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

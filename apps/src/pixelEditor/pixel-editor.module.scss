@@ -165,8 +165,9 @@ $border-subtle: chrome.$border-subtle;
     margin: 0 2px;
   }
 
+  // A square, the height of the swatch inside it.
   .colorPicker {
-    width: 64px;
+    width: 30px;
   }
 
   .spectrumPopover {
@@ -318,7 +319,7 @@ $palette-row: $palette-columns * $palette-swatch + ($palette-columns - 1) * $pal
   margin: 0;
   padding: 0;
   border: 2px solid var(--dialog-control-border-strong);
-  border-radius: 50%;
+  border-radius: 4px;
   cursor: pointer;
 
   &:hover {

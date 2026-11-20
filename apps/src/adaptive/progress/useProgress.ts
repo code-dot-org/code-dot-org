@@ -218,6 +218,7 @@ export function useProgress(
     progress,
     isLoading: progress === undefined,
     isViewingStudent,
+    viewAsUserId,
     statusMap,
     /** What the student has shown in each skill, which the status map is routed on. */
     evidence,

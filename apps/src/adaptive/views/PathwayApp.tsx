@@ -220,6 +220,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   initialProject = false,
   isFirstVisit,
   isViewingStudent,
+  viewAsUserId,
   startStep,
   completeStep,
   leaveStep,
@@ -422,10 +423,12 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     () =>
       playing && {
         pathway,
+        progressKey,
         checkpoint: playing,
         statusMap,
         progress,
         isViewingStudent,
+        viewAsUserId,
         saveGeneratedInstructions,
         recordValidation,
         aiContext,
@@ -434,10 +437,12 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       },
     [
       pathway,
+      progressKey,
       playing,
       statusMap,
       progress,
       isViewingStudent,
+      viewAsUserId,
       saveGeneratedInstructions,
       recordValidation,
       aiContext,
