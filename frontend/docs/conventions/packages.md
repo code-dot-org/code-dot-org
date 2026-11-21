@@ -113,6 +113,9 @@ export default baseConfig;
 
 ## Labs
 
+New labs go in `apps/` on lab2 by default (see the root `AGENTS.md`); scaffold one
+here only when the lab has explicitly chosen `frontend/`.
+
 Labs (`packages/labs/*`) are standalone React apps that are also consumed as lazy-loaded chunks by Studio. Use `frontend/packages/labs/music/` as the reference implementation when scaffolding a new lab.
 
 ### Scaffolding a new lab
