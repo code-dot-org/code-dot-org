@@ -13,9 +13,6 @@ $(document).ready(function () {
       initialImageUrl={imageUrlInput.val()}
       showPreview
     />,
-    $('#upload-image-button').get(0),
-    {
-      legacyReactDomRender: true,
-    }
+    $('#upload-image-button').get(0)
   );
 });

@@ -164,9 +164,6 @@ $(document).ready(function () {
     <DataLibrary />,
     $('<div></div>')
       .insertAfter(`label[for="level_data_library_tables"]`)
-      .get(0),
-    {
-      legacyReactDomRender: true,
-    }
+      .get(0)
   );
 });

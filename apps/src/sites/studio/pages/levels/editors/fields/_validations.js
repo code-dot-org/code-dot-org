@@ -18,9 +18,6 @@ $(document).ready(function () {
       levelName={levelName}
       appName={appName}
     />,
-    document.getElementById('validations-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('validations-editor')
   );
 });
