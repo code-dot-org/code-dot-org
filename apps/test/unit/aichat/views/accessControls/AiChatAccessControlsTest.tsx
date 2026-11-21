@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 import {handleUpdateSectionAiChallengeEnabled} from '@cdo/apps/aichat/accessControlsApi';
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types';
 import AiChatAccessControls from '@cdo/apps/aichat/views/accessControls/AiChatAccessControls';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
@@ -33,8 +34,11 @@ jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
 
 const updateChallengeEnabled =
   handleUpdateSectionAiChallengeEnabled as jest.Mock;
+const sendEvent = analyticsReporter.sendEvent as jest.Mock;
 
 const SECTION_ID = 11;
+const COURSE_ID = 42;
+const UNIT_ID = 7;
 
 function renderControls({
   aiChatAccessLevel = AiChatAccessLevels.ENABLED,
@@ -58,6 +62,8 @@ function renderControls({
         ai_chat_access_level: aiChatAccessLevel,
         ai_challenge_enabled: aiChallengeEnabled,
         lesson_tutor_available: lessonTutorAvailable,
+        course_id: COURSE_ID,
+        unit_id: UNIT_ID,
       },
     ])
   );
@@ -78,6 +84,7 @@ describe('AiChatAccessControls AI Tutor+ Challenges toggle', () => {
     stubRedux();
     registerReducers({currentUser, teacherSections});
     updateChallengeEnabled.mockReset();
+    sendEvent.mockReset();
   });
 
   afterEach(() => {
@@ -87,6 +94,11 @@ describe('AiChatAccessControls AI Tutor+ Challenges toggle', () => {
   it('shows when AI chat is enabled and the course has the lesson tutor', () => {
     renderControls();
     expect(challengeToggle()).not.toBeChecked();
+  });
+
+  it('is tagged as new', () => {
+    renderControls();
+    expect(screen.getByText('New')).toBeInTheDocument();
   });
 
   it('is hidden when AI chat is essential only', () => {
@@ -112,6 +124,12 @@ describe('AiChatAccessControls AI Tutor+ Challenges toggle', () => {
       ).toBe(true)
     );
     expect(challengeToggle()).toBeChecked();
+    expect(sendEvent).toHaveBeenCalledWith('tutor_plus_challenges_toggled', {
+      section_id: SECTION_ID,
+      course_id: COURSE_ID,
+      unit_id: UNIT_ID,
+      enabled: true,
+    });
   });
 
   it('reverts when the save fails', async () => {
@@ -122,5 +140,9 @@ describe('AiChatAccessControls AI Tutor+ Challenges toggle', () => {
 
     await waitFor(() => expect(challengeToggle()).toBeChecked());
     expect(updateChallengeEnabled).toHaveBeenCalledWith(SECTION_ID, false);
+    expect(sendEvent).not.toHaveBeenCalledWith(
+      'tutor_plus_challenges_toggled',
+      expect.anything()
+    );
   });
 });

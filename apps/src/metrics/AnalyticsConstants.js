@@ -377,6 +377,7 @@ const EVENTS = {
   TUTOR_PLUS_CHALLENGE_STARTED: 'tutor_plus_challenge_started',
   TUTOR_PLUS_CHALLENGE_RESTARTED: 'tutor_plus_challenge_restarted',
   TUTOR_PLUS_CHALLENGE_SUBMITTED: 'tutor_plus_challenge_submitted',
+  TUTOR_PLUS_CHALLENGES_TOGGLED: 'tutor_plus_challenges_toggled',
   TUTOR_PLUS_GALLERY_VIEWED: 'tutor_plus_gallery_viewed',
   TUTOR_PLUS_GALLERY_VISIBILITY_TOGGLED:
     'tutor_plus_gallery_visibility_toggled',

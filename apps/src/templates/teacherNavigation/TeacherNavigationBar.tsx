@@ -1,4 +1,5 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
+import {TagProps} from '@code-dot-org/component-library/tags';
 import {Typography} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
@@ -10,7 +11,10 @@ import {
   useParams,
 } from 'react-router-dom';
 
-import {shouldShowAiChatEssentialAlert} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {
+  canToggleAiChallenges,
+  shouldShowAiChatEssentialAlert,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -245,6 +249,22 @@ const TeacherNavigationBar: React.FC<{
     [selectedSection, teacherAiChatAccessLevel]
   );
 
+  const getTag = (key: string): TagProps | undefined => {
+    if (
+      selectedSection &&
+      key === TEACHER_NAVIGATION_PATH_NAMES.aiChatSettings &&
+      !shouldShowErrorIcon(key) &&
+      canToggleAiChallenges({
+        lessonTutorAvailable: selectedSection.lessonTutorAvailable,
+        sectionAiChatAccessLevel: selectedSection.aiChatAccessLevel,
+        teacherAiChatAccessLevel,
+      })
+    ) {
+      return {label: 'New', color: 'pink'};
+    }
+    return undefined;
+  };
+
   const getSidebarOptionsForSection = (
     sidebarKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[]
   ) => {
@@ -261,6 +281,7 @@ const TeacherNavigationBar: React.FC<{
         unitName={selectedSection.unitName}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
         showErrorIcon={shouldShowErrorIcon(key)}
+        tag={getTag(key)}
       />
     ));
   };

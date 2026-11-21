@@ -133,3 +133,16 @@ export const shouldShowAiChatEssentialAlert = ({
       teacherAiChatAccessLevel === AiChatAccessLevels.DISABLED)
   );
 };
+
+export const canToggleAiChallenges = ({
+  lessonTutorAvailable,
+  sectionAiChatAccessLevel,
+  teacherAiChatAccessLevel,
+}: {
+  lessonTutorAvailable: boolean | undefined;
+  sectionAiChatAccessLevel: AiChatAccessLevel;
+  teacherAiChatAccessLevel: AiChatAccessLevel;
+}): boolean =>
+  !!lessonTutorAvailable &&
+  sectionAiChatAccessLevel === AiChatAccessLevels.ENABLED &&
+  teacherAiChatAccessLevel !== AiChatAccessLevels.DISABLED;

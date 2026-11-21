@@ -63,6 +63,7 @@
 }
 
 .linkText {
+  flex-grow: 1;
   margin-bottom: 0 !important;
   font-weight: 600 !important;
   color: var(--text-neutral-tertiary);
@@ -79,8 +80,8 @@
 }
 
 .navTag {
-  // Pull the badge closer to the label than the sidebarOption's 12px gap.
-  margin-inline-start: -6px;
+  // The pull keeps "Student Snapshot" and its tag on one line.
+  margin-inline: -6px 4px;
   flex-shrink: 0;
 }
 

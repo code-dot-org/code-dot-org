@@ -150,6 +150,46 @@ describe('TeacherNavigationBar', () => {
       assigned_required_inaccessible_ai_models: false,
       ai_chat_access_level: 'disabled',
     },
+    // Assigned a course with the lesson tutor, so AI Tutor+ challenges can be
+    // turned on from AI settings.
+    {
+      id: 19,
+      name: 'Period 8',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+      ai_chat_access_level: 'enabled',
+      lesson_tutor_available: true,
+    },
+    // Lesson tutor course, but full AI chat access is off, which hides the
+    // challenges toggle.
+    {
+      id: 20,
+      name: 'Period 9',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+      ai_chat_access_level: 'essential_only',
+      lesson_tutor_available: true,
+    },
+    // Lesson tutor course that requires AI tools, with the tools switched off.
+    {
+      id: 21,
+      name: 'Period 10',
+      hidden: false,
+      courseVersionName: 'csa-2022',
+      unitName: 'csa1-2022',
+      unitPosition: 1,
+      participantType: 'student',
+      assigned_ai_chat_tools_dependency: 'essential',
+      assigned_required_inaccessible_ai_models: false,
+      ai_chat_access_level: 'disabled',
+      lesson_tutor_available: true,
+    },
   ];
   const serverSections = sections.map(serverSectionFromSection);
 
@@ -406,10 +446,10 @@ describe('TeacherNavigationBar', () => {
   // The sidebar option carrying the error icon tells the teacher where to go
   // to understand the problem, so which option carries it is the behavior
   // under test.
-  const errorIconOwner = () => {
-    const icon = document.querySelector('.errorIcon');
-    return icon?.closest('a')?.textContent ?? null;
-  };
+  const sidebarOptionText = element =>
+    element?.closest('a')?.textContent ?? null;
+  const errorIconOwner = () =>
+    sidebarOptionText(document.querySelector('.errorIcon'));
 
   test('flags the Course option when assigned models are unavailable in the region', async () => {
     renderDefault(17, `/teacher_dashboard/sections/17/unit/csa1-2022`, true);
@@ -430,6 +470,37 @@ describe('TeacherNavigationBar', () => {
     await screen.findByText('Course Content');
 
     expect(errorIconOwner()).toBeNull();
+  });
+
+  const newTagOwner = () => sidebarOptionText(screen.queryByText('New'));
+
+  test('tags AI Settings as new when AI Tutor+ challenges can be turned on', async () => {
+    renderDefault(19, `/teacher_dashboard/sections/19/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(newTagOwner()).toContain(i18n.aiSettings());
+  });
+
+  test('does not tag AI Settings as new when full AI chat access is off', async () => {
+    renderDefault(20, `/teacher_dashboard/sections/20/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(newTagOwner()).toBeNull();
+  });
+
+  test('does not tag AI Settings as new when the course has no lesson tutor', async () => {
+    renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(newTagOwner()).toBeNull();
+  });
+
+  test('shows the error icon, not the new tag, on AI Settings', async () => {
+    renderDefault(21, `/teacher_dashboard/sections/21/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(errorIconOwner()).toContain(i18n.aiSettings());
+    expect(newTagOwner()).toBeNull();
   });
 
   test('does not render AiDiffFloatingActionButton component when experiement is not enabled', async () => {
