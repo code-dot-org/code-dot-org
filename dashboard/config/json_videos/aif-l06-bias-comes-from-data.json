@@ -1,0 +1,15 @@
+{
+  "key": "aif-l06-bias-comes-from-data",
+  "description": "See how AI bias starts in the training data, not in the computer deciding to be unfair.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l06-bias-comes-from-data.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "053b2056-bb8c-439b-a86f-8b95536a9e55",
+    "74197709-735f-44be-85ac-92805b1575ba",
+    "3359fd7b-7ddb-4c53-b4c7-dc2e584e5d28"
+  ]
+}

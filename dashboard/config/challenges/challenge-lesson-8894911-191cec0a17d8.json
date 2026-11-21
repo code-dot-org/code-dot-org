@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894911-191cec0a17d8",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 10: Remixing, Creativity, and Originality",
+  "question": "Should an AI help with this task, or should it be all you? Build a decision tree that settles it with two yes-or-no questions.\n\nSteps:\n1. Use the text tool to write two yes-or-no questions in the diamonds.\n2. Use the arrow tool to point at the ending where Task A belongs, based on your questions.\n3. Place a shape on the ending where Task B belongs, based on your questions.\n4. Record your voice making up a third task and showing where it ends up. Explain how your questions split the tasks apart.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No text, arrow, or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student writes fewer than 2 questions, OR the questions cannot be answered yes or no."
+    },
+    {
+      "level": 2,
+      "description": "Two yes or no questions that each ask about a different factor (such as personal meaning, what is at stake, or who is affected) AND an arrow for Task A and a shape for Task B that end in different boxes and match the student's own answers."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording gives a third task, says which box it ends in using the questions, and explains how the questions split the tasks apart."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894911-191cec0a17d8-c358fde8",
+  "whiteboard_starter_image_alt_text": "\"Build a decision tree for creative tasks.\" The tree starts at \"Start: a creative task\" and leads to a blank diamond, Question 1. Yes leads to \"Mostly me.\" No leads to a second blank diamond, Question 2, where Yes leads to \"Me + AI\" and No leads to \"Mostly AI.\" Two task cards sit at the top: Task A, a birthday poem for my grandmother; and Task B, a color palette for a school club poster."
+}

@@ -1,0 +1,10 @@
+name 'aif-y2-ai-at-scale-lesson9-level1-2026'
+display_name 'Evaluate a Neural Network'
+description 'Choose a neural network to build and evaluate'
+
+sublevels
+level 'aif-y2-ai-at-scale-lesson9-level1-choice1-2026'
+level 'aif-y2-ai-at-scale-lesson9-level1-choice2-2026'
+level 'aif-y2-ai-at-scale-lesson9-level1-choice3-2026'
+
+uses_lab2

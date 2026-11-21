@@ -7,12 +7,12 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Comic Strip\r\n- Pick four to eight frames. Put them in the slots in story order.\r\n- Drag bubbles onto your frames. Double-click a bubble to type what each person says or thinks.\r\n- Need more bubbles or frames? Select one and click **Duplicate**.\r\n- Next to **Caption:**, write WHY it happened and WHO could have changed it.\r\n- Click **Download** to save your comic.",
+    "long_instructions": "#AI Bias Comic Strip\r\n\r\nTell a story about AI bias in a comic strip form. Answer the following questions if possible:\r\n\r\n> * Who got an unfair result?  \r\n> * What was the data choice behind the unfair result?  \r\n> * Who made the data choice?  \r\n> * Who else does it affect?  \r\n\r\nUse the existing images.\r\n\r\nDrag the speech & thought bubble to create text\r\n\r\nFill in the caption underneath the comic.",
     "hide_share_and_remix": "true",
     "require_edit_to_continue": "true",
     "project_template_level_name": "data-makes-ai-lesson11-sketch-lab-template",
     "display_name": "Comic Strip"
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-05 18:02:01 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:04:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 21:20:45 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 22:44:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-05 18:02:01 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 18:04:35 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-06 21:20:45 +0000\",\"changed\":[\"long_instructions\",\"hide_share_and_remix\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 22:44:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 17:09:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

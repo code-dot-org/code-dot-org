@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894909-df3df2174e30",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 8: Debugging and Refining Outputs",
+  "question": "You know a lot about Priya, but a prompt with everything in it gets messy. Pick the details that will most improve the speech, skip the ones that will not, and write the prompt in 40 words or fewer.\n\nSteps:\n1. Use the shape tool to mark the 5 details that will most improve the AI’s speech.\n2. Use the arrow tool to point at one detail that is just noise.\n3. Use the text tool to write your final prompt in 40 words or fewer.\n4. Record your voice explaining how one of your chosen details changes what the AI writes.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape, arrow, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places fewer than 4 shapes, OR types no prompt."
+    },
+    {
+      "level": 2,
+      "description": "At least 4 shapes are on details 1, 2, 4, 5, or 8 AND an arrow points to detail 3 or 7 AND the typed prompt asks for a 2-minute speech and uses at least 3 of the marked details in 40 words or fewer."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names one detail and explains how it would change the AI's output (for example, \"hates cheesy jokes\" tells the AI to avoid them)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894909-df3df2174e30-3f2e7cfd",
+  "whiteboard_starter_image_alt_text": "\"You are asking an AI to help write a 2-minute speech for your friend Priya's graduation party. Here is what you know.\" Eight numbered details: 1, my friend's name is Priya; 2, Priya is graduating from nursing school; 3, my favorite color is green; 4, Priya hates cheesy jokes; 5, the speech should take about 2 minutes; 6, I get nervous speaking in front of people; 7, the party is in a garden; and 8, Priya once drove 3 hours to bring me my forgotten phone. At the bottom is a blank box labeled \"Space for your final prompt (40 words or fewer).\""
+}

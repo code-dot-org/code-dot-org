@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894756-cfaacdc2c156",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 1: Investigating AI Tools",
+  "question": "Real AI testers change just ONE thing at a time to see what it does. Pick the word you’d swap, and call your shot before the AI even runs.\n\nSteps:\n1. Use the arrow tool to point at the ONE word in the prompt you want to swap.\n2. Use the text tool to type the new word you’d put in its place.\n3. Record your voice predicting what will change in the image, and what will stay exactly the same.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow points to more than one word or no specific word, the text box has no replacement word, or the voice recording does not make a prediction."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to exactly one word in the prompt AND the text box contains a replacement word AND the voice recording predicts at least one thing that will change in the image."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names at least one specific thing in the image that will stay the same and gives a reason (for example, “the couch stays purple because I only changed the cat’s color”)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894756-cfaacdc2c156-71610a2a",
+  "whiteboard_starter_image_alt_text": "The prompt \"a sleepy orange cat on a purple couch\" above a picture of an orange striped cat sleeping on a purple couch, with a window showing the sun."
+}

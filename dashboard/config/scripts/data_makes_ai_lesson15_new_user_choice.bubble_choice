@@ -1,6 +1,7 @@
 name 'data-makes-ai-lesson15-new-user-choice'
 display_name 'New User'
 description 'Click the same dataset you chose in Meet the Data.'
+navigation_type 'next_sublevel'
 
 sublevels
 level 'data-makes-ai-lesson15-new-user-snacks'

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894914-dbe8079dbed4",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 13: AI Time Capsule Project",
+  "question": "You are the editor of a documentary for students in 2100, and you only have room for five clips. What you leave out shapes what they believe, so choose carefully.\n\nSteps:\n1. Use the shape tool to mark the 5 clips you will keep.\n2. Use the arrow tool to point at the clip that is the most one-sided.\n3. Use the text tool to write a one-line caption that tells viewers what they will understand.\n4. Record your voice naming one viewpoint that is still missing from your documentary.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape, arrow, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places fewer than 5 shapes, OR places no arrow."
+    },
+    {
+      "level": 2,
+      "description": "Five shapes mark clips AND the arrow points to a one-sided clip (clip 1, 5, or 9) AND the typed caption says what the viewer will understand AND the voice recording names a viewpoint that is still missing."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the chosen clips include at least one showing a benefit, one showing a risk or problem, and one human voice (such as the student's notes or the letter)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894914-dbe8079dbed4-dd4da621",
+  "whiteboard_starter_image_alt_text": "\"You are editing a 5-minute documentary about AI today for students in the year 2100. You have room for 5 clips.\" Ten numbered clips: 1, a company video promising AI will fix everything; 2, a news story warning about AI risks; 3, a student's notes on how they used AI and what they changed; 4, a chatbot conversation that went wrong; 5, a news story praising an AI success; 6, a photo of a robot toy; 7, a letter from someone whose job changed because of automation; 8, a list of rules the school made about AI; 9, a poster of a shiny futuristic city; and 10, a list of AI mistakes we noticed. At the bottom is a blank box labeled \"Space for your documentary caption.\""
+}

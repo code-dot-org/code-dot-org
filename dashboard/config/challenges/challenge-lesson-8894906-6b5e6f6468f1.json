@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894906-6b5e6f6468f1",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 5: Uncovering Contradictions",
+  "question": "The same AI gave two opposite answers to the same question. Find the phrases that can’t both be true, and then find what the question left out.\n\nSteps:\n1. Use the arrow tool to point at the two phrases that cannot both be true.\n2. Place a shape on the part of the question that is too vague.\n3. Record your voice naming something the AI would need to know to give one reliable answer. Bonus points if you explain why it gave both.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places arrows and a shape, but the arrows are not on the phrases that clash, OR the voice recording gives no reason."
+    },
+    {
+      "level": 2,
+      "description": "Two arrows point to \"Backpacks are allowed\" and \"Backpacks must be left outside\" AND a shape is on \"the game\" in the question AND the voice recording names something missing from the question (such as which place, which event, or the bag size)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains why the same AI could give both answers (it predicts likely words and the question does not give enough information)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894906-6b5e6f6468f1-b6cf1f8e",
+  "whiteboard_starter_image_alt_text": "\"The same question, asked twice.\" The question: \"Can I bring a backpack to the game?\" Answer 1: \"Backpacks are allowed inside. Bring anything you like.\" Answer 2: \"Only small clear bags are allowed. Backpacks must be left outside.\""
+}

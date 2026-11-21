@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894908-beade9672d0b",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 7: AI's Wild Imagination",
+  "question": "The AI had no data, so it made some up. Give it real numbers and clear rules, and it has a lot less room to invent.\n\nSteps:\n1. Use the arrow tool to point at the part of the prompt that invites the AI to guess.\n2. Use the text tool to write a new prompt that uses the table, asks one specific question, and allows the answer “not in the data.”\n3. Record your voice explaining how each change reduces made-up answers and what you would still check.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow, but the typed prompt does not use the table."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to \"the best player in the league\" AND the typed prompt refers to the table, asks one specific question, and allows the answer \"not in the data.\""
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that limiting the AI to given data reduces made-up answers but does not remove the need to check the answer against the table."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894908-beade9672d0b-df70fb64",
+  "whiteboard_starter_image_alt_text": "A prompt that says \"Tell me the stats of the best player in the league.\" Below it, the AI's answer: \"Jordan Pike scored 31.4 points per game and won 3 championships.\" On the right, a table titled \"Harbor Hawks: last season\" lists each player's games and points: Maya Ortiz, 12 games, 96 points; Leo Park, 12 games, 84 points; and Sam Reyes, 10 games, 55 points. At the bottom is a blank box labeled \"Space for your new prompt.\""
+}

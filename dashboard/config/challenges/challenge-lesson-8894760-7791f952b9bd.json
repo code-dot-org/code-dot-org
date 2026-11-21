@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894760-7791f952b9bd",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 5: Trust and Credibility",
+  "question": "Someone who has never been where you live will picture something very different from what you know. Describe your world so clearly that they get it right.\n\nSteps:\n1. Start recording. Pick one topic from the list below.\n2. Say a short, vague version in 5 words or fewer.\n3. Now say a detailed version. You can use your own experience or make one up, but don’t say real names, addresses, or the name of your school. Include at least 3 details, such as what people are doing, what it looks like, and what you hear or smell.\n4. Tell the camera one thing a listener could get wrong if they only heard the short version.\n\nTopic list:\n- A celebration\n- A family meal\n- A game kids play outside\n- A morning at home",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say a description on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says only a short version or only a detailed version, the short version is longer than 5 words, or the detailed version has fewer than 3 details."
+    },
+    {
+      "level": 2,
+      "description": "Student says a short version (5 words or fewer) AND a detailed version with at least 3 details."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names a specific thing a listener could get wrong if they only heard the short version (for example, “they might picture a cake, but we eat rice”)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}
