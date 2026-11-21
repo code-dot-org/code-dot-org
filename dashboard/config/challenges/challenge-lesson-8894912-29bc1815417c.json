@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894912-29bc1815417c",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 11: Ownership, Ethics, and Creativity",
+  "question": "Four people, four fair points, and one rule has to work for all of them. Can you write it?\n\nSteps:\n1. Use the arrow tool to point at the statement that is most about consent.\n2. Place a shape on a statement about how the tool helps people.\n3. Use the text tool to write one rule with at least 2 parts that tries to respect the people at the table.\n4. Record your voice naming the person your rule serves least, and what you would do to help them.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but types no rule."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to the Artist AND a shape is on the Everyday user or Music fan AND the typed rule has at least 2 provisions (for example, one that protects artists and one that keeps the tool useful) AND the voice recording names the voice the rule serves least."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording says how to help the voice served least AND the rule includes a limit or exception with a reason."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894912-29bc1815417c-da31102e",
+  "whiteboard_starter_image_alt_text": "\"Four people talk about an AI that makes songs,\" seated around a roundtable. Artist: \"My songs were used, and nobody asked me.\" Tool company: \"Without lots of examples, the tool would not work at all.\" Everyday user: \"I just want help making a song for my grandmother's birthday.\" Music fan: \"I love hearing new kinds of music.\" At the bottom is a blank box labeled \"Space for your rule.\""
+}

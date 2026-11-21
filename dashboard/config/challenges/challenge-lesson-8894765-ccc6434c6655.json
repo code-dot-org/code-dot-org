@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894765-ccc6434c6655",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 10: The Final Verdict",
+  "question": "Each student has a good point, but neither is fully right. Your job is to balance the seesaw by writing a rule that keeps the best of both.\n\nSteps:\n1. Use the arrow tool to point at one good point on each side.\n2. Use the text tool to write a rule that gives the AI a job, gives a human a job, and uses the word “when,” “if,” or “unless.”\n3. Record your voice describing a situation where your rule would need to be stricter or looser, and why.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student places arrows on both sides but types no rule, or the rule is missing a job for the AI, a job for a human, or a condition word (when, if, or unless)."
+    },
+    {
+      "level": 2,
+      "description": "One arrow points to a point on each side AND the typed rule includes a job for the AI, a job for a human, and a condition word (when, if, or unless)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording gives a situation where the rule would become stricter or looser, and explains it using the stakes."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894765-ccc6434c6655-58c4bf0d",
+  "whiteboard_starter_image_alt_text": "\"Two students disagree about AI.\" Student 1 says, \"Let AI do the whole job,\" with two reasons: \"AI is fast.\" and \"AI never gets tired.\" Student 2 says, \"Never use AI,\" with two reasons: \"Humans understand people.\" and \"Humans can say sorry and fix mistakes.\" Below, the two students sit on opposite ends of a seesaw."
+}

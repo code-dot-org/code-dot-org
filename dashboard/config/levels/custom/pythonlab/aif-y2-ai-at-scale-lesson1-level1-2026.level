@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T17:28:46.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You are a reliability engineer working on a weather app. The app uses a linear regression model to predict the temperature based on the hour of the day. As an initial prototype, you are testing how well your app can model one day of hourly temperatures in degrees Fahrenheit from one weather station.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Train the linear regression model on the inputs (hours) and outputs (temperatures).\r\n2. Compute the model’s prediction for the temperature at 3 pm (hour 15) and at 11 pm (hour 23) and print each prediction. Then, print the actual temperature recorded in the dataset for 3 pm and 11 pm.\r\n3. Run the program and evaluate the result to see what kinds of inputs the model handles well and what kinds of inputs the model doesn’t handle well. You’ll answer a question about this in Level 4.\r\n\r\n**💻 Coding Tip**\r\n\r\nUse `model.fit` to train the model on a dataset of inputs and outputs.\r\n\r\nThe `temperatures` list stores all of the temperatures from the training data, sorted by hour. `temperatures[0]` is the temperature recorded at midnight.\r\n\r\nIf `x` is an input value, you can use a fitted model to make a prediction with `model.predict([[x]])[0]`. You can also `round` your answer to avoid long decimals.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "example",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\nfrom helpers import draw_chart\n\n# The day's readings, one per hour from midnight (0) to 11 pm (23)\nhours = [[hour] for hour in range(24)]\ntemperatures = [62, 60, 58, 58, 58, 60, 62, 65, 68, 72, 76, 79,\n                82, 84, 86, 86, 86, 84, 82, 79, 76, 72, 68, 65]\n\n# This line creates a new, untrained model:\nmodel = LinearRegression()\n\n# TODO 1: Train the model on the hours and the temperatures\n\n# TODO 2: Predict and print the 3 pm and 11 pm temperatures\n\n# Draw the chart\ndraw_chart(hours, temperatures, model, \"Temperature (°F)\")\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\n\n\n# Draws the day's readings as dots and, once the model is trained, its line.\ndef draw_chart(hours, readings, model, label):\n    x = [hour[0] for hour in hours]\n    plt.scatter(x, readings)\n    if hasattr(model, \"coef_\"):\n        plt.plot(x, model.predict(hours))\n    plt.xlabel(\"Hour of the day\")\n    plt.ylabel(label)\n    plt.xticks(range(0, 24, 3))\n    plt.show()\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "validation.py",
+      "contents": "import contextlib\nimport io\nimport re\nfrom unittest import TestCase\n\nfrom sklearn.exceptions import NotFittedError\nfrom sklearn.utils.validation import check_is_fitted\nfrom unittest_runner import ValidationProtocol\n\n\ndef load_student_program():\n    \"\"\"Imports main into test, preventing additional output and chart calls\"\"\"\n    import helpers\n    helpers.draw_chart = lambda *args, **kwargs: None\n    with contextlib.redirect_stdout(io.StringIO()):\n        import main\n    return main\n\n\nclass TestTemperatureModel(TestCase):\n    longMessage = False\n\n    def test_model_is_trained(self):\n        \"\"\"The model is trained\"\"\"\n        try:\n            check_is_fitted(load_student_program().model)\n        except NotFittedError:\n            self.fail(\"The model hasn't been trained yet\")\n\n    def test_print_1500(self):\n        \"\"\"Prints model's prediction for 3pm\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        printed = {round(float(n)) for n in re.findall(r\"-?\\d+(?:\\.\\d+)?\", output)}\n        self.assertIn(75, printed, \"Output doesn't include correct prediction for 3 pm\")\n\n    def test_print_2300(self):\n        \"\"\"Prints model's prediction for 11pm\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        printed = {round(float(n)) for n in re.findall(r\"-?\\d+(?:\\.\\d+)?\", output)}\n        self.assertIn(82, printed, \"Output doesn't include correct prediction for 11 pm\")\n",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY7KguPr/3d95PLZ\ntwa+8f692146sRtitG9BnYI+JHK87rI1ofENM2LOAhSdL6pOjG8Q9HnkcjQu\nietcYGgglrkIiOKm9EbekbL6bHAz1E748OtS/SV0iTOU41XwbmWwg0N0ay1r\nE1g45DNkkouKUHaPLAdqaf8EY+a5F6GlzW8FqcRhaR+MK1RwhMcQNQZCeE8B\nIA8zcsYUP+ez+PoXpaVVCb/xA9ab/xSi8gOhQ/bbCfq2Keh+1OZQH1lWu21w\nbF8fbwc5/5PBCjzq22Ne7EzIAJpIdqwWug+VV+iMNWeRD69z06lXJO1a1ko2\nQt4lbiGku/YmiOl5KAyttSRuRs48FKgNce1TfG85uNKxxPNKBsEwzysJMpCq\nfhjWxBbEToEErdpAal9QOnMzkM+JKU/6+8G1BHcUc4m1vRacBKYFfkKAxrlQ\nfiMoaIKVEJk+gLzwCJAy5f1uM197Zhw4c3Y4sc66zteJqoSU4flwFTfzFlR/\ns69LjeKFtOndcRXCW8qVgVKUooYUFLVOLm3/CMw4UAMdxUD6C5fKvrgIKt4R\nNRy63czFtOjkl+giUWinAmff85iTn23Tj66WS/DoJTtjKT9U6jYjlsZUTtGW\nKonb492T2hqjQgWj8fVR4hfHRKHM8gsPI44vMn2ur97avRqIpSELuxpTN5sm\ndJkZTWkJNY0LpUOVn3Fg58x4IinBDAkpeTpfM4aP1x0egkHqdRqd6XGcG0Gu\n98bxh4rUc+fs8au53AIX0hWVwCrVZV6o62bush0xhZo1HhTvEiTd4TL/djyU\n2IWUWy9rC08phdNonwhzvtWXW7MLhDK713mmdk8a7EBhD6YLclrtjWXJfm6s\nlDnPFrugZV+5H5BuErVKYXflBhXxPXjS+JEuB57ePuzfMZTc9rLUBWgwT6h5\n12eNyL9Q/Jyfdq6lufcd2IEKn8j5T3ro8lElDwKYIMKA4AeBV16M0+f+oGMt\ns+eBTD5smigWPN0oEe5SG+NvthBhq8eJsczaGsw1hhN3mApvQkN/WTIYLWrA\ntWwPPuxi4jRIvAW5SYmtCDtCl7753fjyVsSqLhTrH3iOcU9PtuWo6JdgDmxd\nhS9b2I569yqHc7kJVndUNONaNtYxM5I4bKwCxxMfa4hc0/a67zGJsF5nAAYh\ncj+gP/YvOtJCn8jpEUshLI2a+GPl5bBYWSfFz/3MSjScED3QxwqesxYUeAC+\ntk8HYt5d6hxh9EYKEXOhPUR2EpaqZaiJhZSTcVc7C0br3npy9LhbTEzaGvKp\nl4j2jtNjm33ZiT22vp9kgsZccK8jR9gPFNK00KKxo8EOCoU4wU3YCeaVA7al\nafCcd5pZnceUxqIJ5J9jAk10YEruw2+VTMMPlC6Dk7EoXxM1sLgijDQrRlNF\nuF449sxAOhlHz2jfCUb5SNUcv5H6c4HXJ8cUxgzgDH3XnIrLFABYCFJGPrwi\nCU5+y5Y9BKTkQvPSe1IMw2X8+vSmjkvb4rhSXHuxPdFn9WKGSeZOO8x3K+zE\nB0h5iLmdCcYhbFpafD1PaKRM+zK0blZ289FUJi0sBnHMelDJXxvrjMma3haA\nf7EtlpWabJnQbPHa1ve4S9yw4OH7t8Afdmr1/aBmQvEgnUZc+byzW3sg4Tyz\n4l0NjdR1gE5xpaBG67KMJwZMP47e4PTvtNubOzGi1qX8wTvvZDDNN3eXPb8N\nkBjt1rvDn3+ZlcvjVHciw9ULjwMTT3AQq6bg5MwInNJqhZPAUBsctx60\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 17:40:26 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 17:41:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 17:41:41 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

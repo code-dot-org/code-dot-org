@@ -1,0 +1,10 @@
+name 'csp_unit1_lesson28_choicelevel4_dev_27_28_pilot'
+display_name 'Modify: Extend!'
+description '####Choose one way to extend the original random roll program.'
+
+sublevels
+level 'csp_unit1_lesson28_level4a_dev_27_28_pilot'
+level 'csp_unit1_lesson28_level4b_dev_27_28_pilot'
+level 'csp_unit1_lesson28_level4c_dev_27_28_pilot'
+
+uses_lab2

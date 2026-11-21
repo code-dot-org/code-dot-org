@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-06-23 17:35:42 UTC",
+    "serialized_at": "2026-11-20 18:21:18 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6530,6 +6530,34 @@
       }
     },
     {
+      "name": "Chart Match Questions",
+      "url": "https://docs.google.com/document/d/1fW16bxEUMirRgq0LWewQv1zoIFzo0Kr-QnZPcdZUris/",
+      "key": "chart_match_questions",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "chart_match_questions"
+      }
+    },
+    {
+      "name": "Chart Match Visuals",
+      "url": "https://drive.google.com/file/d/1LN52ke_eLCJmmMA4tVxB2SSlJJCaWsYK/",
+      "key": "chart_match_visuals",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "chart_match_visuals"
+      }
+    },
+    {
       "name": "Cleaning Data",
       "url": "https://docs.google.com/presentation/d/1-6K-naoslwsVFXmkZ6mHVZdky8r0yJoh-tETk-tE1hc/edit?usp=drive_link",
       "key": "cleaning_data",
@@ -7158,6 +7186,18 @@
       "seeding_key": {
         "lesson.key": "Lesson 6: Data Storytelling",
         "resource.key": "insights_from_data_and_ai_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Introduction to Data Visualization",
+        "resource.key": "chart_match_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 7: Introduction to Data Visualization",
+        "resource.key": "chart_match_visuals"
       }
     },
     {
@@ -8064,6 +8104,9 @@
         "objective.key": "ed7f46a9-1fb8-4b5c-87e8-60b4c3ccd10e"
       }
     }
+  ],
+  "objectives_script_levels": [
+
   ],
   "lessons_standards": [
     {

@@ -1,0 +1,13 @@
+{
+  "key": "aif-l07-hallucinations-not-glitches",
+  "description": "Learn why AI hallucinations happen when it fills a gap with a likely guess, even when nothing is broken.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l07-hallucinations-not-glitches.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "3cc18eaf-53fc-4073-aa36-f6420e0ad764"
+  ]
+}

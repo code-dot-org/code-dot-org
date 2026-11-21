@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894911-21a8c956f09c",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 10: Remixing, Creativity, and Originality",
+  "question": "Anyone can see what something looks like. Only you know why it looks that way. Be the museum audio guide for something you chose or made, and reveal the story behind it.\n\nSteps:\n1. Start recording. Pick one item from the list below.\n2. Describe what a visitor would see, in 10 seconds.\n3. Reveal 3 hidden choices you made, and the reason behind each.\n4. Say what an AI would likely have picked instead, and why.\n\nItem list:\n- Your phone wallpaper\n- A playlist you made\n- How you set up your study space\n- A nickname you came up with for a person or thing",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe anything on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student gives only a description of what is visible, OR only reasons without describing the item."
+    },
+    {
+      "level": 2,
+      "description": "Student describes what a viewer would see AND names 3 hidden choices with a reason for each."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says what an AI would likely have picked instead AND explains that it would pick the most common option from patterns."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894763-6ee1001f896d",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 8: Defending Your Data",
+  "question": "You just made a new account, and every setting starts ON. You decide which ones stay on. Which choices keep you safe without ruining the fun?\n\nSteps:\n1. Place a shape on 3 settings you would turn OFF.\n2. Use the arrow tool to point at one setting you would keep ON.\n3. Record your voice explaining your choices. Say which two settings would be riskier together, and why.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape or arrow is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student places fewer than 3 shapes, places no arrow, or the voice recording gives a reason for fewer than 2 choices."
+    },
+    {
+      "level": 2,
+      "description": "Three shapes are on three different settings from numbers 1 to 5 AND one arrow points to a setting without a shape AND the voice recording gives a reason for at least 2 choices."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names two settings that are riskier together and explains what someone could figure out (for example, school name and live location)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894763-6ee1001f896d-2ac406ef",
+  "whiteboard_starter_image_alt_text": "\"A new account: all settings start ON.\" Six numbered settings, each switched ON: 1, share my live location; 2, show my school name; 3, show my full birthday; 4, let anyone message me; 5, public profile: anyone can see my posts; and 6, show my favorite games."
+}

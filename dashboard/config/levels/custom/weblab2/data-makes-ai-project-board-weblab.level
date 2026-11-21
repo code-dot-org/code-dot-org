@@ -7,7 +7,7 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Meet the Users\r\nA model is only useful if it works for the people who rely on it. Here are four users who want to use a model like yours.\r\n\r\n* Pick the two users you want to investigate.\r\n* Read each case file. Use the tabs at the top to switch between them.\r\n* In your activity guide, write who each user is and what they want to know.\r\n\r\n\r\n",
+    "long_instructions": "# Meet the Users\r\nA model is only useful if it works for the people who rely on it. Here are four users who want to use a model like yours.\r\n\r\n* Pick the two users you want to investigate.\r\n* Read each case file. Use the tabs at the top to switch between them.\r\n* Write the names of your two users in the User column of **Test for My User** in your guide. You will test your model for them in the next level.\r\n\r\n\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -112,8 +112,9 @@
     },
     "display_name": "Board Games",
     "bubble_choice_description": "Meet sample users who might use your board game model",
-    "thumbnail_url": "https://images.code.org/c6e582ff0eda2bed753623a9302d6462-board-game.jpg"
+    "thumbnail_url": "https://images.code.org/c6e582ff0eda2bed753623a9302d6462-board-game.jpg",
+    "hide_ai_tutor": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-12T19:10:34.124+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-project-football-weblab\\\"\"],\"cloned_from\":\"data-makes-ai-project-football-weblab\"},{\"changed_at\":\"2026-11-12 19:10:36 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 19:12:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 19:12:11 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 19:31:31 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 19:31:58 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-12T19:10:34.124+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-project-football-weblab\\\"\"],\"cloned_from\":\"data-makes-ai-project-football-weblab\"},{\"changed_at\":\"2026-11-12 19:10:36 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 19:12:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 19:12:11 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 19:31:31 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-12 19:31:58 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:42:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:42:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
