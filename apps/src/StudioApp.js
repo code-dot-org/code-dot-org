@@ -68,6 +68,7 @@ import {
 } from './constants';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import * as dom from './dom';
+import {installDropletLassoGuard} from './dropletLassoGuard';
 import * as dropletUtils from './dropletUtils';
 import FeedbackUtils from './feedback';
 import Alert from './legacySharedComponents/alert';
@@ -2586,6 +2587,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
         ? config.usingTextModePref
         : !!config.level.textModeAtStart,
   });
+  installDropletLassoGuard(this.editor);
   this.setupChangeHandlers();
 
   if (config.level.paletteCategoryAtStart) {
