@@ -35,6 +35,15 @@ const DEPRECATED_SONGS = [
   'sayso_dojacat',
   'despedidaycierre_vanesamartin',
   'stay_thekidlaroi',
+  'introtoshamstep_47SOUL',
+  'levitating_dualipa',
+  'dontstartnow_dualipa',
+  'heatwaves_glassanimals',
+  'watermelonsugar_harrystyles',
+  'aire_jessejoy',
+  'rainonme_ladygagaftarianagrande',
+  'jerusalema_masterkg',
+  'good4u_oliviarodrigo',
 ];
 
 /**
