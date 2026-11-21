@@ -1,0 +1,12 @@
+-# The settings editor generated from the lab's schema (level_config). A
+-# level not yet converted gets a button to convert it.
+- flat_properties = GamelabJr::LEVEL_CONFIG_REPLACES.index_with {|name| @level.properties[name]}.compact.transform_keys {|name| name.camelize(:lower)}
+%h1.control-legend{data: {toggle: "collapse", target: "#level_config_area"}}
+  Level settings (Sprite Lab in Lab2)
+
+#level_config_area.in.collapse
+  #spritelab-level-config-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_spritelab_level_config.js'),
+    data: {levelid: @level.id.to_json, levelconfig: @level.properties['level_config'].to_json, flatproperties: flat_properties.to_json}}

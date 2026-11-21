@@ -52,7 +52,9 @@ function init() {
   if (
     !levelId ||
     document.getElementById('level_type')?.value !== 'GamelabJr' ||
-    !document.getElementById('level_uses_lab2')?.checked
+    !document.getElementById('level_uses_lab2')?.checked ||
+    // A level with a level_config edits these in its settings editor.
+    document.querySelector('[data-level-config-active="true"]')
   ) {
     return;
   }
@@ -90,6 +92,7 @@ function init() {
 // (values render later via textContent).
 function buildSection() {
   const section = document.createElement('div');
+  section.id = 'spritelab2_extra_properties';
   section.innerHTML = `
     <h1 class="control-legend collapsed" data-toggle="collapse" data-target="#extra_properties_area">
       Additional properties (JSON)
