@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894914-9e59c7845934",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 13: AI Time Capsule Project",
+  "question": "A visitor from the future makes a bold claim about the world. You are the interviewer, and you won’t just accept it. Ask for proof, then decide whether to believe it.\n\nSteps:\n1. Start recording. Pick one claim from the list below.\n2. Be the visitor from the future: say the claim with total confidence.\n3. Be the interviewer: ask for 2 pieces of evidence from today’s world that support the claim. Then give your verdict (believable, needs more evidence, or not believable) and say why.\n4. Name one group of people the claim forgets, and say what would need to change for it to work for them.\n\nClaim list:\n- “Everyone will have an AI tutor in school.”\n- “Nobody will drive a car.”\n- “Cash will disappear.”\n- “Most homework will be spoken, not written.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not play both roles on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student gives the visitor's claim and the interviewer's questions but no verdict."
+    },
+    {
+      "level": 2,
+      "description": "The visitor states a claim AND the interviewer asks for 2 pieces of evidence from today's world AND gives a verdict (believable, needs more evidence, or not believable) with a reason."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names one group the prediction forgets AND says what would need to change for it to work for them."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

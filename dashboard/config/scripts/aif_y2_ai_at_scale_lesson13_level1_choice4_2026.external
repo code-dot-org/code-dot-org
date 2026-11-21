@@ -1,0 +1,14 @@
+name 'aif-y2-ai-at-scale-lesson13-level1-choice4-2026'
+title 'Tree Maintenance'
+display_name 'Tree Maintenance'
+bubble_choice_description "Your community’s parks department wants to predict whether a tree is high risk for causing damage, so that the department can determine what action to take for the trees in the community."
+markdown <<MARKDOWN
+Your community’s parks department wants to predict the risk of a tree causing damage: predicting either low, moderate, high, or extreme risk. The department will use that information to determine what action to take to maintain the trees in the community. The department has had a good track record with tree preservation historically, though five years ago a pest that attacks ash trees arrived in the community and created new challenges for the department.
+
+You have three datasets to choose from. **Evaluate** each of these three datasets and decide which one you’d like to use to train your neural network. Then, **explain** your choice by answering the questions in the **Choose a Dataset** section of your Project Planning Guide. Finally, **download** your dataset so you can use it in the project.
+
+- [**Dataset A**](https://drive.google.com/file/d/1mHOtAY79w8eJk7e9N37Lj2D7MmCatUjE/view?usp=sharing) is data from the community’s parks department for the past three years. It includes the results of 600 inspections. Each entry includes data about the tree type, trunk diameter, tree age, percent of dead branches, whether the trunk has cracks, how far the tree leans, whether there are signs of decay or damaged roots, the estimated number of people who pass by the tree daily, and whether the tree is near a playground, trail, parking lot, or picnic area.
+- [**Dataset B**](https://drive.google.com/file/d/1-1UwX7Bsrgd7KtngodW85PcA-XY3w_g_/view?usp=sharing) is data from the community’s parks department for the past twelve years. It includes the results of 2,400 inspections. The department’s records weren’t always as complete as they are now, so this data includes some of the features from Dataset A but doesn’t include the tree age, whether there are signs of decay or root damage, or the estimated number of people who pass by the tree daily. Each entry also includes information about how long ago the entry is from.
+- [**Dataset C**](https://drive.google.com/file/d/1rYiakNmtYX22wEYWTcfZKf6IsthEph__/view?usp=sharing) is data from a national survey of other cities’ parks. It includes data from 3,000 different inspections. In addition to the features from Dataset A, it also includes data about whether there were any recent storms in the area near the tree.
+
+MARKDOWN

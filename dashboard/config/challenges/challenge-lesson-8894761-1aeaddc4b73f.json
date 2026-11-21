@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894761-1aeaddc4b73f",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 6: The AI Credibility Guide",
+  "question": "A reviewer has never met Mia’s class, but Mia has. Pick the comment that doesn’t fit her readers, and write a polite reply that proves it.\n\nSteps:\n1. Use the arrow tool to point at the comment you disagree with the most.\n2. Place a shape on a fact in “What Mia knows” that shows why.\n3. Use the text tool to write a reply that starts with “I disagree because.”\n4. Record your voice saying one thing the reviewer could tell Mia that would change her mind.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on comment 1 or comment 2, the shape is not on a fact in \"What Mia knows,\" or the student types no reply or a reply that gives no reason."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to comment 1 or comment 2 AND a shape is on a fact in \"What Mia knows\" AND the typed reply starts with \"I disagree because\" and uses that fact."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a specific thing the reviewer could tell Mia that would change her mind."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894761-1aeaddc4b73f-e4c2f54c",
+  "whiteboard_starter_image_alt_text": "\"Mia is planning a reading corner for her class.\" A box labeled \"What Mia knows\" says: \"The readers are 6 years old. Many of them are just learning to read. The corner is small, about the size of two desks.\" Three reviewer comments: 1, \"Put all the books on the top shelf to save floor space.\"; 2, \"Add a big sign with the rules written in long sentences.\"; and 3, \"Add soft rugs so children can sit on the floor.\""
+}

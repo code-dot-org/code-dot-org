@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894914-31388ee10413",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 13: AI Time Capsule Project",
+  "question": "A committee decides which predictions go into a time capsule, and three members always disagree. Play all three, then write the version they can agree on.\n\nSteps:\n1. Start recording. Pick one prediction from the list below.\n2. Be the Optimist: say one real benefit.\n3. Be the Skeptic: say one thing the evidence does not yet show. Then be the Fairness Officer: say one group who might be left out.\n4. Say a one-sentence revised prediction with at least 2 limits, and tell us which voice changed it the most.\n\nPrediction list:\n- “By 2035, self-driving buses will run in every town.”\n- “By 2035, an AI helper will assist doctors in every clinic.”\n- “By 2035, every student will have an AI translator in class.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not play any voices on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student plays only one or two of the three voices."
+    },
+    {
+      "level": 2,
+      "description": "Student plays all 3 voices (Optimist, Skeptic, and Fairness Officer) with one specific point each AND gives a one-sentence revised prediction."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the revised prediction includes at least 2 limits (a condition, a time, or a group) AND says which voice changed it most and why."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

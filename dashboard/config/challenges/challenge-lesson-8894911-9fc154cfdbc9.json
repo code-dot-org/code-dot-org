@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894911-9fc154cfdbc9",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 10: Remixing, Creativity, and Originality",
+  "question": "Every great team has heroes who cover for each other. Build a two-hero team, one human and one AI, and send them on a mission that neither could finish alone.\n\nSteps:\n1. Start recording. Pick one mission from the list below.\n2. Introduce your two heroes. The Human Hero has one human strength (such as judgment, empathy, or knowing the audience), and the AI Hero has one AI strength (such as speed, scale, or spotting patterns).\n3. Narrate the mission in 20 seconds so that it fails if either hero is missing.\n4. Give each hero one weakness, and say how the other hero covers it.\n\nMission list:\n- Save the school talent show after the sound system fails\n- Find a lost dog in a huge park\n- Write a speech in 10 minutes for a surprise event\n- Organize 500 donated books",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe a team or a mission on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names only one hero's power, OR describes a mission where only one hero is needed."
+    },
+    {
+      "level": 2,
+      "description": "Student names one human strength and one AI strength AND narrates a mission that needs both AND gives each hero one weakness."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says how each hero covers the other's weakness with a specific example AND names a mistake that would happen if the AI hero worked alone."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

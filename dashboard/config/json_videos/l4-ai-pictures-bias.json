@@ -1,0 +1,13 @@
+{
+  "key": "l4-ai-pictures-bias",
+  "description": "See how an AI picture reflects the data it learned from, and how to spot bias in it.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l4-ai-pictures-bias.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "a27a2703-9d59-4a4e-8b99-86fb1cbb9d04"
+  ]
+}

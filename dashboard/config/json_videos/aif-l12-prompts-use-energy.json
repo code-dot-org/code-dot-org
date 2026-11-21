@@ -1,0 +1,13 @@
+{
+  "key": "aif-l12-prompts-use-energy",
+  "description": "Find out how every AI prompt uses real energy, and how it adds up across millions of prompts.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l12-prompts-use-energy.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "ed23ec90-7c9d-4eda-b04b-fe1ebdbd6729"
+  ]
+}

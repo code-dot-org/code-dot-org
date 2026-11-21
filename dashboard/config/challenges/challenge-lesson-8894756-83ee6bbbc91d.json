@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894756-83ee6bbbc91d",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 1: Investigating AI Tools",
+  "question": "Your dancer has a banana costume, is breakdancing at the bottom of the ocean, and looks like a claymation figure. Build the weirdest dancer prompt ever, then see what happens when you change just one thing.\n\nSteps:\n1. Start recording. Close your eyes and tap one item from each column of the word bank below, then read your full prompt out loud to the camera.\n2. React like you’re seeing the result. Describe out loud what your dancer looks like.\n3. Pick ONE column and tap again to swap just that part. Read the new prompt and tell us what changed about your dancer.\n4. Mash up a brand new dancer and keep going if you’ve got time.\n\nWord bank:\n\nOutfit:\n- a sparkly astronaut suit\n- a banana costume\n- a tuxedo with rollerblades\n- a medieval knight’s armor\n- a bathrobe and fuzzy slippers\n\nMove:\n- doing the robot\n- spinning like a tornado\n- breakdancing\n- doing a victory dance\n- sneaking on tiptoes\n\nSetting:\n- on the moon\n- in a grocery store\n- at the bottom of the ocean\n- on top of a skyscraper\n- in a giant library\n\nStyle:\n- as an oil painting\n- as a cartoon\n- in neon lights\n- as a movie poster\n- as a claymation figure",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not read any assembled prompt aloud."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student reads a prompt using items from fewer than 4 columns, or reads a full prompt but describes the dancer with fewer than 2 details from the prompt."
+    },
+    {
+      "level": 2,
+      "description": "Student reads a full prompt with one item from each of the 4 columns AND describes the dancer out loud using at least 2 details from the prompt."
+    },
+    {
+      "level": 3,
+      "description": "Student meets all of the above AND swaps exactly one column, reads the new prompt, names which column changed, and states at least one specific difference in the dancer’s description."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}
