@@ -725,23 +725,22 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the preview column is or would be.
   const paneWidthPx = previewColumnWidth || DEFAULT_PANE_WIDTH;
   const clearOfPane = {right: paneWidthPx};
-  // Free play, or a level whose level_config says so, keeps the
-  // instructions out of the way: the panel starts collapsed to its tab,
-  // which expands it again. The view stays mounted from level to level, so
-  // the level's id is a dependency too.
-  const freeplayLevel =
+  // The panel starts collapsed to its tab, which expands it again. The view
+  // stays mounted from level to level, so the level's id is a dependency
+  // too.
+  const instructionsStartCollapsed =
     levelProperties.instructionsStartCollapsed ??
     isFreeplayMode(levelProperties.levelMode);
   const instructionsCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
   useEffect(() => {
-    dispatch(setIsStandaloneCollapsed(freeplayLevel));
+    dispatch(setIsStandaloneCollapsed(instructionsStartCollapsed));
     // Another lab's view may follow in the same page.
     return () => {
       dispatch(setIsStandaloneCollapsed(false));
     };
-  }, [freeplayLevel, levelProperties.id, dispatch]);
+  }, [instructionsStartCollapsed, levelProperties.id, dispatch]);
   // The workspace does not notice its container changing size.
   useEffect(() => {
     const workspace = Blockly.getMainWorkspace?.() as
@@ -2432,7 +2431,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               moduleStyles.instructionsColumn,
               instructionsCollapsed && moduleStyles.instructionsCollapsed
             )}
-            collapsible={freeplayLevel || undefined}
+            collapsible={instructionsStartCollapsed || undefined}
             // The objectives checklist, and the Continue button it enables,
             // render inside the instructions panel.
             objectives={objectives.active ? objectives : undefined}

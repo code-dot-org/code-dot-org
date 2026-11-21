@@ -114,8 +114,8 @@ export function levelConfigFromFlat(properties: FlatProperties): {
     .filter(([key]) => !MODE_KEYS.has(key))
     .map(([key, value]) => `level_mode.${key}: ${JSON.stringify(value)}`);
 
-  // Free play shows every tab, and a level with no mode the lab's default
-  // ones (no World). Both let the student change scenes.
+  // Free play shows every tab; a level with no mode shows the lab's default
+  // tabs (Code and Images, no World). Both let the student change scenes.
   const open = !mode?.kind || mode.kind === 'freeplay';
   const parts = new Set<ProjectPart>();
   if (mode?.kind === 'freeplay') {
@@ -272,8 +272,6 @@ export function levelConfigFromFlat(properties: FlatProperties): {
     instructions: present(instructions) ? instructions : undefined,
   }) as LevelConfig;
 
-  // `edits` is written only when the parts differ from what editableParts
-  // gives for the groups in the config.
   const wanted = PROJECT_PARTS.filter(part => parts.has(part));
   const implied = editableParts(config);
   if (wanted.join() !== implied.join()) {

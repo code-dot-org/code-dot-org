@@ -120,8 +120,8 @@ export function tagOf(option: ZodType, discriminator: string): unknown {
   return field ? defOf(field).values?.[0] : undefined;
 }
 
-/** Whether a names node also takes a lone string, as a block check's type
-    does: one name or several. */
+/** Whether a names node also takes a lone string, so it holds one name or
+    several. */
 export function namesTakeString(schema: ZodType): boolean {
   const {inner} = unwrap(schema);
   return (
