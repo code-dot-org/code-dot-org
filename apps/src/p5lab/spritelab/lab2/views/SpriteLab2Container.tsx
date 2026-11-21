@@ -22,6 +22,7 @@ import {
   setupSpriteLab2BlocklyEnvironment,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
+import {withLevelConfig} from '../levelConfig/applyLevelConfig';
 import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
@@ -64,7 +65,11 @@ const isStudentEdit = (prev: Sources, next: Sources) =>
 
 const SpriteLab2Container: React.FunctionComponent<
   LabProps<SpriteLab2LevelProperties, Sources>
-> = ({levelProperties}) => {
+> = ({levelProperties: storedLevelProperties}) => {
+  const levelProperties = useMemo(
+    () => withLevelConfig(storedLevelProperties),
+    [storedLevelProperties]
+  );
   const dispatch = useAppDispatch();
   // A share link is play only, for its owner too.
   const isShareView = !!useAppSelector(state => state.lab.isShareView);

@@ -96,6 +96,7 @@ import {
   imagesNamedInRole,
 } from '../imageRoleDefaults';
 import {onTrimsUpdated} from '../imageTrim';
+import {withLevelConfig} from '../levelConfig/applyLevelConfig';
 import {
   editsWorld,
   generationLimitForMode,
@@ -572,7 +573,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       : (lessonLevelIds ?? [])
           .slice(0, currentLevelIndex)
           .map(id => levelPropertiesMap[id] as SpriteLab2LevelProperties)
-          .filter(Boolean);
+          .filter(Boolean)
+          .map(withLevelConfig);
   }, [lessonLevelIds, levelPropertiesMap, levelProperties.id]);
   // A standalone project has no earlier levels, so every block it offers
   // that has help is in its catalog.
@@ -726,7 +728,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Free play keeps the instructions out of the way: the panel starts
   // collapsed to its tab, which expands it again. The view stays mounted
   // from level to level, so the level's id is a dependency too.
-  const freeplayLevel = isFreeplayMode(levelProperties.levelMode);
+  const freeplayLevel =
+    levelProperties.instructionsStartCollapsed ??
+    isFreeplayMode(levelProperties.levelMode);
   const instructionsCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );
@@ -2235,11 +2239,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getWorkspace: getMainWorkspace,
   });
 
-  // Only freeplay adds, renames, reorders or deletes scenes; a level with no
-  // mode is unconstrained.
+  // Free play adds, renames, reorders or deletes scenes, and so does a
+  // level whose level_config says so; a level with no mode is unconstrained.
   const scenesEditable =
     !isViewOnly &&
-    (!levelProperties.levelMode || isFreeplayMode(levelProperties.levelMode));
+    (levelProperties.studentChangesScenes ??
+      (!levelProperties.levelMode ||
+        isFreeplayMode(levelProperties.levelMode)));
   const documentHidden = useDocumentHidden();
   // Freeze the game while nobody can see it: a hidden document stops
   // drawing on its own, but its timers would jump forward on return.

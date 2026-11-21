@@ -129,8 +129,16 @@ export interface StarterImage {
 export type WorldStartRoles = {[char: string]: string};
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
+  /** The level's settings as stored (levelConfig/schema.ts). The lab reads
+      them through withLevelConfig, as the properties below. */
+  levelConfig?: unknown;
   /** What kind of level this is; decides the tabs and the image controls. */
   levelMode?: LevelMode;
+  /** Set only from a level_config: whether the student can add, rename,
+      reorder and delete scenes, and whether the instructions panel starts
+      collapsed. Unset, both follow from free play. */
+  studentChangesScenes?: boolean;
+  instructionsStartCollapsed?: boolean;
   /** The one scene this level edits, created on first load if the project
       lacks it. The id is the key the go-to-scene block stores; the name is
       what the student sees, applied only at creation. The id 'scene-1' is
