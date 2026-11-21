@@ -8,6 +8,7 @@ import * as Observability from '@code-dot-org/core/plugins/observability';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
@@ -74,6 +75,7 @@ import * as dropletConfig from './dropletConfig';
 import Exporter from './Exporter';
 import {actions, reducers} from './redux/applab';
 import {changeScreen} from './redux/screens';
+import {deferSyncRenders, renderSync} from './syncRender';
 
 const {ApplabInterfaceMode} = applabConstants;
 
@@ -247,10 +249,7 @@ function renderFooterInSharedGame() {
       menuItems={menuItems}
       phoneFooter={true}
     />,
-    footerDiv,
-    {
-      legacyReactDomRender: true,
-    }
+    footerDiv
   );
 }
 
@@ -788,7 +787,8 @@ Applab.init = function (config) {
   const loader = studioApp()
     .loadLibraries(level.helperLibraries)
     .then(() => {
-      Applab.render();
+      // Synchronous: onMount builds the screens measured below.
+      deferSyncRenders(() => flushSync(renderAppLabView));
 
       //Scale old-sized apps to fit the new sized display. Old height - 480.
       if ($('.screen').height() === 480) {
@@ -947,6 +947,10 @@ Applab.reactMountPoint_ = null;
  * Trigger a top-level React render
  */
 Applab.render = function () {
+  renderSync('app', renderAppLabView);
+};
+
+function renderAppLabView() {
   var nextProps = Object.assign({}, Applab.reactInitialProps_, {
     isEditingProject: project.isEditing(),
     screenIds: designMode.getAllScreenIds(),
@@ -958,12 +962,9 @@ Applab.render = function () {
     <Provider store={getStore()}>
       <AppLabView {...nextProps} />
     </Provider>,
-    Applab.reactMountPoint_,
-    {
-      legacyReactDomRender: true,
-    }
+    Applab.reactMountPoint_
   );
-};
+}
 
 Applab.exportApp = function () {
   // Run, grab the html from divApplab, then reset:

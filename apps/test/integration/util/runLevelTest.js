@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
+import {flushSync} from 'react-dom';
 
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
@@ -91,7 +92,8 @@ module.exports = function (testCollection, testData, dataItem, done) {
             }, 2500);
           });
         } else {
-          // For non-studio tests, run without waiting.
+          // Apply React updates that createRoot queued for a microtask.
+          flushSync(() => {});
           assert(testData.customValidator(assert), 'Custom validator failed');
         }
       }
