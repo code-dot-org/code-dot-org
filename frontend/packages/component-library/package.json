@@ -28,6 +28,14 @@
       "import": "./dist/accordion/index.mjs",
       "require": "./dist/accordion/index.js"
     },
+    "./accordion/faqAccordion": {
+      "types": {
+        "import": "./dist/accordion/faqAccordion/index.d.ts",
+        "require": "./dist/accordion/faqAccordion/index.d.ts"
+      },
+      "import": "./dist/accordion/faqAccordion/index.mjs",
+      "require": "./dist/accordion/faqAccordion/index.js"
+    },
     "./accordrion/faqAccordion": {
       "types": {
         "import": "./dist/accordion/faqAccordion/index.d.ts",
