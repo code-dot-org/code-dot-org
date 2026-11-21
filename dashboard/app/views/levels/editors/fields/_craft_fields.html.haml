@@ -199,7 +199,7 @@
       columns: allColumns,
       colWidths: allColumnWidths,
       stretchH: 'none',
-      colorScheme: 'light',
+      theme: levelbuilder.handsontableTheme,
       licenseKey: 'non-commercial-and-evaluation',
       afterChange: function(changes, source) {
         $("#level_" + map_property_name).val(JSON.stringify(array2dToFlat(array2d)));

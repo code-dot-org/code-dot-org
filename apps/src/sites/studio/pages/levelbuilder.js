@@ -2,6 +2,7 @@
  * @file Main entry point for scripts used on all level editing pages.
  */
 import Handsontable from 'handsontable';
+import {mainTheme, registerTheme} from 'handsontable/themes';
 import $ from 'jquery';
 import _ from 'lodash';
 
@@ -39,6 +40,14 @@ _.extend(window.levelbuilder, {
   acapela: require('@cdo/apps/code-studio/acapela'),
   ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit'),
   Handsontable: Handsontable,
+  handsontableTheme: registerTheme(mainTheme)
+    .setColorScheme('light')
+    .setDensityType('compact')
+    .params({
+      tokens: {
+        fontSize: '13px',
+      },
+    }),
 });
 
 window.levelbuilder.installBlocks = function (app, blockly, options) {

@@ -87,11 +87,12 @@
       }
       new levelbuilder.Handsontable($("#mazeTable").get(0), {
         data: data, startRows: 8, startCols: 8, maxRows: 8, maxCols: 8, stretchH: 'none',
+        theme: levelbuilder.handsontableTheme, licenseKey: 'non-commercial-and-evaluation',
         validator: function(value, callback) {
           callback(parseInt(value) % 1 == 0);
         }, afterChange: function(changes, source) {
           $('#level_maze_data').val(JSON.stringify(data));
         }, cells: function(row, col, prop) {
           return {renderer: mazeRenderer};
-        }, licenseKey: 'non-commercial-and-evaluation'
+        }
       });
