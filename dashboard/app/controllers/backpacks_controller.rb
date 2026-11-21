@@ -23,12 +23,6 @@ class BackpacksController < ApplicationController
   # Return the channels of every backpack the current user already has, keyed by
   # app type. This creates nothing: a user with no backpacks gets an empty list.
   def get_channels
-    backpacks = Backpack.where(user_id: current_user.id).order(:id).includes(:game)
-    channels = backpacks.each_with_object({}) do |backpack, result|
-      app_type = backpack.game_id ? backpack.game&.name&.downcase : SharedConstants::UNIVERSAL_APP_TYPE
-      # A backpack whose game no longer exists cannot be keyed by app type.
-      result[app_type] = backpack.channel if app_type
-    end
-    render json: {channels: channels}
+    render json: {channels: Backpack.channels_by_app_type(current_user.id)}
   end
 end
