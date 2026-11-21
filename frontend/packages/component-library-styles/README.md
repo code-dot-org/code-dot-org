@@ -14,6 +14,7 @@ typography styles, and more to ensure visual consistency and a unified design la
 - [Available Variables](#available-variables)
   - [Colors](#colors)
   - [Primitive Colors](#primitive-colors)
+  - [Brand Tokens](#brand-tokens)
   - [Fonts](#fonts)
   - [Font Awesome](#font-awesome)
   - [Typography](#typography)
@@ -65,18 +66,22 @@ For CSS variables (colors, fonts, shape, and spacing), import them globally in y
 import '@code-dot-org/component-library-styles/fontVariables.css';
 import '@code-dot-org/component-library-styles/primitiveColors.css';
 import '@code-dot-org/component-library-styles/colors.css';
+import '@code-dot-org/component-library-styles/brandOverrides.css';
 import '@code-dot-org/component-library-styles/shapeAndSpacingVariables.css';
 ```
 
+`brandOverrides.css` goes immediately after `colors.css`; see [Brand Tokens](#brand-tokens).
+
 ## Development
 
-The easiest way to develop and see changes live quickly is to run `yarn dev` command from `/frontend` directory.
-This will start the component-library and its Storybook and allow you to see changes in real-time.
+This package has no build step. To see changes live, run the design system Storybook, which serves on port 6006:
 
 ```bash
-#from /frontend directory
-yarn dev
+# from /frontend
+yarn workspace @code-dot-org/design-system-storybook storybook
 ```
+
+`yarn dev` from `/frontend` starts Studio, not Storybook.
 
 ## Usage
 
@@ -174,22 +179,20 @@ You can use semantic colors directly in your SCSS or CSS files (after importing 
 
 #### ✅ Example with Dark Mode:
 
-To enable dark mode, add a `data-theme="dark"` attribute to the root element:
+Semantic colors switch on a `data-theme` attribute whose value is `Light` or `Dark` (case-sensitive). In React,
+mount `ThemeProvider` from `@code-dot-org/component-library/common/contexts`, which renders that wrapper.
 
 ```jsx
-<div data-theme="dark">
+<div data-theme="Dark">
   <MyComponent />
 </div>
 ```
 
-Example SCSS:
+Semantic variables resolve on their own. Target the attribute only for an override the tokens don't cover:
 
 ```scss
-[data-theme='dark'] {
-  .myComponent {
-    background-color: var(--background-neutral-primary);
-    color: var(--text-neutral-primary);
-  }
+[data-theme='Dark'] .myComponent {
+  // dark-mode-specific override
 }
 ```
 
@@ -257,6 +260,21 @@ Then use the CSS variables in your SCSS or CSS files:
   - Internal design tokens
   - Styling that must remain constant regardless of theme
 - ⛔️ Avoid directly referencing primitive colors for theming — use semantic tokens instead.
+
+### Brand Tokens
+
+The colors above are the legacy `:root` tokens. A brand override layer, imported through `brandOverrides.css`,
+sits on top of them and switches on the `data-brand` attribute of `<html>`:
+
+- `colors_codeAi.css`, `primitiveColors_codeAi.css` — the canonical CADS token exports. Design re-exports these;
+  don't hand-edit them.
+- `brandCodeAiNext.css`, `brandCodeAiAudit.css` — **generated** from the two canonical files by
+  `scripts/generateBrandCodeAiNext.mjs` and `scripts/generateBrandCodeAiAudit.mjs`, scoped to
+  `[data-brand='codeai-next']` and `[data-brand='codeai-audit']`. Never edit them.
+- `brandLegacyShim.css`, `brandLegacyAliases.css` — hand-written maps between legacy and CADS token names.
+
+See [Theming Architecture](../component-library/src/themes/README.md#css-variable-resolution) for how the layers
+resolve, and the header of `brandOverrides.css` for the cleanup plan.
 
 ### Fonts
 
@@ -689,23 +707,22 @@ They allow you to define a set of styles that can be reused throughout your proj
 
 ## Theming
 
-We support dark and light mode using `data-theme` attributes.
-
-✅ Example:
-
-```jsx
-<div data-theme="dark">
-  <MyComponent />
-</div>
-```
-
-✅ Example (via SCSS):
+We support dark and light mode using the `data-theme` attribute, with values `Light` and `Dark` (case-sensitive).
+Semantic variables resolve automatically:
 
 ```scss
-[data-theme='dark'] {
-  .myComponent {
-    background-color: var(--bg-primary-dark);
-  }
+.myComponent {
+  // These values change automatically based on [data-theme]
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+```
+
+If you need mode-specific overrides beyond what semantic tokens provide, target the `data-theme` attribute:
+
+```scss
+[data-theme='Dark'] .myComponent {
+  // dark-mode-specific override
 }
 ```
 
@@ -715,15 +732,9 @@ themes on the fly and access the current theme in your components.
 
 ## Testing
 
-Run linting:
-
-```bash
-yarn lint
-
-yarn lint:fix
-
-yarn prettier:fix
-```
+`yarn test` checks that the generated brand files are up to date: it runs both generators with `--check`, which fails
+if `brandCodeAiNext.css` or `brandCodeAiAudit.css` differs from a fresh run. The package's only other script is
+`release`.
 
 ## Contributing
 
