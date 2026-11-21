@@ -2,6 +2,7 @@ import {Typography as MuiTypography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import escapeSpecialCharactersForRegExp from '@cdo/apps/util/escapeSpecialCharactersForRegExp';
 import i18n from '@cdo/locale';
 
 import IconListEntry from './IconListEntry';
@@ -39,8 +40,8 @@ export default class IconList extends React.Component {
       },
     };
 
-    let search = this.props.search;
-    if (search[0] !== '-') {
+    let search = escapeSpecialCharactersForRegExp(this.props.search);
+    if (this.props.search[0] !== '-') {
       search = '(^|-)' + search;
     }
     const query = new RegExp(search);

@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 
 import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import escapeSpecialCharactersForRegExp from '@cdo/apps/util/escapeSpecialCharactersForRegExp';
 import msg from '@cdo/locale';
 
 import experiments from '../../util/experiments';
@@ -71,7 +72,10 @@ class DataLibraryPane extends React.Component {
   };
 
   filterCategories = allCategories => {
-    const searchRegExp = new RegExp('(?:\\s+|^)' + this.state.search, 'i');
+    const searchRegExp = new RegExp(
+      '(?:\\s+|^)' + escapeSpecialCharactersForRegExp(this.state.search),
+      'i'
+    );
     let potentialCategories = allCategories.reduce(
       (filteredCategories, category) => {
         category.datasets = category.datasets.filter(dataset => {
