@@ -281,6 +281,24 @@ describe 'Cdo::ActiveJobBackend' do
     end
   end
 
+  describe 'oldest_worker_age_s()' do
+    it 'returns the age of the longest-running worker' do
+      assert_equal 24, Cdo::ActiveJobBackend.oldest_worker_age_s
+    end
+
+    it 'converts the dd-hh:mm:ss form of ps etime' do
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_5_stale_workers)
+
+      assert_equal 110_662, Cdo::ActiveJobBackend.oldest_worker_age_s
+    end
+
+    it 'returns nil when no workers are running' do
+      Cdo::ActiveJobBackend::ExistingWorkers.stubs(:ps).returns(ps_for_no_workers)
+
+      assert_nil Cdo::ActiveJobBackend.oldest_worker_age_s
+    end
+  end
+
   private def ps_for_5_fresh_workers
     <<~HEREDOC
         PID     ELAPSED COMMAND

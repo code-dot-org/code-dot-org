@@ -99,6 +99,11 @@ module Cdo
       end
     end
 
+    # Age of the longest-running worker, or nil when none are running.
+    def self.oldest_worker_age_s
+      ExistingWorkers.get_workers_from_ps.map {|_job_id, _pid, runtime_seconds| runtime_seconds}.max
+    end
+
     # Load rails environment into memory before forking workers so
     # that they share all this memory and don't have to reload it.
     def self.before_worker_fork
