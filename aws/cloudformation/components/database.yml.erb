@@ -413,4 +413,43 @@
       DBParameterGroupName: default.aurora-mysql8.0 #Explicitly stop setting a custom Instance ParameterGroup.
 <%    end -%>
 <%  end -%>
+<%  if rack_env?(:production) -%>
+  # Aurora writer connections as a share of max_connections. The ceiling grows
+  # with the log of instance memory, so a larger instance buys few connections:
+  # 4,069 on db.r7i.4xlarge, 5,069 on 8xlarge, 5,654 on 12xlarge.
+  #
+  # Thresholds are fixed to the 4xlarge ceiling. The production cluster is not
+  # managed by this stack and is resized by hand, so the template cannot read
+  # the current instance class. Fixing them to the smallest class in use means
+  # the alarms fire early rather than late while the writer is scaled up.
+  #
+  # The Role=WRITER cluster dimension follows the writer through a failover; an
+  # instance ID would not.
+<%    writer_max_connections = 4069 # db.r7i.4xlarge, Aurora MySQL default formula
+      {
+        Warning: {percent: 70, periods: 5, topic: 'LowPriority'},
+        Critical: {percent: 85, periods: 2, topic: 'Urgent'},
+      }.each do |level, alarm|
+        threshold = (writer_max_connections * alarm[:percent] / 100.0).round
+-%>
+  DBWriterConnections<%=level%>:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmActions:
+        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%=alarm[:topic]%>"
+      AlarmName: <%="#{stack_name}_db_writer_connections_#{level.to_s.downcase}"%>
+      AlarmDescription: Aurora writer connections above <%=alarm[:percent]%>% of the db.r7i.4xlarge max_connections ceiling (<%=threshold%> of <%=writer_max_connections%>) for <%=alarm[:periods]%> minutes
+      Namespace: AWS/RDS
+      MetricName: DatabaseConnections
+      Dimensions:
+        - {Name: DBClusterIdentifier, Value: <%=PRODUCTION_DB_CLUSTER_ID%>}
+        - {Name: Role, Value: WRITER}
+      Statistic: Maximum
+      Period: 60
+      EvaluationPeriods: <%=alarm[:periods]%>
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: <%=threshold%>
+      TreatMissingData: notBreaching
+<%    end -%>
+<%  end -%>
 <%end -%>
