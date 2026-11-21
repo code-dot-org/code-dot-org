@@ -3,6 +3,6 @@
   "name": "Images",
   "category": "Supported Content",
   "category_key": "supported_content",
-  "content": "### Allowed hostnames\nFor security reasons, only images with certain hostnames (or ones uploaded directly to the project) can be accessed in Web Lab. Currently, the hostname must end in one of the following:\n\n- [picsum.photos](https://picsum.photos/) - The Lorem Ipsum for photos.",
+  "content": "### Allowed hostnames\nFor security reasons, only images with certain hostnames (or ones uploaded directly to the project) can be accessed in Web Lab. Currently, the hostname must end in one of the following:\n\n- [picsum.photos](https://picsum.photos/) - The Lorem Ipsum for photos.\n- [upload.wikimedia.org](https://upload.wikimedia.org/) - Wikimedia Commons image hosting.",
   "short_description": "Web Lab only allows users to use approved APIs. "
 }
