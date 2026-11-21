@@ -8,8 +8,8 @@ import {pathwaySourceSchema} from '@cdo/apps/adaptive/schema';
 import SchemaForm from '@cdo/apps/lab2/levelEditors/schemaForm/SchemaForm';
 import {kindOf} from '@cdo/apps/lab2/levelEditors/schemaForm/schemaNodes';
 
-// The schema form is for any Lab2 schema: the adaptive tutorial's pathway,
-// which was written with no form in mind, draws and keeps its value.
+// The schema form works for any Lab2 schema: it draws the adaptive pathway
+// schema, which was not written for a form, and leaves the value unchanged.
 const PATHWAY = path.resolve(
   __dirname,
   '../../../../../../dashboard/config/level_content/adaptive/ai-makerspace-2026.json'

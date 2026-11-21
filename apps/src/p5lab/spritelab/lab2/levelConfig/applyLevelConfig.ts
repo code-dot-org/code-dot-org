@@ -1,9 +1,6 @@
-// Hands the lab a level's level_config in the properties its readers know.
-//
-// The lab's readers take a level's settings from level_mode and the
-// properties beside it. A level with a level_config has its settings turned
-// into those as it arrives, and the earlier properties it may still carry
-// are ignored.
+// Turns a level's level_config into level_mode and the other flat
+// properties the lab's code reads. On a level with a level_config, any flat
+// properties it still stores are ignored.
 
 import type {LevelMode, LevelModeKind} from '../levelMode';
 import type {Tab} from '../redux/spriteLab2Redux';
@@ -26,7 +23,8 @@ const TAB_OF_FOCUS: Record<Focus, Tab> = {
 };
 
 // The lab's tab set comes from a kind and the tabs added to it. Code and
-// World kinds come with the game; the image kind is the Images tab alone.
+// World kinds also show the Play tab; the image kind shows only the Images
+// tab.
 function kindFor(focus: Focus, parts: ProjectPart[]): LevelModeKind {
   if (focus === 'code' || focus === 'world') {
     return focus;
@@ -63,8 +61,9 @@ export function flatFromLevelConfig(config: LevelConfig): FlatProperties {
     .filter(part => part !== OWN_PART[kind])
     .filter(part => !(makeFirst && part === 'images'))
     .map(part => TAB_OF_FOCUS[part]);
-  // The kind opens on its own tab. A level that makes its image first opens
-  // on Images and then goes on to that tab.
+  // A level opens on its kind's own tab, so startTab is set only when the
+  // focus is elsewhere. A level that makes its image first opens on Images,
+  // then moves to its focus.
   const opensOn = OWN_PART[kind] ?? 'play';
   const levelMode = onlySet({
     kind,

@@ -6,7 +6,8 @@ import {z} from 'zod';
 import {checklistSchema} from '@cdo/apps/lab2/checklist/checklistSchema';
 import ChecklistEditor from '@cdo/apps/lab2/levelEditors/checklist/ChecklistEditor';
 
-// A lab of its own, with two kinds of check.
+// A made-up lab's checks, two kinds, so the editor is tested apart from
+// Sprite Lab.
 const schema = checklistSchema(
   z.discriminatedUnion('kind', [
     z.strictObject({kind: z.literal('ran')}).meta({title: 'Ran the code'}),

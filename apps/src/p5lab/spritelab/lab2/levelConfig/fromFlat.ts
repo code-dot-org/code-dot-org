@@ -1,6 +1,5 @@
 // Writes a level's earlier settings (level_mode and the properties beside
-// it) as a level_config. Used to convert level files, and by the
-// levelbuilder form when it opens a level not yet converted.
+// it) as a level_config.
 
 import type {LevelMode} from '../levelMode';
 import type {SpriteLab2LevelProperties} from '../types';
@@ -13,7 +12,8 @@ import {
   ProjectPart,
 } from './schema';
 
-/** The earlier properties a level's settings were spread over. */
+/** The flat properties the lab reads a level's settings from: the stored
+    ones a level_config replaces, and two set only from a level_config. */
 export type FlatProperties = Pick<
   SpriteLab2LevelProperties,
   | 'levelMode'
@@ -35,7 +35,7 @@ export type FlatProperties = Pick<
   | 'instructionsStartCollapsed'
 >;
 
-/** Their names in a level file. */
+/** The snake_case name of each flat property in a level file. */
 export const FLAT_PROPERTY_NAMES: Record<keyof FlatProperties, string> = {
   levelMode: 'level_mode',
   pinnedScene: 'pinned_scene',
@@ -272,8 +272,8 @@ export function levelConfigFromFlat(properties: FlatProperties): {
     instructions: present(instructions) ? instructions : undefined,
   }) as LevelConfig;
 
-  // `edits` is written only when the parts differ from what the groups
-  // present would give.
+  // `edits` is written only when the parts differ from what editableParts
+  // gives for the groups in the config.
   const wanted = PROJECT_PARTS.filter(part => parts.has(part));
   const implied = editableParts(config);
   if (wanted.join() !== implied.join()) {

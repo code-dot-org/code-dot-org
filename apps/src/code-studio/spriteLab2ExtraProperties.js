@@ -41,6 +41,27 @@ export function camelize(snakeName) {
 // not overwrite a newer dump.
 let loadEpoch = 0;
 
+// The flags a level with a level_config holds inside it instead
+// (GamelabJr::LEVEL_CONFIG_REPLACES); the section leaves them out on such a
+// level.
+const IN_LEVEL_CONFIG = new Set([
+  'block_catalog',
+  'blocks_always_in_toolbox',
+  'lock_earlier_blocks',
+  'freeplay_intro',
+  'objectives',
+  'image_role_defaults',
+  'pinned_scene',
+  'extra_scene',
+  'add_blocks',
+  'world_start_pattern',
+  'world_start_roles',
+  'world_keeps_roles',
+  'starter_images',
+  'callouts',
+]);
+let editableProperties = RAW_EDITABLE_PROPERTIES;
+
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
@@ -52,11 +73,17 @@ function init() {
   if (
     !levelId ||
     document.getElementById('level_type')?.value !== 'GamelabJr' ||
-    !document.getElementById('level_uses_lab2')?.checked ||
-    // A level with a level_config edits these in its settings editor.
-    document.querySelector('[data-level-config-active="true"]')
+    !document.getElementById('level_uses_lab2')?.checked
   ) {
     return;
+  }
+  if (
+    document.getElementById('spritelab-level-config-editor')?.dataset
+      .hasConfig === 'true'
+  ) {
+    editableProperties = RAW_EDITABLE_PROPERTIES.filter(
+      key => !IN_LEVEL_CONFIG.has(key)
+    );
   }
   form.insertAdjacentElement('afterend', buildSection());
   const textarea = document.getElementById('extra_properties_json');
@@ -142,7 +169,7 @@ async function loadCurrentValues(levelId) {
     }
     const properties = response.value[levelId] || {};
     const display = {};
-    RAW_EDITABLE_PROPERTIES.forEach(key => {
+    editableProperties.forEach(key => {
       display[key] = properties[camelize(key)] ?? null;
     });
     pre.textContent = JSON.stringify(display, null, 2);
@@ -168,7 +195,7 @@ async function save(levelId, status) {
     return;
   }
   const unknown = Object.keys(changes).find(
-    key => !RAW_EDITABLE_PROPERTIES.includes(key)
+    key => !editableProperties.includes(key)
   );
   if (unknown) {
     status.textContent = `${unknown} isn't in this level's editable list — everything else has its own editor.`;

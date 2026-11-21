@@ -1,8 +1,6 @@
 // The level edit page's editor for a lab whose settings are a zod schema:
 // the schema form, a list of what is wrong, the value as JSON for reading,
-// and a hidden input that the level form saves. A lab gives its schema,
-// the property name and, if it wants them, a preview and a way to convert
-// a level whose settings are still in older properties.
+// and a hidden input that the level form saves.
 
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useMemo, useState} from 'react';

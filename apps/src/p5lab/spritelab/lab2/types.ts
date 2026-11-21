@@ -136,7 +136,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   levelMode?: LevelMode;
   /** Set only from a level_config: whether the student can add, rename,
       reorder and delete scenes, and whether the instructions panel starts
-      collapsed. Unset, both follow from free play. */
+      collapsed. Unset, both follow from the level's mode: on in free play,
+      and scene changes also on a level with no mode. */
   studentChangesScenes?: boolean;
   instructionsStartCollapsed?: boolean;
   /** The one scene this level edits, created on first load if the project

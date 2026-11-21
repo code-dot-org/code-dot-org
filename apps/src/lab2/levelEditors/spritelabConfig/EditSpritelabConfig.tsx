@@ -17,8 +17,9 @@ import {
 import LevelConfigEditor from '../levelConfig/LevelConfigEditor';
 import LevelPreviewFrame from '../levelConfig/LevelPreviewFrame';
 
-// The older editors this one replaces, hidden once a level is converted.
-const REPLACED_SECTIONS = ['level_mode_area', 'spritelab2_extra_properties'];
+// The level mode form, which this editor replaces once a level is
+// converted.
+const REPLACED_SECTIONS = ['level_mode_area'];
 
 interface EditSpritelabConfigProps {
   levelId: number;
@@ -44,8 +45,8 @@ const EditSpritelabConfig: React.FunctionComponent<
       });
       return {value: config, dropped};
     }}
-    // A level that starts limiting what the student changes starts from
-    // what they change now.
+    // Switching on "Limit what the student can change" starts the list with
+    // the parts the student can change now.
     featureStart={(path, value) =>
       path === 'edits' ? editableParts(value as LevelConfig) : undefined
     }

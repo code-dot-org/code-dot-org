@@ -5,7 +5,7 @@
   Level settings (Sprite Lab in Lab2)
 
 #level_config_area.in.collapse
-  #spritelab-level-config-editor
+  #spritelab-level-config-editor{data: {has_config: @level.properties['level_config'].present?.to_s}}
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_spritelab_level_config.js'),

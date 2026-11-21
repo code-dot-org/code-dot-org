@@ -51,8 +51,9 @@ export type Widget = React.ComponentType<WidgetProps>;
 interface FormContext {
   problems: Problems;
   widgets: Record<string, Widget>;
-  /** The value a feature starts with when it is switched on, when the
-      caller knows better than the schema; the path is joined with dots. */
+  /** Overrides the value startValue builds from the schema for a feature
+      being switched on; undefined falls back to it. The path is joined
+      with dots. */
   featureStart?: (path: string) => unknown;
 }
 
@@ -74,7 +75,7 @@ const humanize = (key: string | number | undefined) =>
         )
     : undefined;
 
-/** A node's words, with a title made from its key when it has none. */
+/** A node's meta, with a title made from its key when it has none. */
 function metaAt(schema: ZodType, path: Path) {
   const meta = metaOf(schema);
   return meta.title ? meta : {...meta, title: humanize(path[path.length - 1])};
@@ -139,8 +140,8 @@ export const SchemaFormScope: React.FunctionComponent<
   </Context.Provider>
 );
 
-/** Whether a value counts as set: an optional field holding this is
-    written as absent. */
+/** Whether a value is unset. An optional field that is unset is left out
+    of the saved value. */
 const isUnset = (value: unknown) => value === undefined;
 
 interface FieldProps extends WidgetProps {
@@ -839,8 +840,9 @@ const NumberField: React.FunctionComponent<FieldProps> = ({
   );
 };
 
-/** Text that is kept as typed while it is edited, and handed on whenever it
-    reads as a value. */
+/** The text a field shows while it is edited. It is replaced only when the
+    value from outside formats differently, so a partly typed value is not
+    overwritten. */
 function useDraft<T>(
   value: T,
   format: (value: T) => string

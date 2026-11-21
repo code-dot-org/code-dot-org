@@ -725,9 +725,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // the preview column is or would be.
   const paneWidthPx = previewColumnWidth || DEFAULT_PANE_WIDTH;
   const clearOfPane = {right: paneWidthPx};
-  // Free play keeps the instructions out of the way: the panel starts
-  // collapsed to its tab, which expands it again. The view stays mounted
-  // from level to level, so the level's id is a dependency too.
+  // Free play, or a level whose level_config says so, keeps the
+  // instructions out of the way: the panel starts collapsed to its tab,
+  // which expands it again. The view stays mounted from level to level, so
+  // the level's id is a dependency too.
   const freeplayLevel =
     levelProperties.instructionsStartCollapsed ??
     isFreeplayMode(levelProperties.levelMode);

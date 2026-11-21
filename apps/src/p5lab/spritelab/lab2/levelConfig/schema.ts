@@ -433,7 +433,6 @@ const check = z.discriminatedUnion('kind', [
   z.strictObject({kind: z.literal('rated')}).meta({title: 'Rated a picture'}),
 ]);
 
-// The schema's checks and the lab's must stay the same list.
 const sameChecks: Same<z.infer<typeof check>['kind'], ObjectiveCheck['kind']> =
   true;
 void sameChecks;
@@ -575,7 +574,6 @@ export const levelConfigSchema = z
 
 export type LevelConfig = z.infer<typeof levelConfigSchema>;
 
-/** The parts of the project the student can change on a level. */
 export function editableParts(config: LevelConfig): ProjectPart[] {
   if (config.edits) {
     return PROJECT_PARTS.filter(part => config.edits?.includes(part));

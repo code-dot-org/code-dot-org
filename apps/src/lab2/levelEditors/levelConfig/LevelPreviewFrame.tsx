@@ -1,7 +1,8 @@
 // The lab, running the level with the settings being edited, in a frame on
 // the level edit page. It is drawn at a laptop's size and scaled down to
 // fit, and it pins to the corner of the window once its place on the page
-// scrolls out of view, as the panels preview does.
+// scrolls out of view, as the preview in the panels editor
+// (EditPanels.tsx) does.
 
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
@@ -14,7 +15,8 @@ import styles from './level-preview-frame.module.scss';
 // The size the lab is drawn at inside the frame.
 const FRAME_WIDTH = 1280;
 const FRAME_HEIGHT = 800;
-// How long the settings rest before the lab starts over with them.
+// How long the settings must stay unchanged before they are sent and the
+// lab starts over with them.
 const SEND_DELAY_MS = 500;
 const PINNED_WIDTH_VW = 34;
 
@@ -75,7 +77,6 @@ const LevelPreviewFrame: React.FunctionComponent<LevelPreviewFrameProps> = ({
         return;
       }
       const box = slot.getBoundingClientRect();
-      // Pinned once the slot has scrolled up past the top of the window.
       setPinned(box.bottom < 0);
       setSlotWidth(box.width);
     };

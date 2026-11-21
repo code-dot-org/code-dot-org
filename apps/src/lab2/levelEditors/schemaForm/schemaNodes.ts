@@ -1,5 +1,5 @@
 // What the schema form needs to know about a zod schema node: which
-// control it gets, its words, and the value a new one starts with.
+// control it gets, its meta, and the value a new one starts with.
 
 import type {GlobalMeta, ZodType} from 'zod';
 
@@ -34,7 +34,8 @@ export function unwrap(schema: ZodType): {inner: ZodType; optional: boolean} {
   return {inner, optional};
 }
 
-/** The node's words: the inner node's, with the wrapper's laid over them. */
+/** The node's meta: the inner node's, with the optional wrapper's own meta
+    taking precedence. */
 export function metaOf(schema: ZodType): GlobalMeta {
   const {inner} = unwrap(schema);
   return {...ownMeta(inner), ...ownMeta(schema)};
@@ -214,7 +215,8 @@ export function startValue(schema: ZodType): unknown {
   }
 }
 
-/** A setting's words for a list of them: "Steps" lists "Step"s. */
+/** The title of one item of a list: the element's own title, or the list's
+    title without a final s ("Steps" gives "Step"). */
 export function itemTitle(schema: ZodType, listTitle?: string): string {
   const own = metaOf(elementOf(schema)).title;
   if (own) {

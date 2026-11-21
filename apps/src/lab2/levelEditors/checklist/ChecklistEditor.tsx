@@ -1,7 +1,5 @@
 // The levelbuilder editor for a level's checklist (checklistSchema.ts), for
-// any Lab2 lab. A lab with a schema form registers it as the checklist
-// widget; a lab with a hand-built editor renders it on its own, with its
-// checklist schema, and gets the same steps editor.
+// any Lab2 lab.
 
 import {Button as MuiButton} from '@mui/material';
 import React, {useMemo} from 'react';
@@ -152,7 +150,6 @@ const ChecklistFields: React.FunctionComponent<WidgetProps> = ({
   );
 };
 
-/** The checklist widget, for a schema form's `widgets`. */
 export const ChecklistWidget = ChecklistFields;
 
 interface ChecklistEditorProps {
