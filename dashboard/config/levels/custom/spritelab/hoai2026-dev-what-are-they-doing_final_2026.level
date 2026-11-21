@@ -6,11 +6,77 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
-    "world_keeps_roles": [
-      "friend",
-      "hero",
-      "treasure"
-    ],
+    "level_config": {
+      "images": {
+        "canAdd": false,
+        "canDelete": false,
+        "paintTools": "limited",
+        "generationLimit": 5
+      },
+      "world": {
+        "palette": [
+          "friend",
+          "hero",
+          "treasure",
+          "block"
+        ],
+        "keepsOneOf": [
+          "friend",
+          "hero",
+          "treasure"
+        ]
+      },
+      "scenes": {
+        "starting": [
+          {
+            "id": "scene-1",
+            "name": "Scene 1"
+          }
+        ]
+      },
+      "blocks": {
+        "addOnArrival": [
+          {
+            "attachTo": "spritelab2_whenRun",
+            "shadow": {
+              "type": "spritelab2_placeholder",
+              "extraState": {
+                "like": {
+                  "type": "spritelab2_beginsBehavior",
+                  "fields": {
+                    "BEHAVIOR": "patrollingOnBlocks"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "lockEarlier": true,
+        "dropdownsStartOn": {
+          "sprite": "friend",
+          "spritelab2_beginsBehavior": "friend"
+        }
+      },
+      "objectives": {
+        "title": "**What are they doing?**",
+        "steps": [
+          {
+            "text": "Drag a **character begins** block under **when run** and choose what the new character will do.",
+            "check": {
+              "kind": "block",
+              "type": "spritelab2_beginsBehavior",
+              "under": "spritelab2_whenRun"
+            }
+          },
+          {
+            "text": "Select **Run** and watch them go.",
+            "check": {
+              "kind": "play"
+            }
+          }
+        ]
+      }
+    },
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -25,48 +91,6 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
-    "lock_earlier_blocks": true,
-    "level_mode": {
-      "kind": "code",
-      "extraTabs": [
-        "Images",
-        "World"
-      ],
-      "noNewImages": true,
-      "noDeletingImages": true,
-      "generationLimit": 5,
-      "limitedPaintTools": true,
-      "paletteRoles": [
-        "friend",
-        "hero",
-        "treasure",
-        "block"
-      ]
-    },
-    "pinned_scene": {
-      "id": "scene-1",
-      "name": "Scene 1"
-    },
-    "image_role_defaults": {
-      "sprite": "friend",
-      "spritelab2_beginsBehavior": "friend"
-    },
-    "add_blocks": [
-      {
-        "attachTo": "spritelab2_whenRun",
-        "shadow": {
-          "type": "spritelab2_placeholder",
-          "extraState": {
-            "like": {
-              "type": "spritelab2_beginsBehavior",
-              "fields": {
-                "BEHAVIOR": "patrollingOnBlocks"
-              }
-            }
-          }
-        }
-      }
-    ],
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -75,25 +99,6 @@
           "type": "spritelab2_beginsBehavior",
           "fields": {
             "BEHAVIOR": "patrollingOnBlocks"
-          }
-        }
-      ]
-    },
-    "objectives": {
-      "title": "**What are they doing?**",
-      "items": [
-        {
-          "text": "Drag a **character begins** block under **when run** and choose what the new character will do.",
-          "check": {
-            "kind": "block",
-            "type": "spritelab2_beginsBehavior",
-            "under": "spritelab2_whenRun"
-          }
-        },
-        {
-          "text": "Select **Run** and watch them go.",
-          "check": {
-            "kind": "play"
           }
         }
       ]

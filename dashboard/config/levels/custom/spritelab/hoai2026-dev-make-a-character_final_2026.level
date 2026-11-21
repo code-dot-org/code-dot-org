@@ -20,42 +20,49 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
-    "level_mode": {
-      "kind": "image",
-      "limitedPaintTools": true,
-      "generationLimit": 5,
-      "imageType": "sprite",
-      "imageRole": "hero",
-      "learning": true,
-      "oneImage": true
-    },
-    "objectives": {
-      "title": "**Make a character**",
-      "items": [
-        {
-          "text": "Select the **+** button.",
-          "check": {
-            "kind": "image",
-            "imageType": "sprite"
-          }
+    "level_config": {
+      "focus": "images",
+      "edits": [
+        "images"
+      ],
+      "images": {
+        "makes": {
+          "type": "sprite",
+          "role": "hero"
         },
-        {
-          "text": "Make a **prompt** that describes your character, or draw it yourself.",
-          "check": {
-            "kind": "image",
-            "imageType": "sprite"
-          }
-        },
-        {
-          "text": "Evaluate the AI’s image with a thumbs up or thumbs down.",
-          "check": {
-            "kind": "rated"
+        "onlyThisImage": true,
+        "paintTools": "limited",
+        "generationLimit": 5,
+        "explainAi": true
+      },
+      "objectives": {
+        "title": "**Make a character**",
+        "steps": [
+          {
+            "text": "Select the **+** button.",
+            "check": {
+              "kind": "image",
+              "imageType": "sprite"
+            }
           },
-          "shownWhen": {
-            "kind": "generated"
+          {
+            "text": "Make a **prompt** that describes your character, or draw it yourself.",
+            "check": {
+              "kind": "image",
+              "imageType": "sprite"
+            }
+          },
+          {
+            "text": "Evaluate the AI’s image with a thumbs up or thumbs down.",
+            "check": {
+              "kind": "rated"
+            },
+            "shownWhen": {
+              "kind": "generated"
+            }
           }
-        }
-      ]
+        ]
+      }
     },
     "long_instructions": "# Make a character",
     "header_label": "Make a character",

@@ -20,26 +20,33 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
-    "level_mode": {
-      "kind": "image",
-      "limitedPaintTools": true,
-      "generationLimit": 5,
-      "imageType": "sprite",
-      "imageSubject": "object",
-      "imageRole": "treasure",
-      "oneImage": true
-    },
-    "objectives": {
-      "title": "**Treasure**",
-      "items": [
-        {
-          "text": "Select the **+** button and make an image for a new object.",
-          "check": {
-            "kind": "image",
-            "imageType": "sprite"
+    "level_config": {
+      "focus": "images",
+      "edits": [
+        "images"
+      ],
+      "images": {
+        "makes": {
+          "type": "sprite",
+          "subject": "object",
+          "role": "treasure"
+        },
+        "onlyThisImage": true,
+        "paintTools": "limited",
+        "generationLimit": 5
+      },
+      "objectives": {
+        "title": "**Treasure**",
+        "steps": [
+          {
+            "text": "Select the **+** button and make an image for a new object.",
+            "check": {
+              "kind": "image",
+              "imageType": "sprite"
+            }
           }
-        }
-      ]
+        ]
+      }
     },
     "long_instructions": "# What will your player find?\r\n\r\nMake an object for your player to seek or avoid.\r\n",
     "header_label": "Treasure",

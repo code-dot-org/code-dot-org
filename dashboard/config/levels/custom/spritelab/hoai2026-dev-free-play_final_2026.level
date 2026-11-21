@@ -20,19 +20,34 @@
     "hide_share_and_remix": "false",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
-    "level_mode": {
-      "kind": "freeplay"
+    "level_config": {
+      "images": {
+      },
+      "world": {
+      },
+      "scenes": {
+        "canChange": true
+      },
+      "blocks": {
+        "catalog": true,
+        "dropdownsStartOn": {
+          "sprite": "hero",
+          "spritelab2_beginsBehavior": "friend",
+          "gamelab_checkTouching": [
+            "hero",
+            "treasure"
+          ]
+        }
+      },
+      "objectives": {
+        "title": "**Free play!**\n\nEverything is unlocked. Finish your game, and finish the lesson when you're done.",
+        "collapsedText": "Enjoy free play!"
+      },
+      "instructions": {
+        "startCollapsed": true,
+        "freePlayIntro": true
+      }
     },
-    "image_role_defaults": {
-      "sprite": "hero",
-      "spritelab2_beginsBehavior": "friend",
-      "gamelab_checkTouching": [
-        "hero",
-        "treasure"
-      ]
-    },
-    "block_catalog": true,
-    "freeplay_intro": true,
     "use_secondary_finish_button": "true",
     "finish_dialog": "hoai2026",
     "toolbox_definition": {
@@ -156,10 +171,6 @@
           "type": "spritelab2_goToScene"
         }
       ]
-    },
-    "objectives": {
-      "title": "**Free play!**\n\nEverything is unlocked. Finish your game, and finish the lesson when you're done.",
-      "collapsedText": "Enjoy free play!"
     },
     "long_instructions": "# Free play\r\nKeep creating Scene 2, or add something new to your quest. \r\n\r\n**Everything is unlocked! Keep building!**",
     "header_label": "Free play",

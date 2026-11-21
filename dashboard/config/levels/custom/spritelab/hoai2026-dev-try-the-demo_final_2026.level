@@ -11,44 +11,51 @@
     ],
     "encrypted": "false",
     "header_label": "Try a quest",
-    "callouts": [
-      {
-        "target": "continue-button",
-        "direction": "down",
-        "when": {
-          "done": [
-            0
-          ]
+    "level_config": {
+      "focus": "play",
+      "edits": [
+
+      ],
+      "scenes": {
+        "starting": [
+          {
+            "id": "demo-scene",
+            "name": "Demo"
+          }
+        ]
+      },
+      "objectives": {
+        "title": "**Try the demo**\n\nHere is a game like the one you will make.",
+        "steps": [
+          {
+            "text": "Use the arrow keys to run and jump up to the crystal.",
+            "check": {
+              "kind": "reach",
+              "role": "demo-treasure"
+            }
+          }
+        ]
+      },
+      "callouts": [
+        {
+          "target": "continue-button",
+          "direction": "down",
+          "when": {
+            "done": [
+              0
+            ]
+          }
         }
-      }
-    ],
+      ]
+    },
     "helper_libraries": [
       "NativeSpriteLab",
       "zGameDev"
     ],
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
-    "level_mode": {
-      "kind": "play"
-    },
     "long_instructions": "# Try a quest\r\nA **quest** is a game with a goal. See what happens when you reach the crystal!\r\n",
     "no_project": true,
-    "objectives": {
-      "title": "**Try the demo**\n\nHere is a game like the one you will make.",
-      "items": [
-        {
-          "text": "Use the arrow keys to run and jump up to the crystal.",
-          "check": {
-            "kind": "reach",
-            "role": "demo-treasure"
-          }
-        }
-      ]
-    },
-    "pinned_scene": {
-      "id": "demo-scene",
-      "name": "Demo"
-    },
     "skin": "gamelab",
     "standalone_app_name": "spritelab",
     "start_sources": {

@@ -21,7 +21,14 @@
     "encrypted": "false",
     "long_instructions": "Project template for the revised hoai2026-dev unit. Not in the script itself; the unit's Sprite Lab levels name it as their project_template_level_name so they all share one project.",
     "name_suffix": "_final_2026",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "level_config": {
+      "images": {
+      },
+      "scenes": {
+        "canChange": true
+      }
+    }
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2026-11-13T13:28:25.532+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-revised-template\\\"\"],\"cloned_from\":\"hoai2026-dev-revised-template\"}]"
