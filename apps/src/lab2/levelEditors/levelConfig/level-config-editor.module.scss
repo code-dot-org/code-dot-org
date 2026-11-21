@@ -1,0 +1,32 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.status {
+  font-size: 14px;
+}
+
+.ok {
+  color: var(--text-success-primary, #2e7d32);
+}
+
+.bad {
+  color: var(--text-error-primary, #b00020);
+}
+
+.notice {
+  padding: 8px 10px;
+  border-radius: 4px;
+  background-color: var(--background-neutral-secondary);
+}
+
+.json {
+  max-height: 400px;
+  overflow: auto;
+  padding: 8px;
+  font-size: 12px;
+  background-color: var(--background-neutral-secondary);
+}

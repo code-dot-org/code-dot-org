@@ -9,11 +9,13 @@
 // set.
 //
 // This module is loaded by the levelbuilder page as well as the lab, so it
-// imports types only.
+// imports the lab's own modules for their types only.
 
 import {z} from 'zod';
 
 import type {WorkspaceSerialization} from '@cdo/apps/blockly/types';
+import {checklistSchema} from '@cdo/apps/lab2/checklist/checklistSchema';
+import '@cdo/apps/lab2/levelEditors/schemaForm/schemaMeta';
 
 import type {AddBlock} from '../addBlocks';
 import type {ImageSource} from '../ai/images/imageCache';
@@ -22,20 +24,6 @@ import type {CalloutTarget} from '../callouts';
 import type {ObjectiveCheck} from '../objectives';
 import type {Tab} from '../redux/spriteLab2Redux';
 import type {CalloutDirection} from '../views/components/Callout';
-
-/**
- * What the form reads from a schema node, beyond zod's own `title` and
- * `description`. `feature` marks an optional group as a feature the level
- * turns on, with the words for the switch. `widget` asks for a control
- * other than the one the node's type would get.
- */
-declare module 'zod' {
-  interface GlobalMeta {
-    feature?: string;
-    widget?: 'lines' | 'names' | 'json' | 'markdown';
-    placeholder?: string;
-  }
-}
 
 // These lists repeat the lab's own, so that this module stays free of the
 // lab's runtime code. The type checks below keep them the same.
@@ -74,9 +62,13 @@ export type Focus = (typeof FOCUSES)[number];
 
 // A role is a name an image level records on the image it makes, such as
 // "hero" or "treasure", so that later levels can find that image.
-const role = z.string().trim().min(1).meta({placeholder: 'hero'});
+const role = z.string().trim().min(1, 'Required.').meta({placeholder: 'hero'});
 const roles = z.array(role).meta({widget: 'names'});
-const blockType = z.string().trim().min(1).meta({placeholder: 'block type'});
+const blockType = z
+  .string()
+  .trim()
+  .min(1, 'Required.')
+  .meta({placeholder: 'block type'});
 
 // Blockly's own serialized forms: they are edited as JSON.
 const blockState = z
@@ -120,10 +112,10 @@ const madeImage = z
   });
 
 const starterImage = z.strictObject({
-  name: z.string().min(1).meta({title: 'Name'}),
+  name: z.string().min(1, 'Required.').meta({title: 'Name'}),
   imageType: z.enum(IMAGE_TYPES).meta({title: 'Type'}),
   role: role.optional().meta({title: 'Role'}),
-  src: z.string().min(1).meta({
+  src: z.string().min(1, 'Required.').meta({
     title: 'Picture URL',
     placeholder: 'https://…/picture.png',
   }),
@@ -159,12 +151,13 @@ const images = z.strictObject({
   }),
   canAdd: z.boolean().optional().meta({
     title: 'Can add images',
-    description: 'On when not set.',
+    defaultValue: true,
   }),
   canDelete: z.boolean().optional().meta({
     title: 'Can delete images',
+    defaultValue: true,
     description:
-      'On when not set. Turn off when a later level depends on an image made earlier.',
+      'Turn off when a later level depends on an image made earlier.',
   }),
   kinds: z.array(z.enum(IMAGE_TYPES)).optional().meta({
     title: 'Kinds listed',
@@ -194,11 +187,14 @@ const images = z.strictObject({
     description:
       'Cached pictures come from the published set; live asks the model, for levelbuilders only. Cached when not set.',
   }),
-  starters: z.array(starterImage).optional().meta({
-    title: 'Starter images',
-    description:
-      'Images the level gives the project on arrival, when it has none of that name or role yet.',
-  }),
+  starters: z
+    .array(starterImage.meta({title: 'Starter image'}))
+    .optional()
+    .meta({
+      title: 'Starter images',
+      description:
+        'Images the level gives the project on arrival, when it has none of that name or role yet.',
+    }),
 });
 
 // ---- World ---------------------------------------------------------------
@@ -219,7 +215,7 @@ const world = z.strictObject({
 // ---- Scenes --------------------------------------------------------------
 
 const premadeWorld = z.strictObject({
-  pattern: z.array(z.string()).min(1).meta({
+  pattern: z.array(z.string()).min(1, 'Add at least one row.').meta({
     title: 'Pattern',
     widget: 'lines',
     description:
@@ -233,13 +229,13 @@ const premadeWorld = z.strictObject({
 });
 
 const scene = z.strictObject({
-  id: z.string().min(1).meta({
+  id: z.string().min(1, 'Required.').meta({
     title: 'Id',
     placeholder: 'scene-1',
     description:
       'What the go to scene block stores. "scene-1" is the scene every project starts with.',
   }),
-  name: z.string().min(1).meta({
+  name: z.string().min(1, 'Required.').meta({
     title: 'Name',
     placeholder: 'Scene 1',
     description: 'What the student sees, when the level creates the scene.',
@@ -260,11 +256,15 @@ const scene = z.strictObject({
 
 const scenes = z
   .strictObject({
-    starting: z.array(scene).max(2).optional().meta({
-      title: 'Scenes the level sets up',
-      description:
-        'The level makes sure the project has these. The first is the scene the level opens, and the student is kept to these.',
-    }),
+    starting: z
+      .array(scene.meta({title: 'Scene'}))
+      .max(2)
+      .optional()
+      .meta({
+        title: 'Scenes the level sets up',
+        description:
+          'The level makes sure the project has these. The first is the scene the level opens, and the student is kept to these.',
+      }),
     canChange: z.boolean().optional().meta({
       title: 'Student can change scenes',
       description: 'The student can add, rename, reorder and delete scenes.',
@@ -354,117 +354,91 @@ const blocks = z.strictObject({
 
 // ---- Checklist -----------------------------------------------------------
 
-const check = z
-  .discriminatedUnion('kind', [
-    z
-      .strictObject({
-        kind: z.literal('image'),
-        imageType: z.enum(IMAGE_TYPES).meta({title: 'Type'}),
-      })
-      .meta({title: 'Made an image'}),
-    z
-      .strictObject({
-        kind: z.literal('generated'),
-        imageType: z.enum(IMAGE_TYPES).optional().meta({
-          title: 'Type',
-          description: 'Any type when not set.',
-        }),
-      })
-      .meta({title: 'Generated a picture'}),
-    z
-      .strictObject({
-        kind: z.literal('block'),
-        type: z.union([blockType, z.array(blockType).min(1)]).meta({
+const check = z.discriminatedUnion('kind', [
+  z
+    .strictObject({
+      kind: z.literal('image'),
+      imageType: z.enum(IMAGE_TYPES).meta({title: 'Type'}),
+    })
+    .meta({title: 'Made an image'}),
+  z
+    .strictObject({
+      kind: z.literal('generated'),
+      imageType: z.enum(IMAGE_TYPES).optional().meta({
+        title: 'Type',
+        description: 'Any type when not set.',
+      }),
+    })
+    .meta({title: 'Generated a picture'}),
+  z
+    .strictObject({
+      kind: z.literal('block'),
+      type: z
+        .union([
+          blockType,
+          z.array(blockType).min(1, 'Name at least one block type.'),
+        ])
+        .meta({
           title: 'Block type',
           widget: 'names',
           description: 'One block type, or any of several.',
         }),
-        under: blockType.optional().meta({
-          title: 'Under a top block of type',
-        }),
-        data: z.string().optional().meta({
-          title: 'Under the stack tagged',
-          description: 'The tag of a stack the level adds.',
-        }),
-        fields: z.record(z.string(), z.string()).optional().meta({
-          title: 'Field values',
-        }),
-        scene: z.string().optional().meta({
-          title: 'In scene',
-          description: 'By id. The open scene when not set.',
-        }),
-      })
-      .meta({title: 'Uses a block'}),
-    z
-      .strictObject({
-        kind: z.literal('world'),
-        role: role.optional().meta({
-          title: 'Shows an image with role',
-        }),
-        changed: z.boolean().optional().meta({
-          title: 'Changed from the start',
-        }),
-      })
-      .meta({title: 'Placed in the world'}),
-    z.strictObject({kind: z.literal('play')}).meta({title: 'Pressed Run'}),
-    z
-      .strictObject({
-        kind: z.literal('reach'),
-        role: role.optional().meta({title: 'Touched a sprite with role'}),
-        moved: z.boolean().optional().meta({title: 'Moved or jumped'}),
-      })
-      .meta({title: 'Player reached'}),
-    z
-      .strictObject({
-        kind: z.literal('scene'),
-        id: z.string().min(1).meta({title: 'Scene id'}),
-      })
-      .meta({title: 'Got to a scene'}),
-    z
-      .strictObject({
-        kind: z.literal('editing'),
-        id: z.string().min(1).meta({title: 'Scene id'}),
-      })
-      .meta({title: 'Opened a scene'}),
-    z.strictObject({kind: z.literal('rated')}).meta({title: 'Rated a picture'}),
-  ])
-  .meta({title: 'Done when'});
+      under: blockType.optional().meta({
+        title: 'Under a top block of type',
+      }),
+      data: z.string().optional().meta({
+        title: 'Under the stack tagged',
+        description: 'The tag of a stack the level adds.',
+      }),
+      fields: z.record(z.string(), z.string()).optional().meta({
+        title: 'Field values',
+      }),
+      scene: z.string().optional().meta({
+        title: 'In scene',
+        description: 'By id. The open scene when not set.',
+      }),
+    })
+    .meta({title: 'Uses a block'}),
+  z
+    .strictObject({
+      kind: z.literal('world'),
+      role: role.optional().meta({
+        title: 'Shows an image with role',
+      }),
+      changed: z.boolean().optional().meta({
+        title: 'Changed from the start',
+      }),
+    })
+    .meta({title: 'Placed in the world'}),
+  z.strictObject({kind: z.literal('play')}).meta({title: 'Pressed Run'}),
+  z
+    .strictObject({
+      kind: z.literal('reach'),
+      role: role.optional().meta({title: 'Touched a sprite with role'}),
+      moved: z.boolean().optional().meta({title: 'Moved or jumped'}),
+    })
+    .meta({title: 'Player reached'}),
+  z
+    .strictObject({
+      kind: z.literal('scene'),
+      id: z.string().min(1, 'Required.').meta({title: 'Scene id'}),
+    })
+    .meta({title: 'Got to a scene'}),
+  z
+    .strictObject({
+      kind: z.literal('editing'),
+      id: z.string().min(1, 'Required.').meta({title: 'Scene id'}),
+    })
+    .meta({title: 'Opened a scene'}),
+  z.strictObject({kind: z.literal('rated')}).meta({title: 'Rated a picture'}),
+]);
 
 // The schema's checks and the lab's must stay the same list.
 const sameChecks: Same<z.infer<typeof check>['kind'], ObjectiveCheck['kind']> =
   true;
 void sameChecks;
 
-const step = z.strictObject({
-  text: z.string().min(1).meta({
-    title: 'Text',
-    widget: 'markdown',
-    placeholder: 'Select **Run**.',
-  }),
-  check,
-  shownWhen: check.optional().meta({
-    title: 'Hidden until',
-    feature: 'Hide this step until something is done',
-  }),
-  id: z.string().optional().meta({
-    title: 'Id',
-    description: "Names the step to the lab's hover and click handling.",
-  }),
-});
-
-const objectives = z.strictObject({
-  title: z.string().optional().meta({title: 'Title', widget: 'markdown'}),
-  steps: z.array(step).optional().meta({
-    title: 'Steps',
-    description:
-      'The student continues once every step is done. With no steps they can continue from the start.',
-  }),
-  collapsedText: z.string().optional().meta({
-    title: 'Collapsed text',
-    description:
-      'A short line that stays in view when the steps are collapsed.',
-  }),
-});
+const objectives = checklistSchema(check);
 
 // ---- Callouts ------------------------------------------------------------
 
@@ -549,12 +523,15 @@ export const levelConfigSchema = z
       feature: 'Checklist',
       description: 'Steps the student does before they can continue.',
     }),
-    callouts: z.array(callout).optional().meta({
-      title: 'Callouts',
-      feature: 'Callouts',
-      description:
-        'Bouncing arrows at the tabs, the scene menu or Continue. The first one whose condition holds is shown.',
-    }),
+    callouts: z
+      .array(callout.meta({title: 'Callout'}))
+      .optional()
+      .meta({
+        title: 'Callouts',
+        feature: 'Callouts',
+        description:
+          'Bouncing arrows at the tabs, the scene menu or Continue. The first one whose condition holds is shown.',
+      }),
     instructions: z
       .strictObject({
         startCollapsed: z.boolean().optional().meta({

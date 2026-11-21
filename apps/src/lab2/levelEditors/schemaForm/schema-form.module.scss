@@ -1,0 +1,128 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+}
+
+.children {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nested {
+  margin-top: 6px;
+  padding-left: 14px;
+  border-left: 2px solid var(--borders-neutral-primary);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
+  background-color: var(--background-neutral-primary);
+}
+
+.groupOn {
+  border-color: var(--borders-brand-teal-primary, var(--borders-neutral-strong));
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label {
+  margin: 0;
+  font-weight: 600;
+}
+
+.help {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}
+
+.problems {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--text-error-primary, #b00020);
+}
+
+.inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  font: inherit;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.mono {
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  padding: 8px 10px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 6px;
+}
+
+.rowHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.rowTitle {
+  font-weight: 600;
+}
+
+.rowButtons {
+  display: flex;
+  gap: 2px;
+}
+
+.recordRows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.recordRow {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) 2fr auto;
+  gap: 8px;
+  align-items: start;
+}
+
+.recordValue {
+  min-width: 0;
+}

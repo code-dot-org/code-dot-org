@@ -1,0 +1,34 @@
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-left: 4px solid var(--borders-neutral-strong);
+  border-radius: 6px;
+}
+
+.stepHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stepNumber {
+  font-weight: 600;
+}
