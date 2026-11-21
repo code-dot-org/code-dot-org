@@ -65,6 +65,8 @@ export const StatsigStableIdKey = 'statsig_stable_id' as const;
 
 export const StatsigStableIdPattern = '[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}' as const;
 
+export const MobileAppName = 'CodeAIMobileApp' as const;
+
 export const ArtistAutorunOptions = {
   "full_auto_run": "FULL_AUTO_RUN"
 } as const;
