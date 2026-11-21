@@ -1,0 +1,57 @@
+# devcontainer.json layers this over docker/dev/compose.yaml: the same
+# harness, with a seeded database and S3.
+
+services:
+  mysql:
+    image: ${CDO_DEV_DB_IMAGE:-ghcr.io/code-dot-org/cdo-devdb:latest}
+
+  # Unpublished: port 9000 is the apps dev server's.
+  minio:
+    image: minio/minio:latest
+    command: server /data --quiet
+    environment:
+      MINIO_ROOT_USER: local-development
+      MINIO_ROOT_PASSWORD: allstudents
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 2s
+      timeout: 3s
+      retries: 15
+
+  # Rails creates a bucket only on a read (lib/cdo/local_development.rb).
+  minio-buckets:
+    image: minio/minio:latest
+    depends_on:
+      minio:
+        condition: service_healthy
+    entrypoint:
+      - sh
+      - -c
+      - |
+        mc alias set cdo http://minio:9000 local-development allstudents
+        for b in cdo-ai cdo-animation-library cdo-restricted cdo-sound-library \
+                 cdo-v3-animations cdo-v3-assets cdo-v3-files cdo-v3-libraries \
+                 cdo-v3-sources videos.code.org; do
+          mc mb --ignore-existing "cdo/$$b"
+        done
+
+  app:
+    image: ${IMAGE:-ghcr.io/code-dot-org/cdo-dev:latest}
+    environment:
+      # Serve the prebuilt apps package `rake build` downloads.
+      CDO_USE_MY_APPS: "false"
+      CDO_AWS_S3_EMULATED: "true"
+      CDO_AWS_S3_ENDPOINT: http://minio:9000
+      # Keeps the apps dev server inside a laptop's memory (apps/README.md).
+      APPS_DEVTOOL: eval
+      SKIP_TYPECHECK: "1"
+      NODE_OPTIONS: --max-old-space-size=8192
+    volumes:
+      # frontend/ keeps its yarn cache here, outside the checkout.
+      - yarn-cache:/home/cdo/.yarn
+    depends_on:
+      minio-buckets:
+        condition: service_completed_successfully
+
+volumes:
+  yarn-cache:
