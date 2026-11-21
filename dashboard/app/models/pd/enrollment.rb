@@ -200,12 +200,12 @@ class Pd::Enrollment < ApplicationRecord
   # TODO: Once we're satisfied with the first/last name split data,
   # remove the name field entirely.
   def name=(value)
-    ActiveSupport::Deprecation.warn('name is deprecated. Use first_name & last_name instead.')
+    deprecator.warn('name is deprecated. Use first_name & last_name instead.')
     self.full_name = value
   end
 
   def name
-    ActiveSupport::Deprecation.warn('name is deprecated. Use first_name & last_name instead.')
+    deprecator.warn('name is deprecated. Use first_name & last_name instead.')
     full_name
   end
 
@@ -231,7 +231,7 @@ class Pd::Enrollment < ApplicationRecord
 
   # TODO: Migrate existing school entries into schoolInfo and delete school column
   def school
-    ActiveSupport::Deprecation.warn('School is deprecated. Use school_info or school_name instead.')
+    deprecator.warn('School is deprecated. Use school_info or school_name instead.')
     read_attribute :school
   end
 
@@ -353,5 +353,9 @@ class Pd::Enrollment < ApplicationRecord
 
   private def unused_random_code
     CodeGeneration.random_unique_code length: 10, model: Pd::Enrollment
+  end
+
+  private def self.deprecator
+    @deprecator ||= ActiveSupport::Deprecation.new
   end
 end
