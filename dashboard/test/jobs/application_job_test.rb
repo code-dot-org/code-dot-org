@@ -23,32 +23,42 @@ class ApplicationJobTest < ActiveJob::TestCase
     Delayed::Job.insert_all(job_rows)
   end
 
+  # The cron runs the same SQL over a mysql2 client; this runs it over
+  # ActiveRecord against the test database.
+  QUERY = ->(sql) {Delayed::Job.connection.select_all(sql).to_a}
+
   setup do
     Delayed::Job.delete_all
 
     # The delayed_jobs.run_at column stores whole seconds.
-    @t = Time.now.utc.change(usec: 0) + 1.day
+    @t = Time.now.utc.change(usec: 0) - 10.seconds
+    @now = @t + 10.seconds
     populate_jobs_table(@t, 'ApplicationJobTest::TestableJob')
     populate_jobs_table(@t, 'Some::OtherJob')
 
-    @t_offset = 10.seconds
+    @class_counts = {
+      queued: 3,
+      pending: 2,
+      pending_high: 2,
+      pending_low: 0,
+      waiting_to_start: 1,
+      running: 1,
+      failed: 1,
+      oldest_pending_age: 10,
+      oldest_waiting_to_start_age: 10,
+    }
+  end
 
-    # Time starts 10 seconds after creating our test jobs
-    ActiveJobMetrics.stubs(:_now_utc).returns(@t + @t_offset)
+  def report(worker_count: nil)
+    Cdo::ActiveJobQueueMetrics.report(QUERY, environment: CDO.rack_env, now: @now, worker_count: worker_count)
+  end
 
-    @expected_my_failed_count = 1
-    @expected_my_waiting_to_start_count = 1
-    @expected_my_pending_count = 2
-    @expected_my_workable_count = 2
-    @expected_my_queued_count = 3
-    @expected_my_running_count = 1
+  def environment
+    [{name: 'Environment', value: CDO.rack_env}]
+  end
 
-    @expected_failed_count = @expected_my_failed_count * 2
-    @expected_waiting_to_start_count = @expected_my_waiting_to_start_count * 2
-    @expected_pending_count = @expected_my_pending_count * 2
-    @expected_workable_count = @expected_my_workable_count * 2
-    @expected_queued_count = @expected_my_queued_count * 2
-    @expected_running_count = @expected_my_running_count * 2
+  def values(metrics, dimensions)
+    metrics.select {|metric| metric[:dimensions] == dimensions}.to_h {|metric| [metric[:metric_name], metric[:value]]}
   end
 
   test 'includes ActiveJobMetrics' do
@@ -59,77 +69,82 @@ class ApplicationJobTest < ActiveJob::TestCase
     assert_includes ApplicationJob.ancestors, ActiveJobEnqueueRetry
   end
 
-  test 'oldest_pending_job_age_s' do
-    assert_in_delta 10.0, ActiveJobMetrics.oldest_pending_job_age_s, 0.01
-    assert_in_delta 10.0, ApplicationJob.new.oldest_pending_job_age_s, 0.01
-  end
-
-  test 'oldest_waiting_to_start_job_age_s' do
-    assert_in_delta 10.0, ActiveJobMetrics.oldest_waiting_to_start_job_age_s, 0.01
-    assert_in_delta 10.0, ApplicationJob.new.oldest_waiting_to_start_job_age_s, 0.01
-  end
-
-  test 'queued_jobs.count returns the number of queued jobs' do
-    assert_equal @expected_queued_count, ActiveJobMetrics.queued_jobs.count
-    assert_equal @expected_my_queued_count, ApplicationJob.new.queued_jobs.count
-  end
-
-  test 'pending_jobs.count returns the number of pending jobs' do
-    assert_equal @expected_pending_count, ActiveJobMetrics.pending_jobs.count
-    assert_equal @expected_my_pending_count, ApplicationJob.new.pending_jobs.count
-  end
-
-  test 'failed_jobs.count returns the number of failed jobs' do
-    assert_equal @expected_failed_count, ActiveJobMetrics.failed_jobs.count
-    assert_equal @expected_my_failed_count, ApplicationJob.new.failed_jobs.count
-  end
-
-  test 'workable_queued_jobs.count returns the number of workable jobs' do
-    assert_equal @expected_workable_count, ActiveJobMetrics.workable_queued_jobs.count
-    assert_equal @expected_my_workable_count, ApplicationJob.new.workable_queued_jobs.count
-  end
-
-  test 'waiting_to_start_jobs.count returns the number of jobs waiting to start' do
-    assert_equal @expected_waiting_to_start_count, ActiveJobMetrics.waiting_to_start_jobs.count
-    assert_equal @expected_my_waiting_to_start_count, ApplicationJob.new.waiting_to_start_jobs.count
-  end
-
-  test 'running_jobs.count returns the number of jobs currently running' do
-    assert_equal @expected_running_count, ActiveJobMetrics.running_jobs.count
-    assert_equal @expected_my_running_count, ApplicationJob.new.running_jobs.count
-  end
-
-  test 'overall queue metrics include worker count and idle workers percent' do
-    ActiveJobMetrics.stubs(:worker_count).returns(4)
-
-    Cdo::Metrics.expects(:push).with(
-      ApplicationJob::METRICS_NAMESPACE,
-      all_of(
-        includes_metrics(WorkerCount: 4, RunningJobCount: @expected_running_count, PercentWorkersIdle: 50.0),
-        includes_dimensions(:WorkerCount, Environment: CDO.rack_env),
-        includes_dimensions(:RunningJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:PercentWorkersIdle, Environment: CDO.rack_env)
-      )
+  test 'queue counts are grouped by job class' do
+    assert_equal(
+      {'ApplicationJobTest::TestableJob' => @class_counts, 'Some::OtherJob' => @class_counts},
+      Cdo::ActiveJobQueueMetrics.counts_by_class(QUERY, now: @now)
     )
-
-    ActiveJobMetrics.report_overall_queue_metrics
   end
 
-  test 'job-specific queue metrics do not include overall-only metrics' do
+  test 'job classes are matched exactly, not by prefix' do
+    populate_jobs_table(@t, 'ApplicationJobTest::TestableJobber')
+    counts = Cdo::ActiveJobQueueMetrics.counts_by_class(QUERY, now: @now)
+    assert_equal 3, counts.fetch('ApplicationJobTest::TestableJob')[:queued]
+    assert_equal 3, counts.fetch('ApplicationJobTest::TestableJobber')[:queued]
+  end
+
+  test 'a job class named in the arguments does not change the grouping' do
+    Delayed::Job.delete_all
+    Delayed::Job.insert_all([{handler: "job_data:\n  job_class: Real::Job\n  arguments:\n  - 'job_class: Fake::Job'\n", run_at: @t, created_at: @t, updated_at: @t}])
+    assert_equal ['Real::Job'], Cdo::ActiveJobQueueMetrics.counts_by_class(QUERY, now: @now).keys
+  end
+
+  test 'report publishes queue-wide and per-class metrics' do
     Cdo::Metrics.expects(:push).with do |namespace, metrics|
       assert_equal ApplicationJob::METRICS_NAMESPACE, namespace
-
-      running_metric = metrics.find {|m| m[:metric_name] == 'RunningJobCount'}
-      worker_metric = metrics.find {|m| m[:metric_name] == 'WorkerCount'}
-      idle_workers_percent_metric = metrics.find {|m| m[:metric_name] == 'PercentWorkersIdle'}
-
-      assert_equal @expected_my_running_count, running_metric[:value]
-      assert_nil worker_metric
-      assert_nil idle_workers_percent_metric
-      assert(metrics.none? {|metric| metric[:dimensions].any? {|dimension| dimension[:name] == 'Priority'}})
+      overall = values(metrics, environment)
+      assert_equal 6, overall['QueuedJobCount']
+      assert_equal 4, overall['WorkableQueuedJobCount']
+      assert_equal 4, overall['PendingJobCount']
+      assert_equal 2, overall['FailedJobCount']
+      assert_equal 2, overall['WaitingToStartJobCount']
+      assert_equal 2, overall['RunningJobCount']
+      assert_equal 10, overall['OldestPendingJobAge']
+      assert_equal 10, overall['OldestWaitingToStartJobAge']
+      ['ApplicationJobTest::TestableJob', 'Some::OtherJob'].each do |job_class|
+        per_class = values(metrics, environment + [{name: 'JobName', value: job_class}])
+        assert_equal 8, per_class.size
+        assert_equal 3, per_class['QueuedJobCount']
+        assert_equal 2, per_class['PendingJobCount']
+        assert_equal 1, per_class['RunningJobCount']
+        assert_equal 1, per_class['FailedJobCount']
+      end
+      true
     end
 
-    ActiveJobMetrics.report_metrics(ApplicationJob.new, dimensions: [{name: 'Environment', value: CDO.rack_env}, {name: 'JobName', value: 'ApplicationJob'}])
+    report
+  end
+
+  test 'report counts jobs with no ActiveJob class in the queue-wide metrics only' do
+    Delayed::Job.insert_all([{handler: '--- !ruby/object:Delayed::PerformableMethod', run_at: @t, created_at: @t, updated_at: @t}])
+    Cdo::Metrics.expects(:push).with do |_namespace, metrics|
+      assert_equal 7, values(metrics, environment)['QueuedJobCount']
+      job_names = metrics.flat_map {|metric| metric[:dimensions]}.select {|dimension| dimension[:name] == 'JobName'}.pluck(:value)
+      assert_equal ['ApplicationJobTest::TestableJob', 'Some::OtherJob'], job_names.uniq.sort
+      true
+    end
+
+    report
+  end
+
+  test 'report includes worker count and idle workers percent when given' do
+    Cdo::Metrics.expects(:push).with do |_namespace, metrics|
+      overall = values(metrics, environment)
+      assert_equal 4, overall['WorkerCount']
+      assert_equal 50.0, overall['PercentWorkersIdle']
+      true
+    end
+
+    report(worker_count: 4)
+  end
+
+  test 'report omits worker metrics without a worker count' do
+    Cdo::Metrics.expects(:push).with do |_namespace, metrics|
+      assert_empty metrics.pluck(:metric_name) & %w[WorkerCount PercentWorkersIdle]
+      true
+    end
+
+    report
   end
 
   test 'overall pending metrics distinguish priority bands without changing the environment total' do
@@ -148,13 +163,11 @@ class ApplicationJobTest < ActiveJob::TestCase
       {handler: 'job', priority: 0, run_at: @t, failed_at: nil, locked_at: nil, locked_by: nil, created_at: @t, updated_at: @t}.merge(attributes)
     end
     Delayed::Job.insert_all(rows)
-    ActiveJobMetrics.stubs(:worker_count).returns(4)
 
     Cdo::Metrics.expects(:push).with do |namespace, metrics|
       assert_equal ActiveJobMetrics::METRICS_NAMESPACE, namespace
       pending = metrics.select {|metric| metric[:metric_name] == 'PendingJobCount'}
       assert_equal 3, pending.length
-      environment = [{name: 'Environment', value: CDO.rack_env}]
       {nil => 5, 'high' => 2, 'low' => 3}.each do |band, count|
         dimensions = band ? environment + [{name: 'Priority', value: band}] : environment
         metric = pending.find {|candidate| candidate[:dimensions] == dimensions}
@@ -165,73 +178,38 @@ class ApplicationJobTest < ActiveJob::TestCase
       true
     end
 
-    ActiveJobMetrics.report_overall_queue_metrics
+    report
   end
 
-  test 'pending priority metrics publish zero for an empty band and after the queue drains' do
-    dimensions = [{name: 'Environment', value: CDO.rack_env}]
-    ActiveJobMetrics.stubs(:worker_count).returns(4)
+  test 'report publishes zeros for an empty band and after the queue drains' do
     published_metrics = []
-    Cdo::Metrics.expects(:push).twice.with do |namespace, metrics|
-      assert_equal ActiveJobMetrics::METRICS_NAMESPACE, namespace
-      published_metrics << metrics.select do |metric|
-        metric[:metric_name] == 'PendingJobCount' && metric[:dimensions].any? {|dimension| dimension[:name] == 'Priority'}
-      end
+    Cdo::Metrics.expects(:push).twice.with do |_namespace, metrics|
+      published_metrics << metrics
       true
     end
 
-    ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: dimensions, report_overall_metrics: true)
+    report
     Delayed::Job.delete_all
-    ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: dimensions, report_overall_metrics: true)
+    report
 
-    assert_equal [4, 0], published_metrics.first.pluck(:value)
-    assert_equal [0, 0], published_metrics.last.pluck(:value)
-    assert_equal(['high', 'low'], published_metrics.last.map {|metric| metric[:dimensions].last[:value]})
-    assert_equal [{name: 'Environment', value: CDO.rack_env}], dimensions
+    priority = ->(metrics) {metrics.select {|metric| metric[:dimensions].any? {|dimension| dimension[:name] == 'Priority'}}}
+    assert_equal [4, 0], priority.call(published_metrics.first).pluck(:value)
+    assert_equal [0, 0], priority.call(published_metrics.last).pluck(:value)
+    assert(values(published_metrics.last, environment).values.all?(&:zero?))
+    assert(published_metrics.last.none? {|metric| metric[:dimensions].any? {|dimension| dimension[:name] == 'JobName'}})
   end
 
-  test 'enqueued jobs log several metrics' do
-    # Splitting this into two assertions because 'includes_metrics' can't match multiple metrics with the same name.
-    Cdo::Metrics.expects(:push).with(
-      ApplicationJob::METRICS_NAMESPACE,
-      all_of(
-        includes_metrics(
-          QueuedJobCount: @expected_queued_count,
-          WorkableQueuedJobCount: @expected_workable_count,
-          FailedJobCount: @expected_failed_count,
-          PendingJobCount: @expected_pending_count,
-          WaitingToStartJobCount: @expected_waiting_to_start_count,
-        ),
-        includes_dimensions(:QueuedJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:WorkableQueuedJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:FailedJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:PendingJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:RunningJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:OldestPendingJobAge, Environment: CDO.rack_env),
-        includes_dimensions(:OldestWaitingToStartJobAge, Environment: CDO.rack_env),
+  test 'enqueued jobs log EnqueuedCount, WaitTime, ExecutionTime and TotalTime' do
+    Cdo::Metrics.expects(:push).with do |namespace, metrics|
+      next false unless metrics.any? {|metric| metric[:metric_name] == 'EnqueuedCount'}
+      assert_equal ApplicationJob::METRICS_NAMESPACE, namespace
+      assert_equal 1, metrics.size
+      assert_equal(
+        {value: 1, unit: 'Count', dimensions: environment + [{name: 'JobName', value: 'ApplicationJobTest::TestableJob'}]},
+        metrics.first.slice(:value, :unit, :dimensions)
       )
-    )
-    Cdo::Metrics.expects(:push).with(
-      ApplicationJob::METRICS_NAMESPACE,
-      all_of(
-        includes_metrics(
-          QueuedJobCount: @expected_my_queued_count,
-          WorkableQueuedJobCount: @expected_my_workable_count,
-          FailedJobCount: @expected_my_failed_count,
-          PendingJobCount: @expected_my_pending_count,
-          WaitingToStartJobCount: @expected_my_waiting_to_start_count,
-        ),
-        includes_dimensions(:QueuedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-        includes_dimensions(:WorkableQueuedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-        includes_dimensions(:FailedJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-        includes_dimensions(:PendingJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-        includes_dimensions(:WaitingToStartJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-        includes_dimensions(:RunningJobCount, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-        includes_dimensions(:OldestPendingJobAge, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-        includes_dimensions(:OldestWaitingToStartJobAge, Environment: CDO.rack_env, JobName: 'ApplicationJobTest::TestableJob'),
-      )
-    )
+      true
+    end
 
     # before_perform metrics
     Cdo::Metrics.expects(:push).with(
@@ -274,7 +252,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     Cdo::Metrics.stubs(:push)
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
-      includes_metrics(PendingJobCount: anything)
+      includes_metrics(EnqueuedCount: anything)
     ).raises('An error that should be squashed')
 
     Honeybadger.expects(:notify).once
@@ -295,7 +273,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     # Stub other calls
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
-      includes_metrics(PendingJobCount: anything)
+      includes_metrics(EnqueuedCount: anything)
     )
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
@@ -320,7 +298,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     # Stub other calls
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
-      includes_metrics(PendingJobCount: anything)
+      includes_metrics(EnqueuedCount: anything)
     )
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
