@@ -154,7 +154,9 @@ The standalone Vite dev server opens at [http://localhost:5173](http://localhost
 
 ### Integration with the rest of the monorepo
 
-`apps/` (webpack) and `frontend/apps/studio` (Vite) consume this package via `"@code-dot-org/oceans-lab": "workspace:*"`. Local edits are picked up by the next consumer build — no link/symlink step needed.
+`frontend/apps/studio` (Vite) consumes this package via `"@code-dot-org/oceans-lab": "workspace:*"`. Local edits are picked up by the next consumer build — no link/symlink step needed.
+
+`apps/` (webpack) does not consume it yet: `apps/src/fish/Fish.js` still imports the published npm package `@code-dot-org/ml-activities`. See [docs/architecture.md](docs/architecture.md#legacy-apps-consumer).
 
 To rebuild the package's `dist/` for consumers:
 
@@ -164,7 +166,7 @@ yarn turbo run build --filter=@code-dot-org/oceans-lab
 
 ## Adding new fish components
 
-All fish components live in `src/assets/images/fish` in their respective folders (eg bodies live in `body/`). Despite the fact that the fish face right in most of the tutorial, they are built as if they face left in order to simplify the math for the anchor points. This means that all components should be oriented as if the fish is facing left, which might require flopping any new assets. After adding the assets, they will need to be added to `src/utils/fishData.ts`. `bin/determineKnnData.js` will output some of the lines that will be needed in `fishData`.
+All fish components live in `src/assets/images/fish` in their respective folders (eg bodies live in `body/`). Despite the fact that the fish face right in most of the tutorial, they are built as if they face left in order to simplify the math for the anchor points. This means that all components should be oriented as if the fish is facing left, which might require flopping any new assets. After adding the assets, they will need to be added to `src/utils/fishData.ts`.
 
 All components can define `exclusions`, which are modes that the component won't be used in. Components appear in all modes by default.
 
@@ -180,7 +182,7 @@ Some dorsal fins define an x-adjustment to shift the anchor point. This is usefu
 
 ## I18n
 
-By default, this tutorial is in English. The strings live at `src/i18n/oceans.json` and should not be moved without corresponding changes to the I18n pipeline in `code-dot-org`. Translations can be passed into the app using the `i18n` param. If any translations are missing, the English string will be used as a default. This also means that adding a new string is safe and does not require any further steps.
+By default, this tutorial is in English. The strings live at `i18n/oceans.json` and should not be moved without corresponding changes to the I18n pipeline in `code-dot-org`. Translations can be passed into the app using the `i18n` param. If any translations are missing, the English string will be used as a default. This also means that adding a new string is safe and does not require any further steps.
 
 ## Machine Learning algorithms
 
