@@ -66,8 +66,8 @@ const SCOUT_SCHEMA = {
       description:
         'Technical framework. legacy = apps/src/{maze,turtle,bounce,flappy,...} Blockly ' +
         'CSF (POM base LegacyBlocklyLab); lab2 = apps/src/lab2 framework (POM base ' +
-        'Lab2Lab); non-lab = teacher tools, dashboard Haml pages, account/auth, video, ' +
-        'sharing, catalog, lesson plans, etc. (no Blockly base)',
+        'LessonLevelPage); non-lab = teacher tools, dashboard Haml pages, account/auth, ' +
+        'video, sharing, catalog, lesson plans, etc. (no Blockly base)',
     },
     featureGroup: {
       type: 'string',
@@ -108,7 +108,7 @@ const SCOUT_SCHEMA = {
       description:
         'An existing CONCRETE POM to reuse for this lab/feature if one exists (working ' +
         'tree or reference branch) — import and extend it, do not duplicate. Otherwise the ' +
-        'base class to extend (LegacyBlocklyLab / Lab2Lab), or "" if none.',
+        'base class to extend (LegacyBlocklyLab / LessonLevelPage), or "" if none.',
     },
     specAlreadyExists: {
       type: 'boolean',
@@ -234,9 +234,9 @@ FEATURE FILE (authoritative): ${featureFile}
   Discover existing helpers AND concrete POMs from BOTH (reference branch valid even if
   the working tree lacks the foundation):
     - Working tree: grep exports under tests/shared/ and read the POM bases
-      (tests/legacy/shared/LegacyBlocklyLab.ts, tests/lab2/shared/Lab2Lab.ts)
-    - Reference branch (TypeScript SHAPE only):
-      git show ${POC_BRANCH}:frontend/packages/e2e-tests/tests/shared/auth.ts  (etc.)
+      (tests/pages/legacy-blockly-lab.ts, tests/pages/lesson-level-page.ts)
+    - Reference branch (TypeScript SHAPE only; the package is apps-e2e-tests there):
+      git show ${POC_BRANCH}:frontend/packages/apps-e2e-tests/tests/shared/auth.ts  (etc.)
   Classify each DISTINCT step by SEMANTIC INTENT (not lexical — many aliases exist for
   "click" and "sign in"):
     REUSE      -> existing shared helper OR concrete POM (give shared/file.ts:helperName)
@@ -829,15 +829,16 @@ const STRESS_SCHEMA = {
 }
 
 const specRel = plan.targetSpec.replace('frontend/packages/e2e-tests/', '')
-// CI=1 makes the shared playwright.config.ts skip @no_ci tests (grepInvert: /@no_ci/ when
-// isCI) — infra this gate can't provide. --reporter=line and --workers=N below are explicit
-// CLI overrides of the config's CI defaults (reporter html+junit, workers:'100%'), so the
-// gate streams compactly and measures TEST flake, not load.
+// PLAYWRIGHT_PROVIDER=drone makes playwright.config.ts skip @no_ci tests — infra this gate
+// can't provide. It also turns on the config's automated defaults (retries 2, reporters
+// list+html+json); --retries=0 and --reporter=line below override them, and --workers=N
+// pins concurrency, so the gate streams compactly and measures TEST flake, not load.
 // Resolve the runner via yarn (not npx): the workspace can hoist a different
 // `playwright` than the package's @playwright/test, and npx would pick the wrong
 // one ("two different versions"). yarn resolves the package's own bin.
 const stressCmd =
-  `cd frontend/packages/e2e-tests && CI=1 yarn playwright test ${specRel} ` +
+  `cd frontend/packages/e2e-tests && PLAYWRIGHT_PROVIDER=drone ` +
+  `yarn playwright test ${specRel} ` +
   `--repeat-each=5 --retries=0 --workers=${STRESS_WORKERS} --trace=retain-on-failure ` +
   `--project=chromium --project=firefox --project=webkit --reporter=line`
 

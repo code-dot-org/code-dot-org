@@ -45,7 +45,8 @@ guides.
 1. READ the playwright-best-practices skill (its SKILL.md, typically at
    .agents/skills/playwright-best-practices/SKILL.md, and any files it references).
    REQUIRED — it is the Playwright authority; the conventions below are Code.org deltas on
-   top of it. (The workflow's Scout phase installs it; assume it is present.)
+   top of it. (The workflow's Scout phase installs it. If it is absent, run
+   `npx skills experimental_install` from the repo root.)
 2. Read the feature file and every referenced step definition in full. Step defs are not
    1:1: they compose other steps, embed assertions inline, and branch on params. A "When"
    that also asserts becomes a test assertion — capture all of it.
@@ -63,8 +64,8 @@ guides.
 ## Placement and POM base (two independent axes)
 
 - **architecture** (technical) picks the POM BASE to extend:
-  legacy  -> tests/legacy/shared/LegacyBlocklyLab.ts
-  lab2    -> tests/lab2/shared/Lab2Lab.ts
+  legacy  -> tests/pages/legacy-blockly-lab.ts (LegacyBlocklyLab)
+  lab2    -> tests/pages/lesson-level-page.ts (LessonLevelPage; there is no lab2-specific base)
   non-lab -> no Blockly base; compose a plain POM.
 - **featureGroup** (functional) picks the DIRECTORY: place all files under
   `tests/{featureGroup-kebab}/` (a {name}/ subdir when the group holds several
