@@ -174,6 +174,16 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
       'Try it under "when touching" a foe, so a touch sends the player back ' +
       'to the start.',
   },
+  gamelab_spriteClicked: {
+    title: 'When clicked',
+    summary: 'Runs the blocks below each time a sprite is clicked.',
+    body: 'Choose the sprite in the block.',
+  },
+  gamelab_atTime: {
+    title: 'At a time',
+    summary: 'Runs the blocks below once, after this many seconds.',
+    body: 'Pick **frames** to count frames instead of seconds.',
+  },
   gamelab_everyInterval: {
     title: 'Repeat every',
     summary: 'Runs the blocks below each time this much time passes.',
