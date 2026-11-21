@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894911-48efc4cb0c72",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 10: Remixing, Creativity, and Originality",
+  "question": "A paintbrush does not make a painting, and a camera does not take a photo on its own. When someone creates with AI, who is the artist and what is the instrument? Pick an analogy and argue your case.\n\nSteps:\n1. Start recording. Pick one analogy from the list below.\n2. Say 2 ways AI is like it.\n3. Say 2 ways AI is different. Think about training data, patterns, and surprises.\n4. Give your verdict on who the artist is when someone creates with AI, and name one thing that would change your mind.\n\nAnalogy list:\n- A paintbrush\n- A camera\n- A calculator\n- An orchestra of hired musicians",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not pick an analogy or make an argument on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student gives a verdict but fewer than 2 similarities or fewer than 2 differences."
+    },
+    {
+      "level": 2,
+      "description": "Student gives 2 ways AI is like the chosen thing AND 2 ways it is different AND states a verdict about who the artist is."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names a specific condition that would change the verdict."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

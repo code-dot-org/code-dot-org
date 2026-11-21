@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894910-9670bfed5624",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 9: AI as a Co-Creator",
+  "question": "An AI invented this creature, and it looks brand new. But look closely, because every part came from something it has seen before.\n\nSteps:\n1. Use the arrow tool to connect each numbered part to the animal it most likely came from.\n2. Place a shape on the part that feels the most original.\n3. Record your voice explaining how an AI can make something that looks new using only parts it has seen. Bonus points if you name one thing a human could add to make it more original.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student connects fewer than 3 parts to the correct animal (1 to Bat, 2 to Goat, 3 to Goldfish, 4 to Fox)."
+    },
+    {
+      "level": 2,
+      "description": "At least 3 parts are connected to the correct animal AND a shape is on one part AND the voice recording says that the AI combined patterns it has seen."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names one thing a human could add (such as a story, a feeling, or a purpose) to make the creature more original."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894910-9670bfed5624-903666b2",
+  "whiteboard_starter_image_alt_text": "\"An AI invented a creature. What is it made from?\" An orange, four-legged invented creature with four numbered parts: 1, purple wings; 2, curved horns; 3, a fan-shaped fish tail; and 4, pointed ears. On the right are four animal cards: A, bat; B, goat; C, goldfish; and D, fox."
+}

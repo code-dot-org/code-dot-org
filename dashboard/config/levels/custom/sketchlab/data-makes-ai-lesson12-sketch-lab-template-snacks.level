@@ -1420,7 +1420,7 @@
             "id": "vgn3-n-109",
             "type": "text",
             "data": {
-              "text": "Use Make a prediction. Click Predict.",
+              "text": "Use Make a Prediction. Click Predict.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -2225,7 +2225,7 @@
             "id": "vgn3-n-152",
             "type": "text",
             "data": {
-              "text": "Enter their snack. Use Make a prediction.",
+              "text": "Enter their snack. Use Make a Prediction.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -2285,50 +2285,6 @@
             "measured": {
               "width": 560,
               "height": 75
-            }
-          },
-          {
-            "id": "vgn3-n-156",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Right",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "fontSize": "medium",
-              "locked": true
-            },
-            "position": {
-              "x": 4440,
-              "y": 1493
-            },
-            "width": 165,
-            "height": 60,
-            "measured": {
-              "width": 165,
-              "height": 60
-            }
-          },
-          {
-            "id": "vgn3-n-157",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Wrong",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "fontSize": "medium",
-              "locked": true
-            },
-            "position": {
-              "x": 4625,
-              "y": 1493
-            },
-            "width": 165,
-            "height": 60,
-            "measured": {
-              "width": 165,
-              "height": 60
             }
           },
           {
@@ -2427,7 +2383,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "I entered  \nIt predicted  \nI think it is right or wrong because ",
+              "label": "I tested  \nThe model predicted  \nI think that is right / wrong because ",
               "textAlign": "left",
               "backgroundColor": "var(--sketchlab-bg-pink)",
               "fontSize": "medium",
@@ -2449,7 +2405,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "I entered  \nIt predicted  \nI think it is right or wrong because ",
+              "label": "I tested  \nThe model predicted  \nI think that is right / wrong because ",
               "textAlign": "left",
               "backgroundColor": "var(--sketchlab-bg-pink)",
               "fontSize": "medium",
@@ -2471,7 +2427,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "I entered  \nIt predicted  \nI think it is right or wrong because ",
+              "label": "I tested  \nThe model predicted  \nI think that is right / wrong because ",
               "textAlign": "left",
               "backgroundColor": "var(--sketchlab-bg-pink)",
               "fontSize": "medium",
@@ -4029,6 +3985,50 @@
               "height": 60
             },
             "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-156",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✓",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 4440,
+              "y": 1493
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-157",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✗",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 4625,
+              "y": 1493
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            },
+            "zIndex": 10
           }
         ],
         "edges": [
@@ -4043,6 +4043,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-17T04:46:28.408+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-template\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-template\"},{\"changed_at\":\"2026-11-17 04:49:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 19:40:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:13:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:14:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:16:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:17:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:33:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 02:28:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-17T04:46:28.408+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-template\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-template\"},{\"changed_at\":\"2026-11-17 04:49:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 19:40:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:13:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:14:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:16:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:17:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:33:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 02:28:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:21:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894759-75b0341c49b8",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 4: Guidelines for Working with AI",
+  "question": "Your robot alarm clock only does what you tell it. Tell it who it is, who it is helping, and what to do, and waking up might even be fun.\n\nSteps:\n1. Start recording. Pick one job from the list below.\n2. Tell your robot who it is and who it is helping. Be creative: it can be a calm coach, a very dramatic storyteller, or anything you invent.\n3. Tell your robot exactly what to do.\n4. Act out the first thing your robot would say to you. Then tell us which word in your instructions shaped what it said.\n\nJob list:\n- Wake me up on a school morning.\n- Help me pack my bag.\n- Cheer me on before a big test.\n- Remind me to drink water.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say any instructions for the robot on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says only who the robot is OR only what the robot should do, or does not act out the robot's first line."
+    },
+    {
+      "level": 2,
+      "description": "Student says who the robot is and who it is helping AND what it should do, AND acts out the robot's first line."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names one word or phrase from the instructions that shaped the robot's first line."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

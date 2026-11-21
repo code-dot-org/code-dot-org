@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894903-8fb925df6c81",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 2: Beyond Words",
+  "question": "You want an AI to suggest a better layout for your room, so you take a photo. But a photo shows far more than furniture. What would you cover before you hit send?\n\nSteps:\n1. Use the shape tool to cover 3 details you would hide before uploading the photo.\n2. Use the arrow tool to point at the detail the AI actually needs to suggest a layout.\n3. Use the text tool to write the request you would send with the photo.\n4. Record your voice explaining what each covered detail could reveal.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape, arrow, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places fewer than 3 shapes, OR types no request."
+    },
+    {
+      "level": 2,
+      "description": "Three shapes cover three different details from items 1 to 5 AND an arrow points to item 6 AND the typed request asks for layout ideas without personal details AND the voice recording says what at least 2 covered details could reveal."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a trade-off or a risk that remains (for example, the AI can still give layout advice with the details covered, or an uncovered detail could still reveal something)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894903-8fb925df6c81-8c85ce9a",
+  "whiteboard_starter_image_alt_text": "A bedroom photo with the request \"Suggest a better layout for my room.\" Six details are numbered: 1, a window view showing a \"14 Oak St\" street sign; 2, a laptop screen showing \"Inbox (12)\"; 3, a \"Lincoln High\" school ID; 4, an October calendar with \"Tue 4:00 Soccer\"; 5, a framed family photo; and 6, the bed and desk."
+}

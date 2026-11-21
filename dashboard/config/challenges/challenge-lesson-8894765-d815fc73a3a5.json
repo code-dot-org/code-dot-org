@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894765-d815fc73a3a5",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 10: The Final Verdict",
+  "question": "Imagine a dial from 1 to 5. At 1, you do all the work yourself. At 5, a helper does all of it. Where would you set the dial for each job?\n\nSteps:\n1. Start recording. Pick one task from the list below.\n2. Say a number from 1 to 5 and explain why. Say what could go wrong or what you would still do yourself.\n3. Say one thing that would make you change your number.\n\nTask list:\n- Choosing a gift for a friend\n- Fixing spelling mistakes in a text message\n- Planning a route to a place you have never been\n- Writing a thank-you note to a family member\n- Deciding if a bridge is safe to cross",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not pick a task or say a number on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says a number from 1 to 5 but gives no reason, gives a reason but no number, or gives a reason that does not name what could go wrong or what the human would still do."
+    },
+    {
+      "level": 2,
+      "description": "Student says a number from 1 to 5 AND gives a reason that names what could go wrong or what the human would still do."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names a specific condition that would change the number (for example, \"if the stakes were higher, I would pick a lower number\")."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894912-95a2267a6ffc",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 11: Ownership, Ethics, and Creativity",
+  "question": "Food comes with an ingredients label. What if media did too? Design a label for AI-made content, and decide when it must be there.\n\nSteps:\n1. Start recording. Pick one type of content from the list below.\n2. Read out a label with 3 lines. For example, you could say who made it, what the AI did, and whose work it learned from.\n3. Give one example where the label should be required, and one where it would be unnecessary.\n4. Describe one hard case where your rule is unclear, and say how you would decide.\n\nContent list:\n- A news article\n- A voice message\n- A photo\n- A song",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not read a label on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student reads a label with fewer than 3 lines."
+    },
+    {
+      "level": 2,
+      "description": "Student reads a label with 3 lines AND gives one example where the label should be required AND one where it would be unnecessary."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND describes a hard case where the rule is unclear AND says how they would decide, with a reason."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}
