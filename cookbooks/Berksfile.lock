@@ -43,6 +43,8 @@ DEPENDENCIES
     path: cdo-tippecanoe
   cdo-users
     path: cdo-users
+  cdo-wiz-sensor
+    path: cdo-wiz-sensor
   chef-client
   chef_client_updater (>= 3.3.2)
   ntp
@@ -76,6 +78,7 @@ GRAPH
     cdo-secrets (>= 0.0.0)
     cdo-syslog (>= 0.0.0)
     cdo-tippecanoe (>= 0.0.0)
+    cdo-wiz-sensor (>= 0.0.0)
     chef_client_updater (>= 0.0.0)
   cdo-authorized-keys (0.1.2)
   cdo-awscli (0.1.38)
@@ -114,6 +117,7 @@ GRAPH
     ark (>= 0.0.0)
   cdo-users (0.1.56)
     apt (>= 0.0.0)
+  cdo-wiz-sensor (0.1.0)
   chef-client (12.3.4)
     cron (>= 4.2.0)
     logrotate (>= 1.9.0)
