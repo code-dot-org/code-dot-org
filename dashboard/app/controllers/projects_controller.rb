@@ -173,8 +173,8 @@ class ProjectsController < ApplicationController
   # or create a new project for that level and user. If a script_id is provided, get or
   # create the project for that level, script and user.
   # If a user_id is provided, get but do not create the project for that level, script and
-  # user_id; this is used for Lab2 levels when a teacher views a student's work, and the
-  # relevant permission is verified here.
+  # user_id; this is used for Lab2 levels when a teacher or project validator views a
+  # student's work, and the relevant permission is verified here.
   # Returns json: {channel: <encrypted-channel-token>}
   def get_or_create_for_level
     script_id = params[:script_id]
@@ -187,7 +187,7 @@ class ProjectsController < ApplicationController
     # If viewing another user's work, ensure that we have permission.
     if user_id
       user = User.find(user_id)
-      unless user&.student_of?(current_user)
+      unless user&.student_of?(current_user) || current_user&.project_validator?
         return render(status: :forbidden, json: {error: "Access denied."})
       end
 

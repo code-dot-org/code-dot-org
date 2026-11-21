@@ -37,7 +37,8 @@ const RowsTableHeader = ({
           tableStyles.indexCell,
           tableStyles.indexHeader,
           tableStyles.indexColumn,
-          {[tableStyles.frozenIndex]: idColumn}
+          tableStyles.frozenIndex,
+          {[tableStyles.besideIdColumn]: idColumn}
         )}
         aria-label="Row"
       />

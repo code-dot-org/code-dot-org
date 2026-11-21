@@ -1,12 +1,16 @@
 // Making a picture from a sentence of word chips: the words, the model's
 // run, the picture it made, and the rating. A host lays the parts out.
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Toggle from '@code-dot-org/component-library/toggle';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
+import Dots from '@cdo/apps/aiComponentLibrary/loadingAnimations/Dots';
+import {
+  MAX_LEAVING_MS,
+  useStopWhenResting,
+} from '@cdo/apps/aiComponentLibrary/loadingAnimations/useStopWhenResting';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {generateCharacterSet} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
@@ -64,6 +68,7 @@ import styles from './sentence-scene.module.scss';
 const STYLE: ImageStyle = 'pixel';
 // The service's middle temperature.
 const TEMPERATURE = 1;
+const GENERATING_DOTS_WIDTH_PX = 48;
 // The verb shown in front of the sentence the student builds, so it reads
 // as an instruction: "Generate a cute cat."
 const SENTENCE_LEAD = 'Generate';
@@ -72,6 +77,25 @@ const SENTENCE_LEAD = 'Generate';
 export const MIN_CACHED_GENERATING_MS = 6000;
 
 export type Mode = 'edit' | 'generating' | 'result';
+
+// A component of its own, so that each generation starts with new dots:
+// once the dots have left they cannot come back.
+const GeneratingDots: React.FunctionComponent<{leaving: boolean}> = ({
+  leaving,
+}) => {
+  const {firstDotRef, stopping} = useStopWhenResting(
+    leaving ? 'ready' : 'thinking',
+    undefined,
+    MAX_LEAVING_MS
+  );
+  return (
+    <Dots
+      stopping={stopping}
+      firstDotRef={firstDotRef}
+      width={GENERATING_DOTS_WIDTH_PX}
+    />
+  );
+};
 
 interface GeneratedPicture {
   /** The result's filename, unique per generation. */
@@ -107,7 +131,7 @@ export interface SentenceSceneParts {
   /** Every word the sentence needs is chosen, or a prompt is typed. */
   complete: boolean;
   panelRef: React.RefObject<HTMLElement>;
-  /** The frame's contents: the generated picture, the spinner while
+  /** The frame's contents: the generated picture, the bouncing dots while
       generating, or null before the first generation. */
   frame: React.ReactNode;
   /** A made picture is showing in the frame. */
@@ -244,6 +268,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
 
   const [mode, setMode] = useState<Mode>('edit');
   const [tip, setTip] = useState<string | null>(null);
+  const [dotsLeaving, setDotsLeaving] = useState(false);
   // The most recent generated picture, shown in the frame; the host has
   // already stored it as the project's image.
   const [chosenPicture, setChosenPicture] = useState<GeneratedPicture | null>(
@@ -315,6 +340,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       !!typedPrompt || !!advanced?.startFrom || pixelScale !== 1;
     const fromCache = imageSource === 'cached' && !customized;
     setMode('generating');
+    setDotsLeaving(false);
     setTip(current => pickTip(current));
     setVerdict(null);
     setRatingDismissed(false);
@@ -405,9 +431,16 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       }
       if (cached) {
         const elapsed = Date.now() - startedAt;
-        await new Promise(resolve =>
-          setTimeout(resolve, Math.max(MIN_CACHED_GENERATING_MS - elapsed, 0))
-        );
+        const remaining = Math.max(MIN_CACHED_GENERATING_MS - elapsed, 0);
+        // Start the dots' exit MAX_LEAVING_MS before the wait ends, or at
+        // once if less of it is left, so the picture does not wait for the
+        // exit.
+        setTimeout(() => {
+          if (run === runRef.current) {
+            setDotsLeaving(true);
+          }
+        }, Math.max(remaining - MAX_LEAVING_MS, 0));
+        await new Promise(resolve => setTimeout(resolve, remaining));
         if (run !== runRef.current) {
           return;
         }
@@ -615,12 +648,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   // A set's frames arrive one by one; none shows until all have.
   const frame = generating ? (
     <div className={styles.generating}>
-      <FontAwesomeV6Icon
-        iconName="spinner"
-        animationType="spin"
-        className={styles.spinner}
-        aria-hidden
-      />
+      <GeneratingDots leaving={dotsLeaving} />
     </div>
   ) : chosenPicture ? (
     <>

@@ -10,12 +10,16 @@ import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetLayout} from '../redux';
 import {getData, getIdColumn} from '../selectors';
 import {useDatasetTableView} from '../useDatasetTableView';
+import {useTestRows} from '../useTestRows';
 
 import DatasetCardDeck from './DatasetCardDeck';
 import DataTable from './DataTable';
+import InfoButton from './InfoButton';
 import TableFilter from './TableFilter';
 
 import styles from './dataDisplay.module.scss';
+
+const TEST_ROWS_TOOLTIP = 'These rows will be set aside for testing.';
 
 const DataDisplay = () => {
   const dispatch = useAppDispatch();
@@ -23,6 +27,7 @@ const DataDisplay = () => {
   const datasetName = useAppSelector(state => state.name);
   const datasetLayout = useAppSelector(state => state.datasetLayout);
   const idColumn = useAppSelector(getIdColumn);
+  const testRows = useTestRows();
   const rows = useMemo(() => [...data.keys()], [data]);
   const columns = useMemo(
     () => withIdColumnFirst(Object.keys(data[0] ?? {}), idColumn),
@@ -64,6 +69,22 @@ const DataDisplay = () => {
           >
             {rowCountMessage}
           </Typography>
+          {isTable && testRows.size > 0 && (
+            <>
+              <span className={styles.separator} aria-hidden="true" />
+              <div className={styles.testRowLegend}>
+                <span className={styles.testRowSwatch} aria-hidden="true" />
+                <Typography
+                  component="span"
+                  variant="body4"
+                  className={styles.testRowLegendText}
+                >
+                  Test rows
+                </Typography>
+                <InfoButton about="test rows" tooltip={TEST_ROWS_TOOLTIP} />
+              </div>
+            </>
+          )}
         </div>
         <div className={styles.actions}>
           <TableFilter view={tableView} />

@@ -1,10 +1,12 @@
 import $ from 'jquery';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import * as BlocklyUtils from '@cdo/apps/blockly/utils';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import project from '@cdo/apps/code-studio/initApp/project';
+import localization from '@cdo/apps/localization';
 import * as redux from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
@@ -26,6 +28,36 @@ import {
 } from '../util/testUtils';
 
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
+
+// Workspace-facing helpers the start-block localization drives; each keeps
+// its real behavior unless a test overrides it.
+const MOCKED_BLOCKLY_UTILS = [
+  'clearAllStudentWorkspaces',
+  'isWorkspaceBusy',
+  'loadBlocksToWorkspace',
+  'refreshWorkspacesForUpdatedLocale',
+  'restoreTopBlockPositions',
+  'saveTopBlockPositions',
+  'startBlocksStateKey',
+];
+
+jest.mock('@cdo/apps/blockly/utils', () => {
+  const actual = jest.requireActual('@cdo/apps/blockly/utils');
+  const mocked = {...actual};
+  // Repeats MOCKED_BLOCKLY_UTILS, which is not yet defined when this runs.
+  for (const name of [
+    'clearAllStudentWorkspaces',
+    'isWorkspaceBusy',
+    'loadBlocksToWorkspace',
+    'refreshWorkspacesForUpdatedLocale',
+    'restoreTopBlockPositions',
+    'saveTopBlockPositions',
+    'startBlocksStateKey',
+  ]) {
+    mocked[name] = jest.fn((...args) => actual[name](...args));
+  }
+  return mocked;
+});
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
@@ -632,6 +664,279 @@ describe('StudioApp', () => {
       codeDifferentStub.returns(false);
       expect(studio.validateCodeChanged()).to.be.false;
       expect(codeDifferentStub).to.have.been.called;
+    });
+  });
+
+  describe('start block localization', () => {
+    const actualBlocklyUtils = jest.requireActual('@cdo/apps/blockly/utils');
+    const sayXml = text =>
+      '<xml><block type="gamelab_spriteSay">' +
+      '<value name="TEXT"><block type="text">' +
+      `<field name="TEXT">${text}</field>` +
+      '</block></value></block></xml>';
+    const loaded = () =>
+      BlocklyUtils.loadBlocksToWorkspace.mock.calls.map(call => call[1]);
+
+    let studio, dictionary, workspaceKey, busy;
+    beforeEach(() => {
+      jest.useFakeTimers();
+      studio = studioApp();
+      studio.untrackStartBlocks_();
+      dictionary = {};
+      workspaceKey = 'pristine';
+      busy = false;
+      sinon.stub(studio, 'arrangeBlockPosition').callsFake(xml => xml);
+      sinon.stub(localization, 'isLocalizeJS').returns(true);
+      sinon
+        .stub(localization, 'translate')
+        .callsFake(text => dictionary[text] ?? text);
+      for (const name of MOCKED_BLOCKLY_UTILS) {
+        BlocklyUtils[name].mockReset();
+      }
+      BlocklyUtils.startBlocksStateKey.mockImplementation(() => workspaceKey);
+      BlocklyUtils.isWorkspaceBusy.mockImplementation(() => busy);
+      BlocklyUtils.saveTopBlockPositions.mockReturnValue([]);
+    });
+
+    afterEach(() => {
+      studio.untrackStartBlocks_();
+      jest.useRealTimers();
+      studio.arrangeBlockPosition.restore();
+      localization.isLocalizeJS.restore();
+      localization.translate.restore();
+      for (const name of MOCKED_BLOCKLY_UTILS) {
+        BlocklyUtils[name].mockImplementation((...args) =>
+          actualBlocklyUtils[name](...args)
+        );
+      }
+    });
+
+    describe('setStartBlocks_', () => {
+      it('translates authored start blocks', () => {
+        dictionary.Hello = 'Hola';
+        studio.setStartBlocks_({level: {startBlocks: sayXml('Hello')}}, true);
+        expect(loaded()[0]).to.contain('Hola');
+      });
+
+      it('loads a last attempt as saved', () => {
+        dictionary.Hello = 'Hola';
+        const lastAttempt = sayXml('Hello');
+        studio.setStartBlocks_(
+          {level: {startBlocks: sayXml('Hello'), lastAttempt}},
+          true
+        );
+        expect(loaded()).to.deep.equal([lastAttempt]);
+        expect(localization.translate).to.have.not.been.calledWith('Hello');
+      });
+
+      it('translates authored start blocks when resetting', () => {
+        dictionary.Hello = 'Hola';
+        studio.setStartBlocks_(
+          {level: {startBlocks: sayXml('Hello'), lastAttempt: sayXml('Hi')}},
+          false
+        );
+        expect(loaded()[0]).to.contain('Hola');
+      });
+
+      it('leaves start blocks alone when localization is off', () => {
+        dictionary.Hello = 'Hola';
+        localization.isLocalizeJS.returns(false);
+        const startBlocks = sayXml('Hello');
+        studio.setStartBlocks_({level: {startBlocks}}, true);
+        expect(loaded()).to.deep.equal([startBlocks]);
+      });
+    });
+
+    describe('registerCurriculumProcedureNames_', () => {
+      const defineXml = name =>
+        '<xml><block type="procedures_defnoreturn">' +
+        `<field name="NAME">${name}</field></block></xml>`;
+      let mainBlockSpace;
+      beforeEach(() => {
+        mainBlockSpace = Blockly.mainBlockSpace;
+        Blockly.mainBlockSpace = {
+          options: {
+            languageTree: {
+              kind: 'categoryToolbox',
+              contents: [
+                {
+                  kind: 'category',
+                  contents: [
+                    {
+                      kind: 'block',
+                      type: 'procedures_callnoreturn',
+                      extraState: {name: 'from toolbox'},
+                    },
+                  ],
+                },
+              ],
+            },
+          },
+        };
+      });
+
+      afterEach(() => {
+        Blockly.mainBlockSpace = mainBlockSpace;
+        BlocklyUtils.setCurriculumProcedureNames({});
+      });
+
+      it('registers authored names but never the last attempt', () => {
+        studio.registerCurriculumProcedureNames_({
+          level: {
+            startBlocks: defineXml('authored'),
+            lastAttempt: defineXml('mine'),
+          },
+        });
+        expect(BlocklyUtils.isTranslatable('authored')).to.be.true;
+        expect(BlocklyUtils.isTranslatable('from toolbox')).to.be.true;
+        expect(BlocklyUtils.isTranslatable('mine')).to.be.false;
+      });
+
+      it('registers nothing when localization is off', () => {
+        localization.isLocalizeJS.returns(false);
+        studio.registerCurriculumProcedureNames_({
+          level: {startBlocks: defineXml('authored')},
+        });
+        expect(BlocklyUtils.isTranslatable('authored')).to.be.false;
+      });
+    });
+
+    describe('relocalizeStartBlocks_', () => {
+      const loadAuthored = () =>
+        studio.setStartBlocks_({level: {startBlocks: sayXml('Hello')}}, true);
+
+      it('reloads unedited start blocks when their translation arrives', () => {
+        loadAuthored();
+        dictionary.Hello = 'Hola';
+        expect(studio.relocalizeStartBlocks_()).to.be.true;
+        expect(loaded()[1]).to.contain('Hola');
+        expect(
+          BlocklyUtils.clearAllStudentWorkspaces.mock.calls
+        ).to.have.length(1);
+        expect(BlocklyUtils.restoreTopBlockPositions.mock.calls).to.have.length(
+          1
+        );
+      });
+
+      it('does not reload when the translation is unchanged', () => {
+        loadAuthored();
+        expect(studio.relocalizeStartBlocks_()).to.be.false;
+        expect(loaded()).to.have.length(1);
+      });
+
+      it('never reloads a last attempt', () => {
+        studio.setStartBlocks_(
+          {level: {startBlocks: sayXml('Hello'), lastAttempt: sayXml('Hi')}},
+          true
+        );
+        dictionary.Hello = 'Hola';
+        expect(studio.relocalizeStartBlocks_()).to.be.false;
+        expect(loaded()).to.have.length(1);
+      });
+
+      it('stops for good once the student edits', () => {
+        loadAuthored();
+        workspaceKey = 'edited';
+        dictionary.Hello = 'Hola';
+        expect(studio.relocalizeStartBlocks_()).to.be.false;
+        // Undoing back to the original content does not resume tracking.
+        workspaceKey = 'pristine';
+        studio.snapshotStartBlocks_();
+        expect(studio.relocalizeStartBlocks_()).to.be.false;
+        expect(loaded()).to.have.length(1);
+      });
+
+      it('stops once other blocks are loaded over the start blocks', () => {
+        loadAuthored();
+        studio.loadBlocks(sayXml('Restored version'));
+        dictionary.Hello = 'Hola';
+        expect(studio.relocalizeStartBlocks_()).to.be.false;
+        expect(loaded()).to.have.length(2);
+      });
+
+      it('keeps tracking across the variable renames of a refresh', () => {
+        loadAuthored();
+        dictionary.Hello = 'Hola';
+        studio.relocalizeStartBlocks_();
+        workspaceKey = 'variables renamed';
+        studio.snapshotStartBlocks_();
+        dictionary.Hello = 'Bonjour';
+        expect(studio.relocalizeStartBlocks_()).to.be.true;
+        expect(loaded()[2]).to.contain('Bonjour');
+      });
+
+      it('defers while busy and reloads once idle', () => {
+        loadAuthored();
+        busy = true;
+        dictionary.Hello = 'Hola';
+        expect(studio.relocalizeStartBlocks_()).to.be.false;
+        expect(loaded()).to.have.length(1);
+
+        jest.advanceTimersByTime(250);
+        expect(loaded()).to.have.length(1);
+
+        busy = false;
+        jest.advanceTimersByTime(250);
+        expect(loaded()[1]).to.contain('Hola');
+        expect(
+          BlocklyUtils.refreshWorkspacesForUpdatedLocale.mock.calls
+        ).to.have.length(1);
+        expect(jest.getTimerCount()).to.equal(0);
+      });
+
+      it('drops a deferred reload if the student edits meanwhile', () => {
+        loadAuthored();
+        busy = true;
+        dictionary.Hello = 'Hola';
+        studio.relocalizeStartBlocks_();
+        workspaceKey = 'edited';
+        busy = false;
+        jest.advanceTimersByTime(250);
+        expect(loaded()).to.have.length(1);
+        expect(jest.getTimerCount()).to.equal(0);
+      });
+
+      it('keeps one pending retry across repeated locale changes', () => {
+        loadAuthored();
+        busy = true;
+        dictionary.Hello = 'Hola';
+        studio.relocalizeStartBlocks_();
+        studio.relocalizeStartBlocks_();
+        expect(jest.getTimerCount()).to.equal(1);
+      });
+
+      it('restores the previous blocks if the translation fails to load', () => {
+        loadAuthored();
+        const original = loaded()[0];
+        dictionary.Hello = 'Hola';
+        BlocklyUtils.loadBlocksToWorkspace.mockImplementationOnce(() => {
+          throw new Error('bad blocks');
+        });
+        expect(() => studio.relocalizeStartBlocks_()).to.throw('bad blocks');
+        expect(loaded()[2]).to.equal(original);
+        dictionary.Hello = 'Bonjour';
+        expect(studio.relocalizeStartBlocks_()).to.be.false;
+      });
+
+      it('runs before the refresh and snapshots after it on a change', () => {
+        loadAuthored();
+        const order = [];
+        BlocklyUtils.loadBlocksToWorkspace.mockImplementation(() =>
+          order.push('load')
+        );
+        BlocklyUtils.refreshWorkspacesForUpdatedLocale.mockImplementation(
+          () => {
+            order.push('refresh');
+            workspaceKey = 'variables renamed';
+          }
+        );
+        dictionary.Hello = 'Hola';
+        studio.relocalizeStartBlocks_();
+        BlocklyUtils.refreshWorkspacesForUpdatedLocale(false);
+        studio.snapshotStartBlocks_();
+        expect(order).to.deep.equal(['load', 'refresh']);
+        expect(studio.startBlocksSnapshot_).to.equal('variables renamed');
+      });
     });
   });
 });
