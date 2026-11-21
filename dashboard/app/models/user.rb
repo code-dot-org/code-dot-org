@@ -2110,11 +2110,29 @@ class User < ApplicationRecord
   end
 
   private def hidden_lesson_ids(sections)
-    return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)
+    by_section = hidden_lesson_ids_by_section(sections.map(&:id))
+    sections.flat_map {|section| by_section[section.id]}
   end
 
   private def hidden_unit_ids(sections)
-    return sections.flat_map(&:section_hidden_scripts).pluck(:script_id)
+    by_section = hidden_unit_ids_by_section(sections.map(&:id))
+    sections.flat_map {|section| by_section[section.id]}
+  end
+
+  private def hidden_lesson_ids_by_section(section_ids)
+    hidden_ids_by_section(SectionHiddenLesson, :stage_id, section_ids)
+  end
+
+  private def hidden_unit_ids_by_section(section_ids)
+    hidden_ids_by_section(SectionHiddenScript, :script_id, section_ids)
+  end
+
+  # @return {Hash<number,number[]>} section id => hidden ids, with an entry for every section id given.
+  private def hidden_ids_by_section(model, id_column, section_ids)
+    return {} if section_ids.empty?
+
+    grouped = model.where(section_id: section_ids).order(:id).pluck(:section_id, id_column).group_by(&:first)
+    section_ids.index_with {|section_id| (grouped[section_id] || []).map(&:last)}
   end
 
   # This method will extract a list of hidden ids by section. The type of ids depends
@@ -2125,13 +2143,8 @@ class User < ApplicationRecord
   #   if we're looking for hidden units.
   # @return {Hash<string,number[]>
   private def get_instructor_hidden_ids(hidden_lessons)
-    # If we're a teacher, we want to go through each of our sections and return
-    # a mapping from section id to hidden lessons/units in that section
-    hidden_by_section = {}
-    sections_instructed.each do |section|
-      hidden_by_section[section.id] = hidden_lessons ? hidden_lesson_ids([section]) : hidden_unit_ids([section])
-    end
-    hidden_by_section
+    section_ids = sections_instructed.pluck(:id)
+    hidden_lessons ? hidden_lesson_ids_by_section(section_ids) : hidden_unit_ids_by_section(section_ids)
   end
 
   # This method method will go through each of the sections in which we're a member
