@@ -14,8 +14,8 @@ and a small army of translators.
 ```
 cd apps
 
-# Machine setup (macOS with Homebrew)
-brew install node
+# Machine setup; see ../SETUP.md to install nvm
+nvm install    # version from ../.nvmrc
 corepack enable
 
 # Perform first full build
@@ -63,8 +63,6 @@ yarn build
 - `yarn build --app=maze` builds a 'debug' version of only the maze app
 - `yarn build:dist` builds a minified version suitable for production
 - `yarn clean` will clean the build/ directory
-
-See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
 ### Building with rspack (opt-in)
 
@@ -153,7 +151,12 @@ rough edge either way: unmapped modules (node_modules, or everything under
 
 ## Testing
 
-Apps unit tests are run using [jest](https://jestjs.io/) and integration tests are run in a browser using [Karma](https://karma-runner.github.io/). By default they run inside a [headless chrome browser](https://developer.chrome.com/blog/headless-karma-mocha-chai/) but they can also be run in the browser of your choice. See below for information on [writing new tests](#writing-tests).
+[jest](https://jestjs.io/) runs `test/unit/**/*Test.{js,jsx,ts,tsx}` in jsdom.
+[Karma](https://karma-runner.github.io/) runs `test/unit/**/*.karma.test.*`
+(unit tests that need a real browser) and `test/integration/` in
+ChromeHeadless. `yarn test` runs `run-tests-in-parallel.sh`: jest, then
+`yarn lint`, the karma unit tests, and the integration tests split by level
+type, in parallel. It ignores its arguments.
 
 | To Run...                               | Example Command                                           |
 |-----------------------------------------|-----------------------------------------------------------|
@@ -176,7 +179,6 @@ Apps unit tests are run using [jest](https://jestjs.io/) and integration tests a
 
 - `yarn test` is run by Drone CI when you create a pull request.
 - You'll need to run `yarn build` at least once before running tests. If you don't, you'll see errors like `Module not found: Error: Can't resolve '../../../build/`.
-- You probably don't need to keep running `yarn build` while fixing tests, `yarn test --watchTests` will watch and rebuild most test/ and src/ files for you.
 
 ### IDE Support
 
@@ -187,10 +189,11 @@ You can run and debug jest unit tests with an IDE extension. For more details, c
 
 ### Debugging Karma Tests
 
-To debug tests, your best bet is to run them in Chrome:
+To debug karma tests, run them in a visible Chrome:
 
 ```
-yarn test:unit --browser=Chrome --watchTests
+yarn test:integration --browser=Chrome --watchTests
+yarn grunt karma --testType=unit --browser=Chrome --watchTests --entry=./test/unit/Sound.karma.test.js
 ```
 
 A new chrome browser window will open where the tests will be running. You can
@@ -208,21 +211,18 @@ folder. For example, to see what code gets executed by unit tests, run:
 COVERAGE=1 yarn test:unit
 ```
 
-Then you can open up the html report with (note that the exact file path may be
-different):
+Then open the html report:
 
 ```
-open coverage/PhantomJS\ 2.1.1\ \(Mac\ OS\ X\ 0.0.0\)/index.html
+open coverage/lcov-report/index.html
 ```
 
 ### Writing Tests
 
-New or updated tests are executed using [jest](https://jestjs.io/). You can add new test files as `/test/unit/\*Tests.js`; see
-`/test/unit/feedbackTests.js` as an example of adding a mock Blockly
-instance. Note that each test file in `/test/unit/**` should include tests for
-exactly one file in `src/**` and the test file should have the same file name as
-the file it tests (with `Tests` appended to it): i.e. don't create new unit test
-files that test lots and lots of different stuff.
+Add new jest tests as `test/unit/**/*Test.js` (or `.jsx`, `.ts`, `.tsx`); jest
+never runs a file named `*Tests.js`. See `test/unit/feedbackTest.js` for an
+example of a mock Blockly instance. Each test file should test exactly one
+file in `src/` and share its name, with `Test` appended.
 
 In the event you need certain code to only be available when tests are running,
 you can use the `IN_UNIT_TEST` global, which will be set to `true` only when
@@ -236,9 +236,9 @@ if (IN_UNIT_TEST) {
 
 These if statements will be removed from production source files at build time.
 
-### Karma Tests (Deprecated)
+### Karma Tests
 
-Karma is used to run tests that depend on a browser. The test runner starts a server which can serve files in the apps directory to
+Prefer jest for new tests. The karma test runner starts a server which can serve files in the apps directory to
 your test code. Only allowlisted files and directories are available. See the
 `files` array in `karma.conf.js` for the allowlist. When
 fetching files served by the test runner, prefix the file path with
@@ -261,25 +261,10 @@ features. See more in the [apps/.storybook README](./.storybook/README.md).
 
 Bloated javascript bundles getting you down? Run `yarn build:analyze` to generate an interactive treemap visualization of the contents of all of our bundles. This will automatically open the report in your browser, or you can find the generated html page in the apps build directory at code-dot-org/apps/build/package/js/report.html. This uses [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer).
 
-## Localization
-
-It's especially important to test your changes with localization when modifying layouts. We support
-right-to-left languages and have some special layout tweaks embedded in the CSS to support that.
-
-Running a full localization build can take several minutes. Since localization re-builds javascript files for many languages, the default build target locale is `en_us`
-
-Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem. See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
-
 ## Adding a new npm package
 
-To add a new package using npm, e.g., `lodash`, run: `yarn add --dev lodash`
-
-- `--dev` adds the dependency to node's package.json, freezing the current version
-- Because the build process is done in dev mode, include dependencies as devDependencies rather than production dependencies
-
-## Typescript Migration
-We are trying out Typescript in our repository, and currently have a combination of Typescript and Javascript files. Typescript files can be added anywhere in `/src`, and will
-be linted and built.
+Run `yarn add <name>`, or `yarn add --dev <name>` to add it to
+`devDependencies`. Commit `package.json` and `yarn.lock` together.
 
 ## Contributing
 
@@ -289,12 +274,9 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 
 ### Style Guide
 
-- In general, we follow Google's javascript style [guide](https://google.github.io/styleguide/jsguide.html).
-- 80 character line length.
-- 2 space indent.
-- 4 space indent on long line breaks.
-- `yarn lint` should report 0 warnings or errors. Try `yarn lint:fix`.
-- See our [project style guide](../STYLEGUIDE.md) for more details, including CSS/SCSS styling.
+Prettier enforces formatting. Lint changed files with `./tools/hooks/pre-commit`
+from the repo root, and type-check with `yarn run typecheck`. See also the
+[project style guide](../STYLEGUIDE.md).
 
 ## Other Docs
 
