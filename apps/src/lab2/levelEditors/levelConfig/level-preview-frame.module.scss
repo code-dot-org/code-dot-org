@@ -1,0 +1,38 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.help {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}
+
+// Keeps the page from jumping when the frame pins.
+.slot {
+  width: 100%;
+  max-width: 900px;
+}
+
+.box {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 6px;
+  background-color: var(--background-neutral-primary);
+}
+
+.pinned {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  z-index: 1000;
+  box-shadow: 0 4px 16px rgb(0 0 0 / 30%);
+}
+
+.frame {
+  border: 0;
+  transform-origin: 0 0;
+}

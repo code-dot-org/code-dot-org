@@ -7,6 +7,7 @@ import {
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
+import {useLevelConfigPreview} from '@cdo/apps/lab2/levelEditors/levelConfig/levelPreview';
 import {
   getStandaloneProjectId,
   getAppOptionsEditBlocks,
@@ -66,9 +67,18 @@ const isStudentEdit = (prev: Sources, next: Sources) =>
 const SpriteLab2Container: React.FunctionComponent<
   LabProps<SpriteLab2LevelProperties, Sources>
 > = ({levelProperties: storedLevelProperties}) => {
+  // In the level edit page's preview frame, the settings come from the
+  // page as they are edited.
+  const preview = useLevelConfigPreview();
+  const previewConfig = preview?.config;
   const levelProperties = useMemo(
-    () => withLevelConfig(storedLevelProperties),
-    [storedLevelProperties]
+    () =>
+      withLevelConfig(
+        previewConfig === undefined
+          ? storedLevelProperties
+          : {...storedLevelProperties, levelConfig: previewConfig}
+      ),
+    [storedLevelProperties, previewConfig]
   );
   const dispatch = useAppDispatch();
   // A share link is play only, for its owner too.
@@ -138,8 +148,32 @@ const SpriteLab2Container: React.FunctionComponent<
     const sources = readOnlyLevel ? levelSources : storedForLevel;
     return sources && unpackSources(sources);
   }, [readOnlyLevel, levelSources, storedForLevel]);
+  // The preview starts each run from the project as it loaded, and keeps
+  // the run's changes here instead of saving them.
+  const previewStartRef = useRef<Sources>();
+  if (preview && currentSources && !previewStartRef.current) {
+    previewStartRef.current = currentSources;
+  }
+  const [previewRun, setPreviewRun] = useState<{
+    version: number;
+    sources?: Sources;
+  }>({version: -1});
+  const previewVersion = preview?.version ?? 0;
+  if (preview && previewRun.version !== previewVersion) {
+    setPreviewRun({version: previewVersion, sources: previewStartRef.current});
+  }
   const updateSources = useCallback<typeof updateStoredSources>(
     (next, forceSave) => {
+      if (preview) {
+        setPreviewRun(run => ({
+          ...run,
+          sources:
+            typeof next === 'function'
+              ? run.sources && next(run.sources)
+              : next,
+        }));
+        return;
+      }
       if (readOnlyLevel || isShareView || isViewOnly) {
         return;
       }
@@ -148,7 +182,7 @@ const SpriteLab2Container: React.FunctionComponent<
         forceSave
       );
     },
-    [readOnlyLevel, isShareView, isViewOnly, updateStoredSources]
+    [preview, readOnlyLevel, isShareView, isViewOnly, updateStoredSources]
   );
   const patchSources = useCallback<typeof patchStoredSources>(
     (patch, forceSave) =>
@@ -166,15 +200,21 @@ const SpriteLab2Container: React.FunctionComponent<
     }
   }, [loadError, dispatch]);
 
-  if (!currentSources) {
+  const viewSources = preview
+    ? previewRun.sources ?? previewStartRef.current
+    : currentSources;
+  if (!viewSources) {
     return <Loading isLoading={true} />;
   }
   // One view per level: a level change remounts it, so no effect of the
-  // last level runs against this one's sources.
+  // last level runs against this one's sources. The preview remounts it for
+  // each change of the settings too.
   return (
     <SpriteLab2View
-      key={levelProperties.id}
-      currentSources={currentSources}
+      key={
+        preview ? `${levelProperties.id}-${previewVersion}` : levelProperties.id
+      }
+      currentSources={viewSources}
       updateSources={updateSources}
       patchSources={patchSources}
       levelProperties={levelProperties}
