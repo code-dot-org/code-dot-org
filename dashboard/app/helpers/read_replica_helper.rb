@@ -2,17 +2,18 @@ require 'dynamic_config/gatekeeper'
 
 module ReadReplicaHelper
   def self.included(base)
-    ActiveRecord::Base.include GatekeeperReadReplica
+    ActiveRecord::Base.include ReadReplicaRouting
   end
 
-  # Wrap ActiveRecord::ConnectionHandling methods in Gatekeeper flag to allow
-  # dynamic control over offloading queries to the read pool.
-  module GatekeeperReadReplica
+  # Sends each connected_to(role: :reading) block to the replica or to the writer.
+  module ReadReplicaRouting
     extend ActiveSupport::Concern
     module ClassMethods
-      # On by default on development and test environments to exercise read splitting earlier (even when there isn't
-      # a separate read replica database). Defaults to disabled on production.
       def read_replica?
+        # Levelbuilders read back curriculum they have just saved, which may not have reached the replica yet.
+        return false if RequestStore.store[:current_user]&.levelbuilder?
+
+        # On by default in development and test, to exercise read splitting even without a separate replica.
         Gatekeeper.allows('dashboard_read_replica', default: rack_env?(:development, :test))
       end
 
