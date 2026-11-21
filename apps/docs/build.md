@@ -68,26 +68,30 @@ when configuring our bundles:
 Currently, the outcome of applying these guidelines as best we can is the
 following:
 
-- `minimal.js` - this bundle includes code that is used pretty much everywhere
-  on the site. It will get loaded on every page and (hopefully) doesn't change
-  that often.
+- `vendors.js` - a fixed list of large third-party libraries (react, lodash,
+  @mui, etc.) used nearly everywhere. These rarely change, so the bundle stays
+  cached across deploys.
 
 - `code-studio-common.js` - this bundle includes code that is used on all
-  studio.code.org pages, but which isn't already in `minimal.js`. So any page
-  that needs `code-studio-common.js`, also needs `minimal.js` to work.
+  studio.code.org pages.
 
 - `code-studio-common-deps.js` - this bundle includes the third-party code that
   would otherwise be in `code-studio-common.js`. So any page that needs
   `code-studio-common.js`, also needs `code-studio-common-deps.js` to work.
 
 - `common.js` - this bundle includes code that is used across all of the big
-  apps (gamelab, applab, etc.) but which isn't already in `minimal.js` or
+  apps (gamelab, applab, etc.) but which isn't already in
   `code-studio-common.js`.
+
+- `p5-dependencies.js` and `studioRoutes.js` - p5 code shared by the p5-based
+  apps, and the generated Rails routes, which change often.
+
+The `cacheGroups` in `makeSplitChunks()` in `apps/bundlerBase.js` define these
+bundles.
 
 Then there are a bunch of much smaller bundles which serve as the "entry points"
 for various pages. They contain code which isn't used anywhere else and is
-really only for one specific page. So in theory, even the heaviest pages should
-only require downloading 4 different javascript files.
+really only for one specific page.
 
 ### When should I create a new bundle?
 
@@ -101,15 +105,21 @@ considered carefully before being implemented.
 Creating a new bundle is easy, but you need to think about what that bundle's
 dependencies will be. Here are the different options:
 
-1. I'm creating a new code studio "app" like applab/gamelab/etc.
+1. I'm creating a new lab.
 
-   Add the name of your app's directory to the `ALL_APPS` array in
-   `webpackEntryPoints.js` and make sure the directory contains a `main.js` file. The build
-   system will then generate a new bundle for that app with the same name as the
-   directory, using `main.js` as the entry point. Code shared with other apps will
+   New labs use Lab2 and do not get a bundle of their own. Register the lab's
+   entry point in `apps/lab2EntryPoints.ts`; all Lab2 labs load through the
+   `lab2` app bundle. See `apps/src/lab2/README.md`.
+
+2. I'm maintaining an older code studio "app" like applab/gamelab/etc.
+
+   Add the app's name to the `ALL_APPS` array in `webpackEntryPoints.js` and
+   create `src/sites/studio/pages/levels-<app>-main.js`. The build system will
+   then generate a new bundle for that app with the same name, using that file
+   as the entry point. Code shared with other apps will
    be factored out into `common.js`.
 
-2. I'm creating a new code studio page that isn't an app.
+3. I'm creating a new code studio page that isn't an app.
 
    Add a new key/value into the `CODE_STUDIO_ENTRIES` object in `webpackEntryPoints.js`. The
    key will become the bundle's filename and the value is the file to generate the
@@ -117,7 +127,7 @@ dependencies will be. Here are the different options:
    `CODE_STUDIO_ENTRIES` will be automatically factored out into the
    `code-studio-common.js` and `code-studio-common-deps.js` files.
 
-3. I'm creating a new "marketing" page that doesn't have a lot of dependencies.
+4. I'm creating a new "marketing" page that doesn't have a lot of dependencies.
 
    Add a new key/value pair to the `OTHER_ENTRIES` object in `webpackEntryPoints.js`. All
    dependencies will be included in the new bundle whether or not they are also
@@ -137,8 +147,9 @@ different configurations get run. Here is the approximate flow of commands/files
 
 1. `yarn build:dist` - This is the entry point into the build system, and is
    the command used to build production javascript assets. It should be run from
-   inside the `apps/` directory. All this does is execute grunt's `build` task as
-   defined in `Gruntfile.js`
+   inside the `apps/` directory. It runs `build-in-parallel.sh`, which sets the
+   Node heap size and worker count and then runs grunt's `build` task as
+   defined in `Gruntfile.js`.
 
 2. The grunt `build` task - This delegates to the various `webpack` tasks which
    do all the actual work. There are a few extra steps in here that copy around
@@ -161,7 +172,8 @@ different configurations get run. Here is the approximate flow of commands/files
    `applab.js`), or (2) a minified, hashed version of the same bundle (like 
    `applabwp0123456789abcdef0123.min.js`).
 
-   The exact configuration used by webpack is defined in `apps/webpack*.js`.
+   The exact configuration used by webpack is defined in `apps/webpack.config.js`
+   and `apps/bundlerBase.js`.
 
 5. `rake assets:precompile` - This is a ruby on rails rake task which
    generates/compiles *all* the static assets (including images, css, js, etc.)

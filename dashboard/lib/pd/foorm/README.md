@@ -1,11 +1,11 @@
 # Foorm Survey Pipeline
 
 The Foorm Survey Pipeline takes Foorm survey responses and summarizes them for visualization. The main entry point is
-SurveyReporter.get_workshop_report. SurveyReporter.get_workshop_report takes in a workshop id and returns a summary
+SurveyReporter.get_workshop_report. SurveyReporter.get_workshop_report takes in a workshop id and a facilitator id filter (nil for all facilitators), and returns a summary
 in the format described below. The path for calculating a report, given a `workshop_id` x,
 which is a workshop for course y (ex. 'CS Principles'), is:
-1. Get raw workshop data (`SurveyReporter.get_raw_workshop_data`). This gets the forms and responses for
-   `workshop_id`.
+1. Get raw workshop data (`SurveyReporter.get_raw_data_for_workshop(workshop_id, facilitator_id)`). This gets the
+   forms and responses for `workshop_id`.
 1. Summarize workshop x using raw workshop data
    1. `FoormParser.parse_forms`
    1. `WorkshopSummarizer.summarize_answers_by_survey`
@@ -13,9 +13,9 @@ which is a workshop for course y (ex. 'CS Principles'), is:
     1. `RollupHelper.get_question_details_for_rollup`
 1. Calculate rollup for workshop x
     1. `RollupCreator.calculate_averaged_rollup`
-1. Calculate rollup for all workshops for course y
+1. Calculate rollup for all workshops for course y (`SurveyReporter.get_rollup_for_workshop_ids`)
     1. get all workshop ids for course
-    1. `SurveyReporter.get_raw_data_for_workshop(ids)`
+    1. `SurveyReporter.get_raw_data_for_workshop(workshop_ids, facilitator_id)`
     1. `FoormParser.parse_forms`
     1. `WorkshopSummarizer.summarize_answers_by_survey`
     1. `RollupCreator.calculate_averaged_rollup`

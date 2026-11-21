@@ -6,7 +6,7 @@ Automated UI tests for the dashboard.
 
 ### Drone (CI) Tests
 
-The UI tests run as part of our continuous integration tooling, via Drone whenever you create a pull request into the "staging" branch. In this scenario, tests are only run against Chrome, per [saucelabs_browsers_to_run in "ci.rake"](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L182).
+The UI tests run as part of our continuous integration tooling, via Drone whenever you create a pull request into the "staging" branch. In this scenario, tests are only run against Chrome, per `device_farm_browsers_to_run` in [lib/rake/ci.rake](../../../lib/rake/ci.rake).
 
 Today, all UI tests and Eyes tests that run in Drone use a combination of (a) local chromedriver and (b) desktop chrome via AWS Device Farm.
 
@@ -16,7 +16,7 @@ To run tests against other browsers in CI, you can apply tags to commit messages
 * `git commit -m "fixing bug with firefox [skip chrome][test firefox]"`
 * `git commit -m "updating browsers_saucelabs.json [test all browsers]"`
 
-Review all supported tags in [ci.rake](https://github.com/code-dot-org/code-dot-org/blob/staging/lib/rake/ci.rake#L13)
+Review all supported tags in the `*_TAG` constants at the top of [lib/rake/ci.rake](../../../lib/rake/ci.rake).
 
 ### DTT (CD) Tests
 
@@ -25,8 +25,8 @@ The UI tests run as part of our deployment during the Deploy To Test (DTT) via `
 | Suite | Provider | Browsers |
 |-------|----------|----------|
 | Chrome + Firefox UI | AWS Device Farm | `Windows Chrome`, `Windows Firefox` (`browsers_device_farm.json`) |
-| Safari + iPad + iPhone UI | SauceLabs | `macOS Safari`, `iPad Safari`, `iPhone Safari` (`browsers_device_farm.json`) |
-| Eyes | SauceLabs | `Windows Chrome` (Applitools visual diff, `@eyes`) |
+| Safari + iPad + iPhone UI | SauceLabs | `macOS Safari`, `iPad Safari`, `iPhone Safari` (`browsers_saucelabs.json`) |
+| Eyes | AWS Device Farm | `Windows Chrome` (Applitools visual diff, `@eyes`) |
 | Playwright | test machine | `chromium`, `firefox`, `webkit` (functional) |
 | Playwright Eyes | test machine | `chromium` (visual diffs) |
 
@@ -79,7 +79,7 @@ This is the best option for rapid iteration while writing a new test. ChromeDriv
 
 5. To run a single ui test, you can simply run `rake test:ui feature=path/to/test.feature`
 
-If you get the error `unknown error: cannot get automation extension`, follow the [chromedriver-helper instructions](https://github.com/flavorjones/chromedriver-helper#updating-to-latest-chromedriver) to upgrade to latest chromedriver.
+If you get the error `unknown error: cannot get automation extension`, chromedriver does not match your Chrome. selenium-webdriver uses Selenium Manager to fetch a matching chromedriver; remove or update any stale `chromedriver` on your `PATH`.
 
 ### With remote browsers: Sauce Labs
 
@@ -135,7 +135,7 @@ bin/sauce_connect
 
 Here are some example command line options. Run `./runner.rb --help` for a full list.
 
-Run all UI tests on all browsers against your local host (by default, tests point to test.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
+Run all UI tests on all browsers against your local host (by default, tests point to test.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect; see [Installing Sauce Connect Proxy](#installing-sauce-connect-proxy).
 
 `./runner.rb -d localhost-studio.code.org:3000`
 Alternatively, `./runner.rb -d localhost-studio.code.org:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
@@ -179,4 +179,5 @@ Run **eyes tests** on one feature in one saucelabs browser against your local ma
 - [UI Test Curriculum Content](config/README.md) — the courses, units and
   levels which exist only for these tests
 - [Adding an Eyes Test](../../../docs/testing-with-applitools-eyes.md)
+- [Playwright e2e tests](../../../frontend/packages/e2e-tests/README.md)
 - [General Testing Instructions](../../../TESTING.md)

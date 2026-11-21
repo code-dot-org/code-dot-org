@@ -1,5 +1,9 @@
 # Upgrading the JS Interpreter
 
+> **Warning:** much of this document is outdated. In particular, the
+> test262 steps in Step 2 rely on CircleCI and `js-interpreter-tyrant`, which
+> are no longer verified to work. Treat it as historical background.
+
 ## Component Overview
 
 Before embarking on an upgrade of the JS interpreter,
@@ -57,13 +61,12 @@ In order to properly test an upgrade, and debug/fix issues that might come up, t
 extra work to setup your development environment. Assuming you already have the
 `code-dot-org/code-dot-org` repo setup locally, you need to do the following:
 
-1. Check out, install, and link `code-dot-org/JS-Interpreter`:
+1. Check out and install `code-dot-org/JS-Interpreter` next to your `code-dot-org` clone:
 
    ```bash
    git clone git@github.com:code-dot-org/JS-Interpreter.git
    cd JS-Interpreter
    yarn install
-   yarn link
    ```
 
 2. Add `NeilFraser/JS-Interpreter` as a new git remote in your local `JS-Interpreter` clone
@@ -77,10 +80,13 @@ extra work to setup your development environment. Assuming you already have the
    of the one installed from npm:
    
    ```bash
-   cd ../code-dot-org
-   cd apps
-   yarn link @code-dot-org/JS-Interpreter
+   cd ../code-dot-org/apps
+   yarn link ../../JS-Interpreter
    ```
+
+   apps uses Yarn 4, whose `yarn link` takes a path and records it as a
+   `portal:` entry under `resolutions` in `apps/package.json`. Do not commit
+   that entry; run `yarn unlink ../../JS-Interpreter` when done.
    
 ## Performing an Upgrade
 
@@ -90,14 +96,15 @@ extra work to setup your development environment. Assuming you already have the
    in `JS-Interpreter`, run the following:
 
    ```bash
-   git checkout -b master merge-upstream
+   git checkout -b merge-upstream master
    git merge upstream/master
    ```
 
 1. Run interpreter related unit tests in `code-dot-org/apps`:
 
    ```bash
-   yarn run test:entry -- --entry=./test/unit/lib/tools/jsinterpreter/
+   yarn test:unit test/unit/lib/tools/jsinterpreter/
+   yarn grunt karma --testType=unit --entry=./test/unit/lib/tools/jsinterpreter/
    ```
    
    If the tests don't pass, then the upgrade won't work without changes to one or more of the components
@@ -111,12 +118,6 @@ extra work to setup your development environment. Assuming you already have the
    ```
    
 ### Step 2: Test the upgrade against the official ECMAScript test suite:
-
-> ## Warning
->
-> These instructions (possibly this whole document) are quite outdated, and are
-> preserved here for historical background on this feature, not for continued
-> use.
 
 1. Push the `merge-upstream` branch you created in the previous step to github:
 

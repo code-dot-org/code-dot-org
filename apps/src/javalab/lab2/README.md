@@ -93,7 +93,7 @@ Conversion is confined to two boundaries:
 
 `sourceConverter.ts` holds the pure converters and is the single source
 of truth for the flat schema. Tests live in
-`apps/test/unit/javalab2/sourceConverterTest.ts`.
+`apps/test/unit/javalab/lab2/sourceConverterTest.ts`.
 
 Right now it's simplest to keep the old format so we don't have to touch Javabuilder.
 However, this format prevents us from enabling folders. A potential extension if we want to enable
@@ -102,7 +102,7 @@ that format.
 
 ## Run flow
 
-`javabuilderRunner.ts` reuses the legacy
+`javabuilderRunUtils.ts` reuses the legacy
 `apps/src/javalab/JavabuilderConnection` JS class as-is. A TS port is
 still on the TODO list. Differences from legacy use:
 
@@ -174,13 +174,6 @@ still on the TODO list. Differences from legacy use:
   level and fall back to that response, if it exists, so student data
   is not lost in a migration.
 
-## To Dos
-- **Code review**.
-- **Teacher feedback** populate teacher feedback in resource panel.
-- **Decommissioning the legacy bundle**. `apps/src/javalab/` stays
-  until parity is reached and all production levels have flipped
-  `uses_lab2`.
-
 ## Files
 
 - `Javalab2View.tsx` — root view. Converts `startSources` /
@@ -200,9 +193,12 @@ still on the TODO list. Differences from legacy use:
   Editor over Console). Vertical/share/widget slots all point at the
   same horizontal layout for now.
 - `sourceConverter.ts` — `flatToMultiFile`, `multiFileToFlat`.
+- `labConfig.ts` — `deriveLabConfig`: the channel's `labConfig` if
+  present, else one derived from the level's `csaViewMode`. The flat
+  S3 source has no place to store it.
 - `JavalabSourcesStore.ts` — `SourcesStore` subclass that applies the
   converter at the S3 load/save boundary.
-- `javabuilderRunner.ts` — `handleRunClick`, `stopJavaCode`,
+- `javabuilderRunUtils.ts` — `handleRunClick`, `stopJavaCode`,
   `sendJavaConsoleInput`. Wraps the legacy
   `JavabuilderConnection`.
 - `progress/JavaValidationTracker.ts` — singleton holding the per-test
@@ -210,48 +206,3 @@ still on the TODO list. Differences from legacy use:
 - `codemirrorLangJava.d.ts` — minimal module declaration for
   `@codemirror/lang-java`, whose package.json doesn't expose its types
   via node16 `exports`.
-
-## Related changes outside this directory
-
-- `dashboard/app/models/levels/javalab.rb` — `uses_lab2` added to
-  `serialized_attrs`.
-- `dashboard/app/views/levels/editors/_javalab.html.haml` — lab2
-  checkbox partial.
-- `dashboard/app/views/levels/_lab2.html.haml` — added
-  `javalab_locale.js` to the script chunk list.
-- `apps/lab2EntryPoints.ts` — registered `javalab: JavalabEntryPoint`.
-- `apps/src/lab2/projects/ProjectManagerFactory.ts` — both factory
-  methods accept an optional `sourcesStore`.
-- `apps/src/lab2/projects/sourcesStoreForApp.ts` — selects
-  `JavalabSourcesStore` for `appName === 'javalab'`.
-- `apps/src/lab2/lab2Redux.ts` — passes the selected store into the
-  factory.
-- `apps/src/codebridge/types.ts` — added `hideNewFolderButton` to
-  `ConfigType`.
-- `apps/src/codebridge/FileBrowser/FileBrowserHeaderPopUpButton.tsx` —
-  honors `hideNewFolderButton`.
-- `apps/src/codebridge/Console/Console.tsx` — `convertEol: true` on
-  the xterm Terminal so program output containing bare `\n` (common in
-  Java's `println`) wraps the cursor to column 0; without it, follow-on
-  user-typed input was indented.
-- `apps/src/javalab/JavabuilderConnection.js` — constructor accepts an
-  optional `channelId` (falls back to `project.getCurrentId()`); the
-  "project not edited yet" guard now reads `this.channelId` instead of
-  re-fetching from the legacy singleton. Also accepts an optional
-  `onValidationResult` callback, invoked per validation `TEST_RESULT` so
-  Lab2 can populate its validation table.
-- `apps/src/javalab/testResultHandler.js` — `onTestResult` additionally
-  returns a `validationResult` (`{message, result}` with a Lab2
-  `TestStatus`) for `TEST_STATUS` messages; legacy callers ignore it.
-- `dashboard/app/models/levels/javalab.rb` — `get_validations` returns a
-  single `PASSED_ALL_TESTS` condition when the level has validation.
-- `dashboard/test/models/javalab_test.rb` — assertion that `uses_lab2?`
-  defaults to false and honors the serialized property.
-- `dashboard/app/helpers/javalab_files_helper.rb` — strips url-backed
-  asset entries out of `main.json` (saved and override sources) and
-  folds them into `assetUrls` as absolute URLs.
-- `dashboard/app/models/levels/javalab.rb` —
-  `summarize_for_lab2_properties` resolves `starterAssets` through the
-  project template, matching run-time precedence.
-- `apps/src/util/moderateImage.ts` — `javalab` added to
-  `LABS_WITH_IMAGE_MODERATION` so student image uploads are moderated.
