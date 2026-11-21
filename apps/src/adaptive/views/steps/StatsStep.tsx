@@ -1,15 +1,15 @@
 // The student's progress so far, under an encouraging heading: the map's
-// totals and the destinations, each in a tile with its label beneath, in the
-// step's order. A logo from the content sits above the heading when set.
+// totals, the tutor's changes they accepted and rejected, and the skills and
+// destinations, each in a tile with its label beneath, in the step's order.
+// A logo from the content sits above the heading when set.
 
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
-import {totalTimeSpent} from '../../progress';
+import {AiMetrics, serverProgressStore} from '../../progress/progressStore';
 import {STAT_KINDS} from '../../schema/steps/stats';
 import {StatsStep as StatsStepContent} from '../../types';
-import {formatTimeSpent} from '../formatTimeSpent';
 import {
   completedCount,
   getDestinationProgress,
@@ -31,13 +31,23 @@ const StatsStep: React.FunctionComponent<StatsStepProps> = ({
   continueLabel,
   onComplete,
 }) => {
-  const {pathway, statusMap, progress} = usePathwayContext();
+  const {pathway, progressKey, statusMap} = usePathwayContext();
   const destinations = getDestinationProgress(pathway, statusMap);
   const skills = getSkillProgress(pathway, statusMap);
   const headingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     headingRef.current?.focus();
   }, []);
+  const [aiMetrics, setAiMetrics] = useState<AiMetrics>();
+  useEffect(() => {
+    let cancelled = false;
+    serverProgressStore.loadAiMetrics(progressKey).then(counts => {
+      if (!cancelled) setAiMetrics(counts);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [progressKey]);
 
   // A figure with nothing behind it is left out rather than shown empty.
   const items: {[kind in (typeof STAT_KINDS)[number]]: React.ReactNode} = {
@@ -46,9 +56,14 @@ const StatsStep: React.FunctionComponent<StatsStepProps> = ({
         {completedCount(statusMap)}
       </MuiTypography>
     ),
-    timeSpent: (
+    aiChangesAccepted: aiMetrics && (
       <MuiTypography variant="h2" component="dd" className={styles.statsFigure}>
-        {formatTimeSpent(totalTimeSpent(progress))}
+        {aiMetrics.accepted}
+      </MuiTypography>
+    ),
+    aiChangesRejected: aiMetrics && (
+      <MuiTypography variant="h2" component="dd" className={styles.statsFigure}>
+        {aiMetrics.rejected}
       </MuiTypography>
     ),
     skills: skills.length > 0 && (
@@ -64,7 +79,8 @@ const StatsStep: React.FunctionComponent<StatsStepProps> = ({
   };
   const labels = {
     checkpoints: 'Checkpoints completed',
-    timeSpent: 'Time spent',
+    aiChangesAccepted: 'AI changes accepted',
+    aiChangesRejected: 'AI changes rejected',
     skills: 'Skill mastery',
     destinations: 'Focus areas',
   };

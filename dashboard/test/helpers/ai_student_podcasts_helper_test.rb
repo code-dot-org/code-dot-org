@@ -479,13 +479,14 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
   end
 
   test "OpenaiClient request_podcast_script POSTs to OpenAI chat completions with structured output schema" do
-    HTTParty.stubs(:post) do |url, options|
+    HTTParty.expects(:post).with do |url, options|
       assert_equal AiStudentPodcastsHelper::OpenaiClient::OPENAI_URL, url
       assert_equal "Bearer #{@openai_api_key}", options[:headers]['Authorization']
       assert_equal 'application/json', options[:headers]['Content-Type']
 
       body = JSON.parse(options[:body])
       assert_equal AiStudentPodcastsHelper::OPENAI_MODEL, body['model']
+      assert_equal 'none', body['reasoning_effort']
       assert_equal 'system', body['messages'].first['role']
       assert_equal 'prompt-here', body['messages'].first['content']
 
@@ -495,9 +496,8 @@ class AiStudentPodcastsHelperTest < ActionView::TestCase
       item_props = schema['properties']['script']['items']['properties']
       assert_equal %w[Dan Sam], item_props['voice_id']['enum']
       assert_equal 'string', item_props['text']['type']
-
-      mock('response')
-    end
+      true
+    end.returns(mock('response'))
 
     AiStudentPodcastsHelper::OpenaiClient.new(@openai_api_key, AiStudentPodcastsHelper::OPENAI_MODEL).
       request_podcast_script('prompt-here')
