@@ -120,12 +120,16 @@ const Timeline: React.FunctionComponent<TimelineProps> = props => {
     return eventHeight > 8 ? 3 : eventHeight > 6 ? 2 : 1;
   }, []);
 
-  const timelineElements = Array.from(
-    document.querySelectorAll<HTMLElement>(`.${TimelineElementClass}`)
-  );
+  // Queried when a key is pressed: the elements a render saw may since have
+  // been replaced.
+  const getTimelineElements = () =>
+    Array.from(
+      document.querySelectorAll<HTMLElement>(`.${TimelineElementClass}`)
+    );
 
   const onKeyDown = useCallback(
     (event: React.KeyboardEvent<HTMLButtonElement>) => {
+      const timelineElements = getTimelineElements();
       const currentIndex = timelineElements.indexOf(event.currentTarget);
       // For arrow keys, prevent scroll action and move focus accordingly, looping at start and end
       if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
@@ -149,15 +153,13 @@ const Timeline: React.FunctionComponent<TimelineProps> = props => {
         event.preventDefault();
       }
     },
-    [timelineElements]
+    []
   );
 
   const enterExitTimeline = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter') {
       // Focus the first element if it exists
-      if (timelineElements.length > 0) {
-        timelineElements[0].focus();
-      }
+      getTimelineElements()[0]?.focus();
     }
     if (event.key === 'Tab') {
       if (event.shiftKey) {
