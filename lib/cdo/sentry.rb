@@ -10,6 +10,7 @@ require_relative 'github'
 module Cdo
   module Sentry
     UNTRACKED_ENVIRONMENTS = Set[:adhoc, :development]
+    CronjobFailed = Class.new(StandardError)
 
     # Records a deploy in Sentry as a release plus a deploy.
     def self.notify_new_release(environment, revision)
@@ -47,8 +48,8 @@ module Cdo
       ::Sentry.capture_check_in(slug, status.success? ? :ok : :error, check_in_id: check_in_id, duration: duration, monitor_config: monitor_config)
       unless status.success?
         message = "cronjob #{command} returned #{status.exitstatus}"
-        # Sentry would otherwise group every failure by the wrapper's own stack trace.
-        ::Sentry.capture_message(message, fingerprint: [message], extra: {stdout: stdout, stderr: stderr})
+        # Sentry would otherwise split one job's failures by the text of stderr.
+        ::Sentry.capture_exception(CronjobFailed.new("#{message}\n#{stderr}"), fingerprint: [message], extra: {stdout: stdout, stderr: stderr})
       end
 
       [stdout, stderr, status]

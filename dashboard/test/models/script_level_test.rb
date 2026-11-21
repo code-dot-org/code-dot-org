@@ -850,8 +850,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
                  script_level.next_level_or_redirect_path_for_user(student, unit_group_unit: script_level.script.original_unit_group_unit)
   end
 
-  # For lessons with Tutor+ available (AIF/AID), the end of lesson goes to the
-  # lesson deep dive instead of the unit overview / dialog redirect.
+  # For lessons with Tutor+ available, the end of lesson goes to the lesson
+  # deep dive instead of the unit overview / dialog redirect.
   test 'next_level_or_redirect_path_for_user goes to lesson tutor at end of tutor-available lesson' do
     student = create(:student)
     stub_lesson_tutor_experiment(student)

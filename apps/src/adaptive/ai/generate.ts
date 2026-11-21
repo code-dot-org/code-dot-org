@@ -1,6 +1,6 @@
 // The adaptive shell's one way to ask a model for something: structured
-// output through the AI gateway, under its own client type, off until a DCDO
-// flag opts in, and never an exception to the caller. Every feature built on
+// output through the AI gateway, under its own client type, only while the
+// shell may call AI, and never an exception to the caller. Every feature built on
 // it has a no-AI result it falls back to. Every call, however it ends, is
 // traced to Langfuse under an id the caller gets back. Beside it, the check
 // that text may pass between a student and a model: what the student wrote
@@ -14,7 +14,6 @@ import {getModel} from '@cdo/apps/aichat/api/client/helpers/modelHelpers';
 import {isTextSafe} from '@cdo/apps/aichat/api/client/helpers/safetyHelpers';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {generateText} from '@cdo/apps/aiGateway';
-import DCDO from '@cdo/apps/dcdo';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {timeoutMsFromDcdoSeconds} from '@cdo/apps/util/dcdoTimeout';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
@@ -25,6 +24,7 @@ import {
   timeAdaptive,
 } from '../observability';
 
+import {isAdaptiveAiAvailable} from './access';
 import {
   TraceMetadata,
   TraceName,
@@ -33,14 +33,10 @@ import {
 } from './langfuse/trace';
 import {ADAPTIVE_MODELS} from './models';
 
-export const ADAPTIVE_AI_ENABLED_FLAG = 'adaptive-ai-enabled';
 const ADAPTIVE_AI_TIMEOUT_FLAG = 'adaptive-ai-timeout-seconds';
 
 const DEFAULT_TIMEOUT_SECONDS = 45;
 const SAFETY_CONFIG = {modelId: ADAPTIVE_MODELS.FAST};
-
-export const isAdaptiveAiEnabled = (): boolean =>
-  !!DCDO.get(ADAPTIVE_AI_ENABLED_FLAG, false);
 
 // How long one model call may take, generation or moderation alike.
 const timeoutMs = (): number =>
@@ -81,7 +77,7 @@ export async function generate<T>({
   context,
   trace: traceOptions,
 }: GenerateOptions<T>): Promise<GenerateResult<T>> {
-  if (!isAdaptiveAiEnabled()) return {};
+  if (!isAdaptiveAiAvailable()) return {};
   const trace = startTrace({
     name: traceOptions.name,
     levelId: context.currentLevelId,

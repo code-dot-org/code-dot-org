@@ -29499,7 +29499,7 @@ en:
             * Explain key principles for using AI effectively and responsibly in an educational context.
             * Identify ways AI can support teaching practice across planning, communication, and reflection.
             * Develop and refine prompts to improve the quality and usefulness of AI outputs.
-            * Practice using AI tools to support common instructional tasks.
+            * Practice using AI applications to support common instructional tasks.
 
             **Suggested time:** 60 minutes
           student_description: |-
@@ -29510,7 +29510,7 @@ en:
             * Explain key principles for using AI effectively and responsibly in an educational context.
             * Identify ways AI can support teaching practice across planning, communication, and reflection.
             * Develop and refine prompts to improve the quality and usefulness of AI outputs.
-            * Practice using AI tools to support common instructional tasks.
+            * Practice using AI applications to support common instructional tasks.
 
             **Suggested time:** 60 minutes
         self-paced-pl-ai-101-mod5-2026:
@@ -29527,7 +29527,7 @@ en:
             * Identify and analyze ethical issues in AI including misinformation, bias, and data privacy.
             * Apply strategies to recognize and respond to AI-generated misinformation and biased outputs.
             * Model and implement responsible AI practices in your classroom, including guiding students in ethical use and data privacy awareness.
-            * Evaluate AI tools for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
+            * Evaluate AI applications for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
 
 
             **Suggested time:** 60 minutes
@@ -29538,7 +29538,7 @@ en:
             * Identify and analyze ethical issues in AI including misinformation, bias, and data privacy.
             * Apply strategies to recognize and respond to AI-generated misinformation and biased outputs.
             * Model and implement responsible AI practices in your classroom, including guiding students in ethical use and data privacy awareness.
-            * Evaluate AI tools for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
+            * Evaluate AI applications for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
 
 
             **Suggested time:** 60 minutes
@@ -31086,6 +31086,10 @@ en:
               name: Emily- Quiz
             lesson-21:
               name: Angelina- Quiz
+            lesson-22:
+              name: Julian Playground
+            lesson-23:
+              name: Julian Playground - ChatGPT
           lesson_groups:
             lessonGroup-2:
               display_name: Level Builder AI Tools
@@ -31243,7 +31247,19 @@ en:
               name: Tracing Bias to Outcome
             lesson-12:
               name: Data Makes AI Unit Project
-          lesson_groups: {}
+            lesson-13:
+              name: Data Makes AI Project (Day Two)
+            lesson-14:
+              name: Data Makes AI Project (Day Three)
+            lesson-15:
+              name: Data Makes AI Project (Day Four)
+            lesson-16:
+              name: Vocabulary Flashcards
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Data Makes AI
+            lessonGroup-3:
+              display_name: Vocabulary Flashcards
           name: 6-12-aid-data-makes-ai-2026
           title: "[DEV] AI Discoveries SC1: Data Makes AI"
           description_audience: ''

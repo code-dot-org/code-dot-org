@@ -1,6 +1,8 @@
 import {renderHook, act} from '@testing-library/react-hooks';
 
 import {useFlaggedImage} from '@cdo/apps/lab2/hooks/useFlaggedImage';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   post: jest.fn(),
@@ -13,7 +15,10 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
 }));
 
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
-  sendEvent: jest.fn(),
+  __esModule: true,
+  default: {
+    sendEvent: jest.fn(),
+  },
 }));
 
 const mockDispatch = jest.fn();
@@ -43,9 +48,29 @@ describe('useFlaggedImage', () => {
     });
 
     act(() => {
-      result.current.handleCancelFlaggedImage('sketchlab');
+      result.current.handleCancelFlaggedImage('sketchlab', false);
     });
     expect(result.current.flaggedImageData).toBeNull();
     expect(uploadFunction).not.toHaveBeenCalled();
+    expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
+      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      {UploaderType: 'Lab2 File Uploader', ProjectType: 'sketchlab'}
+    );
+  });
+
+  it('reports a signed out cancel under its own event', () => {
+    const {result} = renderHook(() => useFlaggedImage());
+
+    act(() => {
+      result.current.handleCancelFlaggedImage('sketchlab', true);
+    });
+    expect(analyticsReporter.sendEvent).toHaveBeenCalledWith(
+      EVENTS.SIGNED_OUT_FLAGGED_CUSTOM_IMAGE,
+      {UploaderType: 'Lab2 File Uploader', ProjectType: 'sketchlab'}
+    );
+    expect(analyticsReporter.sendEvent).not.toHaveBeenCalledWith(
+      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      expect.anything()
+    );
   });
 });

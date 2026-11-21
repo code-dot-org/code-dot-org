@@ -10,7 +10,7 @@ import {
 } from '../shared/json-video-documents';
 import {setAiChatAccessLevelOnCreate} from '../shared/sections';
 
-// Under an AIF course offering, which enables the deep dive, with two videos.
+// Has tutor_plus_available, which enables the deep dive, and two videos.
 const UNIT = 'ui-test-lesson-tutor';
 const LESSON = 1;
 

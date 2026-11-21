@@ -1,12 +1,10 @@
 // The new-block catalog: a list of blocks on the left, the chosen block's
-// help on the right, and the button that opens it, at the scene bar's end
-// or on a band across the toolbox's foot.
+// help on the right, and the button that opens it.
 
 @use '@cdo/apps/pixelEditor/dialogChrome' as chrome;
 @use 'catalog-dot' as catalog;
 
 $list-width: 220px;
-$band-inset: 8px;
 
 .dialogHost {
   display: contents;
@@ -17,6 +15,9 @@ $band-inset: 8px;
 .dialogHost .dialog {
   @include chrome.panel;
 
+  // chrome.panel is a lighter gray in the dark theme. This matches the
+  // lab's other dialogs, and changes nothing in the light theme.
+  background-color: var(--background-neutral-primary);
   width: 760px;
   max-width: calc(100vw - 32px);
   display: flex;
@@ -153,18 +154,6 @@ $band-inset: 8px;
   }
 }
 
-.scenePill {
-  flex: none;
-  padding: 3px 10px;
-  border: 1px solid var(--dialog-control-border);
-  border-radius: 999px;
-  background: var(--dialog-control-bg);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--dialog-text-secondary);
-  white-space: nowrap;
-}
-
 .infoRow {
   display: flex;
   gap: 16px;
@@ -215,34 +204,6 @@ $band-inset: 8px;
   display: flex;
   justify-content: flex-end;
   padding: 12px 24px;
-}
-
-// Across the toolbox's foot, at the column's width (CatalogBand.tsx).
-// Above Blockly's category list (z 70) and flyout (z 20), below its block
-// drag surface (z 80), so a block dragged out still passes over the band.
-.toolboxFooter {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 $band-inset;
-  box-sizing: border-box;
-  background-color: var(--neutral-black-alpha-80);
-  z-index: 71;
-}
-
-// The band's button, doubled to outrank the button's own line height: the
-// label and the count pill center on the same line.
-.toolboxFooter .catalogButton.catalogButton {
-  line-height: 1;
-  padding: 8px 12px;
-}
-
-.compactButton.compactButton {
-  min-width: 0;
-  padding: 7px 10px;
 }
 
 // How many blocks wait in the catalog.

@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-20T04:12:27.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"datasets\": [\r\n    \"SC1-L12-run-or-pass-base\"\r\n  ],\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"**Find the Problem**\\n\\nGoal: Find what in the data made Tree 1 get records wrong.\\n\\n1. In **Predict**, choose your label from **My Data** in your guide. In **Using**, choose the two features from **Tree 1** in your guide. Click **Train model**.\\n2. Go to the **Testing** tab. Do steps a and b there.\\n3. Come back to this tab. Do steps c and d:\\n    - c. Click **Score** to open Column Analysis, even if you didn't pick it. Find the Least Common category. Write it in **Find the Problem** in your guide, with how many records it has.\\n    - d. Click **Filter**. Choose that category. Write how many records have each label.\\n\\nYou are done when Find the Problem in your guide is full.\",\r\n  \"results\": \"**Find the Problem**\\n\\nGoal: Find what in the data made Tree 1 get records wrong.\\n\\n- a. Click **Accuracy**. Then click **Incorrect**. Write the number incorrect and the number of test records in **Find the Problem** in your guide.\\n- b. Click **Expand columns**. Use **Filter** on one feature at a time. Write the category that most incorrect records share. If none stand out, skip to c.\\n\\nThen go back to the **Dataset** tab for steps c and d.\"\r\n}",
+    "display_name": "Football Plays",
+    "bubble_choice_description": "This dataset contains information about a variety of different football plays from the NFL.",
+    "thumbnail_url": "https://images.code.org/f393ee4e3e884addee0ea5b2634116ab-football-plays.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:27.258+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-tree1-run-or-pass\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-tree1-run-or-pass\"},{\"changed_at\":\"2026-11-20 04:14:23 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

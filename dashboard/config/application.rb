@@ -79,10 +79,6 @@ module Dashboard
     end
 
     if Rails.env.development?
-      # Autoload mailer previews in development mode so changes are picked up without restarting the server.
-      # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
-      config.autoload_paths << Rails.root.join('test/mailers/previews')
-
       # Automatically load tools intended to make the local development
       # environment behave more like production.
       require 'cdo/local_development'

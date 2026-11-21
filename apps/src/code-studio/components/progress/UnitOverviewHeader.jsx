@@ -9,6 +9,7 @@ import {connect} from 'react-redux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import AiFoundationsCallout from '@cdo/apps/templates/aiFoundationsCallout/AiFoundationsCallout';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
@@ -221,6 +222,13 @@ class UnitOverviewHeader extends Component {
                 {i18n.learnMore()}
               </MuiButton>
             }
+          />
+        )}
+        {viewAs === ViewType.Instructor && (
+          <AiFoundationsCallout
+            page="unitOverview"
+            unitName={scriptName}
+            className={styles.notificationBanner}
           />
         )}
         <div id="lesson">

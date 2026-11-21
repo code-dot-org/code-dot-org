@@ -402,4 +402,62 @@ class QuizzesControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal @quiz.reload.updated_at.to_i, JSON.parse(response.body)['version']
   end
+
+  test "update keeps an exam Quiz an exam while it is the last level of a lockable lesson" do
+    @quiz.update!(purpose: 'exam')
+    lesson = create(:lesson, lockable: true)
+    create(:script_level, script: lesson.script, lesson: lesson, levels: [@quiz], assessment: true)
+
+    put :update, params: {level_id: @quiz.id, purpose: 'practice'}
+
+    assert_response :bad_request
+    assert_equal 'exam', @quiz.reload.purpose
+  end
+
+  test "update lets an exam Quiz change purpose when it is not the last level of a lockable lesson" do
+    @quiz.update!(purpose: 'exam')
+
+    put :update, params: {level_id: @quiz.id, purpose: 'practice'}
+
+    assert_response :success
+    assert_equal 'practice', @quiz.reload.purpose
+  end
+
+  test "update refuses exam when the Quiz is in a lesson that is not lockable" do
+    create(:script_level, levels: [@quiz], lesson: create(:lesson, lockable: false))
+    put :update, params: {level_id: @quiz.id, purpose: 'exam'}
+
+    assert_response :bad_request
+    assert_includes JSON.parse(response.body)['error'], 'is not lockable'
+    refute @quiz.reload.exam?
+  end
+
+  test "update refuses exam when the Quiz is not the last level in its lesson" do
+    script = create(:script)
+    lesson = create(:lesson, script: script, lockable: true)
+    create(:script_level, script: script, lesson: lesson, levels: [@quiz], chapter: 1, position: 1)
+    create(:script_level, script: script, lesson: lesson, levels: [create(:quiz)], assessment: true, chapter: 2, position: 2)
+    put :update, params: {level_id: @quiz.id, purpose: 'exam'}
+
+    assert_response :bad_request
+    assert_includes JSON.parse(response.body)['error'], 'not the last level'
+  end
+
+  test "update refuses exam when the Quiz is a sublevel" do
+    ParentLevelsChildLevel.create!(parent_level: create(:bubble_choice_level), child_level: @quiz, kind: ParentLevelsChildLevel::SUBLEVEL)
+    put :update, params: {level_id: @quiz.id, purpose: 'exam'}
+
+    assert_response :bad_request
+    assert_includes JSON.parse(response.body)['error'], 'is a sublevel of'
+  end
+
+  test "update allows exam when the Quiz ends a lockable lesson, or is not placed" do
+    put :update, params: {level_id: create(:quiz).id, purpose: 'exam'}
+    assert_response :success
+
+    create(:script_level, levels: [@quiz], assessment: true, lesson: create(:lesson, lockable: true))
+    put :update, params: {level_id: @quiz.id, purpose: 'exam'}
+    assert_response :success
+    assert @quiz.reload.exam?
+  end
 end

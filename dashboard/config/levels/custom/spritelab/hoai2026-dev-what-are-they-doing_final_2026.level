@@ -83,7 +83,7 @@
       "title": "**What are they doing?**",
       "items": [
         {
-          "text": "Drag **begins** onto the dotted outline and choose what the new character will do.",
+          "text": "Drag a **character begins** block under **when run** and choose what the new character will do.",
           "check": {
             "kind": "block",
             "type": "spritelab2_beginsBehavior",
@@ -98,7 +98,7 @@
         }
       ]
     },
-    "long_instructions": "# What are they doing?\r\nA **behavior** tells a sprite what to do on its own.\r\n",
+    "long_instructions": "# What are they doing?\r\nA behavior tells a sprite what to do on its own.\r\n",
     "header_label": "What are they doing?",
     "embed": "false",
     "instructions_important": "false",

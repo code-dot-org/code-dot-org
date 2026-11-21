@@ -72,8 +72,9 @@ describe('useReclaimAsset', () => {
     await expect(reclaim('/v3/assets/chan/used.png')).resolves.toBe(false);
     httpDelete.mockRejectedValueOnce(new Error('503'));
     await expect(reclaim('/v3/assets/chan/other.png')).resolves.toBe(false);
-    // An edit whose upload failed embeds the pixels, so the image leaves
-    // nothing behind and deleting it must still unflag the project.
+    // An older project can hold a picture inside itself, as a data URI.
+    // It leaves no file behind, and deleting it must still unflag the
+    // project.
     await expect(reclaim('data:image/png;base64,AAAA')).resolves.toBe(true);
   });
 });
