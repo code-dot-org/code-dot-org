@@ -31,6 +31,7 @@ export type FlatProperties = Pick<
   | 'addBlocks'
   | 'callouts'
   | 'starterImages'
+  | 'noProject'
   | 'studentChangesScenes'
   | 'instructionsStartCollapsed'
 >;
@@ -52,6 +53,7 @@ export const FLAT_PROPERTY_NAMES: Record<keyof FlatProperties, string> = {
   addBlocks: 'add_blocks',
   callouts: 'callouts',
   starterImages: 'starter_images',
+  noProject: 'no_project',
   // Set only by level_config; never stored under these names.
   studentChangesScenes: '',
   instructionsStartCollapsed: '',
@@ -269,6 +271,7 @@ export function levelConfigFromFlat(properties: FlatProperties): {
     blocks: present(blocks) ? blocks : undefined,
     objectives: present(steps) ? steps : undefined,
     callouts: list(properties.callouts),
+    noProject: on(properties.noProject) || undefined,
     instructions: present(instructions) ? instructions : undefined,
   }) as LevelConfig;
 
@@ -291,6 +294,7 @@ const ORDER: (keyof LevelConfig)[] = [
   'blocks',
   'objectives',
   'callouts',
+  'noProject',
   'instructions',
 ];
 

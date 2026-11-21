@@ -531,6 +531,11 @@ export const levelConfigSchema = z
         description:
           'Bouncing arrows at the tabs, the scene menu or Continue. The first one whose condition holds is shown.',
       }),
+    noProject: z.boolean().optional().meta({
+      title: 'No project',
+      description:
+        "The level runs with no project: the student sees the level's own content, and nothing they do is saved. For a demo to play.",
+    }),
     instructions: z
       .strictObject({
         startCollapsed: z.boolean().optional().meta({

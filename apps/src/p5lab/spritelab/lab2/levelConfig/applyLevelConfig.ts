@@ -121,6 +121,7 @@ export function flatFromLevelConfig(config: LevelConfig): FlatProperties {
     imageRoleDefaults: blocks?.dropdownsStartOn,
     objectives: Object.keys(steps).length ? steps : undefined,
     callouts: config.callouts,
+    noProject: config.noProject,
   }) as FlatProperties;
 }
 

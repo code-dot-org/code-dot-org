@@ -209,6 +209,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** Images the level gives the project on arrival, when it has no image
       of that name or in that role yet. */
   starterImages?: StarterImage[];
+  /** The level runs with no project. The server reads it (or level_config's
+      noProject) and sends usesProjects: false, which the lab acts on. */
+  noProject?: boolean;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
   /** Runtime libraries the level opts into (see usesPlatformPhysics). */

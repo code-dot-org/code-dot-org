@@ -65,6 +65,15 @@ describe('levelConfigFromFlat', () => {
     expect(tabsAfter({kind: 'play'})).toEqual(['Play']);
   });
 
+  it('carries a level with no project', () => {
+    const {config} = levelConfigFromFlat({
+      levelMode: {kind: 'play'},
+      noProject: true,
+    });
+    expect(config.noProject).toBe(true);
+    expect(flatFromLevelConfig(config).noProject).toBe(true);
+  });
+
   it('lists what it cannot carry', () => {
     const {dropped} = converted(
       {kind: 'code', sentence: 'x'} as unknown as LevelMode,

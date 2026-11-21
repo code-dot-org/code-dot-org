@@ -19,4 +19,12 @@ class GamelabJrTest < ActiveSupport::TestCase
 
     assert_equal({'kind' => 'code'}, level.reload.properties['level_mode'])
   end
+
+  test 'a level with noProject in its level_config has no project' do
+    level = create(:spritelab, uses_lab2: true, level_config: {'focus' => 'play', 'edits' => [], 'noProject' => true})
+    refute level.channel_backed?
+    level.level_config = {'focus' => 'play', 'edits' => []}
+    level.project_template_level_name = 'some-template'
+    assert level.channel_backed?
+  end
 end

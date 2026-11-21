@@ -114,7 +114,7 @@ const SpriteLab2Container: React.FunctionComponent<
     getToolboxEditSources,
     computeHasEdited: isStudentEdit,
   });
-  // A student on a level with no project (the no_project level property)
+  // A student on a level with no project (no_project, or noProject in level_config)
   // sees the level's own sources read-only; the lab's writes are dropped here
   // so none reaches a hook that may still hold the previous level.
   const readOnlyLevel =

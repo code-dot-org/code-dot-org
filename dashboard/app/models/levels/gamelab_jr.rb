@@ -76,6 +76,7 @@ class GamelabJr < Gamelab
     add_blocks
     callouts
     starter_images
+    no_project
   ).freeze
 
   before_save :drop_properties_level_config_replaces
@@ -93,6 +94,7 @@ class GamelabJr < Gamelab
   # project: nothing the student does there is saved.
   def channel_backed?
     return false if properties['no_project'].to_s == 'true'
+    return false if properties.dig('level_config', 'noProject') == true
     super
   end
 

@@ -59,6 +59,7 @@ const IN_LEVEL_CONFIG = new Set([
   'world_keeps_roles',
   'starter_images',
   'callouts',
+  'no_project',
 ]);
 let editableProperties = RAW_EDITABLE_PROPERTIES;
 
