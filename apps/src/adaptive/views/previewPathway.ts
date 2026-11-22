@@ -1,10 +1,3 @@
-// A pathway being edited, as the preview plays it. The edit page sends the
-// pathway as authored; the parts the server resolves (each level step's
-// level properties, the project's, a video step's links) are taken from
-// the saved pathway the page was served with, matched by level name and
-// video key. A level or video the saved pathway does not name stays
-// unresolved, and its step shows as not found.
-
 import {PreviewPlace} from '@cdo/apps/lab2/levelEditors/levelConfig/levelPreview';
 
 import {Pathway} from '../types';
@@ -26,6 +19,10 @@ function stepsOf(pathway: Json): Json[] {
   );
 }
 
+/** The edited pathway, with each step's level properties, video links and
+    the project's level properties copied from the served pathway, matched
+    by level name, video key and template level. A step with no match stays
+    unresolved. */
 export function withServedParts(edited: unknown, served: unknown): unknown {
   if (!isObject(edited) || !isObject(served)) {
     return edited;
@@ -82,7 +79,8 @@ export function previewPlaces(pathway: Pathway): PreviewPlace[] {
   ];
 }
 
-/** The checkpoint and step a place opens; none for the map. */
+/** The checkpoint and step a place opens; none for the map or an unknown
+    place. */
 export function placeTarget(
   pathway: Pathway,
   place: string

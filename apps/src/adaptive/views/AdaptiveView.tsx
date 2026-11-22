@@ -77,7 +77,6 @@ const AdaptiveView: React.FunctionComponent<
     if (access === 'pending' || access === 'allowed') return;
     countAdaptive('Adaptive.AccessBlocked', {reason: access});
   }, [access]);
-  // On the level edit page's preview, the pathway being edited.
   const preview = useLevelConfigPreview();
   const editedPathway = preview?.config;
   const shownProperties = useMemo(
@@ -111,8 +110,8 @@ const AdaptiveView: React.FunctionComponent<
       announcePreviewPlaces(previewPlaces(previewPathway));
     }
   }, [previewPathway]);
-  // The preview starts over on each message from the edit page; a request
-  // for a place first points the address at it, which PathwayApp reads.
+  // A Go to request first writes its checkpoint and step into the URL,
+  // where the remounted PathwayApp picks its starting view.
   const [previewRun, setPreviewRun] = useState(0);
   const placeHandled = useRef(0);
   const previewVersion = preview?.version ?? 0;

@@ -1,5 +1,4 @@
-// Progress for a preview on the level edit page: it starts empty, and
-// nothing a levelbuilder does in the preview is saved.
+// Progress for the preview on the level edit page.
 
 import {EMPTY_PROGRESS, Progress} from './model';
 import {AiMetrics, ProgressStore} from './progressStore';

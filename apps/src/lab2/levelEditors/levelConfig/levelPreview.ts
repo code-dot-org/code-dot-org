@@ -79,7 +79,7 @@ export function useLevelConfigPreview(): PreviewState | undefined {
   return active ? state : undefined;
 }
 
-/** Tells the edit page the places the preview can go to. */
+/** Does nothing outside the level config preview. */
 export function announcePreviewPlaces(places: PreviewPlace[]): void {
   if (isLevelConfigPreview()) {
     window.parent.postMessage(

@@ -63,8 +63,8 @@ interface PathwayAppProps {
   progressKey: ProgressKey;
   /** The adaptive level's own properties, for the map's resource rail. */
   levelProperties: LevelProperties;
-  /** On the level edit page's preview: nothing is saved, and every
-      checkpoint can be opened. */
+  /** On the level edit page's preview: nothing is saved, and the starting
+      address may open a locked checkpoint. */
   preview?: boolean;
 }
 
