@@ -34,10 +34,11 @@ let animationList: {
   >;
 } = fullList;
 let imageRoleDefaults: Record<string, string> | undefined;
+let levelConfig: unknown;
 const mockStore = {
   getState: () => ({
     animationList,
-    lab: {levelProperties: {imageRoleDefaults}},
+    lab: {levelProperties: {imageRoleDefaults, levelConfig}},
   }),
 };
 
@@ -157,6 +158,15 @@ describe('image picker fields', () => {
       field.loadState('"rival"');
       takeLevelDefaults(workspaceOf(field));
       expect(field.getValue()).toBe('"rival"');
+    });
+
+    it('takes the default from a level_config', () => {
+      imageRoleDefaults = undefined;
+      levelConfig = {blocks: {dropdownsStartOn: {sprite: 'hero'}}};
+      const field = onBlock(CostumeField.fromJson({}), 'gamelab_spriteSay');
+      takeLevelDefaults(workspaceOf(field));
+      levelConfig = undefined;
+      expect(field.getValue()).toBe('"hero"');
     });
 
     it('leaves the newest image when the level names no default', () => {

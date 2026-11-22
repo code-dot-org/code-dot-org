@@ -13,7 +13,12 @@ import {ImageType} from '../ai/images/types';
 import {noteImageFieldValue} from '../imageReferences';
 import {defaultImageName, ImageSlot} from '../imageRoleDefaults';
 import {getImageThumbnail} from '../imageTrim';
-import {BACKGROUNDS_CATEGORY, BLOCKS_CATEGORY} from '../types';
+import {withLevelConfig} from '../levelConfig/applyLevelConfig';
+import {
+  BACKGROUNDS_CATEGORY,
+  BLOCKS_CATEGORY,
+  SpriteLab2LevelProperties,
+} from '../types';
 
 export const FIELD_COSTUME_TYPE = 'field_spritelab2_costume';
 export const FIELD_BLOCK_IMAGE_TYPE = 'field_spritelab2_block_image';
@@ -187,9 +192,13 @@ export class Lab2AnimationDropdown extends CdoFieldAnimationDropdown {
       return;
     }
     const state = getStore().getState();
+    // The store holds the level as saved, before its level_config is read.
+    const level = state.lab?.levelProperties as
+      | SpriteLab2LevelProperties
+      | undefined;
     const name = defaultImageName(
       state.animationList,
-      state.lab?.levelProperties?.imageRoleDefaults,
+      level && withLevelConfig(level).imageRoleDefaults,
       IMAGE_TYPE_OF[this.kind],
       slotOf(block)
     );
