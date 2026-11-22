@@ -11,8 +11,8 @@ const TAB_OF: Record<Focus, Tab> = {
 
 /**
  * The tabs a level shows, the first being where it opens. Each part the
- * student can change has its tab, and the game has Play, except on a level
- * that opens on its only part, the images.
+ * student can change has its tab. Play is always added, except when the
+ * focus is images and images are the only part the student can change.
  */
 export function levelTabs(config: LevelConfig): Tab[] {
   const parts = editableParts(config);

@@ -21,7 +21,7 @@ function readLevelConfig(level: SpriteLab2LevelProperties): LevelConfig {
 
 /**
  * The level's settings. A level without a valid level_config has them
- * converted from its older properties (level_mode and the ones beside it).
+ * converted from level_mode and the other properties in FlatProperties.
  */
 export function levelConfigOf(level: SpriteLab2LevelProperties): LevelConfig {
   let config = configs.get(level);

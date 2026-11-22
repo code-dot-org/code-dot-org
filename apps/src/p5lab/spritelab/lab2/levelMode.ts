@@ -1,6 +1,5 @@
 // The level_mode property of a level saved before level_config. The lab
-// reads a level's settings as a level_config (levelConfig/levelConfigOf.ts);
-// this is what the converter and the level mode form read.
+// reads a level's settings as a level_config (levelConfig/levelConfigOf.ts).
 
 import {ImageSource} from './ai/images/imageCache';
 import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';

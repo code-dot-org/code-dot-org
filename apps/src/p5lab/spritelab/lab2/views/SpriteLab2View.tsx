@@ -362,20 +362,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     (scene?: Scene) => resizeWorld(scene?.world, seedSceneSize),
     [seedSceneSize]
   );
-  // The level opens on its first tab. The tabs are shown in a fixed order,
-  // so the list's order is free to carry that.
+  // The tab bar shows tabs in a fixed order whatever the list's order, so
+  // levelTabs puts the tab the level opens on first.
   useEffect(() => {
-    if (tabs.length) {
-      dispatch(setActiveTab(tabs[0]));
-    }
+    dispatch(setActiveTab(tabs[0]));
     // Only the level identity should re-trigger the start tab.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [levelProperties.id, dispatch]);
   // The slice's initial tab is 'Code'; a level hiding Code (an images-only
-  // level, say) needs the selection steered onto a tab that exists. A mode
-  // with no tabs at all renders no shell, so leave the selection alone.
+  // level, say) needs the selection steered onto a tab that exists.
   useEffect(() => {
-    if (tabs.length && !tabs.includes(activeTab)) {
+    if (!tabs.includes(activeTab)) {
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
     }
   }, [tabs, activeTab, dispatch]);
@@ -2592,7 +2589,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 sceneSize={activeSceneSize}
                 onPaintCell={handlePaintWorldCell}
                 emptyMessage={
-                  picturesOffered && !config.images?.canAdd === false
+                  picturesOffered && config.images?.canAdd !== false
                     ? 'Make some pictures first.'
                     : 'Go back and make your image first.'
                 }
