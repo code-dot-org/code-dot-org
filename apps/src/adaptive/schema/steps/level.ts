@@ -39,7 +39,12 @@ export const validationSchema = z.strictObject({
    * `skillIds` and describe `evidenceLevels`.
    */
   measures: z
-    .strictObject({skillId: z.string().min(1).meta({title: 'Skill id'})})
+    .strictObject({
+      skillId: z
+        .string()
+        .min(1)
+        .meta({title: 'Skill', widget: 'reference', options: 'skills.*'}),
+    })
     .meta({
       title: 'Measures',
       description:

@@ -13,6 +13,7 @@ export const skillSourceSchema = z.strictObject({
   /** A Font Awesome (solid) or kit icon name, shown on this skill's map nodes. */
   icon: z.string().min(1).optional().meta({
     title: 'Icon',
+    widget: 'icon',
     description: "An icon name, shown on this skill's map nodes.",
   }),
   /**

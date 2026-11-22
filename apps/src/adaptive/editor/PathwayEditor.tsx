@@ -6,6 +6,9 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
+import IconPickerWidget, {
+  ICON_WIDGET,
+} from '@cdo/apps/lab2/levelEditors/iconPicker/IconPickerWidget';
 import SchemaForm, {
   problemsFrom,
 } from '@cdo/apps/lab2/levelEditors/schemaForm/SchemaForm';
@@ -17,6 +20,10 @@ import {
   parsePathwaySource,
   pathwaySourceSchema,
 } from '../schema';
+
+import DestinationColorWidget, {
+  DESTINATION_COLOR_WIDGET,
+} from './DestinationColorWidget';
 
 function contentProblems(text: string, pathwayId: string): string[] {
   try {
@@ -180,6 +187,10 @@ const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
           schema={pathwaySourceSchema}
           value={parsed}
           problems={formProblems}
+          widgets={{
+            [ICON_WIDGET]: IconPickerWidget,
+            [DESTINATION_COLOR_WIDGET]: DestinationColorWidget,
+          }}
           onChange={next => {
             setText(JSON.stringify(next, null, 2));
             setJustSaved(false);

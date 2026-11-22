@@ -14,7 +14,10 @@ import {subsetOf} from './subsetOf';
 export const measuresSchema = z.union([
   z
     .strictObject({
-      skillId: z.string().min(1).meta({title: 'Skill id'}),
+      skillId: z
+        .string()
+        .min(1)
+        .meta({title: 'Skill', widget: 'reference', options: 'skills.*'}),
       evidenceLevel: z.number().int().min(1).meta({
         title: 'Evidence level',
         description: 'What a correct answer shows.',
@@ -23,7 +26,10 @@ export const measuresSchema = z.union([
     .meta({title: 'Graded: a correct answer shows one level'}),
   z
     .strictObject({
-      skillId: z.string().min(1).meta({title: 'Skill id'}),
+      skillId: z
+        .string()
+        .min(1)
+        .meta({title: 'Skill', widget: 'reference', options: 'skills.*'}),
       /**
        * The evidence level each choice shows, by choice id. A choice left out
        * measures nothing.

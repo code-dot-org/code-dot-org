@@ -15,6 +15,8 @@ export const checkpointSourceSchema = z.strictObject({
   /** Skills this checkpoint develops, by id in the pathway's `skills` map. */
   skillIds: z.array(z.string().min(1)).optional().meta({
     title: 'Skills',
+    widget: 'reference',
+    options: 'skills.*',
     description:
       "The skills this checkpoint develops, by id in the pathway's skills.",
   }),
@@ -24,12 +26,15 @@ export const checkpointSourceSchema = z.strictObject({
    */
   icon: z.string().min(1).optional().meta({
     title: 'Icon',
+    widget: 'icon',
     description:
       'An icon name for the map node, used when none of its skills has one.',
   }),
   /** Checkpoint ids that must be complete before this one unlocks. */
   requires: z.array(z.string().min(1)).optional().meta({
     title: 'Requires',
+    widget: 'reference',
+    options: 'checkpoints.*.id',
     description:
       'Checkpoint ids that must be complete before this one unlocks. A checkpoint that requires none is a root.',
   }),
@@ -72,6 +77,8 @@ export const checkpointSourceSchema = z.strictObject({
    */
   destination: z.string().min(1).optional().meta({
     title: 'Destination',
+    widget: 'reference',
+    options: 'destinations.*',
     description:
       "An id in the pathway's destinations, or the title itself when it declares none. Only a checkpoint no other requires can have one.",
   }),

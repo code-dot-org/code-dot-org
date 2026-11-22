@@ -9,6 +9,7 @@ import type {ZodType} from 'zod';
 import {CHECKLIST_WIDGET} from '@cdo/apps/lab2/checklist/checklistSchema';
 
 import {ChecklistWidget} from '../checklist/ChecklistEditor';
+import IconPickerWidget, {ICON_WIDGET} from '../iconPicker/IconPickerWidget';
 import SchemaForm, {problemsFrom, Widget} from '../schemaForm/SchemaForm';
 
 import styles from './level-config-editor.module.scss';
@@ -103,7 +104,11 @@ const LevelConfigEditor: React.FunctionComponent<LevelConfigEditorProps> = ({
         value={value}
         onChange={setValue}
         problems={problems}
-        widgets={{[CHECKLIST_WIDGET]: ChecklistWidget, ...widgets}}
+        widgets={{
+          [CHECKLIST_WIDGET]: ChecklistWidget,
+          [ICON_WIDGET]: IconPickerWidget,
+          ...widgets,
+        }}
         featureStart={featureStart && (path => featureStart(path, value))}
       />
       <div>
