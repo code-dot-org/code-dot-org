@@ -79,6 +79,9 @@ describe('SchemaForm', () => {
     expect(screen.getAllByRole('textbox')).toHaveLength(3);
     fireEvent.click(screen.getByRole('button', {name: 'Close all'}));
     expect(screen.getAllByRole('textbox')).toHaveLength(1);
+    // An item added after Close all still starts open.
+    fireEvent.click(screen.getByRole('button', {name: 'Add step'}));
+    expect(screen.getAllByRole('textbox')).toHaveLength(2);
   });
 
   it('turns a feature on with its switch, and then shows its settings', () => {

@@ -37,8 +37,8 @@ const ChecklistFields: React.FunctionComponent<WidgetProps> = ({
   onChange,
   path,
 }) => {
-  // The step added last starts open; the rest start closed.
-  const [added, setAdded] = useState<number>();
+  // The item at this index starts open.
+  const [lastAddedIndex, setLastAddedIndex] = useState<number>();
   const shape = shapeOf(schema);
   const checklist = (value ?? {}) as Checklist;
   const steps = checklist.steps ?? [];
@@ -97,7 +97,7 @@ const ChecklistFields: React.FunctionComponent<WidgetProps> = ({
             title={`Step ${index + 1}`}
             path={[...path, 'steps', index]}
             value={step}
-            startOpen={index === added}
+            startOpen={index === lastAddedIndex}
             first={index === 0}
             last={index === steps.length - 1}
             onMove={by => move(index, index + by)}
@@ -122,7 +122,7 @@ const ChecklistFields: React.FunctionComponent<WidgetProps> = ({
           variant="outlined"
           size="small"
           onClick={() => {
-            setAdded(steps.length);
+            setLastAddedIndex(steps.length);
             setSteps([...steps, startValue(stepSchema) as Step]);
           }}
         >

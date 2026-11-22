@@ -10,7 +10,13 @@ import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {createContext, useContext, useEffect, useState} from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import type {ZodType} from 'zod';
 
 import {
@@ -89,14 +95,17 @@ const CollapseContext = createContext<{request: number; open: boolean}>({
   open: false,
 });
 
-/** Whether a section is open, starting closed unless `startOpen`. */
+/** A section that appears after Open all starts open. It follows only the
+    open-all and close-all requests made after it appears. */
 export function useSectionOpen(
   startOpen = false
 ): [boolean, (open: boolean) => void] {
   const {request, open} = useContext(CollapseContext);
-  const [isOpen, setOpen] = useState(startOpen);
+  const [isOpen, setOpen] = useState(startOpen || (request > 0 && open));
+  const requestSeen = useRef(request);
   useEffect(() => {
-    if (request) {
+    if (request !== requestSeen.current) {
+      requestSeen.current = request;
       setOpen(open);
     }
   }, [request, open]);
@@ -127,7 +136,8 @@ const SUMMARY_KEYS = [
   'key',
 ];
 
-/** A line from a value that tells one item of a list from another. */
+/** The first non-empty text among SUMMARY_KEYS, shown beside a section's
+    title to tell it apart. */
 export function summaryOf(value: unknown): string {
   if (!value || typeof value !== 'object') {
     return '';
@@ -142,7 +152,8 @@ export function summaryOf(value: unknown): string {
   return found.length > 70 ? `${found.slice(0, 69)}…` : found;
 }
 
-/** The button that opens and closes a section, with what is inside it. */
+/** The button that opens and closes a section. It shows the title, a
+    summary and how many problems the section holds. */
 export const Disclosure: React.FunctionComponent<{
   open: boolean;
   onToggle: () => void;
@@ -220,7 +231,6 @@ const SchemaForm: React.FunctionComponent<SchemaFormProps> = ({
 
 export default SchemaForm;
 
-/** Buttons that open or close every section of the form. */
 const CollapseAll: React.FunctionComponent<{children: React.ReactNode}> = ({
   children,
 }) => {
@@ -514,8 +524,8 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
   const meta = metaAt(schema, path);
   const {featureStart} = useContext(Context);
   const {optional} = unwrap(schema);
-  // The row added last starts open; the rest start closed.
-  const [added, setAdded] = useState<number>();
+  // The item at this index starts open.
+  const [lastAddedIndex, setLastAddedIndex] = useState<number>();
   if (kindOf(element) === 'enum') {
     return <EnumListField {...props} />;
   }
@@ -542,7 +552,7 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
           title={`${title} ${index + 1}`}
           path={[...path, index]}
           value={item}
-          startOpen={index === added}
+          startOpen={index === lastAddedIndex}
           first={index === 0}
           last={index === items.length - 1}
           onMove={step => move(index, index + step)}
@@ -566,7 +576,7 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
       variant="outlined"
       size="small"
       onClick={() => {
-        setAdded(items.length);
+        setLastAddedIndex(items.length);
         onChange([...items, startValue(element)]);
       }}
     >
@@ -608,7 +618,6 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
   );
 };
 
-/** One item of a list: its heading, its buttons, and its fields when open. */
 export const ListRow: React.FunctionComponent<{
   title: string;
   path: Path;
