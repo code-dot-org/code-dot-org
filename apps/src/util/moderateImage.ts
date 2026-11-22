@@ -48,6 +48,10 @@ const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<CategoryName, number> = {
   Violence: 4,
 };
 
+const APP_SEVERITY_LEVEL_BLOCKED: Record<string, SeverityThresholds> = {
+  applab: {Sexual: 4},
+};
+
 // Applies the per-category severity thresholds to a parsed Azure response and
 // returns the flag/allow decision. Single source of truth shared by
 // moderateImage() and the image-safety eval. Matches the historical inline
@@ -140,7 +144,10 @@ const runModeration = async (
       );
 
       if (
-        getImageModerationVerdict(json, overrideSeverityThresholds) === 'safe'
+        getImageModerationVerdict(json, {
+          ...APP_SEVERITY_LEVEL_BLOCKED[appName],
+          ...overrideSeverityThresholds,
+        }) === 'safe'
       ) {
         return 'safe';
       }
