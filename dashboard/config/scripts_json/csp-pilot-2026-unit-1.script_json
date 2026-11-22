@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-20 22:55:31 UTC",
+    "serialized_at": "2026-11-22 06:31:09 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -96,6 +96,10 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "**When is it safe to let a computer decide?**\n\nStudents explore automation and augmentation by sorting familiar examples, then audit LunchLine, an app that chooses and orders school lunches. Using test cases and student reviews, they evaluate where the app’s decisions affect people. Students then add a human check to the app’s flowchart and consider the trade-off: more control may make lunch ordering slower.",
+        "preparation": "- Print and cut one set of eight \"Who Decided?\" cards per group of three.\n- Print one LunchLine audit guide per group of three.",
+        "student_overview": "**When is it safe to let a computer decide?**\n\nComputers make choices for you every day, but some choices matter more than others. You’ll investigate LunchLine, an app that picks students’ lunches, to see where its decisions work and where they cause problems. Then you’ll change the app’s flowchart to show when a person should step in—and what that change might cost.",
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Lesson 13: Automate or Augment?",
@@ -9518,6 +9522,36 @@
       }
     },
     {
+      "name": "Audit the App",
+      "url": "https://docs.google.com/document/d/1FaUbqkWpqSxRZX2hvcLmhYUuk4zo8e3e7kWtTE0aIvE/",
+      "key": "audit_the_app",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "audit_the_app"
+      }
+    },
+    {
+      "name": "Audit the App",
+      "url": "https://docs.google.com/document/d/19NYDBBlfYGuBnPAG3zA43wNYEMeOkKKI2CQ7XYsXX-I/",
+      "key": "audit_the_app_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "audit_the_app_1"
+      }
+    },
+    {
       "name": "Auto-Mod Review Queue",
       "url": "https://docs.google.com/document/d/1rpRKeaCi7KjcsnPgoe6BTA8jOJ-C1NQdrZh8B4AqEVI/",
       "key": "auto-mod_review_queue",
@@ -9529,6 +9563,21 @@
       },
       "seeding_key": {
         "resource.key": "auto-mod_review_queue"
+      }
+    },
+    {
+      "name": "Automate or Augment",
+      "url": "https://docs.google.com/presentation/d/1vw3EscvZfeqCtgdOeL3ziEVHag09e6j6Kcu3AJ8U_UE/",
+      "key": "automate_or_augment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "automate_or_augment"
       }
     },
     {
@@ -10148,6 +10197,34 @@
     },
     {
       "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/edit?tab=t.0#heading=h.a00em993xsaw",
+      "key": "unit_1_unit_guide_18",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_18"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
+      "url": "https://docs.google.com/document/d/1rg35PNAM5YM2S-ZJbCQMwTrqUptL1HADPIX8zMj_7Uc/edit?tab=t.0#heading=h.a00em993xsaw",
+      "key": "unit_1_unit_guide_19",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_unit_guide_19"
+      }
+    },
+    {
+      "name": "Unit 1 Unit Guide",
       "url": "https://docs.google.com/document/d/15vsReF-Jw6_bUDT_NbduGLFyfIMaahxC0irimIoMUCA/edit?tab=t.0#heading=h.65duwoybt6d0",
       "key": "unit_1_unit_guide_2",
       "properties": {
@@ -10333,6 +10410,36 @@
       }
     },
     {
+      "name": "Who Decided Cards",
+      "url": "https://docs.google.com/document/d/1tMgH8sYhvTxkDoloq5P98bZ6jUsfT1zc7BbZW6EgpJU/",
+      "key": "who_decided_cards",
+      "properties": {
+        "audience": "Verified Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "who_decided_cards"
+      }
+    },
+    {
+      "name": "Who Decided Cards",
+      "url": "https://docs.google.com/document/d/1G4noOhEaPUKy18UwQ2_IljIPN4D4DE6MfJPZfdHHibs/",
+      "key": "who_decided_cards_1",
+      "properties": {
+        "audience": "Student",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "who_decided_cards_1"
+      }
+    },
+    {
       "name": " Wrapped Connect Task",
       "url": "https://docs.google.com/presentation/d/1zW86h0b5Fu77vSNDKXYQ_cTDqOUEmeCJetHLNcvL3XI/",
       "key": "wrapped_connect_task",
@@ -10446,6 +10553,48 @@
       "seeding_key": {
         "lesson.key": "Lesson 12: Generative AI and LLMs",
         "resource.key": "unit_1_unit_guide_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "resource.key": "audit_the_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "resource.key": "audit_the_app_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "resource.key": "automate_or_augment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "resource.key": "unit_1_unit_guide_18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "resource.key": "unit_1_unit_guide_19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "resource.key": "who_decided_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "resource.key": "who_decided_cards_1"
       }
     },
     {
@@ -10851,6 +11000,26 @@
       }
     },
     {
+      "key": "augmentation",
+      "word": "Augmentation",
+      "definition": "A computer helps, but a person makes the final decision.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "augmentation"
+      }
+    },
+    {
+      "key": "automation",
+      "word": "Automation",
+      "definition": "A computer completes a task or makes a decision on its own.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "automation"
+      }
+    },
+    {
       "key": "bias",
       "word": "Bias",
       "definition": "When an app consistently favors certain people, values, or outcomes over others.",
@@ -10908,6 +11077,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "generative_ai"
+      }
+    },
+    {
+      "key": "human_oversight",
+      "word": "Human oversight",
+      "definition": "A person can review, change, or stop a computer’s decision.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "human_oversight"
       }
     },
     {
@@ -11132,6 +11311,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "vocabulary.key": "augmentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "vocabulary.key": "automation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "vocabulary.key": "human_oversight"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Lesson 14: Trustworthy AI: Transparency and Maintenance",
         "vocabulary.key": "model_drift"
       }
@@ -11340,6 +11537,16 @@
       }
     },
     {
+      "key": "19795f80-7891-4e9a-851c-88022c89958f",
+      "properties": {
+        "description": "Design and justify a change that gives people appropriate control while accounting for a trade-off."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "objective.key": "19795f80-7891-4e9a-851c-88022c89958f"
+      }
+    },
+    {
       "key": "1c36c151-93bf-41f0-92f2-49be4592c858",
       "properties": {
         "description": "Write a sequential program that implements a planned design."
@@ -11387,6 +11594,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 27: Expressions and Operators - Day 2",
         "objective.key": "3cb687df-e1e2-4690-99ca-675fe29b0769"
+      }
+    },
+    {
+      "key": "4191e711-4815-4184-9641-e0eaa10c1af0",
+      "properties": {
+        "description": "Evaluate an automated system’s decisions using evidence about its outcomes and effects on people."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "objective.key": "4191e711-4815-4184-9641-e0eaa10c1af0"
       }
     },
     {
@@ -11557,6 +11774,16 @@
       "seeding_key": {
         "lesson.key": "Lesson 12: Generative AI and LLMs",
         "objective.key": "771aa178-6078-47af-9421-8fb34a8b1dbd"
+      }
+    },
+    {
+      "key": "87805d72-c3cc-4866-9102-1e0222413260",
+      "properties": {
+        "description": "Analyze the role of human decision-making in automated and augmented systems."
+      },
+      "seeding_key": {
+        "lesson.key": "Lesson 13: Automate or Augment?",
+        "objective.key": "87805d72-c3cc-4866-9102-1e0222413260"
       }
     },
     {
