@@ -36,7 +36,9 @@ export interface LevelAnalytics {
  * Nothing is sent while `enabled` is false. The visit's events are not sent
  * for a standalone project, which the shared event leaves out as well.
  *
- * Every event sent with the project properties carries `labContext`.
+ * While this hook is mounted, `labContext` is set as a project property, so
+ * every event sent with `includeProjectProperties` carries it, including
+ * events sent outside this hook.
  */
 export default function useLevelAnalytics(
   levelProperties: LevelProperties,
