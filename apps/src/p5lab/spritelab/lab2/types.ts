@@ -130,8 +130,7 @@ export type WorldStartRoles = {[char: string]: string};
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The level's settings as stored (levelConfig/schema.ts). The lab reads
-      them through levelConfigOf. On a level with no valid level_config, that
-      converts levelMode and the other properties in FlatProperties instead. */
+      them through levelConfigOf. */
   levelConfig?: unknown;
   /** What kind of level this is, on a level saved before level_config. */
   levelMode?: LevelMode;

@@ -362,15 +362,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     (scene?: Scene) => resizeWorld(scene?.world, seedSceneSize),
     [seedSceneSize]
   );
-  // The tab bar shows tabs in a fixed order whatever the list's order, so
-  // levelTabs puts the tab the level opens on first.
+  // tabs[0] is the tab the level opens on. The tab bar sorts tabs into its
+  // own order, so the order of tabs is not shown anywhere.
   useEffect(() => {
     dispatch(setActiveTab(tabs[0]));
     // Only the level identity should re-trigger the start tab.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [levelProperties.id, dispatch]);
-  // The slice's initial tab is 'Code'; a level hiding Code (an images-only
-  // level, say) needs the selection steered onto a tab that exists.
+  // If tabs changes and no longer has the active tab, switch to Code, or to
+  // the first tab when Code is hidden.
   useEffect(() => {
     if (!tabs.includes(activeTab)) {
       dispatch(setActiveTab(tabs.includes('Code') ? 'Code' : tabs[0]));
