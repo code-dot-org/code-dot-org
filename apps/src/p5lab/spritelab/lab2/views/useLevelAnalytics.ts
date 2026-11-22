@@ -8,10 +8,21 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ARROW_AND_SPACE_KEYS, isOnScreenGameKey} from './playBar';
 
+/** Where the student is: a unit level, the unit's free play level, or a
+    standalone project. */
+export type LabContext = 'progression' | 'freeplay' | 'standalone';
+
 export interface LevelAnalytics {
   reportActivity: () => void;
   /** Sends the level-complete event with `details`, once per visit. */
   reportCompleted: (details: Record<string, unknown>) => void;
+  /** Sends an event about something the student did, in a standalone
+      project too. `value` is the value Statsig breaks results down by. */
+  reportEvent: (
+    eventName: string,
+    payload: Record<string, unknown>,
+    value?: string
+  ) => void;
 }
 
 // TODO: move into a shared lab2 hook; Dance Party's useReportAnalytics tracks a visit the same way.
@@ -22,13 +33,16 @@ export interface LevelAnalytics {
  * this hook's mount to its unmount, or to the page unload if that comes
  * first.
  *
- * Nothing is sent while `enabled` is false, or for a standalone project,
- * which the shared event leaves out as well.
+ * Nothing is sent while `enabled` is false. The visit's events are not sent
+ * for a standalone project, which the shared event leaves out as well.
+ *
+ * Every event sent with the project properties carries `labContext`.
  */
 export default function useLevelAnalytics(
   levelProperties: LevelProperties,
   playing: boolean,
-  enabled: boolean
+  enabled: boolean,
+  labContext: LabContext
 ): LevelAnalytics {
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const unitName = useAppSelector(state => state.progress.scriptName) ?? '';
@@ -47,8 +61,13 @@ export default function useLevelAnalytics(
   const latest = useRef({logLevelActivity, levelProperties, unitName, enabled});
   latest.current = {logLevelActivity, levelProperties, unitName, enabled};
 
+  useEffect(() => {
+    analyticsReporter.setProjectProperty('labContext', labContext);
+    return () => analyticsReporter.setProjectProperty('labContext', undefined);
+  }, [labContext]);
+
   const send = useCallback(
-    (eventName: string, payload: Record<string, unknown>) => {
+    (eventName: string, payload: Record<string, unknown>, value?: string) => {
       const {levelProperties, unitName} = latest.current;
       analyticsReporter.sendEvent(
         eventName,
@@ -58,10 +77,20 @@ export default function useLevelAnalytics(
           levelId: levelProperties.id,
           levelName: levelProperties.name,
         },
-        true
+        true,
+        value
       );
     },
     []
+  );
+
+  const reportEvent = useCallback(
+    (eventName: string, payload: Record<string, unknown>, value?: string) => {
+      if (latest.current.enabled) {
+        send(eventName, payload, value);
+      }
+    },
+    [send]
   );
 
   const counted = useCallback(
@@ -132,5 +161,5 @@ export default function useLevelAnalytics(
     };
   }, [counted, send]);
 
-  return {reportActivity, reportCompleted};
+  return {reportActivity, reportCompleted, reportEvent};
 }
