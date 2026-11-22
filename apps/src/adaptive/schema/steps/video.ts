@@ -3,10 +3,15 @@ import {z} from 'zod';
 import {stepBaseSchema} from './base';
 
 /** A video step as authored: references a Video record by key. */
-export const videoStepSourceSchema = stepBaseSchema.extend({
-  kind: z.literal('video'),
-  videoKey: z.string().min(1),
-});
+export const videoStepSourceSchema = stepBaseSchema
+  .extend({
+    kind: z.literal('video'),
+    videoKey: z.string().min(1).meta({
+      title: 'Video key',
+      description: 'The key of a video record.',
+    }),
+  })
+  .meta({title: 'Video'});
 
 /**
  * A video step as served: videoKey is preserved and the server has inlined the
