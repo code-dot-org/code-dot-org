@@ -139,13 +139,28 @@ describe('useLevelAnalytics', () => {
     expect(sendEvent).not.toHaveBeenCalled();
   });
 
-  it('sends nothing for a standalone project', () => {
+  it("sends only the visit's end for a standalone project", () => {
     const project = {...level, isProjectLevel: true} as LevelProperties;
     const view = visit({level: project});
     view.result.current.reportActivity();
     view.result.current.reportCompleted({finish: true});
+    jest.advanceTimersByTime(30_000);
     view.unmount();
     expect(logLevelActivity).not.toHaveBeenCalled();
+    expect(sendEvent).toHaveBeenCalledTimes(1);
+    expect(sessionEnds()).toEqual([
+      [
+        EVENTS.HOAI2026_LEVEL_SESSION_END,
+        expect.objectContaining({durationSeconds: 30, completed: false}),
+        true,
+        undefined,
+      ],
+    ]);
+  });
+
+  it('sends no visit end for a standalone project the student did nothing in', () => {
+    const project = {...level, isProjectLevel: true} as LevelProperties;
+    visit({level: project}).unmount();
     expect(sendEvent).not.toHaveBeenCalled();
   });
 

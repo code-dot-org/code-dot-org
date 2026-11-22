@@ -490,6 +490,8 @@ const EVENTS = {
   HOAI2026_CATALOG_ADD: 'hoai2026-catalog-add',
   HOAI2026_SCENE_CREATE: 'hoai2026-scene-create',
   HOAI2026_IMAGE_REPLACE_CONFIRM: 'hoai2026-image-replace-confirm',
+  HOAI2026_GENERATION_LIMIT_REACHED: 'hoai2026-generation-limit-reached',
+  HOAI2026_START_OVER: 'hoai2026-start-over',
 
   // Moderate model output image
   MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',

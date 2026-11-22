@@ -33,8 +33,9 @@ export interface LevelAnalytics {
  * this hook's mount to its unmount, or to the page unload if that comes
  * first.
  *
- * Nothing is sent while `enabled` is false. The visit's events are not sent
- * for a standalone project, which the shared event leaves out as well.
+ * Nothing is sent while `enabled` is false. A standalone project sends only
+ * the event when the visit ends: it has nothing to complete, and the shared
+ * event leaves it out.
  *
  * While this hook is mounted, `labContext` is set as a project property, so
  * every event sent with `includeProjectProperties` carries it, including
@@ -57,9 +58,9 @@ export default function useLevelAnalytics(
     keyboardPressesWhilePlaying: 0,
     buttonPressesWhilePlaying: 0,
   });
-  // Read through a ref so that `send` and `counted` never change. The effect
-  // that ends the visit depends on them, and its cleanup would end the visit
-  // early if they did.
+  // Read through a ref so that `send` never changes. The effect that ends
+  // the visit depends on it, and its cleanup would end the visit early if it
+  // did.
   const latest = useRef({logLevelActivity, levelProperties, unitName, enabled});
   latest.current = {logLevelActivity, levelProperties, unitName, enabled};
 
@@ -95,29 +96,30 @@ export default function useLevelAnalytics(
     [send]
   );
 
-  const counted = useCallback(
-    () =>
-      latest.current.enabled && !latest.current.levelProperties.isProjectLevel,
+  const inUnit = useCallback(
+    () => !latest.current.levelProperties.isProjectLevel,
     []
   );
 
   const reportActivity = useCallback(() => {
-    if (!counted()) {
+    if (!latest.current.enabled) {
       return;
     }
     visit.current.active = true;
-    latest.current.logLevelActivity();
-  }, [counted]);
+    if (inUnit()) {
+      latest.current.logLevelActivity();
+    }
+  }, [inUnit]);
 
   const reportCompleted = useCallback(
     (details: Record<string, unknown>) => {
-      if (!counted() || visit.current.completed) {
+      if (!latest.current.enabled || !inUnit() || visit.current.completed) {
         return;
       }
       visit.current.completed = true;
       send(EVENTS.HOAI2026_LEVEL_COMPLETE, details);
     },
-    [counted, send]
+    [inUnit, send]
   );
 
   // p5 listens for keys on window, so a game key seen here reached the game.
@@ -143,7 +145,7 @@ export default function useLevelAnalytics(
   useEffect(() => {
     const end = () => {
       const {active, ended, startedAt, completed} = visit.current;
-      if (!counted() || !active || ended) {
+      if (!latest.current.enabled || !active || ended) {
         return;
       }
       visit.current.ended = true;
@@ -161,7 +163,7 @@ export default function useLevelAnalytics(
       window.removeEventListener('beforeunload', end);
       end();
     };
-  }, [counted, send]);
+  }, [send]);
 
   return {reportActivity, reportCompleted, reportEvent};
 }

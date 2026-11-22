@@ -2290,6 +2290,16 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     generationLimit === undefined
       ? undefined
       : generationLimit - generationCount;
+  // Once per visit, though a failed last generation gives one back.
+  const limitReportedRef = useRef(false);
+  useEffect(() => {
+    if (generationsLeft === 0 && !limitReportedRef.current) {
+      limitReportedRef.current = true;
+      reportEvent(EVENTS.HOAI2026_GENERATION_LIMIT_REACHED, {
+        generationLimit,
+      });
+    }
+  }, [generationsLeft, generationLimit, reportEvent]);
   // Where the level names no image type, any image counts as its own.
   const ownImageMade = levelImageType
     ? objectiveImages[levelImageType] >= 1
@@ -2371,6 +2381,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         <StartOverDialog
           onConfirm={() => {
             const leaving = !!firstLevelId && firstLevelId !== currentLevelId;
+            reportEvent(
+              EVENTS.HOAI2026_START_OVER,
+              {outcome: 'confirm', toFirstLevel: leaving},
+              'confirm'
+            );
             if (leaving) {
               leavingResetRef.current = {
                 level: levelProperties.id,
@@ -2383,7 +2398,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               dispatch(navigateToLevelId(firstLevelId));
             }
           }}
-          onCancel={() => setShowStartOver(false)}
+          onCancel={() => {
+            reportEvent(
+              EVENTS.HOAI2026_START_OVER,
+              {outcome: 'cancel'},
+              'cancel'
+            );
+            setShowStartOver(false);
+          }}
           type="custom"
           message={
             projectless
