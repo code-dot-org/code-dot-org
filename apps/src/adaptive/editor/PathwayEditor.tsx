@@ -9,6 +9,7 @@ import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 import IconPickerWidget, {
   ICON_WIDGET,
 } from '@cdo/apps/lab2/levelEditors/iconPicker/IconPickerWidget';
+import LevelPreviewFrame from '@cdo/apps/lab2/levelEditors/levelConfig/LevelPreviewFrame';
 import SchemaForm, {
   problemsFrom,
 } from '@cdo/apps/lab2/levelEditors/schemaForm/SchemaForm';
@@ -57,10 +58,13 @@ const editorTheme = EditorView.theme({
 
 interface PathwayEditorProps {
   pathwayId: string;
+  /** The adaptive level being edited, which the preview opens. */
+  levelId?: string;
 }
 
 const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
   pathwayId,
+  levelId,
 }) => {
   const url = `/adaptive_pathways/${pathwayId}`;
   const editorRef = useRef<HTMLDivElement>(null);
@@ -119,12 +123,13 @@ const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
   } catch (error) {
     parseError = (error as Error).message;
   }
+  const schemaResult =
+    parseError === undefined
+      ? pathwaySourceSchema.safeParse(parsed)
+      : undefined;
   const formProblems =
-    display === 'form' && parseError === undefined
-      ? (() => {
-          const result = pathwaySourceSchema.safeParse(parsed);
-          return problemsFrom(result.success ? [] : result.error.issues);
-        })()
+    display === 'form' && schemaResult
+      ? problemsFrom(schemaResult.success ? [] : schemaResult.error.issues)
       : undefined;
 
   useEffect(() => {
@@ -164,7 +169,14 @@ const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
 
   return (
     <div>
-      <div style={{display: 'flex', gap: 8, margin: '0 0 8px'}}>
+      {levelId && savedText !== null && (
+        <LevelPreviewFrame
+          levelUrl={`/levels/${levelId}`}
+          value={parsed}
+          valid={!!schemaResult?.success}
+        />
+      )}
+      <div style={{display: 'flex', gap: 8, margin: '8px 0'}}>
         <MuiButton
           size="small"
           variant={display === 'json' ? 'contained' : 'outlined'}
