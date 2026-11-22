@@ -2290,7 +2290,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     generationLimit === undefined
       ? undefined
       : generationLimit - generationCount;
-  // Once per visit, though a failed last generation gives one back.
+  // Report the limit once per visit, even if a failed last generation stops
+  // counting and the student then reaches the limit again.
   const limitReportedRef = useRef(false);
   useEffect(() => {
     if (generationsLeft === 0 && !limitReportedRef.current) {

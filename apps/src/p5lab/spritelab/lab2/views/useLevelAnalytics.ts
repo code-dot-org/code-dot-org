@@ -33,9 +33,9 @@ export interface LevelAnalytics {
  * this hook's mount to its unmount, or to the page unload if that comes
  * first.
  *
- * Nothing is sent while `enabled` is false. A standalone project sends only
- * the event when the visit ends: it has nothing to complete, and the shared
- * event leaves it out.
+ * Nothing is sent while `enabled` is false. Of the visit's three events, a
+ * standalone project sends only the one when the visit ends: it has nothing
+ * to complete, and the shared event leaves it out.
  *
  * While this hook is mounted, `labContext` is set as a project property, so
  * every event sent with `includeProjectProperties` carries it, including
