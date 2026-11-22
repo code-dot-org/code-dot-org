@@ -30,7 +30,8 @@ interface EditSpritelabConfigProps {
   toolboxDefinition?: unknown;
 }
 
-// Every block type in a toolbox definition, flyout or categories.
+// Every block type in a toolbox definition, either a flyout or a category
+// toolbox.
 function toolboxBlockTypes(definition: unknown): string[] {
   const types = new Set<string>();
   const visit = (node: unknown) => {

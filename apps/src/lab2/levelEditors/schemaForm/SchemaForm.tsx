@@ -1416,9 +1416,10 @@ export interface ReferenceOption {
   label: string;
 }
 
-/** The choices a reference field's `options` names (schemaMeta.ts), from
-    the whole value or, after `..`, from near the field at `path`. Each
-    choice is labeled with its item's title when it has one. */
+/** The choices a reference field's `options` names (schemaMeta.ts): a
+    list from `supplied` for `@name`, otherwise values found in `root`,
+    starting from the field at `path` when the pattern begins with `../`.
+    Each choice is labeled with its item's title when it has one. */
 export function referenceOptions(
   root: unknown,
   pattern: string,
@@ -1428,8 +1429,6 @@ export function referenceOptions(
   if (pattern.startsWith('@')) {
     return supplied[pattern.slice(1)] ?? [];
   }
-  // Each leading "../" climbs one step from the field; without one the
-  // place is in the whole value.
   let rest = pattern;
   let base: Path = rest.startsWith('../') ? path : [];
   while (rest.startsWith('../')) {
@@ -1485,7 +1484,8 @@ export function referenceOptions(
     .filter(option => option.value);
 }
 
-/** The choices a field's `options` or `keyOptions` names, where it is. */
+/** The choices a field's `options` or `keyOptions` pattern names, with
+    `../` read from the field at `path`. */
 function useReferenceOptions(
   pattern: string | undefined,
   path: Path
