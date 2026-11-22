@@ -6,6 +6,7 @@ import {z} from 'zod';
 import '@cdo/apps/lab2/levelEditors/schemaForm/schemaMeta';
 import SchemaForm, {
   problemsFrom,
+  referenceOptions,
 } from '@cdo/apps/lab2/levelEditors/schemaForm/SchemaForm';
 
 const schema = z.strictObject({
@@ -21,6 +22,7 @@ const schema = z.strictObject({
     .optional()
     .meta({title: 'World', feature: 'World tab'}),
   canAdd: z.boolean().optional().meta({title: 'Can add', defaultValue: true}),
+  project: z.literal(true).optional().meta({title: 'Project step'}),
   dialog: z
     .strictObject({heading: z.string().min(1).meta({title: 'Heading'})})
     .optional()
@@ -100,6 +102,8 @@ describe('SchemaForm', () => {
     render(<Harness initial={{dialog: {heading: 'Hello'}}} />);
     fireEvent.click(screen.getByRole('button', {name: 'Remove Dialog'}));
     expect(value()).toEqual({});
+    // Closing every section in between keeps what was removed.
+    fireEvent.click(screen.getByRole('button', {name: 'Close all'}));
     fireEvent.click(screen.getByRole('button', {name: 'Add Dialog'}));
     expect(value()).toEqual({dialog: {heading: 'Hello'}});
   });
@@ -117,6 +121,15 @@ describe('SchemaForm', () => {
     render(<Harness initial={{steps: [{text: ''}]}} />);
     fireEvent.click(screen.getByRole('button', {name: 'Open all'}));
     expect(screen.getByText('Required.')).toBeInTheDocument();
+  });
+
+  it('draws an optional fixed value as a box that writes it or leaves it out', () => {
+    render(<Harness initial={{}} />);
+    const box = screen.getByRole('checkbox', {name: 'Project step'});
+    fireEvent.click(box);
+    expect(value()).toEqual({project: true});
+    fireEvent.click(box);
+    expect(value()).toEqual({});
   });
 
   it('writes a setting left at its default as no value', () => {
@@ -158,5 +171,69 @@ describe('SchemaForm', () => {
       target: {value: 'hero, friend'},
     });
     expect(value().world.roles).toEqual(['hero', 'friend']);
+  });
+});
+
+describe('reference fields', () => {
+  const pathway = z.strictObject({
+    skills: z.record(z.string(), z.strictObject({title: z.string()})),
+    checkpoint: z
+      .strictObject({
+        skillIds: z
+          .array(z.string())
+          .optional()
+          .meta({title: 'Skills', widget: 'reference', options: 'skills.*'}),
+      })
+      .meta({title: 'Checkpoint'}),
+  });
+
+  it('lists a map’s keys, labeled with their titles', () => {
+    expect(
+      referenceOptions(
+        {skills: {build: {title: 'Build with AI'}, debug: {title: 'Debug'}}},
+        'skills.*'
+      )
+    ).toEqual([
+      {value: 'build', label: 'build: Build with AI'},
+      {value: 'debug', label: 'debug: Debug'},
+    ]);
+    expect(
+      referenceOptions(
+        {steps: [{id: 'a', title: 'First'}, {id: 'b'}]},
+        'steps.*.id'
+      )
+    ).toEqual([
+      {value: 'a', label: 'a: First'},
+      {value: 'b', label: 'b'},
+    ]);
+  });
+
+  it('ticks choices from elsewhere in the value, and keeps one not found', () => {
+    let latest: unknown;
+    function Form() {
+      const [value, setValue] = useState<unknown>({
+        skills: {build: {title: 'Build'}, debug: {title: 'Debug'}},
+        checkpoint: {skillIds: ['gone']},
+      });
+      return (
+        <SchemaForm
+          schema={pathway}
+          value={value}
+          onChange={next => {
+            latest = next;
+            setValue(next);
+          }}
+        />
+      );
+    }
+    render(<Form />);
+    fireEvent.click(screen.getByRole('button', {name: 'Open all'}));
+    expect(
+      screen.getByText(/Not found, kept as it is: gone/)
+    ).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('checkbox', {name: 'debug: Debug'}));
+    expect((latest as {checkpoint: unknown}).checkpoint).toEqual({
+      skillIds: ['gone', 'debug'],
+    });
   });
 });

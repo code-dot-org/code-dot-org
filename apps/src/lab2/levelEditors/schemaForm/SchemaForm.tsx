@@ -20,6 +20,7 @@ import React, {
 import type {ZodType} from 'zod';
 
 import {
+  defOf,
   elementOf,
   enumValues,
   discriminatorOf,
@@ -61,9 +62,28 @@ interface FormContext {
       being switched on; undefined falls back to it. The path is joined
       with dots. */
   featureStart?: (path: string) => unknown;
+  /** What each removed or switched-off part held, by path joined with
+      dots, so that adding it back restores it. */
+  removedValues?: Map<string, unknown>;
+  /** The whole value, for fields whose choices come from elsewhere in it. */
+  root?: unknown;
 }
 
 const Context = createContext<FormContext>({problems: new Map(), widgets: {}});
+
+/** The value a part held when it was last removed, and a way to record it.
+    The record is kept for as long as the form is on the page. */
+function useRemovedValue(path: Path): {
+  saved: () => unknown;
+  save: (value: unknown) => void;
+} {
+  const {removedValues} = useContext(Context);
+  const key = keyOf(path);
+  return {
+    saved: () => removedValues?.get(key),
+    save: value => removedValues?.set(key, value),
+  };
+}
 
 const keyOf = (path: Path) => path.join('.');
 
@@ -202,8 +222,8 @@ export function problemsFrom(
   return problems;
 }
 
-// zod's own wording for the most common problems is written for
-// programmers; a schema's own messages are kept.
+// Plain words for zod's default messages about a missing value and a
+// too-short string or list. A message the schema sets itself is kept.
 function plainMessage(issue: {
   message: string;
   code?: string;
@@ -211,7 +231,11 @@ function plainMessage(issue: {
   minimum?: unknown;
   input?: unknown;
 }): string {
-  if (issue.code === 'invalid_type' && issue.input === undefined) {
+  if (
+    issue.code === 'invalid_type' &&
+    issue.input === undefined &&
+    issue.message.startsWith('Invalid input')
+  ) {
     return 'Required.';
   }
   if (issue.code === 'too_small' && issue.message.startsWith('Too small')) {
@@ -246,6 +270,7 @@ const SchemaForm: React.FunctionComponent<SchemaFormProps> = ({
     problems={problems}
     widgets={widgets}
     featureStart={featureStart}
+    root={value}
   >
     <CollapseAll>
       <SchemaField
@@ -292,11 +317,16 @@ const CollapseAll: React.FunctionComponent<{children: React.ReactNode}> = ({
     used on its own, outside a SchemaForm. */
 export const SchemaFormScope: React.FunctionComponent<
   Partial<FormContext> & {children: React.ReactNode}
-> = ({problems = new Map(), widgets = {}, featureStart, children}) => (
-  <Context.Provider value={{problems, widgets, featureStart}}>
-    {children}
-  </Context.Provider>
-);
+> = ({problems = new Map(), widgets = {}, featureStart, root, children}) => {
+  const removedValues = useRef(new Map<string, unknown>()).current;
+  return (
+    <Context.Provider
+      value={{problems, widgets, featureStart, removedValues, root}}
+    >
+      {children}
+    </Context.Provider>
+  );
+};
 
 /** Whether a value is unset. An optional field that is unset is left out
     of the saved value. */
@@ -314,6 +344,9 @@ export const SchemaField: React.FunctionComponent<FieldProps> = props => {
   const {schema, path} = props;
   const {widgets} = useContext(Context);
   const meta = metaAt(schema, path);
+  if (meta.widget === 'reference' && meta.options) {
+    return <ReferenceField {...props} />;
+  }
   const custom = meta.widget && widgets[meta.widget];
   if (custom) {
     const Custom = custom;
@@ -415,8 +448,8 @@ const FieldFrame: React.FunctionComponent<{
 
 /**
  * The heading of an optional group: a switch when the schema names it a
- * feature, else Add and Remove. A group removed keeps its value for the
- * visit, and adding it back restores it; the saved value leaves it out.
+ * feature, else Add and Remove buttons. Removing a group leaves it out of
+ * the value; adding it back restores what it held.
  */
 const OptionalGroupHeader: React.FunctionComponent<
   WidgetProps & {open: boolean; setOpen: (open: boolean) => void}
@@ -424,15 +457,15 @@ const OptionalGroupHeader: React.FunctionComponent<
   const {featureStart} = useContext(Context);
   const meta = metaAt(schema, path);
   const on = !isUnset(value);
-  const removed = useRef<unknown>();
+  const removed = useRemovedValue(path);
   const add = () => {
     setOpen(true);
     onChange(
-      removed.current ?? featureStart?.(keyOf(path)) ?? startValue(schema)
+      removed.saved() ?? featureStart?.(keyOf(path)) ?? startValue(schema)
     );
   };
   const remove = () => {
-    removed.current = value;
+    removed.save(value);
     onChange(undefined);
   };
   if (meta.feature) {
@@ -603,8 +636,7 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
   const meta = metaAt(schema, path);
   const {featureStart} = useContext(Context);
   const {optional} = unwrap(schema);
-  // A list switched off keeps its items for the visit.
-  const removed = useRef<unknown>();
+  const removed = useRemovedValue(path);
   const [lastAddedIndex, setLastAddedIndex] = useState<number>();
   if (kindOf(element) === 'enum') {
     return <EnumListField {...props} />;
@@ -673,11 +705,11 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
           label={meta.feature}
           onChange={event => {
             if (!event.target.checked) {
-              removed.current = value;
+              removed.save(value);
             }
             onChange(
               event.target.checked
-                ? removed.current ?? featureStart?.(keyOf(path)) ?? []
+                ? removed.saved() ?? featureStart?.(keyOf(path)) ?? []
                 : undefined
             );
           }}
@@ -876,7 +908,7 @@ const ChoiceField: React.FunctionComponent<FieldProps> = props => {
   const {featureStart} = useContext(Context);
   const meta = metaAt(schema, path);
   const {optional} = unwrap(schema);
-  const removed = useRef<unknown>();
+  const removed = useRemovedValue(path);
   if (meta.widget === 'names' || namesTakeString(schema)) {
     return <NamesField {...props} />;
   }
@@ -951,11 +983,11 @@ const ChoiceField: React.FunctionComponent<FieldProps> = props => {
           label={meta.feature}
           onChange={event => {
             if (!event.target.checked) {
-              removed.current = value;
+              removed.save(value);
             }
             onChange(
               event.target.checked
-                ? removed.current ??
+                ? removed.saved() ??
                     featureStart?.(keyOf(path)) ??
                     startValue(options[0])
                 : undefined
@@ -1054,7 +1086,7 @@ const EnumListField: React.FunctionComponent<FieldProps> = ({
   const meta = metaAt(schema, path);
   const {optional} = unwrap(schema);
   const {featureStart} = useContext(Context);
-  const removed = useRef<unknown>();
+  const removed = useRemovedValue(path);
   const chosen = Array.isArray(value) ? (value as string[]) : [];
   const values = enumValues(elementOf(schema));
   const on = !isUnset(value);
@@ -1091,11 +1123,11 @@ const EnumListField: React.FunctionComponent<FieldProps> = ({
           label={meta.feature}
           onChange={event => {
             if (!event.target.checked) {
-              removed.current = value;
+              removed.save(value);
             }
             onChange(
               event.target.checked
-                ? removed.current ?? featureStart?.(keyOf(path)) ?? []
+                ? removed.saved() ?? featureStart?.(keyOf(path)) ?? []
                 : undefined
             );
           }}
@@ -1327,17 +1359,157 @@ const TextAreaField: React.FunctionComponent<FieldProps> = ({
   );
 };
 
+/** A choice from elsewhere in the value, by its place in the value:
+    "skills.*" is the keys of the skills map, "checkpoints.*.id" each
+    checkpoint's id. A choice is labeled with its item's title when it has
+    one. */
+export function referenceOptions(
+  root: unknown,
+  pattern: string
+): {value: string; label: string}[] {
+  const parts = pattern.split('.');
+  const children = (value: unknown, part: string): [string, unknown][] => {
+    if (!value || typeof value !== 'object') {
+      return [];
+    }
+    return part === '*'
+      ? Object.entries(value as object)
+      : [[part, (value as Record<string, unknown>)[part]]];
+  };
+  // Each step keeps the node reached and the item it belongs to, so a
+  // choice can be labeled with that item's title.
+  let nodes: {key: string; value: unknown; item: unknown}[] = [
+    {key: '', value: root, item: undefined},
+  ];
+  parts.forEach(part => {
+    nodes = nodes.flatMap(node =>
+      children(node.value, part).map(([key, value]) => ({
+        key,
+        value,
+        item: part === '*' ? value : node.item,
+      }))
+    );
+  });
+  const lastIsKey = parts[parts.length - 1] === '*';
+  return nodes
+    .map(node => {
+      const name = lastIsKey ? node.key : String(node.value ?? '');
+      const title = summaryOf(node.item);
+      return {
+        value: name,
+        label: title && title !== name ? `${name}: ${title}` : name,
+      };
+    })
+    .filter(option => option.value);
+}
+
+/** A field whose choices come from elsewhere in the value (`options`): a
+    list of them to tick, or a menu of them for one. A value that is not
+    among the choices is kept and shown as not found. With no choices at
+    all it is a text field. */
+const ReferenceField: React.FunctionComponent<FieldProps> = props => {
+  const {schema, value, onChange, path, bare} = props;
+  const {root} = useContext(Context);
+  const meta = metaAt(schema, path);
+  const {optional} = unwrap(schema);
+  const options = referenceOptions(root, meta.options ?? '');
+  const many = defOf(unwrap(schema).inner).type === 'array';
+  if (!options.length) {
+    return many ? <NamesField {...props} /> : <StringField {...props} />;
+  }
+  if (many) {
+    const chosen = Array.isArray(value) ? (value as string[]) : [];
+    const missing = chosen.filter(
+      name => !options.some(option => option.value === name)
+    );
+    return (
+      <FieldFrame schema={schema} path={path} bare={bare}>
+        <div className={styles.inline}>
+          {options.map(option => (
+            <Checkbox
+              key={option.value}
+              name={`${idOf(path)}-${option.value}`}
+              checked={chosen.includes(option.value)}
+              size="s"
+              label={option.label}
+              onChange={event => {
+                const next = event.target.checked
+                  ? [...chosen, option.value]
+                  : chosen.filter(name => name !== option.value);
+                onChange(next.length || !optional ? next : undefined);
+              }}
+            />
+          ))}
+        </div>
+        {missing.length > 0 && (
+          <ProblemList
+            problems={[`Not found, kept as it is: ${missing.join(', ')}`]}
+          />
+        )}
+      </FieldFrame>
+    );
+  }
+  const current = typeof value === 'string' ? value : '';
+  const known = !current || options.some(option => option.value === current);
+  return (
+    <FieldFrame schema={schema} path={path} bare={bare}>
+      <SimpleDropdown
+        name={idOf(path)}
+        id={idOf(path)}
+        labelText={meta.title ?? ''}
+        isLabelVisible={false}
+        size="s"
+        items={[
+          ...(optional || !current
+            ? [{value: NOT_SET, text: '(not set)'}]
+            : []),
+          ...(known ? [] : [{value: current, text: `${current} (not found)`}]),
+          ...options.map(option => ({value: option.value, text: option.label})),
+        ]}
+        selectedValue={current}
+        onChange={event =>
+          onChange(
+            event.target.value === NOT_SET ? undefined : event.target.value
+          )
+        }
+      />
+    </FieldFrame>
+  );
+};
+
 /** A value the schema fixes: shown, not edited. */
 const LiteralField: React.FunctionComponent<FieldProps> = ({
   schema,
   value,
+  onChange,
   path,
   bare,
-}) => (
-  <FieldFrame schema={schema} path={path} bare={bare}>
-    <code id={idOf(path)}>{JSON.stringify(value)}</code>
-  </FieldFrame>
-);
+}) => {
+  const meta = metaAt(schema, path);
+  // An optional fixed value is either there or not: a box to tick.
+  if (unwrap(schema).optional) {
+    return (
+      <div className={styles.field}>
+        <Checkbox
+          name={idOf(path)}
+          checked={!isUnset(value)}
+          size="s"
+          label={meta.title ?? ''}
+          onChange={event =>
+            onChange(event.target.checked ? startValue(schema) : undefined)
+          }
+        />
+        {meta.description && <p className={styles.help}>{meta.description}</p>}
+        <ProblemsAt path={path} />
+      </div>
+    );
+  }
+  return (
+    <FieldFrame schema={schema} path={path} bare={bare}>
+      <code id={idOf(path)}>{JSON.stringify(value)}</code>
+    </FieldFrame>
+  );
+};
 
 /** Blockly's own forms and anything else the schema cannot describe. */
 const JsonField: React.FunctionComponent<FieldProps> = ({

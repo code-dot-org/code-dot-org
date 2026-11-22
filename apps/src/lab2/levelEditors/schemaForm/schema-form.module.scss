@@ -1,8 +1,27 @@
+// The form's headings and buttons are controls, so clicking or dragging
+// across them selects nothing. The site's stylesheet makes every span and
+// p selectable, so those are named here too. What a levelbuilder may copy
+// opts back in.
 .form {
   display: flex;
   flex-direction: column;
   gap: 12px;
   max-width: 760px;
+  user-select: none;
+
+  span,
+  p {
+    user-select: none;
+  }
+
+  input,
+  textarea,
+  code,
+  p.help,
+  .problems,
+  .problems li {
+    user-select: text;
+  }
 }
 
 .children {

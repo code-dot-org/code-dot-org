@@ -4,7 +4,9 @@
 // `feature` marks an optional group as a feature the level turns on, and
 // is the label of its switch. `widget` asks for a control other than the
 // one the node's type would get: one the form has (lines, names, markdown,
-// json) or one its caller supplies. `defaultValue` is what the lab does
+// json, reference) or one its caller supplies. A reference field's
+// `options` says where in the whole value its choices are: "skills.*" for a
+// map's keys, "checkpoints.*.id" for each item's id. `defaultValue` is what the lab does
 // when a setting is not set, so the form can show that value in the unset
 // control.
 
@@ -14,6 +16,7 @@ declare module 'zod' {
     widget?: string;
     placeholder?: string;
     defaultValue?: unknown;
+    options?: string;
   }
 }
 
