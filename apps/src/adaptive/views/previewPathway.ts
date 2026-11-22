@@ -72,7 +72,7 @@ export function previewPlaces(pathway: Pathway): PreviewPlace[] {
     ...pathway.checkpoints.flatMap(checkpoint => [
       {id: checkpoint.id, label: `Checkpoint: ${checkpoint.title}`},
       ...checkpoint.steps.map((step, index) => {
-        // Steps in a row can share a title; their kind tells them apart.
+        // Steps in one checkpoint can share a title; the kind tells them apart.
         const shared =
           checkpoint.steps.filter(other => other.title === step.title).length >
           1;
