@@ -26,12 +26,38 @@ interface EditSpritelabConfigProps {
   initialConfig: unknown;
   /** The level's older settings, by their names in the lab. */
   flatProperties: FlatProperties;
+  /** The level's toolbox, for the block types its settings can name. */
+  toolboxDefinition?: unknown;
+}
+
+// Every block type in a toolbox definition, flyout or categories.
+function toolboxBlockTypes(definition: unknown): string[] {
+  const types = new Set<string>();
+  const visit = (node: unknown) => {
+    if (Array.isArray(node)) {
+      node.forEach(visit);
+    } else if (node && typeof node === 'object') {
+      const {kind, type, contents} = node as Record<string, unknown>;
+      if (kind === 'block' && typeof type === 'string') {
+        types.add(type);
+      }
+      visit(contents);
+    }
+  };
+  visit(definition);
+  return [...types];
 }
 
 const EditSpritelabConfig: React.FunctionComponent<
   EditSpritelabConfigProps
-> = ({levelId, initialConfig, flatProperties}) => (
+> = ({levelId, initialConfig, flatProperties, toolboxDefinition}) => (
   <LevelConfigEditor
+    suppliedOptions={{
+      toolboxBlockTypes: toolboxBlockTypes(toolboxDefinition).map(type => ({
+        value: type,
+        label: type,
+      })),
+    }}
     schema={levelConfigSchema}
     initialValue={initialConfig ?? undefined}
     inputName="level[level_config]"

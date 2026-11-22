@@ -294,10 +294,14 @@ const attachShadow = z
   .strictObject({
     attachTo: blockType.meta({
       title: 'Under the stack whose top block is',
+      widget: 'reference',
+      options: '@toolboxBlockTypes',
     }),
     data: z.string().optional().meta({
       title: 'Tag',
       description: "The top block's tag, when one stack of the type is meant.",
+      widget: 'reference',
+      options: 'blocks.addOnArrival.*.data',
     }),
     shadow: blockState.meta({title: 'Placeholder block'}),
   })
@@ -307,11 +311,21 @@ const attachRoom = z
   .strictObject({
     attachTo: blockType.meta({
       title: 'Under the stack whose top block is',
+      widget: 'reference',
+      options: '@toolboxBlockTypes',
     }),
-    data: z.string().optional().meta({title: 'Tag'}),
+    data: z.string().optional().meta({
+      title: 'Tag',
+      widget: 'reference',
+      options: 'blocks.addOnArrival.*.data',
+    }),
     room: z
       .strictObject({
-        type: blockType.meta({title: 'Room for a block of type'}),
+        type: blockType.meta({
+          title: 'Room for a block of type',
+          widget: 'reference',
+          options: '@toolboxBlockTypes',
+        }),
       })
       .meta({title: 'Room'}),
   })
@@ -338,7 +352,8 @@ const blocks = z.strictObject({
   }),
   alwaysInToolbox: z.array(blockType).optional().meta({
     title: 'Always in the toolbox',
-    widget: 'names',
+    widget: 'reference',
+    options: '@toolboxBlockTypes',
     description:
       'With the catalog: blocks that are in the toolbox from the start.',
   }),
@@ -380,22 +395,29 @@ const check = z.discriminatedUnion('kind', [
         ])
         .meta({
           title: 'Block type',
-          widget: 'names',
+          widget: 'reference',
+          options: '@toolboxBlockTypes',
           description: 'One block type, or any of several.',
         }),
       under: blockType.optional().meta({
         title: 'Under a top block of type',
+        widget: 'reference',
+        options: '@toolboxBlockTypes',
       }),
       data: z.string().optional().meta({
         title: 'Under the stack tagged',
         description: 'The tag of a stack the level adds.',
+        widget: 'reference',
+        options: 'blocks.addOnArrival.*.data',
       }),
       fields: z.record(z.string(), z.string()).optional().meta({
         title: 'Field values',
       }),
       scene: z.string().optional().meta({
         title: 'In scene',
-        description: 'By id. The open scene when not set.',
+        description: 'The open scene when not set.',
+        widget: 'reference',
+        options: 'scenes.starting.*.id',
       }),
     })
     .meta({title: 'Uses a block'}),
@@ -421,13 +443,21 @@ const check = z.discriminatedUnion('kind', [
   z
     .strictObject({
       kind: z.literal('scene'),
-      id: z.string().min(1, 'Required.').meta({title: 'Scene id'}),
+      id: z.string().min(1, 'Required.').meta({
+        title: 'Scene',
+        widget: 'reference',
+        options: 'scenes.starting.*.id',
+      }),
     })
     .meta({title: 'Got to a scene'}),
   z
     .strictObject({
       kind: z.literal('editing'),
-      id: z.string().min(1, 'Required.').meta({title: 'Scene id'}),
+      id: z.string().min(1, 'Required.').meta({
+        title: 'Scene',
+        widget: 'reference',
+        options: 'scenes.starting.*.id',
+      }),
     })
     .meta({title: 'Opened a scene'}),
   z.strictObject({kind: z.literal('rated')}).meta({title: 'Rated a picture'}),
@@ -445,7 +475,9 @@ const calloutSpot = {
   target: z.enum(CALLOUT_TARGETS).meta({title: 'Points at'}),
   scene: z.string().optional().meta({
     title: 'Scene',
-    description: 'For a scene-option target: the scene, by id.',
+    description: 'For a scene-option target.',
+    widget: 'reference',
+    options: 'scenes.starting.*.id',
   }),
   direction: z.enum(CALLOUT_DIRECTIONS).optional().meta({
     title: 'Arrow direction',
@@ -463,18 +495,23 @@ const callout = z.strictObject({
     .strictObject({
       done: z.array(z.number().int().min(0)).optional().meta({
         title: 'After steps',
-        description: 'Checklist steps, counted from 0, that must be done.',
+        description: 'Checklist steps that must be done.',
+        widget: 'reference',
+        options: 'objectives.steps.*',
       }),
       notDone: z.array(z.number().int().min(0)).optional().meta({
         title: 'Until steps',
-        description:
-          'Checklist steps, counted from 0, that must not be done yet.',
+        description: 'Checklist steps that must not be done yet.',
+        widget: 'reference',
+        options: 'objectives.steps.*',
       }),
       tabNot: z.enum(TABS).optional().meta({
         title: 'While not on tab',
       }),
       sceneNot: z.string().optional().meta({
         title: 'While not on scene',
+        widget: 'reference',
+        options: 'scenes.starting.*.id',
       }),
     })
     .optional()

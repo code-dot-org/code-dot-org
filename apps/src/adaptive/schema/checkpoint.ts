@@ -48,6 +48,7 @@ export const checkpointSourceSchema = z.strictObject({
     .optional()
     .meta({
       title: 'Target evidence levels',
+      keyOptions: '../skillIds.*',
       description:
         'By skill: the evidence level at which a student has already shown this checkpoint. A skill left out needs level 1.',
     }),

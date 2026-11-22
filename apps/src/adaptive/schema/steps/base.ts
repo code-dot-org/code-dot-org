@@ -11,7 +11,11 @@ export const stepBaseSchema = z.strictObject({
    */
   showIf: z
     .strictObject({
-      stepId: z.string().min(1).meta({title: 'Questions step id'}),
+      stepId: z.string().min(1).meta({
+        title: 'Questions step',
+        widget: 'reference',
+        options: '../../../*.id',
+      }),
       questionId: z.number().int().positive().meta({title: 'Question id'}),
       choiceId: z.string().min(1).meta({
         title: 'Choice id',

@@ -10,7 +10,11 @@ import {CHECKLIST_WIDGET} from '@cdo/apps/lab2/checklist/checklistSchema';
 
 import {ChecklistWidget} from '../checklist/ChecklistEditor';
 import IconPickerWidget, {ICON_WIDGET} from '../iconPicker/IconPickerWidget';
-import SchemaForm, {problemsFrom, Widget} from '../schemaForm/SchemaForm';
+import SchemaForm, {
+  problemsFrom,
+  ReferenceOption,
+  Widget,
+} from '../schemaForm/SchemaForm';
 
 import styles from './level-config-editor.module.scss';
 
@@ -28,6 +32,8 @@ export interface LevelConfigEditorProps {
   /** Draws the level as the current value would run it. */
   renderPreview?: (value: unknown, valid: boolean) => React.ReactNode;
   widgets?: Record<string, Widget>;
+  /** Lists of choices for fields whose options name them as "@name". */
+  suppliedOptions?: Record<string, ReferenceOption[]>;
 }
 
 const LevelConfigEditor: React.FunctionComponent<LevelConfigEditorProps> = ({
@@ -38,6 +44,7 @@ const LevelConfigEditor: React.FunctionComponent<LevelConfigEditorProps> = ({
   featureStart,
   renderPreview,
   widgets,
+  suppliedOptions,
 }) => {
   const [value, setValue] = useState<unknown>(initialValue);
   const [dropped, setDropped] = useState<string[]>([]);
@@ -110,6 +117,7 @@ const LevelConfigEditor: React.FunctionComponent<LevelConfigEditorProps> = ({
           ...widgets,
         }}
         featureStart={featureStart && (path => featureStart(path, value))}
+        suppliedOptions={suppliedOptions}
       />
       <div>
         <MuiButton size="small" onClick={() => setShowJson(!showJson)}>

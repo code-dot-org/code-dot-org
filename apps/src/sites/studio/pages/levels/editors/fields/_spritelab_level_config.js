@@ -11,6 +11,7 @@ if (container) {
       levelId={getScriptData('levelid')}
       initialConfig={getScriptData('levelconfig')}
       flatProperties={getScriptData('flatproperties')}
+      toolboxDefinition={getScriptData('toolboxdefinition')}
     />,
     container
   );

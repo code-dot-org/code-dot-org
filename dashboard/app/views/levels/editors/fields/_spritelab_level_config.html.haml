@@ -9,4 +9,4 @@
 
 - content_for :body_scripts do
   %script{src: webpack_asset_path('js/levels/editors/fields/_spritelab_level_config.js'),
-    data: {levelid: @level.id.to_json, levelconfig: @level.properties['level_config'].to_json, flatproperties: flat_properties.to_json}}
+    data: {levelid: @level.id.to_json, levelconfig: @level.properties['level_config'].to_json, flatproperties: flat_properties.to_json, toolboxdefinition: @level.properties['toolbox_definition'].to_json}}

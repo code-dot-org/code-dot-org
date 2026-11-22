@@ -38,6 +38,7 @@ export const measuresSchema = z.union([
         .record(z.string().min(1), z.number().int().min(0))
         .meta({
           title: 'Evidence levels',
+          keyOptions: '../../choices.*.id',
           description:
             'The evidence level each choice shows, by choice id. A choice left out shows nothing.',
         }),
@@ -94,7 +95,9 @@ export const multipleChoiceDiagnosticQuestionSchema = subsetOf<
        * Otherwise any option allows the student to continue.
        */
       correctChoiceId: z.string().min(1).optional().meta({
-        title: 'Correct choice id',
+        title: 'Correct choice',
+        widget: 'reference',
+        options: '../choices.*.id',
         description:
           'When set, the student retries until correct. Otherwise any choice lets the student continue.',
       }),
