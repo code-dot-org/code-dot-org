@@ -222,8 +222,8 @@ export function problemsFrom(
   return problems;
 }
 
-// Plain words for zod's default messages about a missing value and a
-// too-short string or list. A message the schema sets itself is kept.
+// Plain words for zod's default messages about a missing value, an empty
+// string and a too-short list. A message the schema sets itself is kept.
 function plainMessage(issue: {
   message: string;
   code?: string;
@@ -1359,10 +1359,9 @@ const TextAreaField: React.FunctionComponent<FieldProps> = ({
   );
 };
 
-/** A choice from elsewhere in the value, by its place in the value:
-    "skills.*" is the keys of the skills map, "checkpoints.*.id" each
-    checkpoint's id. A choice is labeled with its item's title when it has
-    one. */
+/** The choices at one place in the whole value (a reference field's
+    `options`, described in schemaMeta.ts). Each choice is labeled with its
+    item's title when it has one. */
 export function referenceOptions(
   root: unknown,
   pattern: string
@@ -1403,8 +1402,8 @@ export function referenceOptions(
     .filter(option => option.value);
 }
 
-/** A field whose choices come from elsewhere in the value (`options`): a
-    list of them to tick, or a menu of them for one. A value that is not
+/** A field whose choices come from elsewhere in the value (`options`):
+    checkboxes for a list, a menu for a single value. A value that is not
     among the choices is kept and shown as not found. With no choices at
     all it is a text field. */
 const ReferenceField: React.FunctionComponent<FieldProps> = props => {
@@ -1477,7 +1476,7 @@ const ReferenceField: React.FunctionComponent<FieldProps> = props => {
   );
 };
 
-/** A value the schema fixes: shown, not edited. */
+/** A value the schema fixes: shown, or a box to tick when it is optional. */
 const LiteralField: React.FunctionComponent<FieldProps> = ({
   schema,
   value,
@@ -1486,7 +1485,6 @@ const LiteralField: React.FunctionComponent<FieldProps> = ({
   bare,
 }) => {
   const meta = metaAt(schema, path);
-  // An optional fixed value is either there or not: a box to tick.
   if (unwrap(schema).optional) {
     return (
       <div className={styles.field}>

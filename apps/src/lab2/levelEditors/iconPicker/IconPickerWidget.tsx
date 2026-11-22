@@ -15,7 +15,7 @@ import solidIcons from './solidIconNames.json';
 
 import styles from './icon-picker.module.scss';
 
-/** The widget name a schema gives an icon field. */
+/** The `widget` meta value that selects this widget. */
 export const ICON_WIDGET = 'icon';
 
 const ICON_NAMES = [...kitIcons, ...solidIcons.names];

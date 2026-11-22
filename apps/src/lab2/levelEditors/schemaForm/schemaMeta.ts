@@ -4,11 +4,13 @@
 // `feature` marks an optional group as a feature the level turns on, and
 // is the label of its switch. `widget` asks for a control other than the
 // one the node's type would get: one the form has (lines, names, markdown,
-// json, reference) or one its caller supplies. A reference field's
-// `options` says where in the whole value its choices are: "skills.*" for a
-// map's keys, "checkpoints.*.id" for each item's id. `defaultValue` is what the lab does
-// when a setting is not set, so the form can show that value in the unset
-// control.
+// json, reference) or one its caller supplies. `defaultValue` is what the
+// lab does when a setting is not set, so the form can show that value in
+// the unset control.
+//
+// A reference field's `options` says where in the whole value its choices
+// are. `*` stands for every key or index: "skills.*" gives the keys of the
+// skills map, "checkpoints.*.id" each checkpoint's id.
 
 declare module 'zod' {
   interface GlobalMeta {

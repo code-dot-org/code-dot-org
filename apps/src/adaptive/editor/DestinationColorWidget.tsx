@@ -10,7 +10,7 @@ import {DESTINATION_COLORS} from '../schema/destination';
 
 import styles from './destination-color-widget.module.scss';
 
-/** The widget name the destination schema gives its color. */
+/** The `widget` meta value that selects this widget. */
 export const DESTINATION_COLOR_WIDGET = 'destinationColor';
 
 const DestinationColorWidget: React.FunctionComponent<WidgetProps> = ({
