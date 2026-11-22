@@ -4,11 +4,19 @@
 // scrolls out of view, as the preview in the panels editor
 // (EditPanels.tsx) does.
 
+import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
-import {PREVIEW_CONFIG, PREVIEW_PARAM, PREVIEW_READY} from './levelPreview';
+import {
+  PREVIEW_CONFIG,
+  PREVIEW_GO,
+  PREVIEW_PARAM,
+  PREVIEW_PLACES,
+  PREVIEW_READY,
+  PreviewPlace,
+} from './levelPreview';
 
 import styles from './level-preview-frame.module.scss';
 
@@ -36,17 +44,25 @@ const LevelPreviewFrame: React.FunctionComponent<LevelPreviewFrameProps> = ({
   const frameRef = useRef<HTMLIFrameElement>(null);
   const slotRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
+  const [places, setPlaces] = useState<PreviewPlace[]>([]);
   const [pinned, setPinned] = useState(false);
   const [slotWidth, setSlotWidth] = useState(640);
 
   useEffect(() => {
     const onMessage = (event: MessageEvent) => {
       if (
-        event.origin === window.location.origin &&
-        event.source === frameRef.current?.contentWindow &&
-        event.data?.type === PREVIEW_READY
+        event.origin !== window.location.origin ||
+        event.source !== frameRef.current?.contentWindow
       ) {
+        return;
+      }
+      if (event.data?.type === PREVIEW_READY) {
         setReady(true);
+      } else if (
+        event.data?.type === PREVIEW_PLACES &&
+        Array.isArray(event.data.places)
+      ) {
+        setPlaces(event.data.places);
       }
     };
     window.addEventListener('message', onMessage);
@@ -100,11 +116,29 @@ const LevelPreviewFrame: React.FunctionComponent<LevelPreviewFrameProps> = ({
         Preview
       </MuiTypography>
       <p className={styles.help}>
-        The level as these settings run it, starting from your own project for
-        it each time the settings change. Nothing you do here is saved to the
-        project.
+        The level as these settings run it. It starts over each time the
+        settings change, and nothing done in it is saved.
         {!valid && ' The preview waits until the settings are valid.'}
       </p>
+      {places.length > 0 && (
+        <SimpleDropdown
+          name="level-preview-place"
+          labelText="Go to"
+          size="s"
+          items={[
+            {value: '', text: 'Choose a place'},
+            ...places.map(place => ({value: place.id, text: place.label})),
+          ]}
+          selectedValue=""
+          onChange={event =>
+            event.target.value &&
+            frameRef.current?.contentWindow?.postMessage(
+              {type: PREVIEW_GO, place: event.target.value},
+              window.location.origin
+            )
+          }
+        />
+      )}
       <div
         ref={slotRef}
         className={styles.slot}
