@@ -1,3 +1,7 @@
+import {announcePreviewCurrentPlace} from '@cdo/apps/lab2/levelEditors/levelConfig/levelPreview';
+
+import {MAP_PLACE} from './previewPathway';
+
 const CHECKPOINT_KEY = 'checkpoint';
 const STEP_KEY = 'step';
 
@@ -22,6 +26,7 @@ export function updateUrl(checkpointId: string, stepId: string): void {
   p.set(CHECKPOINT_KEY, checkpointId);
   p.set(STEP_KEY, stepId);
   window.history.pushState(null, '', `?${p.toString()}`);
+  announcePreviewCurrentPlace(`${checkpointId}/${stepId}`);
 }
 
 export function clearUrl(): void {
@@ -30,4 +35,5 @@ export function clearUrl(): void {
   p.delete(STEP_KEY);
   const qs = p.toString();
   window.history.pushState(null, '', qs ? `?${qs}` : window.location.pathname);
+  announcePreviewCurrentPlace(MAP_PLACE);
 }

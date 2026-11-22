@@ -63,7 +63,7 @@ export function withServedParts(edited: unknown, served: unknown): unknown {
   return copy;
 }
 
-const MAP_PLACE = 'map';
+export const MAP_PLACE = 'map';
 
 /** The map, each checkpoint and each of its steps, for the preview's menu. */
 export function previewPlaces(pathway: Pathway): PreviewPlace[] {
@@ -71,10 +71,18 @@ export function previewPlaces(pathway: Pathway): PreviewPlace[] {
     {id: MAP_PLACE, label: 'The map'},
     ...pathway.checkpoints.flatMap(checkpoint => [
       {id: checkpoint.id, label: `Checkpoint: ${checkpoint.title}`},
-      ...checkpoint.steps.map(step => ({
-        id: `${checkpoint.id}/${step.id}`,
-        label: `${checkpoint.title} / ${step.title}`,
-      })),
+      ...checkpoint.steps.map((step, index) => {
+        // Steps in a row can share a title; their kind tells them apart.
+        const shared =
+          checkpoint.steps.filter(other => other.title === step.title).length >
+          1;
+        return {
+          id: `${checkpoint.id}/${step.id}`,
+          label: `${checkpoint.title} / ${index + 1}. ${step.title}${
+            shared ? ` (${step.kind})` : ''
+          }`,
+        };
+      }),
     ]),
   ];
 }
