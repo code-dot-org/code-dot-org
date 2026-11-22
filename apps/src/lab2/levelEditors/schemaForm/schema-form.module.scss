@@ -126,3 +126,57 @@
 .recordValue {
   min-width: 0;
 }
+
+.toolbar {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+}
+
+.groupHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 16px;
+}
+
+.disclosure {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  min-height: 28px;
+  padding: 2px 4px;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  color: var(--text-neutral-primary);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--background-neutral-secondary);
+  }
+}
+
+.caret {
+  width: 1em;
+}
+
+.disclosureLabel {
+  font-weight: 600;
+}
+
+.summary {
+  color: var(--text-neutral-secondary);
+  font-size: 13px;
+}
+
+.badge {
+  padding: 0 6px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--text-error-primary, #b00020);
+  border: 1px solid currentcolor;
+}

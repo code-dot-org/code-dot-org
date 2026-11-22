@@ -8,7 +8,7 @@
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import TextField from '@code-dot-org/component-library/textField';
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {createContext, useContext, useEffect, useState} from 'react';
 import type {ZodType} from 'zod';
@@ -82,6 +82,96 @@ function metaAt(schema: ZodType, path: Path) {
 }
 const idOf = (path: Path) => `schema-field-${path.join('-') || 'root'}`;
 
+// Sections start closed. A request to open or close them all bumps
+// `request`, and every section follows the latest one.
+const CollapseContext = createContext<{request: number; open: boolean}>({
+  request: 0,
+  open: false,
+});
+
+/** Whether a section is open, starting closed unless `startOpen`. */
+export function useSectionOpen(
+  startOpen = false
+): [boolean, (open: boolean) => void] {
+  const {request, open} = useContext(CollapseContext);
+  const [isOpen, setOpen] = useState(startOpen);
+  useEffect(() => {
+    if (request) {
+      setOpen(open);
+    }
+  }, [request, open]);
+  return [isOpen, setOpen];
+}
+
+/** How many problems are at this path or under it. */
+export function useProblemCount(path: Path): number {
+  const {problems} = useContext(Context);
+  const key = keyOf(path);
+  let count = 0;
+  problems.forEach((messages, at) => {
+    if (!key || at === key || at.startsWith(`${key}.`)) {
+      count += messages.length;
+    }
+  });
+  return count;
+}
+
+const SUMMARY_KEYS = [
+  'title',
+  'name',
+  'text',
+  'questionTitle',
+  'heading',
+  'label',
+  'id',
+  'key',
+];
+
+/** A line from a value that tells one item of a list from another. */
+export function summaryOf(value: unknown): string {
+  if (!value || typeof value !== 'object') {
+    return '';
+  }
+  const record = value as Record<string, unknown>;
+  const found = SUMMARY_KEYS.map(key => record[key]).find(
+    field => typeof field === 'string' && field.trim()
+  ) as string | undefined;
+  if (!found) {
+    return '';
+  }
+  return found.length > 70 ? `${found.slice(0, 69)}…` : found;
+}
+
+/** The button that opens and closes a section, with what is inside it. */
+export const Disclosure: React.FunctionComponent<{
+  open: boolean;
+  onToggle: () => void;
+  label: string;
+  summary?: string;
+  path: Path;
+}> = ({open, onToggle, label, summary, path}) => {
+  const problems = useProblemCount(path);
+  return (
+    <button
+      type="button"
+      className={styles.disclosure}
+      aria-expanded={open}
+      onClick={onToggle}
+    >
+      <span className={styles.caret} aria-hidden="true">
+        {open ? '▾' : '▸'}
+      </span>
+      <span className={styles.disclosureLabel}>{label}</span>
+      {summary && <span className={styles.summary}>{summary}</span>}
+      {problems > 0 && (
+        <span className={styles.badge}>
+          {problems === 1 ? '1 problem' : `${problems} problems`}
+        </span>
+      )}
+    </button>
+  );
+};
+
 /** Collects a zod error's issues by path, for the form. */
 export function problemsFrom(
   issues: {path: PropertyKey[]; message: string}[]
@@ -116,7 +206,7 @@ const SchemaForm: React.FunctionComponent<SchemaFormProps> = ({
     widgets={widgets}
     featureStart={featureStart}
   >
-    <div className={styles.form}>
+    <CollapseAll>
       <SchemaField
         schema={schema}
         value={value}
@@ -124,11 +214,39 @@ const SchemaForm: React.FunctionComponent<SchemaFormProps> = ({
         path={[]}
         bare
       />
-    </div>
+    </CollapseAll>
   </SchemaFormScope>
 );
 
 export default SchemaForm;
+
+/** Buttons that open or close every section of the form. */
+const CollapseAll: React.FunctionComponent<{children: React.ReactNode}> = ({
+  children,
+}) => {
+  const [state, setState] = useState({request: 0, open: false});
+  return (
+    <CollapseContext.Provider value={state}>
+      <div className={styles.form}>
+        <div className={styles.toolbar}>
+          <MuiButton
+            size="small"
+            onClick={() => setState({request: state.request + 1, open: true})}
+          >
+            Open all
+          </MuiButton>
+          <MuiButton
+            size="small"
+            onClick={() => setState({request: state.request + 1, open: false})}
+          >
+            Close all
+          </MuiButton>
+        </div>
+        {children}
+      </div>
+    </CollapseContext.Provider>
+  );
+};
 
 /** The problems and widgets that SchemaFields inside it read: for a widget
     used on its own, outside a SchemaForm. */
@@ -262,27 +380,39 @@ const FeatureSwitch: React.FunctionComponent<
   const {featureStart} = useContext(Context);
   const meta = metaAt(schema, path);
   const on = !isUnset(value);
+  const [open, setOpen] = useSectionOpen();
   return (
     <section
       className={classNames(styles.group, on && styles.groupOn)}
       aria-label={meta.title}
     >
-      <Checkbox
-        name={idOf(path)}
-        checked={on}
-        size="s"
-        label={meta.feature ?? meta.title}
-        onChange={event =>
-          onChange(
-            event.target.checked
-              ? featureStart?.(keyOf(path)) ?? startValue(schema)
-              : undefined
-          )
-        }
-      />
+      <div className={styles.groupHeader}>
+        <Checkbox
+          name={idOf(path)}
+          checked={on}
+          size="s"
+          label={meta.feature ?? meta.title}
+          onChange={event => {
+            setOpen(event.target.checked);
+            onChange(
+              event.target.checked
+                ? featureStart?.(keyOf(path)) ?? startValue(schema)
+                : undefined
+            );
+          }}
+        />
+        {on && (
+          <Disclosure
+            open={open}
+            onToggle={() => setOpen(!open)}
+            label="Settings"
+            path={path}
+          />
+        )}
+      </div>
       {meta.description && <p className={styles.help}>{meta.description}</p>}
       <ProblemsAt path={path} />
-      {on && <div className={styles.children}>{children}</div>}
+      {on && open && <div className={styles.children}>{children}</div>}
     </section>
   );
 };
@@ -298,6 +428,7 @@ const ObjectField: React.FunctionComponent<FieldProps> = ({
   const meta = metaAt(schema, path);
   const {optional} = unwrap(schema);
   const problems = useProblems(path);
+  const [open, setOpen] = useSectionOpen();
   const on = !isUnset(value);
   const object = (on ? value : {}) as Record<string, unknown>;
   const fields = (
@@ -329,37 +460,50 @@ const ObjectField: React.FunctionComponent<FieldProps> = ({
       </>
     );
   }
-  const heading = path.length === 1 ? 'h3' : 'h4';
   return (
     <section
       className={classNames(styles.group, on && styles.groupOn)}
       aria-label={meta.title}
     >
-      {optional ? (
-        <Checkbox
-          name={idOf(path)}
-          checked={on}
-          size="s"
-          label={meta.feature ?? meta.title}
-          onChange={event =>
-            onChange(
-              event.target.checked
-                ? featureStart?.(keyOf(path)) ?? startValue(schema)
-                : undefined
-            )
-          }
-        />
-      ) : (
-        <MuiTypography
-          variant={heading === 'h3' ? 'h5' : 'h6'}
-          component={heading}
-        >
-          {meta.title}
-        </MuiTypography>
-      )}
+      <div className={styles.groupHeader}>
+        {optional ? (
+          <>
+            <Checkbox
+              name={idOf(path)}
+              checked={on}
+              size="s"
+              label={meta.feature ?? meta.title}
+              onChange={event => {
+                setOpen(event.target.checked);
+                onChange(
+                  event.target.checked
+                    ? featureStart?.(keyOf(path)) ?? startValue(schema)
+                    : undefined
+                );
+              }}
+            />
+            {on && (
+              <Disclosure
+                open={open}
+                onToggle={() => setOpen(!open)}
+                label="Settings"
+                path={path}
+              />
+            )}
+          </>
+        ) : (
+          <Disclosure
+            open={open}
+            onToggle={() => setOpen(!open)}
+            label={meta.title ?? ''}
+            summary={open ? undefined : summaryOf(value)}
+            path={path}
+          />
+        )}
+      </div>
       {meta.description && <p className={styles.help}>{meta.description}</p>}
       <ProblemList problems={problems} />
-      {on && fields}
+      {on && open && fields}
     </section>
   );
 };
@@ -370,6 +514,8 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
   const meta = metaAt(schema, path);
   const {featureStart} = useContext(Context);
   const {optional} = unwrap(schema);
+  // The row added last starts open; the rest start closed.
+  const [added, setAdded] = useState<number>();
   if (kindOf(element) === 'enum') {
     return <EnumListField {...props} />;
   }
@@ -391,38 +537,17 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
   const rows = (
     <ol className={styles.rows}>
       {items.map((item, index) => (
-        <li key={index} className={styles.row}>
-          <div className={styles.rowHeader}>
-            <span className={styles.rowTitle}>
-              {title} {index + 1}
-            </span>
-            <span className={styles.rowButtons}>
-              <MuiButton
-                size="small"
-                disabled={index === 0}
-                onClick={() => move(index, index - 1)}
-                aria-label={`Move ${title} ${index + 1} up`}
-              >
-                Up
-              </MuiButton>
-              <MuiButton
-                size="small"
-                disabled={index === items.length - 1}
-                onClick={() => move(index, index + 1)}
-                aria-label={`Move ${title} ${index + 1} down`}
-              >
-                Down
-              </MuiButton>
-              <MuiButton
-                size="small"
-                color="error"
-                onClick={() => onChange(items.filter((_, i) => i !== index))}
-                aria-label={`Remove ${title} ${index + 1}`}
-              >
-                Remove
-              </MuiButton>
-            </span>
-          </div>
+        <ListRow
+          key={index}
+          title={`${title} ${index + 1}`}
+          path={[...path, index]}
+          value={item}
+          startOpen={index === added}
+          first={index === 0}
+          last={index === items.length - 1}
+          onMove={step => move(index, index + step)}
+          onRemove={() => onChange(items.filter((_, i) => i !== index))}
+        >
           <SchemaField
             schema={element}
             value={item}
@@ -432,7 +557,7 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
               onChange(items.map((old, i) => (i === index ? next : old)))
             }
           />
-        </li>
+        </ListRow>
       ))}
     </ol>
   );
@@ -440,7 +565,10 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
     <MuiButton
       variant="outlined"
       size="small"
-      onClick={() => onChange([...items, startValue(element)])}
+      onClick={() => {
+        setAdded(items.length);
+        onChange([...items, startValue(element)]);
+      }}
     >
       Add {title.toLowerCase()}
     </MuiButton>
@@ -480,6 +608,93 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
   );
 };
 
+/** One item of a list: its heading, its buttons, and its fields when open. */
+export const ListRow: React.FunctionComponent<{
+  title: string;
+  path: Path;
+  value: unknown;
+  startOpen?: boolean;
+  first: boolean;
+  last: boolean;
+  onMove: (step: -1 | 1) => void;
+  onRemove: () => void;
+  children: React.ReactNode;
+}> = ({
+  title,
+  path,
+  value,
+  startOpen,
+  first,
+  last,
+  onMove,
+  onRemove,
+  children,
+}) => {
+  const [open, setOpen] = useSectionOpen(startOpen);
+  return (
+    <li className={styles.row}>
+      <div className={styles.rowHeader}>
+        <Disclosure
+          open={open}
+          onToggle={() => setOpen(!open)}
+          label={title}
+          summary={summaryOf(value)}
+          path={path}
+        />
+        <span className={styles.rowButtons}>
+          <MuiButton
+            size="small"
+            disabled={first}
+            onClick={() => onMove(-1)}
+            aria-label={`Move ${title} up`}
+          >
+            Up
+          </MuiButton>
+          <MuiButton
+            size="small"
+            disabled={last}
+            onClick={() => onMove(1)}
+            aria-label={`Move ${title} down`}
+          >
+            Down
+          </MuiButton>
+          <MuiButton
+            size="small"
+            color="error"
+            onClick={onRemove}
+            aria-label={`Remove ${title}`}
+          >
+            Remove
+          </MuiButton>
+        </span>
+      </div>
+      {open && children}
+    </li>
+  );
+};
+
+/** A map entry whose value is a group: its name, and the group when open. */
+const RecordGroupRow: React.FunctionComponent<{
+  name: string;
+  path: Path;
+  value: unknown;
+  children: React.ReactNode;
+}> = ({name, path, value, children}) => {
+  const [open, setOpen] = useSectionOpen();
+  return (
+    <div className={styles.row}>
+      <Disclosure
+        open={open}
+        onToggle={() => setOpen(!open)}
+        label={name || '(no name)'}
+        summary={summaryOf(value)}
+        path={path}
+      />
+      {open && children}
+    </div>
+  );
+};
+
 const RecordField: React.FunctionComponent<FieldProps> = ({
   schema,
   value,
@@ -509,19 +724,37 @@ const RecordField: React.FunctionComponent<FieldProps> = ({
               }
             />
             <div className={styles.recordValue}>
-              <SchemaField
-                schema={valueSchema}
-                value={entry}
-                path={[...path, key]}
-                bare
-                onChange={next =>
-                  write(
-                    entries.map(([k, v], i) =>
-                      i === index ? [k, next ?? ''] : [k, v]
+              {kindOf(valueSchema) === 'object' ? (
+                <RecordGroupRow name={key} path={[...path, key]} value={entry}>
+                  <SchemaField
+                    schema={valueSchema}
+                    value={entry}
+                    path={[...path, key]}
+                    bare
+                    onChange={next =>
+                      write(
+                        entries.map(([k, v], i) =>
+                          i === index ? [k, next ?? ''] : [k, v]
+                        )
+                      )
+                    }
+                  />
+                </RecordGroupRow>
+              ) : (
+                <SchemaField
+                  schema={valueSchema}
+                  value={entry}
+                  path={[...path, key]}
+                  bare
+                  onChange={next =>
+                    write(
+                      entries.map(([k, v], i) =>
+                        i === index ? [k, next ?? ''] : [k, v]
+                      )
                     )
-                  )
-                }
-              />
+                  }
+                />
+              )}
             </div>
             <MuiButton
               size="small"

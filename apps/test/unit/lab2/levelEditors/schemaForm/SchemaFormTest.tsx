@@ -69,6 +69,18 @@ let latest: unknown;
 const value = () => latest as any;
 
 describe('SchemaForm', () => {
+  it('starts sections closed, shows their problems, and opens them all at once', () => {
+    render(<Harness initial={{steps: [{text: 'one'}, {text: ''}]}} />);
+    // Only the top-level Name field shows.
+    expect(screen.getAllByRole('textbox')).toHaveLength(1);
+    expect(screen.getByText('1 problem')).toBeInTheDocument();
+    expect(screen.getByText('one')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name: 'Open all'}));
+    expect(screen.getAllByRole('textbox')).toHaveLength(3);
+    fireEvent.click(screen.getByRole('button', {name: 'Close all'}));
+    expect(screen.getAllByRole('textbox')).toHaveLength(1);
+  });
+
   it('turns a feature on with its switch, and then shows its settings', () => {
     render(<Harness initial={{}} />);
     expect(screen.queryByText('Size')).not.toBeInTheDocument();
@@ -110,6 +122,8 @@ describe('SchemaForm', () => {
 
   it('reads names typed with commas', () => {
     render(<Harness initial={{world: {}}} />);
+    expect(screen.queryByRole('textbox', {name: 'Roles'})).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Settings'}));
     fireEvent.change(screen.getByRole('textbox', {name: 'Roles'}), {
       target: {value: 'hero, friend'},
     });

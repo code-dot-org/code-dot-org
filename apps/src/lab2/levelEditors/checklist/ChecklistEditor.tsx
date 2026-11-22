@@ -2,10 +2,11 @@
 // any Lab2 lab.
 
 import {Button as MuiButton} from '@mui/material';
-import React, {useMemo} from 'react';
+import React, {useMemo, useState} from 'react';
 import type {ZodType} from 'zod';
 
 import {
+  ListRow,
   Path,
   problemsFrom,
   SchemaField,
@@ -36,6 +37,8 @@ const ChecklistFields: React.FunctionComponent<WidgetProps> = ({
   onChange,
   path,
 }) => {
+  // The step added last starts open; the rest start closed.
+  const [added, setAdded] = useState<number>();
   const shape = shapeOf(schema);
   const checklist = (value ?? {}) as Checklist;
   const steps = checklist.steps ?? [];
@@ -89,53 +92,39 @@ const ChecklistFields: React.FunctionComponent<WidgetProps> = ({
       />
       <ol className={styles.steps} aria-label="Steps">
         {steps.map((step, index) => (
-          <li key={index} className={styles.step}>
-            <div className={styles.stepHeader}>
-              <span className={styles.stepNumber}>Step {index + 1}</span>
-              <span>
-                <MuiButton
-                  size="small"
-                  disabled={index === 0}
-                  onClick={() => move(index, index - 1)}
-                  aria-label={`Move step ${index + 1} up`}
-                >
-                  Up
-                </MuiButton>
-                <MuiButton
-                  size="small"
-                  disabled={index === steps.length - 1}
-                  onClick={() => move(index, index + 1)}
-                  aria-label={`Move step ${index + 1} down`}
-                >
-                  Down
-                </MuiButton>
-                <MuiButton
-                  size="small"
-                  color="error"
-                  onClick={() => setSteps(steps.filter((_, i) => i !== index))}
-                  aria-label={`Remove step ${index + 1}`}
-                >
-                  Remove
-                </MuiButton>
-              </span>
+          <ListRow
+            key={index}
+            title={`Step ${index + 1}`}
+            path={[...path, 'steps', index]}
+            value={step}
+            startOpen={index === added}
+            first={index === 0}
+            last={index === steps.length - 1}
+            onMove={by => move(index, index + by)}
+            onRemove={() => setSteps(steps.filter((_, i) => i !== index))}
+          >
+            <div className={styles.step}>
+              {(['text', 'check', 'shownWhen', 'id'] as const).map(key => (
+                <SchemaField
+                  key={key}
+                  schema={stepShape[key]}
+                  value={step[key]}
+                  path={stepPath(index, key)}
+                  onChange={next => setStep(index, key, next)}
+                />
+              ))}
             </div>
-            {(['text', 'check', 'shownWhen', 'id'] as const).map(key => (
-              <SchemaField
-                key={key}
-                schema={stepShape[key]}
-                value={step[key]}
-                path={stepPath(index, key)}
-                onChange={next => setStep(index, key, next)}
-              />
-            ))}
-          </li>
+          </ListRow>
         ))}
       </ol>
       <div>
         <MuiButton
           variant="outlined"
           size="small"
-          onClick={() => setSteps([...steps, startValue(stepSchema) as Step])}
+          onClick={() => {
+            setAdded(steps.length);
+            setSteps([...steps, startValue(stepSchema) as Step]);
+          }}
         >
           Add step
         </MuiButton>
