@@ -10,7 +10,11 @@
 //
 // A reference field's `options` says where in the whole value its choices
 // are. `*` stands for every key or index: "skills.*" gives the keys of the
-// skills map, "checkpoints.*.id" each checkpoint's id.
+// skills map, "checkpoints.*.id" each checkpoint's id. Each leading "../"
+// starts one step up from the field instead: on a question's
+// correctChoiceId, "../choices.*.id" gives that question's choice ids.
+// "@name" names a list the page supplies (SchemaForm's suppliedOptions).
+// A map's `keyOptions` says where its keys come from, the same way.
 
 declare module 'zod' {
   interface GlobalMeta {
@@ -19,6 +23,7 @@ declare module 'zod' {
     placeholder?: string;
     defaultValue?: unknown;
     options?: string;
+    keyOptions?: string;
   }
 }
 

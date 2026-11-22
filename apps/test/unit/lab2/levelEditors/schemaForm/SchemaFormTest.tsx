@@ -208,6 +208,25 @@ describe('reference fields', () => {
     ]);
   });
 
+  it('climbs from the field with .., and reads lists the page supplies', () => {
+    const value = {questions: [{choices: [{id: 'a', text: 'Yes'}, {id: 'b'}]}]};
+    expect(
+      referenceOptions(value, '../choices.*.id', [
+        'questions',
+        0,
+        'correctChoiceId',
+      ])
+    ).toEqual([
+      {value: 'a', label: 'a: Yes'},
+      {value: 'b', label: 'b'},
+    ]);
+    expect(referenceOptions({skillIds: ['build']}, 'skillIds.*')).toEqual([
+      {value: 'build', label: 'build'},
+    ]);
+    const blocks = [{value: 'say', label: 'say'}];
+    expect(referenceOptions({}, '@blocks', [], {blocks})).toBe(blocks);
+  });
+
   it('ticks choices from elsewhere in the value, and keeps one not found', () => {
     let latest: unknown;
     function Form() {

@@ -67,6 +67,8 @@ interface FormContext {
   removedValues?: Map<string, unknown>;
   /** The whole value, for fields whose choices come from elsewhere in it. */
   root?: unknown;
+  /** Lists of choices the page supplies, by name, for `options: "@name"`. */
+  suppliedOptions?: Record<string, ReferenceOption[]>;
 }
 
 const Context = createContext<FormContext>({problems: new Map(), widgets: {}});
@@ -256,6 +258,8 @@ interface SchemaFormProps {
   problems?: Problems;
   widgets?: Record<string, Widget>;
   featureStart?: (path: string) => unknown;
+  /** Lists of choices for `options: "@name"`, by name. */
+  suppliedOptions?: Record<string, ReferenceOption[]>;
 }
 
 const SchemaForm: React.FunctionComponent<SchemaFormProps> = ({
@@ -265,12 +269,14 @@ const SchemaForm: React.FunctionComponent<SchemaFormProps> = ({
   problems = new Map(),
   widgets = {},
   featureStart,
+  suppliedOptions,
 }) => (
   <SchemaFormScope
     problems={problems}
     widgets={widgets}
     featureStart={featureStart}
     root={value}
+    suppliedOptions={suppliedOptions}
   >
     <CollapseAll>
       <SchemaField
@@ -317,11 +323,25 @@ const CollapseAll: React.FunctionComponent<{children: React.ReactNode}> = ({
     used on its own, outside a SchemaForm. */
 export const SchemaFormScope: React.FunctionComponent<
   Partial<FormContext> & {children: React.ReactNode}
-> = ({problems = new Map(), widgets = {}, featureStart, root, children}) => {
+> = ({
+  problems = new Map(),
+  widgets = {},
+  featureStart,
+  root,
+  suppliedOptions,
+  children,
+}) => {
   const removedValues = useRef(new Map<string, unknown>()).current;
   return (
     <Context.Provider
-      value={{problems, widgets, featureStart, removedValues, root}}
+      value={{
+        problems,
+        widgets,
+        featureStart,
+        removedValues,
+        root,
+        suppliedOptions,
+      }}
     >
       {children}
     </Context.Provider>
@@ -827,6 +847,7 @@ const RecordField: React.FunctionComponent<FieldProps> = ({
 }) => {
   const entries = Object.entries((value ?? {}) as Record<string, unknown>);
   const valueSchema = recordValueOf(schema);
+  const keyOptions = useReferenceOptions(metaAt(schema, path).keyOptions, path);
   const {optional} = unwrap(schema);
   const write = (next: [string, unknown][]) =>
     onChange(next.length || !optional ? Object.fromEntries(next) : undefined);
@@ -835,18 +856,48 @@ const RecordField: React.FunctionComponent<FieldProps> = ({
       <div className={styles.recordRows}>
         {entries.map(([key, entry], index) => (
           <div key={index} className={styles.recordRow}>
-            <input
-              className={styles.input}
-              aria-label="Name"
-              value={key}
-              onChange={event =>
-                write(
-                  entries.map(([k, v], i) =>
-                    i === index ? [event.target.value, v] : [k, v]
+            {keyOptions.length ? (
+              <SimpleDropdown
+                name={`${idOf(path)}-key-${index}`}
+                labelText="Name"
+                isLabelVisible={false}
+                size="s"
+                items={[
+                  ...(key ? [] : [{value: '', text: '(choose)'}]),
+                  ...(keyOptions.some(option => option.value === key) || !key
+                    ? []
+                    : [{value: key, text: `${key} (not found)`}]),
+                  ...keyOptions
+                    .filter(
+                      option =>
+                        option.value === key ||
+                        !entries.some(([k]) => k === option.value)
+                    )
+                    .map(option => ({value: option.value, text: option.label})),
+                ]}
+                selectedValue={key}
+                onChange={event =>
+                  write(
+                    entries.map(([k, v], i) =>
+                      i === index ? [event.target.value, v] : [k, v]
+                    )
                   )
-                )
-              }
-            />
+                }
+              />
+            ) : (
+              <input
+                className={styles.input}
+                aria-label="Name"
+                value={key}
+                onChange={event =>
+                  write(
+                    entries.map(([k, v], i) =>
+                      i === index ? [event.target.value, v] : [k, v]
+                    )
+                  )
+                }
+              />
+            )}
             <div className={styles.recordValue}>
               {kindOf(valueSchema) === 'object' ? (
                 <RecordGroupRow name={key} path={[...path, key]} value={entry}>
@@ -1359,14 +1410,40 @@ const TextAreaField: React.FunctionComponent<FieldProps> = ({
   );
 };
 
-/** The choices at one place in the whole value (a reference field's
-    `options`, described in schemaMeta.ts). Each choice is labeled with its
-    item's title when it has one. */
+/** A choice for a reference field: the value written, and what is shown. */
+export interface ReferenceOption {
+  value: string;
+  label: string;
+}
+
+/** The choices a reference field's `options` names (schemaMeta.ts), from
+    the whole value or, after `..`, from near the field at `path`. Each
+    choice is labeled with its item's title when it has one. */
 export function referenceOptions(
   root: unknown,
-  pattern: string
-): {value: string; label: string}[] {
-  const parts = pattern.split('.');
+  pattern: string,
+  path: Path = [],
+  supplied: Record<string, ReferenceOption[]> = {}
+): ReferenceOption[] {
+  if (pattern.startsWith('@')) {
+    return supplied[pattern.slice(1)] ?? [];
+  }
+  // Each leading "../" climbs one step from the field; without one the
+  // place is in the whole value.
+  let rest = pattern;
+  let base: Path = rest.startsWith('../') ? path : [];
+  while (rest.startsWith('../')) {
+    base = base.slice(0, -1);
+    rest = rest.slice(3);
+  }
+  const parts = rest.split('.').filter(part => part !== '');
+  let start: unknown = root;
+  base.forEach(step => {
+    start =
+      start && typeof start === 'object'
+        ? (start as Record<string, unknown>)[step]
+        : undefined;
+  });
   const children = (value: unknown, part: string): [string, unknown][] => {
     if (!value || typeof value !== 'object') {
       return [];
@@ -1378,7 +1455,7 @@ export function referenceOptions(
   // Each step keeps the node reached and the item it belongs to, so a
   // choice can be labeled with that item's title.
   let nodes: {key: string; value: unknown; item: unknown}[] = [
-    {key: '', value: root, item: undefined},
+    {key: '', value: start, item: undefined},
   ];
   parts.forEach(part => {
     nodes = nodes.flatMap(node =>
@@ -1389,10 +1466,16 @@ export function referenceOptions(
       }))
     );
   });
-  const lastIsKey = parts[parts.length - 1] === '*';
+  const lastIsStar = parts[parts.length - 1] === '*';
   return nodes
     .map(node => {
-      const name = lastIsKey ? node.key : String(node.value ?? '');
+      // A list of names gives its names; a map or a list of items gives
+      // its keys or indexes.
+      const name =
+        lastIsStar &&
+        (typeof node.value === 'object' || node.value === undefined)
+          ? node.key
+          : String(node.value ?? '');
       const title = summaryOf(node.item);
       return {
         value: name,
@@ -1402,22 +1485,48 @@ export function referenceOptions(
     .filter(option => option.value);
 }
 
+/** The choices a field's `options` or `keyOptions` names, where it is. */
+function useReferenceOptions(
+  pattern: string | undefined,
+  path: Path
+): ReferenceOption[] {
+  const {root, suppliedOptions} = useContext(Context);
+  return pattern ? referenceOptions(root, pattern, path, suppliedOptions) : [];
+}
+
 /** A field whose choices come from elsewhere in the value (`options`):
     checkboxes for a list, a menu for a single value. A value that is not
     among the choices is kept and shown as not found. With no choices at
     all it is a text field. */
 const ReferenceField: React.FunctionComponent<FieldProps> = props => {
   const {schema, value, onChange, path, bare} = props;
-  const {root} = useContext(Context);
   const meta = metaAt(schema, path);
   const {optional} = unwrap(schema);
-  const options = referenceOptions(root, meta.options ?? '');
-  const many = defOf(unwrap(schema).inner).type === 'array';
+  const options = useReferenceOptions(meta.options, path);
+  // A field that takes one name or several (namesTakeString) is ticked like
+  // a list, and keeps a lone name as a string.
+  const takesString = namesTakeString(schema);
+  const many = takesString || defOf(unwrap(schema).inner).type === 'array';
+  // Choices are names; a field of numbers (such as step numbers) stores
+  // them as numbers.
+  const element = takesString
+    ? namesElementOf(schema)
+    : many
+    ? elementOf(schema)
+    : schema;
+  const numeric = defOf(unwrap(element).inner).type === 'number';
+  const stored = (name: string) => (numeric ? Number(name) : name);
   if (!options.length) {
     return many ? <NamesField {...props} /> : <StringField {...props} />;
   }
   if (many) {
-    const chosen = Array.isArray(value) ? (value as string[]) : [];
+    const chosen = (
+      Array.isArray(value)
+        ? value
+        : typeof value === 'string' && value
+        ? [value]
+        : []
+    ).map(String);
     const missing = chosen.filter(
       name => !options.some(option => option.value === name)
     );
@@ -1435,7 +1544,17 @@ const ReferenceField: React.FunctionComponent<FieldProps> = props => {
                 const next = event.target.checked
                   ? [...chosen, option.value]
                   : chosen.filter(name => name !== option.value);
-                onChange(next.length || !optional ? next : undefined);
+                if (!next.length) {
+                  onChange(optional ? undefined : takesString ? '' : []);
+                } else if (
+                  takesString &&
+                  next.length === 1 &&
+                  !Array.isArray(value)
+                ) {
+                  onChange(next[0]);
+                } else {
+                  onChange(next.map(stored));
+                }
               }}
             />
           ))}
@@ -1448,7 +1567,7 @@ const ReferenceField: React.FunctionComponent<FieldProps> = props => {
       </FieldFrame>
     );
   }
-  const current = typeof value === 'string' ? value : '';
+  const current = value === undefined || value === null ? '' : String(value);
   const known = !current || options.some(option => option.value === current);
   return (
     <FieldFrame schema={schema} path={path} bare={bare}>
@@ -1468,7 +1587,9 @@ const ReferenceField: React.FunctionComponent<FieldProps> = props => {
         selectedValue={current}
         onChange={event =>
           onChange(
-            event.target.value === NOT_SET ? undefined : event.target.value
+            event.target.value === NOT_SET
+              ? undefined
+              : stored(event.target.value)
           )
         }
       />
