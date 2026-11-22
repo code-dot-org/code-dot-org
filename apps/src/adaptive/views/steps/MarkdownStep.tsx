@@ -9,6 +9,8 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import {MarkdownStep as MarkdownStepContent} from '../../types';
 
+import {focusOnArrival} from './focusOnArrival';
+
 import styles from './stepPlayer.module.scss';
 
 interface MarkdownStepProps {
@@ -30,7 +32,7 @@ const MarkdownStep: React.FunctionComponent<MarkdownStepProps> = ({
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    cardRef.current?.focus();
+    focusOnArrival(cardRef.current);
   }, []);
   // The site's stylesheet sets every image's height to auto, over the
   // height written on an <img> tag; a style on the element wins it back.

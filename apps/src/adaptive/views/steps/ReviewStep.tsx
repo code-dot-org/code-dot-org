@@ -19,6 +19,8 @@ import {ReviewDecision} from '../../schema/steps/review';
 import {Pathway, ReviewStep as ReviewStepContent} from '../../types';
 import {usePathwayContext} from '../PathwayContext';
 
+import {focusOnArrival} from './focusOnArrival';
+
 import styles from './stepPlayer.module.scss';
 
 interface ReviewStepProps {
@@ -53,7 +55,7 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
 
   const titleRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    titleRef.current?.focus();
+    focusOnArrival(titleRef.current);
   }, []);
 
   return (
