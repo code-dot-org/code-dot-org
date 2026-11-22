@@ -1,5 +1,7 @@
 import {createRoot, type Root} from 'react-dom/client';
 
+import {localization} from '@code-dot-org/core/plugins/localization';
+
 import constants, {Modes, OCEANS_UI_CONTAINER_ID} from './constants';
 import I18n from './i18n';
 import modeHelpers from './modeHelpers';
@@ -71,12 +73,17 @@ export const initAll = function (options: InitAllOptions): void {
 
   // And have the render UI handler be called every time state is set.
   setSetStateCallback(renderUI);
+
+  // Strings resolve at render time, so a language change needs a redraw.
+  localization.off('change', renderUI);
+  localization.on('change', renderUI);
 };
 
 export const stopUIRerender = (): void => {
   clearInterval(getState().guideTypingTimer);
   setState({guideTypingTimer: undefined}, {skipCallback: true});
   stopRender();
+  localization.off('change', renderUI);
 };
 
 function renderUI(): void {

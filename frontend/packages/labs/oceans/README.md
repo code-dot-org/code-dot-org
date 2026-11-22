@@ -180,7 +180,9 @@ Some dorsal fins define an x-adjustment to shift the anchor point. This is usefu
 
 ## I18n
 
-By default, this tutorial is in English. The strings live at `src/i18n/oceans.json` and should not be moved without corresponding changes to the I18n pipeline in `code-dot-org`. Translations can be passed into the app using the `i18n` param. If any translations are missing, the English string will be used as a default. This also means that adding a new string is safe and does not require any further steps.
+The English strings live at `i18n/oceans.json`. Each formatted string goes through LocalizeJS with the `oceans` label, and shows in English until LocalizeJS has a translation for it. A host may instead pass already translated strings with the `i18n` param of `initAll`; those are used verbatim.
+
+The page decides which LocalizeJS project to load. On studio pages that is the Rails layout. The dev harness loads the AI Foundations project itself and offers a language picker. It sends unrecognized phrases to the TMS only with `?localizeSave`; LocalizeJS records a new phrase only while the page shows a target language.
 
 ## Machine Learning algorithms
 

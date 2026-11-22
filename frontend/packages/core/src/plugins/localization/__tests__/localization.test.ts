@@ -147,6 +147,56 @@ describe('localization', () => {
     });
   });
 
+  describe('attach', () => {
+    it('binds a loader supplied after construction', async () => {
+      Object.defineProperty(global, 'window', {
+        value: {},
+        writable: true,
+        configurable: true,
+      });
+      const localization = new Localization();
+      expect(await localization.waitUntilLoaded()).toBe(false);
+
+      const loaded = await localization.attach(mockLocalizeJS('fr'));
+      expect(loaded).toBe(true);
+      expect(await localization.waitUntilLoaded()).toBe(true);
+      expect(localization.locale).toBe('fr');
+    });
+
+    it('emits change once the language list arrives', async () => {
+      const localization = new Localization();
+      const listener = vi.fn();
+      localization.on('change', listener);
+      listener.mockClear();
+
+      await localization.attach(mockLocalizeJS('fr'));
+      expect(listener).toHaveBeenCalledWith({locale: 'fr', rtl: false});
+    });
+
+    it('resolves false when the loader rejects', async () => {
+      const localization = new Localization();
+      const loaded = await localization.attach(
+        Promise.reject(new Error('blocked')),
+      );
+      expect(loaded).toBe(false);
+      expect(localization.isLocalizeJS()).toBe(false);
+    });
+
+    it('resolves false when the loader yields nothing', async () => {
+      const localization = new Localization();
+      expect(await localization.attach(Promise.resolve(undefined))).toBe(false);
+    });
+
+    it('binds only once for the same loader', async () => {
+      const localization = new Localization();
+      const source = mockLocalizeJS('fr');
+      const Localize = await source;
+      await localization.attach(source);
+      await localization.attach(source);
+      expect(Localize.getAvailableLanguages).toHaveBeenCalledOnce();
+    });
+  });
+
   describe('translatable', () => {
     it('should just chain the input to the translate function', async () => {
       const localization = await setupLocalizeJS();

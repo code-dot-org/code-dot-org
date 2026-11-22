@@ -13,8 +13,13 @@ initAll(options)
   │     └─ loading.ts: load fish data, init KNN/SVM trainer, initRenderer()
   │           └─ finishLoading → modeHelpers.toMode(Modes.Training | Words | ...)
   ├─ renderCanvas()                          ← self-perpetuating rAF loop
-  └─ setSetStateCallback(renderUI)           ← React re-renders on every setState
+  ├─ setSetStateCallback(renderUI)           ← React re-renders on every setState
+  └─ localization.on('change', renderUI)     ← re-renders on a language change
 ```
+
+`I18n.t` formats the English message, then translates it through the core
+`localization` singleton. Values copied into state when a mode starts, such
+as the training word and question, keep the language they were made in.
 
 ## Studio consumer
 

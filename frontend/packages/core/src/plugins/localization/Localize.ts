@@ -8,6 +8,11 @@ export type LocalizeOptions = {
    */
   key: string;
   /**
+   * Defaults to false. The apps/ loader sets it; it governs how Localize
+   * treats ignored children of an isolated element.
+   */
+  allowIgnoredChildrenInIsolate?: boolean;
+  /**
    * Defaults to false. If true, whenever you have a <BR> element in your content,
    * Localize will not break up the parent element's content but instead will keep
    * all sibling child elements together in the parent or containing element.
@@ -226,6 +231,10 @@ export interface LocalizeEventMap {
  * The LocalizeJS frontend API object.
  */
 interface LocalizeJS {
+  /**
+   * Configures the widget for a project. Call once, after the script loads.
+   */
+  initialize: (options: LocalizeOptions) => void;
   /**
    * Translates the page into the given language.
    */
