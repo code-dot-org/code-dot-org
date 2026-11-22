@@ -14,6 +14,7 @@ export const PREVIEW_READY = 'lab2-level-config-preview-ready';
 export const PREVIEW_CONFIG = 'lab2-level-config-preview-config';
 export const PREVIEW_PLACES = 'lab2-level-config-preview-places';
 export const PREVIEW_GO = 'lab2-level-config-preview-go';
+export const PREVIEW_CURRENT = 'lab2-level-config-preview-current';
 
 /** A place in the level the preview can go to. */
 export interface PreviewPlace {
@@ -84,6 +85,17 @@ export function announcePreviewPlaces(places: PreviewPlace[]): void {
   if (isLevelConfigPreview()) {
     window.parent.postMessage(
       {type: PREVIEW_PLACES, places},
+      window.location.origin
+    );
+  }
+}
+
+/** Tells the edit page which place the preview is at now. Does nothing
+    outside the level config preview. */
+export function announcePreviewCurrentPlace(place: string): void {
+  if (isLevelConfigPreview()) {
+    window.parent.postMessage(
+      {type: PREVIEW_CURRENT, place},
       window.location.origin
     );
   }

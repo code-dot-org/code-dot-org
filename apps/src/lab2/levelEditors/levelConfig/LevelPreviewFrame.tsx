@@ -11,6 +11,7 @@ import React, {useEffect, useRef, useState} from 'react';
 
 import {
   PREVIEW_CONFIG,
+  PREVIEW_CURRENT,
   PREVIEW_GO,
   PREVIEW_PARAM,
   PREVIEW_PLACES,
@@ -45,6 +46,7 @@ const LevelPreviewFrame: React.FunctionComponent<LevelPreviewFrameProps> = ({
   const slotRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
   const [places, setPlaces] = useState<PreviewPlace[]>([]);
+  const [currentPlace, setCurrentPlace] = useState('');
   const [pinned, setPinned] = useState(false);
   const [slotWidth, setSlotWidth] = useState(640);
 
@@ -63,6 +65,8 @@ const LevelPreviewFrame: React.FunctionComponent<LevelPreviewFrameProps> = ({
         Array.isArray(event.data.places)
       ) {
         setPlaces(event.data.places);
+      } else if (event.data?.type === PREVIEW_CURRENT) {
+        setCurrentPlace(String(event.data.place ?? ''));
       }
     };
     window.addEventListener('message', onMessage);
@@ -93,7 +97,7 @@ const LevelPreviewFrame: React.FunctionComponent<LevelPreviewFrameProps> = ({
         return;
       }
       const box = slot.getBoundingClientRect();
-      setPinned(box.bottom < 0);
+      setPinned(box.top < 0);
       setSlotWidth(box.width);
     };
     measure();
@@ -126,17 +130,22 @@ const LevelPreviewFrame: React.FunctionComponent<LevelPreviewFrameProps> = ({
           labelText="Go to"
           size="s"
           items={[
-            {value: '', text: 'Choose a place'},
+            ...(places.some(place => place.id === currentPlace)
+              ? []
+              : [{value: '', text: 'Choose a place'}]),
             ...places.map(place => ({value: place.id, text: place.label})),
           ]}
-          selectedValue=""
-          onChange={event =>
-            event.target.value &&
+          selectedValue={currentPlace}
+          onChange={event => {
+            if (!event.target.value) {
+              return;
+            }
+            setCurrentPlace(event.target.value);
             frameRef.current?.contentWindow?.postMessage(
               {type: PREVIEW_GO, place: event.target.value},
               window.location.origin
-            )
-          }
+            );
+          }}
         />
       )}
       <div
