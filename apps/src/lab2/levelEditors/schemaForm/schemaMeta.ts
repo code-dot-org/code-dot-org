@@ -8,14 +8,13 @@
 // lab does when a setting is not set, so the form can show that value in
 // the unset control.
 //
-// A reference field's `options` says where its choices come from. In the
-// whole value, `*` stands for every key or index: "skills.*" gives the keys
-// of the skills map, "checkpoints.*.id" each checkpoint's id, and a
-// trailing `*` over a list of names gives the names themselves. Each
-// leading "../" starts one step up from the field instead, as in
-// "../choices.*.id". "@name" names a list the page supplies (SchemaForm's
-// suppliedOptions). A map's `keyOptions` says where its keys come from,
-// the same way.
+// A reference field's `options` is a dotted path to its choices, read
+// from the whole value or, with each leading "../", from one step further
+// up from the field. `*` stands for every key or index: "skills.*" gives
+// the keys of the skills map, "checkpoints.*.id" each checkpoint's id, and
+// a trailing `*` over a list of names gives the names. "@name" names a list
+// the page supplies (SchemaForm's suppliedOptions). A map's `keyOptions`
+// works the same way.
 
 declare module 'zod' {
   interface GlobalMeta {

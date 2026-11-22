@@ -1,9 +1,6 @@
-// A lab's settings schema written out for people and for AI: as JSON
-// Schema, for tools that generate or check levels, and as a Markdown
-// reference with the lab's own introduction, the rules that tie fields
-// together, and worked examples. Both come from the zod schema, so they
-// stay in step with it; a lab's test regenerates them and fails when they
-// are stale.
+// A lab's settings schema as JSON Schema and as a Markdown reference, for
+// people and for AI. The field list in each is built from the zod schema;
+// the introduction, rules and examples come from the lab.
 
 import {z, ZodType} from 'zod';
 
@@ -30,7 +27,6 @@ export interface SchemaDocsInput {
   examples: {title: string; description?: string; value: unknown}[];
 }
 
-// Keys only the form uses.
 const FORM_ONLY_KEYS = new Set(['widget', 'placeholder']);
 
 function choicesFrom(pattern: string): string {
@@ -39,10 +35,11 @@ function choicesFrom(pattern: string): string {
     : `a name found at "${pattern}" in the settings`;
 }
 
-// The form's keys turned into what a reader of JSON Schema expects.
-function forReaders(node: unknown): unknown {
+// Drops the form-only keys and renames the form's other keys to JSON
+// Schema's.
+function formKeysToJsonSchema(node: unknown): unknown {
   if (Array.isArray(node)) {
-    return node.map(forReaders);
+    return node.map(formKeysToJsonSchema);
   }
   if (!node || typeof node !== 'object') {
     return node;
@@ -59,7 +56,7 @@ function forReaders(node: unknown): unknown {
     } else if (key === 'keyOptions' && typeof value === 'string') {
       out['x-key-choices'] = choicesFrom(value);
     } else {
-      out[key] = forReaders(value);
+      out[key] = formKeysToJsonSchema(value);
     }
   });
   return out;
@@ -71,7 +68,7 @@ export function jsonSchemaFor(
   input: Pick<SchemaDocsInput, 'title' | 'rules'>
 ): object {
   const json = z.toJSONSchema(schema, {unrepresentable: 'any', io: 'input'});
-  const readable = forReaders(json) as Record<string, unknown>;
+  const readable = formKeysToJsonSchema(json) as Record<string, unknown>;
   return {
     ...readable,
     title: input.title,
@@ -79,8 +76,7 @@ export function jsonSchemaFor(
   };
 }
 
-// One line about a node's type, for the Markdown reference.
-function typeOf(schema: ZodType): string {
+function typeSummary(schema: ZodType): string {
   const {inner} = unwrap(schema);
   const meta = metaOf(schema);
   if (meta.options) {
@@ -96,7 +92,7 @@ function typeOf(schema: ZodType): string {
       return kindOf(elementOf(schema)) === 'object' ||
         kindOf(elementOf(schema)) === 'choice'
         ? 'list'
-        : `list; each item: ${typeOf(elementOf(schema))}`;
+        : `list; each item: ${typeSummary(elementOf(schema))}`;
     case 'enum':
       return `one of ${enumValues(schema)
         .map(value => `\`${value}\``)
@@ -114,7 +110,7 @@ function typeOf(schema: ZodType): string {
         meta.keyOptions
           ? ` whose keys are each ${choicesFrom(meta.keyOptions)}`
           : ''
-      } to ${typeOf(recordValueOf(schema))}`;
+      } to ${typeSummary(recordValueOf(schema))}`;
     case 'choice':
       return 'one of the shapes below';
     case 'literal':
@@ -148,7 +144,7 @@ function describeNode(
   const {optional} = unwrap(schema);
   const pad = '  '.repeat(depth);
   const notes = [
-    typeOf(schema),
+    typeSummary(schema),
     optional ? 'optional' : 'required',
     meta.defaultValue !== undefined
       ? `default ${JSON.stringify(meta.defaultValue)}`
@@ -212,7 +208,6 @@ function describeInside(schema: ZodType, depth: number, lines: string[]) {
   }
 }
 
-/** The schema as a Markdown reference. */
 export function markdownFor(schema: ZodType, input: SchemaDocsInput): string {
   const lines: string[] = [
     `# ${input.title}`,

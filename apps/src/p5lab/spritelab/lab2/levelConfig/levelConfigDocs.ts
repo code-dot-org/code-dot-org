@@ -1,6 +1,5 @@
-// What Sprite Lab in Lab2 adds to its settings reference (schemaDocs.ts):
-// the introduction and the rules that tie settings together. The examples
-// come from real level files; see levelConfigDocsTest.ts.
+// The introduction and rules for Sprite Lab in Lab2's settings reference
+// (schemaDocs.ts).
 
 export const LEVEL_CONFIG_DOCS = {
   title: 'Sprite Lab in Lab2 level settings (level_config)',
