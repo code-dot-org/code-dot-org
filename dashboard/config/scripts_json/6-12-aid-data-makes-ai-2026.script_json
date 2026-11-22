@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-21 07:14:16 UTC",
+    "serialized_at": "2026-11-21 08:41:00 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -6543,7 +6543,7 @@
       }
     },
     {
-      "name": "Balanced vs. Unbalanced Data",
+      "name": "[KEY] Balanced vs. Unbalanced Data",
       "url": "https://docs.google.com/document/d/1R5q0piBxZQdQEGylD4PhH7iTvL_mt7eL64OiVyOB6cY/",
       "key": "balanced_vs_unbalanced_data_-_activity_guide",
       "properties": {

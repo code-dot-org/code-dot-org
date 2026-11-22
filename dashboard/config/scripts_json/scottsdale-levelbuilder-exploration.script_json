@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-21 05:44:11 UTC",
+    "serialized_at": "2026-11-21 09:05:47 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -3488,6 +3488,19 @@
       "seeding_key": {
         "resource.key": "ai_lab_day"
       }
+    },
+    {
+      "name": "Lesson Studio live check 8898985",
+      "url": "https://example.org/lesson-studio-live-check-8898985",
+      "key": "lesson_studio_live_check_8898985",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "lesson_studio_live_check_8898985"
+      }
     }
   ],
   "lessons_resources": [
@@ -3508,6 +3521,12 @@
         "lesson.key": "lesson-22",
         "resource.key": "ai_lab_day"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "lesson_studio_live_check_8898985"
+      }
     }
   ],
   "scripts_resources": [
@@ -3517,10 +3536,24 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "lesson_studio_live_check_",
+      "word": "Lesson Studio live check 8898985",
+      "definition": "Temporary companion acceptance-test record; not curriculum content.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "lesson_studio_live_check_"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "vocabulary.key": "lesson_studio_live_check_"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
