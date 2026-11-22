@@ -48,7 +48,7 @@ const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<CategoryName, number> = {
   Violence: 4,
 };
 
-const APP_SEVERITY_LEVEL_BLOCKED: Record<string, SeverityThresholds> = {
+const APP_OVERRIDE_SEVERITY_THRESHOLDS: Record<string, SeverityThresholds> = {
   applab: {Sexual: 4},
 };
 
@@ -145,7 +145,7 @@ const runModeration = async (
 
       if (
         getImageModerationVerdict(json, {
-          ...APP_SEVERITY_LEVEL_BLOCKED[appName],
+          ...APP_OVERRIDE_SEVERITY_THRESHOLDS[appName],
           ...overrideSeverityThresholds,
         }) === 'safe'
       ) {
