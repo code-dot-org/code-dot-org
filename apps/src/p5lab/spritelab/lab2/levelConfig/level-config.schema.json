@@ -1,0 +1,1130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "focus": {
+      "title": "Opens on",
+      "description": "Where the level opens. Code when not set.",
+      "type": "string",
+      "enum": [
+        "code",
+        "images",
+        "world",
+        "play"
+      ]
+    },
+    "edits": {
+      "title": "Student can change",
+      "feature": "Limit what the student can change",
+      "description": "Code, and the Images and World tabs the level turns on, when not set.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "code",
+          "images",
+          "world"
+        ]
+      }
+    },
+    "images": {
+      "title": "Images",
+      "feature": "Images tab",
+      "description": "The student works with images on the Images tab.",
+      "type": "object",
+      "properties": {
+        "makes": {
+          "title": "The image this level makes",
+          "feature": "This level makes an image",
+          "description": "The student makes one image of a set type, which the level records with a role.",
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "sprite",
+                "background",
+                "block"
+              ],
+              "title": "Type",
+              "description": "The kind of image the student makes on this level."
+            },
+            "subject": {
+              "title": "Subject",
+              "description": "For a sprite: a character can be animated, an object is one still picture. Character when not set.",
+              "type": "string",
+              "enum": [
+                "character",
+                "object"
+              ]
+            },
+            "role": {
+              "title": "Role",
+              "description": "A name recorded on the image, such as \"hero\". Later levels use it to find this image.",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "type"
+          ],
+          "additionalProperties": false
+        },
+        "makeFirst": {
+          "title": "Make the image first",
+          "description": "The level opens on the Images tab to make its image, then goes on to where it opens.",
+          "type": "boolean"
+        },
+        "onlyThisImage": {
+          "title": "Only this image",
+          "description": "The student sees only the image this level makes, with no adding or deleting.",
+          "type": "boolean"
+        },
+        "canAdd": {
+          "title": "Can add images",
+          "default": true,
+          "type": "boolean"
+        },
+        "canDelete": {
+          "title": "Can delete images",
+          "default": true,
+          "description": "Turn off when a later level depends on an image made earlier.",
+          "type": "boolean"
+        },
+        "kinds": {
+          "title": "Kinds listed",
+          "description": "The kinds of image the tab lists. Every kind when not set.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "sprite",
+              "background",
+              "block"
+            ]
+          }
+        },
+        "paintTools": {
+          "title": "Paint tools",
+          "description": "Limited is a fixed set of colors and one brush, for a level that is not about painting. All when not set.",
+          "type": "string",
+          "enum": [
+            "all",
+            "limited"
+          ]
+        },
+        "generationLimit": {
+          "title": "Generation limit",
+          "description": "How many pictures the student can generate in one visit. No limit when not set.",
+          "type": "integer",
+          "exclusiveMinimum": 0,
+          "maximum": 9007199254740991
+        },
+        "explainAi": {
+          "title": "Explain how AI made it",
+          "description": "After the first picture made in a visit, the level offers the story of how AI made it.",
+          "type": "boolean"
+        },
+        "upload": {
+          "title": "Upload",
+          "description": "The student can upload an image.",
+          "type": "boolean"
+        },
+        "source": {
+          "title": "Picture source",
+          "description": "Cached pictures come from the published set; live asks the model, for levelbuilders only. Cached when not set.",
+          "type": "string",
+          "enum": [
+            "cached",
+            "live"
+          ]
+        },
+        "starters": {
+          "title": "Starter images",
+          "description": "Images the level gives the project on arrival, when it has none of that name or role yet.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Name"
+              },
+              "imageType": {
+                "type": "string",
+                "enum": [
+                  "sprite",
+                  "background",
+                  "block"
+                ],
+                "title": "Type"
+              },
+              "role": {
+                "title": "Role",
+                "type": "string",
+                "minLength": 1
+              },
+              "src": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Picture URL"
+              },
+              "frameSize": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "title": "Width"
+                  },
+                  "y": {
+                    "type": "integer",
+                    "exclusiveMinimum": 0,
+                    "maximum": 9007199254740991,
+                    "title": "Height"
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
+                ],
+                "additionalProperties": false,
+                "title": "Size in pixels"
+              },
+              "pixelGridSize": {
+                "title": "Pixel size",
+                "description": "For pixel art: the size of one drawn pixel in the file, so previews upscale it with hard edges.",
+                "type": "integer",
+                "exclusiveMinimum": 0,
+                "maximum": 9007199254740991
+              }
+            },
+            "required": [
+              "name",
+              "imageType",
+              "src",
+              "frameSize"
+            ],
+            "additionalProperties": false,
+            "title": "Starter image"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "world": {
+      "title": "World",
+      "feature": "World tab",
+      "description": "The student places images on a grid on the World tab.",
+      "type": "object",
+      "properties": {
+        "palette": {
+          "title": "Palette roles",
+          "description": "The roles of the images the student can place. The level's own image when not set.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "keepsOneOf": {
+          "title": "Keeps at least one of",
+          "description": "For each of these roles, the last square showing it cannot be erased until another is placed.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "scenes": {
+      "title": "Scenes",
+      "feature": "Scenes",
+      "description": "The level sets up scenes, or lets the student make their own.",
+      "type": "object",
+      "properties": {
+        "starting": {
+          "title": "Scenes the level sets up",
+          "description": "The level makes sure the project has these. The first is the scene the level opens, and the student is kept to these.",
+          "maxItems": 2,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Id",
+                "description": "What the go to scene block stores. \"scene-1\" is the scene every project starts with."
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Name",
+                "description": "What the student sees, when the level creates the scene."
+              },
+              "code": {
+                "title": "Starting code",
+                "description": "The scene's code when the level creates it."
+              },
+              "world": {
+                "title": "Premade world",
+                "feature": "The scene starts with a premade world",
+                "type": "object",
+                "properties": {
+                  "pattern": {
+                    "minItems": 1,
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "title": "Pattern",
+                    "description": "One line for each row, the floor last. B is a block, S is the player, and a dot is empty."
+                  },
+                  "roles": {
+                    "title": "Pattern letters",
+                    "description": "More letters, each standing for the newest sprite with a role, such as F for \"friend\".",
+                    "type": "object",
+                    "propertyNames": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 1
+                    },
+                    "additionalProperties": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "required": [
+                  "pattern"
+                ],
+                "additionalProperties": false
+              },
+              "editable": {
+                "title": "Student can open it",
+                "description": "For a second scene: the student can open it in the editor.",
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "name"
+            ],
+            "additionalProperties": false,
+            "title": "Scene"
+          }
+        },
+        "canChange": {
+          "title": "Student can change scenes",
+          "description": "The student can add, rename, reorder and delete scenes.",
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "blocks": {
+      "title": "Code scaffolding",
+      "feature": "Code scaffolding",
+      "description": "Blocks the level adds or locks, the block catalog, and where dropdowns start.",
+      "type": "object",
+      "properties": {
+        "addOnArrival": {
+          "title": "Blocks added on arrival",
+          "description": "Added to the first scene when the student arrives, if it has none of that kind.",
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "attachTo": {
+                    "type": "string",
+                    "minLength": 1,
+                    "title": "Under the stack whose top block is",
+                    "x-choices": "one of the names the editor page supplies as \"toolboxBlockTypes\""
+                  },
+                  "data": {
+                    "title": "Tag",
+                    "description": "The top block's tag, when one stack of the type is meant.",
+                    "x-choices": "a name found at \"blocks.addOnArrival.*.data\" in the settings",
+                    "type": "string"
+                  },
+                  "shadow": {
+                    "title": "Placeholder block"
+                  }
+                },
+                "required": [
+                  "attachTo",
+                  "shadow"
+                ],
+                "additionalProperties": false,
+                "title": "A placeholder under a stack"
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "attachTo": {
+                    "type": "string",
+                    "minLength": 1,
+                    "title": "Under the stack whose top block is",
+                    "x-choices": "one of the names the editor page supplies as \"toolboxBlockTypes\""
+                  },
+                  "data": {
+                    "title": "Tag",
+                    "x-choices": "a name found at \"blocks.addOnArrival.*.data\" in the settings",
+                    "type": "string"
+                  },
+                  "room": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "Room for a block of type",
+                        "x-choices": "one of the names the editor page supplies as \"toolboxBlockTypes\""
+                      }
+                    },
+                    "required": [
+                      "type"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Room"
+                  }
+                },
+                "required": [
+                  "attachTo",
+                  "room"
+                ],
+                "additionalProperties": false,
+                "title": "Empty room under a stack"
+              },
+              {
+                "title": "A new stack"
+              }
+            ],
+            "title": "Block"
+          }
+        },
+        "lockEarlier": {
+          "title": "Lock earlier blocks",
+          "description": "Blocks built on earlier levels cannot be deleted here.",
+          "type": "boolean"
+        },
+        "catalog": {
+          "title": "Block catalog",
+          "description": "New blocks start out of the toolbox, and the student adds them from Discover blocks.",
+          "type": "boolean"
+        },
+        "alwaysInToolbox": {
+          "title": "Always in the toolbox",
+          "x-choices": "one of the names the editor page supplies as \"toolboxBlockTypes\"",
+          "description": "With the catalog: blocks that are in the toolbox from the start.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "dropdownsStartOn": {
+          "title": "Dropdowns start on",
+          "description": "The role each image dropdown starts on, by image kind (sprite, background, block) or by block type.",
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "minLength": 1
+          },
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string",
+                "minLength": 1
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "objectives": {
+      "title": "Checklist",
+      "feature": "Checklist",
+      "description": "Steps the student does before they can continue.",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "steps": {
+          "title": "Steps",
+          "description": "The student continues once every step is done. With no steps they can continue from the start.",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "title": "Text"
+              },
+              "check": {
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "image"
+                      },
+                      "imageType": {
+                        "type": "string",
+                        "enum": [
+                          "sprite",
+                          "background",
+                          "block"
+                        ],
+                        "title": "Type"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "imageType"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Made an image"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "generated"
+                      },
+                      "imageType": {
+                        "title": "Type",
+                        "description": "Any type when not set.",
+                        "type": "string",
+                        "enum": [
+                          "sprite",
+                          "background",
+                          "block"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Generated a picture"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "block"
+                      },
+                      "type": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          {
+                            "minItems": 1,
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        ],
+                        "title": "Block type",
+                        "x-choices": "one of the names the editor page supplies as \"toolboxBlockTypes\"",
+                        "description": "One block type, or any of several."
+                      },
+                      "under": {
+                        "title": "Under a top block of type",
+                        "x-choices": "one of the names the editor page supplies as \"toolboxBlockTypes\"",
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "data": {
+                        "title": "Under the stack tagged",
+                        "description": "The tag of a stack the level adds.",
+                        "x-choices": "a name found at \"blocks.addOnArrival.*.data\" in the settings",
+                        "type": "string"
+                      },
+                      "fields": {
+                        "title": "Field values",
+                        "type": "object",
+                        "propertyNames": {
+                          "type": "string"
+                        },
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      },
+                      "scene": {
+                        "title": "In scene",
+                        "description": "The open scene when not set.",
+                        "x-choices": "a name found at \"scenes.starting.*.id\" in the settings",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "type"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Uses a block"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "world"
+                      },
+                      "role": {
+                        "title": "Shows an image with role",
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "changed": {
+                        "title": "Changed from the start",
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Placed in the world"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "play"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Pressed Run"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "reach"
+                      },
+                      "role": {
+                        "title": "Touched a sprite with role",
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "moved": {
+                        "title": "Moved or jumped",
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Player reached"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "scene"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "Scene",
+                        "x-choices": "a name found at \"scenes.starting.*.id\" in the settings"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Got to a scene"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "editing"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "Scene",
+                        "x-choices": "a name found at \"scenes.starting.*.id\" in the settings"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Opened a scene"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "rated"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Rated a picture"
+                  }
+                ],
+                "title": "Done when"
+              },
+              "shownWhen": {
+                "title": "Hidden until",
+                "feature": "Hide this step until something is done",
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "image"
+                      },
+                      "imageType": {
+                        "type": "string",
+                        "enum": [
+                          "sprite",
+                          "background",
+                          "block"
+                        ],
+                        "title": "Type"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "imageType"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Made an image"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "generated"
+                      },
+                      "imageType": {
+                        "title": "Type",
+                        "description": "Any type when not set.",
+                        "type": "string",
+                        "enum": [
+                          "sprite",
+                          "background",
+                          "block"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Generated a picture"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "block"
+                      },
+                      "type": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "minLength": 1
+                          },
+                          {
+                            "minItems": 1,
+                            "type": "array",
+                            "items": {
+                              "type": "string",
+                              "minLength": 1
+                            }
+                          }
+                        ],
+                        "title": "Block type",
+                        "x-choices": "one of the names the editor page supplies as \"toolboxBlockTypes\"",
+                        "description": "One block type, or any of several."
+                      },
+                      "under": {
+                        "title": "Under a top block of type",
+                        "x-choices": "one of the names the editor page supplies as \"toolboxBlockTypes\"",
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "data": {
+                        "title": "Under the stack tagged",
+                        "description": "The tag of a stack the level adds.",
+                        "x-choices": "a name found at \"blocks.addOnArrival.*.data\" in the settings",
+                        "type": "string"
+                      },
+                      "fields": {
+                        "title": "Field values",
+                        "type": "object",
+                        "propertyNames": {
+                          "type": "string"
+                        },
+                        "additionalProperties": {
+                          "type": "string"
+                        }
+                      },
+                      "scene": {
+                        "title": "In scene",
+                        "description": "The open scene when not set.",
+                        "x-choices": "a name found at \"scenes.starting.*.id\" in the settings",
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "type"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Uses a block"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "world"
+                      },
+                      "role": {
+                        "title": "Shows an image with role",
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "changed": {
+                        "title": "Changed from the start",
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Placed in the world"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "play"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Pressed Run"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "reach"
+                      },
+                      "role": {
+                        "title": "Touched a sprite with role",
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "moved": {
+                        "title": "Moved or jumped",
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Player reached"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "scene"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "Scene",
+                        "x-choices": "a name found at \"scenes.starting.*.id\" in the settings"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Got to a scene"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "editing"
+                      },
+                      "id": {
+                        "type": "string",
+                        "minLength": 1,
+                        "title": "Scene",
+                        "x-choices": "a name found at \"scenes.starting.*.id\" in the settings"
+                      }
+                    },
+                    "required": [
+                      "kind",
+                      "id"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Opened a scene"
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "kind": {
+                        "type": "string",
+                        "const": "rated"
+                      }
+                    },
+                    "required": [
+                      "kind"
+                    ],
+                    "additionalProperties": false,
+                    "title": "Rated a picture"
+                  }
+                ]
+              },
+              "id": {
+                "title": "Id",
+                "description": "Names the step to the lab's hover and click handling.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "text",
+              "check"
+            ],
+            "additionalProperties": false,
+            "title": "Step"
+          }
+        },
+        "collapsedText": {
+          "title": "Collapsed text",
+          "description": "A short line that stays in view when the steps are collapsed.",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "callouts": {
+      "title": "Callouts",
+      "feature": "Callouts",
+      "description": "Bouncing arrows at the tabs, the scene menu or Continue. The first one whose condition holds is shown.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string",
+            "enum": [
+              "images-tab",
+              "world-tab",
+              "code-tab",
+              "scene-menu",
+              "scene-option",
+              "continue-button"
+            ],
+            "title": "Points at"
+          },
+          "scene": {
+            "title": "Scene",
+            "description": "For a scene-option target.",
+            "x-choices": "a name found at \"scenes.starting.*.id\" in the settings",
+            "type": "string"
+          },
+          "direction": {
+            "title": "Arrow direction",
+            "description": "Up when not set.",
+            "type": "string",
+            "enum": [
+              "up",
+              "down",
+              "left"
+            ]
+          },
+          "fallback": {
+            "title": "While the target is hidden",
+            "feature": "Point somewhere else while the target is not on the page",
+            "type": "object",
+            "properties": {
+              "target": {
+                "type": "string",
+                "enum": [
+                  "images-tab",
+                  "world-tab",
+                  "code-tab",
+                  "scene-menu",
+                  "scene-option",
+                  "continue-button"
+                ],
+                "title": "Points at"
+              },
+              "scene": {
+                "title": "Scene",
+                "description": "For a scene-option target.",
+                "x-choices": "a name found at \"scenes.starting.*.id\" in the settings",
+                "type": "string"
+              },
+              "direction": {
+                "title": "Arrow direction",
+                "description": "Up when not set.",
+                "type": "string",
+                "enum": [
+                  "up",
+                  "down",
+                  "left"
+                ]
+              }
+            },
+            "required": [
+              "target"
+            ],
+            "additionalProperties": false
+          },
+          "when": {
+            "title": "Shown when",
+            "feature": "Only show it at certain times",
+            "type": "object",
+            "properties": {
+              "done": {
+                "title": "After steps",
+                "description": "Checklist steps that must be done.",
+                "x-choices": "a name found at \"objectives.steps.*\" in the settings",
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "notDone": {
+                "title": "Until steps",
+                "description": "Checklist steps that must not be done yet.",
+                "x-choices": "a name found at \"objectives.steps.*\" in the settings",
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                }
+              },
+              "tabNot": {
+                "title": "While not on tab",
+                "type": "string",
+                "enum": [
+                  "Code",
+                  "Images",
+                  "World",
+                  "Play"
+                ]
+              },
+              "sceneNot": {
+                "title": "While not on scene",
+                "x-choices": "a name found at \"scenes.starting.*.id\" in the settings",
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "target"
+        ],
+        "additionalProperties": false,
+        "title": "Callout"
+      }
+    },
+    "noProject": {
+      "title": "No project",
+      "description": "The level runs with no project: the student sees the level's own content, and nothing they do is saved. For a demo to play.",
+      "type": "boolean"
+    },
+    "instructions": {
+      "title": "Instructions",
+      "feature": "Instructions options",
+      "type": "object",
+      "properties": {
+        "startCollapsed": {
+          "title": "Start collapsed",
+          "description": "The instructions panel starts collapsed to its tab.",
+          "type": "boolean"
+        },
+        "freePlayIntro": {
+          "title": "Free play intro",
+          "description": "The intro dialog opens the first time the student arrives.",
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "title": "Sprite Lab in Lab2 level settings (level_config)",
+  "x-rules": [
+    "A level opens on `focus`, which is `code` when not set. Unless it is `play`, the student must be able to change that part.",
+    "Without `edits`, the student can change the code, plus images when `images` is set and the world when `world` is set. `edits` limits that list; it can name `images` only with `images` set, and `world` only with `world` set.",
+    "A level that edits only images shows the Images tab alone; a level with `focus: \"play\"` and `edits: []` shows only the game.",
+    "`images.makes.subject` is for a sprite only.",
+    "A level that sets up scenes (`scenes.starting`) keeps the student to them, so it cannot also set `scenes.canChange`. The first starting scene is always the one the student edits, so it does not set `editable`.",
+    "Names that refer to other settings must match them: a checklist check or callout names a scene by its id in `scenes.starting`, a callout names checklist steps by their position from 0, and a tag names the `data` of a block in `blocks.addOnArrival`.",
+    "Roles (such as \"hero\" or \"treasure\") are names an image level records on the image it makes (`images.makes.role`); later levels in the same unit use the same names to find those images."
+  ]
+}
