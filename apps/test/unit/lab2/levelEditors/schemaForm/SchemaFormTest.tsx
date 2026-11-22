@@ -21,6 +21,10 @@ const schema = z.strictObject({
     .optional()
     .meta({title: 'World', feature: 'World tab'}),
   canAdd: z.boolean().optional().meta({title: 'Can add', defaultValue: true}),
+  dialog: z
+    .strictObject({heading: z.string().min(1).meta({title: 'Heading'})})
+    .optional()
+    .meta({title: 'Dialog'}),
   steps: z
     .array(
       z
@@ -90,6 +94,29 @@ describe('SchemaForm', () => {
     fireEvent.click(screen.getByRole('checkbox', {name: 'World tab'}));
     expect(value()).toEqual({world: {}});
     expect(screen.getByText('Size')).toBeInTheDocument();
+  });
+
+  it('adds and removes optional content with buttons, keeping what was removed', () => {
+    render(<Harness initial={{dialog: {heading: 'Hello'}}} />);
+    fireEvent.click(screen.getByRole('button', {name: 'Remove Dialog'}));
+    expect(value()).toEqual({});
+    fireEvent.click(screen.getByRole('button', {name: 'Add Dialog'}));
+    expect(value()).toEqual({dialog: {heading: 'Hello'}});
+  });
+
+  it('keeps a feature switched off, and restores it when switched back on', () => {
+    render(<Harness initial={{world: {size: 'big'}}} />);
+    const box = screen.getByRole('checkbox', {name: 'World tab'});
+    fireEvent.click(box);
+    expect(value()).toEqual({});
+    fireEvent.click(box);
+    expect(value()).toEqual({world: {size: 'big'}});
+  });
+
+  it('says Required. for an empty required field', () => {
+    render(<Harness initial={{steps: [{text: ''}]}} />);
+    fireEvent.click(screen.getByRole('button', {name: 'Open all'}));
+    expect(screen.getByText('Required.')).toBeInTheDocument();
   });
 
   it('writes a setting left at its default as no value', () => {

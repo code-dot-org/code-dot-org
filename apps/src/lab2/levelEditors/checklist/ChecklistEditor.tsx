@@ -37,7 +37,6 @@ const ChecklistFields: React.FunctionComponent<WidgetProps> = ({
   onChange,
   path,
 }) => {
-  // The item at this index starts open.
   const [lastAddedIndex, setLastAddedIndex] = useState<number>();
   const shape = shapeOf(schema);
   const checklist = (value ?? {}) as Checklist;

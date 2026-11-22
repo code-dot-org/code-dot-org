@@ -35,6 +35,18 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
+}
+
+// A text field fills its column: the library's field has a minimum width
+// wider than a map entry's value column.
+.field > .fillWidth {
+  min-width: 0;
+  width: 100%;
+
+  input {
+    width: 100%;
+  }
 }
 
 .label {
@@ -140,10 +152,15 @@
   gap: 4px 16px;
 }
 
+// Add and Remove sit at the right of the header, as a list row's buttons do.
+.groupHeader > .headerAction {
+  margin-left: auto;
+}
+
 .disclosure {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: center;
   gap: 4px 10px;
   min-height: 28px;
   padding: 2px 4px;
@@ -164,8 +181,14 @@
   width: 1em;
 }
 
-.disclosureLabel {
+.disclosureLabel,
+.absentTitle {
   font-weight: 600;
+}
+
+.absentTitle {
+  padding: 2px 4px;
+  color: var(--text-neutral-secondary);
 }
 
 .summary {

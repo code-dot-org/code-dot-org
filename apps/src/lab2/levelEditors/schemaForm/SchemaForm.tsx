@@ -95,8 +95,9 @@ const CollapseContext = createContext<{request: number; open: boolean}>({
   open: false,
 });
 
-/** A section that appears after Open all starts open. It follows only the
-    open-all and close-all requests made after it appears. */
+/** A section starts open when startOpen is set or the latest request was
+    Open all. After that it follows only the requests made after it
+    appears. */
 export function useSectionOpen(
   startOpen = false
 ): [boolean, (open: boolean) => void] {
@@ -136,8 +137,8 @@ const SUMMARY_KEYS = [
   'key',
 ];
 
-/** The first non-empty text among SUMMARY_KEYS, shown beside a section's
-    title to tell it apart. */
+/** A short text that tells a value apart from its siblings: the first
+    non-empty text among SUMMARY_KEYS, cut to 70 characters. */
 export function summaryOf(value: unknown): string {
   if (!value || typeof value !== 'object') {
     return '';
@@ -152,8 +153,7 @@ export function summaryOf(value: unknown): string {
   return found.length > 70 ? `${found.slice(0, 69)}…` : found;
 }
 
-/** The button that opens and closes a section. It shows the title, a
-    summary and how many problems the section holds. */
+/** The button that opens and closes a section. */
 export const Disclosure: React.FunctionComponent<{
   open: boolean;
   onToggle: () => void;
@@ -185,14 +185,44 @@ export const Disclosure: React.FunctionComponent<{
 
 /** Collects a zod error's issues by path, for the form. */
 export function problemsFrom(
-  issues: {path: PropertyKey[]; message: string}[]
+  issues: {
+    path: PropertyKey[];
+    message: string;
+    code?: string;
+    origin?: string;
+    minimum?: unknown;
+    input?: unknown;
+  }[]
 ): Problems {
   const problems = new Map<string, string[]>();
   issues.forEach(issue => {
     const key = issue.path.map(String).join('.');
-    problems.set(key, [...(problems.get(key) ?? []), issue.message]);
+    problems.set(key, [...(problems.get(key) ?? []), plainMessage(issue)]);
   });
   return problems;
+}
+
+// zod's own wording for the most common problems is written for
+// programmers; a schema's own messages are kept.
+function plainMessage(issue: {
+  message: string;
+  code?: string;
+  origin?: string;
+  minimum?: unknown;
+  input?: unknown;
+}): string {
+  if (issue.code === 'invalid_type' && issue.input === undefined) {
+    return 'Required.';
+  }
+  if (issue.code === 'too_small' && issue.message.startsWith('Too small')) {
+    if (issue.origin === 'string' && Number(issue.minimum) === 1) {
+      return 'Required.';
+    }
+    if (issue.origin === 'array') {
+      return `Add at least ${issue.minimum}.`;
+    }
+  }
+  return issue.message;
 }
 
 interface SchemaFormProps {
@@ -383,33 +413,37 @@ const FieldFrame: React.FunctionComponent<{
 
 // ---- Groups --------------------------------------------------------------
 
-/** A feature's switch, and its settings once it is on. */
-const FeatureSwitch: React.FunctionComponent<
-  WidgetProps & {children: React.ReactNode}
-> = ({schema, value, onChange, path, children}) => {
+/**
+ * The heading of an optional group: a switch when the schema names it a
+ * feature, else Add and Remove. A group removed keeps its value for the
+ * visit, and adding it back restores it; the saved value leaves it out.
+ */
+const OptionalGroupHeader: React.FunctionComponent<
+  WidgetProps & {open: boolean; setOpen: (open: boolean) => void}
+> = ({schema, value, onChange, path, open, setOpen}) => {
   const {featureStart} = useContext(Context);
   const meta = metaAt(schema, path);
   const on = !isUnset(value);
-  const [open, setOpen] = useSectionOpen();
-  return (
-    <section
-      className={classNames(styles.group, on && styles.groupOn)}
-      aria-label={meta.title}
-    >
-      <div className={styles.groupHeader}>
+  const removed = useRef<unknown>();
+  const add = () => {
+    setOpen(true);
+    onChange(
+      removed.current ?? featureStart?.(keyOf(path)) ?? startValue(schema)
+    );
+  };
+  const remove = () => {
+    removed.current = value;
+    onChange(undefined);
+  };
+  if (meta.feature) {
+    return (
+      <>
         <Checkbox
           name={idOf(path)}
           checked={on}
           size="s"
-          label={meta.feature ?? meta.title}
-          onChange={event => {
-            setOpen(event.target.checked);
-            onChange(
-              event.target.checked
-                ? featureStart?.(keyOf(path)) ?? startValue(schema)
-                : undefined
-            );
-          }}
+          label={meta.feature}
+          onChange={event => (event.target.checked ? add() : remove())}
         />
         {on && (
           <Disclosure
@@ -419,6 +453,68 @@ const FeatureSwitch: React.FunctionComponent<
             path={path}
           />
         )}
+      </>
+    );
+  }
+  return (
+    <>
+      {on ? (
+        <Disclosure
+          open={open}
+          onToggle={() => setOpen(!open)}
+          label={meta.title ?? ''}
+          summary={open ? undefined : summaryOf(value)}
+          path={path}
+        />
+      ) : (
+        <span className={styles.absentTitle}>{meta.title}</span>
+      )}
+      {on ? (
+        <MuiButton
+          className={styles.headerAction}
+          size="small"
+          color="error"
+          onClick={remove}
+          aria-label={`Remove ${meta.title}`}
+        >
+          Remove
+        </MuiButton>
+      ) : (
+        <MuiButton
+          className={styles.headerAction}
+          size="small"
+          variant="outlined"
+          onClick={add}
+          aria-label={`Add ${meta.title}`}
+        >
+          Add
+        </MuiButton>
+      )}
+    </>
+  );
+};
+
+/** A feature's switch, and its settings once it is on. */
+const FeatureSwitch: React.FunctionComponent<
+  WidgetProps & {children: React.ReactNode}
+> = ({schema, value, onChange, path, children}) => {
+  const meta = metaAt(schema, path);
+  const on = !isUnset(value);
+  const [open, setOpen] = useSectionOpen();
+  return (
+    <section
+      className={classNames(styles.group, on && styles.groupOn)}
+      aria-label={meta.title}
+    >
+      <div className={styles.groupHeader}>
+        <OptionalGroupHeader
+          schema={schema}
+          value={value}
+          onChange={onChange}
+          path={path}
+          open={open}
+          setOpen={setOpen}
+        />
       </div>
       {meta.description && <p className={styles.help}>{meta.description}</p>}
       <ProblemsAt path={path} />
@@ -434,7 +530,6 @@ const ObjectField: React.FunctionComponent<FieldProps> = ({
   path,
   bare,
 }) => {
-  const {featureStart} = useContext(Context);
   const meta = metaAt(schema, path);
   const {optional} = unwrap(schema);
   const problems = useProblems(path);
@@ -477,30 +572,14 @@ const ObjectField: React.FunctionComponent<FieldProps> = ({
     >
       <div className={styles.groupHeader}>
         {optional ? (
-          <>
-            <Checkbox
-              name={idOf(path)}
-              checked={on}
-              size="s"
-              label={meta.feature ?? meta.title}
-              onChange={event => {
-                setOpen(event.target.checked);
-                onChange(
-                  event.target.checked
-                    ? featureStart?.(keyOf(path)) ?? startValue(schema)
-                    : undefined
-                );
-              }}
-            />
-            {on && (
-              <Disclosure
-                open={open}
-                onToggle={() => setOpen(!open)}
-                label="Settings"
-                path={path}
-              />
-            )}
-          </>
+          <OptionalGroupHeader
+            schema={schema}
+            value={value}
+            onChange={onChange}
+            path={path}
+            open={open}
+            setOpen={setOpen}
+          />
         ) : (
           <Disclosure
             open={open}
@@ -524,7 +603,8 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
   const meta = metaAt(schema, path);
   const {featureStart} = useContext(Context);
   const {optional} = unwrap(schema);
-  // The item at this index starts open.
+  // A list switched off keeps its items for the visit.
+  const removed = useRef<unknown>();
   const [lastAddedIndex, setLastAddedIndex] = useState<number>();
   if (kindOf(element) === 'enum') {
     return <EnumListField {...props} />;
@@ -591,13 +671,16 @@ const ArrayField: React.FunctionComponent<FieldProps> = props => {
           checked={on}
           size="s"
           label={meta.feature}
-          onChange={event =>
+          onChange={event => {
+            if (!event.target.checked) {
+              removed.current = value;
+            }
             onChange(
               event.target.checked
-                ? featureStart?.(keyOf(path)) ?? []
+                ? removed.current ?? featureStart?.(keyOf(path)) ?? []
                 : undefined
-            )
-          }
+            );
+          }}
         />
         {meta.description && <p className={styles.help}>{meta.description}</p>}
         <ProblemsAt path={path} />
@@ -682,7 +765,7 @@ export const ListRow: React.FunctionComponent<{
   );
 };
 
-/** A map entry whose value is a group: its name, and the group when open. */
+/** One map entry whose value is a group. */
 const RecordGroupRow: React.FunctionComponent<{
   name: string;
   path: Path;
@@ -793,6 +876,7 @@ const ChoiceField: React.FunctionComponent<FieldProps> = props => {
   const {featureStart} = useContext(Context);
   const meta = metaAt(schema, path);
   const {optional} = unwrap(schema);
+  const removed = useRef<unknown>();
   if (meta.widget === 'names' || namesTakeString(schema)) {
     return <NamesField {...props} />;
   }
@@ -865,13 +949,18 @@ const ChoiceField: React.FunctionComponent<FieldProps> = props => {
           checked={on}
           size="s"
           label={meta.feature}
-          onChange={event =>
+          onChange={event => {
+            if (!event.target.checked) {
+              removed.current = value;
+            }
             onChange(
               event.target.checked
-                ? featureStart?.(keyOf(path)) ?? startValue(options[0])
+                ? removed.current ??
+                    featureStart?.(keyOf(path)) ??
+                    startValue(options[0])
                 : undefined
-            )
-          }
+            );
+          }}
         />
         {on && (
           <div className={styles.children}>
@@ -965,6 +1054,7 @@ const EnumListField: React.FunctionComponent<FieldProps> = ({
   const meta = metaAt(schema, path);
   const {optional} = unwrap(schema);
   const {featureStart} = useContext(Context);
+  const removed = useRef<unknown>();
   const chosen = Array.isArray(value) ? (value as string[]) : [];
   const values = enumValues(elementOf(schema));
   const on = !isUnset(value);
@@ -999,13 +1089,16 @@ const EnumListField: React.FunctionComponent<FieldProps> = ({
           checked={on}
           size="s"
           label={meta.feature}
-          onChange={event =>
+          onChange={event => {
+            if (!event.target.checked) {
+              removed.current = value;
+            }
             onChange(
               event.target.checked
-                ? featureStart?.(keyOf(path)) ?? []
+                ? removed.current ?? featureStart?.(keyOf(path)) ?? []
                 : undefined
-            )
-          }
+            );
+          }}
         />
         {meta.description && <p className={styles.help}>{meta.description}</p>}
         {on && <div className={styles.children}>{boxes}</div>}
@@ -1033,6 +1126,7 @@ const StringField: React.FunctionComponent<FieldProps> = ({
   return (
     <div className={styles.field}>
       <TextField
+        className={styles.fillWidth}
         name={idOf(path)}
         id={idOf(path)}
         size="s"
@@ -1065,6 +1159,7 @@ const NumberField: React.FunctionComponent<FieldProps> = ({
   return (
     <div className={styles.field}>
       <TextField
+        className={styles.fillWidth}
         name={idOf(path)}
         id={idOf(path)}
         size="s"
