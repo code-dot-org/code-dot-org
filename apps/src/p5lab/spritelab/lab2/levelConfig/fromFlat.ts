@@ -12,8 +12,7 @@ import {
   ProjectPart,
 } from './schema';
 
-/** The flat properties the lab reads a level's settings from: the stored
-    ones a level_config replaces, and two set only from a level_config. */
+/** The stored properties a level_config replaces. */
 export type FlatProperties = Pick<
   SpriteLab2LevelProperties,
   | 'levelMode'
@@ -32,32 +31,7 @@ export type FlatProperties = Pick<
   | 'callouts'
   | 'starterImages'
   | 'noProject'
-  | 'studentChangesScenes'
-  | 'instructionsStartCollapsed'
 >;
-
-/** The snake_case name of each flat property in a level file. */
-export const FLAT_PROPERTY_NAMES: Record<keyof FlatProperties, string> = {
-  levelMode: 'level_mode',
-  pinnedScene: 'pinned_scene',
-  extraScene: 'extra_scene',
-  objectives: 'objectives',
-  worldStartPattern: 'world_start_pattern',
-  worldStartRoles: 'world_start_roles',
-  worldKeepsRoles: 'world_keeps_roles',
-  blockCatalog: 'block_catalog',
-  blocksAlwaysInToolbox: 'blocks_always_in_toolbox',
-  lockEarlierBlocks: 'lock_earlier_blocks',
-  freeplayIntro: 'freeplay_intro',
-  imageRoleDefaults: 'image_role_defaults',
-  addBlocks: 'add_blocks',
-  callouts: 'callouts',
-  starterImages: 'starter_images',
-  noProject: 'no_project',
-  // Set only by level_config; never stored under these names.
-  studentChangesScenes: '',
-  instructionsStartCollapsed: '',
-};
 
 const PART_OF_TAB: Record<string, ProjectPart> = {
   Code: 'code',
@@ -267,7 +241,11 @@ export function levelConfigFromFlat(properties: FlatProperties): {
     focus: focus === 'code' ? undefined : focus,
     images: parts.has('images') || present(images) ? images : undefined,
     world: parts.has('world') || present(world) ? world : undefined,
-    scenes: starting.length ? {starting} : open ? {canChange: true} : undefined,
+    scenes: starting.length
+      ? {starting, ...(open && {canChange: true})}
+      : open
+      ? {canChange: true}
+      : undefined,
     blocks: present(blocks) ? blocks : undefined,
     objectives: present(steps) ? steps : undefined,
     callouts: list(properties.callouts),

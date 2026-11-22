@@ -1,12 +1,12 @@
-import {flatFromLevelConfig} from '@cdo/apps/p5lab/spritelab/lab2/levelConfig/applyLevelConfig';
 import {levelConfigFromFlat} from '@cdo/apps/p5lab/spritelab/lab2/levelConfig/fromFlat';
+import {levelTabs} from '@cdo/apps/p5lab/spritelab/lab2/levelConfig/levelTabs';
 import {LevelMode, tabsForMode} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 
 const converted = (levelMode?: LevelMode, more = {}) =>
   levelConfigFromFlat({levelMode, ...more});
 
 const tabsAfter = (levelMode?: LevelMode) =>
-  tabsForMode(flatFromLevelConfig(converted(levelMode).config).levelMode);
+  levelTabs(converted(levelMode).config);
 
 describe('levelConfigFromFlat', () => {
   it('writes free play as every tab, scenes the student changes and collapsed instructions', () => {
@@ -71,7 +71,16 @@ describe('levelConfigFromFlat', () => {
       noProject: true,
     });
     expect(config.noProject).toBe(true);
-    expect(flatFromLevelConfig(config).noProject).toBe(true);
+  });
+
+  it('lets the student change scenes on a level with no mode that pins one', () => {
+    const {config} = levelConfigFromFlat({
+      pinnedScene: {id: 'scene-1', name: 'Scene 1'},
+    });
+    expect(config.scenes).toEqual({
+      starting: [{id: 'scene-1', name: 'Scene 1'}],
+      canChange: true,
+    });
   });
 
   it('lists what it cannot carry', () => {

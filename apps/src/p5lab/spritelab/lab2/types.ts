@@ -12,7 +12,7 @@ import {LevelCallout} from './callouts';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
-import {Objectives} from './objectives';
+import {Objective, Objectives} from './objectives';
 import {World} from './world';
 
 /** The animation-list category marking an image as a background, not a costume. */
@@ -130,16 +130,11 @@ export type WorldStartRoles = {[char: string]: string};
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The level's settings as stored (levelConfig/schema.ts). The lab reads
-      them through withLevelConfig, as the properties below. */
+      them through levelConfigOf, which converts the older properties below
+      on a level that has none. */
   levelConfig?: unknown;
   /** What kind of level this is; decides the tabs and the image controls. */
   levelMode?: LevelMode;
-  /** Set only from a level_config: whether the student can add, rename,
-      reorder and delete scenes, and whether the instructions panel starts
-      collapsed. Unset, both follow from the level's mode: on in free play,
-      and scene changes also on a level with no mode. */
-  studentChangesScenes?: boolean;
-  instructionsStartCollapsed?: boolean;
   /** The one scene this level edits, created on first load if the project
       lacks it. The id is the key the go-to-scene block stores; the name is
       what the student sees, applied only at creation. The id 'scene-1' is
@@ -166,8 +161,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     editable?: boolean;
   };
   /** The level's objectives (objectives.ts): the Guide's text, checklist
-      and Continue gate. */
-  objectives?: Objectives;
+      and Continue gate. Stored with the steps under `items`. */
+  objectives?: Omit<Objectives, 'steps'> & {items?: Objective[]};
   /** Premade world for the pinned scene (worldStartPattern.ts): one string
       per playfield row anchored to the floor. 'B' cells take the block image
       the student made most recently, 'S' the image_role_defaults sprite,

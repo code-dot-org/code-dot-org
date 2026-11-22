@@ -1,5 +1,6 @@
-// What kind of level this is, and everything that follows from it: the
-// surfaces a student sees, and the image controls they get.
+// The level_mode property of a level saved before level_config. The lab
+// reads a level's settings as a level_config (levelConfig/levelConfigOf.ts);
+// this is what the converter and the level mode form read.
 
 import {ImageSource} from './ai/images/imageCache';
 import {ImageStyle, ImageSubject, ImageType} from './ai/images/types';
@@ -104,47 +105,4 @@ export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
   return start && tabs.includes(start)
     ? [start, ...tabs.filter(tab => tab !== start)]
     : tabs;
-}
-
-/** Whether the level is a world level: its work is placing images on the
-    World grid. */
-export function editsWorld(mode: LevelMode | undefined): boolean {
-  return mode?.kind === 'world';
-}
-
-/** Whether the level is free play, the open-ended kind. */
-export function isFreeplayMode(mode: LevelMode | undefined): boolean {
-  return mode?.kind === 'freeplay';
-}
-
-/** Whether the level keeps the student to one image (see oneImage). */
-export function isOneImageMode(mode: LevelMode | undefined): boolean {
-  return !!mode?.oneImage;
-}
-
-/** How many pictures the level lets the student generate in one visit, or
-    undefined when it sets no limit. */
-export function generationLimitForMode(
-  mode: LevelMode | undefined
-): number | undefined {
-  // The option is edited as JSON, so it may not be a count.
-  const limit = mode?.generationLimit;
-  return typeof limit === 'number' && Number.isInteger(limit) && limit > 0
-    ? limit
-    : undefined;
-}
-
-/** The source a mode's pictures come from: the cache unless named. */
-export function imageSourceForMode(mode: LevelMode | undefined): ImageSource {
-  return mode?.imageSource ?? 'cached';
-}
-
-/** Only a levelbuilder gets the model. Anyone else gets the cache, whatever
-    the level or the page's address asks for. */
-export function imageSourceFor(
-  mode: LevelMode | undefined,
-  requested: ImageSource | undefined,
-  isLevelbuilder: boolean
-): ImageSource {
-  return isLevelbuilder ? requested ?? imageSourceForMode(mode) : 'cached';
 }

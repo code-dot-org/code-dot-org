@@ -7,6 +7,7 @@ import {filterToolboxBlocks} from '@cdo/apps/blockly/utils/toolbox';
 import {isAttachment} from './addBlocks';
 import {BLOCK_HELP, BlockHelp} from './blockHelp/blockHelpContent';
 import {ToolboxInfo} from './blockly/toolbox/types';
+import {levelConfigOf} from './levelConfig/levelConfigOf';
 import {SpriteLab2LevelProperties} from './types';
 
 export interface CatalogEntry {
@@ -45,26 +46,29 @@ export function blockTypesIn(node: unknown, shadow = false): string[] {
 const unique = (types: string[]) => [...new Set(types)];
 
 /** The block types a level offers a student: its toolbox, plus the blocks
-    add_blocks places in the workspace before the student starts. */
+    the level adds to the workspace before the student starts. */
 export function offeredBlockTypes(level: SpriteLab2LevelProperties): string[] {
   return unique([
     ...blockTypesIn(level.toolboxDefinition),
-    ...blockTypesIn(level.addBlocks),
+    ...blockTypesIn(levelConfigOf(level).blocks?.addOnArrival),
   ]);
 }
 
 /** The block types a student had to use on a level: the block a checklist
-    item names (an item that accepts any of several types names none), the
-    block it must sit under, and the blocks add_blocks placed for the
-    student to build on. An attachTo entry adds a placeholder or empty room
+    step names (a step that accepts any of several types names none), the
+    block it must sit under, and the blocks the level added for the student
+    to build on. An attachTo entry adds a placeholder or empty room
     and places no block, so it is not counted. */
 export function requiredBlockTypes(level: SpriteLab2LevelProperties): string[] {
-  const fromChecks = (level.objectives?.items ?? []).flatMap(({check}) =>
+  const config = levelConfigOf(level);
+  const fromChecks = (config.objectives?.steps ?? []).flatMap(({check}) =>
     check.kind === 'block'
       ? [typeof check.type === 'string' ? check.type : undefined, check.under]
       : []
   );
-  const placed = (level.addBlocks ?? []).filter(entry => !isAttachment(entry));
+  const placed = (config.blocks?.addOnArrival ?? []).filter(
+    entry => !isAttachment(entry)
+  );
   return unique([
     ...fromChecks.filter((type): type is string => !!type),
     ...blockTypesIn(placed),
@@ -107,7 +111,7 @@ export function inToolboxBlockTypes(
   used: Iterable<string>
 ): Set<string> {
   return new Set([
-    ...(level.blocksAlwaysInToolbox ?? []),
+    ...(levelConfigOf(level).blocks?.alwaysInToolbox ?? []),
     ...chosen,
     ...(level.isProjectLevel ? used : []),
   ]);

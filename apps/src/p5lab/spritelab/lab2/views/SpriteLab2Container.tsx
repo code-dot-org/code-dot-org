@@ -23,7 +23,6 @@ import {
   setupSpriteLab2BlocklyEnvironment,
 } from '../blockly/setup';
 import defaultSources from '../defaultSources.json';
-import {withLevelConfig} from '../levelConfig/applyLevelConfig';
 import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
@@ -73,11 +72,9 @@ const SpriteLab2Container: React.FunctionComponent<
   const previewConfig = preview?.config;
   const levelProperties = useMemo(
     () =>
-      withLevelConfig(
-        previewConfig === undefined
-          ? storedLevelProperties
-          : {...storedLevelProperties, levelConfig: previewConfig}
-      ),
+      previewConfig === undefined
+        ? storedLevelProperties
+        : {...storedLevelProperties, levelConfig: previewConfig},
     [storedLevelProperties, previewConfig]
   );
   const dispatch = useAppDispatch();
