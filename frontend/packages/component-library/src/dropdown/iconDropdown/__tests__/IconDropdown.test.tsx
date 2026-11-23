@@ -88,6 +88,21 @@ describe('Design System - Icon Dropdown Component', () => {
     expect(spyOnChange).toHaveBeenCalledWith(allOptions[1]);
   });
 
+  it('closes the menu and refocuses the trigger after an option is selected', async () => {
+    const user = userEvent.setup();
+    render(<TestIconDropdown labelText="Close label" />);
+
+    const triggerButton = document.getElementById(
+      'test-dropdown-dropdown-button',
+    ) as HTMLElement;
+    await user.click(triggerButton);
+    expect(triggerButton.parentElement).toHaveClass('open');
+
+    await user.click(screen.getByText('option2'));
+    expect(triggerButton.parentElement).not.toHaveClass('open');
+    expect(triggerButton).toHaveFocus();
+  });
+
   it("doesn't change value when dropdown is disabled", async () => {
     const user = userEvent.setup();
     const spyOnChange = vi.fn();

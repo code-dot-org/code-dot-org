@@ -87,6 +87,50 @@ describe('Design System - Action Dropdown Component', () => {
     expect(allOptions[1].onClick).toHaveBeenCalledTimes(1);
   });
 
+  it('closes the menu and refocuses the trigger after an option is selected', async () => {
+    const user = userEvent.setup();
+    render(
+      <ActionDropdown
+        name="close-dropdown"
+        options={allOptions}
+        labelText="Close label"
+        triggerButtonProps={triggerButtonProps}
+      />,
+    );
+
+    const triggerButton = screen.getByRole('button', {name: 'Close label'});
+    await user.click(triggerButton);
+    expect(triggerButton.parentElement).toHaveClass('open');
+
+    await user.click(screen.getByText('option1'));
+    expect(triggerButton.parentElement).not.toHaveClass('open');
+    expect(triggerButton).toHaveFocus();
+  });
+
+  it('leaves focus where the option handler moved it', async () => {
+    const user = userEvent.setup();
+    render(
+      <>
+        <input aria-label="Elsewhere" />
+        <ActionDropdown
+          name="focus-dropdown"
+          options={[
+            {
+              ...allOptions[0],
+              onClick: () => screen.getByLabelText('Elsewhere').focus(),
+            },
+          ]}
+          labelText="Focus label"
+          triggerButtonProps={triggerButtonProps}
+        />
+      </>,
+    );
+
+    await user.click(screen.getByRole('button', {name: 'Focus label'}));
+    await user.click(screen.getByText('option1'));
+    expect(screen.getByLabelText('Elsewhere')).toHaveFocus();
+  });
+
   it("doesn't call onClick when dropdown is disabled", async () => {
     // MUI disabled IconButton sets pointer-events: none, so we need to
     // bypass the pointer-events check to test click behavior.
