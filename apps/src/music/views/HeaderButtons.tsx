@@ -12,6 +12,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getBaseAssetUrl} from '../appConfig';
+import {REMOVED_PACK_MESSAGES} from '../constants';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
@@ -96,7 +97,7 @@ const RemovedPackTooltip: React.FunctionComponent<RemovedPackTooltipProps> = ({
 
   return (
     <Tooltip
-      title={musicI18n.packRemovedDescription()}
+      title={REMOVED_PACK_MESSAGES.PACK}
       placement="bottom"
       describeChild
       slotProps={{
