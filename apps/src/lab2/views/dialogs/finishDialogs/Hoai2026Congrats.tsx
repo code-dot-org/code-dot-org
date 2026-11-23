@@ -186,7 +186,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                     onRemix?.();
                   }}
                 >
-                  Open Quest Builder
+                  Remix your project
                 </MuiButton>
               </div>
               <div className={styles.picture}>

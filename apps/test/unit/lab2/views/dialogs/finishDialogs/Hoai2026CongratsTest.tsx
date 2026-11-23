@@ -88,7 +88,7 @@ describe('Hoai2026Congrats', () => {
   it('opens a remix of the game from the student card', () => {
     const onRemix = jest.fn();
     renderDialog({onRemix});
-    fireEvent.click(screen.getByRole('button', {name: 'Open Quest Builder'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Remix your project'}));
     expect(onRemix).toHaveBeenCalledTimes(1);
   });
 
@@ -98,10 +98,10 @@ describe('Hoai2026Congrats', () => {
     expect(screen.getByRole('button', {name: 'Certificate'})).toBeDisabled();
   });
 
-  it('holds Open Quest Builder when the project may not be remixed', () => {
+  it('holds Remix your project when the project may not be remixed', () => {
     renderDialog({onRemix: undefined});
     expect(
-      screen.getByRole('button', {name: 'Open Quest Builder'})
+      screen.getByRole('button', {name: 'Remix your project'})
     ).toBeDisabled();
   });
 
@@ -145,7 +145,7 @@ describe('Hoai2026Congrats', () => {
     sendEvent.mockClear();
     const press = (role: 'button' | 'link', name: RegExp | string) =>
       fireEvent.click(screen.getByRole(role, {name}));
-    press('button', 'Open Quest Builder');
+    press('button', 'Remix your project');
     press('link', /How AI Makes Decisions/);
     press('link', /AI Discoveries/);
     press('button', 'Copy link');
