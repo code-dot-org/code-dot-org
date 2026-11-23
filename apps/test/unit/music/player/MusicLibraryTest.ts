@@ -75,9 +75,9 @@ describe('MusicLibrary removed packs', () => {
     expect(library.getDefaultSound()).toBe('removed_artist/beat');
   });
 
-  it('plays a removed pack that the level sets', () => {
+  it('plays a removed pack when removed packs are allowed to play', () => {
     const library = createLibrary();
-    library.setLevelPackId('removed_artist');
+    library.setPlayRemovedPacks(true);
     library.setCurrentPackId('removed_artist');
 
     expect(library.isPackRemoved('removed_artist')).toBe(false);
@@ -88,9 +88,10 @@ describe('MusicLibrary removed packs', () => {
     ]);
   });
 
-  it('still silences a removed pack that the level does not set', () => {
+  it('silences a removed pack again when removed packs stop playing', () => {
     const library = createLibrary();
-    library.setLevelPackId('artist');
+    library.setPlayRemovedPacks(true);
+    library.setPlayRemovedPacks(false);
     library.setCurrentPackId('removed_artist');
 
     expect(library.isPackRemoved('removed_artist')).toBe(true);
