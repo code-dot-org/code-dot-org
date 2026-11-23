@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
 import React, {useState} from 'react';
 
-import {WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
+import {PROJECT_PACK_REMOVED_MESSAGE} from '../constants';
 
 import moduleStyles from './pack-removed-alert.module.scss';
 
@@ -16,7 +16,7 @@ const PackRemovedAlert: React.FunctionComponent = () => {
     <Alert
       id="packRemovedAlert"
       className={moduleStyles.inWorkspaceContainer}
-      text={WARNING_BANNER_MESSAGES.MUSIC_PACK_REMOVED}
+      text={PROJECT_PACK_REMOVED_MESSAGE}
       type="warning"
       isImmediateImportance={false}
       size="xs"
