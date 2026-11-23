@@ -127,8 +127,8 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
 
         scrub_pii
 
-        refute UserPracticeProblemAttempt.exists?(attempt.id)
-        assert UserPracticeProblemAttempt.exists?(other.id)
+        _(UserPracticeProblemAttempt.exists?(attempt.id)).must_equal false
+        _(UserPracticeProblemAttempt.exists?(other.id)).must_equal true
       end
     end
 
@@ -145,9 +145,9 @@ class Services::User::PiiScrubberTest < ActiveSupport::TestCase
 
         scrub_pii
 
-        refute ChallengeResponse.exists?(response.id)
-        refute ChallengeResponseAsset.exists?(asset.id)
-        assert ChallengeResponseAsset.exists?(other_asset.id)
+        _(ChallengeResponse.exists?(response.id)).must_equal false
+        _(ChallengeResponseAsset.exists?(asset.id)).must_equal false
+        _(ChallengeResponseAsset.exists?(other_asset.id)).must_equal true
       end
     end
 
