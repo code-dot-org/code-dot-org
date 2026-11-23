@@ -9,6 +9,7 @@ import {AnyAction, Reducer} from 'redux';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
+import {SHARE_LOGO_IMAGE_ID} from '@cdo/apps/code-studio/components/shareLogo/shareLogoImageId';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
@@ -162,6 +163,7 @@ import EditorStrip, {EditHistory} from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import RunButtons, {ArrowCross} from './components/PlayBar';
+import PlayBarGroups from './components/PlayBarGroups';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
 import {sceneDropdownButtonId} from './components/SceneDropdown';
@@ -2660,6 +2662,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             mode={playspaceMode}
             columnHeader={<EditorStrip title="Preview" />}
             onColumnWidth={setPreviewColumnWidth}
+            playClearOfId={isShareView ? SHARE_LOGO_IMAGE_ID : undefined}
             side="right"
             columnShare={PREVIEW_SHARE}
             prompt={
@@ -2671,8 +2674,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }
             bottomBar={
               <>
-                <div className={moduleStyles.playBarButtons}>
-                  {isShareView && <ShareActions />}
+                <PlayBarGroups share={isShareView && <ShareActions />}>
                   <RunButtons
                     playing={activeTab === 'Play'}
                     onPlay={handlePlayClick}
@@ -2701,7 +2703,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                       }
                     />
                   )}
-                </div>
+                </PlayBarGroups>
                 <AskAiIndicator
                   status={askAiStatus}
                   onFailureExpired={handleAskAiExpired}
