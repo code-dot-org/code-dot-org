@@ -28,16 +28,11 @@ export const SongTitlesToArtistTwitterHandle = {
   wenospeakamericano_yolandabecool: 'YolandaBeCool',
   // 2019 Songs
   ificanthaveyou_shawnmendes: 'ShawnMendes',
-  introtoshamstep_47SOUL: '47soulofficial',
   // 2020 Songs
   dancemonkey_tonesandi: 'tonesandimusic',
   dernieredanse_indila: 'Indila',
-  dontstartnow_dualipa: 'DUALIPA',
-  jerusalema_masterkg: 'MasterKGsa',
-  rainonme_ladygagaftarianagrande: 'ladygaga',
   savagelove_jasonderulo: 'jasonderulo',
   // 2021 Songs
-  aire_jessejoy: 'jesseyjoy',
   // These tracks available locally, tweet @codeorg to avoid spamming anyone.
   jazzy_beats: 'codeorg',
   synthesize: 'codeorg',
@@ -62,14 +57,10 @@ export const SongTitlesToArtistTwitterHandle = {
   asitwas_harrystyles: 'Harry_Styles',
   astronautintheocean_maskedwolf: 'MaskedWolfMusic',
   breakmysoul_beyonce: 'Beyonce',
-  good4u_oliviarodrigo: 'OliviaRodrigo',
-  heatwaves_glassanimals: 'GlassAnimals',
   higherpower_coldplay: 'Coldplay',
-  levitating_dualipa: 'DUALIPA',
   sunflower_postmaloneftswaelee: 'PostMalone',
   sunroof_nickyoureanddazy: 'Nicky_Youre',
   taconesrojos_sebastianyatra: 'SebastianYatra',
-  watermelonsugar_harrystyles: 'Harry_Styles',
   wedonttalkaboutbruno_encanto: 'EncantoMovie',
   // 2023 Songs
   butter_bts: 'BTS',
