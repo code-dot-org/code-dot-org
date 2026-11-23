@@ -7,13 +7,13 @@ import {
 import React, {memo, useCallback, useContext, useMemo} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
 
+import {PROJECT_PACK_REMOVED_MESSAGE} from '../constants';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 
@@ -123,7 +123,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
                   iconName="exclamation-circle"
                   iconStyle="solid"
                 />
-                {WARNING_BANNER_MESSAGES.MUSIC_PACK_REMOVED}
+                {PROJECT_PACK_REMOVED_MESSAGE}
               </Typography>
             )}
           </div>
