@@ -78,4 +78,5 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   spritelab: i18n.projectTypeSpriteLab(),
   music: i18n.projectTypeMusic(),
   pythonlab: i18n.projectTypePythonlab(),
+  quest_builder: 'Quest Builder',
 };
