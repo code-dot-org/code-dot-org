@@ -164,7 +164,8 @@ export const AlwaysPublishableProjectTypes = [
   "poetry_hoc",
   "thebadguys",
   "music",
-  "pythonlab"
+  "pythonlab",
+  "quest_builder"
 ] as const;
 
 export const AllPublishableProjectTypes = [
@@ -193,6 +194,7 @@ export const AllPublishableProjectTypes = [
   "thebadguys",
   "music",
   "pythonlab",
+  "quest_builder",
   "applab",
   "gamelab",
   "spritelab"
