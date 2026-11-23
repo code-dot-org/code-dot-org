@@ -74,4 +74,26 @@ describe('MusicLibrary removed packs', () => {
 
     expect(library.getDefaultSound()).toBe('removed_artist/beat');
   });
+
+  it('plays a removed pack that the level sets', () => {
+    const library = createLibrary();
+    library.setLevelPackId('removed_artist');
+    library.setCurrentPackId('removed_artist');
+
+    expect(library.isPackRemoved('removed_artist')).toBe(false);
+    expect(library.isSoundRemoved('removed_artist/beat')).toBe(false);
+    expect(ids(library.getPlayableSounds())).toEqual([
+      'removed_artist',
+      'built_in',
+    ]);
+  });
+
+  it('still silences a removed pack that the level does not set', () => {
+    const library = createLibrary();
+    library.setLevelPackId('artist');
+    library.setCurrentPackId('removed_artist');
+
+    expect(library.isPackRemoved('removed_artist')).toBe(true);
+    expect(library.isSoundRemoved('removed_artist/beat')).toBe(true);
+  });
 });

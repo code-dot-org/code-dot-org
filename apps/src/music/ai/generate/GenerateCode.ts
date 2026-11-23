@@ -83,7 +83,7 @@ export const generateSongAi = async (
   const library = MusicLibrary.getInstance();
   const packFolder = library?.getFolderForFolderId(packId);
   const soundsFolder =
-    packFolder && !packFolder.removed
+    packFolder && !library?.isPackRemoved(packFolder.id)
       ? packFolder
       : library?.getFolderForFolderId('indie');
   const sounds =

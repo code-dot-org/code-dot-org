@@ -170,8 +170,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   );
   const packId = useAppSelector(state => state.music.packId);
   const isPackRemoved =
-    !!packId &&
-    !!MusicLibrary.getInstance()?.getFolderForFolderId(packId)?.removed;
+    !!packId && !!MusicLibrary.getInstance()?.isPackRemoved(packId);
 
   // Pass music validator to Progress Manager
   useEffect(() => {

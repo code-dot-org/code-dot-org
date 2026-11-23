@@ -20,6 +20,9 @@ import moduleStyles from './HeaderButtons.module.scss';
 
 const REMOVED_PACK_ICON_ID = 'removed-pack-icon';
 
+const isPackFolderRemoved = (packFolder: SoundFolder | null) =>
+  !!packFolder && !!MusicLibrary.getInstance()?.isPackRemoved(packFolder.id);
+
 interface CurrentPackProps extends React.HTMLAttributes<HTMLDivElement> {
   packFolder: SoundFolder;
 }
@@ -28,6 +31,7 @@ interface CurrentPackProps extends React.HTMLAttributes<HTMLDivElement> {
 const CurrentPack = React.forwardRef<HTMLDivElement, CurrentPackProps>(
   ({packFolder, className, ...props}, ref) => {
     const library = MusicLibrary.getInstance();
+    const isRemoved = isPackFolderRemoved(packFolder);
 
     let packImageSrc = null;
 
@@ -48,10 +52,10 @@ const CurrentPack = React.forwardRef<HTMLDivElement, CurrentPackProps>(
         className={classNames(
           className,
           moduleStyles.currentPack,
-          packFolder.removed && moduleStyles.currentPackRemoved
+          isRemoved && moduleStyles.currentPackRemoved
         )}
       >
-        {packFolder.removed && (
+        {isRemoved && (
           <FontAwesomeV6Icon
             id={REMOVED_PACK_ICON_ID}
             iconName="exclamation-circle"
@@ -86,7 +90,7 @@ const RemovedPackTooltip: React.FunctionComponent<RemovedPackTooltipProps> = ({
   // The bubble portals to <body>, so it cannot inherit data-theme.
   const {theme} = useTheme(true);
 
-  if (!packFolder?.removed) {
+  if (!isPackFolderRemoved(packFolder)) {
     return children;
   }
 
@@ -200,7 +204,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
           {/* Focusable so keyboard users can open the tooltip. */}
           <CurrentPack
             packFolder={packFolder}
-            tabIndex={packFolder.removed ? 0 : undefined}
+            tabIndex={isPackFolderRemoved(packFolder) ? 0 : undefined}
           />
         </RemovedPackTooltip>
       )}

@@ -100,6 +100,9 @@ export default class MusicLibrary {
   private libraryJson: LibraryJson;
   private allowedSounds: Sounds | null;
   private currentPackId: string | null;
+  // A removed pack that the level itself sets keeps playing, so curriculum
+  // is unaffected until the level is changed.
+  private levelPackId: string | null;
   private hasRestrictedPacks: boolean;
 
   // BPM & Key associated with this library, or undefined if not present.
@@ -143,6 +146,7 @@ export default class MusicLibrary {
     }
 
     this.currentPackId = null;
+    this.levelPackId = null;
 
     this.hasRestrictedPacks = libraryJson.packs.some(pack => pack.restricted);
 
@@ -158,6 +162,11 @@ export default class MusicLibrary {
     this.currentPackId = packId;
 
     // Take this opportunity to update the available sound types in this library.
+    this.determineAvailableSoundTypes();
+  }
+
+  setLevelPackId(packId: string | null) {
+    this.levelPackId = packId;
     this.determineAvailableSoundTypes();
   }
 
@@ -283,13 +292,23 @@ export default class MusicLibrary {
     );
   }
 
+  isPackRemoved(packId: string): boolean {
+    return (
+      packId !== this.levelPackId &&
+      !!this.getFolderForFolderId(packId)?.removed
+    );
+  }
+
   // The available sounds a student can choose, which excludes a removed pack.
   getPlayableSounds() {
-    return this.getAvailableSounds().filter(folder => !folder.removed);
+    return this.getAvailableSounds().filter(
+      folder => !this.isPackRemoved(folder.id)
+    );
   }
 
   isSoundRemoved(id: string): boolean {
-    return !!this.getFolderForSoundId(id)?.removed;
+    const folder = this.getFolderForSoundId(id);
+    return !!folder && this.isPackRemoved(folder.id);
   }
 
   getRestrictedPacks(): SoundFolder[] {
