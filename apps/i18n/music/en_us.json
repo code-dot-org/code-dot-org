@@ -86,6 +86,7 @@
   "redo": "Redo",
   "soundRemoved": "No longer available. Plays as silence.",
   "packRemovedDescription": "This song pack is no longer available. Some sounds may play as silence as a result.",
+  "exampleSoundsRemoved": "This example uses a song pack that is no longer available. Some sounds may play as silence as a result.",
   "soundsFilterPacks": "Packs",
   "soundsFilterSounds": "Sounds",
   "soundsFilterAll": "All",

@@ -1,6 +1,13 @@
+import Alert from '@code-dot-org/component-library/alert';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useCallback, useContext, useEffect, useState} from 'react';
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
@@ -8,7 +15,9 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_PACK} from '../constants';
 import {AnalyticsContext} from '../context';
+import musicI18n from '../locale';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import {isSoundEvent} from '../player/interfaces/SoundEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import {setIsPlaying} from '../redux/musicRedux';
@@ -84,6 +93,13 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
     }
   }, [isPlaying, exemplarIsPlaying, onStopSong]);
 
+  const hasRemovedSounds = useMemo(() => {
+    const library = MusicLibrary.getInstance();
+    return playbackEvents.some(
+      event => isSoundEvent(event) && !!library?.isSoundRemoved(event.id)
+    );
+  }, [playbackEvents]);
+
   // The exemplar player always uses the default pack image to reduce distraction.
   const packImage = MusicLibrary.getInstance()?.getPackImageUrl(DEFAULT_PACK);
 
@@ -132,6 +148,14 @@ const ExemplarPlayerView: React.FunctionComponent<ExemplarPlayerViewProps> = ({
           <div className={moduleStyles.name}>{title}</div>
         </div>
       </div>
+      {hasRemovedSounds && (
+        <Alert
+          text={musicI18n.exampleSoundsRemoved()}
+          type="warning"
+          size="xs"
+          isImmediateImportance={false}
+        />
+      )}
     </div>
   );
 };
