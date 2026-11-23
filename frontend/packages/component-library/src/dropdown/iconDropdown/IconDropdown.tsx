@@ -56,11 +56,11 @@ export interface IconDropdownProps
 }
 
 const IconDropdownMenu: React.FunctionComponent<
-  Pick<IconDropdownProps, 'name' | 'options' | 'onChange' | 'disabled'> & {
+  Pick<IconDropdownProps, 'options' | 'onChange' | 'disabled'> & {
     selectedValue?: string;
   }
-> = ({name, options, selectedValue, onChange, disabled}) => {
-  const closeMenu = useCloseDropdownMenu(name);
+> = ({options, selectedValue, onChange, disabled}) => {
+  const closeMenu = useCloseDropdownMenu();
 
   return (
     <ul>
@@ -163,7 +163,6 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       {...rest}
     >
       <IconDropdownMenu
-        name={name}
         options={options}
         selectedValue={selectedOption?.value}
         onChange={onChange}

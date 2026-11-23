@@ -53,9 +53,9 @@ export interface ActionDropdownProps extends AriaAttributes {
 }
 
 const ActionDropdownMenu: React.FunctionComponent<
-  Pick<ActionDropdownProps, 'name' | 'options' | 'disabled'>
-> = ({name, options, disabled}) => {
-  const closeMenu = useCloseDropdownMenu(name);
+  Pick<ActionDropdownProps, 'options' | 'disabled'>
+> = ({options, disabled}) => {
+  const closeMenu = useCloseDropdownMenu();
 
   return (
     <ul>
@@ -147,7 +147,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
       {...rest}
       triggerButtonProps={triggerButtonProps}
     >
-      <ActionDropdownMenu name={name} options={options} disabled={disabled} />
+      <ActionDropdownMenu options={options} disabled={disabled} />
     </CustomDropdown>
   );
 };

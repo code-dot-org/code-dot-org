@@ -107,6 +107,46 @@ describe('Design System - Action Dropdown Component', () => {
     expect(triggerButton).toHaveFocus();
   });
 
+  it('refocuses its own trigger when several dropdowns share a name', async () => {
+    const user = userEvent.setup();
+    render(
+      <>
+        <ActionDropdown
+          name="row-dropdown"
+          options={allOptions}
+          labelText="Row 1"
+        />
+        <ActionDropdown
+          name="row-dropdown"
+          options={allOptions}
+          labelText="Row 2"
+        />
+      </>,
+    );
+
+    const secondTrigger = screen.getByRole('button', {name: 'Row 2'});
+    await user.click(secondTrigger);
+    await user.click(screen.getAllByText('option1')[1]);
+    expect(secondTrigger).toHaveFocus();
+  });
+
+  it('refocuses a trigger whose id is overridden', async () => {
+    const user = userEvent.setup();
+    render(
+      <ActionDropdown
+        name="custom-id-dropdown"
+        options={allOptions}
+        labelText="Custom id"
+        triggerButtonProps={{...triggerButtonProps, id: 'custom-trigger'}}
+      />,
+    );
+
+    const triggerButton = screen.getByRole('button', {name: 'Custom id'});
+    await user.click(triggerButton);
+    await user.click(screen.getByText('option1'));
+    expect(triggerButton).toHaveFocus();
+  });
+
   it('leaves focus where the option handler moved it', async () => {
     const user = userEvent.setup();
     render(

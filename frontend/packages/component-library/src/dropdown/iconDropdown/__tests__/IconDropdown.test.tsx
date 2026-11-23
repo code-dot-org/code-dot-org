@@ -103,6 +103,26 @@ describe('Design System - Icon Dropdown Component', () => {
     expect(triggerButton).toHaveFocus();
   });
 
+  it('stays open when a disabled option is clicked', async () => {
+    const user = userEvent.setup();
+    const spyOnChange = vi.fn();
+    render(
+      <TestIconDropdown
+        labelText="Disabled option label"
+        options={[{...allOptions[0], isOptionDisabled: true}]}
+        onChange={spyOnChange}
+      />,
+    );
+
+    const triggerButton = document.getElementById(
+      'test-dropdown-dropdown-button',
+    ) as HTMLElement;
+    await user.click(triggerButton);
+    await user.click(screen.getByText('option1'));
+    expect(triggerButton.parentElement).toHaveClass('open');
+    expect(spyOnChange).not.toHaveBeenCalled();
+  });
+
   it("doesn't change value when dropdown is disabled", async () => {
     const user = userEvent.setup();
     const spyOnChange = vi.fn();

@@ -22,20 +22,25 @@ const DropdownContext = createContext({
 
 export const useDropdownContext = () => useContext(DropdownContext);
 
-// Call from inside CustomDropdown's children: CustomDropdown owns the provider.
-// Focus returns to the trigger unless the option's handler moved it elsewhere.
-export const useCloseDropdownMenu = (name: string) => {
+// Call from inside CustomDropdown's children; outside its provider this is a
+// no-op. Focus returns to the trigger unless the handler already moved it.
+// The trigger is found from the menu item, not by id: ids repeat when several
+// dropdowns share a name, and triggerButtonProps can override them.
+export const useCloseDropdownMenu = () => {
   const {setActiveDropdownName} = useDropdownContext();
 
   return useCallback(
-    (option: HTMLElement) => {
+    (menuItem: HTMLElement) => {
       setActiveDropdownName('');
       const focused = document.activeElement;
-      if (!focused || focused === document.body || focused === option) {
-        document.getElementById(`${name}-dropdown-button`)?.focus();
+      if (!focused || focused === document.body || focused === menuItem) {
+        menuItem
+          .closest('[data-dropdown-root]')
+          ?.querySelector<HTMLElement>('[data-toggle="dropdown"]')
+          ?.focus();
       }
     },
-    [name, setActiveDropdownName],
+    [setActiveDropdownName],
   );
 };
 

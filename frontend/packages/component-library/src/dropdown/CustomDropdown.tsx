@@ -242,6 +242,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       )}
       onKeyDown={onKeyDown}
       ref={dropdownRef}
+      data-dropdown-root
       aria-describedby={ariaProps['aria-describedby']}
     >
       {styleAsFormField && labelText && (
