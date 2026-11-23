@@ -167,6 +167,8 @@ jest.mock('@cdo/apps/code-studio/progressRedux', () => ({
 }));
 const mockLoad = jest.fn<Promise<Progress>, []>();
 jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
+  // The preview's store extends it when PathwayApp loads.
+  ProgressStore: class {},
   serverProgressStore: {
     load: () => mockLoad(),
     saveStep: jest.fn(),
