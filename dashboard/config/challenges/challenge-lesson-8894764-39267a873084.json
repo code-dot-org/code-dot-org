@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894764-39267a873084",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 9: Refining Our Product",
+  "question": "Three students said three very different things about AI. One claim is too big to be true, one is too vague to help, and one is built on a real experience. Can you tell which is which?\n\nSteps:\n1. Use the arrow tool to point at the claim that is too big to be true.\n2. Place a shape on the claim that comes from a real experience.\n3. Use the text tool to rewrite Ben’s claim so it says exactly what to be careful about and what to do.\n4. Record your voice explaining what makes the claim with the shape strong, and why “always right” cannot be true.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on Ava's claim, the shape is not on Chloe's claim, or the typed rewrite of Ben's claim does not name a specific thing to be careful about and an action to take."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to Ava's claim AND a shape is on Chloe's claim AND the typed text rewrites Ben's claim to name a specific thing to be careful about and an action to take."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains what makes Chloe's claim strong (a real experience and a specific action) AND why \"always right\" cannot be true."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894764-39267a873084-94ad96ca",
+  "whiteboard_starter_image_alt_text": "\"Three students on the school bus are talking about AI.\" Ava: \"AI is always right, so I never check it.\" Ben: \"AI can be wrong sometimes, so be careful.\" Chloe: \"AI gave me two different dates for the same event, so now I check dates in a second source.\""
+}

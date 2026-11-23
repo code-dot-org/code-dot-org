@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894909-39dcf53e0018",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 8: Debugging and Refining Outputs",
+  "question": "A debugging log only helps if you can tell which change fixed the problem. One of these tries changed too much at once. Find it, and write the next test that tells you the truth.\n\nSteps:\n1. Use the arrow tool to point at the try where you cannot tell which change helped.\n2. Use the text tool to write the next test, changing only one thing from that try.\n3. Record your voice explaining why changing one thing at a time makes debugging easier.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow, but types no next test."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to try 3 AND the typed test changes only one thing from try 3 AND the voice recording says that try 3 changed several things at once."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that changing one thing at a time shows which change caused the improvement, and compares this to debugging code."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894909-39dcf53e0018-ce039a60",
+  "whiteboard_starter_image_alt_text": "\"A debugging log: four tries at one request,\" with columns for what was typed, what changed, and the result. Try 1: \"Make a packing list.\" Nothing changed, since it is the first try. Result: too general. Try 2: \"Make a packing list for a 2-day beach trip.\" Added the trip type and length. Result: better, but nothing for rain. Try 3: \"Make a short packing list for a 2-day beach trip. It will rain and I will hike. Use a friendly tone.\" Added \"short,\" the weather, the hiking, and a friendly tone. Result: works well. Try 4: the same as try 3 plus \"Put it in a table.\" Added the table format. Result: works well, and easier to read. At the bottom is a blank box labeled \"Space for your next test.\""
+}

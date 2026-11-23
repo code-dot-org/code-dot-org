@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894904-0639a90f9800",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 3: The AI's Brain",
+  "question": "You are shopping for training data, and you only have room for four sources. Every source you choose changes what your AI knows, and every one you skip changes what it misses.\n\nSteps:\n1. Use the shape tool to mark the 4 sources you would buy.\n2. Use the arrow tool to point at one source you would leave out.\n3. Use the text tool to write one problem that could still remain in your AI.\n4. Record your voice explaining your choices, and name one trade-off in a source you picked.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape, arrow, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places fewer than 4 shapes, OR places no arrow."
+    },
+    {
+      "level": 2,
+      "description": "Four shapes are on four different sources AND an arrow points to a source left out AND the typed text names a specific problem that could remain AND the voice recording gives a reason for at least 2 choices (such as accuracy, how recent it is, or variety)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a trade-off in one chosen source (for example, social media comments add variety but also rumors) AND says how human feedback could reduce it."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894904-0639a90f9800-b71669f3",
+  "whiteboard_starter_image_alt_text": "The task \"Build an AI that answers students' homework questions. You can pick 4 data sources.\" above eight numbered data sources: 1, encyclopedia articles, updated last year; 2, textbooks from 1975, checked by experts; 3, social media comments from 10 million people on all topics; 4, essays from one school, written by 200 students; 5, news from 50 countries from the last 5 years; 6, product reviews with millions of star ratings; 7, science journals written by researchers; and 8, millions of imaginative fan fiction stories."
+}

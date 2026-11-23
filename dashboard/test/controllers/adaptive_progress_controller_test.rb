@@ -367,6 +367,39 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_empty steps
   end
 
+  test "ai metrics are zero for a student with no chat" do
+    get :ai_metrics, params: params
+
+    assert_response :success
+    assert_equal({'accepted' => 0, 'rejected' => 0}, JSON.parse(response.body))
+  end
+
+  test "ai metrics count the student's decisions in this pathway's level steps and unit" do
+    log_chat_event @sandbox, 'aiTutorVersionActionAccept'
+    log_chat_event @sandbox, 'aiTutorVersionActionAccept'
+    log_chat_event @template, 'aiTutorVersionActionReject'
+    log_chat_event @sandbox, 'success'
+    log_chat_event create(:weblab2), 'aiTutorVersionActionAccept'
+    log_chat_event @sandbox, 'aiTutorVersionActionReject', script_id: create(:unit).id
+    log_chat_event @sandbox, 'aiTutorVersionActionReject', user: create(:student)
+
+    get :ai_metrics, params: params
+
+    assert_equal({'accepted' => 2, 'rejected' => 1}, JSON.parse(response.body))
+  end
+
+  test "ai metrics refuse an adaptive level that is not in the unit" do
+    get :ai_metrics, params: {scriptId: create(:unit).id, levelId: @level.id}
+
+    assert_response :not_found
+  end
+
+  private def log_chat_event(level, notification_type, user: @student, script_id: @unit.id)
+    create(:aichat_event, user: user, level_id: level.id, script_id: script_id,
+      aichat_event: {'notificationType' => notification_type, 'text' => 'Done.', 'timestamp' => 1}
+    )
+  end
+
   private def params
     {scriptId: @unit.id, levelId: @level.id}
   end

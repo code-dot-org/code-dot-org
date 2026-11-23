@@ -1,0 +1,13 @@
+{
+  "key": "l9-ask-for-specific-feedback",
+  "description": "Learn how to tell a feedback chatbot who your audience is and what to check, so its feedback is useful.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l9-ask-for-specific-feedback.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "0e8689e4-f884-4cfc-b95f-94f6b3123bd4"
+  ]
+}

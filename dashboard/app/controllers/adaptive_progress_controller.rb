@@ -26,6 +26,13 @@ class AdaptiveProgressController < ApplicationController
     render json: @level.progress_json(user_id: current_user.id, script_id: @unit.id)
   end
 
+  # Retrieve metrics about the current user's AI use on the adaptive tutorial.
+  # This is used for the wrap up settings.
+  # GET /adaptive_progress/ai_metrics?scriptId=&levelId=
+  def ai_metrics
+    render json: @level.ai_metrics(user_id: current_user.id, script_id: @unit.id)
+  end
+
   # PUT /adaptive_progress/steps/:step_id/progress
   def update_progress
     body = request.request_parameters

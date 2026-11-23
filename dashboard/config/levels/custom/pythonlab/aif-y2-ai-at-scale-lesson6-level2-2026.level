@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-20T18:37:01.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You’d like to better understand how your regression model improves with more training. The loop in this program trains a new network four times, allowing it 1, 10, 100 and then 1000 passes over the drives, and prints each network’s prediction for drive 1.\r\n\r\n**☑️ Do This:**\r\n\r\n- Predict what happens to the prediction for drive 1 as `max_iter` grows from 1 to 1000.\r\n- Run the program to test your prediction.\r\n- Study the four printed predictions. At which `max_iter` do the predictions stop changing as much?\r\n- Run the program again. Be ready to share what you notice: which numbers changed, and which stayed the same?\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "true",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import SGDRegressor\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import make_pipeline\n\n# Twelve practice drives: [rock height (inches), ground slope (degrees)]\ninputs = [[0, 0], [3, 0], [0, 20], [1, 5], [3, 10], [4, 15],\n          [5, 20], [6, 30], [2, 25], [1, 30], [5, 5], [0, 10]]\n\n# The speed that got the rover through each drive (meters per hour)\noutputs = [90, 72, 70, 79, 62, 51, 40, 24, 53, 54, 55, 80]\n\n# This line creates a new, untrained network: a scaler, then one neuron\nmodel = make_pipeline(StandardScaler(), SGDRegressor())\n\nmodel.fit(inputs, outputs)\n\nprediction = round(model.predict([[2, 10]])[0])\nprint(f\"Drive 1: predicted {prediction}, the engineers guessed 62\")\nprediction = round(model.predict([[4, 30]])[0])\nprint(f\"Drive 2: predicted {prediction}, the engineers guessed 14\")\n\n# Train a new network for each max_iter and print its prediction for drive 1\nfor max_iter in [1, 10, 100, 1000]:\n    model = make_pipeline(StandardScaler(), SGDRegressor(max_iter=max_iter))\n    model.fit(inputs, outputs)\n    prediction = round(model.predict([[2, 10]])[0])\n    print(f\"max_iter {max_iter}: predicted {prediction}\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20 18:41:35 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 18:41:44 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 18:42:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 18:42:52 +0000\",\"changed\":[\"disable_edit_run_for_submission\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

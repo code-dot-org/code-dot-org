@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894909-1a1392e3722a",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 8: Debugging and Refining Outputs",
+  "question": "You asked an AI for something simple, and it gave you something ridiculous. Call tech support and file a bug report. Say what you asked, what you got, what was missing, and your fix.\n\nSteps:\n1. Start recording. Pick one case from the list below.\n2. Say what you asked and what you got back.\n3. Name the piece that was missing from your prompt, such as the length, the format, the background, or the tone.\n4. Say your new prompt, then predict what the AI will do with it and what you will check in the result.\n\nCase list:\n- You asked: “Write a birthday message.” You got: a 900-word essay about the history of birthdays.\n- You asked: “Explain photosynthesis.” You got: a rhyming poem that skips the science.\n- You asked: “Plan my Saturday.” You got: a schedule that starts at 4 a.m. and has 14 activities.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe a problem or a new prompt on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student describes what went wrong but does not name what was missing, OR gives no new prompt."
+    },
+    {
+      "level": 2,
+      "description": "Student says what was asked and what came back, names a missing piece that fits the case (such as length, format, background, or tone), and gives a new prompt that includes it."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND predicts what the AI will do with the new prompt AND says what they will check in the result."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}
