@@ -45,6 +45,26 @@ class FrontendStudioControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'index should load gtag.js and stamp the measurement id without the webpack reporter' do
+    DCDO.set('frontend_studio_enabled', true)
+
+    get :index
+
+    assert_select 'script[src*="googletagmanager.com/gtag/js"]', 1
+    stamp = css_select('script[data-googlemeasurement]').first
+    assert_match(/\AG-/, JSON.parse(stamp['data-googlemeasurement'])['id'])
+    assert_nil stamp['src']
+  end
+
+  test 'index should stamp the signed-in user type as an analytics dimension' do
+    DCDO.set('frontend_studio_enabled', true)
+    sign_in create(:teacher)
+
+    get :index
+
+    assert_includes response.body, '"dimension4":"teacher"'
+  end
+
   test 'index should stamp notice, info and alert in that order' do
     DCDO.set('frontend_studio_enabled', true)
 

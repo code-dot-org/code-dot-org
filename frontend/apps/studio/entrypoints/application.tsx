@@ -11,6 +11,7 @@ import {observabilityPlugin} from '@code-dot-org/core/plugins/observability';
 import {injectFontAwesome} from '@code-dot-org/fonts/fontAwesome';
 
 import {isMobileBuild} from '@/config/buildMode';
+import {initializeGoogleAnalytics} from '@/modules/googleAnalytics';
 import {enableMocks} from '@/modules/mocks/enableMocks';
 import router from '@/modules/router';
 import queryClient from '@/modules/router/queryClient';
@@ -28,6 +29,7 @@ if (typeof window !== 'undefined') {
       analyticsPlugin,
     ],
   });
+  initializeGoogleAnalytics();
   // Import FontAwesome into the `base` layer (declared below `mui` in
   // __root.tsx) so MUI's layered styleOverrides win over FA's base icon rules.
   // The mobile build has no layers (see __root.tsx) and links the sheets.

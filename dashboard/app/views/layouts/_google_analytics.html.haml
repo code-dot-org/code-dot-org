@@ -24,4 +24,5 @@
 / Google tag (gtag.js)
 %script{async: "", src: "https://www.googletagmanager.com/gtag/js?id=#{google_measurement[:id]}"}
 
-%script{src: webpack_asset_path("js/layouts/_google_analytics.js"), data: {googleMeasurement: google_measurement.to_json}}
+-# The Studio shell has no webpack runtime; its own bundle reads the data attribute.
+%script{src: (webpack_asset_path("js/layouts/_google_analytics.js") if local_assigns.fetch(:webpack_reporter, true)), data: {googleMeasurement: google_measurement.to_json}}
