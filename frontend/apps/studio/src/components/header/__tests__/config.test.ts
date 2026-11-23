@@ -107,8 +107,8 @@ describe('buildCreateMenuItems', () => {
   });
 
   it('omits Mix & Move with AI', () => {
-    expect(
-      buildCreateMenuItems().some(i => i.id === 'music_dance_ai'),
-    ).toBe(false);
+    expect(buildCreateMenuItems().some(i => i.id === 'music_dance_ai')).toBe(
+      false,
+    );
   });
 });
