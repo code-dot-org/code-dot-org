@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894906-fb7479ea3f83",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 5: Uncovering Contradictions",
+  "question": "Two friends in different parts of the world give different answers to the same question, and both are telling the truth. An AI can look contradictory the same way. Can you tell the difference?\n\nSteps:\n1. Start recording. Pick one question from the list below.\n2. Give two answers that look like they contradict each other.\n3. Say the missing context that makes both answers correct.\n4. Rewrite the question so that it would get one consistent answer.\n\nQuestion list:\n- “What time is it?”\n- “Is it cold outside?”\n- “What is the biggest city in this country?”\n- “How long is the drive?”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give any answers on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student gives two answers but does not explain why both could be right."
+    },
+    {
+      "level": 2,
+      "description": "Student gives two answers that look like they contradict AND names the missing context that makes both correct."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND rewrites the question to include that context so that one consistent answer is possible."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

@@ -50,16 +50,7 @@ export const fetchUserChatHistory = createAsyncThunk(
       );
 
       if (isOwnHistory) {
-        // Saved remove ids would collide with this page load's counter.
-        thunkAPI.dispatch(
-          setOwnChatHistory(
-            chatHistoryApiResponse.map(event =>
-              'removeId' in event
-                ? {...event, removeId: getNewRemoveId()}
-                : event
-            )
-          )
-        );
+        thunkAPI.dispatch(setOwnChatHistory(chatHistoryApiResponse));
         if (initialWelcomeMessage) {
           const stateAfter = thunkAPI.getState() as RootState;
           if (stateAfter.aichat.chatEventsCurrent.length === 0) {

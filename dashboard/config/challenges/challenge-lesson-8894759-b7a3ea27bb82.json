@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894759-b7a3ea27bb82",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 4: Guidelines for Working with AI",
+  "question": "A neighbor needs a helper, and the helper only knows what you tell it. Say its instructions out loud, then find the spot where it could still go wrong.\n\nSteps:\n1. Start recording. Pick one person from the list below.\n2. Say the instructions for your helper out loud. Include who the helper is and who it is helping, what it should do, and one rule about what it should NOT do.\n3. Say the first message your helper would send to that person.\n4. Tell the camera one way the helper could still get it wrong, and how you would change the instructions.\n\nPerson list:\n- A grandparent learning to use a phone\n- A younger child who is afraid of the dark\n- A neighbor who just moved to a new town\n- A friend who is nervous about giving a speech",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say any instructions on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the instructions leave out one or more of the three parts (who the helper is and who it is helping, what it should do, and a rule about what it should NOT do), or the student does not say the helper's first message."
+    },
+    {
+      "level": 2,
+      "description": "Student says all three parts AND says the first message the helper would send to the person."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names a specific way the helper could still get it wrong AND states a change to the instructions that would address it."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

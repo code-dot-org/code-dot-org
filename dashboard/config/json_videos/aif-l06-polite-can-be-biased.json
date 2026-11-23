@@ -1,0 +1,13 @@
+{
+  "key": "aif-l06-polite-can-be-biased",
+  "description": "Learn how to spot bias in AI answers that sound polite by comparing who gets what.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l06-polite-can-be-biased.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "b38c8248-55e2-4eac-9f3a-b527f1cdff7b"
+  ]
+}

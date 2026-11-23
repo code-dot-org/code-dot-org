@@ -1,0 +1,18 @@
+name 'aif-y2-ai-at-scale-lesson13-level5-choice4-2026'
+title 'Tree Maintenance'
+display_name 'Tree Maintenance'
+bubble_choice_description "Your community’s parks department wants to predict whether a tree is high risk for causing damage."
+markdown <<MARKDOWN
+As you’ve talked to the people at your community’s parks department, you’ve learned more about the decisions they need to make based on the available data. Read the quotes, then complete the questions in the **Take Action** section of the Project Planning Guide to describe how you’ll recommend an action based on the neural network’s output and how you’ll add safeguards to your program to address at least one person’s concern.
+
+- Based on the predicted tree risk, they need to decide what action to take. Some of their requests are quoted below:
+  - “We always inspect the trees. But if it’s a low risk tree we probably can wait a year before the next inspection.”
+  - “If there’s an extreme risk tree, we have to do something right away. Probably close the area and remove the tree.”
+  - “For moderate and high risk trees, we usually need to take some action. High risk trees we usually prune or brace with cables within a week. If it’s a moderate risk, we’ll usually do some pruning but it’s okay if it takes a month.”
+- The employees at the parks department are concerned that AI might automatically make decisions that might be wrong. Some of their concerns are quoted below:
+  - “Removing a tree can’t be undone. I worry that AI will suggest that and then we won’t be able to go back.”
+  - “I know people in the community worry about trees that are close to trails or playgrounds and lean over a lot. I always pay special attention to those trees.”
+  - “Heritage trees are trees with large trunks, and they have special legal protection in our community. They should always get a special inspection before we take any action, no matter what AI says.”
+  - “For safety, I always prioritize the trees in busy areas that get a lot of visitors.”
+
+MARKDOWN

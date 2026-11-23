@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894756-c3c20409f702",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 1: Investigating AI Tools",
+  "question": "Four prompts enter the ring and only one can be champion. Predict the winner, then try to beat it.\n\nSteps:\n1. Start recording. Read the four prompts below out loud to the camera.\n2. Rank them from 1st to 4th by which you predict would make the best dancer. Say your ranking out loud.\n3. Explain why your #1 beats your #4. Point to a specific word or detail.\n4. Say a Challenger prompt that beats your #1 by changing just ONE thing, tell us what you changed, and predict how the dancer would look different.\n\nPrompts:\n- A. “a dancer”\n- B. “a dancer in a cool outfit”\n- C. “a hip-hop dancer in a neon yellow jacket and silver sneakers”\n- D. “a really good amazing dancer doing something awesome”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not read any of the prompts or does not give a ranking."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says a ranking of all four prompts but gives no reason, or gives a reason that does not cite a specific word or detail from the prompts (such as “it’s just better”)."
+    },
+    {
+      "level": 2,
+      "description": "Student says a ranking of all four prompts AND cites at least one specific word or detail from the prompts as the reason for the ranking (for example, “C has the jacket color and the shoes”)."
+    },
+    {
+      "level": 3,
+      "description": "Student meets all of the above AND says a Challenger prompt that differs from their #1 by exactly one word or phrase, AND names what they changed, AND predicts how it would change the result."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

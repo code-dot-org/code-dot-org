@@ -1,0 +1,13 @@
+{
+  "key": "aif-l09-your-story-stands-out",
+  "description": "Learn how to turn a neat AI draft into writing that's yours by adding a story only you can tell.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l09-your-story-stands-out.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "9c315c39-11ae-477d-8b48-2688a1d95f00"
+  ]
+}

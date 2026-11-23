@@ -184,6 +184,10 @@ export default class FunctionEditor {
     return false;
   }
 
+  isOpen(): boolean {
+    return this.dom?.style.display === 'block';
+  }
+
   // We kept this around for backwards compatibility with the CDO
   // function editor, but its logic is the same as hide.
   hideIfOpen() {

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894764-443609a2f203",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 9: Refining Our Product",
+  "question": "Four signs are posted along the same trail. Only one tells a hiker what to do. Which one is it, and what makes it useful?\n\nSteps:\n1. Use the arrow tool to point at the sign that helps hikers the most.\n2. Place a shape on one sign that helps the least.\n3. Record your voice explaining what makes your top sign useful. Bonus points if you say what a hiker still would not know after reading the sign with the shape.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on sign B, or the voice recording names fewer than two things that make sign B useful."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to sign B AND a shape is on sign A, C, or D AND the voice recording names at least two things that make sign B useful (what to do, where, or why)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains what a hiker could not know from the sign with the shape."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894764-443609a2f203-e4b2a737",
+  "whiteboard_starter_image_alt_text": "\"Four signs along a hiking trail. Which one helps hikers most?\" Four wooden signs beside a trail. A: \"Be careful.\" B: \"Stay on the path. The rocks near the river are slippery after rain.\" C: \"Nature is beautiful.\" D: \"Watch out for things.\""
+}

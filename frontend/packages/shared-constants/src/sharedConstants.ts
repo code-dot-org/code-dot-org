@@ -256,7 +256,7 @@ export const ChildAccountComplianceStates = {
   "PERMISSION_GRANTED": "g"
 } as const;
 
-export const DanceSongManifestFilename = 'songManifest2026.json' as const;
+export const DanceSongManifestFilename = 'songManifest2026_v2.json' as const;
 
 export const AiEvaluationTypes = {
   "SINGLE_STUDENT": "single_student",

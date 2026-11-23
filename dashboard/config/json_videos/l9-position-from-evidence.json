@@ -1,0 +1,13 @@
+{
+  "key": "l9-position-from-evidence",
+  "description": "See how to build your AI rule from your own evidence instead of something that just sounds smart.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l9-position-from-evidence.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "7ad545f1-8124-4538-bdf6-e15bf3d9de85"
+  ]
+}

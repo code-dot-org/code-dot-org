@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894909-a84638197c12",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 8: Debugging and Refining Outputs",
+  "question": "The AI can copy a voice, but it needs more than a description to do it well. Show how one short example can do what a hundred describing words cannot.\n\nSteps:\n1. Start recording. Pick one voice from the list below.\n2. Say “Describe my morning routine.” Be the AI and perform a flat, generic answer for 10 seconds.\n3. Now give the AI one short example line in that voice, and perform the answer again for 10 seconds.\n4. Say what the example gave the AI that a description like “make it dramatic” could not.\n\nVoice list:\n- A sports announcer\n- A nature documentary narrator\n- A very calm airline pilot\n- A game show host",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not perform on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student performs only one version."
+    },
+    {
+      "level": 2,
+      "description": "Student performs a flat first version AND says one example line in the target style AND performs a second version that clearly differs from the first."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND explains what the example gave the AI that a description alone could not (such as rhythm or word choice)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

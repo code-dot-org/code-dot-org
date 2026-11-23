@@ -1,6 +1,7 @@
 name 'data-makes-ai-lesson12-sketch-lab-tree1-choice'
 display_name 'Add Tree 1'
 description 'Click the same dataset you chose in Meet the Data. Your Project Map for it will open.'
+navigation_type 'next_sublevel'
 
 sublevels
 level 'data-makes-ai-lesson12-sketch-lab-tree1-snacks'

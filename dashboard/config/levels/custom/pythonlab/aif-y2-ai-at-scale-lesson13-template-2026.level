@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T22:37:14.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# TODO",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "next_week.py",
+          "contents": "pantry = {\n  \"years_ago\": 0,\n  \"day_of_week\": 6,\n  \"week_of_month\": 4,\n  \"school_in_session\": 1,\n  \"holiday_week\": 1,\n  \"forecast_high_f\": 25,\n  \"forecast_rain\": 1,\n  \"special_event\": 1,\n  \"registered_households\": 470,\n  \"rural\": 0,\n  \"on_bus_line\": 1,\n  \"unemployment_rate\": 4.5,\n}\n\nroad = {\n  \"years_ago\": 0,\n  \"overnight_low_f\": 29,\n  \"sunset_temp_f\": 37,\n  \"precip_last_24h_in\": 0.0,\n  \"snowfall_in\": 0.0,\n  \"clear_sky\": 0,\n  \"is_bridge\": 1,\n  \"shade\": 0,\n  \"elevation_ft\": 720,\n  \"traffic_per_hour\": 300,\n  \"wind_mph\": 12,\n  \"lanes\": 2,\n}\n\npolling_place = {\n  \"years_ago\": 0,\n  \"hour\": 7,\n  \"registered_voters\": 3500,\n  \"check_in_stations\": 3,\n  \"voting_booths\": 10,\n  \"election_type\": 3,\n  \"ballot_races\": 22,\n  \"early_votes_pct\": 40,\n  \"site_moved\": 1,\n  \"same_day_registration\": 0,\n  \"urban\": 0,\n}\n\ntree = {\n  \"years_ago\": 0,\n  \"is_ash\": 0,\n  \"trunk_diameter_in\": 22,\n  \"age_years\": 60,\n  \"dead_branches_pct\": 8,\n  \"trunk_crack\": 1,\n  \"lean_degrees\": 3,\n  \"decay\": 0,\n  \"root_damage\": 0,\n  \"recent_storm\": 0,\n  \"near_playground\": 1,\n  \"near_trail\": 0,\n  \"near_parking\": 0,\n  \"near_picnic_area\": 0,\n  \"visitors_per_day\": 900,\n}\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 22:37:33 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 22:37:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 22:39:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 22:39:23 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

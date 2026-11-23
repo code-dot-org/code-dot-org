@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894906-fc1d0275e3a5",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 5: Uncovering Contradictions",
+  "question": "You are a crystal ball that answers any question, but you never give the same answer twice. Is that charming or dangerous? It depends on the question.\n\nSteps:\n1. Start recording. Pick one question from the list below.\n2. Be the crystal ball: answer the same question 3 times, with a different answer each time.\n3. Say whether it is okay for that question to get different answers, and why.\n4. Name a question where different answers would cause real trouble, and say who would be affected.\n\nQuestion list:\n- “What should I do this weekend?”\n- “What should I name my goldfish?”\n- “What time does the pharmacy close today?”\n- “Is this email from my bank real?”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give any answers on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student gives fewer than 3 answers, OR the 3 answers are the same."
+    },
+    {
+      "level": 2,
+      "description": "Student gives 3 different answers to the same question AND says whether different answers are okay for that question, with a reason."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names a question where different answers would cause real trouble AND says who would be affected."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

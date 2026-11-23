@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-11-20T18:32:32.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "#The Decision That Mattered\r\n\r\n> Name one decision a human made while maintaining your AI system, and one consequence of that decision.\r\n",
+    "stay_on_level_after_submit": "false",
+    "submittable": "false",
+    "allow_multiple_attempts": "false",
+    "height": "50",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "name_suffix": "_pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20T18:32:32.123+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson14-cfu_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson14-cfu_27_28\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
