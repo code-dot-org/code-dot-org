@@ -24,7 +24,8 @@ module ProjectsList
     poetry: ['poetry', 'poetry_hoc'],
     library: ['applab', 'gamelab'],
     music: ['music'],
-    pythonlab: ['pythonlab']
+    pythonlab: ['pythonlab'],
+    quest_builder: ['quest_builder']
   }.freeze
 
   # Sharing of advanced project types to the public gallery is restricted for
