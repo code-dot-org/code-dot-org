@@ -860,6 +860,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   blocklyWrapper.SourceCustomBlocks = {
     blockDefinitionsByName: {},
     blockTexts: {},
+    blockArgs: {},
   };
   blocklyWrapper.SourceCustomInputTypes = {};
 
