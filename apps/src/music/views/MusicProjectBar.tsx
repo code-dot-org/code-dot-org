@@ -57,7 +57,7 @@ const MusicProjectBar: React.FC<{
           )}
         </div>
       </div>
-      {!isLoading && packFolder?.removed && (
+      {!isLoading && packFolder && library.isPackRemoved(packFolder.id) && (
         <Typography className={styles.packRemoved} variant="body4">
           <FontAwesomeV6Icon iconName="exclamation-circle" iconStyle="solid" />
           {PACK_REMOVED_MESSAGE}
