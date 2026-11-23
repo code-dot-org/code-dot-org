@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography as MuiTypography} from '@mui/material';
 import $ from 'jquery';
+import 'jquery-ui/ui/widgets/draggable';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';

@@ -19,6 +19,15 @@ import {
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/analyticsUtils';
 import i18n from '@cdo/locale';
 
+// Some widgets have specific dependencies on jQuery UI; a holdover from when
+// we used to include it globally on every page. Because we now include jQuery
+// UI as a module and these widgets are currently implemented as static assets
+// which can't include dependencies, we include them here for every widget. If
+// we eventually incorporate these widget into the apps build, we can make this
+// dependency more targeted.
+import 'jquery-ui/ui/widgets/slider'; // required for Vigenere Cipher
+import 'jquery-ui/ui/widgets/sortable'; // required for Odometer
+
 export function showInstructionsDialog() {
   showDialog(
     <LegacyInstructionsDialog

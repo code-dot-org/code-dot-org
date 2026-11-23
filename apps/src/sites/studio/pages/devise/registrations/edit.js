@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import 'jquery-ui/ui/effects/effect-highlight';
 import React from 'react';
 import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
