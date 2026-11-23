@@ -10,7 +10,10 @@ $(document).ready(() => {
     return;
   }
   createReactRoot(
-    <PathwayEditor pathwayId={container.dataset.pathwayId} />,
+    <PathwayEditor
+      pathwayId={container.dataset.pathwayId}
+      levelId={container.dataset.levelId}
+    />,
     container
   );
 });

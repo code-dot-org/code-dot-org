@@ -13,12 +13,20 @@ const mapSchema = z.strictObject({
    * with a `destination` stacked around the outside, the rest fanning out
    * from the root at the center.
    */
-  layout: z.enum(['tree', 'destinations']).optional(),
+  layout: z.enum(['tree', 'destinations']).optional().meta({
+    title: 'Layout',
+    description:
+      'Tree, the default: rows by dependency depth. Destinations: checkpoints with a destination around the outside, the rest fanning out from the center.',
+  }),
   /**
    * The compass direction the layout's top faces: `n` as authored, `e` a
    * quarter turn clockwise, `s` a half turn, `w` three quarters.
    */
-  orientation: z.enum(['n', 'e', 's', 'w']).optional(),
+  orientation: z.enum(['n', 'e', 's', 'w']).optional().meta({
+    title: 'Orientation',
+    description:
+      'The compass direction the top of the layout faces: n as authored, e a quarter turn clockwise, s a half turn, w three quarters.',
+  }),
 });
 
 /**
@@ -27,24 +35,56 @@ const mapSchema = z.strictObject({
  * Adaptive level.
  */
 export const pathwaySourceSchema = z.strictObject({
-  formatVersion: z.literal(4),
-  id: z.string().min(1),
-  title: z.string().min(1),
-  objective: z.string().min(1),
+  formatVersion: z.literal(4).meta({title: 'Format version'}),
+  id: z.string().min(1).meta({
+    title: 'Id',
+    description: "The pathway's id, which is also its content file's name.",
+  }),
+  title: z.string().min(1).meta({title: 'Title'}),
+  objective: z.string().min(1).meta({
+    title: 'Objective',
+    description: 'What the student comes away able to do.',
+  }),
   // Adaptive pathways are built around a single project.
-  project: projectSourceSchema,
+  project: projectSourceSchema.meta({
+    title: 'Project',
+    description: 'The one project the pathway is built around.',
+  }),
   // A pathway's standards are its skills' standards; see pathwayStandards().
-  skills: z.record(z.string(), skillSourceSchema),
-  checkpoints: z.array(checkpointSourceSchema).min(1),
+  skills: z.record(z.string(), skillSourceSchema).meta({
+    title: 'Skills',
+    description:
+      'The skills the pathway develops, by id. Checkpoints name them in their skills.',
+  }),
+  checkpoints: z
+    .array(checkpointSourceSchema.meta({title: 'Checkpoint'}))
+    .min(1)
+    .meta({
+      title: 'Checkpoints',
+      description:
+        'The units of progress, each a sequence of steps that returns the student to the map. They form a graph through what each requires.',
+    }),
   /**
    * The map's destinations by id, which checkpoints name in `destination`.
    * Without this map a checkpoint's `destination` is the title itself.
    */
-  destinations: z.record(z.string().min(1), destinationSchema).optional(),
+  destinations: z.record(z.string().min(1), destinationSchema).optional().meta({
+    title: 'Destinations',
+    description:
+      "The map's destinations by id, which checkpoints name. Without them a checkpoint's destination is its title.",
+  }),
   /** How the map is drawn, unless a URL parameter says otherwise. */
-  map: mapSchema.optional(),
+  map: mapSchema.optional().meta({
+    title: 'Map',
+    description:
+      'How the map is drawn, unless the page address says otherwise.',
+  }),
   /** What I'm finished does; without it the level finishes at once. */
-  finish: finishSourceSchema.optional(),
+  finish: finishSourceSchema.optional().meta({
+    title: "I'm finished",
+    description:
+      "What I'm finished does. Without it the level finishes at once.",
+  }),
 });
 
 /**

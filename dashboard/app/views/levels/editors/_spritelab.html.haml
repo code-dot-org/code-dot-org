@@ -27,7 +27,10 @@
 = render partial: 'levels/editors/fields/audit_log', locals: {f: f}
 = render partial: 'levels/editors/fields/level_concept_difficulty', locals: {f: f}
 = render partial: 'levels/editors/fields/lab2', locals: {f: f, level_type: 'spritelab'}
-= render partial: 'levels/editors/fields/spritelab_mode', locals: {f: f}
+- if @level.persisted? && @level.properties['uses_lab2'].to_s == 'true'
+  = render partial: 'levels/editors/fields/spritelab_level_config', locals: {f: f}
+- unless @level.properties['level_config'].present?
+  = render partial: 'levels/editors/fields/spritelab_mode', locals: {f: f}
 
 :javascript
   window.toggleBlock = function (elementId) {

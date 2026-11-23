@@ -1,5 +1,15 @@
-import React, {useEffect, useMemo, useState} from 'react';
+import React, {
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
+import {
+  announcePreviewPlaces,
+  useLevelConfigPreview,
+} from '@cdo/apps/lab2/levelEditors/levelConfig/levelPreview';
 import {LabProps} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -10,7 +20,9 @@ import {AdaptiveLevelProperties, Pathway} from '../types';
 
 import AccessBlockedScreen from './access/AccessBlockedScreen';
 import {adaptiveAccess} from './access/adaptiveAccess';
+import {clearUrl, updateUrl} from './checkpointUrl';
 import PathwayApp from './PathwayApp';
+import {placeTarget, previewPlaces, withServedParts} from './previewPathway';
 
 import styles from './adaptiveView.module.scss';
 
@@ -65,15 +77,60 @@ const AdaptiveView: React.FunctionComponent<
     if (access === 'pending' || access === 'allowed') return;
     countAdaptive('Adaptive.AccessBlocked', {reason: access});
   }, [access]);
+  const preview = useLevelConfigPreview();
+  const editedPathway = preview?.config;
+  const shownProperties = useMemo(
+    () =>
+      editedPathway === undefined
+        ? levelProperties
+        : {
+            ...levelProperties,
+            pathway: withServedParts(editedPathway, levelProperties.pathway),
+          },
+    [levelProperties, editedPathway]
+  );
   const parsed = useMemo(
-    () => parseLevelContent(levelProperties),
-    [levelProperties]
+    () => parseLevelContent(shownProperties as AdaptiveLevelProperties),
+    [shownProperties]
   );
-  // Progress is kept per unit, so the level plays only from one.
+  // Progress is kept per unit, so the level plays only from one. A preview
+  // saves no progress, so it plays outside a unit too.
   const progressKey = useMemo<ProgressKey | undefined>(
-    () => (scriptId ? {scriptId, levelId: levelProperties.id} : undefined),
-    [scriptId, levelProperties.id]
+    () =>
+      scriptId
+        ? {scriptId, levelId: levelProperties.id}
+        : preview
+        ? {scriptId: 0, levelId: levelProperties.id}
+        : undefined,
+    [scriptId, levelProperties.id, preview]
   );
+  const previewPathway = preview && parsed.pathway;
+  useEffect(() => {
+    if (previewPathway) {
+      announcePreviewPlaces(previewPlaces(previewPathway));
+    }
+  }, [previewPathway]);
+  // A Go to request first writes its checkpoint and step into the URL,
+  // where the remounted PathwayApp picks its starting view.
+  const [previewRun, setPreviewRun] = useState(0);
+  const placeHandled = useRef(0);
+  const previewVersion = preview?.version ?? 0;
+  useLayoutEffect(() => {
+    if (!preview || !previewVersion) return;
+    const place = preview.place;
+    if (place && place.count !== placeHandled.current && parsed.pathway) {
+      placeHandled.current = place.count;
+      const target = placeTarget(parsed.pathway, place.id);
+      if (target) {
+        updateUrl(target.checkpointId, target.stepId);
+      } else {
+        clearUrl();
+      }
+    }
+    setPreviewRun(run => run + 1);
+    // Only a new message from the edit page starts a new run.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [previewVersion]);
   // Students see this page too, so a bad pathway edit is an outage, not a preview.
   useEffect(() => {
     countAdaptive('Adaptive.PathwayLoad', {
@@ -125,9 +182,11 @@ const AdaptiveView: React.FunctionComponent<
 
   return (
     <PathwayApp
+      key={previewRun}
       pathway={parsed.pathway}
       progressKey={progressKey}
       levelProperties={levelProperties}
+      preview={!!preview}
     />
   );
 };

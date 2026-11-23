@@ -94,7 +94,7 @@ export interface Objectives {
   /** Markdown, shown above the list, or alone when there is no list. */
   title?: string;
   /** None means nothing to do: Continue from the start. */
-  items?: Objective[];
+  steps?: Objective[];
   /** A short line the collapsed Guide keeps. */
   collapsedText?: string;
 }
@@ -122,7 +122,7 @@ export interface RuntimeNeeds {
 export function objectiveChecks(
   objectives: Objectives | undefined
 ): ObjectiveCheck[] {
-  return (objectives?.items ?? []).flatMap(item =>
+  return (objectives?.steps ?? []).flatMap(item =>
     item.shownWhen ? [item.check, item.shownWhen] : [item.check]
   );
 }

@@ -20,77 +20,83 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
-    "level_mode": {
-      "kind": "code",
-      "extraTabs": [
-        "Images"
-      ],
-      "noNewImages": true,
-      "noDeletingImages": true,
-      "generationLimit": 5,
-      "limitedPaintTools": true,
-      "imageKinds": [
-        "sprite"
-      ]
-    },
-    "pinned_scene": {
-      "id": "scene-1",
-      "name": "Scene 1"
-    },
-    "world_start_pattern": [
-      "..........",
-      "..........",
-      "..........",
-      "..........",
-      "..........",
-      "..........",
-      ".S........",
-      "..........",
-      "..........",
-      "BBBBBBBBBB"
-    ],
-    "image_role_defaults": {
-      "sprite": "hero"
-    },
-    "add_blocks": [
-      {
-        "attachTo": "spritelab2_whenRun",
-        "shadow": {
-          "type": "spritelab2_placeholder",
-          "extraState": {
-            "like": {
-              "type": "spritelab2_setAsPlatformPlayer"
+    "level_config": {
+      "images": {
+        "canAdd": false,
+        "canDelete": false,
+        "kinds": [
+          "sprite"
+        ],
+        "paintTools": "limited",
+        "generationLimit": 5
+      },
+      "scenes": {
+        "starting": [
+          {
+            "id": "scene-1",
+            "name": "Scene 1",
+            "world": {
+              "pattern": [
+                "..........",
+                "..........",
+                "..........",
+                "..........",
+                "..........",
+                "..........",
+                ".S........",
+                "..........",
+                "..........",
+                "BBBBBBBBBB"
+              ]
             }
           }
+        ]
+      },
+      "blocks": {
+        "addOnArrival": [
+          {
+            "attachTo": "spritelab2_whenRun",
+            "shadow": {
+              "type": "spritelab2_placeholder",
+              "extraState": {
+                "like": {
+                  "type": "spritelab2_setAsPlatformPlayer"
+                }
+              }
+            }
+          }
+        ],
+        "dropdownsStartOn": {
+          "sprite": "hero"
         }
+      },
+      "objectives": {
+        "title": "**Set as player**",
+        "steps": [
+          {
+            "text": "Drag the **set as player** block into the dotted outline under **when run**.",
+            "check": {
+              "kind": "block",
+              "type": "spritelab2_setAsPlatformPlayer",
+              "under": "spritelab2_whenRun"
+            }
+          },
+          {
+            "text": "Select **Run**, then use the arrow keys to run and jump.",
+            "check": {
+              "kind": "reach",
+              "moved": true
+            }
+          }
+        ]
       }
-    ],
+    },
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
         {
           "kind": "block",
           "type": "spritelab2_setAsPlatformPlayer"
-        }
-      ]
-    },
-    "objectives": {
-      "title": "**Set as player**",
-      "items": [
-        {
-          "text": "Drag the **set as player** block into the dotted outline under **when run**.",
-          "check": {
-            "kind": "block",
-            "type": "spritelab2_setAsPlatformPlayer",
-            "under": "spritelab2_whenRun"
-          }
-        },
-        {
-          "text": "Select **Run**, then use the arrow keys to run and jump.",
-          "check": {
-            "kind": "reach",
-            "moved": true
-          }
         }
       ]
     },

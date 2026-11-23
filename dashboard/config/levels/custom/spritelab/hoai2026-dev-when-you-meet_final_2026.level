@@ -6,11 +6,114 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
-    "world_keeps_roles": [
-      "friend",
-      "hero",
-      "treasure"
-    ],
+    "level_config": {
+      "images": {
+        "canAdd": false,
+        "canDelete": false,
+        "paintTools": "limited",
+        "generationLimit": 5
+      },
+      "world": {
+        "palette": [
+          "friend",
+          "hero",
+          "treasure",
+          "block"
+        ],
+        "keepsOneOf": [
+          "friend",
+          "hero",
+          "treasure"
+        ]
+      },
+      "scenes": {
+        "starting": [
+          {
+            "id": "scene-1",
+            "name": "Scene 1"
+          }
+        ]
+      },
+      "blocks": {
+        "addOnArrival": [
+          {
+            "type": "gamelab_checkTouching",
+            "data": "friend-touch",
+            "fields": {
+              "CONDITION": "\"when\""
+            },
+            "inputs": {
+              "SPRITE1": {
+                "shadow": {
+                  "type": "gamelab_allSpritesWithAnimation"
+                }
+              },
+              "SPRITE2": {
+                "shadow": {
+                  "type": "gamelab_allSpritesWithAnimation"
+                }
+              }
+            },
+            "next": {
+              "shadow": {
+                "type": "spritelab2_placeholder",
+                "extraState": {
+                  "like": {
+                    "type": "gamelab_spriteSay",
+                    "fields": {
+                      "SPEECH": "Oh!"
+                    },
+                    "inputs": {
+                      "SPRITE": {
+                        "shadow": {
+                          "type": "gamelab_allSpritesWithAnimation"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "lockEarlier": true,
+        "dropdownsStartOn": {
+          "sprite": "friend",
+          "gamelab_checkTouching": [
+            "hero",
+            "friend"
+          ],
+          "spritelab2_burst": "friend",
+          "gamelab_spriteSay": "hero"
+        }
+      },
+      "objectives": {
+        "title": "**When you meet**",
+        "steps": [
+          {
+            "text": "Drag a block under the event **when player touches character**.",
+            "check": {
+              "kind": "block",
+              "type": [
+                "spritelab2_burst",
+                "spritelab2_playSound",
+                "gamelab_spriteSay",
+                "spritelab2_setCameraZoom",
+                "spritelab2_restartScene"
+              ],
+              "data": "friend-touch"
+            }
+          },
+          {
+            "text": "Select **Run** and go meet them.",
+            "check": {
+              "kind": "reach",
+              "role": "friend"
+            }
+          }
+        ]
+      }
+    },
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -25,78 +128,6 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
-    "lock_earlier_blocks": true,
-    "level_mode": {
-      "kind": "code",
-      "extraTabs": [
-        "Images",
-        "World"
-      ],
-      "noNewImages": true,
-      "noDeletingImages": true,
-      "generationLimit": 5,
-      "limitedPaintTools": true,
-      "paletteRoles": [
-        "friend",
-        "hero",
-        "treasure",
-        "block"
-      ]
-    },
-    "pinned_scene": {
-      "id": "scene-1",
-      "name": "Scene 1"
-    },
-    "image_role_defaults": {
-      "sprite": "friend",
-      "gamelab_checkTouching": [
-        "hero",
-        "friend"
-      ],
-      "spritelab2_burst": "friend",
-      "gamelab_spriteSay": "hero"
-    },
-    "add_blocks": [
-      {
-        "type": "gamelab_checkTouching",
-        "data": "friend-touch",
-        "fields": {
-          "CONDITION": "\"when\""
-        },
-        "inputs": {
-          "SPRITE1": {
-            "shadow": {
-              "type": "gamelab_allSpritesWithAnimation"
-            }
-          },
-          "SPRITE2": {
-            "shadow": {
-              "type": "gamelab_allSpritesWithAnimation"
-            }
-          }
-        },
-        "next": {
-          "shadow": {
-            "type": "spritelab2_placeholder",
-            "extraState": {
-              "like": {
-                "type": "gamelab_spriteSay",
-                "fields": {
-                  "SPEECH": "Oh!"
-                },
-                "inputs": {
-                  "SPRITE": {
-                    "shadow": {
-                      "type": "gamelab_allSpritesWithAnimation"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    ],
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -146,32 +177,6 @@
         {
           "kind": "block",
           "type": "spritelab2_restartScene"
-        }
-      ]
-    },
-    "objectives": {
-      "title": "**When you meet**",
-      "items": [
-        {
-          "text": "Drag a block under the event **when player touches character**.",
-          "check": {
-            "kind": "block",
-            "type": [
-              "spritelab2_burst",
-              "spritelab2_playSound",
-              "gamelab_spriteSay",
-              "spritelab2_setCameraZoom",
-              "spritelab2_restartScene"
-            ],
-            "data": "friend-touch"
-          }
-        },
-        {
-          "text": "Select **Run** and go meet them.",
-          "check": {
-            "kind": "reach",
-            "role": "friend"
-          }
         }
       ]
     },

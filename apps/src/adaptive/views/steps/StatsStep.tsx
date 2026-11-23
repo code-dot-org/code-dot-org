@@ -18,6 +18,8 @@ import {
 import {usePathwayContext} from '../PathwayContext';
 import ProgressRings from '../ProgressRings';
 
+import {focusOnArrival} from './focusOnArrival';
+
 import styles from './stepPlayer.module.scss';
 
 interface StatsStepProps {
@@ -36,7 +38,7 @@ const StatsStep: React.FunctionComponent<StatsStepProps> = ({
   const skills = getSkillProgress(pathway, statusMap);
   const headingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    headingRef.current?.focus();
+    focusOnArrival(headingRef.current);
   }, []);
   const [aiMetrics, setAiMetrics] = useState<AiMetrics>();
   useEffect(() => {

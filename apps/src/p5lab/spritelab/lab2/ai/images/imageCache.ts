@@ -26,6 +26,16 @@ export function isImageSource(value: unknown): value is ImageSource {
   return IMAGE_SOURCES.includes(value as ImageSource);
 }
 
+/** Only a levelbuilder gets the model. Anyone else gets the cache, whatever
+    the level or the page's address asks for. */
+export function imageSourceFor(
+  levelSource: ImageSource | undefined,
+  requested: ImageSource | undefined,
+  isLevelbuilder: boolean
+): ImageSource {
+  return isLevelbuilder ? requested ?? levelSource ?? 'cached' : 'cached';
+}
+
 // The path the hoai2026 image-gen script publishes to, in the cdo-curriculum
 // bucket beside media/musiclab. curriculum.code.org needs no media proxy
 // (assetPrefix.js exempts it).

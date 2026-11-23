@@ -18,6 +18,8 @@ import {
   QuestionsStep as QuestionsStepContent,
 } from '../../types';
 
+import {focusOnArrival} from './focusOnArrival';
+
 import styles from './stepPlayer.module.scss';
 
 // Duration that "Correct" is shown on screen for students before
@@ -85,7 +87,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   const questionHeadingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     // The step title first, then each later question's own heading.
-    (index === 0 ? titleRef : questionHeadingRef).current?.focus();
+    focusOnArrival((index === 0 ? titleRef : questionHeadingRef).current);
   }, [index]);
 
   const completedRef = useRef(false);

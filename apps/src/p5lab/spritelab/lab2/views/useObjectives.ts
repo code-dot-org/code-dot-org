@@ -209,7 +209,7 @@ export function useObjectives({
       runtime,
     ]
   );
-  const items = objectives?.items;
+  const items = objectives?.steps;
   // The indexes of the items that pass `test` and are not in `already`.
   const newIndexes = useCallback(
     (

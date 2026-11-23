@@ -18,7 +18,7 @@
       %p.help-block
         This file is shared by:
         = safe_join(@level.sharing_levels.map {|level| link_to level.name, edit_level_path(level)}, ', ')
-      #adaptive-pathway-editor{data: {pathway_id: @level.adaptive_id}}
+      #adaptive-pathway-editor{data: {pathway_id: @level.adaptive_id, level_id: @level.id}}
 
 = render partial: 'levels/editors/fields/audit_log', locals: {f: f}
 

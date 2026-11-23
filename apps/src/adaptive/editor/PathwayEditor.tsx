@@ -6,13 +6,25 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
+import IconPickerWidget, {
+  ICON_WIDGET,
+} from '@cdo/apps/lab2/levelEditors/iconPicker/IconPickerWidget';
+import LevelPreviewFrame from '@cdo/apps/lab2/levelEditors/levelConfig/LevelPreviewFrame';
+import SchemaForm, {
+  problemsFrom,
+} from '@cdo/apps/lab2/levelEditors/schemaForm/SchemaForm';
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
 import {
   AdaptiveContentError,
   findReferenceProblems,
   parsePathwaySource,
+  pathwaySourceSchema,
 } from '../schema';
+
+import DestinationColorWidget, {
+  DESTINATION_COLOR_WIDGET,
+} from './DestinationColorWidget';
 
 function contentProblems(text: string, pathwayId: string): string[] {
   try {
@@ -46,10 +58,13 @@ const editorTheme = EditorView.theme({
 
 interface PathwayEditorProps {
   pathwayId: string;
+  /** The adaptive level being edited, which the preview opens. */
+  levelId?: string;
 }
 
 const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
   pathwayId,
+  levelId,
 }) => {
   const url = `/adaptive_pathways/${pathwayId}`;
   const editorRef = useRef<HTMLDivElement>(null);
@@ -59,6 +74,8 @@ const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
   const [problems, setProblems] = useState<string[]>([]);
   const [isSaving, setIsSaving] = useState(false);
   const [justSaved, setJustSaved] = useState(false);
+  // The pathway as a form drawn from its schema, or as JSON text.
+  const [display, setDisplay] = useState<'json' | 'form'>('json');
   const isDirty = savedText !== null && text !== savedText;
 
   useEffect(() => {
@@ -73,7 +90,7 @@ const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
 
   const isLoaded = savedText !== null;
   useEffect(() => {
-    if (!isLoaded || !editorRef.current) {
+    if (!isLoaded || display !== 'json' || !editorRef.current) {
       return;
     }
     const view = new EditorView({
@@ -94,9 +111,26 @@ const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
       ],
     });
     return () => view.destroy();
-    // The editor owns the document once created; text only seeds it.
+    // The editor owns the document once created; text only seeds it, also
+    // when the editor is created again on leaving the form.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isLoaded]);
+  }, [isLoaded, display]);
+
+  let parsed: unknown;
+  let parseError: string | undefined;
+  try {
+    parsed = JSON.parse(text || 'null');
+  } catch (error) {
+    parseError = (error as Error).message;
+  }
+  const schemaResult =
+    parseError === undefined
+      ? pathwaySourceSchema.safeParse(parsed)
+      : undefined;
+  const formProblems =
+    display === 'form' && schemaResult
+      ? problemsFrom(schemaResult.success ? [] : schemaResult.error.issues)
+      : undefined;
 
   useEffect(() => {
     if (!isDirty) {
@@ -135,7 +169,46 @@ const PathwayEditor: React.FunctionComponent<PathwayEditorProps> = ({
 
   return (
     <div>
-      <div ref={editorRef} />
+      {levelId && savedText !== null && (
+        <LevelPreviewFrame
+          levelUrl={`/levels/${levelId}`}
+          value={parsed}
+          valid={!!schemaResult?.success}
+        />
+      )}
+      <div style={{display: 'flex', gap: 8, margin: '8px 0'}}>
+        <MuiButton
+          size="small"
+          variant={display === 'json' ? 'contained' : 'outlined'}
+          onClick={() => setDisplay('json')}
+        >
+          JSON
+        </MuiButton>
+        <MuiButton
+          size="small"
+          variant={display === 'form' ? 'contained' : 'outlined'}
+          disabled={parseError !== undefined}
+          onClick={() => setDisplay('form')}
+        >
+          Form
+        </MuiButton>
+      </div>
+      {display === 'json' && <div ref={editorRef} />}
+      {display === 'form' && (
+        <SchemaForm
+          schema={pathwaySourceSchema}
+          value={parsed}
+          problems={formProblems}
+          widgets={{
+            [ICON_WIDGET]: IconPickerWidget,
+            [DESTINATION_COLOR_WIDGET]: DestinationColorWidget,
+          }}
+          onChange={next => {
+            setText(JSON.stringify(next, null, 2));
+            setJustSaved(false);
+          }}
+        />
+      )}
       <div style={{display: 'flex', alignItems: 'center', gap: 12, margin: 8}}>
         <MuiButton
           variant="contained"

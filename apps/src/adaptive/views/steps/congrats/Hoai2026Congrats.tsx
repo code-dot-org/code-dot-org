@@ -18,6 +18,7 @@ import {sendAdaptiveEvent} from '../../../metricsHelpers';
 import {usePathwayProject} from '../../../project/usePathwayProject';
 import {usePathwayContext} from '../../PathwayContext';
 import {CongratsPanelProps} from '../CongratsStep';
+import {focusOnArrival} from '../focusOnArrival';
 
 import styles from './congrats.module.scss';
 
@@ -133,7 +134,7 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
   const shareUrl = projectManager?.getShareUrl();
   const headingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
-    headingRef.current?.focus();
+    focusOnArrival(headingRef.current);
   }, []);
 
   const challengeUrl = DCDO.get('builders_challenge_url', undefined);

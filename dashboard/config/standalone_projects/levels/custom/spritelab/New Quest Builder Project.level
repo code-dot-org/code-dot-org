@@ -20,17 +20,42 @@
     "hide_custom_blocks": true,
     "hide_share_and_remix": "false",
     "encrypted": "false",
-    "level_mode": {
-      "kind": "freeplay",
-      "startTab": "Images"
-    },
-    "image_role_defaults": {
-      "sprite": "hero",
-      "spritelab2_beginsBehavior": "friend",
-      "gamelab_checkTouching": [
-        "hero",
-        "treasure"
-      ]
+    "level_config": {
+      "focus": "images",
+      "images": {
+      },
+      "world": {
+      },
+      "scenes": {
+        "canChange": true
+      },
+      "blocks": {
+        "catalog": true,
+        "alwaysInToolbox": [
+          "spritelab2_setAsPlatformPlayer",
+          "gamelab_setBackgroundImageAs",
+          "gamelab_checkTouching",
+          "spritelab2_beginsBehavior",
+          "spritelab2_goToScene",
+          "spritelab2_burst",
+          "spritelab2_playSound",
+          "gamelab_spriteSay",
+          "spritelab2_setCameraZoom",
+          "spritelab2_restartScene",
+          "spritelab2_showTitle"
+        ],
+        "dropdownsStartOn": {
+          "sprite": "hero",
+          "spritelab2_beginsBehavior": "friend",
+          "gamelab_checkTouching": [
+            "hero",
+            "treasure"
+          ]
+        }
+      },
+      "instructions": {
+        "startCollapsed": true
+      }
     },
     "toolbox_definition": {
       "kind": "flyoutToolbox",
@@ -156,20 +181,6 @@
     },
     "header_label": "Free play",
     "is_project_level": true,
-    "block_catalog": true,
-    "blocks_always_in_toolbox": [
-      "spritelab2_setAsPlatformPlayer",
-      "gamelab_setBackgroundImageAs",
-      "gamelab_checkTouching",
-      "spritelab2_beginsBehavior",
-      "spritelab2_goToScene",
-      "spritelab2_burst",
-      "spritelab2_playSound",
-      "gamelab_spriteSay",
-      "spritelab2_setCameraZoom",
-      "spritelab2_restartScene",
-      "spritelab2_showTitle"
-    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 

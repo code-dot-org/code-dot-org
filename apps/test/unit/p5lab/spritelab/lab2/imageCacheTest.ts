@@ -6,6 +6,7 @@ import {
   sentencePath,
   VARIANT_COUNT,
   variantName,
+  imageSourceFor,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 
 // lodash keeps its own handle on Math.random, so the shuffle is pinned
@@ -211,5 +212,19 @@ describe('imageCache', () => {
     await expect(found.raw('jumping')).rejects.toBeInstanceOf(
       ImageCacheMissError
     );
+  });
+});
+
+describe('imageSourceFor', () => {
+  it('gives anyone but a levelbuilder the cache, whatever is asked for', () => {
+    expect(imageSourceFor('live', undefined, false)).toBe('cached');
+    expect(imageSourceFor(undefined, 'live', false)).toBe('cached');
+  });
+
+  it("gives a levelbuilder the level's source, or the one asked for", () => {
+    expect(imageSourceFor('live', undefined, true)).toBe('live');
+    expect(imageSourceFor(undefined, 'live', true)).toBe('live');
+    expect(imageSourceFor('live', 'cached', true)).toBe('cached');
+    expect(imageSourceFor(undefined, undefined, true)).toBe('cached');
   });
 });

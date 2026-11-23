@@ -7,7 +7,11 @@ import {z} from 'zod';
  */
 export const planSchema = z.strictObject({
   /** The sentence, with `{slot}` where a plan question's answer goes. */
-  template: z.string().min(1),
+  template: z.string().min(1).meta({
+    title: 'Template',
+    description:
+      "The sentence, with {slot} where a plan question's answer goes.",
+  }),
 });
 
 /** A piece of a plan template: literal text, or a slot an answer fills. */

@@ -40,6 +40,7 @@ class GamelabJr < Gamelab
     enable_big_playspace
     uses_lab2
     level_mode
+    level_config
     image_role_defaults
     add_blocks
     pinned_scene
@@ -57,6 +58,34 @@ class GamelabJr < Gamelab
     no_project
   )
 
+  # The properties a level_config takes the place of. A level saved with a
+  # level_config drops them, since the lab ignores them on such a level.
+  LEVEL_CONFIG_REPLACES = %w(
+    level_mode
+    pinned_scene
+    extra_scene
+    objectives
+    world_start_pattern
+    world_start_roles
+    world_keeps_roles
+    block_catalog
+    blocks_always_in_toolbox
+    lock_earlier_blocks
+    freeplay_intro
+    image_role_defaults
+    add_blocks
+    callouts
+    starter_images
+    no_project
+  ).freeze
+
+  before_save :drop_properties_level_config_replaces
+
+  def drop_properties_level_config_replaces
+    return if properties['level_config'].blank?
+    LEVEL_CONFIG_REPLACES.each {|name| properties.delete(name)}
+  end
+
   def shared_blocks
     Block.for(*block_pools.presence || type)
   end
@@ -65,6 +94,7 @@ class GamelabJr < Gamelab
   # project: nothing the student does there is saved.
   def channel_backed?
     return false if properties['no_project'].to_s == 'true'
+    return false if properties.dig('level_config', 'noProject') == true
     super
   end
 

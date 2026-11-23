@@ -12,7 +12,7 @@ import {LevelCallout} from './callouts';
 import {AnimationPoses} from './characterAnimations';
 import {ImageRoleDefaults} from './imageRoleDefaults';
 import {LevelMode} from './levelMode';
-import {Objectives} from './objectives';
+import {Objective, Objectives} from './objectives';
 import {World} from './world';
 
 /** The animation-list category marking an image as a background, not a costume. */
@@ -129,7 +129,10 @@ export interface StarterImage {
 export type WorldStartRoles = {[char: string]: string};
 
 export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
-  /** What kind of level this is; decides the tabs and the image controls. */
+  /** The level's settings as stored (levelConfig/schema.ts). The lab reads
+      them through levelConfigOf. */
+  levelConfig?: unknown;
+  /** What kind of level this is, on a level saved before level_config. */
   levelMode?: LevelMode;
   /** The one scene this level edits, created on first load if the project
       lacks it. The id is the key the go-to-scene block stores; the name is
@@ -157,8 +160,8 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
     editable?: boolean;
   };
   /** The level's objectives (objectives.ts): the Guide's text, checklist
-      and Continue gate. */
-  objectives?: Objectives;
+      and Continue gate. Stored with the steps under `items`. */
+  objectives?: Omit<Objectives, 'steps'> & {items?: Objective[]};
   /** Premade world for the pinned scene (worldStartPattern.ts): one string
       per playfield row anchored to the floor. 'B' cells take the block image
       the student made most recently, 'S' the image_role_defaults sprite,
@@ -200,6 +203,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** Images the level gives the project on arrival, when it has no image
       of that name or in that role yet. */
   starterImages?: StarterImage[];
+  /** The level runs with no project. The server reads it (or level_config's
+      noProject) and sends usesProjects: false, which the lab acts on. */
+  noProject?: boolean;
   /** Legacy stringified XML toolbox. */
   toolboxBlocks?: string;
   /** Runtime libraries the level opts into (see usesPlatformPhysics). */

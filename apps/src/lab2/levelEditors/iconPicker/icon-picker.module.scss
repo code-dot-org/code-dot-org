@@ -1,0 +1,35 @@
+.picker {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
+
+.preview {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 6px 8px;
+  border: 1px solid var(--borders-neutral-strong);
+  border-radius: 4px;
+  font: inherit;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+}
+
+.note {
+  width: 100%;
+  font-size: 13px;
+  color: var(--text-neutral-secondary);
+}

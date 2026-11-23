@@ -1,0 +1,50 @@
+@use '../views/map/destinationColors' as colors;
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.swatch {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 6px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 16px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  font: inherit;
+  cursor: pointer;
+  user-select: none;
+}
+
+.chosen {
+  border-color: var(--borders-neutral-strong);
+  outline: 2px solid var(--destination-color, var(--borders-neutral-strong));
+  outline-offset: 1px;
+}
+
+.chip {
+  width: 16px;
+  height: 16px;
+  border: 1px dashed var(--borders-neutral-strong);
+  border-radius: 50%;
+  background: var(--destination-color, transparent);
+}
+
+@include colors.destination-colors;
+
+// A color family's chip is filled, so it needs no dashed edge.
+.purple,
+.teal,
+.green,
+.blue,
+.orange,
+.strawberry {
+  .chip {
+    border-style: solid;
+    border-color: var(--destination-accent);
+  }
+}

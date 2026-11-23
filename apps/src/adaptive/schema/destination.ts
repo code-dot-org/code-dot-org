@@ -17,8 +17,15 @@ export type DestinationColor = (typeof DESTINATION_COLORS)[number];
  * grouped in, with a color and an icon of its own.
  */
 export const destinationSchema = z.strictObject({
-  title: z.string().min(1),
+  title: z.string().min(1).meta({title: 'Title'}),
   /** A Font Awesome (solid) or kit icon name, shown beside the title. */
-  icon: z.string().min(1).optional(),
-  color: z.enum(DESTINATION_COLORS).optional(),
+  icon: z.string().min(1).optional().meta({
+    title: 'Icon',
+    widget: 'icon',
+    description: 'An icon name, shown beside the title.',
+  }),
+  color: z
+    .enum(DESTINATION_COLORS)
+    .optional()
+    .meta({title: 'Color', widget: 'destinationColor'}),
 });

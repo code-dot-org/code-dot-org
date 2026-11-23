@@ -35,6 +35,7 @@ import {
   useProgress,
   visibleSteps,
 } from '../progress';
+import {previewProgressStore} from '../progress/previewProgressStore';
 import {ProgressKey} from '../progress/progressStore';
 import {nextCheckpoint} from '../routing/route';
 import {findCheckpoint} from '../schema/helpers';
@@ -62,6 +63,9 @@ interface PathwayAppProps {
   progressKey: ProgressKey;
   /** The adaptive level's own properties, for the map's resource rail. */
   levelProperties: LevelProperties;
+  /** On the level edit page's preview: nothing is saved, and the starting
+      address may open a locked checkpoint. */
+  preview?: boolean;
 }
 
 /**
@@ -92,6 +96,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   pathway,
   progressKey,
   levelProperties,
+  preview,
 }) => {
   const dispatch = useAppDispatch();
   useEffect(
@@ -111,9 +116,9 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   const {progress, statusMap, ...restProgress} = useProgress(
     pathway,
     progressKey,
-    {
-      reportLevelStep,
-    }
+    preview
+      ? {store: previewProgressStore, reportLevelStep: async () => {}}
+      : {reportLevelStep}
   );
   if (!progress) {
     return (
@@ -134,7 +139,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   );
 
   if (urlCheckpointId) {
-    if (statusMap[urlCheckpointId] === 'locked') {
+    if (statusMap[urlCheckpointId] === 'locked' && !preview) {
       // Silently drop the URL rather than let the student bypass a lock.
       clearUrl();
     } else {

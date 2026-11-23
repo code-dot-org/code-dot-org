@@ -269,19 +269,19 @@ describe('runtimeNeeds', () => {
     expect(runtimeNeeds(undefined)).toEqual({touch: false, move: false});
     expect(
       runtimeNeeds({
-        items: [
+        steps: [
           {text: '', check: {kind: 'play'}},
           {text: '', check: {kind: 'reach', role: 'treasure'}},
         ],
       })
     ).toEqual({touch: true, move: false});
     expect(
-      runtimeNeeds({items: [{text: '', check: {kind: 'reach', moved: true}}]})
+      runtimeNeeds({steps: [{text: '', check: {kind: 'reach', moved: true}}]})
     ).toEqual({touch: false, move: true});
     // A shownWhen check is read like the item's own.
     expect(
       runtimeNeeds({
-        items: [
+        steps: [
           {
             text: '',
             check: {kind: 'play'},

@@ -6,7 +6,7 @@ import {useObjectives} from '@cdo/apps/p5lab/spritelab/lab2/views/useObjectives'
 
 const OBJECTIVES = {
   title: 'Play',
-  items: [
+  steps: [
     {id: 'play', text: 'Press Play.', check: {kind: 'play' as const}},
     {
       id: 'rate',
@@ -53,7 +53,7 @@ function Checklist({
 // A checklist whose first item is checked the whole time: placing something
 // in the world. Its second is checked once: pressing Run.
 const WORK_OBJECTIVES = {
-  items: [
+  steps: [
     {id: 'place', text: 'Place something.', check: {kind: 'world' as const}},
     {id: 'play', text: 'Press Play.', check: {kind: 'play' as const}},
   ],
@@ -145,7 +145,7 @@ describe('useObjectives', () => {
     function Both() {
       const state = useObjectives({
         objectives: {
-          items: [
+          steps: [
             {id: 'place', text: '', check: {kind: 'world' as const}},
             {id: 'play', text: '', check: {kind: 'play' as const}},
           ],

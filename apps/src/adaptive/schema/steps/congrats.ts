@@ -11,10 +11,16 @@ export const CONGRATS_PANEL_IDS = ['hoai2026'] as const;
  * certificate, all in code. The content picks the panel and may give it a
  * logo.
  */
-export const congratsStepSchema = stepBaseSchema.extend({
-  kind: z.literal('congrats'),
-  /** Which panel the step shows. */
-  panelId: z.enum(CONGRATS_PANEL_IDS),
-  /** Image shown above the panel's heading, such as the course's logo. */
-  logoUrl: z.string().min(1).optional(),
-});
+export const congratsStepSchema = stepBaseSchema
+  .extend({
+    kind: z.literal('congrats'),
+    /** Which panel the step shows. */
+    panelId: z.enum(CONGRATS_PANEL_IDS).meta({title: 'Panel'}),
+    /** Image shown above the panel's heading, such as the course's logo. */
+    logoUrl: z.string().min(1).optional().meta({
+      title: 'Logo URL',
+      description:
+        "An image shown above the panel's heading, such as the course's logo.",
+    }),
+  })
+  .meta({title: 'Congrats'});

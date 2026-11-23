@@ -1,10 +1,12 @@
 import {z} from 'zod';
 
 /** Reference to a standard in the Standards table. */
-export const standardRefSchema = z.strictObject({
-  framework: z.string().min(1),
-  shortcode: z.string().min(1),
-});
+export const standardRefSchema = z
+  .strictObject({
+    framework: z.string().min(1).meta({title: 'Framework'}),
+    shortcode: z.string().min(1).meta({title: 'Shortcode'}),
+  })
+  .meta({title: 'Standard'});
 
 /**
  * A standard as served: the reference plus the description the server

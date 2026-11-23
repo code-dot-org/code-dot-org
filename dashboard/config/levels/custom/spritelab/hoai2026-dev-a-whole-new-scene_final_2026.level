@@ -6,11 +6,159 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
-    "world_keeps_roles": [
-      "friend",
-      "hero",
-      "treasure"
-    ],
+    "level_config": {
+      "images": {
+        "canAdd": false,
+        "canDelete": false,
+        "paintTools": "limited",
+        "generationLimit": 5
+      },
+      "world": {
+        "palette": [
+          "friend",
+          "hero",
+          "treasure",
+          "block"
+        ],
+        "keepsOneOf": [
+          "friend",
+          "hero",
+          "treasure"
+        ]
+      },
+      "scenes": {
+        "starting": [
+          {
+            "id": "scene-1",
+            "name": "Scene 1"
+          },
+          {
+            "id": "second-scene",
+            "name": "Scene 2",
+            "code": {
+              "blocks": {
+                "blocks": [
+                  {
+                    "type": "spritelab2_whenRun",
+                    "x": 20,
+                    "y": 20,
+                    "deletable": false,
+                    "movable": false,
+                    "next": {
+                      "block": {
+                        "type": "spritelab2_setAsPlatformPlayer"
+                      }
+                    }
+                  },
+                  {
+                    "type": "gamelab_checkTouching",
+                    "x": 20,
+                    "y": 230,
+                    "fields": {
+                      "CONDITION": "\"when\""
+                    },
+                    "inputs": {
+                      "SPRITE1": {
+                        "shadow": {
+                          "type": "gamelab_allSpritesWithAnimation"
+                        }
+                      },
+                      "SPRITE2": {
+                        "shadow": {
+                          "type": "gamelab_allSpritesWithAnimation"
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "gamelab_spriteSay",
+                        "data": "friend-says",
+                        "fields": {
+                          "SPEECH": "What's next?"
+                        },
+                        "inputs": {
+                          "SPRITE": {
+                            "shadow": {
+                              "type": "gamelab_allSpritesWithAnimation"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "world": {
+              "pattern": [
+                "..........",
+                "..........",
+                "..........",
+                "..........",
+                "..........",
+                "..........",
+                ".S........",
+                "..........",
+                "......F...",
+                "BBBBBBBBBB"
+              ],
+              "roles": {
+                "F": "friend"
+              }
+            }
+          }
+        ]
+      },
+      "blocks": {
+        "addOnArrival": [
+          {
+            "attachTo": "gamelab_checkTouching",
+            "data": "treasure-touch",
+            "shadow": {
+              "type": "spritelab2_placeholder",
+              "extraState": {
+                "like": {
+                  "type": "spritelab2_goToScene"
+                }
+              }
+            }
+          }
+        ],
+        "lockEarlier": true,
+        "dropdownsStartOn": {
+          "sprite": "hero",
+          "gamelab_checkTouching": [
+            "hero",
+            "friend"
+          ],
+          "gamelab_spriteSay": "hero",
+          "data:friend-says": "friend"
+        }
+      },
+      "objectives": {
+        "title": "**A new scene**",
+        "steps": [
+          {
+            "text": "Drag **go to scene** under one of your **when touches** events.",
+            "check": {
+              "kind": "block",
+              "type": "spritelab2_goToScene",
+              "fields": {
+                "SCENE": "second-scene"
+              },
+              "scene": "scene-1"
+            }
+          },
+          {
+            "text": "Select **Run**, then move your player to touch the object or character that takes it to **Scene 2**.",
+            "check": {
+              "kind": "scene",
+              "id": "second-scene"
+            }
+          }
+        ]
+      }
+    },
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -25,110 +173,6 @@
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
-    "lock_earlier_blocks": true,
-    "level_mode": {
-      "kind": "code",
-      "extraTabs": [
-        "Images",
-        "World"
-      ],
-      "noNewImages": true,
-      "noDeletingImages": true,
-      "generationLimit": 5,
-      "limitedPaintTools": true,
-      "paletteRoles": [
-        "friend",
-        "hero",
-        "treasure",
-        "block"
-      ]
-    },
-    "pinned_scene": {
-      "id": "scene-1",
-      "name": "Scene 1"
-    },
-    "extra_scene": {
-      "id": "second-scene",
-      "name": "Scene 2",
-      "source": {
-        "blocks": {
-          "blocks": [
-            {
-              "type": "spritelab2_whenRun",
-              "x": 20,
-              "y": 20,
-              "deletable": false,
-              "movable": false,
-              "next": {
-                "block": {
-                  "type": "spritelab2_setAsPlatformPlayer"
-                }
-              }
-            },
-            {
-              "type": "gamelab_checkTouching",
-              "x": 20,
-              "y": 230,
-              "fields": {
-                "CONDITION": "\"when\""
-              },
-              "inputs": {
-                "SPRITE1": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                },
-                "SPRITE2": {
-                  "shadow": {
-                    "type": "gamelab_allSpritesWithAnimation"
-                  }
-                }
-              },
-              "next": {
-                "block": {
-                  "type": "gamelab_spriteSay",
-                  "data": "friend-says",
-                  "fields": {
-                    "SPEECH": "What's next?"
-                  },
-                  "inputs": {
-                    "SPRITE": {
-                      "shadow": {
-                        "type": "gamelab_allSpritesWithAnimation"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      "worldStartPattern": [
-        "..........",
-        "..........",
-        "..........",
-        "..........",
-        "..........",
-        "..........",
-        ".S........",
-        "..........",
-        "......F...",
-        "BBBBBBBBBB"
-      ],
-      "worldStartRoles": {
-        "F": "friend"
-      }
-    },
-    "image_role_defaults": {
-      "sprite": "hero",
-      "gamelab_checkTouching": [
-        "hero",
-        "friend"
-      ],
-      "gamelab_spriteSay": "hero",
-      "data:friend-says": "friend"
-    },
     "toolbox_definition": {
       "kind": "flyoutToolbox",
       "contents": [
@@ -137,43 +181,6 @@
           "type": "spritelab2_goToScene",
           "fields": {
             "SCENE": "second-scene"
-          }
-        }
-      ]
-    },
-    "add_blocks": [
-      {
-        "attachTo": "gamelab_checkTouching",
-        "data": "treasure-touch",
-        "shadow": {
-          "type": "spritelab2_placeholder",
-          "extraState": {
-            "like": {
-              "type": "spritelab2_goToScene"
-            }
-          }
-        }
-      }
-    ],
-    "objectives": {
-      "title": "**A new scene**",
-      "items": [
-        {
-          "text": "Drag **go to scene** under one of your **when touches** events.",
-          "check": {
-            "kind": "block",
-            "type": "spritelab2_goToScene",
-            "fields": {
-              "SCENE": "second-scene"
-            },
-            "scene": "scene-1"
-          }
-        },
-        {
-          "text": "Select **Run**, then move your player to touch the object or character that takes it to **Scene 2**.",
-          "check": {
-            "kind": "scene",
-            "id": "second-scene"
           }
         }
       ]
