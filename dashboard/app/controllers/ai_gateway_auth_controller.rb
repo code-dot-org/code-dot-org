@@ -1,3 +1,4 @@
+require 'cdo/aws/metrics'
 require 'jwt'
 require 'securerandom' unless defined?(SecureRandom)
 
@@ -39,6 +40,7 @@ class AiGatewayAuthController < ApplicationController
     aichat_context = params[:aichatContext]
 
     unless current_user.can_access_aichat_chat_completion?(aichat_context[:clientType], aichat_context[:currentLevelId])
+      count_refusal('no_access', aichat_context[:clientType])
       return render status: :forbidden, json: {user_type: current_user.user_type}
     end
 
@@ -46,6 +48,7 @@ class AiGatewayAuthController < ApplicationController
 
     # A token is not tied to a model, so the gateway itself refuses models with no fallback.
     if blocked_providers.any? && !current_user.ai_gateway_fallback_allowed?(aichat_context[:clientType])
+      count_refusal('region_blocked', aichat_context[:clientType])
       return render status: :forbidden, json: {user_type: current_user.user_type, error: AichatRequestsController::MODEL_REGION_BLOCKED_ERROR}
     end
 
@@ -99,6 +102,28 @@ class AiGatewayAuthController < ApplicationController
       jwt_headers
     )
     render json: {token: token, turnstileEnforcementMode: enforcement_mode, signingKey: signing_key_name, reusable: access_token_reusable?}
+  end
+
+  # A refused browser never reaches the gateway, so its telemetry cannot count this.
+  private def count_refusal(reason, client_type)
+    Cdo::Metrics.push(
+      SharedConstants::AICHAT_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: 'AiGatewayToken.Refused',
+          value: 1,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env.to_s},
+            # The browser names the client type; only known ones become a dimension value.
+            {name: 'ClientType', value: SharedConstants::AI_CHAT_CLIENT_TYPES.value?(client_type) ? client_type : 'unknown'},
+            {name: 'Reason', value: reason},
+            {name: 'UserType', value: current_user.user_type.to_s},
+          ],
+        }
+      ]
+    )
   end
 
   # DCDO stores arbitrary JSON, so the value here may be any type. A YAML-loaded
