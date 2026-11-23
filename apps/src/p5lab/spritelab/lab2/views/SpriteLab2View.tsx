@@ -1441,13 +1441,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     getScenes,
     enabled: !isToolboxMode && !isShareView && !isViewOnly,
   });
-  // A level's project is not in the student's list of projects, so only a
-  // standalone project takes a picture.
   const requestProjectPicture = useProjectPicture({
     engineRef,
     scenes,
     startSceneId: defaultPlaySceneId,
-    enabled: !!levelProperties.isProjectLevel && !isToolboxMode,
+    enabled: !isToolboxMode,
   });
   const requestThumbnail = useCallback(
     (sceneId: string) => {
