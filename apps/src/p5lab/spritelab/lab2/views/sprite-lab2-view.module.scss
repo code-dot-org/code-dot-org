@@ -366,6 +366,17 @@ $z-over-blockly: 71;
   }
 }
 
+// Override CustomDropdown's hover and press styles on a disabled item.
+.sceneDropdown .sceneMenu.sceneMenu li:has(> .sceneMenuItem:disabled) {
+  background: none;
+
+  span,
+  i::before {
+    background: none;
+    color: var(--text-neutral-disabled);
+  }
+}
+
 .sceneMenuItemActive {
   background: var(--background-brand-teal-primary);
   color: var(--text-neutral-white-fixed);
