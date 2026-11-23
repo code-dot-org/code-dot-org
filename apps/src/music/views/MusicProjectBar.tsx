@@ -5,8 +5,7 @@ import React from 'react';
 
 import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
 
-import {DEFAULT_PACK} from '../constants';
-import musicI18n from '../locale';
+import {DEFAULT_PACK, REMOVED_PACK_MESSAGES} from '../constants';
 
 import styles from './music-project-bar.module.scss';
 
@@ -61,7 +60,7 @@ const MusicProjectBar: React.FC<{
       {!isLoading && packFolder?.removed && (
         <Typography className={styles.packRemoved} variant="body4">
           <FontAwesomeV6Icon iconName="exclamation-circle" iconStyle="solid" />
-          {musicI18n.packRemovedDescription()}
+          {REMOVED_PACK_MESSAGES.PACK}
         </Typography>
       )}
     </div>
