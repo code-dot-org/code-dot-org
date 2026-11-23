@@ -135,6 +135,7 @@ module SharedConstants
     thebadguys
     music
     pythonlab
+    quest_builder
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met.

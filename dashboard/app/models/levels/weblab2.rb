@@ -38,6 +38,7 @@ class Weblab2 < Level
     validation_enabled
     widget_view
     widget_view_hide_resource_panel
+    showcase_view
     initial_view_mode
     disable_edit_run_for_submission
     predict_settings

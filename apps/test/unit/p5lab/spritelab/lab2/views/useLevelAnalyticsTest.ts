@@ -12,13 +12,14 @@ jest.mock('@cdo/apps/lab2/hooks/useLevelActivityMetrics', () => ({
 }));
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
   __esModule: true,
-  default: {sendEvent: jest.fn()},
+  default: {sendEvent: jest.fn(), setProjectProperty: jest.fn()},
 }));
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: () => 'quest-builder-2026',
 }));
 
 const sendEvent = analyticsReporter.sendEvent as jest.Mock;
+const setProjectProperty = analyticsReporter.setProjectProperty as jest.Mock;
 const level = {id: 7, name: 'set-as-player'} as unknown as LevelProperties;
 const context = {
   unitName: 'quest-builder-2026',
@@ -31,7 +32,7 @@ const visit = (
 ) =>
   renderHook(
     (p: {playing: boolean; enabled: boolean; level: LevelProperties}) =>
-      useLevelAnalytics(p.level, p.playing, p.enabled),
+      useLevelAnalytics(p.level, p.playing, p.enabled, 'progression'),
     {initialProps: {playing: false, enabled: true, level, ...props}}
   );
 const keyboard = (key: string, init: KeyboardEventInit = {}) =>
@@ -47,6 +48,7 @@ describe('useLevelAnalytics', () => {
     jest.setSystemTime(new Date('2026-11-19T12:00:00Z'));
     logLevelActivity.mockClear();
     sendEvent.mockClear();
+    setProjectProperty.mockClear();
   });
   afterEach(() => jest.useRealTimers());
 
@@ -84,7 +86,8 @@ describe('useLevelAnalytics', () => {
     expect(sendEvent).toHaveBeenCalledWith(
       EVENTS.HOAI2026_LEVEL_COMPLETE,
       {finish: false, levelImageOrigin: 'drawn', ...context},
-      true
+      true,
+      undefined
     );
   });
 
@@ -136,13 +139,75 @@ describe('useLevelAnalytics', () => {
     expect(sendEvent).not.toHaveBeenCalled();
   });
 
-  it('sends nothing for a standalone project', () => {
+  it("sends only the visit's end for a standalone project", () => {
     const project = {...level, isProjectLevel: true} as LevelProperties;
     const view = visit({level: project});
     view.result.current.reportActivity();
     view.result.current.reportCompleted({finish: true});
+    jest.advanceTimersByTime(30_000);
     view.unmount();
     expect(logLevelActivity).not.toHaveBeenCalled();
+    expect(sendEvent).toHaveBeenCalledTimes(1);
+    expect(sessionEnds()).toEqual([
+      [
+        EVENTS.HOAI2026_LEVEL_SESSION_END,
+        expect.objectContaining({durationSeconds: 30, completed: false}),
+        true,
+        undefined,
+      ],
+    ]);
+  });
+
+  it('sends no visit end for a standalone project the student did nothing in', () => {
+    const project = {...level, isProjectLevel: true} as LevelProperties;
+    visit({level: project}).unmount();
+    expect(sendEvent).not.toHaveBeenCalled();
+  });
+
+  it('sets the lab context on the project properties for the visit', () => {
+    const view = visit();
+    expect(setProjectProperty).toHaveBeenCalledWith(
+      'labContext',
+      'progression'
+    );
+    view.unmount();
+    expect(setProjectProperty).toHaveBeenLastCalledWith(
+      'labContext',
+      undefined
+    );
+  });
+
+  it('sends a reported event with the level and the value', () => {
+    const {result} = visit();
+    result.current.reportEvent(
+      EVENTS.HOAI2026_SCENE_CREATE,
+      {sceneNumber: 3},
+      '3'
+    );
+    expect(sendEvent).toHaveBeenCalledWith(
+      EVENTS.HOAI2026_SCENE_CREATE,
+      {sceneNumber: 3, ...context},
+      true,
+      '3'
+    );
+  });
+
+  it('sends a reported event from a standalone project', () => {
+    const {result} = visit({
+      level: {...level, isProjectLevel: true} as LevelProperties,
+    });
+    result.current.reportEvent(EVENTS.HOAI2026_CATALOG_OPEN, {});
+    expect(sendEvent).toHaveBeenCalledWith(
+      EVENTS.HOAI2026_CATALOG_OPEN,
+      expect.anything(),
+      true,
+      undefined
+    );
+  });
+
+  it('sends no reported event while disabled', () => {
+    const {result} = visit({enabled: false});
+    result.current.reportEvent(EVENTS.HOAI2026_CATALOG_OPEN, {});
     expect(sendEvent).not.toHaveBeenCalled();
   });
 });

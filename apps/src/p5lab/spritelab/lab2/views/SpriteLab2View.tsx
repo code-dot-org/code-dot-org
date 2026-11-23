@@ -34,6 +34,7 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import {instructionsContinueButtonElementId} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 import StartOverDialog from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
 import {useLevelProperties} from '@cdo/apps/lab2/views/LevelPropertiesWrapper';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 // p5lab/reducers is a CommonJS bundle of all the classic Sprite Lab slices;
 // pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
@@ -419,8 +420,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const levelAnalytics = useLevelAnalytics(
     levelProperties,
     activeTab === 'Play',
-    !isShareView && !isViewOnly && !isLevelEditMode
+    !isShareView && !isViewOnly && !isLevelEditMode,
+    levelProperties.isProjectLevel
+      ? 'standalone'
+      : isFreeplayMode(levelProperties.levelMode)
+      ? 'freeplay'
+      : 'progression'
   );
+  const {reportEvent} = levelAnalytics;
   const blocklySettings = useBlocklySettings();
   const themeSetting = useThemeSetting('spritelab');
   // Seed the page constants the animationList logic + engine read (we bypass
@@ -614,9 +621,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     (type: string) => {
       if (!chosenBlockSet.has(type)) {
         patchSources({chosenBlocks: [...chosenBlockSet, type]});
+        reportEvent(EVENTS.HOAI2026_CATALOG_ADD, {blockType: type});
       }
     },
-    [chosenBlockSet, patchSources]
+    [chosenBlockSet, patchSources, reportEvent]
   );
 
   // The project's pictures, in a sheet over the workspace.
@@ -2280,6 +2288,17 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     generationLimit === undefined
       ? undefined
       : generationLimit - generationCount;
+  // Report the limit once per visit, even if a failed last generation stops
+  // counting and the student then reaches the limit again.
+  const limitReportedRef = useRef(false);
+  useEffect(() => {
+    if (generationsLeft === 0 && !limitReportedRef.current) {
+      limitReportedRef.current = true;
+      reportEvent(EVENTS.HOAI2026_GENERATION_LIMIT_REACHED, {
+        generationLimit,
+      });
+    }
+  }, [generationsLeft, generationLimit, reportEvent]);
   // Where the level names no image type, any image counts as its own.
   const ownImageMade = levelImageType
     ? objectiveImages[levelImageType] >= 1
@@ -2303,6 +2322,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const openBlockCatalog = () => {
     setShowBlockCatalog(true);
     setShowCatalogArrow(false);
+    reportEvent(EVENTS.HOAI2026_CATALOG_OPEN, {
+      blocksOffered: catalog.length,
+      blocksInToolbox: catalog.filter(entry => inToolboxBlocks.has(entry.type))
+        .length,
+    });
+  };
+  const createScene = (name: string) => {
+    sceneEditing.createScene(name);
+    const sceneNumber = scenes.length + 1;
+    reportEvent(
+      EVENTS.HOAI2026_SCENE_CREATE,
+      {sceneNumber},
+      String(sceneNumber)
+    );
   };
 
   const reportLevelCompleted = () =>
@@ -2336,7 +2369,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           scenes={sceneMetadata}
           editable={scenesEditable}
           creating={scenesDialog.creating}
-          onCreateScene={sceneEditing.createScene}
+          onCreateScene={createScene}
           onRenameScene={sceneEditing.renameScene}
           onDeleteScene={sceneEditing.deleteScene}
           onMakeStartScene={sceneEditing.makeStartScene}
@@ -2347,6 +2380,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         <StartOverDialog
           onConfirm={() => {
             const leaving = !!firstLevelId && firstLevelId !== currentLevelId;
+            reportEvent(
+              EVENTS.HOAI2026_START_OVER,
+              {outcome: 'confirm', toFirstLevel: leaving},
+              'confirm'
+            );
             if (leaving) {
               leavingResetRef.current = {
                 level: levelProperties.id,
@@ -2359,7 +2397,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               dispatch(navigateToLevelId(firstLevelId));
             }
           }}
-          onCancel={() => setShowStartOver(false)}
+          onCancel={() => {
+            reportEvent(
+              EVENTS.HOAI2026_START_OVER,
+              {outcome: 'cancel'},
+              'cancel'
+            );
+            setShowStartOver(false);
+          }}
           type="custom"
           message={
             projectless
