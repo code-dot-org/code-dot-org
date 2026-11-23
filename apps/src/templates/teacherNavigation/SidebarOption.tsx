@@ -2,7 +2,7 @@ import {
   default as FontAwesomeV6Icon,
   kitIcons,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Tags from '@code-dot-org/component-library/tags';
+import Tags, {TagProps} from '@code-dot-org/component-library/tags';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
@@ -20,6 +20,8 @@ interface SidebarOptionProps {
   unitName: string | null;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
   showErrorIcon: boolean;
+  // Replaces the option's static tag.
+  tag?: TagProps;
 }
 
 const SidebarOption: React.FC<SidebarOptionProps> = ({
@@ -30,10 +32,11 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
   unitName,
   pathKey,
   showErrorIcon,
+  tag,
 }) => {
   const option = LABELED_TEACHER_NAVIGATION_PATHS[pathKey];
   // Only some options carry a status tag (e.g. "Beta").
-  const tag = 'tag' in option ? option.tag : undefined;
+  const shownTag = tag ?? ('tag' in option ? {label: option.tag} : undefined);
   return (
     <NavLink
       key={option.label}
@@ -63,8 +66,8 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       >
         {option.label}
       </Typography>
-      {tag && (
-        <Tags className={styles.navTag} tagsList={[{label: tag}]} size="s" />
+      {shownTag && (
+        <Tags className={styles.navTag} tagsList={[shownTag]} size="s" />
       )}
       {showErrorIcon && (
         <FontAwesomeV6Icon

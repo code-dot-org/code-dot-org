@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894758-6479664eacc4",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 3: Responsible Co-Creation",
+  "question": "You’re a museum guide who knows NOTHING about the object in front of you, but you sound like you know everything. Can you fool the tour group?\n\nSteps:\n1. Start recording. Pick a mystery object from the list below.\n2. Give a 20-second tour in your most confident voice. Include three “facts”: the year it was made, who made it, and what it was used for. Make them all up.\n3. Tell the camera which fact is the most believable, and what makes it sound true.\n4. Name one thing a real visitor could do to check whether your facts are real.\n\nMystery object list:\n- The Glorpton Hat\n- The Mumblewick Lantern\n- The Fizzbottom Compass\n- The Snorkelsby Chair",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give a tour on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the tour has fewer than 3 facts (year, maker, and use), or the student does not name which fact is the most believable."
+    },
+    {
+      "level": 2,
+      "description": "Student gives a tour with all 3 facts AND names which fact is the most believable."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND explains what makes that fact sound true (for example, a specific date or a believable-sounding name) AND names one specific way to check it (for example, looking it up in a trusted source or asking an expert)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

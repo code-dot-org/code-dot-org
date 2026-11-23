@@ -1,0 +1,16 @@
+{
+  "key": "aif-l13-research-over-ai-guess",
+  "description": "Learn why a prediction built on your own research is stronger than an AI's guess.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l13-research-over-ai-guess.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "ab68d50b-9d85-4b9b-a10c-36becf209e7d",
+    "2773ac04-48bb-41c3-83d8-055a75b508ab",
+    "93016fc4-fc05-4994-8f58-45ccbc44c679",
+    "747b5a90-ede0-43fc-95ff-3255aadf793a"
+  ]
+}

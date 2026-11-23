@@ -1,4 +1,5 @@
 import {
+  type JsonVideoData,
   type LessonObjective,
   type MatchSolution,
   type MultiSolution,
@@ -23,12 +24,6 @@ export type LessonProgressCounts = {
   validatedLevelsTotalCount: number;
   validatedLevelsCorrectCount: number;
   validatedLevelsIncorrectCount: number;
-};
-
-export type JsonVideoData = {
-  key: string;
-  url: string;
-  description: string;
 };
 
 export type LessonDeepDiveData = {

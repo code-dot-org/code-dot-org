@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894906-131c3d181de4",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 5: Uncovering Contradictions",
+  "question": "Ask the same question three times and the answers don’t always agree. Spot the odd one out, then write a prompt that gives the AI less room to wander.\n\nSteps:\n1. Use the arrow tool to point at the answer that disagrees with the others.\n2. Place a shape around the two answers that agree.\n3. Use the text tool to write a better prompt with at least 2 details of context.\n4. Record your voice explaining why two matching answers still don’t prove they are right.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but types no new prompt."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to Ask #3 AND a shape is on Ask #1 and Ask #2 AND the typed prompt adds at least 2 details of context (such as age group, a source, or the format of the answer)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording says that two matching answers do not prove they are correct AND names one way a human could check."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894906-131c3d181de4-90b5d834",
+  "whiteboard_starter_image_alt_text": "The question \"How many hours of sleep should a teenager get?\" with three answers from asking an AI three times. Ask #1: \"A teenager should get 8 to 10 hours of sleep each night.\" Ask #2: \"Teenagers need about 8 to 10 hours of sleep every night.\" Ask #3: \"Six hours of sleep is plenty for most teenagers.\" Below is a blank box labeled \"Space for your new prompt.\""
+}

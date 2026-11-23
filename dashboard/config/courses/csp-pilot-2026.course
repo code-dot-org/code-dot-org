@@ -1,0 +1,27 @@
+{
+  "name": "csp-pilot-2026",
+  "script_names": [
+    "csp-pilot-2026-unit-1",
+    "csp-pilot-2026-unit-2"
+  ],
+  "original_script_names": [
+    "csp-pilot-2026-unit-1",
+    "csp-pilot-2026-unit-2"
+  ],
+  "published_state": "pilot",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csp-pilot-2026",
+    "numbered_units": "auto",
+    "pilot_experiment": "csp-pilot-2026 ",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

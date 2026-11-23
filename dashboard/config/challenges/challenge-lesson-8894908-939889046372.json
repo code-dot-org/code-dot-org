@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894908-939889046372",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 7: AI's Wild Imagination",
+  "question": "One AI mistake is like a pebble dropped into a pond. The ripples spread to people who never saw the mistake being made. Trace how far one goes, and find where to stop it.\n\nSteps:\n1. Start recording. Pick one mistake from the list below.\n2. Name the first person affected, then the second, then the third, like ripples spreading out.\n3. Name one point where a human could stop the ripple, and say how.\n4. Say how the harm changes depending on who catches the mistake first.\n\nMistake list:\n- An AI invents a restaurant in a travel guide.\n- An AI makes up a safety rule for a school science lab.\n- An AI gives the wrong date for an exam.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe a mistake or any people affected on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names a mistake and only one person affected."
+    },
+    {
+      "level": 2,
+      "description": "Student names three people or groups affected, in order, AND names one point where a human could stop the ripple AND says how."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND explains how the harm gets bigger or smaller depending on who catches the mistake first."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

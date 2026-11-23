@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894905-4159ecd41fc1",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 4: Smart or Just Predictable?",
+  "question": "Every product has a label that says what it is good for and what to watch out for. You are writing one for an AI tool, and “be careful” is not allowed.\n\nSteps:\n1. Start recording. Pick one AI tool from the list below.\n2. Read your label out loud in your best product announcer voice. Start with one thing the tool is good for.\n3. Say “Watch out:” and give one specific way it could be wrong.\n4. Say “Always check:” and name one specific check a human should do and what could go wrong if they skip it.\n\nAI tool list:\n- An AI that identifies wild mushrooms from photos\n- An AI that writes recaps of local sports games\n- An AI that translates a restaurant menu\n- An AI that suggests hiking routes",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not read a label on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student gives only a strength or only a warning."
+    },
+    {
+      "level": 2,
+      "description": "Student gives one strength AND one specific way the AI could be wrong AND one specific check a human should do."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says what harm could happen if the check is skipped AND the warning is more specific than \"be careful.\""
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}
