@@ -24,5 +24,19 @@
 / Google tag (gtag.js)
 %script{async: "", src: "https://www.googletagmanager.com/gtag/js?id=#{google_measurement[:id]}"}
 
--# The Studio shell has no webpack runtime; its own bundle reads the data attribute.
-%script{src: (webpack_asset_path("js/layouts/_google_analytics.js") if local_assigns.fetch(:webpack_reporter, true)), data: {googleMeasurement: google_measurement.to_json}}
+- if local_assigns.fetch(:webpack_reporter, true)
+  %script{src: webpack_asset_path("js/layouts/_google_analytics.js"), data: {googleMeasurement: google_measurement.to_json}}
+- else
+  -# The Studio shell has no webpack runtime, so it gets Google's stock snippets inline.
+  -# The container id is synced with apps/src/sites/studio/pages/layouts/_google_analytics.js.
+  :javascript
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', "#{google_measurement[:id]}", window.userAnalyticsDimensions);
+
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TZZBRK5');
