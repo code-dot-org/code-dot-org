@@ -16,7 +16,7 @@ import {
 } from '../linkedAccounts';
 
 const NO_LOGIN =
-  'To make sure you can still sign in to your account, please add a password or another linked account first.';
+  "You can't disconnect this account because it's your only way to sign in. Add a password or another linked account first.";
 const ROSTERED =
   'You cannot disconnect from this linked account because it is tied to one of your sections.';
 
