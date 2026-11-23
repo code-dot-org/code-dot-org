@@ -95,6 +95,11 @@ module Dashboard
     config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
     config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
 
+    # The /restricted/ route checks CloudFront's signed cookies itself in
+    # development, so it must run before Rack::Allowlist strips them.
+    require_relative '../legacy/middleware/sound_library_api'
+    config.middleware.insert_after Middleware::GlobalEdition, SoundLibraryApi
+
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
 

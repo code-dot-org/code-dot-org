@@ -5,7 +5,6 @@ require_relative '../../legacy/middleware/animation_library_api'
 require_relative '../../legacy/middleware/channels_api'
 require_relative '../../legacy/middleware/files_api'
 require_relative '../../legacy/middleware/net_sim_api'
-require_relative '../../legacy/middleware/sound_library_api'
 
 module Middleware
   # Groups the legacy Sinatra applications into a single Rack middleware stack.
@@ -18,7 +17,6 @@ module Middleware
       SharedResources,
       NetSimApi,
       AnimationLibraryApi,
-      SoundLibraryApi,
     ].freeze
 
     # The marketing site needs to make authenticated POST requests
