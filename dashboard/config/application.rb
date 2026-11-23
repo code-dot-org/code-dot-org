@@ -94,6 +94,7 @@ module Dashboard
 
     config.middleware.insert_after Rails::Rack::Logger, Middleware::I18n
     config.middleware.insert_after Middleware::I18n, Middleware::GlobalEdition
+    config.middleware.insert_after Warden::Manager, Middleware::LastWriteStamp
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
