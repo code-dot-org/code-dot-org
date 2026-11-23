@@ -231,7 +231,7 @@ class FieldSounds extends BlocklyCore.Field {
       this.textElement.setAttribute('font-style', 'italic');
     }
     if (isSilent) {
-      this.textElement.setAttribute('opacity', '0.6');
+      this.textElement.setAttribute('opacity', '0.75');
     }
     this.setTooltip(isSilent ? musicI18n.soundRemoved() : null);
 
