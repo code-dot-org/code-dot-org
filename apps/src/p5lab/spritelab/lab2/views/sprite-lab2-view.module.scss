@@ -530,15 +530,33 @@ $z-over-blockly: 71;
   min-width: 0;
   align-items: center;
   gap: 16px;
-  // In a narrow column the second button moves to a row of its own, and
-  // each row is centered. A button's label never breaks onto two lines.
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 8px;
 
+  // A button's label never breaks onto two lines.
   button {
     white-space: nowrap;
   }
+}
+
+// When the share buttons and the game's buttons do not fit on one row,
+// the game's buttons go on the upper row, nearer the game, and the share
+// buttons stay together on the row under them.
+.playBarButtonsShareView {
+  flex-wrap: wrap-reverse;
+}
+
+.playBarGroup {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 16px;
+  // In a narrow column a button that does not fit moves to the next row,
+  // and each row is centered.
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
 }
 
 // Placed by the playspace beside or under the game; the cross inside takes

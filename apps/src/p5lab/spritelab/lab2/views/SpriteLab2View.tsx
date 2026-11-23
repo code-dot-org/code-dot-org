@@ -217,6 +217,9 @@ const SHARE_TABS: readonly Tab[] = ['Play'];
 // On the body while a share link is open; scopes the page footer's styles
 // in sprite-lab2-view.module.scss.
 const SHARE_BODY_CLASS = 'spritelab2-share';
+// The id ShareLogo gives the share page's logo, which is fixed over the
+// page's top-left corner.
+const SHARE_LOGO_ID = 'logo-img';
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // The editor switch's order.
@@ -2617,6 +2620,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             mode={playspaceMode}
             columnHeader={<EditorStrip title="Preview" />}
             onColumnWidth={setPreviewColumnWidth}
+            playClearOfId={isShareView ? SHARE_LOGO_ID : undefined}
             side="right"
             columnShare={PREVIEW_SHARE}
             prompt={
@@ -2628,36 +2632,47 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }
             bottomBar={
               <>
-                <div className={moduleStyles.playBarButtons}>
-                  {isShareView && <ShareActions />}
-                  <RunButtons
-                    playing={activeTab === 'Play'}
-                    onPlay={handlePlayClick}
-                    onStop={stopTab ? handleStopClick : undefined}
-                    // A level pinned to one scene has one Run, for that scene.
-                    onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
-                    playSceneHidden={activeScene.id === scenes[0].id}
-                  />
-                  {activeTab === 'Play' && (
-                    <PlayControls
-                      // On a pinned-scene level the game is that one scene,
-                      // so there is no whole-game restart.
-                      onRestartGame={
-                        pinnedSceneId
-                          ? undefined
-                          : event =>
-                              handleRestartClick(event, handleRestartGame)
-                      }
-                      // On the scene the game starts on, restarting the scene
-                      // is restarting the game, so the one button is enough.
-                      onRestartScene={
-                        pinnedSceneId || playHasLeftTheFirstScene
-                          ? event =>
-                              handleRestartClick(event, handleRestartScene)
-                          : undefined
-                      }
-                    />
+                <div
+                  className={classNames(
+                    moduleStyles.playBarButtons,
+                    isShareView && moduleStyles.playBarButtonsShareView
                   )}
+                >
+                  {isShareView && (
+                    <div className={moduleStyles.playBarGroup}>
+                      <ShareActions />
+                    </div>
+                  )}
+                  <div className={moduleStyles.playBarGroup}>
+                    <RunButtons
+                      playing={activeTab === 'Play'}
+                      onPlay={handlePlayClick}
+                      onStop={stopTab ? handleStopClick : undefined}
+                      // A level pinned to one scene has one Run, for that scene.
+                      onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
+                      playSceneHidden={activeScene.id === scenes[0].id}
+                    />
+                    {activeTab === 'Play' && (
+                      <PlayControls
+                        // On a pinned-scene level the game is that one scene,
+                        // so there is no whole-game restart.
+                        onRestartGame={
+                          pinnedSceneId
+                            ? undefined
+                            : event =>
+                                handleRestartClick(event, handleRestartGame)
+                        }
+                        // On the scene the game starts on, restarting the scene
+                        // is restarting the game, so the one button is enough.
+                        onRestartScene={
+                          pinnedSceneId || playHasLeftTheFirstScene
+                            ? event =>
+                                handleRestartClick(event, handleRestartScene)
+                            : undefined
+                        }
+                      />
+                    )}
+                  </div>
                 </div>
                 <AskAiIndicator
                   status={askAiStatus}
