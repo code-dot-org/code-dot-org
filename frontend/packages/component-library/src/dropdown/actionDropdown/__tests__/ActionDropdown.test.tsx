@@ -107,6 +107,52 @@ describe('Design System - Action Dropdown Component', () => {
     expect(triggerButton).toHaveFocus();
   });
 
+  it('closes and refocuses the trigger when an option is chosen by keyboard', async () => {
+    const user = userEvent.setup();
+    render(
+      <ActionDropdown
+        name="keyboard-dropdown"
+        options={allOptions}
+        labelText="Keyboard label"
+        triggerButtonProps={triggerButtonProps}
+      />,
+    );
+
+    const triggerButton = screen.getByRole('button', {name: 'Keyboard label'});
+    await user.click(triggerButton);
+    screen.getByText('option2').closest('button')?.focus();
+    await user.keyboard('{Enter}');
+
+    expect(allOptions[1].onClick).toHaveBeenCalledTimes(1);
+    expect(triggerButton.parentElement).not.toHaveClass('open');
+    expect(triggerButton).toHaveFocus();
+  });
+
+  // Safari does not focus a clicked button, so focus is on body at that point.
+  it('refocuses the trigger when focus is on body after the click', async () => {
+    const user = userEvent.setup();
+    render(
+      <ActionDropdown
+        name="body-focus-dropdown"
+        options={[
+          {
+            ...allOptions[0],
+            onClick: () => (document.activeElement as HTMLElement).blur(),
+          },
+        ]}
+        labelText="Body focus label"
+        triggerButtonProps={triggerButtonProps}
+      />,
+    );
+
+    const triggerButton = screen.getByRole('button', {
+      name: 'Body focus label',
+    });
+    await user.click(triggerButton);
+    await user.click(screen.getByText('option1'));
+    expect(triggerButton).toHaveFocus();
+  });
+
   it('refocuses its own trigger when several dropdowns share a name', async () => {
     const user = userEvent.setup();
     render(

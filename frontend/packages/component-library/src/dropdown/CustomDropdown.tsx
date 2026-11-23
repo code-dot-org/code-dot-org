@@ -242,6 +242,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       )}
       onKeyDown={onKeyDown}
       ref={dropdownRef}
+      // useCloseDropdownMenu finds the trigger through this, not by id.
       data-dropdown-root
       aria-describedby={ariaProps['aria-describedby']}
     >

@@ -24,8 +24,6 @@ export const useDropdownContext = () => useContext(DropdownContext);
 
 // Call from inside CustomDropdown's children; outside its provider this is a
 // no-op. Focus returns to the trigger unless the handler already moved it.
-// The trigger is found from the menu item, not by id: ids repeat when several
-// dropdowns share a name, and triggerButtonProps can override them.
 export const useCloseDropdownMenu = () => {
   const {setActiveDropdownName} = useDropdownContext();
 
