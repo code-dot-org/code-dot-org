@@ -1,3 +1,4 @@
+import {Skeleton as MuiSkeleton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -10,7 +11,7 @@ import {busRoutes} from './layout/busRoutes';
 import {layoutDestinations} from './layout/destinations';
 import {MapLayout, NODE_RADIUS} from './layout/types';
 import MapBoard from './MapBoard';
-import MapNode from './MapNode';
+import MapNode, {isSkeleton} from './MapNode';
 import {MapProps} from './MapView';
 
 import styles from './destinationsMap.module.scss';
@@ -92,6 +93,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
   fit,
   onSelect,
   tourFocusIds,
+  intro,
 }) => {
   const layout = useMemo(
     () => layoutDestinations(pathway.checkpoints, turns),
@@ -124,6 +126,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
     };
   }, [tourFocusIds, layout.nodes]);
   const firstCheckpointId = pathway.checkpoints[0]?.id;
+  const skeletonOf = (id: string) => isSkeleton(intro, id, firstCheckpointId);
   const firstSkippedId = useMemo(
     () => pathway.checkpoints.find(c => statusMap[c.id] === 'skipped')?.id,
     [pathway.checkpoints, statusMap]
@@ -189,6 +192,7 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
                 ? 'adaptive-tour-first-checkpoint'
                 : undefined
             }
+            skeleton={skeletonOf(checkpoint.id)}
           >
             <span
               className={classNames(
@@ -197,7 +201,13 @@ const DestinationsMap: React.FunctionComponent<DestinationsMapProps> = ({
                 side === 'right' && styles.labelRight
               )}
             >
-              {checkpoint.title}
+              {skeletonOf(checkpoint.id) ? (
+                <MuiSkeleton variant="rounded">
+                  <span>{checkpoint.title}</span>
+                </MuiSkeleton>
+              ) : (
+                checkpoint.title
+              )}
             </span>
           </MapNode>
         );
