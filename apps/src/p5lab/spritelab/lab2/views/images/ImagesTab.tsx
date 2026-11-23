@@ -6,12 +6,14 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {ImageSource} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
   GeneratedImageResult,
   UploadImageFunction,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {
   ImageKind,
+  imageKindLabel,
   imageKindPhrase,
   ImageSubject,
   ImageType,
@@ -35,21 +37,24 @@ import {
   FREEPLAY_TOOLS,
   PAINT_BRUSH_SIZES,
   PAINT_COLORS,
+  PAINT_START_COLOR,
   PAINT_TOOLBAR,
   PAINT_TOOLS,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/paintTools';
 import SentenceScene from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
+import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import {readWordLayout} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/wordLayout';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
+import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AdvancedPopover, {
   AdvancedSettings,
   DEFAULT_ADVANCED,
 } from './AdvancedPopover';
-import DrawPane from './DrawPane';
 import FrameRow from './FrameRow';
-import {FRAME_LABELS, frameGroups} from './frames';
+import {frameGroups} from './frames';
 import ImageFrame from './ImageFrame';
 import ImageList, {DraftEntry} from './ImageList';
 import {currentPixels} from './imagePixels';
@@ -62,27 +67,62 @@ import RatingBar from './teaching/RatingBar';
 import ReopenedBehindTheScenes from './teaching/ReopenedBehindTheScenes';
 import useLearningStory from './teaching/useLearningStory';
 import useDrawing from './useDrawing';
-import useImageWriter, {ImageTarget} from './useImageWriter';
+import useImageUpload, {MODERATION_APP_NAME} from './useImageUpload';
+import useImageWriter, {ImageTarget, UploadedImage} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
+
+export interface UploadWarningSettings {
+  alreadyAgreed: boolean;
+  isTeacher: boolean;
+  onConfirm: () => void;
+}
 
 interface ImagesTabProps {
   uploadImage?: UploadImageFunction;
   /** Drop every reference to a deleted image (called after the removal). */
   onDeleteImage: (name: string) => void;
-  /** Set on a level whose task is one image of this type. The tab opens on
-      that image, or on an empty slot for it until it is made. */
+  /** The one type of image this level offers to generate. */
   lockedImageType?: ImageType;
   lockedImageSubject?: ImageSubject;
   /** Recorded on every image made here. */
   imageRole?: string;
+  /** The level's task is a single image (level mode `oneImage`): the tab
+      opens on it, or on the empty slot it will fill. */
+  oneImage?: boolean;
+  /** The level's own image exists: one of its type was made on this visit,
+      or one carrying the level's role was made on an earlier visit. Until
+      then the plus is offered. After that there is no plus: the student
+      can regenerate or edit the existing image, and cannot add a second
+      one for the same role. */
+  ownImageMade?: boolean;
+  /** The level tells how AI made the image (level mode `learning`). */
+  learning?: boolean;
+  /** The level being visited; a new level is a new visit. */
+  levelId?: number;
   /** Generations the student has left on this level; unlimited when
       unset. */
   generationsLeft?: number;
   /** Called when a generation request is sent to the model. */
   onGenerate?: () => void;
-  /** Students may add images and draw on them (free play). */
+  onGenerateFailed?: () => void;
+  /** Students may add images, draw on them and delete them. */
   editingOffered?: boolean;
+  /** No New button, even where `editingOffered` would show one: the
+      student works on the images already listed. */
+  noNewImages?: boolean;
+  /** No Delete button, even where `editingOffered` would show one. */
+  noDeletingImages?: boolean;
+  /** The paint tools are the limited set. Without it they are the full
+      set free play has. */
+  limitedPaintTools?: boolean;
+  /** The kinds of image the list shows. Every kind when unset. */
+  imageKinds?: ImageType[];
+  /** Enable the user to upload their own images. */
+  enableImageUpload?: boolean;
+  uploadWarningSettings?: UploadWarningSettings;
+  /** Any image can be chosen and looked at; nothing can be changed. */
+  viewOnly?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
@@ -99,9 +139,16 @@ interface ImagesTabProps {
   /** The level checks that the picture was rated: the rating strip stays
       until a thumb is given. */
   ratingRequired?: boolean;
+  /** Where a sentence's picture comes from (imageCache.ts); the cache when
+      unset. */
+  imageSource?: ImageSource;
+  /** Another address to read cached pictures from (QA). */
+  imageCacheUrl?: string;
 }
 
 const DRAFT_ID = 'draft';
+
+const UPLOAD_ERROR_SHOWN_MS = 10_000;
 
 /** How an image the student drew on is shown. Default: it opens in the
     paint tools with the word menus beside them. `?images-edited=pane`
@@ -119,15 +166,29 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   lockedImageType,
   lockedImageSubject,
   imageRole,
+  oneImage,
+  ownImageMade,
+  learning,
+  levelId,
   generationsLeft,
   onGenerate,
+  onGenerateFailed,
   editingOffered,
+  noNewImages,
+  noDeletingImages,
+  limitedPaintTools,
+  imageKinds,
+  enableImageUpload,
+  uploadWarningSettings,
+  viewOnly,
   paneWidth,
   onImageLanded,
   active = true,
   onDrawingHistory,
   advancedOffered,
   ratingRequired,
+  imageSource,
+  imageCacheUrl,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // The engine trims each image after it loads and stores a thumbnail; the
@@ -138,16 +199,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     trimAnimationListImages(animationList);
   }, [animationList]);
   const images = useMemo(
-    () => listProjectImages(animationList),
+    () =>
+      listProjectImages(animationList).filter(
+        // The option is edited as JSON, so it may not be a list.
+        image =>
+          !Array.isArray(imageKinds) || imageKinds.includes(image.imageType)
+      ),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [animationList, trimVersion]
+    [animationList, trimVersion, imageKinds]
   );
   const writer = useImageWriter({uploadImage, imageRole, onDeleteImage});
   const editedMode = useMemo(() => readEditedMode(), []);
   const wordLayout = useMemo(() => readWordLayout(), []);
   // Free play paints every image in place, with the word menus beside the
   // tools, so the student can draw on it or make a picture over it.
-  const paintsInPlace = editedMode === 'paint' && !!editingOffered;
+  const paintsInPlace = editedMode === 'paint' && !!editingOffered && !viewOnly;
 
   const [advanced, setAdvanced] = useState<AdvancedSettings>(DEFAULT_ADVANCED);
   const [draft, setDraft] = useState<DraftEntry | null>(null);
@@ -171,15 +237,24 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     [startSession]
   );
 
-  // On a level whose task is one image: that image, when it exists.
-  const ownImage = lockedImageType
-    ? imageRole
-      ? images.find(image => image.props.role === imageRole)
-      : images.find(image => image.imageType === lockedImageType)
-    : undefined;
+  // The image the level's own task produces: the one tagged with its role,
+  // or without a role the newest of its type (the list is newest first, as
+  // the dropdowns' role defaults pick it).
+  const ownImage =
+    imageRole || lockedImageType
+      ? images.find(image =>
+          imageRole
+            ? image.props.role === imageRole
+            : image.imageType === lockedImageType
+        )
+      : undefined;
   // The opening choice is read once at mount; a later change to the list
-  // must not move the choice.
-  const openOnRef = useRef(lockedImageType ? ownImage : images[0]);
+  // must not move the choice. A level with a role or a type opens on its own
+  // image, and a one-image level on the empty slot until that image is made;
+  // anything else opens on the project's newest image.
+  const openOnRef = useRef(
+    lockedImageType || imageRole || oneImage ? ownImage : images[0]
+  );
   useEffect(() => {
     setChosenId(openOnRef.current?.key ?? null);
   }, []);
@@ -234,6 +309,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     },
     []
   );
+  // The element at the right end of the pane's header bar, where the pane
+  // draws its info button.
+  const [headerSlot, setHeaderSlot] = useState<HTMLElement | null>(null);
   // While a picture is being made the list holds still: choosing another
   // image would unmount the scene and throw the picture away, after it has
   // been counted against the level's limit.
@@ -241,30 +319,12 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // Animated is on until the student turns it off, and stays as they left
   // it from image to image; no image or level turns it off for them.
   const [animated, setAnimated] = useState(true);
-  const {story, offerStory, handleAsking, endStory} = useLearningStory({
-    active,
-    lockedImageType,
-  });
-  // Rating a picture keeps it a second time; the story is offered only on
-  // the first keep of each picture.
-  const keptRef = useRef<string | null>(null);
-  const handleKeep = useCallback(
-    async (result: GeneratedImageResult) => {
-      const target: ImageTarget = {
-        key: chosenKeyRef.current,
-        imageType: result.generation.imageType,
-        subject: result.generation.subject,
-      };
-      const firstKeep = keptRef.current !== result.filename;
-      keptRef.current = result.filename;
-      await storePicture(target, () => writer.acceptGenerated(target, result));
-      if (firstKeep) {
-        offerStory(result);
-      }
-    },
-    [writer, storePicture, offerStory]
-  );
-
+  const {story, offerStory, handleAsking, tellStory, endStory} =
+    useLearningStory({
+      active,
+      learning,
+      levelId,
+    });
   const tools = useDrawing({
     images,
     saveEdited: writer.saveEdited,
@@ -272,7 +332,116 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     active,
     onDrawingHistory,
   });
-  const {drawing, startDrawing, leaveDrawing, stopDrawing} = tools;
+  const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
+    tools;
+  const {closedPicture, releaseClosedPicture} = tools;
+  // The canvas copy kept when Done closed the tools is for one image, so it
+  // is dropped when another image is chosen.
+  useEffect(() => {
+    if (closedPicture && closedPicture.key !== chosenId) {
+      releaseClosedPicture();
+    }
+  }, [chosenId, closedPicture, releaseClosedPicture]);
+
+  const [uploadError, setUploadError] = useState<{text: string} | null>(null);
+  const [uploadStatus, setUploadStatus] = useState('');
+  useEffect(() => {
+    if (!uploadError) {
+      return;
+    }
+    const timer = setTimeout(() => setUploadError(null), UPLOAD_ERROR_SHOWN_MS);
+    return () => clearTimeout(timer);
+  }, [uploadError]);
+  const handleUploaded = useCallback(
+    async (kind: ImageKind, image: UploadedImage) => {
+      const target: ImageTarget = {
+        key: null,
+        imageType: kind.imageType,
+        subject: kind.subject,
+      };
+      const key = await writer.acceptUploaded(target, image);
+      leaveDrawing();
+      setDraft(null);
+      startSession(key);
+      landedRef.current?.();
+      setUploadStatus(`${imageKindLabel(kind.imageType, kind.subject)} added.`);
+    },
+    [leaveDrawing, startSession, writer]
+  );
+  const upload = useImageUpload({
+    onAccepted: handleUploaded,
+    onError: message => setUploadError({text: message}),
+    onProgress: setUploadStatus,
+  });
+
+  const [pendingUpload, setPendingUpload] = useState<{
+    kind: ImageKind;
+    trigger: HTMLElement | null;
+  } | null>(null);
+
+  const handleUpload = useCallback(
+    (kind: ImageKind, trigger: HTMLElement | null) => {
+      setUploadError(null);
+      if (uploadWarningSettings && !uploadWarningSettings.alreadyAgreed) {
+        setPendingUpload({kind, trigger});
+        return;
+      }
+      upload.pickFile(kind, trigger);
+    },
+    [upload, uploadWarningSettings]
+  );
+
+  const cancelPendingUpload = useCallback(() => {
+    setPendingUpload(null);
+    pendingUpload?.trigger?.focus();
+  }, [pendingUpload]);
+
+  const confirmPendingUpload = useCallback(() => {
+    if (!pendingUpload) {
+      return;
+    }
+    setPendingUpload(null);
+    uploadWarningSettings?.onConfirm();
+    upload.pickFile(pendingUpload.kind, pendingUpload.trigger);
+  }, [pendingUpload, upload, uploadWarningSettings]);
+
+  const handleKeep = useCallback(
+    async (result: GeneratedImageResult) => {
+      const target: ImageTarget = {
+        key: chosenKeyRef.current,
+        imageType: result.generation.imageType,
+        subject: result.generation.subject,
+      };
+      await storePicture(target, () => writer.acceptGenerated(target, result));
+    },
+    [writer, storePicture]
+  );
+  // The verdict is written onto the stored picture's generation record.
+  // Its pixels are not touched, so anything drawn on the picture since it
+  // was generated is kept.
+  const handleRate = useCallback(
+    async (verdict: Verdict) => {
+      const key = chosenKeyRef.current;
+      if (!key) {
+        return false;
+      }
+      const generation = writer.rateGenerated(key, verdict);
+      if (!generation) {
+        // The picture has been edited by hand, which removes its generation
+        // record, so there is nowhere to write the verdict. True tells the
+        // scene the rating is dealt with, so it does not store its own copy
+        // of the picture again, which would go over the student's edits.
+        return true;
+      }
+      adoptGeneration(key, generation);
+      await storePicture(
+        {key, imageType: generation.imageType},
+        async () => key
+      );
+      return true;
+    },
+    [writer, storePicture, adoptGeneration]
+  );
   // When the chosen image has been deleted, choose the first image left, or
   // none; tools open on it close without saving, since a save would create
   // a new image from the deleted pixels.
@@ -289,8 +458,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     }
     startSession(images[0]?.key ?? null);
   }, [chosenId, draft, images, startSession, stopDrawing, drawing]);
-  // A level before free play keeps the few tools that draw.
-  const limitedTools = !editingOffered;
+  const limitedTools = !!limitedPaintTools;
   // An image that is the student's own work (no prompt made its pixels)
   // hides the word menus until Replace image is pressed; the choice is per
   // image, and choosing another image or leaving the tab hides them again.
@@ -311,8 +479,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     restPick && restPick.key === chosenImage?.key ? restPick.index : null;
   const restFrameRef = useRef(restFrame);
   restFrameRef.current = restFrame;
-  // Where the tools open by themselves, no button offers them.
-  const drawOffered = !!sceneKind && !drawing && !paintsChosen;
+  // In free play the paint tools open by themselves, on an existing image
+  // and on a new one, so no button is needed to open them.
+  const drawOffered = !!sceneKind && !drawing && !paintsInPlace && !viewOnly;
+  // The chosen image has been edited by hand since it was generated. The
+  // scene still holds the picture as the AI made it, so the frame must show
+  // the stored image instead, and the question about the AI's picture no
+  // longer applies.
+  const editedSinceGenerated = !!chosenImage?.props.edited;
   // The chosen image opens in the paint tools by itself, again on return
   // to the tab, and again once a picture has landed over it.
   const chosenKey = chosenImage?.key;
@@ -344,12 +518,27 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     kindSubject,
     startDrawing,
   ]);
+  // In free play a new image, which has no picture yet, opens in the paint
+  // tools too, on a blank canvas.
+  const draftChosen = !!chosenDraft;
+  useEffect(() => {
+    if (paintsInPlace && active && !drawingOpen && draftChosen && kindType) {
+      startDrawing({key: null, imageType: kindType, subject: kindSubject});
+    }
+  }, [
+    paintsInPlace,
+    active,
+    drawingOpen,
+    draftChosen,
+    kindType,
+    kindSubject,
+    startDrawing,
+  ]);
   // A generated picture replacing the image (or blank) being drawn on
   // becomes the image's pixels; the tools close without saving the drawn
   // pixels over it.
   const landedOverPainting =
     !!drawing &&
-    paintsInPlace &&
     !!chosenImage?.props.generation &&
     chosenImage.props.generation !== tools.openedOnGeneration &&
     (drawing.target.key === chosenImage.key || drawing.target.key === null);
@@ -380,9 +569,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       group.frames.includes(shownFrame)
     )?.key;
 
-  const deleteOffered = !!editingOffered;
-  // On a level whose task is one image, the plus is shown until that image
-  // exists and its menu enables only that kind. In free play every kind is
+  const deleteOffered = !!editingOffered && !noDeletingImages && !viewOnly;
+  // The plus menu enables only the level's kind; without one every kind is
   // enabled.
   const lockedKind: ImageKind | undefined = lockedImageType
     ? {
@@ -390,18 +578,22 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         subject: lockedImageType === 'sprite' ? lockedImageSubject : undefined,
       }
     : undefined;
-  const newOffered = !!editingOffered || (!!lockedKind && !ownImage);
-  // A level about one image keeps the choice on that image, or on the slot
-  // it will take; the project's other tiles are listed but disabled.
-  const chooseOffered = !lockedKind;
+  // Where a single image is the task, the plus is shown until that image is
+  // made on this visit, and the choice stays on it or on the slot it will
+  // take; the project's other tiles are listed but disabled.
+  const newOffered =
+    !viewOnly && !noNewImages && (!!editingOffered || !ownImageMade);
+  const chooseOffered = !!editingOffered;
 
   return (
     <div className={styles.tab}>
-      <div className={styles.panelHeader} style={{width: paneWidth}}>
-        <EditorStrip title="AI" />
-      </div>
+      {!viewOnly && (
+        <div className={styles.panelHeader} style={{width: paneWidth}}>
+          <EditorStrip title="AI Prompt" endSlotRef={setHeaderSlot} />
+        </div>
+      )}
       <ImageList
-        disabled={busy}
+        disabled={busy || upload.uploading}
         images={images}
         playing={
           sheet && chosenImage && shownPose
@@ -450,7 +642,11 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             : undefined
         }
         chooseOffered={chooseOffered}
+        heading={viewOnly ? 'Images' : undefined}
         newKind={lockedKind}
+        onUpload={enableImageUpload && newOffered ? handleUpload : undefined}
+        notice={uploadError?.text}
+        onNoticeClose={() => setUploadError(null)}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />
       {sceneKind ? (
@@ -469,10 +665,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           ratingRequired={ratingRequired}
           generationsLeft={generationsLeft}
           onGenerateStart={onGenerate}
+          onGenerateFailed={onGenerateFailed}
           onBusyChange={setBusy}
           onKeep={handleKeep}
+          onReady={offerStory}
+          onRate={handleRate}
           wordLayout={wordLayout}
           compactBehindTheScenes
+          onTellStory={tellStory}
+          imageSource={imageSource}
+          imageCacheUrl={imageCacheUrl}
           advanced={
             advancedOffered
               ? {
@@ -486,6 +688,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
               : undefined
           }
           method="tab"
+          replacesGenerated={!!chosenImage?.props.generation}
           stillFrame={shownFrame}
           layout={parts => {
             const generating = parts.mode === 'generating';
@@ -507,6 +710,18 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 disabled={!drawingSheet && parts.busy}
               />
             );
+            // The scene's own copy of the picture is out of date once the
+            // student has drawn on the stored image. While the scene is
+            // busy storing a new picture, the stored image's "edited" mark
+            // is still the old picture's, so it is ignored until then.
+            const sceneCopyStale = editedSinceGenerated && !parts.busy;
+            // On a level that requires a rating, the student answers the
+            // question about the AI's picture before drawing on it.
+            const ratingAwaited =
+              parts.rating.offered &&
+              parts.rating.required &&
+              !parts.rating.verdict &&
+              !sceneCopyStale;
             const frame = (
               live?: React.ReactNode,
               above?: React.ReactNode,
@@ -517,36 +732,61 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 frame={shownFrame}
                 workspaceClassName={live ? styles.paintFrame : undefined}
                 above={above}
+                reserveAbove={!viewOnly}
+                cover={
+                  !live &&
+                  !generating &&
+                  closedPicture?.key === chosenImage?.key
+                    ? closedPicture?.canvas
+                    : undefined
+                }
+                onCoverDone={releaseClosedPicture}
                 live={
                   generating
                     ? parts.frame
-                    : live ?? (parts.frameFilled ? parts.frame : undefined)
+                    : live ??
+                      (parts.frameFilled && !sceneCopyStale
+                        ? parts.frame
+                        : undefined)
                 }
                 generating={generating}
                 tip={generating ? parts.tip : undefined}
                 under={generating ? undefined : under}
                 overlay={
-                  parts.rating.offered && (
-                    <RatingBar
-                      verdict={parts.rating.verdict}
-                      onJudge={parts.rating.judge}
-                      onReasons={parts.rating.explain}
-                      onAsking={handleAsking}
-                      onDismiss={
-                        parts.rating.required ? undefined : parts.rating.dismiss
-                      }
-                      disabled={parts.busy}
-                    />
-                  )
+                  <>
+                    {parts.rating.offered && !sceneCopyStale && (
+                      <RatingBar
+                        verdict={parts.rating.verdict}
+                        onJudge={parts.rating.judge}
+                        onReasons={parts.rating.explain}
+                        onAsking={handleAsking}
+                        onDismiss={
+                          parts.rating.required
+                            ? undefined
+                            : parts.rating.dismiss
+                        }
+                        disabled={parts.busy}
+                      />
+                    )}
+                  </>
                 }
               />
             );
-            const makePane = (
+            // The pane's second button opens the paint tools. While the
+            // tools are open on a level before free play, the same button
+            // closes them and keeps the drawing. `doneDisabled` is true for
+            // a new drawing that has no strokes yet: there is nothing to
+            // keep, so the button cannot be pressed.
+            const makePane = (doneDisabled = false, drawnOn = false) => (
               <MakePane
                 parts={parts}
                 width={paneWidth}
-                replaces={!!chosenImage}
                 regenerate={!!chosenImage?.props.generation}
+                headerSlot={headerSlot}
+                // `drawnOn` covers strokes the open tools hold that are not
+                // saved yet: the stored image is marked as edited only
+                // once a save has gone through.
+                editedByHand={sceneCopyStale || drawnOn}
                 onDraw={
                   drawOffered
                     ? () => {
@@ -560,9 +800,21 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           restFrame ?? undefined
                         );
                       }
+                    : drawing && !paintsInPlace
+                    ? tools.finishDrawing
                     : undefined
                 }
-                drawLabel={chosenImage ? 'Edit this image' : 'Draw my own'}
+                drawLabel={
+                  drawing
+                    ? drawing.target.key
+                      ? 'Done editing'
+                      : 'Done drawing'
+                    : chosenImage
+                    ? 'Edit this image'
+                    : 'Draw my own'
+                }
+                drawIcon={drawing ? 'check' : undefined}
+                drawDisabled={drawing ? doneDisabled : ratingAwaited}
                 extra={
                   <>
                     {/* The Behind the scenes button sits in this header:
@@ -573,6 +825,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                       <ReopenedBehindTheScenes
                         image={chosenImage}
                         disabled={busy}
+                        onTellStory={tellStory}
                       />
                     )}
                     {advancedOffered && (
@@ -602,6 +855,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   }
                   tools={limitedTools ? PAINT_TOOLS : FREEPLAY_TOOLS}
                   palette={limitedTools ? PAINT_COLORS : undefined}
+                  startColor={limitedTools ? PAINT_START_COLOR : undefined}
                   brushSizes={
                     limitedTools ? PAINT_BRUSH_SIZES : FREEPLAY_BRUSH_SIZES
                   }
@@ -646,21 +900,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                           ),
                           frameRow
                         )}
-                        {paintsInPlace ? (
-                          makePane
-                        ) : (
-                          <DrawPane
-                            width={paneWidth}
-                            kind={sceneKind}
-                            frameLabel={
-                              drawing.sheet
-                                ? FRAME_LABELS[drawing.sheet.index]
-                                : undefined
-                            }
-                            editing={!!drawing.target.key}
-                            edited={editor.edited}
-                            onDone={tools.finishDrawing}
-                          />
+                        {makePane(
+                          !drawing.target.key && !editor.edited,
+                          editor.edited
                         )}
                       </>
                     );
@@ -671,7 +913,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
             return (
               <>
                 {frame()}
-                {ownWorkPane && chosenImage ? (
+                {viewOnly ? null : ownWorkPane && chosenImage ? (
                   <OwnWorkPane
                     width={paneWidth}
                     edited={!!chosenImage.props.edited}
@@ -692,7 +934,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                     }
                   />
                 ) : (
-                  makePane
+                  makePane()
                 )}
               </>
             );
@@ -700,34 +942,60 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         />
       ) : (
         <>
-          <ImageFrame image={null} />
-          <section
-            className={styles.pane}
-            style={{width: paneWidth}}
-            aria-label="Make your picture"
-          >
-            <p className={styles.headline}>
-              {newOffered
-                ? `Press + to make ${
-                    lockedKind
-                      ? imageKindPhrase(
-                          lockedKind.imageType,
-                          lockedKind.subject
-                        )
-                      : 'an image'
-                  }.`
-                : 'This level has no images to make.'}
-            </p>
-          </section>
+          <ImageFrame image={null} reserveAbove={!viewOnly} />
+          {!viewOnly && (
+            <section
+              className={styles.pane}
+              style={{width: paneWidth}}
+              aria-label="Make your picture"
+            >
+              <p className={styles.headline}>
+                {newOffered
+                  ? `Press + to make ${
+                      lockedKind
+                        ? imageKindPhrase(
+                            lockedKind.imageType,
+                            lockedKind.subject
+                          )
+                        : 'an image'
+                    }.`
+                  : 'This level has no images to make.'}
+              </p>
+            </section>
+          )}
         </>
       )}
       {story && (
         <LearningDialog
+          // A new story opens on its first panel.
+          key={story.picture.src}
           picture={story.picture}
           prompt={story.prompt}
+          imageType={story.imageType}
           onDone={endStory}
+          onClose={story.asked ? endStory : undefined}
         />
       )}
+      {pendingUpload && (
+        <ImageUploadModal
+          isOpen
+          isTeacher={!!uploadWarningSettings?.isTeacher}
+          cancelUpload={cancelPendingUpload}
+          confirmUploadWarning={confirmPendingUpload}
+          hasVersionHistory={false}
+        />
+      )}
+      <upload.FileInput />
+      {upload.flaggedImage && (
+        <FlaggedImageModal
+          appName={MODERATION_APP_NAME}
+          onAccept={upload.acceptFlaggedImage}
+          onCancel={upload.cancelFlaggedImage}
+        />
+      )}
+      <p aria-live="polite" className={styles.srOnly}>
+        {uploadStatus}
+      </p>
     </div>
   );
 };

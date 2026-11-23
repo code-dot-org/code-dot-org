@@ -65,13 +65,20 @@ export function recordGatewayRequestOk(
   count('ok', signingKey);
 }
 
+// The worker also answers 401 to a failed Turnstile check, which is not the access token's fault.
+export async function isAccessTokenRejection(error: unknown): Promise<boolean> {
+  if (!(error instanceof NetworkError) || error.response.status !== 401) {
+    return false;
+  }
+  return (await errorBody(error)).reason !== 'turnstile';
+}
+
 export async function recordGatewayRequestError(
   signingKey: SigningKey | undefined,
   error: unknown
 ): Promise<void> {
-  const body = await errorBody(error);
   const status = error instanceof NetworkError ? error.response.status : 0;
-  if (status === 401 && body.reason !== 'turnstile') {
+  if (await isAccessTokenRejection(error)) {
     count('token_rejected', signingKey);
   } else if (status >= 500) {
     count('gateway_error', signingKey);

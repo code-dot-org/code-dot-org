@@ -15,10 +15,23 @@ describe('wordHues', () => {
     expect(new Set(hues).size).toBe(hues.length);
   });
 
-  it('colors by position, so one word set differs between sentences', () => {
-    const treasure = sentenceFor('sprite', 'object', 'treasure');
-    expect(hueFor(treasure, 'treasure')).toBe('blue');
-    expect(hueFor(treasure, 'look')).toBe('yellow');
-    expect(hueFor(treasure, 'detail')).toBe('pink');
+  it('colors by position, so the required word is blue in every sentence', () => {
+    const place = sentenceFor('background');
+    expect(hueFor(place, 'place')).toBe('blue');
+    expect(hueFor(place, 'adjective')).toBe('yellow');
+    expect(hueFor(place, 'from')).toBe('pink');
+    // Read second, but picked first.
+    const block = sentenceFor('block');
+    expect(hueFor(block, 'material')).toBe('blue');
+    expect(hueFor(block, 'adjective')).toBe('yellow');
+    for (const sentence of [
+      sentenceFor('sprite'),
+      sentenceFor('sprite', 'object'),
+      place,
+      block,
+    ]) {
+      const required = Object.values(sentence.slots).find(s => s.required)!;
+      expect(hueFor(sentence, required.id)).toBe('blue');
+    }
   });
 });

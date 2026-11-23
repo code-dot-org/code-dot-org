@@ -12,3 +12,22 @@
   background-size: $cell $cell;
   background-position: 0 0, 0 $half, $half (-$half), (-$half) 0;
 }
+
+// The light checkerboard of the paint editor: white and pale gray in both
+// the light and the dark theme. Generated pictures are shown on it
+// everywhere, so a picture looks the same wherever it appears.
+@mixin light-checkerboard($cell) {
+  @include checkerboard($cell, var(--neutral-gray-10), var(--neutral-base-white));
+}
+
+// The same colors, laid out as the paint editor's canvas lays them out:
+// the top-left square is the gray one. $tile is the side of a block of two
+// by two squares, and may be a custom property.
+@mixin light-checkerboard-tiles($tile) {
+  background-color: var(--neutral-base-white);
+  background-image: repeating-conic-gradient(
+    transparent 0 25%,
+    var(--neutral-gray-10) 0 50%
+  );
+  background-size: $tile $tile;
+}

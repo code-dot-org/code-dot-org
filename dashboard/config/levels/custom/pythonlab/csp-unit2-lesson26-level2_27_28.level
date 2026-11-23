@@ -1,0 +1,36 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-15T22:05:37.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "csp-unit2-lesson26-template_27_28",
+    "offer_browser_tts": "false",
+    "additional_ai_evaluation_instructions": "You are helping a student fix a vending machine program using evidence from their test case table. The program has a planted bug: the line \"elif cents <= 150:\" should be \"elif cents < 150:\", so an input of exactly 150 prints \"Insert 0 more\" instead of \"Enjoy your snack\". A blank input also crashes the program, because int(\"\") fails before any check runs.\r\n\r\n- Before helping, ask the student for their evidence: which input failed, what they expected, and what the program printed. If they have not run their tests, send them back to Level 1.\r\n- Once they give the failing input, help them reason from it. Ask which branch that input should reach (their page 1 trace says exactly 150 is branch 3) and what the comparison on the branch above it does with 150. Let them notice that <= includes 150.\r\n- Do not write the corrected line for them. Confirm or question their proposed fix, then tell them to rerun the failing row to prove it.\r\n- For the blank input, explain why it crashes (int() cannot convert an empty string) and suggest checking cents_text before converting. The student decides what the message says. Do not write the if statement for them.\r\n- If the student asks about a word like \"two dollars\", explain it will still crash and that handling it is beyond this lesson; a recorded Fail is the right answer for that row.\r\n- Keep responses short. Each reply should move the student one step: identify the branch, question the comparison, propose the fix, rerun the test.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "## Fix the Bugs\r\n\r\nSame program. Now fix it.\r\n\r\n1. Find the row that failed. Its Branch column tells you which branch of the code to check.\r\n2. Tell the AI Tutor the input, what you expected, and what you got. Ask what might cause it.\r\n3. Fix that branch yourself, then rerun the row. It should pass now.\r\n4. Press Enter with nothing typed. The program crashes. Add a check so a blank gets a message instead.",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMq2pXWlqvVvjS/2\nj9W2LHmRYHHCgPovBLZYxcmg/8VPKDUaDecw/nVa/o/IX26Vp36ggGQQHo5H\nJ+WIoDglj2E6Bpvi9bX5f0vn8LfHcbARMhbCLN7OrSaiHCRTPhHkA6Y/RbN8\nuLb0KCnqcDzOGd4Ya0UWSNGlNcran8CIYF/o4f7Q3bZUHpuAhfszhlxrAZFu\nQZlVZSoxZ3cpIi/BoFd4WKqybW9UhnSZAmCqDq8nTnbGAultysWuIXVZK/xA\nKW6qDOtSqzWZ44x1Oak93dcYe8DeuQxFEx2Q7UMAA+fF20aw50A6fsUakzbu\nt10MvcINdOXZbihT2DX5rUIlWw0DZV+OP5BBb8do83Gt8+5B9acdjDfL1bnR\nmQO39JpHqNggZ0eI8gzLUtEy0mIqJPczMIu4t04ZtRZhFHWXw3xNL1vu7S4A\nFrQtQcU0iAhLTeG4W37KYunEXkAvSgATxxkbvoRhLg1vu2zUjZTENV5GP8pv\nLpQ3UvjbnmRCG2rLEdNXzqs4Jje9IQlONfUhVa95R3YbsFjFpxWVnUdl5UZM\nYEwpmMJcXX5g8ac2FjaQd/wNDr/eFeAof0c12v1ooa8WTx05/3LYa+0DorrC\nUup/bo6cEA3IrFzUXLvpRLwJHktdsBwuwMkqlKtyv3DdQSxtGHhVzpMxxoEA\nWIe/36Y3zenX3+pl6wqI/KyJJFt7TJsN7cH8dET7guAzoHD/uifKwvP7MdQI\nyFFbehvGUSHy0k4WhYCwjgR1Sx59t3ymhKOETY0rQ7b5ZvPJsykab727F3OP\naokf+p4wgzR3vX32CSZXMhBvvvx/lVgkicJc+l+WU1Vdiu8DUnSUdZ65nA+U\nTfj0w0Z2d+nGVCDYXeYeVljhG+796Cy/WdGKN7iHiJb++f4SHNQu8rYzmUNp\n2J46qQRivlObLcJo3wl+dSeyJmLqr+FlG2cogkoBEXsw0cWcwNP9cCotCWOa\npi5hJuGKc0G3ncGY2CXx9dK6FwASJNgjXXqQ2NuQjcZSyMyKOeTIrRmXZRaW\nX8YNt1TkmQPeuxLC58QigI4zAf802tk1MA==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-15 22:10:40 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-15 22:11:51 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-15 22:16:01 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Pythonlab>

@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-03T16:11:04.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Curiosities",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice2-2026 + template",
+    "long_instructions": "`generate` returns a list of tokens, like this:\r\n\r\n```\r\n[\"Why\", \"does\", \"Venus\", \"look\", \"red\", \"?\"]\r\n```\r\n\r\nTo print it as a sentence, you need to turn the list back into a single string. The `detokenize` function should do just that.\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete the `detokenize` function.\r\n  - Join the tokens in `tokens` into a single string, with a space between each token.\r\n  - Replace `\" ?\"` with `\"?\"` so the question mark sits at the end of the last word.\r\n  - Return the resulting string.\r\n\r\n💻 Coding Tip\r\n\r\n`\" \".join` combines a list of strings into one string, with a space between each item.\r\n\r\n```\r\n\" \".join([\"Why\", \"does\", \"Venus\"]) # \"Why does Venus\"\r\n```\r\n\r\n`replace` returns a copy of a string with every match swapped out:\r\n\r\n```\r\n\"Hello world ?\".replace(\" ?\", \"?\")\r\n```",
+    "bubble_choice_description": "A collection of curious questions about astronomy.",
+    "thumbnail_url": "https://images.code.org/66e12643e21f09882edcfa73d19df1a7-curiosities.png",
+    "offer_browser_tts": "false",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-03 16:14:23 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 16:15:30 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 16:16:13 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 16:30:03 +0000\",\"changed\":[\"submittable\",\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

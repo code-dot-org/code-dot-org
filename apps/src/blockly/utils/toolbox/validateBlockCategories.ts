@@ -5,9 +5,14 @@ import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 /**
  * Adds a warning to blocks that are not positioned under a static category block,
  * except when there are no categories at all. If warnings are ignored, we will
- * still save the blocks into a "DEFAULT" category.
+ * still save the blocks into a "DEFAULT" category. Pass
+ * `dynamicCategoriesHoldBlocks` where blocks under an auto-populated category
+ * join its flyout.
  */
-export function validateBlockCategories(workspace: BlocklyCore.WorkspaceSvg) {
+export function validateBlockCategories(
+  workspace: BlocklyCore.WorkspaceSvg,
+  {dynamicCategoriesHoldBlocks = false} = {}
+) {
   const topBlocks = workspace.getTopBlocks(true);
 
   const noCategoryBlocks =
@@ -27,16 +32,13 @@ export function validateBlockCategories(workspace: BlocklyCore.WorkspaceSvg) {
       // Update the current category to this block
       currentCategoryBlock = block;
     } else if (block.type === BLOCK_TYPES.categoryDynamic) {
-      // Reset the current category since dynamic categories can't include static blocks
-      currentCategoryBlock = null;
+      currentCategoryBlock = dynamicCategoriesHoldBlocks ? block : null;
       warningText = 'Auto-populated categories cannot include static blocks.';
     } else {
       // All non-category blocks
       if (!currentCategoryBlock) {
-        // No static category block above this block
         block.setWarningText(warningText);
       } else {
-        // Valid placement under a static category block
         block.setWarningText(null);
       }
     }

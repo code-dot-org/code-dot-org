@@ -1,0 +1,61 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2026-11-04T18:27:17.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Modify \r\n\r\nThis program counts down from 10 and prints “Liftoff!” — but every line is copy-pasted. \r\n\r\n**Do This:** \r\nReplace the repeated `print()` calls with a counting variable and a while loop.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "print(10)\nprint(9)\nprint(8)\nprint(7)\nprint(6)\nprint(5)\nprint(4)\nprint(3)\nprint(2)\nprint(1)\nprint(\"Liftoff!\")",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nusVy6X8kwDPP/tc70VI+Ea0HyjkYFAykQnY=\n",
+    "display_name": "Countdown Launch",
+    "bubble_choice_description": "Mission Control’s countdown program repeats a print statement for every number. Replace the repetition with a while loop.",
+    "thumbnail_url": "https://images.code.org/5ff0118e76e2fd9d58f87f70a861cb50-rocket.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import ast\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\nclass TestModifyCountdown(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code and parse its structure\"\"\"\n        cls.stdout = ValidationProtocol().get_stdout_logs()\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n        cls.tree = ast.parse(cls.source)\n        cls.while_nodes = [n for n in ast.walk(cls.tree) if isinstance(n, ast.While)]\n\n    def test_uses_while_loop(self):\n        \"\"\"Uses a while loop instead of repeating print() calls\"\"\"\n        self.assertTrue(\n            self.while_nodes,\n            \"We didn't find a while loop in your code. Replace the repeated print() calls with a single while loop.\"\n        )\n\n    def test_while_loop_has_required_parts(self):\n        \"\"\"The while loop has a starting value, a condition, and an update\"\"\"\n        if not self.while_nodes:\n            self.skipTest(\"No while loop found yet -- add one before checking its parts.\")\n\n        while_node = self.while_nodes[0]\n\n        condition = while_node.test\n        condition_vars = {n.id for n in ast.walk(condition) if isinstance(n, ast.Name)}\n        self.assertTrue(\n            isinstance(condition, ast.Compare) and condition_vars,\n            \"Your while loop's condition should compare a variable to a value, like `while count > 0:`. Check what you wrote after `while`.\"\n        )\n\n        body_nodes = []\n        for stmt in while_node.body:\n            body_nodes.extend(ast.walk(stmt))\n        updated_vars = set()\n        for node in body_nodes:\n            if isinstance(node, ast.Assign):\n                updated_vars |= {t.id for t in node.targets if isinstance(t, ast.Name)}\n            elif isinstance(node, ast.AugAssign) and isinstance(node.target, ast.Name):\n                updated_vars.add(node.target.id)\n        self.assertTrue(\n            condition_vars & updated_vars,\n            \"We didn't find the loop's condition variable being updated inside the loop. Make sure you're changing the same variable you check in the while condition (e.g., count = count - 1) -- otherwise the loop runs forever or never runs.\"\n        )\n\n        loop_line = while_node.lineno\n        initialized_vars = set()\n        for node in ast.walk(self.tree):\n            if getattr(node, \"lineno\", None) is not None and node.lineno < loop_line:\n                if isinstance(node, ast.Assign):\n                    initialized_vars |= {t.id for t in node.targets if isinstance(t, ast.Name)}\n                elif isinstance(node, ast.AugAssign) and isinstance(node.target, ast.Name):\n                    initialized_vars.add(node.target.id)\n        self.assertTrue(\n            condition_vars & initialized_vars,\n            \"We didn't find your counting variable being set to a starting value before the while loop. Make sure you initialize it (e.g., count = 10) above your while loop.\"\n        )\n\n    def test_prints_countdown_and_liftoff(self):\n        \"\"\"Prints 10 down to 1, then Liftoff!\"\"\"\n        if not self.while_nodes:\n            self.skipTest(\"Add your while loop first -- we'll check the output once the loop is in place.\")\n        if not self.stdout:\n            self.skipTest(\"Nothing printed at all. Make sure your loop still prints each number.\")\n        expected = [str(n) for n in range(10, 0, -1)] + [\"Liftoff!\"]\n        self.assertEqual(\n            self.stdout,\n            expected,\n            f\"Expected to see 10 down to 1, then Liftoff! -- but we got {self.stdout}. \"\n            \"Check your loop's starting value, ending condition, and that your counting variable is updating each pass.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-04T18:27:17.624+00:00\",\"changed\":[\"cloned from \\\"csp-unit2-lesson18-modify-neighborhood-choice-a_27_28\\\"\"],\"cloned_from\":\"csp-unit2-lesson18-modify-neighborhood-choice-a_27_28\"},{\"changed_at\":\"2026-11-04 18:27:58 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"serialized_maze\",\"mini_app\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:28:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:29:10 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:30:49 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:31:21 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:31:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:31:40 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:31:54 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:40:31 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-04 18:41:46 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 20:07:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 20:07:34 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

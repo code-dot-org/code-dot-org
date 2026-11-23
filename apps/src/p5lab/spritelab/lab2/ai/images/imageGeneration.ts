@@ -9,7 +9,9 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {createUuid} from '@cdo/apps/utils';
 
+import {CachedImage} from './imageCache';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
+import {chooseKeyColor} from './keyColor';
 import {
   ASSUMED_BLOCK,
   ImageSize,
@@ -23,6 +25,7 @@ import {
   cropToContent,
   flattenOntoGround,
   removeBackground,
+  removeKeyColor,
 } from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
@@ -126,6 +129,9 @@ export type GenerateImageOptions = Partial<
    * data URI, not raw bytes: the request body is JSON.
    */
   inputImageDataURI?: string;
+  /** Take the model's output from the cache instead of asking it; the
+      record carries no seed. Reviewed before upload: no judges run. */
+  cached?: CachedImage;
 };
 
 export interface GeneratedImageResult {
@@ -222,7 +228,7 @@ export function rawImageToBlob(raw: RawImage): Blob {
  * it already does. High-quality filter: downscaling the model's 1K render is
  * what anti-aliases the stored image.
  */
-async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
+export async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
   try {
     const probe = await createImageBitmap(blob);
     const scale = maxPx / Math.max(probe.width, probe.height);
@@ -290,50 +296,57 @@ export async function generateImage(
   prompt: string,
   options: GenerateImageOptions = {}
 ): Promise<GeneratedImageResult> {
-  const {imageType = 'sprite', style = 'smooth'} = options;
+  const {imageType = 'sprite', style = 'smooth', cached} = options;
   // Always choose the seed ourselves: the service doesn't report the one it
   // rolls, and an unrecorded roll can never be replayed.
   const seed = options.seed ?? Math.floor(Math.random() * 2 ** 31);
+  const {temperature} = options;
   const pixelBlock = pixelBlockFor(imageType, options.pixelGrid);
-  const fullPrompt = fullPromptFor(prompt, options);
 
-  // The prompt judge and the image model run concurrently — generation is
-  // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks
-  // a generation failure, and its image is discarded unseen.
-  const [promptVerdict, rawResult] = await Promise.allSettled([
-    checkPromptSafety(prompt),
-    requestImage(
-      options.inputImageDataURI
-        ? `Modify the provided image: ${fullPrompt}`
-        : fullPrompt,
-      {
-        seed,
-        temperature: options.temperature,
-        references: options.inputImageDataURI
-          ? [options.inputImageDataURI]
-          : [],
-      }
-    ),
-  ]);
-  if (promptVerdict.status === 'rejected') {
-    throw promptVerdict.reason;
+  let raw: RawImage;
+  if (cached) {
+    raw = await cached.raw('single');
+  } else {
+    const fullPrompt = fullPromptFor(prompt, options);
+    // The prompt judge and the image model run concurrently — generation is
+    // the slow leg, so a safe prompt pays nothing. A flagged prompt outranks
+    // a generation failure, and its image is discarded unseen.
+    const [promptVerdict, rawResult] = await Promise.allSettled([
+      checkPromptSafety(prompt),
+      requestImage(
+        options.inputImageDataURI
+          ? `Modify the provided image: ${fullPrompt}`
+          : fullPrompt,
+        {
+          seed,
+          temperature,
+          references: options.inputImageDataURI
+            ? [options.inputImageDataURI]
+            : [],
+        }
+      ),
+    ]);
+    if (promptVerdict.status === 'rejected') {
+      throw promptVerdict.reason;
+    }
+    if (rawResult.status === 'rejected') {
+      throw rawResult.reason;
+    }
+    raw = rawResult.value;
   }
-  if (rawResult.status === 'rejected') {
-    throw rawResult.reason;
-  }
-  const raw = rawResult.value;
   // Judge the pixels while the local pipeline crops and downscales them.
-  const imageVerdict = markHandled(checkImageSafety(raw));
+  const imageVerdict = cached
+    ? Promise.resolve()
+    : markHandled(checkImageSafety(raw));
 
   const generation: ImageGenerationMetadata = {
     prompt,
     imageType,
     ...(options.subject && {subject: options.subject}),
     style,
-    seed,
-    ...(options.temperature !== undefined && {
-      temperature: options.temperature,
-    }),
+    ...(cached
+      ? {variant: cached.variant}
+      : {seed, ...(temperature !== undefined && {temperature})}),
     // Recorded even at the default: the point is comparing what was asked
     // for against what came back.
     ...(style === 'pixel' && {pixelGrid: logicalGridFor(pixelBlock)}),
@@ -363,7 +376,13 @@ export async function generateImage(
   // opaque; pixel style gets grid-normalized.
   let blob = rawImageToBlob(raw);
   if (imageType === 'sprite' || imageType === 'block') {
-    blob = await removeBackground(blob, {soft: style === 'smooth'});
+    const matte = {soft: style === 'smooth'};
+    // A cached character set's base frame stands in for a single picture.
+    // Its backdrop is the key color its prompt names, and the fill from the
+    // corner would miss a gap the character closes off.
+    blob = cached?.characterSet
+      ? await removeKeyColor(blob, chooseKeyColor(prompt).rgb, matte)
+      : await removeBackground(blob, matte);
   }
   // Smooth sprites are cropped like blocks always were, so the stored image
   // is what the runtime trim pass would have made anyway (pixel sprites

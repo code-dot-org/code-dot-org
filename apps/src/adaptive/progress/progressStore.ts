@@ -2,8 +2,9 @@
 // the adaptive level. A level step's progress is not written here; it is its
 // level's own, reported through milestones.
 
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {countAdaptive, httpStatus, reportAdaptiveError} from '../observability';
 
 import {
   Answer,
@@ -29,6 +30,37 @@ export interface StepWrite {
 const query = ({scriptId, levelId}: ProgressKey) =>
   `scriptId=${scriptId}&levelId=${levelId}`;
 
+type PutRoute = 'progress' | 'generated_instructions' | 'validation_history';
+
+export type ProgressRoute = PutRoute | 'load' | 'level_step' | 'ai_metrics';
+
+export interface AiMetrics {
+  accepted: number;
+  rejected: number;
+}
+
+export function recordProgressOk(route: ProgressRoute) {
+  countAdaptive('Adaptive.ProgressRequest', {Route: route, Outcome: 'ok'});
+}
+
+export function recordProgressFailure(
+  route: ProgressRoute,
+  error: unknown,
+  stepId?: string
+) {
+  const status = httpStatus(error);
+  countAdaptive('Adaptive.ProgressRequest', {
+    Route: route,
+    Outcome: 'error',
+    Status: status,
+  });
+  reportAdaptiveError(`Adaptive progress: ${route} failed`, error, {
+    route,
+    stepId,
+    status,
+  });
+}
+
 /** Sends writes one at a time, in order; a failed one is logged and skipped. */
 export class ProgressStore {
   private chain: Promise<void> = Promise.resolve();
@@ -39,10 +71,22 @@ export class ProgressStore {
     return {...EMPTY_PROGRESS, ...body};
   }
 
+  async loadAiMetrics(key: ProgressKey): Promise<AiMetrics | undefined> {
+    try {
+      const response = await HttpClient.get(
+        `/adaptive_progress/ai_metrics?${query(key)}`
+      );
+      const counts = (await response.json()) as AiMetrics;
+      recordProgressOk('ai_metrics');
+      return counts;
+    } catch (error) {
+      recordProgressFailure('ai_metrics', error);
+      return undefined;
+    }
+  }
+
   saveStep(key: ProgressKey, stepId: string, write: StepWrite): Promise<void> {
-    return this.enqueue(`save ${stepId}`, () =>
-      this.putStep(key, stepId, 'progress', write)
-    );
+    return this.enqueue(key, stepId, 'progress', write);
   }
 
   saveInstructions(
@@ -50,11 +94,9 @@ export class ProgressStore {
     stepId: string,
     content: GeneratedContent
   ): Promise<void> {
-    return this.enqueue(`save instructions for ${stepId}`, () =>
-      this.putStep(key, stepId, 'generated_instructions', {
-        generatedInstructions: content,
-      })
-    );
+    return this.enqueue(key, stepId, 'generated_instructions', {
+      generatedInstructions: content,
+    });
   }
 
   /** Appends one check of a project step's work; the server sets its time. */
@@ -63,32 +105,25 @@ export class ProgressStore {
     stepId: string,
     attempt: Omit<ValidationAttempt, 'at'>
   ): Promise<void> {
-    return this.enqueue(`save validation for ${stepId}`, () =>
-      this.putStep(key, stepId, 'validation_history', {attempt})
-    );
+    return this.enqueue(key, stepId, 'validation_history', {attempt});
   }
 
-  private putStep(
+  private enqueue(
     key: ProgressKey,
     stepId: string,
-    route: string,
+    route: PutRoute,
     body: object
   ) {
-    return HttpClient.put(
-      `/adaptive_progress/steps/${encodeURIComponent(stepId)}/${route}`,
-      JSON.stringify({...key, ...body}),
-      true,
-      {'Content-Type': 'application/json'}
-    );
-  }
-
-  private enqueue(label: string, request: () => Promise<unknown>) {
-    this.chain = this.chain.then(request).then(
-      () => undefined,
-      error =>
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError(`Adaptive progress: ${label} failed`, error as Error)
+    const put = () =>
+      HttpClient.put(
+        `/adaptive_progress/steps/${encodeURIComponent(stepId)}/${route}`,
+        JSON.stringify({...key, ...body}),
+        true,
+        {'Content-Type': 'application/json'}
+      );
+    this.chain = this.chain.then(put).then(
+      () => recordProgressOk(route),
+      error => recordProgressFailure(route, error, stepId)
     );
     return this.chain;
   }

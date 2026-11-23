@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894757-c26487b44bdd",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 2: A Deeper Look Into AI",
+  "question": "Three posters, one crowd of 6- and 7-year-olds. Which poster would actually work on them?\n\nSteps:\n1. Use the arrow tool to point at the poster you’d hang up for this audience.\n2. Place a shape on ONE design element that made you choose it (a color, an icon, or the text size).\n3. Record your voice explaining your choice. Bonus points if you say why another poster wouldn’t work for this crowd.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the shape is not on the poster the arrow points to, or the voice recording does not name a design element and connect it to the audience."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to one poster AND a shape is on a design element within that same poster AND the voice recording names that element and connects it to the audience (mentions kids, age, or little ones)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains why at least one other poster would not work for the audience, naming a specific element (for example, “poster C has tiny gray text that a 6-year-old couldn’t read”)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894757-c26487b44bdd-0b627ea2",
+  "whiteboard_starter_image_alt_text": "\"Audience: kids ages 6–7 learning to skateboard,\" above three skate park rule posters. A: a bright yellow and pink poster titled \"Skate Park Rules!\" with a star, a smiley face, and a helmet, and three numbered rules in large text: \"Wear your helmet!\", \"Take turns!\", and \"Ask for help!\" B: a black poster titled \"PARK RULES\" with lightning bolts and neon text: \"HELMETS ON. ALWAYS.\", \"WAIT YOUR TURN.\", and \"RESPECT THE PARK.\" C: a plain gray \"NOTICE\" with a long paragraph of tiny, formal text about protective equipment, liability, and park regulations."
+}

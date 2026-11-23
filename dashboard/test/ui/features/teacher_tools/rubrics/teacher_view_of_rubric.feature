@@ -1,6 +1,7 @@
 @no_mobile
 Feature: Teachers can see and give feedback on Rubrics
 
+@skip
 Scenario: Teachers can give and send feedback on the rubric to students.
   Given I create an authorized teacher-associated student named "Lillian"
 

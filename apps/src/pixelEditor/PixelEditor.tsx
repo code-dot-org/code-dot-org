@@ -4,6 +4,7 @@ import React, {
   useCallback,
   useEffect,
   useLayoutEffect,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -12,10 +13,15 @@ import useThemeMode from '@cdo/apps/pixelEditor/useThemeMode';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import ColorPicker from './ColorPicker';
-import PaletteSwatches from './PaletteSwatches';
+import {checkerCellSize, displayScale, pixelGridFor} from './displayGrid';
 import {NATIVE_PIXEL_GRID, downsampleToGrid} from './pixelArt';
 import PixelTooltip from './PixelTooltip';
-import {PixelTool, TOOLS, toolTitle} from './toolDefinitions';
+import {
+  PixelTool,
+  TOOLS,
+  toolAfterColorChoice,
+  toolTitle,
+} from './toolDefinitions';
 import {
   BRUSH_SIZES,
   drawCircle,
@@ -30,28 +36,21 @@ import {
 
 import moduleStyles from './pixel-editor.module.scss';
 
-// Internal display-canvas resolution: integer upscale of the backing image,
-// as large as fits this budget. The rendered (CSS) size is independent: the
-// canvas fills this fraction of the viewport, capped, aspect preserved.
-const MAX_DISPLAY_SIZE = 640;
+// The rendered (CSS) size is independent of the display canvas's
+// resolution: the canvas fills this fraction of the viewport, capped,
+// aspect preserved.
 const CSS_HEIGHT_VIEWPORT_FRACTION = 0.68;
 const MAX_CSS_HEIGHT_PX = 720;
 const CSS_WIDTH_VIEWPORT_FRACTION = 0.76;
 const MAX_CSS_WIDTH_PX = 900;
 
-// Transparency checkerboard: cell size in display px outside pixel mode, the
-// smallest legible cell in pixel mode (art-pixel cells are grouped up to it),
-// and per-theme base/tint pairs (a white base reads best on a light panel, a
-// panel-colored base on a dark one — the image dialog uses the same pairs).
-const CHECKER_CELL_PX = 16;
-const MIN_CHECKER_CELL_PX = 4;
-const CHECKER_COLORS = {
-  light: {base: '#ffffff', tint: 'rgb(128 128 128 / 16%)'},
-  dark: {base: '#333a47', tint: 'rgb(128 128 128 / 22%)'},
-};
+// The checkerboard that shows through transparent pixels. The colors are
+// white and a pale gray (the design system's neutral gray 10) in both the
+// light and the dark theme, the same as wherever else a picture is shown.
+const CHECKER_COLORS = {base: '#ffffff', tint: '#e1e3e6'};
 
-// A bright azure, at the darkest shade that clears 3:1 against white while
-// holding 3:1 on the dark checker and 6.9:1 on a black background fill.
+// A bright azure, at the darkest shade that clears 3:1 against the white
+// of the checkerboard and 6.9:1 on a black background fill.
 const DEFAULT_COLOR: RGBA = [0, 155, 233, 255];
 
 // Summed per-channel difference a pixel may have from the clicked color and
@@ -181,14 +180,17 @@ export interface PixelEditorProps {
   onHistoryChange?: (history: PixelEditorHistory) => void;
   // Added to the canvas box, e.g. to drop its border inside a host's frame.
   canvasClassName?: string;
-  // One round swatch each, in place of the spectrum picker; the first is
-  // the color the editor opens on.
+  // The only colors offered: the color square opens these as square
+  // swatches, in place of the spectrum picker.
   palette?: readonly PaletteColor[];
+  // The color the editor opens on. Absent, it is the palette's first
+  // color, or the editor's own blue when there is no palette.
+  startColor?: RGBA;
   // The brush sizes to offer, in BRUSH_SIZES order; all four when absent.
   // The editor opens on the first; one alone shows no size buttons.
   brushSizes?: readonly number[];
   // The toolbar as the host lays it out: groups of tool ids, 'sizes' (the
-  // brush sizes) and 'color' (the swatches or the picker), a divider
+  // brush sizes) and 'color' (the color square and its popover), a divider
   // between groups. Absent, the toolbar is the editor's own arrangement.
   toolbarGroups?: readonly (readonly ToolbarItem[])[];
   // The host lays the parts out, inside the editor's theme host.
@@ -219,20 +221,20 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   onHistoryChange,
   canvasClassName,
   palette,
+  startColor,
   brushSizes,
   toolbarGroups,
   children,
 }) => {
   const themeMode = useThemeMode();
-  const shownTools = tools ? TOOLS.filter(t => tools.includes(t.id)) : TOOLS;
+  const shownTools = useMemo(
+    () => (tools ? TOOLS.filter(t => tools.includes(t.id)) : TOOLS),
+    [tools]
+  );
   // For the window keydown listener, which is bound once.
   const shownToolsRef = useRef(shownTools);
   shownToolsRef.current = shownTools;
   const column = toolbarLayout === 'column';
-  // A ref so repaint (a stable callback) always draws the current theme's
-  // checkerboard.
-  const themeModeRef = useRef<'light' | 'dark'>(themeMode);
-  themeModeRef.current = themeMode;
   const [tool, setTool] = useState<PixelTool>('pen');
   // The last non-eyedropper tool, so the eyedropper returns you to what you
   // were using rather than always the pen. Tracked during render: whenever
@@ -241,6 +243,10 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   if (tool !== 'eyedropper') {
     lastNonEyedropperToolRef.current = tool;
   }
+  const offeredToolIds = useMemo(
+    () => shownTools.map(shown => shown.id),
+    [shownTools]
+  );
   const shownBrushSizes = brushSizes
     ? BRUSH_SIZES.filter(size => brushSizes.includes(size))
     : BRUSH_SIZES;
@@ -252,7 +258,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     brushSizes ? shownBrushSizes[0] ?? BRUSH_SIZES[0] : BRUSH_SIZES[1]
   );
   const [color, setColor] = useState<RGBA>(
-    () => palette?.[0]?.rgba ?? DEFAULT_COLOR
+    () => startColor ?? palette?.[0]?.rgba ?? DEFAULT_COLOR
   );
   const [loaded, setLoaded] = useState(false);
   // Bumped as each picture lands, so a new picture given to a mounted
@@ -423,14 +429,11 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       ctx.fillStyle = opaqueGround;
       ctx.fillRect(0, 0, display.width, display.height);
     } else {
-      const checker = CHECKER_COLORS[themeModeRef.current];
-      ctx.fillStyle = checker.base;
+      ctx.fillStyle = CHECKER_COLORS.base;
       ctx.fillRect(0, 0, display.width, display.height);
       const scale = scaleRef.current;
-      const cell = pixelModeRef.current
-        ? scale * Math.max(1, Math.ceil(MIN_CHECKER_CELL_PX / scale))
-        : CHECKER_CELL_PX;
-      ctx.fillStyle = checker.tint;
+      const cell = checkerCellSize(scale, pixelModeRef.current);
+      ctx.fillStyle = CHECKER_COLORS.tint;
       for (let y = 0; y * cell < display.height; y++) {
         for (let x = y % 2; x * cell < display.width; x += 2) {
           ctx.fillRect(x * cell, y * cell, cell, cell);
@@ -442,12 +445,6 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       ctx.drawImage(previewRef.current, 0, 0, display.width, display.height);
     }
   }, [opaqueGround]);
-
-  // The checkerboard is baked into the canvas; redraw it if the page theme
-  // flips while the editor is open.
-  useEffect(() => {
-    repaint();
-  }, [repaint, themeMode]);
 
   // Abandon any in-progress stroke or shape drag. Losing the window
   // mid-press swallows the pointerup (and pointercancel isn't reliably
@@ -542,15 +539,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       backing.height = height;
       const ctx = backing.getContext('2d', {willReadFrequently: true});
       ctx?.drawImage(source, 0, 0);
-      // Trust the metadata only when it divides the image cleanly (a resize
-      // elsewhere would otherwise smear the downsample). A grid of 1 is
-      // pixel art already at its logical size: nothing to downsample.
-      const grid =
-        knownPixelGrid &&
-        width % knownPixelGrid === 0 &&
-        height % knownPixelGrid === 0
-          ? knownPixelGrid
-          : null;
+      // A grid of 1 is pixel art already at its logical size: nothing to
+      // downsample.
+      const grid = pixelGridFor(width, height, knownPixelGrid);
       const raster =
         grid && grid > 1 ? ctx?.getImageData(0, 0, width, height) : null;
       if (raster && grid) {
@@ -585,10 +576,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       // The circle preview is also read back per pointer-move.
       preview.getContext('2d', {willReadFrequently: true});
       previewRef.current = preview;
-      scaleRef.current = Math.max(
-        1,
-        Math.floor(MAX_DISPLAY_SIZE / Math.max(backing.width, backing.height))
-      );
+      scaleRef.current = displayScale(backing.width, backing.height);
       // A new picture is a new history.
       undoStackRef.current = [];
       redoStackRef.current = [];
@@ -677,6 +665,13 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
   }, []);
 
   const canvasAreaRef = useRef<HTMLDivElement | null>(null);
+  // The host places the canvas and can take it off the page and put it
+  // back. The element it puts back is new, so it is sized and painted again.
+  const [canvasArea, setCanvasArea] = useState<HTMLDivElement | null>(null);
+  const attachCanvasArea = useCallback((area: HTMLDivElement | null) => {
+    canvasAreaRef.current = area;
+    setCanvasArea(area);
+  }, []);
 
   // Layout effect: size and paint the canvas BEFORE the browser paints the
   // newly-mounted panel, or its first frame flashes default-sized. The
@@ -734,7 +729,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     const observer = new ResizeObserver(size);
     observer.observe(area);
     return () => observer.disconnect();
-  }, [loaded, loadVersion, repaint, fit]);
+  }, [loaded, loadVersion, repaint, fit, canvasArea]);
 
   // Map a pointer event to backing-canvas pixel coordinates.
   const toPixel = useCallback((e: React.PointerEvent<HTMLCanvasElement>) => {
@@ -860,6 +855,12 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         return;
       }
       const [r, g, b, a] = ctx.getImageData(p.x, p.y, 1, 1).data;
+      // A fixed palette offers no transparent color, so the eyedropper
+      // does not pick one up from an empty pixel. The pen would then
+      // paint nothing, with no swatch to show why.
+      if (a === 0 && !opaqueGround && palette) {
+        return;
+      }
       // Over an opaque ground a transparent pixel displays as the ground
       // color, so that's what the eyedropper picks.
       setColor(
@@ -870,7 +871,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
           : [r, g, b, 255]
       );
     },
-    [opaqueGround]
+    [opaqueGround, palette]
   );
 
   const handlePointerDown = useCallback(
@@ -1019,7 +1020,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
         // The pick is final on release (a drag samples continuously until
         // then); return to whatever tool was active before, so picking a
         // color mid-task drops you back where you were.
-        setTool(lastNonEyedropperToolRef.current);
+        setTool(
+          toolAfterColorChoice(lastNonEyedropperToolRef.current, offeredToolIds)
+        );
         return;
       }
       const backing = backingRef.current;
@@ -1062,6 +1065,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       drawShape,
       pushUndo,
       recordColorUse,
+      offeredToolIds,
     ]
   );
 
@@ -1134,7 +1138,9 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       } else if (tool === 'eyedropper') {
         pickColorAt(p);
         // Mirror the pointer flow: return to the tool used before the pick.
-        setTool(lastNonEyedropperToolRef.current);
+        setTool(
+          toolAfterColorChoice(lastNonEyedropperToolRef.current, offeredToolIds)
+        );
         announce(`Color picked ${at}`);
       } else if (tool === 'bucket') {
         pushUndo();
@@ -1158,6 +1164,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
       pickColorAt,
       redrawKeyboardShapePreview,
       announce,
+      offeredToolIds,
     ]
   );
 
@@ -1395,13 +1402,41 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     onHistoryChange?.({canUndo, canRedo, undo, redo});
   }, [onHistoryChange, canUndo, canRedo, undo, redo]);
 
-  const colorControl = palette ? (
-    <PaletteSwatches palette={palette} color={color} onChange={setColor} />
-  ) : (
+  // A color chosen with the eyedropper in hand is for the tool the student
+  // was using before it. The eyedropper would only pick another color over
+  // it at the next press.
+  const chooseColor = useCallback(
+    (chosen: RGBA) => {
+      setColor(chosen);
+      setTool(current =>
+        toolAfterColorChoice(
+          current === 'eyedropper' ? lastNonEyedropperToolRef.current : current,
+          offeredToolIds
+        )
+      );
+    },
+    [offeredToolIds]
+  );
+  // The tool in hand when the color control opened, put back if the student
+  // cancels the choice.
+  const toolRef = useRef(tool);
+  toolRef.current = tool;
+  const toolAtColorOpenRef = useRef<PixelTool>('pen');
+  const rememberTool = useCallback(() => {
+    toolAtColorOpenRef.current = toolRef.current;
+  }, []);
+  const putToolBack = useCallback(
+    () => setTool(toolAtColorOpenRef.current),
+    []
+  );
+  const colorControl = (
     <ColorPicker
       color={color}
-      onChange={setColor}
+      onChange={chooseColor}
+      onOpen={rememberTool}
+      onCancel={putToolBack}
       recentColors={recentColors}
+      palette={palette}
     />
   );
 
@@ -1561,7 +1596,7 @@ const PixelEditor: React.FunctionComponent<PixelEditorProps> = ({
     ),
     canvas: (
       <div
-        ref={canvasAreaRef}
+        ref={attachCanvasArea}
         data-pixel-editor=""
         className={classNames(moduleStyles.canvasArea, canvasClassName)}
       >

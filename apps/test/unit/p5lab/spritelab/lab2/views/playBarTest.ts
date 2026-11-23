@@ -1,12 +1,13 @@
 import {
   arrowSetFor,
   dispatchGameKey,
+  isOnScreenGameKey,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/playBar';
 
 describe('arrowSetFor', () => {
   it('offers Jump in a platform scene with gravity, either way up', () => {
     expect(arrowSetFor({platformer: true, gravity: 0.75})).toBe('jump');
-    expect(arrowSetFor({platformer: true, gravity: -0.75})).toBe('jump');
+    expect(arrowSetFor({platformer: true, gravity: -0.75})).toBe('jumpDown');
   });
 
   it('steers up and down when weightless', () => {
@@ -35,5 +36,18 @@ describe('dispatchGameKey', () => {
       ['keydown', 37, 37, 'ArrowLeft'],
       ['keyup', 38, 38, 'ArrowUp'],
     ]);
+  });
+
+  it('marks its events, so they can be told from the keyboard', () => {
+    const seen: Event[] = [];
+    const record = (e: Event) => seen.push(e);
+    window.addEventListener('keydown', record);
+    try {
+      dispatchGameKey('keydown', 'left');
+      window.dispatchEvent(new KeyboardEvent('keydown', {key: 'ArrowLeft'}));
+    } finally {
+      window.removeEventListener('keydown', record);
+    }
+    expect(seen.map(isOnScreenGameKey)).toEqual([true, false]);
   });
 });

@@ -23,6 +23,7 @@ interface UseInitialLabThemeProps {
 }
 const LABS_WITH_THEME_PREFERENCE: (string | undefined)[] = [
   'aichat',
+  'ailab',
   'pythonlab',
   'weblab2',
   'sketchlab',

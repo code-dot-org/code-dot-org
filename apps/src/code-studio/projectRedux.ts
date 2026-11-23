@@ -99,6 +99,9 @@ const projectReduxSlice = createSlice({
     refreshInRestrictedShareMode: state => {
       state.inRestrictedShareMode = dashboard.project.inRestrictedShareMode();
     },
+    setInRestrictedShareMode: (state, action: PayloadAction<boolean>) => {
+      state.inRestrictedShareMode = action.payload;
+    },
     refreshExceedsAbuseThreshold: state => {
       state.exceedsAbuseThreshold = dashboard.project.exceedsAbuseThreshold();
     },
@@ -126,6 +129,7 @@ export const {
   setNameFailure,
   unsetNameFailure,
   refreshInRestrictedShareMode,
+  setInRestrictedShareMode,
   refreshExceedsAbuseThreshold,
   refreshHasPrivacyProfanityViolation,
   refreshTeacherHasConfirmedUploadWarning,

@@ -11,6 +11,7 @@ import {
   useCurrentUser,
   type UserSettings,
 } from '@code-dot-org/core/api';
+import {sendEvent} from '@code-dot-org/core/plugins/analytics';
 
 import EducatorProfileForm from './components/EducatorProfileForm';
 import IntegrationsForm from './components/IntegrationsForm';
@@ -43,6 +44,9 @@ const ACCOUNT_TABS: {
 
 const NO_OP = () => {};
 
+// The name and the space in 'user type' are a contract with dashboards.
+const PAGE_VISITED_EVENT = 'Account Settings Page Visited';
+
 export interface UsersSettingsPageProps {
   tab?: string;
   onTabChange?: (tab: string) => void;
@@ -64,6 +68,16 @@ export default function UsersSettingsPage({
   // relies on); the page's own fields all come from `settings`, not its data.
   const currentUser = useCurrentUser(DashboardApiClient);
   const settings = useUserSettings(DashboardApiClient);
+
+  const visitUserType = currentUser.data?.isSignedIn
+    ? currentUser.data.userType
+    : undefined;
+  const visitReported = useRef(false);
+  useEffect(() => {
+    if (visitReported.current) return;
+    visitReported.current = true;
+    sendEvent(PAGE_VISITED_EVENT, {'user type': visitUserType});
+  }, [visitUserType]);
 
   // Until settings load every tab counts as visible, so a requested tab survives.
   const visibleTabs = ACCOUNT_TABS.filter(

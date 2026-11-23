@@ -18,14 +18,17 @@ export interface BuilderCardProps {
   isExpanded: boolean;
   onExpandedChange: (expanded: boolean) => void;
   isDirty: boolean;
-  isSaving: boolean;
-  isRemoving: boolean;
+  isSaving?: boolean;
+  isRemoving?: boolean;
   error?: string | null;
-  onSave: () => void;
+  // Without it there's no Save button, for a card saved with Save quiz.
+  onSave?: () => void;
   onDiscard: () => void;
   onRemove: () => void;
   // When set, Remove looks disabled but stays focusable to show this tooltip.
   cannotRemoveReason?: string;
+  // Shown in the header before the Edit toggle.
+  menu?: React.ReactNode;
   // A question inside a page: tighter corners and a clamped name.
   nested?: boolean;
   neverSaved?: boolean;
@@ -40,13 +43,14 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
   isExpanded,
   onExpandedChange,
   isDirty,
-  isSaving,
-  isRemoving,
+  isSaving = false,
+  isRemoving = false,
   error,
   onSave,
   onDiscard,
   onRemove,
   cannotRemoveReason,
+  menu,
   nested = false,
   neverSaved = false,
   children,
@@ -100,6 +104,7 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
         </div>
         <div className={rowStyles.actions}>
           {isDirty && <UnsavedBadge label="Unsaved changes" />}
+          {menu}
           <IconButton
             ref={toggleButtonRef}
             aria-label={
@@ -162,22 +167,24 @@ const BuilderCard: React.FunctionComponent<BuilderCardProps> = ({
               >
                 {neverSaved ? 'Discard' : 'Discard changes'}
               </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                size="extraSmall"
-                type="button"
-                disabled={isBusy || !isDirty}
-                loading={isSaving}
-                onClick={onSave}
-                startIcon={
-                  isSaving ? undefined : (
-                    <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
-                  )
-                }
-              >
-                Save
-              </Button>
+              {onSave && (
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="extraSmall"
+                  type="button"
+                  disabled={isBusy || !isDirty}
+                  loading={isSaving}
+                  onClick={onSave}
+                  startIcon={
+                    isSaving ? undefined : (
+                      <FontAwesomeV6Icon iconName="save" iconStyle="solid" />
+                    )
+                  }
+                >
+                  Save
+                </Button>
+              )}
             </div>
           </div>
         </>

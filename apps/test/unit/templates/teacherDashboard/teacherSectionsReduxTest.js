@@ -389,6 +389,22 @@ describe('teacherSectionsRedux', () => {
       });
     });
 
+    it('keeps existing sections in the order when adding one section', () => {
+      const existing = sections.filter(section => section.id !== 307);
+      const state = reducer(
+        startState,
+        setSections(existing, false, [13, 12, 11])
+      );
+      const nextState = reducer(
+        state,
+        setSections(
+          sections.filter(section => section.id === 307),
+          false
+        )
+      );
+      assert.deepEqual(nextState.sectionOrder, [307, 13, 12, 11]);
+    });
+
     it('does not throw if we set the same data twice', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);
@@ -619,6 +635,8 @@ describe('teacherSectionsRedux', () => {
         assignedAiChatToolsDependency: undefined,
         assignedRequiredInaccessibleAiModels: undefined,
         aiChatAccessLevel: undefined,
+        aiChallengeEnabled: undefined,
+        lessonTutorAvailable: undefined,
       });
     });
   });
@@ -979,6 +997,8 @@ describe('teacherSectionsRedux', () => {
           assignedAiChatToolsDependency: undefined,
           assignedRequiredInaccessibleAiModels: undefined,
           aiChatAccessLevel: undefined,
+          aiChallengeEnabled: undefined,
+          lessonTutorAvailable: undefined,
         },
       });
     });
@@ -2046,19 +2066,11 @@ describe('teacherSectionsRedux', () => {
       assert.deepEqual(newState.sectionOrder, orderedSections);
     });
 
-    it('saves the order of sections to the BE if order is different', () => {
+    it('reconciles the order with the sections without saving it', () => {
       const state = reducer(initialState, setSections(sections));
       const orderedSections = [11, 12, 13];
-      const newState = reducer(state, setSectionOrder(orderedSections, true));
+      const newState = reducer(state, setSectionOrder(orderedSections));
       assert.deepEqual(newState.sectionOrder, [307, ...orderedSections]);
-      expect(putSpy).to.be.called.once;
-    });
-
-    it('does not save the order of sections to the BE if order is the same', () => {
-      const state = reducer(initialState, setSections(sections));
-      const orderedSections = [11, 12, 13, 307];
-      const newState = reducer(state, setSectionOrder(orderedSections, true));
-      assert.deepEqual(newState.sectionOrder, orderedSections);
       expect(putSpy).not.to.be.called;
     });
   });

@@ -1,5 +1,6 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import Tags from '@code-dot-org/component-library/tags';
 import Toggle from '@code-dot-org/component-library/toggle';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -9,17 +10,26 @@ import InfoTooltipIcon from '@cdo/apps/aiComponentLibrary/infoTooltipIcon/InfoTo
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
-import {updateSectionAiChatAccessLevel} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  updateSectionAiChallengeEnabled,
+  updateSectionAiChatAccessLevel,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
-import {handleUpdateSectionAiChatAccessLevel} from '../../accessControlsApi';
+import {
+  handleUpdateSectionAiChallengeEnabled,
+  handleUpdateSectionAiChatAccessLevel,
+} from '../../accessControlsApi';
 import {
   AI_SETTINGS_SUPPORT_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '../../constants';
-import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
+import {
+  canToggleAiChallenges,
+  shouldShowAiChatEssentialAlert,
+} from '../../helpers/aiChatAccess';
 import {AiChatAccessLevel} from '../../types';
 
 import style from './ai-chat-access-controls.module.scss';
@@ -72,10 +82,22 @@ const AiChatAccessControls: React.FC = () => {
   const [essentialOnlyCheckbox, setEssentialOnlyCheckbox] = useState(
     essentialOnlyCheckboxState(section.aiChatAccessLevel)
   );
+  const [challengeToggle, setChallengeToggle] = useState(
+    !!section.aiChallengeEnabled
+  );
 
   const shouldShowAlert = shouldShowAiChatEssentialAlert({
     assignedAiChatToolsDependency: section.assignedAiChatToolsDependency,
     sectionAiChatAccessLevel: section.aiChatAccessLevel,
+    teacherAiChatAccessLevel,
+  });
+
+  const showChallengeToggle = canToggleAiChallenges({
+    lessonTutorAvailable: section.lessonTutorAvailable,
+    sectionAiChatAccessLevel: calculateAccessLevel(
+      accessToggle,
+      essentialOnlyCheckbox
+    ),
     teacherAiChatAccessLevel,
   });
 
@@ -124,10 +146,40 @@ const AiChatAccessControls: React.FC = () => {
     }
   };
 
+  const handleChallengeToggle = async () => {
+    const previousValue = challengeToggle;
+    const newValue = !challengeToggle;
+    setChallengeToggle(newValue);
+    try {
+      await handleUpdateSectionAiChallengeEnabled(section.id, newValue);
+      dispatch(
+        updateSectionAiChallengeEnabled({
+          sectionId: section.id,
+          aiChallengeEnabled: newValue,
+        })
+      );
+      analyticsReporter.sendEvent(EVENTS.AI_CHALLENGE_SECTION_ENABLED_UPDATED, {
+        sectionId: section.id,
+        enabled: newValue,
+        courseAssigned: section.courseVersionName,
+        uiLocation: 'aiSettingsTeacherDashboardTab',
+      });
+      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGES_TOGGLED, {
+        section_id: section.id,
+        course_id: section.courseId,
+        unit_id: section.unitId,
+        enabled: newValue,
+      });
+    } catch (error) {
+      setChallengeToggle(previousValue);
+    }
+  };
+
   useEffect(() => {
     const accessLevel = section.aiChatAccessLevel;
     setEssentialOnlyCheckbox(essentialOnlyCheckboxState(accessLevel));
     setAccessToggle(accessToggleState(accessLevel));
+    setChallengeToggle(!!section.aiChallengeEnabled);
   }, [section]);
 
   return (
@@ -190,11 +242,29 @@ const AiChatAccessControls: React.FC = () => {
               <Toggle
                 id="uitest-ai-chat-section-access-toggle"
                 name="aiChatSectionAccessToggle"
+                aria-label="AI Chat Tools"
                 checked={isCurrentUserAccessDisabled ? false : accessToggle}
                 onChange={handleAccessToggle}
                 disabled={isCurrentUserAccessDisabled}
               />
             </div>
+            {showChallengeToggle && (
+              <div className={style.rowContainer}>
+                <div className={style.labelWithTag}>
+                  <Typography className={style.semiBold} variant="body2">
+                    AI Tutor+ Challenges
+                  </Typography>
+                  <Tags tagsList={[{label: 'New', color: 'pink'}]} size="s" />
+                </div>
+                <Toggle
+                  id="uitest-ai-challenge-section-toggle"
+                  name="aiChallengeSectionToggle"
+                  aria-label="AI Tutor+ Challenges"
+                  checked={challengeToggle}
+                  onChange={handleChallengeToggle}
+                />
+              </div>
+            )}
           </>
         )}
       </div>

@@ -1,0 +1,18 @@
+name 'aif-y2-ai-at-scale-lesson13-level5-choice1-2026'
+title 'Food Pantry'
+display_name 'Food Pantry'
+bubble_choice_description "Your community’s food pantry wants to predict how many households to expect."
+
+markdown <<MARKDOWN
+As you’ve talked to the people at your community’s food pantry, you’ve learned more about the decisions they need to make based on the available data. Read the quotes, then complete the questions in the **Take Action** section of the Project Planning Guide to describe how you’ll recommend an action based on the neural network’s output and how you’ll add safeguards to your program to address at least one person’s concern.
+
+- Based on the predicted number of pantry attendees, they need to decide how many bags of food to prepare. Some of their requests are quoted below:
+  - “We’d rather not prepare too many bags of groceries, to avoid waste.”
+  - “Our top priority is making sure that we don’t run out of bags of food for people who come to the pantry.”
+- The coordinators at the pantry are concerned that AI might automatically make decisions that might be wrong. Some of their concerns are quoted below:
+  - “Sometimes on days with extreme weather, like very cold days or days with freezing rain, we might need to make special adjustments that AI won’t know about.”
+  - “Attendance always looks different around the holidays. I don’t know if AI will be smart enough to account for that.”
+  - “What if AI predicts not many people will show up and we end up not preparing many bags at all?”
+  - “What if AI predicts a huge number of people will show up and we don’t have the resources to prepare that much food?”
+
+MARKDOWN

@@ -1,0 +1,78 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T20:35:19.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Pancakes",
+    "long_instructions": "You are building a neural network for a pancake shop to predict whether pancakes will turn out good or bad, based on the temperature of the pan and how long the pancakes are cooked for.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Open the `pancakes.csv` file and read the data into a variable called `pancakes` that stores a list of rows.\r\n2. Fill in the `TODO`s in the definitions of `inputs` and `outputs` with names of columns from `pancakes.csv`. For the first input, use the pan temperature; for the second input, use the cook time.\r\n3. Fit the model to the training input and output data.\r\n4. Score the model on the test input and output data. Print out the accuracy score.\r\n5. Run the program. Look at the accuracy score, then look at the visualization of the data and what the model learned. How well did the model learn the pattern in the data? You’ll answer a question about this in the next level.\r\n\r\n\r\n**💻 Coding Tip**\r\n\r\nUse `open` to open a file and `csv.DictReader` to read that file into dictionaries.\r\n\r\nUse the `fit` method to train a model and the `score` method to score it. Both methods accept two arguments: a list of inputs and a list of outputs.\r\n",
+    "bubble_choice_description": "Evaluate a neural network for a pancake shop to predict whether pancakes will turn out good or bad.",
+    "thumbnail_url": "https://images.code.org/e688805903747e48a5e3d4fb8a9f78a8-pancakes.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "example",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\nfrom helpers import visualize_model\n\n# TODO 1: Open pancakes.csv and read the data into a variable called pancakes\npancakes = []\n\n# TODO 2: Fill in the TODOs with the column names for inputs and outputs\ninputs = [[float(pancake[\"TODO\"]), float(pancake[\"TODO\"])] for pancake in pancakes]\noutputs = [pancake[\"TODO\"] for pancake in pancakes]\n\n# Split into training and testing data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n    inputs,\n    outputs,\n    test_size=0.4,\n)\n\n# Configure the classifier\nmodel = make_pipeline(StandardScaler(), SGDClassifier(max_iter=1000))\n\n# TODO 3: Train the model\n\n# TODO 4: Score the model and print the accuracy score\n\n# Visualize model\nvisualize_model(model, inputs, outputs, \"Pan temperature\", \"Cook time\")\n",
+          "folderId": "0",
+          "active": false
+        },
+        "1": {
+          "id": "1",
+          "name": "pancakes.csv",
+          "contents": "pan_temp_f,cook_minutes,label\n358,7.8,ruined\n342,5.0,perfect\n353,5.5,perfect\n392,5.8,perfect\n339,4.2,perfect\n324,6.3,ruined\n416,9.5,ruined\n338,10.0,ruined\n276,5.9,ruined\n386,5.4,perfect\n479,5.9,ruined\n401,5.4,perfect\n354,3.1,perfect\n370,5.2,perfect\n366,5.3,perfect\n402,3.3,ruined\n392,5.0,perfect\n301,6.6,ruined\n369,8.5,ruined\n383,5.4,perfect\n362,3.7,perfect\n416,3.5,ruined\n275,6.2,ruined\n400,4.9,perfect\n423,7.9,ruined\n269,2.9,ruined\n329,4.4,perfect\n438,2.5,ruined\n312,1.8,ruined\n271,2.1,ruined\n275,4.7,ruined\n452,6.7,ruined\n372,8.4,ruined\n350,4.6,perfect\n385,3.6,perfect\n357,3.7,perfect\n336,3.5,perfect\n375,4.2,perfect\n366,9.2,ruined\n352,4.8,perfect\n376,4.3,perfect\n386,4.6,perfect\n378,8.5,ruined\n383,4.6,perfect\n475,1.6,ruined\n326,6.1,ruined\n254,2.6,ruined\n479,3.8,ruined\n357,1.9,ruined\n372,4.6,perfect\n366,5.1,perfect\n331,4.9,perfect\n423,1.4,ruined\n389,6.2,ruined\n399,3.7,perfect\n497,3.4,ruined\n402,2.1,ruined\n367,1.1,ruined\n372,3.0,perfect\n365,4.6,perfect\n364,5.5,perfect\n344,4.2,perfect\n366,4.5,perfect\n395,6.6,ruined\n379,4.3,perfect\n474,10.0,ruined\n334,4.3,perfect\n365,6.9,ruined\n277,8.0,ruined\n337,5.5,perfect\n296,9.0,ruined\n425,9.7,ruined\n279,7.1,ruined\n412,4.4,perfect\n267,5.2,ruined\n457,1.6,ruined\n352,4.3,perfect\n282,5.3,ruined\n351,5.0,perfect\n384,6.0,perfect\n397,4.5,perfect\n284,6.6,ruined\n391,5.5,perfect\n277,8.2,ruined\n316,4.7,ruined\n301,2.0,ruined\n390,5.4,perfect\n360,3.6,perfect\n417,3.4,ruined\n371,5.1,perfect\n363,3.4,perfect\n375,3.2,perfect\n367,5.2,perfect\n349,2.7,ruined\n437,1.7,ruined\n369,4.4,perfect\n382,4.4,perfect\n479,5.7,ruined\n380,2.8,ruined\n406,3.9,perfect\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\nimport numpy as np\nfrom matplotlib.colors import ListedColormap\nfrom sklearn.inspection import DecisionBoundaryDisplay\n\nPALETTE = [\"tab:blue\", \"tab:orange\"]\n\n\ndef visualize_model(model, inputs, outputs, x_label, y_label):\n    labels = list(model.classes_)\n    colors = PALETTE[: len(labels)]\n    display = DecisionBoundaryDisplay.from_estimator(\n        model,\n        np.array(inputs),\n        response_method=\"predict\",\n        cmap=ListedColormap(colors),\n        alpha=0.25,\n        xlabel=x_label,\n        ylabel=y_label,\n    )\n    for label, color in zip(labels, colors):\n        xs = [x for (x, y), out in zip(inputs, outputs) if out == label]\n        ys = [y for (x, y), out in zip(inputs, outputs) if out == label]\n        display.ax_.scatter(xs, ys, c=color, label=label, edgecolors=\"black\")\n    display.ax_.legend()\n    plt.show()\n\n\n",
+          "folderId": "0",
+          "active": true,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "3"
+      ]
+    },
+    "validation_file": {
+      "id": "2",
+      "name": "validation.py",
+      "contents": "import contextlib\nimport io\nfrom unittest import TestCase\n\nfrom sklearn.exceptions import NotFittedError\nfrom sklearn.utils.validation import check_is_fitted\nfrom unittest_runner import ValidationProtocol\n\n\ndef load_student_program():\n    \"\"\"Imports main into test, preventing additional output and chart calls\"\"\"\n    import helpers\n    helpers.visualize_model = lambda *args, **kwargs: None\n    with contextlib.redirect_stdout(io.StringIO()):\n        import main\n    return main\n\n\nclass TestPancakePredictor(TestCase):\n    longMessage = False\n\n    def test_inputs_use_right_columns(self):\n        \"\"\"Inputs are pan temperature, then cook time\"\"\"\n        main = load_student_program()\n        first = main.pancakes[0]\n        expected = [float(first[\"pan_temp_f\"]), float(first[\"cook_minutes\"])]\n        self.assertEqual(main.inputs[0], expected, \"Inputs don't use pan temperature, then cook time\")\n\n    def test_model_is_trained(self):\n        \"\"\"The model is trained\"\"\"\n        try:\n            check_is_fitted(load_student_program().model)\n        except NotFittedError:\n            self.fail(\"The model hasn't been trained yet\")\n\n    def test_print_accuracy(self):\n        \"\"\"Prints the model's accuracy score\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        self.assertRegex(output, r\"\\d\", \"Output doesn't include the accuracy score\")\n",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 20:36:44 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 20:37:04 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

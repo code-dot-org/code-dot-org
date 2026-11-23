@@ -15,6 +15,7 @@ interface ProjectDetailsCardProps {
   unitPosition: number | null;
   // Forwards this project's reaction changes up toward the gallery.
   onReactionsChange?: (reactions: Reaction[]) => void;
+  onReactionAdded?: (emoji: string) => void;
 }
 
 interface DetailTag {
@@ -41,11 +42,13 @@ const detailTags = (detail: ChallengeResponseDetail): DetailTag[] => {
 };
 
 // The details footer on the project page: the unit/lesson label, modality
-// tags, the author, the challenge prompt, and the class's reactions.
+// tags, the author, the challenge prompt, the recording's transcript, and the
+// class's reactions.
 const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
   detail,
   unitPosition,
   onReactionsChange,
+  onReactionAdded,
 }) => (
   <div className={styles.detailsWrapper}>
     <div className={styles.detailsCard}>
@@ -86,10 +89,27 @@ const ProjectDetailsCard: FC<ProjectDetailsCardProps> = ({
           Project Prompt: {detail.question}
         </Typography>
       )}
+      {detail.transcript && (
+        <details>
+          <summary className={styles.transcriptSummary}>
+            <Typography
+              variant="overline2"
+              component="span"
+              className={styles.sectionLabel}
+            >
+              Transcript (auto-generated)
+            </Typography>
+          </summary>
+          <Typography variant="body3" className={styles.transcriptText}>
+            {detail.transcript}
+          </Typography>
+        </details>
+      )}
       <ReactionChips
         responseId={detail.id}
         reactions={detail.reactions}
         onReactionsChange={onReactionsChange}
+        onReactionAdded={onReactionAdded}
       />
     </div>
   </div>

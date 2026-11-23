@@ -1,0 +1,72 @@
+name 'pl-aif-y2-u2-l3-facilitation-reading-numbers'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Describing Data
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Warm-up:</strong> students interpret real adult music-genre data, then predict how their own class's preferences might differ</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Graphing Categorical Data:</strong> students collect and bar-chart their own class's genre preferences, then compare to the adult data</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Graphing Numerical Data:</strong> students plot artist followers vs. streams on a scatter plot and discuss correlation and outliers</div>
+  </div>
+</div>
+
+<hr>
+
+## Watch for: Reading Numbers vs. Interpreting Them
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Reads the Numbers</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">"Hip Hop is 11, Pop is 9, Rock is 6."</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Interprets Them</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">"Hip Hop was clearly the most popular, and Pop and Rock were about equally liked."</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "What genre was the most popular? What genres had similar popularity?"</div>
+</div>
+
+## Watch for: Vague Relationship Descriptions
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Can't Name a Direction</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">"They're kind of related, I guess."</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Names the Direction</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">"Artists with a higher follower count tend to have more listeners, they're positively correlated."</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Do artists with a higher follower count have more listeners?"</div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; On outliers:</strong> there's no single correct interpretation here. The guide asks students to generate ideas, high followers with surprisingly low listeners, or the reverse, both are worth taking seriously as discussion, not resolving into one "right" answer.
+  </div>
+</div>
+MARKDOWN

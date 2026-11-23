@@ -53,6 +53,8 @@ export interface Section {
   assignedAiChatToolsDependency?: AiChatToolsDependencyValue;
   assignedRequiredInaccessibleAiModels?: boolean;
   aiChatAccessLevel?: AiChatAccessLevel;
+  aiChallengeEnabled?: boolean;
+  lessonTutorAvailable?: boolean;
 }
 
 export type DemoType = 'elementary' | 'middle' | 'high';

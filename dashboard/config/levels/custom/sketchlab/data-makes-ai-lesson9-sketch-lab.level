@@ -1,0 +1,742 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-06T20:52:37.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Creating a Model Card\r\n\r\nRead the sections of the model card that have already been filled in.\r\n\r\nComplete the sections of the model card that are marked with the Pencil icon.",
+    "hide_share_and_remix": "true",
+    "require_edit_to_continue": "true",
+    "start_sources": {
+      "source": {
+        "nodes": [
+          {
+            "id": "9e89ccfb-732f-4f93-81a1-dc2b20673c67",
+            "type": "text",
+            "data": {
+              "text": "Model Card",
+              "strokeColor": "transparent",
+              "fontSize": 140,
+              "locked": true
+            },
+            "position": {
+              "x": 208.76737128263915,
+              "y": -179.15174288397802
+            },
+            "width": 989.1204457616541,
+            "height": 189.88400710011896,
+            "measured": {
+              "width": 989,
+              "height": 190
+            },
+            "dragging": false,
+            "zIndex": 1
+          },
+          {
+            "id": "93252915-0e3e-4478-b57d-1922ce92c07b",
+            "type": "text",
+            "data": {
+              "text": "The Basics",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -586.48188626758,
+              "y": 187.24613776992456
+            },
+            "width": 292.0000000000002,
+            "height": 72.00000000000009,
+            "measured": {
+              "width": 292,
+              "height": 72
+            },
+            "dragging": false
+          },
+          {
+            "id": "e8a76204-e543-4fe0-87d1-e41b5519d1f6",
+            "type": "text",
+            "data": {
+              "text": "Features",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 227.58172261973942,
+              "y": 196.61950760332888
+            },
+            "width": 292.0000000000002,
+            "height": 72.00000000000009,
+            "measured": {
+              "width": 292,
+              "height": 72
+            },
+            "dragging": false
+          },
+          {
+            "id": "246c6f97-47f3-4429-ae57-012ee74278ca",
+            "type": "text",
+            "data": {
+              "text": "How It Decides",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1017.1996928007698,
+              "y": 205.53024422372073
+            },
+            "width": 427.2495608542215,
+            "height": 40,
+            "measured": {
+              "width": 427,
+              "height": 40
+            },
+            "dragging": false
+          },
+          {
+            "id": "565d6d90-64fc-40a0-a96c-29117e84db72",
+            "type": "text",
+            "data": {
+              "text": "Strengths & Limits",
+              "strokeColor": "transparent",
+              "fontSize": 50,
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 1827.5677653911002,
+              "y": 200.97931221628005
+            },
+            "width": 473.4323377312728,
+            "height": 55.50615111533861,
+            "measured": {
+              "width": 473,
+              "height": 56
+            },
+            "dragging": false
+          },
+          {
+            "id": "4688b741-d885-4751-bbbb-25e433c959a8",
+            "type": "text",
+            "data": {
+              "text": "Model Name:  Where Should We Film?",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -791.8363872586915,
+              "y": 366.13184815098816
+            },
+            "width": 591.2517561330422,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 591,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "01a3d755-7af9-4f1a-9958-32767ae9a643",
+            "type": "text",
+            "data": {
+              "text": "Built by: The Virtual Production team",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -791.9955527668078,
+              "y": 583.6744622383088
+            },
+            "width": 569.4879920506391,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 569,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "8679eb0a-ddb0-4280-8551-3756eab62cd0",
+            "type": "text",
+            "data": {
+              "text": "This model sorts movie scenes into these labels: LED Wall, Real Location",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -795.9440096912003,
+              "y": 823.7098287194722
+            },
+            "width": 610.0644518814231,
+            "height": 100.5358894109373,
+            "measured": {
+              "width": 610,
+              "height": 101
+            },
+            "dragging": false
+          },
+          {
+            "id": "38d0e686-9ea4-4292-8990-1526248fd7ac",
+            "type": "text",
+            "data": {
+              "text": "Which features does the model use?  \n* Far Away\n* Expensive to Travel\n* Dangerous to Film\n* Specific Time of Day\n* Weather Matters\n* Night Scene\n* Big Crowd",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": 14.12662182646153,
+              "y": 447.7009128123421
+            },
+            "width": 597.900708654656,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 598,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "63b70cf3-0d10-4956-8aab-c7781723762e",
+            "type": "text",
+            "data": {
+              "text": "I combined ___ and ___ into ___. \n\n\nAccuracy went from ___ to ___",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 2.0585806682108796,
+              "y": 798.9245571393295
+            },
+            "width": 611.1632286116219,
+            "height": 94.8519522865233,
+            "measured": {
+              "width": 611,
+              "height": 95
+            },
+            "dragging": false
+          },
+          {
+            "id": "9f1a254b-8330-4d11-a424-495ff6e2f9dc",
+            "type": "text",
+            "data": {
+              "text": "Paste in your decision tree",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left",
+              "locked": false
+            },
+            "position": {
+              "x": 1016.6269882937754,
+              "y": 568.2256006556098
+            },
+            "width": 234.46142713735753,
+            "height": 40,
+            "measured": {
+              "width": 234,
+              "height": 40
+            },
+            "dragging": false,
+            "zIndex": 2
+          },
+          {
+            "id": "8e00f4d0-0fac-449f-8215-da71c4dd725f",
+            "type": "text",
+            "data": {
+              "text": "Draw shapes over your decision tree:",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 962.7211608052654,
+              "y": 890.7890567934434
+            },
+            "width": 304.8650384978689,
+            "height": 57.39497215580761,
+            "measured": {
+              "width": 305,
+              "height": 57
+            },
+            "dragging": false
+          },
+          {
+            "id": "e38596b5-e3c2-4bdb-8722-23284e584310",
+            "type": "text",
+            "data": {
+              "text": "Triangle = the question your feature combination added",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 818.3768732134083,
+              "y": 1054.7191666998226
+            },
+            "width": 250.7792776408412,
+            "height": 44.79529489699641,
+            "measured": {
+              "width": 251,
+              "height": 45
+            },
+            "dragging": false
+          },
+          {
+            "id": "51fb8a2a-e606-4be6-af16-06a9974a3d78",
+            "type": "text",
+            "data": {
+              "text": "What it does well:",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1655.9540788939403,
+              "y": 346.957925003951
+            },
+            "width": 598.1601383988855,
+            "height": 260.4425420805152,
+            "measured": {
+              "width": 598,
+              "height": 260
+            },
+            "dragging": false,
+            "zIndex": 3
+          },
+          {
+            "id": "e6a4bc27-20a6-48e9-a740-9c6cdb24a90a",
+            "type": "text",
+            "data": {
+              "text": "Who it might fail, and why:",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1650.8980625350252,
+              "y": 669.2529397665838
+            },
+            "width": 536.031884286378,
+            "height": 307.25016091175405,
+            "measured": {
+              "width": 536,
+              "height": 307
+            },
+            "dragging": false,
+            "zIndex": 4
+          },
+          {
+            "id": "1ca4b70b-6c13-46e8-8603-7b8eaf9f835a",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/75cff58f-1279-4b5c-85e5-66b64cc8e05c.png",
+              "altText": "team-work",
+              "locked": true
+            },
+            "position": {
+              "x": -787.9183707900286,
+              "y": 172.41018957272757
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "bdea31a4-519f-4146-8b6c-30c635b402a2",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/30bf2ef5-87f8-44f7-ac52-a2d405438e78.png",
+              "altText": "new-features",
+              "locked": true
+            },
+            "position": {
+              "x": 23.58017320845164,
+              "y": 170.82080766206172
+            },
+            "width": 160,
+            "height": 133.19507910772893,
+            "measured": {
+              "width": 160,
+              "height": 133
+            },
+            "dragging": false
+          },
+          {
+            "id": "1d38692b-061d-4d40-9a64-e8e29ff28c43",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/2bbf7300-4951-494c-ae19-3f2e8e077fe1.png",
+              "altText": "decision-tree (5)",
+              "locked": true
+            },
+            "position": {
+              "x": 800.3975535955542,
+              "y": 152.60916355979077
+            },
+            "width": 192.98769776932227,
+            "height": 129.89630933079667,
+            "measured": {
+              "width": 193,
+              "height": 130
+            },
+            "dragging": false
+          },
+          {
+            "id": "420a5c40-6198-4078-9e25-7bd9bdf4149c",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/158dfe40-6e05-47cf-9fd8-42a8fb120c30.png",
+              "altText": "positive-and-negative",
+              "locked": true
+            },
+            "position": {
+              "x": 1650.799849100818,
+              "y": 171.45746647202125
+            },
+            "width": 160,
+            "height": 120,
+            "measured": {
+              "width": 160,
+              "height": 120
+            },
+            "dragging": false
+          },
+          {
+            "id": "845834d5-83f2-4f0e-a80d-bfb5f13959c1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/134048b1-4163-4fe2-af5c-0c4807f1075c.png",
+              "altText": "model-card-1",
+              "locked": true
+            },
+            "position": {
+              "x": -1037.6151185260378,
+              "y": -81.50288339122608
+            },
+            "width": 1077.0579979871595,
+            "height": 1363.6362059034502,
+            "measured": {
+              "width": 1077,
+              "height": 1364
+            },
+            "dragging": false,
+            "zIndex": -1
+          },
+          {
+            "id": "7dd46fb6-cd2e-452c-b091-b53dcee1ba4b",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/0844fa3a-a04f-4aeb-a920-03514a867d4c.png",
+              "altText": "model-card-3",
+              "locked": true
+            },
+            "position": {
+              "x": -257.4560662815656,
+              "y": -83.15226827969173
+            },
+            "width": 1129.8383144180752,
+            "height": 1373.532515234247,
+            "measured": {
+              "width": 1130,
+              "height": 1374
+            },
+            "dragging": false,
+            "zIndex": -3
+          },
+          {
+            "id": "35340116-c3b0-47ae-b61a-b3f8d30a2d03",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/48daf65f-7fb4-4429-bb5f-e794c676db1d.png",
+              "altText": "model-card-4",
+              "locked": true
+            },
+            "position": {
+              "x": 614.9143252269896,
+              "y": -91.53601338030944
+            },
+            "width": 1030.8752211101084,
+            "height": 1403.2214432266371,
+            "measured": {
+              "width": 1031,
+              "height": 1403
+            },
+            "dragging": false,
+            "zIndex": -4
+          },
+          {
+            "id": "fff7d293-8b59-49d8-aac8-699a5690239e",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-sketch-lab-model-card-template/uuid/134048b1-4163-4fe2-af5c-0c4807f1075c.png",
+              "altText": "model-card-1",
+              "locked": true
+            },
+            "position": {
+              "x": 1422.8899393839588,
+              "y": -79.71708904627212
+            },
+            "width": 1080.3567677640917,
+            "height": 1383.4288245650437,
+            "measured": {
+              "width": 1080,
+              "height": 1383
+            },
+            "dragging": false,
+            "zIndex": -5
+          },
+          {
+            "id": "5ee0558a-f65c-45d7-aa4b-6e59a0a817fa",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-yellow)",
+              "locked": false
+            },
+            "position": {
+              "x": 817.311953617443,
+              "y": 328.7039166073595
+            },
+            "width": 623.7869608300518,
+            "height": 563.6847396176038,
+            "measured": {
+              "width": 624,
+              "height": 564
+            },
+            "dragging": false
+          },
+          {
+            "id": "7e66e730-3b6a-4209-8a72-07a47c094037",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson9-sketch-lab/uuid/408b07a5-9324-4ef8-ba03-d4f64b456077.png",
+              "altText": "pencil"
+            },
+            "position": {
+              "x": 492.86666340802265,
+              "y": 671.3214822947509
+            },
+            "width": 107.21968356908428,
+            "height": 111.75307555766938,
+            "measured": {
+              "width": 107,
+              "height": 112
+            },
+            "dragging": false
+          },
+          {
+            "id": "b94ddf55-ea41-4a53-8e42-b7c5955257c4",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson9-sketch-lab/uuid/408b07a5-9324-4ef8-ba03-d4f64b456077.png",
+              "altText": "pencil"
+            },
+            "position": {
+              "x": 496.17026609434834,
+              "y": 819.5635738276882
+            },
+            "width": 107.21968356908428,
+            "height": 111.75307555766938,
+            "measured": {
+              "width": 107,
+              "height": 112
+            },
+            "dragging": false
+          },
+          {
+            "id": "ed77dee5-c509-4e44-9486-cd273a032f11",
+            "type": "shape",
+            "data": {
+              "shapeType": "triangle",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-green)"
+            },
+            "position": {
+              "x": 872.7708221946704,
+              "y": 971.21999159712
+            },
+            "width": 96.82159047516325,
+            "height": 74.05206580011873,
+            "measured": {
+              "width": 97,
+              "height": 74
+            },
+            "dragging": false
+          },
+          {
+            "id": "d64f8d5a-5b97-4c56-9909-e145391c725e",
+            "type": "text",
+            "data": {
+              "text": "Diamond = a branch that might misclassify a scene ",
+              "strokeColor": "transparent",
+              "fontSize": "medium",
+              "textAlign": "left"
+            },
+            "position": {
+              "x": 1159.8723197198858,
+              "y": 1048.1216271459582
+            },
+            "width": 250.7792776408412,
+            "height": 44.79529489699641,
+            "measured": {
+              "width": 251,
+              "height": 45
+            },
+            "dragging": false
+          },
+          {
+            "id": "26b0d144-974c-4e01-9c0c-f01f67fd514c",
+            "type": "shape",
+            "data": {
+              "shapeType": "diamond",
+              "label": "",
+              "backgroundColor": "var(--sketchlab-bg-red)"
+            },
+            "position": {
+              "x": 1248.030141258687,
+              "y": 956.8159978958586
+            },
+            "width": 80.82952535362642,
+            "height": 77.11599289988112,
+            "measured": {
+              "width": 81,
+              "height": 77
+            },
+            "dragging": false
+          },
+          {
+            "id": "1a09c72e-df24-4392-90a4-c61cd2321e8d",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson9-sketch-lab/uuid/408b07a5-9324-4ef8-ba03-d4f64b456077.png",
+              "altText": "pencil"
+            },
+            "position": {
+              "x": 1296.538167153814,
+              "y": 748.6054299952514
+            },
+            "width": 107.21968356908428,
+            "height": 111.75307555766938,
+            "measured": {
+              "width": 107,
+              "height": 112
+            },
+            "dragging": false
+          },
+          {
+            "id": "f8718b1b-b851-4f53-a4c0-ce3a669e05f8",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson9-sketch-lab/uuid/408b07a5-9324-4ef8-ba03-d4f64b456077.png",
+              "altText": "pencil"
+            },
+            "position": {
+              "x": 2176.5381671538125,
+              "y": 398.6054299952522
+            },
+            "width": 107.21968356908428,
+            "height": 111.75307555766938,
+            "measured": {
+              "width": 107,
+              "height": 112
+            },
+            "dragging": false
+          },
+          {
+            "id": "c73f02e7-4739-49a3-8c8e-8435f25ec414",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson9-sketch-lab/uuid/408b07a5-9324-4ef8-ba03-d4f64b456077.png",
+              "altText": "pencil"
+            },
+            "position": {
+              "x": 2186.5381671538125,
+              "y": 751.1054299952515
+            },
+            "width": 107.21968356908428,
+            "height": 111.75307555766938,
+            "measured": {
+              "width": 107,
+              "height": 112
+            },
+            "dragging": false
+          },
+          {
+            "id": "473cf59c-e92e-46c6-925c-6c1fef51c1d1",
+            "type": "image",
+            "data": {
+              "src": "/level_starter_assets/data-makes-ai-lesson9-sketch-lab/uuid/408b07a5-9324-4ef8-ba03-d4f64b456077.png",
+              "altText": "pencil",
+              "locked": true
+            },
+            "position": {
+              "x": -503.46183284618206,
+              "y": -141.3945700047468
+            },
+            "width": 107.21968356908428,
+            "height": 111.75307555766938,
+            "measured": {
+              "width": 107,
+              "height": 112
+            },
+            "dragging": false
+          },
+          {
+            "id": "61bf2ee6-72a7-4456-94e0-776e5e76db70",
+            "type": "text",
+            "data": {
+              "text": "Complete the Model Card sections that are marked with the pencil icon.",
+              "strokeColor": "transparent",
+              "fontSize": "extra-large",
+              "textAlign": "left",
+              "locked": true
+            },
+            "position": {
+              "x": -375.8857827071686,
+              "y": -138.04207499604797
+            },
+            "width": 598.1601383988855,
+            "height": 110.44254208051552,
+            "measured": {
+              "width": 598,
+              "height": 110
+            },
+            "dragging": false,
+            "zIndex": 3
+          }
+        ],
+        "edges": [
+
+        ],
+        "viewport": {
+          "x": 595.2261366188578,
+          "y": 135.98132799752148,
+          "zoom": 0.6062866266041606
+        }
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-06T20:52:37.941+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-sketch-lab-model-card-template\\\"\"],\"cloned_from\":\"data-makes-ai-sketch-lab-model-card-template\"},{\"changed_at\":\"2026-11-06 20:52:45 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:32:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:42:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:46:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:51:43 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

@@ -1,19 +1,14 @@
 // Progress as the views use it: the hook that loads a student's progress,
-// applies each change at once and sends it on, and the labels the map shows
-// for each status.
+// applies each change at once and sends it on.
 
-import {useCallback, useEffect, useMemo, useState} from 'react';
+import {useCallback, useEffect, useState} from 'react';
 
 import {TestResults} from '@cdo/apps/constants';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
-import {computeEvidence} from '../routing/evidence';
-import {routeStatusMap} from '../routing/route';
 import {Pathway, Step} from '../types';
 
 import {
   Answer,
-  CheckpointStatus,
   EMPTY_PROGRESS,
   GeneratedContent,
   PROJECT_STEP_ID,
@@ -25,16 +20,11 @@ import {
   ProgressKey,
   ProgressStore,
   StepWrite,
+  recordProgressFailure,
+  recordProgressOk,
   serverProgressStore,
 } from './progressStore';
-
-export const STATUS_LABELS: {[status in CheckpointStatus]: string} = {
-  locked: 'Locked',
-  available: 'Ready to start',
-  inProgress: 'In progress',
-  complete: 'Complete',
-  skipped: 'Skipped',
-};
+import {usePathwayStatus} from './usePathwayStatus';
 
 /** Records a result on a level step's level; see sendAdaptiveStepReport. */
 export type LevelStepReporter = (
@@ -52,11 +42,6 @@ interface ProgressOptions {
 // The server rounds each save up to whole seconds; match it.
 const toSeconds = (ms: number) => Math.ceil(ms / 1000);
 
-const logFailure = (what: string, error: unknown) =>
-  Lab2Registry.getInstance()
-    .getMetricsReporter()
-    .logError(`Adaptive progress: ${what} failed`, error as Error);
-
 export function useProgress(
   pathway: Pathway,
   key: ProgressKey,
@@ -72,10 +57,11 @@ export function useProgress(
     setProgress(undefined);
     store.load({scriptId, levelId}).then(
       loaded => {
+        recordProgressOk('load');
         if (!cancelled) setProgress(loaded);
       },
       error => {
-        logFailure('load', error);
+        recordProgressFailure('load', error);
         if (!cancelled) setProgress(EMPTY_PROGRESS);
       }
     );
@@ -84,14 +70,7 @@ export function useProgress(
     };
   }, [store, scriptId, levelId]);
 
-  const evidence = useMemo(
-    () => computeEvidence(pathway, progress ?? EMPTY_PROGRESS),
-    [pathway, progress]
-  );
-  const statusMap = useMemo(
-    () => routeStatusMap(pathway, progress ?? EMPTY_PROGRESS, evidence),
-    [pathway, progress, evidence]
-  );
+  const {evidence, statusMap} = usePathwayStatus(pathway, progress);
 
   const updateStep = useCallback(
     (stepId: string, change: (entry?: StepProgress) => StepProgress) =>
@@ -120,7 +99,10 @@ export function useProgress(
         properties.appName,
         write.completed ? TestResults.ALL_PASS : TestResults.LEVEL_STARTED,
         write.timeSinceLastSave ?? 0
-      ).catch(error => logFailure(`report ${step.id}`, error));
+      ).then(
+        () => recordProgressOk('level_step'),
+        error => recordProgressFailure('level_step', error, step.id)
+      );
     },
     [updateStep, store, scriptId, levelId, reportLevelStep]
   );
@@ -141,26 +123,13 @@ export function useProgress(
     [reportStepProgress]
   );
 
-  const completeStep = useCallback(
-    (step: Step, timeMs: number) => {
-      if (step.id === PROJECT_STEP_ID) return;
-      reportStepProgress(
-        step,
-        entry => ({
-          ...entry,
-          status: 'complete',
-          timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
-        }),
-        {completed: true, timeSinceLastSave: timeMs}
-      );
-    },
-    [reportStepProgress]
-  );
-
-  /** Records the time on a step the student leaves without finishing it. */
+  /**
+   * Records the time on a step the student leaves without finishing it. The
+   * project screen's time goes to the template level this way, and is never
+   * more than time: the screen is not a step the student completes.
+   */
   const leaveStep = useCallback(
     (step: Step, timeMs: number) => {
-      if (step.id === PROJECT_STEP_ID) return;
       reportStepProgress(
         step,
         entry => ({
@@ -172,6 +141,22 @@ export function useProgress(
       );
     },
     [reportStepProgress]
+  );
+
+  const completeStep = useCallback(
+    (step: Step, timeMs: number) => {
+      if (step.id === PROJECT_STEP_ID) return leaveStep(step, timeMs);
+      reportStepProgress(
+        step,
+        entry => ({
+          ...entry,
+          status: 'complete',
+          timeSpent: (entry?.timeSpent ?? 0) + toSeconds(timeMs),
+        }),
+        {completed: true, timeSinceLastSave: timeMs}
+      );
+    },
+    [reportStepProgress, leaveStep]
   );
 
   const saveAnswers = useCallback(

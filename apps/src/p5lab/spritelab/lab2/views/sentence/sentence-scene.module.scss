@@ -16,7 +16,6 @@
   object-fit: contain;
 }
 
-// The in-progress state: a centered spinner filling the frame.
 .generating {
   display: flex;
   flex-direction: column;
@@ -28,9 +27,9 @@
   box-sizing: border-box;
 }
 
-.spinner {
-  font-size: 48px;
-  color: var(--text-neutral-quaternary);
+// The design gives the dots a lighter purple on a dark surface.
+:global([data-theme='Dark']) .generating {
+  --codeai-anim-color: var(--brand-purple-20);
 }
 
 .error {
@@ -42,4 +41,12 @@
 .animatedRow > label {
   justify-content: space-between;
   width: 100%;
+
+  // The label's text is the same size and weight as the text in the
+  // buttons below it. The switch itself, a div, keeps its small size.
+  > :not(div) {
+    font-size: var(--font-size-body-md);
+    font-weight: 600;
+    line-height: 1.5rem;
+  }
 }

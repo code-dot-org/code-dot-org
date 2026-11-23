@@ -1,0 +1,11 @@
+name 'csp-unit2-lesson18-modify-console-choice_27_28'
+display_name 'Don\’t Repeat Yourself'
+description '###Choose ONE scenario below. Each program uses repeated print statements to do the same thing over and over. Replace the repetition with a counting variable and a while loop.'
+
+sublevels
+level 'csp-unit2-lesson18-modify-console-choice-a_27_28'
+level 'csp-unit2-lesson18-modify-console-choice-b_27_28'
+level 'csp-unit2-lesson18-modify-console-choice-c_27_28'
+
+
+uses_lab2

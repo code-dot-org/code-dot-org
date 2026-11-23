@@ -9,6 +9,7 @@
 #pardot_private_key: localoverride
 #openai_student_learning_api_key: localoverride
 #openai_measures_of_learning_api_key: localoverride
+#openai_lesson_deep_dive_api_key: localoverride
 #tutor_langfuse_secret_key: localoverride
 #ta_langfuse_secret_key: localoverride
 #tutor_langfuse_public_key: localoverride
@@ -59,6 +60,11 @@ use_my_studio: true
 #       as once the `language_` cookie is set in production (HTTPS),
 #       it becomes "Secure" and can't be rewritten in a local (HTTP) environment.
 #lazy_load_i18n: true
+
+
+# Whether to skip `rake seed:default` during `rake build`. In development,
+# seeding only loads UI test content and completes in 1-3 minutes.
+#skip_seed: true
 
 
 # Whether to store sprocket asset cache on disk or in memory. Setting this to

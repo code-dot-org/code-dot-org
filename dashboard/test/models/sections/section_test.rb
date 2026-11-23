@@ -16,6 +16,21 @@ class SectionTest < ActiveSupport::TestCase
     @jigsaw_unit.reload
   end
 
+  test 'lesson_tutor_available? is true for a section assigned a course with a tutor_plus_available unit' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'tutor-plus-section', version_year: '2026')
+    unit_group.first_unit.update!(tutor_plus_available: true)
+    assert create(:section, unit_group: unit_group).lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a section assigned a course whose units lack tutor_plus_available' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'no-tutor-plus-section', version_year: '2026')
+    refute create(:section, unit_group: unit_group).lesson_tutor_available?
+  end
+
+  test 'lesson_tutor_available? is false for a section with nothing assigned' do
+    refute create(:section).lesson_tutor_available?
+  end
+
   test "sections are soft-deleted" do
     assert_no_change("Section.with_deleted.count") do
       @section.destroy
@@ -841,6 +856,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -878,6 +895,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1013,6 +1032,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1076,6 +1097,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1145,6 +1168,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1213,6 +1238,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1273,6 +1300,8 @@ class SectionTest < ActiveSupport::TestCase
         assigned_ai_chat_tools_dependency: SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE],
         assigned_required_inaccessible_ai_models: false,
         ai_chat_access_level: "disabled",
+        ai_challenge_enabled: false,
+        lesson_tutor_available: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -1304,6 +1333,31 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 1, summarized_section[:numberOfStudents]
     assert_equal 1, summarized_section[:studentCount]
     assert_includes summarized_section[:students], student.summarize
+  end
+
+  test 'student_counts: one distinct count per section, none for an empty section' do
+    with_students = create(:section, script: nil, unit_group: nil)
+    student = create(:student)
+    create(:follower, section: with_students, student_user: student)
+    create(:follower, section: with_students, student_user: student)
+    create(:follower, section: with_students)
+    empty = create(:section, script: nil, unit_group: nil)
+
+    counts = nil
+    assert_queries(1) {counts = Section.student_counts([with_students, empty])}
+    assert_equal({with_students.id => 2}, counts)
+  end
+
+  test 'summarize_without_students: uses a given student count instead of counting' do
+    section = create(:section, script: nil, unit_group: nil)
+    create(:follower, section: section)
+
+    summarized = section.summarize_without_students(student_count: 7)
+    assert_equal 7, summarized[:numberOfStudents]
+    assert_equal 7, summarized[:studentCount]
+    assert_nil summarized[:students]
+
+    assert_equal 1, section.summarize_without_students[:studentCount]
   end
 
   test 'summarize: section with sharing disabled and script with project sharing' do
@@ -1692,61 +1746,36 @@ class SectionTest < ActiveSupport::TestCase
     CodeReviewGroupMember.create(follower_id: @followers[2].id, code_review_group_id: @group2.id)
   end
 
-  describe '.summarize' do
-    let(:section) {create(:section)}
-    let(:student) {create(:student, us_state: at_risk_age_gated_us_state)}
-    let(:summarize) {section.summarize}
-    let(:at_risk_age_gated_date) {DateTime.now}
-    let(:at_risk_age_gated_us_state) {'WA'}
+  %i[summarize_without_students concise_summarize].each do |summary_method|
+    test "#{summary_method} does not load the student roster" do
+      section = create(:section, hidden: false)
+      create_list(:follower, 2, section: section)
+      section.reload
 
-    before do
-      allow(section).to receive(:at_risk_age_gated_student).and_return(student)
-      allow(student).to receive(:at_risk_age_gated_date).and_return(at_risk_age_gated_date)
-    end
+      summary = nil
+      queries = capture_queries {summary = section.public_send(summary_method)}
 
-    it 'has at_risk_age_gated_date' do
-      _(summarize).must_be_kind_of Hash
-      _(summarize[:at_risk_age_gated_date]).must_equal at_risk_age_gated_date
-    end
-
-    it 'has at_risk_age_gated_us_state' do
-      _(summarize).must_be_kind_of Hash
-      _(summarize[:at_risk_age_gated_us_state]).must_equal at_risk_age_gated_us_state
+      assert_equal 2, summary[:studentCount]
+      assert summary.key?(:at_risk_age_gated_date)
+      assert_nil summary[:at_risk_age_gated_date]
+      assert summary.key?(:at_risk_age_gated_us_state)
+      assert_nil summary[:at_risk_age_gated_us_state]
+      roster_queries = queries.grep(/SELECT .*`users`\.\*.*JOIN `followers`/i).reject {|sql| sql.include?('COUNT(')}
+      assert_empty roster_queries, roster_queries.join("\n")
     end
   end
 
-  describe '.at_risk_age_gated_student' do
-    let(:section) {create(:section, hidden: archived?)}
-    let(:student) {create(:student)}
-    let(:archived?) {false}
-    let(:student_at_risk_age_gated_date) {nil}
-    let(:at_risk_age_gated_student) {section.at_risk_age_gated_student}
-    let(:at_risk_age_gated_date) {at_risk_age_gated_student&.at_risk_age_gated_date}
+  test 'summarize preserves null section age-gate fields when including students' do
+    section = create(:section)
+    create(:follower, section: section)
 
-    before do
-      allow(section).to receive(:students).and_return([student])
-      allow(student).to receive(:at_risk_age_gated_date).and_return(student_at_risk_age_gated_date)
-    end
+    summary = section.summarize
 
-    it 'does not return a student' do
-      _(at_risk_age_gated_student).must_be_nil
-    end
-
-    context 'has an at risk student' do
-      let(:student_at_risk_age_gated_date) {DateTime.now}
-
-      it 'returns the at risk student' do
-        _(at_risk_age_gated_student).must_equal student
-      end
-
-      context 'the section is archived' do
-        let(:archived?) {true}
-
-        it 'does not return a student' do
-          _(at_risk_age_gated_student).must_be_nil
-        end
-      end
-    end
+    assert_equal 1, summary[:students].size
+    assert summary.key?(:at_risk_age_gated_date)
+    assert_nil summary[:at_risk_age_gated_date]
+    assert summary.key?(:at_risk_age_gated_us_state)
+    assert_nil summary[:at_risk_age_gated_us_state]
   end
 
   test 'add_teacher_to_mailjet_course_list is called when matching course is assigned' do

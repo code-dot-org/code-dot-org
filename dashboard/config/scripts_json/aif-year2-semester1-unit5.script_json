@@ -8,8 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-03 06:14:01 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2026-11-09 15:01:58 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -82,7 +82,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**Why is it challenging for computers to process language?**\n\nIn this lesson, students learn about natural language processing (NLP) of the English language by exploring three of its applications: speech recognition, language understanding, and text classification. Each surfaces a variation on the central challenge of NLP: the ambiguity of language.",
-        "preparation": "- Print one copy of the Natural Language Processing Unit Guide for each student",
+        "preparation": "- Print copies of the Natural Language Processing Unit Guide (one for each student)",
         "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**Why is it challenging for computers to process language?**\n\nIn this lesson, you'll learn about natural language processing (NLP) of the English language by exploring three of its applications: speech recognition, language understanding, and text classification. Each surfaces a variation on the central challenge of NLP: the ambiguity of language."
       },
       "seeding_key": {
@@ -843,9 +843,39 @@
       "key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "key": "e172c602-6411-4f5c-8f05-40b6923ee9a7",
+      "position": 3,
+      "properties": {
+        "duration": 45,
+        "name": "Day 3"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7",
         "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit5"
@@ -4527,10 +4557,550 @@
       "key": "7db8bfa7-9683-4c62-a7b2-1d89910f6886",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Text Generation Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n",
+        "duration": "5",
+        "name": "Warm Up"
       },
       "seeding_key": {
         "activity_section.key": "7db8bfa7-9683-4c62-a7b2-1d89910f6886",
         "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "da741a69-96bb-476c-a556-be79919b1bf7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Introduce the Text Generation Project and its requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the project requirements and project rubric.",
+        "duration": "10",
+        "name": "Choosing a Corpus"
+      },
+      "seeding_key": {
+        "activity_section.key": "da741a69-96bb-476c-a556-be79919b1bf7",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "e16204f2-f166-4990-8df7-cd7f2c02e7f1",
+      "position": 3,
+      "properties": {
+        "description": "In this project, you’ll apply what you’ve learned in Unit 5 to build a language model that can generate text on its own. More specifically, you’ll build a bigram language model. This is a model that finds and learns from bigrams in a text corpus. It then uses those bigrams to generate text one token at a time. Like the Markov chains you saw in a prior lesson, a bigram language model predicts the next token based on the previous token.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e16204f2-f166-4990-8df7-cd7f2c02e7f1",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "1ea5e830-301f-4121-a440-c02cb613a46a",
+      "position": 4,
+      "properties": {
+        "description": "To build your model, you’ll first choose and contribute to a corpus of text. Then, you’ll finish a few functions to make your language model work. You'll make a function to tokenize your text and a function to train your model on bigrams of those tokens. You'll also make multiple functions to generate text with your trained model.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1ea5e830-301f-4121-a440-c02cb613a46a",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "9fe11fbd-b57c-42fc-9773-fd113506e527",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Invite students to ask questions about the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share an example of the project in action. Highlight to students that their language model in this project will be similar to, but distinct from, the Markov chains they’ve previously implemented."
+      },
+      "seeding_key": {
+        "activity_section.key": "9fe11fbd-b57c-42fc-9773-fd113506e527",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "bff040e7-d381-46b4-88b0-d1303a2ea5cd",
+      "position": 6,
+      "properties": {
+        "description": "Here’s an example of what you’ll build. You’ll get a corpus like this one: a corpus of single sentences with a common theme. Your model will then generate a new sentence, based on what it learns from the corpus.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bff040e7-d381-46b4-88b0-d1303a2ea5cd",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "021388dd-1c63-46b0-8df3-248f075d0145",
+      "position": 7,
+      "properties": {
+        "description": "Again, your model is similar to the Markov chains you’ve already created. But there’s one important difference in this project. Your model won’t just generate a fixed number of words. Rather, it will generate text until it comes to a natural stop, like the end of a sentence.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "021388dd-1c63-46b0-8df3-248f075d0145",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "3ad32294-4509-4edc-8a65-9eea5eedaecb",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Step 1 of their Project Planning Guide: Choosing a Corpus."
+      },
+      "seeding_key": {
+        "activity_section.key": "3ad32294-4509-4edc-8a65-9eea5eedaecb",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "a75467da-1a40-4111-8922-afc701611914",
+      "position": 9,
+      "properties": {
+        "description": "The corpus you use will determine the kind of text your model will generate. Read about the corpora available to you, then choose the one you’d like to work with.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a75467da-1a40-4111-8922-afc701611914",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "3dee1fff-9b8b-4b63-8697-3a7710b30249",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students read about the corpora, consider providing additional context about each corpus.\n- The sayings corpus contains short sayings students may be familiar with. Among them are \"The night is darkest just before the dawn,\" \"The truth is stranger than fiction,\" and \"The more the merrier.\"\n- The curiosities corpus contains questions about astronomy. Among them are \"Why does Mars look red?”, \"Why do planets orbit the Sun?”,  and \"Why do galaxies collide so often?\"\n- The invitations corpus contains invitations to birthday parties. Among them are invitations like \"Please come to my birthday costume party this weekend at the park!\" and \"Please tell everyone about my sixteenth birthday dinner on Friday evening at the arcade!\""
+      },
+      "seeding_key": {
+        "activity_section.key": "3dee1fff-9b8b-4b63-8697-3a7710b30249",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "5bcd32b8-d212-4542-b556-e7878194ddbb",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students explore how their corpus influences their model’s output.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Step 2 of their Project Planning Guide: Evaluating Corpora.",
+        "duration": "10",
+        "name": "Understanding Corpora"
+      },
+      "seeding_key": {
+        "activity_section.key": "5bcd32b8-d212-4542-b556-e7878194ddbb",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "ea78c063-ea74-4459-8ddc-db7c7836b7c7",
+      "position": 12,
+      "properties": {
+        "description": "Today, you’ll focus on understanding and contributing to the corpus you’ve chosen. Before you explore your own corpus, evaluate two hypothetical corpora to build your intuition about what makes a good corpus for your model.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ea78c063-ea74-4459-8ddc-db7c7836b7c7",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "563c6b7d-52be-4cab-a623-e3b2413e4f56",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, consider prompting them to notice the differences between the two corpora and guide them in making connections between those differences and a bigram language model’s performance.\n- Corpus 1 contains sentences that share a common grammatical structure: each sentence follows one of two patterns (e.g., \"Students must…\" or \"Students should…\"). Because every token appears in a consistent position, a bigram model has few ways to deviate from these grammatical structures.\n- Corpus 2 contains sentences with varied grammatical structures, and some tokens appear in more than one structure. Because a bigram model predicts each token using only the previous token, it can begin a sentence following one structure and, after reaching a shared token, continue following a different one. The result could be a new sentence that isn’t itself grammatically correct.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How would a bigram language model’s behavior differ if trained on Corpus instead of Corpus 1? Explain.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students toward the realization that a bigram language model performs best when learning from a corpus of sentences with a shared grammatical structure. Strong responses will observe that Corpus 1’s sentences share a grammatical structure (e.g., all sentences begin with \"Students must\" or \"Students should\"). Strong responses will also connect observations about shared grammatical structures to the workings of a bigram language model (e.g., \"Because Corpus 1’s sentences follow a similar grammatical structure, a bigram model is less likely to combine tokens from two different grammatical structures that can’t work together.\"). If focusing on grammatical structure isn’t intuitive to some students, consider focusing on identifying more general patterns in the corpora. For instance, ask \"Which corpus’s sentences followed a shared pattern?\" Then, highlight that bigram language models will replicate the patterns found in their corpora: \"Remember that a bigram language model relies on following patterns in text data. In which corpus is that pattern clearer?\" Once students understand that a bigram language model works best with a corpus of sentences that follow a shared pattern, continue on.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Emphasize the key point from the prior discussion."
+      },
+      "seeding_key": {
+        "activity_section.key": "563c6b7d-52be-4cab-a623-e3b2413e4f56",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "a68558de-4bb4-4ba9-9cb9-c07cdf428306",
+      "position": 14,
+      "properties": {
+        "description": "A bigram model can only be as consistent as the corpus it learns from. Keep this in mind as you explore your corpus and contribute your own sentences to it.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a68558de-4bb4-4ba9-9cb9-c07cdf428306",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "06dacb81-8a41-437b-bd3a-1c4bb1fb0196",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Students study the corpus they’ve chosen and identify common patterns in the sentences that compose the corpus. Students then contribute their own sentences to the corpus.",
+        "duration": "15",
+        "name": "Contributing to the Corpus"
+      },
+      "seeding_key": {
+        "activity_section.key": "06dacb81-8a41-437b-bd3a-1c4bb1fb0196",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "12912e69-e9d9-426b-ac10-6fbdb3a0dbfd",
+      "position": 16,
+      "properties": {
+        "description": "Now, it’s time to get more familiar with the corpus you’ve chosen. Study the sentences you see in the corpus and try to identify the pattern that most of them follow. Then, add your own sentences to the corpus so that your model will have your influence when it generates text.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "12912e69-e9d9-426b-ac10-6fbdb3a0dbfd",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "68f64ace-65da-4fcc-a3fb-7b889afad07b",
+      "position": 17,
+      "properties": {
+        "progression_name": "Text Generation Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "68f64ace-65da-4fcc-a3fb-7b889afad07b",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "f28ea264-9a93-4b9e-bf21-f19de46865d0",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1.\n- **Level 1:** Students study the pattern of sentences in their chosen text corpus. In their Project Planning Guide, they document the patterns they find in their own words. Then, they contribute their own sentences to the text corpus that follow the patterns they’ve found.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work on Level 1, look for:\n- Students who could use additional support in identifying the patterns in their corpus. Guide students in looking at how sentences begin, continue, and end. Point out common verbs and the way they are used. If students are familiar with grammatical functions such as subject, object, etc., guide them in spotting where these appear in sentences."
+      },
+      "seeding_key": {
+        "activity_section.key": "f28ea264-9a93-4b9e-bf21-f19de46865d0",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "f7a7b986-a872-4554-8568-31d163350bc7",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to complete the Day 1 Reflection section in their Project Planning Guide.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7a7b986-a872-4554-8568-31d163350bc7",
+        "lesson_activity.key": "1a6eb83d-25c5-429e-9899-b8cc9f984aaa"
+      }
+    },
+    {
+      "key": "ddcf0cc8-86fb-46f2-96de-d6844e4e8f1e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of two to three. Prompt them to discuss the question on the slide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What pattern did you find in your corpus? How do your contributions follow this pattern?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to compare their understandings of the sentence patterns in their corpus, and to get feedback from their peers on how well their contributions match this pattern.",
+        "duration": "5",
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, consider grouping students with others who are using the same corpus."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ddcf0cc8-86fb-46f2-96de-d6844e4e8f1e",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "41e98311-05ab-46c3-b086-90bb23c24cda",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Guide students through implementing their bigram language model.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce students to the functions that compose their model, and how they work together.",
+        "duration": "35",
+        "name": "Text Generation Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider inviting students to open their laptops and navigate to Lesson 13, Level 2, to follow along with this diagram in the main function."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "41e98311-05ab-46c3-b086-90bb23c24cda",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "79d815fc-57dd-4c5a-b397-ca6fcb9bea61",
+      "position": 3,
+      "properties": {
+        "description": "Today you’ll focus on writing the functions that make your model work. There are four of them: `tokenize`, `learn`, `generate`, and `detokenize`. In this diagram, you can see how these functions work together. Let’s walk through it.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "79d815fc-57dd-4c5a-b397-ca6fcb9bea61",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "f8ee128b-f292-4810-b25f-37d68aa8af1d",
+      "position": 4,
+      "properties": {
+        "description": "First, notice model. In your program, you’ll see a variable called `model` at the top. Every function has access to it. It’s a dictionary that records which tokens can follow which. At first, it’s an empty dictionary. The `tokenize` and `learn` functions add tokens to model.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f8ee128b-f292-4810-b25f-37d68aa8af1d",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "3dc970a3-f1b5-4bd9-bca8-2765784b2113",
+      "position": 5,
+      "properties": {
+        "description": "Once you’ve built up model, it’s time to generate text. The `generate` and `detokenize` functions work together, using the model to build up a list of tokens that form a new sentence.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3dc970a3-f1b5-4bd9-bca8-2765784b2113",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "f37a1f4c-e44f-4fe6-9302-3ae3d84c4688",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Allow students to ask questions about the structure of the program they’ll build."
+      },
+      "seeding_key": {
+        "activity_section.key": "f37a1f4c-e44f-4fe6-9302-3ae3d84c4688",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "4b7530e7-67ae-4364-823e-5f279d8951da",
+      "position": 7,
+      "properties": {
+        "description": "It’s time to start working on these functions. Aim to finish most of them today, but don’t worry if you need more time. We’ll continue this work next class, too.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4b7530e7-67ae-4364-823e-5f279d8951da",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac",
+      "position": 8,
+      "properties": {
+        "progression_name": "Text Generation Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "dbfbaeb6-4df7-4e55-9c14-28b3a01eabd1",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Levels 2–5.\n- **Level 2:** Students complete the `tokenize` function. They write the function so that words and punctuation are tokenized separately.\n- **Level 3:** Students complete the `learn` function. They add tokens, and those that follow them, to the model dictionary.\n- **Level 4:** Students complete the `generate` function. They use model to randomly choose a new token based on the current token.\n- **Level 5:** Students complete the `detokenize` function. They combine the tokens from generate into a readable string.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for:\n- **Level 2:** Students who don’t tokenize words and punctuation separately. Remind them about the regular expression they learned about earlier in the unit, which can do so for them.\n- **Level 3:** Students who aren’t sure how to associate a token with a new list of tokens, or how to add a token to an existing list. Prompt them to ask AI Tutor for syntax help, or remind them of the syntax yourself.\n- **Level 4:** Students who aren’t sure how to generate new tokens until reaching the end of a sentence. Point out that the model can know it should stop generating text when the previous token it generated does not have any tokens that could follow it—in other words, when the most recently generated token is not itself a key in model. Consider also facilitating the class-wide discussion about end-of-sequence tokens based on the following slide.\n- **Level 5:** Students whose corpus includes sentences with varied punctuation. By default, a student’s corpus includes only one punctuation character (\".\", \"?\" or \"!\"). However, if a student has added additional sentences that end with other punctuation, they’ll need to account for that in their `detokenize` function.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If some students finish these levels sooner than expected, invite them to continue contributing sentences to their corpus. How does what they add to their corpus change what their model generates?"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "dbfbaeb6-4df7-4e55-9c14-28b3a01eabd1",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "24662983-df59-4dbf-b4bb-b7678c01e674",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once a critical mass of students are working on the `generate` function, consider pausing and exploring approaches to generating text until reaching the end of a sentence.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Imagine a computer generated this sentence, token by token. How do you think it knew when to stop?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Prompt students to consider logical ways a model could end its generation of tokens. Strong responses will mention an idea along these lines: a model could continue generating text until it reaches a certain, special token (e.g., the exclamation mark), at which point it knows it should stop. If students have difficulty identifying this approach, prompt them to envision what a model \"sees.\" For example: \"Imagine you’re the model, and you want to generate a sentence. All you can see is the last token you’ve generated. What information could you gather from that token to know whether you should continue?\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce how to terminate generation: an end-of-sequence token."
+      },
+      "seeding_key": {
+        "activity_section.key": "24662983-df59-4dbf-b4bb-b7678c01e674",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "19f23c02-45c0-4a6b-a50a-a9a0a126be6c",
+      "position": 11,
+      "properties": {
+        "description": "One way to terminate generation is with what’s called an \"end-of-sequence token.\" This is a special token that tells a model it is the last token it should generate. Usually, an end-of-sequence token is a special character you can’t see. But because, in this project, you’re generating single sentences, the end-of-sequence token could be a punctuation mark that all of your sentences end with.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "19f23c02-45c0-4a6b-a50a-a9a0a126be6c",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "53010b92-9a6c-4616-862c-b2d67374057b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to continue working, applying what they’ve learned about ways to terminate generation."
+      },
+      "seeding_key": {
+        "activity_section.key": "53010b92-9a6c-4616-862c-b2d67374057b",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "81169acf-07a4-424b-9a35-3c69a2a9577d",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to complete the Day 2 Reflection section in their Project Planning Guide.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "81169acf-07a4-424b-9a35-3c69a2a9577d",
+        "lesson_activity.key": "fa347b57-c53e-4729-abf2-fa7c4aa57b13"
+      }
+    },
+    {
+      "key": "ab2e1e25-ab4a-435d-bc5b-0a1c560fa73d",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** With a partner, evaluate these generations from a bigram model. Then, share how you evaluated them.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Gather ideas about how to qualitatively evaluate the outputs of a generative model. Strong responses will notice that one generation—\"The more the dawn\"—is grammatically incorrect, and so is undesirable. Another generation is grammatically correct, but not factual: \"Why does Europa have a black hole?\". Another generation—\"Please help me celebrate turning ten!\"—is grammatically correct and seems plausible, but could also be construed as somewhat plain. There isn’t a single correct answer in this discussion. Rather, the goal is to surface the many ways that the output of a generative model could be evaluated.",
+        "duration": "10",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab2e1e25-ab4a-435d-bc5b-0a1c560fa73d",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "50864f30-d360-4f96-adaf-4a1fa4dcfeee",
+      "position": 2,
+      "properties": {
+        "description": "Unlike the models you’ve seen so far, there’s no one correct answer we expect from generative models. Rather, we need to assess the output of a model along multiple dimensions, some of which may be subjective. Today, you’ll choose a few metrics to evaluate your own model on.",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "For those unfamiliar, consider sharing that Europa is one of the moons of Jupiter."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "50864f30-d360-4f96-adaf-4a1fa4dcfeee",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "8c6a2b51-2f0e-4759-8d46-39aefdf53307",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Prepare students to evaluate their model using metrics of their choice.",
+        "duration": "10",
+        "name": "Evaluating Generative Models"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c6a2b51-2f0e-4759-8d46-39aefdf53307",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "da8d5d3a-8f49-4d0b-8ff9-c81159efcc85",
+      "position": 4,
+      "properties": {
+        "description": "Here’s an example evaluation of one of the generations you just saw. This generation is grammatically correct, but isn’t factually accurate: Europa doesn’t have a black hole. That said, if it were true, it would arguably be an intriguing question—and maybe we’d like for our model to generate intriguing questions like this one.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "da8d5d3a-8f49-4d0b-8ff9-c81159efcc85",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "df59f84d-50fd-46ed-86df-c998a58e4f6d",
+      "position": 5,
+      "properties": {
+        "description": "When machine learning engineers evaluate generative models, they may define metrics that represent what they hope to see in the model’s output. These metrics will vary widely—they could be things like \"helpfulness,\" \"cautiousness,\" \"accuracy,\" and more.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "df59f84d-50fd-46ed-86df-c998a58e4f6d",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "11e30ad0-28c4-4edf-afc9-248e7a771c81",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to identify metrics for their model in their Project Planning Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "11e30ad0-28c4-4edf-afc9-248e7a771c81",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "db012e19-2c13-4d12-ae19-afb68cf9c2e2",
+      "position": 7,
+      "properties": {
+        "description": "Consider metrics you’d like to evaluate your model on. Then, write them down in your Project Planning Guide. You don’t need to have a rigorous definition of your metric. Just a sense of how you’d answer \"Yes\" or \"No\" if you asked \"Does this generation include what you’re looking for?\" is enough.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "db012e19-2c13-4d12-ae19-afb68cf9c2e2",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "bb95b593-78cf-4c72-8ecd-6ffafcd23b40",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this Activity:** Guide students in completing their text generation project and evaluating their model.",
+        "duration": "20",
+        "name": "Text Generation Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb95b593-78cf-4c72-8ecd-6ffafcd23b40",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "5756b12e-b2df-4ab8-af33-6fb700682266",
+      "position": 9,
+      "properties": {
+        "description": "It’s time to finish your text generation project. Once you get to Level 6, you’ll evaluate your model using the metrics you’ve added to your Project Planning Guide.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5756b12e-b2df-4ab8-af33-6fb700682266",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "8182b882-9241-4564-8953-a94baea38705",
+      "position": 10,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "8182b882-9241-4564-8953-a94baea38705",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "f5bc33aa-4049-4e77-a96a-fac75cf82be0",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Levels 2–7.\n- **Level 2:** Students complete the `tokenize` function. They write the function so that words and punctuation are tokenized separately.\n- **Level 3:** Students complete the `learn` function. They add tokens, and those that follow them, to the model dictionary.\n- **Level 4:** Students complete the `generate` function. They use model to randomly choose a new token based on the current token.\n- **Level 5:** Students complete the `detokenize` function. They combine the tokens from generate into a readable string.\n- **Level 6:** Students evaluate their model using the metrics they’ve added to their Project Planning Guide.\n- **Level 7:** Students answer a Check Your Understanding.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for:\n- **Level 2:** Students who don’t tokenize words and punctuation separately. Remind them about the regular expression they learned about earlier in the unit, which can do so for them.\n- **Level 3:** Students who aren’t sure how to associate a token with a new list of tokens, or how to add a token to an existing list. Prompt them to ask AI Tutor for syntax help, or remind them of the syntax yourself.\n- **Level 4:** Students who aren’t sure how to generate new tokens until reaching the end of a sentence. Point out that the model can know it should stop generating text when the previous token it generated does not have any tokens that could follow it—in other words, when the most recently generated token is not itself a key in model. Consider also facilitating the class-wide discussion about end-of-sequence tokens based on the following slide.\n- **Level 5:** Students whose corpus includes sentences with varied punctuation. By default, a student’s corpus includes only one punctuation character (\".\", \"?\" or \"!\"). However, if a student has added additional sentences that end with other punctuation, they’ll need to account for that in their `detokenize` function.\n- **Level 6:** Students who aren’t sure how to evaluate their model. Guide them in generating a sentence with their model. Then, ask them whether that generation meets any of the criteria they established in their Project Planning Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "f5bc33aa-4049-4e77-a96a-fac75cf82be0",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
+      }
+    },
+    {
+      "key": "089a222c-71b3-48b7-bfd7-b45f9fab45d7",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "089a222c-71b3-48b7-bfd7-b45f9fab45d7",
+        "lesson_activity.key": "e172c602-6411-4f5c-8f05-40b6923ee9a7"
       }
     },
     {
@@ -5364,6 +5934,160 @@
       "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Text Generation Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level1-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "68f64ace-65da-4fcc-a3fb-7b889afad07b"
+      },
+      "level_keys": [
+        "aif-y2-natural-language-processing-lesson13-level1-2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Text Generation Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level2-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      },
+      "level_keys": [
+        "aif-y2-natural-language-processing-lesson13-level2-2026"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Text Generation Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level3-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      },
+      "level_keys": [
+        "aif-y2-natural-language-processing-lesson13-level3-2026"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Text Generation Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level4-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      },
+      "level_keys": [
+        "aif-y2-natural-language-processing-lesson13-level4-2026"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "progression": "Text Generation Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level5-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      },
+      "level_keys": [
+        "aif-y2-natural-language-processing-lesson13-level5-2026"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Text Generation Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level6-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      },
+      "level_keys": [
+        "aif-y2-natural-language-processing-lesson13-level6-2026"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check Your Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level7-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "8182b882-9241-4564-8953-a94baea38705"
+      },
+      "level_keys": [
+        "aif-y2-natural-language-processing-lesson13-level7-2026"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "progression": "End of Unit Assessment"
@@ -5830,6 +6554,90 @@
     },
     {
       "seeding_key": {
+        "level.key": "aif-y2-natural-language-processing-lesson13-level1-2026",
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level1-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "68f64ace-65da-4fcc-a3fb-7b889afad07b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-natural-language-processing-lesson13-level2-2026",
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level2-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-natural-language-processing-lesson13-level3-2026",
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level3-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-natural-language-processing-lesson13-level4-2026",
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level4-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-natural-language-processing-lesson13-level5-2026",
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level5-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-natural-language-processing-lesson13-level6-2026",
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level6-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "c1b6573f-e3ca-41d0-9b39-a5a1a22960ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-natural-language-processing-lesson13-level7-2026",
+        "script_level.level_keys": [
+          "aif-y2-natural-language-processing-lesson13-level7-2026"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5",
+        "activity_section.key": "8182b882-9241-4564-8953-a94baea38705"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "aif-y2-natural-language-processing-postassessment-levelgroup-2026",
         "script_level.level_keys": [
           "aif-y2-natural-language-processing-postassessment-levelgroup-2026"
@@ -5928,7 +6736,7 @@
       "url": "https://docs.google.com/document/u/0/d/1In48XEXiqAEG463KxlDGobt-Ry6HxX30XOF3zoEDYEQ/edit",
       "key": "_exemplar_video_keywords",
       "properties": {
-        "audience": "Student",
+        "audience": "Verified Teacher",
         "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
@@ -5948,6 +6756,19 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_volcano_catalog"
+      }
+    },
+    {
+      "name": "[KEY] Natural Language Processing Unit Guide",
+      "url": "https://docs.google.com/document/d/14KQsyrDJqiLUtIA2fRzr9WedTt54AnfB21GoI7BSd0I/edit?usp=sharing",
+      "key": "_key_natural_language_processing_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_natural_language_processing_unit_guide"
       }
     },
     {
@@ -6277,6 +7098,12 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_natural_language_processing_unit_guide"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -7106,6 +7933,15 @@
       }
     },
     {
+      "level_name": "aif-y2-natural-language-processing-lesson13-level5-2026",
+      "s3_config_dir": "",
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
       "level_name": "aif-y2-natural-language-processing-lesson2-level7-2026",
       "s3_config_dir": "",
       "seeding_key": {
@@ -7253,6 +8089,45 @@
       "seeding_key": {
         "learning_goal.key": "405b10df-9bd5-4259-94ee-bd8e335de11d",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "key": "55ba23c1-29ae-4d3e-a76b-3fec3844a77e",
+      "position": 3,
+      "learning_goal": "Thinking Critically About Language",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "55ba23c1-29ae-4d3e-a76b-3fec3844a77e",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "key": "5697d0a7-2f0d-4404-84ce-d86d19be5f97",
+      "position": 2,
+      "learning_goal": "Manipulating Text",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "5697d0a7-2f0d-4404-84ce-d86d19be5f97",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "key": "5ceef961-678b-457d-9dc1-6fea38d35d3e",
+      "position": 1,
+      "learning_goal": "Modeling With Language",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "5ceef961-678b-457d-9dc1-6fea38d35d3e",
+        "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit5"
       }
@@ -7634,6 +8509,150 @@
         "understanding": 3,
         "learning_goal.key": "405b10df-9bd5-4259-94ee-bd8e335de11d",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not attempt to contribute to their corpus.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "55ba23c1-29ae-4d3e-a76b-3fec3844a77e",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student attempts to contribute to their corpus, but in a way that does not follow the established pattern.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "55ba23c1-29ae-4d3e-a76b-3fec3844a77e",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student contributes new data to their corpus in a way that follows the established pattern.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "55ba23c1-29ae-4d3e-a76b-3fec3844a77e",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student contributes new data to their corpus in a way that follows the established pattern and effectively guides their model in generating text they want to see.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "55ba23c1-29ae-4d3e-a76b-3fec3844a77e",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student attempts neither to tokenize the text from their corpus nor to detokenize the tokens from their model.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "5697d0a7-2f0d-4404-84ce-d86d19be5f97",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student attempts to tokenize the text from their corpus and to detokenize the tokens from their model, but does not fully succeed. They may incorrectly implement one or both of these functions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "5697d0a7-2f0d-4404-84ce-d86d19be5f97",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student tokenizes the text from their corpus and detokenizes the tokens from their model.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "5697d0a7-2f0d-4404-84ce-d86d19be5f97",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student efficiently and idiomatically tokenizes the text from their corpus and detokenizes the tokens from their model.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "5697d0a7-2f0d-4404-84ce-d86d19be5f97",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not attempt to build a working bigram model.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "5ceef961-678b-457d-9dc1-6fea38d35d3e",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student attempts to build a working bigram model, but does not fully succeed. They may incorrectly implement one or more of the core functions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "5ceef961-678b-457d-9dc1-6fea38d35d3e",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student builds a working bigram model. They correctly implement each of the four core functions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "5ceef961-678b-457d-9dc1-6fea38d35d3e",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "aif-year2-semester1-unit5"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student builds a working bigram model with clear, concise, and idiomatic Python code. They correctly and efficiently implement each of the four core functions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "5ceef961-678b-457d-9dc1-6fea38d35d3e",
+        "lesson.key": "lesson-13",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit5"
       }

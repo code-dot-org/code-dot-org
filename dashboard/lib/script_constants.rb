@@ -9,6 +9,8 @@ module ScriptConstants
   ACCELERATED_NAME = 'accelerated'.freeze
   ALGEBRA_NAME = 'algebra'.freeze
   AIML_2021_NAME = 'aiml-2021'.freeze
+  QUEST_BUILDER_2026 = 'quest-builder-2026'.freeze # 2026 hour of ai
+  AI_MAKERSPACE_2026 = 'ai-makerspace-2026'.freeze # 2026 hour of ai
 
   # Deprecated course constants (kept for deprecated course page rendering)
   COURSE1_NAME = 'course1'.freeze
@@ -144,6 +146,7 @@ module ScriptConstants
       MINECRAFT_AI_NAME = 'generation-ai'.freeze,
       MINECRAFT_SHOW_NAME = 'show-must-go-on'.freeze,
       MINECRAFT_NIGHT_NAME = 'firstnight-mc'.freeze,
+      MINECRAFT_FIELD_AGENT_NAME = 'fieldagent-mc'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       FROZEN_NAME = 'frozen'.freeze,
@@ -234,6 +237,7 @@ module ScriptConstants
       MINECRAFT_AI_NAME,
       MINECRAFT_SHOW_NAME,
       MINECRAFT_NIGHT_NAME,
+      MINECRAFT_FIELD_AGENT_NAME,
     ],
   }.freeze
 

@@ -1,0 +1,11 @@
+name 'csp-unit2-lesson18-modify-neighborhood-choice_27_28'
+display_name 'Move and Paint'
+description '###Choose ONE scenario and write a program that has the Painter move and paints the path, stopping only when it can\’t move forward or runs out of paint — whichever happens first.'
+
+sublevels
+level 'csp-unit2-lesson18-modify-neighborhood-choice-a_27_28'
+level 'csp-unit2-lesson18-modify-neighborhood-choice-b_27_28'
+level 'csp-unit2-lesson18-modify-neighborhood-choice-c_27_28'
+
+
+uses_lab2

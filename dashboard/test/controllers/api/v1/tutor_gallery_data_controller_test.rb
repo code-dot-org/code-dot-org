@@ -2,12 +2,11 @@ require 'test_helper'
 
 class Api::V1::TutorGalleryDataControllerTest < ActionController::TestCase
   setup do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(true)
+    User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(true)
 
-    # Script#lesson_tutor_available? requires an AIF/AID marketing initiative.
-    @ai_script = create(:script, name: 'ai-unit-1')
+    # Script#lesson_tutor_available? requires tutor_plus_available.
+    @ai_script = create(:script, name: 'ai-unit-1', tutor_plus_available: true)
     @ai_course = create(:single_unit_course, :with_course_offering, unit: @ai_script)
-    @ai_course.course_version.course_offering.update!(marketing_initiative: 'AIF')
     lesson_group = create(:lesson_group, script: @ai_script)
     @ai_lesson = create(:lesson, lesson_group: lesson_group, name: 'ai lesson display name', has_lesson_plan: true)
 
@@ -25,8 +24,8 @@ class Api::V1::TutorGalleryDataControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  test 'forbidden without lesson deep dive access' do
-    User.any_instance.stubs(:can_use_lesson_deep_dive?).returns(false)
+  test 'forbidden without lesson deep dive challenge access' do
+    User.any_instance.stubs(:can_use_lesson_deep_dive_challenges?).returns(false)
     sign_in @teacher
     get :show, params: {script_id: @ai_script.name, lesson_position: @ai_lesson.relative_position}
     assert_response :forbidden

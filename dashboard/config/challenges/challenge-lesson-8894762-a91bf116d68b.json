@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894762-a91bf116d68b",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 7: Exploring Data in AI",
+  "question": "You are an inspector with a clipboard. A chatbot made a claim, and you decide whether anyone should rely on it.\n\nSteps:\n1. Start recording. Pick one claim from the list below and read it out loud.\n2. Say what could go wrong if the claim is false.\n3. Name one specific place or person you would check with.\n4. Say what result would make you trust the claim, and what you would do if two sources disagreed.\n\nClaim list:\n- “A chatbot says: ‘Your school bus leaves at 7:10 a.m.’”\n- “A chatbot says: ‘The science fair is on Friday.’”\n- “A chatbot says: ‘It is safe to swim at this beach today.’”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not pick a claim or say anything about checking it."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says they would check it but names no specific place or person, or does not say what could go wrong if the claim is false."
+    },
+    {
+      "level": 2,
+      "description": "Student says what could go wrong if the claim is false AND names one specific place or person to check with."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says what result would make them trust the claim AND what they would do if two sources disagreed."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

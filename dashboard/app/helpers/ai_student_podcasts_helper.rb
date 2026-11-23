@@ -3,7 +3,7 @@ class StudentPodcastToxicityRetriesExceeded < StandardError; end
 
 module AiStudentPodcastsHelper
   ELEVENLABS_MODEL = "eleven_v3"
-  OPENAI_MODEL = SharedConstants::EVALUATE_STUDENT_LEARNING_MODEL_VERSION
+  OPENAI_MODEL = SharedConstants::LESSON_DEEP_DIVE_MODEL_VERSION
   PODCAST_FOLDER = 'student_podcasts/'
   VOICE_ID_DAN = "0sqkv877qKv8jUXFfsXj"
   VOICE_ID_SAM = "w7LY6CndrQObaTsPvYeB"
@@ -213,6 +213,7 @@ module AiStudentPodcastsHelper
 
       data = {
         model: @model,
+        reasoning_effort: 'none',
         messages: [{role: "system", content: prompt}],
         response_format: {
           type: "json_schema",
@@ -256,7 +257,7 @@ module AiStudentPodcastsHelper
   end
 
   def self.openai_client
-    OpenaiClient.new(CDO.openai_lesson_summaries_api_key, OPENAI_MODEL)
+    OpenaiClient.new(CDO.openai_lesson_deep_dive_api_key, OPENAI_MODEL)
   end
 
   # A podcast's content is determined entirely by its lesson and the set of

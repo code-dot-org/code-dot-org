@@ -126,9 +126,68 @@ class ApplicationJobTest < ActiveJob::TestCase
       assert_equal @expected_my_running_count, running_metric[:value]
       assert_nil worker_metric
       assert_nil idle_workers_percent_metric
+      assert(metrics.none? {|metric| metric[:dimensions].any? {|dimension| dimension[:name] == 'Priority'}})
     end
 
     ActiveJobMetrics.report_metrics(ApplicationJob.new, dimensions: [{name: 'Environment', value: CDO.rack_env}, {name: 'JobName', value: 'ApplicationJob'}])
+  end
+
+  test 'overall pending metrics distinguish priority bands without changing the environment total' do
+    Delayed::Job.delete_all
+    rows = [
+      {priority: -1},
+      {priority: 9},
+      {priority: 10},
+      {priority: 11, locked_at: @t, locked_by: 'worker'},
+      {priority: 10, locked_at: @t - 5.hours, locked_by: 'abandoned-worker'},
+      {priority: 9, run_at: @t + 1.day},
+      {priority: 10, run_at: @t + 1.day},
+      {priority: 9, failed_at: @t},
+      {priority: 10, failed_at: @t},
+    ].map do |attributes|
+      {handler: 'job', priority: 0, run_at: @t, failed_at: nil, locked_at: nil, locked_by: nil, created_at: @t, updated_at: @t}.merge(attributes)
+    end
+    Delayed::Job.insert_all(rows)
+    ActiveJobMetrics.stubs(:worker_count).returns(4)
+
+    Cdo::Metrics.expects(:push).with do |namespace, metrics|
+      assert_equal ActiveJobMetrics::METRICS_NAMESPACE, namespace
+      pending = metrics.select {|metric| metric[:metric_name] == 'PendingJobCount'}
+      assert_equal 3, pending.length
+      environment = [{name: 'Environment', value: CDO.rack_env}]
+      {nil => 5, 'high' => 2, 'low' => 3}.each do |band, count|
+        dimensions = band ? environment + [{name: 'Priority', value: band}] : environment
+        metric = pending.find {|candidate| candidate[:dimensions] == dimensions}
+        assert_equal count, metric.fetch(:value)
+        assert_equal 'Count', metric.fetch(:unit)
+        assert_kind_of Time, metric.fetch(:timestamp)
+      end
+      true
+    end
+
+    ActiveJobMetrics.report_overall_queue_metrics
+  end
+
+  test 'pending priority metrics publish zero for an empty band and after the queue drains' do
+    dimensions = [{name: 'Environment', value: CDO.rack_env}]
+    ActiveJobMetrics.stubs(:worker_count).returns(4)
+    published_metrics = []
+    Cdo::Metrics.expects(:push).twice.with do |namespace, metrics|
+      assert_equal ActiveJobMetrics::METRICS_NAMESPACE, namespace
+      published_metrics << metrics.select do |metric|
+        metric[:metric_name] == 'PendingJobCount' && metric[:dimensions].any? {|dimension| dimension[:name] == 'Priority'}
+      end
+      true
+    end
+
+    ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: dimensions, report_overall_metrics: true)
+    Delayed::Job.delete_all
+    ActiveJobMetrics.report_metrics(ActiveJobMetrics, dimensions: dimensions, report_overall_metrics: true)
+
+    assert_equal [4, 0], published_metrics.first.pluck(:value)
+    assert_equal [0, 0], published_metrics.last.pluck(:value)
+    assert_equal(['high', 'low'], published_metrics.last.map {|metric| metric[:dimensions].last[:value]})
+    assert_equal [{name: 'Environment', value: CDO.rack_env}], dimensions
   end
 
   test 'enqueued jobs log several metrics' do

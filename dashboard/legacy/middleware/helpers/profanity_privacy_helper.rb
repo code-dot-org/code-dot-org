@@ -79,24 +79,42 @@ def channel_main_json_body(channel_id)
   (result && result[:body]) || false
 end
 
+# Whether the error is the outside profanity service failing: a timeout, a
+# connection that cannot be made or is cut, an answer that is not JSON, or
+# the service's own error, which its client raises as a plain StandardError.
+def profanity_service_failure?(exception)
+  exception.instance_of?(StandardError) || [
+    Timeout::Error, SocketError, SystemCallError, IOError, OpenSSL::SSL::SSLError, Net::ProtocolError, JSON::ParserError
+  ].any? {|kind| exception.is_a?(kind)}
+end
+
 # Effectively private
 def share_failure_from_body(body, locale, project_type)
   return false unless body
   body_string = body.string
 
+  # A long stack of blocks nests two levels a block, so a structured source
+  # can run deeper than the parser's default of 100.
   begin
-    parsed_json = JSON.parse(body_string)
+    parsed_json = JSON.parse(body_string, max_nesting: DCDO.get('share_filtering_blockly_json_max_depth', ShareFiltering::JSON_MAX_DEPTH))
   rescue JSON::ParserError
     return false
   end
 
-  source = parsed_json['source']
+  source = ShareFiltering.whole_project_type?(project_type) ? parsed_json : parsed_json['source']
   return false unless source
 
   begin
     ShareFiltering.find_share_failure(source, locale, project_type)
   rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable
     # If WebPurify or Geocoder are unavailable, default to viewable
+    return false
+  rescue StandardError => exception
+    # Only a failure of the outside service is forgiven: a project must still
+    # load when the check cannot be made. Any other error is a fault in
+    # reading the project, and a project that cannot be read is not shown.
+    raise unless profanity_service_failure?(exception)
+    Observability::Errors.report(exception, context: {project_type: project_type, outcome: 'share filter unreachable; project treated as viewable'})
     return false
   end
 end

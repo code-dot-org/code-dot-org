@@ -2,10 +2,19 @@ import {generateText} from '@cdo/apps/aiGateway';
 import {
   fullPromptFor,
   generateImage,
+  GenerateImageOptions,
   pixelBlockFor,
   requestImage,
   styleClause,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
+import {
+  checkImageSafety,
+  checkPromptSafety,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety';
+import {
+  removeBackground,
+  removeKeyColor,
+} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/removeBackground';
 
 jest.mock('@cdo/apps/aiGateway', () => ({
   generateText: jest.fn(),
@@ -19,6 +28,21 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageSafety', () => ({
   markHandled: jest.fn(promise => promise),
 }));
 
+// The canvas steps cannot run in jsdom, so these tests check only which
+// step a picture is sent to.
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/removeBackground', () => {
+  // jsdom's Blob cannot be read back, so each step hands on a stand-in.
+  const pass = async () => ({arrayBuffer: async () => new ArrayBuffer(2)});
+  return {
+    ...jest.requireActual(
+      '@cdo/apps/p5lab/spritelab/lab2/ai/images/removeBackground'
+    ),
+    removeBackground: jest.fn(pass),
+    removeKeyColor: jest.fn(pass),
+    cropToContent: jest.fn(pass),
+  };
+});
+
 const mockGenerateText = generateText as jest.Mock;
 
 // A smooth-style background delivered as JPEG (no alpha) skips the canvas
@@ -28,6 +52,8 @@ const OPTIONS = {imageType: 'background', style: 'smooth'} as const;
 
 describe('generateImage', () => {
   beforeEach(() => {
+    (checkPromptSafety as jest.Mock).mockClear();
+    (checkImageSafety as jest.Mock).mockClear();
     mockGenerateText.mockReset();
     mockGenerateText.mockResolvedValue({
       files: [{mediaType: 'image/jpeg', uint8Array: new Uint8Array([1, 2, 3])}],
@@ -92,6 +118,87 @@ describe('generateImage', () => {
     await generateImage('a beach', OPTIONS);
     expect(mockGenerateText.mock.calls[0][0].providerOptions).toEqual({
       google: {imageConfig: {aspectRatio: '1:1', imageSize: '1K'}},
+    });
+  });
+
+  it('takes a cached picture in place of the model, with its own record', async () => {
+    const cached = {
+      variant: 1,
+      characterSet: false,
+      raw: jest.fn(async () => ({
+        mediaType: 'image/jpeg',
+        uint8Array: new Uint8Array([5, 6]),
+        base64: 'BQY=',
+      })),
+    } as unknown as NonNullable<GenerateImageOptions['cached']>;
+    const result = await generateImage('a beach', {
+      ...OPTIONS,
+      seed: 1,
+      temperature: 2,
+      cached,
+    });
+    expect(mockGenerateText).not.toHaveBeenCalled();
+    expect(checkPromptSafety).not.toHaveBeenCalled();
+    expect(checkImageSafety).not.toHaveBeenCalled();
+    expect(cached.raw).toHaveBeenCalledWith('single');
+    expect(Array.from(result.uint8Array)).toEqual([5, 6]);
+    expect(result.generation).toMatchObject({prompt: 'a beach', variant: 1});
+    expect(result.generation.seed).toBeUndefined();
+    expect(result.generation.temperature).toBeUndefined();
+  });
+
+  describe('a cached sprite', () => {
+    const cachedSprite = (characterSet: boolean) =>
+      ({
+        variant: 1,
+        characterSet,
+        raw: jest.fn(async () => ({
+          mediaType: 'image/png',
+          uint8Array: new Uint8Array([5, 6]),
+          base64: 'BQY=',
+        })),
+      } as unknown as NonNullable<GenerateImageOptions['cached']>);
+    const SPRITE = {imageType: 'sprite', style: 'smooth'} as const;
+
+    beforeEach(() => {
+      (removeBackground as jest.Mock).mockClear();
+      (removeKeyColor as jest.Mock).mockClear();
+    });
+
+    it("has a character set's key color removed wherever it sits", async () => {
+      await generateImage('A spooky robot wearing a hat', {
+        ...SPRITE,
+        cached: cachedSprite(true),
+      });
+      expect(removeKeyColor).toHaveBeenCalledWith(
+        expect.anything(),
+        [255, 0, 255],
+        {soft: true}
+      );
+      expect(removeBackground).not.toHaveBeenCalled();
+    });
+
+    it('uses the green key for a set whose prompt names a purple character', async () => {
+      await generateImage('A purple fairy', {
+        ...SPRITE,
+        cached: cachedSprite(true),
+      });
+      expect(removeKeyColor).toHaveBeenCalledWith(
+        expect.anything(),
+        [0, 255, 0],
+        {soft: true}
+      );
+    });
+
+    it('is filled from the corner when it is a single picture', async () => {
+      await generateImage('A treasure chest', {
+        ...SPRITE,
+        cached: cachedSprite(false),
+      });
+      expect(removeBackground).toHaveBeenCalledWith(expect.anything(), {
+        soft: true,
+      });
+      expect(removeKeyColor).not.toHaveBeenCalled();
     });
   });
 

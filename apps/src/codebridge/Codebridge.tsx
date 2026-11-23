@@ -18,7 +18,7 @@ import {useAiChatDisabledState} from '@cdo/apps/aichat/hooks/useAiChatDisabledSt
 import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import type {JsonVideoFileMetadata} from '@cdo/apps/jsonVideo/jsonVideoPrompt';
-import {aiTutorModelId} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
+import {aiTutorModelParametersFor} from '@cdo/apps/lab2/ai/ai-tutor-model-id';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {useFlaggedImage} from '@cdo/apps/lab2/hooks/useFlaggedImage';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
@@ -90,13 +90,17 @@ export const Codebridge = React.memo(
     const hasSubmittedPredictResponse = useAppSelector(
       state => state.predictLevel.hasSubmittedResponse
     );
-    const {disabled: aiTutorDisabled} = useAiChatDisabledState({
+    const {disabled: aiTutorDisabledByAccess} = useAiChatDisabledState({
       appName,
       clientType: AiChatClientTypes.AI_TUTOR,
-      selectedModelId: aiTutorModelId,
+      selectedModelId: aiTutorModelParametersFor(
+        levelProperties.aiTutorModelParameters
+      ).selectedModelId,
       isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
       hasSubmittedPredictResponse,
     });
+    const aiTutorDisabled =
+      !!levelProperties.hideAiTutor || aiTutorDisabledByAccess;
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).

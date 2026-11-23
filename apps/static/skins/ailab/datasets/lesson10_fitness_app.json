@@ -1,0 +1,46 @@
+{
+  "name": "lesson10_fitness_app",
+  "card": {
+    "description": "Days logged by students using the StepStreak fitness app. Each day is labeled Active Day or Rest Day. Data comes from each phone's step counter, which tracks steps, walking minutes, and floors climbed. Students also wrote down what they did that day.",
+    "source": "Created for AI Discoveries, Lesson 10",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "Code.org AI Discoveries",
+      "potentialUses": "Predict whether a day was an Active Day or a Rest Day, to keep a student's activity streak going."
+    }
+  },
+  "defaultLabelColumn": "Day Type",
+  "defaultIdColumn": "ID",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "ID",
+      "description": "An ID for each row of data."
+    },
+    {
+      "type": "categorical",
+      "id": "Activity Type",
+      "description": "What the student said they did that day."
+    },
+    {
+      "type": "numerical",
+      "id": "Steps",
+      "description": "Steps counted by the phone."
+    },
+    {
+      "type": "numerical",
+      "id": "Walking Minutes",
+      "description": "Minutes the phone counted as walking."
+    },
+    {
+      "type": "numerical",
+      "id": "Floors Climbed",
+      "description": "Floors the phone counted as climbed."
+    },
+    {
+      "type": "categorical",
+      "id": "Day Type",
+      "description": "Whether the day was an Active Day or a Rest Day."
+    }
+  ]
+}

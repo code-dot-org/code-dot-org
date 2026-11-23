@@ -1,0 +1,84 @@
+name 'pl-aif-y2-u2-l5-facilitate-feature-label'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Building Classifiers
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Exploring Nearest Neighbors:</strong> students find Today's nearest past day by hand using the Activity Guide, using the majority label among three neighbors</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Nearest Neighbors Classification (Levels 1-4):</strong> students run a program with two features, change Today's values, then change how many neighbors are considered</div>
+  </div>
+</div>
+
+<hr>
+
+## Watch for, Level 1: Finding the Prediction on the Plot
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Where to look:</strong> the prediction appears two places, in the plot's title, and along the dashed lines connecting Today to the neighbors it used. If a student can't find it, point them to both.
+  </div>
+</div>
+
+## Watch for, Level 2: Not Connecting Feature Changes to the Prediction
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Changes Values, Doesn't Notice Why</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Edits snowfall or traffic, reruns the program, and reports the new prediction, without connecting it back to which neighbors are now closest.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Traces the Mechanism</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Notices that moving Today toward one group of points on the plot is exactly why the prediction changed.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Where did Today move to on the plot? Which past days does it sit closest to now?"</div>
+</div>
+
+## Watch for, Level 3: Assuming More Neighbors Is Always Better
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: More Is Always Better</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Sets the neighbor count as high as possible, assuming more data means a more reliable prediction.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Tests a Range</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Tries a small number (2-3) and a large number (10+), and notices the prediction can get worse, not better, as neighbors increase.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Language to borrow:</strong>
+  </div>
+  <div style="font-size: 16px; color: #222222;">&bull; "What happens to the plot as you change the number of neighbors? Does the prediction stay stable, or does it flip?"</div>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; The real mechanism:</strong> at some point, a large neighbor count starts pulling in points that aren't actually similar to Today, you lose the signal in the noise. If students are stuck, have them compare predictions at a small k versus a very large one directly.
+  </div>
+</div>
+
+## Assessment: Level 4 Check for Understanding
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; What a strong answer needs:</strong> most students should explain that nearest neighbors predicts a label by finding the most similar past example(s), and show evidence they actually tried different neighbor counts, not just accepted the first result. If students struggle to reason about neighbor count, send them back to Level 3 and have them directly compare a small count (2-3) against a large one (10+).
+  </div>
+</div>
+MARKDOWN

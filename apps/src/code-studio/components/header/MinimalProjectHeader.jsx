@@ -14,6 +14,8 @@ class MinimalProjectHeader extends React.Component {
     inRestrictedShareMode: PropTypes.bool,
     isBlockedAbuse: PropTypes.bool,
     exceedsAbuseThreshold: PropTypes.bool,
+    onChangedWidth: PropTypes.func,
+    isBlockedShareFailure: PropTypes.bool,
   };
 
   render() {
@@ -21,13 +23,18 @@ class MinimalProjectHeader extends React.Component {
       inRestrictedShareMode,
       isBlockedAbuse,
       exceedsAbuseThreshold,
+      isBlockedShareFailure,
       legacyProjectName,
       lab2ProjectName,
+      onChangedWidth,
     } = this.props;
     // Only one of legacyProjectName and lab2ProjectName will be defined.
     const projectName = legacyProjectName || lab2ProjectName;
     const remixBlocked =
-      inRestrictedShareMode || isBlockedAbuse || exceedsAbuseThreshold;
+      inRestrictedShareMode ||
+      isBlockedAbuse ||
+      exceedsAbuseThreshold ||
+      isBlockedShareFailure;
 
     return (
       <div style={{display: 'flex'}}>
@@ -39,7 +46,7 @@ class MinimalProjectHeader extends React.Component {
             </div>
           )}
         </div>
-        <ProjectRemix />
+        <ProjectRemix onChangedWidth={onChangedWidth} />
       </div>
     );
   }
@@ -52,5 +59,10 @@ export default connect(state => ({
   isBlockedAbuse: !!(state.lab && state.lab.isBlockedAbuse),
   exceedsAbuseThreshold: !!(
     state.project && state.project.exceedsAbuseThreshold
+  ),
+  isBlockedShareFailure: !!(
+    state.lab &&
+    state.lab.shareFailure &&
+    !(state.lab.channel && state.lab.channel.isOwner)
   ),
 }))(MinimalProjectHeader);

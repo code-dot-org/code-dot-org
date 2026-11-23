@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T15:21:44.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Curiosities",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice2-2026 + template",
+    "long_instructions": "**☑️ Do This:**\r\n\r\n- Read the starter code provided to you. Ask AI Tutor to explain any parts you don’t yet understand.\r\n- Complete the `tokenize` function to tokenize the text in your corpus. Treat words and punctuation as separate tokens.\r\n\r\n**💻 Coding Tip**\r\n\r\nRemember that `r\"\\w+|[^\\w\\s]\"` is a regular expression that can tokenize both words and punctuation separately. Ask AI Tutor if you need to remember how to use it.\r\n",
+    "bubble_choice_description": "A collection of curious questions about astronomy.",
+    "thumbnail_url": "https://images.code.org/66e12643e21f09882edcfa73d19df1a7-curiosities.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+        "hint": "If a student is wondering how to tokenize words using a regular expression, suggest `re.findall` as opposed to other methods. They have only learned to use `re.findall`."
+      }
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 15:26:41 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:27:26 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:27:41 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

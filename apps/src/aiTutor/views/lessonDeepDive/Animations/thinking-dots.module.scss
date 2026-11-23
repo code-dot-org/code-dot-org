@@ -1,0 +1,239 @@
+$beat: 1.2s;
+// Delay before the first dot and the T start hopping.
+$first-hop: 0.8s;
+// From the sparkle's center down to the dots' center.
+$drop-y: 2.77px;
+// One dot's size over the sparkle's size.
+$dot-scale: 0.234;
+
+.icon {
+  color: var(--sentiment-information-50);
+  // Overrides Bootstrap normalize's `svg:not(:root) { overflow: hidden }`.
+  overflow: visible !important;
+}
+
+.sparkle,
+.slot {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+// Squash and stretch from the baseline.
+.dot,
+.t {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+}
+
+.slot {
+  transform: scale(0);
+}
+
+.thinking {
+  .sparkle {
+    animation: drop 0.45s both;
+  }
+
+  .slot {
+    animation: emerge 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.36s both;
+  }
+}
+
+// The bounce carries into 'ready' so nothing jumps mid-hop.
+.thinking,
+.ready {
+  .dot {
+    animation: bounce $beat ease-in-out infinite backwards;
+    animation-delay: calc(#{$first-hop} + var(--stagger));
+  }
+
+  .t {
+    animation: t-hop $beat ease-in-out $first-hop infinite backwards;
+  }
+}
+
+.ready {
+  .slot {
+    animation: merge 0.4s ease-in-out both;
+  }
+
+  .sparkle {
+    animation: pop 0.8s 0.3s both;
+  }
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    animation-timing-function: ease-out;
+  }
+  20% {
+    transform: translate(0, 0) rotate(-10deg) scale(1.1, 0.9);
+    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  }
+  80% {
+    transform: translate(0, $drop-y) rotate(90deg) scale($dot-scale);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, $drop-y) rotate(90deg) scale($dot-scale);
+    opacity: 0;
+  }
+}
+
+@keyframes emerge {
+  0% {
+    transform: translateX(var(--from-x)) scale(0.7);
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-1.3px) scale(1);
+  }
+  42% {
+    transform: translateY(0) scale(1.15, 0.85);
+  }
+}
+
+@keyframes t-hop {
+  0%,
+  60%,
+  100% {
+    transform: none;
+  }
+  25% {
+    transform: translateY(-0.6px) scale(0.97, 1.04);
+  }
+  42% {
+    transform: scale(1.05, 0.93);
+  }
+}
+
+@keyframes merge {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: translateX(var(--from-x)) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(var(--from-x)) scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: translate(0, $drop-y) rotate(-90deg) scale($dot-scale);
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slot-in {
+  from {
+    transform: none;
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes slot-out {
+  from {
+    transform: none;
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0%,
+  60%,
+  100% {
+    opacity: 0.35;
+  }
+  25% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thinking {
+    .sparkle {
+      animation: fade-out 0.3s ease-out both;
+    }
+
+    .slot {
+      animation: slot-in 0.3s ease-out 0.2s both;
+    }
+  }
+
+  .thinking,
+  .ready {
+    .dot {
+      animation: glow $beat ease-in-out infinite backwards;
+      animation-delay: calc(0.5s + var(--stagger));
+    }
+
+    .t {
+      animation: none;
+    }
+  }
+
+  .ready {
+    .slot {
+      animation: slot-out 0.3s ease-in both;
+    }
+
+    .sparkle {
+      animation: fade-in 0.3s ease-out 0.2s both;
+    }
+  }
+}

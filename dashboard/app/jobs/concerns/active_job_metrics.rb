@@ -197,6 +197,22 @@ module ActiveJobMetrics
         }
       ]
       metrics.concat(overall_metrics)
+
+      jobs = job_class.pending_jobs
+      priorities = {
+        'high' => jobs.where('priority < 10'),
+        'low' => jobs.where('priority >= 10'),
+      }
+      timestamp = Time.now
+      priorities.each do |priority, priority_jobs|
+        metrics << {
+          metric_name: 'PendingJobCount',
+          value: priority_jobs.count,
+          unit: 'Count',
+          timestamp: timestamp,
+          dimensions: dimensions + [{name: 'Priority', value: priority}],
+        }
+      end
     end
 
     Cdo::Metrics.push(METRICS_NAMESPACE, metrics)
@@ -225,18 +241,7 @@ module ActiveJobMetrics
     # Log wait times only for jobs that were enqueued
     return if enqueued_at.nil?
 
-    # In Rails 7.1, `enqueued_at` was changed from an ISO8601 String to a Time
-    # object and so no longer needs to be parsed.
-    # See: https://github.com/rails/rails/blob/7-1-stable/activejob/CHANGELOG.md#rails-710rc1-september-27-2023
-    # TODO infra: simplify this once we've fully updated to Rails 7.1
-    @enqueued_or_started_at =
-      if Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 0
-        Time.parse(enqueued_at)
-      elsif Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 1
-        enqueued_at
-      else
-        throw "remove this temporary transitional logic before upgrading beyond Rails 7.1"
-      end
+    @enqueued_or_started_at = enqueued_at
     wait_time = @perform_started_at - @enqueued_or_started_at
 
     Cdo::Metrics.push(

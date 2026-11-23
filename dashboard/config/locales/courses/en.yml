@@ -7650,3 +7650,33 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: ''
+        ai-makerspace-2026:
+          title: AI Makerspace
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        adaptive-dev:
+          title: adaptive-dev
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        quest-builder-2026:
+          title: Quest Builder
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        decision-tree-beta-test:
+          title: decision-tree-beta-test
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csp-pilot-2026:
+          title: "[PILOT] AP Computer Science Principles"
+          description_short: This course reimagines AP Computer Science Principles with Python as the primary language, weaving AI concepts and tools throughout rather than treating them as an add-on. Students write, test, and refine Python programs while learning to use AI to support problem-solving, algorithm design, and debugging — always examining AI’s limitations, biases, and ethical implications alongside their own code. Through required AI Labs, a culminating AI Design Project, and an updated Code Create Project, students build foundational programming and computational thinking skills while learning to collaborate thoughtfully with AI as a tool, not a shortcut.
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

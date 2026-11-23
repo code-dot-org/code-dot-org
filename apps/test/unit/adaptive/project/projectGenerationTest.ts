@@ -1,6 +1,7 @@
 import {
   GENERATION_TRACE_KEY,
   applyGeneratedFiles,
+  differsFromTemplate,
   editableFiles,
   generationTraceId,
 } from '@cdo/apps/adaptive/project/projectGeneration';
@@ -61,6 +62,54 @@ describe('editableFiles', () => {
   it('is empty for a single-source project', () => {
     expect(editableFiles({source: 'print(1)'})).toEqual([]);
     expect(editableFiles(undefined)).toEqual([]);
+  });
+});
+
+describe('differsFromTemplate', () => {
+  const files = (sources.source as {files: object}).files;
+  const withFiles = (changes: object): ProjectSources => ({
+    source: {folders: {}, files: {...files, ...changes}},
+  });
+
+  it('is false for the template itself', () => {
+    expect(differsFromTemplate(withFiles({}), sources)).toBe(false);
+  });
+
+  it('is true when an editable file changed', () => {
+    const edited = withFiles({
+      '1': {
+        id: '1',
+        name: 'index.html',
+        contents: '<h1>Dogs</h1>',
+        folderId: '0',
+      },
+    });
+    expect(differsFromTemplate(edited, sources)).toBe(true);
+  });
+
+  it('is true when an editable file was added', () => {
+    const added = withFiles({
+      '7': {id: '7', name: 'new.html', contents: '', folderId: '0'},
+    });
+    expect(differsFromTemplate(added, sources)).toBe(true);
+  });
+
+  it('ignores files the student cannot edit', () => {
+    const hidden = withFiles({
+      '4': {
+        id: '4',
+        name: 'check.js',
+        contents: 'changed()',
+        folderId: '0',
+        type: ProjectFileType.VALIDATION,
+      },
+    });
+    expect(differsFromTemplate(hidden, sources)).toBe(false);
+  });
+
+  it('is true against a missing template, and false between single sources', () => {
+    expect(differsFromTemplate(sources, undefined)).toBe(true);
+    expect(differsFromTemplate({source: 'a'}, {source: 'b'})).toBe(false);
   });
 });
 

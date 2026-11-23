@@ -359,6 +359,30 @@ const EVENTS = {
   LESSON_TUTOR_UNIT_OVERVIEW_CLICK: 'Lesson Tutor Unit Overview Click',
   LESSON_TUTOR_PROGRESS_BUBBLE_CLICK: 'Lesson Tutor Progress Bubble Click',
 
+  // Tutor+
+  TUTOR_PLUS_OPENED: 'tutor_plus_opened',
+  TUTOR_PLUS_RECAP_CARD_VIEWED: 'tutor_plus_recap_card_viewed',
+  TUTOR_PLUS_OBJECTIVE_RATED: 'tutor_plus_objective_rated',
+  TUTOR_PLUS_REFLECTION_SUBMITTED: 'tutor_plus_reflection_submitted',
+  TUTOR_PLUS_NEXT_STEP_CHOSEN: 'tutor_plus_next_step_chosen',
+  TUTOR_PLUS_PRACTICE_MODALITY_SELECTED:
+    'tutor_plus_practice_modality_selected',
+  TUTOR_PLUS_CHAT_MESSAGE_SENT: 'tutor_plus_chat_message_sent',
+  TUTOR_PLUS_PRACTICE_DONE: 'tutor_plus_practice_done',
+  TUTOR_PLUS_PRACTICE_NEXT_CHOSEN: 'tutor_plus_practice_next_chosen',
+  TUTOR_PLUS_SKILLS_CHECK_STARTED: 'tutor_plus_skills_check_started',
+  TUTOR_PLUS_SKILLS_CHECK_ANSWERED: 'tutor_plus_skills_check_answered',
+  TUTOR_PLUS_SKILLS_CHECK_COMPLETED: 'tutor_plus_skills_check_completed',
+  TUTOR_PLUS_CHALLENGE_TYPE_SELECTED: 'tutor_plus_challenge_type_selected',
+  TUTOR_PLUS_CHALLENGE_STARTED: 'tutor_plus_challenge_started',
+  TUTOR_PLUS_CHALLENGE_RESTARTED: 'tutor_plus_challenge_restarted',
+  TUTOR_PLUS_CHALLENGE_SUBMITTED: 'tutor_plus_challenge_submitted',
+  TUTOR_PLUS_CHALLENGES_TOGGLED: 'tutor_plus_challenges_toggled',
+  TUTOR_PLUS_GALLERY_VIEWED: 'tutor_plus_gallery_viewed',
+  TUTOR_PLUS_GALLERY_VISIBILITY_TOGGLED:
+    'tutor_plus_gallery_visibility_toggled',
+  TUTOR_PLUS_GALLERY_REACTION_ADDED: 'tutor_plus_gallery_reaction_added',
+
   // Javalab
   JAVALAB_TEST_BUTTON_CLICK: 'Javalab Test Button Clicked',
   JAVALAB_TEST_PASSED: 'Javalab Test Passed',
@@ -452,11 +476,17 @@ const EVENTS = {
   ACCEPT_FLAGGED_CUSTOM_IMAGE:
     'User accepts and uploads a flagged custom image',
   CANCEL_FLAGGED_CUSTOM_IMAGE: 'User cancels upload of flagged custom image',
+  SIGNED_OUT_FLAGGED_CUSTOM_IMAGE:
+    'Signed out user cannot upload a flagged custom image',
 
   // Sprite Lab in Lab2 image generation
   HOAI2026_IMAGE_PROMPT: 'hoai2026-image-prompt',
   HOAI2026_IMAGE_VERDICT: 'hoai2026-image-verdict',
   HOAI2026_IMAGE_VERDICT_REASON: 'hoai2026-image-verdict-reason',
+  HOAI2026_IMAGE_DRAW: 'hoai2026-image-draw',
+  HOAI2026_LEVEL_COMPLETE: 'hoai2026-level-complete',
+  HOAI2026_LEVEL_SESSION_END: 'hoai2026-level-session-end',
+  HOAI2026_FINISH_DIALOG: 'hoai2026-finish-dialog',
 
   // Moderate model output image
   MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',
@@ -570,6 +600,7 @@ const EVENTS = {
 
   // AI Chat Access Control Settings
   AI_CHAT_SECTION_ACCESS_LEVEL_UPDATED: 'AI Chat section access level updated',
+  AI_CHALLENGE_SECTION_ENABLED_UPDATED: 'AI Challenge section enabled updated',
 
   // Measures of learning
   AI_SUMMARY_FRQ_PAGE_USER_FEEDBACK:
@@ -748,11 +779,49 @@ const EVENTS = {
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
 
+  // AI Foundations callout
+  AI_FOUNDATIONS_CALLOUT_CLICKED: 'AI Foundations Callout Clicked',
+  AI_FOUNDATIONS_CALLOUT_DISMISSED: 'AI Foundations Callout Dismissed',
+
   // Pair programming
   PAIRING_ADD_PARTNER_BUTTON_CLICKED:
     'Add pair programming partner button clicked',
   PAIRING_STOP_PAIR_PROGRAMMING_BUTTON_CLICKED:
     'Stop pair programming button clicked',
+
+  // Adaptive levels
+  ADAPTIVE_PATHWAY_LOADED: 'Adaptive Pathway Loaded',
+  ADAPTIVE_SKILL_MAP_VIEWED: 'Adaptive Skill Map Viewed',
+  ADAPTIVE_SKILL_MAP_HEADER_BUTTON_CLICKED:
+    'Adaptive Skill Map Header Button Clicked',
+  ADAPTIVE_SKILL_MAP_CHECKPOINT_SELECTED:
+    'Adaptive Skill Map Checkpoint Selected',
+  ADAPTIVE_PRODUCT_TOUR_STARTED: 'Adaptive Product Tour Started',
+  ADAPTIVE_PRODUCT_TOUR_COMPLETED: 'Adaptive Product Tour Completed',
+  ADAPTIVE_PRODUCT_TOUR_DISMISSED: 'Adaptive Product Tour Dismissed',
+  ADAPTIVE_CHECKPOINT_STARTED: 'Adaptive Checkpoint Started',
+  ADAPTIVE_CHECKPOINT_RESUMED: 'Adaptive Checkpoint Resumed',
+  ADAPTIVE_CHECKPOINT_REVIEWED: 'Adaptive Checkpoint Reviewed',
+  ADAPTIVE_SKIPPED_CHECKPOINT_OPENED: 'Adaptive Skipped Checkpoint Opened',
+  ADAPTIVE_CHECKPOINT_COMPLETED: 'Adaptive Checkpoint Completed',
+  ADAPTIVE_ROUTING_SKIPPED_CHECKPOINT: 'Adaptive Routing Skipped Checkpoint',
+  ADAPTIVE_STEP_STARTED: 'Adaptive Step Started',
+  ADAPTIVE_STEP_COMPLETED: 'Adaptive Step Completed',
+  ADAPTIVE_MULTIPLE_CHOICE_QUESTION_ANSWERED:
+    'Adaptive Multiple Choice Question Answered',
+  ADAPTIVE_FREE_RESPONSE_ANSWERED: 'Adaptive Free Response Answered',
+  ADAPTIVE_FINAL_PROJECT_BUTTON_CLICKED:
+    'Adaptive Final Project Button Clicked',
+  ADAPTIVE_CONGRATS_LINK_CLICKED: 'Adaptive Congrats Link Clicked',
+  ADAPTIVE_FIRST_PROMPT_SUBMITTED: 'Adaptive First Prompt Submitted',
+  ADAPTIVE_PROJECT_GENERATED: 'Adaptive Project Generated',
+  ADAPTIVE_INSTRUCTIONS_GENERATED: 'Adaptive Instructions Generated',
+  ADAPTIVE_WORK_VALIDATION_PASSED: 'Adaptive Work Validation Passed',
+  ADAPTIVE_WORK_VALIDATION_FAILED: 'Adaptive Work Validation Failed',
+  ADAPTIVE_EFFORT_CHECK_PASSED: 'Adaptive Effort Check Passed',
+  ADAPTIVE_EFFORT_CHECK_FAILED: 'Adaptive Effort Check Failed',
+  ADAPTIVE_CONTINUE_UNLOCKED: 'Adaptive Continue Unlocked',
+  ADAPTIVE_AI_STATIC_FALLBACK_USED: 'Adaptive AI Static Fallback Used',
 
   // Teacher and Permanent promotion events
   PROMOTION_CLICKED: 'Promotion Clicked',

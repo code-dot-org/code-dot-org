@@ -1,0 +1,61 @@
+name 'pl-aif-y2-u2-l2-what-is-ML-facilitation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating "What Is Machine Learning?"
+
+## What's Actually Happening in This Lesson
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">1</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Cat or Dog? warm-up:</strong> students vote on doodles, then try and fail to write rules that reliably tell them apart</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">2</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Introduction to Machine Learning:</strong> the gather-train-predict process, introduced conceptually before any coding</div>
+  </div>
+  <div style="display: flex; align-items: flex-start; gap: 12px;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 12px; width: 24px; height: 24px; min-width: 24px; border-radius: 6px; display: flex; align-items: center; justify-content: center;">3</div>
+    <div style="font-size: 16px; line-height: 1.5;"><strong>Doodle Identifier (Levels 1-2):</strong> students pick two categories of their own choosing, draw several examples of each as training data, train a model on those drawings, then test it on new drawings, before completing a Check for Understanding on ML vs. logic-based AI</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> before students try this on their own, the guide recommends demoing it yourself with a simple, reliable example: call the two categories "Circle" and "Square," quickly draw a few of each, train the model live, then show the class it can tell them apart. High success rate, fast to set up, gives students a clear model of the process before they pick their own (often trickier) categories.</div>
+</div>
+</div>
+
+<hr>
+
+## Watch for: Training Issues
+
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #611D00; line-height: 1.5;"><strong>&#9888; "It's stuck":</strong> training can genuinely take 2-40 seconds, especially on slower machines. Reassure students it will finish, this isn't a bug.</div>
+</div>
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: "It's Broken"</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">The model doesn't recognize a new drawing, student assumes something is wrong with the Doodle Identifier itself.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Checks the Data</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">"A model is only as powerful as its training data." Either the new drawing doesn't resemble what it trained on, or the drawing is too complex for this small model.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Language to borrow:</strong></div>
+  <div style="font-size: 16px; color: #222222;">&bull; "Does your new drawing look like the examples you trained it on, or is it pretty different?"</div>
+</div>
+
+## Assessment: ML vs. Logic-Based AI
+
+Level 2's Check for Understanding asks students to evaluate their Doodle Identifier and explain how machine learning differs from logic-based AI, the real formative assessment for this lesson.
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;"><strong>&#8505; Strong answer, verbatim from the guide:</strong> these are two fundamentally different paradigms for building AI systems, one involves writing rules in advance, the other involves selecting data from which a machine could infer rules.</div>
+</div>
+MARKDOWN

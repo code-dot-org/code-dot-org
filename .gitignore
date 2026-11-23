@@ -117,6 +117,9 @@ CLAUDE.local.md
 .agents/**/*.local.*
 .agents/skills/*.local
 
+# figma-pixel-parity: per-task recipes and captures.
+.agents/skills/figma-pixel-parity/work/
+
 # playwright-best-practices: managed by skills-lock.json, not vendored.
 # Restore with `npx skills experimental_install` (see e2e-tests/README.md).
 .agents/skills/playwright-best-practices/

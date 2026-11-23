@@ -160,7 +160,11 @@ class SpritelabInput extends React.Component {
     }
 
     return (
-      <div id="spritelabInputArea" style={styles.container}>
+      <div
+        id="spritelabInputArea"
+        data-notranslate="true"
+        style={styles.container}
+      >
         <div style={styles.prompt}>
           {numPrompts > 1 && (
             <span style={styles.circle} className="fa-stack">

@@ -75,6 +75,7 @@ interface AnalyticsData {
     | 'AnimationPicker'
     | 'AssetManager'
     | 'SketchLab'
+    | 'SpriteLab2'
     | 'ImageURLInput'
     | 'n/a';
   moderateEvent?: string;

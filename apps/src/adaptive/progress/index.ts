@@ -2,4 +2,4 @@
 // live in their own files so none of them needs this barrel.
 
 export * from './model';
-export {STATUS_LABELS, useProgress} from './useProgress';
+export {useProgress} from './useProgress';

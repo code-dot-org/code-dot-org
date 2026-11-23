@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894905-5c1ec6c14c83",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 4: Smart or Just Predictable?",
+  "question": "This band doesn’t exist. The AI wrote a full biography anyway, with a quote from the singer. Find the details it made up, and figure out which one would fool you.\n\nSteps:\n1. Use the shape tool to mark 4 details the AI invented.\n2. Use the arrow tool to point at the one most likely to fool someone.\n3. Record your voice finishing this sentence: “The AI wrote this because every band biography has ___, so it ___.”",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape or arrow is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places fewer than 3 shapes on invented details, OR places no arrow."
+    },
+    {
+      "level": 2,
+      "description": "Three shapes are on invented details (the name, the 1923 date, the book, the award, or the 1931 date) AND the arrow points to \"Who invented\" in the question AND the voice recording says the AI followed a familiar pattern."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that the AI predicts likely text and does not check whether the band exists AND names a way to verify it (such as searching official sources) and what the result would be."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894905-5c1ec6c14c83-69a62164",
+  "whiteboard_starter_image_alt_text": "A chat where someone asks, \"Tell me about the band Static Orchard.\" The AI answers: \"Static Orchard is an indie rock band formed in 2016 in Austin, Texas. Their debut album, Neon Tides, came out in 2018 and sold over 2 million copies. In 2019, the band won Best New Act at the Silver Note Awards. Lead singer Mara Velez says: 'We write songs for the people who stay up late.'\" A fact check box at the bottom says \"Static Orchard is not a real band.\""
+}

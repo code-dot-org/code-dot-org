@@ -1,0 +1,15 @@
+{
+  "key": "aif-l07-exact-details-not-proof",
+  "description": "Find out why exact names and numbers in an AI answer aren't proof, and how to fact-check them.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l07-exact-details-not-proof.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "281c3a05-dbea-489c-b485-2a9cee46a1e7",
+    "bc93eee0-d7fd-43c8-838e-e14489b53d4e",
+    "2388f0dd-1c66-4df3-b4bc-2a109deb77ff"
+  ]
+}

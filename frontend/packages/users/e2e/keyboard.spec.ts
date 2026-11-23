@@ -45,7 +45,7 @@ test('a disconnect blocked for want of another login says why', async ({
   });
   await expect(disconnect).toBeDisabled();
   await expect(disconnect).toHaveAccessibleDescription(
-    /add a password or another linked account/,
+    /Add a password or another linked account/,
   );
 });
 
@@ -161,6 +161,25 @@ test('critical flows work at 400% zoom (320px reflow) without horizontal scroll'
   await expect(page.getByRole('dialog', {name: /update email/i})).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(page.getByRole('dialog')).toBeHidden();
+});
+
+test('the Update email dialog asks for the current password when the account has one', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'teacher');
+  await page.getByRole('button', {name: 'Update email'}).click();
+  const dialog = page.getByRole('dialog', {name: /update email/i});
+  await expect(dialog.getByLabel('Current password')).toBeVisible();
+});
+
+test('the Update email dialog asks for no password on a provider-only account', async ({
+  page,
+}) => {
+  await gotoLoaded(page, 'sso-teacher');
+  await page.getByRole('button', {name: 'Update email'}).click();
+  const dialog = page.getByRole('dialog', {name: /update email/i});
+  await expect(dialog.getByLabel('New email')).toBeVisible();
+  await expect(dialog.getByLabel('Current password')).toHaveCount(0);
 });
 
 // DSCO Checkbox hides its real input as position:absolute/opacity:0 stretched

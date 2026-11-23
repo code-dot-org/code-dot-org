@@ -11,15 +11,17 @@ class Policies::Ai
     return false if user.nil?
     return false if script_level.nil?
 
-    sections = user.sections_as_student
-    return false if sections.empty?
+    ActiveRecord::Base.connected_to(role: :reading) do
+      sections = user.sections_as_student
+      return false if sections.empty?
 
-    # Get sections that contain the given script_level (or aren't related to any unit)
-    sections = sections.select {|s| s.script.nil? || s.script.try(:id) == script_level.script.id}
+      # Get sections that contain the given script_level (or aren't related to any unit)
+      sections = sections.select {|s| s.script.nil? || s.script.try(:id) == script_level.script.id}
 
-    # It is enabled if any of these sections have a teacher that has not opted-out
-    sections.any? do |section|
-      Policies::Ai.ai_rubrics_enabled?(section.user)
+      # It is enabled if any of these sections have a teacher that has not opted-out
+      sections.any? do |section|
+        Policies::Ai.ai_rubrics_enabled?(section.user)
+      end
     end
   end
 

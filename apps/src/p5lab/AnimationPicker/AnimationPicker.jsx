@@ -1,4 +1,4 @@
-import {MuiDialog as Dialog} from '@code-dot-org/component-library/dialog';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -280,16 +280,21 @@ class AnimationPicker extends React.Component {
       });
   };
 
-  handleCancelFlaggedImage = () => {
+  handleCancelFlaggedImage = (appName, isSignedOut) => {
     this.setState({
       showFlaggedModal: false,
       pendingUploadData: null,
       flaggedModalError: null,
     });
-    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
-      UploaderType: 'Animation Picker',
-      ProjectType: this.props.projectType,
-    });
+    analyticsReporter.sendEvent(
+      isSignedOut
+        ? EVENTS.SIGNED_OUT_FLAGGED_CUSTOM_IMAGE
+        : EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+      {
+        UploaderType: 'Animation Picker',
+        ProjectType: this.props.projectType,
+      }
+    );
     this.props.onClose(); // Close the entire AnimationPicker
   };
 

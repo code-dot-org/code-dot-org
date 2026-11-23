@@ -48,8 +48,8 @@ interface TabsProps extends TabModel {
   isSelected: boolean;
   /** Tab onClick handler */
   onClick: (value: string) => void;
-  /** The ID of the panel element that this tab controls */
-  tabPanelId: string;
+  /** The ID of the panel element that this tab controls. Omit when panels are hidden. */
+  tabPanelId: string | undefined;
   /** The ID of the button element (_Tab) */
   tabButtonId: string;
 }

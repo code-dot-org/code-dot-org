@@ -84,3 +84,13 @@ export function toolTitle(tool: (typeof TOOLS)[number]): string {
   }${tool.shortcut.toUpperCase()}`;
   return `${tool.label} (${combo})`;
 }
+
+/** The tool to hold once a color has been chosen. The eraser has no use
+    for a color, so choosing one hands over to the pen, where the pen is
+    offered. Any other tool stays. */
+export function toolAfterColorChoice(
+  tool: PixelTool,
+  offered: readonly PixelTool[]
+): PixelTool {
+  return tool === 'eraser' && offered.includes('pen') ? 'pen' : tool;
+}

@@ -9,9 +9,8 @@
 module PracticeProblemGenerator
   class OpenaiError < StandardError; end
 
-  # A pinned OpenAI model; this call is intentionally separate from the aichat
-  # model configuration.
-  MODEL = 'gpt-4o-mini-2024-07-18'.freeze
+  # Intentionally separate from the aichat model configuration.
+  MODEL = SharedConstants::LESSON_DEEP_DIVE_MODEL_VERSION
   DEFAULT_COUNT = 5
 
   TYPES = SharedConstants::PRACTICE_PROBLEM_TYPES
@@ -174,6 +173,7 @@ module PracticeProblemGenerator
           model: @model,
           messages: [{role: 'system', content: prompt}],
           response_format: {type: 'json_object'},
+          reasoning_effort: 'none',
           temperature: 0.7,
         }.to_json,
         open_timeout: DCDO.get('openai_http_open_timeout', 5),

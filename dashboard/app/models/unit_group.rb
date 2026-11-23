@@ -649,6 +649,12 @@ class UnitGroup < ApplicationRecord
     course_version
   end
 
+  # Mirrors Unit#lesson_tutor_available?; true if any default unit has the flag.
+  def lesson_tutor_available?
+    return false if pl_course?
+    default_units.any?(&:tutor_plus_available?)
+  end
+
   def has_pilot_experiment?(user)
     return false unless pilot_experiment
     SingleUserExperiment.enabled?(user: user, experiment_name: pilot_experiment)
@@ -715,12 +721,15 @@ class UnitGroup < ApplicationRecord
     default_units.sum(&:duration_in_minutes)
   end
 
+  # Memoized for the same reason as Unit#has_ai_chat_tools?.
   def has_ai_chat_tools?
-    default_units.with_ai_chat_tools.exists?
+    return @has_ai_chat_tools if defined?(@has_ai_chat_tools)
+    @has_ai_chat_tools = default_units.with_ai_chat_tools.exists?
   end
 
   def requires_ai_chat_tools?
-    default_units.with_essential_ai_chat_tools.exists?
+    return @requires_ai_chat_tools if defined?(@requires_ai_chat_tools)
+    @requires_ai_chat_tools = default_units.with_essential_ai_chat_tools.exists?
   end
 
   def requires_inaccessible_ai_models?(user)

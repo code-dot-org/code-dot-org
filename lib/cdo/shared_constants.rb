@@ -135,6 +135,7 @@ module SharedConstants
     thebadguys
     music
     pythonlab
+    quest_builder
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met.
@@ -748,7 +749,7 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2026.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2026_v2.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
@@ -756,6 +757,8 @@ module SharedConstants
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   STUDENT_SNAPSHOT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  # Tutor+ only. OpenAI publishes no dated snapshot of this model.
+  LESSON_DEEP_DIVE_MODEL_VERSION = 'gpt-6-luna'
 
   AI_EVALUATION_TYPES = {
     SINGLE_STUDENT: 'single_student',
@@ -871,6 +874,10 @@ module SharedConstants
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
     GEMINI_3_1_FLASH_IMAGE: "gemini-3.1-flash-image",
+    GPT_5_6_LUNA: "gpt-5.6-luna",
+    GPT_6_LUNA: "gpt-6-luna",
+    GEMINI_3_1_FLASH_LITE: "gemini-3.1-flash-lite",
+    GEMINI_3_5_FLASH_LITE: "gemini-3.5-flash-lite",
   }
 
   # Models served via the Google Gemini API. This is about routing — which
@@ -883,6 +890,8 @@ module SharedConstants
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_PRO],
     AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
     AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
+    AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_LITE],
+    AI_CHAT_MODEL_IDS[:GEMINI_3_5_FLASH_LITE],
   ].freeze
 
   AI_CHAT_PROVIDERS = {
@@ -892,7 +901,11 @@ module SharedConstants
 
   # Models absent here (Mistral, served from SageMaker) are never blocked.
   AI_CHAT_PROVIDER_BY_MODEL_ID = AI_CHAT_GEMINI_MODEL_IDS.to_h {|id| [id, AI_CHAT_PROVIDERS[:GOOGLE]]}.
-    merge(AI_CHAT_MODEL_IDS[:CHATGPT] => AI_CHAT_PROVIDERS[:OPENAI]).
+    merge(
+      AI_CHAT_MODEL_IDS[:CHATGPT] => AI_CHAT_PROVIDERS[:OPENAI],
+      AI_CHAT_MODEL_IDS[:GPT_5_6_LUNA] => AI_CHAT_PROVIDERS[:OPENAI],
+      AI_CHAT_MODEL_IDS[:GPT_6_LUNA] => AI_CHAT_PROVIDERS[:OPENAI],
+    ).
     freeze
 
   # Unavailable to users outside the US
@@ -903,6 +916,12 @@ module SharedConstants
     select {|_, provider| AI_CHAT_US_ONLY_PROVIDERS.include?(provider)}.
     keys.
     freeze
+
+  # Image models: the gateway has no fallback that produces images.
+  AI_CHAT_GEMINI_IMAGE_MODEL_IDS = [
+    AI_CHAT_MODEL_IDS[:GEMINI_2_5_FLASH_IMAGE],
+    AI_CHAT_MODEL_IDS[:GEMINI_3_1_FLASH_IMAGE],
+  ].freeze
 
   AI_CHAT_CLIENT_TYPES = {
     AI_CHAT_LAB: "ai-chat-lab",
@@ -931,6 +950,14 @@ module SharedConstants
     AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI] => 30,
   }
 
+  AI_GATEWAY_ACCESS_TOKEN_LIFETIME_SECONDS = 60
+
+  # Client types the gateway may serve from a fallback provider when the user's provider is blocked.
+  AI_GATEWAY_FALLBACK_CLIENT_TYPES = [
+    AI_CHAT_CLIENT_TYPES[:ADAPTIVE],
+    AI_CHAT_CLIENT_TYPES[:AI_TUTOR],
+  ].freeze
+
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
 
   AI_CHAT_TEACHER_FEEDBACK = {
@@ -947,6 +974,14 @@ module SharedConstants
     ENABLED: 'enabled',
     DISABLED: 'disabled',
     ESSENTIAL_ONLY: 'essential_only',
+  }.freeze
+
+  # Why the server refuses a user the Sprite Lab 2 ask AI blocks.
+  SPRITELAB_ASK_AI_REFUSALS = {
+    OFF: 'off',
+    NOT_IN_PILOT: 'not_in_pilot',
+    NO_ACCESS: 'no_access',
+    REGION_BLOCKED: 'region_blocked',
   }.freeze
 
   # The degree to which a curriculum depends on AI chat features.
@@ -1112,6 +1147,7 @@ module SharedConstants
     'api.waqi.info',               # Air quality data - API key required 🔑
     'dataservice.accuweather.com', # Weather data - API key required 🔑
     'data.weather.gov.hk',         # Hong Kong weather
+    'opendataapi.dmi.dk',          # Danish Meteorological Institute - Public API
     'noaa.gov',                    # Weather/climate data - API key required 🔑
 
     # === PLACES & GEOGRAPHY ===

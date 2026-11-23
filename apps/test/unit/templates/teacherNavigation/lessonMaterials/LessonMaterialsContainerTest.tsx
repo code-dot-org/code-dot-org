@@ -725,6 +725,52 @@ describe('LessonMaterialsContainer', () => {
       summary.tips.forEach((tip: string) => screen.getByText(tip));
     });
 
+    // Shape of a summary saved in production that crashed this page with
+    // React error #31.
+    it('renders lesson beats that were generated as {activity} objects', async () => {
+      const beats = [
+        'Pre-Unit Pulse: Complete pre-unit questions independently to reflect on past learning about the internet.',
+        'Warm-Up: Distribute the Unit 2 Journal and engage in an open discussion about experiences with sharing digital data.',
+        'Check for Understanding: Reflect upon personal Internet usage in a typical day.',
+      ];
+      await renderDefault(false, mockLessonData, {
+        lesson_summary: JSON.stringify({
+          learning_objective:
+            'In Lesson 1: Welcome to the Internet, students will engage in a reflective exploration of their prior knowledge.',
+          lesson_beats: beats.map(activity => ({activity})),
+          misconceptions: [
+            'Students may believe that the Internet is a single entity rather than a complex network of connections.',
+          ],
+          tips: [
+            'Prepare for potential technological issues when using the Internet Simulator by running a test beforehand.',
+          ],
+        }),
+        script: null,
+      });
+
+      screen.getByText(i18n.keyLessonBeats());
+      beats.forEach(beat => screen.getByText(beat));
+      screen.getByText(
+        'Students may believe that the Internet is a single entity rather than a complex network of connections.'
+      );
+    });
+
+    it('renders a summary whose fields are not all strings', async () => {
+      await renderDefault(false, mockLessonData, {
+        lesson_summary: JSON.stringify({
+          learning_objective: {objective: 'Objective as an object'},
+          lesson_beats: [{activity: 'Warm Up', description: 'Discuss CSS'}],
+          tips: ['Plain tip', 42, null, ['nested']],
+        }),
+      });
+
+      screen.getByText('Objective as an object');
+      screen.getByText('Warm Up: Discuss CSS');
+      screen.getByText('Plain tip');
+      screen.getByText('42');
+      expect(screen.queryByText('nested')).toBe(null);
+    });
+
     it('renders audio summary transcript dialog when transcript data is present', async () => {
       store.dispatch(setShowAITAPodcasts(true));
 

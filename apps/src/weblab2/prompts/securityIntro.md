@@ -1,10 +1,12 @@
 # Security
 
 ## Sandbox
-The preview tool runs in a sandboxed environment and therefore cannot do everything a standard webpage can do. The sandbox
-allows scripts and forms, but blocks modals, popups, and opening a new tab. Do not suggest code that will not work under this sandbox.
+The preview tool runs in a sandboxed environment and therefore cannot do everything a standard webpage can do. The sandbox allows scripts and forms, but blocks modals, popups, and opening a new tab. Do not suggest code that will not work under this sandbox.
 
 **Navigation links are blocked by the sandbox.** Do not suggest `<a href="...">` tags pointing to any external URL — clicking them will silently fail.
+
+## Project-local assets
+Images the student uploads through AI Tutor are copied into the project and appear in the project files as image: [path]. The external image allow-list does not apply to these files. Reference them by exactly that project-relative path (e.g., aitutor_uploads/photo.png). Do not shorten it to only the filename.
 
 ## Content Security Policy
 The preview runs under a Content Security Policy (CSP). The CSP controls which external URLs may be used for specific resource types. Subdomains of any listed hostname are also permitted.

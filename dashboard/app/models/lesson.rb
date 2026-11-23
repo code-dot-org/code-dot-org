@@ -420,7 +420,7 @@ class Lesson < ApplicationRecord
   end
 
   # The lesson tutor deep dive is available only for lessons with a lesson plan
-  # (assessments/surveys are excluded) that belong to an AIF/AID student course.
+  # (assessments/surveys are excluded) in a unit that offers it.
   def lesson_tutor_available?
     has_lesson_plan && !!script&.lesson_tutor_available?
   end
@@ -537,6 +537,7 @@ class Lesson < ApplicationRecord
       objectives: objectives.sort_by(&:description).map(&:summarize_for_edit),
       tutorVideos: JSONVideo.joins(:objectives).where(objectives: {lesson_id: id}).distinct.map {|v| v.summarize_for_lesson_edit(self)},
       tutorPracticeProblems: PracticeProblem.joins(:objectives).where(objectives: {lesson_id: id}).distinct.map {|p| p.summarize_for_lesson_edit(self)},
+      tutorChallenges: Challenge.where(lesson_id: id).map(&:summarize_for_lesson_edit),
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
@@ -783,12 +784,9 @@ class Lesson < ApplicationRecord
 
   # For a given set of students, determine when the given lesson is locked for
   # each student.
-  # The design of a lockable lesson is that there is (optionally) some number of
-  # non-LevelGroup levels, followed by a single LevelGroup. This last one is the
-  # only one which is truly locked/unlocked. The lesson is considered locked if
-  # and only if the final assessment level is locked. When in this state, the UI
-  # will show the entire lesson as being locked, but if you know the URL of the other
-  # levels, you're still able to go to them and submit answers.
+  # A lockable lesson ends in its assessment, a LevelGroup or exam Quiz, which
+  # holds each student's lock state. Every level in the lesson is locked while
+  # that state is locked.
   def lockable_state(students)
     return unless lockable?
 
@@ -895,13 +893,28 @@ class Lesson < ApplicationRecord
     reload
   end
 
-  def update_objectives(objectives)
+  # @param [Hash<Integer, Array<Integer>>] previous_level_ids_by_script_level_id - level ids of each
+  #   script level before update_activities, used to follow a level that moved to another activity
+  #   section, since the move recreates its script level under a new id.
+  def update_objectives(objectives, previous_level_ids_by_script_level_id = {})
     return unless objectives
+
+    script_level_id_by_level_ids = script_levels.includes(:levels).to_h {|sl| [sl.level_ids.sort, sl.id]}
+    current_script_level_ids = script_level_id_by_level_ids.values.to_set
+    resolve_script_level_id = lambda do |id|
+      next id if current_script_level_ids.include?(id)
+      script_level_id_by_level_ids[previous_level_ids_by_script_level_id[id]&.sort]
+    end
 
     self.objectives = objectives.filter_map do |objective|
       next nil if objective['description'].blank?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
+      if objective.key?('scriptLevelIds')
+        persisted_objective.script_level_ids = objective['scriptLevelIds'].filter_map do |id|
+          resolve_script_level_id.call(Integer(id, exception: false))
+        end.uniq
+      end
       persisted_objective.save!
       persisted_objective
     end
@@ -1092,6 +1105,7 @@ class Lesson < ApplicationRecord
     copied_lesson.save! if copied_lesson.changed?
 
     # Copy lesson activities, activity sections, and script levels
+    copied_script_level_ids_by_original_id = {}
     copied_lesson.lesson_activities = lesson_activities.map do |original_lesson_activity|
       copied_lesson_activity = original_lesson_activity.dup
       copied_lesson_activity.key = SecureRandom.uuid
@@ -1130,7 +1144,12 @@ class Lesson < ApplicationRecord
             "levels" => [copied_level]
           }
         end
-        copied_activity_section.update_script_levels(sl_data) if sl_data.present?
+        if sl_data.present?
+          copied_script_levels = copied_activity_section.update_script_levels(sl_data)
+          original_activity_section.script_levels.zip(copied_script_levels) do |original_script_level, copied_script_level|
+            copied_script_level_ids_by_original_id[original_script_level.id] = copied_script_level.id
+          end
+        end
         copied_activity_section
       end
       copied_lesson_activity
@@ -1140,6 +1159,7 @@ class Lesson < ApplicationRecord
     copied_lesson.objectives = objectives.map do |original_objective|
       copied_objective = original_objective.dup
       copied_objective.key = SecureRandom.uuid
+      copied_objective.script_level_ids = copied_script_level_ids_by_original_id.values_at(*original_objective.script_level_ids).compact
       copied_objective
     end
 

@@ -1,0 +1,53 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T14:58:03.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\nimport random\nimport re\n\nmodel = {}\n\n\ndef tokenize(text):\n  return text\n\n\ndef learn(tokens):\n  return tokens\n\n\ndef generate(start):\n  return start\n\n\ndef detokenize(tokens):\n  return tokens\n\n\ndef main():\n\n  # Read data\n  f = open(\"curiosities.csv\")\n  curiosities = [row[\"question\"] for row in csv.DictReader(f)]\n  f.close()\n\n  # Learn from data\n  for question in curiosities:\n    tokens = tokenize(question)\n    learn(tokens)\n\n  # Generate text\n  text = detokenize(generate(\"Why\"))\n  print(text)\n\n\nmain()",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "curiosities.csv",
+          "contents": "question\nWhy does our Moon always show us one face?\nWhy does Mars look red?\nWhy does Venus spin backward?\nWhy does Venus rotate so slowly?\nWhy does Saturn have rings?\nWhy does Jupiter have a Great Red Spot?\nWhy does gravity bend light from far away?\nWhy does Uranus spin on its side?\nWhy does time slow down near a black hole?\nWhy does our universe keep expanding faster?\nWhy does Earth have seasons?\nWhy does Titan have methane lakes?\nWhy does Europa have a hidden ocean?\nWhy does Polaris stay in one place?\nWhy does Neptune have such strong winds?\nWhy does Earth have a magnetic field?\nWhy does Mars have such a thin atmosphere?\nWhy do stars shine for billions of years?\nWhy do stars twinkle in the night sky?\nWhy do planets orbit the Sun?\nWhy do comets grow tails near the Sun?\nWhy do stars come in different colors?\nWhy do some stars explode as supernovas?\nWhy do galaxies have spiral arms?\nWhy do quasars shine so brightly?\nWhy do astronauts float in orbit?\nWhy do meteors burn up in the atmosphere?\nWhy do auroras appear near the poles?\nWhy do neutron stars spin so fast?\nWhy do eclipses not happen every month?\nWhy do tides rise twice a day?\nWhy do we see meteor showers every year?\nWhy do pulsars send out such regular pulses?\nWhy do moons become tidally locked?\nWhy do galaxies collide so often?\nWhy is Io so volcanic?\nWhy is Pluto no longer considered a planet?\nWhy is space so dark?\nWhy is Mercury so cratered?\nWhy are white dwarfs so dense?\nWhy are Martian sunsets so blue?\nWhy is Olympus Mons so tall?\nWhy is interstellar space so cold?\nWhy are gas giants so large?\nWhy can nothing travel faster than light?\nWhy is most matter so hard to detect?\nWhy did Mars dry out?\nWhy did Jupiter not become a star?\nWhy did Betelgeuse suddenly dim?\nWhy does Betelgeuse look red?\nWhy does our universe look flat?\nWhy does Uranus look blue?\nWhy does Venus look so bright?\nWhy does gravity slow down clocks?\nWhy do sunspots appear darker than their surroundings?\nWhy do planets not twinkle as much?\nWhy do we see different stars in winter?\nWhy do neutron stars collide?\nWhy do some moons have atmospheres?\nWhy do comets have two tails?\nWhy do massive stars explode?\nWhy do some stars suddenly brighten?\nWhy are Martian dust storms so large?\nWhy did Mars lose its magnetic field?\nWhy can nothing escape a black hole?\nWhy are Martian skies pink during daytime?\nWhy is antimatter so rare?\nWhy do stars form in nebulas?\nWhy are brown dwarfs so dim?\nWhy are planetary rings so flat?\nWhy is Ganymede so large?\nWhy is Enceladus so reflective?\nWhy can telescopes see into the past?\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 15:00:33 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:02:37 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:02:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:28:07 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 15:28:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

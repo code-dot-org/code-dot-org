@@ -1,0 +1,96 @@
+name 'pl-aif-y2-u2-l4-linear-regression'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Building Regression Models
+
+Lesson 5 opens with "Predict the Price": a ride-share service charges &#36;11 for 4 miles, &#36;15 for 6 miles, &#36;19 for 8 miles.
+
+***Predict:*** How much would a 10-mile ride cost?
+
+<div role="img" aria-label="Three ride cards: &#36;11.00 for 4 miles, &#36;15.00 for 6 miles, and &#36;19.00 for 8 miles" style="display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap; justify-content: center;">
+  <div style="background: #FAFAFC; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center; width: 200px;">
+    <div style="display: inline-block; background: #4C42CF; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; margin-bottom: 10px;">&#128663; RIDE</div>
+    <div style="font-size: 22px; font-weight: 700; color: #1a1a1a;">&#36;11.00</div>
+    <div style="font-size: 12px; color: #777; margin-top: 8px;">&#8226; &#8226; &#8226; 4 miles &#8226; &#8226; &#8226;</div>
+  </div>
+  <div style="background: #FAFAFC; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center; width: 200px;">
+    <div style="display: inline-block; background: #4C42CF; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; margin-bottom: 10px;">&#128663; RIDE</div>
+    <div style="font-size: 22px; font-weight: 700; color: #1a1a1a;">&#36;15.00</div>
+    <div style="font-size: 12px; color: #777; margin-top: 8px;">&#8226; &#8226; &#8226; 6 miles &#8226; &#8226; &#8226;</div>
+  </div>
+  <div style="background: #FAFAFC; border: 1px solid #E4E2F8; border-radius: 10px; padding: 16px; text-align: center; width: 200px;">
+    <div style="display: inline-block; background: #4C42CF; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 12px; border-radius: 999px; margin-bottom: 10px;">&#128663; RIDE</div>
+    <div style="font-size: 22px; font-weight: 700; color: #1a1a1a;">&#36;19.00</div>
+    <div style="font-size: 12px; color: #777; margin-top: 8px;">&#8226; &#8226; &#8226; 8 miles &#8226; &#8226; &#8226;</div>
+  </div>
+</div>
+
+<div style="clear:both;"></div>
+
+To answer this, Lesson 5 teaches **linear regression**: finding a straight line through data like this, then using that line to make a prediction.
+
+Here's the vocabulary you'll need along the way.
+
+
+## Lesson Vocabulary
+
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/regression-vocab-flip-cards.html"
+    width="100%"
+    height="500"
+    frameborder="0"
+    scrolling="no"
+    title="Regression vocabulary flip cards: regression model, linear regression, slope, y-intercept">
+  </iframe>
+</div>
+
+
+<div style="clear:both;"></div>
+
+## Interpreting a Prediction Line
+
+A separate example from the lesson shows how to actually read a prediction off a line: 
+- locate Miles = 4 on the x-axis
+- trace up to the line
+- read across to find the cost, $9.
+
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/0998a77b6f6cd420088a447b61f410a4-image-1794328966531.png" alt="A graph titled Interpreting a Prediction Line, with Miles on the x-axis and Cost in dollars on the y-axis, showing dashed lines reading a prediction of $9 at 4 miles" style="width: 55%; border-radius: 10px;">
+</div>
+
+## The Equation Behind the Line
+
+Every prediction line follows the same formula, and that formula translates directly into Python.
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+y = mx + b
+  </div>
+</div>
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
+m = 1.5<br>
+b = 3<br>
+<br>
+def predict(x):<br>
+&nbsp;&nbsp;return m * x + b
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> this is the exact shape every regression function in this unit takes, multiply the input by the slope, then add the y-intercept. You'll write a version of this yourself in the Python Lab.</div>
+</div>
+
+
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#128188; Career context:</strong> a Machine Learning Engineer writes code that uses data to build models capable of making useful predictions, exactly what students do in this lesson's Python implementation.
+  </div>
+</div>
+MARKDOWN

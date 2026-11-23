@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-05-20T21:15:25.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nInteract with this AI chat bot to ask any initial questions you have about AI and how it works.\r\n\r\nFor example, you can ask:\r\n>- What is AI?\r\n>- Why should I, a high school English teacher, care about AI?\r\n>- What does a school administrator need to know about how AI works?\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful. You'll have a lot more opportunities to learn throughout the AI 101 series, so don't feel like you have to get all of your questions answered on this level.*",
+    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nInteract with this system to ask any initial questions you have about AI and how it works.\r\n\r\nFor example, you can ask:\r\n>- What is AI?\r\n>- Why should I, a high school English teacher, care about AI?\r\n>- What does a school administrator need to know about how AI works?\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful. You'll have a lot more opportunities to learn throughout the AI 101 series, so don't feel like you have to get all of your questions answered on this level.*",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -48,7 +49,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-20T21:15:25.588+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-whatai-03b\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-whatai-03b\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:15:25.588+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod1-whatai-03b\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod1-whatai-03b\"},{\"changed_at\":\"2026-11-18 21:57:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

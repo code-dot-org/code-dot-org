@@ -158,8 +158,10 @@ describe('train.cancel', () => {
 
 describe('the accuracy-check split', () => {
   // How train.init divides a dataset of this many rows.
-  const splitOf = rowCount => {
+  const splitOf = (rowCount, mode, reserveLocation = TestDataLocations.END) => {
     const store = createStore(rootReducer);
+    store.dispatch(setMode(mode));
+    store.dispatch(setReserveLocation(reserveLocation));
     const rows = Array.from({length: rowCount}, (_unused, index) => ({
       animal: index % 2 ? 'bird' : 'dog',
       legs: String(index),
@@ -189,6 +191,37 @@ describe('the accuracy-check split', () => {
   // Rounding to nearest would leave a small dataset nothing to grade against.
   test('holds a row back even when a tenth of the dataset is under one', () => {
     expect(splitOf(4)).toEqual({heldBack: 1, trainedOn: 3});
+  });
+
+  test('holds back the percentage of rows the level sets', () => {
+    expect(splitOf(21, {testRows: {percent: 25}})).toEqual({
+      heldBack: 6,
+      trainedOn: 15,
+    });
+  });
+
+  test('holds back the number of rows the level sets', () => {
+    expect(splitOf(21, {testRows: {count: 5}})).toEqual({
+      heldBack: 5,
+      trainedOn: 16,
+    });
+  });
+
+  test('holds back the number of rows the level sets from random rows', () => {
+    expect(
+      splitOf(21, {testRows: {count: 20}}, TestDataLocations.RANDOM)
+    ).toEqual({heldBack: 20, trainedOn: 1});
+  });
+
+  test('leaves a row to train on however many the level asks for', () => {
+    expect(splitOf(4, {testRows: {count: 10}})).toEqual({
+      heldBack: 3,
+      trainedOn: 1,
+    });
+    expect(splitOf(4, {testRows: {percent: 99}})).toEqual({
+      heldBack: 3,
+      trainedOn: 1,
+    });
   });
 });
 
@@ -266,6 +299,32 @@ const splits = [
   ['the last rows', TestDataLocations.END],
   ['a random selection of rows', TestDataLocations.RANDOM],
 ];
+
+describe('train.init', () => {
+  const runFrom = (project, reserveLocation = TestDataLocations.RANDOM) => {
+    train.reset();
+    train.init(loadedStore(undefined, reserveLocation), project);
+    return train.onClickTrain();
+  };
+
+  test('holds back the rows the project already holds back', () => {
+    const run = runFrom({...PROJECT, accuracyCheckRowIndices: [3, 7]});
+    expect(run.accuracyCheckRowIndices).toEqual([3, 7]);
+  });
+
+  test('repeats a run exactly when nothing else changes', () => {
+    const {run, saved} = trainAndSave(undefined, TestDataLocations.RANDOM);
+    expect(runFrom(saved).historicResult).toEqual(run.historicResult);
+  });
+
+  test('draws a new split when the saved one no longer fits the dataset', () => {
+    const run = runFrom(
+      {...PROJECT, accuracyCheckRowIndices: [18, ROWS.length]},
+      TestDataLocations.END
+    );
+    expect(run.accuracyCheckRowIndices).toEqual([18, 19]);
+  });
+});
 
 /*
   A saved project carries no model. It is rebuilt from the dataset, the columns,

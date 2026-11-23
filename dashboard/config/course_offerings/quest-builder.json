@@ -1,0 +1,23 @@
+{
+  "key": "quest-builder",
+  "display_name": "Quest Builder",
+  "is_featured": true,
+  "assignable": true,
+  "curriculum_type": "Hour of Code",
+  "marketing_initiative": "HOAI",
+  "grade_levels": "3,4,5,6,7,8",
+  "header": "favorites",
+  "image": "https://images.code.org/f7c0d50a41b3c9b85e2fcba5ca06676c-Quest Builder v5 (1).png",
+  "cs_topic": "artificial_intelligence,games_and_animations,programming",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
+  "description": "Students build their own game from scratch, designing a world and coding what happens when characters meet. They can create characters and treasures with AI or draw their own, and finish with a game they can play.",
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_key": null,
+  "ai_teaching_assistant_available": false,
+  "facilitator_course_permissions": [
+
+  ]
+}

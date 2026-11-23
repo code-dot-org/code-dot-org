@@ -7,6 +7,9 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -15,17 +18,29 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "hoai2026-dev-revised-template",
+    "lock_earlier_blocks": true,
     "level_mode": {
       "kind": "code",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
       "imageType": "background",
       "imageRole": "platform-background",
-      "imageFirst": true
+      "imageFirst": true,
+      "learning": true,
+      "oneImage": true,
+      "extraTabs": [
+        "World"
+      ],
+      "paletteRoles": [
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -55,7 +70,7 @@
       "title": "**Set the scene**",
       "items": [
         {
-          "text": "In Images, click New image.",
+          "text": "In **Images**, select the **+** button.",
           "check": {
             "kind": "image",
             "imageType": "background"

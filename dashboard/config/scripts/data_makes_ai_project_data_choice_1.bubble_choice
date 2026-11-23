@@ -1,0 +1,13 @@
+name 'data-makes-ai-project-data-choice-1'
+display_name 'Project Datasets'
+description 'Pick the dataset you will use for the whole project. You will use the same one in every lesson.'
+navigation_type 'next_sublevel'
+
+sublevels
+level 'data-makes-ai-project-snack-1'
+level 'data-makes-ai-project-football-1'
+level 'data-makes-ai-project-study-1'
+level 'data-makes-ai-project-game-1'
+level 'data-makes-ai-project-board-1'
+
+uses_lab2

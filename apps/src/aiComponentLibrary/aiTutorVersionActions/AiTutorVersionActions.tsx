@@ -233,7 +233,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
           <div className={moduleStyles.saveAiTutorVersionActions}>
             <MuiButton
               variant="contained"
-              color="primary"
+              color="secondary"
               size="small"
               className={moduleStyles.saveAiTutorVersionButton}
               id="save-ai-tutor-version-button"

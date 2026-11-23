@@ -21,13 +21,10 @@ jest.mock('tone', () => {
   }
   const made = {
     tones: [] as MonoSynth[],
-    noises: [] as NoiseSynth[],
-    filters: [] as Filter[],
     gains: [] as Gain[],
     lfos: [] as LFO[],
     compressors: [] as Compressor[],
     synths: [] as Synth[],
-    plucks: [] as PluckSynth[],
   };
   class Synth extends Node {
     frequency = param();
@@ -60,28 +57,6 @@ jest.mock('tone', () => {
       made.tones.push(this);
     }
   }
-  class NoiseSynth extends Node {
-    envelope = {decay: 0, cancel: jest.fn()};
-    triggerAttackRelease: Fn = jest.fn(() => this);
-    triggerRelease: Fn = jest.fn(() => this);
-    constructor(public options: object) {
-      super();
-      made.noises.push(this);
-    }
-  }
-  class Filter extends Node {
-    type: string;
-    frequency = param();
-    detune = param();
-    Q = param();
-    constructor(options: {type: string; frequency: number; Q?: number}) {
-      super();
-      this.type = options.type;
-      this.frequency.value = options.frequency;
-      this.Q.value = options.Q ?? 1;
-      made.filters.push(this);
-    }
-  }
   class Gain extends Node {
     gain = param();
     constructor(value: number) {
@@ -111,14 +86,6 @@ jest.mock('tone', () => {
       made.compressors.push(this);
     }
   }
-  class PluckSynth extends Node {
-    release = 0;
-    triggerAttack: Fn = jest.fn(() => this);
-    constructor(public options: object) {
-      super();
-      made.plucks.push(this);
-    }
-  }
   // Fresh per test: the module keeps its bus and instruments per context.
   const makeContext = () => ({
     state: 'running',
@@ -134,15 +101,12 @@ jest.mock('tone', () => {
   );
   return {
     MonoSynth,
-    NoiseSynth,
-    Filter,
     Gain,
     LFO,
     Compressor,
     MembraneSynth,
     FMSynth,
     MetalSynth,
-    PluckSynth,
     getContext: () => context,
     start,
     __made: made,
@@ -303,6 +267,10 @@ describe('PRESETS', () => {
   it('builds the game sounds from the block parameters', () => {
     expect(PRESETS.jump).toEqual(notesFor(jump));
   });
+
+  it('makes boom from the drum wave', () => {
+    expect(PRESETS.boom.map(note => note.type)).toEqual(['drum']);
+  });
 });
 
 describe('playNotes', () => {
@@ -338,13 +306,10 @@ describe('playNotes', () => {
   const fake = tone as unknown as {
     __made: {
       tones: FakeTone[];
-      noises: Struck[];
-      filters: {type: string; frequency: Param}[];
       gains: {gain: Param}[];
       lfos: FakeLfo[];
       compressors: object[];
       synths: (Struck & {constructor: {name: string}})[];
-      plucks: {release: number; triggerAttack: jest.Mock; dispose: jest.Mock}[];
     };
     __context: {state: string; setTimeout: jest.Mock};
     __resetContext: () => void;
@@ -490,23 +455,6 @@ describe('playNotes', () => {
     expect(rampEnd - 10).toBeCloseTo(0.12, 5);
   });
 
-  it('plays noise through a bandpass filter at the note pitch', () => {
-    const [note] = notesFor({...jump, wave: 'noise', pattern: 'slide down'});
-    playNotes([note]);
-    expect(made.tones).toHaveLength(0);
-    expect(made.noises).toHaveLength(1);
-    const [seconds, at, volume] =
-      made.noises[0].triggerAttackRelease.mock.calls[0];
-    expect(seconds).toBe(note.seconds);
-    expect(at).toBe(10);
-    expect(volume).toBe(note.volume);
-    const band = made.filters.find(f => f.type === 'bandpass')!;
-    const set = band.frequency.setValueAtTime.mock.calls.at(-1)![0] as number;
-    expect(near(set, note.hz)).toBe(true);
-    expect(near(rampTarget(band.frequency), note.slideTo!)).toBe(true);
-    expect(rampTime(band.frequency)).toBe(10 + note.seconds);
-  });
-
   it('plays a UI cue at exactly its pitch, never nudged', () => {
     for (let i = 0; i < 5; i++) {
       playPreset('pick');
@@ -527,11 +475,6 @@ describe('playNotes', () => {
       expect(synth.triggerRelease).toHaveBeenCalledWith(10);
       expect(synth.dispose).not.toHaveBeenCalled();
     });
-    playSoundEffect({...jump, wave: 'pluck', pattern: 'steady'});
-    stopSoundEffects();
-    const gain = made.gains.at(-1)!.gain;
-    expect(gain.cancelScheduledValues).toHaveBeenCalledWith(10);
-    expect(gain.setValueAtTime).toHaveBeenLastCalledWith(0, 10);
   });
 
   it('ends a wobble when its instrument is struck again, or on stop', () => {
@@ -632,25 +575,6 @@ describe('playNotes', () => {
     const [note] = notesFor({...jump, wave: 'bell'});
     const [synth] = made.synths;
     expect(near(rampTarget(synth.frequency), note.slideTo!)).toBe(true);
-  });
-
-  it('plucks one string, or a strummed chord, and never bends it', () => {
-    const [note] = notesFor({...jump, wave: 'pluck', pattern: 'slide up'});
-    playNotes([note]);
-    expect(made.plucks).toHaveLength(1);
-    expect(made.synths).toHaveLength(0);
-    const [[hz, at]] = made.plucks[0].triggerAttack.mock.calls;
-    expect(near(hz, note.hz)).toBe(true);
-    expect(at).toBe(10);
-    expect(made.plucks[0].release).toBe(note.seconds);
-    playSoundEffect({...jump, wave: 'pluck', pattern: 'chord'});
-    // The chord takes the next three strings of the four kept.
-    expect(made.plucks).toHaveLength(4);
-    const struck = made.plucks
-      .slice(1)
-      .map(p => p.triggerAttack.mock.calls[0][0]);
-    expect(near(struck[1], struck[0] * 1.25)).toBe(true);
-    expect(near(struck[2], struck[0] * 1.5)).toBe(true);
   });
 
   it('plays nothing with ?quiet on the URL', () => {

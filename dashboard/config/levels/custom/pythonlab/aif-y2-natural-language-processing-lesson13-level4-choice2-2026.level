@@ -1,0 +1,40 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-03T16:03:21.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Curiosities",
+    "project_template_level_name": "aif-y2-natural-language-processing-lesson13-choice2-2026 + template",
+    "long_instructions": "Now that `model` is filled in, you can use it to generate new text.\r\n\r\nThe `generate` function starts from one token and keeps choosing a next token until the sentence ends.\r\n\r\nFor example, starting from \"Why\", the model might build a sentence like this:\r\n\r\n```\r\n[\"Why\"]\r\n[\"Why\", \"does\"]\r\n[\"Why\", \"does\", \"Venus\"]\r\n[\"Why\", \"does\", \"Venus\", \"look\"]\r\n[\"Why\", \"does\", \"Venus\", \"look\", \"red\"]\r\n[\"Why\", \"does\", \"Venus\", \"look\", \"red\", \"?\"]\r\n```\r\n\r\n**☑️ Do This:**\r\n\r\n- Complete the `generate` function.\r\n  - Create a list to hold the generated tokens. Make it hold `start`—the current token.\r\n  - While a sentence is not yet complete:\r\n      - Randomly choose the next token from the current token’s list in `model`.\r\n      - Append that token to your list of tokens, and make it the current token.\r\n  - When a sentence is complete, return your list of tokens.\r\n- Answer the question under **Step 4: Build Your Model** in your Project Planning Guide.\r\n\r\n**💻 Coding Tip**\r\n\r\nA `while` loop repeats until its condition is no longer true.\r\n\r\n```\r\nwhile token != \"?\":\r\n  ...\r\n```\r\n\r\n`random.choice` picks a random item from a list.\r\n\r\n```\r\ntoken = random.choice(model[token])\r\n```",
+    "bubble_choice_description": "A collection of curious questions about astronomy.",
+    "thumbnail_url": "https://images.code.org/66e12643e21f09882edcfa73d19df1a7-curiosities.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "encrypted_exemplar_sources": "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\nt+g6tcMJHixJXqPOmHoI/GhAfA==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-03 16:07:41 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 16:08:45 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-03 16:08:54 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

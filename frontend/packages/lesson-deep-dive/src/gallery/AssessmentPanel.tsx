@@ -4,7 +4,6 @@ import {FC} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 
-import aiTutorAvatar from './ai-tutor-avatar.png';
 import {type ChallengeResponseDetail} from './types';
 
 import styles from './project-view.module.scss';
@@ -40,7 +39,12 @@ const FeedbackCard: FC<{detail: ChallengeResponseDetail}> = ({detail}) => (
   <div className={styles.chatCard}>
     <div className={styles.chatHeader}>
       <div className={styles.chatAvatar}>
-        <img src={aiTutorAvatar} alt="" />
+        <FontAwesomeV6Icon
+          iconFamily="kit"
+          iconStyle="solid"
+          iconName="tutor"
+          className={styles.chatAvatarIcon}
+        />
       </div>
       <div className={styles.chatMeta}>
         <Typography

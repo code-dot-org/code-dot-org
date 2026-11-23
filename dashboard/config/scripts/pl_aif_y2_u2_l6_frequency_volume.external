@@ -1,0 +1,30 @@
+name 'pl-aif-y2-u2-l6-frequency-volume'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Representing Sound as Features
+
+The "Hearing" activity asks students to tell apart two instruments: a cello and a violin, just by listening to one note from each. Can your students guess which is which?
+
+Here's what makes the two notes distinguishable: their spectrograms, visualizations of how loud a sound's frequencies are over time. Louder frequencies appear darker.
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap; justify-content: center;">
+  <div style="flex: 1; min-width: 220px; text-align: center;">
+    <img src="https://images.code.org/b6412a519dfb0b18468282d86a68a5f8-image-1795020119479.png" alt="Spectrogram of a cello note, showing darker frequency bands concentrated toward the bottom of the chart" style="width: 100%; border-radius: 10px;">
+    <p>Cello</p>
+  </div>
+  <div style="flex: 1; min-width: 220px; text-align: center;">
+    <img src="https://images.code.org/a0896ecc41f828f20495e36a8d462a63-image-1795020184041.png" alt="Spectrogram of a violin note, showing darker, more stacked frequency bands spread higher up the chart" style="width: 100%; border-radius: 10px;">
+    <p>Violin</p>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <p>&#128161; <strong>Teacher tip:</strong> these are slides 23 and 31's real Praat spectrogram screenshots. The violin's is visibly darker overall with more stacked bands, that's the real visual difference the teaching guide asks students to notice.</p>
+</div>
+
+Violins tend to play higher, brighter notes than cellos. "Higher" shows up as frequency; "brighter" shows up as more, more tightly stacked bands in the spectrogram. Those two qualities, frequency and brightness, become the features a classifier can use.
+
+
+MARKDOWN

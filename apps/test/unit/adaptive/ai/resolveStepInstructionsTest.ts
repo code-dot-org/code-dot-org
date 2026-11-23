@@ -1,16 +1,39 @@
-import {generate} from '@cdo/apps/adaptive/ai/generate';
+import {isAdaptiveAiAvailable} from '@cdo/apps/adaptive/ai/access';
+import {generate, moderateOutput} from '@cdo/apps/adaptive/ai/generate';
 import {
   INSTRUCTIONS_PROMPT_VERSION,
   buildInstructionsPrompt,
 } from '@cdo/apps/adaptive/ai/instructionsPrompt';
 import {resolveStepInstructions} from '@cdo/apps/adaptive/ai/resolveStepInstructions';
+import {sendAiStaticFallbackUsed} from '@cdo/apps/adaptive/metricsHelpers';
 import {generateInputsHash} from '@cdo/apps/adaptive/progress/model';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
 import {AichatContext} from '@cdo/apps/aichat/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-jest.mock('@cdo/apps/adaptive/ai/generate', () => ({generate: jest.fn()}));
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: jest.fn(() => true),
+}));
+jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
+  generate: jest.fn(),
+  moderateOutput: jest.fn(async () => 'ok'),
+}));
+jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
+  ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
+  sendAiStaticFallbackUsed: jest.fn(),
+}));
+const mockLogWarning = jest.fn();
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {
+    getInstance: () => ({
+      getMetricsReporter: () => ({logWarning: mockLogWarning}),
+    }),
+  },
+}));
+const mockAvailable = isAdaptiveAiAvailable as jest.Mock;
 const mockGenerate = generate as jest.Mock;
+const mockModerateOutput = moderateOutput as jest.Mock;
 
 const step: LevelStep = {
   id: 'build',
@@ -75,7 +98,10 @@ const resolve = (
 };
 
 describe('resolveStepInstructions', () => {
-  beforeEach(() => jest.clearAllMocks());
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockAvailable.mockReturnValue(true);
+  });
 
   it('returns the authored text for a step without a prompt, without generating', async () => {
     const {result} = resolve({
@@ -84,6 +110,18 @@ describe('resolveStepInstructions', () => {
 
     expect(await result).toBe('Authored.');
     expect(mockGenerate).not.toHaveBeenCalled();
+  });
+
+  it('returns the authored text, and counts the fallback, while the shell makes no AI calls', async () => {
+    mockAvailable.mockReturnValue(false);
+    expect(await resolve().result).toBe('Authored.');
+    expect(mockGenerate).not.toHaveBeenCalled();
+    expect(sendAiStaticFallbackUsed).toHaveBeenCalledWith(
+      'instructions',
+      'aiUnavailable',
+      checkpoint,
+      step
+    );
   });
 
   it('returns the authored text while the project is still loading', async () => {
@@ -125,6 +163,7 @@ describe('resolveStepInstructions', () => {
     await result;
 
     expect(mockGenerate.mock.calls[0][0]).toMatchObject({
+      model: 'gemini-3.1-flash-lite',
       trace: {
         name: 'adaptive-instructions',
         metadata: {
@@ -136,6 +175,26 @@ describe('resolveStepInstructions', () => {
         },
       },
     });
+  });
+
+  it('moderates the generated text before showing it, and returns the authored text, caching nothing, when it does not clear', async () => {
+    mockGenerate.mockResolvedValue({
+      output: {instructions: 'Rude.'},
+      traceId: 'trace-1',
+    });
+    mockModerateOutput.mockResolvedValueOnce('flagged');
+    const {result, saveGeneratedInstructions} = resolve();
+
+    expect(await result).toBe('Authored.');
+    expect(mockModerateOutput).toHaveBeenCalledWith('Rude.', context);
+    expect(saveGeneratedInstructions).not.toHaveBeenCalled();
+    expect(mockLogWarning).toHaveBeenCalledWith(
+      expect.objectContaining({
+        moderation: 'flagged',
+        stepId: 'build',
+        traceId: 'trace-1',
+      })
+    );
   });
 
   it('returns the authored text and caches nothing when generation yields nothing', async () => {

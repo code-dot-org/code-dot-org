@@ -8,22 +8,23 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-15 00:00:00 UTC",
+    "serialized_at": "2026-11-05 22:40:15 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
     "seeding_key": {
       "script.name": "adaptive-dev"
-    },
-    "hide_within_course": false
+    }
   },
   "lesson_groups": [
     {
       "key": "",
       "user_facing": false,
       "position": 1,
-      "properties": {},
+      "properties": {
+      },
       "seeding_key": {
         "lesson_group.key": "",
         "script.name": "adaptive-dev"
@@ -38,7 +39,8 @@
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
-      "properties": {},
+      "properties": {
+      },
       "seeding_key": {
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
@@ -50,7 +52,8 @@
     {
       "key": "0dc2ed60-cf93-4c28-8588-16e533322269",
       "position": 1,
-      "properties": {},
+      "properties": {
+      },
       "seeding_key": {
         "lesson_activity.key": "0dc2ed60-cf93-4c28-8588-16e533322269",
         "lesson.key": "lesson-1",
@@ -63,7 +66,8 @@
     {
       "key": "bc1a1b62-a62c-456e-8127-20a48793c01c",
       "position": 1,
-      "properties": {},
+      "properties": {
+      },
       "seeding_key": {
         "activity_section.key": "bc1a1b62-a62c-456e-8127-20a48793c01c",
         "lesson_activity.key": "0dc2ed60-cf93-4c28-8588-16e533322269"
@@ -110,17 +114,46 @@
       }
     }
   ],
-  "resources": [],
-  "lessons_resources": [],
-  "scripts_resources": [],
-  "scripts_student_resources": [],
-  "vocabularies": [],
-  "lessons_vocabularies": [],
-  "lessons_programming_expressions": [],
-  "objectives": [],
-  "lessons_standards": [],
-  "lessons_opportunity_standards": [],
-  "rubrics": [],
-  "learning_goals": [],
-  "learning_goal_evidence_levels": []
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
 }

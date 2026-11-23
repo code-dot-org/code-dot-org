@@ -5,8 +5,12 @@ import React from 'react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
 import ChallengeRoute from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeRoute';
-import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+let mockChallengesEnabled = true;
+jest.mock('@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled', () => ({
+  useLessonDeepDiveChallengesEnabled: () => mockChallengesEnabled,
+}));
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
@@ -63,15 +67,11 @@ function renderRoute({
 describe('ChallengeRoute', () => {
   beforeEach(() => {
     fetchJson.mockReset();
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, true);
+    mockChallengesEnabled = true;
   });
 
-  afterEach(() => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
-  });
-
-  it('renders nothing when the challenge experiment flag is off', () => {
-    experiments.setEnabled(experiments.LESSON_TUTOR_CHALLENGE, false);
+  it('renders nothing when challenges are disabled', () => {
+    mockChallengesEnabled = false;
     fetchJson.mockResolvedValue({value: [fakeChallenge]});
     renderRoute();
     expect(
