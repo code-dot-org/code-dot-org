@@ -12,6 +12,7 @@ import {
 
 import {setChatIsOpen} from '@cdo/apps/aiTeacherDrawer/redux';
 import {aiDiffChatReducer} from '@cdo/apps/aiTeacherDrawer/redux/slice';
+import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
@@ -30,6 +31,13 @@ import {
 } from '@cdo/apps/templates/teacherNavigation/TeacherNavigationPaths';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
+
+jest.mock('@cdo/apps/dcdo', () => ({
+  __esModule: true,
+  default: {
+    get: jest.fn((_key, defaultValue) => defaultValue),
+  },
+}));
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   put: jest.fn(() => Promise.resolve({})),
@@ -311,6 +319,7 @@ describe('TeacherNavigationBar', () => {
   afterEach(() => {
     jest.restoreAllMocks();
     localStorage.clear();
+    DCDO.get.mockImplementation((_key, defaultValue) => defaultValue);
   });
 
   test('renders correctly with visible sections', async () => {
@@ -479,6 +488,16 @@ describe('TeacherNavigationBar', () => {
     await screen.findByText('Course Content');
 
     expect(newTagOwner()).toContain(i18n.aiSettings());
+  });
+
+  test('does not tag AI Settings as new when Tutor+ is switched off', async () => {
+    DCDO.get.mockImplementation((key, defaultValue) =>
+      key === 'lesson-deep-dive-enabled' ? false : defaultValue
+    );
+    renderDefault(19, `/teacher_dashboard/sections/19/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(newTagOwner()).toBeNull();
   });
 
   test('does not tag AI Settings as new when full AI chat access is off', async () => {

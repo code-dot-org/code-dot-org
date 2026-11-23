@@ -6,6 +6,7 @@ import {Provider} from 'react-redux';
 import {handleUpdateSectionAiChallengeEnabled} from '@cdo/apps/aichat/accessControlsApi';
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types';
 import AiChatAccessControls from '@cdo/apps/aichat/views/accessControls/AiChatAccessControls';
+import DCDO from '@cdo/apps/dcdo';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getStore,
@@ -27,6 +28,13 @@ jest.mock('@cdo/apps/aichat/accessControlsApi', () => ({
   handleUpdateSectionAiChallengeEnabled: jest.fn(),
 }));
 
+jest.mock('@cdo/apps/dcdo', () => ({
+  __esModule: true,
+  default: {
+    get: jest.fn((_key: string, defaultValue: unknown) => defaultValue),
+  },
+}));
+
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
   __esModule: true,
   default: {sendEvent: jest.fn()},
@@ -35,6 +43,7 @@ jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
 const updateChallengeEnabled =
   handleUpdateSectionAiChallengeEnabled as jest.Mock;
 const sendEvent = analyticsReporter.sendEvent as jest.Mock;
+const mockDcdoGet = DCDO.get as jest.Mock;
 
 const SECTION_ID = 11;
 const COURSE_ID = 42;
@@ -89,6 +98,10 @@ describe('AiChatAccessControls AI Tutor+ Challenges toggle', () => {
 
   afterEach(() => {
     restoreRedux();
+    jest.restoreAllMocks();
+    mockDcdoGet.mockImplementation(
+      (_key: string, defaultValue: unknown) => defaultValue
+    );
   });
 
   it('shows when AI chat is enabled and the course has the lesson tutor', () => {
@@ -103,6 +116,14 @@ describe('AiChatAccessControls AI Tutor+ Challenges toggle', () => {
 
   it('is hidden when AI chat is essential only', () => {
     renderControls({aiChatAccessLevel: AiChatAccessLevels.ESSENTIAL_ONLY});
+    expect(challengeToggle()).not.toBeInTheDocument();
+  });
+
+  it('is hidden when Tutor+ is switched off', () => {
+    mockDcdoGet.mockImplementation((key: string, defaultValue: unknown) =>
+      key === 'lesson-deep-dive-enabled' ? false : defaultValue
+    );
+    renderControls();
     expect(challengeToggle()).not.toBeInTheDocument();
   });
 

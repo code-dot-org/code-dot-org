@@ -144,5 +144,5 @@ export const canToggleAiChallenges = ({
   teacherAiChatAccessLevel: AiChatAccessLevel;
 }): boolean =>
   !!lessonTutorAvailable &&
-  sectionAiChatAccessLevel === AiChatAccessLevels.ENABLED &&
+  canUseLessonDeepDive(sectionAiChatAccessLevel) &&
   teacherAiChatAccessLevel !== AiChatAccessLevels.DISABLED;
