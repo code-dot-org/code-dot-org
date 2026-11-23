@@ -2,7 +2,8 @@
 // set: the progress widget with the lesson's name as text, a bubble per level
 // that fills in as the level is done, the project's save status, and a slot
 // the lab fills with a button of its own. The bubbles are pictures, not links:
-// the unit is walked in order, with no going back or ahead.
+// the unit is walked in order, with no going back or ahead. A URL parameter
+// makes them buttons, to try the unit with free movement between levels.
 
 import ProgressWidget, {
   ProgressBubble,
@@ -14,9 +15,12 @@ import {isEqual} from 'lodash';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
+import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevels} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {LevelWithProgress} from '@cdo/apps/types/progressTypes';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProjectInfo from './ProjectInfo';
@@ -28,6 +32,8 @@ import styles from './simple-header.module.scss';
 /** The lab portals its header button, if it has one, into the element
     with this id. */
 export const HEADER_ACTION_ID = 'simple_header_action';
+
+const CLICKABLE_BUBBLES = queryParams('clickable-bubbles') === 'true';
 
 // The header page's store has no typed root state; these are the slices
 // this component reads.
@@ -72,6 +78,7 @@ interface SimpleHeaderProps {
 const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
   lessonName,
 }) => {
+  const dispatch = useAppDispatch();
   const isRtl = useSelector((state: HeaderState) => state.isRtl);
   const {showProjectUpdatedAt, projectUpdatedStatus} = useSelector(
     (state: HeaderState) => state.project
@@ -130,6 +137,11 @@ const SimpleHeader: React.FunctionComponent<SimpleHeaderProps> = ({
                 ariaLabel={`Level ${level.levelNumber ?? ''}, ${
                   statusLabel[status]
                 }`}
+                onClick={
+                  CLICKABLE_BUBBLES
+                    ? () => dispatch(navigateToLevelId(level.id))
+                    : undefined
+                }
               />
             );
           })}
