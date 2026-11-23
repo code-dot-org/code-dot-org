@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-21 09:05:47 UTC",
+    "serialized_at": "2026-11-23 05:59:36 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -227,9 +227,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
-        "overview": "**How do we know if an AI system is accurate enough to trust for a real job? And who would be affected if it got something wrong?**\n\nStudents test an AI chatbot against criteria they define themselves, using a library scenario where the chatbot confidently answers questions it has no real information about. Through testing, scoring, and comparing results with a partner, students uncover where the system succeeds and where it fails, then reason about who is affected by those failures and whether the system needs human oversight.",
+        "overview": "QOTD: How do we know if an AI system is accurate enough to trust for a real job? And who would be affected if it got something wrong?\nStudents test an AI chatbot against criteria they define themselves, using a library scenario where the chatbot confidently answers questions it has no real information about. Through testing, scoring, and comparing results with a partner, students uncover where the system succeeds and where it fails, then reason about who is affected by those failures and whether the system needs human oversight.",
         "preparation": "- Provide copies of the AI Lab activity guide (one per pair)",
-        "student_overview": "**How do we know if an AI system is accurate enough to trust for a real job? And who would be affected if it got something wrong?**\n\nStudents put an AI chatbot to the test, deciding for themselves what counts as a trustworthy answer and then checking if the chatbot measures up. Along the way, they discover where it falls short and think about who gets affected when it does."
+        "student_overview": "QOTD: How do we know if an AI system is accurate enough to trust for a real job? And who would be affected if it got something wrong?\nStudents put an AI chatbot to the test, deciding for themselves what counts as a trustworthy answer and then checking if the chatbot measures up. Along the way, they discover where it falls short and think about who gets affected when it does."
       },
       "seeding_key": {
         "lesson.key": "lesson-23",
@@ -559,42 +559,42 @@
       }
     },
     {
-      "key": "80aaec88-3808-45e4-9ee4-733584ec6d2c",
+      "key": "fc0a9cf8-6379-44fb-8fc9-31b9f1133daf",
       "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "80aaec88-3808-45e4-9ee4-733584ec6d2c",
+        "lesson_activity.key": "fc0a9cf8-6379-44fb-8fc9-31b9f1133daf",
         "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration"
       }
     },
     {
-      "key": "60e33c27-3e08-4ce4-a616-0a0746fd963a",
+      "key": "11a6ffa2-aa2a-4c81-a26a-3cfe859a349e",
       "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "60e33c27-3e08-4ce4-a616-0a0746fd963a",
+        "lesson_activity.key": "11a6ffa2-aa2a-4c81-a26a-3cfe859a349e",
         "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration"
       }
     },
     {
-      "key": "387ee9dc-12f6-4afe-b930-4e0ea55e3add",
+      "key": "52c84f54-0bf6-434e-8671-95b37b37a86a",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "387ee9dc-12f6-4afe-b930-4e0ea55e3add",
+        "lesson_activity.key": "52c84f54-0bf6-434e-8671-95b37b37a86a",
         "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration"
@@ -947,7 +947,7 @@
       }
     },
     {
-      "key": "4467b12e-5793-4c45-aa72-c1918b12ab79",
+      "key": "91cb0b93-1f73-4622-a792-08d8080efa52",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\" aria-hidden=\"true\"></i> **Goal of this activity:** Hook students into today’s scenario and surface that “accurate” isn’t an obvious, fixed standard — it’s something people have to define, and different people might define it differently. This sets up why Step 1 (defining criteria) matters before any testing happens.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What would count as a “good” answer here — and who decides?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should start to notice that “good” isn’t obvious or universal — it might depend on who’s asking (a student wanting a fast answer vs. a librarian needing it to be exact), and that someone has to decide on a standard before anyone can even test whether the chatbot meets it. There’s no right answer expected here — just a couple of volunteer responses to get students thinking about criteria before they define their own later in the lesson.",
@@ -959,23 +959,23 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4467b12e-5793-4c45-aa72-c1918b12ab79",
-        "lesson_activity.key": "80aaec88-3808-45e4-9ee4-733584ec6d2c"
+        "activity_section.key": "91cb0b93-1f73-4622-a792-08d8080efa52",
+        "lesson_activity.key": "fc0a9cf8-6379-44fb-8fc9-31b9f1133daf"
       }
     },
     {
-      "key": "6e6af15e-3169-4bcc-bf32-46791e6024d7",
+      "key": "df96be4a-fd21-4d0a-b8d7-12bae30bd25d",
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives."
       },
       "seeding_key": {
-        "activity_section.key": "6e6af15e-3169-4bcc-bf32-46791e6024d7",
-        "lesson_activity.key": "80aaec88-3808-45e4-9ee4-733584ec6d2c"
+        "activity_section.key": "df96be4a-fd21-4d0a-b8d7-12bae30bd25d",
+        "lesson_activity.key": "fc0a9cf8-6379-44fb-8fc9-31b9f1133daf"
       }
     },
     {
-      "key": "230920e8-1fc0-4e36-ac4e-0e7a3d540158",
+      "key": "0ece89c2-b96c-446b-8239-27cc17adde3c",
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day. Let students know this question comes back at the end of the lesson, after they test an AI chatbot themselves.",
@@ -987,12 +987,12 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "230920e8-1fc0-4e36-ac4e-0e7a3d540158",
-        "lesson_activity.key": "80aaec88-3808-45e4-9ee4-733584ec6d2c"
+        "activity_section.key": "0ece89c2-b96c-446b-8239-27cc17adde3c",
+        "lesson_activity.key": "fc0a9cf8-6379-44fb-8fc9-31b9f1133daf"
       }
     },
     {
-      "key": "0e61dcca-2198-467e-9a5c-8de1024d3e61",
+      "key": "8761706f-a232-4796-a77f-0086960cc75d",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\" aria-hidden=\"true\"></i> **Goal of this activity:** Students define what “accurate” means for a real AI use case, then write test questions that put their own criteria to the test.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the AI Lab activity guide.",
@@ -1000,12 +1000,12 @@
         "name": "Design Test Criteria"
       },
       "seeding_key": {
-        "activity_section.key": "0e61dcca-2198-467e-9a5c-8de1024d3e61",
-        "lesson_activity.key": "60e33c27-3e08-4ce4-a616-0a0746fd963a"
+        "activity_section.key": "8761706f-a232-4796-a77f-0086960cc75d",
+        "lesson_activity.key": "11a6ffa2-aa2a-4c81-a26a-3cfe859a349e"
       }
     },
     {
-      "key": "1a9064f0-4d68-4c67-9b49-dd19eebde631",
+      "key": "0239ab09-3baf-4ce0-87db-1a74cad2a0e3",
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Step 1 on their activity guide. Have students work with their partner to decide what a correct answer needs to include, what would make an answer unacceptable, and write their team’s accuracy criteria — the standard they use to score the chatbot’s responses later in Step 3.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for criteria that are too vague to actually score against later, like “it should be good” or “it should make sense.” Push pairs toward something specific and checkable — does it need to match a fact exactly? Does it need to admit when it’s not sure? If a pair is stuck, ask: “If the chatbot gave a confident-sounding answer that was wrong, how would you even know?”",
@@ -1017,12 +1017,12 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "1a9064f0-4d68-4c67-9b49-dd19eebde631",
-        "lesson_activity.key": "60e33c27-3e08-4ce4-a616-0a0746fd963a"
+        "activity_section.key": "0239ab09-3baf-4ce0-87db-1a74cad2a0e3",
+        "lesson_activity.key": "11a6ffa2-aa2a-4c81-a26a-3cfe859a349e"
       }
     },
     {
-      "key": "fd618683-e2e5-4fde-a49b-d9003448d205",
+      "key": "1ce237ab-811d-445f-9359-ba0be602d25a",
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Step 2 on their activity guide. Have them continue working with their partner and write six required test questions, making sure to cover all four categories listed — not just easy ones — plus up to two optional backup questions they aren’t required to test.",
@@ -1034,18 +1034,17 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "fd618683-e2e5-4fde-a49b-d9003448d205",
-        "lesson_activity.key": "60e33c27-3e08-4ce4-a616-0a0746fd963a"
+        "activity_section.key": "1ce237ab-811d-445f-9359-ba0be602d25a",
+        "lesson_activity.key": "11a6ffa2-aa2a-4c81-a26a-3cfe859a349e"
       }
     },
     {
-      "key": "fc31a2cd-a184-4227-9e46-de19ff31907b",
+      "key": "eee77988-024e-43f9-99c9-ffe71739b836",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\" aria-hidden=\"true\"></i> **Goal of this activity:** Students test their own questions against the chatbot, score each response using their own criteria, then compare results with their partner to find a pattern in what breaks the system.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 16, Level 1, to complete Steps 3 and 4 in their activity guide. Partners split their six questions and each test and score their own three on their own page in Step 3. In Step 4, partners bring their pages back together to compare results and identify a pattern.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for pairs scoring responses based on how confident or polished the answer sounds, rather than checking it against the Quick Reference sheet or their own Step 1 criteria. If a team marks every response “Meets,” ask them to point to the specific line on the reference sheet that confirms it. Also watch for teams rushing past Step 4 without actually comparing both partners’ pages side by side.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\" aria-hidden=\"true\"></i> **Goal of this activity:** Students test their own questions against the chatbot, score each response using their own criteria, then compare results with their partner to find a pattern in what breaks the system.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1, to complete Steps 3 and 4 in their activity guide. Partners split their six questions and each test and score their own three on their own page in Step 3. In Step 4, partners bring their pages back together to compare results and identify a pattern.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for pairs scoring responses based on how confident or polished the answer sounds, rather than checking it against the Quick Reference sheet or their own Step 1 criteria. If a team marks every response “Meets,” ask them to point to the specific line on the reference sheet that confirms it. Also watch for teams rushing past Step 4 without actually comparing both partners’ pages side by side.",
         "duration": "10",
         "name": "Test, Score, and Reflect",
-        "progression_name": "Test, Score, and Reflect",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1054,18 +1053,17 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "fc31a2cd-a184-4227-9e46-de19ff31907b",
-        "lesson_activity.key": "60e33c27-3e08-4ce4-a616-0a0746fd963a"
+        "activity_section.key": "eee77988-024e-43f9-99c9-ffe71739b836",
+        "lesson_activity.key": "11a6ffa2-aa2a-4c81-a26a-3cfe859a349e"
       }
     },
     {
-      "key": "ac355981-18dc-4168-994c-f1ff01a244fd",
+      "key": "dcb9f05f-e4c7-4a96-96eb-8c3d5a179cb0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 16, Levels 2-4.\n- **Level 2:** Students reflect on whether the library chatbot is accurate enough to trust without human review, using evidence from their own testing.\n- **Level 3:** Students think about who would be affected if a patron had relied on the chatbot’s holiday-hours mistake.\n- **Level 4:** Students apply that same judgment to a new scenario — a parks department chatbot — and explain their reasoning.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 2, watch for students giving a blanket yes/no without citing a specific example from their own testing — prompt them to point to a response they actually scored. On Level 3, watch for vague answers like “people could be confused” — push students toward a specific, plausible person or consequence tied to the actual scenario. On Level 4, watch for students who answer without explaining why this situation differs from the ones that worked fine during testing, or who don’t connect their answer back to anything they noticed with the library chatbot.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 2-4.\n- **Level 2:** Students reflect on whether the library chatbot is accurate enough to trust without human review, using evidence from their own testing.\n- **Level 3:** Students think about who would be affected if a patron had relied on the chatbot’s holiday-hours mistake.\n- **Level 4:** Students apply that same judgment to a new scenario — a parks department chatbot — and explain their reasoning.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 2, watch for students giving a blanket yes/no without citing a specific example from their own testing — prompt them to point to a response they actually scored. On Level 3, watch for vague answers like “people could be confused” — push students toward a specific, plausible person or consequence tied to the actual scenario. On Level 4, watch for students who answer without explaining why this situation differs from the ones that worked fine during testing, or who don’t connect their answer back to anything they noticed with the library chatbot.",
         "duration": "5",
         "name": "Check for Understanding",
-        "progression_name": "Check for Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1074,30 +1072,41 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "ac355981-18dc-4168-994c-f1ff01a244fd",
-        "lesson_activity.key": "60e33c27-3e08-4ce4-a616-0a0746fd963a"
+        "activity_section.key": "dcb9f05f-e4c7-4a96-96eb-8c3d5a179cb0",
+        "lesson_activity.key": "11a6ffa2-aa2a-4c81-a26a-3cfe859a349e"
       }
     },
     {
-      "key": "8e8c2022-075a-4285-9456-4f69dd0b45df",
+      "key": "35248e41-51c2-4064-8a8e-ce09c0a54082",
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives."
       },
       "seeding_key": {
-        "activity_section.key": "8e8c2022-075a-4285-9456-4f69dd0b45df",
-        "lesson_activity.key": "387ee9dc-12f6-4afe-b930-4e0ea55e3add"
+        "activity_section.key": "35248e41-51c2-4064-8a8e-ce09c0a54082",
+        "lesson_activity.key": "52c84f54-0bf6-434e-8671-95b37b37a86a"
       }
     },
     {
-      "key": "e6de1a38-2800-4e7b-810e-db1866422be7",
+      "key": "8d25f062-317a-4a5f-b727-6feb28fe8999",
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to think about what they learned today. Facilitate a whole-class discussion — invite a few students to share the pattern their team found in Step 4, and a few others to share their answer from Level 3 about who would be affected. Tie the discussion back to today’s lesson objectives. Listen for students connecting specific chatbot behavior to real consequences, not just general statements about AI being risky."
       },
       "seeding_key": {
-        "activity_section.key": "e6de1a38-2800-4e7b-810e-db1866422be7",
-        "lesson_activity.key": "387ee9dc-12f6-4afe-b930-4e0ea55e3add"
+        "activity_section.key": "8d25f062-317a-4a5f-b727-6feb28fe8999",
+        "lesson_activity.key": "52c84f54-0bf6-434e-8671-95b37b37a86a"
+      }
+    },
+    {
+      "key": "1d5b291e-c274-46c3-ad7b-bdd17d5c5496",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Teachers and students should complete the end of lesson survey."
+      },
+      "seeding_key": {
+        "activity_section.key": "1d5b291e-c274-46c3-ad7b-bdd17d5c5496",
+        "lesson_activity.key": "52c84f54-0bf6-434e-8671-95b37b37a86a"
       }
     },
     {
@@ -3448,6 +3457,32 @@
   ],
   "resources": [
     {
+      "name": "AI Lab",
+      "url": "https://docs.google.com/presentation/d/1Uq3M1xk8vbSAK_dbuYGsZNkCsukRgWz9suP9u3vqx-I/edit",
+      "key": "ai_lab",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai_lab"
+      }
+    },
+    {
+      "name": "AI Lab Activity Guide",
+      "url": "https://docs.google.com/document/d/1ZGRldM4hbqjKx8V2KWWJQOk6Or0Darv9s7-K-EBf824/edit",
+      "key": "ai_lab_activity_guide_1",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_lab_activity_guide_1"
+      }
+    },
+    {
       "name": "AI Lab Activity Guide",
       "url": "https://docs.google.com/document/d/13Bn4pgLQy54GzNzQTo10ONf79o5l5wU3Xc5KrSbyWFE",
       "key": "ai_lab_activity_guide_2",
@@ -3525,6 +3560,18 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-23",
+        "resource.key": "ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "resource.key": "ai_lab_activity_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-23",
         "resource.key": "lesson_studio_live_check_8898985"
       }
     }
@@ -3560,33 +3607,33 @@
   ],
   "objectives": [
     {
-      "key": "15db4312-c96a-44a4-bda8-c07335f9ead5",
-      "properties": {
-        "description": "Evaluate whether an AI system needs human oversight, and explain who could be affected if it gives inaccurate information."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "objective.key": "15db4312-c96a-44a4-bda8-c07335f9ead5"
-      }
-    },
-    {
-      "key": "17ffd3b8-15d2-43ad-a982-6b6117ff9108",
-      "properties": {
-        "description": "Define criteria for evaluating whether an AI chatbot’s responses are accurate and trustworthy for a real-world task."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-22",
-        "objective.key": "17ffd3b8-15d2-43ad-a982-6b6117ff9108"
-      }
-    },
-    {
-      "key": "27816417-9a47-42bd-b50e-831d476358a0",
+      "key": "1a6691d7-0de9-4427-8c8f-92b9e77e3731",
       "properties": {
         "description": "Test an AI chatbot against your own criteria and identify patterns in where it succeeds or fails."
       },
       "seeding_key": {
-        "lesson.key": "lesson-22",
-        "objective.key": "27816417-9a47-42bd-b50e-831d476358a0"
+        "lesson.key": "lesson-23",
+        "objective.key": "1a6691d7-0de9-4427-8c8f-92b9e77e3731"
+      }
+    },
+    {
+      "key": "32084b4d-5f92-48f3-9095-a17d6d50c37e",
+      "properties": {
+        "description": "Define criteria for evaluating whether an AI chatbot’s responses are accurate and trustworthy for a real-world task."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "objective.key": "32084b4d-5f92-48f3-9095-a17d6d50c37e"
+      }
+    },
+    {
+      "key": "41ceaf33-4092-4bf7-9029-b61522f220e5",
+      "properties": {
+        "description": "Evaluate whether an AI system needs human oversight, and explain who could be affected if it gives inaccurate information."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-23",
+        "objective.key": "41ceaf33-4092-4bf7-9029-b61522f220e5"
       }
     }
   ],
