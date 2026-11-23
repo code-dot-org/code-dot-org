@@ -11,8 +11,9 @@ export const SPRITELAB_LAB2_COURSE = 'ui-test-spritelab-lab2';
  * DOM contract:
  * - The editors sit in a group named "Edit" (EditorSwitch.tsx) with one
  *   button per editor: Images, World, Code.
- * - The Images tab is the region named "Images" (SpriteLab2View.tsx); its
- *   list has the "New image" plus with a menu of kinds, word chips are
+ * - The Images tab is the outer region named "Images" (SpriteLab2View.tsx);
+ *   its list, also a region named "Images" (ImageList.tsx), has the
+ *   "New image" plus with a menu of kinds, word chips are
  *   buttons named by their word (WordMenus.tsx), and the rating is the
  *   "Good" and "Not so good" buttons (RatingBar.tsx).
  * - The World tab is the grid named "World" of gridcell buttons, with the
@@ -28,7 +29,7 @@ export class SpriteLab2 extends LessonLevelPage {
   readonly animatedSwitch: Locator;
   readonly goodButton: Locator;
   readonly continueButton: Locator;
-  readonly playButton: Locator;
+  readonly runButton: Locator;
   readonly stopButton: Locator;
   readonly worldGrid: Locator;
   readonly itemsToPlace: Locator;
@@ -38,14 +39,18 @@ export class SpriteLab2 extends LessonLevelPage {
   constructor(page: Page) {
     super(page);
     this.editors = page.getByRole('group', {name: 'Edit'});
-    this.imagesTab = page.getByRole('region', {name: 'Images', exact: true});
+    // The list inside the Images pane is a region named "Images" too.
+    this.imagesTab = page
+      .getByRole('region', {name: 'Images', exact: true})
+      .first();
     this.newImageButton = page.getByRole('button', {name: 'New image'});
     this.generateButton = page.getByRole('button', {name: /^Generate/});
     this.animatedSwitch = page.getByRole('checkbox', {name: 'Animated'});
     this.goodButton = page.getByRole('button', {name: 'Good', exact: true});
     this.continueButton = page.getByRole('button', {name: /^Continue/});
-    // Named by its icon glyph and the word; "Play this scene" is another button.
-    this.playButton = page.getByRole('button', {name: /Play$/});
+    // Ends in "Run": the preview's "Run this scene" and a scene level's
+    // "Run scene" and "Run game" do not.
+    this.runButton = page.getByRole('button', {name: /Run$/});
     this.stopButton = page.getByRole('button', {name: /Stop$/});
     this.worldGrid = page.getByRole('grid', {name: 'World'});
     this.itemsToPlace = page.getByRole('radiogroup', {name: 'Items to place'});
@@ -64,12 +69,12 @@ export class SpriteLab2 extends LessonLevelPage {
   }
 
   /**
-   * Press Play and wait for the game to be running: the stop button shows
+   * Press Run and wait for the game to be running: the stop button shows
    * once the engine has taken the program, and the sprites load for a
    * moment after that before keys move anything.
    */
-  async play(): Promise<void> {
-    await this.playButton.click();
+  async run(): Promise<void> {
+    await this.runButton.click();
     await expect(this.stopButton).toBeVisible();
     await this.page.waitForTimeout(2000);
   }
@@ -94,7 +99,7 @@ export class SpriteLab2 extends LessonLevelPage {
 
   /**
    * Hold a control, in bursts, until the checklist item is done. The first
-   * frames after Play can still be loading the sprites' pictures, during
+   * frames after Run can still be loading the sprites' pictures, during
    * which a press does nothing, as a student would find and press again.
    */
   async steerUntilDone(
@@ -108,6 +113,24 @@ export class SpriteLab2 extends LessonLevelPage {
       }
     }
     await this.expectObjectiveDone(objective);
+  }
+
+  /**
+   * Read through "How AI made your image", which a level that asks for it
+   * opens once its first picture is ready, before showing it: Next to the
+   * last panel, then Got it.
+   */
+  async readLearningStory(): Promise<void> {
+    const story = this.page.getByRole('dialog', {
+      name: 'How AI made your image',
+    });
+    await expect(story).toBeVisible();
+    const gotIt = story.getByRole('button', {name: 'Got it'});
+    while (!(await gotIt.isVisible())) {
+      await story.getByRole('button', {name: 'Next'}).click();
+    }
+    await gotIt.click();
+    await expect(story).toBeHidden();
   }
 
   editorButton(name: 'Images' | 'World' | 'Code'): Locator {
@@ -153,7 +176,7 @@ export class SpriteLab2 extends LessonLevelPage {
   }
 
   /**
-   * Drag a flyout block to hang under the stack whose top block shows
+   * Drag a flyout block to snap on under the stack whose top block shows
    * `stackText`: dropped just below the stack's last block, where Blockly
    * snaps it on.
    */
@@ -194,10 +217,5 @@ export class SpriteLab2 extends LessonLevelPage {
     await this.page.mouse.move(grab.x + 20, grab.y + 20, {steps: 5});
     await this.page.mouse.move(to.x + 12, to.y + 12, {steps: 15});
     await this.page.mouse.up();
-    // An edit re-runs the preview after a 400ms debounce, held on its first
-    // frame. A Play pressed inside that window is overtaken by the held
-    // preview, and the game sits frozen behind a Stop button; a student is
-    // slower than that, so the test is too.
-    await this.page.waitForTimeout(1500);
   }
 }

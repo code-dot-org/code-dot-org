@@ -7,6 +7,11 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "friend",
+      "hero",
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -15,14 +20,29 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
     "project_template_level_name": "UI Test Sprite Lab in Lab2 template",
+    "lock_earlier_blocks": true,
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "extraTabs": [
+        "Images",
+        "World"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "paletteRoles": [
+        "friend",
+        "hero",
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -45,6 +65,42 @@
                   "type": "spritelab2_setAsPlatformPlayer"
                 }
               }
+            },
+            {
+              "type": "gamelab_checkTouching",
+              "x": 20,
+              "y": 230,
+              "fields": {
+                "CONDITION": "\"when\""
+              },
+              "inputs": {
+                "SPRITE1": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                },
+                "SPRITE2": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation"
+                  }
+                }
+              },
+              "next": {
+                "block": {
+                  "type": "gamelab_spriteSay",
+                  "data": "friend-says",
+                  "fields": {
+                    "SPEECH": "What's next?"
+                  },
+                  "inputs": {
+                    "SPRITE": {
+                      "shadow": {
+                        "type": "gamelab_allSpritesWithAnimation"
+                      }
+                    }
+                  }
+                }
+              }
             }
           ]
         }
@@ -56,14 +112,23 @@
         "..........",
         "..........",
         "..........",
-        "..........",
-        "..........",
         ".S........",
+        "..........",
+        "......F...",
         "BBBBBBBBBB"
-      ]
+      ],
+      "worldStartRoles": {
+        "F": "friend"
+      }
     },
     "image_role_defaults": {
-      "sprite": "hero"
+      "sprite": "hero",
+      "gamelab_checkTouching": [
+        "hero",
+        "friend"
+      ],
+      "gamelab_spriteSay": "hero",
+      "data:friend-says": "friend"
     },
     "toolbox_definition": {
       "kind": "flyoutToolbox",
@@ -81,13 +146,18 @@
       {
         "attachTo": "gamelab_checkTouching",
         "data": "treasure-touch",
-        "room": {
-          "type": "spritelab2_goToScene"
+        "shadow": {
+          "type": "spritelab2_placeholder",
+          "extraState": {
+            "like": {
+              "type": "spritelab2_goToScene"
+            }
+          }
         }
       }
     ],
     "objectives": {
-      "title": "**A new scene**\n\nWe made you a second scene.",
+      "title": "**A new scene**",
       "items": [
         {
           "text": "Drag **go to scene** under one of your **when touches** events.",
@@ -96,11 +166,12 @@
             "type": "spritelab2_goToScene",
             "fields": {
               "SCENE": "second-scene"
-            }
+            },
+            "scene": "scene-1"
           }
         },
         {
-          "text": "Click **Play** and get to **Scene 2**.",
+          "text": "Select **Run**, then move your player to touch the object or character that takes it to **Scene 2**.",
           "check": {
             "kind": "scene",
             "id": "second-scene"
@@ -108,10 +179,8 @@
         }
       ]
     },
-    "long_instructions": "# A new scene\r\nA **scene** is one screen of your quest. We made you a second one!",
+    "long_instructions": "# A new scene\r\nA **scene** is a new area of your game for your player to explore. Your quest now has a second scene ready for you to build.",
     "header_label": "A new scene",
-    "preload_asset_list": null,
-    "encrypted_examples": [],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -131,10 +200,12 @@
     "use_default_sprites": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "enable_big_playspace": "false"
+    "enable_big_playspace": "false",
+    "preload_asset_list": null
   },
   "audit_log": "[{\"changed_at\":\"2026-11-01 18:37:41 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
-  "level_concept_difficulty": {}
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

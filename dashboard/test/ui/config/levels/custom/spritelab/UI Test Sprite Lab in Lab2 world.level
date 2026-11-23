@@ -7,6 +7,10 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "hero",
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -15,7 +19,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -24,7 +28,19 @@
     "level_mode": {
       "kind": "world",
       "paletteRoles": [
+        "hero",
+        "treasure",
         "block"
+      ],
+      "extraTabs": [
+        "Images"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "imageKinds": [
+        "sprite"
       ]
     },
     "starter_images": [
@@ -84,23 +100,30 @@
       "title": "**Make your world**",
       "items": [
         {
-          "text": "Click a square to place a **block**.",
+          "text": "Select a square to place your object.",
           "check": {
-            "kind": "world"
+            "kind": "world",
+            "role": "treasure"
           }
         },
         {
-          "text": "Click **Play**.",
+          "text": "Add blocks to jump onto.",
           "check": {
-            "kind": "play"
+            "kind": "world",
+            "role": "block"
+          }
+        },
+        {
+          "text": "Select **Run**, then run and jump to your object.",
+          "check": {
+            "kind": "reach",
+            "role": "treasure"
           }
         }
       ]
     },
     "long_instructions": "# Make your world\r\n\r\nBuild a world where your player can reach your object.",
     "header_label": "Make your world",
-    "preload_asset_list": null,
-    "encrypted_examples": [],
     "embed": "false",
     "instructions_important": "false",
     "submittable": "false",
@@ -120,10 +143,12 @@
     "use_default_sprites": "false",
     "mini_toolbox": "false",
     "hide_pause_button": "false",
-    "enable_big_playspace": "false"
+    "enable_big_playspace": "false",
+    "preload_asset_list": null
   },
   "audit_log": "[{\"changed_at\":\"2026-11-01 17:12:19 +0000\",\"changed\":[\"objectives\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:12:43 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"},{\"changed_at\":\"2026-11-01 17:13:42 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]",
-  "level_concept_difficulty": {}
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

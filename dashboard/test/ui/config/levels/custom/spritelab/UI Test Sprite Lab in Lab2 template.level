@@ -15,12 +15,13 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
     "encrypted": "false",
-    "long_instructions": "Project template for the ui-test-spritelab-lab2 unit. Not in the unit itself; its Sprite Lab levels name it as their project_template_level_name so they all share one project."
+    "long_instructions": "Project template for the revised hoai2026-dev unit. Not in the script itself; the unit's Sprite Lab levels name it as their project_template_level_name so they all share one project.",
+    "preload_asset_list": null
   }
 }]]></config>
 </GamelabJr>

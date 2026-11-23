@@ -12,10 +12,17 @@ import {mockDcdo} from './dcdo';
  * judges are turned off by their DCDO flag, and answered as safe if one is
  * asked anyway. Picture moderation (dashboard's /v3/images/moderate, which
  * calls Azure and answers null where the key is absent, as on CI) is
- * answered as safe, so the test never leaves the box.
+ * answered as safe, so the test never leaves the box. Anyone but a
+ * levelbuilder, this test's student included, gets pre-made pictures from the
+ * image cache rather than the gateway (levelMode.ts imageSourceFor); every
+ * file asked of the cache is the same picture.
  */
 
 const AI_GATEWAY_URL = 'https://ai-gateway.code.org';
+// Where pre-made pictures come from, on every level for anyone but a
+// levelbuilder (apps/src/p5lab/spritelab/lab2/ai/images/imageCache.ts).
+const IMAGE_CACHE_URL =
+  'https://curriculum.code.org/media/spritelab/generate/images';
 const IMAGE_SAFETY_DCDO_KEY = 'spritelab-lab2-image-safety-enabled';
 
 /** The picture every generation returns: 1024px square, 32px art pixels. */
@@ -109,9 +116,10 @@ const SAFE_MODERATION = {
 };
 
 /**
- * Route the gateway and its token endpoint for `page`. Call after the page
- * is on the target host, since the safety flag is a cookie on that host.
- * Returns the number of pictures handed out so far, as a function.
+ * Route the gateway, its token endpoint and the image cache for `page`. Call
+ * after the page is on the target host, since the safety flag is a cookie on
+ * that host. Returns, as a function, how many pictures the gateway and
+ * picture files the cache have handed out so far.
  */
 export async function fakeImageGeneration(page: Page): Promise<() => number> {
   pictureBase64 ??= fakePicture();
@@ -125,6 +133,13 @@ export async function fakeImageGeneration(page: Page): Promise<() => number> {
   await page.route('**/v3/images/moderate', route =>
     route.fulfill({json: SAFE_MODERATION}),
   );
+  await page.route(`${IMAGE_CACHE_URL}/**`, route => {
+    pictures += 1;
+    return route.fulfill({
+      contentType: 'image/png',
+      body: Buffer.from(pictureBase64!, 'base64'),
+    });
+  });
   await page.route(`${AI_GATEWAY_URL}/**`, route => {
     const body = route.request().postDataJSON() as {output?: unknown} | null;
     if (body?.output) {
