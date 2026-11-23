@@ -34,7 +34,7 @@ class DcdoController < ApplicationController
         when "String"
           raw_value
         else
-          new_value = Oj.load(raw_value)
+          new_value = Oj.load(raw_value, mode: :strict)
           if new_value.class.to_s != data_type
             raise "#{new_value} does not match data type \"#{data_type}\""
           end
