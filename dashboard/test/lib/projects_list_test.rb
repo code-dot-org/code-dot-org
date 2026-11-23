@@ -312,6 +312,53 @@ class ProjectsListTest < ActionController::TestCase
     assert_equal [], ProjectsList.fetch_updated_library_channels([])
   end
 
+  test 'fetch_section_projects fetches the projects of every student in one query' do
+    other_storage_id = @storage_id + 1
+    stub_projects = [
+      {
+        id: 1, storage_id: @storage_id, state: 'active', uuid: SecureRandom.uuid,
+        value: {name: 'First', level: '/projects/applab'}.to_json
+      },
+      {
+        id: 2, storage_id: other_storage_id, state: 'active', uuid: SecureRandom.uuid,
+        value: {name: 'Second', level: '/projects/gamelab'}.to_json
+      },
+      {
+        id: 3, storage_id: @storage_id, state: 'active', uuid: SecureRandom.uuid,
+        value: {name: 'Third', level: '/projects/applab'}.to_json
+      },
+    ]
+    mock_user = Struct.new(:id, :name)
+    first_student = mock_user.new(4, 'first student')
+    second_student = mock_user.new(5, 'second student')
+    mock_section = Struct.new(:students)
+    section = mock_section.new([first_student, second_student])
+
+    ProjectsList.stubs(:get_storage_ids_by_user_ids).returns(
+      {first_student.id => @storage_id, second_student.id => other_storage_id}
+    )
+
+    projects_table = mock
+    projects_table.expects(:where).
+      with(storage_id: [@storage_id, other_storage_id], state: 'active').
+      once.
+      returns(stub_projects)
+    Projects.stubs(:table).returns(projects_table)
+
+    response = ProjectsList.fetch_section_projects(section)
+
+    assert_equal %w[First Third Second], (response.map {|row| row['name']})
+    assert_equal ['first student', 'first student', 'second student'], (response.map {|row| row['studentName']})
+  end
+
+  test 'fetch_section_projects queries no projects when no student has a storage id' do
+    mock_section = Struct.new(:students)
+    ProjectsList.stubs(:get_storage_ids_by_user_ids).returns({})
+    Projects.expects(:table).never
+
+    assert_equal [], ProjectsList.fetch_section_projects(mock_section.new([]))
+  end
+
   private def user_db_result(result)
     stub(where: stub(select_hash: result))
   end
