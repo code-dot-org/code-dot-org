@@ -27,11 +27,10 @@ export function getBlockDefinitionsForUpdatedLocale(
     const blockDefinition =
       Blockly.SourceCustomBlocks.blockDefinitionsByName[blockName];
 
-    if (!blockDefinition.config.sourceArgs) {
-      blockDefinition.config.sourceArgs = blockDefinition.config.args;
-    }
-
-    blockDefinition.config.args = blockDefinition.config.sourceArgs || [];
+    // Lab2 definitions come from Redux and are frozen, so the English args
+    // are kept here rather than on the definition.
+    Blockly.SourceCustomBlocks.blockArgs[blockName] ||=
+      blockDefinition.config.args;
 
     Blockly.SourceCustomBlocks.blockTexts[blockName] ||=
       blockDefinition.config.blockText;
@@ -57,13 +56,12 @@ export function getBlockDefinitionsForUpdatedLocale(
       newBlockText = localization.translate(oldBlockText, ['blockly-block']);
     }
 
-    const args = blockDefinition.config.args
-      ? [...blockDefinition.config.args]
-      : blockDefinition.config.args;
+    const sourceArgs = Blockly.SourceCustomBlocks.blockArgs[blockName];
+    const args = sourceArgs ? [...sourceArgs] : sourceArgs;
 
     (args || []).forEach((arg, i) => {
       if (arg.options) {
-        // A copy, so the English options in sourceArgs stay as they are.
+        // A copy, so the English options in blockArgs stay as they are.
         args[i] = {...args[i]};
 
         args[i].options = arg.options.map(item => {
