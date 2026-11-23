@@ -12,6 +12,9 @@ import {
   recordTokenNotIssued,
 } from '@cdo/apps/aiGateway/requestMetric';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
+const TUTOR = AiChatClientTypes.AI_TUTOR;
 
 const countMock = Observability.metrics.count as jest.Mock;
 const recordErrorMock = Observability.recordError as jest.Mock;
@@ -51,10 +54,11 @@ describe('parseSigningKey', () => {
 });
 
 describe('recordGatewayRequestOk', () => {
-  it('counts an ok request under its signing key', () => {
-    recordGatewayRequestOk('environment_key');
+  it('counts an ok request under its client type and signing key', () => {
+    recordGatewayRequestOk(TUTOR, 'environment_key');
 
     expect(lastTags()).toEqual({
+      client_type: TUTOR,
       signing_key: 'environment_key',
       outcome: 'ok',
     });
@@ -63,15 +67,19 @@ describe('recordGatewayRequestOk', () => {
 
 describe('recordTokenNotIssued', () => {
   it('counts token_not_issued without a signing key', () => {
-    recordTokenNotIssued();
+    recordTokenNotIssued(AiChatClientTypes.ADAPTIVE);
 
-    expect(lastTags()).toEqual({outcome: 'token_not_issued'});
+    expect(lastTags()).toEqual({
+      client_type: AiChatClientTypes.ADAPTIVE,
+      outcome: 'token_not_issued',
+    });
   });
 });
 
 describe('recordGatewayRequestError', () => {
   it('counts a 401 for the token as token_rejected', async () => {
     await recordGatewayRequestError(
+      TUTOR,
       'environment_key',
       networkError(401, {reason: 'invalid_token'})
     );
@@ -81,6 +89,7 @@ describe('recordGatewayRequestError', () => {
 
   it('does not count a Turnstile 401 as token_rejected', async () => {
     await recordGatewayRequestError(
+      TUTOR,
       'environment_key',
       networkError(401, {reason: 'turnstile'})
     );
@@ -90,11 +99,13 @@ describe('recordGatewayRequestError', () => {
 
   it('counts a 5xx as gateway_error', async () => {
     await recordGatewayRequestError(
+      TUTOR,
       'legacy_shared_key',
       networkError(500, {error: 'Unknown Error'})
     );
 
     expect(lastTags()).toEqual({
+      client_type: TUTOR,
       signing_key: 'legacy_shared_key',
       outcome: 'gateway_error',
     });
@@ -102,15 +113,17 @@ describe('recordGatewayRequestError', () => {
 
   it('counts without a signing key when the token response named none', async () => {
     await recordGatewayRequestError(
+      TUTOR,
       undefined,
       networkError(500, {error: 'Unknown Error'})
     );
 
-    expect(lastTags()).toEqual({outcome: 'gateway_error'});
+    expect(lastTags()).toEqual({client_type: TUTOR, outcome: 'gateway_error'});
   });
 
   it('counts anything else as other_error', async () => {
     await recordGatewayRequestError(
+      TUTOR,
       'environment_key',
       networkError(429, {error: 'Too Many Requests'})
     );

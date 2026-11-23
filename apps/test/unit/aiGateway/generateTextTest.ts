@@ -5,6 +5,7 @@ import {
   AI_GATEWAY_URL,
   clearAccessTokenCache,
 } from '@cdo/apps/aiGateway/shared';
+import DCDO from '@cdo/apps/dcdo';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -12,6 +13,11 @@ jest.mock('@code-dot-org/core/plugins/observability', () => ({
   startSpan: (_options: unknown, callback: () => unknown) => callback(),
   recordError: jest.fn(),
   metrics: {count: jest.fn()},
+}));
+
+jest.mock('@cdo/apps/dcdo', () => ({
+  __esModule: true,
+  default: {get: jest.fn((_key: string, fallback: unknown) => fallback)},
 }));
 
 jest.mock('@cdo/apps/aiGateway/logHelper', () => ({
@@ -35,6 +41,7 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 
 const mockPost = HttpClient.post as jest.Mock;
 const mockFetchChallengeToken = fetchChallengeToken as jest.Mock;
+const dcdoGetMock = DCDO.get as jest.Mock;
 
 const aichatContext: AichatContext = {
   clientType: AiChatClientTypes.AI_TUTOR,
@@ -142,5 +149,57 @@ describe('generateTextThroughGateway access tokens', () => {
     await generate();
 
     expect(accessTokenRequests()).toHaveLength(1);
+  });
+});
+
+describe('generateTextThroughGateway purpose header', () => {
+  beforeEach(() => {
+    clearAccessTokenCache();
+    mockPost.mockReset();
+    mockPost.mockImplementation(async (url: string) =>
+      url === '/ai_gateway/access_token'
+        ? {
+            json: async () => ({
+              token: 'token-1',
+              turnstileEnforcementMode: 'off',
+              signingKey: 'legacy_shared_key',
+              reusable: false,
+            }),
+          }
+        : {json: async () => ({text: 'hi'})}
+    );
+  });
+
+  afterEach(() => {
+    dcdoGetMock.mockImplementation(
+      (_key: string, fallback: unknown) => fallback
+    );
+  });
+
+  const gatewayHeaders = () =>
+    mockPost.mock.calls.find(([url]) => url === AI_GATEWAY_URL)?.[3];
+
+  const generateFor = (purpose: string) =>
+    generateTextThroughGateway(
+      {model: 'gemini', prompt: 'hello'},
+      {aichatContext, phase: 'generation', purpose}
+    );
+
+  it('sends the purpose once DCDO turns the header on', async () => {
+    dcdoGetMock.mockImplementation((key: string, fallback: unknown) =>
+      key === 'ai-gateway-purpose-header-enabled' ? true : fallback
+    );
+
+    await generateFor('adaptive-instructions');
+
+    expect(gatewayHeaders()).toMatchObject({
+      'x-ai-gateway-purpose': 'adaptive-instructions',
+    });
+  });
+
+  it('leaves the purpose header off while the flag is off', async () => {
+    await generateFor('adaptive-instructions');
+
+    expect(gatewayHeaders()).not.toHaveProperty('x-ai-gateway-purpose');
   });
 });

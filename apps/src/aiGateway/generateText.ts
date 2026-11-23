@@ -1,6 +1,7 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 import {generateText, type GenerateTextResult} from 'ai';
 
+import DCDO from '@cdo/apps/dcdo';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import AichatContextManager from '../aichat/aichatContextManager';
@@ -18,6 +19,10 @@ import {AI_GATEWAY_URL, getModelString} from './shared';
 import {turnstileErrorTags} from './turnstile';
 
 export type GatewayPhase = 'input_filter' | 'generation' | 'output_filter';
+
+// Off by default: until the gateway worker allows x-ai-gateway-purpose,
+// sending it fails the request's CORS preflight.
+const PURPOSE_HEADER_DCDO_KEY = 'ai-gateway-purpose-header-enabled';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type ExtraOptions = Record<string, unknown>;
@@ -100,6 +105,10 @@ const generateTextThroughGateway = async <
 ): Promise<GatewayGenerateTextResult<TOOLS, OUTPUT>> => {
   const {model, ...restOptions} = options;
   const phase = extraOptions?.phase as GatewayPhase | undefined;
+  // A short slug naming what the call is for, e.g. 'adaptive-instructions'.
+  const purpose = extraOptions?.purpose as string | undefined;
+  const sendPurpose =
+    !!purpose && DCDO.get(PURPOSE_HEADER_DCDO_KEY, false) === true;
   // A caller outside a chat passes its own context for the access token.
   const aichatContext =
     (extraOptions?.aichatContext as AichatContext | undefined) ??
@@ -134,6 +143,7 @@ const generateTextThroughGateway = async <
               'X-AI-Gateway-Schema-Version': CURRENT_SCHEMA_VERSION,
               ...challengeHeaders(challengeToken),
               ...(phase && {'x-ai-gateway-phase': phase}),
+              ...(sendPurpose && {'x-ai-gateway-purpose': purpose}),
             }
           )
       );
@@ -181,6 +191,7 @@ const generateTextThroughGateway = async <
         'ai.model': modelString,
         'ai.prompt_length': promptLength,
         'ai.client_type': clientType,
+        ...(purpose && {'ai.purpose': purpose}),
         feature: 'ai-gateway',
       },
     },

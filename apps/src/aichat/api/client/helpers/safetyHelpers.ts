@@ -64,7 +64,8 @@ export async function isTextSafe(
   text: string,
   phase?: 'input_filter' | 'output_filter',
   customSafetyConfig?: Partial<SafetyConfig>,
-  aichatContext?: AichatContext
+  aichatContext?: AichatContext,
+  purpose?: string
 ): Promise<boolean> {
   const safetyConfig = {
     ...DEFAULT_SAFETY_CONFIG,
@@ -77,7 +78,7 @@ export async function isTextSafe(
       output: outputSchema,
       model: getModel(safetyConfig.modelId),
     },
-    {phase, aichatContext}
+    {phase, aichatContext, purpose}
   );
 
   return isValidAndPassingClassification(response.output?.classification);
