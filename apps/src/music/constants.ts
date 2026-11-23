@@ -5,10 +5,11 @@ import {Key} from './utils/Notes';
 export const baseAssetUrl = 'https://curriculum.code.org/media/musiclab/';
 export const baseAssetUrlRestricted = '/restricted/musiclab/';
 
-export const REMOVED_PACK_MESSAGES = {
-  SOUND: 'No longer available. Plays as silence.',
-  PACK: 'This song pack is no longer available. Some sounds may play as silence as a result.',
-};
+export const PROJECT_PACK_REMOVED_MESSAGE =
+  'A song pack this project used is no longer available. Some sounds may play as silence as a result.';
+export const PACK_REMOVED_MESSAGE =
+  'This song pack is no longer available. Some sounds may play as silence as a result.';
+export const SOUND_REMOVED_MESSAGE = 'No longer available. Plays as silence.';
 
 export interface Trigger {
   id: string;
