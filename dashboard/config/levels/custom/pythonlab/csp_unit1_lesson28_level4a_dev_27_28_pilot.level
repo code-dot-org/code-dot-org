@@ -1,0 +1,62 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T18:35:09.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Two Dice",
+    "long_instructions": "## Two Dice\r\n\r\nModify the original program so it rolls two dice.\r\n\r\n1. Create a second variable to store another random roll.\r\n2. Print the first roll.\r\n3. Print the second roll.\r\n4. Add both rolls together and store the result in a total variable.\r\n5. Print the total.\r\n\r\n**Check:** Run the program several times. Do both rolls stay between 1 and 6?",
+    "bubble_choice_description": "Add a second random roll. Print both rolls, then add them together and print the total.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/d6a9ff25eeea42feea7d69996d7f2de3-Pasted Graphic 6.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from random import randint\n\nroll = randint(1, 6)\n\nprint(roll)",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMp/5WLnmz+r66Sl\nrkxbhsMrYI1Lo7B2VDqdRFmFZCWh5iDV9z3xg3Sshl9B6CKpNaIeCAYBrWZx\nBOHlh/DBCHpE6/4lxA1H+IHs+NTVtJYEutbFhgraSE5UDrYfN0Fv2BcrIwp8\nMksN9g9CDYUawduPaaQaR45d17vSDu4gpgfyJIoPt25m2sYhaRArYkbNGQFG\naihF1mSMywFoCq36xyxiNPQFjAKGyzmqwAHQXOysT6b+p9eLkVl6eqpC0Njd\nHNeSZCYCE4yY6Qz0Xe2uTdp10dJe3SghMPMSh+QigBqcUG00Pk1qToRFFTFq\nJnZeE7gNv/XJxJGRh8UVi/8vrRf8GUKmB919Z7WIc/XSeaF3QQ==\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import contextlib\nimport io\nfrom unittest import TestCase\n\n\nclass TestModifyTwoDice(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and capture both the actual\n        variable values and the printed output.\"\"\"\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n        cls.namespace = {}\n        stdout = io.StringIO()\n        cls.run_error = None\n        try:\n            with contextlib.redirect_stdout(stdout):\n                exec(compile(cls.source, \"main.py\", \"exec\"), cls.namespace)\n        except Exception as e:\n            cls.run_error = e\n        cls.stdout_text = stdout.getvalue()\n\n    def _int_variables(self):\n        return {\n            name: value for name, value in self.namespace.items()\n            if isinstance(value, int) and not isinstance(value, bool) and not name.startswith(\"__\")\n        }\n\n    def test_prints_two_separate_rolls(self):\n        \"\"\"Creates two separate dice roll variables, each between 1 and 6, and prints both\"\"\"\n        int_vars = self._int_variables()\n        roll_like_vars = {name: v for name, v in int_vars.items() if \"roll\" in name.lower()}\n        self.assertGreaterEqual(\n            len(roll_like_vars),\n            2,\n            f\"Expected at least 2 roll variables, but found: {list(roll_like_vars.keys())}. \"\n            \"Make sure you create a second variable to store another random roll.\"\n        )\n        out_of_range = {name: v for name, v in roll_like_vars.items() if not (1 <= v <= 6)}\n        self.assertFalse(\n            out_of_range,\n            f\"These roll variable(s) are outside 1-6: {out_of_range}. Make sure both use randint(1, 6).\"\n        )\n        for name, value in roll_like_vars.items():\n            self.assertIn(\n                str(value),\n                self.stdout_text,\n                f\"{name}'s value ({value}) wasn't found anywhere in the printed output. Make sure you print both rolls.\"\n            )\n\n    def test_prints_correct_total(self):\n        \"\"\"Stores and prints a total equal to the sum of the two rolls\"\"\"\n        int_vars = self._int_variables()\n        roll_values = [v for name, v in int_vars.items() if \"roll\" in name.lower()]\n        total_vars = {name: v for name, v in int_vars.items() if \"total\" in name.lower()}\n        if len(roll_values) < 2:\n            self.skipTest(\"Add both roll variables first -- we'll check the total once they're in place.\")\n        self.assertTrue(\n            total_vars,\n            \"We didn't find a variable with 'total' in its name. Store the sum of both rolls in a total variable.\"\n        )\n        expected_total = sum(roll_values)\n        matches_expected = any(v == expected_total for v in total_vars.values())\n        self.assertTrue(\n            matches_expected,\n            f\"Expected a total of {expected_total} (the sum of your rolls {roll_values}), but found: {total_vars}.\"\n        )\n        total_value = next(iter(total_vars.values()))\n        self.assertIn(\n            str(total_value),\n            self.stdout_text,\n            f\"The total ({total_value}) wasn't found in the printed output. Make sure you print the total.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20T18:35:09.924+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson28_level4a_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson28_level4a_dev_27_28\"}]"
+}]]></config>
+</Pythonlab>

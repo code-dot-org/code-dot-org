@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894911-9fae18d466cb",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 10: Remixing, Creativity, and Originality",
+  "question": "The biggest words are the ones the AI reached for most often, and the smallest are the ones that almost never showed up. Which would you start a story with?\n\nSteps:\n1. Use the arrow tool to point at the 2 biggest words.\n2. Place a shape on one small word that would make a story more interesting.\n3. Record your voice explaining why an AI uses the big words most. Tell us the story idea your small word could start.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places arrows and a shape, but the voice recording gives no reason."
+    },
+    {
+      "level": 2,
+      "description": "Two arrows point to \"friend\" and \"adventure\" AND a shape is on one small word AND the voice recording says the big words are the most common choices AND gives a story idea the small word could start."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains what problem, feeling, or meaning the small word adds to the story."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894911-9fae18d466cb-81c22e29",
+  "whiteboard_starter_image_alt_text": "A word cloud titled \"Words an AI used in 50 stories about a robot who wants a pet.\" The biggest words are \"friend\" and \"adventure.\" Medium words are \"learns,\" \"brave,\" \"city,\" \"dream,\" and \"journey.\" The smallest words are \"pigeon,\" \"awkward,\" \"allergic,\" \"forgot,\" \"hiccups,\" and \"tax forms.\""
+}

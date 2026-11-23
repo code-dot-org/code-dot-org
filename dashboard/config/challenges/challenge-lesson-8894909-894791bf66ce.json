@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894909-894791bf66ce",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 8: Debugging and Refining Outputs",
+  "question": "A race car pit crew never changes five things at once, because then nobody knows which change made the car faster. Plan your prompt testing the same way.\n\nSteps:\n1. Start recording. Pick one goal from the list below.\n2. Say your first prompt and what you expect to go wrong with it.\n3. Plan 3 new versions. Each version changes only one thing, and for each one, say what that change tests.\n4. Name 2 ways you will judge which version is best, and say why you would test each version more than once.\n\nGoal list:\n- A study schedule that fits around my job\n- A short speech for a friend’s graduation\n- A plan for a one-day school fundraiser\n- A summary of a long article for a younger sibling",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe a plan on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student says a first prompt but plans fewer than 3 versions, OR the versions change more than one thing."
+    },
+    {
+      "level": 2,
+      "description": "Student says a first prompt and what they expect to go wrong AND plans 3 versions that each change only one thing AND says what each change tests."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names 2 ways to judge which version is best AND explains why each version should be tested more than once."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

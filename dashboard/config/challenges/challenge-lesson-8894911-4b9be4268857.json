@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894911-4b9be4268857",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 10: Remixing, Creativity, and Originality",
+  "question": "Each team won something, but no team won everything. What do these numbers say about when working together is worth the extra time?\n\nSteps:\n1. Use the arrow tool to point at the number where AI alone beat the other teams.\n2. Place a shape on the number where humans alone beat the other teams.\n3. Use the text tool to write one sentence about when working together is worth the extra time.\n4. Record your voice naming one situation where AI alone is enough, and one where a human alone is better.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but types no sentence."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to Team AI's 5 min AND a shape is on Team Human's originality (9 / 10) AND the typed sentence names a condition for when working together is worth the extra time."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names one situation where AI alone is enough and one where a human alone is better, with a reason for each."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894911-4b9be4268857-b31833a7",
+  "whiteboard_starter_image_alt_text": "\"Three teams designed a footbridge for the school pond.\" A table compares the teams. Team Human (no AI): 90 minutes to finish, strength test 6 out of 10, originality 9 out of 10. Team AI (AI alone): 5 minutes, strength 7 out of 10, originality 3 out of 10. Team Together (human + AI): 40 minutes, strength 9 out of 10, originality 8 out of 10. At the bottom is a blank box labeled \"Space for your sentence.\""
+}

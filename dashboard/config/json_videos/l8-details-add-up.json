@@ -1,0 +1,13 @@
+{
+  "key": "l8-details-add-up",
+  "description": "See how small details you share online can add up to reveal more than you meant to.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l8-details-add-up.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "35b23546-6e0f-46d8-9d65-ac99ee2db06e"
+  ]
+}

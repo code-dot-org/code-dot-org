@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894910-521f0fa5e394",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 9: AI as a Co-Creator",
+  "question": "Every movie ends with credits that say who did what. If you made something with AI, honest credits say exactly what the AI did and what you did.\n\nSteps:\n1. Start recording. Pick one creation from the list below.\n2. Read your credits out loud. Include at least 4 lines, such as “Idea by...”, “First draft by...”, “Edited by...”, and “Final choices by...”, and say who did each one (you, the AI, or someone else).\n3. Name one line that would be misleading if you left it out.\n4. Say why honest credits matter.\n\nCreation list:\n- A poem\n- A short song\n- A comic strip script\n- An idea for a video game level",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not read any credits on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student reads fewer than 4 credit lines, OR the lines do not say who did what."
+    },
+    {
+      "level": 2,
+      "description": "Student reads at least 4 credit lines that each name a specific contribution and who made it (including a specific task for the AI) AND names one line that would be misleading if left out."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND explains why honest credits matter, with a specific reason (for example, others need to know what to trust or who to ask)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

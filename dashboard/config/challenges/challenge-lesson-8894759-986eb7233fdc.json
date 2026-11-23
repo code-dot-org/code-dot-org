@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894759-986eb7233fdc",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 4: Guidelines for Working with AI",
+  "question": "The helper was given two rules, and it broke both. Why does that happen? Find the broken rule, make the instructions stronger, and explain why a written rule is still not a guarantee.\n\nSteps:\n1. Use the arrow tool to point at one rule the helper broke.\n2. Place a shape on the part of the helper’s answer that breaks that rule.\n3. Use the text tool to write a stronger version of the instructions. Say what the helper should do when asked about something else.\n4. Record your voice explaining why a helper might still break a rule even when it is written down.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on a rule, the shape is not on the helper's answer, or the student types no new instructions or instructions that do not say what the helper should do when asked about something else."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to Rule 1 or Rule 2 AND a shape is on the helper's answer AND the new instructions restate the rule and say what the helper should do when asked about something else."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that an AI predicts likely words from patterns, so it can still break a rule that is written down."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894759-986eb7233fdc-5f950a80",
+  "whiteboard_starter_image_alt_text": "\"Train Museum Helper.\" On the left, instructions for the helper. Rule 1: \"Only answer questions about trains.\" Rule 2: \"Keep every answer to 2 sentences or fewer.\" On the right, a chat. The visitor asks, \"What is the fastest airplane?\" The helper answers: \"The fastest airplane ever flown is the X-15, a rocket plane. It flew more than 6 times faster than the speed of sound. Planes like it changed how people think about flight.\""
+}

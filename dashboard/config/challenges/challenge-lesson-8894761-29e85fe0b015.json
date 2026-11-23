@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894761-29e85fe0b015",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 6: The AI Credibility Guide",
+  "question": "A helper just gave advice, but the helper has never met the person who will use the work. You decide whether the advice is good.\n\nSteps:\n1. Start recording. Pick one case from the list below and read it out loud.\n2. Say whether the person should keep the advice, change it, or keep only part of it.\n3. Explain your answer using one detail about the person who will use the work.\n4. Say better advice the helper could have given.\n\nCase list:\n- “Theo is writing instructions so his grandmother can join a video call. A helper says: ‘Use short technical words to save space.’”\n- “Mina is planning a party for a 6-year-old. A helper says: ‘Make the schedule three hours long with many quiet activities.’”\n- “Omar is writing a welcome note for a new student who is just learning English. A helper says: ‘Use slang and jokes so it sounds cool.’”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give a decision on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says keep, change, or keep part of the advice, but gives no reason, or gives a reason that does not use a detail about the person who will use the work."
+    },
+    {
+      "level": 2,
+      "description": "Student says keep, change, or keep part of the advice AND gives at least one reason that uses a detail about the person who will use the work."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says better advice the helper could have given, using a detail about the person."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

@@ -20,7 +20,7 @@
     "peer_reviewable": "false",
     "optional": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-05 01:40:30 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 01:53:45 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-11-05 01:40:30 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-05 01:53:45 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:46:42 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

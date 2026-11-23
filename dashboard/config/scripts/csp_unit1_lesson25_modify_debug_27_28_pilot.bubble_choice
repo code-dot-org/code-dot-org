@@ -1,0 +1,11 @@
+name 'csp-unit1-lesson25-modify-debug_27_28_pilot'
+display_name 'Modify: Debug'
+description '####Pick **one** program below. Find the bug, fix it, and run your code to confirm it works.'
+
+sublevels
+level 'csp-unit1-lesson25-modify-debug-a_27_28_pilot'
+level 'csp-unit1-lesson25-modify-debug-b_27_28_pilot'
+level 'csp-unit1-lesson25-modify-debug-c_27_28_pilot'
+level 'csp-unit1-lesson25-modify-debug-d_27_28_pilot'
+
+uses_lab2

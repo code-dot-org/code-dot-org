@@ -6,7 +6,6 @@ import React, {forwardRef, memo} from 'react';
 import AiTutorVersionActionNotification from '@cdo/apps/aiComponentLibrary/aiTutorVersionActionNotification/AiTutorVersionActionNotification';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import ThinkingDots from '@cdo/apps/aiTutor/views/lessonDeepDive/Animations/ThinkingDots';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiChatTeacherFeedback as TeacherFeedback} from '@cdo/generated-scripts/sharedConstants';
 
@@ -150,7 +149,6 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
         timestamp,
         commitDescription,
         hideTimestamp,
-        pending,
       } = event;
 
       if (
@@ -195,20 +193,9 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
       }
 
       const time = hideTimestamp ? '' : timestampToLocalTime(timestamp);
-      const label = time ? `${text} ${time}` : text;
       return (
         <Alert
-          text={
-            pending ? (
-              <>
-                <ThinkingDots size={20} className={styles.pendingDots} />
-                {label}
-              </>
-            ) : (
-              label
-            )
-          }
-          showIcon={!pending}
+          text={time ? `${text} ${time}` : text}
           type={ALERT_TYPES[notificationType] ?? 'success'}
           onClose={
             isTeacherView

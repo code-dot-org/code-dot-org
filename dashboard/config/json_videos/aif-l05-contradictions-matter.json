@@ -1,0 +1,14 @@
+{
+  "key": "aif-l05-contradictions-matter",
+  "description": "Find out why a contradiction in AI's answers is a warning sign to check a trusted source before you act.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l05-contradictions-matter.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "aa84046f-f43f-45a1-8563-83426f470007",
+    "8109e34b-1763-4092-856f-524a05ac1b2a"
+  ]
+}

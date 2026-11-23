@@ -3,6 +3,7 @@ import {
   Challenges,
   PodcastsBox,
   ReflectionData,
+  VideosBox,
   VocabularyFlashcards,
 } from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
@@ -12,12 +13,12 @@ import {
   LessonDeepDiveData,
   AssessmentQuestionResult,
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Chat from './Chat';
-import VideosBox from './VideosBox';
 
 import styles from './intervention-box.module.scss';
 
@@ -255,7 +256,9 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             onChallengeStarted={handleChallengeStarted}
           />
         )}
-        {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
+        {selected === 'videos' && (
+          <VideosBox jsonVideos={jsonVideos} VideoPlayer={TutorVideo} />
+        )}
         {selected === 'podcasts' && (
           <PodcastsBox
             lessonId={lessonId}

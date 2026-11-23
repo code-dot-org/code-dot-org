@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894761-69f3dcd37c4c",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 6: The AI Credibility Guide",
+  "question": "You are a judge at a school talent show. Anyone can say “that was fine,” but a great judge gives comments that help the performer get better.\n\nSteps:\n1. Start recording. Pick one act from the list below.\n2. In your judge voice, give a comment that is vague (for example, “It was okay”).\n3. Now give a specific comment that names one part of the act and says what to change.\n4. Tell the camera which comment would help the performer more, and why.\n\nAct list:\n- A student tells a joke.\n- A student juggles three balls.\n- A student reads a poem.\n- A student does a magic trick with a coin.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give any comment on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student gives only one comment, both comments are equally vague (such as \"it was okay\" and \"it was fine\"), or the student does not say which comment would help more."
+    },
+    {
+      "level": 2,
+      "description": "Student gives one vague comment AND one specific comment that names a part of the act, AND says which comment would help the performer more."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the specific comment also says what the performer should change, AND student gives a reason the specific comment is more useful."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

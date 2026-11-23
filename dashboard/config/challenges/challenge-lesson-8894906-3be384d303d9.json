@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894906-3be384d303d9",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 5: Uncovering Contradictions",
+  "question": "An AI that gives two different answers to the same question is a problem. In some places, it can be a big one. Design the safety net that catches it before anyone gets hurt.\n\nSteps:\n1. Start recording. Pick one system from the list below.\n2. Describe a specific contradiction that could happen (two different answers to the same question) and who would be affected.\n3. Describe one check that would catch it, such as asking twice and comparing, using one trusted source, or having a person sign off.\n4. Say one weakness of your check, and when a human should step in.\n\nSystem list:\n- A school’s emergency alert system\n- A bank’s help chat\n- A bus route app\n- A concert ticket helper",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe a system or a contradiction on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names a system but does not describe a specific contradiction."
+    },
+    {
+      "level": 2,
+      "description": "Student describes a specific contradiction (two different answers) AND who would be affected AND one check that would catch it."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names a weakness of the check (for example, answers could match and still be wrong) AND says when a human should step in."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

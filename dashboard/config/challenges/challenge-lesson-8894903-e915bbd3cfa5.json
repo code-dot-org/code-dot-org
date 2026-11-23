@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894903-e915bbd3cfa5",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 2: Beyond Words",
+  "question": "You are a nature documentary narrator, but your subject is a photo. Study the clues, whisper about them dramatically, and show how much a picture can tell you beyond what is obviously in it.\n\nSteps:\n1. Start recording. Pick one photo description from the list below.\n2. Narrate it in your best documentary voice and name 3 clues.\n3. For each clue, say what it tells you (such as the time of day, the weather, or the place).\n4. Name one clue you would remove before posting the photo, and say why.\n\nPhoto list:\n- “A backpack on a bus seat. Through the window, a red brick building and a street sign are visible. A wet umbrella lies on the floor.”\n- “A pair of muddy boots by a door. A coat with snow on its shoulders hangs above. A mug of steaming drink sits on the shelf.”\n- “A bicycle leaning on a fence. Long shadows stretch across the sidewalk. A sign in the window behind it says ‘Open until 6.’”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not narrate a photo on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names fewer than 3 clues, OR names clues without saying what they tell you."
+    },
+    {
+      "level": 2,
+      "description": "Student names 3 clues AND says what each one tells you (such as time of day, weather, or place) AND names one clue to remove before posting, with a reason."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND combines two clues into a stronger conclusion (for example, long shadows plus \"Open until 6\" points to late afternoon)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

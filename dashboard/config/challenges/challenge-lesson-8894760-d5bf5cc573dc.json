@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894760-d5bf5cc573dc",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 5: Trust and Credibility",
+  "question": "Kids all over the world play with many different toys, but this app only showed six. Fill the toy box with toys the app forgot, then write a request that would get them in.\n\nSteps:\n1. Use the text tool to add 3 toys or games that are missing. They can be toys or games you know from anywhere, like from your life or places you know about.\n2. Place a shape on one toy in the picture that you would take out to make space.\n3. Record your voice. Say the exact words you would type to the app so your toys would show up. Tell us about one of your toys, like how it is played, and say why you think the app left these toys out.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No text or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student adds fewer than 3 toys, places no shape, or the voice recording does not include a request that names at least 2 of the added toys."
+    },
+    {
+      "level": 2,
+      "description": "Student adds 3 toys that are not in the picture AND places a shape on one toy in the picture AND the voice recording says a request that names at least 2 of the added toys."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording tells where one added toy is from or how it is played, AND gives a reason the app might have left these toys out (for example, “it learned from pictures where toy boxes all look alike”)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894760-d5bf5cc573dc-ce41579f",
+  "whiteboard_starter_image_alt_text": "\"An app's answer for: 'a toy box'.\" A toy box holding six labeled toys: a teddy bear, building blocks, a ball, a toy car, a toy robot, and a drum. At the bottom is a blank box labeled \"Space for toys the app forgot.\""
+}

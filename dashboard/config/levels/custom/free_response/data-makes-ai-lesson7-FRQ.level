@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check for Understanding",
-    "long_instructions": "##Training a Decision Tree\r\n\r\nUse the sentence stem below and fill in the blanks based on the work that you did training decision trees today:\r\n\r\n**Our tree learned from decisions that past movie teams made. One thing our data might assume about real movies is ______. I think this because ______. A feature that could help the tree make better decisions is ______.**",
+    "long_instructions": "##Training a Decision Tree\r\n\r\nUse the sentence stem below and fill in the blanks based on the work that you did training decision trees today:\r\n\r\n**Our tree learned from decisions that past movie teams made. One thing our data might assume about real movies is ___________________________. I think this because ______. A feature that could help the tree make better decisions is ______.**",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "placeholder": "Write your response here",
@@ -20,7 +20,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-30T20:14:59.063+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson5-FRQ\\\"\"],\"cloned_from\":\"data-makes-ai-lesson5-FRQ\"},{\"changed_at\":\"2026-10-30 20:18:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-10-30T20:14:59.063+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson5-FRQ\\\"\"],\"cloned_from\":\"data-makes-ai-lesson5-FRQ\"},{\"changed_at\":\"2026-10-30 20:18:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:48:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
