@@ -5,7 +5,7 @@ import color from '@cdo/apps/util/color';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
-import {REMOVED_PACK_MESSAGES} from '../constants';
+import {SOUND_REMOVED_MESSAGE} from '../constants';
 import MusicRegistry from '../MusicRegistry';
 import MusicLibrary from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
@@ -233,7 +233,7 @@ class FieldSounds extends BlocklyCore.Field {
     if (isSilent) {
       this.textElement.setAttribute('opacity', '0.75');
     }
-    this.setTooltip(isSilent ? REMOVED_PACK_MESSAGES.SOUND : null);
+    this.setTooltip(isSilent ? SOUND_REMOVED_MESSAGE : null);
 
     // Attach the actual text.
     this.textElement.appendChild(document.createTextNode(fieldText));
