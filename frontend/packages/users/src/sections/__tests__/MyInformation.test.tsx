@@ -135,3 +135,15 @@ describe('MyInformation display-name helper', () => {
     expect(screen.queryByText(HELPER)).toBeNull();
   });
 });
+
+describe('MyInformation verified teacher tag', () => {
+  it('shows the tag for a verified teacher', () => {
+    renderSection({...TEACHER, verifiedTeacher: true});
+    expect(screen.getByText('Verified Teacher')).toBeInTheDocument();
+  });
+
+  it('shows no tag for a teacher who is not verified', () => {
+    renderSection({...TEACHER, verifiedTeacher: false});
+    expect(screen.queryByText('Verified Teacher')).not.toBeInTheDocument();
+  });
+});

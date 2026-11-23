@@ -80,6 +80,7 @@ class User::SettingsSerializer
       educator_role: user.educator_role,
       educator_role_options: educator_role_options,
       school_info: school_info,
+      verified_teacher: user.verified_teacher?,
     }
   end
 
