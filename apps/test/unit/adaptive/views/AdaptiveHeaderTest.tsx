@@ -67,6 +67,32 @@ describe('AdaptiveHeader', () => {
     expect(onFinish).toHaveBeenCalled();
   });
 
+  it("disables I'm finished with its reason in reach of the keyboard", async () => {
+    const onFinish = jest.fn();
+    renderHeader({onFinish, finishDisabledReason: 'Not yet'});
+    const button = screen.getByRole('button', {name: /I'm finished!/});
+    expect(button).toBeDisabled();
+    fireEvent.click(button);
+    expect(onFinish).not.toHaveBeenCalled();
+
+    const wrapper = button.parentElement!;
+    expect(wrapper).toHaveAttribute('tabindex', '0');
+    fireEvent.mouseOver(wrapper);
+    expect(await screen.findByRole('tooltip')).toHaveTextContent('Not yet');
+  });
+
+  it("hangs a callout under I'm finished and lets it be dismissed", () => {
+    const onDismiss = jest.fn();
+    renderHeader({
+      onFinish: jest.fn(),
+      finishCallout: {title: 'Ready!', body: 'Go on.', onDismiss},
+    });
+    expect(screen.getByRole('status', {name: ''})).toHaveTextContent('Ready!');
+    expect(screen.getByText('Go on.')).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Dismiss'}));
+    expect(onDismiss).toHaveBeenCalled();
+  });
+
   it("names the project's save state on the cloud", () => {
     renderHeader({}, 'saved');
     expect(screen.getByTitle('Saved')).toBeTruthy();
