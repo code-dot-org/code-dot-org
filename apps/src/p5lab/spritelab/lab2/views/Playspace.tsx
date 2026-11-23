@@ -260,9 +260,10 @@ export function playLayout(
 }
 
 /**
- * Like playLayout, but when the game's box would reach into `corner`, a
- * region in the stage's top-left corner, the layout is worked out in the
- * stage height below it and moved down by its height.
+ * Like playLayout, but keeps the game clear of `corner`, a rectangle in the
+ * stage's top-left corner such as the share page's logo: when the game would
+ * overlap it, the game is laid out again in the part of the stage below it,
+ * which can make it smaller.
  */
 export function playLayoutClearOf(
   corner: Size | null,
