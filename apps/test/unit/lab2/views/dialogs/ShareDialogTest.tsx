@@ -86,7 +86,7 @@ describe('Lab2 ShareDialog', () => {
       renderFinish({isAbusive: true});
       expect(screen.queryByRole('button', {name: 'Copy link'})).toBeNull();
       expect(
-        screen.getByRole('button', {name: 'Open Sprite Lab'})
+        screen.getByRole('button', {name: 'Open Quest Builder'})
       ).toBeDisabled();
     });
 
@@ -95,7 +95,7 @@ describe('Lab2 ShareDialog', () => {
       expect(screen.queryByText(/123-456-7890/)).toBeNull();
       expect(screen.queryByRole('button', {name: 'Copy link'})).toBeNull();
       expect(
-        screen.getByRole('button', {name: 'Open Sprite Lab'})
+        screen.getByRole('button', {name: 'Open Quest Builder'})
       ).toBeDisabled();
     });
 
@@ -103,7 +103,7 @@ describe('Lab2 ShareDialog', () => {
       renderFinish({shareCheckPending: true});
       expect(screen.getByRole('button', {name: 'Copy link'})).toBeDisabled();
       expect(
-        screen.getByRole('button', {name: 'Open Sprite Lab'})
+        screen.getByRole('button', {name: 'Open Quest Builder'})
       ).toBeDisabled();
       expect(screen.queryByText(/can't be shared/)).toBeNull();
     });
@@ -119,10 +119,10 @@ describe('Lab2 ShareDialog', () => {
       expect(screen.queryByRole('button', {name: 'Copy link'})).toBeNull();
     });
 
-    it('offers Open Sprite Lab', () => {
+    it('offers Open Quest Builder', () => {
       renderFinish();
       expect(
-        screen.getByRole('button', {name: 'Open Sprite Lab'})
+        screen.getByRole('button', {name: 'Open Quest Builder'})
       ).toBeEnabled();
     });
 

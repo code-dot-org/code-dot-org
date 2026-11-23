@@ -166,7 +166,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                 variant="h4"
                 className={styles.cardTitle}
               >
-                Discover more in Sprite Lab
+                Discover more in Quest Builder
               </Typography>
               <div>
                 <MuiButton
@@ -186,7 +186,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                     onRemix?.();
                   }}
                 >
-                  Open Sprite Lab
+                  Open Quest Builder
                 </MuiButton>
               </div>
               <div className={styles.picture}>
