@@ -8,7 +8,7 @@ import {isSoundEvent} from '@cdo/apps/music/player/interfaces/SoundEvent';
 import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
 import SoundStyle from '@cdo/apps/music/utils/SoundStyle';
 
-import musicI18n from '../../locale';
+import {REMOVED_PACK_MESSAGES} from '../../constants';
 
 import {useTimelineContext} from './TimelineContext';
 
@@ -73,10 +73,10 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
       onKeyDown={onKeyDown}
       aria-label={
         isSilent
-          ? `${friendlyLabel}. ${musicI18n.soundRemoved()}`
+          ? `${friendlyLabel}. ${REMOVED_PACK_MESSAGES.SOUND}`
           : friendlyLabel
       }
-      title={isSilent ? musicI18n.soundRemoved() : undefined}
+      title={isSilent ? REMOVED_PACK_MESSAGES.SOUND : undefined}
       className={classNames(
         TimelineElementClass,
         moduleStyles.timelineElement,
