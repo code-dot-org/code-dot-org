@@ -1,0 +1,41 @@
+# Builds the dependency layer from the current checkout into the local image
+# store, for a pull request whose dependency inputs have no published layer.
+# The caller must already be logged in to ghcr.io.
+
+name: cdo-deps build
+description: Build cdo-build and then cdo-deps from this checkout as a local image
+
+inputs:
+  engine:
+    description: The container engine to build with, docker or podman
+    required: true
+  tag:
+    description: The local tag for the built dependency layer
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        ENGINE: ${{ inputs.engine }}
+        TAG: ${{ inputs.tag }}
+      run: |
+        set -euo pipefail
+        cd "$GITHUB_WORKSPACE"
+
+        # One digest for both builds, so the extensions ship on the base
+        # they were compiled against.
+        base="ghcr.io/code-dot-org/cdo-base@$(docker buildx imagetools inspect \
+          ghcr.io/code-dot-org/cdo-base:latest \
+          --format '{{json .Manifest.Digest}}' | tr -d '"')"
+
+        "$ENGINE" build \
+          -f docker/build/Dockerfile \
+          --build-arg BASE_IMAGE="$base" \
+          -t cdo-build:ci .
+        "$ENGINE" build \
+          -f docker/deps/Dockerfile \
+          --build-arg BUILD_IMAGE=cdo-build:ci \
+          --build-arg BASE_IMAGE="$base" \
+          -t "$TAG" .

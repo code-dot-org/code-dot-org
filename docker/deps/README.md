@@ -114,9 +114,10 @@ a sparse checkout that omits one would otherwise hash to a key that fails far
 away with no explanation.
 
 A checkout whose dependency inputs have never been published has no keyed
-image. That is the intended failure: the layer is published on the staging
-push that changes a lockfile, so a consumer branch must be rebased onto that
-push rather than silently landing on stale bytes.
+image. The layer is published on the staging push that changes a lockfile. A
+consumer must not land on stale bytes in the meantime: it waits for that push,
+or, like `cdo-rails-image` on a pull request, builds the layer from its own
+checkout with `.github/actions/cdo-deps-build`.
 
 To see which key a checkout implies — to pull the matching layer, or to work
 out why a keyed tag did not resolve — reproduce it in a shell:
