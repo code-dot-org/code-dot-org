@@ -1,5 +1,3 @@
-// Whether I'm finished waits on the pathway's finish.requiredCheckpoints.
-
 import DCDO from '@cdo/apps/dcdo';
 
 import {CheckpointStatusMap} from '../progress';
