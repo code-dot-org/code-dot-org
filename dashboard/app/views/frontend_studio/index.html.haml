@@ -9,7 +9,13 @@
     - if page_flash
       %meta{name: 'page-flash', content: page_flash}
     = render_shared_haml 'onetrust_cookie_scripts', dashboard: true, domain: 'code.org'
-    = render partial: 'layouts/google_analytics', locals: {webpack_reporter: false}
+    -# Google's stock tag. The measurement id is synced with layouts/_google_analytics.html.haml.
+    %script{async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-L9HT5MZ3HD'}
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L9HT5MZ3HD');
     = vite_client_tag
     = vite_react_refresh_tag
 
