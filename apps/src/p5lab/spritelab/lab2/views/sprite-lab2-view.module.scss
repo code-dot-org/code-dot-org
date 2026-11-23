@@ -545,7 +545,7 @@ $z-over-blockly: 71;
 
 // When the share buttons and the game's buttons do not fit on one row,
 // the game's buttons go on the upper row, nearer the game, and the share
-// buttons stay together on the row under them.
+// buttons go on the rows under them.
 .playBarButtonsShareView {
   flex-wrap: wrap-reverse;
 }

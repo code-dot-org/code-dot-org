@@ -594,8 +594,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   }, []);
 
   // From the stage's top-left corner to the element's right and bottom
-  // edges. Measured again only when the stage resizes: the share page's
-  // logo has its size in CSS before its image loads.
+  // edges.
   const [clearCorner, setClearCorner] = useState<Size | null>(null);
   useLayoutEffect(() => {
     const element = playClearOfId && document.getElementById(playClearOfId);
@@ -604,10 +603,24 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
       setClearCorner(null);
       return;
     }
-    const clear = element.getBoundingClientRect();
-    const stage = overlay.getBoundingClientRect();
-    const corner = {w: clear.right - stage.left, h: clear.bottom - stage.top};
-    setClearCorner(last => (isEqual(last, corner) ? last : corner));
+    const measure = () => {
+      const clear = element.getBoundingClientRect();
+      const stage = overlay.getBoundingClientRect();
+      const corner = {
+        w: clear.right - stage.left,
+        h: clear.bottom - stage.top,
+      };
+      setClearCorner(last => (isEqual(last, corner) ? last : corner));
+    };
+    measure();
+    // The element's size can change after this first measure, for example
+    // when an image loads.
+    if (typeof ResizeObserver === 'undefined') {
+      return;
+    }
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
   }, [playClearOfId, size]);
 
   // Worked out in every mode: while playing, the card keeps the place the

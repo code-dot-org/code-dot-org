@@ -9,6 +9,7 @@ import {AnyAction, Reducer} from 'redux';
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import {WorkspaceSerialization} from '@cdo/apps/blockly/types';
 import {applyBlockIdOverrides} from '@cdo/apps/blockly/utils';
+import {SHARE_LOGO_IMAGE_ID} from '@cdo/apps/code-studio/components/shareLogo/shareLogoImageId';
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
@@ -217,9 +218,6 @@ const SHARE_TABS: readonly Tab[] = ['Play'];
 // On the body while a share link is open; scopes the page footer's styles
 // in sprite-lab2-view.module.scss.
 const SHARE_BODY_CLASS = 'spritelab2-share';
-// The id ShareLogo gives the share page's logo, which is fixed over the
-// page's top-left corner.
-const SHARE_LOGO_ID = 'logo-img';
 // The Images pane, for the hook that keeps it inert while closed.
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // The editor switch's order.
@@ -2620,7 +2618,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             mode={playspaceMode}
             columnHeader={<EditorStrip title="Preview" />}
             onColumnWidth={setPreviewColumnWidth}
-            playClearOfId={isShareView ? SHARE_LOGO_ID : undefined}
+            playClearOfId={isShareView ? SHARE_LOGO_IMAGE_ID : undefined}
             side="right"
             columnShare={PREVIEW_SHARE}
             prompt={
