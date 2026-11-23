@@ -266,6 +266,41 @@ export function loadedAnimations(
   return {orderedKeys, propsByKey};
 }
 
+function canDecode(source: string): Promise<boolean> {
+  return new Promise<boolean>(resolve => {
+    const img = new Image();
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
+    img.src = source;
+  });
+}
+
+export async function decodableAnimations(
+  list: RuntimeAnimationList,
+  isKnownDecodable: (props: RuntimeAnimationProps) => boolean = () => false
+): Promise<RuntimeAnimationList> {
+  const keys = list.orderedKeys || [];
+  const keep = await Promise.all(
+    keys.map(async key => {
+      const props = list.propsByKey[key];
+      if (!props?.dataURI) {
+        return false;
+      }
+      if (isKnownDecodable(props) || (await canDecode(props.dataURI))) {
+        return true;
+      }
+      console.warn(`SpriteLab2 could not decode the image "${props.name}".`);
+      return false;
+    })
+  );
+  const orderedKeys = keys.filter((key, index) => keep[index]);
+  const propsByKey: RuntimeAnimationList['propsByKey'] = {};
+  orderedKeys.forEach(key => {
+    propsByKey[key] = list.propsByKey[key];
+  });
+  return {orderedKeys, propsByKey};
+}
+
 /**
  * Frame `index` of a sprite sheet as a dataURI, for thumbnails. Cached by
  * frame and source.
