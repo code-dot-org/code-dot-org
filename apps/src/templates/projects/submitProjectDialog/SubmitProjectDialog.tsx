@@ -119,6 +119,7 @@ const SubmitProjectDialog: React.FunctionComponent<
         </Typography>
         <textarea
           id="submission-input"
+          className="form-control"
           value={projectDescription}
           onChange={e => setProjectDescription(e.target.value)}
           placeholder={i18n.submitProjectGallery_placeholder()}
