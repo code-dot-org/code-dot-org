@@ -65,6 +65,7 @@ export const HTMLPreview: React.FC = () => {
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isStartMode = getIsStartMode();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
+  const isShareView = useAppSelector(state => state.lab.isShareView);
   const codebridgeContext = useCodebridgeContext();
   const levelProperties =
     codebridgeContext.levelProperties as Weblab2LevelProperties;
@@ -73,6 +74,8 @@ export const HTMLPreview: React.FC = () => {
   // Hide the header in either widget mode, unless editing a widget in start mode.
   const hideHeader =
     !!widget2 || (!!levelProperties.widgetView && !isStartMode);
+  const viewOnlyHeader =
+    !!isShareView || (!!levelProperties.showcase && !isStartMode);
   // The header holds the only exit control, so no header means no full screen.
   const isFullScreen = !!isFullScreenView && !hideHeader;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
@@ -211,13 +214,13 @@ export const HTMLPreview: React.FC = () => {
   }, [aiFilePathToPreview]);
 
   const dispatch = useAppDispatch();
-  // A level without a header has no way to close the debug panel or turn the
-  // inspector off, so neither carries over into one.
+  // A level without the debug and inspector controls has no way to close the
+  // debug panel or turn the inspector off, so neither carries over into one.
   useEffect(() => {
-    if (!hideHeader) return;
+    if (!hideHeader && !viewOnlyHeader) return;
     dispatch(setDebugPanelOpen(false));
     dispatch(setInspectorEnabled(false));
-  }, [dispatch, levelId, hideHeader]);
+  }, [dispatch, levelId, hideHeader, viewOnlyHeader]);
 
   const handleUrlSubmit = (newInputValue: string) => {
     setCurrentFile(newInputValue);
@@ -576,6 +579,7 @@ export const HTMLPreview: React.FC = () => {
             onStopPreview={onStopPreview}
             isStopEnabled={!isStopped}
             fetchFileSearchOptions={fetchHtmlFileOptions}
+            viewOnly={viewOnlyHeader}
           />
         )}
         {isEmptyProject ? (
