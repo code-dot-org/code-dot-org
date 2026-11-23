@@ -5,7 +5,6 @@ import {WARNING_BANNER_MESSAGES} from '@cdo/apps/lab2/constants';
 
 import moduleStyles from './pack-removed-alert.module.scss';
 
-// Dismissing hides the alert only until the project is loaded again.
 const PackRemovedAlert: React.FunctionComponent = () => {
   const [isDismissed, setIsDismissed] = useState(false);
 
