@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894756-a08bb184a658",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 1: Investigating AI Tools",
+  "question": "What if you could be the dancer and the AI has to figure out how to describe you? Strike a pose, then say the prompt that would make an AI generate you.\n\nSteps:\n1. Start recording. Strike a dancer pose or do a 5-second dance move on camera. Add a costume piece if you have one nearby, like a hat or jacket.\n2. Say a prompt out loud that would get an AI to generate a dancer just like you, including the pose, the outfit, and a setting.\n3. Say a shorter version of your prompt using fewer words.\n4. Tell the camera which word you couldn’t cut, and why.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student shows no pose or move on camera, or says no prompt."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student shows a pose or move and says a prompt, but the prompt names fewer than 3 features (such as pose, outfit, or setting)."
+    },
+    {
+      "level": 2,
+      "description": "Student shows a pose or move and says a prompt that names at least 3 features of what is visible or described (such as pose, outfit, setting, or mood)."
+    },
+    {
+      "level": 3,
+      "description": "Student meets all of the above AND says a shortened second prompt with fewer words than the first AND names one specific word they refused to cut."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

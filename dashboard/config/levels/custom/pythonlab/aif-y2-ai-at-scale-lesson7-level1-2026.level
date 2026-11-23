@@ -1,0 +1,60 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T19:14:48.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You are an engineer on the recycling robot team writing a program to train a neural network to sort recyclable items. The program holds twelve scans of training data for recyclable items, each with its weight in ounces and its transparency.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Train the network on the inputs (the scans) and the outputs (the bins).\r\n2. Predict the bin for the red can, the green bottle, and the small jar, then print each prediction beside its correct bin: Aluminum, Glass, and Glass, respectively.\r\n3. Run the program. Which predictions match the correct bins?\r\n\r\nIf you get stuck, you can ask AI Tutor for help with training the network and making a prediction.\r\n\r\n**💻 Coding Tip**\r\n\r\nUse `model.fit` to train the network on a list of inputs and a list of outputs.\r\n\r\nIf `x` is one item, represented with a list of features, `model.predict([x])[0]` returns the network's prediction.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import SGDClassifier\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import make_pipeline\n\n# Recyclable items [weight (ounces), transparency (0-10)]\ninputs = [[0.4, 0], [1.0, 0], [0.3, 0], [1.5, 0],\n          [3, 5], [14, 6], [10, 4], [10, 2],\n          [2, 5], [3, 4], [0.5, 9], [2, 7]]\n\n# The bin each item belongs in\noutputs = [\"Aluminum\", \"Aluminum\", \"Aluminum\", \"Aluminum\",\n           \"Glass\", \"Glass\", \"Glass\", \"Glass\",\n           \"Plastic\", \"Plastic\", \"Plastic\", \"Plastic\"]\n\nmodel = make_pipeline(StandardScaler(), SGDClassifier())\n\n# Three new items the network has never seen: [weight (ounces), transparency (0-10)]\nred_can = [0.5, 0]  # Correct bin: aluminum\ngreen_bottle = [10, 6]  # Correct bin: glass\nsmall_jar = [4, 8]  # Correct bin: glass\n\n# TODO 1: Train the network on the training data\n\n# TODO 2: Predict and print the bin for the red can, green bottle, and small jar\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "validation.py",
+      "contents": "import contextlib\nimport io\nimport re\nfrom unittest import TestCase\n\nfrom sklearn.exceptions import NotFittedError\nfrom sklearn.utils.validation import check_is_fitted\nfrom unittest_runner import ValidationProtocol\n\n\ndef load_student_program():\n    \"\"\"Imports main into test, preventing additional output\"\"\"\n    with contextlib.redirect_stdout(io.StringIO()):\n        import main\n    return main\n\n\nclass TestSortingNetwork(TestCase):\n    longMessage = False\n\n    def test_model_is_trained(self):\n        \"\"\"The network is trained\"\"\"\n        try:\n            check_is_fitted(load_student_program().model)\n        except NotFittedError:\n            self.fail(\"The network hasn't been trained yet\")\n\n    def test_print_three_predictions(self):\n        \"\"\"Prints network's predictions for all three items\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs()).lower()\n        bins = re.findall(r\"aluminum|glass|plastic\", output)\n        self.assertGreaterEqual(len(bins), 3, \"Output doesn't include a prediction for all three items\")\n",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqKf56y6BkDQkMQ\nQ1+oe5aj4szlqeGJy9zEr7TWkJhezouJJbelmA445tMfJ5Yn1rEC2U2kLtN/\nVb9BW3lxhZQTm7EL4KSKWb0G3KNJp7XcvsmclQDIppCMo252BaXSkRBzQP1b\naJVoLCFIkaJRq7qRrt0f4OMroT4JSP5zNQqj5740eOdtWYDSVMJ62CUekbaV\nnwxBYdC7BoMff66TfSCU2ZjYwZXuYpo2miSiPV+KBp8X8+UDTXaz8RYZ8/6X\n+vQihEsrrU2Y6u1G/iWs8Lp2HCmdsAsbpv7KoF7JM1rK/5UKBLIW4JgMjga7\ndcV4F0YEzUXt5CQAa5IqAfu0QUTK6fh/eljXYBn8nkezOo5cW1nW9Qozex0n\nwxAJrL2iUchP8kHqLL3KpEK2Zlv6hEOuGoMqrwFkQqgxlFPSllOO39LmJ+QC\nKuVI1RxlI+p2SdVRFYqfOMmHkQ2mfgtLIH03JWrYB0Bjysq5qKPZ2tMbvc5K\nqOSy+acLU70j166I8AXGuTfwBDg6g1LDZ3QoynAdFTO1tlRsuFCN+uiAafjZ\n8CwING5Ik1Sig15EfByJKwXSuNPnH2Tvq9yMibUOWk+UlZ+i/3r508gedNuV\nLbXOKrOwtFIIB2TxjY3mzJ1lX7KrCvxXFCbs1juICnWiVZq6lVBjgSBfOYgE\nLvuAHUnxWDb141Gqdhn1JnNTpyGz4W3w6gkI/XWtiguyGLR9M1/L+3ZDoOTc\nea1ZqsRSRgrKVZUr2GAkm0kLPVItJBfSSgtaaIUUiATVREXJPX6ERIgZ5/6j\nEg1LFo1oKc7gzB0akG3Zrj/XAWj9o6z9qXktvNWEiMWO2BxN1Tlhl3ZGmyZV\nmYxECtJI1IYs/E42MZuBtIbBX38CHkhMiur0MLxWHsr9X2W2Yk7PMukEZeB1\nZkYUB4oeX/pFCDlF9mI7bTBkKdQ51HhvXF+Eb3bzjb3FplD85bRbzzEXHh8R\nf2pt5vm79s8nd2+2UQiM4S4dFLXK5mRmkwZo1705F3gnMp4oc9TdWy9++h39\nuccuIGVW/Z+J7EvB5L780qlo++66COiRtcNyg8MHjcEMBwvWa/65cPbpRTBp\n/8+xM6aMp3G7g2bzd/DJzLbb9BAz5bvOvxnq7/n1I9kVm67lhJeO/OKE/i8e\nTrLvXdfJYQNqplmAtQzhGya0yw3CFX0+FH8Iwc0z6QC7JAPco4sBD6Q1bHl6\naTk=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 19:16:13 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 19:16:32 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 19:16:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 19:17:01 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

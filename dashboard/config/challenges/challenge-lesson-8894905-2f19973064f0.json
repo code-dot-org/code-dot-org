@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894905-2f19973064f0",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 4: Smart or Just Predictable?",
+  "question": "An AI is applying for a job, and you are the hiring manager. It is fast and tireless, but is it right for every part of the job?\n\nSteps:\n1. Start recording. Pick one job from the list below.\n2. Name two tasks in that job that an AI could handle well, and say why.\n3. Name two tasks a human should keep, and say why.\n4. Give your verdict: hire, hire with supervision, or do not hire.\n\nJob list:\n- A sports referee\n- A wedding planner\n- A wildlife photographer\n- A lifeguard",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not pick a job or say any tasks on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names tasks but gives no reasons."
+    },
+    {
+      "level": 2,
+      "description": "Student names 2 tasks an AI could handle with a reason for each AND 2 tasks a human should keep with a reason for each AND gives a verdict (hire, hire with supervision, or do not hire)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says what the human supervision would look like (who checks what) OR names what would change the verdict."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

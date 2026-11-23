@@ -1,6 +1,7 @@
 name 'data-makes-ai-project-data-choice-alternatives'
 display_name 'Alternative Datasets'
 description 'The following datasets have been curated differently than the original:'
+navigation_type 'next_sublevel'
 
 sublevels
 level 'data-makes-ai-project-snack-alternative'

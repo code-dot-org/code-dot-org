@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894756-c7c8e839d474",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 1: Investigating AI Tools",
+  "question": "Sam ran a test and found that blue paint makes AI rockets smaller. But something about Sam’s test is broken, and you’re the investigator who can find it.\n\nSteps:\n1. Use shapes to mark every part of the prompts that is different between Test 1 and Test 2.\n2. Use the text tool to write one sentence describing how Sam should run a fair test.\n3. Record your voice explaining why Sam can’t be sure the blue paint made the rocket smaller.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape or text is added to the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student marks fewer than 3 differences with shapes, or the text sentence does not say to change only one thing."
+    },
+    {
+      "level": 2,
+      "description": "Student marks all 3 differences with shapes (red/blue, “tiny,” and “at night”) AND the text sentence says to change only one thing, or to test the color alone."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that “tiny” or “at night” could also have made the rocket look smaller, so Sam can’t tell which change caused it."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894756-c7c8e839d474-d941100e",
+  "whiteboard_starter_image_alt_text": "At the top: Sam says, \"Blue paint makes AI rockets smaller.\" Below are two pictures side by side. Test 1, \"a red rocket,\" shows a large red rocket in a daytime sky with clouds. Test 2, \"a tiny blue rocket at night,\" shows a small blue rocket in a night sky with stars and a moon."
+}

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894757-0f70545d4fb9",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 2: A Deeper Look Into AI",
+  "question": "Three dragons are about to decide whether your idea gets made. You have 30 seconds to win them over.\n\nSteps:\n1. Start recording. Pick one theme and one audience from the lists below.\n2. Pitch your idea to the dragons: “I want to make a poster, app, or game about ___ for ___.” Pick whichever one you like.\n3. Name ONE design element you’d use (a color, an icon, a font, or a layout) and say why it fits your audience.\n4. Ask yourself the toughest question a dragon might ask, then answer it.\n\nTheme list:\n- Gaming\n- Soccer\n- Fashion\n- Cooking\n- Music\n- Animals\n\nAudience list:\n- Kindergarteners\n- Grandparents\n- A school principal\n- A stressed-out new student\n- Professional athletes",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not state a theme and audience on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student states a theme and an audience but names no design element."
+    },
+    {
+      "level": 2,
+      "description": "Student states a theme, an audience, and one design element."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND gives a reason connecting the design element to the audience AND states a dragon question out loud and answers it."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

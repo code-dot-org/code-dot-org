@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894757-c0c099f74571",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 2: A Deeper Look Into AI",
+  "question": "Every great guide is built from smaller parts. Can you slice this one apart and name each piece?\n\nSteps:\n1. Use the text tool to type the right label from the word bank next to each of the four sections.\n2. Use the arrow tool to point at the section you’d cut first if the guide had to get shorter.\n3. Record your voice explaining what the reader would lose if that section disappeared.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No text labels are placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student places fewer than 4 labels on the correct sections."
+    },
+    {
+      "level": 2,
+      "description": "Student places all 4 labels correctly: TIP on the “Name the animal AND the place” section, EXAMPLE on the “plain blob” section, WHY IT WORKS on the “more clues” section, and TRY IT on the “Add one new detail” section."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND an arrow points to one section AND the voice recording names a specific thing the reader would lose without it (for example, “without the example, you wouldn’t see what a detailed prompt looks like”)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894757-c0c099f74571-5959eaae",
+  "whiteboard_starter_image_alt_text": "\"Ocean Pictures Guide: Getting Great Results from AI,\" with four unlabeled sections: \"A prompt of 'a jellyfish' gave a plain blob. 'a glowing jellyfish in a dark cave' gave a sparkly scene.\"; \"Add one new detail to your next prompt and see what changes!\"; \"Name the animal AND the place, like 'a glowing jellyfish in a dark cave.'\"; and \"More details give the AI more clues about what you want.\" At the bottom is a word bank: TIP, EXAMPLE, WHY IT WORKS, and TRY IT."
+}

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894906-d404950e7c3a",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 5: Uncovering Contradictions",
+  "question": "You are the checkpoint officer, and every AI answer has to pass through you. Decide what happens in each lane, and find the one that can still let a wrong answer slip through.\n\nSteps:\n1. Use the text tool to write what you do in each lane.\n2. Use the arrow tool to point at the lane that could still let a wrong answer through.\n3. Record your voice explaining why that lane is risky and what extra check you would add.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No text or arrow is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student types an action for fewer than 3 lanes."
+    },
+    {
+      "level": 2,
+      "description": "Student types a different action for each of the 3 lanes AND an arrow points to one lane AND the voice recording explains the risk in that lane."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the arrow points to Lane 1 AND the voice recording says that 3 matching answers can still be wrong AND names one more check to add."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894906-d404950e7c3a-f77471e1",
+  "whiteboard_starter_image_alt_text": "\"Ask the AI the same question 3 times. Then compare the answers. Which lane are you in?\" Three checkpoint lanes, each with a blank box asking \"What do you do?\": Lane 1, all 3 answers match; Lane 2, 2 answers match and 1 is different; and Lane 3, all 3 answers are different."
+}

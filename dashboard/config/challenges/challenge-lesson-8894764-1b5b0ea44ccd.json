@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894764-1b5b0ea44ccd",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 9: Refining Our Product",
+  "question": "The school board is deciding about a new rule, and you get one minute to speak. Say what you believe, prove it with something that happened to you, and answer the person who disagrees.\n\nSteps:\n1. Start recording. Pick one question from the list below and say your position.\n2. Give one specific experience from your own life that supports it. Leave out the names of real people and schools.\n3. Say what someone who disagrees would say, and answer them.\n4. Finish this sentence: “I would change my position if ___.”\n\nQuestion list:\n- Should students use AI to write the first draft of an essay?\n- Should AI check your work before you turn it in?\n- Should AI choose the topic for your project?",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not state a position on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student states a position but gives no reason, or gives a reason that is not a specific experience from their own life."
+    },
+    {
+      "level": 2,
+      "description": "Student states a position AND gives one specific experience from their own life that supports it."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND answers what someone who disagrees would say AND states one condition that would change their position."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

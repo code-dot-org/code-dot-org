@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894905-77adac7dfdfe",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 4: Smart or Just Predictable?",
+  "question": "Your yearbook team is using an AI to speed things up. It can save hours, but one of these steps can’t be left to the AI alone. Which one?\n\nSteps:\n1. Use the shape tool to mark 2 steps where an AI can safely help.\n2. Use the arrow tool to point at the step where a human check matters most.\n3. Use the text tool to write a one-sentence rule that starts “Before we print, a human checks...”\n4. Record your voice explaining what would go wrong if that check were skipped.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape, arrow, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places shapes and an arrow, but types no rule."
+    },
+    {
+      "level": 2,
+      "description": "Two shapes are on steps 1 and 2 (or either of them plus another reasonable step) AND the arrow points to step 3 AND the typed rule says a human checks the names before printing."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains what goes wrong if step 3 is skipped (for example, 500 books with misspelled names) and why AI speed does not remove the need for the check."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894905-77adac7dfdfe-68972982",
+  "whiteboard_starter_image_alt_text": "\"Making the school yearbook,\" shown as four numbered steps connected by arrows: 1, collect photos from students; 2, write a caption for each photo; 3, check that every name is spelled right; and 4, print 500 yearbooks."
+}
