@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-22 06:31:09 UTC",
+    "serialized_at": "2026-11-22 16:47:37 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -544,7 +544,7 @@
       "key": "9b9c631d-7c47-4644-a1fd-5ad70b09a03f",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 8,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -558,7 +558,7 @@
       "key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f",
       "position": 2,
       "properties": {
-        "duration": 35,
+        "duration": 32,
         "name": "Activity"
       },
       "seeding_key": {
@@ -2264,6 +2264,9 @@
       "key": "1a60d615-6652-4460-89b7-3e7d643b01ba",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have students sort everyday computer decisions by who really made the call, before the words automation and augmentation exist, so the two categories come from their own sorting.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of three one set of eight \"Who Decided?\" cards. If the cards are not pre-cut, provide scissors.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups sort all eight cards into the two piles. Every card must go somewhere; a card that is hard to place gets turned sideways. Give about two minutes. Do not define any terms yet.",
+        "duration": "8",
+        "name": "\"Who Decided?\" Sort"
       },
       "seeding_key": {
         "activity_section.key": "1a60d615-6652-4460-89b7-3e7d643b01ba",
@@ -2271,9 +2274,58 @@
       }
     },
     {
+      "key": "e018b30b-ae21-4be3-9a1d-97ead9efb8bc",
+      "position": 2,
+      "properties": {
+        "description": "Every one of these is something a computer does for you. Your job is to decide who really made the call. Did the computer act on its own, or did it suggest something and leave the decision to a person? If a card could go either way, turn it sideways. We will come back to those.\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The sideways cards are the point. Autoplay, auto-brightness, and the bank text are the ones students usually argue about, and they become the human-oversight examples after the audit. Groups keep their cards."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e018b30b-ae21-4be3-9a1d-97ead9efb8bc",
+        "lesson_activity.key": "9b9c631d-7c47-4644-a1fd-5ad70b09a03f"
+      }
+    },
+    {
+      "key": "68dd3a6a-4bd1-4286-9af3-277cccdad99f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Display the discussion prompts one at a time. Have groups talk, then take responses.\n\n- *Hold up your sideways cards. Which one showed up most?*\n\n- *Autocorrect and the resume screener both acted on their own. What is different about them?*\n\n- *Which one would you want a human to check?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should land on the consequence of a mistake: a wrong autocorrect costs a second, a wrong rejection costs someone a job. Listen for students saying the resume screener needs a human check even though both are “the computer decided.” That is the lesson’s whole argument in one answer.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have groups keep their cards on the desk. They place the sideways ones during direct instruction."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "68dd3a6a-4bd1-4286-9af3-277cccdad99f",
+        "lesson_activity.key": "9b9c631d-7c47-4644-a1fd-5ad70b09a03f"
+      }
+    },
+    {
+      "key": "0b4e7be6-c38f-4054-b96a-68685b30e45f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "0b4e7be6-c38f-4054-b96a-68685b30e45f",
+        "lesson_activity.key": "9b9c631d-7c47-4644-a1fd-5ad70b09a03f"
+      }
+    },
+    {
       "key": "7a57ba3a-e858-4606-8161-8e8510f2d78c",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Give the two piles their names and set up the decision lens students will use in the audit: who is using the system, and what happens when it is wrong.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define automation and connect it to the “computer decided” pile. Have groups hold up a card from that pile.",
+        "duration": "7",
+        "name": "Automation vs. Augmentation"
       },
       "seeding_key": {
         "activity_section.key": "7a57ba3a-e858-4606-8161-8e8510f2d78c",
@@ -2281,9 +2333,194 @@
       }
     },
     {
+      "key": "291da63d-3421-4eb1-b1b9-22376cb00710",
+      "position": 2,
+      "properties": {
+        "description": "Your first pile has a name: automation. The computer does the task on its own. Nobody approved the autocorrect. Nobody read the email before the filter moved it. The system acted, and you found out afterward, if you found out at all.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "291da63d-3421-4eb1-b1b9-22376cb00710",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "d7ec7f2b-3523-48f4-8fe1-28e02d5d0f3e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define augmentation and connect it to the \"human decided\" pile."
+      },
+      "seeding_key": {
+        "activity_section.key": "d7ec7f2b-3523-48f4-8fe1-28e02d5d0f3e",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "be31084e-19dc-466f-98ee-1ac3bc691e63",
+      "position": 4,
+      "properties": {
+        "description": "Your second pile is augmentation. The computer helps, but a person makes the call. GPS suggests; you can take a different turn. The spell-checker underlines; you decide whether to change it. The key word is responsible. In augmentation, a human is still responsible for what happens.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "be31084e-19dc-466f-98ee-1ac3bc691e63",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "032ca9c7-ddc1-48d6-85b3-24d600179700",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the decision lens: context and purpose, impact of failure, then benefits against risks and broader costs. Students use this lens in the LunchLine audit next."
+      },
+      "seeding_key": {
+        "activity_section.key": "032ca9c7-ddc1-48d6-85b3-24d600179700",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "a7de3ec5-1815-475d-8d43-8aeedf4c39d2",
+      "position": 6,
+      "properties": {
+        "description": "Whether to automate is not a yes or no about the technology. It is a question about the situation. Who is using it, and what happens to them when it is wrong? Then you weigh what you gain, speed, scale, consistency, against what you risk, and against the costs that do not show up on the screen: the jobs, the energy, who can afford it, who gets left out.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a7de3ec5-1815-475d-8d43-8aeedf4c39d2",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "6ea75876-c075-40e1-b11d-e1d2c81823b4",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Have groups evaluate LunchLine, an app that orders school lunches on its own: judge each of its choices with evidence, read how it affects people, then add one human check to its flowchart and name the trade-off.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of three one Audit the App activity guide.",
+        "duration": "20",
+        "name": "Audit the App"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ea75876-c075-40e1-b11d-e1d2c81823b4",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "a7a8e4e9-7bcd-484c-95cc-bda502d485a3",
+      "position": 8,
+      "properties": {
+        "description": "A school is about to turn on LunchLine. At 7:00 a.m. it picks and orders your lunch for you, and you find out what you got at the window. Your group is the review team. Before the school says yes, you decide where this app gets it right, where it gets it wrong, and where a person needs to step in.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a7a8e4e9-7bcd-484c-95cc-bda502d485a3",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "447c555b-85b1-490a-8d51-5e0030d5a2fb",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to Part A. Jordan is the worked example. For Priya, Sam, Alex, and Maya, have them mark Pass or Fail, explain with details from the case, and for each Fail say what LunchLine should have done instead.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Priya is a Pass. Sam, Alex, and Maya are Fails for three different reasons: missing information (the special's ingredients), an unclear note (\"no milk\"), and no history at all. Push for the “instead”: the answer is almost always ask the student or check with staff, which is the human check they add in Part C.",
+        "name": "Part A: Test the App's Choices ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Each one is a case the app was never given enough to decide. Students who can say what was missing are doing the evaluation the objective asks for."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "447c555b-85b1-490a-8d51-5e0030d5a2fb",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "8b170c6c-2d1a-40ac-b12d-784d24c15ead",
+      "position": 10,
+      "properties": {
+        "description": "\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to Part B. Have them read the three reviews and finish each sentence with who should step in and what that person should do. Then they choose one of the three fixes to carry into Part C.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Each sentence needs a person and an action: \"the student or their family should see the meal and price and confirm or cancel.\" \"Someone should fix it\" is not an answer. For Review B, accept \"possible bias\" or \"unfair\"; the review shows an unexplained difference, not proof of why.",
+        "name": "Part B: How Does the App Affect People?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The three reviews are three different kinds of harm: privacy (data it did not need), fairness (different treatment with the same history), and cost (money charged with no chance to say no). Part A found wrong choices; Part B finds effects the test cases could never show."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8b170c6c-2d1a-40ac-b12d-784d24c15ead",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "1d9f927d-544f-45f1-abab-5ab2278f4ce2",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to Part C. Have them draw their fix onto the flowchart: a new box showing who steps in and what they decide, with arrows for what LunchLine does next. Then they answer the trade-off question.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Most fixes go between \"Pick meal and portion size\" and \"Charge lunch account\": the student sees the meal and price and confirms or cancels before any charge. The box needs two arrows out: approved, and changed or cancelled. The trade-off should cost something real: slower prep, staff handling changed orders.",
+        "name": "Part C: Where Should a Person Step In?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Part C is the evidence for the second objective: the box is the change that gives people control, and the last question is the trade-off. A fix with no cost named is half an answer."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1d9f927d-544f-45f1-abab-5ab2278f4ce2",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "db4f5934-b4fc-45f9-9802-569571a2f642",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human oversight and connect it to what groups just drew: the box they added to the flowchart is a person who can review, change, or stop the app's decision.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the in / on / out of the loop picture. Have groups place their sideways cards from the warm-up in the middle: on the loop.",
+        "duration": "5",
+        "name": "Where is the human?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "What you just added to LunchLine has a name: human oversight. The app still does the work, but a person can review it, change it, or stop it before it counts. That is the difference between the LunchLine the school was about to buy and the one you redesigned."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "db4f5934-b4fc-45f9-9802-569571a2f642",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "bb33deb8-93a4-4cf5-9bd6-55ffbb358db7",
+      "position": 13,
+      "properties": {
+        "description": "\nYour sideways cards were hard to place because there is a third spot. Autoplay starts the next episode on its own, but you are sitting right there and can stop it. That is human oversight: the system acts, a person is on the loop. The original LunchLine was out of the loop. Your fix moved it on the loop.\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The picture is on the Unit Guide. The point to land is that oversight is a design choice, not a property of the technology: the same app sits in a different spot depending on whether someone can step in."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bb33deb8-93a4-4cf5-9bd6-55ffbb358db7",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
+      "key": "1ca36041-e8bb-485b-94d2-38ef95a0439c",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1ca36041-e8bb-485b-94d2-38ef95a0439c",
+        "lesson_activity.key": "1f085d8c-2ae8-445e-8416-ad3ed93d5c2f"
+      }
+    },
+    {
       "key": "91229cde-49e0-40b2-b705-19a1ad3e3ea6",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to just think about what they learned today.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "91229cde-49e0-40b2-b705-19a1ad3e3ea6",
