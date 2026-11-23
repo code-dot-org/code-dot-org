@@ -21,7 +21,6 @@ export interface BlockDefinition {
 
 export interface BlockConfig {
   args: arg[];
-  sourceArgs?: arg[];
   blockText: string;
   color: [number, number, number];
   func: string;
@@ -167,6 +166,10 @@ export interface BlocklyWrapperType extends BlocklyCoreType {
     };
     blockTexts: {
       [key: string]: string;
+    };
+    /** The English args, before their dropdown options were translated. */
+    blockArgs: {
+      [key: string]: arg[] | undefined;
     };
   };
 }
