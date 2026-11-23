@@ -162,6 +162,7 @@ import EditorStrip, {EditHistory} from './components/EditorStrip';
 import {Editor} from './components/EditorSwitch';
 import LabShell from './components/LabShell';
 import RunButtons, {ArrowCross} from './components/PlayBar';
+import PlayBarGroups from './components/PlayBarGroups';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
 import {sceneDropdownButtonId} from './components/SceneDropdown';
@@ -2628,48 +2629,36 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             }
             bottomBar={
               <>
-                <div
-                  className={classNames(
-                    moduleStyles.playBarButtons,
-                    isShareView && moduleStyles.playBarButtonsShareView
-                  )}
-                >
-                  {isShareView && (
-                    <div className={moduleStyles.playBarGroup}>
-                      <ShareActions />
-                    </div>
-                  )}
-                  <div className={moduleStyles.playBarGroup}>
-                    <RunButtons
-                      playing={activeTab === 'Play'}
-                      onPlay={handlePlayClick}
-                      onStop={stopTab ? handleStopClick : undefined}
-                      // A level pinned to one scene has one Run, for that scene.
-                      onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
-                      playSceneHidden={activeScene.id === scenes[0].id}
+                <PlayBarGroups share={isShareView && <ShareActions />}>
+                  <RunButtons
+                    playing={activeTab === 'Play'}
+                    onPlay={handlePlayClick}
+                    onStop={stopTab ? handleStopClick : undefined}
+                    // A level pinned to one scene has one Run, for that scene.
+                    onPlayGame={pinnedSceneId ? undefined : handlePlayGame}
+                    playSceneHidden={activeScene.id === scenes[0].id}
+                  />
+                  {activeTab === 'Play' && (
+                    <PlayControls
+                      // On a pinned-scene level the game is that one scene,
+                      // so there is no whole-game restart.
+                      onRestartGame={
+                        pinnedSceneId
+                          ? undefined
+                          : event =>
+                              handleRestartClick(event, handleRestartGame)
+                      }
+                      // On the scene the game starts on, restarting the scene
+                      // is restarting the game, so the one button is enough.
+                      onRestartScene={
+                        pinnedSceneId || playHasLeftTheFirstScene
+                          ? event =>
+                              handleRestartClick(event, handleRestartScene)
+                          : undefined
+                      }
                     />
-                    {activeTab === 'Play' && (
-                      <PlayControls
-                        // On a pinned-scene level the game is that one scene,
-                        // so there is no whole-game restart.
-                        onRestartGame={
-                          pinnedSceneId
-                            ? undefined
-                            : event =>
-                                handleRestartClick(event, handleRestartGame)
-                        }
-                        // On the scene the game starts on, restarting the scene
-                        // is restarting the game, so the one button is enough.
-                        onRestartScene={
-                          pinnedSceneId || playHasLeftTheFirstScene
-                            ? event =>
-                                handleRestartClick(event, handleRestartScene)
-                            : undefined
-                        }
-                      />
-                    )}
-                  </div>
-                </div>
+                  )}
+                </PlayBarGroups>
                 <AskAiIndicator
                   status={askAiStatus}
                   onFailureExpired={handleAskAiExpired}

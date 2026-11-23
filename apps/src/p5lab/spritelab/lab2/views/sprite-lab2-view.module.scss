@@ -543,14 +543,8 @@ $z-over-blockly: 71;
   }
 }
 
-// When the share buttons and the game's buttons do not fit on one row,
-// the game's buttons go on the upper row, nearer the game, and the share
-// buttons go on the rows under them.
-.playBarButtonsShareView {
-  flex-wrap: wrap-reverse;
-}
-
 .playBarGroup {
+  position: relative;
   display: flex;
   min-width: 0;
   align-items: center;
@@ -560,6 +554,18 @@ $z-over-blockly: 71;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 8px;
+}
+
+// Centered in the 16px gap before the group and taken out of the flow, so
+// showing it never makes the row wrap.
+.playBarGroupDivided::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: -9px;
+  width: 1px;
+  background: var(--borders-neutral-strong);
 }
 
 // Placed by the playspace beside or under the game; the cross inside takes
