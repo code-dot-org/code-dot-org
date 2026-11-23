@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894904-ee3a8ac0b50a",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 3: The AI's Brain",
+  "question": "You are a human rater, and every answer you reward teaches the AI what to do more of. Choose carefully, because one of these sounds great but gets the science wrong.\n\nSteps:\n1. Use the arrow tool to point at the answer that is best for a 10-year-old.\n2. Place a shape on the answer that sounds fun but is misleading.\n3. Use the text tool to write one sentence of feedback that would help the AI fix that answer.\n4. Record your voice explaining how a rater could be fooled by a friendly, confident answer, and what that does to the AI.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but types no feedback."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to answer B AND a shape is on answer C AND the typed feedback names the specific mistake in answer C and what it should say instead."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains how a rater could be fooled by a friendly or confident answer, and that the AI learns whatever raters reward."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894904-ee3a8ac0b50a-f66c8c22",
+  "whiteboard_starter_image_alt_text": "The question \"Explain what a black hole is to a 10-year-old.\" with three AI answers. A: \"A black hole is a region of spacetime where gravity is so strong that the escape velocity exceeds the speed of light, so nothing can leave it.\" B: \"A black hole is a place in space where gravity is so strong that nothing, not even light, can escape it.\" C: \"A black hole is a giant vacuum cleaner in space that sucks up everything nearby, even whole planets, like a drain.\""
+}

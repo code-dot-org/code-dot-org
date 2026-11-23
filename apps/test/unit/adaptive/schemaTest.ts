@@ -270,11 +270,11 @@ describe('parsePathway', () => {
         logoUrl: 'https://images.code.org/logo.svg',
       },
       {
-        id: 'time',
-        title: 'Time',
+        id: 'changes',
+        title: 'Changes',
         kind: 'stats',
-        heading: 'Time',
-        stats: ['timeSpent', 'checkpoints'],
+        heading: 'Changes',
+        stats: ['aiChangesRejected', 'checkpoints'],
       }
     );
     expect(problemsOf(raw)).toEqual([]);

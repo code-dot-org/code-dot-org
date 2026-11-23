@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894904-3191f8a2dc45",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 3: The AI's Brain",
+  "question": "This AI has only ever read one kind of text, and it thinks the whole world sounds like that. Ask it an everyday question and listen to what comes out.\n\nSteps:\n1. Start recording. Pick the one kind of text your AI was trained on from the list below.\n2. Pick an everyday question from the list and answer it exactly as that AI would.\n3. Say one thing your AI would get wrong because of what it was trained on.\n4. Name one more kind of data that would fix the problem, and say how it helps.\n\nTraining list:\n- Only weather reports\n- Only fairy tales\n- Only sports commentary\n- Only recipe blogs\n\nQuestion list:\n- “How do I get to school?”\n- “What should I do when I’m sad?”\n- “How was your weekend?”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give an answer on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student answers the question but the answer shows no influence from the chosen data, OR does not name anything the AI would get wrong."
+    },
+    {
+      "level": 2,
+      "description": "Student's answer uses at least 2 words or phrases typical of the chosen data AND names one specific thing the AI would get wrong because of it."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names one more data source that would fix the problem AND explains how it fixes it."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894912-2286ab33ca70",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 11: Ownership, Ethics, and Creativity",
+  "question": "Some companies ask permission in a way that hides what they really want. Ask for the same thing twice: once the sneaky way, and once the fair way.\n\nSteps:\n1. Start recording. Pick one item from the list below that someone else made.\n2. Be the sneaky company: ask permission in a vague, rushed way.\n3. Now be a fair creator: ask clearly. Say what you will use, how you will use it, who will see it, whether you will give credit or payment, and how the person can say no.\n4. Say which detail matters most to the person who made it, and why.\n\nItem list:\n- A friend’s drawing\n- A classmate’s song\n- A cousin’s recipe\n- A neighbor’s photo",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say a request on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student says only one version of the request (vague or clear, not both)."
+    },
+    {
+      "level": 2,
+      "description": "Student says a vague or sneaky request AND a clear request that includes at least 3 of these: what will be used, how it will be used, who will see it, credit, payment, or a way to say no."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names which detail matters most to the creator and explains why."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

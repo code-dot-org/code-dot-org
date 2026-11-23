@@ -1,0 +1,17 @@
+name 'aif-y2-ai-at-scale-lesson13-level5-choice3-2026'
+title 'Election Day'
+display_name 'Election Day'
+bubble_choice_description "Your community’s election office wants to predict how long the wait will be at each polling place on election day."
+markdown <<MARKDOWN
+As you’ve talked to the people at your community’s election office, you’ve learned more about the decisions they need to make based on the available data. Read the quotes, then complete the questions in the **Take Action** section of the Project Planning Guide to describe how you’ll recommend an action based on the neural network’s output and how you’ll add safeguards to your program to address at least one person’s concern.
+
+- Based on the predicted wait time in a given hour, they need to decide how many extra polling workers to send to the site. Some of their requests are quoted below:
+  - “If the wait’s predicted to be less than 15 minutes, I wouldn’t send any extra poll workers.”
+  - “If the wait’s predicted to be 15 minutes or more, we usually send some extra poll workers. One extra worker could help address a 15 minute wait. The longer the predicted wait, the more workers we’d send. For an hour-long wait, I might send three extra poll workers.”
+- The employees at the election office are concerned that AI might automatically make decisions that might be wrong. Some of their concerns are quoted below:
+  - “Before we assign polling workers, I always like to double-check any large polling sites to make sure they’re well-staffed. I wouldn’t trust AI to do that.”
+  - “Whenever we have to move the polling site, people get confused and need more help. Will AI be smart enough to know we need more polling workers then?”
+  - “We only have a limited number of polling workers. I’m worried AI will assign too many polling workers for one site and then we won’t have enough for the others.”
+  - “I know that when there aren’t many early voters, the polling sites are busier on election day. Sometimes I like to check in on those sites and send some extra workers.”
+
+MARKDOWN

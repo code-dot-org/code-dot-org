@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894910-32ca1001b5d6",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 9: AI as a Co-Creator",
+  "question": "You run a school art and media gallery, and several works arrived that were made with help from an AI. You decide which ones hang on the wall, which need a question first, and which stay off.\n\nSteps:\n1. Start recording. Pick two scenarios from the list below.\n2. For each one, say “hang it,” “ask first,” or “do not hang it,” and give a reason. Think about what the AI learned from, whose work was used, and how much the human did.\n3. Name one question you would ask the creator.\n4. Finish this sentence: “A fair way to create with AI is...”\n\nScenario list:\n- An AI-made song sounds a lot like a famous singer’s style.\n- A student asks an AI to paint “in the style of” a living artist and sells prints.\n- A student uses an AI to fix the grammar in her own short story.\n- A student gives an AI her own drawings and asks it to make new ones in her style.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not pick a scenario or give a decision on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student gives a decision for each scenario but no reasons."
+    },
+    {
+      "level": 2,
+      "description": "Student gives a decision (hang it, ask first, or do not hang it) for 2 scenarios AND a reason for each that refers to what the AI learned from, whose work was used, or how much the human did."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names one question to ask the creator AND finishes with one sentence rule that fits both scenarios."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

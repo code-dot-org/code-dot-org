@@ -1,0 +1,64 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T18:07:38.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The team now wants a model to predict the ultraviolet (UV) index based on the hour of the day. This time, you’ll need to import anything you need, build and train a model, then test it.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Import `LinearRegression` from `scikit-learn`’s `linear_model` module.\r\n2. Create a new, untrained linear regression model.\r\n3. Train it on the inputs (hours) and outputs (UV levels).\r\n4. Compute the model’s prediction for the UV level at 3 pm (hour 15) and at 11 pm (hour 23) and print each prediction. Then, print the actual UV level recorded in the dataset for 3 pm and 11 pm.\r\n5. Run the program and compare the line with the readings, as in Level 1.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo import a class in Python, use code like from `sklearn.<module>` import `<Class>`.\r\n\r\nOnce you’ve created a model, `model.fit` trains it on a dataset of inputs and outputs.\r\n\r\nThe `uv_levels` list stores all of the UV levels from the training data, sorted by hour. `uv_levels[0]` is the UV level recorded at midnight.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# TODO 1: Import LinearRegression from scikit-learn\nfrom helpers import draw_chart\n\n# The day's readings, one per hour from midnight (0) to 11 pm (23)\nhours = [[hour] for hour in range(24)]\nuv_levels = [0, 0, 0, 0, 0, 0, 0, 2, 4, 6, 7, 8,\n             9, 9, 9, 8, 7, 6, 4, 2, 0, 0, 0, 0]\n\n# TODO 2: Create a new, untrained linear regression model\n\n# TODO 3: Train the model on the hours and the UV levels\n\n# TODO 4: Predict and print the 3 pm and 11 pm UV levels\n\n# Draw the chart\ndraw_chart(hours, uv_levels, model, \"UV index\")\n",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\n\n\n# Draws the day's readings as dots and, once the model is trained, its line.\ndef draw_chart(hours, readings, model, label):\n    x = [hour[0] for hour in hours]\n    plt.scatter(x, readings)\n    if hasattr(model, \"coef_\"):\n        plt.plot(x, model.predict(hours))\n    plt.xlabel(\"Hour of the day\")\n    plt.ylabel(label)\n    plt.xticks(range(0, 24, 3))\n    plt.show()\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "validation.py",
+      "contents": "import contextlib\nimport io\nimport re\nfrom unittest import TestCase\n\nfrom sklearn.exceptions import NotFittedError\nfrom sklearn.utils.validation import check_is_fitted\nfrom unittest_runner import ValidationProtocol\n\n\ndef load_student_program():\n    \"\"\"Imports main into test, preventing additional output and chart calls\"\"\"\n    import helpers\n    helpers.draw_chart = lambda *args, **kwargs: None\n    with contextlib.redirect_stdout(io.StringIO()):\n        import main\n    return main\n\n\nclass TestUVModel(TestCase):\n    longMessage = False\n\n    def test_model_is_trained(self):\n        \"\"\"The model is trained\"\"\"\n        try:\n            check_is_fitted(load_student_program().model)\n        except NotFittedError:\n            self.fail(\"The model hasn't been trained yet\")\n\n    def test_print_1500(self):\n        \"\"\"Prints model's prediction for 3pm\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        printed = {round(float(n)) for n in re.findall(r\"-?\\d+(?:\\.\\d+)?\", output)}\n        self.assertIn(4, printed, \"Output doesn't include correct prediction for 3 pm\")\n\n    def test_print_2300(self):\n        \"\"\"Prints model's prediction for 11pm\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        printed = {round(float(n)) for n in re.findall(r\"-?\\d+(?:\\.\\d+)?\", output)}\n        self.assertIn(5, printed, \"Output doesn't include correct prediction for 11 pm\")\n",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY5WmryT/onrHR6y\nQ6GlBxHprrzkrtzIU5A/AhfCmAVgd818FI0C7PZVmnkoAbjHRk4SfQvy+pkh\nANMy8CPVw3xk1s6RlAADvQ1frROSLlge3mwc7f+zrCbtkSOt7hcvs8KlHnw7\nY3Fl8UJms7pQ94tz17RRayJwxliNPPvBqwmFBt+R2tgxpObtQRZa92Z/WjRn\niSSXIHsw2+SMIJSIPqf3oNFIQ4+K1J1Y0uP8xiOlqwKv4k5kF7N9JicmT6BK\nZE+7NRMiA6PhpK5I8GDQtVCWTGPGtghnuTXXimVoVjjAuYAmceNcevDb3Kh5\nx93lYGaXlNg1j0/x+YMPhrUbnnocIhOJkNGpKmrEihLC1BgrToc52qOOFluR\nj3qUWCXmHylzroOJW/q/NUF3S1zTgHJVOSKRy3uCvlX++rqJEr8rBxxVcoH0\nOGhVqh8nVef+oQbdTgdWcEN+cOPN5va0dXgynFhdu9g9eFqLB2es4VvhLBbF\nOFR40BIKjDoUjEcg+yYQ/sSCOorObvkgvYmmGDVGQLg0druexJbx7wZs7oXw\nnXJRojqP7YCjs9dNHeB2sgi/qNvRKVA/tLX3MPDtY3WPk414VZosCAOcYe4n\nZyNoTGPyaWeyvBo53UgifpEqNf5yX5O8PztQGmXxvZcFIF7iqARPFhdud5Sb\nY3q+AWma50XA/WJh+3fj92RvGR1ZOZqAH2l/lhWR78cxJK8G0XAWYxDqeXWV\nwV+bZ9D34im2gtL1vwHsePWyCqWdF4c56tA+W9isoOILogyd7rjhN7LwTqHw\nYuMnlgZFblApy8Y6Ng4c6MM4LF80D9uHvwncO6qFx8hKLnEhrhKntGtsBmYl\nUWM/p7NDyL+YZDdGt1FdV61YdPj9CS+dOlbYjrQkyVXVayYSa/kXaRxM6vHt\n26MnSEHDrHBm6Ik7CA4x8rQ3lK7rGlV6OGiI1O7S/cYrFDn2DBcPLo7qwS8p\nfNSwtEZ0yTxJTobkXKN0bQbS2CJiRDRn2H/9ArJtcHy5lW1NP9Klc9Kgx5Sb\nENmQuRxOrJfq++Ep54pRItabpoaEyXHYCQk9uIZ2cLGnBkZX5ugSh9GeDNC+\nshF2HmaOavwKvXrHgFBTqFLXjTtnu8gwWMM+vfa9T+xUXoHpmor3Hqd9BuVg\neGIq0UhwBUGMnz6tkhpEAr30+dmzsfvYAGltWlEMXcl9K+lTwprJnfA7KGq0\nSXKQUmIwpLIw24q2nvRqSoZ+IQuDGKRC5tbIzDNnrTCJGRi9taXFTucnt3L4\nw2/T8yELejv5VpnLah/JLhZ/lBRnH4yS7Au1O+TiWHi0Axg18st4C5aPRMUK\nu0HMhEPJrBQSgJyc8eFb42fNY1IIdyMCD01U+kh/ws6sd8Zu25QxdG/YVceU\nMxrz8U3OJXinRlW1+6IP+GvR2ddH5sV6DsMK2X3+yj3x1agg5Z+Zhtr6E5BG\ndQuAJPpKmfYuhPQibDNDvx5MtgenNtQssVvtV9sY4nYzx/SJCL5fA0vcnP9Q\nW+LoW3g6pTarPqXO2oP5HN/GiLEoMU51gR7sZ2ibDdTSmj7+9BTz81fJElwP\n2W1qzz74uJM8M4/hpTiF37wC7gtOrwtlztljM1xXF2KAXCB7\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 18:10:20 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 18:10:29 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

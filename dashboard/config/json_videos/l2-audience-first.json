@@ -1,0 +1,13 @@
+{
+  "key": "l2-audience-first",
+  "description": "See why a short prompt leaves AI guessing, and how adding exact details gets you closer to what you pictured.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l2-audience-first.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "5a3e8eb7-a56d-4ee6-8e78-5ef38c639b2b"
+  ]
+}

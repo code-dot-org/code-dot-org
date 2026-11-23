@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894912-e2ae8352fd3c",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 11: Ownership, Ethics, and Creativity",
+  "question": "Four sources, and the answers are not the same for each. Find the one that is a problem, and the one where the company hasn’t told us enough.\n\nSteps:\n1. Use the arrow tool to point at the row that is most concerning.\n2. Place a shape on the row where the company has not told us what happened.\n3. Use the text tool to write one question the company should answer in public.\n4. Record your voice explaining why “unknown” is different from “yes” and from “no.”",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but types no question."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to row 3 AND a shape is on row 4 AND the typed question asks the company to say whether users agreed or were paid AND the voice recording says that \"unknown\" is different from \"yes\" and \"no.\""
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a fix for row 3 (such as asking permission, paying, or removing the songs) AND explains why not knowing makes fairness impossible to judge."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894912-e2ae8352fd3c-9d44a0a3",
+  "whiteboard_starter_image_alt_text": "\"What a song-making AI learned from.\" A table lists where the songs came from, whether the artists agreed, and whether they were paid. 1, songs from a licensed music catalog: agreed yes, paid yes. 2, public-domain classics: not needed for either. 3, songs copied from a video site: agreed no, paid no. 4, songs uploaded by users: agreed unknown, paid unknown. At the bottom is a blank box labeled \"Space for your question.\""
+}

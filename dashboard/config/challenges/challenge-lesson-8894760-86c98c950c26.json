@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894760-86c98c950c26",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 5: Trust and Credibility",
+  "question": "A picture app keeps showing the same version of everyday things. You’re the reporter, and your job is to explain why. A default is the version the app shows first, and it shows it again and again.\n\nSteps:\n1. Start recording. Pick one case from the list below and announce it like a news reporter.\n2. Explain why the app does this. Use at least two steps in order (for example, people make pictures, then the app learns what appears most).\n3. Say who or what is left out of the app’s pictures, and what could happen when lots of people see the same picture again and again.\n4. End with one thing a person can do about it.\n\nCase list:\n- “A picture app always shows a school as a tall brick building.”\n- “A picture app always shows a musical instrument as a guitar.”\n- “A picture app always shows a street as a wide road with a sidewalk and trees.”\n- “A picture app always shows a home as a house with a roof and a fence.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give a report on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student states that the app shows one version but gives no explanation of why, gives an explanation with only one step, or names nothing that is left out."
+    },
+    {
+      "level": 2,
+      "description": "Student gives an explanation with at least 2 steps in order AND names at least one kind of person, place, or thing that is left out."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says what happens over time when many people see the same picture and accept it, AND names one specific action (such as writing a more specific request or questioning the result)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

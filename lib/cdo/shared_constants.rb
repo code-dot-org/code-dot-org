@@ -748,7 +748,7 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2026.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2026_v2.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
@@ -756,6 +756,8 @@ module SharedConstants
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   STUDENT_SNAPSHOT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  # Tutor+ only. OpenAI publishes no dated snapshot of this model.
+  LESSON_DEEP_DIVE_MODEL_VERSION = 'gpt-6-luna'
 
   AI_EVALUATION_TYPES = {
     SINGLE_STUDENT: 'single_student',

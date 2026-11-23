@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894760-2d1f293e371c",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 5: Trust and Credibility",
+  "question": "An app made six pictures of “a home.” Look closely. What do most of them have in common, and what is missing?\n\nSteps:\n1. Use the arrow tool to point at the picture that is different from the others.\n2. Place a shape on one thing that most of the other pictures have in common.\n3. Record your voice naming one kind of home that is NOT shown in any of the six pictures. Bonus points if you say who might not see their own home in these pictures.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on picture 4, the shape is not on a feature the other five share (roof, chimney, fence, tree, or lawn), or the voice recording does not name a kind of home that is missing."
+    },
+    {
+      "level": 2,
+      "description": "Arrow is on picture 4 AND the shape is on a feature shared by the other five AND the voice recording names a kind of home that is not shown in any picture (for example, an apartment, a tent, or a farm)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording says who might not see their own home in the pictures, or why that could matter."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894760-2d1f293e371c-39776dad",
+  "whiteboard_starter_image_alt_text": "\"An app's answers for: 'a home'.\" Six numbered pictures. Pictures 1, 2, 3, 5, and 6 each show a house in a different color with a pointed roof, a chimney, a white picket fence, a tree, and a green lawn. Picture 4 shows a houseboat on the water."
+}

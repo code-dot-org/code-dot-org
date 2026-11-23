@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894759-a02d54d1154a",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 4: Guidelines for Working with AI",
+  "question": "Mira told her delivery robot, “Bring the package to my friend.” The robot could go to the wrong place. Who the robot is helping and what it should do are the missing pieces. Can you add them?\n\nSteps:\n1. Use the arrow tool to point at two places the robot might go that are wrong.\n2. Use the text tool to type a better instruction. Say who the robot is helping and what it should do, and use at least 2 details from “What we know.”\n3. Record your voice explaining which words in your new instruction stop which mistake.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student places fewer than 2 arrows, an arrow points to Ben's house, types no new instruction, or the instruction does not name Ben and one more detail from the \"What we know\" box."
+    },
+    {
+      "level": 2,
+      "description": "Two arrows point to places other than Ben's house (Ana's apartment, Chen's house, or School) AND the new instruction names Ben or Ben's house AND includes at least one more detail from the \"What we know\" box."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the new instruction includes at least two details from the \"What we know\" box AND the voice recording links a specific word or phrase to a specific wrong place it prevents."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894759-a02d54d1154a-de5fe1aa",
+  "whiteboard_starter_image_alt_text": "\"A delivery robot gets this instruction: 'Bring the package to my friend.'\" A map shows Mira's home, the robot, and four places connected by roads: Ana's apartment, Ben's house, Chen's house, and the school. A box labeled \"What we know\" says: \"Mira has three friends: Ana, Ben, and Chen. The package is a birthday gift for Ben. It must arrive before 5:00.\""
+}

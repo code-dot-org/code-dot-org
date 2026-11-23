@@ -1,0 +1,18 @@
+name 'aif-y2-ai-at-scale-lesson13-level5-choice2-2026'
+title 'Road Icing'
+display_name 'Road Icing'
+bubble_choice_description "Your community’s public works department wants to predict what road conditions will be like."
+markdown <<MARKDOWN
+As you’ve talked to the people at your community’s public works department, you’ve learned more about the decisions they need to make based on the available data. Read the quotes, then complete the questions in the **Take Action** section of the Project Planning Guide to describe how you’ll recommend an action based on the neural network’s output and how you’ll add safeguards to your program to address at least one person’s concern.
+
+- Based on the predicted road condition, they need to decide what action the road work trucks need to take. Some of their requests are quoted below:
+  - “When the road is clear, we don’t need to send a truck.”
+  - “When there’s ice on the road, we send a salt truck. If there’s snow, then we have to plow the road first and then salt it.”
+  - “When there’s frost on the road, we usually use a brine sprayer.”
+- The employees at the public works department are concerned that AI might automatically make decisions that might be wrong. Some of their concerns are quoted below:
+  - “After a particularly big snowstorm, we probably should just plow every road instead of letting AI decide.”
+  - “Sometimes on very cold nights, I like to send the brine sprayer to treat the roads just in case, even if I think they’re going to be clear.”
+  - “Is it going to be wasteful if AI predicts that roads need salting even on a really warm night?”
+  - “I usually pay extra attention to roads we haven’t worked on before, especially those that are high up. Sometimes those need special consideration.”
+
+MARKDOWN

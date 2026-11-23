@@ -16,7 +16,6 @@
   object-fit: contain;
 }
 
-// The in-progress state: a centered spinner filling the frame.
 .generating {
   display: flex;
   flex-direction: column;
@@ -28,9 +27,9 @@
   box-sizing: border-box;
 }
 
-.spinner {
-  font-size: 48px;
-  color: var(--text-neutral-quaternary);
+// The design gives the dots a lighter purple on a dark surface.
+:global([data-theme='Dark']) .generating {
+  --codeai-anim-color: var(--brand-purple-20);
 }
 
 .error {
