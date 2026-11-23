@@ -10,9 +10,9 @@ import AppLabIcon from '@/config/brand/assets/courses/app-lab-icon.webp';
 import DanceIcon from '@/config/brand/assets/courses/dance-party-icon.webp';
 import GameLabIcon from '@/config/brand/assets/courses/game-lab-icon.webp';
 import AllProjectsIcon from '@/config/brand/assets/courses/header-all-projects-icon.webp';
-import MusicDanceAiIcon from '@/config/brand/assets/courses/music-dance-ai-icon.webp';
 import MusicLabIcon from '@/config/brand/assets/courses/music-lab-icon.webp';
 import PythonLabIcon from '@/config/brand/assets/courses/python-lab-icon.webp';
+import QuestBuilderIcon from '@/config/brand/assets/courses/quest-builder-icon.webp';
 import SketchLabIcon from '@/config/brand/assets/courses/sketch-lab-icon.webp';
 import SpriteLabIcon from '@/config/brand/assets/courses/sprite-lab-icon.webp';
 import WebLab2Icon from '@/config/brand/assets/courses/weblab2-icon.webp';
@@ -52,14 +52,14 @@ export function buildTeacherMenuItems(): MenuItem[] {
   ];
 }
 
-/** "New project" picker items. A function (see {@link buildGlobalNav}) since `Mix & Move with AI` resolves via `siteConfig.marketingUrl`. */
+/** "New project" picker items. */
 export function buildCreateMenuItems(): CreateMenuItem[] {
   return [
     {
-      id: 'music_dance_ai',
-      label: 'Mix & Move with AI',
-      href: siteConfig.marketingUrl('/mix-move-ai'),
-      iconUrl: MusicDanceAiIcon,
+      id: 'quest_builder',
+      label: 'Quest Builder',
+      href: '/courses/quest-builder-2026/units/1/lessons/1/levels/1',
+      iconUrl: QuestBuilderIcon,
     },
     {
       id: 'spritelab',

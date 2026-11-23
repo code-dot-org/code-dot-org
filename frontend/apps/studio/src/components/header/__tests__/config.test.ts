@@ -98,10 +98,17 @@ describe('buildTeacherMenuItems', () => {
 });
 
 describe('buildCreateMenuItems', () => {
-  it('resolves Mix & Move with AI via siteConfig.marketingUrl', () => {
-    const items = buildCreateMenuItems();
-    expect(items.find(i => i.label === 'Mix & Move with AI')?.href).toBe(
-      siteConfig.marketingUrl('/mix-move-ai'),
+  it('leads with Quest Builder, linking to the tutorial', () => {
+    const [first] = buildCreateMenuItems();
+    expect(first.label).toBe('Quest Builder');
+    expect(first.href).toBe(
+      '/courses/quest-builder-2026/units/1/lessons/1/levels/1',
     );
+  });
+
+  it('omits Mix & Move with AI', () => {
+    expect(
+      buildCreateMenuItems().some(i => i.id === 'music_dance_ai'),
+    ).toBe(false);
   });
 });

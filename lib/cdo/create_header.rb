@@ -51,6 +51,10 @@ class CreateHeader
       image: "music-dance-ai-icon.png",
       url: CDO.code_org_url("/mix-move-ai")
     },
+    quest_builder: {
+      image: "quest-builder-icon.png",
+      url: CDO.studio_url("courses/quest-builder-2026/units/1/lessons/1/levels/1")
+    },
     javalab: {
       image: "java-lab-icon.png"
     },
@@ -81,7 +85,7 @@ class CreateHeader
   def self.get_create_dropdown_contents(options)
     entries = options[:limit_project_types] == "true" ?
       %w(spritelab minecraft_designer music artist dance) :
-      %w(music_dance_ai spritelab applab gamelab sketchlab weblab2 music pythonlab dance)
+      %w(quest_builder spritelab applab gamelab sketchlab weblab2 music pythonlab dance)
 
     if options[:project_type] &&
         !entries.include?(options[:project_type]) &&
