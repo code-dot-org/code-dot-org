@@ -528,11 +528,15 @@ $z-over-blockly: 71;
   border-inline-start: 1px solid var(--borders-neutral-primary);
 }
 
+// Between the game's buttons and the share page's buttons, which have the
+// line between them.
+$play-bar-group-gap: 40px;
+
 .playBarButtons {
   display: flex;
   min-width: 0;
   align-items: center;
-  gap: 16px;
+  column-gap: $play-bar-group-gap;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 8px;
@@ -556,14 +560,14 @@ $z-over-blockly: 71;
   row-gap: 8px;
 }
 
-// Centered in the 16px gap before the group and taken out of the flow, so
+// Centered in the gap before the group and taken out of the flow, so
 // showing it never makes the row wrap.
 .playBarGroupDivided::before {
   content: '';
   position: absolute;
   top: 4px;
   bottom: 4px;
-  left: -9px;
+  left: math.div(-$play-bar-group-gap, 2) - 0.5px;
   width: 1px;
   background: var(--borders-neutral-strong);
 }
