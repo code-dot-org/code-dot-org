@@ -366,8 +366,8 @@ $z-over-blockly: 71;
   }
 }
 
-// CustomDropdown highlights every menu li on hover and press.
-.sceneDropdown .sceneMenu li:has(> .sceneMenuItem:disabled) {
+// Override CustomDropdown's hover and press styles on a disabled item.
+.sceneDropdown .sceneMenu.sceneMenu li:has(> .sceneMenuItem:disabled) {
   background: none;
 
   span,
