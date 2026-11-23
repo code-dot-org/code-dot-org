@@ -1,0 +1,13 @@
+{
+  "key": "l7-check-another-source",
+  "description": "Learn why checking an AI answer means looking at a different source, not asking the AI again.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l7-check-another-source.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "eb549fc1-f0f5-4724-a1f0-636116232599"
+  ]
+}

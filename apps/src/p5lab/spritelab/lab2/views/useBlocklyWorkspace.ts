@@ -20,6 +20,7 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {OUTLINE_EVENT_GROUP, withoutOutlines} from '../addBlocks';
 import {withoutBlockTypes} from '../blockCatalog';
 import {lockBlocks, withoutLocks} from '../blockLocks';
+import {widenFlyoutMargin} from '../blockly/flyoutRoom';
 import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
@@ -46,6 +47,8 @@ interface UseBlocklyWorkspaceOptions {
   theme: 'Light' | 'Dark';
   /** The blocks can be read and not changed, and there is no toolbox. */
   readOnly?: boolean;
+  /** Multiplies the flyout's margin; read at inject. */
+  flyoutMarginFactor?: number;
 }
 
 interface UseBlocklyWorkspaceResult {
@@ -99,10 +102,13 @@ export default function useBlocklyWorkspace({
   sharedBlocks,
   theme,
   readOnly,
+  flyoutMarginFactor,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
   const hiddenRef = useRef(hiddenBlockTypes);
   hiddenRef.current = hiddenBlockTypes;
+  const flyoutMarginRef = useRef(flyoutMarginFactor);
+  flyoutMarginRef.current = flyoutMarginFactor;
   // A level's authored definition with the lab's additions, filtered to
   // registered blocks and less the hidden ones.
   const prepareToolbox = useCallback(
@@ -176,6 +182,12 @@ export default function useBlocklyWorkspace({
       customSimpleDialog,
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
+    if (flyoutMarginRef.current && toolbox) {
+      // Inject lays the flyout out at Blockly's own margin, so it is laid
+      // out again here, before the browser draws it.
+      widenFlyoutMargin(workspaceRef.current, flyoutMarginRef.current);
+      workspaceRef.current.updateToolbox(toolbox);
+    }
 
     // Drags onto a placeholder keep the placeholder showing, not a marker.
     workspaceRef.current.options.plugins[
@@ -209,7 +221,9 @@ export default function useBlocklyWorkspace({
       // Toolbox editing: flag blocks that won't serialize into a category.
       if (isToolboxMode && e.type === BlocklyCore.Events.BLOCK_MOVE) {
         if (workspaceRef.current?.rendered) {
-          validateBlockCategories(workspaceRef.current);
+          validateBlockCategories(workspaceRef.current, {
+            dynamicCategoriesHoldBlocks: true,
+          });
         }
       }
       // Emit intermediate change if detected.
@@ -341,7 +355,9 @@ export default function useBlocklyWorkspace({
   const getToolboxDefinition = useCallback(
     () =>
       workspaceRef.current
-        ? workspaceToToolboxDefinition(workspaceRef.current)
+        ? workspaceToToolboxDefinition(workspaceRef.current, {
+            dynamicCategoriesHoldBlocks: true,
+          })
         : null,
     []
   );

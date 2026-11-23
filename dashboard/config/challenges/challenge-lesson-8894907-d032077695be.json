@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894907-d032077695be",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 6: Understanding Bias",
+  "question": "A city lets an AI decide which streets to repair first, based on reports from a phone app. The potholes are spread equally, but the repairs are not. Why?\n\nSteps:\n1. Use the arrow tool to point at the neighborhood the plan treats most unfairly.\n2. Place a shape on the number that misled the AI.\n3. Use the text tool to write one change that would make the plan fairer.\n4. Record your voice explaining why the AI was not being unfair on purpose, and why the result was unfair anyway.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but types no change."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to Eastside AND a shape is on the phone reports number that misled the AI AND the typed change adds a different source of information (such as inspector visits or surveys in every neighborhood)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that the AI was not unfair on purpose but still produced an unfair result because of who uses the app."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894907-d032077695be-9bd40430",
+  "whiteboard_starter_image_alt_text": "\"A city AI decides which streets to repair first.\" Four neighborhoods, each showing its share of phone reports and its share of real potholes found by inspectors: North Hill, 55% of reports and 25% of potholes; Old Town, 25% and 25%; Riverside, 15% and 25%; and Eastside, 5% and 25%. A box labeled \"The AI's repair plan\" says it fixes streets in the order of phone reports: 1, North Hill; 2, Old Town; 3, Riverside; and 4, Eastside."
+}

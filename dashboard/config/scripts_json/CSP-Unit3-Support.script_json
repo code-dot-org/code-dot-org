@@ -9,7 +9,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:55:36 UTC",
+    "serialized_at": "2026-11-20 18:30:15 UTC",
+    "hide_within_course": false,
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -799,10 +800,25 @@
   "objectives": [
 
   ],
+  "objectives_script_levels": [
+
+  ],
   "lessons_standards": [
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -25,6 +25,7 @@ module ChallengeEvaluationOpenaiHelper
         model: model,
         messages: messages,
         response_format: response_format,
+        reasoning_effort: 'low',
       }
 
       HTTParty.post(

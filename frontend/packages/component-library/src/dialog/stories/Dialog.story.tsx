@@ -138,6 +138,23 @@ DialogWithSecondaryButton.args = {
   onClose: () => console.log('Dialog with secondary button closed'),
 };
 
+export const DestructiveDialog = SingleTemplate.bind({});
+DestructiveDialog.args = {
+  title: 'Delete this project?',
+  description: 'This cannot be undone.',
+  icon: {iconName: 'trash-can'},
+  destructive: true,
+  primaryButtonProps: {
+    children: 'Delete',
+    onClick: () => alert('Primary button clicked!'),
+  },
+  secondaryButtonProps: {
+    children: 'Cancel',
+    onClick: () => alert('Secondary button clicked!'),
+  },
+  onClose: () => console.log('Destructive dialog closed'),
+};
+
 export const DialogWithLongText = SingleTemplate.bind({});
 DialogWithLongText.args = {
   title: 'A title long enough to wrap onto a second line in the dialog',

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894910-a45b43da46c3",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 9: AI as a Co-Creator",
+  "question": "Four students asked the same AI for the same thing, and three of them got nearly the same answer. What happens to creativity when everyone asks the same question?\n\nSteps:\n1. Use the arrow tool to point at the three slogans that are almost the same.\n2. Place a shape on the slogan that stands out.\n3. Use the text tool to write a prompt that would get a slogan only your community could have, with at least 2 details that only you would know.\n4. Record your voice explaining why the same prompt gives similar results, and what that could mean for creativity if millions of people do it.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places arrows and a shape, but types no new prompt."
+    },
+    {
+      "level": 2,
+      "description": "Arrows point to slogans A, B, and C AND a shape is on slogan D AND the typed prompt includes at least 2 details only their community would have (such as a name, a place, an audience, or a tone)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that the same prompt gives similar results because AI picks likely words, and says what could happen to creativity if many people use the same prompt."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894910-a45b43da46c3-fd66909b",
+  "whiteboard_starter_image_alt_text": "\"Four students asked the same AI for a slogan for the library's summer reading challenge.\" A: \"Read More, Dream More!\" B: \"Read More, Dream Big!\" C: \"Read More, Dream Bigger!\" D: \"Beat the heat with 10 books and one very cold library.\" Below is a blank box labeled \"Space for your new prompt.\""
+}

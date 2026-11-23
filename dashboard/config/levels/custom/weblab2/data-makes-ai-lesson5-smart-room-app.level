@@ -7,13 +7,13 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Smart Room Inspector App\r\n\r\nThis app uses a **model** that is **trained** on many different types of bedrooms.\r\n\r\nClick the [_**Take Photo**_] button to explore how the app **predicts** whether a room is clean or not. \r\n\r\n",
+    "long_instructions": "# Smart Room Inspector App\r\n\r\nThis app uses a **model** that is **trained** on many different types of bedrooms.\r\n\r\nClick the _**Take Photo**_ button to explore how the app **predicts** whether a room is clean or not. \r\n\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "widget_view": "true",
-    "require_edit_to_continue": "true",
+    "require_edit_to_continue": "false",
     "initial_view_mode": "split",
     "predict_settings": {
       "isPredictLevel": false,
@@ -28,16 +28,7 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-        "buildHTML",
-        "buildCSS",
-        "ask",
-        "hint",
-        "debug",
-        "example",
-        "explainCode",
-        "documentation",
-        "pseudocode",
-        "testCase"
+        "ask"
       ],
       "answerTypeCustomizations": {
       }
@@ -118,8 +109,9 @@
         "2",
         "3"
       ]
-    }
+    },
+    "hide_ai_tutor": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-26 21:11:10 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-26 21:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 14:22:51 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 15:36:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 15:37:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 15:37:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-10-26 21:11:10 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-26 21:16:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 14:22:51 +0000\",\"changed\":[\"widget_view\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 15:36:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 15:37:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-27 15:37:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-18 19:06:42 +0000\",\"changed\":[\"require_edit_to_continue\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-18 19:07:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

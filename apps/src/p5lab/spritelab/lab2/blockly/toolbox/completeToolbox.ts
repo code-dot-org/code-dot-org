@@ -1,6 +1,8 @@
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {
   getToolboxDefinition,
+  isBlockInfo,
+  isStaticCategoryInfo,
   makeDynamicCategory,
 } from '@cdo/apps/blockly/utils/toolbox';
 
@@ -23,6 +25,33 @@ import {WHEN_PLAYER_BLOCK_TYPE} from '../blockDefinitions/whenPlayer';
 import {AI_BLOCK_TYPES, AI_CATEGORY} from './aiBlocks';
 import {filterToSupportedSharedBlocks} from './supportedSharedBlocks';
 import {ToolboxInfo} from './types';
+
+// Sprite sockets that start filled in the complete toolbox, as an authored
+// toolbox fills them: block type -> input name -> shadow block type.
+const SPRITE_SHADOWS: {[type: string]: {[input: string]: string}} = {
+  [BURST_BLOCK_TYPE]: {ORIGIN: 'gamelab_allSpritesWithAnimation'},
+};
+
+function withSpriteShadows(def: ToolboxInfo): ToolboxInfo {
+  def.contents.forEach(category => {
+    if (!isStaticCategoryInfo(category)) {
+      return;
+    }
+    category.contents.filter(isBlockInfo).forEach(block => {
+      const shadows = block.type && SPRITE_SHADOWS[block.type];
+      if (!shadows) {
+        return;
+      }
+      block.inputs = Object.fromEntries(
+        Object.entries(shadows).map(([input, type]) => [
+          input,
+          {shadow: {type}},
+        ])
+      );
+    });
+  });
+  return def;
+}
 
 // Where the lab-owned blocks live in the complete toolbox.
 const LAB_BLOCKS_BY_CATEGORY: {[category: string]: string[]} = {
@@ -104,11 +133,12 @@ export function getCompleteToolboxDefinition(
   sharedBlocksByCategory: {[category: string]: string[]},
   forToolboxEditing: boolean
 ): ToolboxInfo {
+  const supportedShared = filterToSupportedSharedBlocks(sharedBlocksByCategory);
   const merged: {[category: string]: string[]} = {
     ...(forToolboxEditing
       ? {Categories: [BLOCK_TYPES.category, BLOCK_TYPES.categoryDynamic]}
       : {}),
-    ...filterToSupportedSharedBlocks(sharedBlocksByCategory),
+    ...supportedShared,
   };
   [LAB_BLOCKS_BY_CATEGORY, COMMON_BLOCKS_BY_CATEGORY].forEach(byCategory =>
     Object.entries(byCategory).forEach(([name, types]) => {
@@ -117,14 +147,19 @@ export function getCompleteToolboxDefinition(
     })
   );
   if (forToolboxEditing) {
-    return getToolboxDefinition(merged, 'categoryToolbox');
+    return withSpriteShadows(getToolboxDefinition(merged, 'categoryToolbox'));
   }
-  // Variable blocks come from the dynamic category's flyout instead.
+  // Variable blocks come from the dynamic category's flyout instead, which
+  // ends with the pool's own, such as show variable.
   delete merged.Variables;
-  const def = getToolboxDefinition(merged, 'categoryToolbox');
-  def.contents.push(
-    makeDynamicCategory('Variables', 'VARIABLE'),
-    makeDynamicCategory('Functions', 'PROCEDURE')
+  const def = withSpriteShadows(
+    getToolboxDefinition(merged, 'categoryToolbox')
   );
+  const variables = makeDynamicCategory('Variables', 'VARIABLE');
+  variables.contents = (supportedShared.Variables || []).map(type => ({
+    kind: 'block',
+    type,
+  }));
+  def.contents.push(variables, makeDynamicCategory('Functions', 'PROCEDURE'));
   return def;
 }

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894905-03374abeada8",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 4: Smart or Just Predictable?",
+  "question": "You are the trivia host, and your job is to write the trickiest question possible: one that tempts an AI to make something up. Pick your traps, write the question, and predict how it goes wrong.\n\nSteps:\n1. Use the shape tool to mark 2 trap types you will combine.\n2. Use the text tool to write your trap question in the chat window.\n3. Record your voice predicting what the AI will get wrong and why it will make that mistake.\n4. Say how a human could catch the error.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places fewer than 2 shapes, OR types no question."
+    },
+    {
+      "level": 2,
+      "description": "Two shapes are on two trap types AND the typed question uses both traps AND the voice recording predicts a specific wrong thing the AI would do and says that it predicts likely words."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a specific way a human could catch the error (such as a trusted source or an expert)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894905-03374abeada8-7f5ba352",
+  "whiteboard_starter_image_alt_text": "\"Write a question that could trick an AI into making something up.\" On the left, six numbered trap types: 1, ask about something that does not exist; 2, ask for an exact quote; 3, ask for a very specific number; 4, ask about news from this morning; 5, ask for the page number of a source; and 6, ask what a famous person secretly thought. On the right, a chat window with a blank box for your trap question and a box labeled \"Space for your prediction.\""
+}

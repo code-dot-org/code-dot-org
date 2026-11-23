@@ -2,9 +2,9 @@
 
 import type {Store} from 'redux';
 
-import {TestDataLocations, PERCENT_OF_DATASET_FOR_TESTING} from './constants';
+import {TestDataLocations, DEFAULT_TEST_ROWS_PERCENT} from './constants';
 import {buildOptionNumberKey} from './helpers/columnDetails';
-import {splitRowIndices} from './helpers/trainingSplit';
+import {describesDataset, splitRowIndices} from './helpers/trainingSplit';
 import {getRandomInt} from './helpers/utils';
 import {convertValueForTraining} from './helpers/valueConversion';
 import {
@@ -21,7 +21,13 @@ import {
 import {getData, getSelectedCategoricalColumns} from './selectors';
 import {buildTrainer} from './trainers';
 import type {Trainer, TrainerOutput, TrainingRun} from './trainers/types';
-import type {AilabProject, DataRow, TrainedModel} from './types';
+import {
+  describeTestRows,
+  type AilabProject,
+  type DataRow,
+  type TestRows,
+  type TrainedModel,
+} from './types';
 
 /* Builds a hash that maps selected categorical features to their option-
   number keys and dispatches that hash to the Redux store.
@@ -97,24 +103,38 @@ const extractTrainingLabel = (
   return convertValueForTraining(state, project, value, project.labelColumn!);
 };
 
+const testRowCount = (
+  rowCount: number,
+  testRows: TestRows = {percent: DEFAULT_TEST_ROWS_PERCENT}
+): number => {
+  const {unit, amount} = describeTestRows(testRows);
+  const requested =
+    unit === 'count' ? amount : Math.ceil((rowCount * amount) / 100);
+  return Math.min(requested, rowCount - 1);
+};
+
 /*
   Which rows a run holds back to grade itself on.
 */
-const reserveRowIndices = (rowCount: number, location: string): number[] => {
-  const numToReserve = Math.ceil(rowCount * PERCENT_OF_DATASET_FOR_TESTING);
+const reserveRowIndices = (
+  rowCount: number,
+  location: string,
+  testRows?: TestRows
+): number[] => {
+  const numToReserve = testRowCount(rowCount, testRows);
 
   if (location === TestDataLocations.RANDOM) {
     const reserved = new Set<number>();
-    while (reserved.size < numToReserve && reserved.size < rowCount) {
+    while (reserved.size < numToReserve) {
       reserved.add(getRandomInt(rowCount));
     }
     return [...reserved].sort((a, b) => a - b);
   }
 
   // If the location is not random, reserve the last numToReserve rows.
-  const firstReserved = Math.max(0, rowCount - numToReserve);
+  const firstReserved = rowCount - numToReserve;
   return Array.from(
-    {length: rowCount - firstReserved},
+    {length: numToReserve},
     (_unused, offset) => firstReserved + offset
   );
 };
@@ -184,14 +204,18 @@ const prepare = (
   prepareTrainingData(store, project, accuracyCheckRowIndices);
 };
 
-// A run the student started, without a predetermined split.
+// A run the student started, graded on the project's split once it has one.
 const init = (store: Store<RootState>, project: AilabProject): void => {
   const state = store.getState();
+  const rowCount = getData(state).length;
+  const savedSplit = project.accuracyCheckRowIndices;
   trainingState.previousResults = getTrainingResults(state);
   prepare(
     store,
     project,
-    reserveRowIndices(getData(state).length, state.reserveLocation)
+    savedSplit && describesDataset(savedSplit, rowCount)
+      ? savedSplit
+      : reserveRowIndices(rowCount, state.reserveLocation, state.mode?.testRows)
   );
 };
 
@@ -203,25 +227,6 @@ const describeRun = (run?: TrainerOutput): TrainingRun | undefined =>
 
 const onClickTrain = (): TrainingRun | undefined =>
   describeRun(trainingState.trainer?.startTraining());
-
-/*
-  Whether a saved split still describes this dataset: every index names a row,
-  and some rows are left over to train on. If the rowCount has changed, 
-  the split may no longer be valid.
-*/
-const describesDataset = (
-  accuracyCheckRowIndices: number[],
-  rowCount: number
-): boolean => {
-  const reserved = new Set(accuracyCheckRowIndices);
-  return (
-    reserved.size > 0 &&
-    reserved.size < rowCount &&
-    [...reserved].every(
-      index => Number.isInteger(index) && index >= 0 && index < rowCount
-    )
-  );
-};
 
 /*
   Rebuilds the model a saved project describes, on the split it was graded

@@ -7,7 +7,6 @@ import {
 import {TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import useSources from '@cdo/apps/lab2/hooks/useSources';
 import {setPageError} from '@cdo/apps/lab2/lab2Redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getStandaloneProjectId,
   getAppOptionsEditBlocks,
@@ -27,6 +26,7 @@ import {unpackSources} from '../packedWorld';
 import type {SpriteLab2LevelProperties, Sources} from '../types';
 
 import SpriteLab2View from './SpriteLab2View';
+import useShareCheck, {checksOnLoad} from './useShareCheck';
 
 const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 const isLevelEditMode = getIsLevelEditMode();
@@ -50,15 +50,16 @@ function getToolboxEditSources(
   return {source: toolboxToWorkspaceBlocks(definition)};
 }
 
-// Saved flags for the block catalog and free play intro are not student
-// edits: Continue and the Run/Edit prompt read hasEdited.
-const CATALOG_KEYS: ReadonlySet<keyof Sources> = new Set<keyof Sources>([
+// Keys that are not considered student edits.
+const BOOKKEEPING_KEYS: ReadonlySet<keyof Sources> = new Set<keyof Sources>([
   'chosenBlocks',
   'freeplayIntroSeen',
+  'inRestrictedShareMode',
+  'teacherHasConfirmedUploadWarning',
 ]);
 const isStudentEdit = (prev: Sources, next: Sources) =>
   (Object.keys({...prev, ...next}) as (keyof Sources)[]).some(
-    key => !CATALOG_KEYS.has(key) && prev[key] !== next[key]
+    key => !BOOKKEEPING_KEYS.has(key) && prev[key] !== next[key]
   );
 
 const SpriteLab2Container: React.FunctionComponent<
@@ -86,7 +87,6 @@ const SpriteLab2Container: React.FunctionComponent<
     updateSources: updateStoredSources,
     patchSources: patchStoredSources,
     channel,
-    projectManager,
     loadError,
     ...restOutputs
   } = useSources<Sources>({
@@ -151,13 +151,7 @@ const SpriteLab2Container: React.FunctionComponent<
     [updateSources]
   );
 
-  // Set the project manager in the registry for external components that need it (e.g. header).
-  useEffect(() => {
-    if (projectManager) {
-      Lab2Registry.getInstance().setProjectManager(projectManager);
-    }
-    return () => Lab2Registry.getInstance().clearProjectManager();
-  }, [projectManager]);
+  useShareCheck(channel?.id, checksOnLoad(levelProperties));
 
   useEffect(() => {
     if (loadError) {

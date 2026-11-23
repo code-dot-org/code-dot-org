@@ -283,7 +283,10 @@ export default class MusicLibrary {
 
   getRestrictedPacks(): SoundFolder[] {
     return this.getAllowedSounds().filter(
-      folder => folder.restricted && folder.id !== DEFAULT_PACK
+      folder =>
+        folder.restricted &&
+        folder.id !== DEFAULT_PACK &&
+        (!folder.removed || folder.id === this.currentPackId)
     );
   }
 
@@ -487,6 +490,10 @@ export interface SoundFolder {
   imageSrc: string;
   color?: string;
   restricted?: boolean;
+  // A removed pack is left out of the pack picker, but projects and levels
+  // that already chose it keep it. Only restricted (artist) packs can be
+  // removed.
+  removed?: boolean;
   sounds: SoundData[];
   bpm?: number;
   key?: Key;

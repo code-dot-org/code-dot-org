@@ -4,6 +4,8 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import ChallengeBox from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeBox';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -12,6 +14,11 @@ import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
   default: {fetchJson: jest.fn(), post: jest.fn(), put: jest.fn()},
+}));
+
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
 }));
 
 jest.mock('react-router-dom', () => ({
@@ -77,6 +84,7 @@ const fetchJson = HttpClient.fetchJson as jest.Mock;
 const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;
 const snapshot = createSketchSnapshotBlob as jest.Mock;
+const sendEventMock = analyticsReporter.sendEvent as jest.Mock;
 
 const fakeChallenge: Challenge = {
   id: 1,
@@ -90,6 +98,7 @@ const fakeChallenge: Challenge = {
 const createdResponse = {
   id: 7,
   assets: [{id: 9, asset_type: 'whiteboard_image'}],
+  attempt_number: 1,
 };
 
 // Shape of the ChallengeResponse the polling effect fetches from
@@ -168,6 +177,7 @@ describe('ChallengeBox', () => {
     post.mockReset();
     put.mockReset();
     snapshot.mockReset();
+    sendEventMock.mockReset();
   });
 
   it('shows the waiting-for-feedback text and image once the response is submitted', async () => {
@@ -605,6 +615,117 @@ describe('ChallengeBox', () => {
 
       expect(screen.getByText('canvas mode: preview')).toBeInTheDocument();
       expect(screen.getByRole('button', {name: 'Submit'})).toBeEnabled();
+    });
+  });
+
+  describe('Tutor+ analytics', () => {
+    const renderWhiteboardChallenge = () =>
+      render(
+        <ChallengeBox
+          lessonId={42}
+          challenge={fakeChallenge}
+          challengeType={ChallengeTypes.WHITEBOARD}
+        />
+      );
+
+    it("reports a successful submit with the server's attempt number", async () => {
+      fetchJson.mockResolvedValue({value: fakeChallengeResponse()});
+      snapshot.mockResolvedValue({
+        blob: new Blob(['png-bytes'], {type: 'image/png'}),
+      });
+      post.mockResolvedValue({
+        ok: true,
+        json: async () => ({...createdResponse, attempt_number: 3}),
+      });
+      put.mockResolvedValue({});
+
+      renderWhiteboardChallenge();
+      await submitWhiteboardChallenge();
+
+      await waitFor(() =>
+        expect(sendEventMock).toHaveBeenCalledWith(
+          EVENTS.TUTOR_PLUS_CHALLENGE_SUBMITTED,
+          {
+            lesson_id: 42,
+            challenge_id: fakeChallenge.id,
+            type: ChallengeTypes.WHITEBOARD,
+            attempt_number: 3,
+            duration_seconds: expect.any(Number),
+          }
+        )
+      );
+    });
+
+    it('does not report a submit that fails', async () => {
+      snapshot.mockResolvedValue({error: 'Could not capture your drawing.'});
+
+      renderWhiteboardChallenge();
+      await submitWhiteboardChallenge();
+
+      await waitFor(() =>
+        expect(
+          screen.getByText('Could not capture your drawing.')
+        ).toBeInTheDocument()
+      );
+      expect(sendEventMock).not.toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_CHALLENGE_SUBMITTED,
+        expect.anything()
+      );
+    });
+
+    it('reports Start over, noting whether there was work to lose', async () => {
+      renderWhiteboardChallenge();
+      await waitFor(() =>
+        expect(
+          screen.getByText('Draw a flowchart of the algorithm.')
+        ).toBeInTheDocument()
+      );
+
+      fireEvent.click(screen.getByRole('button', {name: 'Start over'}));
+      expect(sendEventMock).toHaveBeenLastCalledWith(
+        EVENTS.TUTOR_PLUS_CHALLENGE_RESTARTED,
+        {
+          lesson_id: 42,
+          challenge_id: fakeChallenge.id,
+          action: 'start_over',
+          had_work: false,
+        }
+      );
+
+      fireEvent.click(screen.getByRole('button', {name: 'Text'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Draw something'}));
+      fireEvent.click(screen.getByRole('button', {name: 'Start over'}));
+      expect(sendEventMock).toHaveBeenLastCalledWith(
+        EVENTS.TUTOR_PLUS_CHALLENGE_RESTARTED,
+        {
+          lesson_id: 42,
+          challenge_id: fakeChallenge.id,
+          action: 'start_over',
+          had_work: true,
+        }
+      );
+    });
+
+    it('reports Choose a different challenge', async () => {
+      renderWhiteboardChallenge();
+      await waitFor(() =>
+        expect(
+          screen.getByText('Draw a flowchart of the algorithm.')
+        ).toBeInTheDocument()
+      );
+
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Choose a different challenge'})
+      );
+      expect(sendEventMock).toHaveBeenCalledWith(
+        EVENTS.TUTOR_PLUS_CHALLENGE_RESTARTED,
+        {
+          lesson_id: 42,
+          challenge_id: fakeChallenge.id,
+          action: 'choose_different',
+          had_work: false,
+        }
+      );
     });
   });
 });

@@ -89,10 +89,19 @@
           "id": "=HRm.V|Qt)9IJ;9An~np",
           "fields": {
             "COUNT": 20,
-            "LOOK": "<field name=\"LOOK\">sparks</field>",
-            "ORIGIN": "<field name=\"ORIGIN\">null</field>"
+            "LOOK": "<field name=\"LOOK\">sparks</field>"
           },
-          "enabled": true
+          "enabled": true,
+          "inputs": {
+            "ORIGIN": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation",
+                "fields": {
+                  "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                }
+              }
+            }
+          }
         },
         {
           "kind": "block",
@@ -215,10 +224,19 @@
           "id": "rXz3YY1c5:[HtKwf/}MF",
           "fields": {
             "COUNT": 20,
-            "LOOK": "<field name=\"LOOK\">sparks</field>",
-            "ORIGIN": "<field name=\"ORIGIN\">null</field>"
+            "LOOK": "<field name=\"LOOK\">sparks</field>"
           },
-          "enabled": true
+          "enabled": true,
+          "inputs": {
+            "ORIGIN": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation",
+                "fields": {
+                  "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                }
+              }
+            }
+          }
         },
         {
           "kind": "block",

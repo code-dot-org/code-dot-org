@@ -7,6 +7,7 @@
   "properties": {
     "uses_lab2": "true",
     "world_keeps_roles": [
+      "hero",
       "treasure"
     ],
     "block_pools": [
@@ -17,7 +18,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -26,6 +27,7 @@
     "level_mode": {
       "kind": "world",
       "paletteRoles": [
+        "hero",
         "treasure",
         "block"
       ],
@@ -97,14 +99,14 @@
       "title": "**Make your world**",
       "items": [
         {
-          "text": "Select a square to place your object where your player can reach it.",
+          "text": "Select a square to place your object.",
           "check": {
             "kind": "world",
             "role": "treasure"
           }
         },
         {
-          "text": "Add **blocks** to jump onto.",
+          "text": "Add blocks to jump onto.",
           "check": {
             "kind": "world",
             "role": "block"

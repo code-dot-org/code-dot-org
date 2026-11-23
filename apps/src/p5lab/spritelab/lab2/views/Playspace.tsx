@@ -32,7 +32,17 @@ export type PlayspaceMode = 'preview' | 'play' | 'hidden';
 
 // Read by a screen reader when focus reaches the game, which otherwise
 // reports itself only in sound.
-const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
+const FULL_HELP =
+  'Left and right arrows move. Space jumps. In altered gravity, arrows ' +
+  'steer. Turn on navigation sounds in Settings. Press H to hear this ' +
+  'again.';
+// After the first visit, so the full help does not hold up what the game
+// says as play starts.
+const SHORT_HELP = 'Arrow keys move. Press H for help.';
+// Older entries leave the log; screen readers do not read removals.
+const LOG_LENGTH = 5;
+// Focus arriving this soon after play starts is Run handing it to the game.
+const PLAY_FOCUS_MS = 1000;
 
 // The engine's p5 canvas is a fixed 400x400 (p5lab APP_WIDTH/HEIGHT); we scale
 // it with a CSS transform to fit either the corner preview or the centered
@@ -40,9 +50,11 @@ const CONTROLS_HELP_ID = 'spritelab2-playspace-help';
 const CANVAS = 400;
 const MARGIN = 12;
 // The editor strip's height ($editor-strip-height): the header over the
-// preview column, and the bar pinned to the overlay's foot, the editors'
-// scene bar's twin.
+// preview column.
 const EDITOR_STRIP_PX = 41;
+// The stylesheet's $foot-height: the height of the bar along the overlay's
+// foot, used until the bar has been measured.
+const FOOT_BAR_PX = 53;
 // The arrow cross: three keys and two gaps across, as the stylesheet's
 // .arrowCross has them; the same size in every mode.
 const CROSS_KEY = 38;
@@ -54,9 +66,6 @@ const CROSS_SIZE = {
 };
 // Under the preview the cross sits this far below the box.
 const PREVIEW_CROSS_GAP = 2 * MARGIN;
-// The restart buttons' inset from the play area's top-right corner, as the
-// stylesheet's .playControls has it.
-const CONTROLS_INSET = 8;
 // The preview column's share of the browser's width.
 const PREVIEW_WIDTH_SHARE = 1 / 3;
 // Under PREVIEW_MIN_PX the column widens, up to the max share, and the
@@ -107,27 +116,15 @@ function centeredIn(area: Size): Placement {
  * Where the play view goes in an overlay of `size`, clear of a guide hung
  * from a bottom corner: centered when that clears the guide, else beside or
  * above it, whichever leaves the box bigger. `reserveBelow` is room kept
- * under the box (the play bar); `reserveTop`, room kept over it.
+ * under the box (the play bar).
  */
 export function playPlacement(
   size: Size,
   guideSize?: {width: number; height: number} | null,
   reserveBelow = 0,
   reserveLeft = 0,
-  guideSide: 'left' | 'right' = 'right',
-  reserveTop = 0
+  guideSide: 'left' | 'right' = 'right'
 ): Placement {
-  if (reserveTop) {
-    // Place within the area under the reserve, then shift down.
-    const inner = playPlacement(
-      {w: size.w, h: size.h - reserveTop},
-      guideSize,
-      reserveBelow,
-      reserveLeft,
-      guideSide
-    );
-    return {...inner, y: inner.y + reserveTop};
-  }
   if (reserveLeft) {
     // Place within the area right of the reserve, then shift back.
     const inner = playPlacement(
@@ -199,64 +196,18 @@ type PlayLayout = {box: Placement; cross: {x: number; y: number} | null};
  * with the cross centered in the room to its right, or under the box when
  * that leaves the box bigger.
  * `cross` is its size; null means there is none. `reserveBottom` is the
- * bar's room. `corner` is the size of the restart
- * buttons in the top-right corner: a box that would reach under them is
- * placed below them instead.
+ * bar's room.
  */
 export function playLayout(
   size: Size,
   guideSize: {width: number; height: number} | null,
   guideSide: 'left' | 'right',
   reserveBottom: number,
-  cross: Size | null,
-  corner: Size | null = null
-): PlayLayout {
-  const laid = playLayoutUnder(
-    size,
-    guideSize,
-    guideSide,
-    reserveBottom,
-    cross
-  );
-  if (!corner) {
-    return laid;
-  }
-  const cornerLeft = size.w - CONTROLS_INSET - corner.w - MARGIN;
-  const cornerBottom = CONTROLS_INSET + corner.h + MARGIN;
-  const {box} = laid;
-  const underCorner =
-    box.x + CANVAS * box.scale > cornerLeft && box.y < cornerBottom;
-  return underCorner
-    ? playLayoutUnder(
-        size,
-        guideSize,
-        guideSide,
-        reserveBottom,
-        cross,
-        cornerBottom
-      )
-    : laid;
-}
-
-/** playLayout with `reserveTop` kept clear over the box. */
-function playLayoutUnder(
-  size: Size,
-  guideSize: {width: number; height: number} | null,
-  guideSide: 'left' | 'right',
-  reserveBottom: number,
-  cross: Size | null,
-  reserveTop = 0
+  cross: Size | null
 ): PlayLayout {
   if (!cross) {
     return {
-      box: playPlacement(
-        size,
-        guideSize,
-        reserveBottom,
-        0,
-        guideSide,
-        reserveTop
-      ),
+      box: playPlacement(size, guideSize, reserveBottom, 0, guideSide),
       cross: null,
     };
   }
@@ -265,14 +216,7 @@ function playLayoutUnder(
   // sides, so it stays centered; the guide, hung from the stage's corner,
   // then stands that much nearer the narrowed edge.
   const edge = cross.w + 2 * MARGIN;
-  let beside = playPlacement(
-    size,
-    guideSize,
-    reserveBottom,
-    0,
-    guideSide,
-    reserveTop
-  );
+  let beside = playPlacement(size, guideSize, reserveBottom, 0, guideSide);
   if (size.w - (beside.x + CANVAS * beside.scale) < edge) {
     const guideIn =
       guideSize && guideSize.width > edge
@@ -283,8 +227,7 @@ function playLayoutUnder(
       guideIn,
       reserveBottom,
       0,
-      guideSide,
-      reserveTop
+      guideSide
     );
     beside = {...inner, x: inner.x + edge};
   }
@@ -293,8 +236,7 @@ function playLayoutUnder(
     guideSize,
     reserveBottom + cross.h + MARGIN,
     0,
-    guideSide,
-    reserveTop
+    guideSide
   );
   if (stacked.scale > beside.scale) {
     const boxSide = CANVAS * stacked.scale;
@@ -333,10 +275,10 @@ interface PlayspaceProps {
   onPreviewClick?: () => void;
   // The play-mode game region, for handing keyboard focus to the game.
   boxRef?: React.RefObject<HTMLDivElement>;
-  // Over the play area's corner, outside the box so they keep their size.
-  controls?: React.ReactNode;
   // Over the box's bottom edge, unscaled.
   prompt?: React.ReactNode;
+  // Filled with a function that reads a sprite's line aloud.
+  speakRef?: React.MutableRefObject<((text: string) => void) | null>;
   // Pinned to the foot: across the column in preview, across the stage in
   // play. The box is placed to leave it room.
   bottomBar?: React.ReactNode;
@@ -352,8 +294,6 @@ interface PlayspaceProps {
   /** The column's share of the browser's width; PREVIEW_WIDTH_SHARE
       unless given. */
   columnShare?: number;
-  // The preview column's width, which the code keeps clear of.
-  onPreviewWidth?: (width: number) => void;
   /** The width of the preview column, reported in every mode. */
   onColumnWidth?: (width: number) => void;
 }
@@ -370,19 +310,53 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   fadeTrigger = 0,
   covered = false,
   boxRef,
-  controls,
   prompt,
+  speakRef,
   bottomBar,
   arrows,
   columnHeader,
   below,
   side = 'right',
   columnShare = PREVIEW_WIDTH_SHARE,
-  onPreviewWidth,
   onColumnWidth,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
+  // The help and what sprites say share one log, so a screen reader reads
+  // them in turn.
+  const [log, setLog] = useState<{id: number; text: string}[]>([]);
+  const logIdRef = useRef(0);
+  const addToLog = useCallback((text: string) => {
+    const id = ++logIdRef.current;
+    setLog(entries => [...entries.slice(-(LOG_LENGTH - 1)), {id, text}]);
+  }, []);
+  const heardFullHelpRef = useRef(false);
+  const addHelp = useCallback(() => {
+    addToLog(heardFullHelpRef.current ? SHORT_HELP : FULL_HELP);
+    heardFullHelpRef.current = true;
+  }, [addToLog]);
+  useEffect(() => {
+    if (!speakRef) {
+      return;
+    }
+    speakRef.current = text => {
+      if (text.trim()) {
+        addToLog(text.trim());
+      }
+    };
+    return () => {
+      speakRef.current = null;
+    };
+  }, [speakRef, addToLog]);
+  // On play starting, not only on focus: VoiceOver's activation reads as a
+  // pointer click, after which focus does not move to the box.
+  const playStartedAtRef = useRef(0);
+  useEffect(() => {
+    if (mode === 'play') {
+      playStartedAtRef.current = Date.now();
+      addHelp();
+    }
+  }, [mode, addHelp]);
   const overlayRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({w: 0, h: 0});
@@ -406,7 +380,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   useEffect(() => () => belowObserver.current?.disconnect(), []);
   // The bar at the stage's foot is measured, because its buttons stack in
   // a narrow column and the bar grows taller to hold them.
-  const [bottomBarHeight, setBottomBarHeight] = useState(EDITOR_STRIP_PX);
+  const [bottomBarHeight, setBottomBarHeight] = useState(FOOT_BAR_PX);
   const bottomBarObserver = useRef<ResizeObserver | null>(null);
   const bottomBarRef = useCallback((el: HTMLDivElement | null) => {
     bottomBarObserver.current?.disconnect();
@@ -417,31 +391,12 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     const observer = new ResizeObserver(() => {
       // offsetHeight is the bar's full height, padding and border
       // included. That is how much room the bar takes up under the stage.
-      setBottomBarHeight(el.offsetHeight || EDITOR_STRIP_PX);
+      setBottomBarHeight(el.offsetHeight || FOOT_BAR_PX);
     });
     observer.observe(el);
     bottomBarObserver.current = observer;
   }, []);
   useEffect(() => () => bottomBarObserver.current?.disconnect(), []);
-  // The restart buttons' size, so the box keeps clear of their corner. The
-  // last size stands while they are away: the box is placed against it as
-  // play opens, before they are measured again.
-  const [controlsSize, setControlsSize] = useState<Size | null>(null);
-  const controlsObserver = useRef<ResizeObserver | null>(null);
-  const controlsRef = useCallback((el: HTMLDivElement | null) => {
-    controlsObserver.current?.disconnect();
-    controlsObserver.current = null;
-    if (!el || typeof ResizeObserver === 'undefined') {
-      return;
-    }
-    const observer = new ResizeObserver(entries => {
-      const rect = entries[0].contentRect;
-      setControlsSize({w: rect.width, h: rect.height});
-    });
-    observer.observe(el);
-    controlsObserver.current = observer;
-  }, []);
-  useEffect(() => () => controlsObserver.current?.disconnect(), []);
 
   const dispatch = useAppDispatch();
   // The location-picker block puts us in "selecting" mode; while active, the
@@ -716,14 +671,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
 
   const playing =
     mode === 'play'
-      ? playLayout(
-          size,
-          cardGuide,
-          side,
-          bottomRoom,
-          crossSize,
-          controls ? controlsSize : null
-        )
+      ? playLayout(size, cardGuide, side, bottomRoom, crossSize)
       : null;
   const placement: Placement = playing ? playing.box : previewPlacement;
   const {x, y, scale} = placement;
@@ -738,13 +686,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     : null;
   const transform = `translate(${x}px, ${y}px) scale(${scale})`;
   const boxSide = CANVAS * scale;
-  // The room the code gives up.
   const previewWidth = mode === 'preview' && measured ? columnWidth : 0;
-  const reportPreviewWidth = useRef(onPreviewWidth);
-  reportPreviewWidth.current = onPreviewWidth;
-  useEffect(() => {
-    reportPreviewWidth.current?.(previewWidth);
-  }, [previewWidth]);
   const reportColumnWidth = useRef(onColumnWidth);
   reportColumnWidth.current = onColumnWidth;
   const measuredColumnWidth = measured ? columnWidth : 0;
@@ -861,8 +803,34 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
         // keystrokes through to the game.
         role={mode === 'play' ? 'application' : undefined}
         aria-label={mode === 'play' ? 'Game playspace' : undefined}
-        aria-describedby={mode === 'play' ? CONTROLS_HELP_ID : undefined}
         tabIndex={mode === 'play' ? 0 : undefined}
+        onFocus={
+          mode === 'play'
+            ? () => {
+                // Run's own hand-off of focus; play starting already
+                // added the help.
+                if (Date.now() - playStartedAtRef.current > PLAY_FOCUS_MS) {
+                  addHelp();
+                }
+              }
+            : undefined
+        }
+        // On the box, not the window, so H is a shortcut only while the game
+        // has focus (WCAG 2.1.4).
+        onKeyDown={
+          mode === 'play'
+            ? e => {
+                if (
+                  e.key.toLowerCase() === 'h' &&
+                  !e.ctrlKey &&
+                  !e.metaKey &&
+                  !e.altKey
+                ) {
+                  addToLog(FULL_HELP);
+                }
+              }
+            : undefined
+        }
         style={{
           transform,
           // Fade in on appearance (first measurement or hidden -> visible);
@@ -960,19 +928,13 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
           {prompt}
         </div>
       )}
-      {mode === 'play' && (
-        <p id={CONTROLS_HELP_ID} className={moduleStyles.srOnly}>
-          Left and right arrows move. Space or up arrow jumps. In zero gravity,
-          up and down steer. Navigation sounds can be turned on in Settings:
-          footsteps and bumps, a tone for your height, and tones that grow
-          louder as a wall or an edge comes near.
-        </p>
-      )}
-      {mode === 'play' && controls && (
-        <div ref={controlsRef} className={moduleStyles.playControls}>
-          {controls}
-        </div>
-      )}
+      {/* Always mounted: a live region added along with its text is often
+          not read. */}
+      <div role="log" aria-live="polite" className={moduleStyles.srOnly}>
+        {log.map(entry => (
+          <p key={entry.id}>{entry.text}</p>
+        ))}
+      </div>
       {mode === 'preview' && columnHeader && measured && (
         <div
           className={moduleStyles.columnHeader}

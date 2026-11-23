@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894758-34202b989399",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 3: Responsible Co-Creation",
+  "question": "Superhero movies are so predictable that a robot could guess what happens next. Can you out-predict the movie, then out-surprise it?\n\nSteps:\n1. Start recording. Pick one scene from the list below and read it out loud in your best movie-trailer voice.\n2. Say the most predictable thing that happens next, the one that happens in a million movies.\n3. Now say the most unpredictable thing that could happen next.\n4. Tell the camera which one was easier to come up with and why.\n5. If you’ve got time, do it again with a second scene.\n\nScene list:\n- “The superhero lands on the rooftop. The villain says, ‘We meet again.’ Then...”\n- “The team is losing the battle. The leader goes quiet. Then...”\n- “The sidekick says everything is under control. Then...”\n- “The villain captures the hero. The hero smiles. Then...”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say a prediction on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student gives only one type of prediction (predictable OR unpredictable), or gives both but does not say which one was easier."
+    },
+    {
+      "level": 2,
+      "description": "Student gives both a predictable and an unpredictable next moment for one scene, and says which one was easier."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND gives a reason the predictable one was easier that refers to patterns (for example, “I’ve seen it in lots of movies”), AND completes a second scene."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

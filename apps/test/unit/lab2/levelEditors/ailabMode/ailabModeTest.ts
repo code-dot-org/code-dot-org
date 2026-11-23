@@ -55,6 +55,29 @@ describe('ailabMode', () => {
       expect(cleanMode({requireAccuracy: 101}, KNOWN).mode).toEqual({});
     });
 
+    it('keeps test rows that are one whole count or one percentage in range', () => {
+      [{count: 1}, {count: 30}, {percent: 0.5}, {percent: 99.5}].forEach(
+        testRows => {
+          expect(cleanMode({testRows}, KNOWN).mode).toEqual({testRows});
+        }
+      );
+      [
+        {count: 0},
+        {count: 2.5},
+        {count: '5'},
+        {percent: 0},
+        {percent: 100},
+        {count: 5, percent: 10},
+        {},
+        {rows: 5},
+        [5],
+        5,
+        null,
+      ].forEach(testRows => {
+        expect(cleanMode({testRows}, KNOWN).mode).toEqual({});
+      });
+    });
+
     it('checks only the shape of the label, features, and id column', () => {
       const mode = {label: 'any column', features: ['a', 'b'], idColumn: 'c'};
       expect(cleanMode(mode, KNOWN).mode).toEqual(mode);

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894904-d93b61e71cdb",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 3: The AI's Brain",
+  "question": "You are the principal of a school for AI. You decide what it studies and who teaches it, and both choices change what kind of AI graduates.\n\nSteps:\n1. Start recording. Pick one job for your AI from the list below.\n2. Name 3 kinds of data your AI will study.\n3. Name one group of people or one situation your data might miss, and say what the AI would get wrong because of it.\n4. Describe how humans will give feedback to your AI. Say who they are and how they do it, and how that fixes the gap you named.\n\nJob list:\n- Recommend music for any mood\n- Help newcomers learn how a city’s bus system works\n- Check if a news headline is misleading\n- Suggest outfits for any weather",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe a plan on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names fewer than 3 kinds of data, OR names data without a missed group or situation."
+    },
+    {
+      "level": 2,
+      "description": "Student names 3 kinds of data AND one group or situation the data might miss with what the AI would get wrong AND one way humans give feedback, saying who and how."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND explains how the human feedback would fix the specific gap the student named."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

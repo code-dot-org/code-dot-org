@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894761-c5f4ed10fa34",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 6: The AI Credibility Guide",
+  "question": "Rosa is designing a school garden for kindergarten students and just got feedback. You play both people: the reviewer who gives the feedback, and Rosa, who decides what to do with it.\n\nSteps:\n1. Start recording. Pick one feedback statement from the list below.\n2. Say it out loud as the reviewer.\n3. Now answer as Rosa. Say whether you agree, disagree, or partly agree, and give one specific reason about the kindergarten students or the garden.\n4. Finish this sentence: “I would change my mind if ___.”\n\nFeedback list:\n- “Plant only tall flowers because they look impressive from far away.”\n- “Make the paths very narrow so there is room for more plants.”\n- “Skip the signs. Let the plants be a surprise.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say a feedback statement or a reply on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says the feedback but gives no reply, gives a reply with no reason, or gives a reason that is not about the kindergarten students or the garden."
+    },
+    {
+      "level": 2,
+      "description": "Student says the feedback as the reviewer AND replies as Rosa with a decision (agree, disagree, or partly agree) AND one specific reason about the kindergarten students or the garden."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says a specific condition that would change Rosa's mind (for example, \"I would change my mind if...\")."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

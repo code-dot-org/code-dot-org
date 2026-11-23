@@ -1,8 +1,5 @@
-import {
-  generate,
-  isAdaptiveAiEnabled,
-  moderateOutput,
-} from '@cdo/apps/adaptive/ai/generate';
+import {isAdaptiveAiAvailable} from '@cdo/apps/adaptive/ai/access';
+import {generate, moderateOutput} from '@cdo/apps/adaptive/ai/generate';
 import {
   PLAIN_REASONS,
   validateStep,
@@ -12,9 +9,11 @@ import {sendAiStaticFallbackUsed} from '@cdo/apps/adaptive/metricsHelpers';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: jest.fn(() => true),
+}));
 jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   generate: jest.fn(),
-  isAdaptiveAiEnabled: jest.fn(() => true),
   moderateOutput: jest.fn(async () => 'ok'),
 }));
 jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
@@ -31,7 +30,7 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   },
 }));
 const mockGenerate = generate as jest.Mock;
-const mockEnabled = isAdaptiveAiEnabled as jest.Mock;
+const mockAvailable = isAdaptiveAiAvailable as jest.Mock;
 const mockModerateOutput = moderateOutput as jest.Mock;
 
 const step: LevelStep = {
@@ -90,7 +89,7 @@ const options = {
 describe('validateStep', () => {
   beforeEach(() => {
     mockGenerate.mockReset();
-    mockEnabled.mockReturnValue(true);
+    mockAvailable.mockReturnValue(true);
     mockModerateOutput.mockResolvedValue('ok');
     mockLogWarning.mockClear();
   });
@@ -219,8 +218,14 @@ describe('validateStep', () => {
     expect(
       await validateStep({...options, pathway: unscaled, onJudging})
     ).toBeUndefined();
-    mockEnabled.mockReturnValue(false);
+    mockAvailable.mockReturnValue(false);
     expect(await validateStep({...options, onJudging})).toBeUndefined();
+    expect(sendAiStaticFallbackUsed).toHaveBeenCalledWith(
+      'validation',
+      'aiUnavailable',
+      checkpoint,
+      step
+    );
     expect(onJudging).toHaveBeenCalledTimes(1);
     expect(mockGenerate).toHaveBeenCalledTimes(1);
     expect(validation).toBeDefined();
@@ -230,7 +235,7 @@ describe('validateStep', () => {
 describe('validateStep fallbacks', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    mockEnabled.mockReturnValue(true);
+    mockAvailable.mockReturnValue(true);
     mockModerateOutput.mockResolvedValue('ok');
   });
 

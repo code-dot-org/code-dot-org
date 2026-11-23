@@ -11,6 +11,7 @@ import {useProject} from '../ProjectContext';
 import {getShowColumnClicking, getTableData, setCurrentColumn} from '../redux';
 import {getDatasetId, getIdColumn} from '../selectors';
 import type {DatasetTableView} from '../types';
+import {useTestRows} from '../useTestRows';
 
 import ColumnHeader from './ColumnHeader';
 import DataCell from './DataCell';
@@ -51,6 +52,7 @@ const DataTable = ({
   const currentColumn = useAppSelector(state => state.currentColumn);
   const showColumnClicking = useAppSelector(getShowColumnClicking);
   const idColumn = useAppSelector(getIdColumn);
+  const testRows = useTestRows();
   const headerButtons = useRef<Record<string, HTMLButtonElement | null>>({});
   const previousColumn = useRef(currentColumn);
 
@@ -139,9 +141,12 @@ const DataTable = ({
         <tr>
           {showRowNumbers && (
             <th
-              className={classNames(styles.indexCell, styles.indexHeader, {
-                [styles.frozenIndex]: idColumn,
-              })}
+              className={classNames(
+                styles.indexCell,
+                styles.indexHeader,
+                styles.frozenIndex,
+                {[styles.besideIdColumn]: idColumn}
+              )}
               aria-label="Row"
             />
           )}
@@ -190,12 +195,14 @@ const DataTable = ({
       </thead>
       <tbody>
         {getRows().map((row, index) => {
+          const isTestRow = !!view && testRows.has(row);
           return (
             <tr key={row} className={styles.row}>
               {showRowNumbers && (
                 <RowNumberCell
                   rowNumber={row + 1}
                   besideIdColumn={!!idColumn}
+                  isTestRow={isTestRow}
                 />
               )}
               {getColumns().map(columnId => {
@@ -203,6 +210,7 @@ const DataTable = ({
                   <DataCell
                     key={columnId}
                     isIdColumn={columnId === idColumn}
+                    isTestRow={isTestRow}
                     rowNumber={row + 1}
                     value={
                       startingRow !== undefined && index <= startingRow

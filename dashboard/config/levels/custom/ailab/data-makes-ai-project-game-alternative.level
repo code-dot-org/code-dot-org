@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-16T21:26:43.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"datasets\": [\r\n    \"SC1-L12-video-games-fixed\"\r\n  ],\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"**Train Tree 2**\\n\\nGoal: Train a new tree on the (Fixed) dataset so you can compare it to Tree 1.\\n\\n1. Read the **Dataset Update** below.\\n2. In **Predict**, choose your label. In **Using**, keep your two features, or add more.\\n3. Write your label and features in the Tree 2 row of **Tree 1 vs. Tree 2** in your guide.\\n4. Click **Train model**.\\n\\nYou are done when your tree shows. Go to the **Testing** tab.\\n\\n---\\n\\n**Dataset Update**: \\n\\nAdds nine games: five PC games and four handheld games.\\n\\n**Data Source**: \\n\\nTitles, years, genres, platforms and couch co-op facts compiled by hand from Wikipedia game articles and the ESRB rating search. Best-seller lists (Code.org Data Library, a Kaggle sales set) were used only to help pick well-known titles\",\r\n  \"results\": \"**Train Tree 2**\\n\\nGoal: Train a new tree on the (Fixed) dataset so you can compare it to Tree 1.\\n\\n1. Copy your Tree 1 results from Lesson 12 into the Tree 1 row of **Tree 1 vs. Tree 2** in your guide. Your label is in **My Data**.\\n2. Find your **Accuracy** at the top. Write it in the Tree 2 row.\\n3. Click **Accuracy**. Write the **Correct** number in the Tree 2 row.\\n4. Add **Correct** and **Incorrect**. Write the total after \\\"out of\\\". Click **Back to Testing**.\\n5. Click **Save image** (the camera under your tree). Click **Save to Backpack**.\\n\\nYou are done when **Tree 1 vs. Tree 2** in your guide is full and Tree 2 is in your Backpack.\"\r\n}",
+    "display_name": "Video Game Night",
+    "bubble_choice_description": "**Dataset Update:** Adds nine games: five PC games and four handheld games.",
+    "thumbnail_url": "https://images.code.org/056da52c53f419ecd11e39109cf30606-video-game.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-16T21:26:43.054+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-project-game-2\\\"\"],\"cloned_from\":\"data-makes-ai-project-game-2\"},{\"changed_at\":\"2026-11-16 21:28:33 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:29 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:47:23 +0000\",\"changed\":[\"mode\",\"dynamic_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:04:03 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:05 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

@@ -1,0 +1,13 @@
+{
+  "key": "l3-useful-for-purpose",
+  "description": "Learn how to check whether an AI answer fits your purpose, even when it looks good.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l3-useful-for-purpose.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "ab3a91f1-e3f3-4654-8257-5236e3f26d3e"
+  ]
+}
