@@ -75,7 +75,7 @@ export const HTMLPreview: React.FC = () => {
   const hideHeader =
     !!widget2 || (!!levelProperties.widgetView && !isStartMode);
   const viewOnlyHeader =
-    !!isShareView || (!!levelProperties.showcase && !isStartMode);
+    !!isShareView || (!!levelProperties.showcaseView && !isStartMode);
   // The header holds the only exit control, so no header means no full screen.
   const isFullScreen = !!isFullScreenView && !hideHeader;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);

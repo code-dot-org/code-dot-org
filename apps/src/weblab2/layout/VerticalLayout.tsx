@@ -42,14 +42,13 @@ const MIN_DEBUG_PANEL_HEIGHT = 200;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
   isWidgetView,
-  isShowcase,
+  isShowcaseView,
 }) => {
   const viewMode = useAppSelector(state => state.weblab2.viewMode);
 
   const hideWorkspaceForWidgetView = !getIsStartMode() && isWidgetView;
   // A showcase has no other mode to toggle to.
-  const hideViewModeToggle =
-    hideWorkspaceForWidgetView || (!!isShowcase && !getIsStartMode());
+  const hideViewModeToggle = hideWorkspaceForWidgetView || !!isShowcaseView;
   const isStandaloneCollapsed = useAppSelector(
     state => state.lab2View.isStandaloneCollapsed
   );

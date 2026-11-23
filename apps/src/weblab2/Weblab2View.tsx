@@ -183,16 +183,16 @@ const Weblab2View: React.FC<
   }, [hasEdited, logLevelActivity, dispatch, levelProperties.appName]);
 
   // Always use preview mode for showcase unless in start mode.
-  const showcase = !!levelProperties?.showcase && !getIsStartMode();
+  const isShowcaseView = !!levelProperties?.showcaseView && !getIsStartMode();
   useEffect(() => {
     dispatch(
       setViewMode(
-        showcase
+        isShowcaseView
           ? ViewMode.PREVIEW
           : levelProperties?.initialViewMode || ViewMode.SPLIT
       )
     );
-  }, [dispatch, showcase, levelProperties?.initialViewMode]);
+  }, [dispatch, isShowcaseView, levelProperties?.initialViewMode]);
 
   const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
     source,
