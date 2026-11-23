@@ -21,6 +21,7 @@ import teacherSections, {
   selectSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 import {AiChatAccessLevels} from '@cdo/generated-scripts/sharedConstants';
 
 jest.mock('@cdo/apps/aichat/accessControlsApi', () => ({
@@ -88,12 +89,21 @@ function renderControls({
 const challengeToggle = () =>
   screen.queryByRole('checkbox', {name: 'AI Tutor+ Challenges'});
 
+const enableExperiments = (...keys: string[]) =>
+  jest
+    .spyOn(experiments, 'isEnabledAllowingQueryString')
+    .mockImplementation(key => keys.includes(key));
+
 describe('AiChatAccessControls AI Tutor+ Challenges toggle', () => {
   beforeEach(() => {
     stubRedux();
     registerReducers({currentUser, teacherSections});
     updateChallengeEnabled.mockReset();
     sendEvent.mockReset();
+    enableExperiments(
+      experiments.LESSON_TUTOR,
+      experiments.LESSON_TUTOR_CHALLENGE
+    );
   });
 
   afterEach(() => {
@@ -123,6 +133,18 @@ describe('AiChatAccessControls AI Tutor+ Challenges toggle', () => {
     mockDcdoGet.mockImplementation((key: string, defaultValue: unknown) =>
       key === 'lesson-deep-dive-enabled' ? false : defaultValue
     );
+    renderControls();
+    expect(challengeToggle()).not.toBeInTheDocument();
+  });
+
+  it('is hidden without the lesson-tutor experiment', () => {
+    enableExperiments(experiments.LESSON_TUTOR_CHALLENGE);
+    renderControls();
+    expect(challengeToggle()).not.toBeInTheDocument();
+  });
+
+  it('is hidden without the lesson-tutor-challenge experiment', () => {
+    enableExperiments(experiments.LESSON_TUTOR);
     renderControls();
     expect(challengeToggle()).not.toBeInTheDocument();
   });

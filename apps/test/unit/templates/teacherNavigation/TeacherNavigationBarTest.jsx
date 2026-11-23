@@ -482,8 +482,17 @@ describe('TeacherNavigationBar', () => {
   });
 
   const newTagOwner = () => sidebarOptionText(screen.queryByText('New'));
+  const enableTutorExperiments = () =>
+    jest
+      .spyOn(experiments, 'isEnabledAllowingQueryString')
+      .mockImplementation(key =>
+        [experiments.LESSON_TUTOR, experiments.LESSON_TUTOR_CHALLENGE].includes(
+          key
+        )
+      );
 
   test('tags AI Settings as new when AI Tutor+ challenges can be turned on', async () => {
+    enableTutorExperiments();
     renderDefault(19, `/teacher_dashboard/sections/19/unit/csa1-2022`, true);
     await screen.findByText('Course Content');
 
@@ -491,6 +500,7 @@ describe('TeacherNavigationBar', () => {
   });
 
   test('does not tag AI Settings as new when Tutor+ is switched off', async () => {
+    enableTutorExperiments();
     DCDO.get.mockImplementation((key, defaultValue) =>
       key === 'lesson-deep-dive-enabled' ? false : defaultValue
     );
@@ -500,7 +510,15 @@ describe('TeacherNavigationBar', () => {
     expect(newTagOwner()).toBeNull();
   });
 
+  test('does not tag AI Settings as new without the Tutor+ experiments', async () => {
+    renderDefault(19, `/teacher_dashboard/sections/19/unit/csa1-2022`, true);
+    await screen.findByText('Course Content');
+
+    expect(newTagOwner()).toBeNull();
+  });
+
   test('does not tag AI Settings as new when full AI chat access is off', async () => {
+    enableTutorExperiments();
     renderDefault(20, `/teacher_dashboard/sections/20/unit/csa1-2022`, true);
     await screen.findByText('Course Content');
 
@@ -508,6 +526,7 @@ describe('TeacherNavigationBar', () => {
   });
 
   test('does not tag AI Settings as new when the course has no lesson tutor', async () => {
+    enableTutorExperiments();
     renderDefault(16, `/teacher_dashboard/sections/16/unit/csa1-2022`, true);
     await screen.findByText('Course Content');
 
@@ -515,6 +534,7 @@ describe('TeacherNavigationBar', () => {
   });
 
   test('shows the error icon, not the new tag, on AI Settings', async () => {
+    enableTutorExperiments();
     renderDefault(21, `/teacher_dashboard/sections/21/unit/csa1-2022`, true);
     await screen.findByText('Course Content');
 

@@ -6,6 +6,7 @@ import {
 import type {AiChatClientType} from '@cdo/apps/aichat/types/context';
 import type {ModelParameters} from '@cdo/apps/aichat/types/model';
 import DCDO from '@cdo/apps/dcdo';
+import experiments from '@cdo/apps/util/experiments';
 import {
   AiChatAccessLevels,
   AiChatGeminiImageModelIds,
@@ -134,6 +135,9 @@ export const shouldShowAiChatEssentialAlert = ({
   );
 };
 
+// Can toggle challenges if: the section is assigned curriculum with tutor+ available,
+// DCDO flag is set, section has AI chat tools enabled, Teacher can access AI chat,
+// and tutor experiments are enabled
 export const canToggleAiChallenges = ({
   lessonTutorAvailable,
   sectionAiChatAccessLevel,
@@ -145,4 +149,6 @@ export const canToggleAiChallenges = ({
 }): boolean =>
   !!lessonTutorAvailable &&
   canUseLessonDeepDive(sectionAiChatAccessLevel) &&
-  teacherAiChatAccessLevel !== AiChatAccessLevels.DISABLED;
+  teacherAiChatAccessLevel !== AiChatAccessLevels.DISABLED &&
+  experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR) &&
+  experiments.isEnabledAllowingQueryString(experiments.LESSON_TUTOR_CHALLENGE);
