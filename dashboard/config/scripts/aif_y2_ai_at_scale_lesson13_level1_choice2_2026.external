@@ -1,0 +1,14 @@
+name 'aif-y2-ai-at-scale-lesson13-level1-choice2-2026'
+title 'Road Icing'
+display_name 'Road Icing'
+bubble_choice_description "Your community’s public works department wants to predict what road conditions will be like, so they know what kind of road work needs to be done."
+markdown <<MARKDOWN
+Your community’s public works department wants to predict what road conditions will be like — in particular, whether a road will be clear, have frost, have ice, or have snow. That information will then be used to send trucks to roads to handle road work. The department has always tried to find ways to improve its operations: for example, four years ago, they started pre-treating bridges with a brine solution to reduce weather impact.
+
+You have three datasets to choose from. **Evaluate** each of these three datasets and decide which one you’d like to use to train your neural network. Then, **explain** your choice by answering the questions in the **Choose a Dataset** section of your Project Planning Guide. Finally, **download** your dataset so you can use it in the project.
+
+- [**Dataset A**](https://drive.google.com/file/d/1QKbGl6BnM-vk3JJJjRuamroDWocQM96p/view?usp=sharing) is data from the community’s public works department for the past two winters. It includes data from 1,200 different crew checks of streets on cold nights. Each entry includes data for the overnight low temperature, the sunset temperature, the amount of rain, the amount of snowfall, whether the sky was clear, whether the road is on a bridge, whether the road has shade, the elevation of the road, and the amount of traffic on the road.
+- [**Dataset B**](https://drive.google.com/file/d/1y6ejeorynzEKRyZDTC342CQSflfUcB8y/view?usp=sharing) is data from the community’s public works department for the past ten winters. It includes data from 2,500 crew checks over that period of time. The department’s records weren’t always as complete as they are now, so this data includes some of the features from Dataset A but doesn’t include the sunset temperature, the snowfall amount, whether the road has shade, the elevation of the road, or the amount of traffic on the road. Each entry also includes information about how long ago the entry is from.
+- [**Dataset C**](https://drive.google.com/file/d/1HVU1N5cFQPdwiUL_AyRQycYQUMjL9fjt/view?usp=sharing) is data from the state about road checks on roads in other communities around the state. It includes data from 3,000 crew checks. In addition to the features from Dataset A, it also includes data about the wind speed and the number of lanes on the road.
+
+MARKDOWN

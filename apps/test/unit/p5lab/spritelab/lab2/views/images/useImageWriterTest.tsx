@@ -67,10 +67,9 @@ const result = (filename: string) => ({
   },
 });
 
-function renderWriter() {
-  const uploadImage = jest.fn(
-    async (name: string) => `/v3/assets/chan/${name}`
-  );
+function renderWriter(
+  uploadImage = jest.fn(async (name: string) => `/v3/assets/chan/${name}`)
+) {
   const latest: {current: ImageWriter | null} = {current: null};
   const onDeleteImage = jest.fn();
   const Harness = () => {
@@ -120,6 +119,7 @@ describe('useImageWriter', () => {
       role: 'hero',
       subject: 'character',
       categories: [],
+      fromGeneration: true,
     });
   });
 
@@ -157,6 +157,7 @@ describe('useImageWriter', () => {
       categories: [],
       trimmed: false,
       edited: false,
+      fromGeneration: false,
     });
     expect(patch.generation).toBeUndefined();
     expect(patch.pixelGridSize).toBeUndefined();
@@ -176,6 +177,89 @@ describe('useImageWriter', () => {
       )
     ).rejects.toThrow();
     expect(createNamedAnimation).not.toHaveBeenCalled();
+  });
+
+  it('stores no generated picture whose file cannot be uploaded', async () => {
+    const failing = jest.fn(async (name: string): Promise<string> => {
+      throw new Error('upload failed');
+    });
+    const {writer} = renderWriter(failing);
+    await expect(
+      writer().acceptGenerated(
+        {key: null, imageType: 'sprite'},
+        result('cat.png')
+      )
+    ).rejects.toThrow('upload failed');
+    expect(createNamedAnimation).not.toHaveBeenCalled();
+    // The next try uploads again: the failure is not remembered.
+    failing.mockImplementationOnce(async name => `/v3/assets/chan/${name}`);
+    await act(async () => {
+      await writer().acceptGenerated(
+        {key: null, imageType: 'sprite'},
+        result('cat.png')
+      );
+    });
+    expect(failing).toHaveBeenCalledTimes(2);
+    expect(createNamedAnimation.mock.calls[0][2]).toMatchObject({
+      sourceUrl: '/v3/assets/chan/cat.png',
+    });
+  });
+
+  it('leaves an image as it was when a drawing on it cannot be uploaded', async () => {
+    propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+    const {writer} = renderWriter(
+      jest.fn(async (name: string): Promise<string> => {
+        throw new Error('upload failed');
+      })
+    );
+    await expect(
+      writer().saveEdited(
+        {key: 'k1', imageType: 'sprite'},
+        'data:image/png;base64,AA',
+        {}
+      )
+    ).rejects.toThrow('upload failed');
+    expect(repointAnimation).not.toHaveBeenCalled();
+  });
+
+  it('stores no generated or drawn picture with nowhere to put the file', async () => {
+    const latest: {current: ImageWriter | null} = {current: null};
+    const Harness = () => {
+      latest.current = useImageWriter({onDeleteImage: jest.fn()});
+      return null;
+    };
+    render(<Harness />);
+    const writer = latest.current as ImageWriter;
+    await expect(
+      writer.acceptGenerated({key: null, imageType: 'sprite'}, result('a.png'))
+    ).rejects.toThrow('no uploader for this project');
+    await expect(
+      writer.saveEdited(
+        {key: null, imageType: 'sprite'},
+        'data:image/png;base64,AA',
+        {}
+      )
+    ).rejects.toThrow('no uploader for this project');
+    expect(createNamedAnimation).not.toHaveBeenCalled();
+  });
+
+  it('shows a pause in drawing on screen with no upload, so it cannot fail', async () => {
+    propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+    const {writer} = renderWriter(
+      jest.fn(async (name: string): Promise<string> => {
+        throw new Error('upload failed');
+      })
+    );
+    await act(async () => {
+      await writer().saveEdited(
+        {key: 'k1', imageType: 'sprite'},
+        'data:image/png;base64,AA',
+        {},
+        {upload: false}
+      );
+    });
+    expect(repointAnimation).toHaveBeenCalledTimes(1);
+    expect(repointAnimation.mock.calls[0][2]).not.toHaveProperty('sourceUrl');
   });
 
   it('keeps what an image depicts when an edit drops the prompt', async () => {
@@ -307,12 +391,19 @@ describe('useImageWriter', () => {
     expect(quiet).toMatchObject({
       dataURI: 'data:image/png;base64,AA',
       generation: undefined,
+      fromGeneration: true,
       edited: true,
       trimmed: false,
     });
     expect(quiet).not.toHaveProperty('sourceUrl');
+    // Store the first edit, so the second edit starts from an image with no
+    // `generation`. `fromGeneration` must still be true.
+    propsByKey.k1 = {...propsByKey.k1, ...quiet};
     await act(async () => {
       await writer().saveEdited(target, 'data:image/png;base64,AB', {});
+    });
+    expect(repointAnimation.mock.calls[1][2]).toMatchObject({
+      fromGeneration: true,
     });
     expect(uploadImage).toHaveBeenCalledTimes(1);
     const loud = repointAnimation.mock.calls[1][2] as Record<string, unknown>;
@@ -338,6 +429,7 @@ describe('useImageWriter', () => {
     expect(patch).toMatchObject({
       pixelGridSize: 1,
       edited: true,
+      fromGeneration: false,
       frameCount: 1,
       role: 'hero',
     });

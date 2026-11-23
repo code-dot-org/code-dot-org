@@ -1,0 +1,13 @@
+{
+  "key": "l2-one-design-element",
+  "description": "See why choosing the one design element your audience needs works better than using every color, font and picture you like.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l2-one-design-element.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "31098d45-9931-4f13-a712-a60b5cef9c10"
+  ]
+}

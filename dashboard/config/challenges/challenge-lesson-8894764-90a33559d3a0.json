@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894764-90a33559d3a0",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 9: Refining Our Product",
+  "question": "Anyone can say a claim is true. The strongest proof is a test. Which note proves the claim, and what test would make it even stronger?\n\nSteps:\n1. Use the arrow tool to point at the note that is the strongest proof.\n2. Place a shape on one note that is a weaker proof.\n3. Use the text tool to describe one more test you could run to make the claim even stronger.\n4. Record your voice explaining why the strongest note is better than the one with the shape.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on note 2, the shape is not on note 1 or note 3, or the student types no new test."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to note 2 AND a shape is on note 1 or note 3 AND the typed text describes one more test to try AND the voice recording says why note 2 is stronger (for example, it was tested or it has numbers)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the typed test changes only one thing or names what will be measured, AND the voice recording explains why the shaped note is weaker (for example, it is an opinion, not a test)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894764-90a33559d3a0-32507c24",
+  "whiteboard_starter_image_alt_text": "A science fair board with the claim \"Plants grow greener and sturdier with more light.\" Three notes. 1: \"My friend told me this is true.\" 2: \"I grew 6 bean plants. Three sat by a window and three sat in a closet. After 10 days, the window plants had greener leaves and thicker stems.\" 3: \"Everyone knows plants need light.\" A small potted plant sits in the corner."
+}

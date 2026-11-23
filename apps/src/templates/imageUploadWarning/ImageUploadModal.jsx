@@ -15,6 +15,7 @@ export default function ImageUploadModal({
   cancelUpload,
   isTeacher,
   confirmUploadWarning,
+  hasVersionHistory = true,
 }) {
   const [noPIIConfirmed, setNoPIIConfirmed] = useState(false);
   const [restrictedShareConfirmed, setRestrictedShareConfirmed] =
@@ -67,7 +68,9 @@ export default function ImageUploadModal({
                 <br />
               </>
             )}
-            {msg.animationPicker_undoRestrictedShareInstructions()}
+            {hasVersionHistory
+              ? msg.animationPicker_undoRestrictedShareInstructions()
+              : 'You can start over to undo this change.'}
           </Typography>
         </div>
       }
@@ -89,4 +92,5 @@ ImageUploadModal.propTypes = {
   cancelUpload: PropTypes.func.isRequired,
   confirmUploadWarning: PropTypes.func.isRequired,
   isTeacher: PropTypes.bool.isRequired,
+  hasVersionHistory: PropTypes.bool,
 };

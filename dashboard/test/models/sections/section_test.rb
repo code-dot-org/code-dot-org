@@ -16,15 +16,14 @@ class SectionTest < ActiveSupport::TestCase
     @jigsaw_unit.reload
   end
 
-  test 'lesson_tutor_available? is true for a section assigned an AIF course' do
-    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'ai-tutor-section', version_year: '2026')
-    unit_group.course_version.course_offering.update!(marketing_initiative: 'AIF')
+  test 'lesson_tutor_available? is true for a section assigned a course with a tutor_plus_available unit' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'tutor-plus-section', version_year: '2026')
+    unit_group.first_unit.update!(tutor_plus_available: true)
     assert create(:section, unit_group: unit_group).lesson_tutor_available?
   end
 
-  test 'lesson_tutor_available? is false for a section assigned a non-AI course' do
-    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'not-ai-section', version_year: '2026')
-    unit_group.course_version.course_offering.update!(marketing_initiative: 'CSD')
+  test 'lesson_tutor_available? is false for a section assigned a course whose units lack tutor_plus_available' do
+    unit_group = create(:single_unit_course, :with_course_offering, family_name: 'no-tutor-plus-section', version_year: '2026')
     refute create(:section, unit_group: unit_group).lesson_tutor_available?
   end
 
@@ -1334,6 +1333,31 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 1, summarized_section[:numberOfStudents]
     assert_equal 1, summarized_section[:studentCount]
     assert_includes summarized_section[:students], student.summarize
+  end
+
+  test 'student_counts: one distinct count per section, none for an empty section' do
+    with_students = create(:section, script: nil, unit_group: nil)
+    student = create(:student)
+    create(:follower, section: with_students, student_user: student)
+    create(:follower, section: with_students, student_user: student)
+    create(:follower, section: with_students)
+    empty = create(:section, script: nil, unit_group: nil)
+
+    counts = nil
+    assert_queries(1) {counts = Section.student_counts([with_students, empty])}
+    assert_equal({with_students.id => 2}, counts)
+  end
+
+  test 'summarize_without_students: uses a given student count instead of counting' do
+    section = create(:section, script: nil, unit_group: nil)
+    create(:follower, section: section)
+
+    summarized = section.summarize_without_students(student_count: 7)
+    assert_equal 7, summarized[:numberOfStudents]
+    assert_equal 7, summarized[:studentCount]
+    assert_nil summarized[:students]
+
+    assert_equal 1, section.summarize_without_students[:studentCount]
   end
 
   test 'summarize: section with sharing disabled and script with project sharing' do

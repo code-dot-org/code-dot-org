@@ -389,6 +389,22 @@ describe('teacherSectionsRedux', () => {
       });
     });
 
+    it('keeps existing sections in the order when adding one section', () => {
+      const existing = sections.filter(section => section.id !== 307);
+      const state = reducer(
+        startState,
+        setSections(existing, false, [13, 12, 11])
+      );
+      const nextState = reducer(
+        state,
+        setSections(
+          sections.filter(section => section.id === 307),
+          false
+        )
+      );
+      assert.deepEqual(nextState.sectionOrder, [307, 13, 12, 11]);
+    });
+
     it('does not throw if we set the same data twice', () => {
       const action = setSections(sections);
       const nextState = reducer(startState, action);

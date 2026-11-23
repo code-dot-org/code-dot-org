@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894757-49a2840c2323",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 2: A Deeper Look Into AI",
+  "question": "The same amusement park rule has to work for a toddler, a grandparent, and a pirate crew. Can you say it three different ways?\n\nSteps:\n1. Start recording. Pick one ride rule from the list below and say it to the camera as written.\n2. Pick an audience from the list. Say the same rule again so it works for them.\n3. Pick a second audience and say it a third time.\n4. Tell the camera what you changed each time (your words, your tone, or your speed), and why it fits that audience.\n\nRide rule list:\n- “Keep your hands and feet inside the ride.”\n- “Stay seated until the ride stops.”\n- “Hold on to your belongings.”\n- “Keep your seatbelt buckled.”\n\nAudience list:\n- A 4-year-old on their first ride\n- A grandparent who has never been on a coaster\n- A crew of pirates\n- A very serious robot",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say a ride rule on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says the rule only once, or says it multiple times with identical wording each time."
+    },
+    {
+      "level": 2,
+      "description": "Student says the rule at least twice for two named audiences, and the wording differs between versions."
+    },
+    {
+      "level": 3,
+      "description": "Student says the rule for three versions (original plus two audiences) AND names at least one specific change out loud (words, tone, or speed) AND gives a reason it fits that audience."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

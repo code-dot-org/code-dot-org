@@ -1,0 +1,14 @@
+{
+  "key": "aif-l12-helps-most-not-all",
+  "description": "Learn how to check whether an AI tool that helps most people leaves some people out.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l12-helps-most-not-all.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "9f3ab167-b45f-431f-885c-d442f3d3a194",
+    "34471d3c-923b-48c0-b641-fab6ac9fab30"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894909-bc7a44539828",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 8: Debugging and Refining Outputs",
+  "question": "Three replies, one request. All three ask for an extension, but only one fits Sam’s situation. Which one, and which facts decided it?\n\nSteps:\n1. Use the arrow tool to point at the reply that fits best.\n2. Place a shape on words in one of the other replies that do not fit.\n3. Record your voice naming the fact from “What the AI knows” that decided your choice. Bonus points if you say what is wrong with both of the other replies.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but the voice recording gives no reason."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to reply C AND a shape is on words in reply A or B that do not fit (such as \"yo teach\" or \"Dear Sir or Madam\") AND the voice recording names a fact from \"What the AI knows\" that decided the choice."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains what is wrong with both reply A and reply B for this situation."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894909-bc7a44539828-354eb839",
+  "whiteboard_starter_image_alt_text": "\"Three replies to the same request: Write a message to my teacher.\" A box labeled \"What the AI knows\" says: Sam missed the project deadline because of the flu. Sam wants two more days. The teacher, Ms. Rivera, is strict but kind. Reply A: \"yo teach, couldn't do the project lol, gimme more time?\" Reply B: \"Dear Sir or Madam, I hereby request an extension of the deadline in accordance with school policy.\" Reply C: \"Hello Ms. Rivera, I was out sick with the flu this week and could not finish the project. Could I have two more days? Thank you for understanding.\""
+}

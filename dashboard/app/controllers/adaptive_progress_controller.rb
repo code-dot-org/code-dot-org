@@ -19,11 +19,18 @@ class AdaptiveProgressController < ApplicationController
   # REVIEW_DECISIONS in apps/src/adaptive/schema/steps/review.ts.
   REVIEW_DECISIONS = %w[build skip].freeze
   # SkipReason in apps/src/adaptive/progress/model.ts; absent on a check of work.
-  SKIP_REASONS = %w[limitReached].freeze
+  SKIP_REASONS = %w[effortDemonstrated limitReached].freeze
 
   # GET /adaptive_progress?scriptId=&levelId=
   def show
     render json: @level.progress_json(user_id: current_user.id, script_id: @unit.id)
+  end
+
+  # Retrieve metrics about the current user's AI use on the adaptive tutorial.
+  # This is used for the wrap up settings.
+  # GET /adaptive_progress/ai_metrics?scriptId=&levelId=
+  def ai_metrics
+    render json: @level.ai_metrics(user_id: current_user.id, script_id: @unit.id)
   end
 
   # PUT /adaptive_progress/steps/:step_id/progress

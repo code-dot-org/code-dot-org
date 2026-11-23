@@ -46,7 +46,11 @@ export function stepProperties(checkpoint: Checkpoint, step: Step) {
   };
 }
 
-export type AiFallbackFeature = 'instructions' | 'project' | 'validation';
+export type AiFallbackFeature =
+  | 'instructions'
+  | 'project'
+  | 'validation'
+  | 'effort';
 
 /** The student got the shell without an AI part it would have had. */
 export function sendAiStaticFallbackUsed(

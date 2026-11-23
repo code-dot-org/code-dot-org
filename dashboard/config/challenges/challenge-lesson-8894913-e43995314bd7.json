@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894913-e43995314bd7",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 12: AI's Role in Society",
+  "question": "Every AI request has a cost, even if the price tag is invisible. Write the receipt for one everyday AI task and read it out loud.\n\nSteps:\n1. Start recording. Pick one task from the list below.\n2. Read your receipt with 3 lines: “What you got,” “What it used” (such as electricity or water for cooling in a data center), and “Who shares the cost.”\n3. Say whether it was worth it, and for whom.\n4. Give one way to cut the cost without losing the benefit.\n\nTask list:\n- Making a cartoon image\n- Asking a chatbot a question\n- Getting video recommendations for an hour\n- Translating a long document",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not read a receipt on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student reads fewer than 3 lines, OR the lines do not separate what was gained from what it used."
+    },
+    {
+      "level": 2,
+      "description": "Student reads 3 lines (what you got, what it used, and who shares the cost) AND says whether it was worth it and for whom."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND gives one specific way to cut the cost without losing the benefit."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

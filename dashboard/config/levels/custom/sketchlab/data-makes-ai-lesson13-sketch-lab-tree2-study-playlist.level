@@ -1,0 +1,20 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-20T04:12:28.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "data-makes-ai-lesson12-sketch-lab-template-study-playlist",
+    "long_instructions": "## Add Tree 2\r\nGoal: Put Tree 2 on your map. Compare it to Tree 1.\r\n\r\n1. Drag your Data Scientist to **Prepare Stop 2**.\r\n2. Click the zoom **+** in the bottom corner of the map.\r\n3. Open your **Backpack**. Click **+** next to the file that ends in **fixed-tree**.\r\n4. Drag the picture into the \"Add Tree 2 from your Backpack\" box. Drag a corner to make it bigger.\r\n5. Use **Tree 1 vs. Tree 2** in your guide to answer \"What changed?\"\r\n6. Answer the New Problem question.\r\n\r\nYou are done when Tree 2 is on your map and Prepare Stop 2 has an answer.",
+    "hide_share_and_remix": "false",
+    "display_name": "Project Map: Study Playlist",
+    "bubble_choice_description": "This dataset contains different song qualities that might be in a study playlist.",
+    "thumbnail_url": "https://images.code.org/19e16aab47ffa690b4e13e6e478163b7-k4c-playlist.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:28.960+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-tree1-study-playlist\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-tree1-study-playlist\"},{\"changed_at\":\"2026-11-20 04:13:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:03:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:03:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:06:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

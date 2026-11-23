@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894758-7ac4d572bd58",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 3: Responsible Co-Creation",
+  "question": "All three helpers sounded sure of themselves. Only one actually helps Leo. Can you tell which?\n\nSteps:\n1. Use the arrow tool to point at the answer that is most useful for Leo.\n2. Place a shape on the answer that sounds good but wouldn’t actually help him.\n3. Record your voice explaining your choices, using what Leo needs for his trip.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow and shape are on the same answer, the arrow is not on B, or the voice recording does not mention Leo or his trip."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to B AND a shape is on A or C AND the voice recording names a specific thing Leo needs (October cold, one night, or what to pack) as the reason."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains what is wrong with BOTH A and C (A doesn’t answer the question, C includes items Leo can’t actually use)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894758-7ac4d572bd58-e748b150",
+  "whiteboard_starter_image_alt_text": "\"Leo is going on a one-night camping trip with his scout troop this October. He asks a helper: 'What should I pack?'\" Three answers. A: \"Camping is great! People have enjoyed the outdoors for thousands of years, and camping can be relaxing and fun for the whole family.\" B: \"Pack a tent, sleeping bag, flashlight, water, snacks, and warm layers. October nights get cold, so bring a hat and extra socks.\" C: \"Bring a tent, a sleeping bag, a flashlight, a fishing boat, a grand piano, and a hot tub.\""
+}

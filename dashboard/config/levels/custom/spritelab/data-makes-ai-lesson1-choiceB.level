@@ -55,15 +55,15 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Try sorting by shape or color.\",\"hint_id\":\"ai_data_sorting_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/d7442ff78c204fc75693cdad2f6e231f/sorting_items_free_play_2.mp3\"}]",
     "skip_autosave": true,
     "standalone_app_name": "spritelab",
-    "display_name": "Level Two",
+    "display_name": "Option Two",
     "bubble_choice_description": "You choose how to sort these items!",
     "thumbnail_url": "https://images.code.org/769acfa8604f4e989b96fde75fe00718-sublevel2.png",
     "enable_big_playspace": "true",
-    "preload_asset_list": null,
-    "uses_lab2": "false"
+    "uses_lab2": "false",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-10-20T19:28:36.201+00:00\",\"changed\":[\"cloned from \\\"sorting_items_free_play_2\\\"\"],\"cloned_from\":\"sorting_items_free_play_2\"},{\"changed_at\":\"2026-10-20 19:28:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-10-20T19:28:36.201+00:00\",\"changed\":[\"cloned from \\\"sorting_items_free_play_2\\\"\"],\"cloned_from\":\"sorting_items_free_play_2\"},{\"changed_at\":\"2026-10-20 19:28:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-18 15:27:27 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

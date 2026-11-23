@@ -58,6 +58,7 @@ class DCDO < DynamicConfigBase
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
       'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true),
       'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
+      'hoai2026-aif-callout-enabled': DCDO.get('hoai2026-aif-callout-enabled', true),
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
       # Apex domain for the Web Lab 2 / Python Lab sandboxed preview origin.
       # Set to 'codeaiprojects.org' to move previews to the new domain; unset
@@ -91,7 +92,8 @@ class DCDO < DynamicConfigBase
       'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
       # Seconds the adaptive shell waits on one model call before giving up.
       'adaptive-ai-timeout-seconds': DCDO.get('adaptive-ai-timeout-seconds', 45),
-      # Tutor replies on a checked step after which Continue opens regardless of the work.
+      # Tutor replies on a checked step from which a judge rates the student's effort, and after which Continue opens regardless of the work.
+      'adaptive-effort-check-replies': DCDO.get('adaptive-effort-check-replies', 4),
       'adaptive-reply-limit': DCDO.get('adaptive-reply-limit', 8),
       'adaptive-skill-map-tour-enabled': DCDO.get('adaptive-skill-map-tour-enabled', true),
       # AI descriptions of Python Lab theater output; also gates the access token server-side.

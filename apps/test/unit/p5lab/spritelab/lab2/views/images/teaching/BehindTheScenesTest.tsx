@@ -62,6 +62,25 @@ describe('BehindTheScenes', () => {
     expect(screen.queryByRole('dialog')).toBeNull();
   });
 
+  it('draws the dialog in the nearest themed element, not beside its button', () => {
+    render(
+      <ThemeProvider>
+        <div data-theme="Dark">
+          <div role="toolbar">
+            <BehindTheScenes
+              sent={sentPromptsFor('A cat', OPTIONS, 'pixel', false)}
+            />
+          </div>
+        </div>
+      </ThemeProvider>
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    const dialog = screen.getByRole('dialog');
+    const toolbar = screen.getByRole('toolbar');
+    expect(toolbar.contains(dialog)).toBe(false);
+    expect(dialog.closest('[data-theme]')).toBe(toolbar.parentElement);
+  });
+
   it("switches between a set's first-picture words and the shared pose words", () => {
     renderBehind({
       sent: sentPromptsFor('A dragon', OPTIONS, 'pixel', true, 'quadruped'),

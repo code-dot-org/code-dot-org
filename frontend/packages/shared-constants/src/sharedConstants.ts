@@ -256,7 +256,7 @@ export const ChildAccountComplianceStates = {
   "PERMISSION_GRANTED": "g"
 } as const;
 
-export const DanceSongManifestFilename = 'songManifest2026.json' as const;
+export const DanceSongManifestFilename = 'songManifest2026_v2.json' as const;
 
 export const AiEvaluationTypes = {
   "SINGLE_STUDENT": "single_student",
@@ -695,6 +695,7 @@ export const AllowedHostnameSuffixes = [
   "api.waqi.info",
   "dataservice.accuweather.com",
   "data.weather.gov.hk",
+  "opendataapi.dmi.dk",
   "noaa.gov",
   "api.foursquare.com",
   "api.opencagedata.com",

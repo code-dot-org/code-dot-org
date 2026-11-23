@@ -1,0 +1,14 @@
+{
+  "key": "aif-l11-style-copy-hurts",
+  "description": "See how using AI to copy an artist's style can cost that artist work, even when the picture isn't an exact copy.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l11-style-copy-hurts.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "d43f71d6-32d2-478c-bf6a-5b68e9f00c31",
+    "b5b85cdf-ce92-4741-a6e3-374d94b28434"
+  ]
+}

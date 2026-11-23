@@ -33,6 +33,11 @@ class Adaptive < Level
 
   PROJECT_STEP_ID = 'project'.freeze
 
+  AI_METRIC_NOTIFICATION_TYPES = {
+    'aiTutorVersionActionAccept' => 'accepted',
+    'aiTutorVersionActionReject' => 'rejected',
+  }.freeze
+
   # What a level made with only a name points at, until the author picks
   # content in the editor.
   DEFAULT_ADAPTIVE_ID = 'sample'.freeze
@@ -89,6 +94,18 @@ class Adaptive < Level
     steps = rows.filter_map {|row| (entry = row.step_json) && [row.step_id, entry]}.to_h
     steps.merge!(level_step_progress(user_id, script_id)) {|_step_id, entry, progress| entry.merge(progress)}
     {'steps' => steps}
+  end
+
+  # How many of the tutor's proposed changes the user accepted and rejected
+  # in this pathway's level steps in one unit, as their chats logged them.
+  def ai_metrics(user_id:, script_id:)
+    type = Arel.sql("aichat_event->>'$.notificationType'")
+    counts = AichatEvent.
+      where(user_id: user_id, script_id: script_id, level_id: step_levels.values.map(&:id).uniq).
+      where("#{type} IN (?)", AI_METRIC_NOTIFICATION_TYPES.keys).
+      group(type).
+      count
+    AI_METRIC_NOTIFICATION_TYPES.to_h {|notification_type, key| [key, counts[notification_type] || 0]}
   end
 
   def sharing_levels
