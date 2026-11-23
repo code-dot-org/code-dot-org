@@ -97,6 +97,19 @@
         background-color: var(--background-neutral-quinary);
       }
 
+      // Grey rather than the sound type's color, which would read as playing.
+      // Before BlockSelected so a selected silent sound keeps its highlight.
+      &Silent {
+        border-style: dashed;
+        border-color: var(--borders-neutral-strong);
+        background-image: repeating-linear-gradient(
+          -45deg,
+          transparent 0 4px,
+          var(--background-neutral-quinary) 4px 8px
+        );
+        background-color: transparent;
+      }
+
       &BlockSelected {
         border-color: #fc3;
         border-width: 3px;
@@ -108,16 +121,6 @@
 
       &ThinBorder {
         border-width: 1px;
-      }
-
-      &Silent {
-        border-style: dashed;
-        background-image: repeating-linear-gradient(
-          -45deg,
-          transparent 0 4px,
-          var(--background-neutral-quinary) 4px 8px
-        );
-        background-color: transparent;
       }
     }
 
