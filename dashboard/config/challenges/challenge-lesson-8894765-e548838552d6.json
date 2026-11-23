@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894765-e548838552d6",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 10: The Final Verdict",
+  "question": "You are a farmer, and an AI helper just gave you a recommendation. Follow it, check it, or ignore it? Neither “always listen” nor “never listen” is a good plan, so explain what you would do and why.\n\nSteps:\n1. Start recording. Pick one recommendation from the list below and read it out loud.\n2. Say whether you would follow it, check it first, or ignore it.\n3. Name one thing you would check or one person you would ask. Say what could go wrong if you followed it without checking.\n4. Say what could go wrong if you always ignored the helper.\n\nRecommendation list:\n- “Water the north field today because rain is unlikely.”\n- “Sell all the corn this week because prices are high.”\n- “Plant the new seeds two weeks early.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not pick a recommendation or give a decision on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says follow it, check it first, or ignore it, but gives no reason, or does not name both one thing to check (or one person to ask) and one thing that could go wrong without checking."
+    },
+    {
+      "level": 2,
+      "description": "Student gives a decision AND names one thing to check or one person to ask AND says one thing that could go wrong if they follow it without checking."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says one thing that could go wrong if they always ignore the helper."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

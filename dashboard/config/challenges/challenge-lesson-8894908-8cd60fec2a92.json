@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894908-8cd60fec2a92",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 7: AI's Wild Imagination",
+  "question": "Your group’s presentation includes a fact that an AI wrote, and nobody checked it. Now someone in the audience has raised a hand. What do you do?\n\nSteps:\n1. Start recording. Pick one claim from the list below.\n2. Be the presenter: say the claim confidently in 10 seconds.\n3. Be the audience member: ask one tough question, such as “Where did that come from?”\n4. Be the presenter again: respond honestly, say what you will do right now, and name one habit that would have prevented this.\n\nClaim list:\n- “Our school’s recycling program saved 4,000 trees last year.”\n- “Our town’s first mayor once said, ‘Every street is a story.’”\n- “A study from the University of Dunmore found that students learn best at 10 a.m.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not present a claim or give a response on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student presents the claim and hears the question, but does not respond honestly (for example, keeps defending the claim)."
+    },
+    {
+      "level": 2,
+      "description": "Student presents the claim confidently AND asks a tough audience question AND responds honestly (admits it is not confirmed and says what they will check)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says the claim came from an AI and was not checked AND names one habit that would prevent this next time."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

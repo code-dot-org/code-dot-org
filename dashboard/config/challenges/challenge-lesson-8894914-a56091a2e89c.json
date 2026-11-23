@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894914-a56091a2e89c",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 13: AI Time Capsule Project",
+  "question": "Three predictions, one chart. The data can tell you which prediction fits, and which one is just hype.\n\nSteps:\n1. Use the arrow tool to point at the prediction that best fits the trend.\n2. Place a shape on the prediction that is most likely hype.\n3. Use the text tool to write one thing that could change the trend.\n4. Record your voice explaining what the chart shows about how fast the numbers are growing.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but types no idea."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to prediction B AND a shape is on prediction A AND the typed idea names one thing that could change the trend AND the voice recording says that growth is slowing (the yearly increases are getting smaller)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains why prediction C does not fit either (it is below today's number) AND says how they would check the prediction later."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894914-a56091a2e89c-56e0e6fb",
+  "whiteboard_starter_image_alt_text": "A line chart titled \"Homes with a smart speaker (made-up practice data)\" showing the percent of homes with one: 5% in 2016, 15% in 2018, 30% in 2020, 40% in 2022, and 45% in 2024. On the right, three predictions for 2030: A, 100% of homes will have one; B, 60% of homes will have one; and C, 30% of homes will have one. Below them is a blank box labeled \"Space for your idea.\""
+}

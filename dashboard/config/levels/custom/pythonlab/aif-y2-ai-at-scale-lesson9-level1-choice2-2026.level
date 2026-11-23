@@ -1,0 +1,77 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T20:38:24.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Business",
+    "long_instructions": "You are building a neural network for a food truck to predict whether business will be busy or slow, based on the day of the week—represented as a number from 1 (Monday) to 7 (Sunday)—and the hour of the day.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Open the `food_truck.csv` file and read the data into a variable called `hours` that stores a list of rows.\r\n2. Fill in the `TODO`s in the definitions of `inputs` and `outputs` with names of columns from `food_truck.csv`. For the first input, use the hour of the day; for the second input, use the day of the week.\r\n3. Fit the model to the training input and output data.\r\n4. Score the model on the test input and output data. Print out the accuracy score.\r\n5. Run the program. Look at the accuracy score, then look at the visualization of the data and what the model learned. How well did the model learn the pattern in the data? You’ll answer a question about this in the next level.\r\n\r\n**💻 Coding Tip**\r\n\r\nUse `open` to open a file and `csv.DictReader` to read that file into dictionaries.\r\n\r\nUse the `fit` method to train a model and the `score` method to score it. Both methods accept two arguments: a list of inputs and a list of outputs.\r\n",
+    "bubble_choice_description": "Evaluate a neural network for a food truck to predict whether business will be busy or slow.",
+    "thumbnail_url": "https://images.code.org/5763e57cafe6b55c8c99278a86b68d9b-food-truck.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "example",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\nfrom helpers import visualize_model\n\n# TODO 1: Open food_truck.csv and read the data into a variable called hours\nhours = []\n\n# TODO 2: Fill in the TODOs with the column names for inputs and outputs\ninputs = [[float(hour[\"TODO\"]), float(hour[\"TODO\"])] for hour in hours]\noutputs = [hour[\"TODO\"] for hour in hours]\n\n# Split into training and testing data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n    inputs,\n    outputs,\n    test_size=0.4,\n)\n\n# Configure the classifier\nmodel = make_pipeline(StandardScaler(), SGDClassifier(max_iter=1000))\n\n# TODO 3: Train the model\n\n# TODO 4: Score the model and print the accuracy score\n\n# Visualize model\nvisualize_model(model, inputs, outputs, \"Hour of day\", \"Day of week\")\n",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "food_truck.csv",
+          "contents": "hour_of_day,day_of_week,label\n11,7,busy\n17,1,busy\n22,1,slow\n22,4,slow\n8,1,slow\n15,5,slow\n17,7,busy\n11,7,busy\n18,4,busy\n14,4,slow\n13,6,busy\n16,1,slow\n10,5,slow\n14,5,slow\n22,2,slow\n8,2,slow\n14,6,busy\n18,1,busy\n20,3,slow\n11,2,busy\n12,6,busy\n19,5,busy\n22,4,slow\n19,6,busy\n20,7,busy\n16,2,slow\n22,7,slow\n22,7,slow\n14,5,slow\n11,2,busy\n9,6,slow\n22,6,slow\n8,1,slow\n17,1,busy\n15,5,slow\n21,3,slow\n18,2,busy\n19,1,busy\n14,3,slow\n7,6,slow\n22,6,slow\n21,5,slow\n22,2,slow\n14,6,busy\n11,6,busy\n20,1,slow\n14,7,busy\n20,1,slow\n16,4,slow\n17,5,busy\n14,6,busy\n8,5,slow\n19,1,busy\n8,5,slow\n8,7,slow\n17,2,busy\n9,7,slow\n22,3,slow\n19,1,busy\n13,4,busy\n10,5,slow\n19,5,busy\n17,3,busy\n7,4,slow\n7,2,slow\n19,7,busy\n13,5,busy\n12,1,busy\n22,1,slow\n8,2,slow\n10,6,busy\n9,3,slow\n12,1,busy\n19,4,busy\n13,7,busy\n20,6,busy\n18,3,busy\n13,5,busy\n17,2,busy\n17,4,busy\n18,3,busy\n11,7,busy\n12,6,busy\n9,5,slow\n15,7,slow\n14,1,slow\n17,3,busy\n15,3,slow\n10,7,busy\n7,5,slow\n11,1,busy\n15,5,slow\n19,4,busy\n13,5,busy\n10,4,slow\n7,5,slow\n11,1,busy\n8,7,slow\n18,3,busy\n21,5,slow\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\nimport numpy as np\nfrom matplotlib.colors import ListedColormap\nfrom sklearn.inspection import DecisionBoundaryDisplay\n\nPALETTE = [\"tab:blue\", \"tab:orange\"]\n\n\ndef visualize_model(model, inputs, outputs, x_label, y_label):\n    labels = list(model.classes_)\n    colors = PALETTE[: len(labels)]\n    display = DecisionBoundaryDisplay.from_estimator(\n        model,\n        np.array(inputs),\n        response_method=\"predict\",\n        cmap=ListedColormap(colors),\n        alpha=0.25,\n        xlabel=x_label,\n        ylabel=y_label,\n    )\n    for label, color in zip(labels, colors):\n        xs = [x for (x, y), out in zip(inputs, outputs) if out == label]\n        ys = [y for (x, y), out in zip(inputs, outputs) if out == label]\n        display.ax_.scatter(xs, ys, c=color, label=label, edgecolors=\"black\")\n    display.ax_.legend()\n    plt.show()\n\n\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "2",
+      "name": "validation.py",
+      "contents": "import contextlib\nimport io\nfrom unittest import TestCase\n\nfrom sklearn.exceptions import NotFittedError\nfrom sklearn.utils.validation import check_is_fitted\nfrom unittest_runner import ValidationProtocol\n\n\ndef load_student_program():\n    \"\"\"Imports main into test, preventing additional output and chart calls\"\"\"\n    import helpers\n    helpers.visualize_model = lambda *args, **kwargs: None\n    with contextlib.redirect_stdout(io.StringIO()):\n        import main\n    return main\n\n\nclass TestBusinessPredictor(TestCase):\n    longMessage = False\n\n    def test_inputs_use_right_columns(self):\n        \"\"\"Inputs are hour of day, then day of week\"\"\"\n        main = load_student_program()\n        first = main.hours[0]\n        expected = [float(first[\"hour_of_day\"]), float(first[\"day_of_week\"])]\n        self.assertEqual(main.inputs[0], expected, \"Inputs don't use hour of day, then day of week\")\n\n    def test_model_is_trained(self):\n        \"\"\"The model is trained\"\"\"\n        try:\n            check_is_fitted(load_student_program().model)\n        except NotFittedError:\n            self.fail(\"The model hasn't been trained yet\")\n\n    def test_print_accuracy(self):\n        \"\"\"Prints the model's accuracy score\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        self.assertRegex(output, r\"\\d\", \"Output doesn't include the accuracy score\")\n",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 20:39:26 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 20:39:45 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

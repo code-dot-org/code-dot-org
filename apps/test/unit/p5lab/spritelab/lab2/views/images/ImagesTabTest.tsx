@@ -219,6 +219,12 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
     select({animationList: animationList(), lab: labState}),
   useAppDispatch: () => jest.fn(),
 }));
+// Signed-out students are not offered a flagged picture at all. The warning
+// reads sign-in state off the store, not through a selector hook.
+let signInState = 'SignedIn';
+jest.mock('@cdo/apps/redux', () => ({
+  getStore: () => ({getState: () => ({currentUser: {signInState}})}),
+}));
 const moderate = jest.fn<Promise<string>, unknown[]>();
 jest.mock('@cdo/apps/util/moderateImage', () => ({
   moderateImage: (...args: unknown[]) => moderate(...args),
@@ -342,6 +348,7 @@ describe('ImagesTab', () => {
     sceneOverrides = {};
     lastRateResult = undefined;
     labState = {channel: {id: 'c1'}};
+    signInState = 'SignedIn';
     moderate.mockReset().mockResolvedValue('safe');
     httpPost.mockClear();
   });
@@ -1648,6 +1655,25 @@ describe('ImagesTab', () => {
       );
     });
 
+    it('offers a signed-out student no way to keep a flagged picture', async () => {
+      signInState = 'SignedOut';
+      moderate.mockResolvedValue('flagged');
+      await pickCharacter();
+      expect(screen.queryByRole('button', {name: /^accept$/i})).toBeNull();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^ok$/i}));
+      });
+      await settle();
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(httpPost).not.toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        expect.anything(),
+        expect.anything(),
+        expect.anything()
+      );
+      expect(screen.getByRole('button', {name: 'Upload image'})).toBeEnabled();
+    });
+
     it('checks nothing it has already refused for its size', async () => {
       await pickCharacter(pngFile('Huge.png', 6 * 1024 * 1024));
       expect(moderate).not.toHaveBeenCalled();
@@ -1664,6 +1690,110 @@ describe('ImagesTab', () => {
       await pickCharacter();
       expect(moderate).not.toHaveBeenCalled();
       expect(acceptUploaded).toHaveBeenCalled();
+    });
+
+    describe('the upload rules', () => {
+      const RULES_TITLE = 'To upload images, you must agree to these rules:';
+      const NO_PII = 'I will not upload images with personal information.';
+      const NO_REMIX = 'This project can not be remixed.';
+
+      function pressUpload() {
+        fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+        fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
+      }
+
+      function tick(name: string) {
+        fireEvent.click(screen.getByRole('checkbox', {name}));
+      }
+
+      it('holds the file picker shut until a student agrees', async () => {
+        const onConfirm = jest.fn();
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarningSettings: {
+            alreadyAgreed: false,
+            isTeacher: false,
+            onConfirm,
+          },
+        });
+        const opened = jest.spyOn(fileInput(container), 'click');
+        pressUpload();
+        expect(screen.getByText(RULES_TITLE)).toBeTruthy();
+        expect(opened).not.toHaveBeenCalled();
+        expect(screen.getByRole('button', {name: 'OK'})).toBeDisabled();
+        tick(NO_PII);
+        tick(NO_REMIX);
+        fireEvent.click(screen.getByRole('button', {name: 'OK'}));
+        expect(onConfirm).toHaveBeenCalledTimes(1);
+        expect(opened).toHaveBeenCalledTimes(1);
+        acceptUploaded.mockImplementation(async () => {
+          propsByKey.k1 = {name: 'Block 1', categories: ['blocks']};
+          return 'k1';
+        });
+        await pickFile(container, pngFile());
+        expect(acceptUploaded.mock.calls[0][0]).toEqual({
+          key: null,
+          imageType: 'block',
+          subject: undefined,
+        });
+      });
+
+      it('asks a teacher for the shorter agreement', () => {
+        renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarningSettings: {
+            alreadyAgreed: false,
+            isTeacher: true,
+            onConfirm: jest.fn(),
+          },
+        });
+        pressUpload();
+        expect(screen.getByRole('checkbox', {name: NO_PII})).toBeTruthy();
+        expect(screen.queryByRole('checkbox', {name: NO_REMIX})).toBeNull();
+        tick(NO_PII);
+        expect(screen.getByRole('button', {name: 'OK'})).toBeEnabled();
+      });
+
+      it('records nothing and uploads nothing when the rules are refused', () => {
+        const onConfirm = jest.fn();
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarningSettings: {
+            alreadyAgreed: false,
+            isTeacher: false,
+            onConfirm,
+          },
+        });
+        const opened = jest.spyOn(fileInput(container), 'click');
+        pressUpload();
+        fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+        expect(screen.queryByText(RULES_TITLE)).toBeNull();
+        expect(onConfirm).not.toHaveBeenCalled();
+        expect(opened).not.toHaveBeenCalled();
+      });
+
+      it('stops asking once the project has agreed', async () => {
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarningSettings: {
+            alreadyAgreed: true,
+            isTeacher: false,
+            onConfirm: jest.fn(),
+          },
+        });
+        acceptUploaded.mockImplementation(async () => {
+          propsByKey.k1 = {name: 'Block 1', categories: ['blocks']};
+          return 'k1';
+        });
+        pressUpload();
+        expect(screen.queryByText(RULES_TITLE)).toBeNull();
+        await pickFile(container, pngFile());
+        expect(acceptUploaded).toHaveBeenCalledTimes(1);
+      });
     });
   });
 });

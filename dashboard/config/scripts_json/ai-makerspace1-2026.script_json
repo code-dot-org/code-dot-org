@@ -25,7 +25,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-18 17:00:47 UTC",
+    "serialized_at": "2026-11-21 01:21:54 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -57,8 +57,20 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "key": "4177e99c-13ed-4bb6-8f08-19566a5e3892",
+            "notice": "Review CodeAI Technical Requirements for this lesson",
+            "details": "To use this lesson, become a Verified Teacher, make sure AI Tutor is enabled, and allow both https://codeaiprojects.org and https://*.codeaiprojects.org on your network so they aren’t blocked.",
+            "link": "https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher",
+            "type": "warning",
+            "visibility": "Teacher-only",
+            "dismissible": true,
+            "buttonText": "Become a Verified Teacher"
+          }
+        ],
         "overview": "In AI Makerspace, students build a website in Web Lab based on their own interests, with AI as a co-creator. They learn to direct AI using the language of web development, check the changes AI makes, and revise their prompts until the site does what they want. A quick Skill Check finds each student’s starting point, then students choose which skill to work on next, so expect your class to be working on different skills at the same time.\n\nNote: This tutorial uses AI features that require verified teacher permissions. See this support article for more information on how to become a verified teacher.",
-        "preparation": "- Test out AI Makerspace to ensure familiarity with the platform.\n- Review the introduction video and practice walking students through the steps to co-create with AI.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of AI at your school [here](https://csforall.org/en-US/hour-of-ai/how-to/k-12educator)!",
+        "preparation": "- Become a Verified Teacher - [Support Article](https://support.code.org/hc/en-us/articles/115001550131-How-to-Become-a-Verified-Teacher)\n- Ensure AI Tutor is enabled - [Support Article](https://support.code.org/hc/en-us/articles/42550900593677-AI-Settings-Managing-Student-Access-to-AI-Tools)\n- Review CodeAI Technical Requirements - [Support Article](https://code.org/en-US/about/it-requirements)\n   - Make sure the following sites are allowed and aren't blocked: https://codeaiprojects.org and https://*.codeaiprojects.org\n- Test out AI Makerspace using your classroom WiFi to ensure connectivity and familiarity with the platform.\n- Review the introduction video and practice walking students through the steps to co-create with AI.\n- *[Optional]* Find the resources you need to plan, implement, and celebrate the Hour of AI at your school [here](https://csforall.org/en-US/hour-of-ai/how-to/k-12educator)!",
         "student_overview": "Ready to build a website about something you’re interested in? In AI Makerspace, you’ll create it in Web Lab with AI as your co-creator, choosing which skills to learn as you go, like describing your design in real web terms or checking whether AI’s fix actually worked. You’ll finish with a site that’s all yours to share."
       },
       "seeding_key": {

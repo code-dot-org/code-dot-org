@@ -475,11 +475,17 @@ const EVENTS = {
   ACCEPT_FLAGGED_CUSTOM_IMAGE:
     'User accepts and uploads a flagged custom image',
   CANCEL_FLAGGED_CUSTOM_IMAGE: 'User cancels upload of flagged custom image',
+  SIGNED_OUT_FLAGGED_CUSTOM_IMAGE:
+    'Signed out user cannot upload a flagged custom image',
 
   // Sprite Lab in Lab2 image generation
   HOAI2026_IMAGE_PROMPT: 'hoai2026-image-prompt',
   HOAI2026_IMAGE_VERDICT: 'hoai2026-image-verdict',
   HOAI2026_IMAGE_VERDICT_REASON: 'hoai2026-image-verdict-reason',
+  HOAI2026_IMAGE_DRAW: 'hoai2026-image-draw',
+  HOAI2026_LEVEL_COMPLETE: 'hoai2026-level-complete',
+  HOAI2026_LEVEL_SESSION_END: 'hoai2026-level-session-end',
+  HOAI2026_FINISH_DIALOG: 'hoai2026-finish-dialog',
 
   // Moderate model output image
   MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',
@@ -772,6 +778,10 @@ const EVENTS = {
   LESSON_SNAPSHOT_FEEDBACK_WIDGET_LOADED:
     "Teacher opens a student's lesson view and the feedback widget is rendered",
 
+  // AI Foundations callout
+  AI_FOUNDATIONS_CALLOUT_CLICKED: 'AI Foundations Callout Clicked',
+  AI_FOUNDATIONS_CALLOUT_DISMISSED: 'AI Foundations Callout Dismissed',
+
   // Pair programming
   PAIRING_ADD_PARTNER_BUTTON_CLICKED:
     'Add pair programming partner button clicked',
@@ -801,6 +811,7 @@ const EVENTS = {
   ADAPTIVE_FREE_RESPONSE_ANSWERED: 'Adaptive Free Response Answered',
   ADAPTIVE_FINAL_PROJECT_BUTTON_CLICKED:
     'Adaptive Final Project Button Clicked',
+  ADAPTIVE_CONGRATS_LINK_CLICKED: 'Adaptive Congrats Link Clicked',
   ADAPTIVE_FIRST_PROMPT_SUBMITTED: 'Adaptive First Prompt Submitted',
   ADAPTIVE_PROJECT_GENERATED: 'Adaptive Project Generated',
   ADAPTIVE_INSTRUCTIONS_GENERATED: 'Adaptive Instructions Generated',

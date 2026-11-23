@@ -1,0 +1,15 @@
+{
+  "key": "aif-l04-usually-right-still-check",
+  "description": "Learn how to decide which parts of AI's work you still need to check yourself, even when it's usually right.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l04-usually-right-still-check.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "e495badb-34e7-43d0-9609-3eed16edef96",
+    "ee47e199-1a58-4719-ae9d-fa19221e1598",
+    "e9d1c4d2-a22e-4fd4-bddd-2137d808871c"
+  ]
+}

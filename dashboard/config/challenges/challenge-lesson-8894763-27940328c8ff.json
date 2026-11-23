@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894763-27940328c8ff",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 8: Defending Your Data",
+  "question": "A stranger found Riley’s backpack. Some items are harmless, but two others together could tell the stranger exactly where Riley will be. Can you spot them?\n\nSteps:\n1. Place a shape on the item that is safest to share with anyone.\n2. Use the arrow tool to point at two items that together tell a stranger where Riley will be and when.\n3. Record your voice explaining your choices.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape or arrow is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the shape is not on item 1 or item 6, the arrows do not point to item 2 and item 3, or the voice recording gives no reason."
+    },
+    {
+      "level": 2,
+      "description": "Shape is on item 1 or item 6 AND two arrows point to item 2 and item 3 AND the voice recording gives a reason for at least one choice."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains what a stranger could figure out by combining the two pointed-at items (for example, where Riley will be at 10:15)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894763-27940328c8ff-a3d12fac",
+  "whiteboard_starter_image_alt_text": "\"A stranger found Riley's lost backpack. Here is what is inside.\" A drawing of a blue backpack next to six numbered items: 1, a water bottle with a smiley sticker; 2, a class schedule: Room 12, Period 3, 10:15 a.m.; 3, a notebook with \"Maple Middle School\" on the cover; 4, a key tag that says \"14 Cedar Lane\"; 5, a soccer shirt that says \"Tigers\"; and 6, a sticker that says \"I love music.\""
+}

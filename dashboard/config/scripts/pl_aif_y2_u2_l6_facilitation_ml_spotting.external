@@ -11,14 +11,16 @@ Two classification models have been trained to spot pedestrians, people walking,
   <iframe
     src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/pedestrian-model-compare.html"
     width="100%"
-    height="560"
+    height="1000"
     frameborder="0"
     scrolling="no"
     title="Compare Model 1 and Model 2 pedestrian classifications across eight photos, then choose and reveal which model you'd use">
   </iframe>
 </div>
 
-Model 1 never misses a pedestrian it calls a pedestrian, it has perfect accuracy on this set. Model 2 gets three of those same photos wrong by strict accuracy, calling a motorcycle, a bicycle, and a car near a crosswalk pedestrians too.
+**Model 1** never misses a pedestrian it calls a pedestrian, it has perfect accuracy on this set. 
+
+**Model 2**  gets three of those same photos wrong by strict accuracy, calling a motorcycle, a bicycle, and a car near a crosswalk pedestrians too.
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
   <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> students will default to calling Model 1 the better model because it's more accurate. Don't correct that yet, let them sit with it, then ask the next question: if these models decide when a self-driving car stops, which one do you want behind the wheel?</div>

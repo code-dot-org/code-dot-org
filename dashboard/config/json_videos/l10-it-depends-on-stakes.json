@@ -1,0 +1,13 @@
+{
+  "key": "l10-it-depends-on-stakes",
+  "description": "Learn how to decide when to check AI's work and when to let it help, based on what's at stake.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l10-it-depends-on-stakes.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "7663596d-71b8-48fe-8dcd-81d66b156015"
+  ]
+}

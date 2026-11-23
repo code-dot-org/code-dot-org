@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894910-d5cfc3b92b4e",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 9: AI as a Co-Creator",
+  "question": "An AI doesn’t invent from nothing. It remixes patterns it has seen before. Be the remix machine, then be the human who makes the story surprising.\n\nSteps:\n1. Start recording. Pick one character and one setting from the chart below.\n2. Be the machine: tell a 15-second story that mixes the two, using only the most predictable ideas.\n3. Be the human co-creator: tell the story again in 15 seconds with one surprising twist from your own life or imagination.\n4. Say which part came from patterns and which part came from you.\n\nCharacters:\n- A detective\n- A robot barista\n- A medieval knight\n- A deep-sea diver\n\nSettings:\n- A school cafeteria\n- A space station\n- A talent show\n- A tiny village",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not tell a story on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student tells only one version of the story."
+    },
+    {
+      "level": 2,
+      "description": "Student tells a predictable version using both chosen ideas AND a second version with one surprising twist AND says which part came from patterns and which came from them."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND explains why the twist needed something an AI would not have (such as a personal experience, a feeling, or knowledge of a community)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

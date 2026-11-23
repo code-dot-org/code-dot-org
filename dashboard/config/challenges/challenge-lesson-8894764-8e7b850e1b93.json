@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894764-8e7b850e1b93",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 9: Refining Our Product",
+  "question": "Your coach just yelled something that sounds like help but isn’t. You step in and turn it into advice a player can actually use.\n\nSteps:\n1. Start recording. Pick one coach line from the list below and say it in your best coach voice.\n2. Now say a specific tip that replaces it. Include what to do, when to do it, and what to look for.\n3. Describe a real moment from your own life that shows your tip works. Leave out the names of real people, teams, and schools.\n\nCoach line list:\n- “Play better!”\n- “Try harder!”\n- “Be more careful!”\n- “Just do your best!”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say a coach line on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says only the vague line with no new tip, or gives a tip with fewer than two concrete details."
+    },
+    {
+      "level": 2,
+      "description": "Student says the vague line AND a specific tip with at least two concrete details (what to do, when to do it, or what to look for)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND describes a real moment from their own life that shows the tip works."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

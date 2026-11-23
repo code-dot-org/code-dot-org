@@ -8,18 +8,18 @@
   "properties": {
     "encrypted": "false",
     "title": "Check for Understanding",
-    "long_instructions": "**Instructions**: Copy the caption from your comic strip in Level 1 and paste it in the box below, or type it in. \r\n\r\nClick the [Add/Remove Attachments] and upload your copy of your Sketch Lab Comic Strip canvas.",
+    "long_instructions": "Reflect on the comic strip that you created:\r\n* What was the unfair result that you comic strip was about?\r\n* What caused the unfair result?\r\n",
     "stay_on_level_after_submit": "false",
     "submittable": "true",
     "allow_multiple_attempts": "true",
-    "height": "200",
-    "allow_user_uploads": "true",
+    "height": "150",
+    "allow_user_uploads": "false",
     "peer_reviewable": "false",
     "optional": "false",
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-18 00:22:50 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-11-18 00:22:50 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 17:10:12 +0000\",\"changed\":[\"long_instructions\",\"height\",\"allow_user_uploads\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

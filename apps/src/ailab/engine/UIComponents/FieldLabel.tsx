@@ -1,7 +1,8 @@
 /* Visible label for a Train panel field, with an info tooltip. */
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton, Tooltip, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 import React from 'react';
+
+import InfoButton from './InfoButton';
 
 import styles from './fieldLabel.module.scss';
 
@@ -20,17 +21,7 @@ const FieldLabel = ({text, tooltip}: FieldLabelProps) => (
     >
       {text}
     </Typography>
-    <Tooltip title={tooltip}>
-      <IconButton
-        variant="text"
-        color="tertiary"
-        size="extraSmall"
-        className={styles.infoButton}
-        aria-label={`About ${text}`}
-      >
-        <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
-      </IconButton>
-    </Tooltip>
+    <InfoButton about={text} tooltip={tooltip} />
   </div>
 );
 

@@ -70,11 +70,16 @@ export const useFlaggedImage = (
   );
 
   const handleCancelFlaggedImage = useCallback(
-    (appName: string) => {
-      analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
-        UploaderType: uploaderType,
-        ProjectType: appName,
-      });
+    (appName: string, isSignedOut: boolean) => {
+      analyticsReporter.sendEvent(
+        isSignedOut
+          ? EVENTS.SIGNED_OUT_FLAGGED_CUSTOM_IMAGE
+          : EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
+        {
+          UploaderType: uploaderType,
+          ProjectType: appName,
+        }
+      );
       setFlaggedImageData(null);
     },
     [uploaderType]

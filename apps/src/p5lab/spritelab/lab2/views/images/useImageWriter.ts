@@ -213,6 +213,7 @@ export default function useImageWriter({
         pixelGridSize: result.pixelGridSize,
         trimmed: !!result.trimmed,
         generation: result.generation,
+        fromGeneration: true,
         edited: false,
       });
     },
@@ -239,6 +240,7 @@ export default function useImageWriter({
         pixelGridSize: undefined,
         trimmed: false,
         generation: undefined,
+        fromGeneration: false,
         edited: false,
         flagged: file.flagged,
       });
@@ -287,6 +289,7 @@ export default function useImageWriter({
         trimmed: false,
         // Hand-edited pixels are not the prompt's output anymore.
         generation: undefined,
+        fromGeneration: existing?.fromGeneration || !!existing?.generation,
         edited: true,
         recentColors: meta.recentColors,
       });

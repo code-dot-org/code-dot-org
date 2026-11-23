@@ -58,6 +58,7 @@ class DCDO < DynamicConfigBase
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
       'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true),
       'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
+      'hoai2026-aif-callout-enabled': DCDO.get('hoai2026-aif-callout-enabled', true),
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
       # Apex domain for the Web Lab 2 / Python Lab sandboxed preview origin.
       # Set to 'codeaiprojects.org' to move previews to the new domain; unset

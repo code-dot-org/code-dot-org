@@ -928,7 +928,7 @@
             "id": "vgn3-n-61",
             "type": "text",
             "data": {
-              "text": "Train your model. Click Save to put Tree 1 in your Backpack. Then add it here.",
+              "text": "Train your model. Click Save image to put Tree 1 in your Backpack. Then add it here.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -973,7 +973,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "My rule and Tree 1 are different at ",
+              "label": "My rule and Tree 1 are alike or different because ",
               "textAlign": "left",
               "backgroundColor": "#ffffff",
               "fontSize": "medium"
@@ -1352,7 +1352,7 @@
             "id": "vgn3-n-103",
             "type": "text",
             "data": {
-              "text": "Open the Video Game Night (Fixed) dataset. Keep your two features, or add more. Train Tree 2. Click Save to put it in your Backpack. Then add it here.",
+              "text": "Open the Video Game Night (Fixed) dataset. Keep your two features, or add more. Train Tree 2. Click Save image to put it in your Backpack. Then add it here.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -1486,7 +1486,7 @@
             "id": "vgn3-n-109",
             "type": "text",
             "data": {
-              "text": "Use Make a prediction. Click Predict.",
+              "text": "Use Make a Prediction. Click Predict.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -2291,7 +2291,7 @@
             "id": "vgn3-n-152",
             "type": "text",
             "data": {
-              "text": "Enter their game. Use Make a prediction.",
+              "text": "Enter their game. Use Make a Prediction.",
               "strokeColor": "transparent",
               "fontSize": "medium",
               "fontFamily": "sans",
@@ -2370,50 +2370,6 @@
             "measured": {
               "width": 560,
               "height": 75
-            }
-          },
-          {
-            "id": "vgn3-n-156",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Right",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "fontSize": "medium",
-              "locked": true
-            },
-            "position": {
-              "x": 4440,
-              "y": 1493
-            },
-            "width": 165,
-            "height": 60,
-            "measured": {
-              "width": 165,
-              "height": 60
-            }
-          },
-          {
-            "id": "vgn3-n-157",
-            "type": "shape",
-            "data": {
-              "shapeType": "rectangle",
-              "label": "Wrong",
-              "textAlign": "center",
-              "backgroundColor": "var(--sketchlab-bg-gray)",
-              "fontSize": "medium",
-              "locked": true
-            },
-            "position": {
-              "x": 4625,
-              "y": 1493
-            },
-            "width": 165,
-            "height": 60,
-            "measured": {
-              "width": 165,
-              "height": 60
             }
           },
           {
@@ -2512,7 +2468,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "I entered  \nIt predicted  \nI think it is right or wrong because ",
+              "label": "I tested  \nThe model predicted  \nI think that is right / wrong because ",
               "textAlign": "left",
               "backgroundColor": "var(--sketchlab-bg-pink)",
               "fontSize": "medium",
@@ -2534,7 +2490,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "I entered  \nIt predicted  \nI think it is right or wrong because ",
+              "label": "I tested  \nThe model predicted  \nI think that is right / wrong because ",
               "textAlign": "left",
               "backgroundColor": "var(--sketchlab-bg-pink)",
               "fontSize": "medium",
@@ -2556,7 +2512,7 @@
             "type": "shape",
             "data": {
               "shapeType": "rectangle",
-              "label": "I entered  \nIt predicted  \nI think it is right or wrong because ",
+              "label": "I tested  \nThe model predicted  \nI think that is right / wrong because ",
               "textAlign": "left",
               "backgroundColor": "var(--sketchlab-bg-pink)",
               "fontSize": "medium",
@@ -4123,6 +4079,50 @@
               "height": 60
             },
             "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-156",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✓",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-green)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 4440,
+              "y": 1493
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            },
+            "zIndex": 10
+          },
+          {
+            "id": "vgn3-n-157",
+            "type": "shape",
+            "data": {
+              "shapeType": "rectangle",
+              "label": "✗",
+              "textAlign": "center",
+              "backgroundColor": "var(--sketchlab-bg-red)",
+              "fontSize": "large"
+            },
+            "position": {
+              "x": 4625,
+              "y": 1493
+            },
+            "width": 60,
+            "height": 60,
+            "measured": {
+              "width": 60,
+              "height": 60
+            },
+            "zIndex": 10
           }
         ],
         "edges": [
@@ -4137,6 +4137,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-13 20:33:08 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 22:57:50 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 23:04:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 23:15:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:26:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:33:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:44:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:54:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:12:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:25:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:27:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:33:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 01:16:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 01:17:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 01:17:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 03:07:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 03:39:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 03:39:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 04:26:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:13:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:35:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:14:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:15:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:17:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:33:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-13 20:33:08 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 22:57:50 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 23:04:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-13 23:15:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:26:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:33:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:44:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 00:54:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:12:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:25:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:26:10 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:27:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-14 01:33:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 01:16:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 01:17:29 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 01:17:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 03:07:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 03:39:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 03:39:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 04:26:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:13:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:35:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:14:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:15:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:17:03 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:33:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 02:28:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:21:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

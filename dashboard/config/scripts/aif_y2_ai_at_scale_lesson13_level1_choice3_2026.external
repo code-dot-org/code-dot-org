@@ -1,0 +1,14 @@
+name 'aif-y2-ai-at-scale-lesson13-level1-choice3-2026'
+title 'Election Day'
+display_name 'Election Day'
+bubble_choice_description "Your community’s election office wants to predict how long the wait will be at each polling place on election day, so they know how many additional poll workers to send to each location."
+markdown <<MARKDOWN
+Your community’s election office wants to predict how long the wait will be at each polling place for any given hour on election day. Before each election, the office tries to assign extra polling workers to the locations at times that are expected to be busy. The election office is always looking for ways to improve efficiency: for example, six years ago, the community switched from paper ballots to electronic ballots.
+
+You have three datasets to choose from. **Evaluate** each of these three datasets and decide which one you’d like to use to train your neural network. Then, **explain** your choice by answering the questions in the **Choose a Dataset** section of your Project Planning Guide. Finally, **download** your dataset so you can use it in the project.
+
+- [**Dataset A**](https://drive.google.com/file/d/1MJ0ysNkYaoUPKKqfXkbzd-GLIFY4reKU/view?usp=sharing) is data from the community’s election office in the past four years of elections. It includes data from 1,144 recorded wait times. Each entry includes data for the hour of the day, the number of registered voters assigned to the site, the number of check-in stations, the number of voting booths, the type of election (local, midterm, presidential), the number of races on the ballot, the percentage of early voters, and whether the polling place has moved since the last election.
+- [**Dataset B**](https://drive.google.com/file/d/1MGSEAhxl5YOVV7SiKsiMMKNl24m214Nl/view?usp=sharing) is data from the community’s election office in the past twenty years of elections. It includes data from 3,432 recorded wait times. The office’s records weren’t always as complete as they are now, so this data includes some of the features from Dataset A but doesn’t include the number of races on the ballot or whether the polling place has moved since the last election. Each entry also includes information about how long ago the entry is from.
+- [**Dataset C**](https://drive.google.com/file/d/1r1fH-LmezPka-6gm6KrmlTahohR9Bo2E/view?usp=sharing) is data from a national study of different polling places across many different states. It includes data from 2,535 wait times. In addition to the features from Dataset A, it also includes data about whether same-day registration was allowed and whether the site was located in an urban area.
+
+MARKDOWN

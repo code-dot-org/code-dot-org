@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894903-a569a1f3c8f5",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 2: Beyond Words",
+  "question": "An AI looks at pixels, and many different things can look alike. Add words and you can tell it exactly which one you mean. Can you find two that could be mixed up, and write the words that separate them?\n\nSteps:\n1. Use the arrow tool to point at two items that an AI could mix up.\n2. Use the text tool to type 3 words or short phrases you would add to a prompt to tell the two apart.\n3. Record your voice explaining why the picture alone is not enough and what the words add.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places arrows on fewer than 2 items, OR types fewer than 3 words or phrases."
+    },
+    {
+      "level": 2,
+      "description": "Arrows point to two items AND the typed text has 3 words or phrases that are true of one item but not the other AND the voice recording says the picture alone does not make clear which one is meant."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names something the words add that a picture cannot show (such as taste, feel, sound, or how it moves)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894903-a569a1f3c8f5-0e294b4d",
+  "whiteboard_starter_image_alt_text": "Six yellow, round-ish things in numbered boxes: 1, a lemon; 2, a tennis ball; 3, a balloon; 4, a cheese wheel; 5, a sun; and 6, a smiley face sticker"
+}
