@@ -12,6 +12,10 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 jest.mock('@cdo/apps/adaptive/ai/resolveStepInstructions', () => ({
   resolveStepInstructions: jest.fn(),
 }));
+let mockIsViewingStudent = false;
+jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
+  usePathwayContext: () => ({isViewingStudent: mockIsViewingStudent}),
+}));
 const mockResolve = resolveStepInstructions as jest.Mock;
 
 const step: LevelStep = {
@@ -57,7 +61,22 @@ const base: StepInstructionsOptions = {
 };
 
 describe('useStepInstructions', () => {
-  beforeEach(() => jest.clearAllMocks());
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockIsViewingStudent = false;
+  });
+
+  it('tells the resolver when a teacher views a student', async () => {
+    mockIsViewingStudent = true;
+    mockResolve.mockResolvedValue('Saved.');
+    const {waitForNextUpdate} = renderHook(() => useStepInstructions(base));
+
+    await waitForNextUpdate();
+
+    expect(mockResolve).toHaveBeenCalledWith(
+      expect.objectContaining({isViewingStudent: true})
+    );
+  });
 
   it('stays unresolved and asks nothing while the project is loading', () => {
     const {result} = renderHook(() =>

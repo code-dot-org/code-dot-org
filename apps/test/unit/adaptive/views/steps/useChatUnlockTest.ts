@@ -32,6 +32,10 @@ jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
 jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({getState: () => ({lab2Project: {projectSources: {}}})}),
 }));
+let mockIsViewingStudent = false;
+jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
+  usePathwayContext: () => ({isViewingStudent: mockIsViewingStudent}),
+}));
 const mockJudgeEffort = judgeEffort as jest.Mock;
 const mockSendEvent = sendAdaptiveEvent as jest.Mock;
 const mockSendUnlocked = sendContinueUnlocked as jest.Mock;
@@ -121,6 +125,7 @@ describe('useChatUnlock', () => {
   beforeEach(() => {
     mockJudgeEffort.mockReset();
     mockSendEvent.mockReset();
+    mockIsViewingStudent = false;
     mockSendUnlocked.mockReset();
   });
 
@@ -333,7 +338,8 @@ describe('useChatUnlock', () => {
 
   it('does not listen while a teacher views a student', () => {
     const {chat, listeners} = fakeChat();
-    render(chat, {isViewingStudent: true});
+    mockIsViewingStudent = true;
+    render(chat);
 
     expect(listeners).toHaveLength(0);
   });

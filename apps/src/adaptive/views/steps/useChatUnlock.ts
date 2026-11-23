@@ -21,6 +21,7 @@ import {
   workAttempts,
 } from '../../progress/model';
 import {Checkpoint, LevelStep, Pathway} from '../../types';
+import {usePathwayContext} from '../PathwayContext';
 
 export interface ChatUnlockOptions extends LabHandles {
   pathway: Pathway;
@@ -35,7 +36,6 @@ export interface ChatUnlockOptions extends LabHandles {
   continueAllowed: boolean;
   /** Appends a chat entry to the step's validation history. */
   recordAttempt: (attempt: Omit<ValidationAttempt, 'at'>) => void;
-  isViewingStudent?: boolean;
 }
 
 /**
@@ -52,7 +52,8 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
   latestOptions.current = options;
   // One judge at a time, across resubscribes.
   const judging = useRef(false);
-  const {chat, step, continueAllowed, isViewingStudent} = options;
+  const {chat, step, continueAllowed} = options;
+  const {isViewingStudent} = usePathwayContext();
   const adapter =
     step.validation && !continueAllowed && !isViewingStudent
       ? workAdapterFor(step.levelProperties?.appName ?? '')

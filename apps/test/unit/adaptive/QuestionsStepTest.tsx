@@ -10,6 +10,11 @@ import {
 } from '@cdo/apps/adaptive/types';
 import QuestionsStep from '@cdo/apps/adaptive/views/steps/QuestionsStep';
 
+let mockIsViewingStudent = false;
+jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
+  usePathwayContext: () => ({isViewingStudent: mockIsViewingStudent}),
+}));
+
 const frQuestion = (
   id: number,
   text: string,
@@ -77,6 +82,7 @@ function renderStep(
   content: Step = step,
   isViewingStudent = false
 ) {
+  mockIsViewingStudent = isViewingStudent;
   const onComplete = jest.fn();
   const saved: [number, Answer[]][] = [];
   const Host = () => {
@@ -90,7 +96,6 @@ function renderStep(
           setAnswers(prev => ({...prev, [questionId]: list}));
         }}
         onComplete={onComplete}
-        isViewingStudent={isViewingStudent}
       />
     );
   };

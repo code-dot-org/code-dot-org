@@ -17,6 +17,7 @@ import {
   MultipleChoiceDiagnosticQuestion,
   QuestionsStep as QuestionsStepContent,
 } from '../../types';
+import {usePathwayContext} from '../PathwayContext';
 
 import styles from './stepPlayer.module.scss';
 
@@ -29,7 +30,6 @@ interface QuestionsStepProps {
   answers: StepAnswers;
   onSaveAnswers: (questionId: number, answers: Answer[]) => void;
   onComplete: () => void;
-  isViewingStudent?: boolean;
 }
 
 const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
@@ -37,8 +37,8 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   answers,
   onSaveAnswers,
   onComplete,
-  isViewingStudent = false,
 }) => {
+  const {isViewingStudent} = usePathwayContext();
   const {questions} = step;
   const [index, setIndex] = useState(0);
   const question = questions[index];

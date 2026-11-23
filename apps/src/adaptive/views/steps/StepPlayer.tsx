@@ -269,7 +269,6 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             answers={progress.steps[step.id]?.answers ?? NO_ANSWERS}
             onSaveAnswers={saveAnswers}
             onComplete={advance}
-            isViewingStudent={isViewingStudent}
           />
         );
       case 'review':

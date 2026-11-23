@@ -4,6 +4,7 @@ import {
   StepInstructionsOptions,
   resolveStepInstructions,
 } from '../../ai/resolveStepInstructions';
+import {usePathwayContext} from '../PathwayContext';
 
 const NO_INSTRUCTIONS = null;
 
@@ -12,7 +13,10 @@ const NO_INSTRUCTIONS = null;
  * indicating if the computation has resolved. Callers can pass plain
  * values without memoizing, since this hook handles memoization internally.
  */
-export function useStepInstructions(opts: StepInstructionsOptions) {
+export function useStepInstructions(
+  opts: Omit<StepInstructionsOptions, 'isViewingStudent'>
+) {
+  const {isViewingStudent} = usePathwayContext();
   // Undefined until resolved; null when resolved to no text at all.
   const [resolved, setResolved] = useState<string | typeof NO_INSTRUCTIONS>();
   const {name, description} = opts.projectInfo;
@@ -32,7 +36,7 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
       generatedInstructions: opts.generatedInstructions,
       saveGeneratedInstructions: opts.saveGeneratedInstructions,
       aichatContext: opts.aichatContext,
-      isViewingStudent: opts.isViewingStudent,
+      isViewingStudent,
     }).then(instructions => {
       if (!cancelled) setResolved(instructions ?? NO_INSTRUCTIONS);
     });
@@ -50,7 +54,7 @@ export function useStepInstructions(opts: StepInstructionsOptions) {
     opts.generatedInstructions,
     opts.saveGeneratedInstructions,
     opts.aichatContext,
-    opts.isViewingStudent,
+    isViewingStudent,
   ]);
   return {
     instructions: resolved ?? undefined,

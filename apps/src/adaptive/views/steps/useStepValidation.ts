@@ -19,6 +19,7 @@ import {
   ValidationAttempt,
   workAttempts,
 } from '../../progress/model';
+import {usePathwayContext} from '../PathwayContext';
 
 import {useChatUnlock} from './useChatUnlock';
 
@@ -31,7 +32,6 @@ export interface StepValidationOptions
   progress: StepProgress | undefined;
   /** Whether Continue is already open, by work or by chat. */
   continueAllowed: boolean;
-  isViewingStudent?: boolean;
 }
 
 /**
@@ -46,7 +46,8 @@ export function useStepValidation(options: StepValidationOptions): void {
   // Read at judge time, so a change to the options does not resubscribe.
   const latestOptions = useRef(options);
   latestOptions.current = options;
-  const {chat, step, isViewingStudent} = options;
+  const {chat, step} = options;
+  const {isViewingStudent} = usePathwayContext();
   const adapter =
     step.validation && !isViewingStudent
       ? workAdapterFor(step.levelProperties?.appName ?? '')
@@ -62,7 +63,6 @@ export function useStepValidation(options: StepValidationOptions): void {
     progress: options.progress,
     continueAllowed: options.continueAllowed,
     recordAttempt: options.recordValidation,
-    isViewingStudent,
   });
 
   useEffect(() => {

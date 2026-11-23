@@ -19,6 +19,10 @@ jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
   ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
   sendContinueUnlocked: jest.fn(),
 }));
+let mockIsViewingStudent = false;
+jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
+  usePathwayContext: () => ({isViewingStudent: mockIsViewingStudent}),
+}));
 jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({
     getState: () => ({
@@ -109,7 +113,6 @@ const render = (
   extra: {
     progress?: StepProgress;
     continueAllowed?: boolean;
-    isViewingStudent?: boolean;
   } = {}
 ) => {
   const options = baseOptions(chat);
@@ -127,6 +130,7 @@ describe('useStepValidation', () => {
   beforeEach(() => {
     mockValidateStep.mockReset();
     mockSendUnlocked.mockReset();
+    mockIsViewingStudent = false;
   });
 
   it("judges each piece of the lab's work, records the verdict and has the lab say a check is running, then the verdict", async () => {
@@ -287,13 +291,11 @@ describe('useStepValidation', () => {
     expect(listeners).toHaveLength(0);
   });
 
-  it('judges nothing, and tells the chat unlock hook so, while a teacher views a student', () => {
+  it('judges nothing while a teacher views a student', () => {
     const {chat, listeners} = fakeChat();
-    render(chat, {}, {isViewingStudent: true});
+    mockIsViewingStudent = true;
+    render(chat);
 
     expect(listeners).toHaveLength(0);
-    expect(mockUseChatUnlock).toHaveBeenLastCalledWith(
-      expect.objectContaining({isViewingStudent: true})
-    );
   });
 });
