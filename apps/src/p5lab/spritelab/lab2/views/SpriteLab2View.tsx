@@ -173,7 +173,7 @@ import RunButtons, {ArrowCross} from './components/PlayBar';
 import PlayBarGroups from './components/PlayBarGroups';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
-import {sceneDropdownButtonId} from './components/SceneDropdown';
+import SceneDropdown, {sceneDropdownButtonId} from './components/SceneDropdown';
 import SceneSidebar from './components/SceneSidebar';
 import ShareActions from './components/ShareActions';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
@@ -359,8 +359,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     (isLevelbuilder && imagesAdvancedParam) || isLevelEditMode;
   // ?world-block=true: an experiment with Images | Scenes at the top, the
   // scenes listed beside the code, and the world edited from a set world
-  // block instead of a World tab.
-  const worldBlock = useMemo(() => queryParams('world-block') === 'true', []);
+  // block instead of a World tab. ?world-block=dropdown is the same, but
+  // with a scene dropdown in the middle of the bar over the code in place
+  // of the list.
+  const worldBlockParam = useMemo(() => queryParams('world-block'), []);
+  const worldBlock =
+    worldBlockParam === 'true' || worldBlockParam === 'dropdown';
+  const sceneDropdownInStrip = worldBlockParam === 'dropdown';
   // The mode decides the tab set, and an image level's is empty: its panel
   // replaces the shell. A level with no mode, or one whose authored kind is
   // not a kind we know, falls back to the lab defaults.
@@ -2337,7 +2342,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     onManageScenes: () => setScenesDialog({creating: false}),
   };
   const catalogOffered = catalog.length > 0 && isEditable;
-  const sceneSidebarShown = worldBlock && scenesOffered && editorsShown;
+  const sceneSidebarShown =
+    worldBlock && !sceneDropdownInStrip && scenesOffered && editorsShown;
   const [worldEditorOpen, setWorldEditorOpen] = useState(false);
   // Give the set world block the open scene's world to draw and the world
   // editor dialog to open. Set on every render, not once: the dev server
@@ -2620,6 +2626,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                         activeTab === 'Code' ? 'Workspace' : activeTab
                       } (view only)`
                     : undefined
+                }
+                titleContent={
+                  sceneDropdownInStrip &&
+                  scenesOffered &&
+                  activeTab === 'Code' && <SceneDropdown {...sceneControls} />
                 }
                 switchAtStart
                 history={
