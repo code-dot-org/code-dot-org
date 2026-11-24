@@ -52,11 +52,13 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
         }))}
       />
     );
-  const cut = between ? editors.indexOf(between.after) + 1 : editors.length;
+  const split =
+    between && editors.includes(between.after) ? between : undefined;
+  const cut = split ? editors.indexOf(split.after) + 1 : editors.length;
   return (
     <div role="group" aria-label="Edit" className={moduleStyles.editorSwitch}>
       {buttons(editors.slice(0, cut))}
-      {between?.node}
+      {split?.node}
       {buttons(editors.slice(cut))}
     </div>
   );

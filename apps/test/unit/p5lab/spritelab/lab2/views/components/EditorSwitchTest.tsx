@@ -61,7 +61,24 @@ describe('EditorSwitch', () => {
     expect(
       [...group.querySelectorAll('button')].map(b => b.textContent?.trim())
     ).toEqual(['Images', 'Scene 1', 'World', 'Code']);
-    // Two segmented groups, the scene control its own element between.
     expect(group.childElementCount).toBe(3);
+  });
+
+  it('leaves the control out when the editor it follows is not offered', () => {
+    render(
+      <EditorSwitch
+        value="Code"
+        onChange={jest.fn()}
+        editors={['World', 'Code']}
+        between={{
+          after: 'Images',
+          node: <button type="button">Scene 1</button>,
+        }}
+      />
+    );
+    const group = screen.getByRole('group', {name: 'Edit'});
+    expect(
+      [...group.querySelectorAll('button')].map(b => b.textContent?.trim())
+    ).toEqual(['World', 'Code']);
   });
 });
