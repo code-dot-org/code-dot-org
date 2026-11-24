@@ -18,8 +18,6 @@ describe('BLOCK_HELP', () => {
     'spritelab2_touchedSprite',
     'spritelab2_clickedSprite',
     'gamelab_everyInterval',
-    'gamelab_spriteClicked',
-    'gamelab_atTime',
     'spritelab2_askAI',
     'spritelab2_askAIWithChoices',
     'spritelab2_setSystemPrompt',
