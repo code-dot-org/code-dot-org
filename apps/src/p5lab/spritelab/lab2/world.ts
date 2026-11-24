@@ -195,7 +195,7 @@ export function paintWorldCell(
 // draw on top. Placed items are cell-sized: the prelude pins the default
 // sprite size to one cell, which platformer levels already use. Sprites of
 // the world's player image join the player group with the arrow keys wired,
-// as set as player does.
+// as the "set … as player" block does.
 export function compileWorldPrelude(world?: World): string {
   const rows = world?.grid ?? [];
   const sceneSize = sceneGridSize(world);
