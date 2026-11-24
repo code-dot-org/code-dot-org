@@ -112,7 +112,7 @@ const AccessBlockedScreen: React.FunctionComponent<{
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get verified
+              Learn about setup
             </MuiButton>
           </div>
           <MuiLink
