@@ -14,6 +14,6 @@
 // Declared after hover so it wins when both apply.
 :global(.react-flow__node-group.selected) .groupNode,
 :global(.react-flow__node-group:focus-visible) .groupNode {
-  outline: 2px solid var(--borders-brand-teal-primary);
+  outline: 2px solid var(--border-focused-primary);
   outline-offset: 4px;
 }

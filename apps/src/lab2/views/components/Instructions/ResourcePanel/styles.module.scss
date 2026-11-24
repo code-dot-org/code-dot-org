@@ -128,7 +128,7 @@
       border-inline: none !important;
     }
 
-    @include mixins.focus-styles(var(--borders-brand-teal-primary), -2px);
+    @include mixins.focus-styles(var(--border-focused-primary), -2px);
   }
 
   // Styles applied when the sidebar is collapsed

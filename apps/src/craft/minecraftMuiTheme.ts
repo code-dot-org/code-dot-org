@@ -98,7 +98,7 @@ const MINECRAFT_CHROME = {
     outline: 'none',
   },
   '&:focus-visible, a&:focus-visible': {
-    outline: '2px solid var(--borders-brand-teal-primary)',
+    outline: '2px solid var(--border-focused-primary)',
     outlineOffset: '2px',
     borderRadius: 0,
     boxShadow: 'none',

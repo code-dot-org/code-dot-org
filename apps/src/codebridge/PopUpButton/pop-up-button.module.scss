@@ -1,5 +1,5 @@
 @mixin focus-styles($outline-offset, $border-radius) {
-  outline: var(--borders-brand-teal-primary) solid 2px;
+  outline: var(--border-focused-primary) solid 2px;
   outline-offset: $outline-offset;
   border-radius: $border-radius;
 }

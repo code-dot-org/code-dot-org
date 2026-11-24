@@ -96,7 +96,7 @@ p.noMarginBottomParagraph {
   }
 
   &:focus-visible {
-    outline: 2px solid var(--borders-brand-teal-primary);
+    outline: 2px solid var(--border-focused-primary);
     color: var(--text-brand-teal-primary);
     outline-offset: 2px;
     border-radius: 2px;
@@ -201,7 +201,7 @@ button.advancedSettingsButton {
   }
 
   &:focus-visible {
-    outline: 2px solid var(--borders-brand-teal-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
     border-radius: 2px;
   }

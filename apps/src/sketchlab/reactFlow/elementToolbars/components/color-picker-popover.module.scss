@@ -47,7 +47,7 @@
 
   // Propagate the hidden input's focus state to the label.
   &:focus-within {
-    outline: 2px solid var(--borders-brand-teal-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
   }
 }

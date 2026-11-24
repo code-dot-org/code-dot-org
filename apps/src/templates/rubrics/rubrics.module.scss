@@ -160,7 +160,7 @@ p.countText {
   }
 
   &:focus {
-    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline: var(--border-focused-primary) solid 2px;
     outline-offset: 2px;
   }
 }

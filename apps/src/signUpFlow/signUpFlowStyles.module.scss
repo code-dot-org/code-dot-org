@@ -524,7 +524,7 @@ span:not(:global(.MuiButton-icon)) {
 
         :focus {
           outline-style: solid;
-          outline-color: var(--borders-brand-teal-primary);
+          outline-color: var(--border-focused-primary);
           outline-width: 2px;
           outline-offset: 2px;
           border-radius: $regular-border-radius;
