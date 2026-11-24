@@ -191,7 +191,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
                 <MuiButton
                   variant="contained"
                   color="error"
-                  size="extraSmall"
+                  size="small"
                   fullWidth
                   onClick={() => onDelete(scene.id)}
                 >
@@ -200,7 +200,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
                 <MuiButton
                   variant="outlined"
                   color="secondary"
-                  size="extraSmall"
+                  size="small"
                   fullWidth
                   onClick={() => setConfirming(false)}
                 >
@@ -212,7 +212,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
             <MuiButton
               variant="outlined"
               color="error"
-              size="extraSmall"
+              size="small"
               startIcon={<FontAwesomeV6Icon iconName="trash" aria-hidden />}
               disabled={disabled}
               onClick={() => setConfirming(true)}
@@ -232,7 +232,7 @@ const SceneCard: React.FunctionComponent<SceneCardProps> = ({
             <MuiButton
               variant="outlined"
               color="secondary"
-              size="extraSmall"
+              size="small"
               startIcon={<FontAwesomeV6Icon iconName="play" aria-hidden />}
               disabled={disabled}
               onClick={() => onMakeStart(scene.id)}
