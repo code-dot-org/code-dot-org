@@ -37,7 +37,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-09-04 18:50:35 UTC",
+    "serialized_at": "2026-11-23 18:34:36 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1104,6 +1104,9 @@
 
   ],
   "objectives": [
+
+  ],
+  "objectives_script_levels": [
 
   ],
   "lessons_standards": [

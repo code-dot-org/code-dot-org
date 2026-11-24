@@ -24,7 +24,7 @@ A computer has no eyes, no ears, only numbers, specifically, ones and zeros call
 
 That gap between what looks like a picture to us and what's actually just numbers to a computer is exactly what your students experience hands-on in the next level, filling in a grid of bits themselves and watching an image appear.
 
-This is what a **representation** is: a way of describing something real, a picture, a sound, anything, with data a computer can understand. Every classifier your students build this unit, from nearest neighbors to the cello-and-violin one coming up later in this lesson, starts with that same move: choosing a representation before a computer can sense anything at all.
+This is what a **representation** is: a way of describing something real, a picture, a sound, anything, with data a computer can understand. Every classifier your students build this unit starts with choosing a representation before a computer can sense anything at all.
 
 ## Lesson Vocabulary
 
@@ -43,7 +43,7 @@ Two terms carry this lesson, click each card to see its definition:
 
 
 
-Today's two activities explore two of those input types: images, through the "Seeing" activity next, and sound, through the "Hearing" activity after that.
+This lesson's two activities explore two of those input types: images, through the "Seeing" activity next, and sound, through the "Hearing" activity after that.
 
 
 MARKDOWN
