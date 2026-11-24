@@ -222,7 +222,15 @@
     white-space: nowrap;
     text-transform: none;
 
-    &:hover {
+    // The theme's contained-primary skin whitens the label in these states.
+    &:hover,
+    &:focus,
+    &:active {
+      color: #121212;
+    }
+
+    &:hover,
+    &:active {
       background: #e8e8e8;
     }
 

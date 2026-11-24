@@ -193,6 +193,12 @@ $purple: var(--background-brand-purple-primary);
   letter-spacing: 0.04em;
   color: var(--text-neutral-secondary);
   cursor: pointer;
+
+  // Studio's legacy.scss gives every details summary a light hover fill.
+  &:hover {
+    background: none;
+    text-decoration: underline;
+  }
 }
 
 .transcriptLines {
