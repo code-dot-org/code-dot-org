@@ -30,9 +30,7 @@ Frequency and volume alone aren't enough, because a cello and a violin playing t
   <p>&#8505; <strong>What to listen for in Levels 2-3:</strong> once students add brightness as a third feature, well-tuned classifiers should correctly classify 90%+ of notes. Look for students who can explain why brightness helps, violins tend to sound both higher and brighter, not just that their accuracy number went up.</p>
 </div>
 
-<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <p>&#9888;&#65039; <strong>A note on your table's framing:</strong> I built this level around the real circulate note, students under-testing a classifier that looks like it works, rather than "more features is always better." The teaching guide doesn't actually document that misconception for this lesson; if you've seen it come up in practice and want it added alongside this, let me know and I'll fold it in as a second Stuck/Strong pair.</p>
-</div>
+
 
 ## Assessment: Level 3 Check for Understanding
 

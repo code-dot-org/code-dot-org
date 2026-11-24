@@ -69,7 +69,7 @@ Strong answers on the last one either defend ratings ("students should get snack
 
 ## Wrap Up: Models Get Harder to Interpret
 
-Close by showing your students that the models in this lesson are the easy ones. On the left is a regression model with two variables, which is harder to explain than one. On the right is one visualization of a large language model, the kind of model behind AI chatbots.
+Close by showing your students that the models in this lesson are the easy ones. On the left is a regression model with two variables. On the right is one visualization of a large language model, the kind of model behind AI chatbots.
 
 <div style="display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 260px;">

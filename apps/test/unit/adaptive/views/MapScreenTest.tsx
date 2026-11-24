@@ -31,11 +31,18 @@ jest.mock('@cdo/apps/adaptive/project/usePathwayProject', () => ({
   usePathwayProject: () => ({isLoading: false}),
 }));
 
-// MapView mock exposes onSelect so tests can simulate a checkpoint click.
+// MapView mock exposes onSelect so tests can simulate a checkpoint click,
+// and the skeletonStyle it receives as data-skeleton-style.
 jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
   __esModule: true,
-  default: ({onSelect}: {onSelect?: (id: string) => void}) => (
-    <div aria-label="map">
+  default: ({
+    onSelect,
+    skeletonStyle,
+  }: {
+    onSelect?: (id: string) => void;
+    skeletonStyle?: string;
+  }) => (
+    <div aria-label="map" data-skeleton-style={skeletonStyle ?? 'none'}>
       <button type="button" onClick={() => onSelect?.('cp-1')}>
         select cp-1
       </button>
@@ -426,6 +433,74 @@ describe('MapScreen tour', () => {
       renderMapScreen({hasSkippedCheckpoints: true});
       expect(createdTour).not.toBeNull();
       expect(createdTour.isActive()).toBe(true);
+    });
+  });
+
+  describe('map skeleton', () => {
+    const skeletonStyle = () =>
+      screen.getByLabelText('map').getAttribute('data-skeleton-style');
+
+    describe.each([false, true])(
+      'with hasSkippedCheckpoints=%s',
+      hasSkippedCheckpoints => {
+        it('skeletons the whole map on the first step', () => {
+          renderMapScreen({hasSkippedCheckpoints});
+          expect(skeletonStyle()).toBe('all');
+        });
+
+        it('skeletons all but the first checkpoint on the second step', () => {
+          renderMapScreen({hasSkippedCheckpoints});
+          act(() => {
+            createdTour.next(); // → step 1
+          });
+          expect(skeletonStyle()).toBe('allButFirst');
+        });
+
+        it('shows the whole map from the third step', () => {
+          renderMapScreen({hasSkippedCheckpoints});
+          act(() => {
+            createdTour.next(); // → step 1
+          });
+          act(() => {
+            createdTour.next(); // → step 2
+          });
+          expect(skeletonStyle()).toBe('none');
+        });
+      }
+    );
+
+    it('skeletons again when navigating back to the second step', () => {
+      renderMapScreen();
+      act(() => {
+        createdTour.next(); // → step 1
+      });
+      act(() => {
+        createdTour.next(); // → step 2
+      });
+      act(() => {
+        createdTour.back(); // → step 1
+      });
+      expect(skeletonStyle()).toBe('allButFirst');
+    });
+
+    it('shows the whole map once the tour is cancelled', () => {
+      renderMapScreen();
+      act(() => {
+        createdTour.cancel();
+      });
+      expect(skeletonStyle()).toBe('none');
+    });
+
+    it('does not skeleton the map when the storage key is set', () => {
+      localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
+      renderMapScreen();
+      expect(skeletonStyle()).toBe('none');
+    });
+
+    it('does not skeleton the map when the DCDO flag is off', () => {
+      (DCDO.get as jest.Mock).mockReturnValue(false);
+      renderMapScreen();
+      expect(skeletonStyle()).toBe('none');
     });
   });
 

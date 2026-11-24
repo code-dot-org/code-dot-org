@@ -31,6 +31,8 @@ module ChallengeEvaluationPromptHelper
 
       Rubric:
       #{rubric_text(challenge.rubric)}
+
+      The challenge question and rubric may name a way to respond, such as a voice recording or typed text. Treat that as describing what the student must communicate, not how. A student may answer in writing, by speaking, or on the whiteboard, whichever is more accessible to them. If the rubric asks for a voice recording and the student wrote the same content instead, or the other way around, grade it exactly as if they had used the named way. Never choose a lower level because of how the student responded, including under a rubric clause such as "the voice recording is missing."
     PROMPT
   end
 

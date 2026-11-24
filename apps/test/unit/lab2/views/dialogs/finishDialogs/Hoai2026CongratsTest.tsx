@@ -45,7 +45,7 @@ describe('Hoai2026Congrats', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {
-        name: 'Discover more in Sprite Lab',
+        name: 'Discover more in Quest Builder',
       })
     ).toBeInTheDocument();
     expect(
@@ -80,7 +80,7 @@ describe('Hoai2026Congrats', () => {
   it('shows a picture on the students card, with no name to read out', () => {
     renderDialog();
     const students = screen.getByRole('region', {
-      name: 'Discover more in Sprite Lab',
+      name: 'Discover more in Quest Builder',
     });
     expect(within(students).getByAltText('')).toBeInTheDocument();
   });
@@ -88,7 +88,7 @@ describe('Hoai2026Congrats', () => {
   it('opens a remix of the game from the student card', () => {
     const onRemix = jest.fn();
     renderDialog({onRemix});
-    fireEvent.click(screen.getByRole('button', {name: 'Open Sprite Lab'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Remix your project'}));
     expect(onRemix).toHaveBeenCalledTimes(1);
   });
 
@@ -98,10 +98,10 @@ describe('Hoai2026Congrats', () => {
     expect(screen.getByRole('button', {name: 'Certificate'})).toBeDisabled();
   });
 
-  it('holds Open Sprite Lab when the project may not be remixed', () => {
+  it('holds Remix your project when the project may not be remixed', () => {
     renderDialog({onRemix: undefined});
     expect(
-      screen.getByRole('button', {name: 'Open Sprite Lab'})
+      screen.getByRole('button', {name: 'Remix your project'})
     ).toBeDisabled();
   });
 
@@ -145,7 +145,7 @@ describe('Hoai2026Congrats', () => {
     sendEvent.mockClear();
     const press = (role: 'button' | 'link', name: RegExp | string) =>
       fireEvent.click(screen.getByRole(role, {name}));
-    press('button', 'Open Sprite Lab');
+    press('button', 'Remix your project');
     press('link', /How AI Makes Decisions/);
     press('link', /AI Discoveries/);
     press('button', 'Copy link');
