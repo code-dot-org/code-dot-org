@@ -27,8 +27,6 @@ export const Route = createFileRoute('/users/edit')({
       throw redirect({href, reloadDocument: true});
     }
   },
-  // Title is set here, not in a component effect: HeadContent manages it per
-  // matched route, so it needs no cleanup and is restored on navigation.
   head: () => ({meta: [{title: pageTitle('My Account')}]}),
   component: AccountsRoute,
   errorComponent: AccountsError,
