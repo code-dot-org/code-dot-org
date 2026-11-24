@@ -98,7 +98,9 @@ internal class LoadingCover(
         } else {
             webView.importantForAccessibility = View.IMPORTANT_FOR_ACCESSIBILITY_AUTO
             webView.descendantFocusability = ViewGroup.FOCUS_BEFORE_DESCENDANTS
-            webView.isFocusable = true
+            // isFocusable = false also cleared focusability in touch mode, which
+            // a tapped text field needs to open the keyboard; this restores both.
+            webView.isFocusableInTouchMode = true
         }
     }
 
