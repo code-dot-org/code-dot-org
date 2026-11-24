@@ -2361,10 +2361,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [sceneDropdownInStrip, workspaceVersion]);
   const sceneSidebarShown =
     worldBlock && !sceneDropdownInStrip && scenesOffered && editorsShown;
-  // The set world block whose world the dialog is editing, and that world.
+  // The set world block whose world the dialog is editing, and the dialog's
+  // copy of that world, written to the block when the dialog closes: one
+  // undo step and one save per visit, not one per painted cell.
   const [worldEditor, setWorldEditor] = useState<{
     field: WorldField;
     world: World;
+    changed: boolean;
   } | null>(null);
   const worldEditorRef = useRef(worldEditor);
   worldEditorRef.current = worldEditor;
@@ -2381,6 +2384,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             field,
             world:
               field.getWorld() ?? createEmptyWorld(activeSceneSizeRef.current),
+            changed: false,
           }),
       });
     }
@@ -2397,12 +2401,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       }
       // Read by the next paint before React renders again, as a drag paints
       // several cells quickly.
-      worldEditorRef.current = {...editing, world};
-      editing.field.setWorld(world);
+      worldEditorRef.current = {...editing, world, changed: true};
       setWorldEditor(worldEditorRef.current);
     },
     [worldKeeps]
   );
+  const closeWorldEditor = useCallback(() => {
+    const editing = worldEditorRef.current;
+    if (editing?.changed) {
+      editing.field.setWorld(editing.world);
+    }
+    worldEditorRef.current = null;
+    setWorldEditor(null);
+  }, []);
   // Redraw the block's picture when pictures finish trimming.
   useEffect(() => {
     if (!worldBlock) {
@@ -2545,10 +2556,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         <Modal
           title="World"
           className={moduleStyles.worldDialog}
-          onClose={() => setWorldEditor(null)}
+          onClose={closeWorldEditor}
           primaryButtonProps={{
             children: 'Done',
-            onClick: () => setWorldEditor(null),
+            onClick: closeWorldEditor,
           }}
           customContent={
             <div className={moduleStyles.worldDialogBody}>
