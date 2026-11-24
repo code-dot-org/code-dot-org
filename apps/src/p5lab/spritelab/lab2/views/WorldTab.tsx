@@ -287,6 +287,8 @@ interface WorldTabProps {
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
+  /** The smallest the grid shrinks to, in pixels. */
+  minGridPixels?: number;
 }
 
 /**
@@ -312,6 +314,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   kept = NOTHING_KEPT,
   selected,
   onSelect,
+  minGridPixels = MIN_GRID_PIXELS,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails prefer the engine's trimmed image (a sprite sheet's is its
@@ -701,7 +704,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     const observer = new ResizeObserver(() => {
       setGridPixels(
         Math.max(
-          MIN_GRID_PIXELS,
+          minGridPixels,
           Math.min(GRID_PIXELS, area.clientHeight, area.clientWidth)
         )
       );
@@ -709,7 +712,7 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
     });
     observer.observe(area);
     return () => observer.disconnect();
-  }, []);
+  }, [minGridPixels]);
 
   const cellPixels = gridPixels / sceneSize;
   // Unmeasured, the palette is one column; empty, it keeps one cell's shape.

@@ -236,6 +236,9 @@ const EDITORS: Editor[] = ['Images', 'World', 'Code'];
 const WORLD_BLOCK_EDITORS: Editor[] = ['Images', 'Code'];
 const WORLD_BLOCK_LABELS = {Code: 'Scenes'};
 const WORLD_BLOCK_TYPES = [SET_WORLD_BLOCK_TYPE];
+// The world dialog fits the window, so its grid may shrink further than
+// the World tab's.
+const WORLD_DIALOG_MIN_GRID_PIXELS = 160;
 // ?world-block=dropdown: the scene dropdown's distance past the toolbox.
 const SCENE_DROPDOWN_GAP = 12;
 // The preview column's share of the browser's width: beside a 280 px panel
@@ -2531,6 +2534,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 kept={worldKeeps}
                 selected={worldPaletteSelection}
                 onSelect={choosePaletteSelection}
+                minGridPixels={WORLD_DIALOG_MIN_GRID_PIXELS}
               />
             </div>
           }

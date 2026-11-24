@@ -368,15 +368,27 @@ $scene-sidebar-width: 150px;
   gap: 4px;
 }
 
-// The world editor in a dialog, opened from a set world block.
+// The world editor in a dialog, opened from a set world block. It stays
+// $world-dialog-margin inside the window; the grid shrinks to the room left.
+$world-dialog-margin: 24px;
+
 .worldDialog {
-  width: min(900px, 92vw);
+  width: min(900px, calc(100vw - 2 * $world-dialog-margin));
   max-width: none;
+  max-height: calc(100dvh - 2 * $world-dialog-margin);
+  margin: 0;
+
+  // The dialog's text section, which holds the body: free to shrink.
+  > :first-child {
+    min-height: 0;
+  }
 }
 
 .worldDialogBody {
   position: relative;
-  height: min(560px, 70vh);
+  align-self: stretch;
+  height: 560px;
+  min-height: 0;
 }
 
 // The editors stop above the scene bar at their base.
