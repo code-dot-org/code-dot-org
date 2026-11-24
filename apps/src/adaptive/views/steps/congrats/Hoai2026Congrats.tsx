@@ -1,6 +1,6 @@
 // The Hour of AI 2026 wrap-up: a card for the challenge, then a
-// row of what to do next. Students get a share link, a zip of their code
-// and the certificate; teachers get the share link, the certificate and two
+// row of what to do next. Students get a share link, a link to export their code,
+// and the certificate; teachers get the share link, the certificate, and two
 // links out to professional learning. Every row item leaves the tutorial,
 // so the panel has no Continue of its own.
 
