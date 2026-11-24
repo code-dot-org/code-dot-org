@@ -72,6 +72,8 @@ const styles = {
   phoneFrameButton: {
     minWidth: 105,
     textAlign: 'center',
+    // Keeps the button off the bottom edge of the phone frame above it.
+    marginTop: 8,
   },
 };
 

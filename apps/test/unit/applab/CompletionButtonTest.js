@@ -62,6 +62,32 @@ describe('CompletionButton', () => {
     expect(button.text()).toBe('Finish');
   });
 
+  it('leaves a gap above the button when rendered below the phone frame', () => {
+    const completionButton = mount(
+      <CompletionButton
+        isProjectLevel={false}
+        isSubmittable={false}
+        isSubmitted={false}
+        playspacePhoneFrame={true}
+      />
+    );
+    const button = completionButton.find('button');
+    expect(button.getDOMNode().style.marginTop).toBe('8px');
+  });
+
+  it('adds no margin to the button outside the phone frame', () => {
+    const completionButton = mount(
+      <CompletionButton
+        isProjectLevel={false}
+        isSubmittable={false}
+        isSubmitted={false}
+        playspacePhoneFrame={false}
+      />
+    );
+    const button = completionButton.find('button');
+    expect(button.getDOMNode().style.marginTop).toBe('');
+  });
+
   it('project level (cant submit)', () => {
     const completionButton = mount(
       <CompletionButton
