@@ -1,5 +1,3 @@
-import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
-
 import {
   isReadOnlyAndShouldNotBeSaved,
   isReadOnlyWorkspace,
@@ -35,32 +33,34 @@ function buildState(
 describe('lab2 read-only selectors', () => {
   it('a running Python Lab workspace is read-only but still worth saving', () => {
     const state = buildState({isRunning: true});
-    expect(isReadOnlyWorkspace(state)).to.be.true;
-    expect(isReadOnlyAndShouldNotBeSaved(state)).to.be.false;
+    expect(isReadOnlyWorkspace(state)).toBe(true);
+    expect(isReadOnlyAndShouldNotBeSaved(state)).toBe(false);
   });
 
   it('a project the user does not own is not saved', () => {
-    expect(isReadOnlyAndShouldNotBeSaved(buildState({isOwner: false}))).to.be
-      .true;
+    expect(isReadOnlyAndShouldNotBeSaved(buildState({isOwner: false}))).toBe(
+      true
+    );
   });
 
   it('an old version being previewed is not saved', () => {
-    expect(isReadOnlyAndShouldNotBeSaved(buildState({viewingOldVersion: true})))
-      .to.be.true;
+    expect(
+      isReadOnlyAndShouldNotBeSaved(buildState({viewingOldVersion: true}))
+    ).toBe(true);
   });
 
   it('an editable project is saved', () => {
-    expect(isReadOnlyAndShouldNotBeSaved(buildState())).to.be.false;
+    expect(isReadOnlyAndShouldNotBeSaved(buildState())).toBe(false);
   });
 
   // Running must not mask a read-only reason that stands on its own.
   it('an old version being previewed is not saved while it runs', () => {
     const state = buildState({viewingOldVersion: true, isRunning: true});
-    expect(isReadOnlyAndShouldNotBeSaved(state)).to.be.true;
+    expect(isReadOnlyAndShouldNotBeSaved(state)).toBe(true);
   });
 
   it('a project the user does not own is not saved while it runs', () => {
     const state = buildState({isOwner: false, isRunning: true});
-    expect(isReadOnlyAndShouldNotBeSaved(state)).to.be.true;
+    expect(isReadOnlyAndShouldNotBeSaved(state)).toBe(true);
   });
 });
