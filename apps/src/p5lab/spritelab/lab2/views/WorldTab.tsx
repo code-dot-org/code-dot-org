@@ -1,7 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -14,6 +21,7 @@ import {
   NOTHING_KEPT,
   World,
   WorldCell,
+  worldSpriteImages,
 } from '../world';
 
 import moduleStyles from './world-tab.module.scss';
@@ -40,6 +48,9 @@ const DRAG_START_PX = 6;
 // custom properties.
 const PALETTE_ITEM_PX = 64;
 const PALETTE_GAP_PX = 8;
+// Space between the grid and the player column; .worldGridAreaWithPlayer's
+// gap must match.
+const PLAYER_COLUMN_GAP_PX = 20;
 
 /** Items per palette column for the room available, at least one. */
 export function paletteItemsPerColumn(height: number): number {
@@ -287,6 +298,10 @@ interface WorldTabProps {
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
+  minGridPixels?: number;
+  // When set, a column to the right of the grid lists the world's sprite
+  // images; pressing one makes it the player.
+  onChangePlayer?: (player: string | undefined) => void;
 }
 
 /**
@@ -312,6 +327,8 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   kept = NOTHING_KEPT,
   selected,
   onSelect,
+  minGridPixels = MIN_GRID_PIXELS,
+  onChangePlayer,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // Thumbnails prefer the engine's trimmed image (a sprite sheet's is its
@@ -693,25 +710,36 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   const gridAreaRef = useRef<HTMLDivElement | null>(null);
   const [gridPixels, setGridPixels] = useState(GRID_PIXELS);
   const [areaHeight, setAreaHeight] = useState(0);
-  useEffect(() => {
+  const playerColumn = !!onChangePlayer;
+  // Measured before the first paint too, so the grid does not show at full
+  // size and then shrink.
+  useLayoutEffect(() => {
     const area = gridAreaRef.current;
     if (!area) {
       return;
     }
-    const observer = new ResizeObserver(() => {
+    const measure = () => {
       setGridPixels(
         Math.max(
-          MIN_GRID_PIXELS,
-          Math.min(GRID_PIXELS, area.clientHeight, area.clientWidth)
+          minGridPixels,
+          Math.min(
+            GRID_PIXELS,
+            area.clientHeight,
+            area.clientWidth -
+              (playerColumn ? PALETTE_ITEM_PX + PLAYER_COLUMN_GAP_PX : 0)
+          )
         )
       );
       setAreaHeight(area.clientHeight);
-    });
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
     observer.observe(area);
     return () => observer.disconnect();
-  }, []);
+  }, [minGridPixels, playerColumn]);
 
   const cellPixels = gridPixels / sceneSize;
+  const playerImages = useMemo(() => worldSpriteImages(world), [world]);
   // Unmeasured, the palette is one column; empty, it keeps one cell's shape.
   const paletteRows = Math.max(
     1,
@@ -959,7 +987,13 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         {!palette.length && (
           <p className={moduleStyles.worldEmpty}>{emptyMessage}</p>
         )}
-        <div ref={gridAreaRef} className={moduleStyles.worldGridArea}>
+        <div
+          ref={gridAreaRef}
+          className={classNames(
+            moduleStyles.worldGridArea,
+            playerColumn && moduleStyles.worldGridAreaWithPlayer
+          )}
+        >
           <div
             ref={gridRef}
             role="grid"
@@ -989,6 +1023,62 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
               />
             ))}
           </div>
+          {onChangePlayer && (
+            <div
+              role="group"
+              aria-labelledby="world-player-heading"
+              className={moduleStyles.worldPlayerColumn}
+              style={paletteVars}
+            >
+              <p
+                id="world-player-heading"
+                className={moduleStyles.worldPlayerHeading}
+              >
+                Player
+              </p>
+              {playerImages.length ? (
+                playerImages.map((image, index) => {
+                  const isPlayer = image === world?.player;
+                  return (
+                    <PaletteTooltip
+                      key={image}
+                      tooltipId={`world-player-${index}`}
+                      text={
+                        isPlayer
+                          ? `${image} is the player`
+                          : `Make ${image} the player`
+                      }
+                    >
+                      <button
+                        type="button"
+                        aria-pressed={isPlayer}
+                        className={classNames(
+                          moduleStyles.worldPaletteItem,
+                          isPlayer && moduleStyles.worldPaletteSelected
+                        )}
+                        onClick={() =>
+                          onChangePlayer(isPlayer ? undefined : image)
+                        }
+                      >
+                        <span className={moduleStyles.srOnly}>{image}</span>
+                        {thumbsByImage.get(image) && (
+                          <img
+                            src={thumbsByImage.get(image)}
+                            alt=""
+                            draggable={false}
+                          />
+                        )}
+                      </button>
+                    </PaletteTooltip>
+                  );
+                })
+              ) : (
+                <p className={moduleStyles.worldPlayerEmpty}>
+                  Place a character first.
+                </p>
+              )}
+            </div>
+          )}
         </div>
       </div>
       {/* Always mounted, so the first move of a drag has it to place; sized

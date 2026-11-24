@@ -11,6 +11,8 @@ interface EditorSwitchProps {
   /** Editors this level does not enable; shown disabled rather than left
       out, so the switch keeps one shape across the unit's levels. */
   disabledEditors?: Editor[];
+  /** Button text in place of an editor's name. */
+  labels?: Partial<Record<Editor, string>>;
 }
 
 const DEFAULT_EDITORS: Editor[] = ['Code', 'World'];
@@ -30,6 +32,7 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
   onChange,
   editors = DEFAULT_EDITORS,
   disabledEditors = [],
+  labels = {},
 }) => (
   <div role="group" aria-label="Edit">
     <SegmentedButtons
@@ -39,7 +42,7 @@ const EditorSwitch: React.FunctionComponent<EditorSwitchProps> = ({
       buttons={editors.map(editor => ({
         id: editorSwitchButtonId(editor),
         value: editor,
-        label: editor,
+        label: labels[editor] ?? editor,
         iconLeft: {iconName: ICONS[editor], iconStyle: 'solid'},
         disabled: disabledEditors.includes(editor),
       }))}

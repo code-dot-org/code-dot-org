@@ -210,6 +210,17 @@ $z-over-blockly: 71;
   color: var(--text-neutral-quaternary);
 }
 
+// grid-column: auto so that left is measured from the bar's edge; an
+// absolutely positioned grid item that keeps a column is positioned within
+// that column.
+.editorStripTitleFromLeft {
+  grid-column: auto;
+  grid-row: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .editorStripEnd {
   grid-column: 3;
   grid-row: 1;
@@ -267,7 +278,125 @@ $z-over-blockly: 71;
   top: $editor-strip-height;
 }
 
-// ?bar=workspace: the editors stop above the scene bar at their base.
+// ?world-block=true: the scene list down the left of the code.
+$scene-sidebar-width: 150px;
+
+.sceneSidebar {
+  position: absolute;
+  top: $editor-strip-height;
+  bottom: 0;
+  left: 0;
+  width: $scene-sidebar-width;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  overflow-y: auto;
+  border-right: 1px solid var(--borders-neutral-primary);
+  background: var(--background-neutral-primary);
+}
+
+.besideSceneSidebar {
+  left: $scene-sidebar-width;
+}
+
+.sceneSidebarList {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sceneSidebarItem {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 4px;
+  width: 100%;
+  margin: 0;
+  padding: 6px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: none;
+  color: var(--text-neutral-primary);
+  font-size: 0.875rem;
+  text-align: start;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--background-neutral-secondary);
+  }
+}
+
+.sceneSidebarItemActive,
+.sceneSidebarItemActive:hover {
+  background: var(--background-selected-primary);
+  border-color: var(--border-selected-primary);
+  color: var(--text-selected-primary);
+  font-weight: 600;
+}
+
+.sceneSidebarPicture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 4px;
+  background: var(--background-neutral-secondary);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.sceneSidebarName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sceneSidebarActions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+// The world editor in a dialog, opened from a set world block. It stays
+// $world-dialog-margin inside the window; the grid shrinks to the room left.
+$world-dialog-margin: 24px;
+
+.worldDialog {
+  box-sizing: border-box;
+  width: min(900px, calc(100vw - 2 * $world-dialog-margin));
+  min-width: 0;
+  max-width: none;
+  max-height: calc(100dvh - 2 * $world-dialog-margin);
+  margin: 0;
+
+  // The modal's content section scrolls by default. A flex column instead,
+  // so the dialog body shrinks to fit.
+  > div:has(> .worldDialogBody) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.worldDialogBody {
+  position: relative;
+  align-self: stretch;
+  flex: 0 1 560px;
+  min-height: 0;
+}
+
+// The editors stop above the scene bar at their base.
 .aboveWorkspaceSceneBar {
   bottom: $foot-height;
 }

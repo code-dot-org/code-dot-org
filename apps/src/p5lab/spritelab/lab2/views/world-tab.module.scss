@@ -81,6 +81,33 @@
   }
 }
 
+.worldGridAreaWithPlayer {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.worldPlayerColumn {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  gap: var(--palette-gap);
+  width: var(--palette-item);
+}
+
+.worldPlayerHeading {
+  margin: 0;
+  color: var(--text-neutral-primary);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.worldPlayerEmpty {
+  margin: 0;
+  color: var(--text-neutral-secondary);
+  font-size: 12px;
+}
+
 .worldPaletteErase {
   flex-direction: column;
   gap: 4px;

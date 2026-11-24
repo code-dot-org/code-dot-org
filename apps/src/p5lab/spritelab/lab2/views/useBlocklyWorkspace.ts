@@ -24,7 +24,10 @@ import {widenFlyoutMargin} from '../blockly/flyoutRoom';
 import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
-import {applyToolboxAdditions} from '../blockly/toolbox/toolboxAdditions';
+import {
+  applyToolboxAdditions,
+  withLeadingBlocks,
+} from '../blockly/toolbox/toolboxAdditions';
 import {STACK_ROOM_EVENT_GROUP, watchStackRoom} from '../stackRoom';
 
 export const BLOCKLY_DIV_ID = 'spritelab2-blockly-div';
@@ -43,6 +46,8 @@ interface UseBlocklyWorkspaceOptions {
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
   /** Block types kept out of the toolbox; read at inject and on refresh. */
   hiddenBlockTypes?: ReadonlySet<string>;
+  /** Block types put first in the toolbox; read at inject and on refresh. */
+  leadingBlockTypes?: string[];
   sharedBlocks?: BlockDefinition[];
   theme: 'Light' | 'Dark';
   /** The blocks can be read and not changed, and there is no toolbox. */
@@ -99,6 +104,7 @@ export default function useBlocklyWorkspace({
   enabled,
   toolboxDefinition,
   hiddenBlockTypes,
+  leadingBlockTypes,
   sharedBlocks,
   theme,
   readOnly,
@@ -107,14 +113,21 @@ export default function useBlocklyWorkspace({
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
   const hiddenRef = useRef(hiddenBlockTypes);
   hiddenRef.current = hiddenBlockTypes;
+  const leadingRef = useRef(leadingBlockTypes);
+  leadingRef.current = leadingBlockTypes;
   const flyoutMarginRef = useRef(flyoutMarginFactor);
   flyoutMarginRef.current = flyoutMarginFactor;
-  // A level's authored definition with the lab's additions, filtered to
-  // registered blocks and less the hidden ones.
+  // A level's authored definition with the lab's additions and the leading
+  // blocks, filtered to registered blocks and less the hidden ones.
   const prepareToolbox = useCallback(
     (definition: BlocklyCore.utils.toolbox.ToolboxInfo) =>
       withoutBlockTypes(
-        filterToolboxToRegisteredBlocks(applyToolboxAdditions(definition)),
+        filterToolboxToRegisteredBlocks(
+          withLeadingBlocks(
+            applyToolboxAdditions(definition),
+            leadingRef.current ?? []
+          )
+        ),
         hiddenRef.current ?? NO_BLOCK_TYPES
       ),
     []

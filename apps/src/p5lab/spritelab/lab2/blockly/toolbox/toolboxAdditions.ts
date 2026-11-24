@@ -218,3 +218,22 @@ export function applyToolboxAdditions(def: ToolboxInfo): ToolboxInfo {
   ensureInjectedCategories(out);
   return out;
 }
+
+/**
+ * A copy of the toolbox with blocks of these types added at the start of its
+ * first category, or at the start of the list when it has no categories.
+ */
+export function withLeadingBlocks(
+  def: ToolboxInfo,
+  types: string[]
+): ToolboxInfo {
+  if (!types.length) {
+    return def;
+  }
+  const out = cloneDeep(def);
+  const first = out.contents.find(isStaticCategoryInfo);
+  const contents = first ? first.contents : out.contents;
+  const blocks: BlockInfo[] = types.map(type => ({kind: 'block', type}));
+  contents.unshift(...blocks);
+  return out;
+}

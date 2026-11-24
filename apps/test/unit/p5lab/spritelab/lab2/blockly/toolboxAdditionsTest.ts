@@ -1,5 +1,8 @@
 import {EFFECT_FIELD_DEFAULTS} from '@cdo/apps/p5lab/spritelab/lab2/blockly/blockDefinitions/playSoundEffect';
-import {applyToolboxAdditions} from '@cdo/apps/p5lab/spritelab/lab2/blockly/toolbox/toolboxAdditions';
+import {
+  applyToolboxAdditions,
+  withLeadingBlocks,
+} from '@cdo/apps/p5lab/spritelab/lab2/blockly/toolbox/toolboxAdditions';
 import {
   BlockInfo,
   StaticCategoryInfo,
@@ -47,5 +50,32 @@ describe('applyToolboxAdditions', () => {
       block => block.type === 'spritelab2_playMusic'
     );
     expect(music?.fields).toBeUndefined();
+  });
+});
+
+describe('withLeadingBlocks', () => {
+  it('puts the blocks first in a toolbox with no categories', () => {
+    const toolbox: ToolboxInfo = {
+      kind: 'flyoutToolbox',
+      contents: [{kind: 'block', type: 'a'}],
+    };
+    expect(withLeadingBlocks(toolbox, ['lead']).contents).toEqual([
+      {kind: 'block', type: 'lead'},
+      {kind: 'block', type: 'a'},
+    ]);
+  });
+
+  it('puts the blocks first in the first category', () => {
+    const toolbox: ToolboxInfo = {
+      kind: 'categoryToolbox',
+      contents: [
+        {kind: 'category', name: 'One', contents: [{kind: 'block', type: 'a'}]},
+        {kind: 'category', name: 'Two', contents: [{kind: 'block', type: 'b'}]},
+      ],
+    };
+    const out = withLeadingBlocks(toolbox, ['lead']);
+    expect(blocksIn(out, 'One').map(b => b.type)).toEqual(['lead', 'a']);
+    expect(blocksIn(out, 'Two').map(b => b.type)).toEqual(['b']);
+    expect(blocksIn(toolbox, 'One').map(b => b.type)).toEqual(['a']);
   });
 });

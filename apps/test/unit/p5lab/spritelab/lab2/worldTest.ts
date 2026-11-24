@@ -11,6 +11,7 @@ import {
   trimLegacyWorld,
   World,
   WorldCell,
+  worldSpriteImages,
 } from '@cdo/apps/p5lab/spritelab/lab2/world';
 
 // A legacy world: the 8-cell playfield this lab shipped with first.
@@ -96,6 +97,55 @@ describe('world', () => {
         '',
       ].join('\n')
     );
+  });
+
+  it("spawns the player image's sprites as players, last, and wires the keys", () => {
+    const world: World = {
+      ...createEmptyWorld(LEGACY_SCENE_SIZE),
+      player: 'owl',
+    };
+    world.grid[0][1] = {image: 'owl', kind: 'sprite'};
+    world.grid[0][2] = {image: 'bat', kind: 'sprite'};
+    world.grid[7][0] = {image: 'ice', kind: 'block'};
+    expect(compileWorldPrelude(world)).toBe(
+      [
+        'setDefaultSpriteSize(50);',
+        'makeNewGroupSprite("ice", \'walls\', {x: 25, y: 375});',
+        'makeNewSpriteAnon("bat", {x: 125, y: 25});',
+        'makeNewGroupSprite("owl", "players", {x: 75, y: 25});',
+        'wirePlatformControls();',
+        '',
+      ].join('\n')
+    );
+  });
+
+  it('wires no keys when the player image is not on the grid', () => {
+    const world: World = {
+      ...createEmptyWorld(LEGACY_SCENE_SIZE),
+      player: 'owl',
+    };
+    world.grid[0][2] = {image: 'bat', kind: 'sprite'};
+    expect(compileWorldPrelude(world)).not.toContain('wirePlatformControls');
+  });
+
+  it('keeps the player through paints and resizes', () => {
+    const world: World = {
+      ...createEmptyWorld(LEGACY_SCENE_SIZE),
+      player: 'owl',
+    };
+    const painted = paintWorldCell(world, 0, 0, {image: 'owl', kind: 'sprite'});
+    expect(painted.player).toBe('owl');
+    expect(resizeWorld(painted, 10).player).toBe('owl');
+  });
+
+  it('lists the sprite images on the grid once each, not blocks', () => {
+    const world = createEmptyWorld(LEGACY_SCENE_SIZE);
+    world.grid[0][0] = {image: 'owl', kind: 'sprite'};
+    world.grid[1][0] = {image: 'ice', kind: 'block'};
+    world.grid[2][0] = {image: 'bat', kind: 'sprite'};
+    world.grid[3][0] = {image: 'owl', kind: 'sprite'};
+    expect(worldSpriteImages(world)).toEqual(['owl', 'bat']);
+    expect(worldSpriteImages(undefined)).toEqual([]);
   });
 
   it("sizes cells from the world's own playfield, not a fixed constant", () => {
