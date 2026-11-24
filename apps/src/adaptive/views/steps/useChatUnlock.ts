@@ -53,9 +53,9 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
   // One judge at a time, across resubscribes.
   const judging = useRef(false);
   const {chat, step, continueAllowed} = options;
-  const {isViewingStudent} = usePathwayContext();
+  const {isReadonly} = usePathwayContext();
   const adapter =
-    step.validation && !continueAllowed && !isViewingStudent
+    step.validation && !continueAllowed && !isReadonly
       ? workAdapterFor(step.levelProperties?.appName ?? '')
       : undefined;
   const observe = adapter?.observeReplies;

@@ -38,6 +38,7 @@ jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
     statusMap: {},
     progress: mockProgress,
     isViewingStudent: mockIsViewingStudent,
+    isReadonly: mockIsViewingStudent,
     saveGeneratedInstructions: jest.fn(),
     aiContext: undefined,
   }),

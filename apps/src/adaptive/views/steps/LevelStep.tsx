@@ -141,7 +141,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     checkpoint,
     statusMap,
     progress,
-    isViewingStudent,
+    isReadonly,
     saveGeneratedInstructions,
     recordValidation,
     aiContext,
@@ -206,8 +206,8 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     saveGeneratedInstructions,
     aichatContext: aiContext,
   });
-  // The lab's Continue button advances the step (always for a teacher
-  // viewing a student). A step whose work is checked waits for work
+  // The lab's Continue button advances the step (always while read-only,
+  // where no check can open it). A step whose work is checked waits for work
   // that passes, for enough failed checks that the judge may be at fault, or
   // for the chat to reach its reply limit, unless no judge can run: the shell
   // makes no AI calls, or the lab takes no part in checking.
@@ -215,7 +215,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   const unlockReason = continueUnlockReason(entry);
   const aiAvailable = isAdaptiveAiAvailable();
   const continueEnabled =
-    isViewingStudent ||
+    isReadonly ||
     !step.validation ||
     !aiAvailable ||
     !workAdapterFor(levelProperties.appName) ||

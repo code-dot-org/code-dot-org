@@ -14,9 +14,9 @@ const NO_INSTRUCTIONS = null;
  * values without memoizing, since this hook handles memoization internally.
  */
 export function useStepInstructions(
-  opts: Omit<StepInstructionsOptions, 'isViewingStudent'>
+  opts: Omit<StepInstructionsOptions, 'isReadonly'>
 ) {
-  const {isViewingStudent} = usePathwayContext();
+  const {isReadonly} = usePathwayContext();
   // Undefined until resolved; null when resolved to no text at all.
   const [resolved, setResolved] = useState<string | typeof NO_INSTRUCTIONS>();
   const {name, description} = opts.projectInfo;
@@ -36,7 +36,7 @@ export function useStepInstructions(
       generatedInstructions: opts.generatedInstructions,
       saveGeneratedInstructions: opts.saveGeneratedInstructions,
       aichatContext: opts.aichatContext,
-      isViewingStudent,
+      isReadonly,
     }).then(instructions => {
       if (!cancelled) setResolved(instructions ?? NO_INSTRUCTIONS);
     });
@@ -54,7 +54,7 @@ export function useStepInstructions(
     opts.generatedInstructions,
     opts.saveGeneratedInstructions,
     opts.aichatContext,
-    isViewingStudent,
+    isReadonly,
   ]);
   return {
     instructions: resolved ?? undefined,

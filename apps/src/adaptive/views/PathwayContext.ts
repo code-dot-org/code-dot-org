@@ -22,7 +22,10 @@ export interface PathwayContextValue {
   checkpoint: Checkpoint;
   statusMap: CheckpointStatusMap;
   progress: Progress;
+  /** A teacher is looking at one of their students' work. */
   isViewingStudent: boolean;
+  /** Nothing is saved, generated or checked; buttons that would do so are off. */
+  isReadonly: boolean;
   /** The student a teacher is viewing, or null for the student themself. */
   viewAsUserId: number | null;
   saveGeneratedInstructions: (

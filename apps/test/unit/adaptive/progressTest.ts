@@ -697,6 +697,7 @@ describe('useProgress', () => {
     await waitForNextUpdate();
     expect(store.load).toHaveBeenCalledWith(key, 77);
     expect(result.current.isViewingStudent).toBe(true);
+    expect(result.current.isReadonly).toBe(true);
     const loaded = result.current.progress;
     const statusMap = result.current.statusMap;
 

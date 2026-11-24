@@ -47,9 +47,9 @@ export function useStepValidation(options: StepValidationOptions): void {
   const latestOptions = useRef(options);
   latestOptions.current = options;
   const {chat, step} = options;
-  const {isViewingStudent} = usePathwayContext();
+  const {isReadonly} = usePathwayContext();
   const adapter =
-    step.validation && !isViewingStudent
+    step.validation && !isReadonly
       ? workAdapterFor(step.levelProperties?.appName ?? '')
       : undefined;
 

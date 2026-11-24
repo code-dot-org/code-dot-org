@@ -133,7 +133,7 @@ describe('resolveStepInstructions', () => {
 
   it("shows a viewed student's saved instructions, stale or not, without generating", async () => {
     const {result, saveGeneratedInstructions} = resolve({
-      isViewingStudent: true,
+      isReadonly: true,
       generatedInstructions: {instructions: 'Theirs.', inputsHash: 'old'},
     });
 
@@ -143,7 +143,7 @@ describe('resolveStepInstructions', () => {
   });
 
   it('shows the authored text to a teacher viewing a student with none saved, without generating', async () => {
-    const {result} = resolve({isViewingStudent: true});
+    const {result} = resolve({isReadonly: true});
 
     expect(await result).toBe('Authored.');
     expect(mockGenerate).not.toHaveBeenCalled();

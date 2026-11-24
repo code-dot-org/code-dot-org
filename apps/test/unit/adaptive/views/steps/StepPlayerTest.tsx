@@ -662,7 +662,7 @@ describe('StepPlayer', () => {
     it('plays only the steps with student work, then finishes', () => {
       const {calls, onFinish} = renderPlayer(
         {checkpoint: mixed},
-        {isViewingStudent: true}
+        {isViewingStudent: true, isReadonly: true}
       );
 
       expect(screen.getByText(/level: try/)).toBeTruthy();
@@ -679,7 +679,7 @@ describe('StepPlayer', () => {
     it('starts on the next step with work when resuming at a skipped one', () => {
       renderPlayer(
         {checkpoint: mixed, initialStepId: 'watch'},
-        {isViewingStudent: true}
+        {isViewingStudent: true, isReadonly: true}
       );
 
       expect(screen.getByText(/level: build/)).toBeTruthy();

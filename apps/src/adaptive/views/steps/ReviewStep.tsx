@@ -33,10 +33,16 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
   onSaveAnswers,
   onComplete,
 }) => {
-  const {pathway, checkpoint, progress, isViewingStudent, setBuildRequested} =
-    usePathwayContext();
+  const {
+    pathway,
+    checkpoint,
+    progress,
+    isViewingStudent,
+    isReadonly,
+    setBuildRequested,
+  } = usePathwayContext();
   const decide = (decision: ReviewDecision) => {
-    if (isViewingStudent) return;
+    if (isReadonly) return;
     onSaveAnswers([{answerId: decision}]);
     setBuildRequested(decision === 'build');
     onComplete();
@@ -123,7 +129,7 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
           color="primary"
           size="medium"
           type="button"
-          disabled={isViewingStudent}
+          disabled={isReadonly}
           onClick={() => decide('skip')}
         >
           {hasWork ? 'Continue to your project' : step.skipLabel ?? 'Skip'}
@@ -134,13 +140,13 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
             color="primary"
             size="medium"
             type="button"
-            disabled={isViewingStudent}
+            disabled={isReadonly}
             onClick={onBuild}
           >
             {hasWork ? 'Re-build with AI' : step.buildLabel ?? 'Build site'}
           </MuiButton>
         )}
-        {isViewingStudent && (
+        {isReadonly && (
           <MuiButton
             variant="contained"
             color="primary"

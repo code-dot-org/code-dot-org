@@ -47,7 +47,7 @@ interface ProgressOptions {
 // The server rounds each save up to whole seconds; match it.
 const toSeconds = (ms: number) => Math.ceil(ms / 1000);
 
-// Stands in for each write while a teacher views a student; one function, so
+// Stands in for each write while the pathway is read-only; one function, so
 // callers that depend on it do not rerun on every render.
 const ignore = () => {};
 
@@ -65,6 +65,9 @@ export function useProgress(
   // Destructure key so its members can be used as primitive deps.
   const {scriptId, levelId} = key;
   const isViewingStudent = viewAsUserId !== null;
+  // Nothing the viewer does is saved or generated. Today only a teacher
+  // viewing a student reads a pathway they may not change.
+  const isReadonly = isViewingStudent;
 
   useEffect(() => {
     let cancelled = false;
@@ -219,19 +222,18 @@ export function useProgress(
     progress,
     isLoading: progress === undefined,
     isViewingStudent,
+    isReadonly,
     viewAsUserId,
     statusMap,
     /** What the student has shown in each skill, which the status map is routed on. */
     evidence,
-    // A viewing teacher's clicks are not the student's progress, on the page
-    // or on the server: every function that writes progress belongs here.
-    startStep: isViewingStudent ? ignore : startStep,
-    completeStep: isViewingStudent ? ignore : completeStep,
-    leaveStep: isViewingStudent ? ignore : leaveStep,
-    saveAnswers: isViewingStudent ? ignore : saveAnswers,
-    saveGeneratedInstructions: isViewingStudent
-      ? ignore
-      : saveGeneratedInstructions,
-    recordValidation: isViewingStudent ? ignore : recordValidation,
+    // A read-only viewer's clicks are not progress, on the page or on the
+    // server: every function that writes progress belongs here.
+    startStep: isReadonly ? ignore : startStep,
+    completeStep: isReadonly ? ignore : completeStep,
+    leaveStep: isReadonly ? ignore : leaveStep,
+    saveAnswers: isReadonly ? ignore : saveAnswers,
+    saveGeneratedInstructions: isReadonly ? ignore : saveGeneratedInstructions,
+    recordValidation: isReadonly ? ignore : recordValidation,
   };
 }

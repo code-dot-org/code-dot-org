@@ -38,7 +38,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   onSaveAnswers,
   onComplete,
 }) => {
-  const {isViewingStudent} = usePathwayContext();
+  const {isReadonly} = usePathwayContext();
   const {questions} = step;
   const [index, setIndex] = useState(0);
   const question = questions[index];
@@ -121,7 +121,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   };
 
   const handleSubmit = () => {
-    if (isViewingStudent) return;
+    if (isReadonly) return;
     if (isAdvancing || completedRef.current || !question) return;
 
     if (question.type === 'MultipleChoiceQuestion') {
@@ -162,7 +162,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     }
   };
 
-  const isDisabled = isViewingStudent
+  const isDisabled = isReadonly
     ? true
     : question?.type === 'MultipleChoiceQuestion'
     ? !selectedChoiceId || (isOtherPicked && !otherText.trim())
@@ -299,7 +299,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
         >
           {isLastQuestion ? 'Submit' : 'Next'}
         </MuiButton>
-        {isViewingStudent && (
+        {isReadonly && (
           <MuiButton
             variant="contained"
             color="primary"

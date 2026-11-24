@@ -42,6 +42,7 @@ function renderReview(isViewingStudent: boolean, progress: Progress) {
           checkpoint,
           progress,
           isViewingStudent,
+          isReadonly: isViewingStudent,
           setBuildRequested,
         } as unknown as PathwayContextValue
       }

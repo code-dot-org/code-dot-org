@@ -220,6 +220,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   initialProject = false,
   isFirstVisit,
   isViewingStudent,
+  isReadonly,
   viewAsUserId,
   startStep,
   completeStep,
@@ -351,12 +352,12 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   }, [view, pathway, statusMap]);
   // A teacher viewing a student would otherwise start the level as themselves.
   useEffect(() => {
-    if (initialCheckpointId && !isViewingStudent)
+    if (initialCheckpointId && !isReadonly)
       dispatch(sendStartedReportIfNotStarted('adaptive'));
-  }, [initialCheckpointId, isViewingStudent, dispatch]);
+  }, [initialCheckpointId, isReadonly, dispatch]);
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
   const openProject = () => {
-    if (!isViewingStudent) dispatch(sendStartedReportIfNotStarted('adaptive'));
+    if (!isReadonly) dispatch(sendStartedReportIfNotStarted('adaptive'));
     setView({kind: 'project'});
   };
   const allCheckpointsComplete = pathway.checkpoints.every(
@@ -373,7 +374,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   const [finishAsked, setFinishAsked] = useState(false);
   // A viewing teacher must not report success or leave the student's level.
   const finishLevel = () => {
-    if (!isViewingStudent) return dispatch(continueOrFinishLesson());
+    if (!isReadonly) return dispatch(continueOrFinishLesson());
     clearUrl();
     setView({kind: 'map'});
   };
@@ -428,6 +429,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         statusMap,
         progress,
         isViewingStudent,
+        isReadonly,
         viewAsUserId,
         saveGeneratedInstructions,
         recordValidation,
@@ -442,6 +444,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       statusMap,
       progress,
       isViewingStudent,
+      isReadonly,
       viewAsUserId,
       saveGeneratedInstructions,
       recordValidation,
@@ -565,7 +568,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         onFocus={focusId => setView({kind: 'map', focusId})}
         canOpenLocked={isViewingStudent}
         onStart={id => {
-          if (!isViewingStudent) {
+          if (!isReadonly) {
             dispatch(sendStartedReportIfNotStarted('adaptive'));
           }
           const cp = findCheckpoint(pathway, id);

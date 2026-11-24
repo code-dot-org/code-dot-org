@@ -10,9 +10,9 @@ import {
 } from '@cdo/apps/adaptive/types';
 import QuestionsStep from '@cdo/apps/adaptive/views/steps/QuestionsStep';
 
-let mockIsViewingStudent = false;
+let mockIsReadonly = false;
 jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
-  usePathwayContext: () => ({isViewingStudent: mockIsViewingStudent}),
+  usePathwayContext: () => ({isReadonly: mockIsReadonly}),
 }));
 
 const frQuestion = (
@@ -80,9 +80,9 @@ const mixedStep: Step = {
 function renderStep(
   initial: StepAnswers = {},
   content: Step = step,
-  isViewingStudent = false
+  isReadonly = false
 ) {
-  mockIsViewingStudent = isViewingStudent;
+  mockIsReadonly = isReadonly;
   const onComplete = jest.fn();
   const saved: [number, Answer[]][] = [];
   const Host = () => {

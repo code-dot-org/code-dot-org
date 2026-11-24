@@ -19,9 +19,9 @@ jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
   ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
   sendContinueUnlocked: jest.fn(),
 }));
-let mockIsViewingStudent = false;
+let mockIsReadonly = false;
 jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
-  usePathwayContext: () => ({isViewingStudent: mockIsViewingStudent}),
+  usePathwayContext: () => ({isReadonly: mockIsReadonly}),
 }));
 jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({
@@ -130,7 +130,7 @@ describe('useStepValidation', () => {
   beforeEach(() => {
     mockValidateStep.mockReset();
     mockSendUnlocked.mockReset();
-    mockIsViewingStudent = false;
+    mockIsReadonly = false;
   });
 
   it("judges each piece of the lab's work, records the verdict and has the lab say a check is running, then the verdict", async () => {
@@ -292,7 +292,7 @@ describe('useStepValidation', () => {
 
   it('judges nothing while a teacher views a student', () => {
     const {chat, listeners} = fakeChat();
-    mockIsViewingStudent = true;
+    mockIsReadonly = true;
     render(chat);
 
     expect(listeners).toHaveLength(0);
