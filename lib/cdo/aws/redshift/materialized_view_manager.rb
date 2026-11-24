@@ -10,7 +10,7 @@ module Cdo
   module Aws
     module Redshift
       # One row of `MaterializedViewManager.view_status` output: the most recent CREATE/DROP/REFRESH
-      # the Redshift Data API knows about for one materialized view FQN, plus the view's current
+      # the Redshift Data API knows about for one materialized view Fully Qualified Name, plus the view's current
       # freshness as reported by SVV_MV_INFO.
       ViewStatusRow = Struct.new(
         :model_name,
@@ -55,7 +55,7 @@ module Cdo
       #     self.emit_view_status_metrics  # CloudWatch metrics + per-error-view logs
       #     self.error_condition_for / self.describe_mv_state
       #
-      # The phases share internals on purpose (the Data API client, the schema/FQN conventions, the
+      # The phases share internals on purpose (the Data API client, the schema/Fully Qualified Name conventions, the
       # SVV_MV_INFO catalog reads, ViewStatusRow), which is why they live in one cohesive class
       # rather than being split apart.
       #
@@ -296,7 +296,7 @@ module Cdo
         # wait.
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] e.g., :production, :test
-        # @param only [Array<String>, nil] optional FQN allowlist — when given, rebuilds only this
+        # @param only [Array<String>, nil] optional Fully Qualified Name allowlist — when given, rebuilds only this
         #   model's views named in the list.
         # @return [Hash{String => String}] fqn => Redshift Data API statement_id
         def create_or_replace_views(client:, environment_type:, only: nil)
@@ -321,15 +321,15 @@ module Cdo
         # Submits REFRESH MATERIALIZED VIEW for this model's PII and non-PII
         # views asynchronously and returns the resulting statement IDs without
         # waiting. Each view is submitted as its own single-statement async call
-        # so callers can track completion per FQN (e.g., via `client.wait_for_statements`).
+        # so callers can track completion per Fully Qualified Name (e.g., via `client.wait_for_statements`).
         # REFRESH on a Zero ETL-sourced view can take longer than the synchronous
         # client timeout when many INSERT/UPDATE/DELETE rows have streamed in
         # since the last refresh, which is why this method does not wait.
         #
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] e.g., :production, :test
-        # @param only [Array<String>, nil] optional FQN whitelist — when given,
-        #   submits REFRESH only for FQNs in this model's view variants that
+        # @param only [Array<String>, nil] optional Fully Qualified Name whitelist — when given,
+        #   submits REFRESH only for Fully Qualified Names in this model's view variants that
         #   intersect the list. Used by `.refresh_all_views` to skip non-stale
         #   views.
         # @return [Hash{String => String}] fqn => Redshift Data API statement_id
@@ -359,7 +359,7 @@ module Cdo
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol, String] :production or :test
         # @param models [Enumerable<Class>] ActiveRecord model classes to plan for
-        # @return [Hash] :to_add, :to_update, :unchanged, :to_drop — sorted arrays of view FQNs
+        # @return [Hash] :to_add, :to_update, :unchanged, :to_drop — sorted arrays of view Fully Qualified Names
         def self.plan_provisioning(client:, environment_type:, models:)
           desired_ddls = {}
           models.each do |model|
@@ -372,7 +372,7 @@ module Cdo
           existing_comments = list_existing_view_comments(client: client, environment_type: environment_type)
           existing_fqns = Set.new(existing_comments.keys)
 
-          # Every unchanged FQN is by construction both desired and existing, so this needs no
+          # Every unchanged Fully Qualified Name is by construction both desired and existing, so this needs no
           # further intersection below.
           unchanged_fqns = Set.new(
             desired_ddls.select do |fqn, sql|
@@ -538,7 +538,7 @@ module Cdo
         # @param timeout [Integer, nil] seconds to wait for the REFRESH statements; nil waits
         #   indefinitely. The statements keep running on Redshift when the wait is abandoned.
         # @return [Hash] :refreshed => [fqn, ...] that finished, :failures => [name, ...] that did
-        #   not (model table names for submit failures, view FQNs for execution failures).
+        #   not (model table names for submit failures, view Fully Qualified Names for execution failures).
         # @raise [Cdo::Aws::Redshift::Client::QueryError] when `timeout` elapses first.
         def self.refresh_and_wait(client:, environment_type:, models:, timeout: nil, &reporter)
           result = refresh_all_views(
@@ -555,12 +555,12 @@ module Cdo
         end
 
         # Returns one `ViewStatusRow` per (model, view variant) plus extra rows
-        # for orphan FQNs (views referenced by recent Data API statements but no
+        # for orphan Fully Qualified Names (views referenced by recent Data API statements but no
         # longer claimed by any model in `models`). The "operation" column is the
-        # user-meaningful action of the most recent batch touching that FQN —
+        # user-meaningful action of the most recent batch touching that Fully Qualified Name —
         # CREATE wins over REFRESH wins over DROP, so our DROP+CREATE+COMMENT
         # create-or-replace batches report as `CREATE`, the consolidated
-        # orphan-drop batch reports per-FQN as `DROP`, and a refresh-only batch
+        # orphan-drop batch reports per-Fully Qualified Name as `DROP`, and a refresh-only batch
         # reports as `REFRESH`. COMMENT sub-statements are intentionally
         # ignored.
         #
@@ -614,7 +614,7 @@ module Cdo
             end
           end
 
-          # Phase 2: describe each candidate, resolve per-FQN primary op.
+          # Phase 2: describe each candidate, resolve per-Fully Qualified Name primary op.
           # `sub_statements` is populated only for batch statements (e.g., our
           # DROP+CREATE+COMMENT batches). Single-statement submissions (e.g.,
           # REFRESH via `execute_async`) report sub_statements=nil; for those
@@ -652,7 +652,7 @@ module Cdo
           # API statement history, useful for "is this view actually fresh?"
           staleness = list_view_staleness(client: client, environment_type: env)
 
-          # Expected FQNs per model.
+          # Expected Fully Qualified Names per model.
           model_fqns = {}
           models.sort_by(&:name).each do |model|
             new(model).expected_view_fqns(env).each {|fqn| model_fqns[fqn] = model}
