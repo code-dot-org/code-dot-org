@@ -20,6 +20,7 @@ class ProjectPlayer {
   private currentMetadata: MusicMetadata | null = null;
   private eventMeasures: number[] | null = null;
   private stopIntervalId: number | null = null;
+  private playRemovedPacks = false;
 
   constructor(
     private readonly player = new MusicPlayer(),
@@ -29,7 +30,10 @@ class ProjectPlayer {
     setUpBlocklyForMusicLab();
   }
 
-  async loadProject(channelId: string) {
+  // playRemovedPacks plays a removed pack rather than silencing it, as Music
+  // Lab does inside a unit.
+  async loadProject(channelId: string, playRemovedPacks = false) {
+    this.playRemovedPacks = playRemovedPacks;
     this.currentMetadata = null;
     this.eventMeasures = null;
     this.workspace.initHeadless();
@@ -161,6 +165,7 @@ class ProjectPlayer {
       library = await MusicLibrary.loadLibrary(libraryName || 'launch2024');
     }
 
+    library.setPlayRemovedPacks(this.playRemovedPacks);
     if (packId) {
       library.setCurrentPackId(packId);
     }
