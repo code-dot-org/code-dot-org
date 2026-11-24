@@ -3,7 +3,7 @@ import {AriaAttributes} from 'react';
 
 import Checkbox from '@/checkbox';
 import {dropdownColors} from '@/common/constants';
-import {useDropdownContext} from '@/common/contexts/DropdownContext';
+import {useCloseDropdownMenu} from '@/common/contexts/DropdownContext';
 import {
   ComponentSizeXSToL,
   DropdownColor,
@@ -91,7 +91,6 @@ function actionButtonSize(
 }
 
 const CheckboxDropdownActionRow: React.FunctionComponent<{
-  name: string;
   size: ComponentSizeXSToL;
   selectionCount: number;
   onSelectAll: (event: ActionClickEvent) => void;
@@ -100,7 +99,6 @@ const CheckboxDropdownActionRow: React.FunctionComponent<{
   clearAllText: string;
   doneText: string;
 }> = ({
-  name,
   size,
   selectionCount,
   onSelectAll,
@@ -109,7 +107,7 @@ const CheckboxDropdownActionRow: React.FunctionComponent<{
   clearAllText,
   doneText,
 }) => {
-  const {setActiveDropdownName} = useDropdownContext();
+  const closeMenu = useCloseDropdownMenu();
   const hasSelection = selectionCount > 0;
 
   return (
@@ -126,10 +124,7 @@ const CheckboxDropdownActionRow: React.FunctionComponent<{
         variant="contained"
         color="secondary"
         size={actionButtonSize(size)}
-        onClick={() => {
-          setActiveDropdownName('');
-          document.getElementById(`${name}-dropdown-button`)?.focus();
-        }}
+        onClick={event => closeMenu(event.currentTarget)}
       >
         {hasSelection ? `${doneText} (${selectionCount})` : doneText}
       </MuiButton>
@@ -209,7 +204,6 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       </ul>
       {!rest.hideControls && (
         <CheckboxDropdownActionRow
-          name={name}
           size={size}
           selectionCount={checkedOptions.length}
           onSelectAll={rest.onSelectAll}
