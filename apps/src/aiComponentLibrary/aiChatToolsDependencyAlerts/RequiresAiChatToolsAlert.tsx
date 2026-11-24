@@ -36,11 +36,9 @@ const isMakerspacePage = () =>
  * warns them loudly if they have it turned off.
  */
 const RequiresAiChatToolsAlert: React.FC = () => {
-  const makerspace = isMakerspacePage();
-  const supportLink = makerspace
+  const supportLink = isMakerspacePage()
     ? MAKERSPACE_SETUP_SUPPORT_LINK
     : AI_SETTINGS_SUPPORT_LINK;
-  const supportLinkText = makerspace ? 'Learn about setup' : 'Learn more';
   const selectedSection = useAppSelector(selectedSectionSelector);
   const handleReviewAiSettings = React.useCallback(() => {
     navigateToHref(
@@ -59,7 +57,6 @@ const RequiresAiChatToolsAlert: React.FC = () => {
           className={styles.overviewSpacing}
           text="This course requires the use of AI chat tools to complete."
           supportLink={supportLink}
-          supportLinkText={supportLinkText}
         />
       )}
       {aiChatAccessLevel === AiChatAccessLevels.DISABLED && (
@@ -75,7 +72,7 @@ const RequiresAiChatToolsAlert: React.FC = () => {
               able to complete some lessons in this course.&nbsp;&nbsp;
               <Link
                 href={supportLink}
-                text={supportLinkText}
+                text="Learn more"
                 type="secondary"
                 size="s"
                 openInNewTab

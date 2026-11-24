@@ -14,20 +14,14 @@ const AiChatToolsInfoAlert: React.FC<{
   className?: string;
   //TODO(lc): remove this code after CSEdWeek
   supportLink?: string;
-  supportLinkText?: string;
-}> = ({
-  text,
-  className,
-  supportLink = AI_SETTINGS_SUPPORT_LINK,
-  supportLinkText = 'Learn more',
-}) => {
+}> = ({text, className, supportLink = AI_SETTINGS_SUPPORT_LINK}) => {
   return (
     <Alert
       type={alertTypes.aqua}
       text={text}
       link={{
         href: supportLink,
-        text: supportLinkText,
+        text: 'Learn more',
         openInNewTab: true,
       }}
       icon={{iconName: 'ai-bot-solid', iconFamily: 'kit'}}
