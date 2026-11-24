@@ -48,7 +48,8 @@ const DRAG_START_PX = 6;
 // custom properties.
 const PALETTE_ITEM_PX = 64;
 const PALETTE_GAP_PX = 8;
-// Between the grid and the player column; the stylesheet's gap matches.
+// Space between the grid and the player column; .worldGridAreaWithPlayer's
+// gap must match.
 const PLAYER_COLUMN_GAP_PX = 20;
 
 /** Items per palette column for the room available, at least one. */
@@ -298,8 +299,8 @@ interface WorldTabProps {
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
   minGridPixels?: number;
-  // Given, a column right of the grid offers the world's sprite images as
-  // the player (?world-block).
+  // When set, a column to the right of the grid lists the world's sprite
+  // images; pressing one makes it the player.
   onChangePlayer?: (player: string | undefined) => void;
 }
 
