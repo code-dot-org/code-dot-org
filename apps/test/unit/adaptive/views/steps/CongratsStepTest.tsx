@@ -1,4 +1,5 @@
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
+import fileDownload from 'js-file-download';
 import React from 'react';
 
 import {CongratsStep as CongratsStepContent} from '@cdo/apps/adaptive/types';
@@ -6,6 +7,12 @@ import CongratsStep from '@cdo/apps/adaptive/views/steps/CongratsStep';
 import DCDO from '@cdo/apps/dcdo';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
+jest.mock('js-file-download', () => jest.fn());
+const mockBuildProjectZip = jest.fn();
+jest.mock('@cdo/apps/adaptive/project/exportProjectZip', () => ({
+  ...jest.requireActual('@cdo/apps/adaptive/project/exportProjectZip'),
+  buildProjectZip: (...args: unknown[]) => mockBuildProjectZip(...args),
+}));
 jest.mock('@cdo/apps/util/copyToClipboard', () => ({
   __esModule: true,
   default: jest.fn(),
@@ -21,9 +28,16 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 }));
 let mockShareUrl: string | null =
   'https://studio.code.org/projects/weblab2/abc123';
+const multiFileSource = {
+  folders: {},
+  files: {'1': {id: '1', name: 'index.html', contents: '', folderId: '0'}},
+};
+let mockSource: unknown = multiFileSource;
 jest.mock('@cdo/apps/adaptive/project/usePathwayProject', () => ({
   usePathwayProject: () => ({
     projectManager: {getShareUrl: () => mockShareUrl},
+    sources: {source: mockSource},
+    channel: {name: 'My Site'},
   }),
 }));
 jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
@@ -42,6 +56,9 @@ describe('CongratsStep', () => {
   afterEach(() => {
     mockState = {currentUser: {userType: 'student'}};
     mockShareUrl = 'https://studio.code.org/projects/weblab2/abc123';
+    mockSource = multiFileSource;
+    mockBuildProjectZip.mockReset();
+    jest.mocked(fileDownload).mockReset();
     DCDO.reset();
   });
 
@@ -133,5 +150,44 @@ describe('CongratsStep', () => {
     render(<CongratsStep step={step} onComplete={jest.fn()} />);
     expect(screen.queryByText('Share your site')).toBeNull();
     expect(screen.getByText('Get your certificate')).toBeTruthy();
+  });
+
+  it("downloads the student's code as a zip named for the project", async () => {
+    const zip = new Blob(['zip']);
+    mockBuildProjectZip.mockResolvedValue(zip);
+    render(<CongratsStep step={step} onComplete={jest.fn()} />);
+    fireEvent.click(screen.getByRole('button', {name: 'Export my code'}));
+    await waitFor(() =>
+      expect(fileDownload).toHaveBeenCalledWith(zip, 'My Site.zip')
+    );
+    expect(mockBuildProjectZip).toHaveBeenCalledWith(
+      multiFileSource,
+      'My Site'
+    );
+    expect(screen.queryByText(/could not be exported/)).toBeNull();
+  });
+
+  it('says so when the export fails', async () => {
+    jest.spyOn(console, 'error').mockImplementation(() => {});
+    mockBuildProjectZip.mockRejectedValue(new Error('fetch failed'));
+    render(<CongratsStep step={step} onComplete={jest.fn()} />);
+    fireEvent.click(screen.getByRole('button', {name: 'Export my code'}));
+    expect(
+      (await screen.findByText(/could not be exported/)).getAttribute('role')
+    ).toBe('alert');
+    expect(fileDownload).not.toHaveBeenCalled();
+    jest.mocked(console.error).mockRestore();
+  });
+
+  it('leaves out the export card for a teacher', () => {
+    mockState = {...mockState, currentUser: {userType: 'teacher'}};
+    render(<CongratsStep step={step} onComplete={jest.fn()} />);
+    expect(screen.queryByText('Export your code')).toBeNull();
+  });
+
+  it('leaves out the export card until the sources have loaded', () => {
+    mockSource = undefined;
+    render(<CongratsStep step={step} onComplete={jest.fn()} />);
+    expect(screen.queryByText('Export your code')).toBeNull();
   });
 });
