@@ -15,6 +15,7 @@ import AiChatToolsInfoAlert from './AiChatToolsInfoAlert';
 
 import styles from './ai-chat-tools-dependency-alerts.module.scss';
 
+//TODO(lc): remove this code after CSEdWeek
 const MAKERSPACE_SETUP_SUPPORT_LINK =
   'https://support.code.org/hc/en-us/articles/50616846268045-Getting-ready-for-AI-Makerspace-Hour-of-AI-grades-9-12';
 

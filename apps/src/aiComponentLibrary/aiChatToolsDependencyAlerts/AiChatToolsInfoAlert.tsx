@@ -12,6 +12,7 @@ import styles from './ai-chat-tools-dependency-alerts.module.scss';
 const AiChatToolsInfoAlert: React.FC<{
   text: string;
   className?: string;
+  //TODO(lc): remove this code after CSEdWeek
   supportLink?: string;
 }> = ({text, className, supportLink = AI_SETTINGS_SUPPORT_LINK}) => {
   return (
