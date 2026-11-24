@@ -576,7 +576,7 @@ export const ICON_BUTTON_OVERRIDES: Components<Theme>['MuiIconButton'] = {
         },
 
         '&:focus-visible, a&:focus-visible': {
-          outline: '2px solid var(--borders-brand-teal-primary)',
+          outline: '2px solid var(--border-focused-primary)',
           outlineOffset: '2px',
           borderRadius: 'var(--shape-sm, 0.375rem)',
           boxShadow: 'none', // Remove shadow on focus-visible

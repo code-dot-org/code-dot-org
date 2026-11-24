@@ -57,7 +57,7 @@
     appearance: none;
 
     &:focus-visible {
-      outline: 2px solid var(--borders-brand-teal-primary);
+      outline: 2px solid var(--border-focused-primary);
       border-radius: 0.25rem;
       outline-offset: 2px;
     }
@@ -149,7 +149,7 @@
           }
 
           &:focus-visible {
-            outline: 2px solid var(--borders-brand-teal-primary);
+            outline: 2px solid var(--border-focused-primary);
             outline-offset: -2px;
           }
 

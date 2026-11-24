@@ -73,7 +73,7 @@
 
       // Focus styles
       &:has(input[type='checkbox']:focus-visible) {
-        outline: 2px solid var(--borders-brand-teal-primary);
+        outline: 2px solid var(--border-focused-primary);
         outline-offset: 2px;
       }
 
