@@ -330,6 +330,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         setPlaying={setPlaying}
         projectName={channel?.name}
         overrideProjectManager={overrideProjectManager}
+        isPackRemoved={isPackRemoved}
       />
     );
   }
