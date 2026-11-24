@@ -17,6 +17,8 @@ import {
   translateFilled,
 } from '@cdo/apps/localization/templates';
 
+import {localizeLevelText} from './localizeLevelText';
+
 const CATEGORY_LABELS = ['blockly-block', 'blockly-category'];
 
 /** Retranslates the level's blockText blocks and every init() block. */
@@ -42,8 +44,8 @@ function localizedToolboxItem(item: ToolboxItem): ToolboxItem {
 }
 
 /**
- * The toolbox as shown: a copy with its category names in the current
- * language. The toolbox given stays in English.
+ * The toolbox as shown: a copy with its category names, and the words in
+ * its blocks, in the current language. The toolbox given stays in English.
  */
 export function shownToolbox(
   toolbox: BlocklyCore.utils.toolbox.ToolboxDefinition
@@ -51,8 +53,8 @@ export function shownToolbox(
   if (isEnglishLocale() || typeof toolbox === 'string') {
     return toolbox;
   }
-  return localizedToolboxItem(
-    toolbox as ToolboxItem
+  return localizeLevelText(
+    localizedToolboxItem(toolbox as ToolboxItem)
   ) as BlocklyCore.utils.toolbox.ToolboxDefinition;
 }
 

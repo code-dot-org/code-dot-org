@@ -15,8 +15,10 @@ import {
 import {LabProps} from '@cdo/apps/lab2/types';
 import getInitialSources from '@cdo/apps/lab2/utils/getInitialSources';
 import Loading from '@cdo/apps/lab2/views/Loading';
+import {isEnglishLocale} from '@cdo/apps/localization/templates';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {localizeLevelText} from '../blockly/localizeLevelText';
 import {
   installSharedBlocks,
   setupSpriteLab2BlocklyEnvironment,
@@ -77,6 +79,22 @@ const SpriteLab2Container: React.FunctionComponent<
     installSharedBlocks(levelProperties.sharedBlocks || []);
   }, [levelProperties.sharedBlocks]);
 
+  // The level's start and template sources with their blocks' words in the
+  // student's language. A saved project is never translated: these are
+  // used only where there is none. Translated once per level, so a language
+  // change cannot reinitialize the sources.
+  const sourcesLevelProperties = useMemo(
+    () =>
+      isLevelEditMode || isEnglishLocale()
+        ? levelProperties
+        : {
+            ...levelProperties,
+            startSources: localizeLevelText(levelProperties.startSources),
+            templateSources: localizeLevelText(levelProperties.templateSources),
+          },
+    [levelProperties]
+  );
+
   const [sourcesReinitializedCount, setSourcesReinitializedCount] = useState(0);
   const handleReinitialize = useCallback(
     () => setSourcesReinitializedCount(c => c + 1),
@@ -90,7 +108,7 @@ const SpriteLab2Container: React.FunctionComponent<
     loadError,
     ...restOutputs
   } = useSources<Sources>({
-    levelProperties,
+    levelProperties: sourcesLevelProperties,
     defaultSources,
     // Without this a project page loads the visitor's own project for the
     // level, not the one in the address.
@@ -107,10 +125,10 @@ const SpriteLab2Container: React.FunctionComponent<
   const levelSources = useMemo(
     () =>
       readOnlyLevel
-        ? getInitialSources<Sources>(levelProperties) ??
+        ? getInitialSources<Sources>(sourcesLevelProperties) ??
           (defaultSources as Sources)
         : undefined,
-    [readOnlyLevel, levelProperties]
+    [readOnlyLevel, sourcesLevelProperties]
   );
   // The hook keeps the last level's sources for the render in which the
   // level changes, until its load effect clears them. Those are not handed

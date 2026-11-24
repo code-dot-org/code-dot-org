@@ -22,6 +22,7 @@ jest.mock('@cdo/apps/blockly/utils/workspace/refresh', () => ({
 const SPANISH: {[source: string]: string} = {
   Sprites: 'Objetos',
   World: 'Mundo',
+  'We did it!': '¡Lo logramos!',
 };
 
 const TOOLBOX = {
@@ -62,6 +63,20 @@ describe('shownToolbox', () => {
     expect(shown.contents.map(c => c.name)).toEqual(['Objetos', 'Mundo']);
     expect(shown.contents[0].contents).toEqual(TOOLBOX.contents[0].contents);
     expect(TOOLBOX.contents[0].name).toBe('Sprites');
+  });
+
+  it('translates the words in its blocks', () => {
+    const shown = shownToolbox({
+      kind: 'flyoutToolbox',
+      contents: [
+        {
+          kind: 'block',
+          type: 'gamelab_spriteSay',
+          fields: {SPEECH: 'We did it!'},
+        },
+      ],
+    }) as unknown as {contents: {fields: {SPEECH: string}}[]};
+    expect(shown.contents[0].fields.SPEECH).toBe('¡Lo logramos!');
   });
 
   it('returns the toolbox itself in English', () => {

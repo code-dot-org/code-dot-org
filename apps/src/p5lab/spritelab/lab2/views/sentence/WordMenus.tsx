@@ -365,7 +365,7 @@ export function useWordMenus({
       phrase =>
         phraseFilled(sentence, phrase, which) || mentions(phrase, slot.id)
     );
-    return translateSentence(template).flatMap((piece, i) =>
+    return translateSentence(template).flatMap<React.ReactNode>((piece, i) =>
       'slot' in piece
         ? renderSlot(piece.slot, which)
         : [<span key={`text${i}`}>{piece.text}</span>]

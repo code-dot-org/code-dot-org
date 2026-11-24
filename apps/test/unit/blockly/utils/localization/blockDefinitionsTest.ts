@@ -13,6 +13,7 @@ const SPANISH: {[source: string]: string} = {
   left: 'izquierda',
   center: 'centro',
   'Makes a sprite.': 'Crea un sprite.',
+  'You win!': '¡Ganaste!',
 };
 
 const MAKE_SPRITE: BlockJson = {
@@ -79,6 +80,17 @@ describe('localizeJsonBlockDefinition', () => {
       ['7', '7'],
     ]);
     expect(localized.tooltip).toBe('Crea un sprite.');
+  });
+
+  it("translates a text field's starting text", () => {
+    const localized = localizeJsonBlockDefinition({
+      type: 'spritelab2_showTitle',
+      message0: 'show title %1',
+      args0: [{type: 'field_input', name: 'TEXT', text: 'You win!'}],
+    } as BlockJson);
+    expect((localized.args0[0] as unknown as {text: string}).text).toBe(
+      '¡Ganaste!'
+    );
   });
 
   it('leaves the definition it was given unchanged', () => {

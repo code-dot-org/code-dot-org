@@ -55,11 +55,12 @@ const SentenceReadOnly: React.FunctionComponent<SentenceReadOnlyProps> = ({
     >
       {isEnglish(locale)
         ? withPeriod(render(sentence.segments))
-        : translateSentence(readOnlyTemplate(sentence, choices)).flatMap(
-            (piece, i) =>
-              'slot' in piece
-                ? renderSlot(piece.slot)
-                : [<span key={`text${i}`}>{piece.text}</span>]
+        : translateSentence(
+            readOnlyTemplate(sentence, choices)
+          ).flatMap<React.ReactNode>((piece, i) =>
+            'slot' in piece
+              ? renderSlot(piece.slot)
+              : [<span key={`text${i}`}>{piece.text}</span>]
           )}
     </p>
   );

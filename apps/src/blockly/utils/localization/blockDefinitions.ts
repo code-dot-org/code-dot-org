@@ -67,7 +67,12 @@ export function localizeBlockDefinition(blockDefinition: BlockJson): BlockJson {
   };
 }
 
-type ArgJson = {name?: string; options?: unknown};
+type ArgJson = {
+  name?: string;
+  type?: string;
+  text?: unknown;
+  options?: unknown;
+};
 
 function argReferences(message: string): string[] {
   return (message.match(/%\d+/g) ?? []).sort();
@@ -100,7 +105,8 @@ function translateOptions(options: unknown): unknown {
 
 /**
  * Returns a copy of a JSON block definition in the current language: its
- * messages, its tooltip, and the display text of any argument's options. English is returned as
+ * messages, its tooltip, the display text of any argument's options, and the
+ * starting text of its text fields. English is returned as
  * given.
  */
 export function localizeJsonBlockDefinition(definition: BlockJson): BlockJson {
@@ -115,9 +121,16 @@ export function localizeJsonBlockDefinition(definition: BlockJson): BlockJson {
       localized[`message${n}`] = translateBlockMessage(message);
     }
     if (definition[`args${n}`]) {
-      localized[`args${n}`] = args.map(arg =>
-        arg.options ? {...arg, options: translateOptions(arg.options)} : arg
-      ) as BlockJson[`args${number}`];
+      localized[`args${n}`] = args.map(arg => {
+        if (arg.options) {
+          return {...arg, options: translateOptions(arg.options)};
+        }
+        // A text field's starting words, shown until the student edits them.
+        if (arg.type === 'field_input' && typeof arg.text === 'string') {
+          return {...arg, text: translate(arg.text, BLOCK_LABELS)};
+        }
+        return arg;
+      }) as BlockJson[`args${number}`];
     }
   }
   if (definition.tooltip) {
