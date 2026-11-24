@@ -28,6 +28,7 @@ import {QueryClientProvider} from '@code-dot-org/core/api';
 
 import StudioFooter from '@/components/footer';
 import SiteHeader from '@/components/header';
+import {BRAND_NAME} from '@/components/header/config';
 import PageFlash from '@/components/pageFlash';
 import {isMobileBuild} from '@/config/buildMode';
 import {
@@ -159,7 +160,7 @@ export const createStudioRootRoute = () =>
     head: () => ({
       // Default document title; leaf routes override it via their own `head`.
       // HeadContent restores this when navigating back to a title-less route.
-      meta: [{title: 'CodeAI'}],
+      meta: [{title: BRAND_NAME}],
       links: [
         {
           rel: 'icon',

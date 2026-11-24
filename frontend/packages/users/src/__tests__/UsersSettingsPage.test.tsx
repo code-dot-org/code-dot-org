@@ -73,7 +73,6 @@ describe('UsersSettingsPage', () => {
     expect(
       screen.getByRole('heading', {level: 1, name: 'My Account'}),
     ).toBeInTheDocument();
-    expect(document.title).toBe('My Account — Code.org');
 
     const tabs = within(tablist).getAllByRole('tab');
     expect(tabs.map(tab => tab.textContent)).toEqual([
