@@ -78,7 +78,7 @@ const AdaptiveStatsWidget: React.FC<AdaptiveStatsWidgetProps> = ({
 
   return (
     <WidgetTemplate
-      widgetName="Pathway Stats"
+      widgetName="Skill Map Stats"
       gridWidth={1}
       gridHeight={3}
       scrollable
