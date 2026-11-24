@@ -67,7 +67,7 @@ describe('CongratsStep', () => {
     expect(onComplete).toHaveBeenCalledTimes(1);
   });
 
-  it('leaves out the challenge when builders_challenge_url is unset', () => {
+  it('leaves out the challenge when adaptive-challenge-url is unset', () => {
     render(<CongratsStep step={step} onComplete={jest.fn()} />);
     expect(
       screen.getByText(/Keep exploring and building with AI/)
@@ -75,14 +75,14 @@ describe('CongratsStep', () => {
     expect(screen.queryByText(/Challenge/)).toBeNull();
   });
 
-  it('ignores a builders_challenge_url that is not a string', () => {
-    DCDO.set('builders_challenge_url', true);
+  it('ignores a adaptive-challenge-url that is not a string', () => {
+    DCDO.set('adaptive-challenge-url', true);
     render(<CongratsStep step={step} onComplete={jest.fn()} />);
     expect(screen.queryByText(/Challenge/)).toBeNull();
   });
 
-  it('links to the challenge when builders_challenge_url is set', () => {
-    DCDO.set('builders_challenge_url', 'https://example.com/challenge');
+  it('links to the challenge when adaptive-challenge-url is set', () => {
+    DCDO.set('adaptive-challenge-url', 'https://example.com/challenge');
     render(<CongratsStep step={step} onComplete={jest.fn()} />);
     expect(
       screen.getByText(/Join the Building with AI Challenge/)
@@ -92,6 +92,32 @@ describe('CongratsStep', () => {
     });
     expect(link.getAttribute('href')).toBe('https://example.com/challenge');
     expect(link.getAttribute('target')).toBe('_blank');
+  });
+
+  it('takes the challenge copy from DCDO when set', () => {
+    DCDO.set('adaptive-challenge-url', 'https://example.com/challenge');
+    DCDO.set('adaptive-challenge-description', 'Join the Spring Challenge.');
+    DCDO.set('adaptive-challenge-button-text', 'See the Spring Challenge');
+    render(<CongratsStep step={step} onComplete={jest.fn()} />);
+    expect(screen.getByText('Join the Spring Challenge.')).toBeTruthy();
+    expect(
+      screen.getByRole('link', {name: /See the Spring Challenge/})
+    ).toBeTruthy();
+  });
+
+  it('keeps the default challenge copy when the DCDO copy is null', () => {
+    DCDO.set('adaptive-challenge-url', 'https://example.com/challenge');
+    DCDO.set('adaptive-challenge-description', null);
+    DCDO.set('adaptive-challenge-button-text', null);
+    render(<CongratsStep step={step} onComplete={jest.fn()} />);
+    expect(
+      screen.getByText(/Join the Building with AI Challenge/)
+    ).toBeTruthy();
+    expect(
+      screen.getByRole('link', {
+        name: /Learn about the Building with AI Challenge/,
+      })
+    ).toBeTruthy();
   });
 
   it('adds the professional learning cards for a teacher', () => {
