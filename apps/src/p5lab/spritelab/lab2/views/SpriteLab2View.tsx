@@ -2471,6 +2471,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               instructionsCollapsed && moduleStyles.instructionsCollapsed
             )}
             collapsible={freeplayLevel || undefined}
+            hideCollapsedTabBorder
             // The objectives checklist, and the Continue button it enables,
             // render inside the instructions panel.
             objectives={objectives.active ? objectives : undefined}
