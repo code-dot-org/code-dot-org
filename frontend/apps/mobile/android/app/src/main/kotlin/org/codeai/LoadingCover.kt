@@ -27,9 +27,10 @@ internal class LoadingCover(
         if (cover != null) {
             return
         }
-        // Inside the root's system-bar padding, so its header sits where the
-        // page's does and the bars keep the root's purple.
-        val root = activity.findViewById<ViewGroup>(R.id.app_root)
+        // Beside the page, inside the root's system-bar padding, so its header
+        // sits where the page's does, it turns with the page, and the bars keep
+        // the root's purple.
+        val root = activity.findViewById<ViewGroup>(R.id.app_content)
         val shown = activity.layoutInflater.inflate(R.layout.loading_cover, root, false)
         val home = shown.findViewById<View>(R.id.loading_cover_logo)
         home.setOnClickListener { onHome() }
