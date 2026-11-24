@@ -6,7 +6,7 @@ ARG DEPS_IMAGE=ghcr.io/code-dot-org/cdo-deps:latest
 
 # uv from Astral's official docker setup.
 # See: https://docs.astral.sh/uv/guides/integration/docker/
-FROM ghcr.io/astral-sh/uv:0.5.18@sha256:e2101b9e627153b8fe4e8a1249cc4194f1b38ece7f28a5a9b8f958e3b560e69c AS uv
+FROM ghcr.io/astral-sh/uv:0.13.9@sha256:d3b601f0c7b118bc1753febf7c41cc80981df678445e0254284eecf84db79a7d AS uv
 
 FROM ${DEPS_IMAGE}
 
