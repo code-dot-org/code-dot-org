@@ -325,3 +325,52 @@ describe('WorldTab palette', () => {
     expect(screen.getByText('That one stays.')).toBeTruthy();
   });
 });
+
+describe('WorldTab player column', () => {
+  const worldWith = (player?: string) => {
+    const grid = Array.from({length: 10}, () =>
+      Array.from(
+        {length: 10},
+        () => null as null | {image: string; kind: 'block' | 'sprite'}
+      )
+    );
+    grid[9][0] = {image: 'Stone', kind: 'block'};
+    grid[8][0] = {image: 'Hero', kind: 'sprite'};
+    return {grid, player};
+  };
+
+  it('is left out without onChangePlayer', () => {
+    renderTab({world: worldWith()});
+    expect(screen.queryByRole('group', {name: 'Player'})).toBeNull();
+  });
+
+  it("offers the world's sprite images, and a press makes one the player", () => {
+    const onChangePlayer = jest.fn();
+    renderTab({world: worldWith(), onChangePlayer});
+    const column = screen.getByRole('group', {name: 'Player'});
+    const buttons = column.querySelectorAll('button');
+    expect([...buttons].map(b => b.textContent)).toEqual(['Hero']);
+    expect(buttons[0].getAttribute('aria-pressed')).toBe('false');
+    fireEvent.click(buttons[0]);
+    expect(onChangePlayer).toHaveBeenCalledWith('Hero');
+  });
+
+  it('shows the player pressed, and a press on it clears the player', () => {
+    const onChangePlayer = jest.fn();
+    renderTab({world: worldWith('Hero'), onChangePlayer});
+    const button = screen
+      .getByRole('group', {name: 'Player'})
+      .querySelector('button') as HTMLButtonElement;
+    expect(button.getAttribute('aria-pressed')).toBe('true');
+    fireEvent.click(button);
+    expect(onChangePlayer).toHaveBeenCalledWith(undefined);
+  });
+
+  it('asks for a character when the world has none', () => {
+    renderTab({
+      world: {grid: worldWith().grid.map(() => Array(10).fill(null))},
+      onChangePlayer: jest.fn(),
+    });
+    expect(screen.getByText('Place a character first.')).toBeTruthy();
+  });
+});
