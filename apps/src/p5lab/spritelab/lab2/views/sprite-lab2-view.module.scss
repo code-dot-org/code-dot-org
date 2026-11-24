@@ -354,13 +354,29 @@ $z-over-blockly: 71;
   text-align: left;
   cursor: pointer;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background: var(--background-neutral-tertiary);
   }
 
   &:focus-visible {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: -2px;
+  }
+
+  &:disabled {
+    color: var(--text-neutral-disabled);
+    cursor: default;
+  }
+}
+
+// Override CustomDropdown's hover and press styles on a disabled item.
+.sceneDropdown .sceneMenu.sceneMenu li:has(> .sceneMenuItem:disabled) {
+  background: none;
+
+  span,
+  i::before {
+    background: none;
+    color: var(--text-neutral-disabled);
   }
 }
 
