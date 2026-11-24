@@ -54,6 +54,8 @@ export interface ChatHandle {
 export interface ChatHost {
   /** Called with the chat's handle once it mounts, and again if it remounts. */
   onChatReady: (chat: ChatHandle) => void;
+  /** Added to the tutor's build, accept and reject analytics events. */
+  analyticsProperties?: Record<string, string>;
 }
 
 export const ChatHostContext = createContext<ChatHost | null>(null);

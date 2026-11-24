@@ -1,5 +1,7 @@
 import {renderHook} from '@testing-library/react-hooks';
+import React from 'react';
 
+import {ChatHostContext} from '@cdo/apps/aichat/host/ChatHostContext';
 import {useSharedAiTutorResponseSchemaSettings} from '@cdo/apps/aiTutor/hooks/useSharedAiTutorResponseSchemaSettings';
 import {setProjectSourceBeforeAiTutorVersion} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -100,10 +102,36 @@ describe('useSharedAiTutorResponseSchemaSettings', () => {
     onResponse!(acceptRejectResponse);
 
     expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledTimes(1);
+    expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
+      'AI Tutor Generated Code',
+      {answerType: 'buildHTML'}
+    );
     const dispatched = mockDispatch.mock.calls.map(([action]) => action.type);
     expect(dispatched).toContain('lab2Project/setViewingAiTutorVersion');
     expect(dispatched).toContain('lab2Project/setSource');
     expect(mockOnAiTutorVersionLoaded).toHaveBeenCalledTimes(1);
+  });
+
+  it('onResponse reports the generated code with the host analytics properties', () => {
+    const host = {onChatReady: jest.fn(), analyticsProperties: {stepId: 's'}};
+    const {onResponse} = renderHook(
+      () => useSharedAiTutorResponseSchemaSettings(weblab2Options()),
+      {
+        wrapper: ({children}: {children?: React.ReactNode}) =>
+          React.createElement(
+            ChatHostContext.Provider,
+            {value: host},
+            children
+          ),
+      }
+    ).result.current;
+
+    onResponse!(acceptRejectResponse);
+
+    expect(mockSendLab2AnalyticsEvent).toHaveBeenCalledWith(
+      'AI Tutor Generated Code',
+      {answerType: 'buildHTML', stepId: 's'}
+    );
   });
 
   it('onResponse merges with the project as it is when the answer arrives', () => {
