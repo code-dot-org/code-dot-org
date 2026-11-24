@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {makerspaceSupportLinkFor} from '@cdo/apps/adaptive/makerspaceSupportLink';
 import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import RequiresInaccessibleAiModelsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresInaccessibleAiModelsAlert';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
@@ -245,9 +244,7 @@ class CourseOverview extends Component {
         )}
         {viewAsTeacher &&
           aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-            <RequiresAiChatToolsAlert
-              supportLink={makerspaceSupportLinkFor(name)}
-            />
+            <RequiresAiChatToolsAlert />
           )}
         <SafeMarkdown
           className={styles.description}
