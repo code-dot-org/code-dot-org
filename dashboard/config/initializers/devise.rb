@@ -324,22 +324,32 @@ Devise.setup do |config|
   # end
 
   require 'cdo/cookie_helpers'
-  Warden::Manager.after_set_user do |user, auth|
-    user_type =
-      if user.teacher?
-        "teacher"
-      elsif user.under_13?
-        "student_y"
-      else
-        "student"
-      end
-    # Students younger than 13 shouldn't see App Lab and Game Lab unless they
-    # are in a teacher's section for privacy reasons.
-    limit_project_types = user.under_13? && user.sections_as_student.none?
-    auth.cookies[environment_specific_cookie_name("_limit_project_types")] = {value: limit_project_types, domain: :all, httponly: true}
-    auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
-    auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
-    auth.cookies[environment_specific_cookie_name("_experiments")] = {value: Queries::User::EnabledExperiments.call(user).to_json, domain: :all}
+  Warden::Manager.after_set_user do |user, auth, opts|
+    set_user_cookies = proc do
+      user_type =
+        if user.teacher?
+          "teacher"
+        elsif user.under_13?
+          "student_y"
+        else
+          "student"
+        end
+      # Students younger than 13 shouldn't see App Lab and Game Lab unless they
+      # are in a teacher's section for privacy reasons.
+      limit_project_types = user.under_13? && user.sections_as_student.none?
+      auth.cookies[environment_specific_cookie_name("_limit_project_types")] = {value: limit_project_types, domain: :all, httponly: true}
+      auth.cookies[environment_specific_cookie_name("_user_type")] = {value: user_type, domain: :all, httponly: true}
+      auth.cookies[environment_specific_cookie_name("_shortName")] = {value: user.short_name, domain: :all}
+      auth.cookies[environment_specific_cookie_name("_experiments")] = {value: Queries::User::EnabledExperiments.call(user).to_json, domain: :all}
+    end
+
+    # Read from writer database at sign-in because this request's db changes may not have replicated to the reader yet.
+    if opts[:event] == :fetch
+      context = Middleware::LastWriteStamp::Context.call(ActionDispatch::Request.new(auth.env))
+      Middleware::LastWriteStamp::Resolver.call(context).read(&set_user_cookies)
+    else
+      set_user_cookies.call
+    end
   end
 
   Warden::Manager.before_logout do |_, auth|
