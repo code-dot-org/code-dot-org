@@ -1,8 +1,5 @@
-@use 'sass:color';
-
 $border: var(--borders-neutral-primary);
 $green: #66c365;
-$purple: #9657c7;
 
 .container {
   display: flex;
@@ -153,60 +150,9 @@ $purple: #9657c7;
   width: 600px;
   max-width: 100%;
   margin: 0 auto;
-}
 
-.iconButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-  border: 1px solid var(--borders-neutral-strong);
-  border-radius: 4px;
-  background: var(--background-neutral-black-fixed);
-  color: var(--text-neutral-primary);
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.12s ease;
-
-  &:hover {
-    background: rgba(255 255 255 / 0.08);
-  }
-
-  &:focus-visible {
-    outline: 2px solid #a374d6;
-    outline-offset: 2px;
-  }
-
-  &:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-}
-
-.flipButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  height: 40px;
-  padding: 0 32px;
-  border: none;
-  border-radius: 4px;
-  background: $purple;
-  color: var(--text-neutral-primary);
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.12s ease;
-
-  &:hover {
-    background: color.adjust($purple, $lightness: -8%);
-  }
-
-  &:focus-visible {
-    outline: 2px solid #a374d6;
-    outline-offset: 2px;
+  // MUI Button — nested for specificity over the theme's size padding
+  .flipButton {
+    padding-inline: 32px;
   }
 }

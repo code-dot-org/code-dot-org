@@ -1,3 +1,4 @@
+import {Button as MuiButton, IconButton} from '@mui/material';
 import {type FC, useCallback, useMemo, useState} from 'react';
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -73,32 +74,36 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
       </div>
 
       <div className={styles.controls}>
-        <button
-          type="button"
-          className={styles.iconButton}
+        <IconButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
           onClick={goPrev}
           disabled={vocabulary.length <= 1}
           aria-label="Previous card"
         >
           <FontAwesomeV6Icon iconName="arrow-left" />
-        </button>
-        <button
-          type="button"
+        </IconButton>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           className={styles.flipButton}
           onClick={flip}
           aria-label="Flip card"
         >
           Flip
-        </button>
-        <button
-          type="button"
-          className={styles.iconButton}
+        </MuiButton>
+        <IconButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
           onClick={goNext}
           disabled={vocabulary.length <= 1}
           aria-label="Next card"
         >
           <FontAwesomeV6Icon iconName="arrow-right" />
-        </button>
+        </IconButton>
       </div>
     </div>
   );
