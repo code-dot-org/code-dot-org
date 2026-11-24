@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894913-964b16416661",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 12: AI's Role in Society",
+  "question": "A community AI system works well for some people and badly for others. You are the designer called in to make it fair. Decide who is left out, and what you will change.\n\nSteps:\n1. Start recording. Pick one system from the list below.\n2. Say who is left out and why.\n3. Give 3 fixes: one about the data the AI learns from, one about who can reach it, and one about who watches over it.\n4. Name one trade-off in your redesign (such as cost or privacy), and say how you would decide.\n\nSystem list:\n- A library uses an AI to plan programs, trained mostly on data from its biggest branch.\n- A clinic’s chatbot books appointments, but only in English and only on a phone app.\n- A city’s AI cameras count bikes, but they work poorly at night.\n- A school’s AI assigns tutors, but students need internet at home to use it.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe a redesign on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names who is left out but gives fewer than 3 fixes."
+    },
+    {
+      "level": 2,
+      "description": "Student names who is left out and why AND gives 3 fixes (one about the data, one about access, and one about oversight)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names one trade-off (such as cost or privacy) AND says how to decide."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

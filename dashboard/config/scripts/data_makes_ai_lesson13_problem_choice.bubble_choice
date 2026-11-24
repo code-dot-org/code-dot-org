@@ -1,0 +1,13 @@
+name 'data-makes-ai-lesson13-problem-choice'
+display_name 'Find the Problem'
+description 'Click the same dataset you chose in Meet the Data.'
+navigation_type 'next_sublevel'
+
+sublevels
+level 'data-makes-ai-lesson13-problem-snacks'
+level 'data-makes-ai-lesson13-problem-run-or-pass'
+level 'data-makes-ai-lesson13-problem-study-playlist'
+level 'data-makes-ai-lesson13-problem-video-games'
+level 'data-makes-ai-lesson13-problem-board-games'
+
+uses_lab2

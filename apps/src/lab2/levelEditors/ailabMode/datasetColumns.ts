@@ -16,6 +16,7 @@ export interface DatasetColumns {
   selectable: string[];
   defaultLabel?: string;
   defaultIdColumn?: string;
+  rowCount: number;
 }
 
 export async function fetchDatasetColumns(
@@ -49,6 +50,7 @@ export async function fetchDatasetColumns(
       defaultIdColumn && all.includes(defaultIdColumn)
         ? defaultIdColumn
         : undefined,
+    rowCount: rows.length,
   };
 }
 

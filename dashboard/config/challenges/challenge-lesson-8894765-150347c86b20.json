@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894765-150347c86b20",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 10: The Final Verdict",
+  "question": "A recycling center uses an AI to sort items. A human cannot check everything, so where should a person look? Find the step where a mistake would be hardest to fix.\n\nSteps:\n1. Use the arrow tool to point at the step where a mistake would be hardest to fix.\n2. Place a shape at the spot where a human should check.\n3. Record your voice explaining your choices. Say why checking every item at step 1 would not work well.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on step 4, the shape is not on step 3 or between step 3 and step 4, or the voice recording does not say that a mistake is hard to undo after step 4."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to step 4 AND a shape is on step 3 or between step 3 and step 4 AND the voice recording says that a mistake is hard to undo after step 4."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains why checking every item at step 1 would not be practical and what the human check should look at instead."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894765-150347c86b20-2ae354eb",
+  "whiteboard_starter_image_alt_text": "\"Inside a recycling center.\" Four steps connected by arrows above a conveyor belt: 1, \"A camera looks at each item.\"; 2, \"The AI guesses: plastic, paper, metal, or trash.\"; 3, \"A machine sorts the item into a bin.\"; and 4, \"Full bins are crushed into blocks and shipped away.\""
+}

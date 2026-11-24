@@ -152,6 +152,37 @@ activeJobWorker:
     awsRegion: us-east-1
 ```
 
+### Generate test work
+
+`AutoscalingTestJob` occupies one worker by sleeping for a requested integer
+duration from 0 to 1800 seconds. It defaults to the low-priority queue and
+inherits the normal Active Job metrics. It exercises queue scaling and job
+draining; it does not simulate CPU or database load.
+
+Deploy the class to every worker that can consume the test database, including
+legacy workers, before enqueueing. In a Rails console connected to the isolated
+test environment, enqueue a bounded batch:
+
+```ruby
+run_id = "keda-#{SecureRandom.uuid}"
+jobs = Array.new(12) do
+  AutoscalingTestJob.perform_later(run_id: run_id, duration_seconds: 180)
+end
+puts({run_id: run_id, job_ids: jobs.map(&:job_id)}.to_json)
+```
+
+Use `duration_seconds: 1800` for the long-job drain test. Use
+`AutoscalingTestJob.set(priority: 9)` or `.set(priority: 10)` before
+`perform_later` to test the priority boundary.
+
+The job emits JSON `started` and `completed` events through `CDO.log` to stdout.
+Each includes the run ID, Active Job ID, hostname (normally the pod name), PID,
+requested duration, and UTC timestamp. Filter on `namespace=autoscaling_test_job`
+and the run ID. Completion is logged only after the sleep returns; it does not
+prove the queue row was deleted. Check the queue as well when verifying drain.
+The job installs no signal handlers, so Delayed Job retains its normal
+finish-current-job behavior on SIGTERM.
+
 ## Non-local clusters
 
 Argo CD and Kargo configuration lives in the

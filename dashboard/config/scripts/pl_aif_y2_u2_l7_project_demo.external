@@ -1,0 +1,27 @@
+name 'pl-aif-y2-u2-l7-project-demo'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Look Through a Finished Project
+
+This is the finished project your students are aiming for. Read it the way they will, by tracing each row of the data table into a line of code.
+
+**☑️ Do This:**
+- In the Project Planning Guide, find the Step 3 table.
+- In the code, match each Train row to its dictionary.
+- Pick a test image and run the code. Does the prediction match the guide?
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/image-classifier-sim.html"
+    width="100%"
+    height="1760"
+    frameborder="0"
+    scrolling="no"
+    title="Finished Project Planning Guide beside a simulated Python lab for the ocean and river image classifier">
+  </iframe>
+</div>
+
+What might your students find challenging about this?
+MARKDOWN

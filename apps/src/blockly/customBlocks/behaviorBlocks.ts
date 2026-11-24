@@ -30,7 +30,7 @@ export const blocks = BlocklyCore.common.createBlockDefinitionsFromJsonArray([
         text: ' ',
       },
       {
-        type: 'field_input',
+        type: 'field_procedure_name_input',
         name: 'NAME',
         text: '',
         spellcheck: false,
@@ -79,7 +79,7 @@ export const blocks = BlocklyCore.common.createBlockDefinitionsFromJsonArray([
     message0: '%1 %2',
     args0: [
       {
-        type: 'field_label',
+        type: 'field_procedure_name',
         name: 'NAME',
         text: '%{BKY_UNNAMED_KEY}',
       },
@@ -240,8 +240,7 @@ export function flyoutCategory(
     blockList.push(newBehaviorButton);
   }
 
-  // Add blocks from the level toolbox XML, if present.
-  blockList.push(...getCategoryBlocksJson('Behavior'));
+  blockList.push(...getCategoryBlocksJson(workspace, 'Behavior'));
 
   // Workspaces to populate behaviors flyout category from
   const workspaces = [

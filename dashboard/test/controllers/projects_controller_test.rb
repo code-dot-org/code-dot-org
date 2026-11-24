@@ -496,6 +496,34 @@ class ProjectsControllerTest < ActionController::TestCase
     refute_nil @response.body['channel']
   end
 
+  test 'get_or_create_for_level with user returns channel for a project validator who does not teach the student' do
+    student = create(:user)
+    sign_in_with_request(student)
+    script = create(:script, :in_single_unit_course)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    create(:user_level, level: level, user: student, script: script)
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
+    assert_response :success
+    student_channel = JSON.parse(@response.body)['channel']
+    sign_out_with_request(student)
+
+    sign_in create(:project_validator)
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :success
+    assert_equal student_channel, JSON.parse(@response.body)['channel']
+  end
+
+  test 'get_or_create_for_level with user returns forbidden for a teacher who does not teach the student' do
+    student = create(:user)
+    script = create(:script, :in_single_unit_course)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    sign_in create(:teacher)
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :forbidden
+  end
+
   test 'on lab2 levels navigating to /view redirects to /edit if user is project owner' do
     channel_id = '12345'
     Projects.any_instance.stubs(:get).returns({isOwner: true})

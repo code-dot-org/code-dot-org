@@ -4,6 +4,9 @@ import {
   LevelsAttemptedBox,
   NextStepPicker,
   PreSkillsCheck,
+  ReflectionBox,
+  ReflectionData,
+  ReflectionValue,
   TimeSpentBox,
   TutorSummaryBox,
   ValidatedLevelsBox,
@@ -13,14 +16,15 @@ import React, {FC, useCallback, useEffect, useMemo, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
 import {useLessonDeepDiveChallengesEnabled} from '@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {LessonObjectiveReflectionValues} from '@cdo/generated-scripts/sharedConstants';
 
-import ReflectionBox from './Reflection/ReflectionBox';
 import InterventionBox from './ReviewModalities/InterventionBox';
 import SkillsCheck from './SkillsCheck/SkillsCheck';
-import {LessonDeepDiveData, ReflectionData, ReflectionValue} from './types';
+import {LessonDeepDiveData} from './types';
 
 import styles from './lesson-deep-dive-container.module.scss';
 
@@ -235,9 +239,28 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
     goToNext,
   ]);
 
-  const handleReflectionComplete = useCallback((data: ReflectionData) => {
-    setReflectionData(data);
-  }, []);
+  const handleReflectionComplete = useCallback(
+    (data: ReflectionData) => {
+      setReflectionData(data);
+      Object.entries(data.objectiveReflections).forEach(
+        ([objectiveId, rating]) => {
+          if (rating) {
+            analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_OBJECTIVE_RATED, {
+              lesson_id: lessonDeepDiveData.lessonId,
+              objective_id: objectiveId,
+              rating,
+            });
+          }
+        }
+      );
+      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_REFLECTION_SUBMITTED, {
+        lesson_id: lessonDeepDiveData.lessonId,
+        has_success_note: data.success.trim().length > 0,
+        has_confusion_note: data.struggle.trim().length > 0,
+      });
+    },
+    [lessonDeepDiveData.lessonId]
+  );
 
   // Returns the first struggling objective's description, shown as the focus
   // topic on the intervention screen to personalise the "Let's get to work" heading.
@@ -270,6 +293,42 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
   const currentStorySlide =
     (STORY_SCREEN_ORDER as readonly string[]).indexOf(currentScreenId) + 1;
 
+  const lessonId = lessonDeepDiveData.lessonId;
+
+  // Recap cards call onNext only on a click; auto-advance and arrow keys
+  // call goToNext directly and are not logged.
+  const handleRecapNext = () => {
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_RECAP_CARD_VIEWED, {
+      lesson_id: lessonId,
+      card_index: currentStorySlide,
+    });
+    goToNext();
+  };
+
+  const handleNextStepChosen = (choice: 'practice' | 'challenge') => {
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN, {
+      lesson_id: lessonId,
+      choice,
+      source: 'next_step_screen',
+    });
+    setNextStepChoice(choice);
+    goToNext();
+  };
+
+  const handlePracticeNextChosen = (
+    choice: 'keep_practicing' | 'test_skills'
+  ) => {
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_PRACTICE_NEXT_CHOSEN, {
+      lesson_id: lessonId,
+      choice,
+    });
+    if (choice === 'keep_practicing') {
+      goToPrev();
+    } else {
+      goToNext();
+    }
+  };
+
   const renderBox = () => {
     switch (currentScreenId) {
       case 'welcome':
@@ -281,7 +340,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
-            onNext={goToNext}
+            onNext={handleRecapNext}
           />
         );
       case 'levels-attempted':
@@ -298,7 +357,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
-            onNext={goToNext}
+            onNext={handleRecapNext}
           />
         );
       case 'time-spent':
@@ -313,7 +372,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
-            onNext={goToNext}
+            onNext={handleRecapNext}
           />
         );
       case 'validated-levels':
@@ -335,7 +394,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
-            onNext={goToNext}
+            onNext={handleRecapNext}
           />
         );
       case 'lesson-summary':
@@ -358,7 +417,7 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
             autoAdvanceDurationMs={STORY_CARD_DURATION_MS}
             currentSlide={currentStorySlide}
             totalSlides={TOTAL_STORY_SLIDES}
-            onNext={goToNext}
+            onNext={handleRecapNext}
           />
         );
       case 'reflection':
@@ -375,14 +434,8 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
       case 'next-step':
         return (
           <NextStepPicker
-            onPractice={() => {
-              setNextStepChoice('practice');
-              goToNext();
-            }}
-            onChallenge={() => {
-              setNextStepChoice('challenge');
-              goToNext();
-            }}
+            onPractice={() => handleNextStepChosen('practice')}
+            onChallenge={() => handleNextStepChosen('challenge')}
           />
         );
       case 'intervention':
@@ -406,7 +459,10 @@ const LessonDeepDiveContainer: FC<LessonDeepDiveContainerProps> = ({
         );
       case 'pre-skills-check':
         return (
-          <PreSkillsCheck onKeepPracticing={goToPrev} onTestSkills={goToNext} />
+          <PreSkillsCheck
+            onKeepPracticing={() => handlePracticeNextChosen('keep_practicing')}
+            onTestSkills={() => handlePracticeNextChosen('test_skills')}
+          />
         );
       case 'skills-check':
         return (

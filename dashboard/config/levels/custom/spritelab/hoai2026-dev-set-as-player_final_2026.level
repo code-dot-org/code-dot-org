@@ -14,7 +14,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -78,7 +78,7 @@
       "title": "**Set as player**",
       "items": [
         {
-          "text": "Drag the **set as player block** into the dotted outline under **when run**.",
+          "text": "Drag the **set as player** block into the dotted outline under **when run**.",
           "check": {
             "kind": "block",
             "type": "spritelab2_setAsPlatformPlayer",
@@ -94,7 +94,7 @@
         }
       ]
     },
-    "long_instructions": "# Set as player\r\nA player sprite is pulled down by the world’s gravity. It runs left and right and jumps up with the arrow keys.",
+    "long_instructions": "# Set as player\r\nA player sprite is pulled down by the world’s gravity. You control it with the arrow keys to run and jump.",
     "header_label": "Set as player",
     "embed": "false",
     "instructions_important": "false",

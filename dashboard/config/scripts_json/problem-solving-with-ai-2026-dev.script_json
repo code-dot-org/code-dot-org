@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-12 15:47:48 UTC",
+    "serialized_at": "2026-11-21 06:42:17 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6128,7 +6128,7 @@
     {
       "key": "training_data",
       "word": "training data",
-      "definition": "the structured or unstructured information, such as text, images, or code, used to train an AI model and shape its ability to recognize patterns and generate accurate responses",
+      "definition": "the set or collection of data used to train an AI model to recognize patterns or make predictions.",
       "properties": {
       },
       "seeding_key": {

@@ -1,0 +1,13 @@
+{
+  "key": "aid-u1-l1-short-prompts",
+  "description": "A review video that explains how more detailed prompts give better results.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aid-u1-l1-short-prompts.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "d1f16775-1eca-4dc4-96f7-9947befe720d"
+  ]
+}

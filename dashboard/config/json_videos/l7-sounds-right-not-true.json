@@ -1,0 +1,13 @@
+{
+  "key": "l7-sounds-right-not-true",
+  "description": "Find out why AI can give a wrong answer that sounds right, without lying or glitching.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l7-sounds-right-not-true.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "eb549fc1-f0f5-4724-a1f0-636116232599"
+  ]
+}

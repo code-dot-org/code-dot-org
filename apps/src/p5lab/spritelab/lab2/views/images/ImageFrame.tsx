@@ -4,11 +4,16 @@
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
-import React, {useLayoutEffect, useRef, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useRef, useState} from 'react';
 
 import {standingFrameIndex} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import StripFrame from '@cdo/apps/p5lab/spritelab/lab2/views/StripFrame';
+import {
+  checkerCellFraction,
+  pixelGridFor,
+} from '@cdo/apps/pixelEditor/displayGrid';
 
+import PaintPlaceholder from './PaintPlaceholder';
 import {ProjectImage} from './projectImages';
 
 import styles from './images-tab.module.scss';
@@ -29,12 +34,63 @@ interface ImageFrameProps {
   workspaceClassName?: string;
   /** Above the frame, across the column. */
   above?: React.ReactNode;
+  /** Keeps the row above the frame when it is empty, so the frame does not
+      move when the paint tools open. */
+  reserveAbove?: boolean;
   /** Over the frame, positioned by its own class. */
   overlay?: React.ReactNode;
   /** A tip shown over the frame's bottom part while a picture is made. */
   tip?: React.ReactNode;
   /** Under the frame. */
   under?: React.ReactNode;
+  /** A copy of the paint tools' canvas, shown over the picture until the
+      picture has been drawn. */
+  cover?: HTMLCanvasElement;
+  onCoverDone?: () => void;
+}
+
+// A canvas is this size until its size is set, which the frame's pictures
+// do as they are drawn.
+const NEW_CANVAS_SIZE = {width: 300, height: 150};
+// A picture that has not been drawn after this many animation frames is
+// taken to have failed, and the cover is dropped.
+const COVER_MAX_FRAMES = 30;
+
+/**
+ * The frame's checkerboard as the paint tools draw it behind `image`: the
+ * tile's side, and where the tiles start so that one starts at the
+ * picture's corner. Undefined for a picture of unknown size, or one too
+ * small for a tile.
+ */
+function checkerOf(
+  image: ProjectImage | null
+): React.CSSProperties | undefined {
+  // The paint tools open one frame of a character set, and the whole
+  // picture otherwise.
+  const size =
+    image?.sheet?.frameSize ??
+    image?.props.sourceSize ??
+    image?.props.frameSize;
+  if (!size) {
+    return undefined;
+  }
+  const grid = pixelGridFor(size.x, size.y, image?.props.pixelGridSize);
+  const width = size.x / (grid ?? 1);
+  const height = size.y / (grid ?? 1);
+  const longer = Math.max(width, height);
+  // A tile is two squares a side, as a share of the frame's side.
+  const tile = 2 * checkerCellFraction(width, height, !!grid);
+  if (tile >= 1) {
+    return undefined;
+  }
+  // The picture is centered in the frame. A background position in percent
+  // moves the tiles by that share of the frame's side less one tile.
+  const start = (side: number) => `${(50 * (1 - side / longer)) / (1 - tile)}%`;
+  return {
+    '--checker-tile': `${100 * tile}%`,
+    '--checker-x': start(width),
+    '--checker-y': start(height),
+  } as React.CSSProperties;
 }
 
 const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
@@ -44,9 +100,12 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   generating,
   workspaceClassName,
   above,
+  reserveAbove,
   overlay,
   tip,
   under,
+  cover,
+  onCoverDone,
 }) => {
   // The frame is a square as large as the column allows. CSS alone cannot
   // size it: a flex item's percentage height is undefined until the column
@@ -57,7 +116,7 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
   const aboveRef = useRef<HTMLDivElement>(null);
   const underRef = useRef<HTMLDivElement>(null);
   const [frameSide, setFrameSide] = useState<number>();
-  const hasAbove = !!above;
+  const hasAbove = !!above || !!reserveAbove;
   const hasUnder = !!under;
   useLayoutEffect(() => {
     const column = columnRef.current;
@@ -90,10 +149,45 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
     // row that appears later is watched from then on.
   }, [hasAbove, hasUnder]);
   const filled = live ? !generating : !!image;
+  const checker = checkerOf(image);
+
+  const pictureRef = useRef<HTMLDivElement>(null);
+  const onCoverDoneRef = useRef(onCoverDone);
+  onCoverDoneRef.current = onCoverDone;
+  useEffect(() => {
+    if (!cover) {
+      return;
+    }
+    const drawn = () => {
+      const picture = pictureRef.current?.querySelector('img, canvas');
+      if (picture instanceof HTMLImageElement) {
+        return picture.complete && picture.naturalWidth > 0;
+      }
+      if (picture instanceof HTMLCanvasElement) {
+        return (
+          picture.width !== NEW_CANVAS_SIZE.width ||
+          picture.height !== NEW_CANVAS_SIZE.height
+        );
+      }
+      return true;
+    };
+    let frames = 0;
+    let request = 0;
+    const check = () => {
+      if (drawn() || ++frames > COVER_MAX_FRAMES) {
+        onCoverDoneRef.current?.();
+        return;
+      }
+      request = requestAnimationFrame(check);
+    };
+    request = requestAnimationFrame(check);
+    return () => cancelAnimationFrame(request);
+  }, [cover]);
+
   return (
     <div className={styles.frameWell}>
       <div ref={columnRef} className={styles.frameColumn}>
-        {above && (
+        {hasAbove && (
           <div ref={aboveRef} className={styles.above}>
             {above}
           </div>
@@ -103,14 +197,16 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
             className={classNames(
               styles.frame,
               filled && styles.frameFilled,
+              checker && styles.frameMatched,
               workspaceClassName
             )}
-            style={{width: frameSide, height: frameSide}}
+            style={{width: frameSide, height: frameSide, ...checker}}
           >
             {/* role="img" is on the picture's own box, not the frame, so
                 controls the frame holds are not hidden from assistive
                 tech. */}
             <div
+              ref={pictureRef}
               className={styles.picture}
               role={workspaceClassName ? undefined : 'img'}
               aria-label={
@@ -142,6 +238,9 @@ const ImageFrame: React.FunctionComponent<ImageFrameProps> = ({
                   />
                 ) : null)}
             </div>
+            {cover && (
+              <PaintPlaceholder picture={cover} pixelated={image?.pixelated} />
+            )}
             {overlay}
             {/* A live region, so a screen reader hears each tip as it
                 changes. */}

@@ -1,0 +1,64 @@
+import {type FC} from 'react';
+
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
+
+import {type LessonObjective, type ReflectionValue} from '../types';
+
+import styles from './reflection.module.scss';
+
+export type {ReflectionValue};
+
+interface LessonObjectiveReflectionProps {
+  objective: LessonObjective;
+  selected: ReflectionValue | null;
+  onSelectionChange: (objectiveId: string, value: ReflectionValue) => void;
+}
+
+const BUTTONS: {value: ReflectionValue; icon: string; label: string}[] = [
+  {
+    value: LessonObjectiveReflectionValues.LOST,
+    icon: 'eyes',
+    label: 'New to me',
+  },
+  {
+    value: LessonObjectiveReflectionValues.UNSURE,
+    icon: 'battery-half',
+    label: 'Getting there',
+  },
+  {
+    value: LessonObjectiveReflectionValues.CONFIDENT,
+    icon: 'thumbs-up',
+    label: 'Got it',
+  },
+];
+
+const LessonObjectiveReflection: FC<LessonObjectiveReflectionProps> = ({
+  objective,
+  selected,
+  onSelectionChange,
+}) => (
+  <>
+    <p className={styles.objectiveText}>{objective.description}</p>
+    {BUTTONS.map(({value, icon, label}) => {
+      const isActive = selected === value;
+      return (
+        <button
+          key={value}
+          type="button"
+          onClick={() => onSelectionChange(objective.id, value)}
+          aria-label={label}
+          aria-pressed={isActive}
+          className={`${styles.ratingOption} ${
+            isActive ? styles.ratingOptionActive : ''
+          }`}
+        >
+          <FontAwesomeV6Icon iconName={icon} />
+          {label}
+        </button>
+      );
+    })}
+  </>
+);
+
+export default LessonObjectiveReflection;

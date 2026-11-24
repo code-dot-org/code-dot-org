@@ -7,7 +7,9 @@
   "properties": {
     "uses_lab2": "true",
     "world_keeps_roles": [
-      "friend"
+      "friend",
+      "hero",
+      "treasure"
     ],
     "block_pools": [
       "GamelabJr",
@@ -17,7 +19,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -31,6 +33,8 @@
       "imageRole": "friend",
       "paletteRoles": [
         "friend",
+        "hero",
+        "treasure",
         "block"
       ],
       "imageFirst": true,
@@ -47,14 +51,14 @@
       "title": "**Friend or foe?**",
       "items": [
         {
-          "text": "In **Images**, select the **+** button and make a friend or a foe.",
+          "text": "In **Images**, select the **+** button to make a new character.",
           "check": {
             "kind": "image",
             "imageType": "sprite"
           }
         },
         {
-          "text": "In **World**, select a square to place one or more.",
+          "text": "In **World**, select squares to place one or more copies.",
           "check": {
             "kind": "world",
             "role": "friend"
@@ -62,7 +66,7 @@
         }
       ]
     },
-    "long_instructions": "# Friend or foe?\r\n\r\nMake another character to share your world with your player.",
+    "long_instructions": "# Who else is in your world?\r\n\r\nMake another character for your player to meet. Will it be a friend, or an enemy?",
     "header_label": "Friend or foe?",
     "callouts": [
       {

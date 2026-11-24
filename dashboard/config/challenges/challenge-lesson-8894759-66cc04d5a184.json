@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894759-66cc04d5a184",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 4: Guidelines for Working with AI",
+  "question": "Every helper needs a name tag so it knows exactly who it is, who it is helping, and what to do. Fill one in and bring your helper to life.\n\nSteps:\n1. Use the text tool to fill in all three boxes on the name tag. Invent any helper you like, and don’t use real people’s names.\n2. Read your name tag out loud in your helper’s voice.\n3. Record your voice saying the first sentence your helper would say to the person it is helping.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student fills in fewer than 3 boxes, writes fewer than 3 words in a box, or the voice recording does not read the name tag aloud."
+    },
+    {
+      "level": 2,
+      "description": "All 3 boxes are filled in with at least 3 words each AND the voice recording reads the name tag aloud."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording includes a first sentence from the helper that uses details from at least two of the boxes."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894759-66cc04d5a184-f3cbe305",
+  "whiteboard_starter_image_alt_text": "\"Design a helper: fill in its name tag.\" A name tag headed \"HELLO, I AM A HELPER\" with a small robot icon and three empty boxes labeled \"I am:\", \"I am helping:\", and \"My job is to:\"."
+}

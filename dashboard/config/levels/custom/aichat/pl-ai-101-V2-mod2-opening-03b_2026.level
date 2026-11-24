@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-05-20T21:17:12.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nYou may have heard of terms such as artificial intelligence, machine learning, data science, deep learning, or natural language processing - what do all these phrases mean? \r\n\r\nThis AI chat will quiz you on key terms related to AI and give you feedback on your answers. It's okay if you don't get them all right! The goal of this level is to learn something new.\r\n\r\nStart the chat by saying:\r\n> I'm ready to begin!\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful. Key terms are summarized on the next level.*",
+    "long_instructions": "## Welcome to AI Chat Lab!\r\n\r\nYou may have heard of terms such as artificial intelligence, machine learning, data science, deep learning, or natural language processing - what do all these phrases mean? \r\n\r\nThis system will quiz you on key terms related to AI and give you feedback on your answers. It's okay if you don't get them all right! The goal of this level is to learn something new.\r\n\r\nStart the chat by saying:\r\n> I'm ready to begin!\r\n\r\n*Spend as much time interacting with the chatbot as you find helpful. Key terms are summarized on the next level.*",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -51,7 +52,6 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-20T21:17:12.212+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-opening-03b\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-opening-03b\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-20T21:17:12.212+00:00\",\"changed\":[\"cloned from \\\"pl-ai-101-V2-mod2-opening-03b\\\"\"],\"cloned_from\":\"pl-ai-101-V2-mod2-opening-03b\"},{\"changed_at\":\"2026-11-18 21:57:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

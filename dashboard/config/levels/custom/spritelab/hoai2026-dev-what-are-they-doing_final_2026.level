@@ -8,6 +8,7 @@
     "uses_lab2": "true",
     "world_keeps_roles": [
       "friend",
+      "hero",
       "treasure"
     ],
     "block_pools": [
@@ -18,7 +19,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -37,6 +38,7 @@
       "limitedPaintTools": true,
       "paletteRoles": [
         "friend",
+        "hero",
         "treasure",
         "block"
       ]
@@ -81,7 +83,7 @@
       "title": "**What are they doing?**",
       "items": [
         {
-          "text": "Drag **begins** onto the dotted outline and choose what the new character will do.",
+          "text": "Drag a **character begins** block under **when run** and choose what the new character will do.",
           "check": {
             "kind": "block",
             "type": "spritelab2_beginsBehavior",
@@ -96,7 +98,7 @@
         }
       ]
     },
-    "long_instructions": "# What are they doing?\r\nA **behavior** tells a sprite what to do on its own.\r\n",
+    "long_instructions": "# What are they doing?\r\nA behavior tells a sprite what to do on its own.\r\n",
     "header_label": "What are they doing?",
     "embed": "false",
     "instructions_important": "false",

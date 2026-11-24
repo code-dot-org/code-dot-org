@@ -1,0 +1,15 @@
+name 'aif-y2-ai-at-scale-lesson13-level1-choice1-2026'
+title 'Food Pantry'
+display_name 'Food Pantry'
+bubble_choice_description "Your community’s food pantry wants to predict how many households to expect, so that they know how much food to prepare."
+
+markdown <<MARKDOWN
+Your community’s food pantry wants to predict how many households to expect at the food pantry each day, so that they can determine how many bags of groceries to prepare. The food pantry has been running for eight years, although they moved to a new location in a different part of town three years ago.
+
+You have three datasets to choose from. **Evaluate** each of these three datasets and decide which one you’d like to use to train your neural network. Then, **explain** your choice by answering the questions in the **Choose a Dataset** section of your Project Planning Guide. Finally, **download** your dataset so you can use it in the project.
+
+- [**Dataset A**](https://drive.google.com/file/d/1yeWXY2ID12kmOQndukGwgCkkxA3zYFWu/view?usp=sharing) is data from the community’s food pantry last year. It includes data from 156 days in the past year. Each entry includes data for the day of the week, the week of the month, whether school is in session, whether it’s a holiday week, the temperature forecast, whether rain was forecasted, and whether it was a special event.
+- [**Dataset B**](https://drive.google.com/file/d/1FcJV7xayAddRcBwRvYZ8NDH3BXwiqRUc/view?usp=sharing) is data from the community’s food pantry over the past eight years. It includes data from 1,248 days over that period of time. The food pantry’s records weren’t always as complete as they are now, so this dataset includes some of the features from Dataset A but doesn’t include whether school was in session, whether rain was forecasted, or whether it was a special event. Each entry also includes information about how long ago the entry is from.
+- [**Dataset C**](https://drive.google.com/file/d/1rZHO2vJp2Sh1k9gMADKAvGrsS_QtBrVM/view?usp=sharing) is data from a network of other food pantries in nearby communities. It includes data from 2,500 distribution days from different food pantries. In addition to the features from Dataset A, it also includes data about the number of registered households at the pantry, whether the community is in a rural area, whether the pantry is along a bus line, and the local unemployment rate at the time.
+
+MARKDOWN

@@ -32,6 +32,7 @@ const post = HttpClient.post as jest.Mock;
 const put = HttpClient.put as jest.Mock;
 const createdResponse = {
   id: 7,
+  attempt_number: 1,
   challenge_id: 5,
   user_id: 1,
   student_text: null,
@@ -62,7 +63,7 @@ const recordVideo = async () => {
 const VideoHarness: FC<{
   submitCallback: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({submitCallback}) => {
-  const submitRef = useRef<(() => Promise<boolean>) | null>(null);
+  const submitRef = useRef<(() => Promise<number | null>) | null>(null);
   const resetRef = useRef<(() => void) | null>(null);
   const [canSubmit, setCanSubmit] = useState(false);
   const [isRecording, setIsRecording] = useState(false);

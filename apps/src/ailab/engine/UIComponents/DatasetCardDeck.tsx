@@ -8,6 +8,7 @@ import React, {type CSSProperties, type KeyboardEvent} from 'react';
 import {useAppDispatch, useAppSelector} from '../hooks';
 import {setDatasetCardRow} from '../redux';
 import {getData} from '../selectors';
+import {useTestRows} from '../useTestRows';
 
 import DatasetRowCard from './DatasetRowCard';
 import PagerButton from './PagerButton';
@@ -25,6 +26,7 @@ const DatasetCardDeck = ({rows}: DatasetCardDeckProps) => {
   const dispatch = useAppDispatch();
   const data = useAppSelector(getData);
   const currentRow = useAppSelector(state => state.datasetCardRow);
+  const testRows = useTestRows();
   const total = rows.length;
   // A filter that drops the current row moves the deck to its first card.
   const position = Math.max(rows.indexOf(currentRow), 0);
@@ -80,6 +82,7 @@ const DatasetCardDeck = ({rows}: DatasetCardDeckProps) => {
                     isCurrent={depth === 0}
                     rowNumber={row + 1}
                     row={data[row]}
+                    isTestRow={testRows.has(row)}
                   />
                 )}
               </div>

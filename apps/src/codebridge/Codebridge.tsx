@@ -90,7 +90,7 @@ export const Codebridge = React.memo(
     const hasSubmittedPredictResponse = useAppSelector(
       state => state.predictLevel.hasSubmittedResponse
     );
-    const {disabled: aiTutorDisabled} = useAiChatDisabledState({
+    const {disabled: aiTutorDisabledByAccess} = useAiChatDisabledState({
       appName,
       clientType: AiChatClientTypes.AI_TUTOR,
       selectedModelId: aiTutorModelParametersFor(
@@ -99,6 +99,8 @@ export const Codebridge = React.memo(
       isPredictLevel: !!levelProperties.predictSettings?.isPredictLevel,
       hasSubmittedPredictResponse,
     });
+    const aiTutorDisabled =
+      !!levelProperties.hideAiTutor || aiTutorDisabledByAccess;
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -236,6 +238,7 @@ export const Codebridge = React.memo(
           <InnerLayout
             isProjectLevel={levelProperties.isProjectLevel}
             isWidgetView={levelProperties.widgetView}
+            isShowcaseView={!!levelProperties.showcaseView && !isStartMode}
           />
         </div>
       </CodebridgeContextProvider>

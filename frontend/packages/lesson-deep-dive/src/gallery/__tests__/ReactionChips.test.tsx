@@ -192,4 +192,48 @@ describe('ReactionChips', () => {
       expect(onReactionsChange).toHaveBeenLastCalledWith(server),
     );
   });
+
+  it('reports an added reaction once the server accepts it', async () => {
+    const user = userEvent.setup();
+    const onReactionAdded = vi.fn();
+    addReaction.mockResolvedValue([heart({count: 4, reacted: true})]);
+    render(
+      <ReactionChips
+        responseId={5}
+        reactions={[heart()]}
+        onReactionAdded={onReactionAdded}
+      />,
+    );
+
+    await user.click(screen.getByRole('button', {name: /Heart/}));
+
+    await waitFor(() => expect(onReactionAdded).toHaveBeenCalledWith('heart'));
+  });
+
+  it('does not report a removed or failed reaction', async () => {
+    const user = userEvent.setup();
+    const onReactionAdded = vi.fn();
+    removeReaction.mockResolvedValue([heart({count: 2, reacted: false})]);
+    addReaction.mockRejectedValue(new Error('network'));
+    render(
+      <ReactionChips
+        responseId={5}
+        reactions={[heart({count: 3, reacted: true})]}
+        onReactionAdded={onReactionAdded}
+      />,
+    );
+
+    // Removes the viewer's reaction, then fails to add it back.
+    await user.click(screen.getByRole('button', {name: /Heart/}));
+    await waitFor(() =>
+      expect(screen.getByRole('button', {name: /Heart/})).toHaveAttribute(
+        'aria-pressed',
+        'false',
+      ),
+    );
+    await user.click(screen.getByRole('button', {name: /Heart/}));
+    await waitFor(() => expect(addReaction).toHaveBeenCalled());
+
+    expect(onReactionAdded).not.toHaveBeenCalled();
+  });
 });
