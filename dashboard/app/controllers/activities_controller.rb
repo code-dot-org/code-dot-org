@@ -200,6 +200,11 @@ class ActivitiesController < ApplicationController
           anon_user_id: request.anon_user_id,
           ip_address:   request.ip,
         )
+
+        Services::AnonymousLevel::ClientRecording.call(
+          anon_user_id: request.anon_user_id,
+          user_agent:   request.user_agent,
+        )
       end
 
       is_sublevel = @script_level.levels.exclude?(@level)
