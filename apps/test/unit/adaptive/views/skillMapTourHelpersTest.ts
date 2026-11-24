@@ -101,6 +101,23 @@ describe('getSkillMapTourStepIndices', () => {
   });
 });
 
+describe.each([false, true])(
+  'getSkillMapTourStepIndices with hasSkippedCheckpoints=%s',
+  hasSkippedCheckpoints => {
+    const indices = getSkillMapTourStepIndices(hasSkippedCheckpoints);
+    const steps = buildSkillMapTourSteps(mockTour, hasSkippedCheckpoints);
+
+    it('returns firstCheckpoint=1 and revealMap=2', () => {
+      expect(indices.firstCheckpoint).toBe(1);
+      expect(indices.revealMap).toBe(2);
+    });
+
+    it('points firstCheckpoint at the first-checkpoint step', () => {
+      expect(steps[indices.firstCheckpoint].id).toBe('first-checkpoint');
+    });
+  }
+);
+
 describe('SKILL_MAP_TOUR_STORAGE_KEY', () => {
   it('is a non-empty string', () => {
     expect(typeof SKILL_MAP_TOUR_STORAGE_KEY).toBe('string');
