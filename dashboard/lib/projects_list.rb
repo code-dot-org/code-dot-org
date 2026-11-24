@@ -81,13 +81,16 @@ module ProjectsList
       section_students = section.students
       [].tap do |projects_list_data|
         student_storage_ids = get_storage_ids_by_user_ids(section_students.pluck(:id))
+        adaptive_ids = adaptive_project_ids(student_storage_ids.values)
         section_students.each do |student|
           next unless student_storage_id = student_storage_ids[student.id]
           Projects.new(student_storage_id).get_active_projects.each do |project|
             # The channel id stored in the project's value field may not be reliable
             # when apps are remixed, so recompute the channel id.
             channel_id = get_project_channel_id(student_storage_id, project[:id])
-            project_data = get_project_row_data(project, channel_id, student)
+            project_data = adaptive_ids.include?(project[:id]) ?
+              get_adaptive_project_row_data(project, channel_id, student) :
+              get_project_row_data(project, channel_id, student)
             projects_list_data << project_data if project_data
           end
         end
@@ -267,9 +270,9 @@ module ProjectsList
     # pull various fields out of the student and project records to populate
     # a data structure that can be used to populate a UI component displaying a
     # single project.
-    private def get_project_row_data(project, channel_id, student = nil, with_library: false)
+    private def get_project_row_data(project, channel_id, student = nil, with_library: false, include_hidden: false)
       project_value = project[:value] ? JSON.parse(project[:value]) : {}
-      return nil if project_value['hidden'] == true || project_value['hidden'] == 'true'
+      return nil if !include_hidden && (project_value['hidden'] == true || project_value['hidden'] == 'true')
 
       row_data = {
         channel: channel_id,
@@ -293,6 +296,23 @@ module ProjectsList
       end
 
       row_data.with_indifferent_access
+    end
+
+    # An Adaptive pathway's project is the channel of its template level.
+    private def adaptive_project_ids(storage_ids)
+      return Set.new if storage_ids.empty?
+      template_names = Adaptive.all.filter_map(&:pathway_template_level_name).uniq
+      return Set.new if template_names.empty?
+      level_ids = Level.where(name: template_names).pluck(:id)
+      ChannelToken.where(storage_id: storage_ids, level_id: level_ids).pluck(:storage_app_id).to_set
+    end
+
+    # Level channels are created hidden and unnamed.
+    private def get_adaptive_project_row_data(project, channel_id, student)
+      row_data = get_project_row_data(project, channel_id, student, include_hidden: true)
+      row_data[:name] = row_data[:name].presence || 'My Website'
+      row_data[:type] = project[:project_type].presence || row_data[:type]
+      row_data
     end
 
     # pull various fields out of the user and project records to populate
