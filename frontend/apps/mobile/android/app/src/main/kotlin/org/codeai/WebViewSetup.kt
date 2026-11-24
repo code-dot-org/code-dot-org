@@ -1,6 +1,8 @@
 package org.codeai
 
+import android.content.Context
 import android.content.res.Resources
+import android.os.Build
 import android.view.Menu
 import android.view.textclassifier.TextClassifier
 import android.webkit.WebSettings
@@ -10,15 +12,17 @@ import androidx.core.view.size
 import androidx.webkit.UserAgentMetadata
 import androidx.webkit.WebSettingsCompat
 import androidx.webkit.WebViewFeature
+import com.getcapacitor.CapConfig
 
 /** Settings the app's one WebView needs before its first page loads. */
-internal fun setUpWebView(webView: WebView) {
+internal fun setUpWebView(webView: WebView, config: CapConfig) {
     // The first page is the bundled landing page, so no network request has
     // gone out before this runs.
     val settings = webView.settings
-    settings.userAgentString =
-        "${settings.userAgentString} ${SitePolicy.userAgentToken(BuildConfig.VERSION_NAME)}"
-    addAppBrand(settings)
+    val product = userAgentProduct(config)
+    val token = SitePolicy.userAgentToken(product, BuildConfig.VERSION_NAME, installSource(webView.context))
+    settings.userAgentString = "${settings.userAgentString} $token"
+    addAppBrand(settings, product)
     // Every page, including window.open and target=_blank, loads in this one
     // WebView, so sessionStorage and session cookies carry across pages.
     // Capacitor lets scripts open windows; without multiple-window support
@@ -32,17 +36,33 @@ internal fun setUpWebView(webView: WebView) {
     settings.useWideViewPort = true
 }
 
+// SharedConstants::MOBILE_APP_NAME in lib/cdo/shared_constants.rb, which
+// capacitor.config.ts passes as plugins.WebViewSetup.userAgentProduct.
+private fun userAgentProduct(config: CapConfig): String =
+    checkNotNull(config.getPluginConfiguration("WebViewSetup").getString("userAgentProduct")) {
+        "capacitor.config.ts sets no plugins.WebViewSetup.userAgentProduct"
+    }
+
+// The package that installed the app; null for an APK installed by hand.
+private fun installSource(context: Context): String? =
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+        context.packageManager.getInstallSourceInfo(context.packageName).installingPackageName
+    } else {
+        @Suppress("DEPRECATION")
+        context.packageManager.getInstallerPackageName(context.packageName)
+    }
+
 // Names the app in the WebView's brand list too (navigator.userAgentData and
 // the Sec-CH-UA headers), as a browser built on Chromium names itself. Older
 // WebViews lack the feature and keep only the User-Agent token.
-private fun addAppBrand(settings: WebSettings) {
+private fun addAppBrand(settings: WebSettings, product: String) {
     if (!WebViewFeature.isFeatureSupported(WebViewFeature.USER_AGENT_METADATA)) {
         return
     }
     val metadata = WebSettingsCompat.getUserAgentMetadata(settings)
     val version = BuildConfig.VERSION_NAME
     val app = UserAgentMetadata.BrandVersion.Builder()
-        .setBrand(SitePolicy.USER_AGENT_PRODUCT)
+        .setBrand(product)
         .setMajorVersion(version.substringBefore('.'))
         .setFullVersion(version)
         .build()

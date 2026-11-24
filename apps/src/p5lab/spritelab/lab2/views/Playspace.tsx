@@ -259,6 +259,37 @@ export function playLayout(
   };
 }
 
+/**
+ * Like playLayout, but keeps the game clear of `corner`, a rectangle in the
+ * stage's top-left corner such as the share page's logo: when the game would
+ * overlap it, the game is laid out again in the part of the stage below it,
+ * which can make it smaller.
+ */
+export function playLayoutClearOf(
+  corner: Size | null,
+  size: Size,
+  guideSize: {width: number; height: number} | null,
+  guideSide: 'left' | 'right',
+  reserveBottom: number,
+  cross: Size | null
+): PlayLayout {
+  const layout = playLayout(size, guideSize, guideSide, reserveBottom, cross);
+  if (!corner || layout.box.x >= corner.w || layout.box.y >= corner.h) {
+    return layout;
+  }
+  const lowered = playLayout(
+    {w: size.w, h: size.h - corner.h},
+    guideSize,
+    guideSide,
+    reserveBottom,
+    cross
+  );
+  return {
+    box: {...lowered.box, y: lowered.box.y + corner.h},
+    cross: lowered.cross && {...lowered.cross, y: lowered.cross.y + corner.h},
+  };
+}
+
 interface PlayspaceProps {
   mode: PlayspaceMode;
   // Scenes UI variant: increment to play a quick fade-in-from-black over the
@@ -296,6 +327,10 @@ interface PlayspaceProps {
   columnShare?: number;
   /** The width of the preview column, reported in every mode. */
   onColumnWidth?: (width: number) => void;
+  /** The id of an element fixed over the stage's top-left corner, such as
+      the share page's logo. While playing, the game moves down below it
+      when it would otherwise reach into it. */
+  playClearOfId?: string;
 }
 
 /**
@@ -319,6 +354,7 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
   side = 'right',
   columnShare = PREVIEW_WIDTH_SHARE,
   onColumnWidth,
+  playClearOfId,
   getDefaultSpriteSize,
   onPreviewClick,
 }) => {
@@ -558,6 +594,36 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
     return () => observer.disconnect();
   }, []);
 
+  // From the stage's top-left corner to the element's right and bottom
+  // edges.
+  const [clearCorner, setClearCorner] = useState<Size | null>(null);
+  useLayoutEffect(() => {
+    const element = playClearOfId && document.getElementById(playClearOfId);
+    const overlay = overlayRef.current;
+    if (!element || !overlay) {
+      setClearCorner(null);
+      return;
+    }
+    const measure = () => {
+      const clear = element.getBoundingClientRect();
+      const stage = overlay.getBoundingClientRect();
+      const corner = {
+        w: clear.right - stage.left,
+        h: clear.bottom - stage.top,
+      };
+      setClearCorner(last => (isEqual(last, corner) ? last : corner));
+    };
+    measure();
+    // The element's size can change after this first measure, for example
+    // when an image loads.
+    if (typeof ResizeObserver === 'undefined') {
+      return;
+    }
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [playClearOfId, size]);
+
   // Worked out in every mode: while playing, the card keeps the place the
   // editing view gave it. The browser's width, not the playspace's: the
   // panels left of the workspace count against the code, not the preview.
@@ -671,7 +737,14 @@ const Playspace: React.FunctionComponent<PlayspaceProps> = ({
 
   const playing =
     mode === 'play'
-      ? playLayout(size, cardGuide, side, bottomRoom, crossSize)
+      ? playLayoutClearOf(
+          clearCorner,
+          size,
+          cardGuide,
+          side,
+          bottomRoom,
+          crossSize
+        )
       : null;
   const placement: Placement = playing ? playing.box : previewPlacement;
   const {x, y, scale} = placement;

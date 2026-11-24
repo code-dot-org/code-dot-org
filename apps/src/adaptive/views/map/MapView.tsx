@@ -13,6 +13,8 @@ import TreeMap from './TreeMap';
  */
 export type MapFit = 'whole' | 'width';
 
+export type MapSkeletonStyle = 'all' | 'allButFirst';
+
 /** What every map layout takes. */
 export interface MapProps {
   pathway: Pathway;
@@ -26,6 +28,8 @@ export interface MapProps {
   /** Leaving it out makes the map read-only. */
   onSelect?: (id: string) => void;
   tourFocusIds?: string[];
+  /** Draws every checkpoint, or all but the first, as a loading skeleton. */
+  skeletonStyle?: MapSkeletonStyle;
 }
 
 interface MapViewProps extends MapProps {

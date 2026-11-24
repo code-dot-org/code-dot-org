@@ -26,7 +26,6 @@ class Policies::Lti
     AccessTokenScopes.const_get(scope)
   end
 
-  NAMESPACE = 'lti_v1_controller'
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'
   JWT_ISSUER = CDO.studio_url('').freeze
   DEFAULT_TARGET_LINK_URI = CDO.studio_url('/lti/v1/sync_course').freeze

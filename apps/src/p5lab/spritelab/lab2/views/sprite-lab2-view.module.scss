@@ -26,6 +26,9 @@
   width: 100%;
   height: 100%;
   min-height: 0;
+  // The closed Images pane waits past the right edge. Without the clip, a
+  // touch browser lets the page pan sideways to it.
+  overflow-x: clip;
   // The lab is controls, not text to copy, so a drag across it selects
   // nothing. Safari reads only the prefixed property.
   -webkit-user-select: none;
@@ -351,13 +354,29 @@ $z-over-blockly: 71;
   text-align: left;
   cursor: pointer;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background: var(--background-neutral-tertiary);
   }
 
   &:focus-visible {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: -2px;
+  }
+
+  &:disabled {
+    color: var(--text-neutral-disabled);
+    cursor: default;
+  }
+}
+
+// Override CustomDropdown's hover and press styles on a disabled item.
+.sceneDropdown .sceneMenu.sceneMenu li:has(> .sceneMenuItem:disabled) {
+  background: none;
+
+  span,
+  i::before {
+    background: none;
+    color: var(--text-neutral-disabled);
   }
 }
 
@@ -525,20 +544,48 @@ $z-over-blockly: 71;
   border-inline-start: 1px solid var(--borders-neutral-primary);
 }
 
+// Between the game's buttons and the share page's buttons, which have the
+// line between them.
+$play-bar-group-gap: 40px;
+
 .playBarButtons {
   display: flex;
   min-width: 0;
   align-items: center;
-  gap: 16px;
-  // In a narrow column the second button moves to a row of its own, and
-  // each row is centered. A button's label never breaks onto two lines.
+  column-gap: $play-bar-group-gap;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 8px;
 
+  // A button's label never breaks onto two lines.
   button {
     white-space: nowrap;
   }
+}
+
+.playBarGroup {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 16px;
+  // In a narrow column a button that does not fit moves to the next row,
+  // and each row is centered.
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
+}
+
+// Centered in the gap before the group and taken out of the flow, so
+// showing it never makes the row wrap.
+.playBarGroupDivided::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: math.div(-$play-bar-group-gap, 2) - 0.5px;
+  width: 1px;
+  background: var(--borders-neutral-strong);
 }
 
 // Placed by the playspace beside or under the game; the cross inside takes

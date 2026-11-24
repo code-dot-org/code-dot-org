@@ -1,10 +1,19 @@
 require 'json'
+require 'digest'
 module LtiAccessToken
+  CACHE_NAMESPACE = 'lti_access_token'.freeze
+
+  # The digest input is a JSON array so that two different (issuer, client_id)
+  # pairs never share a key.
+  def self.cache_key(client_id, issuer)
+    "#{CACHE_NAMESPACE}/#{Digest::SHA256.hexdigest([issuer, client_id].to_json)}"
+  end
+
   # Retrieve a JWT from the access_token_url of the LTI Integration
   # The JWT can be used to access the LTI Advantage Services for the LTI Integration
   # client_id and issuer are present in the id_token we cache or store as a cookie from the LTI launch
   def get_access_token(client_id, issuer, scopes = Policies::Lti::ALL_SCOPES)
-    cache_key = "#{Policies::Lti::NAMESPACE}/#{client_id}-#{issuer}"
+    cache_key = LtiAccessToken.cache_key(client_id, issuer)
 
     # check for valid access token
     access_token = CDO.shared_cache.read(cache_key)

@@ -8,10 +8,21 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ARROW_AND_SPACE_KEYS, isOnScreenGameKey} from './playBar';
 
+/** Where the student is: a unit level, the unit's free play level, or a
+    standalone project. */
+export type LabContext = 'progression' | 'freeplay' | 'standalone';
+
 export interface LevelAnalytics {
   reportActivity: () => void;
   /** Sends the level-complete event with `details`, once per visit. */
   reportCompleted: (details: Record<string, unknown>) => void;
+  /** Sends an event about something the student did, in a standalone
+      project too. `value` is the value Statsig breaks results down by. */
+  reportEvent: (
+    eventName: string,
+    payload: Record<string, unknown>,
+    value?: string
+  ) => void;
 }
 
 // TODO: move into a shared lab2 hook; Dance Party's useReportAnalytics tracks a visit the same way.
@@ -22,13 +33,19 @@ export interface LevelAnalytics {
  * this hook's mount to its unmount, or to the page unload if that comes
  * first.
  *
- * Nothing is sent while `enabled` is false, or for a standalone project,
- * which the shared event leaves out as well.
+ * Nothing is sent while `enabled` is false. Of the visit's three events, a
+ * standalone project sends only the one when the visit ends: it has nothing
+ * to complete, and the shared event leaves it out.
+ *
+ * While this hook is mounted, `labContext` is set as a project property, so
+ * every event sent with `includeProjectProperties` carries it, including
+ * events sent outside this hook.
  */
 export default function useLevelAnalytics(
   levelProperties: LevelProperties,
   playing: boolean,
-  enabled: boolean
+  enabled: boolean,
+  labContext: LabContext
 ): LevelAnalytics {
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const unitName = useAppSelector(state => state.progress.scriptName) ?? '';
@@ -41,14 +58,19 @@ export default function useLevelAnalytics(
     keyboardPressesWhilePlaying: 0,
     buttonPressesWhilePlaying: 0,
   });
-  // Read through a ref so that `send` and `counted` never change. The effect
-  // that ends the visit depends on them, and its cleanup would end the visit
-  // early if they did.
+  // Read through a ref so that `send` never changes. The effect that ends
+  // the visit depends on it, and its cleanup would end the visit early if it
+  // did.
   const latest = useRef({logLevelActivity, levelProperties, unitName, enabled});
   latest.current = {logLevelActivity, levelProperties, unitName, enabled};
 
+  useEffect(() => {
+    analyticsReporter.setProjectProperty('labContext', labContext);
+    return () => analyticsReporter.setProjectProperty('labContext', undefined);
+  }, [labContext]);
+
   const send = useCallback(
-    (eventName: string, payload: Record<string, unknown>) => {
+    (eventName: string, payload: Record<string, unknown>, value?: string) => {
       const {levelProperties, unitName} = latest.current;
       analyticsReporter.sendEvent(
         eventName,
@@ -58,35 +80,46 @@ export default function useLevelAnalytics(
           levelId: levelProperties.id,
           levelName: levelProperties.name,
         },
-        true
+        true,
+        value
       );
     },
     []
   );
 
-  const counted = useCallback(
-    () =>
-      latest.current.enabled && !latest.current.levelProperties.isProjectLevel,
+  const reportEvent = useCallback(
+    (eventName: string, payload: Record<string, unknown>, value?: string) => {
+      if (latest.current.enabled) {
+        send(eventName, payload, value);
+      }
+    },
+    [send]
+  );
+
+  const inUnit = useCallback(
+    () => !latest.current.levelProperties.isProjectLevel,
     []
   );
 
   const reportActivity = useCallback(() => {
-    if (!counted()) {
+    if (!latest.current.enabled) {
       return;
     }
     visit.current.active = true;
-    latest.current.logLevelActivity();
-  }, [counted]);
+    if (inUnit()) {
+      latest.current.logLevelActivity();
+    }
+  }, [inUnit]);
 
   const reportCompleted = useCallback(
     (details: Record<string, unknown>) => {
-      if (!counted() || visit.current.completed) {
+      if (!latest.current.enabled || !inUnit() || visit.current.completed) {
         return;
       }
       visit.current.completed = true;
       send(EVENTS.HOAI2026_LEVEL_COMPLETE, details);
     },
-    [counted, send]
+    [inUnit, send]
   );
 
   // p5 listens for keys on window, so a game key seen here reached the game.
@@ -112,7 +145,7 @@ export default function useLevelAnalytics(
   useEffect(() => {
     const end = () => {
       const {active, ended, startedAt, completed} = visit.current;
-      if (!counted() || !active || ended) {
+      if (!latest.current.enabled || !active || ended) {
         return;
       }
       visit.current.ended = true;
@@ -130,7 +163,7 @@ export default function useLevelAnalytics(
       window.removeEventListener('beforeunload', end);
       end();
     };
-  }, [counted, send]);
+  }, [send]);
 
-  return {reportActivity, reportCompleted};
+  return {reportActivity, reportCompleted, reportEvent};
 }

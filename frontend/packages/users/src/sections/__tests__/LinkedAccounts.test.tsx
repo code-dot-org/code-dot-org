@@ -297,7 +297,7 @@ describe('LinkedAccounts', () => {
     const disconnect = button(/^disconnect google/i);
     expect(disconnect).toBeDisabled();
     expect(disconnect).toHaveAccessibleDescription(
-      'To make sure you can still sign in to your account, please add a password or another linked account first.',
+      "You can't disconnect this account because it's your only way to sign in. Add a password or another linked account first.",
     );
   });
 
