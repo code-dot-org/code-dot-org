@@ -10,7 +10,7 @@ module Cdo
   module Aws
     module Redshift
       # One row of `MaterializedViewManager.view_status` output: the most recent CREATE/DROP/REFRESH
-      # the Redshift Data API knows about for one materialized view FQN, plus the view's current
+      # the Redshift Data API knows about for one materialized view Fully Qualified Name, plus the view's current
       # freshness as reported by SVV_MV_INFO.
       ViewStatusRow = Struct.new(
         :model_name,
@@ -55,7 +55,7 @@ module Cdo
       #     self.emit_view_status_metrics  # CloudWatch metrics + per-error-view logs
       #     self.error_condition_for / self.describe_mv_state
       #
-      # The phases share internals on purpose (the Data API client, the schema/FQN conventions, the
+      # The phases share internals on purpose (the Data API client, the schema/Fully Qualified Name conventions, the
       # SVV_MV_INFO catalog reads, ViewStatusRow), which is why they live in one cohesive class
       # rather than being split apart.
       #
@@ -71,6 +71,10 @@ module Cdo
         NON_PII_CLASSIFICATIONS = %i[public confidential].freeze
         PII_CLASSIFICATIONS = %i[public confidential restricted].freeze
         SQL_INDENT = ' ' * 2
+
+        # Used to control which operations are executed automatically on test vs production.
+        PROVISION_OPERATIONS = %i[add update drop].freeze
+        PLAN_KEY_BY_OPERATION = {add: :to_add, update: :to_update, drop: :to_drop}.freeze
 
         # Human-readable descriptions for the numeric `state` column of
         # SVV_MV_INFO. States 0/1 are healthy (the view refreshes, either by
@@ -296,12 +300,16 @@ module Cdo
         # wait.
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] e.g., :production, :test
+        # @param only [Array<String>, nil] optional Fully Qualified Name allowlist — when given, rebuilds only this
+        #   model's views named in the list.
         # @return [Hash{String => String}] fqn => Redshift Data API statement_id
-        def create_or_replace_views(client:, environment_type:)
+        def create_or_replace_views(client:, environment_type:, only: nil)
           env = environment_type.to_s
           statements = {}
 
           rendered_ddls(environment_type: env).each do |fqn, info|
+            next unless only.nil? || only.include?(fqn)
+
             drop_sql = "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"
             create_sql = info[:sql]
             comment_sql = "COMMENT ON COLUMN #{fqn}.#{info[:first_column]} IS '#{self.class.ddl_hash(create_sql)}'"
@@ -317,15 +325,15 @@ module Cdo
         # Submits REFRESH MATERIALIZED VIEW for this model's PII and non-PII
         # views asynchronously and returns the resulting statement IDs without
         # waiting. Each view is submitted as its own single-statement async call
-        # so callers can track completion per FQN (e.g., via `client.wait_for_statements`).
+        # so callers can track completion per Fully Qualified Name (e.g., via `client.wait_for_statements`).
         # REFRESH on a Zero ETL-sourced view can take longer than the synchronous
         # client timeout when many INSERT/UPDATE/DELETE rows have streamed in
         # since the last refresh, which is why this method does not wait.
         #
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol] e.g., :production, :test
-        # @param only [Array<String>, nil] optional FQN whitelist — when given,
-        #   submits REFRESH only for FQNs in this model's view variants that
+        # @param only [Array<String>, nil] optional Fully Qualified Name whitelist — when given,
+        #   submits REFRESH only for Fully Qualified Names in this model's view variants that
         #   intersect the list. Used by `.refresh_all_views` to skip non-stale
         #   views.
         # @return [Hash{String => String}] fqn => Redshift Data API statement_id
@@ -355,7 +363,7 @@ module Cdo
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol, String] :production or :test
         # @param models [Enumerable<Class>] ActiveRecord model classes to plan for
-        # @return [Hash] :to_add, :to_update, :unchanged, :to_drop — sorted arrays of view FQNs
+        # @return [Hash] :to_add, :to_update, :unchanged, :to_drop — sorted arrays of view Fully Qualified Names
         def self.plan_provisioning(client:, environment_type:, models:)
           desired_ddls = {}
           models.each do |model|
@@ -368,7 +376,7 @@ module Cdo
           existing_comments = list_existing_view_comments(client: client, environment_type: environment_type)
           existing_fqns = Set.new(existing_comments.keys)
 
-          # Every unchanged FQN is by construction both desired and existing, so this needs no
+          # Every unchanged Fully Qualified Name is by construction both desired and existing, so this needs no
           # further intersection below.
           unchanged_fqns = Set.new(
             desired_ddls.select do |fqn, sql|
@@ -396,32 +404,65 @@ module Cdo
         #   yield(:submitted, table_name, [fqn, ...])      # after async submit for one model
         #   yield(:skipped, table_name)                    # comment hash matches desired DDL
         #   yield(:error, table_name, exception)           # submit raised; provisioning continues
+        #   yield(:deferred, table_name)                   # source table mid-load; left for a later run
         #   yield(:drop_batch_submitted, [fqn, ...])       # after async submit of the orphan-drop batch
         #
         # @param client [Cdo::Aws::Redshift::Client]
         # @param environment_type [Symbol, String] :production or :test
         # @param models [Enumerable<Class>] ActiveRecord model classes to provision
-        # @return [Hash] the `plan_provisioning` keys, plus :failed (table names whose submit raised)
-        #   and :statements (`{fqn => statement_id}`)
-        def self.provision_all_views(client:, environment_type:, models:)
+        # @param operations [Array<Symbol>] Which of the pending operations to execute (`:add`, `:update`, `:drop`).
+        # @param require_synced_sources [Boolean] when true, leaves a Model's Views alone unless Zero ETL
+        #   reports its source table `Synced`.
+        # @return [Hash] the `plan_provisioning` keys, plus :failed (table names whose submit raised),
+        #   :statements (`{fqn => statement_id}`), :declined (`{add:, update:, drop:}` of the FQNs each
+        #   omitted operation would have touched) and :deferred (table names whose source is not `Synced`)
+        def self.provision_all_views(
+          client:, environment_type:, models:, operations: PROVISION_OPERATIONS, require_synced_sources: false
+        )
           # Keep the committed `.sql.erb` templates in lockstep with the models on every provision.
           generate_all_ddl_templates(models: models)
 
+          synced_tables =
+            if require_synced_sources
+              ZeroEtl.synced_table_names(client: client, environment_type: environment_type)
+            end
+
           plan = plan_provisioning(client: client, environment_type: environment_type, models: models)
           unchanged_fqns = Set.new(plan[:unchanged])
-          result = plan.merge(failed: [], statements: {})
+          declined = PROVISION_OPERATIONS.to_h do |operation|
+            [operation, operations.include?(operation) ? [] : plan[PLAN_KEY_BY_OPERATION.fetch(operation)]]
+          end
+          allowed_fqns = Set.new(
+            PROVISION_OPERATIONS.
+              select {|operation| operation != :drop && operations.include?(operation)}.
+              flat_map {|operation| plan[PLAN_KEY_BY_OPERATION.fetch(operation)]}
+          )
+          result = plan.merge(failed: [], statements: {}, declined: declined, deferred: [])
 
           models.map {|model| new(model)}.each do |gen|
             table_name = gen.view_name
             gen_fqns = gen.expected_view_fqns(environment_type)
+            changed_fqns = gen_fqns.reject {|fqn| unchanged_fqns.include?(fqn)}
 
-            if gen_fqns.any? && gen_fqns.all? {|fqn| unchanged_fqns.include?(fqn)}
+            if gen_fqns.any? && changed_fqns.empty?
               yield(:skipped, table_name) if block_given?
               next
             end
 
+            # Whatever `operations` excludes is reported once in `result[:declined]` rather than per Model.
+            provisionable_fqns = changed_fqns.select {|fqn| allowed_fqns.include?(fqn)}
+            next if provisionable_fqns.empty?
+
+            if synced_tables && !synced_tables.include?(table_name)
+              result[:deferred] << table_name
+              yield(:deferred, table_name) if block_given?
+              next
+            end
+
             begin
-              submitted = gen.create_or_replace_views(client: client, environment_type: environment_type)
+              submitted = gen.create_or_replace_views(
+                client: client, environment_type: environment_type, only: provisionable_fqns
+              )
               result[:statements].merge!(submitted)
               yield(:submitted, table_name, submitted.keys) if block_given?
             rescue StandardError => exception
@@ -435,7 +476,7 @@ module Cdo
           # are mutually independent and idempotent (`DROP ... IF EXISTS`), so splitting them across
           # independent, unordered batches is safe. `batch_execute_async` returns one statement id per
           # batch.
-          if result[:to_drop].any?
+          if operations.include?(:drop) && result[:to_drop].any?
             drop_sqls = result[:to_drop].map {|fqn| "DROP MATERIALIZED VIEW IF EXISTS #{fqn}"}
             client.batch_execute_async(drop_sqls, allow_separate_transactions: true).each_with_index do |statement_id, batch_index|
               result[:statements]["__drop_orphans___#{batch_index}"] = statement_id
@@ -531,7 +572,7 @@ module Cdo
         # @param timeout [Integer, nil] seconds to wait for the REFRESH statements; nil waits
         #   indefinitely. The statements keep running on Redshift when the wait is abandoned.
         # @return [Hash] :refreshed => [fqn, ...] that finished, :failures => [name, ...] that did
-        #   not (model table names for submit failures, view FQNs for execution failures).
+        #   not (model table names for submit failures, view Fully Qualified Names for execution failures).
         # @raise [Cdo::Aws::Redshift::Client::QueryError] when `timeout` elapses first.
         def self.refresh_and_wait(client:, environment_type:, models:, timeout: nil, &reporter)
           result = refresh_all_views(
@@ -548,12 +589,12 @@ module Cdo
         end
 
         # Returns one `ViewStatusRow` per (model, view variant) plus extra rows
-        # for orphan FQNs (views referenced by recent Data API statements but no
+        # for orphan Fully Qualified Names (views referenced by recent Data API statements but no
         # longer claimed by any model in `models`). The "operation" column is the
-        # user-meaningful action of the most recent batch touching that FQN —
+        # user-meaningful action of the most recent batch touching that Fully Qualified Name —
         # CREATE wins over REFRESH wins over DROP, so our DROP+CREATE+COMMENT
         # create-or-replace batches report as `CREATE`, the consolidated
-        # orphan-drop batch reports per-FQN as `DROP`, and a refresh-only batch
+        # orphan-drop batch reports per-Fully Qualified Name as `DROP`, and a refresh-only batch
         # reports as `REFRESH`. COMMENT sub-statements are intentionally
         # ignored.
         #
@@ -607,7 +648,7 @@ module Cdo
             end
           end
 
-          # Phase 2: describe each candidate, resolve per-FQN primary op.
+          # Phase 2: describe each candidate, resolve per-Fully Qualified Name primary op.
           # `sub_statements` is populated only for batch statements (e.g., our
           # DROP+CREATE+COMMENT batches). Single-statement submissions (e.g.,
           # REFRESH via `execute_async`) report sub_statements=nil; for those
@@ -645,7 +686,7 @@ module Cdo
           # API statement history, useful for "is this view actually fresh?"
           staleness = list_view_staleness(client: client, environment_type: env)
 
-          # Expected FQNs per model.
+          # Expected Fully Qualified Names per model.
           model_fqns = {}
           models.sort_by(&:name).each do |model|
             new(model).expected_view_fqns(env).each {|fqn| model_fqns[fqn] = model}
