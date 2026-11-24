@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894908-875020f866d6",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 7: AI's Wild Imagination",
+  "question": "An AI made a poster for the club fair, and it looks great. But compare it to the official list, and some of the clubs may not exist.\n\nSteps:\n1. Use the arrow tool to point at the 2 clubs on the poster that are not on the official list.\n2. Place a shape on one real club the poster left out.\n3. Record your voice explaining why the AI’s invented clubs sound believable, and how you would check them.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places arrows and a shape, but the voice recording gives no reason."
+    },
+    {
+      "level": 2,
+      "description": "Two arrows point to Drone Racing Club and Moon Rover Club AND a shape is on a club that is on the official list but missing from the poster (Debate Club or Garden Club) AND the voice recording says the invented clubs sound believable."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a specific check (such as the official list or the club adviser) AND explains why a polished poster does not prove its content is true."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894908-875020f866d6-269ef186",
+  "whiteboard_starter_image_alt_text": "\"An AI made a poster for the club fair.\" The poster, titled \"CLUB FAIR! Join us!\", lists Robotics Club, Chess Club, Drone Racing Club, Poetry Slam, and Moon Rover Club. Next to it, the school's official club list shows Robotics Club, Chess Club, Poetry Slam, Debate Club, and Garden Club."
+}

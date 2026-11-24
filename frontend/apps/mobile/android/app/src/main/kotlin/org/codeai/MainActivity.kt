@@ -70,7 +70,7 @@ class MainActivity : BridgeActivity() {
         super.onCreate(savedInstanceState)
         CookieManager.getInstance().setCookie(SITE_ORIGIN, SitePolicy.LOCALE_COOKIE)
         val webView = bridge.webView
-        setUpWebView(webView)
+        setUpWebView(webView, bridge.config)
         webView.webChromeClient = AppChromeClient(bridge)
         // The volume keys set the volume of the WebView's sound, not the ringer.
         volumeControlStream = AudioManager.STREAM_MUSIC

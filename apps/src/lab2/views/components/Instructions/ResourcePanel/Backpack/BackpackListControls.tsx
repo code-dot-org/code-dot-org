@@ -32,14 +32,6 @@ const SORT_OPTIONS: (IconDropdownOption & {value: BackpackSortOrder})[] = [
   },
 ];
 
-// Helper to auto-close dropdown on select by simulating a mousedown elsewhere.
-// The menu is hidden with the option button still focused, so move focus back
-// to the trigger button. Once we migrate to MUI dropdown we shouldn't need this.
-function closeOpenDropdownMenu(dropdownName: string) {
-  document.dispatchEvent(new MouseEvent('mousedown'));
-  document.getElementById(`${dropdownName}-dropdown-button`)?.focus();
-}
-
 interface BackpackListControlsProps {
   fileNames: string[];
   selectedExtension: FileExtension | typeof ALL_FILES_ID;
@@ -91,12 +83,9 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         options={categoryOptions}
         color="gray"
         selectedOption={selectedCategoryOption}
-        onChange={option => {
-          onExtensionChange(
-            option.value as FileExtension | typeof ALL_FILES_ID
-          );
-          closeOpenDropdownMenu(FILE_TYPE_FILTER_NAME);
-        }}
+        onChange={option =>
+          onExtensionChange(option.value as FileExtension | typeof ALL_FILES_ID)
+        }
         aria-label={`File type: ${selectedCategoryOption.label}`}
       />
       <IconDropdown
@@ -109,10 +98,9 @@ const BackpackListControls: React.FC<BackpackListControlsProps> = ({
         color="gray"
         options={SORT_OPTIONS}
         selectedOption={selectedSortOption}
-        onChange={option => {
-          onSortOrderChange(option.value as BackpackSortOrder);
-          closeOpenDropdownMenu(SORT_ORDER_NAME);
-        }}
+        onChange={option =>
+          onSortOrderChange(option.value as BackpackSortOrder)
+        }
         aria-label={`Sort by: ${selectedSortOption.label}`}
       />
     </div>

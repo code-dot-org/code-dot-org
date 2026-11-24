@@ -1,0 +1,139 @@
+$color: var(--codeai-anim-color, var(--brand-purple-50));
+
+.root {
+  display: inline-block;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  color: $color;
+  // Lets the dots squash past the edge, and overrides Bootstrap
+  // normalize's `svg:not(:root) { overflow: hidden }`.
+  overflow: visible !important;
+}
+
+.slot,
+.dot {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+// The landing squash scales from the dot's bottom edge, so that edge stays
+// where it is.
+.dot {
+  transform-origin: center bottom;
+}
+
+// Side dots slide out from behind the middle one, with a little overshoot.
+.thinking .slot {
+  animation: emerge 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes emerge {
+  0% {
+    transform: translateX(var(--offset-to-middle)) scale(0.6);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.thinking .dot {
+  animation: bounce 1.2s ease-in-out infinite backwards;
+  animation-delay: calc(0.5s + var(--stagger));
+}
+
+@keyframes bounce {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  25% {
+    transform: translateY(-4.3px) scale(1);
+  }
+
+  42% {
+    transform: translateY(0) scale(1.15, 0.85);
+  }
+}
+
+.stopping .slot {
+  animation: merge 0.4s ease-in-out both;
+}
+
+@keyframes merge {
+  0% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: translateX(var(--offset-to-middle)) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(var(--offset-to-middle)) scale(0.6);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0%,
+  60%,
+  100% {
+    opacity: 0.35;
+  }
+
+  25% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+// No sliding or hopping: the dots fade in, glow in turn on the bounce's
+// timing, then fade out. A dot's own opacity is 35%, the glow's resting
+// value, so a dot stopped between glows does not change brightness.
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    opacity: 0.35;
+  }
+
+  .thinking .slot {
+    animation: fade-in 0.3s ease-out both;
+  }
+
+  .thinking .dot {
+    animation-name: glow;
+  }
+
+  .stopping .slot {
+    animation: fade-out 0.3s ease-in both;
+  }
+}

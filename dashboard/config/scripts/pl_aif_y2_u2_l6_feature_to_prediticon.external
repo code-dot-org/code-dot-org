@@ -3,34 +3,78 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# From Features to a Prediction
+# Features as a Python Dictionary
 
-So what does this actually look like in Python? The features your students just saw, frequency, volume, brightness, become values in a dictionary. 
+Before your students write any Python, they need to know what the numbers in the code mean.
 
-But a dictionary just holds information, it doesn't predict anything by itself.
+A note can be described by three features.
+- **Frequency** is how high or low the sound is, measured in hertz (Hz), or vibrations per second. A higher frequency sounds higher in pitch.
+-  **Volume** is how loud the sound is, measured in decibels (dB).
+-   **Brightness** is how sharp or bright the tone sounds, which depends on how much of the sound is made of higher frequencies.
 
-That's what a conditional does, the same tool from Lesson 6's thermostat, just checking a feature instead of a temperature.
+Here's how the slides describe a cello note and a violin note:
 
-<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
-  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
-if note["frequency"] &gt; 400:<br>
-&nbsp;&nbsp;print("violin")<br>
-else:<br>
-&nbsp;&nbsp;print("cello")
+<div style="display: flex; gap: 20px; flex-wrap: wrap; margin: 16px 0;">
+  <div style="flex: 1; min-width: 260px;">
+    <div style="font-size: 24px; font-weight: bold; color: #1F1976; text-align: center; margin-bottom: 8px;">Cello</div>
+    <div style="background-color: #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <div style="font-size: 20px; font-weight: bold; color: #222222;">Frequency</div>
+      <div style="background-color: #FFFFFF; border-radius: 8px; padding: 8px 18px; font-size: 18px; color: #222222;">300 Hz</div>
+    </div>
+    <div style="background-color: #E4E2F8; border-radius: 10px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <div style="font-size: 20px; font-weight: bold; color: #222222;">Volume</div>
+      <div style="background-color: #FFFFFF; border-radius: 8px; padding: 8px 18px; font-size: 18px; color: #222222;">60 dB</div>
+    </div>
+    <div style="background-color: #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <div style="font-size: 20px; font-weight: bold; color: #222222;">Brightness</div>
+      <div style="background-color: #FFFFFF; border-radius: 8px; padding: 8px 18px; font-size: 18px; color: #222222;">20</div>
+    </div>
+  </div>
+  <div style="flex: 1; min-width: 260px;">
+    <div style="font-size: 24px; font-weight: bold; color: #1F1976; text-align: center; margin-bottom: 8px;">Violin</div>
+    <div style="background-color: #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <div style="font-size: 20px; font-weight: bold; color: #222222;">Frequency</div>
+      <div style="background-color: #FFFFFF; border-radius: 8px; padding: 8px 18px; font-size: 18px; color: #222222;">300 Hz</div>
+    </div>
+    <div style="background-color: #E4E2F8; border-radius: 10px; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <div style="font-size: 20px; font-weight: bold; color: #222222;">Volume</div>
+      <div style="background-color: #FFFFFF; border-radius: 8px; padding: 8px 18px; font-size: 18px; color: #222222;">60 dB</div>
+    </div>
+    <div style="background-color: #E4E2F8; border-radius: 10px; padding: 12px 16px; margin-top: 8px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <div style="font-size: 20px; font-weight: bold; color: #222222;">Brightness</div>
+      <div style="background-color: #FFFFFF; border-radius: 8px; padding: 8px 18px; font-size: 18px; color: #222222;">35</div>
+    </div>
   </div>
 </div>
 
-One feature gets you this far. But a cello and a violin can share a frequency, so the actual lab asks students to check more than one feature at once, by nesting a conditional inside another.
-
-<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
-  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
-if note["frequency"] &gt; 100:<br>
-&nbsp;&nbsp;if note["brightness"] &gt; 50:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;...
-  </div>
-</div>
+These two notes share the same frequency and volume, but the violin is brighter. That matters in the lab, because a classifier makes its decision by asking whether a feature is **greater than** or **less than** a number. Without knowing what 300 Hz or 60 dB describes, a line like "frequency greater than 400" is just a number with no meaning.
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <p>&#128161; <strong>Teacher tip:</strong> this nested pattern is exactly what the lab's Coding Tip shows students. If a student is stuck writing a flat if/elif chain that only checks one feature, point them back to this: nesting an if inside an if is how you combine two features into one prediction.</p>
+  <p>&#128161; <strong>Teacher tip:</strong> students often mix up frequency and volume. Frequency is pitch, how high or low a sound is. Volume is loudness. A quiet sound can have a high frequency, and a loud sound can have a low one.</p>
 </div>
+
+## From a Note to a Prediction
+
+To describe a note with more than one feature at once, Python uses a dictionary: a collection of named values bundled under one variable. Keys, like "frequency" and "volume", name each feature. Values, like 300 and 60, hold each feature's number.
+
+A dictionary only holds information, so it doesn't predict anything by itself. That's what a conditional does, the same tool from Lesson 6's thermostat, just checking a feature instead of a temperature. Step through all three ideas below. Switch between the cello and the violin to see how the same code treats each one.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/note-classifier-walkthrough.html"
+    width="100%"
+    height="780"
+    frameborder="0"
+    scrolling="no"
+    title="Step through a Python dictionary, a conditional, and a nested conditional that classify a cello or violin note">
+  </iframe>
+</div>
+
+The number a conditional compares against is called a cutoff. Notice that frequency alone can't separate these two notes, because they share the same frequency, which is why the lab asks students to nest a conditional and check brightness too.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <p>&#128161; <strong>Teacher tip:</strong> frequency, volume, and brightness are features, the same term from Lesson 8's classifiers. This lesson doesn't redefine it, but it's worth reminding students that the vocabulary carries over: a feature is still just a piece of information used to make a prediction.</p>
+</div>
+
+In the next level, students will use features read straight out of a dictionary like this one to write their first classifier that tells a cello from a violin.
 MARKDOWN

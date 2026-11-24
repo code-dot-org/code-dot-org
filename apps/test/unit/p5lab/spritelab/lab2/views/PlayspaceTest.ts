@@ -1,5 +1,6 @@
 import {
   playLayout,
+  playLayoutClearOf,
   playPlacement,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/Playspace';
 
@@ -152,5 +153,44 @@ describe('playLayout', () => {
     );
     expect(cross).toBeNull();
     expect(box(p)).toEqual(box(playPlacement({w: 1000, h: 600}, null, 41)));
+  });
+});
+
+describe('playLayoutClearOf', () => {
+  const CROSS = {w: 126, h: 82};
+  // The share page's logo at phone width: its right edge 155px from the
+  // stage's left, its bottom 42px below the stage's top.
+  const LOGO = {w: 155, h: 42};
+
+  it('moves the box and the cross below a corner the box would reach into', () => {
+    const stage = {w: 393, h: 612};
+    const plain = playLayout(stage, null, 'right', 90, CROSS);
+    expect(box(plain.box).top).toBeLessThan(LOGO.h);
+    const {box: p, cross} = playLayoutClearOf(
+      LOGO,
+      stage,
+      null,
+      'right',
+      90,
+      CROSS
+    );
+    const b = box(p);
+    expect(b.top).toBeGreaterThanOrEqual(LOGO.h + 12);
+    expect(cross!.y).toBeCloseTo(b.bottom + 12);
+    expect(cross!.y + CROSS.h).toBeLessThanOrEqual(stage.h - 90);
+  });
+
+  it('leaves the layout as it is when the box is already clear of the corner', () => {
+    const stage = {w: 1280, h: 752};
+    expect(playLayoutClearOf(LOGO, stage, null, 'right', 41, CROSS)).toEqual(
+      playLayout(stage, null, 'right', 41, CROSS)
+    );
+  });
+
+  it('leaves the layout as it is with no corner', () => {
+    const stage = {w: 393, h: 612};
+    expect(playLayoutClearOf(null, stage, null, 'right', 90, CROSS)).toEqual(
+      playLayout(stage, null, 'right', 90, CROSS)
+    );
   });
 });

@@ -9,43 +9,22 @@ The "Hearing" activity asks students to tell apart two instruments: a cello and 
 
 Here's what makes the two notes distinguishable: their spectrograms, visualizations of how loud a sound's frequencies are over time. Louder frequencies appear darker.
 
-<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap; justify-content: center;">
-  <div style="flex: 1; min-width: 220px; text-align: center;">
-    <img src="https://images.code.org/b6412a519dfb0b18468282d86a68a5f8-image-1795020119479.png" alt="Spectrogram of a cello note, showing darker frequency bands concentrated toward the bottom of the chart" style="width: 100%; border-radius: 10px;">
-    <p>Cello</p>
-  </div>
-  <div style="flex: 1; min-width: 220px; text-align: center;">
-    <img src="https://images.code.org/a0896ecc41f828f20495e36a8d462a63-image-1795020184041.png" alt="Spectrogram of a violin note, showing darker, more stacked frequency bands spread higher up the chart" style="width: 100%; border-radius: 10px;">
-    <p>Violin</p>
-  </div>
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/instrument-spectrograms.html"
+    width="100%"
+    height="560"
+    frameborder="0"
+    scrolling="no"
+    title="Cello and violin frequency pictures. Select each speaker to hear the sound.">
+  </iframe>
 </div>
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <p>&#128161; <strong>Teacher tip:</strong> these are slides 23 and 31's real Praat spectrogram screenshots. The violin's is visibly darker overall with more stacked bands, that's the real visual difference the teaching guide asks students to notice, so pull these two images directly rather than redrawing them.</p>
+  <p>&#128161; <strong>Teacher tip:</strong> these are slides 23 and 31's real Praat spectrogram screenshots. The violin's is visibly darker overall with more stacked bands, that's the real visual difference the teaching guide asks students to notice.</p>
 </div>
 
 Violins tend to play higher, brighter notes than cellos. "Higher" shows up as frequency; "brighter" shows up as more, more tightly stacked bands in the spectrogram. Those two qualities, frequency and brightness, become the features a classifier can use.
-
-## Features as a Python Dictionary
-
-To represent a note with more than one feature at once, Python uses a dictionary: a collection of named values bundled under one variable.
-
-<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
-  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
-note = {<br>
-&nbsp;&nbsp;"frequency": 300,<br>
-&nbsp;&nbsp;"volume": 60<br>
-}
-  </div>
-</div>
-
-Keys, like <code style="font-size:14px;">"frequency"</code> and <code style="font-size:14px;">"volume"</code>, name each feature. Values, like <code style="font-size:14px;">300</code> and <code style="font-size:14px;">60</code>, hold each feature's number. To read a value back out, write the key's name in square brackets after the dictionary's name: <code style="font-size:14px;">note["frequency"]</code>.
-
-<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <p>&#128161; <strong>Teacher tip:</strong> frequency and volume are features, the same term from Lesson 8's classifiers. This lesson doesn't redefine it, but it's worth reminding students that the vocabulary carries over: a feature is still just a piece of information used to make a prediction.</p>
-</div>
-
-In the next level, students will use frequency and volume, read straight out of a dictionary like this one, to write their first classifier that tells a cello from a violin.
 
 
 MARKDOWN

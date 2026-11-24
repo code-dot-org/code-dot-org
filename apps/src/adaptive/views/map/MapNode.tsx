@@ -1,6 +1,7 @@
 import FontAwesomeV6Icon, {
   kitIcons,
 } from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Skeleton as MuiSkeleton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -9,6 +10,7 @@ import {Checkpoint} from '../../types';
 import PathwayIcon from '../components/PathwayIcon';
 
 import {NodePosition} from './layout/types';
+import type {MapSkeletonStyle} from './MapView';
 
 import styles from './mapNode.module.scss';
 
@@ -40,6 +42,18 @@ interface MapNodeProps {
   children?: React.ReactNode;
   onSelect?: (id: string) => void;
   tourId?: string;
+  skeleton?: boolean;
+}
+
+export function shouldSkeleton(
+  skeletonStyle: MapSkeletonStyle | undefined,
+  checkpointId: string,
+  firstCheckpointId: string | undefined
+): boolean {
+  return (
+    skeletonStyle === 'all' ||
+    (skeletonStyle === 'allButFirst' && checkpointId !== firstCheckpointId)
+  );
 }
 
 /** A checkpoint on the map: its circle, with the layout's title around it. */
@@ -56,6 +70,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
   children,
   onSelect,
   tourId,
+  skeleton,
 }) => {
   // A badge in the circle's corner: the lock on a locked circle that shows
   // its own icon, the mark of a complete one, the checked bulb of one
@@ -68,7 +83,9 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
       : icon && status === 'locked'
       ? 'lock'
       : undefined;
-  const inner = (
+  const inner = skeleton ? (
+    <MuiSkeleton variant="circular" width="100%" height="100%" />
+  ) : (
     <>
       <PathwayIcon iconName={icon ?? STATUS_ICONS[status]} />
       {badge && (
@@ -85,7 +102,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
     <div
       className={classNames(
         styles.node,
-        styles[status],
+        skeleton ? styles.skeleton : styles[status],
         focusId && focusId !== checkpoint.id && styles.dimmed,
         focusId === checkpoint.id && styles.focused
       )}
@@ -105,7 +122,7 @@ const MapNode: React.FunctionComponent<MapNodeProps> = ({
           id={tourId}
           className={styles.circle}
           data-checkpoint-id={checkpoint.id}
-          onClick={() => onSelect(checkpoint.id)}
+          onClick={() => !skeleton && onSelect(checkpoint.id)}
           aria-label={`${checkpoint.title}: ${STATUS_LABELS[status]}`}
           aria-pressed={focusId === checkpoint.id}
         >

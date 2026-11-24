@@ -22,7 +22,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-07-23 23:33:59 UTC",
+    "serialized_at": "2026-11-23 17:37:24 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6036,7 +6036,8 @@
       "url": "https://docs.google.com/document/d/1SLEwwzfYofJQvLxE8QyT7e9X19S_uJPdBHegCxcOu80/edit?usp=drivesdk",
       "key": "threat_detected_cards",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
@@ -6899,6 +6900,9 @@
         "objective.key": "f9b5c15d-f019-4511-b7e6-d9729f9a20c3"
       }
     }
+  ],
+  "objectives_script_levels": [
+
   ],
   "lessons_standards": [
     {

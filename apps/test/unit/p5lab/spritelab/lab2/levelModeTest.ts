@@ -40,6 +40,22 @@ describe('tabsForMode', () => {
     ).toEqual(['Images', 'Code', 'Play', 'World']);
   });
 
+  it('opens on the start tab when the level shows it', () => {
+    expect(tabsForMode({kind: 'freeplay', startTab: 'Images'})).toEqual([
+      'Images',
+      'Code',
+      'World',
+      'Play',
+    ]);
+    expect(
+      tabsForMode({kind: 'code', extraTabs: ['World'], startTab: 'World'})
+    ).toEqual(['World', 'Code', 'Play']);
+    expect(tabsForMode({kind: 'code', startTab: 'Images'})).toEqual([
+      'Code',
+      'Play',
+    ]);
+  });
+
   it('gives an image level the Images tab alone', () => {
     expect(tabsForMode({kind: 'image'})).toEqual(['Images']);
   });

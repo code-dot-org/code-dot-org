@@ -5,13 +5,15 @@ description 'description here'
 markdown <<MARKDOWN
 # How Much Weight Can an Airplane Take?
 
+In the  <a href="https://docs.google.com/document/d/1ddNzv1LYvoQaIgmG4gz3CjsjkDXw31SBBiKGyO0WUaw/edit?usp=sharing" target="blank" rel="noopener noreferrer">activity guide</a>, students explore two different regression models and analyze which is the best model. One for weight on an airplane and the other for drafting basketball players. 
+
 Two regression models predict how many passengers a plane can safely carry at a given air temperature. Drag the slider below to see how each model's prediction changes as temperature rises, and watch what happens to real flight data along the way.
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
   <iframe
     src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/regression-model-compare.html"
     width="100%"
-    height="760"
+    height="950"
     frameborder="0"
     scrolling="no"
     title="Compare two regression models predicting airplane passenger capacity, and two predicting basketball points scored">

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894907-3754673cefd0",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 6: Understanding Bias",
+  "question": "Your smart speaker learned from only one part of the world, so it knows one word for everything. Ask it for something with a different word, and watch it stumble.\n\nSteps:\n1. Start recording. Pick one pair of words from the list below.\n2. Be the smart speaker. First, respond perfectly to the word it knows. Then respond with dramatic confusion to the other word.\n3. Say who would get poor service from a speaker like this, and how it might feel.\n4. Name one thing to add to the speaker’s training data to fix it, and say why that helps.\n\nWord pairs (word it knows → other word):\n- Sneakers → Trainers\n- Backpack → Rucksack\n- Apartment → Flat\n- Truck → Lorry",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not perform the speaker on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student shows the speaker being confused, but does not show it understanding the word it knows, OR names no one who is affected."
+    },
+    {
+      "level": 2,
+      "description": "Student shows the speaker understanding one word and failing on the other AND names who would get poor service because of it."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names specific data to add (such as voices or words from other places) AND says why that would help."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

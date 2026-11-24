@@ -5,7 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # Evaluating the Impact of Models
 
-Your students have spent this section teaching a computer to sense the world, bits into images, features into sound. That's only half the story. Once a model can sense and predict, a harder question shows up: is it making the right call?
+Your students have spent this section teaching a computer to sense the world, bits into images, features into sound. That's only half the story. 
+
+In curriculum Lesson 11, students dive into evaluating the impact of models, judging them through the lenses of fairness and safety.
+
+Once a model can sense and predict, a harder question shows up: is it making the right call?
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
   <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> students will want to answer that question with a number, whichever model has the highest accuracy or the lowest error. Push back gently when that happens. The activities in this lesson are built so that the "best" model by the numbers is sometimes the wrong one to actually use.</div>
@@ -13,13 +17,15 @@ Your students have spent this section teaching a computer to sense the world, bi
 
 ## Spot the Machine Learning
 
-Before students evaluate models, they need to notice where models already are. This warm up asks: in each everyday scenario, is a machine learning model classifying something into categories, or predicting a number?
+Before students evaluate models, they need to notice where models already are. 
+
+**This warm up asks:** in each everyday scenario, is a machine learning model classifying something into categories, or predicting a number?
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
   <iframe
     src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/spot-the-ml-sort.html"
     width="100%"
-    height="640"
+    height="780"
     frameborder="0"
     scrolling="no"
     title="Spot the Machine Learning: sort scenarios into classification or regression">

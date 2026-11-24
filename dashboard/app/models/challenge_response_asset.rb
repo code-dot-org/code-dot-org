@@ -25,6 +25,9 @@ class ChallengeResponseAsset < ApplicationRecord
 
   validates :asset_type, presence: true
 
+  # Before, not after commit, so an S3 failure aborts the destroy and leaves the row to retry.
+  before_destroy :delete_s3_object
+
   # How long presigned S3 URLs remain valid.
   URL_EXPIRY = 15.minutes
 
@@ -84,6 +87,10 @@ class ChallengeResponseAsset < ApplicationRecord
   # never uploaded; check uploaded? first when that is not an error.
   def download_bytes
     AWS::S3.download_from_bucket(AWS::S3.user_content_bucket, s3_key)
+  end
+
+  def delete_s3_object
+    AWS::S3.delete_from_bucket(AWS::S3.user_content_bucket, s3_key)
   end
 
   # @param upload [Boolean] when true, the asset was just created and its

@@ -1,0 +1,14 @@
+{
+  "key": "aif-l08-debug-dont-restart",
+  "description": "See how to find and fix the part of your prompt that's off instead of starting over.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l08-debug-dont-restart.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "b96ea037-b229-4490-bcde-383226614311",
+    "6083d9c4-3131-4f49-bc59-d4165c735e33"
+  ]
+}

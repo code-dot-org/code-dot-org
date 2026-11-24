@@ -26,6 +26,10 @@
     %p Students can switch between modes using buttons in the header.
 
   .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :showcase_view, description: "Showcase View"}
+    %p
+      Displays the user's site for presentation only: renders in preview mode only with no view mode toggle, and uses the share preview's header (address bar, stop preview, desktop/mobile toggle). Note that this has no effect on a widget level, which hides the preview header entirely.
+  .field
     = f.label :level_system_prompt, 'Level System Prompt'
     %p Optional addition to the system prompt for AI Tutor. This will be deprecated at the end of the AIF Semester 2 pilot!
     = f.text_area :level_system_prompt, placeholder: 'Level system prompt', rows: 4, style: 'width: 50%', value: @level.level_system_prompt

@@ -1,0 +1,14 @@
+{
+  "key": "aif-l10-remix-not-from-nothing",
+  "description": "Find out why generative AI remixes things that already exist instead of making ideas from nothing.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l10-remix-not-from-nothing.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "6a3cfa37-8150-49ee-998d-5016fe73b662",
+    "34a3bc0f-97e9-4805-96b0-b58b1a2f5401"
+  ]
+}

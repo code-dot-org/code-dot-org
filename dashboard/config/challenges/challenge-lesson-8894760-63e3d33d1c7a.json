@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894760-63e3d33d1c7a",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 5: Trust and Credibility",
+  "question": "Kai asked an app for “a park,” but the app showed a place Kai has never seen. Can you change Kai’s words so the app shows his real park?\n\nSteps:\n1. Use the arrow tool to point at two things in the app’s picture that are NOT in Kai’s real park.\n2. Use the text tool to type 3 words or short phrases Kai should add to his request so the app shows his park.\n3. Record your voice explaining why you think the app made that kind of park the first time.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student places arrows on fewer than 2 mismatches, types fewer than 3 details from Kai’s description, or the voice recording does not name something the app assumed."
+    },
+    {
+      "level": 2,
+      "description": "Arrows point to two items not in Kai’s park (green grass, the fountain, or the swings) AND the text box has 3 details from Kai’s description (such as dry ground, shade trees, water pump) AND the voice recording names one thing the app assumed."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains a reason the app made that park, such as that it learned from many pictures where parks look that way."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894760-63e3d33d1c7a-a0020290",
+  "whiteboard_starter_image_alt_text": "\"Kai asked an app for 'a park'.\" On the left, what the app made: a park with green grass, three trees, a swing set, a fountain, and a paved path. On the right, Kai's real park: \"The ground is dry and brown. There are two big shade trees and a water pump. There is no fountain. There are no swings. Kids play ball here every evening.\""
+}

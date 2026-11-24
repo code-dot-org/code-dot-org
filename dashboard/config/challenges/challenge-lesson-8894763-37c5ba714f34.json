@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894763-37c5ba714f34",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 8: Defending Your Data",
+  "question": "The Guessing Machine read Riley’s posts and made four guesses. Some are right, some might be wrong, and some are risky either way.\n\nSteps:\n1. Use the arrow tool to connect each guess to the post that probably caused it.\n2. Place a shape on the guess most likely to be wrong.\n3. Record your voice naming one guess that would be risky if it were true, and say why. Bonus points if you explain how two guesses together could reveal even more.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student connects fewer than 3 guesses to the correct posts, places no shape, or the voice recording does not name a guess that would be risky if true."
+    },
+    {
+      "level": 2,
+      "description": "Student connects at least 3 guesses to the correct posts (1 to A, 2 to B, 3 to C, 4 to D) AND places a shape on guess 1 or guess 3 AND the voice recording names a guess that would be risky if true and says why."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains why a guess that might be wrong can still be a problem, OR explains how two guesses together (such as 1 and 2) reveal where Riley will be and when."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894763-37c5ba714f34-54b8e9ec",
+  "whiteboard_starter_image_alt_text": "\"The Guessing Machine reads Riley's posts.\" On the left, what Riley posted: A, a photo of a soccer field with a sign that says \"Maple Park\"; B, \"Practice was so hard today. See you Tuesday!\"; C, a photo of a small jacket and a big jacket on the same hook; and D, \"Happy birthday to me! Finally 12!\" On the right, the machine's guesses: 1, Riley lives near Maple Park; 2, Riley practices on Tuesdays; 3, Riley has a younger brother or sister; and 4, Riley is 12 years old."
+}

@@ -67,6 +67,10 @@
   max-width: 800px;
 }
 
+.questionsBack {
+  margin-right: auto;
+}
+
 .feedbackCorrect {
   color: var(--text-success-primary);
 }
@@ -314,10 +318,10 @@
   width: 100%;
 }
 
-// Tiles in two columns; a figure added later takes the next cell.
+// Three figures to a row, two ring tiles to a row.
 .statsList {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 8px;
   width: 100%;
   margin: 0;
@@ -325,6 +329,7 @@
 
 // The label reads before the figure but shows beneath it.
 .statsItem {
+  grid-column: span 2;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -343,6 +348,7 @@
 
 // Rings sit a little further from their label than a figure does.
 .statsItemRings {
+  grid-column: span 3;
   gap: 12px;
 }
 

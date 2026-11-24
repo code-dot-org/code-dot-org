@@ -1,0 +1,62 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T18:35:10.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Custom Range",
+    "long_instructions": "## Custom Range\r\n\r\nModify the original program so the user can choose the range.\r\n\r\n1. Ask the user for an integer to use as the smallest possible value.\r\n2. Ask the user for an integer to use as the largest possible value.\r\n3. Use those variables inside `randint()`.\r\n5. Print the random number.\r\n\r\n**Check:** Run the program several times with different ranges. Does the random number stay between the values you entered?",
+    "bubble_choice_description": "Ask the user for the lowest and highest possible values. Use those values inside randint() so the program chooses a random number in the user’s range.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "explainCode",
+        "buildPython"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "thumbnail_url": "https://images.code.org/f926eb884a820b99f991030e31ee0a8a-Pasted Graphic 1 4.png",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from random import randint\n\nroll = randint(1, 6)\n\nprint(roll)",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpSvOkNOHQhDAE0\nBvswbgTvYpwBb+xMbJFkbo/vK+ZkPC2Njqzx6ZMgtgePXKwV0FPGI+qfC6aN\n81Phd8gK64zUc5TbQcrA5cHnjuoeUwR1/T5m2OES4jWLPzRTkf6eATXlX8ZF\naorYVoQyvk0444TgIg9wagQzdMkSkRx5xfoj2Zoxcwt1d1gEb2ejPKXu+vpo\n6CtnOQOUPVZlu0NXpfgrnLf4m3TTUPDUnmUWHaykh+V9IuoOViI/QFYrd/gA\nDIAQs5Wc/gyKeIVWkv2sebecybNh9U1I4+rPGc01RQmjgIA4bDTbidJs22W4\n1PfH01f/oEwW2MIuRNAvtelKvCTlTvlRoAIWJpFjvlYljHqiom9yBBXzaK+y\nh7eU3ta042g=\n",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import contextlib\nimport io\nfrom unittest import TestCase\nfrom unittest.mock import patch\n\n\nclass TestModifyCustomRange(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code with mocked, controlled low/high inputs\"\"\"\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n        cls.namespace = {}\n        stdout = io.StringIO()\n        cls.run_error = None\n        try:\n            with patch(\"builtins.input\", side_effect=[\"10\", \"20\"]), contextlib.redirect_stdout(stdout):\n                exec(compile(cls.source, \"main.py\", \"exec\"), cls.namespace)\n        except Exception as e:\n            cls.run_error = e\n        cls.stdout_text = stdout.getvalue()\n\n    def _int_vars(self):\n        return {\n            name: value for name, value in self.namespace.items()\n            if isinstance(value, int) and not isinstance(value, bool) and not name.startswith(\"__\")\n        }\n\n    def test_uses_both_inputs_as_randint_range(self):\n        \"\"\"Uses the two entered values as randint()'s range\"\"\"\n        self.assertIsNone(\n            self.run_error,\n            f\"Your program raised an error while running: {self.run_error}. \"\n            \"Make sure you're asking for two integers with input() and int().\"\n        )\n        int_vars = self._int_vars()\n        self.assertIn(10, int_vars.values(), \"We didn't find a variable holding 10, the smallest value we entered. Make sure you're using int(input(...)) to store it.\")\n        self.assertIn(20, int_vars.values(), \"We didn't find a variable holding 20, the largest value we entered. Make sure you're using int(input(...)) to store it.\")\n\n    def test_random_number_within_entered_range(self):\n        \"\"\"The random number stays within the entered range\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        int_vars = self._int_vars()\n        result_candidates = [v for v in int_vars.values() if v not in (10, 20)]\n        self.assertTrue(\n            result_candidates,\n            \"We didn't find a third number variable (the random result) besides the two you entered.\"\n        )\n        result = result_candidates[0]\n        self.assertTrue(\n            10 <= result <= 20,\n            f\"Expected the random number to be between 10 and 20, but got {result}.\"\n        )\n\n    def test_prints_the_random_number(self):\n        \"\"\"Prints the random number\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        int_vars = self._int_vars()\n        result_candidates = [v for v in int_vars.values() if v not in (10, 20)]\n        if not result_candidates:\n            self.skipTest(\"Generate the random number first -- we'll check it's printed once it exists.\")\n        self.assertIn(\n            str(result_candidates[0]),\n            self.stdout_text,\n            f\"The random number ({result_candidates[0]}) wasn't found in the printed output. Make sure you print it.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20T18:35:10.052+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson28_level4b_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson28_level4b_dev_27_28\"}]"
+}]]></config>
+</Pythonlab>

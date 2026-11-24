@@ -3,42 +3,26 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# How Much Weight Can an Airplane Take?
+# Meet the Snack Model Code
 
-Two regression models predict how many passengers a plane can safely carry at a given air temperature. Drag the slider below to see how each model's prediction changes as temperature rises, and watch what happens to real flight data along the way.
+Your students write very little code in this lab, and that is on purpose. They change one word and watch a model's decisions change. Before you try it, look at everything they will see.
 
 <div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
   <iframe
-    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/regression-model-compare.html"
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/snack-code-explorer.html"
     width="100%"
-    height="760"
+    height="660"
     frameborder="0"
     scrolling="no"
-    title="Compare two regression models predicting airplane passenger capacity, and two predicting basketball points scored">
+    title="Annotated tour of the student snack model code">
   </iframe>
 </div>
 
-Model 1 has the lower absolute loss, its line sits closer to the real data points overall. But look at what happens as the temperature climbs past 100 degrees: Model 1's line keeps predicting a number of passengers that real flights never actually carried at that temperature. It's over-promising capacity exactly when the stakes are highest.
-
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> as a safety engineer, you're not trying to minimize error across the whole dataset, you're trying to avoid the one mistake that matters: telling a flight crew it's safe to carry more passengers than it actually is. Model 2's line sits lower everywhere, it never makes that mistake, even though it fits the overall data worse.</div>
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> the lab's single learning target is choosing a characteristic and seeing how that choice changes which snacks win. Encourage your students to try at least three different characteristics before they decide on a best model.</div>
 </div>
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <p><b>Discussion question:</b> a colleague argues you should use Model 1 because it has lower loss. As the safety engineer, which model do you pick, and why?</p>
-</div>
-
-## Who Gets to Play on the Varsity Team?
-
-Switch to the Basketball Draft tab in the activity above. Two regression models predict a player's points scored, one using height, the other using how many practices they attended. Drag each chart's own slider to see that model's prediction update.
-
-Both relationships are real, taller players and players who practice more both tend to score more in this data. The difference is what a player can do about it.
 
 <div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
-  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#9888;&#65039; Watch for:</b> this is the trickiest comparison in the lesson for students. If they're stuck choosing a model, ask them two separate questions: "Which model would the coach prefer?" and "Which model would the player prefer?" Height and practice attendance aren't competing on accuracy here, they're competing on what a person can actually change about themselves.</div>
-</div>
-
-<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
-  <p><b>Discussion question:</b> height and practice attendance are only two variables a model could consider. What's another variable you'd want a model like this to include, and why?</p>
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#9888;&#65039; Watch for:</b> the characteristic name has to match exactly, like "allergen_count" with the underscore. If your students see an error after changing the quoted word, check the spelling and capitalization first.</div>
 </div>
 MARKDOWN

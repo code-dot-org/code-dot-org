@@ -45,7 +45,7 @@ test('a disconnect blocked for want of another login says why', async ({
   });
   await expect(disconnect).toBeDisabled();
   await expect(disconnect).toHaveAccessibleDescription(
-    /add a password or another linked account/,
+    /Add a password or another linked account/,
   );
 });
 

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894758-91dd2d14441d",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 3: Responsible Co-Creation",
+  "question": "A forecast never says “it WILL rain.” It says how likely each kind of weather is. Which day would you bet on, and which would you not?\n\nSteps:\n1. Use the arrow tool to point at the day with the forecast you’d trust most.\n2. Place a shape on a day where no kind of weather is very likely.\n3. Record your voice using the numbers to explain both choices. Bonus points if you say how a forecast is like an AI picking the most likely next word.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on Monday, the shape is not on Tuesday or Thursday, or the voice recording does not use numbers from the board to explain the choices."
+    },
+    {
+      "level": 2,
+      "description": "Arrow is on Monday AND shape is on Tuesday or Thursday AND the voice recording cites at least one number from the board for each choice (for example, “90%” or “55 and 45”)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording states that the most likely option is not guaranteed AND connects this to an AI choosing the most probable next word, which can still be wrong."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894758-91dd2d14441d-e2f94842",
+  "whiteboard_starter_image_alt_text": "\"5-Day Forecast: Which day would you trust?\" Monday: sunny 90%, rain 10%. Tuesday: sunny 55%, rain 45%. Wednesday: rain 80%, cloudy 15%, sunny 5%. Thursday: cloudy 40%, sunny 35%, rain 25%. Friday: sunny 70%, cloudy 20%, rain 10%."
+}

@@ -3,8 +3,27 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import Hoai2026Congrats from '@cdo/apps/lab2/views/dialogs/finishDialogs/Hoai2026Congrats';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
+jest.mock('@cdo/apps/util/copyToClipboard', () => jest.fn());
+jest.mock('@cdo/apps/util/trackEvent', () => jest.fn());
+
+const sendEvent = analyticsReporter.sendEvent as jest.Mock;
+const reportedActions = () =>
+  sendEvent.mock.calls.map(([name, payload, withProject]) => {
+    expect(name).toBe(EVENTS.HOAI2026_FINISH_DIALOG);
+    expect(withProject).toBe(true);
+    return payload.action;
+  });
 
 describe('Hoai2026Congrats', () => {
+  beforeEach(() => sendEvent.mockClear());
+
   const renderDialog = (
     props: Partial<React.ComponentProps<typeof Hoai2026Congrats>> = {}
   ) =>
@@ -26,7 +45,7 @@ describe('Hoai2026Congrats', () => {
     ).toBeInTheDocument();
     expect(
       screen.getByRole('heading', {
-        name: 'Discover more in Sprite Lab',
+        name: 'Discover more in Quest Builder',
       })
     ).toBeInTheDocument();
     expect(
@@ -47,16 +66,21 @@ describe('Hoai2026Congrats', () => {
     expect(certificate).toHaveAttribute('href', '/congrats?s=hoai2026-dev');
     // In place of the lab, as the lab's Finish would go.
     expect(certificate).not.toHaveAttribute('target');
-    expect(screen.getByRole('link', {name: 'Learn more'})).toHaveAttribute(
-      'href',
-      'https://code.org/en-US/professional-learning'
-    );
+    const elevate = screen.getByRole('region', {
+      name: 'Elevate your Hour of AI',
+    });
+    expect(
+      within(elevate).getByText('Prepare to lead an Hour of AI.')
+    ).toBeInTheDocument();
+    const learnMore = within(elevate).getByRole('link', {name: 'Learn more'});
+    expect(learnMore).toHaveAttribute('href', 'https://aka.ms/ElevateHourofAI');
+    expect(learnMore).toHaveAttribute('target', '_blank');
   });
 
   it('shows a picture on the students card, with no name to read out', () => {
     renderDialog();
     const students = screen.getByRole('region', {
-      name: 'Discover more in Sprite Lab',
+      name: 'Discover more in Quest Builder',
     });
     expect(within(students).getByAltText('')).toBeInTheDocument();
   });
@@ -64,7 +88,7 @@ describe('Hoai2026Congrats', () => {
   it('opens a remix of the game from the student card', () => {
     const onRemix = jest.fn();
     renderDialog({onRemix});
-    fireEvent.click(screen.getByRole('button', {name: 'Open Sprite Lab'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Remix your project'}));
     expect(onRemix).toHaveBeenCalledTimes(1);
   });
 
@@ -74,10 +98,10 @@ describe('Hoai2026Congrats', () => {
     expect(screen.getByRole('button', {name: 'Certificate'})).toBeDisabled();
   });
 
-  it('holds Open Sprite Lab when the project may not be remixed', () => {
+  it('holds Remix your project when the project may not be remixed', () => {
     renderDialog({onRemix: undefined});
     expect(
-      screen.getByRole('button', {name: 'Open Sprite Lab'})
+      screen.getByRole('button', {name: 'Remix your project'})
     ).toBeDisabled();
   });
 
@@ -102,5 +126,42 @@ describe('Hoai2026Congrats', () => {
     renderDialog({onClose});
     screen.getByRole('button', {name: 'Keep playing'}).click();
     expect(onClose).toHaveBeenCalled();
+  });
+
+  it('reports that it was shown, once', () => {
+    const view = renderDialog();
+    view.rerender(
+      <Hoai2026Congrats
+        onClose={jest.fn()}
+        shareUrl="https://studio.code.org/projects/spritelab2/abc"
+        projectType="spritelab"
+      />
+    );
+    expect(reportedActions()).toEqual(['shown']);
+  });
+
+  it('reports each call to action as it is pressed', () => {
+    renderDialog();
+    sendEvent.mockClear();
+    const press = (role: 'button' | 'link', name: RegExp | string) =>
+      fireEvent.click(screen.getByRole(role, {name}));
+    press('button', 'Remix your project');
+    press('link', /How AI Makes Decisions/);
+    press('link', /AI Discoveries/);
+    press('button', 'Copy link');
+    press('link', 'Certificate');
+    press('link', 'Learn more');
+    press('button', 'Keep playing');
+    press('button', 'Close');
+    expect(reportedActions()).toEqual([
+      'open_quest_builder_standalone',
+      'elementary',
+      'middle_school',
+      'copy_link',
+      'certificate',
+      'elevate_hour_of_ai',
+      'keep_playing',
+      'close',
+    ]);
   });
 });

@@ -19,6 +19,9 @@
 */
 :root,
 [data-theme='Light'] {
+  /* Tells the browser which scheme to draw scrollbars and its own controls in. */
+  color-scheme: light;
+
   --background-accent-orange-light: var(--accent-orange-10);
   --background-accent-orange-primary: var(--accent-orange-50);
   --background-accent-orange-strong: var(--accent-orange-70);
@@ -131,6 +134,8 @@
 
 /* Dark Theme Semantic Colors */
 [data-theme='Dark'] {
+  color-scheme: dark;
+
   --background-accent-orange-light: var(--accent-orange-90);
   --background-accent-orange-primary: var(--accent-orange-50);
   --background-accent-orange-strong: var(--accent-orange-40);
