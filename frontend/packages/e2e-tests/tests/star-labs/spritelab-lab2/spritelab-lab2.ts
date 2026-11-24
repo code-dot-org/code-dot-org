@@ -2,7 +2,7 @@ import {expect, type Locator, type Page} from '@playwright/test';
 
 import {LessonLevelPage} from '../../pages/lesson-level-page';
 
-/** The ui-test-spritelab-lab2 unit, one lesson, levels 1 to 5. */
+/** The ui-test-spritelab-lab2 unit, one lesson, levels 1 to 10. */
 export const SPRITELAB_LAB2_COURSE = 'ui-test-spritelab-lab2';
 
 /**
@@ -18,6 +18,9 @@ export const SPRITELAB_LAB2_COURSE = 'ui-test-spritelab-lab2';
  *   "Good" and "Not so good" buttons (RatingBar.tsx).
  * - The World tab is the grid named "World" of gridcell buttons, with the
  *   radiogroup "Items to place" beside it (WorldTab.tsx).
+ * - While the game plays it is the application named "Game playspace"
+ *   (Playspace.tsx); the game hears the arrow keys on the window, wherever
+ *   focus is.
  * - The checklist is a list whose items read "Done: " or "To do: " to
  *   assistive tech (lab2 ObjectivesList.tsx); Continue sits under it.
  */
@@ -33,6 +36,7 @@ export class SpriteLab2 extends LessonLevelPage {
   readonly stopButton: Locator;
   readonly worldGrid: Locator;
   readonly itemsToPlace: Locator;
+  readonly game: Locator;
   readonly flyout: Locator;
   readonly workspace: Locator;
 
@@ -54,6 +58,7 @@ export class SpriteLab2 extends LessonLevelPage {
     this.stopButton = page.getByRole('button', {name: /Stop$/});
     this.worldGrid = page.getByRole('grid', {name: 'World'});
     this.itemsToPlace = page.getByRole('radiogroup', {name: 'Items to place'});
+    this.game = page.getByRole('application', {name: 'Game playspace'});
     this.flyout = page.locator('.blocklyFlyout');
     this.workspace = page.locator('svg.blocklySvg g.blocklyWorkspace').first();
   }
@@ -63,9 +68,12 @@ export class SpriteLab2 extends LessonLevelPage {
     await this.waitForReady();
   }
 
-  /** The lab is up once its editor switch is on screen. */
+  /** The lab is up once its editor switch is on screen, or its game on a
+      level that only plays. */
   async waitForReady(): Promise<void> {
-    await expect(this.editors).toBeVisible({timeout: 45_000});
+    await expect(this.editors.or(this.game).first()).toBeVisible({
+      timeout: 45_000,
+    });
   }
 
   /**
@@ -81,9 +89,9 @@ export class SpriteLab2 extends LessonLevelPage {
 
   /**
    * Hold one of the on-screen game controls (PlayBar.tsx: Left, Right,
-   * Jump) for `ms`. They send the game the same key events as the keyboard
-   * and need no focus, which a synthetic keypress in a headless browser
-   * does not reliably have.
+   * Jump) for `ms`, for the one level that tests those controls. They send
+   * the game the same key events as the keyboard (playBar.ts
+   * dispatchGameKey).
    */
   async holdControl(label: string, ms: number): Promise<void> {
     const control = this.page.getByRole('button', {name: label, exact: true});
@@ -133,6 +141,70 @@ export class SpriteLab2 extends LessonLevelPage {
     await expect(story).toBeHidden();
   }
 
+  /**
+   * Hold `key` in the running game, jumping every half second when `jump`
+   * is set, until the checklist item is done or 20 seconds pass. Clicking the game first moves focus onto it,
+   * off any control that would also act on the keys.
+   */
+  async steerWithKeysUntilDone(
+    objective: string | RegExp,
+    {key = 'ArrowRight', jump = false}: {key?: string; jump?: boolean} = {},
+  ): Promise<void> {
+    await this.game.click();
+    await this.page.keyboard.down(key);
+    try {
+      for (let tick = 0; tick < 40; tick++) {
+        if (jump) {
+          await this.page.keyboard.down('ArrowUp');
+        }
+        await this.page.waitForTimeout(250);
+        if (jump) {
+          await this.page.keyboard.up('ArrowUp');
+        }
+        await this.page.waitForTimeout(250);
+        if (
+          (await this.objective(objective).textContent())?.includes('Done:')
+        ) {
+          return;
+        }
+      }
+    } finally {
+      await this.page.keyboard.up(key);
+    }
+    await this.expectObjectiveDone(objective);
+  }
+
+  /** The first word offered in the sentence's first choice. */
+  get firstWordChoice(): Locator {
+    return this.page
+      .getByRole('group', {name: /pick one/})
+      .first()
+      .getByRole('button')
+      .first();
+  }
+
+  /** The student's `n`th picture among the items to place: "Sprite 1" is
+      the player, "Sprite 2" the object, "Sprite 3" the friend. */
+  spriteToPlace(n: number): Locator {
+    return this.itemsToPlace.getByRole('radio', {name: `Sprite ${n}, sprite`});
+  }
+
+  get blockToPlace(): Locator {
+    return this.itemsToPlace.getByRole('radio', {name: /block$/}).first();
+  }
+
+  /** A cell on the bottom row of the 10 by 10 grid, `column` counted from
+      0: the row the player falls to from its start in column 1, so it walks
+      into what sits there. */
+  floorCell(column: number): Locator {
+    return this.worldGrid.getByRole('gridcell').nth(90 + column);
+  }
+
+  async placeInWorld(item: Locator, cell: Locator): Promise<void> {
+    await item.click();
+    await cell.click();
+  }
+
   editorButton(name: 'Images' | 'World' | 'Code'): Locator {
     return this.editors.getByRole('button', {name});
   }
@@ -147,8 +219,11 @@ export class SpriteLab2 extends LessonLevelPage {
     return this.page.locator('li').filter({hasText: text});
   }
 
-  async expectObjectiveDone(text: string | RegExp): Promise<void> {
-    await expect(this.objective(text)).toContainText('Done:');
+  async expectObjectiveDone(
+    text: string | RegExp,
+    options: {timeout?: number} = {},
+  ): Promise<void> {
+    await expect(this.objective(text)).toContainText('Done:', options);
   }
 
   /** A block in the toolbox flyout, by a piece of its text. */
@@ -164,31 +239,6 @@ export class SpriteLab2 extends LessonLevelPage {
     return this.workspace.locator('.blocklyPlaceholder').first();
   }
 
-  /** A stack on the workspace by a piece of its top block's text: the
-      outermost block group, which spans the whole stack. A pinned when run
-      is not draggable, so this matches on the block class, not the
-      draggable one. */
-  workspaceBlock(text: string): Locator {
-    return this.workspace
-      .locator('.blocklyBlockCanvas > g.blocklyBlock')
-      .filter({hasText: text})
-      .first();
-  }
-
-  /**
-   * Drag a flyout block to snap on under the stack whose top block shows
-   * `stackText`: dropped just below the stack's last block, where Blockly
-   * snaps it on.
-   */
-  async dragFlyoutBlockUnder(text: string, stackText: string): Promise<void> {
-    const stack = this.workspaceBlock(stackText);
-    const box = await stack.boundingBox();
-    if (!box) {
-      throw new Error(`cannot drop under "${stackText}": not on screen`);
-    }
-    await this.dragFlyoutBlockToPoint(text, {x: box.x, y: box.y + box.height});
-  }
-
   /**
    * Drag a flyout block so its top-left lands on `target`'s top-left:
    * Blockly then snaps its connection to the stack it was dropped on. The
@@ -196,6 +246,8 @@ export class SpriteLab2 extends LessonLevelPage {
    * radius.
    */
   async dragFlyoutBlockTo(text: string, target: Locator): Promise<void> {
+    // A level's outline is added after its blocks load.
+    await expect(target).toBeVisible();
     const to = await target.boundingBox();
     if (!to) {
       throw new Error(`cannot drag "${text}": target not on screen`);
