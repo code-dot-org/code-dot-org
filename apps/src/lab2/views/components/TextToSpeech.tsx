@@ -25,15 +25,35 @@ const enabledLocales = DCDO.get('browser-tts-button-enabled-locales', []) as
   | string[]
   | boolean;
 
+// Units whose read-aloud is offered only in English: their content is not
+// fully translated, and English text would be read in another language's
+// voice.
+const ENGLISH_ONLY_UNITS = ['quest-builder-2026'];
+
+function isEnglishOnlyUnitPage(): boolean {
+  return ENGLISH_ONLY_UNITS.some(unit =>
+    new RegExp(`/(courses|s)/${unit}(/|$)`).test(window.location.pathname)
+  );
+}
+
+function isButtonEnabled(locale: string): boolean {
+  const enabledForLocale =
+    enabledLocales === true ||
+    (Array.isArray(enabledLocales) && enabledLocales.includes(locale));
+  const english = locale.split(/[-_]/)[0] === 'en';
+  return enabledForLocale && (english || !isEnglishOnlyUnitPage());
+}
+
 /**
  * TextToSpeech play button.
  *
  * This takes either some specific `text` content or a reference to a given
  * element to derive that text from using the `textContent` property.
  *
- * The button is not rendered if the text-to-speech engine is not available
- * or the current locale is not enabled via the array provided by the
- * `browser-tts-button-enabled-locales` DCDO flag.
+ * The button is not rendered if the text-to-speech engine is not available,
+ * if the current locale is not enabled via the array provided by the
+ * `browser-tts-button-enabled-locales` DCDO flag, or if the page is in one of
+ * ENGLISH_ONLY_UNITS and the locale is not English.
  */
 const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
   text,
@@ -51,10 +71,7 @@ const TextToSpeech: React.FunctionComponent<TextToSpeechProps> = ({
   // Determine, whenever the locale is set on the first time or updated, if the
   // text-to-speech engine is available for that locale.
   useEffect(() => {
-    setTtsButtonEnabled(
-      enabledLocales === true ||
-        (Array.isArray(enabledLocales) && enabledLocales.includes(locale))
-    );
+    setTtsButtonEnabled(isButtonEnabled(locale));
   }, [locale]);
 
   const playText = () => {
