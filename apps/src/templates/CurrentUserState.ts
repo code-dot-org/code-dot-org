@@ -1,7 +1,11 @@
 /** TODO: Merge these with currentUserRedux when it has been updated to TypeScript/redux-toolkit **/
 import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
+import {ValueOf} from '@cdo/apps/types/utils';
+import {SpritelabAskAiRefusals} from '@cdo/generated-scripts/sharedConstants';
 
 import {AudioSummaryTranscriptLine} from './teacherNavigation/lessonMaterials/LessonMaterialTypes';
+
+export type SpritelabAskAiRefusal = ValueOf<typeof SpritelabAskAiRefusals>;
 
 enum CourseRole {
   Unknown = 'Unknown',
@@ -49,4 +53,5 @@ export interface CurrentUserState {
   aiChatAccessLevel: AiChatAccessLevel;
   canUseLessonDeepDiveChallenges: boolean;
   blockedAichatProviders: string[];
+  spritelabAskAiRefusal: SpritelabAskAiRefusal | null;
 }

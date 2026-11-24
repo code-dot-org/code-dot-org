@@ -1,12 +1,15 @@
-import React, {useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 
 import {LabProps} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {countAdaptive, reportAdaptiveError} from '../observability';
 import {ProgressKey} from '../progress/progressStore';
 import {AdaptiveContentError, parsePathway} from '../schema';
 import {AdaptiveLevelProperties, Pathway} from '../types';
 
+import AccessBlockedScreen from './access/AccessBlockedScreen';
+import {adaptiveAccess} from './access/adaptiveAccess';
 import PathwayApp from './PathwayApp';
 
 import styles from './adaptiveView.module.scss';
@@ -50,6 +53,18 @@ const AdaptiveView: React.FunctionComponent<
   LabProps<AdaptiveLevelProperties>
 > = ({levelProperties}) => {
   const scriptId = useAppSelector(state => state.progress.scriptId);
+  const access = useAppSelector(state =>
+    adaptiveAccess({
+      aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
+      userType: state.currentUser.userType,
+      inSection: state.currentUser.inSection,
+    })
+  );
+  const [teacherContinued, setTeacherContinued] = useState(false);
+  useEffect(() => {
+    if (access === 'pending' || access === 'allowed') return;
+    countAdaptive('Adaptive.AccessBlocked', {reason: access});
+  }, [access]);
   const parsed = useMemo(
     () => parseLevelContent(levelProperties),
     [levelProperties]
@@ -59,6 +74,22 @@ const AdaptiveView: React.FunctionComponent<
     () => (scriptId ? {scriptId, levelId: levelProperties.id} : undefined),
     [scriptId, levelProperties.id]
   );
+  // Students see this page too, so a bad pathway edit is an outage, not a preview.
+  useEffect(() => {
+    countAdaptive('Adaptive.PathwayLoad', {
+      Outcome: parsed.problems ? 'content_problems' : 'ok',
+    });
+    if (!parsed.problems) return;
+    reportAdaptiveError(
+      'Adaptive pathway content has problems',
+      new Error(parsed.problems.join('; ')),
+      {
+        problems: parsed.problems,
+        pathwayId: levelProperties.adaptiveId,
+        levelId: levelProperties.id,
+      }
+    );
+  }, [parsed, levelProperties.adaptiveId, levelProperties.id]);
   const problems =
     parsed.problems ??
     (progressKey ? [] : ['this level can only be played from a unit']);
@@ -76,6 +107,19 @@ const AdaptiveView: React.FunctionComponent<
           ))}
         </ul>
       </div>
+    );
+  }
+
+  if (access === 'pending') return null;
+  if (
+    access !== 'allowed' &&
+    !(access === 'unverifiedTeacher' && teacherContinued)
+  ) {
+    return (
+      <AccessBlockedScreen
+        reason={access}
+        onContinue={() => setTeacherContinued(true)}
+      />
     );
   }
 

@@ -65,6 +65,8 @@ export const StatsigStableIdKey = 'statsig_stable_id' as const;
 
 export const StatsigStableIdPattern = '[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}' as const;
 
+export const MobileAppName = 'CodeAIMobileApp' as const;
+
 export const ArtistAutorunOptions = {
   "full_auto_run": "FULL_AUTO_RUN"
 } as const;
@@ -164,7 +166,8 @@ export const AlwaysPublishableProjectTypes = [
   "poetry_hoc",
   "thebadguys",
   "music",
-  "pythonlab"
+  "pythonlab",
+  "quest_builder"
 ] as const;
 
 export const AllPublishableProjectTypes = [
@@ -193,6 +196,7 @@ export const AllPublishableProjectTypes = [
   "thebadguys",
   "music",
   "pythonlab",
+  "quest_builder",
   "applab",
   "gamelab",
   "spritelab"
@@ -256,7 +260,7 @@ export const ChildAccountComplianceStates = {
   "PERMISSION_GRANTED": "g"
 } as const;
 
-export const DanceSongManifestFilename = 'songManifest2026.json' as const;
+export const DanceSongManifestFilename = 'songManifest2026_v2.json' as const;
 
 export const AiEvaluationTypes = {
   "SINGLE_STUDENT": "single_student",
@@ -358,6 +362,11 @@ export const AiChatGeminiModelIds = [
   "gemini-3.5-flash-lite"
 ] as const;
 
+export const AiChatGeminiImageModelIds = [
+  "gemini-2.5-flash-image",
+  "gemini-3.1-flash-image"
+] as const;
+
 export const AiChatProviders = {
   "GOOGLE": "google",
   "OPENAI": "openai"
@@ -411,6 +420,13 @@ export const AiChatAccessLevels = {
   "ESSENTIAL_ONLY": "essential_only"
 } as const;
 
+export const SpritelabAskAiRefusals = {
+  "OFF": "off",
+  "NOT_IN_PILOT": "not_in_pilot",
+  "NO_ACCESS": "no_access",
+  "REGION_BLOCKED": "region_blocked"
+} as const;
+
 export const AiChatToolsDependency = {
   "ESSENTIAL": "essential",
   "AVAILABLE": "available",
@@ -418,6 +434,11 @@ export const AiChatToolsDependency = {
 } as const;
 
 export const AiGatewayAccessTokenLifetimeSeconds = 60 as const;
+
+export const AiGatewayFallbackClientTypes = [
+  "adaptive",
+  "ai-tutor"
+] as const;
 
 export const FeaturedProjectStatus = {
   "active": "active",
@@ -678,6 +699,7 @@ export const AllowedHostnameSuffixes = [
   "api.waqi.info",
   "dataservice.accuweather.com",
   "data.weather.gov.hk",
+  "opendataapi.dmi.dk",
   "noaa.gov",
   "api.foursquare.com",
   "api.opencagedata.com",

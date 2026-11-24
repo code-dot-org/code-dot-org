@@ -15,14 +15,6 @@ export interface SceneMetadata {
   thumbnail?: string;
 }
 
-// A scene from a section-mate's project, offered by the go-to-external-scene
-// block's dropdown. key = "<channel>:<sceneId>" (the value the block stores);
-// label is what the dropdown shows.
-export interface ExternalSceneOption {
-  key: string;
-  label: string;
-}
-
 // One of the user's Music Lab projects, offered by the play-music block's
 // dropdown; channel is the value the block stores.
 export interface MusicProjectOption {
@@ -47,7 +39,6 @@ export interface SpriteLab2State {
   activeTab: Tab;
   hasRun: boolean;
   scenes: SceneMetadata[];
-  externalScenes: ExternalSceneOption[];
   musicProjects: MusicProjectOption[];
   prompt: ActivePrompt | null;
   askAi: AskAiStatus | null;
@@ -57,7 +48,6 @@ const initialState: SpriteLab2State = {
   activeTab: 'Code',
   hasRun: false,
   scenes: [],
-  externalScenes: [],
   musicProjects: [],
   prompt: null,
   askAi: null,
@@ -75,12 +65,6 @@ const spriteLab2Slice = createSlice({
     },
     setScenes: (state, action: PayloadAction<SceneMetadata[]>) => {
       state.scenes = action.payload;
-    },
-    setExternalScenes: (
-      state,
-      action: PayloadAction<ExternalSceneOption[]>
-    ) => {
-      state.externalScenes = action.payload;
     },
     setMusicProjects: (state, action: PayloadAction<MusicProjectOption[]>) => {
       state.musicProjects = action.payload;
@@ -115,7 +99,6 @@ export const {
   setActiveTab,
   setHasRun,
   setScenes,
-  setExternalScenes,
   setMusicProjects,
   showPrompt,
   clearPrompt,

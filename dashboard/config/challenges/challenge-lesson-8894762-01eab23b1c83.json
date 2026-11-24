@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894762-01eab23b1c83",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 7: Exploring Data in AI",
+  "question": "You host a short podcast, and today’s guest question is: “Why does AI sound so sure even when it is wrong?” Explain it so a friend would understand.\n\nSteps:\n1. Start recording. Welcome your listeners, then pick one starter from the list below.\n2. Use the starter to explain why AI can sound sure even when it is wrong.\n3. Give one example where a confident wrong answer could cause a problem.\n4. Give your listeners one tip for checking an answer.\n\nStarter list:\n- “AI is like a person who finishes other people’s sentences...”\n- “AI is like a student who read a huge library but never checks facts...”\n- “AI is like a very good guesser...”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give an explanation on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says AI can make mistakes but gives no reason why, or does not use one of the starters."
+    },
+    {
+      "level": 2,
+      "description": "Student uses one of the starters AND says that AI predicts or guesses what sounds right from patterns (uses a word such as predict, guess, pattern, or sounds right)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND gives one example where a confident wrong answer could cause a problem AND gives a tip that names a specific way or place to check."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

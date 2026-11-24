@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-16T21:26:49.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"datasets\": [\r\n    \"SC1-L12-board-games-fixed\"\r\n  ],\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"**Train Tree 2**\\n\\nGoal: Train a new tree on the (Fixed) dataset so you can compare it to Tree 1.\\n\\n1. Read the **Dataset Update** below.\\n2. In **Predict**, choose your label. In **Using**, keep your two features, or add more.\\n3. Write your label and features in the Tree 2 row of **Tree 1 vs. Tree 2** in your guide.\\n4. Click **Train model**.\\n\\nYou are done when your tree shows. Go to the **Testing** tab.\\n\\n---\\n\\n**Dataset Update**: \\n\\nAdds nine board games that take over an hour to play.\\n\\n**Data Source**: \\n\\nBoardGameGeek Dataset on Board Games (Kaggle).\",\r\n  \"results\": \"**Train Tree 2**\\n\\nGoal: Train a new tree on the (Fixed) dataset so you can compare it to Tree 1.\\n\\n1. Copy your Tree 1 results from Lesson 12 into the Tree 1 row of **Tree 1 vs. Tree 2** in your guide. Your label is in **My Data**.\\n2. Find your **Accuracy** at the top. Write it in the Tree 2 row.\\n3. Click **Accuracy**. Write the **Correct** number in the Tree 2 row.\\n4. Add **Correct** and **Incorrect**. Write the total after \\\"out of\\\". Click **Back to Testing**.\\n5. Click **Save image** (the camera under your tree). Click **Save to Backpack**.\\n\\nYou are done when **Tree 1 vs. Tree 2** in your guide is full and Tree 2 is in your Backpack.\"\r\n}",
+    "display_name": "Board Games",
+    "bubble_choice_description": "**Dataset Update:** Adds nine board games that take over an hour to play.",
+    "thumbnail_url": "https://images.code.org/af352195a5a3b3366da22e55e5e7cc68-board-game.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-16T21:26:49.612+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-project-board-2\\\"\"],\"cloned_from\":\"data-makes-ai-project-board-2\"},{\"changed_at\":\"2026-11-16 21:28:34 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:32 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:47:25 +0000\",\"changed\":[\"mode\",\"dynamic_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:04:04 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:06 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

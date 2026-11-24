@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894765-38c7956ac59e",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 10: The Final Verdict",
+  "question": "The school’s AI helper has four jobs. For some, a mistake is no big deal. For others, a mistake could hurt someone. Which is which?\n\nSteps:\n1. Use the arrow tool to point at the job where a human should check the AI’s answer most closely.\n2. Place a shape on a job where a mistake would matter the least.\n3. Record your voice explaining what could go wrong on the job you pointed at. Bonus points if you say how closely a human should check that job compared with the job you marked with a shape.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on job 4 or job 2, the shape is not on job 1 or job 3, or the voice recording gives no reason."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to job 4 (or job 2) AND a shape is on job 1 or job 3 AND the voice recording says what could go wrong if the AI makes a mistake on the pointed-at job."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording says how closely a human should check each of the two jobs and why they are different."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894765-38c7956ac59e-ad1acca7",
+  "whiteboard_starter_image_alt_text": "\"The school's AI helper has four jobs.\" 1: \"Pick the music to play during lunch.\" 2: \"Tell the bus driver which route to take in a snowstorm.\" 3: \"Suggest a name for the class plant.\" 4: \"Decide which students may leave the building during an emergency.\""
+}

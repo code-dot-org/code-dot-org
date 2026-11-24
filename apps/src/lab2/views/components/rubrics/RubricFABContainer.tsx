@@ -1,10 +1,11 @@
 import React, {useEffect, useMemo} from 'react';
 
 import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
+import {setDrawerRubric} from '@cdo/apps/aiTeacherDrawer/redux';
 import {isLabLoading} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import experiments from '@cdo/apps/util/experiments';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
 
 import {useLevelProperties} from '../../LevelPropertiesWrapper';
@@ -32,6 +33,10 @@ const RubricFABContainer: React.FC = () => {
   );
   const courseName = useAppSelector(state => state.progress.courseName);
   const unitName = useAppSelector(state => state.progress.scriptName);
+  const hasHostedDrawer = useAppSelector(
+    state => !!state.aiDiffChat.hostedDrawerConfig
+  );
+  const dispatch = useAppDispatch();
 
   const studentLevelInfo = useMemo(() => {
     const userLevel = levelsWithProgress?.find(
@@ -61,13 +66,9 @@ const RubricFABContainer: React.FC = () => {
     [unitName, courseName, levelName]
   );
 
-  const canShow =
-    appName &&
-    isTeacher &&
-    showRubric &&
-    !labLoading &&
-    !isLoadingRubric &&
-    rubricData;
+  const hasRubric =
+    !!appName && isTeacher && showRubric && !isLoadingRubric && !!rubricData;
+  const canShow = hasRubric && !labLoading;
 
   // Temporary hack: show/hide the AI Differentiation FAB based on if the Rubric FAB is showing.
   // Note that currently, the AI Diff FAB will be out of date on Lab2 levels since it relies on
@@ -85,6 +86,38 @@ const RubricFABContainer: React.FC = () => {
     aiDiffFab.style.visibility = canShow ? 'hidden' : 'visible';
   }, [canShow]);
 
+  // The page embeds no rubric on a Lab2 level, so the TA drawer's Rubrics
+  // screen learns of this one here, and again whenever the level changes.
+  // The drawer does not wait for the lab to load, so neither does this.
+  useEffect(() => {
+    if (!hasRubric) {
+      dispatch(setDrawerRubric(null));
+      return;
+    }
+    dispatch(
+      setDrawerRubric({
+        rubric: rubricData!.rubric,
+        studentLevelInfo,
+        levelName,
+        parentLevelName,
+        levelType: type,
+        unitName: unitName ?? undefined,
+        courseName: courseName ?? undefined,
+      })
+    );
+  }, [
+    hasRubric,
+    rubricData,
+    studentLevelInfo,
+    levelName,
+    parentLevelName,
+    type,
+    unitName,
+    courseName,
+    dispatch,
+  ]);
+  useEffect(() => () => void dispatch(setDrawerRubric(null)), [dispatch]);
+
   if (!canShow) {
     return null;
   }
@@ -94,7 +127,11 @@ const RubricFABContainer: React.FC = () => {
   if (experiments.isEnabled('rubrics-drawer')) {
     // Hands off to the AI TA drawer's Rubrics screen (apps/src/
     // aiTeacherDrawer/rubrics/) instead of the floating RubricContainer
-    // panel below.
+    // panel below. The drawer Lab2Wrapper hosts already has that screen; a
+    // second one would open beside it.
+    if (hasHostedDrawer) {
+      return null;
+    }
     return (
       <AiDiffFloatingActionButton
         context={{type: AiDiffContext.LEVEL}}

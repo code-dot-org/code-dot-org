@@ -1,13 +1,11 @@
-// Shows a step's markdown on a canvas sized like a panel, the text centered
-// vertically, with the step's button and an optional outside link under the
-// canvas at the end.
+// Shows a step's markdown on a card, under a logo when the content names
+// one, with the step's button and an optional outside link under the card
+// at the end.
 
 import {Button as MuiButton} from '@mui/material';
-import React, {useEffect, useMemo, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 
-import {PANEL_CONTROLS_HEIGHT, fitPanel} from '@cdo/apps/panels/fitPanel';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import useElementSize from '@cdo/apps/util/hooks/useElementSize';
 
 import {MarkdownStep as MarkdownStepContent} from '../../types';
 
@@ -30,71 +28,53 @@ const MarkdownStep: React.FunctionComponent<MarkdownStepProps> = ({
   continueLabel,
   onComplete,
 }) => {
-  const host = useRef<HTMLDivElement>(null);
-  const [hostWidth, hostHeight] = useElementSize(host);
-  const size = useMemo(
-    () => fitPanel(hostWidth, hostHeight),
-    [hostWidth, hostHeight]
-  );
-
-  // The canvas mounts once the host is measured, so focus waits for that.
-  const ready = hostWidth > 0;
-  const canvasRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    if (ready) canvasRef.current?.focus();
-  }, [ready]);
+    cardRef.current?.focus();
+  }, []);
   // The site's stylesheet sets every image's height to auto, over the
   // height written on an <img> tag; a style on the element wins it back.
   useEffect(() => {
-    canvasRef.current
+    cardRef.current
       ?.querySelectorAll<HTMLImageElement>('img[height]')
       .forEach(img => {
         img.style.height = `${img.getAttribute('height')}px`;
       });
-  }, [ready, step.markdown]);
+  }, [step.markdown]);
 
   return (
-    <div ref={host} className={styles.markdownHost}>
-      {ready && (
-        <>
-          <div
-            className={styles.markdownCanvas}
-            style={size}
-            tabIndex={-1}
-            ref={canvasRef}
+    <div className={styles.questionsStep}>
+      <div className={styles.markdownCard} tabIndex={-1} ref={cardRef}>
+        {step.logoUrl && (
+          <img src={step.logoUrl} alt="" className={styles.cardLogo} />
+        )}
+        <div className={styles.markdownBody}>
+          <SafeMarkdown markdown={withLineBreaks(step.markdown)} />
+        </div>
+      </div>
+      <div className={styles.markdownActions}>
+        {step.link && (
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="large"
+            href={step.link.href}
+            target="_blank"
+            rel="noopener"
           >
-            <div className={styles.markdownBody}>
-              <SafeMarkdown markdown={withLineBreaks(step.markdown)} />
-            </div>
-          </div>
-          <div
-            className={styles.markdownActions}
-            style={{width: size.width, height: PANEL_CONTROLS_HEIGHT}}
-          >
-            {step.link && (
-              <MuiButton
-                variant="outlined"
-                color="secondary"
-                size="medium"
-                href={step.link.href}
-                target="_blank"
-                rel="noopener"
-              >
-                {step.link.label}
-              </MuiButton>
-            )}
-            <MuiButton
-              variant="contained"
-              color="primary"
-              size="medium"
-              type="button"
-              onClick={onComplete}
-            >
-              {step.continueLabel ?? continueLabel}
-            </MuiButton>
-          </div>
-        </>
-      )}
+            {step.link.label}
+          </MuiButton>
+        )}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="large"
+          type="button"
+          onClick={onComplete}
+        >
+          {step.continueLabel ?? continueLabel}
+        </MuiButton>
+      </div>
     </div>
   );
 };

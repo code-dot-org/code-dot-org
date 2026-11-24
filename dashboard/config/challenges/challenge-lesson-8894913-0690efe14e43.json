@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894913-0690efe14e43",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 12: AI's Role in Society",
+  "question": "This ticket machine works great for some people and not at all for others. Find out who would struggle, and what is getting in their way.\n\nSteps:\n1. Use the arrow tool to connect at least 2 people to the feature that would cause them trouble.\n2. Place a shape on the person who would have no trouble.\n3. Record your voice with one change that would help the most people.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places fewer than 2 arrows, OR the arrows do not match a feature to a person it affects."
+    },
+    {
+      "level": 2,
+      "description": "At least 2 arrows connect a resident to the feature that causes trouble (A to 1, B to 2, C to 3, or E to 1 or 4) AND a shape is on D AND the voice recording names one change that would help most people."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording says who was probably missing when the machine was designed or tested."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894913-0690efe14e43-b911c880",
+  "whiteboard_starter_image_alt_text": "\"A train station adds a new AI ticket machine.\" A drawing of the machine shows a touchscreen labeled \"TICKETS,\" a \"card only\" slot, and a \"voice help\" button. Its four numbered features: 1, touchscreen only, no buttons; 2, the screen is in English only; 3, card payments only; and 4, voice help talks fast and cannot repeat. Five people: A, Mr. Chen, 82, has trouble seeing small touchscreens; B, Aisha moved here last month and is learning English; C, Dev is a student who only has cash; D, Lena commutes daily, speaks fluent English, and has a card; and E, Omar is blind and uses a screen reader."
+}

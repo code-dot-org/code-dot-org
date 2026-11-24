@@ -11,10 +11,12 @@ import {
   useUpdateSchoolInfo,
   type SchoolInfoSummary,
 } from '@code-dot-org/core/api';
+import {sendEvent} from '@code-dot-org/core/plugins/analytics';
 
 import {COUNTRIES_US_FIRST} from '../util/countries';
 import {
   CLICK_TO_ADD,
+  NO_SCHOOL_SETTING,
   SELECT_A_SCHOOL,
   SELECT_COUNTRY,
   US_COUNTRY_CODE,
@@ -28,6 +30,14 @@ import {useModalForm} from './useModalForm';
 
 const ZIP_INVALID = 'Please enter a 5 digit zip code.';
 const NO_SCHOOLS = 'No schools found for that zip code.';
+
+// Synced with apps/src/metrics/AnalyticsConstants.js; Statsig dashboards key on these names.
+const COUNTRY_SELECTED_EVENT = 'User Selects Country';
+const ZIP_CODE_ENTERED_EVENT = 'Valid Zip Code Entered';
+const SCHOOL_SELECTED_FROM_LIST_EVENT = 'School Selected from Dropdown';
+const ADD_MANUALLY_CLICKED_EVENT = 'User Elects to Add School Name Manually';
+const DO_NOT_TEACH_AT_SCHOOL_CLICKED_EVENT =
+  'User Clicks I Do Not Teach In A School Setting';
 
 /**
  * Finds and saves a new school affiliation. Only the country carries over from
@@ -52,6 +62,7 @@ export default function UpdateSchoolModal({
 
   const isUs = country === US_COUNTRY_CODE;
   const addingManually = schoolId === CLICK_TO_ADD;
+  const noSchoolSetting = schoolId === NO_SCHOOL_SETTING;
   const zipValid = ZIP.test(schoolZip);
 
   // Outside the US there is no zip to search on; the hook idles on a non-zip.
@@ -135,7 +146,10 @@ export default function UpdateSchoolModal({
         labelText="What country are you located in?"
         items={COUNTRIES_US_FIRST}
         selectedValue={country}
-        onChange={event => setCountry(event.target.value)}
+        onChange={event => {
+          sendEvent(COUNTRY_SELECTED_EVENT, {country: event.target.value});
+          setCountry(event.target.value);
+        }}
         disabled={saving}
         styleAsFormField
       />
@@ -145,14 +159,20 @@ export default function UpdateSchoolModal({
           label="Enter your school's zip code:"
           name="school_zip"
           value={schoolZip}
-          onChange={event => setSchoolZip(event.target.value)}
+          onChange={event => {
+            const zip = event.target.value;
+            if (ZIP.test(zip)) {
+              sendEvent(ZIP_CODE_ENTERED_EVENT, {zip, country});
+            }
+            setSchoolZip(zip);
+          }}
           errorMessage={schoolZip && !zipValid ? ZIP_INVALID : undefined}
           disabled={saving}
           autoComplete="postal-code"
         />
       )}
 
-      {isUs && !addingManually && (
+      {isUs && !addingManually && !noSchoolSetting && (
         <Box className={styles.schoolList}>
           <Field>
             <SimpleDropdown
@@ -163,7 +183,13 @@ export default function UpdateSchoolModal({
                 ...schoolsList,
               ]}
               selectedValue={schoolId}
-              onChange={event => setSchoolId(event.target.value)}
+              onChange={event => {
+                sendEvent(SCHOOL_SELECTED_FROM_LIST_EVENT, {
+                  'nces Id': event.target.value,
+                  country,
+                });
+                setSchoolId(event.target.value);
+              }}
               helperMessage={
                 zipValid && search.isSuccess && schoolsList.length === 0
                   ? NO_SCHOOLS
@@ -173,15 +199,37 @@ export default function UpdateSchoolModal({
               styleAsFormField
             />
           </Field>
-          <Button onClick={() => setSchoolId(CLICK_TO_ADD)} sx={{px: 0}}>
+          <Button
+            onClick={() => {
+              sendEvent(ADD_MANUALLY_CLICKED_EVENT, {country});
+              setSchoolId(CLICK_TO_ADD);
+            }}
+            sx={{px: 0}}
+          >
             I don’t see my school here. Add manually
+          </Button>
+          <Button
+            onClick={() => {
+              sendEvent(DO_NOT_TEACH_AT_SCHOOL_CLICKED_EVENT, {country});
+              setSchoolId(NO_SCHOOL_SETTING);
+            }}
+            disabled={!zipValid}
+            sx={{px: 0}}
+          >
+            I don’t teach CS in a school setting
           </Button>
         </Box>
       )}
 
-      {isUs && addingManually && (
+      {isUs && (addingManually || noSchoolSetting) && (
         <Box className={styles.schoolList}>
-          {schoolNameField}
+          {addingManually ? (
+            schoolNameField
+          ) : (
+            <Typography variant="body2">
+              You’ve chosen a non-school setting.
+            </Typography>
+          )}
           <Button onClick={() => setSchoolId(SELECT_A_SCHOOL)} sx={{px: 0}}>
             Return to results list
           </Button>

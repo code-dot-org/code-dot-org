@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894764-5ed2e4852d7a",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 9: Refining Our Product",
+  "question": "Every tool in a workshop makes something easier, but not every tool makes you better at the job. Choose a tool and find out which kind it is.\n\nSteps:\n1. Start recording. Pick one tool from the list below.\n2. Say one way it makes the job easier.\n3. Say a different way it can make your work better, not just faster.\n4. Say a time when using it too much could hurt you, and why.\n\nTool list:\n- A calculator\n- Spell check\n- A map app\n- A power drill\n- A recipe",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not name a tool or say anything about it on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student gives a way the tool makes things easier but no different way it makes the work better, or gives only a way it could hurt."
+    },
+    {
+      "level": 2,
+      "description": "Student gives a way the tool makes things easier AND a different way it makes the work better (not just faster)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND gives a time when using the tool too much could hurt, with a specific reason."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

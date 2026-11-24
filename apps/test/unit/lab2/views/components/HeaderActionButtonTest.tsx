@@ -15,7 +15,7 @@ describe('HeaderActionButton', () => {
     document.body.appendChild(slot);
     const onClick = jest.fn();
     render(
-      <HeaderActionButton onClick={onClick} tone="success">
+      <HeaderActionButton onClick={onClick} buttonColor="success">
         I'm finished
       </HeaderActionButton>
     );

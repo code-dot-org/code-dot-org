@@ -3,23 +3,26 @@
 // ring is a button that does nothing but take focus, so a keyboard reaches
 // its tooltip and a screen reader reads its label.
 
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
+import PathwayIcon from './components/PathwayIcon';
 import {GroupProgress} from './map/groupProgress';
 
 import styles from './progressRings.module.scss';
 
 interface ProgressRingsProps {
   rings: GroupProgress[];
+  /** Large rings for the stats tiles; small is the map's. */
+  size?: 'small' | 'large';
 }
 
 const ProgressRings: React.FunctionComponent<ProgressRingsProps> = ({
   rings,
+  size = 'small',
 }) => (
-  <ul className={styles.rings}>
+  <ul className={classNames(styles.rings, size === 'large' && styles.large)}>
     {rings.map(({key, title, icon, color, done, total}) => {
       const share = total ? done / total : 0;
       const label = `${title}: ${done} of ${total} checkpoints complete`;
@@ -38,7 +41,7 @@ const ProgressRings: React.FunctionComponent<ProgressRingsProps> = ({
               aria-label={label}
             >
               <span className={styles.inner}>
-                {icon && <FontAwesomeV6Icon iconName={icon} />}
+                {icon && <PathwayIcon iconName={icon} />}
               </span>
             </button>
           </Tooltip>

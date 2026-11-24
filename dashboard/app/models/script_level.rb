@@ -66,9 +66,10 @@ class ScriptLevel < ApplicationRecord
   belongs_to :activity_section, optional: true
 
   has_and_belongs_to_many :levels
-  has_and_belongs_to_many :objectives
   has_many :callouts, inverse_of: :script_level
   has_many :levels_script_levels # join table. we need this association for seeding logic
+  has_many :objectives_script_levels, dependent: :delete_all
+  has_many :objectives, through: :objectives_script_levels
 
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
@@ -260,9 +261,9 @@ class ScriptLevel < ApplicationRecord
         script_lesson_extras_path(script.name, lesson_position)
       end
     elsif end_of_lesson? && lesson&.lesson_tutor_available? && Experiment.enabled?(user: user, experiment_name: 'lesson-tutor') && user&.can_use_lesson_deep_dive?
-      # For lessons with Tutor+ available (AIF/AID courses), send students at
-      # the end of the lesson to the lesson deep dive ("tutor") space instead of
-      # the next-level / unit-overview redirect. This is the single choke point
+      # For lessons with Tutor+ available, send students at the end of the
+      # lesson to the lesson deep dive ("tutor") space instead of the
+      # next-level / unit-overview redirect. This is the single choke point
       # for both lab2 (finishUrl) and legacy (next_level_url) navigation, so it
       # takes precedence over lesson extras and the unit overview dialog.
       lesson.lesson_tutor_path
@@ -369,6 +370,10 @@ class ScriptLevel < ApplicationRecord
     return false if level.nil? || level.properties.nil?
 
     return level.properties["anonymous"] == "true"
+  end
+
+  def exam_quiz?
+    levels.any? {|l| l.is_a?(Quiz) && l.exam?}
   end
 
   def activity_guide_level?

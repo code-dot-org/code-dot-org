@@ -1,7 +1,7 @@
 import {AichatContext} from '@cdo/apps/aichat/types';
+import {fetchChallengeToken} from '@cdo/apps/aiGateway/challengeToken';
 import {sendGatewayRequest} from '@cdo/apps/aiGateway/gatewayRequest';
 import {clearAccessTokenCache} from '@cdo/apps/aiGateway/shared';
-import {fetchTurnstileToken} from '@cdo/apps/aiGateway/turnstile';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
@@ -10,8 +10,10 @@ jest.mock('@code-dot-org/core/plugins/observability', () => ({
   metrics: {count: jest.fn()},
 }));
 
-jest.mock('@cdo/apps/aiGateway/turnstile', () => ({
-  fetchTurnstileToken: jest.fn(async () => 'turnstile-token'),
+const challengeToken = {provider: 'turnstile', token: 'turnstile-token'};
+
+jest.mock('@cdo/apps/aiGateway/challengeToken', () => ({
+  fetchChallengeToken: jest.fn(async () => challengeToken),
 }));
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
@@ -21,7 +23,7 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 }));
 
 const mockPost = HttpClient.post as jest.Mock;
-const mockFetchTurnstileToken = fetchTurnstileToken as jest.Mock;
+const mockFetchChallengeToken = fetchChallengeToken as jest.Mock;
 
 const aichatContext: AichatContext = {
   clientType: AiChatClientTypes.AI_TUTOR,
@@ -62,8 +64,8 @@ describe('sendGatewayRequest', () => {
     const response = await sendGatewayRequest(aichatContext, send);
 
     expect(response).toEqual({ok: true});
-    expect(send).toHaveBeenCalledWith('token-1', 'turnstile-token');
-    expect(mockFetchTurnstileToken).toHaveBeenCalledWith('enforce');
+    expect(send).toHaveBeenCalledWith('token-1', challengeToken);
+    expect(mockFetchChallengeToken).toHaveBeenCalledWith('enforce');
   });
 
   it('resends once with a fresh access token and challenge after a rejected reusable one', async () => {
@@ -72,7 +74,7 @@ describe('sendGatewayRequest', () => {
     await sendGatewayRequest(aichatContext, send);
 
     expect(sentAccessTokens()).toEqual(['token-1', 'token-2']);
-    expect(mockFetchTurnstileToken).toHaveBeenCalledTimes(2);
+    expect(mockFetchChallengeToken).toHaveBeenCalledTimes(2);
   });
 
   it('gives up after one retry', async () => {

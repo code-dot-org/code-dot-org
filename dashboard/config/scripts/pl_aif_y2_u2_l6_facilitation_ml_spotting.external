@@ -1,0 +1,34 @@
+name 'pl-aif-y2-u2-l6-facilitation-ML-spotting'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What Counts as a Pedestrian?
+
+Two classification models have been trained to spot pedestrians, people walking, in street photos. Below, toggle between Model 1 and Model 2 to see how each one classifies the exact same eight photos, then make your own call on which model you'd actually use.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/pedestrian-model-compare.html"
+    width="100%"
+    height="1000"
+    frameborder="0"
+    scrolling="no"
+    title="Compare Model 1 and Model 2 pedestrian classifications across eight photos, then choose and reveal which model you'd use">
+  </iframe>
+</div>
+
+**Model 1** never misses a pedestrian it calls a pedestrian, it has perfect accuracy on this set. 
+
+**Model 2**  gets three of those same photos wrong by strict accuracy, calling a motorcycle, a bicycle, and a car near a crosswalk pedestrians too.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> students will default to calling Model 1 the better model because it's more accurate. Don't correct that yet, let them sit with it, then ask the next question: if these models decide when a self-driving car stops, which one do you want behind the wheel?</div>
+</div>
+
+Now reframe the question. These models decide when a self-driving car stops, it stops for a pedestrian and keeps going otherwise. Suddenly Model 2's mistakes look less like errors and more like caution. It treats a motorcycle, a bicycle, and a car near a crosswalk the same way it treats a person on foot: worth stopping for. That's the choice built into the activity above, click one and the real reasoning reveals underneath it.
+
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#9888;&#65039; Watch for:</b> students who treat "classify more things as pedestrians" as a free win. Push them further, a model that calls everything a pedestrian is also safe by this definition, but useless. The real skill here is picking a category, and a threshold, that matches what the model is actually for.</div>
+</div>
+MARKDOWN

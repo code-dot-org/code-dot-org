@@ -65,6 +65,43 @@ describe('ProjectManager', () => {
     expect(channel).to.deep.equal(FAKE_CHANNEL);
   });
 
+  it('remixes once the save lands', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+    await projectManager.save(UPDATED_SOURCE, true);
+    await projectManager.saveAndRemix();
+    assert.isTrue(channelsStore.redirectToRemix.calledOnce);
+  });
+
+  it('does not remix when the save before it fails', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    sourcesStore.save.callsFake(() => Promise.reject(new Error('500')));
+    const projectManager = new ProjectManager({
+      sourcesStore,
+      channelsStore,
+      channelId: FAKE_CHANNEL_ID,
+      reduceChannelUpdates: false,
+      isStandaloneProjectLevel: false,
+    });
+    await projectManager.load();
+    await projectManager.save(UPDATED_SOURCE, true);
+    let thrown: unknown;
+    try {
+      await projectManager.saveAndRemix();
+    } catch (error) {
+      thrown = error;
+    }
+    assert.isDefined(thrown);
+    assert.isTrue(channelsStore.redirectToRemix.notCalled);
+  });
+
   it('fetches the share failure for share-filtered project types', async () => {
     const sketchlabChannel: Channel = {
       ...FAKE_CHANNEL,

@@ -87,6 +87,23 @@ const lessonBubbles = (
   </>
 );
 
+// No href or onClick: a plain-title widget's bubbles are images.
+const plainTitleBubbles = (
+  <>
+    <ProgressBubble status="completed" ariaLabel="Level 1, completed" />
+    <ProgressBubble status="completed" ariaLabel="Level 2, completed" />
+    <ProgressBubble status="passed" ariaLabel="Level 3, passed" />
+    <ProgressBubble
+      status="inProgress"
+      isActive
+      levelNumber={4}
+      ariaLabel="Level 4, in progress"
+    />
+    <ProgressBubble ariaLabel="Level 5, not started" />
+    <ProgressBubble ariaLabel="Level 6, not started" />
+  </>
+);
+
 const sharedArgs = {
   lessonLabel: 'Lesson 3: Introduction to Online Puzzles',
   onLessonClick: fn(),
@@ -117,6 +134,24 @@ export const OfflineNoAction: Story = {
     saveStatus: 'offline',
     saveStatusLabel: "You're offline",
     children: lessonBubbles,
+  },
+};
+
+export const PlainTitle: Story = {
+  args: {
+    lessonLabel: 'Quest Builder Hour of AI Tutorial',
+    bubblesLabel: 'Lesson progress',
+    saveStatus: 'saved',
+    saveStatusLabel: 'Saved just now',
+    children: plainTitleBubbles,
+    actionSlotId: 'portal-target',
+  },
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    expect(canvas.queryAllByRole('button')).toHaveLength(0);
+    expect(canvas.queryAllByRole('link')).toHaveLength(0);
+    const slot = canvasElement.querySelector('#portal-target') as HTMLElement;
+    expect(getComputedStyle(slot).display).toBe('none');
   },
 };
 

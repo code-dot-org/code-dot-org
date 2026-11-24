@@ -1,4 +1,8 @@
-import {playPlacement} from '@cdo/apps/p5lab/spritelab/lab2/views/Playspace';
+import {
+  playLayout,
+  playLayoutClearOf,
+  playPlacement,
+} from '@cdo/apps/p5lab/spritelab/lab2/views/Playspace';
 
 // The canvas is 400px; the margin 12px; the guide sits 32px from the right
 // edge and 20px from the bottom (Playspace, Guide).
@@ -81,5 +85,112 @@ describe('playPlacement', () => {
       const guideTop = size.h - GUIDE.height - 20;
       expect(b.right <= guideLeft || b.bottom <= guideTop).toBe(true);
     }
+  });
+});
+
+describe('playLayout', () => {
+  // Three 38px keys and two 6px gaps across, two rows high.
+  const CROSS = {w: 126, h: 82};
+
+  it('centers the box on a wide stage, the cross in the room to its right', () => {
+    const {box: p, cross} = playLayout(
+      {w: 1200, h: 600},
+      null,
+      'right',
+      41,
+      CROSS
+    );
+    const b = box(p);
+    // The box fills the height less the bar, centered across the width.
+    expect(b.bottom - b.top).toBe(600 - 41 - 24);
+    expect(b.left).toBeCloseTo(1200 - b.right);
+    expect(cross).not.toBeNull();
+    expect(cross!.x + CROSS.w / 2).toBeCloseTo((b.right + 1200) / 2);
+    // Centered on the box's height.
+    expect(cross!.y + CROSS.h / 2).toBeCloseTo((b.top + b.bottom) / 2);
+  });
+
+  it('narrows the box on both sides when the cross would not fit beside it', () => {
+    const {box: p, cross} = playLayout(
+      {w: 800, h: 600},
+      null,
+      'right',
+      41,
+      CROSS
+    );
+    const b = box(p);
+    // A centered box filling the height leaves (800 - 535) / 2 right of
+    // it, short of the cross and its margins: the box gives up that room
+    // on both sides and stays centered.
+    expect(b.right - b.left).toBe(800 - 2 * (CROSS.w + 24) - 24);
+    expect(b.left).toBeCloseTo(800 - b.right);
+    expect(b.right + CROSS.w + 2 * 12).toBeLessThanOrEqual(800);
+    // Centered in the room given up.
+    expect(cross!.x + CROSS.w / 2).toBeCloseTo((b.right + 800) / 2);
+  });
+
+  it('puts the cross under the box on a tall stage when that leaves it bigger', () => {
+    const {box: p, cross} = playLayout(
+      {w: 500, h: 1000},
+      null,
+      'right',
+      41,
+      CROSS
+    );
+    const b = box(p);
+    expect(b.right - b.left).toBe(500 - 24);
+    expect(cross!.y).toBeCloseTo(b.bottom + 12);
+    expect(cross!.x + CROSS.w / 2).toBeCloseTo((b.left + b.right) / 2);
+  });
+
+  it('places the box alone when there is no cross', () => {
+    const {box: p, cross} = playLayout(
+      {w: 1000, h: 600},
+      null,
+      'right',
+      41,
+      null
+    );
+    expect(cross).toBeNull();
+    expect(box(p)).toEqual(box(playPlacement({w: 1000, h: 600}, null, 41)));
+  });
+});
+
+describe('playLayoutClearOf', () => {
+  const CROSS = {w: 126, h: 82};
+  // The share page's logo at phone width: its right edge 155px from the
+  // stage's left, its bottom 42px below the stage's top.
+  const LOGO = {w: 155, h: 42};
+
+  it('moves the box and the cross below a corner the box would reach into', () => {
+    const stage = {w: 393, h: 612};
+    const plain = playLayout(stage, null, 'right', 90, CROSS);
+    expect(box(plain.box).top).toBeLessThan(LOGO.h);
+    const {box: p, cross} = playLayoutClearOf(
+      LOGO,
+      stage,
+      null,
+      'right',
+      90,
+      CROSS
+    );
+    const b = box(p);
+    expect(b.top).toBeGreaterThanOrEqual(LOGO.h + 12);
+    expect(cross!.y).toBeCloseTo(b.bottom + 12);
+    expect(cross!.y + CROSS.h).toBeLessThanOrEqual(stage.h - 90);
+  });
+
+  it('leaves the layout as it is when the box is already clear of the corner', () => {
+    const stage = {w: 1280, h: 752};
+    expect(playLayoutClearOf(LOGO, stage, null, 'right', 41, CROSS)).toEqual(
+      playLayout(stage, null, 'right', 41, CROSS)
+    );
+  });
+
+  it('leaves the layout as it is with no corner', () => {
+    const stage = {w: 393, h: 612};
+    expect(playLayoutClearOf(null, stage, null, 'right', 90, CROSS)).toEqual(
+      playLayout(stage, null, 'right', 90, CROSS)
+    );
   });
 });

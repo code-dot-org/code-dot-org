@@ -14,7 +14,7 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
       usage: {input: 10, output: 2, total: 12},
       startedAt: 1_767_225_600_000,
       endedAt: 1_767_225_602_000,
-      metadata: {pathwayId: 'p', stepId: 's', inputsHash: 'h', promptVersion: 'v1', workAt: 't', instructionsTraceId: 'i', nested: {no: 1}, secret: 'nope'},
+      metadata: {pathwayId: 'p', stepId: 's', inputsHash: 'h', promptVersion: 'v1', workAt: 't', instructionsTraceId: 'i', replies: 5, nested: {no: 1}, secret: 'nope'},
     }
   end
 
@@ -46,6 +46,12 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
     sign_in(@student)
     allow_adaptive_ai(false)
     LangfuseHelper.expects(:trace_adaptive_generation).never
+    Cdo::Metrics.expects(:push).with do |namespace, metrics|
+      namespace == SharedConstants::AICHAT_METRICS_NAMESPACE &&
+        metrics.length == 1 &&
+        metrics.first[:metric_name] == 'AdaptiveTraces.Forbidden' &&
+        metrics.first[:dimensions].include?({name: 'UserType', value: 'student'})
+    end
 
     post :create, params: @params, as: :json
 
@@ -90,7 +96,7 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
 
     opts = capture_trace
 
-    assert_equal({pathway_id: 'p', step_id: 's', inputs_hash: 'h', prompt_version: 'v1', work_at: 't', instructions_trace_id: 'i', level_id: 7}, opts[:metadata])
+    assert_equal({pathway_id: 'p', step_id: 's', inputs_hash: 'h', prompt_version: 'v1', work_at: 't', instructions_trace_id: 'i', replies: 5, level_id: 7}, opts[:metadata])
   end
 
   test 'groups traces into a session per student, unit and level' do

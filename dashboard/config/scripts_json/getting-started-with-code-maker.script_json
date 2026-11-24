@@ -4,20 +4,17 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "content_area": "self_paced_pl_k_5",
-      "curriculum_umbrella": "Self-paced PL - K-5 special topics",
+      "content_area": "skills_focused_self_paced_pl",
+      "curriculum_umbrella": "Self-paced PL - Pedagogy special topics",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
-      "topic_tags": [
-        "maker"
-      ],
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-08-14 21:15:59 UTC",
+    "serialized_at": "2026-11-09 23:40:27 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -1500,6 +1497,9 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "jit_pl_concepts_lessons": [
 
   ],
   "rubrics": [

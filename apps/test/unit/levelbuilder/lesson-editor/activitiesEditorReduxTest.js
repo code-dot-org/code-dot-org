@@ -21,6 +21,8 @@ import reducers, {
   emptyActivity,
   emptyActivitySection,
   getSerializedActivities,
+  getTaggableScriptLevels,
+  NEW_LEVEL_ID,
 } from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 import {sampleActivities} from './activitiesTestData';
@@ -34,6 +36,44 @@ const reducer = combineReducers(reducers);
 describe('activitiesEditorRedux reducer tests', () => {
   let initialState;
   beforeEach(() => (initialState = getInitialState()));
+
+  it('getTaggableScriptLevels labels saved levels by lesson position and active variant', () => {
+    const scriptLevel = (id, levelNumber, activeId, levels) => ({
+      id,
+      levelNumber,
+      activeId,
+      levels,
+    });
+    const activities = [
+      {
+        activitySections: [
+          {
+            scriptLevels: [
+              scriptLevel('10', 1, '1', [{id: '1', name: 'first'}]),
+              scriptLevel('11', 2, '3', [
+                {id: '2', name: 'inactive variant'},
+                {id: '3', name: 'active variant'},
+              ]),
+            ],
+          },
+        ],
+      },
+      {
+        activitySections: [
+          {
+            scriptLevels: [
+              scriptLevel(NEW_LEVEL_ID, 3, '4', [{id: '4', name: 'unsaved'}]),
+            ],
+          },
+        ],
+      },
+    ];
+
+    expect(getTaggableScriptLevels(activities)).toEqual([
+      {id: '10', label: '1. first'},
+      {id: '11', label: '2. active variant'},
+    ]);
+  });
 
   it('getSerializedActivities', () => {
     let serializedActivities = getSerializedActivities(initialState.activities);

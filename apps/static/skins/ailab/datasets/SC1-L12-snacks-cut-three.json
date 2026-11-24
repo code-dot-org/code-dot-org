@@ -1,0 +1,57 @@
+{
+  "name": "SC1-L12-snacks-cut-three",
+  "card": {
+    "description": "An after-school program's Snack Checker predicts which snacks meet the school snack rules. Each record is one food in one typical serving. The label is Yes (meets the rules) or No (does not). You can also choose Vitamin C Source? or Kept Cold? as the label.",
+    "source": "Real foods from USDA FoodData Central, SR Legacy (April 2018 release), https://fdc.nal.usda.gov. Source: USDA FoodData Central. Label made by the project from the USDA Smart Snacks in School limits (7 CFR 210.11), simplified.",
+    "lastUpdated": "2026",
+    "context": {
+      "createdBy": "CodeAI",
+      "potentialUses": "Use the checker's predictions to help pick snacks for the after-school program.",
+      "potentialMisuses": "The checker is trained on only 50 foods picked by one person, so it may predict poorly for foods that are not in the data. It checks the snack rules only. It does not say a food is good or bad."
+    }
+  },
+  "defaultLabelColumn": "Meets Snack Rules?",
+  "defaultIdColumn": "Snack",
+  "fields": [
+    {
+      "type": "categorical",
+      "id": "Snack",
+      "description": "What is the snack called?"
+    },
+    {
+      "type": "categorical",
+      "id": "Food Group",
+      "description": "Which food group does the snack belong to?"
+    },
+    {
+      "type": "categorical",
+      "id": "Sugar (g)",
+      "description": "How much sugar is in one serving? Low is 0 to 4 grams. Medium is 5 to 12 grams. High is 13 grams or more."
+    },
+    {
+      "type": "categorical",
+      "id": "Sodium (mg)",
+      "description": "How much sodium (salt) is in one serving? 200 or Less means 200 milligrams (mg) or less. Over 200 means more than 200 mg."
+    },
+    {
+      "type": "categorical",
+      "id": "Calories",
+      "description": "How many calories are in one serving? Low is under 100. Medium is 100 to 200. High is over 200."
+    },
+    {
+      "type": "categorical",
+      "id": "Vitamin C Source?",
+      "description": "Does one serving have a good amount of vitamin C? Yes means 9 milligrams or more."
+    },
+    {
+      "type": "categorical",
+      "id": "Kept Cold?",
+      "description": "Is the food usually kept cold in a fridge or freezer until it is eaten?"
+    },
+    {
+      "type": "categorical",
+      "id": "Meets Snack Rules?",
+      "description": "Does the snack meet the school snack rules? This is what the checker predicts for each snack."
+    }
+  ]
+}

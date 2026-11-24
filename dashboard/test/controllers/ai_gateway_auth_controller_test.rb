@@ -54,10 +54,11 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     assert_equal @authorized_teacher.user_type, body['user_type']
   end
 
-  test 'mints a token for a blocked user once the gateway fallback is enabled, stamping the blocked providers' do
+  test 'mints a tutor token for a blocked user once the gateway fallback is enabled, stamping the blocked providers' do
     sign_in(@authorized_teacher)
     User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
     DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(true)
+    @params[:aichatContext][:clientType] = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
     payload = stub_jwt_encode
 
     post :get_access_token, params: @params, as: :json
@@ -65,6 +66,17 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     assert_response :success
     assert_equal 'fake.jwt.token', JSON.parse(response.body)['token']
     assert_equal SharedConstants::AI_CHAT_US_ONLY_PROVIDERS, payload[:blocked_providers]
+  end
+
+  test 'refuses a blocked user a token for a client type the gateway fallback does not serve' do
+    sign_in(@authorized_teacher)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+    DCDO.stubs(:get).with('ai_gateway_fallback_is_enabled', anything).returns(true)
+
+    post :get_access_token, params: @params, as: :json
+
+    assert_response :forbidden
+    assert_equal AichatRequestsController::MODEL_REGION_BLOCKED_ERROR, JSON.parse(response.body)['error']
   end
 
   test 'mints a token with no blocked_providers claim when nothing is blocked' do
@@ -109,7 +121,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     end
   end
 
-  test 'the Sprite Lab ask AI block mints a token only for a levelbuilder' do
+  test 'the Sprite Lab ask AI block mints a token only in the pilot' do
     ask_ai_params = {
       aichatContext: {
         clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:SPRITELAB_ASK_AI],
@@ -123,7 +135,7 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     OpenSSL::PKey::RSA.stubs(:new).returns(OpenSSL::PKey::RSA.generate(2048))
     JWT.stubs(:encode).returns('fake.jwt.token')
 
-    # A teacher who would otherwise be allowed is refused without the permission.
+    # A teacher who would otherwise be allowed is refused outside the pilot.
     sign_in(@authorized_teacher)
     post :get_access_token, params: ask_ai_params, as: :json
     assert_response :forbidden

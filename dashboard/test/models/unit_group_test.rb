@@ -18,22 +18,10 @@ class UnitGroupTest < ActiveSupport::TestCase
       @@course_cache ||= UnitGroup.course_cache_to_cache
       UnitGroup.course_cache
 
-      # Rails 7.1 renamed the underlying method from `execute` to
-      # `raw_execute`, so temporarily support both versions.
-      # TODO infra: simplify this once we're fully updated to Rails 7.1
-      execute_method_name =
-        if Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 0
-          :execute
-        elsif Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR == 1
-          :raw_execute
-        else
-          throw "remove this temporary transitional logic before upgrading beyond Rails 7.1"
-        end
-
       # ActiveRecord collection association still references an active DB
       # connection, even when the data is already eager loaded. Best we can do
       # is ensure that no queries are executed on the active connection.
-      ActiveRecord::Base.connection.stubs(execute_method_name).raises('Database disconnected')
+      ActiveRecord::Base.connection.stubs(:raw_execute).raises('Database disconnected')
     end
 
     test "get_from_cache uses cache" do
@@ -1192,8 +1180,22 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     unit.levels.first.update!(ai_tutor_available: true)
 
+    # The answer is memoized per instance, so ask a fresh one.
+    unit_group = UnitGroup.find(unit_group.id)
     assert unit_group.has_ai_chat_tools?
     refute unit_group.requires_ai_chat_tools?
+  end
+
+  test 'has_ai_chat_tools? and requires_ai_chat_tools? query once per instance' do
+    unit = create(:unit, :with_levels, levels_count: 1)
+    unit_group = create(:unit_group, :with_unit, unit: unit)
+
+    refute unit_group.has_ai_chat_tools?
+    refute unit_group.requires_ai_chat_tools?
+    assert_queries(0) do
+      refute unit_group.has_ai_chat_tools?
+      refute unit_group.requires_ai_chat_tools?
+    end
   end
 
   test 'requires_ai_chat_tools? returns true for essential ai chat level types' do

@@ -30,6 +30,8 @@ interface HTMLPreviewHeaderProps {
   onStopPreview: () => void;
   isStopEnabled: boolean;
   fetchFileSearchOptions: (value: string) => Promise<string[]>;
+  /** Only the controls for looking at the site: no debug, inspector or full screen. */
+  viewOnly: boolean;
 }
 
 export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
@@ -47,9 +49,9 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
   onStopPreview,
   isStopEnabled,
   fetchFileSearchOptions,
+  viewOnly,
 }) => {
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
-  const isShareView = useAppSelector(state => state.lab.isShareView);
   const debugPanelOpen = useAppSelector(state => state.weblab2.debugPanelOpen);
   const inspectorEnabled = useAppSelector(
     state => state.weblab2.inspectorEnabled
@@ -202,8 +204,7 @@ export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
         {...previewViewModeButtonsProps}
       />
 
-      {!isShareView && (
-        // Hide debug panel toggle and full screen toggle buttons in share view.
+      {!viewOnly && (
         <>
           <Tooltip
             placement="bottom"

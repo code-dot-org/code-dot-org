@@ -45,14 +45,23 @@ jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
     activeTab,
     onTabChange,
     projectName,
+    skills,
+    timeSpentSeconds,
   }: {
     activeTab: string;
     onTabChange: (tab: string) => void;
     projectName?: string;
+    skills?: unknown[];
+    timeSpentSeconds?: number;
   }) => (
     <div>
       tabs: {activeTab}
       {projectName && <span>tab project: {projectName}</span>}
+      {skills !== undefined && (
+        <span>
+          tab stats: {skills.length} skills, {timeSpentSeconds}s
+        </span>
+      )}
       <button type="button" onClick={() => onTabChange('project')}>
         My project tab
       </button>
@@ -120,11 +129,24 @@ jest.mock('@cdo/apps/lab2/views/Loading', () => ({
   __esModule: true,
   default: () => <div>loading</div>,
 }));
-jest.mock('@cdo/apps/aichat/api/shouldUseAiGateway', () => ({
-  setAiGatewayOptIn: jest.fn(),
+jest.mock('@cdo/apps/adaptive/views/FinalProjectCallout', () => ({
+  __esModule: true,
+  default: ({onDismiss}: {onDismiss: () => void}) => (
+    <div>
+      final project callout
+      <button type="button" onClick={onDismiss}>
+        dismiss callout
+      </button>
+    </div>
+  ),
 }));
-jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
-  isAdaptiveAiEnabled: () => false,
+const mockSetAiGatewayOptIn = jest.fn();
+jest.mock('@cdo/apps/aichat/api/shouldUseAiGateway', () => ({
+  setAiGatewayOptIn: (optIn: boolean) => mockSetAiGatewayOptIn(optIn),
+}));
+const mockAiEnabled = jest.fn(() => false);
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiEnabled: () => mockAiEnabled(),
 }));
 const mockDispatch = jest.fn();
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -150,6 +172,8 @@ jest.mock('@cdo/apps/adaptive/progress/progressStore', () => ({
     saveStep: jest.fn(),
     saveInstructions: jest.fn(),
   },
+  recordProgressOk: jest.fn(),
+  recordProgressFailure: jest.fn(),
 }));
 
 const step = (id: string) => ({
@@ -203,6 +227,8 @@ describe('PathwayApp', () => {
 
   beforeEach(() => {
     mockDispatch.mockClear();
+    mockSetAiGatewayOptIn.mockClear();
+    mockAiEnabled.mockReturnValue(false);
     mockLoad.mockResolvedValue(EMPTY_PROGRESS);
     mockUseAppSelector.mockReturnValue(undefined);
     window.history.replaceState({}, '', '/');
@@ -254,6 +280,17 @@ describe('PathwayApp', () => {
     await renderSettled();
 
     expect(screen.getByText(/playing Intro/)).toBeTruthy();
+  });
+
+  it('routes the tutor through the gateway only while adaptive AI is on', async () => {
+    mockAiEnabled.mockReturnValue(true);
+    await renderSettled();
+    expect(mockSetAiGatewayOptIn).toHaveBeenLastCalledWith(true);
+
+    mockSetAiGatewayOptIn.mockClear();
+    mockAiEnabled.mockReturnValue(false);
+    await renderSettled();
+    expect(mockSetAiGatewayOptIn).toHaveBeenLastCalledWith(false);
   });
 
   it('shows the map once anything has been started', async () => {
@@ -521,7 +558,7 @@ describe('PathwayApp', () => {
       steps: {'intro-step': {status: 'started', timeSpent: 0}},
     });
     await renderSettled();
-    expect(screen.getByText('header: Skill Tree: Pathway')).toBeTruthy();
+    expect(screen.getByText('header: Skill Map: Pathway')).toBeTruthy();
 
     act(() => screen.getByText("I'm finished!").click());
 
@@ -681,6 +718,58 @@ describe('PathwayApp', () => {
       await renderSettled();
 
       expect(screen.queryByText(/tab project:/)).toBeNull();
+    });
+
+    it('passes skill progress and total time spent to the tab bar on the map view', async () => {
+      // intro-step started (120s) + next-step started (60s) = 180s total.
+      mockLoad.mockResolvedValue({
+        steps: {
+          'intro-step': {status: 'started', timeSpent: 120},
+          'next-step': {status: 'started', timeSpent: 60},
+        },
+      });
+      // Pathway has no skills, so skill count is 0.
+      await renderSettled();
+
+      expect(screen.getByText('tab stats: 0 skills, 180s')).toBeTruthy();
+    });
+  });
+
+  describe('final project callout', () => {
+    // Progress that marks every checkpoint in `pathway` complete. isComplete
+    // checks the last visible step, so multi only needs multi-b-step done.
+    const allCompleteProgress: Progress = {
+      steps: {
+        'intro-step': {status: 'complete', timeSpent: 0},
+        'next-step': {status: 'complete', timeSpent: 0},
+        'multi-b-step': {status: 'complete', timeSpent: 0},
+      },
+    };
+
+    it('shows the callout on the map when every checkpoint is complete', async () => {
+      mockLoad.mockResolvedValue(allCompleteProgress);
+      await renderSettled();
+
+      expect(screen.getByText('final project callout')).toBeTruthy();
+    });
+
+    it('does not show the callout when some checkpoints are still incomplete', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {'intro-step': {status: 'complete', timeSpent: 0}},
+      });
+      await renderSettled();
+
+      expect(screen.queryByText('final project callout')).toBeNull();
+    });
+
+    it('hides the callout for the session when dismissed', async () => {
+      mockLoad.mockResolvedValue(allCompleteProgress);
+      await renderSettled();
+      expect(screen.getByText('final project callout')).toBeTruthy();
+
+      act(() => screen.getByRole('button', {name: 'dismiss callout'}).click());
+
+      expect(screen.queryByText('final project callout')).toBeNull();
     });
   });
 });

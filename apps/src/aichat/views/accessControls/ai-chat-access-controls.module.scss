@@ -32,6 +32,12 @@
   padding: 10px 0;
 }
 
+.labelWithTag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .semiBold {
   @include main-font-semi-bold;
 }

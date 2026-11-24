@@ -134,6 +134,32 @@ export const PixelReveal: React.FunctionComponent<PixelRevealProps> = ({
   );
 };
 
+interface FirstShowingOnlyProps {
+  /** The picture being shown. */
+  id: string;
+  /** The ids of the pictures that have already been shown. The caller owns
+      this set, so it outlives this component. */
+  shownIds: React.MutableRefObject<Set<string>>;
+  children: React.ReactNode;
+}
+
+/**
+ * Renders its children only the first time a picture is shown, by its id.
+ * A picture's frame can be taken down and put back, and the reveal
+ * animation inside it should not play again each time.
+ */
+export const FirstShowingOnly: React.FunctionComponent<
+  FirstShowingOnlyProps
+> = ({id, shownIds, children}) => {
+  // Decided once, when this component is created, so that marking the
+  // picture as shown (below) does not hide the animation while it plays.
+  const [firstShowing] = useState(() => !shownIds.current.has(id));
+  useEffect(() => {
+    shownIds.current.add(id);
+  }, [shownIds, id]);
+  return firstShowing ? <>{children}</> : null;
+};
+
 const SPARK_COUNT = 14;
 const hueClass = (i: number) => wordStyles[`hue_${HUES[i % HUES.length]}`];
 // The spark animation's length plus its longest delay (pixel-reveal.module.scss).

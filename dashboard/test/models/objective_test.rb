@@ -15,8 +15,10 @@ class ObjectiveTest < ActiveSupport::TestCase
     objective.description = 'what I will learn'
     objective.key = 'my-key'
     objective.save!
+    script_level = create(:script_level)
+    objective.script_levels = [script_level]
     objective.reload
-    expected_edit_summary = {id: objective.id, description: 'what I will learn', key: objective.key}
+    expected_edit_summary = {id: objective.id, description: 'what I will learn', key: objective.key, scriptLevelIds: [script_level.id.to_s]}
     expected_show_summary = {id: objective.id, description: 'what I will learn'}
     assert_equal expected_edit_summary, objective.summarize_for_edit
     assert_equal expected_show_summary, objective.summarize_for_lesson_show

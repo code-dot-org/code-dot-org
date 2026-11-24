@@ -1,24 +1,26 @@
 // A generated project: the template rewritten around the student's answers
 // by one model call, laid over the template's sources. No answers, no
-// editable files, adaptive AI off, a failed call, answers that do not clear
+// editable files, no AI, a failed call, answers that do not clear
 // moderation or a result that does not all mean nothing is generated, and
 // the template stands.
 
 import {AichatContext} from '@cdo/apps/aichat/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectSources} from '@cdo/apps/lab2/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 
+import {
+  sendAdaptiveEvent,
+  sendAiStaticFallbackUsed,
+  stepProperties,
+} from '../metricsHelpers';
 import {Progress} from '../progress/model';
 import {checkpointPlan} from '../project/plan';
 import {applyGeneratedFiles, editableFiles} from '../project/projectGeneration';
 import {Checkpoint, LevelStep, Pathway} from '../types';
 
-import {
-  generate,
-  isAdaptiveAiEnabled,
-  moderateInput,
-  moderateOutput,
-} from './generate';
+import {isAdaptiveAiAvailable} from './access';
+import {generate, moderateInput, moderateOutput} from './generate';
 import {ADAPTIVE_MODELS} from './models';
 import {
   PROJECT_PROMPT_VERSION,
@@ -61,7 +63,10 @@ export async function generateProject({
   aichatContext,
 }: GenerateProjectOptions): Promise<GeneratedProject | undefined> {
   if (!step.projectPrompt || !step.project) return undefined;
-  if (!isAdaptiveAiEnabled()) return undefined;
+  if (!isAdaptiveAiAvailable()) {
+    sendAiStaticFallbackUsed('project', 'aiUnavailable', checkpoint, step);
+    return undefined;
+  }
   const plan = checkpointPlan(checkpoint, progress);
   const files = editableFiles(sources);
   if (plan.answers.length === 0 || files.length === 0) return undefined;
@@ -73,6 +78,17 @@ export async function generateProject({
     plan,
     files,
   });
+  const startedAt = Date.now();
+  const sendGenerated = (errorType?: string) => {
+    sendAdaptiveEvent(EVENTS.ADAPTIVE_PROJECT_GENERATED, {
+      ...stepProperties(checkpoint, step),
+      success: !errorType,
+      latencyMs: Date.now() - startedAt,
+      errorType,
+    });
+    if (errorType)
+      sendAiStaticFallbackUsed('project', errorType, checkpoint, step);
+  };
   // Only what the student wrote is moderated; a chosen answer is authored text.
   const typed = plan.answers.filter(a => a.typed).map(a => a.answer);
   const moderation = typed.length
@@ -86,6 +102,11 @@ export async function generateProject({
       pathwayId: pathway.id,
       stepId: step.id,
     });
+    sendGenerated(
+      moderation === 'flagged'
+        ? 'answersFlaggedByModeration'
+        : 'moderationCheckFailed'
+    );
     return undefined;
   }
 
@@ -104,7 +125,10 @@ export async function generateProject({
       },
     },
   });
-  if (!output || !traceId) return undefined;
+  if (!output || !traceId) {
+    sendGenerated('modelErrorOrInvalidOutput');
+    return undefined;
+  }
   const written = [
     output.name,
     output.description,
@@ -120,10 +144,19 @@ export async function generateProject({
       stepId: step.id,
       traceId,
     });
+    sendGenerated(
+      outputModeration === 'flagged'
+        ? 'outputFlaggedByModeration'
+        : 'moderationCheckFailed'
+    );
     return undefined;
   }
   const seeded = applyGeneratedFiles(sources, output.files);
-  if (!seeded) return undefined;
+  if (!seeded) {
+    sendGenerated('noGeneratedFileMatchedProject');
+    return undefined;
+  }
+  sendGenerated();
   return {
     name: output.name,
     description: output.description,

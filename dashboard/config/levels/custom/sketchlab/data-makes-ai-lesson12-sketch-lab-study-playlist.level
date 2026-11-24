@@ -1,0 +1,20 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-17T04:46:35.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "data-makes-ai-lesson12-sketch-lab-template-study-playlist",
+    "long_instructions": "## Define Your Project\r\nGoal: Plan your model before you train it.\r\n\r\nHave **My Data** from your guide open. Move your Data Scientist to each stop as you start it. Click the zoom **+** in the bottom corner of the map.\r\n- **Define Stop 1:** Drag the star to the label you wrote in My Data.\r\n- **Define Stop 2:** Write who will use your model: one person or one type of person.\r\n- **Define Stop 3:** Drag your two features from My Data into the boxes. Write why you picked them.\r\n- **Define Stop 4:** Finish the \"If ..., then ...\" rule with your two features. Don't train yet.\r\n\r\nYou are done when Define Stops 1–4 have an answer. Go to the next level.",
+    "hide_share_and_remix": "false",
+    "display_name": "Project Map: Study Playlist",
+    "bubble_choice_description": "This dataset contains different song qualities that might be in a study playlist.",
+    "thumbnail_url": "https://images.code.org/19e16aab47ffa690b4e13e6e478163b7-k4c-playlist.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-17T04:46:35.332+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab\"},{\"changed_at\":\"2026-11-17 04:46:48 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 05:49:26 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:18:27 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:58:09 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:07:01 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:15:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:26:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 02:28:06 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:03:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:06:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

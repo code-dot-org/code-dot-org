@@ -123,7 +123,7 @@ describe('WordMenus', () => {
     const ghost = document.querySelector('p[aria-hidden]') as HTMLElement;
     // The icons carry no text; the longest words by width are picked.
     expect(ghost.textContent?.replace(/\s+/g, ' ')).toBe(
-      'A robotic astronaut wearing a glasses.'
+      'A robotic dumpling wearing a glasses.'
     );
     expect(sentenceText()).toBe('A cat.');
   });
@@ -143,6 +143,38 @@ describe('WordMenus', () => {
       screen.getByRole('button', {name: 'cute. Show adjective words'})
     );
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
+  });
+
+  it("plays a chip's entrance animation once, and again only if the word is removed and re-chosen", () => {
+    const {rerender} = render(<Harness initial={{creature: 'cat'}} />);
+    const chip = () =>
+      screen.getByRole('button', {name: 'cat. Show creature words'})
+        .parentElement as HTMLElement;
+    expect(chip().classList.contains('entrancePlayed')).toBe(false);
+    fireEvent.animationEnd(chip());
+    rerender(<Harness initial={{creature: 'cat'}} />);
+    expect(chip().classList.contains('entrancePlayed')).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'Remove cat'}));
+    fireEvent.click(screen.getByRole('button', {name: 'cat'}));
+    expect(chip().classList.contains('entrancePlayed')).toBe(false);
+  });
+
+  it('shows the verb in front of the sentence when given one', () => {
+    render(
+      <WordMenus
+        sentence={CHARACTER_SENTENCE}
+        choices={{creature: 'cat'}}
+        onChange={jest.fn()}
+        lead="Generate"
+      />
+    );
+    expect(sentenceText()).toBe('Generate a cat.');
+  });
+
+  it('heads each set of words with the kind of word it holds', () => {
+    render(<Harness layout="clusters" />);
+    const group = screen.getByRole('group', {name: 'creature (pick one)'});
+    expect(group.querySelector('p')?.textContent).toBe('Noun');
   });
 
   it('shows a chip as plain text while the creature is missing', () => {

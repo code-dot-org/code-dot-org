@@ -1,5 +1,6 @@
 import {AichatContext} from '../aichat/types';
 
+import {type ChallengeToken, fetchChallengeToken} from './challengeToken';
 import {
   isAccessTokenRejection,
   recordGatewayRequestError,
@@ -7,19 +8,18 @@ import {
   recordTokenNotIssued,
 } from './requestMetric';
 import {getAccessToken, invalidateAccessToken} from './shared';
-import {fetchTurnstileToken} from './turnstile';
 
 const MAX_ATTEMPTS = 2;
 
 /**
- * Issues the access token, solves Turnstile, and calls `send`.
+ * Issues the access token, solves the challenge, and calls `send`.
  * Does one retry with a fresh access token if a reusable access token gets rejected.
  */
 export async function sendGatewayRequest(
   aichatContext: AichatContext,
   send: (
     accessToken: string,
-    turnstileToken: string | null
+    challengeToken: ChallengeToken | null
   ) => Promise<Response>
 ): Promise<Response> {
   const issueAccessToken = () =>
@@ -30,7 +30,7 @@ export async function sendGatewayRequest(
 
   for (let attempt = 1; ; attempt++) {
     const issued = await issueAccessToken();
-    const turnstileToken = await fetchTurnstileToken(
+    const challengeToken = await fetchChallengeToken(
       issued.turnstileEnforcementMode
     );
     // A challenge can outlast the reuse window, so a reusable access token is re-checked after it.
@@ -40,7 +40,7 @@ export async function sendGatewayRequest(
       reusable,
     } = issued.reusable ? await issueAccessToken() : issued;
     try {
-      const response = await send(accessToken, turnstileToken);
+      const response = await send(accessToken, challengeToken);
       recordGatewayRequestOk(signingKey);
       return response;
     } catch (error) {

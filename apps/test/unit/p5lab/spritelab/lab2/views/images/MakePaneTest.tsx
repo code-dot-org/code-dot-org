@@ -1,8 +1,16 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MakePane from '@cdo/apps/p5lab/spritelab/lab2/views/images/MakePane';
 import type {SentenceSceneParts} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
+
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
+const sendEvent = analyticsReporter.sendEvent as jest.Mock;
 
 const parts = (over: Partial<SentenceSceneParts> = {}): SentenceSceneParts => ({
   mode: 'edit',
@@ -11,7 +19,6 @@ const parts = (over: Partial<SentenceSceneParts> = {}): SentenceSceneParts => ({
   panelRef: {current: null},
   frame: null,
   frameFilled: false,
-  cachedTag: null,
   behindTheScenes: null,
   status: null,
   sentence: <span>sentence</span>,
@@ -34,40 +41,74 @@ const parts = (over: Partial<SentenceSceneParts> = {}): SentenceSceneParts => ({
 });
 
 describe('MakePane', () => {
-  it('names the kind with its article, and generates on the button', () => {
+  it('shows an error message outside the scrolling box of words', () => {
+    render(
+      <MakePane
+        parts={parts({
+          error: <p role="alert">Couldn't make the picture. Try again.</p>,
+        })}
+        width={280}
+      />
+    );
+    const alert = screen.getByRole('alert');
+    const pane = screen.getByRole('region', {name: 'Make your picture'});
+    // The message is a direct child of the pane, and the words are not:
+    // they are inside the scrolling box.
+    expect(alert.parentElement).toBe(pane);
+    expect(screen.getByText('words').parentElement).not.toBe(pane);
+  });
+
+  it('generates on the button', () => {
     const generate = jest.fn();
     render(<MakePane parts={parts({generate})} width={280} />);
-    expect(screen.getByText('Generate an object')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
     expect(generate).toHaveBeenCalledTimes(1);
   });
 
-  it('asks before generating over an existing image, once a sitting', () => {
+  it('replaces a picture that only AI made without asking', () => {
     const generate = jest.fn();
-    const {rerender} = render(
-      <MakePane parts={parts({generate})} width={280} replaces />
-    );
-    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    expect(generate).not.toHaveBeenCalled();
-    expect(
-      screen.getByRole('alertdialog', {name: 'Replace this image?'})
-    ).toBeTruthy();
-    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
-    expect(generate).not.toHaveBeenCalled();
-    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
-    fireEvent.click(screen.getByRole('button', {name: 'Replace'}));
-    expect(generate).toHaveBeenCalledTimes(1);
-    expect(screen.queryByRole('alertdialog')).toBeNull();
-    // A picture has landed: the next generation replaces it without asking.
-    rerender(
+    render(
       <MakePane
         parts={parts({generate, mode: 'result', frameFilled: true})}
         width={280}
-        replaces
+        regenerate
       />
     );
     fireEvent.click(screen.getByRole('button', {name: 'Regenerate'}));
-    expect(generate).toHaveBeenCalledTimes(2);
+    expect(screen.queryByRole('dialog')).toBeNull();
+    expect(generate).toHaveBeenCalledTimes(1);
+  });
+
+  it('asks before generating over a picture the student has drawn on', () => {
+    const generate = jest.fn();
+    render(
+      <MakePane
+        parts={parts({generate, mode: 'result', frameFilled: true})}
+        width={280}
+        editedByHand
+      />
+    );
+    fireEvent.click(screen.getByRole('button', {name: 'Regenerate'}));
+    expect(generate).not.toHaveBeenCalled();
+    expect(
+      screen.getByRole('dialog', {name: 'Replace this image?'})
+    ).toBeTruthy();
+    fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+    expect(generate).not.toHaveBeenCalled();
+    expect(screen.queryByRole('dialog')).toBeNull();
+    fireEvent.click(screen.getByRole('button', {name: 'Regenerate'}));
+    fireEvent.click(screen.getByRole('button', {name: 'Replace'}));
+    expect(generate).toHaveBeenCalledTimes(1);
+    expect(screen.queryByRole('dialog')).toBeNull();
+  });
+
+  it('asks before generating over a new drawing that is not saved yet', () => {
+    const generate = jest.fn();
+    render(<MakePane parts={parts({generate})} width={280} editedByHand />);
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(generate).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', {name: 'Replace'}));
+    expect(generate).toHaveBeenCalledTimes(1);
   });
 
   it('offers Regenerate for an AI-made image, and the drawing button when given', () => {
@@ -81,8 +122,59 @@ describe('MakePane', () => {
         drawLabel="Edit this image"
       />
     );
-    expect(screen.getByText('Regenerate this object')).toBeTruthy();
+    expect(screen.getByRole('button', {name: 'Regenerate'})).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
     expect(onDraw).toHaveBeenCalledTimes(1);
+  });
+
+  it('draws the info button and the extra controls into the header slot it is given', () => {
+    const headerSlot = document.createElement('div');
+    document.body.appendChild(headerSlot);
+    const shown = (generating = false) => (
+      <MakePane
+        parts={parts({
+          behindTheScenes: <button type="button">info</button>,
+          mode: generating ? 'generating' : 'edit',
+        })}
+        width={280}
+        extra={<button type="button">advanced</button>}
+        headerSlot={headerSlot}
+      />
+    );
+    const {rerender} = render(shown());
+    const pane = screen.getByRole('region', {name: 'Make your picture'});
+    // In the slot, not in the pane.
+    expect(headerSlot.textContent).toBe('infoadvanced');
+    expect(pane.contains(screen.getByText('info'))).toBe(false);
+    // Not shown while a picture is being made.
+    rerender(shown(true));
+    expect(headerSlot.textContent).toBe('');
+    headerSlot.remove();
+  });
+
+  it.each([
+    ['Replace', 'replace', 1],
+    ['Cancel', 'cancel', 0],
+  ])('reports %s in the replace dialog', (button, outcome, generations) => {
+    sendEvent.mockClear();
+    const generate = jest.fn();
+    render(<MakePane parts={parts({generate})} width={280} editedByHand />);
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(sendEvent).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', {name: button}));
+    expect(generate).toHaveBeenCalledTimes(generations);
+    expect(sendEvent).toHaveBeenCalledWith(
+      EVENTS.HOAI2026_IMAGE_REPLACE_CONFIRM,
+      {outcome},
+      true,
+      outcome
+    );
+  });
+
+  it('reports nothing when it generates without asking', () => {
+    sendEvent.mockClear();
+    render(<MakePane parts={parts()} width={280} />);
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(sendEvent).not.toHaveBeenCalled();
   });
 });

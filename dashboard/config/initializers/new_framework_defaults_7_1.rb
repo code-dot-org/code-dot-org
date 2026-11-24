@@ -51,7 +51,7 @@ Rails.application.config.action_controller.allow_deprecated_parameters_hash_equa
 # 2. If you have +config.active_support.key_generator_hash_digest_class+ configured as SHA256 (the new default
 # in 7.0), then you need to configure SHA-256 for Active Record Encryption:
 #++
-# Rails.application.config.active_record.encryption.hash_digest_class = OpenSSL::Digest::SHA256
+Rails.application.config.active_record.encryption.hash_digest_class = OpenSSL::Digest::SHA256
 #
 # 3. If you don't currently have data encrypted with Active Record encryption, you can disable this setting to
 # configure the default behavior starting 7.1+:
@@ -151,7 +151,7 @@ Rails.application.config.active_support.message_serializer = :json_allow_marshal
 # leave this optimization off on the first deploy, then enable it on a
 # subsequent deploy.
 #++
-# Rails.application.config.active_support.use_message_serializer_for_metadata = true
+Rails.application.config.active_support.use_message_serializer_for_metadata = true
 
 ###
 # Set the maximum size for Rails log files.
@@ -207,7 +207,7 @@ Rails.application.config.active_record.default_column_serializer = nil
 # leave this optimization off on the first deploy, then enable it on a
 # subsequent deploy.
 #++
-# Rails.application.config.active_record.marshalling_format_version = 7.1
+Rails.application.config.active_record.marshalling_format_version = 7.1
 
 ###
 # Run `after_commit` and `after_*_commit` callbacks in the order they are defined in a model.

@@ -1479,17 +1479,16 @@ FactoryBot.define do
 
   factory :challenge do
     association :lesson
+    sequence(:key) {|n| "challenge-#{n}"}
     question {'What is 2 + 2?'}
-
-    trait :with_rubric do
-      rubric do
-        [
-          {'level' => 0, 'description' => 'No answer is present'},
-          {'level' => 1, 'description' => 'Answer is partially correct'},
-          {'level' => 2, 'description' => 'Answer is correct'},
-          {'level' => 3, 'description' => 'Answer is correct and the reasoning is clearly explained'},
-        ]
-      end
+    default_modality {'whiteboard'}
+    rubric do
+      [
+        {'level' => 0, 'description' => 'No answer is present'},
+        {'level' => 1, 'description' => 'Answer is partially correct'},
+        {'level' => 2, 'description' => 'Answer is correct'},
+        {'level' => 3, 'description' => 'Answer is correct and the reasoning is clearly explained'},
+      ]
     end
   end
 
@@ -1678,6 +1677,16 @@ FactoryBot.define do
     state {Faker::Address.unique.state}
     city {Faker::Address.unique.city}
     postal_code {Faker::Address.unique.postcode}
+  end
+
+  factory :anonymous_level_client, class: 'AnonymousLevel::Client' do
+    anon_user_id {Cdo::AnonUserId.generate}
+    name {Faker::Lorem.word.capitalize}
+
+    trait :amazon_mobile_app do
+      name {SharedConstants::MOBILE_APP_NAME}
+      install_source {'com.amazon.venezia'}
+    end
   end
 
   factory :user_script do

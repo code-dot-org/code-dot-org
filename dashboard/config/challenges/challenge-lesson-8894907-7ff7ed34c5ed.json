@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894907-7ff7ed34c5ed",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 6: Understanding Bias",
+  "question": "The chart makes it look like almost every student loves soccer, but look at where the survey was done. What would an AI learn from this chart?\n\nSteps:\n1. Use the arrow tool to point at the bar that dominates the chart.\n2. Place a shape on the note that explains why.\n3. Record your voice saying what an AI trained on this survey would conclude, and who is missing. Bonus points if you say how to collect better data.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but the voice recording does not say what an AI would conclude."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to the Soccer bar AND a shape is on the \"Where we asked\" note AND the voice recording says that an AI trained on this survey would conclude that most students love soccer, and names a group that is missing."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a specific way to collect better data (such as asking at different places or times)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894907-7ff7ed34c5ed-ee1cfc9e",
+  "whiteboard_starter_image_alt_text": "A bar chart titled \"Survey: What is your favorite after-school activity?\" showing the number of students who chose each activity: Soccer 26, Gaming 4, Music 4, Reading 3, and Art 3. A note labeled \"Where we asked\" says \"At the soccer field, right after practice. 40 students answered.\" Below it is a blank box labeled \"Space for your notes.\""
+}

@@ -3,13 +3,18 @@
 // reading to the end. A telling the student asked for closes like any
 // dialog. The copy differs for a character and for a background.
 
-import {MuiDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import Modal from '@code-dot-org/component-library/modal';
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
 import {ImageType} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
+import anotherArt from '@cdo/static/spritelab_lab2/learning/another.svg';
+import evaluateArt from '@cdo/static/spritelab_lab2/learning/evaluate.svg';
+import flowerCardArt from '@cdo/static/spritelab_lab2/learning/flower-card.svg';
+import learnedArt from '@cdo/static/spritelab_lab2/learning/learned.svg';
+import wordsArt from '@cdo/static/spritelab_lab2/learning/words.svg';
 
 import ChunkyPicture, {PictureCrop} from './ChunkyPicture';
 
@@ -35,10 +40,6 @@ interface LearningDialogProps {
 const TITLE = 'How AI made your image';
 // Cells across the picture at each stage of the guess.
 const GUESS_STAGES = [4, 12] as const;
-// Pictures in the training mosaic, and the delay between one appearing and
-// the next.
-const MOSAIC_CELLS = 12;
-const MOSAIC_STAGGER_MS = 90;
 // Dots across the noise the guess starts from.
 const NOISE_CELLS = 12;
 
@@ -107,68 +108,47 @@ interface PanelContent {
   visual: (picture: LearningPicture, prompt: string) => React.ReactNode;
 }
 
-const mosaic = () => (
-  <div className={styles.mosaic} aria-hidden>
-    {Array.from({length: MOSAIC_CELLS}, (_, i) => (
-      <span
-        key={i}
-        className={styles.mosaicCell}
-        style={
-          {'--cell-delay': `${i * MOSAIC_STAGGER_MS}ms`} as React.CSSProperties
-        }
-      >
-        <FontAwesomeV6Icon iconName="image" />
-      </span>
-    ))}
-  </div>
+// The drawings, loaded as the story opens so that none arrives after its
+// panel.
+const DRAWINGS = [learnedArt, wordsArt, anotherArt, evaluateArt, flowerCardArt];
+
+const Drawing: React.FunctionComponent<{src: string}> = ({src}) => (
+  <img src={src} alt="" className={styles.drawing} />
 );
 
+const drawing = (src: string) => () => <Drawing src={src} />;
+
 const words = (_: LearningPicture, prompt: string) => (
-  <MuiTypography component="p" variant="h5" className={styles.words}>
-    <span className={styles.quote}>“</span>
-    {prompt}
-    <span className={styles.quote}>”</span>
-  </MuiTypography>
+  <>
+    <Drawing src={wordsArt} />
+    <MuiTypography component="p" variant="h5" className={styles.words}>
+      <span className={styles.wordsText}>“{prompt}”</span>
+    </MuiTypography>
+  </>
 );
 
 const noiseToPicture = (picture: LearningPicture) => (
   <div className={styles.stages}>
-    <Noise />
+    <span className={styles.frame}>
+      <Noise />
+    </span>
     {GUESS_STAGES.map(cells => (
-      <ChunkyPicture
-        key={cells}
-        src={picture.src}
-        cells={cells}
-        crop={picture.crop}
-      />
+      <span key={cells} className={styles.frame}>
+        <ChunkyPicture src={picture.src} cells={cells} crop={picture.crop} />
+      </span>
     ))}
-    <ChunkyPicture src={picture.src} crop={picture.crop} />
-  </div>
-);
-
-const anotherGuess = (picture: LearningPicture) => (
-  <div className={styles.guess}>
-    <ChunkyPicture src={picture.src} crop={picture.crop} />
-    <FontAwesomeV6Icon iconName="dice" className={styles.dice} aria-hidden />
-  </div>
-);
-
-const evaluate = (picture: LearningPicture) => (
-  <div className={styles.guess}>
-    <ChunkyPicture src={picture.src} crop={picture.crop} />
-    <span className={styles.thumbs} aria-hidden>
-      <FontAwesomeV6Icon iconName="thumbs-up" />
-      <FontAwesomeV6Icon iconName="thumbs-down" />
+    <span className={styles.frame}>
+      <ChunkyPicture src={picture.src} crop={picture.crop} />
     </span>
   </div>
 );
 
-// A character's square beside the background's: twice the side, four times
-// the pixels.
+// A drawing of a character's picture beside the student's background. The
+// background is about twice as wide, which is four times the pixels.
 const sizes = (picture: LearningPicture) => (
-  <div className={styles.sizes} aria-hidden>
-    <span className={classNames(styles.sizeBox, styles.sizeSmall)} />
-    <span className={classNames(styles.sizeBox, styles.sizeLarge)}>
+  <div className={styles.sizes}>
+    <img src={flowerCardArt} alt="" className={styles.sizeSmall} />
+    <span className={classNames(styles.frame, styles.sizeLarge)}>
       <ChunkyPicture src={picture.src} crop={picture.crop} />
     </span>
   </div>
@@ -178,7 +158,7 @@ const CHARACTER_PANELS: PanelContent[] = [
   {
     heading: 'AI learned from examples',
     body: 'During *training*, the AI learned patterns from pictures and their descriptions.',
-    visual: mosaic,
+    visual: drawing(learnedArt),
   },
   {
     heading: 'Your words guide the image',
@@ -192,21 +172,26 @@ const CHARACTER_PANELS: PanelContent[] = [
   },
   {
     heading: 'Try another version',
-    body: 'Click Generate again. The result can be different, even with the same prompt.',
-    visual: anotherGuess,
+    body: 'Select Regenerate. The result can be different, even with the same prompt.',
+    visual: drawing(anotherArt),
   },
   {
     heading: 'Evaluate what the AI made',
     body: 'Does the result match your prompt? Look closely, then rate it.',
-    visual: evaluate,
+    visual: drawing(evaluateArt),
   },
 ];
 
 const BACKGROUND_PANELS: PanelContent[] = [
   {
+    heading: 'A background is a big job',
+    body: 'Here, backgrounds have many more *pixels*, or tiny squares of color, than characters, objects, or blocks. Together, they form one scene.',
+    visual: sizes,
+  },
+  {
     heading: 'AI learned from examples',
     body: 'Before you ever used it, the AI was *trained* on many example pictures. It learned patterns from many pictures and the words describing them.',
-    visual: mosaic,
+    visual: drawing(learnedArt),
   },
   {
     heading: 'Your words guide the image',
@@ -220,18 +205,13 @@ const BACKGROUND_PANELS: PanelContent[] = [
   },
   {
     heading: 'Try another picture',
-    body: 'Click *Generate* again. The picture can be different, even with the same prompt.',
-    visual: anotherGuess,
+    body: 'Select *Regenerate*. The picture can be different, even with the same prompt.',
+    visual: drawing(anotherArt),
   },
   {
     heading: 'Evaluate the picture',
     body: 'Look closely. Does it match what you asked for? Then use [thumb up] or [thumb down] to rate it.',
-    visual: evaluate,
-  },
-  {
-    heading: 'A background is a big job',
-    body: 'Here, backgrounds have four times as many *pixels*, or tiny squares of color, as characters, objects, or blocks. Together, they form one scene.',
-    visual: sizes,
+    visual: drawing(evaluateArt),
   },
 ];
 
@@ -248,11 +228,16 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
   onClose,
 }) => {
   const [index, setIndex] = useState(0);
+  useEffect(() => {
+    DRAWINGS.forEach(src => {
+      new Image().src = src;
+    });
+  }, []);
   const panels = panelsFor(imageType);
   const onLastPanel = index === panels.length - 1;
   const panel = panels[index];
   return (
-    <MuiDialog
+    <Modal
       title={TITLE}
       className={styles.dialog}
       onClose={onClose}
@@ -264,20 +249,35 @@ const LearningDialog: React.FunctionComponent<LearningDialogProps> = ({
           </span>
           <div key={index} className={styles.panel}>
             <div className={styles.visual}>{panel.visual(picture, prompt)}</div>
-            <MuiTypography
-              component="h3"
-              variant="h4"
-              className={styles.heading}
-            >
-              {panel.heading}
-            </MuiTypography>
-            <MuiTypography
-              component="p"
-              variant="body1"
-              className={styles.text}
-            >
-              {richText(panel.body)}
-            </MuiTypography>
+            {/* Every panel's words are laid out, and only this panel's
+                show, so the dialog keeps the height of its tallest panel. */}
+            <div className={styles.copyStack}>
+              {panels.map((each, i) => (
+                <div
+                  key={i}
+                  className={classNames(
+                    styles.copy,
+                    i !== index && styles.copyHidden
+                  )}
+                  aria-hidden={i !== index || undefined}
+                >
+                  <MuiTypography
+                    component="h4"
+                    variant="h4"
+                    className={styles.heading}
+                  >
+                    {each.heading}
+                  </MuiTypography>
+                  <MuiTypography
+                    component="p"
+                    variant="body1"
+                    className={styles.text}
+                  >
+                    {richText(each.body)}
+                  </MuiTypography>
+                </div>
+              ))}
+            </div>
           </div>
           <div className={styles.dots} aria-hidden>
             {panels.map((_, i) => (

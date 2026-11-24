@@ -29,6 +29,9 @@ interface EditorStripProps {
       sit across from it either way. */
   switchAtStart?: boolean;
   history?: EditHistory;
+  /** Receives an empty element at the bar's right end. A caller draws its
+      own controls into it (with a portal), such as an info button. */
+  endSlotRef?: (element: HTMLDivElement | null) => void;
   /** Room kept clear of the preview's column. */
   style?: React.CSSProperties;
 }
@@ -47,6 +50,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   title,
   switchAtStart = false,
   history,
+  endSlotRef,
   style,
 }) => {
   // Takes focus from a button that its own click disables.
@@ -115,6 +119,9 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
       <div className={moduleStyles.editorStripEnd}>
         {endExtra}
         {switchAtStart ? historyNode : switchNode}
+        {endSlotRef && (
+          <div ref={endSlotRef} className={moduleStyles.editorStripEndSlot} />
+        )}
       </div>
     </div>
   );

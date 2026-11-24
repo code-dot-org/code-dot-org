@@ -276,7 +276,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   setup do
     # stub cache reads for each test
     LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
-    LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(@integration)
+    LtiV1Controller.any_instance.stubs(:read_cache).with(LtiV1Controller.integration_cache_key(@integration.issuer, @integration.client_id)).returns(@integration)
     Honeybadger.stubs(:notify)
     Policies::Lti.stubs(:supported_message_type?).returns(true)
   end
@@ -428,11 +428,94 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
         user
         deployment
         LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
-        LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(cached_integration)
+        LtiV1Controller.any_instance.stubs(:read_cache).with(LtiV1Controller.integration_cache_key(@integration.issuer, @integration.client_id)).returns(cached_integration)
 
         authenticate
         assert_includes deployment.reload.lti_user_identities, user.lti_user_identities.first
       end
+    end
+  end
+
+  # These run against the real shared cache instead of a stubbed read_cache.
+  describe 'integration cache' do
+    let(:integration) {create(:lti_integration, issuer: "https://#{SecureRandom.alphanumeric.downcase}.invalid")}
+    let(:integration_key) {LtiV1Controller.integration_cache_key(integration.issuer, integration.client_id)}
+    let(:integration_entry) {"#{LtiV1Controller::NAMESPACE}/#{integration_key}"}
+    let(:state_entry) {"#{LtiV1Controller::NAMESPACE}/#{@state}"}
+    let(:payload) {{**get_valid_payload, iss: integration.issuer, aud: integration.client_id, azp: integration.client_id}}
+
+    def unsigned_jwt(claims)
+      JWT.encode(claims, nil, 'none')
+    end
+
+    def launch
+      post '/lti/v1/authenticate', params: {id_token: create_jwt_and_stub(payload), state: @state}
+    end
+
+    before do
+      LtiV1Controller.any_instance.unstub(:read_cache)
+      CDO.shared_cache.write(state_entry, {state: @state, nonce: @nonce}.to_json)
+    end
+
+    after do
+      CDO.shared_cache.delete(state_entry)
+      CDO.shared_cache.delete(integration_entry)
+    end
+
+    it 'caches the integration on a successful lookup' do
+      launch
+      assert_response :ok
+      assert_equal integration.id, JSON.parse(CDO.shared_cache.read(integration_entry))['id']
+    end
+
+    it 'returns unauthorized every time for an unknown issuer and client id' do
+      issuer = "https://#{SecureRandom.alphanumeric.downcase}.invalid"
+      client_id = SecureRandom.alphanumeric
+      jwt = unsigned_jwt(iss: issuer, aud: client_id)
+
+      2.times do
+        post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+        assert_response :unauthorized
+      end
+      assert_nil CDO.shared_cache.read("#{LtiV1Controller::NAMESPACE}/#{LtiV1Controller.integration_cache_key(issuer, client_id)}")
+    end
+
+    it 'keeps pairs that concatenate to the same string apart' do
+      host = URI(integration.issuer).host
+      split_claims = {iss: 'https:', aud: "/#{host}/#{integration.client_id}"}
+      refute_equal integration_key, LtiV1Controller.integration_cache_key(split_claims[:iss], split_claims[:aud])
+
+      post '/lti/v1/authenticate', params: {id_token: unsigned_jwt(split_claims), state: @state}
+      assert_response :unauthorized
+
+      launch
+      assert_response :ok
+      assert_equal integration.id, JSON.parse(CDO.shared_cache.read(integration_entry))['id']
+    end
+
+    ['null', 'not json'].each do |bad_value|
+      it "falls back to the database when the cached entry is #{bad_value.inspect}" do
+        CDO.shared_cache.write(integration_entry, bad_value)
+        launch
+        assert_response :ok
+      end
+    end
+
+    it 'does not replace an entry written after its own read missed' do
+      seeded = integration.attributes.merge('platform_name' => 'seeded').to_json
+      CDO.shared_cache.write(integration_entry, seeded)
+      LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
+      LtiV1Controller.any_instance.stubs(:read_cache).with(integration_key).returns(nil)
+
+      launch
+      assert_response :ok
+      assert_equal seeded, CDO.shared_cache.read(integration_entry)
+    end
+
+    it 'returns unauthorized when aud is not a string' do
+      jwt = unsigned_jwt(iss: integration.issuer, aud: {id: integration.client_id})
+      post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+      assert_response :unauthorized
     end
   end
 
@@ -691,7 +774,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
     integration = create(:lti_integration, issuer: issuer)
     # Override read_cache stub with this integration
-    LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
+    LtiV1Controller.any_instance.stubs(:read_cache).with(LtiV1Controller.integration_cache_key(integration.issuer, integration.client_id)).returns(integration)
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
@@ -703,7 +786,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     integration = create(:lti_integration, issuer: issuer)
     integration.update(platform_name: 'schoology')
     # Override read_cache stub with this integration
-    LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
+    LtiV1Controller.any_instance.stubs(:read_cache).with(LtiV1Controller.integration_cache_key(integration.issuer, integration.client_id)).returns(integration)
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id, azp: integration.client_id}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state, new_tab: true}

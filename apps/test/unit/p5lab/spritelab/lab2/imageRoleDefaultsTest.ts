@@ -43,6 +43,32 @@ describe('defaultRole', () => {
   it('is undefined for a level naming nothing', () => {
     expect(defaultRole(undefined, 'sprite')).toBeUndefined();
   });
+
+  it('lets a block placed by the level name its role by data tag', () => {
+    const tagged = {
+      ...defaults,
+      gamelab_spriteSay: 'hero',
+      'data:friend-says': 'friend',
+    };
+    const say = (data?: string) => ({
+      blockType: 'gamelab_spriteSay',
+      index: 0,
+      data,
+    });
+    expect(defaultRole(tagged, 'sprite', say())).toBe('hero');
+    expect(defaultRole(tagged, 'sprite', say('friend-says'))).toBe('friend');
+    // A tag the level does not name falls through to the block's role.
+    expect(defaultRole(tagged, 'sprite', say('other'))).toBe('hero');
+    // A tagged block's sockets can be named one by one, like a block type's.
+    const touch = (index: number) => ({
+      blockType: 'gamelab_checkTouching',
+      index,
+      data: 'meeting',
+    });
+    const perSocket = {...tagged, 'data:meeting': ['friend', 'hero']};
+    expect(defaultRole(perSocket, 'sprite', touch(0))).toBe('friend');
+    expect(defaultRole(perSocket, 'sprite', touch(1))).toBe('hero');
+  });
 });
 
 describe('defaultImageName', () => {

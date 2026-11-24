@@ -472,7 +472,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :quiz_questions, only: [:index, :show, :update] do
+    resources :quiz_questions, only: [:index, :show, :create, :update] do
       collection do
         get 'course_unit_search'
       end
@@ -1515,10 +1515,6 @@ Dashboard::Application.routes.draw do
     post '/aichat_events/submit_teacher_feedback', to: 'aichat_events#submit_teacher_feedback'
     get '/aichat_events/chat_history', to: 'aichat_events#chat_history'
 
-    # Lab2 Sprite Lab scenes UI variant: cross-project scene jumps.
-    get '/sprite_lab2/section_scenes', to: 'sprite_lab2#section_scenes'
-    get '/sprite_lab2/external_scenes', to: 'sprite_lab2#external_scenes'
-
     post '/aichat/find_toxicity', to: 'aichat#find_toxicity'
 
     resources :ai_interaction_feedback, only: [:create]
@@ -1544,13 +1540,14 @@ Dashboard::Application.routes.draw do
 
     resources :quiz_attempts, only: [:index, :create, :update]
     resource :adaptive_progress, controller: :adaptive_progress, only: [:show] do
+      get 'ai_metrics'
       put 'steps/:step_id/progress', action: :update_progress, as: :step_progress
       put 'steps/:step_id/generated_instructions', action: :update_generated_instructions, as: :step_generated_instructions
       put 'steps/:step_id/validation_history', action: :update_validation_history, as: :step_validation_history
     end
     resources :quiz_question_responses, only: [:create]
 
-    resources :challenges, only: [:index, :show] do
+    resources :challenges, only: [:index, :show, :create, :update, :destroy] do
       member do
         get :starter_image
       end

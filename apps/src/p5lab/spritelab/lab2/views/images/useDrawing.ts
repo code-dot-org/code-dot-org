@@ -5,6 +5,8 @@
 import {useCallback, useEffect, useRef, useState} from 'react';
 
 import {toImage} from '@cdo/apps/imageUtils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {standingFrameIndex} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {DEFAULT_IMAGE_STYLE} from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
 import {blankPaintImage} from '@cdo/apps/p5lab/spritelab/lab2/paintBlank';
@@ -22,10 +24,14 @@ import {ImageTarget, ImageWriter} from './useImageWriter';
 // the image list's tile, the World tab's palette and the next Run show the
 // picture as it is drawn.
 const STROKE_SAVE_MS = 800;
-// A pause's save stores the pixels in the project; the PNG upload behind the
+// A pause's save updates the picture on screen; the PNG upload behind the
 // image happens at most once per this gap, and once more when the drawing
 // is finished. The project's own save keeps its own throttle.
 const UPLOAD_GAP_MS = 5000;
+
+/** What the tools opened on. `other` is an image that is neither blank nor
+    AI-made: a drawing, an upload, or a hand-edited AI picture. */
+type DrawingOrigin = 'blank' | 'generated' | 'other';
 
 /** A drawing in progress: what it writes to, and what the editor opened. */
 export interface Drawing {
@@ -65,10 +71,20 @@ export interface DrawingTools {
   drawing: Drawing | null;
   /** The image's generation record when the tools opened on it. */
   openedOnGeneration: ImageProps['generation'];
+  /** The image's generation record changed without its pixels, as a
+      rating changes it. Tools open on that image take the record as their
+      own and stay open; without this, a changed record reads as a new
+      picture landing over the drawing. */
+  adoptGeneration: (key: string, generation: ImageProps['generation']) => void;
   /** What the frame shows over the editor's canvas until the editor has
       painted: a copy of the previous drawing's canvas, or the picture
       decoded ahead. */
   placeholderPicture: HTMLImageElement | HTMLCanvasElement | undefined;
+  /** The paint tools' canvas as it was when Done closed them, with the key
+      of its image. The frame shows it until the image's saved picture has
+      been drawn. */
+  closedPicture: {key: string; canvas: HTMLCanvasElement} | null;
+  releaseClosedPicture: () => void;
   /** The last pause-save failed; it is tried again at the next pause,
       Done or tab change. */
   saveFailed: boolean;
@@ -124,6 +140,9 @@ export default function useDrawing({
   const drawingRef = useRef(drawing);
   drawingRef.current = drawing;
   const [saveFailed, setSaveFailed] = useState(false);
+  const [closedPicture, setClosedPicture] =
+    useState<DrawingTools['closedPicture']>(null);
+  const releaseClosedPicture = useCallback(() => setClosedPicture(null), []);
   // The drawing that a generated picture replaced while a save of it was
   // still in flight; that save must not set the image's pixels back to the
   // drawing.
@@ -151,6 +170,12 @@ export default function useDrawing({
   // generated picture replaced the image while it was being drawn on.
   const openedOnGenerationRef = useRef<ImageProps['generation']>();
   const drawingIdRef = useRef(0);
+  // What the open drawing's first edit will report; null once that edit has
+  // been reported.
+  const firstEditReportRef = useRef<{
+    origin: DrawingOrigin;
+    target: ImageTarget;
+  } | null>(null);
   // A copy of the previous drawing's canvas, shown until the next image's
   // editor has painted, and which drawing the copy came from.
   const previousCanvasRef = useRef<{
@@ -175,6 +200,15 @@ export default function useDrawing({
     setSaveFailed(false);
     setDrawing(null);
   }, []);
+
+  const closeAfterDone = useCallback(
+    (key = drawingRef.current?.target.key) => {
+      const canvas = editorRef.current?.snapshot();
+      setClosedPicture(key && canvas ? {key, canvas} : null);
+      stopDrawing();
+    },
+    [stopDrawing]
+  );
 
   const abandonDrawing = useCallback(() => {
     abandonedDrawingIdRef.current = drawingRef.current?.id ?? null;
@@ -212,7 +246,16 @@ export default function useDrawing({
         ? images.find(image => image.key === target.key)
         : undefined;
       openedOnGenerationRef.current = existing?.props.generation;
+      firstEditReportRef.current = {
+        origin: !existing?.src
+          ? 'blank'
+          : existing.props.generation
+          ? 'generated'
+          : 'other',
+        target,
+      };
       leaveAfterSaveRef.current = false;
+      setClosedPicture(null);
       const id = ++drawingIdRef.current;
       if (existing?.sheet) {
         const {src, frameSize, poses} = existing.sheet;
@@ -281,6 +324,19 @@ export default function useDrawing({
   }, []);
 
   const scheduleStrokeSave = useCallback(() => {
+    const unreported = firstEditReportRef.current;
+    if (unreported) {
+      firstEditReportRef.current = null;
+      analyticsReporter.sendEvent(
+        EVENTS.HOAI2026_IMAGE_DRAW,
+        {
+          origin: unreported.origin,
+          imageType: unreported.target.imageType,
+          imageSubject: unreported.target.subject,
+        },
+        true
+      );
+    }
     dirtyRef.current = true;
     clearIdleTimer();
     idleTimerRef.current = window.setTimeout(() => {
@@ -375,17 +431,21 @@ export default function useDrawing({
             : d
         );
       } catch {
-        // The picture is still on the canvas. It is marked unsaved, so the
-        // next pause, Done or leaving the tab tries again from the canvas
-        // as it is then; a pending save would only carry older pixels.
-        dirtyRef.current = true;
-        uploadPendingRef.current = true;
-        pendingRef.current = null;
-        leaveAfterSaveRef.current = false;
-        nextFrameRef.current = null;
-        inFlightRef.current = false;
-        setSaveFailed(true);
-        return;
+        if (drawingRef.current?.id === drawingToSave.id) {
+          // The picture is still on the canvas. It is marked unsaved, so the
+          // next pause, Done or leaving the tab tries again from the canvas
+          // as it is then; a pending save would only carry older pixels.
+          dirtyRef.current = true;
+          uploadPendingRef.current = true;
+          pendingRef.current = null;
+          leaveAfterSaveRef.current = false;
+          nextFrameRef.current = null;
+          inFlightRef.current = false;
+          setSaveFailed(true);
+          return;
+        }
+        // This failed save was for a drawing that is no longer open, so
+        // there is nothing to retry.
       } finally {
         inFlightRef.current = false;
       }
@@ -410,14 +470,15 @@ export default function useDrawing({
           pending.final
         );
       } else if (final && drawingRef.current?.id === saved.id) {
-        stopDrawing();
+        // A new image's key is in `saved` before it is in `drawingRef`.
+        closeAfterDone(saved.target.key);
       } else if (nextFrameRef.current !== null) {
         const next = nextFrameRef.current;
         nextFrameRef.current = null;
         await openFrame(next);
       }
     },
-    [storePicture, saveEdited, stopDrawing, openFrame]
+    [storePicture, saveEdited, closeAfterDone, openFrame]
   );
 
   const selectFrame = useCallback(
@@ -479,9 +540,9 @@ export default function useDrawing({
       leaveAfterSaveRef.current = true;
       editorRef.current?.save();
     } else {
-      stopDrawing();
+      closeAfterDone();
     }
-  }, [stopDrawing]);
+  }, [closeAfterDone]);
 
   // Leaving the tab is Done: what was drawn is saved and the tools close.
   useEffect(() => {
@@ -494,10 +555,22 @@ export default function useDrawing({
     editorRef.current = editor;
   }, []);
 
+  const adoptGeneration = useCallback(
+    (key: string, generation: ImageProps['generation']) => {
+      if (drawingRef.current?.target.key === key) {
+        openedOnGenerationRef.current = generation;
+      }
+    },
+    []
+  );
+
   return {
     drawing,
     openedOnGeneration: openedOnGenerationRef.current,
+    adoptGeneration,
     placeholderPicture: previousCanvasRef.current?.canvas ?? drawing?.picture,
+    closedPicture,
+    releaseClosedPicture,
     saveFailed,
     startDrawing,
     leaveDrawing,

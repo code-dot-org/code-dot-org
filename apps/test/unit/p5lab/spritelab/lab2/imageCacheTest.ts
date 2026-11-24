@@ -2,8 +2,9 @@ import {
   findCachedImage,
   frameFileName,
   ImageCacheMissError,
-  resetMissingFrames,
+  resetImageCacheState,
   sentencePath,
+  VARIANT_COUNT,
   variantName,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 
@@ -17,10 +18,14 @@ jest.mock('lodash', () => ({
 const BASE = 'https://cache.test/generate/';
 const VERSION = 'v9';
 const FOLDER = `${BASE}${VERSION}/character/brave/dragon/_/pixel`;
+const OTHER_FOLDER = `${BASE}${VERSION}/character/calm/dragon/_/pixel`;
 
-// A tiny tree: the named variants' base frames, and one walking frame;
+// A tiny cache: the named variants' base frames, and one walking frame;
 // anything else is a 404.
-function installFetch(variants: string[] = ['00', '02']) {
+function installFetch(
+  variants: string[] = ['00', '02'],
+  folders: string[] = [FOLDER]
+) {
   const calls: string[] = [];
   // The project types fetch as jest-fetch-mock; this stub is plainer.
   (global as unknown as {fetch: unknown}).fetch = jest.fn(
@@ -29,7 +34,9 @@ function installFetch(variants: string[] = ['00', '02']) {
       calls.push(url);
       const ok = (body: BodyInit, type: string) =>
         new Response(body, {status: 200, headers: {'content-type': type}});
-      const variant = variants.find(v => url === `${FOLDER}/${v}-base.png`);
+      const variant = variants.find(v =>
+        folders.some(folder => url === `${folder}/${v}-base.png`)
+      );
       if (variant) {
         return ok(new Uint8Array([Number(variant), 8, 7]), 'image/png');
       }
@@ -55,7 +62,7 @@ const find = (overrides = {}) =>
 
 describe('imageCache', () => {
   beforeEach(() => {
-    resetMissingFrames();
+    resetImageCacheState();
   });
 
   it('names a filled sentence by sentence, one folder per word, and style', () => {
@@ -85,19 +92,52 @@ describe('imageCache', () => {
   it('passes over a missing variant, and the one shown last', async () => {
     installFetch(['01', '02']);
     expect((await find())?.variant).toBe(1);
-    expect((await find({avoidVariant: 1}))?.variant).toBe(2);
+    expect((await find())?.variant).toBe(2);
   });
 
   it('shows the only variant again rather than nothing', async () => {
     installFetch(['02']);
-    expect((await find({avoidVariant: 2}))?.variant).toBe(2);
+    expect((await find())?.variant).toBe(2);
+    expect((await find())?.variant).toBe(2);
+  });
+
+  it('brings back the variant found longest ago when every variant was found recently', async () => {
+    installFetch(['01', '02', '04']);
+    const found: (number | undefined)[] = [];
+    for (let i = 0; i < 7; i++) {
+      found.push((await find())?.variant);
+    }
+    expect(found).toEqual([1, 2, 4, 1, 2, 4, 1]);
+  });
+
+  it('leaves two of a full set to choose between', async () => {
+    installFetch([...Array(VARIANT_COUNT).keys()].map(variantName));
+    const found: number[] = [];
+    for (let i = 0; i < VARIANT_COUNT - 1; i++) {
+      found.push((await find())?.variant as number);
+    }
+    expect(new Set(found).size).toBe(VARIANT_COUNT - 1);
+    // The two are the variant not found yet and the variant found first.
+    // The shuffle is pinned to keep its input's order, so the
+    // lower-numbered is chosen, and that is the variant found first.
+    expect((await find())?.variant).toBe(found[0]);
+  });
+
+  it('starts again from nothing when the words change', async () => {
+    installFetch(['01', '02', '04'], [FOLDER, OTHER_FOLDER]);
+    expect((await find())?.variant).toBe(1);
+    expect((await find())?.variant).toBe(2);
+    expect((await find({wordIds: ['calm', 'dragon', '_']}))?.variant).toBe(1);
+    // Back to the first words: the two variants found for them earlier are
+    // forgotten.
+    expect((await find())?.variant).toBe(1);
   });
 
   it('has nothing when no variant is there, and asks each once', async () => {
     const calls = installFetch([]);
     expect(await find()).toBeUndefined();
     expect(await find()).toBeUndefined();
-    expect(calls).toHaveLength(3);
+    expect(calls).toHaveLength(VARIANT_COUNT);
   });
 
   it('asks again after a fetch that failed, and says so', async () => {
@@ -114,7 +154,7 @@ describe('imageCache', () => {
     expect(calls).toEqual([`${FOLDER}/00-base.png`, `${FOLDER}/00-base.png`]);
   });
 
-  it('has nothing for words or a style the tree lacks', async () => {
+  it('has nothing for words or a style the cache lacks', async () => {
     installFetch();
     expect(await find({wordIds: ['brave', 'cat', '_']})).toBeUndefined();
     expect(await find({style: 'smooth'})).toBeUndefined();

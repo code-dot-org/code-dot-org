@@ -282,6 +282,49 @@ class ChannelsTest < Minitest::Test
     assert_nil result['subprojects']
   end
 
+  def test_share_failure_checks_english_and_the_viewer_language
+    failure = {'type' => 'profanity', 'content' => 'darn'}
+    I18n.stubs(:locale).returns('es-MX')
+    ChannelsApi.any_instance.expects(:explain_share_failure).with('abc').returns(failure)
+    ChannelsApi.any_instance.expects(:explain_share_failure).with('abc', 'es').returns(failure)
+
+    get '/v3/channels/abc/share-failure'
+
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_equal failure, result['share_failure']
+    assert_equal failure, result['intl_share_failure']
+    assert_equal 'es', result['language']
+  end
+
+  def test_share_failure_viewer_language_only_skips_the_english_check
+    failure = {'type' => 'profanity', 'content' => 'darn'}
+    I18n.stubs(:locale).returns('es-MX')
+    ChannelsApi.any_instance.expects(:explain_share_failure).with('abc').never
+    ChannelsApi.any_instance.expects(:explain_share_failure).with('abc', 'es').returns(failure)
+
+    get '/v3/channels/abc/share-failure?viewer_language_only=true'
+
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_nil result['share_failure']
+    assert_equal failure, result['intl_share_failure']
+  end
+
+  def test_share_failure_viewer_language_only_still_checks_an_english_viewer
+    failure = {'type' => 'profanity', 'content' => 'darn'}
+    I18n.stubs(:locale).returns('en-US')
+    ChannelsApi.any_instance.expects(:explain_share_failure).with('abc').returns(failure)
+    ChannelsApi.any_instance.expects(:explain_share_failure).with('abc', anything).never
+
+    get '/v3/channels/abc/share-failure?viewer_language_only=true'
+
+    assert last_response.ok?
+    result = JSON.parse(last_response.body)
+    assert_equal failure, result['share_failure']
+    assert_nil result['intl_share_failure']
+  end
+
   private def timestamp(time)
     time.strftime('%Y-%m-%d %H:%M:%S.%L')
   end

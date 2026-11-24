@@ -1,4 +1,4 @@
-import {Box, Button, Tooltip} from '@mui/material';
+import {Box, Button, Tooltip, Typography} from '@mui/material';
 import {visuallyHidden} from '@mui/utils';
 import classNames from 'classnames';
 import {FunctionComponent, MouseEvent, ReactNode} from 'react';
@@ -23,20 +23,38 @@ export type ProgressWidgetSaveProps =
       saveStatusLabel: string;
     };
 
+/** Without `onLessonClick` the lesson name is plain text, for units walked in order. */
+export type ProgressWidgetLessonProps =
+  | {
+      /** Opens the lesson menu. */
+      onLessonClick: (e: MouseEvent<HTMLButtonElement>) => void;
+      lessonMenuExpanded?: boolean;
+    }
+  | {onLessonClick?: undefined; lessonMenuExpanded?: undefined};
+
+export type ProgressWidgetActionProps =
+  | {
+      /** The Continue button. */
+      action?: ReactNode;
+      actionSlotId?: undefined;
+    }
+  | {
+      action?: undefined;
+      /** Id of an empty slot that a portal from another React root fills; hidden while empty. */
+      actionSlotId: string;
+    };
+
 export type ProgressWidgetProps = {
-  /** Lesson name on the lesson menu button, e.g. "Lesson 3: Online Puzzles". */
+  /** Lesson name, e.g. "Lesson 3: Online Puzzles". */
   lessonLabel: string;
-  /** Opens the lesson menu. */
-  onLessonClick: (e: MouseEvent<HTMLButtonElement>) => void;
-  lessonMenuExpanded?: boolean;
   /** Names the bubble row for screen readers, e.g. "Lesson progress". */
   bubblesLabel: string;
   /** Bubbles as direct children; below 992px only the aria-current one shows. */
   children: ReactNode;
-  /** The Continue button. */
-  action?: ReactNode;
   className?: string;
-} & ProgressWidgetSaveProps;
+} & ProgressWidgetLessonProps &
+  ProgressWidgetActionProps &
+  ProgressWidgetSaveProps;
 
 const saveIconName: Record<
   Exclude<ProgressWidgetSaveStatus, 'none'>,
@@ -75,23 +93,38 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
   saveStatusLabel,
   children,
   action,
+  actionSlotId,
   className,
 }) => (
   <div className={classNames(moduleStyles.widget, className)}>
     <div className={moduleStyles.lesson}>
-      <Button
-        variant="outlined"
-        color="secondary"
-        size="extraSmall"
-        className={moduleStyles.lessonButton}
-        onClick={onLessonClick}
-        aria-expanded={lessonMenuExpanded}
-        endIcon={
-          <FontAwesomeV6Icon iconName="chevron-down" iconStyle="solid" />
-        }
-      >
-        <span className={moduleStyles.lessonLabel}>{lessonLabel}</span>
-      </Button>
+      {onLessonClick ? (
+        <Button
+          variant="outlined"
+          color="secondary"
+          size="extraSmall"
+          className={moduleStyles.lessonButton}
+          onClick={onLessonClick}
+          aria-expanded={lessonMenuExpanded}
+          endIcon={
+            <FontAwesomeV6Icon iconName="chevron-down" iconStyle="solid" />
+          }
+        >
+          <span className={moduleStyles.lessonLabel}>{lessonLabel}</span>
+        </Button>
+      ) : lessonLabel ? (
+        <Typography
+          variant="body4"
+          component="span"
+          className={classNames(
+            moduleStyles.lessonLabel,
+            moduleStyles.lessonTitle,
+          )}
+          title={lessonLabel}
+        >
+          {lessonLabel}
+        </Typography>
+      ) : null}
       {saveStatus !== 'none' && (
         <Tooltip title={saveStatusLabel} placement="bottom">
           <span
@@ -107,9 +140,6 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
           </span>
         </Tooltip>
       )}
-      <Box component="span" role="status" sx={visuallyHidden}>
-        {announcedSaveStatuses.includes(saveStatus) ? saveStatusLabel : ''}
-      </Box>
     </div>
     <div
       className={moduleStyles.bubbles}
@@ -118,7 +148,14 @@ const ProgressWidget: FunctionComponent<ProgressWidgetProps> = ({
     >
       {children}
     </div>
-    {action ? <div className={moduleStyles.action}>{action}</div> : null}
+    {actionSlotId ? (
+      <div id={actionSlotId} className={moduleStyles.action} />
+    ) : action ? (
+      <div className={moduleStyles.action}>{action}</div>
+    ) : null}
+    <Box component="span" role="status" sx={visuallyHidden}>
+      {announcedSaveStatuses.includes(saveStatus) ? saveStatusLabel : ''}
+    </Box>
   </div>
 );
 

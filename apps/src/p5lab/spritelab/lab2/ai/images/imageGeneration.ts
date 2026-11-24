@@ -11,6 +11,7 @@ import {createUuid} from '@cdo/apps/utils';
 
 import {CachedImage} from './imageCache';
 import {checkImageSafety, checkPromptSafety, markHandled} from './imageSafety';
+import {chooseKeyColor} from './keyColor';
 import {
   ASSUMED_BLOCK,
   ImageSize,
@@ -24,6 +25,7 @@ import {
   cropToContent,
   flattenOntoGround,
   removeBackground,
+  removeKeyColor,
 } from './removeBackground';
 import {ImageGenerationMetadata, ImageStyle, ImageType} from './types';
 
@@ -226,7 +228,7 @@ export function rawImageToBlob(raw: RawImage): Blob {
  * it already does. High-quality filter: downscaling the model's 1K render is
  * what anti-aliases the stored image.
  */
-async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
+export async function downscaleToFit(blob: Blob, maxPx: number): Promise<Blob> {
   try {
     const probe = await createImageBitmap(blob);
     const scale = maxPx / Math.max(probe.width, probe.height);
@@ -342,7 +344,9 @@ export async function generateImage(
     imageType,
     ...(options.subject && {subject: options.subject}),
     style,
-    ...(!cached && {seed, ...(temperature !== undefined && {temperature})}),
+    ...(cached
+      ? {variant: cached.variant}
+      : {seed, ...(temperature !== undefined && {temperature})}),
     // Recorded even at the default: the point is comparing what was asked
     // for against what came back.
     ...(style === 'pixel' && {pixelGrid: logicalGridFor(pixelBlock)}),
@@ -372,7 +376,13 @@ export async function generateImage(
   // opaque; pixel style gets grid-normalized.
   let blob = rawImageToBlob(raw);
   if (imageType === 'sprite' || imageType === 'block') {
-    blob = await removeBackground(blob, {soft: style === 'smooth'});
+    const matte = {soft: style === 'smooth'};
+    // A cached character set's base frame stands in for a single picture.
+    // Its backdrop is the key color its prompt names, and the fill from the
+    // corner would miss a gap the character closes off.
+    blob = cached?.characterSet
+      ? await removeKeyColor(blob, chooseKeyColor(prompt).rgb, matte)
+      : await removeBackground(blob, matte);
   }
   // Smooth sprites are cropped like blocks always were, so the stored image
   // is what the runtime trim pass would have made anyway (pixel sprites

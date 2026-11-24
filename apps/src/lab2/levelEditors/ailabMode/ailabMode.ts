@@ -3,7 +3,11 @@
   keeps only the keys and values Lab 2 AI Lab understands; anything else is
   dropped when the level is next saved.
 */
-import {isValidHyperparameter} from '@cdo/apps/ailab/engine';
+import {
+  describeTestRows,
+  isValidHyperparameter,
+  type TestRows,
+} from '@cdo/apps/ailab/engine';
 
 import {setJsonObjectValue} from '../jsonUtils';
 
@@ -50,6 +54,58 @@ export function isValidAccuracy(value: unknown): boolean {
     Number.isFinite(value) &&
     value >= MIN_ACCURACY &&
     value <= MAX_ACCURACY
+  );
+}
+
+export const TEST_ROWS_UNITS = ['percent', 'count'] as const;
+export type TestRowsUnit = (typeof TEST_ROWS_UNITS)[number];
+
+export function isValidTestRowsAmount(
+  unit: TestRowsUnit,
+  amount: number
+): boolean {
+  return unit === 'count'
+    ? Number.isInteger(amount) && amount >= 1
+    : amount > 0 && amount < 100;
+}
+
+function isValidTestRows(value: unknown): boolean {
+  if (typeof value !== 'object' || value === null) {
+    return false;
+  }
+  const entries = Object.entries(value);
+  if (entries.length !== 1) {
+    return false;
+  }
+  const [unit, amount] = entries[0];
+  return (
+    (TEST_ROWS_UNITS as readonly string[]).includes(unit) &&
+    typeof amount === 'number' &&
+    isValidTestRowsAmount(unit as TestRowsUnit, amount)
+  );
+}
+
+const getTestRows = (mode: ModeObject) => mode.testRows as TestRows | undefined;
+
+export function getTestRowsUnit(mode: ModeObject): TestRowsUnit {
+  const testRows = getTestRows(mode);
+  return testRows ? describeTestRows(testRows).unit : 'percent';
+}
+
+export function getTestRowsAmount(mode: ModeObject): number | undefined {
+  const testRows = getTestRows(mode);
+  return testRows && describeTestRows(testRows).amount;
+}
+
+export function setTestRows(
+  mode: ModeObject,
+  unit: TestRowsUnit,
+  amount: number | undefined
+): ModeObject {
+  return setJsonObjectValue(
+    mode,
+    'testRows',
+    amount === undefined ? undefined : {[unit]: amount}
   );
 }
 
@@ -110,6 +166,9 @@ function isValidModeValue(
   }
   if (key === 'requireAccuracy') {
     return isValidAccuracy(value);
+  }
+  if (key === 'testRows') {
+    return isValidTestRows(value);
   }
   if (key === 'idColumn' && value === null) {
     return true;
@@ -260,6 +319,7 @@ const SET_BY_HIDDEN_TESTING: ModeObject = {
   requireAccuracy: undefined,
   hideSave: undefined,
   hyperparameters: undefined,
+  testRows: undefined,
 };
 
 export function isSetByHiddenTesting(mode: ModeObject, key: string): boolean {

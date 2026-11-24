@@ -100,11 +100,11 @@
   height: 40px;
   background-color: var(--background-neutral-white-fixed);
   border-radius: var(--shape-round);
+}
 
-  img {
-    width: 30px;
-    height: 20px;
-  }
+.chatAvatarIcon {
+  font-size: 20px;
+  color: var(--sentiment-information-50);
 }
 
 .chatMeta {

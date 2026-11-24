@@ -119,9 +119,14 @@ module AiLessonSummariesHelper
           type: "json_schema",
           json_schema: {
             name: "lesson_summary",
+            # Without strict, the schema only guides the model; it has
+            # returned objects where these strings belong.
+            strict: true,
             schema: {
               type: "object",
               properties: response_props,
+              required: response_props.keys,
+              additionalProperties: false,
             }
           }
         }

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894904-0688c43d1d85",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 3: The AI's Brain",
+  "question": "This AI studied eight pictures labeled “instrument,” and now it is guessing about new ones. Which will it get right, which will it miss, and what do those eight pictures teach it?\n\nSteps:\n1. Use the arrow tool to point at the new picture the AI is most likely to call an instrument.\n2. Place a shape on the new picture the AI is most likely to miss.\n3. Record your voice explaining the pattern the AI learned from the eight pictures. Name one more picture you would add to its training set.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but the voice recording does not name a pattern from the training pictures."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to picture A (the violin) AND a shape is on picture B or C AND the voice recording names a pattern the AI learned (such as strings, a long neck, or a rounded body)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a kind of picture to add to the training set that would fix the problem, and explains why."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894904-0688c43d1d85-a8be4246",
+  "whiteboard_starter_image_alt_text": "On the left, eight training pictures, all labeled \"instrument,\" each showing a guitar in a different color. On the right, three new pictures: A, a violin with a bow; B, a drum with drumsticks; and C, a flute."
+}

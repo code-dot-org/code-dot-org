@@ -69,6 +69,10 @@ class LangfuseHelperTest < ActiveSupport::TestCase
   test 'adaptive trace swallows client failures' do
     LangfuseClientHelper::Client.any_instance.stubs(:create_trace_and_generation).raises(StandardError, 'down')
     Rails.logger.expects(:warn).with(regexp_matches(/trace_adaptive_generation failed: down/))
+    Observability::Errors.expects(:report).with(
+      instance_of(StandardError),
+      context: {trace_id: 'ab' * 16, trace_name: 'adaptive-instructions', outcome: 'success'}
+    )
 
     assert_nil LangfuseHelper.trace_adaptive_generation(**default_args)
   end

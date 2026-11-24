@@ -1,0 +1,67 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T17:45:13.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The weather team now wants a linear regression model for humidity based on the hour of the day. This time, the model has not yet been created: you’ll need to create, train, and test the model yourself.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Create a new, untrained linear regression model.\r\n2. Train it on the inputs (hours) and outputs (humidities).\r\n3. Compute the model’s prediction for the humidity at 3 pm (hour 15) and at 11 pm (hour 23) and print each prediction. Then, print the actual humidity recorded in the dataset for 3 pm and 11 pm.\r\n4. Run the program and compare the line with the readings, as in Level 1.\r\n\r\n**💻 Coding Tip**\r\n\r\nTo create a new untrained model, call `LinearRegression()` and save the result in a variable.\r\n\r\nUse `model.fit` to train it on a dataset of inputs and outputs.\r\n\r\nThe `humidities` list stores all of the humidities from the training data, sorted by hour. `humidities[0]` is the humidity recorded at midnight.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "example",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import LinearRegression\nfrom helpers import draw_chart\n\n# The day's readings in percent, one per hour from midnight (0) to 11 pm (23)\nhours = [[hour] for hour in range(24)]\nhumidities = [84, 87, 89, 90, 89, 87, 84, 79, 74, 68, 62, 57,\n              52, 49, 47, 46, 47, 49, 52, 57, 62, 68, 74, 79]\n\n# TODO 1: Create a new, untrained linear regression model\n\n# TODO 2: Train the model on the hours and the humidities\n\n# TODO 3: Predict and print the 3 pm and 11 pm humidities\n\n# Draw the chart\ndraw_chart(hours, humidities, model, \"Humidity (%)\")\n",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\n\n\n# Draws the day's readings as dots and, once the model is trained, its line.\ndef draw_chart(hours, readings, model, label):\n    x = [hour[0] for hour in hours]\n    plt.scatter(x, readings)\n    if hasattr(model, \"coef_\"):\n        plt.plot(x, model.predict(hours))\n    plt.xlabel(\"Hour of the day\")\n    plt.ylabel(label)\n    plt.xticks(range(0, 24, 3))\n    plt.show()\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "validation.py",
+      "contents": "import contextlib\nimport io\nimport re\nfrom unittest import TestCase\n\nfrom sklearn.exceptions import NotFittedError\nfrom sklearn.utils.validation import check_is_fitted\nfrom unittest_runner import ValidationProtocol\n\n\ndef load_student_program():\n    \"\"\"Imports main into test, preventing additional output and chart calls\"\"\"\n    import helpers\n    helpers.draw_chart = lambda *args, **kwargs: None\n    with contextlib.redirect_stdout(io.StringIO()):\n        import main\n    return main\n\n\nclass TestHumidityModel(TestCase):\n    longMessage = False\n\n    def test_model_is_trained(self):\n        \"\"\"The model is trained\"\"\"\n        try:\n            check_is_fitted(load_student_program().model)\n        except NotFittedError:\n            self.fail(\"The model hasn't been trained yet\")\n\n    def test_print_1500(self):\n        \"\"\"Prints model's prediction for 3pm\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        printed = {round(float(n)) for n in re.findall(r\"-?\\d+(?:\\.\\d+)?\", output)}\n        self.assertIn(63, printed, \"Output doesn't include correct prediction for 3 pm\")\n\n    def test_print_2300(self):\n        \"\"\"Prints model's prediction for 11pm\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        printed = {round(float(n)) for n in re.findall(r\"-?\\d+(?:\\.\\d+)?\", output)}\n        self.assertIn(52, printed, \"Output doesn't include correct prediction for 11 pm\")\n",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFX9JcY0EP21afMHISj6uVQg4g+59OIzUb4pa2W4J\nrpgF4fJi2rLr0nr8WnSVq0386eA0D+Fr2XW/3W5uJDibTY5TPfPzta0QPZAs\nJwybJQs69Y+QhUVtI0ECmXwwXYKNkBzeRcgWLpcsCXz0deNJGyyaagGQifkL\n9HCdV72SUekQ+zwPIGh5cAH4u8q6M8vLtSG25Tj5YGlR3H2/q2doCJV7svFi\nbJl0q8NF8xd2V1BQeWX7f+EQom5XZmE+KosZiYURkVUs/S5V8ZgGPuv+NnIL\nClqC5QDjrRT1pUj1GNoE1/i+VCdItZm5y3VXEMCpCWkhDl7AvvIpFYvdXva6\nkAfK2lFJxdK7RLOiTgPvgihx/JlXpz0ousM9yUr+VpKkkAFBOok3XvsFti0x\nSikhFfPsz7wzCwT90tPL9UOLn65G1ZUBqd6NsrP98gEAZgFWYUJlSde6sWWb\n3sKTWwSPMQt64m4kcwYzretOn/uR5+DGEu9cDukvHdBxYRzcF8xza/exNuuC\nrLj4Fyoi3jTcwV7YpwbN/AWgC6Jiy6VJosdexcnd6st9ramUgS4l3ZK9gR0W\nzsK0AYESA9uzxPWb0TAWh6BTbxOU0YuPMgequMWgfDrlZbIIUku4PJMenBby\nNSIo5/Ks0SxjshVR+OhRz9pyB9k0C00an23QIGsoDzNLm+YTW6WCoSGlAcwd\nuqfQXDppPXFeO/OMbLk7gDQAte2qAoLNGXXqf0xIbwl2GxnRGqkQlteM/Hgh\nx4P1+Oh2FWTuU3mvCN+nIONDTVRoAtdSiR0CFCeyRhaUd+GwQl8H1KV8Y6cn\nGp2xdGEJbJdj3HJVpe2u0utxZzSStwKHlaijD+pODG4E+/2pqAP8LQwA1ndt\nvoOMdqLQaTjvaAPIvI7Jsq2LQgXH6tTCX5PIHmkIQCjz5QxX9L64g56+RcBt\nyeNX+ojJsGBvYveT85czEhhLDQJ55EYPR50yRBG98mlba3n4seZLL3acJI27\nmtJLJoWT2ECSQmF0kwrrmr4hWErZZWj4NSm586l1qs6jzvRUGC/qO5oetnb8\nrUOSVGrxV5EmccibIVrA2fI2RrM6jLtNUr/cYbIs0sPwFTF2avy8fbkEkNtZ\nJe6h8D5PskWFU0xOyPjb1n8LX+iCSruHa4r3fCHKTvCuBH471eZLFqucXDHf\n07++39MOi3oxIOcks89EZO7LzSvqunJaYXKzomrsx+pdLcgfxkmMTMQjPKi+\nc6o5qONaMME3vvkKEkxWDF7CaXr0RzU5VPKkMlHVEfyUWPhVMggOguHlAurk\nB7Df7P0UX2L3JU4/YXJ92kigeuq/6/TaqtpglvvyS67Xsn5mSNU321n2zBEh\nA6Ypfz+KEf9eKqHqyYWIzNYxKsGRKjktYQPIoLlPsILmse+Ig7NlC1734hNJ\n4ZYJt48xP8HuqpU6lLwBC0NC7d1LwAwbQkE4+kg/fXssESbZR9PYIN//AMu0\nNfjXcGnXGfjZ5b+BsURw/k1zOwJtl3DdVquTlcsrT8xXFD6ics7amTVkVBT4\n27Yc3z8CqvzlixDV+N2U2Ipq64RLl/TDJ0zJWyZxM2k/1giq08+yQktfdXb5\nC7Wi5rlT4oyX8s/bqnwUfIoz0JhdOw5uAT+2PRK44uM4Yl1ubEwMkONAkkjT\n6+rU+pqzNMnJEQtKwzMzCuYnNBNJuvPeyvWwLa40MHlIO85zDjoKAx9y2yxM\nXAgPeGxvoCoDkN6cMcaMGGvIfzkmDlXtgQ9AbuNdWZBldXf3j/mc\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 17:46:17 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 17:46:34 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

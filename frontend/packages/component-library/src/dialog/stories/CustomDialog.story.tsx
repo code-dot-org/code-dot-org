@@ -4,6 +4,8 @@ import {useState} from 'react';
 
 import CustomDialog, {CustomDialogProps} from '../CustomDialog';
 
+import styles from './dialogStories.module.scss';
+
 export default {
   title: 'DesignSystem/Dialog/CustomDialog',
   component: CustomDialog,
@@ -28,7 +30,7 @@ const SingleTemplate: StoryFn<CustomDialogProps> = args => {
             args.onClose?.();
           }}
         >
-          <div style={{width: 500, height: 500}}>
+          <div className={styles.contentBox}>
             {args.children || (
               <div id="dsco-dialog-description">
                 This is the content of the Custom Dialog.
@@ -55,7 +57,7 @@ const MultipleTemplate: StoryFn<{
         * Margins on this screen do not represent the component's margins, and
         are only added to improve Storybook view *
       </p>
-      <div style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+      <div className={styles.launcherColumn}>
         {args.components?.map((componentArg, index) => (
           <div key={index}>
             <Button
@@ -71,7 +73,7 @@ const MultipleTemplate: StoryFn<{
                   setValues({...values, [`dialog-${index}`]: false})
                 }
               >
-                <div style={{width: 500, height: 500}}>
+                <div className={styles.contentBox}>
                   {componentArg.children || (
                     <div id="dsco-dialog-description">
                       This is the content of the Custom Dialog.
