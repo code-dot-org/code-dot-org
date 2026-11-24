@@ -58,6 +58,7 @@ class DCDO < DynamicConfigBase
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
       'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true),
       'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
+      'hoai2026-aif-callout-enabled': DCDO.get('hoai2026-aif-callout-enabled', true),
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
       # Apex domain for the Web Lab 2 / Python Lab sandboxed preview origin.
       # Set to 'codeaiprojects.org' to move previews to the new domain; unset
@@ -72,6 +73,9 @@ class DCDO < DynamicConfigBase
       # Falls back to reCAPTCHA v3 when the Turnstile script cannot load. Leave off
       # until the gateway worker accepts and verifies X-Recaptcha-Token.
       'ai-gateway-recaptcha-fallback-enabled': DCDO.get('ai-gateway-recaptcha-fallback-enabled', false),
+      # Seconds a Turnstile challenge, or the reCAPTCHA fallback, may take before it fails.
+      'ai-gateway-turnstile-timeout-seconds': DCDO.get('ai-gateway-turnstile-timeout-seconds', 30),
+      'ai-gateway-recaptcha-timeout-seconds': DCDO.get('ai-gateway-recaptcha-timeout-seconds', 30),
       # Controls whether the output image goes through the additional LLM-as-judge safety layer.
       # Azure image moderation still runs when this is false.
       'aichat-output-image-llm-safety-judge-enabled': DCDO.get('aichat-output-image-llm-safety-judge-enabled', true),
@@ -86,6 +90,13 @@ class DCDO < DynamicConfigBase
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
       'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false),
       'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
+      # Replaces every adaptive level with an outage page, for when all AI providers are down.
+      'adaptive-ai-outage': DCDO.get('adaptive-ai-outage', false),
+      # Seconds the adaptive shell waits on one model call before giving up.
+      'adaptive-ai-timeout-seconds': DCDO.get('adaptive-ai-timeout-seconds', 45),
+      # Tutor replies on a checked step from which a judge rates the student's effort, and after which Continue opens regardless of the work.
+      'adaptive-effort-check-replies': DCDO.get('adaptive-effort-check-replies', 4),
+      'adaptive-reply-limit': DCDO.get('adaptive-reply-limit', 8),
       'adaptive-skill-map-tour-enabled': DCDO.get('adaptive-skill-map-tour-enabled', true),
       # AI descriptions of Python Lab theater output; also gates the access token server-side.
       'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false),
@@ -93,7 +104,9 @@ class DCDO < DynamicConfigBase
       'lesson-deep-dive-enabled': DCDO.get('lesson-deep-dive-enabled', true),
       # Whether the AI gateway serves users with blocked providers from another provider;
       # also lets dashboard mint gateway tokens for those users.
-      ai_gateway_fallback_is_enabled: DCDO.get('ai_gateway_fallback_is_enabled', false)
+      ai_gateway_fallback_is_enabled: DCDO.get('ai_gateway_fallback_is_enabled', false),
+      builders_challenge_url: DCDO.get('builders_challenge_url', nil),
+      'statsig-plugin-enabled': DCDO.get('statsig-plugin-enabled', false)
     }
   end
 end

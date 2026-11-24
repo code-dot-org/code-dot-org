@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check for Understanding",
-    "long_instructions": "##Curating a Dataset\r\n\r\nSomeone already picked these four features:\r\n* Floor Mess\r\n* Dirty Dishes, Cups, Cans\r\n* Bed Status\r\n* Posters on Wall\r\n\r\nWhat did they leave out, and what does the Smart Room Inspector app lose because of it?",
+    "long_instructions": "##Curating a Dataset\r\n\r\nSomeone already picked these four features:\r\n* Floor Mess\r\n* Dirty Dishes-Cups-Cans\r\n* Bed Status\r\n* Posters on Wall\r\n\r\nWhat did they leave out, and what does the Smart Room Inspector app lose because of it?",
     "stay_on_level_after_submit": "false",
     "height": "100",
     "placeholder": "Write your response here",
@@ -20,7 +20,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-10-27 18:31:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:40:49 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-10-27 18:31:50 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-10-28 18:40:49 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:07:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

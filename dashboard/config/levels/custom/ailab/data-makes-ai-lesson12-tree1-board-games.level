@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-20T02:28:53.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"datasets\": [\r\n    \"SC1-L12-board-games-base\"\r\n  ],\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"**Train Tree 1**\\n\\nGoal: Train your model and test it for your user.\\n\\n1. In **Predict**, choose the label from **My Data** in your guide.\\n2. In **Using**, choose only the two features you put on your map in Define Stop 3. Write them in **Tree 1** in your guide.\\n3. Click **Train model**.\\n\\nYou are done when your tree shows. Go to the **Testing** tab.\",\r\n  \"results\": \"**Train Tree 1**\\n\\nGoal: Train your model and test it for your user.\\n\\n1. Find your **Accuracy** at the top. Write it in **Tree 1** in your guide.\\n2. Click **Accuracy**. Write the **Correct** number in **Tree 1**.\\n3. Add **Correct** and **Incorrect**. Write the total after \\\"out of\\\". Click **Back to Testing**.\\n4. Write your user from Define Stop 2 on the **My user** line in **Tree 1**.\\n5. In **Make a Prediction**, choose a category for each feature that fits your user. Write them in the **My user** table.\\n6. Click **Predict**. Wait until the path stops moving. Write the prediction in **Tree 1**.\\n7. Click **Save image** (the camera under your tree). Click **Save to Backpack**.\\n\\nYou are done when **Tree 1** in your guide is full and your tree is in your Backpack.\\n\\nThink about: Which of your two features did your tree ask about? Why?\"\r\n}",
+    "display_name": "Board Games",
+    "bubble_choice_description": "This dataset contains qualities about different board games.",
+    "thumbnail_url": "https://images.code.org/af352195a5a3b3366da22e55e5e7cc68-board-game.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T02:28:53.118+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-project-board-1\\\"\"],\"cloned_from\":\"data-makes-ai-project-board-1\"},{\"changed_at\":\"2026-11-20 02:30:13 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:03:57 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:06:19 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

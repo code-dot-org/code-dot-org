@@ -1,0 +1,58 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T18:34:59.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "# Boba Run Splitter\n# Totals a boba order, adds a tip, and splits it among friends.\n\nprint(\"Boba Run Splitter\")\n\nnum_drinks = int(input(\"How many drinks? \"))\ndrink_price = float(input(\"Price per drink: \"))\ncoupon = float(input(\"Coupon amount: \"))\nnum_friends = int(input(\"How many friends are splitting? \"))\n\nsubtotal = num_drinks * drink_price - coupon\ntotal_cents = round(subtotal * 1.18 * 100)\n\nper_person = round(total_cents / num_friends)\nleftover_cents = total_cents % num_friends\n\nprint(\"Each person pays: $\" + str(per_person / 100))\nprint(\"Leftover cents: \" + str(leftover_cents))\nprint(\"Whoever picked the shop covers the leftover!\")",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMpMAawoYOy7718d\nDb6wwN4QYuO8Dq+MZ/uprcgwpG5EOlhiF8/IKwWM48bl0SeXHL4GXRDY0V92\nR1VrFoW4QURhPALgiJP37j9jrWG3SwsN1h/7sIqKUPzr4iD+gC8m9IxUU5a3\nbqKG6S7uIjjdqmX8T1EUpRT0+tQJc3QZthHzKCQ+eFjTMN6zTx4EthGlg02w\n6dRoelIQdBAzDPw1WNk0K8ckAQ9oAMM/YvZ6USrzAe5DLr/yscZEtPzCHCbZ\nhoEhOUXgRRrE1MC+a3Xgmz7QzCbFSeB31m8fTyr4aiw2c+cXJzBU6ybgCd8M\nO+awxCoFwoAaVj54ZkU0zbZYb2rw+P1W9VfyugXn0i3g54k1YKAN9gEQe61X\nMtbpajGgDtahYcFQnuDwiLu8osH7DOywr43LL0Z8+3lxLw/bdUj/RU03tJZn\nO7GqTpPcVacWW3Jt9MFeptp1mS+dLa6/XAikaxT12nPCmyIi/ZKHveMwYS4W\n2OdXx+J1p81Z5GSHgW8W9CeI22rn/G8jpF7ZZf2OOkF2ucQzx45rLm0K8Isr\nb8cJC0WpX3YsAvk6xs5Mp9t0cuHOpfS6+AwzEd4JBE2Vp4ELD58aXUBcyHid\nOeHjYqg7fuA1FRKzS9c4XW7p/QC9SI/gJt+gWQahbgCDbGPPcZW6PHhpss3P\nZmxzv7LgNVj5BZ4ZmShO/jYVcplso5Iw9sqnNbWZW2ocBKsi2TF9CLVgWvJ2\no/VykfkboCnYXTJZ6a1O9x+z49bTTEh0nBnRy9RTuU2cG0x0zpvzcrtN+/sH\nG+YYfj3qYSqgU1QGGpcDV1KmvJMv3iB0SABvjESPvlruKMTnAxZNBQRVLTeK\nhWQOWhMnn5Y9XNa+viDQ5OHteVLdf+5ZGYiVNBlqxc49JV8226oaxcu4spQH\n50ZvfGOgtTnkecf9je+2cdu9vo9tprj/OZAvZWCIxQjSAt84Y0IACVuGbjF/\nYZDc1T1Mur7hYPB6/QWhEMbWb9FTXCqiE0eV/QbkdMxbzACptodVqYYPXhHU\nO7vbC/Yk1aT0Vw1VAi4I1dZr80rw/LXxa2cqHvRXHvFtXfn/vp40fucMx6kq\n1OvB/8EFkyRMoMotMsGcPTncMZLB0ZnAvolrhKxhlR4Y3fnr+VVX1H6NlFbl\niM1c679Aw2FNNBdRasj8aI9XdPr0/xbzM2AOOpKCQ8txbB5CbpSPFG/Cm9XT\nngPTBL7W0h60Emf1LH0xVNn9\n",
+    "encrypted": "false",
+    "long_instructions": "## Modify\r\n\r\nModify the Boba Run Splitter so it:\r\n\r\n* asks for the total cost of toppings\r\n* includes toppings in the subtotal\r\n* uses `round()` to convert the total into cents\r\n* uses `%` to find the cents part of the group total\r\n* prints the group total before the split amount\r\n\r\nTest your program to make sure the new input changes the total.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildPython",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import contextlib\nimport io\nfrom unittest import TestCase\nfrom unittest.mock import patch\n\n\nclass TestModifyBobaSplitterToppings(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code with fixed, known inputs so we can\n        verify the toppings cost actually changes the total by a\n        predictable amount.\"\"\"\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n\n        # Baseline: no-topping-equivalent run and a with-toppings run,\n        # everything else held constant, so we can isolate toppings' effect.\n        cls.run_error = None\n        cls.stdout_with_toppings = None\n        cls.stdout_zero_toppings = None\n        try:\n            cls.stdout_with_toppings = cls._run(cls.source, [\"4\", \"5.00\", \"0\", \"3.00\", \"2\"])\n            cls.stdout_zero_toppings = cls._run(cls.source, [\"4\", \"5.00\", \"0\", \"0.00\", \"2\"])\n        except Exception as e:\n            cls.run_error = e\n\n    @staticmethod\n    def _run(source, inputs):\n        stdout = io.StringIO()\n        with patch(\"builtins.input\", side_effect=inputs), contextlib.redirect_stdout(stdout):\n            exec(compile(source, \"main.py\", \"exec\"), {})\n        return stdout.getvalue()\n\n    def test_runs_without_error(self):\n        \"\"\"Runs without an error when given a toppings amount\"\"\"\n        self.assertIsNone(\n            self.run_error,\n            f\"Your program raised an error while running: {self.run_error}. \"\n            \"Make sure you added a new input() for toppings cost, in addition to the existing inputs.\"\n        )\n\n    def test_toppings_included_in_subtotal(self):\n        \"\"\"Including a toppings cost changes the resulting total\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        self.assertNotEqual(\n            self.stdout_with_toppings,\n            self.stdout_zero_toppings,\n            \"Running your program with $3.00 in toppings produced the exact same output as running it with $0.00 in toppings. \"\n            \"Make sure toppings is actually included in your subtotal calculation.\"\n        )\n\n    def test_group_total_printed_before_split_amount(self):\n        \"\"\"Prints the group total before the per-person split amount\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        lines = self.stdout_with_toppings.splitlines()\n        total_index = next((i for i, line in enumerate(lines) if \"group total\" in line.lower() or \"total:\" in line.lower()), None)\n        split_index = next((i for i, line in enumerate(lines) if \"each person pays\" in line.lower()), None)\n        self.assertIsNotNone(\n            total_index,\n            \"We didn't find a line printing the group total. Make sure you print the group total before the split amount.\"\n        )\n        self.assertIsNotNone(split_index, \"We didn't find the 'Each person pays' line -- make sure it's still there.\")\n        self.assertLess(\n            total_index,\n            split_index,\n            \"The group total should print BEFORE the split amount, but we found it printed after (or in the wrong order).\"\n        )\n\n    def test_group_total_shown_in_dollars_and_cents(self):\n        \"\"\"The group total is shown as dollars and cents, derived using round() and %\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        lines = self.stdout_with_toppings.splitlines()\n        total_line = next((line for line in lines if \"group total\" in line.lower() or \"total:\" in line.lower()), None)\n        self.assertIsNotNone(total_line, \"We didn't find a line printing the group total.\")\n        # 4 drinks x $5.00 + $3.00 toppings - $0 coupon = $23.00, x 1.18 tip = $27.14 -> 2714 cents -> $27.14\n        self.assertIn(\n            \"27.14\",\n            total_line.replace(\"$\", \"\"),\n            f\"Expected the group total to come out to $27.14 with these inputs, but got: {total_line}. \"\n            \"Check that toppings is added to the subtotal, and that you're using round() and % correctly to split it into dollars and cents.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20T18:34:59.884+00:00\",\"changed\":[\"cloned from \\\"csp_unit1_lesson27_level1_dev_27_28\\\"\"],\"cloned_from\":\"csp_unit1_lesson27_level1_dev_27_28\"}]"
+}]]></config>
+</Pythonlab>

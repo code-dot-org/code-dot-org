@@ -10,7 +10,7 @@ include:
   # Services the dashboard server depends on
   - path: ./docker/developers/docker-compose.mysql.yml
   - path: ./docker/developers/docker-compose.redis.yml
-  - path: ./docker/developers/docker-compose.minio.yml
+  - path: ./docker/developers/docker-compose.silo.yml
 
   # The dashboard server itself
   - path: ./docker/developers/docker-compose.dashboard.yml
@@ -42,7 +42,7 @@ services:
         echo 'cloudfront_private_key: localoverride' &&
         echo 'slack_bot_token: localoverride' &&
         echo \"properties_encryption_key: ''\" &&
-        echo 'aws_s3_endpoint: http://localhost:9000' &&
+        echo 'aws_s3_endpoint: http://localhost:9002' &&
         echo 'aws_s3_access_key_id: local-development' &&
         echo 'aws_s3_secret_access_key: allstudents' &&
         echo 'aws_s3_emulated: true'

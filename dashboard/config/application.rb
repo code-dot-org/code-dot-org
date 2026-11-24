@@ -40,8 +40,9 @@ module Dashboard
 
     # Manually load some config values for the new version of Rails while we are finalizing the update.
     # TODO infra: start invoking config.load_defaults 7.1 and remove these
-    config.active_support.cache_format_version = 7.1
     config.active_record.belongs_to_required_validates_foreign_key = false
+    config.active_support.cache_format_version = 7.1
+    config.add_autoload_paths_to_load_path = false
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
@@ -79,10 +80,6 @@ module Dashboard
     end
 
     if Rails.env.development?
-      # Autoload mailer previews in development mode so changes are picked up without restarting the server.
-      # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
-      config.autoload_paths << Rails.root.join('test/mailers/previews')
-
       # Automatically load tools intended to make the local development
       # environment behave more like production.
       require 'cdo/local_development'

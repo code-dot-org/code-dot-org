@@ -26,6 +26,15 @@ export function arrowSetFor(state: ControlsState): ArrowSet {
   return state.gravity > 0 ? 'jump' : 'jumpDown';
 }
 
+export const ARROW_AND_SPACE_KEYS = new Set([
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowUp',
+  'ArrowDown',
+  ' ',
+  'Spacebar',
+]);
+
 export type GameKey = 'left' | 'right' | 'up' | 'down';
 
 const KEY_EVENT_INIT: Record<GameKey, KeyboardEventInit> = {
@@ -42,7 +51,17 @@ const KEY_EVENT_INIT: Record<GameKey, KeyboardEventInit> = {
  */
 export function dispatchGameKey(type: 'keydown' | 'keyup', key: GameKey) {
   const init = KEY_EVENT_INIT[key];
-  window.dispatchEvent(
-    new KeyboardEvent(type, {...init, which: init.keyCode, bubbles: true})
-  );
+  const event = new KeyboardEvent(type, {
+    ...init,
+    which: init.keyCode,
+    bubbles: true,
+  });
+  onScreenKeyEvents.add(event);
+  window.dispatchEvent(event);
+}
+
+const onScreenKeyEvents = new WeakSet<Event>();
+
+export function isOnScreenGameKey(event: Event): boolean {
+  return onScreenKeyEvents.has(event);
 }

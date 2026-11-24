@@ -10,9 +10,6 @@ import {columnWidths, rowHeight, cellStyle} from './AssignmentVersionMenuItem';
 const style = {
   item: {
     backgroundColor: color.charcoal,
-    ':hover': {
-      backgroundColor: color.charcoal,
-    },
     cursor: 'default',
   },
   wrapper: {

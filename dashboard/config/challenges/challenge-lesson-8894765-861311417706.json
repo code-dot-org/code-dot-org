@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894765-861311417706",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 10: The Final Verdict",
+  "question": "A town just put an AI in charge of its traffic lights. You get to decide when the AI works alone and when a person has to step in.\n\nSteps:\n1. Start recording. Pick two situations from the list below.\n2. For each one, say who should decide: the AI alone, the AI with a human check, or a human only. Give a reason for each.\n3. Finish with one rule that fits both situations. Start it with “A human should step in when.”\n\nSituation list:\n- A normal weekday morning\n- A parade that closes three streets\n- A storm that makes the power flicker\n- A school bus that breaks down in an intersection",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give a decision for any situation on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student gives a decision for only one situation, or gives a decision with no reason."
+    },
+    {
+      "level": 2,
+      "description": "Student says who decides (the AI alone, the AI with a human check, or a human only) for 2 situations AND gives a reason for each."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says one rule that fits both situations, starting with \"A human should step in when,\" and names the stakes or the consequences."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

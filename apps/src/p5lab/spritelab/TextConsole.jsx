@@ -146,7 +146,7 @@ export default class TextConsole extends React.Component {
 
   render() {
     return (
-      <div>
+      <div data-notranslate="true">
         <Transition in={this.state.open} timeout={1000}>
           {state => (
             <div

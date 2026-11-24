@@ -36,7 +36,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-05-21 13:22:27 UTC",
+    "serialized_at": "2026-11-18 21:59:18 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -129,7 +129,7 @@
       "key": "a817cf6e-a266-4693-9a40-5c69b28b3459",
       "position": 4,
       "properties": {
-        "progression_name": "Education Specific AI Tools"
+        "progression_name": "Education Specific AI Applications"
       },
       "seeding_key": {
         "activity_section.key": "a817cf6e-a266-4693-9a40-5c69b28b3459",
@@ -441,7 +441,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Education Specific AI Tools"
+        "progression": "Education Specific AI Applications"
       },
       "bonus": false,
       "seeding_key": {
@@ -463,7 +463,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Education Specific AI Tools"
+        "progression": "Education Specific AI Applications"
       },
       "bonus": false,
       "seeding_key": {
@@ -485,7 +485,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Education Specific AI Tools"
+        "progression": "Education Specific AI Applications"
       },
       "bonus": false,
       "seeding_key": {
@@ -507,7 +507,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Education Specific AI Tools"
+        "progression": "Education Specific AI Applications"
       },
       "bonus": false,
       "seeding_key": {
@@ -529,7 +529,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Education Specific AI Tools"
+        "progression": "Education Specific AI Applications"
       },
       "bonus": false,
       "seeding_key": {
@@ -888,6 +888,9 @@
 
   ],
   "objectives": [
+
+  ],
+  "objectives_script_levels": [
 
   ],
   "lessons_standards": [

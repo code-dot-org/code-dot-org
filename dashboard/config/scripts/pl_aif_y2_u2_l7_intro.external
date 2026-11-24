@@ -1,0 +1,43 @@
+name 'pl-aif-y2-u2-l7-intro'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>Section 7: Bringing It Together</h1>
+
+<div style="display: inline-block; background-color: #E4E2F8; color: #1F1976; font-weight: bold; font-size: 16px; padding: 4px 12px; border-radius: 10px; margin-bottom: 12px;">Aligns to curriculum Lesson 13</div>
+
+<p>This section prepares you to teach the Image Classifier Project, the lesson where your students stop learning pieces of machine learning and start using all of them at once.</p><p> Over three class days, each student picks two image categories, decides which yes/no questions could tell them apart, labels their own data, and writes a nearest-neighbor classifier in Python to predict which category a new image belongs to.</p>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+  <div style="font-size: 16px; line-height: 1.5;"><b>Curriculum Lesson 13:</b> Image Classifier Project</div>
+  <a href="PASTE_UNIT_2_LESSON_13_URL_HERE" style="display: inline-block; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; padding: 6px 14px; border-radius: 8px; text-decoration: none; margin-top: 6px; font-size: 16px;">View Curriculum Lesson 13</a>
+</div>
+
+<hr>
+
+<p><b>In this section, you'll:</b></p>
+<div style="margin-bottom: 6px; font-size: 16px;">&bull; Walk through the full project pipeline, from brainstorming categories to writing a distance function</div>
+<div style="margin-bottom: 6px; font-size: 16px;">&bull; Read the project rubric the way you'll use it to give feedback</div>
+<div style="margin-bottom: 6px; font-size: 16px;">&bull; Trace a distance function line by line, the same code your students will write</div>
+<div style="margin-bottom: 6px; font-size: 16px;">&bull; Plan the three days so the long coding stretch doesn't catch your students off guard</div>
+<div style="font-size: 16px;">&bull; Spot and fix the most common problem: features that don't actually tell the two categories apart</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Notice as you explore:</b> the project is the whole unit in miniature. Features, labeled data, training and test sets, nearest neighbors, and evaluation all show up again. When a student gets stuck, ask which earlier lesson the sticking point comes from, and you'll know what to revisit.</div>
+</div>
+
+<hr>
+
+<div style="display: flex; gap: 6px; margin-top: 24px; max-width: 700px;">
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Section 1</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Section 2</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Section 3</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Section 4</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Section 5</div>
+  <div style="flex: 1; text-align: center; background-color: #ACA8EA; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Section 6</div>
+  <div style="flex: 1; text-align: center; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 16px; padding: 10px 4px; border-radius: 6px;">Section 7</div>
+</div>
+
+
+MARKDOWN

@@ -29,8 +29,11 @@ export interface LevelMode {
   /** The level tells how AI made the student's image, after the first
       picture made in a visit. */
   learning?: boolean;
-  /** Where the level's pictures come from (imageCache.ts); the tree first
-      when unset. */
+  /** Enable student upload. If the level sets an image type, the upload will be of that type,
+   * otherwise the student assigns a type. */
+  enableImageUpload?: boolean;
+  /** Where the level's pictures come from (imageCache.ts); the cache when
+      unset. */
   imageSource?: ImageSource;
   /** The Images tab offers one image, of the level's imageType, with no
       adding or deleting. Unset, the tab is as in free play. */
@@ -41,6 +44,9 @@ export interface LevelMode {
       without leaving the level. The level still opens on its kind's first
       tab. Names that are not editor tabs are ignored. */
   extraTabs?: string[];
+  /** The tab the level opens on, in place of its kind's first. Ignored
+      unless the level shows that tab. */
+  startTab?: Tab;
   /** The Images tab has no New button: the student can regenerate or draw
       on the images it lists, but cannot add one. */
   noNewImages?: boolean;
@@ -94,7 +100,10 @@ export function tabsForMode(mode: LevelMode | undefined): Tab[] | undefined {
       tabs.push(tab);
     }
   });
-  return tabs;
+  const start = mode.startTab;
+  return start && tabs.includes(start)
+    ? [start, ...tabs.filter(tab => tab !== start)]
+    : tabs;
 }
 
 /** Whether the level is a world level: its work is placing images on the
@@ -125,7 +134,17 @@ export function generationLimitForMode(
     : undefined;
 }
 
-/** The source a mode's pictures come from: the tree first unless named. */
+/** The source a mode's pictures come from: the cache unless named. */
 export function imageSourceForMode(mode: LevelMode | undefined): ImageSource {
   return mode?.imageSource ?? 'cached';
+}
+
+/** Only a levelbuilder gets the model. Anyone else gets the cache, whatever
+    the level or the page's address asks for. */
+export function imageSourceFor(
+  mode: LevelMode | undefined,
+  requested: ImageSource | undefined,
+  isLevelbuilder: boolean
+): ImageSource {
+  return isLevelbuilder ? requested ?? imageSourceForMode(mode) : 'cached';
 }

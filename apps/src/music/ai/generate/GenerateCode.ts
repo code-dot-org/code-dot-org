@@ -81,12 +81,16 @@ export const generateSongAi = async (
   promptTextExtra?: string
 ) => {
   const library = MusicLibrary.getInstance();
+  const packFolder = library?.getFolderForFolderId(packId);
+  const soundsFolder =
+    packFolder && !library?.isPackRemoved(packFolder.id)
+      ? packFolder
+      : library?.getFolderForFolderId('indie');
   const sounds =
-    library
-      ?.getFolderForFolderId(packId || 'indie')
-      ?.sounds?.map(sound => {
+    soundsFolder?.sounds
+      ?.map(sound => {
         if (sound.type !== 'preview') {
-          return `"${packId}/${sound.src}" (${sound.length} measures)`;
+          return `"${soundsFolder.id}/${sound.src}" (${sound.length} measures)`;
         }
       })
       .filter(sound => sound !== undefined)

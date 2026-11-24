@@ -1,8 +1,16 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MakePane from '@cdo/apps/p5lab/spritelab/lab2/views/images/MakePane';
 import type {SentenceSceneParts} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
+
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: jest.fn()},
+}));
+const sendEvent = analyticsReporter.sendEvent as jest.Mock;
 
 const parts = (over: Partial<SentenceSceneParts> = {}): SentenceSceneParts => ({
   mode: 'edit',
@@ -11,7 +19,6 @@ const parts = (over: Partial<SentenceSceneParts> = {}): SentenceSceneParts => ({
   panelRef: {current: null},
   frame: null,
   frameFilled: false,
-  cachedTag: null,
   behindTheScenes: null,
   status: null,
   sentence: <span>sentence</span>,
@@ -143,5 +150,31 @@ describe('MakePane', () => {
     rerender(shown(true));
     expect(headerSlot.textContent).toBe('');
     headerSlot.remove();
+  });
+
+  it.each([
+    ['Replace', 'replace', 1],
+    ['Cancel', 'cancel', 0],
+  ])('reports %s in the replace dialog', (button, outcome, generations) => {
+    sendEvent.mockClear();
+    const generate = jest.fn();
+    render(<MakePane parts={parts({generate})} width={280} editedByHand />);
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(sendEvent).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole('button', {name: button}));
+    expect(generate).toHaveBeenCalledTimes(generations);
+    expect(sendEvent).toHaveBeenCalledWith(
+      EVENTS.HOAI2026_IMAGE_REPLACE_CONFIRM,
+      {outcome},
+      true,
+      outcome
+    );
+  });
+
+  it('reports nothing when it generates without asking', () => {
+    sendEvent.mockClear();
+    render(<MakePane parts={parts()} width={280} />);
+    fireEvent.click(screen.getByRole('button', {name: 'Generate'}));
+    expect(sendEvent).not.toHaveBeenCalled();
   });
 });

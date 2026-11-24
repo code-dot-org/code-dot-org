@@ -1,0 +1,40 @@
+name 'pl-aif-y2-u2-l6-facilitation-features'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Choosing Representations
+
+## Watch for: "My Classifier Should Just Work"
+
+<div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #611D00; margin-bottom: 10px;">Stuck: Tests One Note, Moves On</div>
+    <div style="font-size: 16px; color: #611D00; line-height: 1.6;">Student runs their conditional once, sees the right answer print, and assumes the classifier is finished.</div>
+  </div>
+  <div style="flex: 1; min-width: 250px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #003F25; margin-bottom: 10px;">Strong: Tries to Break It</div>
+    <div style="font-size: 16px; color: #003F25; line-height: 1.6;">Student tests several different notes, including ones where a cello and violin might play at a similar frequency, and notices where the classifier gets it wrong.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <p>&#128161; <strong>Language to borrow:</strong> &bull; "Try a few more notes before you decide it works. What's a case where a cello and a violin might be hard to tell apart just by frequency?"</p>
+</div>
+
+## The Real Moment This Lesson Builds Toward
+
+Frequency and volume alone aren't enough, because a cello and a violin playing the same note share the same frequency, and neither instrument is reliably louder than the other. That's not a bug in the student's code, it's the point: two features can both be real and still fail to distinguish two things.
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <p>&#8505; <strong>What to listen for in Levels 2-3:</strong> once students add brightness as a third feature, well-tuned classifiers should correctly classify 90%+ of notes. Look for students who can explain why brightness helps, violins tend to sound both higher and brighter, not just that their accuracy number went up.</p>
+</div>
+
+
+
+## Assessment: Level 3 Check for Understanding
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 18px; margin-top: 20px;">
+  <p>&#8505; <strong>What a strong answer needs:</strong> students should explain that brightness has predictive power because violins tend to both play higher notes and sound brighter, and that a classifier with access to both senses predicts better than one with access to only one.</p>
+</div>
+MARKDOWN

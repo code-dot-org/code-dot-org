@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894907-489816b52533",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 6: Understanding Bias",
+  "question": "A 92% score sounds great, until you look closer. Find the group the tool lets down, and figure out why.\n\nSteps:\n1. Use the arrow tool to point at the row with the biggest drop in accuracy.\n2. Place a shape on the number that helps explain why.\n3. Use the text tool to write one kind of clip the company should collect.\n4. Record your voice explaining how the overall score can hide a problem for one group.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but types no idea."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to the strong regional accent row AND a shape is on 400 AND the typed idea names a kind of clip to collect AND the voice recording links few examples to lower accuracy."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that the overall 92% hides the problem for one group."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894907-489816b52533-345f7fda",
+  "whiteboard_starter_image_alt_text": "\"A voice-to-text tool was tested on four kinds of speakers.\" A table lists each kind of speaker, the clips it learned from, and the words it got right: fast talkers, 9,000 clips, 95%; slow talkers, 6,500 clips, 93%; speakers with a strong regional accent, 400 clips, 62%; and speakers in a noisy room, 1,200 clips, 71%. Below it: \"Overall: 92% of words right,\" next to a blank box labeled \"Space for your idea.\""
+}

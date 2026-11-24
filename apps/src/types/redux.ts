@@ -6,6 +6,7 @@ import {AiDiffChatState} from '@cdo/apps/aiTeacherDrawer/redux';
 import {CalendarState} from '@cdo/apps/code-studio/calendarRedux';
 import {HeaderReduxState} from '@cdo/apps/code-studio/headerRedux';
 import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
 import {TeacherPanelState} from '@cdo/apps/code-studio/teacherPanelTypes';
 import {JavalabConsoleState} from '@cdo/apps/javalab/redux/consoleRedux';
 import {JavalabEditorState} from '@cdo/apps/javalab/redux/editorRedux';
@@ -68,6 +69,7 @@ export interface RootState {
   pageConstants: LegacyLabsState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
+  project: ProjectState;
   runState: RunState;
   sectionProgress: SectionProgressState;
   spriteLab2: SpriteLab2State;

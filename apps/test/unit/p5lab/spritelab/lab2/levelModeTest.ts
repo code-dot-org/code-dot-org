@@ -1,5 +1,6 @@
 import {
   generationLimitForMode,
+  imageSourceFor,
   imageSourceForMode,
   isFreeplayMode,
   isOneImageMode,
@@ -37,6 +38,22 @@ describe('tabsForMode', () => {
     expect(
       tabsForMode({kind: 'code', imageFirst: true, extraTabs: ['World']})
     ).toEqual(['Images', 'Code', 'Play', 'World']);
+  });
+
+  it('opens on the start tab when the level shows it', () => {
+    expect(tabsForMode({kind: 'freeplay', startTab: 'Images'})).toEqual([
+      'Images',
+      'Code',
+      'World',
+      'Play',
+    ]);
+    expect(
+      tabsForMode({kind: 'code', extraTabs: ['World'], startTab: 'World'})
+    ).toEqual(['World', 'Code', 'Play']);
+    expect(tabsForMode({kind: 'code', startTab: 'Images'})).toEqual([
+      'Code',
+      'Play',
+    ]);
   });
 
   it('gives an image level the Images tab alone', () => {
@@ -125,8 +142,24 @@ describe('generationLimitForMode', () => {
   });
 });
 
+describe('imageSourceFor', () => {
+  const liveLevel: LevelMode = {kind: 'image', imageSource: 'live'};
+
+  it('gives anyone but a levelbuilder the cache, whatever is asked for', () => {
+    expect(imageSourceFor(liveLevel, undefined, false)).toBe('cached');
+    expect(imageSourceFor({kind: 'image'}, 'live', false)).toBe('cached');
+  });
+
+  it("gives a levelbuilder the level's source, or the one asked for", () => {
+    expect(imageSourceFor(liveLevel, undefined, true)).toBe('live');
+    expect(imageSourceFor({kind: 'image'}, 'live', true)).toBe('live');
+    expect(imageSourceFor(liveLevel, 'cached', true)).toBe('cached');
+    expect(imageSourceFor({kind: 'image'}, undefined, true)).toBe('cached');
+  });
+});
+
 describe('imageSourceForMode', () => {
-  it('is the tree first unless the level names a source', () => {
+  it('is the cache unless the level names a source', () => {
     expect(imageSourceForMode({kind: 'image'})).toBe('cached');
     expect(imageSourceForMode(undefined)).toBe('cached');
     expect(imageSourceForMode({kind: 'image', imageSource: 'live'})).toBe(

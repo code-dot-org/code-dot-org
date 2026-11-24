@@ -51,8 +51,13 @@ export interface SerializedAnimationProps {
   edited?: boolean;
   /** Present on AI-generated images. */
   generation?: ImageGenerationMetadata;
+  /** True for an image that began as an AI-generated picture. Kept through
+      a hand edit, which clears `generation`. */
+  fromGeneration?: boolean;
   /** Present on a character set: where each pose lives in the sheet. */
   poses?: AnimationPoses;
+  /** An upload moderation flagged and the student kept anyway. */
+  flagged?: boolean;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.
@@ -101,8 +106,10 @@ export interface Sources extends ProjectSources {
   scenes?: Scene[];
   /** Catalog blocks the student added to the toolbox (blockCatalog.ts). */
   chosenBlocks?: string[];
-  /** The catalog has opened itself once on the free play level. */
-  blockCatalogSeen?: boolean;
+  /** The free play intro has been dismissed. */
+  freeplayIntroSeen?: boolean;
+  inRestrictedShareMode?: boolean;
+  teacherHasConfirmedUploadWarning?: boolean;
 }
 
 /** A single-frame image a level gives the project: a lab asset by URL. */
@@ -165,13 +172,19 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
       these roles can be erased or painted over only after another has been
       placed. Unset, no role is kept this way. */
   worldKeepsRoles?: string[];
-  /** The new blocks start out of the toolbox, offered through the new-block
-      catalog instead (blockCatalog.ts). */
+  /** The blocks no earlier level of the lesson required start out of the
+      toolbox, and the student adds them from the block catalog
+      (blockCatalog.ts). The ones in blocksAlwaysInToolbox are in the toolbox
+      from the start. */
   blockCatalog?: boolean;
+  blocksAlwaysInToolbox?: string[];
   /** Blocks built on earlier levels cannot be deleted here, in any scene
       the level opens (blockLocks.ts). The blocks under a stack this level adds can,
       and so can the toolbox blocks no earlier level required. */
   lockEarlierBlocks?: boolean;
+  /** The free play intro opens the first time the student arrives
+      (FreeplayIntroDialog.tsx). */
+  freeplayIntro?: boolean;
   /** The role each dropdown starts on (imageRoleDefaults.ts); roles are what
       image levels record through level_mode.imageRole. */
   imageRoleDefaults?: ImageRoleDefaults;

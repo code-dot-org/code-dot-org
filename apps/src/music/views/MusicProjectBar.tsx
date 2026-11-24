@@ -5,7 +5,7 @@ import React from 'react';
 
 import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
 
-import {DEFAULT_PACK} from '../constants';
+import {DEFAULT_PACK, PACK_REMOVED_MESSAGE} from '../constants';
 
 import styles from './music-project-bar.module.scss';
 
@@ -32,29 +32,37 @@ const MusicProjectBar: React.FC<{
 
   return (
     <div className={classNames(styles.container, className)}>
-      {isLoading ? (
-        <div className={styles.loadingIcon}>
-          <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
-        </div>
-      ) : (
-        packImageUrl && (
-          <img
-            src={packImageUrl}
-            className={styles.image}
-            alt={packFolder?.name}
-          />
-        )
-      )}
-      <div className={styles.text}>
-        <Typography variant="body3" gutterBottom>
-          {isLoading ? 'Loading...' : title}
-        </Typography>
-        {packFolder && (
-          <Typography variant="body4" gutterBottom>
-            {`${packFolder.name} - ${packFolder.artist}`}
-          </Typography>
+      <div className={styles.row}>
+        {isLoading ? (
+          <div className={styles.loadingIcon}>
+            <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
+          </div>
+        ) : (
+          packImageUrl && (
+            <img
+              src={packImageUrl}
+              className={styles.image}
+              alt={packFolder?.name}
+            />
+          )
         )}
+        <div className={styles.text}>
+          <Typography variant="body3" gutterBottom>
+            {isLoading ? 'Loading...' : title}
+          </Typography>
+          {packFolder && (
+            <Typography variant="body4" gutterBottom>
+              {`${packFolder.name} - ${packFolder.artist}`}
+            </Typography>
+          )}
+        </div>
       </div>
+      {!isLoading && packFolder && library.isPackRemoved(packFolder.id) && (
+        <Typography className={styles.packRemoved} variant="body4">
+          <FontAwesomeV6Icon iconName="exclamation-circle" iconStyle="solid" />
+          {PACK_REMOVED_MESSAGE}
+        </Typography>
+      )}
     </div>
   );
 };

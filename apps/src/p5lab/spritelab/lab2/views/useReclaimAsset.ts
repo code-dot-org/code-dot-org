@@ -6,16 +6,15 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 /**
- * Deletes an uploaded image file nothing uses anymore. Deliberately narrow
- * and best-effort: only this project's own uploads, only when no image still
- * points at the file, and a failed delete is ignored.
+ * Deletes an uploaded image file nothing uses anymore.
+ * Resolves true once the project no longer contains the image and false otherwise.
  */
-export default function useReclaimAsset(): (url?: string) => void {
+export default function useReclaimAsset(): (url?: string) => Promise<boolean> {
   const channelId = useAppSelector(state => state.lab.channel?.id);
   return useCallback(
-    (url?: string) => {
-      if (!channelId || !url || !url.startsWith(`/v3/assets/${channelId}/`)) {
-        return;
+    async (url?: string) => {
+      if (!url) {
+        return true;
       }
       // The classic store is untyped; its list has the lab's shape.
       const list: RuntimeAnimationList = getStore().getState().animationList;
@@ -23,9 +22,22 @@ export default function useReclaimAsset(): (url?: string) => void {
         p => p?.sourceUrl === url
       );
       if (stillUsed) {
-        return;
+        return false;
       }
-      HttpClient.delete(url, true).catch(() => undefined);
+      // Data uris represent embedded images and do not correspond to a file on the server.
+      if (url.startsWith('data:')) {
+        return true;
+      }
+      // File we can't delete.
+      if (!channelId || !url.startsWith(`/v3/assets/${channelId}/`)) {
+        return false;
+      }
+      try {
+        await HttpClient.delete(url, true);
+        return true;
+      } catch {
+        return false;
+      }
     },
     [channelId]
   );

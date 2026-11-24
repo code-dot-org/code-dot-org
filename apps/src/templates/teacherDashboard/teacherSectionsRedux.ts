@@ -22,10 +22,7 @@ import {
   SectionLoginType,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  getFilteredSectionOrderIds,
-  saveSectionOrder,
-} from './sectionOrderUtils';
+import {getFilteredSectionOrderIds} from './sectionOrderUtils';
 import {
   isAddingSection,
   sectionFromServerSection as untypedSectionFromServerSection,
@@ -359,14 +356,15 @@ const sectionSlice = createSlice({
         state.studentSectionIds = studentSectionIds;
         state.plSectionIds = plSectionIds;
 
-        state.sectionOrder = getFilteredSectionOrderIds(
-          sections,
-          action.payload.sectionOrder || state.sectionOrder
-        );
         state.sections = {
           ...state.sections,
           ..._.keyBy(sections, 'id'),
         };
+        // Callers may pass only new sections, so order all of them.
+        state.sectionOrder = getFilteredSectionOrderIds(
+          Object.values(state.sections),
+          action.payload.sectionOrder || state.sectionOrder
+        );
       },
       prepare(
         sections,
@@ -758,32 +756,11 @@ const sectionSlice = createSlice({
         return {payload: asyncLoadComplete};
       },
     },
-    setSectionOrder: {
-      reducer(
-        state,
-        action: PayloadAction<{sectionOrder: number[]; save: boolean}>
-      ) {
-        const result = getFilteredSectionOrderIds(
-          Object.values(state.sections),
-          action.payload.sectionOrder
-        );
-        if (
-          action.payload.save &&
-          !_.isEqual(result, action.payload.sectionOrder)
-        ) {
-          saveSectionOrder(result);
-        }
-
-        state.sectionOrder = result;
-      },
-      prepare(sectionOrder: number[], save = false) {
-        return {
-          payload: {
-            sectionOrder,
-            save,
-          },
-        };
-      },
+    setSectionOrder(state, action: PayloadAction<number[]>) {
+      state.sectionOrder = getFilteredSectionOrderIds(
+        Object.values(state.sections),
+        action.payload
+      );
     },
   },
 });

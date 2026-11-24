@@ -7,6 +7,8 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 import {createPortal} from 'react-dom';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SentenceSceneParts} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
 import styles from './images-tab.module.scss';
@@ -52,6 +54,18 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
   headerSlot,
 }) => {
   const [confirming, setConfirming] = useState(false);
+  const answerConfirm = (outcome: 'replace' | 'cancel' | 'close') => {
+    setConfirming(false);
+    analyticsReporter.sendEvent(
+      EVENTS.HOAI2026_IMAGE_REPLACE_CONFIRM,
+      {outcome},
+      true,
+      outcome
+    );
+    if (outcome === 'replace') {
+      parts.generate();
+    }
+  };
   const result = parts.mode === 'result';
   const generating = parts.mode === 'generating';
   // Generating asks for confirmation only when it would replace the
@@ -127,17 +141,15 @@ const MakePane: React.FunctionComponent<MakePaneProps> = ({
         <Modal
           title="Replace this image?"
           description="A new picture takes its place."
-          onClose={() => setConfirming(false)}
+          onClose={() => answerConfirm('close')}
           secondaryButtonProps={{
             children: 'Cancel',
-            onClick: () => setConfirming(false),
+            onClick: () => answerConfirm('cancel'),
           }}
           primaryButtonProps={{
             children: 'Replace',
-            onClick: () => {
-              setConfirming(false);
-              parts.generate();
-            },
+            color: 'error',
+            onClick: () => answerConfirm('replace'),
           }}
         />
       )}

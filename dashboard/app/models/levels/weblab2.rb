@@ -37,6 +37,7 @@ class Weblab2 < Level
     submittable
     validation_enabled
     widget_view
+    showcase_view
     initial_view_mode
     disable_edit_run_for_submission
     predict_settings
@@ -45,6 +46,7 @@ class Weblab2 < Level
     ai_tutor_prompt_settings
     widget2
     require_edit_to_continue
+    hide_ai_tutor
   )
 
   after_initialize do

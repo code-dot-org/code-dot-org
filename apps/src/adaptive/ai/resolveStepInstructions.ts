@@ -19,6 +19,7 @@ import {GeneratedContent, generateInputsHash} from '../progress/model';
 import {summarizeProjectFiles} from '../project/summarizeProjectFiles';
 import {Checkpoint, LevelStep, Pathway, PathwayProjectInfo} from '../types';
 
+import {isAdaptiveAiAvailable} from './access';
 import {generate, moderateOutput} from './generate';
 import {
   INSTRUCTIONS_PROMPT_VERSION,
@@ -68,6 +69,10 @@ export async function resolveStepInstructions({
 }: StepInstructionsOptions): Promise<string | undefined> {
   if (!step.instructionsPrompt || !step.project) return authoredInstructions;
   if (sources === undefined) return authoredInstructions;
+  if (!isAdaptiveAiAvailable()) {
+    sendAiStaticFallbackUsed('instructions', 'aiUnavailable', checkpoint, step);
+    return authoredInstructions;
+  }
 
   const prompt = buildInstructionsPrompt({
     pathway,

@@ -1,0 +1,28 @@
+name 'pl-aif-y2-u2-l6-building-models-ethically'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Meet the Snack Model Code
+
+Your students write very little code in this lab, and that is on purpose. They change one word and watch a model's decisions change. Before you try it, look at everything they will see.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/snack-code-explorer.html"
+    width="100%"
+    height="660"
+    frameborder="0"
+    scrolling="no"
+    title="Annotated tour of the student snack model code">
+  </iframe>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> the lab's single learning target is choosing a characteristic and seeing how that choice changes which snacks win. Encourage your students to try at least three different characteristics before they decide on a best model.</div>
+</div>
+
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#9888;&#65039; Watch for:</b> the characteristic name has to match exactly, like "allergen_count" with the underscore. If your students see an error after changing the quoted word, check the spelling and capitalization first.</div>
+</div>
+MARKDOWN

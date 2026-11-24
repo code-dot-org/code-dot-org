@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class EvaluateChallengeResponseJobTest < ActiveJob::TestCase
-  let(:challenge) {create(:challenge, :with_rubric)}
+  let(:challenge) {create(:challenge)}
   let(:challenge_response) do
     create(:challenge_response, challenge:, student_text: 'It equals 4', is_final: true)
   end
@@ -118,7 +118,7 @@ class EvaluateChallengeResponseJobTest < ActiveJob::TestCase
 
   it 'records failure and raises when the challenge has no rubric' do
     stub_filters_pass
-    challenge.update!(rubric: nil)
+    challenge.update_column(:rubric, nil)
 
     _ do
       EvaluateChallengeResponseJob.perform_now(challenge_response_id: challenge_response.id)

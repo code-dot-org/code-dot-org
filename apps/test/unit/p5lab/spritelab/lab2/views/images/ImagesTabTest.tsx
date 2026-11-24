@@ -87,7 +87,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
           panelRef: {current: null},
           frame: generating ? <span>spinner</span> : null,
           frameFilled: false,
-          cachedTag: null,
           behindTheScenes: null,
           status: null,
           sentence: <span>words</span>,
@@ -118,8 +117,10 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene', () => {
 // lays out, with save handing back fixed pixels.
 jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
   const PixelEditorStub = ({
+    imageUrl,
     tools,
     palette,
+    startColor,
     knownPixelGrid,
     brushSizes,
     onEdit,
@@ -127,8 +128,10 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
     onHistoryChange,
     children,
   }: {
+    imageUrl?: string;
     tools?: readonly string[];
     palette?: readonly unknown[];
+    startColor?: readonly number[];
     knownPixelGrid?: number;
     brushSizes?: readonly number[];
     onEdit?: () => void;
@@ -153,8 +156,10 @@ jest.mock('@cdo/apps/pixelEditor/PixelEditor', () => {
         </button>
         <span>{tools ? `${tools.length} tools` : 'all tools'}</span>
         <span>{palette ? `${palette.length} colors` : 'every color'}</span>
+        <span>starts on {startColor?.join(' ') ?? 'its own color'}</span>
         <span>grid {knownPixelGrid ?? 'none'}</span>
         <span>{brushSizes?.length ?? 'all'} brush sizes</span>
+        <span>drawing {imageUrl}</span>
         {children({
           ready: true,
           loadError: false,
@@ -207,10 +212,29 @@ const animationList = () => ({
   orderedKeys: Object.keys(propsByKey),
   propsByKey,
 });
+// Uploads are moderated only when there is a channel.
+let labState: Record<string, unknown> = {channel: {id: 'c1'}};
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: (select: (state: unknown) => unknown) =>
-    select({animationList: animationList(), lab: {}}),
+    select({animationList: animationList(), lab: labState}),
   useAppDispatch: () => jest.fn(),
+}));
+// Signed-out students are not offered a flagged picture at all. The warning
+// reads sign-in state off the store, not through a selector hook.
+let signInState = 'SignedIn';
+jest.mock('@cdo/apps/redux', () => ({
+  getStore: () => ({getState: () => ({currentUser: {signInState}})}),
+}));
+const moderate = jest.fn<Promise<string>, unknown[]>();
+jest.mock('@cdo/apps/util/moderateImage', () => ({
+  moderateImage: (...args: unknown[]) => moderate(...args),
+}));
+const httpPost = jest.fn((...args: unknown[]) =>
+  Promise.resolve({json: async () => ({abuse_score: 0})} as Response)
+);
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  __esModule: true,
+  default: {post: (...args: unknown[]) => httpPost(...args)},
 }));
 const params: Record<string, string> = {};
 jest.mock('@cdo/apps/code-studio/utils', () => ({
@@ -222,6 +246,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/imageTrim', () => ({
   getImageThumbnail: () => undefined,
 }));
 const acceptGenerated = jest.fn();
+const acceptUploaded = jest.fn();
 const saveEdited = jest.fn();
 const rateGenerated = jest.fn();
 const deleteImage = jest.fn();
@@ -230,12 +255,67 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter', () => ({
   __esModule: true,
   default: () => ({
     acceptGenerated: (...args: unknown[]) => acceptGenerated(...args),
+    acceptUploaded: (...args: unknown[]) => acceptUploaded(...args),
     saveEdited: (...args: unknown[]) => saveEdited(...args),
     rateGenerated: (...args: unknown[]) => rateGenerated(...args),
     deleteImage: (...args: unknown[]) => deleteImage(...args),
     endSession: () => endSession(),
   }),
 }));
+// Resizing an uploaded picture has no canvas to run on in jsdom.
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration', () => ({
+  ...jest.requireActual(
+    '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration'
+  ),
+  downscaleToFit: async (blob: Blob) => blob,
+}));
+
+// jsdom's Blob has no arrayBuffer(); every browser this ships to does.
+if (!Blob.prototype.arrayBuffer) {
+  Blob.prototype.arrayBuffer = function () {
+    return new Promise<ArrayBuffer>((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result as ArrayBuffer);
+      reader.onerror = () => reject(reader.error);
+      reader.readAsArrayBuffer(this);
+    });
+  };
+}
+
+// jsdom decodes nothing, and an upload is checked by decoding it. Each test
+// that wants a file refused makes this reject instead.
+const decodeImage = jest.fn(
+  async () => ({close: () => undefined} as unknown as ImageBitmap)
+);
+globalThis.createImageBitmap =
+  decodeImage as unknown as typeof createImageBitmap;
+
+const pngFile = (name = 'My Cat.png', bytes = 4) =>
+  new File([new Uint8Array(bytes)], name, {type: 'image/png'});
+
+/**
+ * Hands the hidden input a file, as the OS dialog would, and waits for the
+ * checking and storing behind it.
+ */
+/** The input behind the Upload button. It is display:none and carries no
+    name, so no query a user could make reaches it. */
+function fileInput(container: HTMLElement) {
+  // eslint-disable-next-line no-restricted-properties
+  return container.querySelector('#file-input') as HTMLInputElement;
+}
+
+async function settle() {
+  await act(async () => {
+    await new Promise(resolve => setTimeout(resolve, 0));
+  });
+}
+
+async function pickFile(container: HTMLElement, file: File) {
+  await act(async () => {
+    fireEvent.change(fileInput(container), {target: {files: [file]}});
+  });
+  await settle();
+}
 
 function renderTab(
   props: Partial<React.ComponentProps<typeof ImagesTab>> = {}
@@ -259,6 +339,7 @@ describe('ImagesTab', () => {
     // paint-first default has tests of its own below.
     params['images-edited'] = 'pane';
     acceptGenerated.mockReset();
+    acceptUploaded.mockReset();
     rateGenerated.mockReset();
     saveEdited.mockReset();
     deleteImage.mockReset();
@@ -266,6 +347,10 @@ describe('ImagesTab', () => {
     endSession.mockReset();
     sceneOverrides = {};
     lastRateResult = undefined;
+    labState = {channel: {id: 'c1'}};
+    signInState = 'SignedIn';
+    moderate.mockReset().mockResolvedValue('safe');
+    httpPost.mockClear();
   });
 
   it('opens a level about one image on the place it will go, and lands it there', async () => {
@@ -391,6 +476,28 @@ describe('ImagesTab', () => {
       />
     );
     expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
+  });
+
+  it('lets a visitor look through the images and change nothing when view only', () => {
+    propsByKey.k1 = {name: 'Sprite 1', categories: []};
+    propsByKey.k2 = {name: 'Sprite 2', categories: []};
+    renderTab({editingOffered: true, viewOnly: true});
+    expect(screen.getByRole('region', {name: 'Images'})).toBeTruthy();
+    // Any image can be chosen.
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
+    expect(pressed()).toEqual(['Sprite 2']);
+    fireEvent.click(screen.getByRole('button', {name: 'Sprite 1'}));
+    expect(pressed()).toEqual(['Sprite 1']);
+    // Nothing that would change one is offered.
+    for (const name of [
+      'New image',
+      'Delete image',
+      'Edit this image',
+      'Draw my own',
+      'land sprite character',
+    ]) {
+      expect(screen.queryByRole('button', {name})).toBeNull();
+    }
   });
 
   it('makes more than one image of the level kind when one image is off', () => {
@@ -976,7 +1083,8 @@ describe('ImagesTab', () => {
     fireEvent.click(screen.getByRole('button', {name: 'Edit this image'}));
     // The eyedropper is among the tools; the colors are the fixed swatches.
     expect(screen.getByText('4 tools')).toBeTruthy();
-    expect(screen.getByText('10 colors')).toBeTruthy();
+    expect(screen.getByText('20 colors')).toBeTruthy();
+    expect(screen.getByText('starts on 41 173 255 255')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     saveEdited.mockResolvedValue('k1');
     await act(async () => {
@@ -1044,7 +1152,7 @@ describe('ImagesTab', () => {
       screen.getByRole('dialog', {name: 'How AI made your image'})
     ).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
-    expect(screen.getByText('A cat')).toBeTruthy();
+    expect(screen.getByText('“A cat”')).toBeTruthy();
     // Asked for, so it closes unread.
     fireEvent.click(screen.getByRole('button', {name: 'Close modal'}));
     expect(screen.queryByRole('dialog')).toBeNull();
@@ -1233,5 +1341,459 @@ describe('ImagesTab', () => {
       {x: 64, y: 64},
       2
     );
+  });
+
+  describe('uploading a picture', () => {
+    it('offers no upload unless the level allows it', () => {
+      renderTab({editingOffered: true});
+      expect(screen.queryByRole('button', {name: 'Upload image'})).toBeNull();
+    });
+
+    // One image is one image however it was made, so the upload goes when
+    // the plus does.
+    it('stops offering uploads once the level has its own image', () => {
+      propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
+      renderTab({
+        lockedImageType: 'sprite',
+        imageRole: 'hero',
+        ownImageMade: true,
+        enableImageUpload: true,
+      });
+      expect(screen.queryByRole('button', {name: 'New image'})).toBeNull();
+      expect(screen.queryByRole('button', {name: 'Upload image'})).toBeNull();
+    });
+
+    it('keeps offering uploads in free play, image or no image', () => {
+      propsByKey.k1 = {name: 'Sprite 1', categories: [], role: 'hero'};
+      renderTab({
+        editingOffered: true,
+        ownImageMade: true,
+        enableImageUpload: true,
+      });
+      expect(screen.getByRole('button', {name: 'Upload image'})).toBeTruthy();
+    });
+
+    it('stores a picked file as the kind the student chose', async () => {
+      const onImageLanded = jest.fn();
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+        onImageLanded,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
+      acceptUploaded.mockImplementation(async () => {
+        propsByKey.k1 = {name: 'Block 1', categories: ['blocks']};
+        return 'k1';
+      });
+      await pickFile(container, pngFile());
+      expect(acceptUploaded).toHaveBeenCalledWith(
+        {key: null, imageType: 'block', subject: undefined},
+        expect.objectContaining({
+          mediaType: 'image/png',
+          filename: expect.stringMatching(/^upload_my_cat_\d+\.png$/),
+        })
+      );
+      expect(onImageLanded).toHaveBeenCalled();
+      expect(pressed()).toEqual(['Block 1']);
+    });
+
+    it("takes the level's own kind without asking", async () => {
+      const {container} = renderTab({
+        lockedImageType: 'background',
+        enableImageUpload: true,
+      });
+      acceptUploaded.mockImplementation(async () => {
+        propsByKey.k1 = {name: 'Background 1', categories: ['backgrounds']};
+        return 'k1';
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      expect(screen.queryByRole('menu')).toBeNull();
+      await pickFile(container, pngFile());
+      expect(acceptUploaded).toHaveBeenCalledTimes(1);
+      expect(acceptUploaded.mock.calls[0][0]).toEqual({
+        key: null,
+        imageType: 'background',
+        subject: undefined,
+      });
+    });
+
+    it('holds the list still while an upload is in flight', async () => {
+      let finish: (key: string) => void = () => undefined;
+      acceptUploaded.mockImplementation(
+        () =>
+          new Promise<string>(resolve => {
+            finish = resolve;
+          })
+      );
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      await act(async () => {
+        fireEvent.change(fileInput(container), {target: {files: [pngFile()]}});
+      });
+      await act(async () => {
+        await new Promise(resolve => setTimeout(resolve, 0));
+      });
+      expect(screen.getByRole('button', {name: 'New image'})).toBeDisabled();
+      await act(async () => {
+        propsByKey.k2 = {name: 'Sprite 2', categories: []};
+        finish('k2');
+      });
+      expect(screen.getByRole('button', {name: 'New image'})).toBeEnabled();
+    });
+
+    it('removes failure alert after 10 seconds', async () => {
+      // Timers still run on their own, so picking the file works as it does
+      // everywhere else here; only the ten second wait is skipped.
+      jest.useFakeTimers({advanceTimers: true});
+      try {
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+        });
+        fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+        fireEvent.click(
+          screen.getByRole('menuitem', {name: 'Upload a character'})
+        );
+        await pickFile(container, pngFile('Huge.png', 6 * 1024 * 1024));
+        expect(screen.getByRole('alert')).toBeTruthy();
+        act(() => {
+          jest.advanceTimersByTime(10_000);
+        });
+        expect(screen.queryByRole('alert')).toBeNull();
+      } finally {
+        jest.useRealTimers();
+      }
+    });
+
+    it('refuses a file too big to upload, and says so', async () => {
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      await pickFile(container, pngFile('Huge.png', 6 * 1024 * 1024));
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(screen.getByRole('alert').textContent).toMatch(/too big/);
+    });
+
+    it('refuses a file of a kind that cannot be used', async () => {
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      await pickFile(
+        container,
+        new File(['x'], 'cat.gif', {type: 'image/gif'})
+      );
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(screen.getByRole('alert').textContent).toMatch(/can't be used/);
+    });
+
+    // A renamed .txt is reported as image/png, so only decoding tells.
+    it('refuses a file that holds no picture, uploading nothing', async () => {
+      decodeImage.mockRejectedValueOnce(new Error('not an image'));
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      await pickFile(container, pngFile('Notes.png'));
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(screen.getByRole('alert').textContent).toMatch(/can't be used/);
+    });
+
+    it('moves the paint tools onto the uploaded picture', async () => {
+      delete params['images-edited'];
+      propsByKey.k1 = {
+        name: 'Sprite 1',
+        categories: [],
+        sourceUrl: 'sprite1.png',
+      };
+      const {container} = renderTab({
+        editingOffered: true,
+        enableImageUpload: true,
+      });
+      expect(await screen.findByText('drawing sprite1.png')).toBeTruthy();
+      acceptUploaded.mockImplementation(async () => {
+        propsByKey.k2 = {
+          name: 'Block 1',
+          categories: ['blocks'],
+          sourceUrl: 'uploaded.png',
+        };
+        return 'k2';
+      });
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
+      await pickFile(container, pngFile());
+      expect(pressed()).toEqual(['Block 1']);
+      expect(await screen.findByText('drawing uploaded.png')).toBeTruthy();
+    });
+
+    const pickCharacter = async (file = pngFile()) => {
+      const view = renderTab({editingOffered: true, enableImageUpload: true});
+      fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+      fireEvent.click(
+        screen.getByRole('menuitem', {name: 'Upload a character'})
+      );
+      await pickFile(view.container, file);
+      return view;
+    };
+
+    it('checks the picture as picked, before storing anything', async () => {
+      moderate.mockImplementation(async () => {
+        expect(acceptUploaded).not.toHaveBeenCalled();
+        return 'safe';
+      });
+      await pickCharacter();
+      expect(moderate).toHaveBeenCalledWith(
+        expect.objectContaining({name: 'My Cat.png', type: 'image/png'}),
+        'spritelab',
+        {uploaderType: 'SpriteLab2'}
+      );
+      expect(acceptUploaded).toHaveBeenCalled();
+    });
+
+    it('stores the picture when the check cannot be made', async () => {
+      moderate.mockResolvedValue('error');
+      await pickCharacter();
+      expect(acceptUploaded).toHaveBeenCalled();
+      expect(screen.queryByRole('alert')).toBeNull();
+    });
+
+    it('stores nothing until the student answers for a flagged picture', async () => {
+      moderate.mockResolvedValue('flagged');
+      await pickCharacter();
+      expect(
+        screen.getByText('Warning: Inappropriate Image')
+      ).toBeInTheDocument();
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      // The warning blocks a second pick: there is one pending slot for it.
+      expect(
+        screen.getByRole('button', {name: 'Upload image', hidden: true})
+      ).toBeDisabled();
+    });
+
+    it('stores a flagged picture the student keeps, and flags the project', async () => {
+      moderate.mockResolvedValue('flagged');
+      acceptUploaded.mockImplementation(async () => {
+        propsByKey.k1 = {name: 'Sprite 1', categories: []};
+        return 'k1';
+      });
+      await pickCharacter();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^accept$/i}));
+      });
+      await settle();
+      expect(acceptUploaded).toHaveBeenCalledWith(
+        expect.anything(),
+        expect.objectContaining({flagged: true})
+      );
+      expect(httpPost).toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        JSON.stringify({type: 'flag'}),
+        true,
+        expect.anything()
+      );
+    });
+
+    it('stores nothing when the student turns down a flagged picture', async () => {
+      moderate.mockResolvedValue('flagged');
+      await pickCharacter();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^cancel$/i}));
+      });
+      await settle();
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(httpPost).not.toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        expect.anything(),
+        expect.anything(),
+        expect.anything()
+      );
+      expect(screen.queryByRole('alert')).toBeNull();
+      expect(screen.getByRole('button', {name: 'Upload image'})).toBeEnabled();
+      // Focus goes back to the button that opened the file dialog, which the
+      // dialog's disableRestoreFocus would otherwise have dropped.
+      expect(document.activeElement).toBe(
+        screen.getByRole('button', {name: 'Upload image'})
+      );
+    });
+
+    it('leaves the project unflagged when storing an accepted picture fails', async () => {
+      moderate.mockResolvedValue('flagged');
+      acceptUploaded.mockRejectedValue(new Error('no'));
+      await pickCharacter();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^accept$/i}));
+      });
+      await settle();
+      expect(screen.getByRole('alert').textContent).toMatch(
+        /couldn't be added/
+      );
+      expect(httpPost).not.toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        expect.anything(),
+        expect.anything(),
+        expect.anything()
+      );
+    });
+
+    it('offers a signed-out student no way to keep a flagged picture', async () => {
+      signInState = 'SignedOut';
+      moderate.mockResolvedValue('flagged');
+      await pickCharacter();
+      expect(screen.queryByRole('button', {name: /^accept$/i})).toBeNull();
+      await act(async () => {
+        fireEvent.click(screen.getByRole('button', {name: /^ok$/i}));
+      });
+      await settle();
+      expect(acceptUploaded).not.toHaveBeenCalled();
+      expect(httpPost).not.toHaveBeenCalledWith(
+        '/v3/channels/c1/abuse/image',
+        expect.anything(),
+        expect.anything(),
+        expect.anything()
+      );
+      expect(screen.getByRole('button', {name: 'Upload image'})).toBeEnabled();
+    });
+
+    it('checks nothing it has already refused for its size', async () => {
+      await pickCharacter(pngFile('Huge.png', 6 * 1024 * 1024));
+      expect(moderate).not.toHaveBeenCalled();
+    });
+
+    it('checks nothing that holds no picture', async () => {
+      decodeImage.mockRejectedValueOnce(new Error('not an image'));
+      await pickCharacter(pngFile('Notes.png'));
+      expect(moderate).not.toHaveBeenCalled();
+    });
+
+    it('checks nothing when there is no project to flag', async () => {
+      labState = {};
+      await pickCharacter();
+      expect(moderate).not.toHaveBeenCalled();
+      expect(acceptUploaded).toHaveBeenCalled();
+    });
+
+    describe('the upload rules', () => {
+      const RULES_TITLE = 'To upload images, you must agree to these rules:';
+      const NO_PII = 'I will not upload images with personal information.';
+      const NO_REMIX = 'This project can not be remixed.';
+
+      function pressUpload() {
+        fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
+        fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
+      }
+
+      function tick(name: string) {
+        fireEvent.click(screen.getByRole('checkbox', {name}));
+      }
+
+      it('holds the file picker shut until a student agrees', async () => {
+        const onConfirm = jest.fn();
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarningSettings: {
+            alreadyAgreed: false,
+            isTeacher: false,
+            onConfirm,
+          },
+        });
+        const opened = jest.spyOn(fileInput(container), 'click');
+        pressUpload();
+        expect(screen.getByText(RULES_TITLE)).toBeTruthy();
+        expect(opened).not.toHaveBeenCalled();
+        expect(screen.getByRole('button', {name: 'OK'})).toBeDisabled();
+        tick(NO_PII);
+        tick(NO_REMIX);
+        fireEvent.click(screen.getByRole('button', {name: 'OK'}));
+        expect(onConfirm).toHaveBeenCalledTimes(1);
+        expect(opened).toHaveBeenCalledTimes(1);
+        acceptUploaded.mockImplementation(async () => {
+          propsByKey.k1 = {name: 'Block 1', categories: ['blocks']};
+          return 'k1';
+        });
+        await pickFile(container, pngFile());
+        expect(acceptUploaded.mock.calls[0][0]).toEqual({
+          key: null,
+          imageType: 'block',
+          subject: undefined,
+        });
+      });
+
+      it('asks a teacher for the shorter agreement', () => {
+        renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarningSettings: {
+            alreadyAgreed: false,
+            isTeacher: true,
+            onConfirm: jest.fn(),
+          },
+        });
+        pressUpload();
+        expect(screen.getByRole('checkbox', {name: NO_PII})).toBeTruthy();
+        expect(screen.queryByRole('checkbox', {name: NO_REMIX})).toBeNull();
+        tick(NO_PII);
+        expect(screen.getByRole('button', {name: 'OK'})).toBeEnabled();
+      });
+
+      it('records nothing and uploads nothing when the rules are refused', () => {
+        const onConfirm = jest.fn();
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarningSettings: {
+            alreadyAgreed: false,
+            isTeacher: false,
+            onConfirm,
+          },
+        });
+        const opened = jest.spyOn(fileInput(container), 'click');
+        pressUpload();
+        fireEvent.click(screen.getByRole('button', {name: 'Cancel'}));
+        expect(screen.queryByText(RULES_TITLE)).toBeNull();
+        expect(onConfirm).not.toHaveBeenCalled();
+        expect(opened).not.toHaveBeenCalled();
+      });
+
+      it('stops asking once the project has agreed', async () => {
+        const {container} = renderTab({
+          editingOffered: true,
+          enableImageUpload: true,
+          uploadWarningSettings: {
+            alreadyAgreed: true,
+            isTeacher: false,
+            onConfirm: jest.fn(),
+          },
+        });
+        acceptUploaded.mockImplementation(async () => {
+          propsByKey.k1 = {name: 'Block 1', categories: ['blocks']};
+          return 'k1';
+        });
+        pressUpload();
+        expect(screen.queryByText(RULES_TITLE)).toBeNull();
+        await pickFile(container, pngFile());
+        expect(acceptUploaded).toHaveBeenCalledTimes(1);
+      });
+    });
   });
 });

@@ -18,6 +18,4 @@
   background: color-mix(in srgb, var(--neutral-base-true-black) 45%, transparent);
   color: var(--text-neutral-white-fixed);
   font-size: 13px;
-  // The page gives every span user-select: text.
-  user-select: none;
 }

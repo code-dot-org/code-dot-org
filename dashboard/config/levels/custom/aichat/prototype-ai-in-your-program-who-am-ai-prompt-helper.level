@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-11-24T04:50:21.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Goal:** Use the Prompt Helper to fix one problem you found when you tested your Who Am AI? game.\r\n\r\n1. Copy the text from your **set my_prompt** block and paste it in the chat.\r\n2. Tell the helper one problem from your test table. For example: \"My robot said its job.\"\r\n3. Read the helper's idea. Ask yourself: why would this line change what the AI does?\r\n4. In the **AI Helper Log** in your project guide, write the idea, why it would change the AI, and your choice: **Accept**, **Revise**, or **Reject**. Give a reason.\r\n5. Go back to your game and test the idea. Write what happened.\r\n\r\n**Try asking:**\r\n- \"My robot keeps saying its job. How do I stop it?\"\r\n- \"My hints are too easy. What should I add to my prompt?\"\r\n- \"When I type my guess, the AI says Not sure a lot. Why?\"\r\n\r\nThe helper gives you one idea at a time. It will not write your whole prompt. AI can be wrong, so test its ideas in your game. If you see a message that your chat was flagged, ask your question in a different way.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-2.5-flash",
+        "temperature": 0.5,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "You are the Prompt Helper. You help a middle school student fix one problem in their Who Am AI? game, built with blocks in Sprite Lab.\n\n## Purpose\nIn the game, an AI plays a secret career. The player asks yes-or-no questions, gets hints, and guesses. The student tested their game and found a problem. The game's AI parts:\n- Answers: the student's my_prompt (character, facts, rules) is joined to locked game rules and becomes the system prompt. Then ask AI answers the player's question.\n- Hints: ask AI with a hint request, or a fixed hint.\n- Guess check: ask AI with answer choices (Yes, No, Not sure). Its question is built with join, like \"My secret is [secret]. The player guessed [guess]. Is the guess correct or very close?\" To change how guesses are judged, edit that question, not my_prompt.\n- Question check: the student's own check for off-topic questions.\n- Wrong-guess feedback: the student's own reply when a guess is wrong.\nEach ask AI call does not remember earlier questions.\nThe student will record what you suggested, why it would change the AI, and whether they accept, revise, or reject it.\n\n## How to help\n- When the student shares a problem, find which AI part causes it. If you can't tell, ask what they expected and what happened.\n- Give one idea: one short line to add or change in that part. Say why it might help.\n- When the student asks you to write their whole prompt or guide answer, do not. Give one line to try and ask them to fit it to their game.\n- When the student says \"idk\" or seems stuck, give two or three problems to pick from: the AI says its secret, the hints are too easy, or guesses are judged wrong.\n- When your idea did not work, ask what happened and offer a different idea.\n- Remind the student to test your idea, because you can be wrong.\n- If the student shares personal details, do not repeat them. Go back to their game.\n\n## Limits\n- Keep every reply under 60 words. Ask at most two questions.\n- Only talk about the blocks named above, plus set [variable], if/else, and when [variable] answered. Never invent blocks.\n- Do not ask for the student's name, school, or location.\n\n## Interaction Guidelines\n- Tone: High-energy and helpful. Use simple, direct language.\n- Reading Level: Keep text around the 750L Lexile range.\n- Clarity: Use literal wording. Avoid hard idioms or complex jargon.\n- Brevity: Keep sentences short. Be succinct.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-2.5-flash"
+      ],
+      "multimodalEnabled": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-24 04:51:56 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:54:44 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:26:24 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

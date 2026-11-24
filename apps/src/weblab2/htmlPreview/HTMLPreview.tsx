@@ -37,6 +37,7 @@ import {
 } from '@cdo/apps/weblab2/redux/networkRedux';
 
 import {Weblab2LevelProperties} from '../types';
+import {setDebugPanelOpen, setInspectorEnabled} from '../weblab2Redux';
 
 import {
   IframeMessageType,
@@ -64,13 +65,19 @@ export const HTMLPreview: React.FC = () => {
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isStartMode = getIsStartMode();
   const isFullScreenView = useAppSelector(state => state.lab.isFullScreenView);
+  const isShareView = useAppSelector(state => state.lab.isShareView);
   const codebridgeContext = useCodebridgeContext();
   const levelProperties =
     codebridgeContext.levelProperties as Weblab2LevelProperties;
   const levelId = levelProperties.id;
   const widget2 = levelProperties.widget2;
-  // widget2 hides the header, which holds the only exit control.
-  const isFullScreen = !!isFullScreenView && !widget2;
+  // Hide the header in either widget mode, unless editing a widget in start mode.
+  const hideHeader =
+    !!widget2 || (!!levelProperties.widgetView && !isStartMode);
+  const viewOnlyHeader =
+    !!isShareView || (!!levelProperties.showcaseView && !isStartMode);
+  // The header holds the only exit control, so no header means no full screen.
+  const isFullScreen = !!isFullScreenView && !hideHeader;
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const previewContainerRef = useRef<HTMLDivElement | null>(null);
   const previewUrl = useMemo(() => {
@@ -207,6 +214,13 @@ export const HTMLPreview: React.FC = () => {
   }, [aiFilePathToPreview]);
 
   const dispatch = useAppDispatch();
+  // A level without the debug and inspector controls has no way to close the
+  // debug panel or turn the inspector off, so neither carries over into one.
+  useEffect(() => {
+    if (!hideHeader && !viewOnlyHeader) return;
+    dispatch(setDebugPanelOpen(false));
+    dispatch(setInspectorEnabled(false));
+  }, [dispatch, levelId, hideHeader, viewOnlyHeader]);
 
   const handleUrlSubmit = (newInputValue: string) => {
     setCurrentFile(newInputValue);
@@ -545,10 +559,11 @@ export const HTMLPreview: React.FC = () => {
       <div
         className={classNames(
           moduleStyles.previewContainer,
+          hideHeader && moduleStyles.previewContainerNoHeader,
           isFullScreen && moduleStyles.fullScreenPreviewContainer
         )}
       >
-        {!widget2 && (
+        {!hideHeader && (
           <HTMLPreviewHeader
             value={inputValue}
             onChange={setInputValue}
@@ -564,6 +579,7 @@ export const HTMLPreview: React.FC = () => {
             onStopPreview={onStopPreview}
             isStopEnabled={!isStopped}
             fetchFileSearchOptions={fetchHtmlFileOptions}
+            viewOnly={viewOnlyHeader}
           />
         )}
         {isEmptyProject ? (

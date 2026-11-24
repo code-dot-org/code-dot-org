@@ -494,7 +494,7 @@ module UsersHelper
       teacher_feedback_review_state: teacher_feedback&.review_state,
       teacher_feedback_commented: teacher_feedback&.comment&.present? || nil,
       teacher_feedback_new:
-        ((teacher_feedback&.updated_at&.to_i || 0) > (user_level.updated_at&.to_i || 0)) || nil
+        ((teacher_feedback&.created_at&.to_i || 0) > (user_level.updated_at&.to_i || 0)) || nil
     }.compact
   end
 

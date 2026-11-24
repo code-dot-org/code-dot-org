@@ -1,0 +1,21 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2026-11-20T18:11:16.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Look at the chart of the line through one day’s readings. Describe one kind of mistake the linear regression model made, and explain why a straight line could not fit this data. Then name one other reason a model might fail to learn a useful pattern.",
+    "stay_on_level_after_submit": "false",
+    "submittable": "true",
+    "allow_multiple_attempts": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "published": true
+}]]></config>
+</FreeResponse>

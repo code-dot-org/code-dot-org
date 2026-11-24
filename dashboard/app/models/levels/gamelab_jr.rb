@@ -51,7 +51,9 @@ class GamelabJr < Gamelab
     callouts
     objectives
     block_catalog
+    blocks_always_in_toolbox
     lock_earlier_blocks
+    freeplay_intro
     no_project
   )
 
@@ -79,7 +81,8 @@ class GamelabJr < Gamelab
       ['Adaptations', 'adaptations'],
       ['Ecosystems', 'ecosystems'],
       ['Sprite Lab (Game Design)', 'game_design'],
-      ['Transformers', 'transformers']
+      ['Transformers', 'transformers'],
+      ['Quest Builder', 'quest_builder']
     ]
   end
 

@@ -12,6 +12,7 @@ const IMAGE_ROLE = /^Image role/;
 const PALETTE_ROLES = /^Palette roles/;
 const IMAGE_FIRST = /^Enable the Images tab/;
 const ONE_IMAGE = /^Limit students to one image/;
+const IMAGE_UPLOAD = /^Enable image upload/;
 
 const dropdown = (name: RegExp) => screen.getByRole('combobox', {name});
 const textbox = (name: RegExp) => screen.getByRole('textbox', {name});
@@ -231,5 +232,16 @@ describe('EditSpritelabMode', () => {
     const {container} = renderEditor({kind: 'code', imageFirst: true});
     fireEvent.click(screen.getByRole('checkbox', {name: IMAGE_FIRST}));
     expect(JSON.parse(submitted(container))).toEqual({kind: 'code'});
+  });
+
+  it('turns image upload on and off', () => {
+    const {container} = renderEditor({kind: 'freeplay'});
+    fireEvent.click(screen.getByRole('checkbox', {name: IMAGE_UPLOAD}));
+    expect(JSON.parse(submitted(container))).toEqual({
+      kind: 'freeplay',
+      enableImageUpload: true,
+    });
+    fireEvent.click(screen.getByRole('checkbox', {name: IMAGE_UPLOAD}));
+    expect(JSON.parse(submitted(container))).toEqual({kind: 'freeplay'});
   });
 });

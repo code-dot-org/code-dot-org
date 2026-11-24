@@ -88,6 +88,11 @@ export interface CodebridgeLevelProperties extends LevelProperties {
   startDirection?: number;
   widgetView?: boolean;
   widgetViewAllowShowCode?: boolean;
+  /**
+   * Displays the user's site for presentation only; no editing, no view mode
+   * toggle, and uses the share view's preview header.
+   */
+  showcaseView?: boolean;
 }
 
 // Python Lab specific property
@@ -100,6 +105,7 @@ export interface MazeCell {
 export interface LayoutProps {
   isProjectLevel?: boolean;
   isWidgetView?: boolean;
+  isShowcaseView?: boolean;
 }
 
 export interface ProjectPickerSettings {

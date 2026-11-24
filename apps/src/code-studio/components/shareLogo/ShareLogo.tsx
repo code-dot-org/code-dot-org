@@ -4,6 +4,7 @@ import React from 'react';
 import inverseLogo from '@cdo/static/logo-codeai-inverse.svg';
 import blackLogo from '@cdo/static/logo-codeai.svg';
 
+import {SHARE_LOGO_IMAGE_ID} from './shareLogoImageId';
 import useBackgroundTheme from './useBackgroundTheme';
 
 interface ShareLogoProps {
@@ -20,7 +21,7 @@ const ShareLogo: React.FunctionComponent<ShareLogoProps> = ({logoUrl}) => {
 
   return (
     <a href={logoUrl}>
-      <img id="logo-img" src={src} alt="CodeAI home" />
+      <img id={SHARE_LOGO_IMAGE_ID} src={src} alt="CodeAI home" />
     </a>
   );
 };

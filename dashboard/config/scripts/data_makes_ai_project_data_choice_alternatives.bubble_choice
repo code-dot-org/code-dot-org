@@ -1,0 +1,13 @@
+name 'data-makes-ai-project-data-choice-alternatives'
+display_name 'Alternative Datasets'
+description 'The following datasets have been curated differently than the original:'
+navigation_type 'next_sublevel'
+
+sublevels
+level 'data-makes-ai-project-snack-alternative'
+level 'data-makes-ai-project-football-alternative'
+level 'data-makes-ai-project-study-alternative'
+level 'data-makes-ai-project-game-alternative'
+level 'data-makes-ai-project-board-alternative'
+
+uses_lab2

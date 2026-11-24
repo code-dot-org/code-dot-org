@@ -3,11 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Trying AI Tools
+# Trying AI Applications
 
-Take some time to try one or more of these external AI tools below. If you’ve already used one, consider choosing something new.
+Take some time to try one or more of these external AI apps below. If you’ve already used one, consider choosing something new.
 
-👉 Click on the tool to reveal the directions.
+👉 Click on the application to reveal the directions.
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Create Art</summary>
@@ -65,7 +65,7 @@ Try a video!
 </p></div>
 </details>
 
-During the AI 101 Professional Learning Series series, you'll get the opportunity to try out a variety of AI tools, including AI Chat Lab, external LLMs (such as Gemini, Claude, or ChatGPT), and education specific AI tools such as these.
+During the AI 101 Professional Learning Series series, you'll get the opportunity to try out a variety of AI apps, including AI Chat Lab, external LLMs (such as Gemini, Claude, or ChatGPT), and education specific AI apps such as these.
 
 > **💬 Quick Reflection:** How could you use what you tried in your school or classroom?
 MARKDOWN

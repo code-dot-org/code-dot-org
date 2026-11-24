@@ -6,6 +6,10 @@
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :require_edit_to_continue, description: "Require student to edit code before continuing"}
 
   .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :hide_ai_tutor, description: "Hide AI Tutor on this level"}
+    %p Note that if this is enabled, the "showInstructionsInAiTutor" option is ignored, and instructions are always shown in the Instructions tab.
+
+  .field
     = f.label :initial_view_mode, 'Initial View Mode'
     = f.select :initial_view_mode, options_for_select(@level.class.view_modes, @level.initial_view_mode)
     %p Allows setting the initial view mode when the level is loaded, which can be:
@@ -21,6 +25,10 @@
         Shows code editor only.
     %p Students can switch between modes using buttons in the header.
 
+  .field
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :showcase_view, description: "Showcase View"}
+    %p
+      Displays the user's site for presentation only: renders in preview mode only with no view mode toggle, and uses the share preview's header (address bar, stop preview, desktop/mobile toggle). Note that this has no effect on a widget level, which hides the preview header entirely.
   .field
     = f.label :level_system_prompt, 'Level System Prompt'
     %p Optional addition to the system prompt for AI Tutor. This will be deprecated at the end of the AIF Semester 2 pilot!

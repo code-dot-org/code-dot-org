@@ -4,10 +4,12 @@ import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
 import useSources from '@cdo/apps/lab2/hooks/useSources';
-import {setChannel} from '@cdo/apps/lab2/lab2Redux';
+import {setChannel, setIsBlockedAbuse} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import ProjectManagerFactory from '@cdo/apps/lab2/projects/ProjectManagerFactory';
 import {Channel, LevelProperties, ProjectSources} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {
   getStore,
   registerReducers,
@@ -85,6 +87,9 @@ describe('useSources', () => {
       progress: (state: any = {viewAsUserId: null, scriptId: 11}) => state,
     });
     store = getStore();
+    // The registry is a singleton; a manager left over from an earlier test
+    // would look like a successor to the compare-and-clear check.
+    Lab2Registry.create();
     jest.clearAllMocks();
     fakeManager = createFakeProjectManager();
     mockGetProjectManagerForLevel.mockResolvedValue(fakeManager);
@@ -99,6 +104,7 @@ describe('useSources', () => {
     options: {
       includeVersionHistory?: boolean;
       computeHasEdited?: (prev: TestSources, next: TestSources) => boolean;
+      registerProjectManager?: boolean;
     } = {}
   ) => {
     // renderHook passes initialProps to the wrapper too, hence the prop type.
@@ -143,6 +149,38 @@ describe('useSources', () => {
       await flush();
 
       expect(dispatchSpy).toHaveBeenCalledWith(setChannel(OWNED_CHANNEL));
+    });
+
+    it.each([
+      [15, true],
+      [14, false],
+    ])(
+      'publishes an abuse score of %i as blocked=%s',
+      async (score, blocked) => {
+        const dispatchSpy = jest.spyOn(store, 'dispatch');
+        mockGetProjectManagerForLevel.mockResolvedValueOnce(
+          createFakeProjectManager({
+            load: jest.fn().mockResolvedValue({
+              sources: SAVED_SOURCES,
+              channel: OWNED_CHANNEL,
+              abuseScore: score,
+            }),
+          })
+        );
+        renderUseSources();
+        await flush();
+
+        expect(dispatchSpy).toHaveBeenCalledWith(setIsBlockedAbuse(blocked));
+      }
+    );
+
+    it('leaves the block alone when no score came back', async () => {
+      const dispatchSpy = jest.spyOn(store, 'dispatch');
+      renderUseSources();
+      await flush();
+
+      expect(dispatchSpy).not.toHaveBeenCalledWith(setIsBlockedAbuse(false));
+      expect(dispatchSpy).not.toHaveBeenCalledWith(setIsBlockedAbuse(true));
     });
 
     it('refreshes the channel when a save changes it', async () => {
@@ -392,6 +430,112 @@ describe('useSources', () => {
       unmount();
 
       expect(fakeManager.cleanUp).toHaveBeenCalled();
+    });
+  });
+
+  describe('registry', () => {
+    const registered = () => Lab2Registry.getInstance().getProjectManager();
+
+    it('stays out of the registry when opted out', async () => {
+      renderUseSources(LEVEL_ONE, {registerProjectManager: false});
+      await flush();
+
+      expect(registered()).toBeNull();
+    });
+
+    it('registers the manager once it exists', async () => {
+      renderUseSources();
+      expect(registered()).toBeNull();
+
+      await flush();
+
+      expect(registered()).toBe(fakeManager);
+    });
+
+    it('swaps the registered manager when the level changes', async () => {
+      const levelTwoManager = createFakeProjectManager();
+      const {rerender} = renderUseSources();
+      await flush();
+
+      mockGetProjectManagerForLevel.mockResolvedValue(levelTwoManager);
+      rerender({levelProperties: LEVEL_TWO});
+      await flush();
+
+      expect(registered()).toBe(levelTwoManager);
+    });
+
+    it('keeps the outgoing manager registered until its saves have flushed', async () => {
+      // beforeunload reaches unsaved work only through the registry, so
+      // unregistering before the flush lands would strand it.
+      let finishCleanUp = () => {};
+      const levelOneManager = createFakeProjectManager({
+        cleanUp: jest.fn(
+          () => new Promise<void>(resolve => (finishCleanUp = () => resolve()))
+        ),
+      });
+      mockGetProjectManagerForLevel.mockResolvedValue(levelOneManager);
+
+      const {rerender} = renderUseSources();
+      await flush();
+      expect(registered()).toBe(levelOneManager);
+
+      mockGetProjectManagerForLevel.mockResolvedValue(fakeManager);
+      rerender({levelProperties: LEVEL_TWO});
+      await flush(); // level two's load is parked on level one's cleanUp
+
+      expect(levelOneManager.cleanUp).toHaveBeenCalled();
+      expect(registered()).toBe(levelOneManager);
+
+      await act(async () => finishCleanUp());
+
+      expect(registered()).toBe(fakeManager);
+    });
+
+    it('does not register a manager whose level has already been left', async () => {
+      // The outgoing hook's factory lookup can resolve after lab2Redux has
+      // registered the incoming level's manager and before the outgoing view
+      // unmounts, when nothing has yet cancelled the stale load.
+      let finishLookup = (manager: ProjectManager) => {};
+      const outgoingManager = createFakeProjectManager();
+      mockGetProjectManagerForLevel.mockReturnValue(
+        new Promise<ProjectManager>(resolve => (finishLookup = resolve))
+      );
+
+      renderUseSources();
+      await flush(); // the lookup is parked
+
+      // Navigation to a level owned by lab2Redux, which registers its own.
+      const incomingManager = createFakeProjectManager();
+      Lab2Registry.getInstance()
+        .getLifecycleNotifier()
+        .notify(LifecycleEvent.LevelLoadStarted, LEVEL_TWO.id);
+      Lab2Registry.getInstance().setProjectManager(incomingManager);
+
+      await act(async () => finishLookup(outgoingManager));
+
+      expect(registered()).toBe(incomingManager);
+    });
+
+    it('clears its own manager on unmount', async () => {
+      const {unmount} = renderUseSources();
+      await flush();
+
+      unmount();
+
+      expect(registered()).toBeNull();
+    });
+
+    it('leaves a successor manager alone when unmounting after it', async () => {
+      // A lab whose view unmounts only once the next level has loaded would
+      // otherwise unregister the manager that level just registered.
+      const {unmount} = renderUseSources();
+      await flush();
+
+      const successor = createFakeProjectManager();
+      Lab2Registry.getInstance().setProjectManager(successor);
+      unmount();
+
+      expect(registered()).toBe(successor);
     });
   });
 
