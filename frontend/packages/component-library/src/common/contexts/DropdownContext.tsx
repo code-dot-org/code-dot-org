@@ -23,19 +23,17 @@ const DropdownContext = createContext({
 export const useDropdownContext = () => useContext(DropdownContext);
 
 // Call from inside CustomDropdown's children; outside its provider this is a
-// no-op. Focus returns to the trigger unless the handler already moved it.
+// no-op. Focus returns to the trigger unless the handler moved it outside.
 export const useCloseDropdownMenu = () => {
   const {setActiveDropdownName} = useDropdownContext();
 
   return useCallback(
     (menuItem: HTMLElement) => {
       setActiveDropdownName('');
+      const root = menuItem.closest('[data-dropdown-root]');
       const focused = document.activeElement;
-      if (!focused || focused === document.body || focused === menuItem) {
-        menuItem
-          .closest('[data-dropdown-root]')
-          ?.querySelector<HTMLElement>('[data-toggle="dropdown"]')
-          ?.focus();
+      if (!focused || focused === document.body || root?.contains(focused)) {
+        root?.querySelector<HTMLElement>('[data-toggle="dropdown"]')?.focus();
       }
     },
     [setActiveDropdownName],
