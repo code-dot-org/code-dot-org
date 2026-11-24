@@ -33,7 +33,7 @@ async function expectFullCreateMenuItems(
   await expect(header.getCreateProjectItem('minecraft')).not.toBeVisible();
   await expect(header.getCreateProjectItem('dance')).toBeVisible();
   await expect(header.getCreateProjectItem('sketchlab')).toBeVisible();
-  await expect(header.getCreateProjectItem('music_dance_ai')).toBeVisible();
+  await expect(header.getCreateProjectItem('quest_builder')).toBeVisible();
   await expect(header.getCreateProjectItem('weblab2')).toBeVisible();
   await expect(header.getCreateProjectItem('music')).toBeVisible();
   await expect(header.getCreateProjectItem('pythonlab')).toBeVisible();

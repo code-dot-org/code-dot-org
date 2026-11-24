@@ -1,4 +1,4 @@
-// The Hour of AI 2026 wrap-up: a card for the Builder's Challenge, then a
+// The Hour of AI 2026 wrap-up: a card for the challenge, then a
 // row of what to do next. Students get a share link and the certificate;
 // teachers also get two links out to professional learning. Every row item
 // leaves the tutorial, so the panel has no Continue of its own.
@@ -22,21 +22,30 @@ import {CongratsPanelProps} from '../CongratsStep';
 import styles from './congrats.module.scss';
 
 const HEADING = 'You just built something with AI!';
-const DESCRIPTION_WITH_CHALLENGE =
+const DEFAULT_CHALLENGE_DESCRIPTION =
   'Want to keep going? Join the Building with AI Challenge, a national competition for high school teams. Build your project over eight weeks and submit by Feb 1, 2027.';
 const DESCRIPTION_WITHOUT_CHALLENGE =
   'You created a website with your own vision and design using AI. Keep exploring and building with AI to create even more amazing projects!';
+const DEFAULT_CHALLENGE_BUTTON_TEXT =
+  'Learn about the Building with AI Challenge';
 
 const ELEVATE_URL = 'https://code.org/hour-of-ai';
 const AI_FOUNDATIONS_URL =
   'https://code.org/en-US/curriculum/artificial-intelligence-foundations';
 
 type CongratsLink =
-  | 'buildersChallenge'
+  | 'challenge'
   | 'copyShareLink'
   | 'certificate'
   | 'elevateHourOfAi'
   | 'aiFoundations';
+
+// dcdo.rb forwards unset keys as null, so the default passed to DCDO.get
+// alone would not apply.
+const dcdoString = (key: string, fallback: string): string => {
+  const value = DCDO.get(key, fallback);
+  return typeof value === 'string' && value.length > 0 ? value : fallback;
+};
 
 const sendLinkClicked = (link: CongratsLink) =>
   sendAdaptiveEvent(EVENTS.ADAPTIVE_CONGRATS_LINK_CLICKED, {link});
@@ -136,9 +145,17 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
     headingRef.current?.focus();
   }, []);
 
-  const challengeUrl = DCDO.get('builders_challenge_url', undefined);
+  const challengeUrl = DCDO.get('adaptive-challenge-url', undefined);
   const showChallenge =
     typeof challengeUrl === 'string' && challengeUrl.length > 0;
+  const challengeDescription = dcdoString(
+    'adaptive-challenge-description',
+    DEFAULT_CHALLENGE_DESCRIPTION
+  );
+  const challengeButtonText = dcdoString(
+    'adaptive-challenge-button-text',
+    DEFAULT_CHALLENGE_BUTTON_TEXT
+  );
 
   return (
     <div className={styles.panel}>
@@ -157,7 +174,7 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
           </MuiTypography>
           <MuiTypography variant="body2">
             {showChallenge
-              ? DESCRIPTION_WITH_CHALLENGE
+              ? challengeDescription
               : DESCRIPTION_WITHOUT_CHALLENGE}
           </MuiTypography>
         </div>
@@ -165,10 +182,10 @@ const Hoai2026Congrats: React.FunctionComponent<CongratsPanelProps> = ({
         {showChallenge && (
           <ExternalLinkButton
             href={challengeUrl}
-            link="buildersChallenge"
+            link="challenge"
             size="medium"
           >
-            Learn about the Building with AI Challenge
+            {challengeButtonText}
           </ExternalLinkButton>
         )}
       </div>

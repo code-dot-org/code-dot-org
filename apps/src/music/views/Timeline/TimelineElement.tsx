@@ -5,7 +5,10 @@ import {isChordEvent} from '@cdo/apps/music/player/interfaces/ChordEvent';
 import {isInstrumentEvent} from '@cdo/apps/music/player/interfaces/InstrumentEvent';
 import {PlaybackEvent} from '@cdo/apps/music/player/interfaces/PlaybackEvent';
 import {isSoundEvent} from '@cdo/apps/music/player/interfaces/SoundEvent';
+import MusicLibrary from '@cdo/apps/music/player/MusicLibrary';
 import SoundStyle from '@cdo/apps/music/utils/SoundStyle';
+
+import {SOUND_REMOVED_MESSAGE} from '../../constants';
 
 import {useTimelineContext} from './TimelineContext';
 
@@ -59,12 +62,19 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
   // The format of an id is "soundType/soundName" so parsing out the soundName
   const friendlyLabel = eventData.id.split('/').pop();
 
+  const isSilent =
+    isSoundEvent(eventData) &&
+    !!MusicLibrary.getInstance()?.isSoundRemoved(eventData.id);
+
   return (
     <button
       tabIndex={-1}
       type="button"
       onKeyDown={onKeyDown}
-      aria-label={friendlyLabel}
+      aria-label={
+        isSilent ? `${friendlyLabel}. ${SOUND_REMOVED_MESSAGE}` : friendlyLabel
+      }
+      title={isSilent ? SOUND_REMOVED_MESSAGE : undefined}
       className={classNames(
         TimelineElementClass,
         moduleStyles.timelineElement,
@@ -75,7 +85,8 @@ const TimelineElement: React.FunctionComponent<TimelineElementProps> = ({
         isSkipSound && moduleStyles.timelineElementSkipSound,
         isBlockSelected && moduleStyles.timelineElementBlockSelected,
         !isPlaying && moduleStyles.timelineElementClickable,
-        isThinBorder && moduleStyles.timelineElementThinBorder
+        isThinBorder && moduleStyles.timelineElementThinBorder,
+        isSilent && moduleStyles.timelineElementSilent
       )}
       style={{
         width: barWidth * eventData.length,

@@ -225,7 +225,17 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   // handle the lab's chat hands back. The chat's replies open Continue on
   // the reply limit alone.
   const [chat, setChat] = useState<ChatHandle>();
-  const chatHost = useMemo(() => ({onChatReady: setChat}), []);
+  const chatHost = useMemo(
+    () => ({
+      onChatReady: setChat,
+      analyticsProperties: {
+        pathwayId: pathway.id,
+        checkpointId: checkpoint.id,
+        stepId: step.id,
+      },
+    }),
+    [pathway.id, checkpoint.id, step.id]
+  );
   const latestValidationAttempt = latestValidation(entry);
   const checkedBuilds = workAttempts(entry).length;
   const recordStepValidation = useCallback(
