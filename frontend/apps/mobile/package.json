@@ -21,6 +21,7 @@
   "devDependencies": {
     "@capacitor/cli": "^7.6.9",
     "@code-dot-org/lint-config": "workspace:*",
+    "@code-dot-org/shared-constants": "workspace:*",
     "@code-dot-org/studio": "workspace:*",
     "@types/node": "catalog:",
     "eslint": "catalog:",
