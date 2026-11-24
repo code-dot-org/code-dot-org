@@ -11,6 +11,48 @@ class ApplicationJobTest < ActiveJob::TestCase
     end
   end
 
+  class FailingJob < ApplicationJob
+    def perform
+      raise 'job failed'
+    end
+  end
+
+  class SwallowingJob < ApplicationJob
+    rescue_from(StandardError) do
+      # Swallows the failure, as a job with its own error reporting does.
+    end
+
+    def perform
+      raise 'job failed'
+    end
+  end
+
+  class AbortedJob < ApplicationJob
+    before_perform {throw :abort}
+
+    def perform
+      # No-op; never reached.
+    end
+  end
+
+  class SkippedJob < ApplicationJob
+    around_perform do |_job, _block|
+      # Skips the job by never calling the block.
+    end
+
+    def perform
+      # No-op; never reached.
+    end
+  end
+
+  class RetriedJob < ApplicationJob
+    retry_on StandardError, wait: 0, attempts: 2
+
+    def perform
+      raise 'first attempt failed' if executions == 1
+    end
+  end
+
   def populate_jobs_table(t, job_class)
     job_class = "job_class: #{job_class}"
     created_at = t - 1.hour
@@ -334,5 +376,178 @@ class ApplicationJobTest < ActiveJob::TestCase
     rescue => exception
       raise exception, 'Expected error to be squashed'
     end
+  end
+
+  # PerformCount: one datum per perform attempt run by an ActiveJob worker
+  # process, labelled with its outcome and the platform that ran it.
+
+  def stub_worker_process
+    CDO.stubs(:running_active_job_worker?).returns(true)
+  end
+
+  # Lets every push through and returns the PerformCount data among them.
+  def capture_perform_counts
+    perform_counts = []
+    Cdo::Metrics.stubs(:push).with do |_namespace, metrics|
+      perform_counts.concat(metrics.select {|metric| metric[:metric_name] == 'PerformCount'})
+      true
+    end
+    perform_counts
+  end
+
+  def expect_perform_count(job_class, outcome:, platform: 'ec2')
+    Cdo::Metrics.stubs(:push)
+    Cdo::Metrics.expects(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(PerformCount: 1),
+        includes_dimensions(
+          :PerformCount,
+          Environment: CDO.rack_env,
+          JobName: job_class.name,
+          Outcome: outcome,
+          Platform: platform
+        )
+      )
+    ).once
+  end
+
+  def stub_perform_count_push_to_raise
+    Cdo::Metrics.stubs(:push)
+    Cdo::Metrics.stubs(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      includes_metrics(PerformCount: anything)
+    ).raises('PerformCount push failed')
+  end
+
+  test 'a job that succeeds in a worker pushes PerformCount with outcome success' do
+    stub_worker_process
+    expect_perform_count(TestableJob, outcome: 'success')
+
+    TestableJob.perform_now
+  end
+
+  test 'PerformCount carries exactly four dimensions, a count of one and no failure datum' do
+    stub_worker_process
+    perform_counts = capture_perform_counts
+
+    TestableJob.perform_now
+
+    assert_equal 1, perform_counts.length
+    datum = perform_counts.first
+    assert_equal 1, datum[:value]
+    assert_equal 'Count', datum[:unit]
+    assert_kind_of Time, datum[:timestamp]
+    assert_equal(
+      [
+        {name: 'Environment', value: CDO.rack_env},
+        {name: 'JobName', value: 'ApplicationJobTest::TestableJob'},
+        {name: 'Outcome', value: 'success'},
+        {name: 'Platform', value: 'ec2'},
+      ],
+      datum[:dimensions]
+    )
+  end
+
+  test 'a job that raises in a worker pushes PerformCount with outcome failure and still raises' do
+    stub_worker_process
+    expect_perform_count(FailingJob, outcome: 'failure')
+
+    exception = assert_raises(RuntimeError) {FailingJob.perform_now}
+    assert_equal 'job failed', exception.message
+  end
+
+  test 'a job that swallows its failure with rescue_from still pushes outcome failure' do
+    stub_worker_process
+    expect_perform_count(SwallowingJob, outcome: 'failure')
+
+    SwallowingJob.perform_now
+  end
+
+  test 'a retried job pushes one PerformCount per attempt' do
+    stub_worker_process
+    perform_counts = capture_perform_counts
+
+    perform_enqueued_jobs do
+      RetriedJob.perform_later
+    end
+
+    outcomes = perform_counts.map {|datum| datum[:dimensions].find {|dimension| dimension[:name] == 'Outcome'}[:value]}
+    assert_equal %w(failure success), outcomes
+  end
+
+  test 'a job aborted by its own before_perform pushes outcome success without performing' do
+    stub_worker_process
+    expect_perform_count(AbortedJob, outcome: 'success')
+
+    job = AbortedJob.new
+    job.expects(:perform).never
+    job.perform_now
+  end
+
+  test 'a job skipped by its own around_perform pushes outcome success without performing' do
+    stub_worker_process
+    expect_perform_count(SkippedJob, outcome: 'success')
+
+    job = SkippedJob.new
+    job.expects(:perform).never
+    job.perform_now
+  end
+
+  test 'PerformCount takes its platform from CDO.compute_platform' do
+    stub_worker_process
+    CDO.stubs(:compute_platform).returns('k8s')
+    expect_perform_count(TestableJob, outcome: 'success', platform: 'k8s')
+
+    TestableJob.perform_now
+  end
+
+  test 'a job run outside a worker process pushes no PerformCount and runs normally' do
+    perform_counts = capture_perform_counts
+
+    job = TestableJob.new
+    job.expects(:perform).once
+    job.perform_now
+
+    assert_empty perform_counts
+  end
+
+  test 'a failing PerformCount push does not fail a successful job and is reported once' do
+    stub_worker_process
+    stub_perform_count_push_to_raise
+
+    Honeybadger.expects(:notify).once
+
+    TestableJob.perform_now
+  end
+
+  test 'a failing PerformCount push does not replace the exception of a failed job' do
+    stub_worker_process
+    stub_perform_count_push_to_raise
+    Honeybadger.stubs(:notify)
+
+    exception = assert_raises(RuntimeError) {FailingJob.perform_now}
+    assert_equal 'job failed', exception.message
+  end
+
+  test 'a failing error report in the PerformCount path does not change the result of a job' do
+    stub_worker_process
+    stub_perform_count_push_to_raise
+    Observability::Errors.stubs(:report).raises('error report failed')
+
+    TestableJob.perform_now
+
+    exception = assert_raises(RuntimeError) {FailingJob.perform_now}
+    assert_equal 'job failed', exception.message
+  end
+
+  test 'common_dimensions is still exactly Environment and JobName' do
+    assert_equal(
+      [
+        {name: 'Environment', value: CDO.rack_env},
+        {name: 'JobName', value: 'ApplicationJobTest::TestableJob'},
+      ],
+      TestableJob.new.send(:common_dimensions)
+    )
   end
 end

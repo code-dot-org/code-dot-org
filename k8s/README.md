@@ -183,6 +183,21 @@ prove the queue row was deleted. Check the queue as well when verifying drain.
 The job installs no signal handlers, so Delayed Job retains its normal
 finish-current-job behavior on SIGTERM.
 
+Pass `fail: true` to make the job raise after the sleep, in place of logging
+`completed`. The `started` event is still logged, so a failing job records which
+worker took it. Use one job of each kind as a smoke test of a worker's metrics,
+logs and error reports:
+
+```ruby
+AutoscalingTestJob.perform_later(run_id: 'smoke-success', duration_seconds: 0)
+AutoscalingTestJob.perform_later(run_id: 'smoke-failure', duration_seconds: 0, fail: true)
+```
+
+Each should add one to the `PerformCount` metric in the `code-dot-org/ActiveJob`
+CloudWatch namespace, with `Outcome` of `success` or `failure` and the
+`Platform` of the worker that ran it. The failing job also leaves one failed
+`delayed_jobs` row, one Honeybadger notice and one Sentry event.
+
 ## Non-local clusters
 
 Argo CD and Kargo configuration lives in the

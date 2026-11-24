@@ -90,7 +90,11 @@ spec:
 
         command: {{ (.command | default .Values.command) | toJson }}
         args: {{ (.args | default .Values.args) | toJson }}
-        tty: true # dashboard stdout logging assumes a tty
+        # Dashboard stdout logging assumes a tty. Application log lines
+        # (Rails.logger is a syslog logger) reach `kubectl logs` only through the
+        # syslog console fallback this enables, so keep it until the app logs to
+        # stdout directly.
+        tty: true
 
         env:
           - name: RAILS_ENV

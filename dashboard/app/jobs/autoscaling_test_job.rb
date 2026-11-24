@@ -5,7 +5,11 @@ class AutoscalingTestJob < ApplicationJob
 
   queue_as CDO.active_job_queues[:low_priority]
 
-  def perform(run_id:, duration_seconds:)
+  # With `fail: true` the job raises after the sleep, in place of logging
+  # `completed`. That gives a controlled failure for checking metrics, logs and
+  # error reports. The `started` event is still logged, so a failing job records
+  # which worker took it.
+  def perform(run_id:, duration_seconds:, fail: false)
     unless run_id.is_a?(String) && !run_id.strip.empty?
       raise ArgumentError, 'run_id must be a nonblank string'
     end
@@ -24,6 +28,8 @@ class AutoscalingTestJob < ApplicationJob
 
     log_event('started', context)
     sleep duration_seconds
+    raise 'AutoscalingTestJob failure requested' if fail
+
     log_event('completed', context)
   end
 

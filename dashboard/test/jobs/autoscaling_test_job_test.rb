@@ -90,6 +90,20 @@ class AutoscalingTestJobTest < ActiveJob::TestCase
         _(events.pluck('event')).must_equal ['started']
       end
     end
+
+    context 'with fail: true' do
+      subject(:perform_job) do
+        described_instance.perform(run_id: run_id, duration_seconds: duration_seconds, fail: true)
+      end
+
+      it 'sleeps, then raises without reporting completion' do
+        described_instance.expects(:sleep).with(duration_seconds)
+
+        error = _ {perform_job}.must_raise RuntimeError
+        _(error.message).must_equal 'AutoscalingTestJob failure requested'
+        _(events.pluck('event')).must_equal ['started']
+      end
+    end
   end
 
   describe '#perform_now' do

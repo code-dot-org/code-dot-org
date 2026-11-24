@@ -721,6 +721,11 @@ active_job_queue_adapter: :delayed_job
 active_job_backend_n_workers_to_start: 10
 active_job_backend_rolling_restart_in_n_batches: 2
 
+# Which platform this process runs on: `ec2` by default, set to `k8s` by the
+# Helm chart (k8s/helm/templates/locals.yml.yaml). Used as the `Platform`
+# dimension of the ActiveJob `PerformCount` metric.
+compute_platform: ec2
+
 # aiproxy credentials
 aiproxy_api_key: !Secret
 
