@@ -369,9 +369,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     (isLevelbuilder && imagesAdvancedParam) || isLevelEditMode;
   // ?world-block=true: an experiment with Images | Scenes at the top, the
   // scenes listed beside the code, and the world edited from a set world
-  // block instead of a World tab. ?world-block=dropdown is the same, but
-  // with a scene dropdown in the middle of the bar over the code in place
-  // of the list.
+  // block instead of a World tab. ?world-block=dropdown is the same, but a
+  // scene dropdown in the bar over the code, just past the toolbox, replaces
+  // the list.
   const worldBlockParam = useMemo(() => queryParams('world-block'), []);
   const worldBlock =
     worldBlockParam === 'true' || worldBlockParam === 'dropdown';
@@ -2362,8 +2362,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const sceneSidebarShown =
     worldBlock && !sceneDropdownInStrip && scenesOffered && editorsShown;
   // The set world block whose world the dialog is editing, and the dialog's
-  // copy of that world, written to the block when the dialog closes: one
-  // undo step and one save per visit, not one per painted cell.
+  // copy of that world, written to the block when the dialog closes, so each
+  // opening of the dialog makes one undo step and one save, not one per
+  // painted cell.
   const [worldEditor, setWorldEditor] = useState<{
     field: WorldField;
     world: World;

@@ -23,7 +23,7 @@ interface EditorStripProps {
   editorLabels?: Partial<Record<Editor, string>>;
   /** The name in the middle; the open editor's unless given. */
   title?: string;
-  /** Shown in the middle in place of the name, such as a scene dropdown. */
+  /** Shown in place of the name. */
   titleContent?: React.ReactNode;
   /** Where titleContent starts, in pixels from the bar's left edge;
       centered when left out. */
@@ -117,7 +117,8 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
         <div
           className={classNames(
             moduleStyles.editorStripTitle,
-            titleContentLeft !== undefined && moduleStyles.editorStripTitleAt
+            titleContentLeft !== undefined &&
+              moduleStyles.editorStripTitleFromLeft
           )}
           style={
             titleContentLeft !== undefined

@@ -294,7 +294,6 @@ interface WorldTabProps {
   // component unmounts when the tab is hidden).
   selected: PaletteSelection | null;
   onSelect: (selection: PaletteSelection) => void;
-  /** The smallest the grid shrinks to, in pixels. */
   minGridPixels?: number;
 }
 

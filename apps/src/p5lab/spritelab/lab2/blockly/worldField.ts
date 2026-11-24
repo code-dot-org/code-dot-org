@@ -5,7 +5,6 @@ import {drawWorldThumbnail, WORLD_THUMBNAIL_PX} from '../worldThumbnail';
 
 export const FIELD_WORLD_TYPE = 'field_spritelab2_world';
 
-/** Set by the view while ?world-block is on. */
 interface WorldFieldHost {
   /** Cells per side for a block whose world is still empty. */
   sceneSize: () => number;
@@ -34,8 +33,7 @@ export function worldFromFieldValue(value: unknown): World | undefined {
 
 /**
  * The set world block's own world, shown as a small picture of its grid.
- * Clicking the picture opens the world editor on this block's world. The
- * value is saved with the block, so each block keeps its own world.
+ * The value is saved with the block, so each block keeps its own world.
  */
 export class WorldField extends BlocklyCore.FieldImage {
   override SERIALIZABLE = true;
@@ -73,7 +71,6 @@ export class WorldField extends BlocklyCore.FieldImage {
     this.redraw();
   }
 
-  /** Draw the picture again, as when the world's pictures finish loading. */
   redraw(): void {
     if (!this.imageElement) {
       return;
