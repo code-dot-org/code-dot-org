@@ -4,6 +4,7 @@ import {lazy, Suspense} from 'react';
 
 import {signInRedirectHref} from '@/modules/auth';
 import {ErrorPage} from '@/modules/errors';
+import {pageTitle} from '@/modules/router/pageTitle';
 
 // Lazy so the accounts package lands in its own chunk, fetched on first nav.
 const UsersSettingsPage = lazy(() => import('@code-dot-org/users'));
@@ -28,7 +29,7 @@ export const Route = createFileRoute('/users/edit')({
   },
   // Title is set here, not in a component effect: HeadContent manages it per
   // matched route, so it needs no cleanup and is restored on navigation.
-  head: () => ({meta: [{title: 'My Account | CodeAI'}]}),
+  head: () => ({meta: [{title: pageTitle('My Account')}]}),
   component: AccountsRoute,
   errorComponent: AccountsError,
 });
