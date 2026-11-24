@@ -56,14 +56,13 @@ node['cdo-users'].each_pair do |user_name, user_data|
 
   # Forward email if an address is provided.
   user_email = user_data['email'].to_s.strip.downcase
-  unless user_email.empty?
-    template File.join(home_directory, '.forward') do
-      action :create_if_missing
-      source 'forward.erb'
-      variables(email: user_email)
-      owner user_name
-      group user_name
-    end
+  template File.join(home_directory, '.forward') do
+    not_if {user_email.empty?}
+    action :create_if_missing
+    source 'forward.erb'
+    variables(email: user_email)
+    owner user_name
+    group user_name
   end
 
   #
