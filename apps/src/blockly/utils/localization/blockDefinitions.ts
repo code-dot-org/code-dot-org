@@ -2,8 +2,9 @@ import * as BlocklyCore from 'blockly/core';
 
 import {BlockJson} from '@cdo/apps/blockly/types';
 import localization from '@cdo/apps/localization';
+import {isEnglishLocale} from '@cdo/apps/localization/templates';
 
-const BLOCK_LABELS = ['blockly-block'];
+export const BLOCK_LABELS = ['blockly-block'];
 const TOOLTIP_LABELS = ['blockly-block', 'blockly-tooltip'];
 
 /**
@@ -64,6 +65,65 @@ export function localizeBlockDefinition(blockDefinition: BlockJson): BlockJson {
         ? translate(blockDefinition.message3, BLOCK_LABELS)
         : undefined,
   };
+}
+
+type ArgJson = {name?: string; options?: unknown};
+
+function argReferences(message: string): string[] {
+  return (message.match(/%\d+/g) ?? []).sort();
+}
+
+/**
+ * Translates a JSON block message as the legacy blocks' messages are, %N
+ * and all. A translation that drops or repeats a %N would make jsonInit
+ * throw, so the English message is kept instead.
+ */
+export function translateBlockMessage(message: string): string {
+  const translated = translate(message, BLOCK_LABELS);
+  const same =
+    argReferences(translated).join() === argReferences(message).join();
+  return same ? translated : message;
+}
+
+function translateOptions(options: unknown): unknown {
+  if (!Array.isArray(options)) {
+    return options;
+  }
+  return options.map(option => {
+    if (!Array.isArray(option) || typeof option[0] !== 'string') {
+      return option;
+    }
+    const [display, ...rest] = option;
+    return [translate(display, BLOCK_LABELS), ...rest];
+  });
+}
+
+/**
+ * Returns a copy of a JSON block definition in the current language: its
+ * messages, its tooltip, and the display text of any argument's options. English is returned as
+ * given.
+ */
+export function localizeJsonBlockDefinition(definition: BlockJson): BlockJson {
+  if (isEnglishLocale()) {
+    return definition;
+  }
+  const localized: BlockJson = {...definition};
+  for (let n = 0; `message${n}` in definition; n++) {
+    const message = definition[`message${n}`];
+    const args = (definition[`args${n}`] ?? []) as ArgJson[];
+    if (typeof message === 'string') {
+      localized[`message${n}`] = translateBlockMessage(message);
+    }
+    if (definition[`args${n}`]) {
+      localized[`args${n}`] = args.map(arg =>
+        arg.options ? {...arg, options: translateOptions(arg.options)} : arg
+      ) as BlockJson[`args${number}`];
+    }
+  }
+  if (definition.tooltip) {
+    localized.tooltip = translate(definition.tooltip, TOOLTIP_LABELS);
+  }
+  return localized;
 }
 
 type BlockInitDefinition = (typeof BlocklyCore.Blocks)[string];

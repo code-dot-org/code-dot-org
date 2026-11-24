@@ -1,12 +1,14 @@
 import localization from '@cdo/apps/localization';
 import {
-  displayTextFromImage,
   elementToTemplate,
+  templateToElement,
+} from '@cdo/apps/localization/templates';
+import {
+  displayTextFromImage,
   readOnlyTemplate,
   sentenceDisplayText,
   sentenceTemplate,
   splitTemplate,
-  templateToElement,
   translateSentence,
   translateText,
   translateWord,

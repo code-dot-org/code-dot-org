@@ -4,7 +4,12 @@
 // word is translated on its own. The prompt sent to the model is never
 // translated: it is built by promptText, in English.
 
-import localization from '@cdo/apps/localization';
+import {
+  isEnglishLocale,
+  PLACEHOLDER,
+  translateFilled,
+  translateTemplate,
+} from '@cdo/apps/localization/templates';
 import {ImageGenerationMetadata} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 
 import {
@@ -24,7 +29,6 @@ import {
 const SENTENCE_LABELS = ['spritelab-sentence'];
 const WORD_LABELS = ['spritelab-sentence', 'spritelab-word'];
 
-const PLACEHOLDER = /\{\{(\w+)\}\}/g;
 // A word is sent as "[Noun] cat", so one spelling used as two parts of
 // speech gets two entries.
 const CONTEXT_PREFIX = /^\[[^\]]*\]\s*/;
@@ -32,66 +36,9 @@ const CONTEXT_PREFIX = /^\[[^\]]*\]\s*/;
 /** A run of fixed text, or the place a slot's word goes. */
 export type SentencePiece = {text: string} | {slot: string};
 
-export function isEnglish(locale: string = localization.locale): boolean {
-  return locale.split(/[-_]/)[0] === 'en';
-}
+export const isEnglish = isEnglishLocale;
 
-/**
- * The template as a phrase LocalizeJS can reorder: each {{name}} becomes
- * <var name>name</var>. LocalizeJS names a variable after the element's
- * first attribute and never sends its content to translators.
- */
-export function templateToElement(template: string): HTMLElement {
-  const phrase = document.createElement('span');
-  let cursor = 0;
-  for (const match of template.matchAll(PLACEHOLDER)) {
-    const index = match.index ?? 0;
-    phrase.append(template.slice(cursor, index));
-    const variable = document.createElement('var');
-    variable.setAttribute(match[1], '');
-    variable.textContent = match[1];
-    phrase.append(variable);
-    cursor = index + match[0].length;
-  }
-  phrase.append(template.slice(cursor));
-  return phrase;
-}
-
-/**
- * A translated phrase back as a template: text as it is, and each <var> as
- * {{name}}. LocalizeJS lowercases variable names, so a name is matched to
- * the template's own spelling.
- */
-export function elementToTemplate(phrase: Node, names: string[]): string {
-  const spelling = new Map(names.map(name => [name.toLowerCase(), name]));
-  return Array.from(phrase.childNodes)
-    .map(node => {
-      if (node instanceof HTMLElement && node.tagName === 'VAR') {
-        const name = node.attributes[0]?.name ?? node.textContent?.trim() ?? '';
-        return `{{${spelling.get(name.toLowerCase()) ?? name}}}`;
-      }
-      return node.textContent ?? '';
-    })
-    .join('');
-}
-
-/** Translates a template, keeping its {{name}} placeholders as variables. */
-function translate(template: string, labels: string[]): string {
-  const names = Array.from(template.matchAll(PLACEHOLDER), m => m[1]);
-  if (!names.length) {
-    return localization.translate(template, labels);
-  }
-  const translated: unknown = localization.translate(
-    templateToElement(template),
-    labels
-  );
-  if (typeof translated === 'string') {
-    const parsed = document.createElement('span');
-    parsed.innerHTML = translated;
-    return elementToTemplate(parsed, names);
-  }
-  return elementToTemplate(translated as Node, names);
-}
+const translate = translateTemplate;
 
 /**
  * The template for the segments as shown: a slot is a {{slot}} placeholder
@@ -193,13 +140,7 @@ export function translateText(
   template: string,
   values: {[name: string]: string} = {}
 ): string {
-  const translated = isEnglish()
-    ? template
-    : translate(template, SENTENCE_LABELS);
-  return translated.replace(
-    PLACEHOLDER,
-    (match, name) => values[name] ?? match
-  );
+  return translateFilled(template, values, SENTENCE_LABELS);
 }
 
 /** The template for a sentence read back: chosen words and filled phrases. */
