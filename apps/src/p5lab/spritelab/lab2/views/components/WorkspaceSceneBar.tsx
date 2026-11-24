@@ -14,54 +14,60 @@ interface WorkspaceSceneBarProps
   startExtra?: React.ReactNode;
   /** Room kept clear of the preview's column. */
   style?: React.CSSProperties;
+  /** False when the scene controls are in the editor strip instead
+      (?scene-tabs=true). */
+  withScenes?: boolean;
 }
 
 /**
- * The bar across the base of the editors (?bar=workspace): the
- * project-wide controls at the start, then at the end the scene dropdown,
+ * The bar across the base of the editors: the project-wide controls at the
+ * start, then at the end, unless withScenes is false, the scene dropdown,
  * opening upward, and All scenes.
  */
 const WorkspaceSceneBar: React.FunctionComponent<WorkspaceSceneBarProps> = ({
   onManageScenes,
   startExtra,
   style,
+  withScenes = true,
   ...dropdown
 }) => (
   <div className={moduleStyles.workspaceSceneBar} style={style}>
     <div className={moduleStyles.tabBar}>{startExtra}</div>
-    <div className={moduleStyles.tabBar}>
-      <SceneDropdown {...dropdown} menuPlacement="top" />
-      {onManageScenes && (
-        // aria-disabled, not disabled: a locked button stays in the tab
-        // order, so its reason reaches keyboard users. The disabled look
-        // takes no pointer events, so the span carries the hover.
-        <Tooltip
-          title={dropdown.locked ? dropdown.lockedReason : ''}
-          describeChild
-        >
-          <span>
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              size="small"
-              aria-disabled={dropdown.locked}
-              className={classNames({
-                [buttonClasses.disabled]: dropdown.locked,
-              })}
-              onClick={event => {
-                if (dropdown.locked) {
-                  return;
-                }
-                blurAfterPointerClick(event);
-                onManageScenes();
-              }}
-            >
-              All scenes
-            </MuiButton>
-          </span>
-        </Tooltip>
-      )}
-    </div>
+    {withScenes && (
+      <div className={moduleStyles.tabBar}>
+        <SceneDropdown {...dropdown} menuPlacement="top" />
+        {onManageScenes && (
+          // aria-disabled, not disabled: a locked button stays in the tab
+          // order, so its reason reaches keyboard users. The disabled look
+          // takes no pointer events, so the span carries the hover.
+          <Tooltip
+            title={dropdown.locked ? dropdown.lockedReason : ''}
+            describeChild
+          >
+            <span>
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                size="small"
+                aria-disabled={dropdown.locked}
+                className={classNames({
+                  [buttonClasses.disabled]: dropdown.locked,
+                })}
+                onClick={event => {
+                  if (dropdown.locked) {
+                    return;
+                  }
+                  blurAfterPointerClick(event);
+                  onManageScenes();
+                }}
+              >
+                All scenes
+              </MuiButton>
+            </span>
+          </Tooltip>
+        )}
+      </div>
+    )}
   </div>
 );
 

@@ -19,8 +19,11 @@ interface EditorStripProps {
   onChange?: (editor: Editor) => void;
   editors?: Editor[];
   disabledEditors?: Editor[];
-  /** The name in the middle; the open editor's unless given. */
-  title?: string;
+  /** A control set into the switch (see EditorSwitch). */
+  between?: {after: Editor; node: React.ReactNode};
+  /** The name in the middle: the open editor's when left out; null shows
+      no name. */
+  title?: string | null;
   /** The switch at the bar's start instead of its end; undo and redo
       sit across from it either way. */
   switchAtStart?: boolean;
@@ -30,22 +33,25 @@ interface EditorStripProps {
   endSlotRef?: (element: HTMLDivElement | null) => void;
   /** Room kept clear of the preview's column. */
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
  * The bar over a pane, as Lab2's panel headers: the pane's name centered,
- * and over the editors the Code | World switch at its end.
+ * with the editor switch at one end and undo and redo at the other.
  */
 const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   editor,
   onChange,
   editors,
   disabledEditors,
+  between,
   title,
   switchAtStart = false,
   history,
   endSlotRef,
   style,
+  className,
 }) => {
   // Takes focus from a button that its own click disables.
   const historyRef = useRef<HTMLDivElement>(null);
@@ -89,26 +95,30 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
       onChange={onChange}
       editors={editors}
       disabledEditors={disabledEditors}
+      between={between}
     />
   );
   return (
     <div
       className={classNames(
         moduleStyles.editorStrip,
-        onChange && moduleStyles.editorStripEditors
+        onChange && moduleStyles.editorStripEditors,
+        className
       )}
       style={style}
     >
       <div className={moduleStyles.editorStripStart}>
         {switchAtStart ? switchNode : historyNode}
       </div>
-      <MuiTypography
-        component="h2"
-        variant="overline2"
-        className={moduleStyles.editorStripTitle}
-      >
-        {title ?? (editor === 'Code' ? 'Workspace' : editor)}
-      </MuiTypography>
+      {title !== null && (
+        <MuiTypography
+          component="h2"
+          variant="overline2"
+          className={moduleStyles.editorStripTitle}
+        >
+          {title ?? (editor === 'Code' ? 'Workspace' : editor)}
+        </MuiTypography>
+      )}
       <div className={moduleStyles.editorStripEnd}>
         {switchAtStart ? historyNode : switchNode}
         {endSlotRef && (

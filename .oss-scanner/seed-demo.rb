@@ -18,7 +18,8 @@ student = User.find_by_email_or_hashed_email('demo-student@example.com') ||
 
 section = Section.find_by(user: teacher, name: 'Demo Section') ||
   Section.create!(user: teacher, name: 'Demo Section', login_type: 'email', participant_type: 'student',
-    course_id: course.id, script_id: unit.id)
+    course_id: course.id, script_id: unit.id
+  )
 section.add_student(student) unless section.students.include?(student)
 
 puts "seed-demo: demo-teacher@example.com and demo-student@example.com (password #{PASSWORD}); " \

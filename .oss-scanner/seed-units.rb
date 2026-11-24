@@ -62,15 +62,15 @@ courses.each do |c|
   CourseOffering.seed_record(offering) if File.exist?(offering)
 end
 DSLDefined.transaction {parse_dsl_files(child_dsls, child_types)} if child_dsls.any?
-custom_paths.each {|path| LevelLoader.import_levels(path.gsub(/[\[\]{}*?,\\]/) {|c| "\\#{c}"})}
+custom_paths.each {|custom_path| LevelLoader.import_levels(custom_path.gsub(/[\[\]{}*?,\\]/) {|c| "\\#{c}"})}
 DSLDefined.transaction {parse_dsl_files(parent_dsls, parent_types)} if parent_dsls.any?
 update_scripts(script_files: script_files)
-course_paths.each {|path| UnitGroup.load_from_path(path)}
+course_paths.each {|course_path| UnitGroup.load_from_path(course_path)}
 # Vocabulary and resources need the course version, which exists only now.
 update_scripts(script_files: script_files)
 
-ARGV.each do |name|
-  course = UnitGroup.find_by!(name: name)
-  puts "seed-units: #{name}: " +
+ARGV.each do |course_name|
+  course = UnitGroup.find_by!(name: course_name)
+  puts "seed-units: #{course_name}: " +
     course.default_units.map {|u| "#{u.name} (#{u.lessons.count} lessons, #{u.script_levels.count} levels)"}.join(', ')
 end

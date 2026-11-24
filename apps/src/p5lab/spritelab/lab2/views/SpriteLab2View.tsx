@@ -167,6 +167,7 @@ import PlayBarGroups from './components/PlayBarGroups';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
 import {sceneDropdownButtonId} from './components/SceneDropdown';
+import SceneSwitch from './components/SceneSwitch';
 import ShareActions from './components/ShareActions';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton, {
@@ -346,6 +347,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const imagesAdvanced =
     (isLevelbuilder && imagesAdvancedParam) || isLevelEditMode;
+  // ?scene-tabs=true: an experiment that puts a picture button per scene
+  // beside Images in the top strip, with World | Code in a second strip
+  // beneath.
+  const sceneTabs = useMemo(() => queryParams('scene-tabs') === 'true', []);
   // The mode decides the tab set, and an image level's is empty: its panel
   // replaces the shell. A level with no mode, or one whose authored kind is
   // not a kind we know, falls back to the lab defaults.
@@ -2308,6 +2313,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // A toolbox has no scenes: New scene would put the student default into
   // the saved toolbox.
   const scenesOffered = labReady && !isToolboxMode;
+  const sceneRows = sceneTabs && scenesOffered;
+  const editorTitle = isViewOnly
+    ? `${activeTab === 'Code' ? 'Workspace' : activeTab} (view only)`
+    : undefined;
   // The scene controls for the scene row or the workspace bar. A pinned
   // level shows only its own scene.
   const sceneControls = {
@@ -2499,9 +2508,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         <div ref={stageRef} className={moduleStyles.stage}>
           {scenesOffered &&
             editorsShown &&
-            (activeTab === 'Code' || activeTab === 'World') && (
+            (sceneTabs
+              ? activeTab === 'Code' && catalogOffered
+              : activeTab === 'Code' || activeTab === 'World') && (
               <WorkspaceSceneBar
                 {...sceneControls}
+                withScenes={!sceneTabs}
                 startExtra={
                   activeTab === 'Code' &&
                   catalogOffered && (
@@ -2522,18 +2534,25 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <EditorStrip
                 editor={activeTab}
                 onChange={handleEditorChange}
-                editors={EDITORS}
+                editors={sceneRows ? ['Images'] : EDITORS}
                 disabledEditors={disabledEditors}
-                title={
-                  isViewOnly
-                    ? `${
-                        activeTab === 'Code' ? 'Workspace' : activeTab
-                      } (view only)`
+                between={
+                  sceneRows
+                    ? {
+                        after: 'Images',
+                        node: (
+                          <SceneSwitch
+                            {...sceneControls}
+                            sceneOpen={activeTab !== 'Images'}
+                          />
+                        ),
+                      }
                     : undefined
                 }
+                title={sceneRows && activeTab !== 'Images' ? null : editorTitle}
                 switchAtStart
                 history={
-                  activeTab === 'Code'
+                  activeTab === 'Code' && !sceneRows
                     ? {canUndo, canRedo, undo, redo}
                     : activeTab === 'Images'
                     ? drawingHistory ?? undefined
@@ -2542,14 +2561,37 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 style={activeTab === 'Images' ? clearOfPane : clearOfPreview}
               />
             )}
+          {sceneRows &&
+            editorsShown &&
+            (activeTab === 'World' || activeTab === 'Code') && (
+              <EditorStrip
+                editor={activeTab}
+                onChange={handleEditorChange}
+                editors={['World', 'Code']}
+                disabledEditors={disabledEditors}
+                title={editorTitle}
+                switchAtStart
+                history={
+                  activeTab === 'Code'
+                    ? {canUndo, canRedo, undo, redo}
+                    : undefined
+                }
+                className={moduleStyles.sceneEditorStrip}
+                style={clearOfPreview}
+              />
+            )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on labReady (see the seed effect). */}
           <div
             ref={codeWrapperRef}
             className={classNames(
               moduleStyles.codeTabWrapper,
-              editorsShown && moduleStyles.underEditorStrip,
-              moduleStyles.aboveWorkspaceSceneBar
+              editorsShown &&
+                (sceneRows
+                  ? moduleStyles.underSceneEditorStrip
+                  : moduleStyles.underEditorStrip),
+              (!sceneTabs || catalogOffered) &&
+                moduleStyles.aboveWorkspaceSceneBar
             )}
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
@@ -2629,8 +2671,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               ref={fade.ref('World')}
               className={classNames(
                 moduleStyles.codeTabWrapper,
-                editorsShown && moduleStyles.underEditorStrip,
-                moduleStyles.aboveWorkspaceSceneBar
+                editorsShown &&
+                  (sceneRows
+                    ? moduleStyles.underSceneEditorStrip
+                    : moduleStyles.underEditorStrip),
+                !sceneTabs && moduleStyles.aboveWorkspaceSceneBar
               )}
               style={{
                 clipPath: activeTab === 'World' ? 'none' : 'inset(100%)',
