@@ -7,7 +7,7 @@ additions, layered on by `docker-compose.yml`:
 | | |
 |---|---|
 | `mysql` | [cdo-devdb](../.github/workflows/cdo-devdb-image.yml) in place of stock `mysql:8.0`. It carries `dashboard_development` seeded with the production curriculum, and `dashboard_test` prepared and seeded. |
-| `minio` | S3, emulated, with the buckets Rails expects. |
+| `silo` | S3, emulated, with the buckets Rails expects. |
 
 Configuration is [docker/dev/dev.env](../docker/dev/dev.env). A `CDO_*`
 variable outranks `locals.yml`, so the container needs no `locals.yml` and
@@ -80,7 +80,7 @@ apps files" and browse port 9000.
 
 ## The database outlives the container
 
-The first start copies the image's datadir into the `mysql-data` volume.
+The first start copies the image's datadir into the `devdb-data` volume.
 `down` and rebuilding the container keep your writes, and each start
 applies the migrations newer than the volume. To start over from the
 latest pre-seed, delete the Codespace or run `docker compose down -v`.

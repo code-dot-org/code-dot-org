@@ -4,36 +4,43 @@
 services:
   mysql:
     image: ${CDO_DEV_DB_IMAGE:-ghcr.io/code-dot-org/cdo-devdb:latest}
+    # The harness sets a command, which replaces the image's. Keep in sync
+    # with Dockerfile.db.
+    command: ["--datadir=/opt/mysql-data", "--default-time-zone=+00:00"]
+    volumes:
+      # Empty on first start, so docker fills it from the image's datadir.
+      - devdb-data:/opt/mysql-data
 
-  # Unpublished: port 9000 is the apps dev server's.
-  minio:
-    image: minio/minio:latest
-    command: server /data --quiet
+  silo:
+    image: pgsty/silo:RELEASE.2026-11-12T00-00-00Z # docker/developers/.env
+    command: server --address ":9002" /data
     environment:
       MINIO_ROOT_USER: local-development
       MINIO_ROOT_PASSWORD: allstudents
     healthcheck:
-      test: ["CMD", "mc", "ready", "local"]
+      test: ["CMD", "curl", "-sf", "http://localhost:9002/minio/health/live"]
       interval: 2s
       timeout: 3s
       retries: 15
 
   # Rails creates a bucket only on a read (lib/cdo/local_development.rb).
-  minio-buckets:
-    image: minio/minio:latest
+  silo-buckets:
+    image: amazon/aws-cli
+    # install-s3.sh accepts only a localhost endpoint.
+    network_mode: service:silo
     depends_on:
-      minio:
+      silo:
         condition: service_healthy
-    entrypoint:
-      - sh
-      - -c
-      - |
-        mc alias set cdo http://minio:9000 local-development allstudents
-        for b in cdo-ai cdo-animation-library cdo-restricted cdo-sound-library \
-                 cdo-v3-animations cdo-v3-assets cdo-v3-files cdo-v3-libraries \
-                 cdo-v3-sources videos.code.org; do
-          mc mb --ignore-existing "cdo/$$b"
-        done
+    entrypoint: ""
+    command: /bin/bash /code-dot-org/docker/developers/install-s3.sh
+    environment:
+      AWS_ACCESS_KEY_ID: local-development
+      AWS_SECRET_ACCESS_KEY: allstudents
+      AWS_DEFAULT_REGION: us-east-1
+      AWS_S3_ENDPOINT_URL: http://localhost:9002
+      WITHIN_DOCKER: "1"
+    volumes:
+      - ../..:/code-dot-org:ro
 
   app:
     image: ${IMAGE:-ghcr.io/code-dot-org/cdo-dev:latest}
@@ -41,7 +48,7 @@ services:
       # Serve the prebuilt apps package `rake build` downloads.
       CDO_USE_MY_APPS: "false"
       CDO_AWS_S3_EMULATED: "true"
-      CDO_AWS_S3_ENDPOINT: http://minio:9000
+      CDO_AWS_S3_ENDPOINT: http://silo:9002
       # Keeps the apps dev server inside a laptop's memory (apps/README.md).
       APPS_DEVTOOL: eval
       SKIP_TYPECHECK: "1"
@@ -50,8 +57,9 @@ services:
       # frontend/ keeps its yarn cache here, outside the checkout.
       - yarn-cache:/home/cdo/.yarn
     depends_on:
-      minio-buckets:
+      silo-buckets:
         condition: service_completed_successfully
 
 volumes:
+  devdb-data:
   yarn-cache:
