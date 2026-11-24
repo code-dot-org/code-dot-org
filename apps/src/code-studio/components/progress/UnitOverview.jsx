@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {makerspaceSupportLinkFor} from '@cdo/apps/adaptive/makerspaceSupportLink';
 import RequiresAiChatToolsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresAiChatToolsAlert';
 import RequiresInaccessibleAiModelsAlert from '@cdo/apps/aiComponentLibrary/aiChatToolsDependencyAlerts/RequiresInaccessibleAiModelsAlert';
 import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
@@ -230,7 +231,9 @@ class UnitOverview extends React.Component {
               )}
             {viewAs === ViewType.Instructor &&
               aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
-                <RequiresAiChatToolsAlert />
+                <RequiresAiChatToolsAlert
+                  supportLink={makerspaceSupportLinkFor(scriptName)}
+                />
               )}
           </UnitOverviewHeader>
           {/* unit-calendar-for-printing has style `display: none` from `style/curriculum/scripts.scss` which is added from the BE */}
