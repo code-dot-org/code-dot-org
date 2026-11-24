@@ -42,7 +42,7 @@ const pathway = (stats?: string[]) => ({
     {...checkpoint('a', ['intro']), skillIds: ['build']},
     checkpoint('b', ['a'], 'north'),
     {
-      ...checkpoint('wrap', ['b']),
+      ...checkpoint('wrap', ['a']),
       steps: [
         {
           id: 'wrap-stats',
