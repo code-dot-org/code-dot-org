@@ -10,7 +10,7 @@ import {Checkpoint} from '../../types';
 import PathwayIcon from '../components/PathwayIcon';
 
 import {NodePosition} from './layout/types';
-import type {MapIntro} from './MapView';
+import type {MapSkeletonStyle} from './MapView';
 
 import styles from './mapNode.module.scss';
 
@@ -45,14 +45,14 @@ interface MapNodeProps {
   skeleton?: boolean;
 }
 
-export function isSkeleton(
-  intro: MapIntro | undefined,
+export function shouldSkeleton(
+  skeletonStyle: MapSkeletonStyle | undefined,
   checkpointId: string,
   firstCheckpointId: string | undefined
 ): boolean {
   return (
-    intro === 'skeleton' ||
-    (intro === 'skeletonButFirst' && checkpointId !== firstCheckpointId)
+    skeletonStyle === 'all' ||
+    (skeletonStyle === 'allButFirst' && checkpointId !== firstCheckpointId)
   );
 }
 

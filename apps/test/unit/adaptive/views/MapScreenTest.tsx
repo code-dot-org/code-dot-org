@@ -32,17 +32,17 @@ jest.mock('@cdo/apps/adaptive/project/usePathwayProject', () => ({
 }));
 
 // MapView mock exposes onSelect so tests can simulate a checkpoint click,
-// and the intro it receives as data-intro.
+// and the skeletonStyle it receives as data-skeleton-style.
 jest.mock('@cdo/apps/adaptive/views/map/MapView', () => ({
   __esModule: true,
   default: ({
     onSelect,
-    intro,
+    skeletonStyle,
   }: {
     onSelect?: (id: string) => void;
-    intro?: string;
+    skeletonStyle?: string;
   }) => (
-    <div aria-label="map" data-intro={intro ?? 'none'}>
+    <div aria-label="map" data-skeleton-style={skeletonStyle ?? 'none'}>
       <button type="button" onClick={() => onSelect?.('cp-1')}>
         select cp-1
       </button>
@@ -436,15 +436,16 @@ describe('MapScreen tour', () => {
     });
   });
 
-  describe('map intro skeleton', () => {
-    const intro = () => screen.getByLabelText('map').getAttribute('data-intro');
+  describe('map skeleton', () => {
+    const skeletonStyle = () =>
+      screen.getByLabelText('map').getAttribute('data-skeleton-style');
 
     describe.each([false, true])(
       'with hasSkippedCheckpoints=%s',
       hasSkippedCheckpoints => {
         it('skeletons the whole map on the first step', () => {
           renderMapScreen({hasSkippedCheckpoints});
-          expect(intro()).toBe('skeleton');
+          expect(skeletonStyle()).toBe('all');
         });
 
         it('skeletons all but the first checkpoint on the second step', () => {
@@ -452,7 +453,7 @@ describe('MapScreen tour', () => {
           act(() => {
             createdTour.next(); // → step 1
           });
-          expect(intro()).toBe('skeletonButFirst');
+          expect(skeletonStyle()).toBe('allButFirst');
         });
 
         it('shows the whole map from the third step', () => {
@@ -463,7 +464,7 @@ describe('MapScreen tour', () => {
           act(() => {
             createdTour.next(); // → step 2
           });
-          expect(intro()).toBe('none');
+          expect(skeletonStyle()).toBe('none');
         });
       }
     );
@@ -479,7 +480,7 @@ describe('MapScreen tour', () => {
       act(() => {
         createdTour.back(); // → step 1
       });
-      expect(intro()).toBe('skeletonButFirst');
+      expect(skeletonStyle()).toBe('allButFirst');
     });
 
     it('shows the whole map once the tour is cancelled', () => {
@@ -487,19 +488,19 @@ describe('MapScreen tour', () => {
       act(() => {
         createdTour.cancel();
       });
-      expect(intro()).toBe('none');
+      expect(skeletonStyle()).toBe('none');
     });
 
     it('does not skeleton the map when the storage key is set', () => {
       localStorage.setItem(SKILL_MAP_TOUR_STORAGE_KEY, '1');
       renderMapScreen();
-      expect(intro()).toBe('none');
+      expect(skeletonStyle()).toBe('none');
     });
 
     it('does not skeleton the map when the DCDO flag is off', () => {
       (DCDO.get as jest.Mock).mockReturnValue(false);
       renderMapScreen();
-      expect(intro()).toBe('none');
+      expect(skeletonStyle()).toBe('none');
     });
   });
 

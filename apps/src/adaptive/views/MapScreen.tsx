@@ -19,7 +19,7 @@ import {Pathway} from '../types';
 
 import CheckpointCard from './CheckpointCard';
 import {resolveMapSettings} from './map/mapSettings';
-import MapView, {MapIntro} from './map/MapView';
+import MapView, {MapSkeletonStyle} from './map/MapView';
 import MapZoom from './map/MapZoom';
 
 import styles from './mapScreen.module.scss';
@@ -110,12 +110,12 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
     [hasSkippedCheckpoints]
   );
 
-  const mapIntro: MapIntro | undefined = !tourEnabled
+  const skeletonStyle: MapSkeletonStyle | undefined = !tourEnabled
     ? undefined
     : tourStep < tourStepIndices.firstCheckpoint
-    ? 'skeleton'
+    ? 'all'
     : tourStep < tourStepIndices.revealMap
-    ? 'skeletonButFirst'
+    ? 'allButFirst'
     : undefined;
 
   const dismissTour = () => {
@@ -270,7 +270,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               settings={mapSettings}
               focusId={tourEnabled ? undefined : focusId}
               tourFocusIds={tourFocusIds}
-              intro={mapIntro}
+              skeletonStyle={skeletonStyle}
               onSelect={id => {
                 const sendSelected = () =>
                   sendAdaptiveEvent(

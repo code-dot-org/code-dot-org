@@ -9,7 +9,7 @@ import {DrawnEdge} from './layout/busRoutes';
 import {layoutCheckpoints} from './layout/tree';
 import {NODE_RADIUS} from './layout/types';
 import MapBoard from './MapBoard';
-import MapNode, {isSkeleton} from './MapNode';
+import MapNode, {shouldSkeleton} from './MapNode';
 import {MapProps} from './MapView';
 
 import styles from './treeMap.module.scss';
@@ -28,7 +28,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
   fit,
   onSelect,
   tourFocusIds,
-  intro,
+  skeletonStyle,
 }) => {
   const layout = useMemo(
     () => layoutCheckpoints(pathway.checkpoints),
@@ -53,7 +53,8 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
     };
   }, [tourFocusIds, layout.nodes]);
   const firstCheckpointId = pathway.checkpoints[0]?.id;
-  const skeletonOf = (id: string) => isSkeleton(intro, id, firstCheckpointId);
+  const isCheckpointSkeleton = (id: string) =>
+    shouldSkeleton(skeletonStyle, id, firstCheckpointId);
   const firstSkippedId = useMemo(
     () => pathway.checkpoints.find(c => statusMap[c.id] === 'skipped')?.id,
     [pathway.checkpoints, statusMap]
@@ -96,7 +97,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
           width={NODE_WIDTH}
           above={
             <MuiTypography variant="strong" className={styles.nodeLabel}>
-              {skeletonOf(checkpoint.id) ? (
+              {isCheckpointSkeleton(checkpoint.id) ? (
                 <MuiSkeleton variant="rounded">
                   <span>{checkpoint.title}</span>
                 </MuiSkeleton>
@@ -113,7 +114,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
               ? 'adaptive-tour-first-checkpoint'
               : undefined
           }
-          skeleton={skeletonOf(checkpoint.id)}
+          skeleton={isCheckpointSkeleton(checkpoint.id)}
         />
       ))}
     </MapBoard>
