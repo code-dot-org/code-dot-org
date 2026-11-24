@@ -273,7 +273,8 @@
       }
     ],
     "name_suffix": "_final_2026",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "offer_browser_tts": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2026-11-13T13:28:27.336+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-continue-the-quest\\\"\"],\"cloned_from\":\"hoai2026-dev-continue-the-quest\"}]",
