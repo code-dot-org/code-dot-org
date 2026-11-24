@@ -70,7 +70,6 @@ module.exports = {
     gtag: 'readonly',
     Gamelab: 'readonly',
     google: 'readonly',
-    Handsontable: 'readonly',
     hocYear: 'readonly',
     IN_STORYBOOK: 'readonly',
     IN_UNIT_TEST: 'readonly',

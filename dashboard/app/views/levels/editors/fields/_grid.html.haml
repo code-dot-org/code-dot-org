@@ -78,19 +78,21 @@
       function mazeRenderer(instance, td, row, col, prop, value, cellProperties) {
         var dataValues = ['border','path','start','end','obstacle'];
         if (parseInt(value) < 5 && parseInt(value) >= 0) {
-            Handsontable.renderers.NumericRenderer.apply(this, arguments);
+            levelbuilder.Handsontable.renderers.NumericRenderer.apply(this, arguments);
             td.className += ' ' + dataValues[parseInt(value)];
         } else if (parseInt(value) === 16) {
-            Handsontable.renderers.NumericRenderer.apply(this, arguments);
+            levelbuilder.Handsontable.renderers.NumericRenderer.apply(this, arguments);
             td.className += ' start';
         }
       }
-      $("#mazeTable").handsontable({
+      new levelbuilder.Handsontable($("#mazeTable").get(0), {
         data: data, startRows: 8, startCols: 8, maxRows: 8, maxCols: 8, stretchH: 'none',
+        theme: levelbuilder.handsontableTheme, licenseKey: 'non-commercial-and-evaluation',
         validator: function(value, callback) {
           callback(parseInt(value) % 1 == 0);
         }, afterChange: function(changes, source) {
           $('#level_maze_data').val(JSON.stringify(data));
         }, cells: function(row, col, prop) {
           return {renderer: mazeRenderer};
-      }});
+        }
+      });

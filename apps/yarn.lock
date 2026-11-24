@@ -12116,6 +12116,7 @@ __metadata:
     grunt-sass: "npm:3.1.0"
     grunt-webpack: "npm:^6.0.0"
     hammerjs: "npm:^2.0.8"
+    handsontable: "npm:^18.1.2"
     history: "npm:^2.0.1"
     html-to-image: "npm:1.11.13"
     html2canvas: "npm:^0.5.0-beta4"
@@ -18618,6 +18619,13 @@ canvg@gabelerner/canvg:
   bin:
     handlebars: bin/handlebars
   checksum: 10/e755433d652e8a15fc02f83d7478e652359e7a4d354c4328818853ed4f8a39d4a09e1d22dad3c7213c5240864a65b3c840970b8b181745575dd957dd258f2b8d
+  languageName: node
+  linkType: hard
+
+"handsontable@npm:^18.1.2":
+  version: 18.1.2
+  resolution: "handsontable@npm:18.1.2"
+  checksum: 10/4c2dcaafb12ac6f442e73b45d6eddd7d09d10f7dd0b32d1496f069affdb9e91cd9cc9cfefd5debd68029990633070acfcd1cc6012d664b5895dd6fe51f5f4947
   languageName: node
   linkType: hard
 

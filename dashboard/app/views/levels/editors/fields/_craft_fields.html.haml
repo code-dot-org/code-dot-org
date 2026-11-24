@@ -190,7 +190,7 @@
       allColumns.push(columnConfig);
       allColumnWidths.push(100);
     }
-    $(mapDivID).handsontable({
+    new levelbuilder.Handsontable($(mapDivID).get(0), {
       data: array2d,
       startRows: #{@level.get_height},
       startCols: #{@level.get_width},
@@ -199,17 +199,20 @@
       columns: allColumns,
       colWidths: allColumnWidths,
       stretchH: 'none',
+      theme: levelbuilder.handsontableTheme,
+      licenseKey: 'non-commercial-and-evaluation',
       afterChange: function(changes, source) {
         $("#level_" + map_property_name).val(JSON.stringify(array2dToFlat(array2d)));
       },
       cells: function(row, col, prop) {
         return {renderer: renderMaze};
-    }});
+      },
+    });
   }
 
   function renderMaze(instance, td, row, col, prop, value, cellProperties) {
     td.className += ' ' + value;
-    Handsontable.renderers.AutocompleteRenderer.apply(this, arguments);
+    levelbuilder.Handsontable.renderers.AutocompleteRenderer.apply(this, arguments);
   }
 
 - Craft::JSON_LEVEL_MAPS.each do |level_json_name|
