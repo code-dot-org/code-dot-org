@@ -19,6 +19,8 @@ interface EditorStripProps {
   onChange?: (editor: Editor) => void;
   editors?: Editor[];
   disabledEditors?: Editor[];
+  /** Button text to show instead of an editor's name. */
+  editorLabels?: Partial<Record<Editor, string>>;
   /** The name in the middle; the open editor's unless given. */
   title?: string;
   /** The switch at the bar's start instead of its end; undo and redo
@@ -41,6 +43,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   onChange,
   editors,
   disabledEditors,
+  editorLabels,
   title,
   switchAtStart = false,
   history,
@@ -89,6 +92,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
       onChange={onChange}
       editors={editors}
       disabledEditors={disabledEditors}
+      labels={editorLabels}
     />
   );
   return (

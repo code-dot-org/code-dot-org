@@ -1,4 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
@@ -77,11 +78,16 @@ import {
   withSceneMenuActive,
 } from '../blockly/blockDefinitions/goToScene';
 import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
+import {
+  placeWorld,
+  SET_WORLD_BLOCK_TYPE,
+} from '../blockly/blockDefinitions/setWorld';
 import {endKeyboardNavigation} from '../blockly/endKeyboardNavigation';
 import {FLYOUT_DOTS_MARGIN_FACTOR} from '../blockly/flyoutDots';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {codeFromSavedScene} from '../blockly/savedSceneCode';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
+import {refreshWorldFields, setWorldFieldHost} from '../blockly/worldField';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
@@ -154,6 +160,7 @@ import {
   WorldCell,
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
+import {drawWorldThumbnail} from '../worldThumbnail';
 
 import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
@@ -167,6 +174,7 @@ import PlayBarGroups from './components/PlayBarGroups';
 import PlayControls from './components/PlayControls';
 import PromptBar from './components/PromptBar';
 import {sceneDropdownButtonId} from './components/SceneDropdown';
+import SceneSidebar from './components/SceneSidebar';
 import ShareActions from './components/ShareActions';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
 import DiscoverBlocksButton, {
@@ -224,6 +232,9 @@ const SHARE_BODY_CLASS = 'spritelab2-share';
 const PICTURES_DRAWER_ID = 'spritelab2-pictures';
 // The editor switch's order.
 const EDITORS: Editor[] = ['Images', 'World', 'Code'];
+const WORLD_BLOCK_EDITORS: Editor[] = ['Images', 'Code'];
+const WORLD_BLOCK_LABELS = {Code: 'Scenes'};
+const WORLD_BLOCK_TYPES = [SET_WORLD_BLOCK_TYPE];
 // The preview column's share of the browser's width: beside a 280 px panel
 // at a 1280 px window this leaves the workspace about 720 px, free play's
 // widest toolbox block and widest stack side by side.
@@ -346,6 +357,10 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const imagesAdvanced =
     (isLevelbuilder && imagesAdvancedParam) || isLevelEditMode;
+  // ?world-block=true: an experiment with Images | Scenes at the top, the
+  // scenes listed beside the code, and the world edited from a set world
+  // block instead of a World tab.
+  const worldBlock = useMemo(() => queryParams('world-block') === 'true', []);
   // The mode decides the tab set, and an image level's is empty: its panel
   // replaces the shell. A level with no mode, or one whose authored kind is
   // not a kind we know, falls back to the lab defaults.
@@ -1392,6 +1407,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     sharedBlocks: levelProperties.sharedBlocks,
     theme,
     readOnly: isViewOnly,
+    leadingBlockTypes: worldBlock ? WORLD_BLOCK_TYPES : undefined,
     flyoutMarginFactor: catalogOn ? FLYOUT_DOTS_MARGIN_FACTOR : undefined,
   });
 
@@ -1473,8 +1489,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       return;
     }
     dispatch(setIsRunning(true));
-    const {result: program, referencedImages} = collectImageReferences(
-      () => compileWorldPrelude(activeWorldRef.current) + (getCode() ?? '')
+    const {result: program, referencedImages} = collectImageReferences(() =>
+      placeWorld(compileWorldPrelude(activeWorldRef.current), getCode() ?? '')
     );
     if (activeSceneIdRef.current) {
       requestThumbnail(activeSceneIdRef.current);
@@ -1519,7 +1535,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           // entirely; run it as an empty scene.
           console.error('Failed to compile scene', scene.id, e);
         }
-        return prelude + code;
+        return placeWorld(prelude, code);
       });
       dispatch(setIsRunning(true));
       requestThumbnail(scene.id);
@@ -2321,6 +2337,47 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     onManageScenes: () => setScenesDialog({creating: false}),
   };
   const catalogOffered = catalog.length > 0 && isEditable;
+  const sceneSidebarShown = worldBlock && scenesOffered && editorsShown;
+  const [worldEditorOpen, setWorldEditorOpen] = useState(false);
+  // Give the set world block the open scene's world to draw and the world
+  // editor dialog to open. Set on every render, not once: the dev server
+  // can reload the field's module, which starts with no host.
+  useEffect(() => {
+    if (worldBlock) {
+      setWorldFieldHost({
+        thumbnail: () =>
+          drawWorldThumbnail(activeWorldRef.current, () =>
+            refreshWorldFields(Blockly.getMainWorkspace())
+          ),
+        openEditor: () => setWorldEditorOpen(true),
+      });
+    }
+  });
+  // Redraw the block's picture when pictures finish trimming.
+  useEffect(() => {
+    if (!worldBlock) {
+      return;
+    }
+    const unsubscribe = onTrimsUpdated(() =>
+      refreshWorldFields(Blockly.getMainWorkspace())
+    );
+    return () => {
+      unsubscribe();
+      setWorldFieldHost(null);
+    };
+  }, [worldBlock]);
+  useEffect(() => {
+    if (worldBlock) {
+      refreshWorldFields(Blockly.getMainWorkspace());
+    }
+  }, [worldBlock, activeWorld, workspaceVersion]);
+  // No World tab in this experiment: a level that opens on it opens on the
+  // scenes instead.
+  useEffect(() => {
+    if (worldBlock && activeTab === 'World') {
+      dispatch(setActiveTab('Code'));
+    }
+  }, [worldBlock, activeTab, dispatch]);
   const openBlockCatalog = () => {
     setShowBlockCatalog(true);
     setShowCatalogArrow(false);
@@ -2434,6 +2491,35 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {showCatalogArrow && catalogOffered && (
         <Callout selector={`#${DISCOVER_BLOCKS_BUTTON_ID}`} direction="down" />
       )}
+      {worldEditorOpen && (
+        <Dialog
+          title="World"
+          className={moduleStyles.worldDialog}
+          onClose={() => setWorldEditorOpen(false)}
+          primaryButtonProps={{
+            children: 'Done',
+            onClick: () => setWorldEditorOpen(false),
+          }}
+          customContent={
+            <div className={moduleStyles.worldDialogBody}>
+              <WorldTab
+                world={activeWorld}
+                sceneSize={activeSceneSize}
+                onPaintCell={handlePaintWorldCell}
+                emptyMessage={
+                  picturesOffered && !levelProperties.levelMode?.noNewImages
+                    ? 'Make some pictures first.'
+                    : 'Go back and make your image first.'
+                }
+                only={paletteOnly}
+                kept={worldKeeps}
+                selected={worldPaletteSelection}
+                onSelect={choosePaletteSelection}
+              />
+            </div>
+          }
+        />
+      )}
       {showBlockCatalog && (
         <BlockCatalogDialog
           entries={catalog}
@@ -2499,9 +2585,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         <div ref={stageRef} className={moduleStyles.stage}>
           {scenesOffered &&
             editorsShown &&
-            (activeTab === 'Code' || activeTab === 'World') && (
+            (worldBlock
+              ? activeTab === 'Code' && catalogOffered
+              : activeTab === 'Code' || activeTab === 'World') && (
               <WorkspaceSceneBar
                 {...sceneControls}
+                withScenes={!worldBlock}
                 startExtra={
                   activeTab === 'Code' &&
                   catalogOffered && (
@@ -2522,7 +2611,8 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               <EditorStrip
                 editor={activeTab}
                 onChange={handleEditorChange}
-                editors={EDITORS}
+                editors={worldBlock ? WORLD_BLOCK_EDITORS : EDITORS}
+                editorLabels={worldBlock ? WORLD_BLOCK_LABELS : undefined}
                 disabledEditors={disabledEditors}
                 title={
                   isViewOnly
@@ -2542,6 +2632,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 style={activeTab === 'Images' ? clearOfPane : clearOfPreview}
               />
             )}
+          {sceneSidebarShown && activeTab === 'Code' && (
+            <SceneSidebar
+              {...sceneControls}
+              className={classNames(
+                catalogOffered && moduleStyles.aboveWorkspaceSceneBar
+              )}
+            />
+          )}
           {/* Kept mounted (clipped) so the workspace survives tab switches;
           gated on labReady (see the seed effect). */}
           <div
@@ -2549,7 +2647,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             className={classNames(
               moduleStyles.codeTabWrapper,
               editorsShown && moduleStyles.underEditorStrip,
-              moduleStyles.aboveWorkspaceSceneBar
+              (!worldBlock || catalogOffered) &&
+                moduleStyles.aboveWorkspaceSceneBar,
+              sceneSidebarShown && moduleStyles.besideSceneSidebar
             )}
             style={{
               clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',

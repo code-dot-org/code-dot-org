@@ -27,6 +27,7 @@ import setPlatformGravityDirection from './setPlatformGravityDirection';
 import setPlatformJumpHeight from './setPlatformJumpHeight';
 import setSystemPrompt from './setSystemPrompt';
 import setWeather from './setWeather';
+import setWorld from './setWorld';
 import showTitle from './showTitle';
 import thePlayer from './thePlayer';
 import thePlayer2 from './thePlayer2';
@@ -41,6 +42,7 @@ const labBlockDefinitions: {
   helperCode?: string;
 }[] = [
   goToScene,
+  setWorld,
   playMusic,
   playSound,
   playSoundEffect,

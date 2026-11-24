@@ -52,6 +52,7 @@ import {
   MusicProjectDropdown,
 } from './musicProjectDropdown';
 import {placeholderOutline} from './placeholderRendering';
+import {FIELD_WORLD_TYPE, WorldField} from './worldField';
 
 // blocksCommon is a plain CommonJS module (exports.install = ...); give it a
 // minimal typed view.
@@ -96,6 +97,7 @@ function installLabBlocks(): void {
   Blockly.fieldRegistry.register(FIELD_BLOCK_IMAGE_TYPE, BlockImageField);
   Blockly.fieldRegistry.register(FIELD_GRID_TYPE, GridField);
   Blockly.fieldRegistry.register(FIELD_GRID_SINGLE_TYPE, GridSingleField);
+  Blockly.fieldRegistry.register(FIELD_WORLD_TYPE, WorldField);
   BlocklyCore.Extensions.register(
     PLACEHOLDER_OUTLINE_EXTENSION,
     placeholderOutline
