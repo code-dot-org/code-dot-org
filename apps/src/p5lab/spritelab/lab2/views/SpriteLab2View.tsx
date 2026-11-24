@@ -1,5 +1,5 @@
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {Dialog} from '@code-dot-org/component-library/dialog';
+import Modal from '@code-dot-org/component-library/modal';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import {cloneDeep, isEqual} from 'lodash';
@@ -2511,7 +2511,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         <Callout selector={`#${DISCOVER_BLOCKS_BUTTON_ID}`} direction="down" />
       )}
       {worldEditorOpen && (
-        <Dialog
+        <Modal
           title="World"
           className={moduleStyles.worldDialog}
           onClose={() => setWorldEditorOpen(false)}

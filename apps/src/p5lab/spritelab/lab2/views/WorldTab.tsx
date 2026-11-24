@@ -1,7 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Tooltip} from '@mui/material';
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -696,12 +703,14 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
   const gridAreaRef = useRef<HTMLDivElement | null>(null);
   const [gridPixels, setGridPixels] = useState(GRID_PIXELS);
   const [areaHeight, setAreaHeight] = useState(0);
-  useEffect(() => {
+  // Measured before the first paint too, so the grid does not show at full
+  // size and then shrink.
+  useLayoutEffect(() => {
     const area = gridAreaRef.current;
     if (!area) {
       return;
     }
-    const observer = new ResizeObserver(() => {
+    const measure = () => {
       setGridPixels(
         Math.max(
           minGridPixels,
@@ -709,7 +718,9 @@ const WorldTab: React.FunctionComponent<WorldTabProps> = ({
         )
       );
       setAreaHeight(area.clientHeight);
-    });
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
     observer.observe(area);
     return () => observer.disconnect();
   }, [minGridPixels]);

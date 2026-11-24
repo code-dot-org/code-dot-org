@@ -373,21 +373,25 @@ $scene-sidebar-width: 150px;
 $world-dialog-margin: 24px;
 
 .worldDialog {
+  box-sizing: border-box;
   width: min(900px, calc(100vw - 2 * $world-dialog-margin));
+  min-width: 0;
   max-width: none;
   max-height: calc(100dvh - 2 * $world-dialog-margin);
   margin: 0;
 
-  // The dialog's text section, which holds the body: free to shrink.
-  > :first-child {
-    min-height: 0;
+  // The modal's content section, which would scroll: a column instead,
+  // so the body shrinks in it.
+  > div:has(> .worldDialogBody) {
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .worldDialogBody {
   position: relative;
   align-self: stretch;
-  height: 560px;
+  flex: 0 1 560px;
   min-height: 0;
 }
 
