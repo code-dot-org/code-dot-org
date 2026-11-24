@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894903-a6e1e01929da",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 2: Beyond Words",
+  "question": "An AI can describe what it sees, but it can’t know the story behind it. You can. Write two captions for this picture: the one an AI would write, and the one only a human would know.\n\nSteps:\n1. Use the text tool to write a caption the way an AI would, using only what it can see in the picture.\n2. Use the text tool to write a second caption with the backstory only a human could know. Make it funny, strange, or dramatic.\n3. Record your voice naming one thing about the picture that no one could know just by looking.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student writes only one caption, OR the two captions are almost the same."
+    },
+    {
+      "level": 2,
+      "description": "The first caption names at least 3 things visible in the picture AND the second caption includes a backstory, reason, or feeling that cannot be seen in the picture."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names one specific thing no one could know from the picture and says what words could be added to a prompt to tell the AI."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894903-a6e1e01929da-e3f7eeac",
+  "whiteboard_starter_image_alt_text": "A cartoon penguin wearing sunglasses stands under an open red umbrella at a bus stop on a sunny day. A brown suitcase sits beside it, and a wrapped red gift sits on the bench. A label at the top says \"Write two captions for this picture.\""
+}

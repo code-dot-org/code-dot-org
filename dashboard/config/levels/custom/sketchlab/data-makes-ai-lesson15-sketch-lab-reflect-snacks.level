@@ -1,0 +1,20 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-11-20T04:12:27.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "require_edit_to_continue": "true",
+    "encrypted": "false",
+    "project_template_level_name": "data-makes-ai-lesson12-sketch-lab-template-snacks",
+    "long_instructions": "## Reflect\r\nGoal: Use your results to write when your model should and should not be used.\r\n\r\nClick the zoom **+** in the bottom corner of the map.\r\n\r\nMove your Data Scientist to each stop as you start it.\r\n- **Reflect Stop 1:** Copy the prediction from **New User** in your guide. Drag the ✓ or ✗ next to it to show if it is right for them.\r\n- **Reflect Stop 2:** Show your Project Map to two classmates. Each one copies a Visitor Note on your map and fills it in.\r\n- **Reflect Stop 3:** Read the visitor notes. Write your final model card.\r\n- **Reflect Stop 4:** Finish both sentences about your choices.\r\n\r\nYou are done when Reflect Stops 1–4 have an answer.",
+    "hide_share_and_remix": "false",
+    "display_name": "Project Map: After-School Snacks",
+    "bubble_choice_description": "This dataset contains information about a variety of different snacks.",
+    "thumbnail_url": "https://images.code.org/58975171162608f12a6304609b0866fb-k4a-snacks.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:27.079+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-tree1-snacks\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-tree1-snacks\"},{\"changed_at\":\"2026-11-20 04:13:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:03:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:06:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:21:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894910-7cc9df11a4aa",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 9: AI as a Co-Creator",
+  "question": "This letter could have been written by anyone, and that is the problem. Only you know the details that would make it unforgettable.\n\nSteps:\n1. Use the arrow tool to point at a sentence that anyone could have written.\n2. Use the text tool to rewrite it with at least one detail from the “Only I know” card (or from your own life).\n3. Record your voice explaining what makes your version yours, and what you would keep from the AI’s version.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow, but types no rewrite."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to a sentence anyone could have written (sentence 1, 2, 3, or 4) AND the typed rewrite includes at least one specific detail from \"Only I know\" or the student's own life AND the voice recording names one thing that makes the new version theirs."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the typed rewrite includes at least 2 specific details and a feeling or opinion AND the voice recording names one thing from the AI version worth keeping (such as the structure)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894910-7cc9df11a4aa-52f7df29",
+  "whiteboard_starter_image_alt_text": "\"A letter an AI wrote for a time capsule\": \"Dear Future Reader,\" followed by four numbered sentences: 1, \"I hope this letter finds you well.\"; 2, \"Right now, technology is changing fast and life is busy.\"; 3, \"I hope the future is bright and full of good things.\"; and 4, \"Take care of the world.\" It is signed \"Sincerely, a student from the past.\" A card labeled \"Only I know\" lists: My cat, Waffles, knocks everything off the shelf. The bakery on 5th Street smells like cinnamon every morning. My little brother calls the moon \"the night cookie.\" Below the card is a blank box labeled \"Space for your rewrite.\""
+}

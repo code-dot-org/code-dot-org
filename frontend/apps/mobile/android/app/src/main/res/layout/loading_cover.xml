@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shown while a page loads: the wordmark and a spinner on the launcher's
+     page background. Clickable so it swallows taps meant for the page
+     underneath, and a pane screen readers announce while MainActivity.kt hides
+     the page from them. The wordmark returns to the landing page. Its
+     background covers the WebView, not the window's own background. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/codeai_page"
+    android:accessibilityPaneTitle="@string/loading"
+    android:clickable="true"
+    android:focusable="true"
+    tools:ignore="Overdraw">
+
+    <ImageView
+        android:id="@+id/loading_cover_logo"
+        android:focusable="true"
+        android:layout_width="280dp"
+        android:layout_height="47.37dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/go_home"
+        android:scaleType="fitXY"
+        android:src="@drawable/logo_codeai" />
+
+    <ProgressBar
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="96dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/codeai_purple" />
+</FrameLayout>

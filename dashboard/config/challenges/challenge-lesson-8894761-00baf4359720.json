@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894761-00baf4359720",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 6: The AI Credibility Guide",
+  "question": "“It’s confusing” is not much help, because it doesn’t say what is confusing or how to fix it. Can you write a comment the clue writer can actually use?\n\nSteps:\n1. Use the arrow tool to point at the clue that is confusing.\n2. Use the text tool to type a better comment. Say which clue is confusing, what is unclear, and how to fix it.\n3. Record your voice explaining why your comment helps more than “It’s confusing.”",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow does not point to clue 3, or the typed comment does not name clue 3 or a word in it and say what is unclear."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to clue 3 AND the typed comment names clue 3 or a word in it (such as \"thing\" or \"place\") AND says what is unclear."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the typed comment suggests a specific fix (for example, naming an object) AND the voice recording says why this comment helps more than \"It's confusing.\""
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894761-00baf4359720-4ecf4893",
+  "whiteboard_starter_image_alt_text": "\"Treasure Hunt Clues\": 1, \"Look under the big tree in the yard.\"; 2, \"Find the red door next to the garden.\"; 3, \"Go to the thing near the place by the door.\"; and 4, \"Dig up the box beside the blue bench.\" A reviewer says, \"It's confusing.\" Below is a blank box labeled \"Space for your comment.\""
+}

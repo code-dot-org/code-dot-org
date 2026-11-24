@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-132667-45ce96b97aba",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 1: Talking to Machines",
+  "question": "You're the actor, and your director just handed you two totally different scripts for the same commercial — one vague, one super specific. Try both out, then explain which one turned out better and why.\n\nSteps:\n1. Read Direction A (vague) below and act it out as a 10-second ad — no extra details, just what it says.\n2. Read Direction B (specific) below and act out the SAME ad again — following every detail this time.\n3. In one sentence, say out loud which version felt easier to perform and why.\n\nDirection A (vague): “Make an ad for a snack.”\n\nDirection B (specific): “Make a 10-second ad for a spicy cheese popcorn snack aimed at teenagers. Use an energetic hype-man voice, and end with the tagline ‘Snap into flavor.’”\n\nThe AI connection: This is exactly what happens when you prompt AI. A vague prompt forces it to guess and fill gaps with generic choices. A specific prompt gives it — and you — clear details to work with, so the result is sharper and closer to what you wanted.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student performs only one direction (A or B), or performs neither."
+    },
+    {
+      "level": 1,
+      "description": "Student performs both directions, but Direction B does not include the specified details (tone, audience, or tagline missing)."
+    },
+    {
+      "level": 2,
+      "description": "Student performs both directions, and Direction B includes all three specified details (energetic tone, teen audience framing, tagline)."
+    },
+    {
+      "level": 3,
+      "description": "Meets level 2, and the student's spoken comparison names a specific detail from Direction B that made the performance easier or clearer (not just “it was better”)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

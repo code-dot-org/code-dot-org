@@ -286,11 +286,14 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const hasAiTutorPromptSettings =
     (levelProperties.aiTutorPromptSettings?.answerTypes?.length ?? 0) > 0;
-  const aiTutorVisible = shouldShowAiTutor({
-    appName,
-    isTutorLevel: levelProperties.aiTutorAvailable || hasAiTutorPromptSettings,
-    aiChatAccessLevel: aiChatAccessLevel,
-  });
+  const aiTutorVisible =
+    !levelProperties.hideAiTutor &&
+    shouldShowAiTutor({
+      appName,
+      isTutorLevel:
+        levelProperties.aiTutorAvailable || hasAiTutorPromptSettings,
+      aiChatAccessLevel: aiChatAccessLevel,
+    });
   const aiChatDisabledState = useAiChatDisabledState({
     appName,
     clientType: AiChatClientTypes.AI_TUTOR,
@@ -392,7 +395,9 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         disabledState: aiChatDisabledState,
         onAssetUploaded,
         onAssetRemoved,
-        initialWelcomeMessage,
+        initialWelcomeMessage: levelProperties.disableAiTutorWelcome
+          ? undefined
+          : initialWelcomeMessage,
         disableCommitMessages:
           levelProperties.aiTutorPromptSettings?.disableCommitMessages,
       };

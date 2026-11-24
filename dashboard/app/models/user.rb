@@ -305,9 +305,10 @@ class User < ApplicationRecord
   has_many :ai_lesson_summaries, dependent: :destroy
   has_many :lesson_insights, foreign_key: 'student_id', dependent: :destroy
 
-  has_many :user_practice_problem_attempts, dependent: :destroy
+  # Deleted by Services::User::PiiScrubber, not on soft delete, so undestroy keeps them.
+  has_many :user_practice_problem_attempts, dependent: nil
 
-  has_many :challenge_responses, dependent: :destroy
+  has_many :challenge_responses, dependent: nil
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
@@ -1028,7 +1029,10 @@ class User < ApplicationRecord
   end
 
   def can_pair?
-    sections_as_student.any?(&:pairing_allowed)
+    # The header asks this on every page; section membership tolerates database replica lag.
+    ActiveRecord::Base.connected_to(role: :reading) do
+      sections_as_student.any?(&:pairing_allowed)
+    end
   end
 
   def can_pair_with?(other_user)

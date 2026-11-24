@@ -1,0 +1,13 @@
+{
+  "key": "l5-patterns-not-rules",
+  "description": "Find out how AI learns patterns from examples instead of following rules someone typed in.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l5-patterns-not-rules.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "09979de0-7ee5-4aab-b721-0b99aaf30cab"
+  ]
+}

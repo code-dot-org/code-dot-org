@@ -19,10 +19,10 @@ let mockProgress: {steps: {[stepId: string]: {status?: string}}} = {
 };
 let mockBuildRequested = false;
 const mockSetBuildRequested = jest.fn();
+let mockAiAvailable = false;
 
-const mockAdaptiveAiEnabled = jest.fn(() => false);
-jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
-  isAdaptiveAiEnabled: () => mockAdaptiveAiEnabled(),
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: () => mockAiAvailable,
 }));
 jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
   usePathwayContext: () => ({
@@ -120,6 +120,7 @@ jest.mock('../../../../../lab2EntryPoints', () => {
     levelProperties: {
       hideNonInstructionTabs?: boolean;
       spotlightInstructions?: boolean;
+      disableAiTutorWelcome?: boolean;
       aiTutorModelParameters?: {selectedModelId: string};
     };
   }) {
@@ -136,6 +137,11 @@ jest.mock('../../../../../lab2EntryPoints', () => {
         'p',
         null,
         `spotlight: ${String(levelProperties?.spotlightInstructions)}`
+      ),
+      React.createElement(
+        'p',
+        null,
+        `no welcome: ${String(levelProperties?.disableAiTutorWelcome)}`
       ),
       React.createElement(
         'p',
@@ -182,6 +188,7 @@ describe('LevelStep (LevelPlayer)', () => {
   afterEach(() => {
     mockProgress = {steps: {}};
     mockBuildRequested = false;
+    mockAiAvailable = false;
     restoreRedux();
     jest.clearAllMocks();
     Object.assign(sourcesState, baseSourcesState);
@@ -201,20 +208,26 @@ describe('LevelStep (LevelPlayer)', () => {
     );
   }
 
-  it("gives the tutor the shell's model only while adaptive AI is on", () => {
+  it("gives the tutor the shell's model only while the shell makes AI calls", () => {
     renderStep();
     expect(screen.getByText('tutor: default')).toBeInTheDocument();
-    mockAdaptiveAiEnabled.mockReturnValue(true);
+    mockAiAvailable = true;
     renderStep();
     expect(
       screen.getByText('tutor: gemini-3.5-flash-lite')
     ).toBeInTheDocument();
-    mockAdaptiveAiEnabled.mockReturnValue(false);
   });
 
   it('sets hideNonInstructionTabs on viewProperties passed to the lab view', () => {
     renderStep();
     expect(screen.getByText('hide tabs: true')).toBeInTheDocument();
+  });
+
+  it('suppresses the tutor welcome on a pathway level and on the project', () => {
+    renderStep();
+    expect(screen.getByText('no welcome: true')).toBeInTheDocument();
+    renderStep({...makeLevelStep(), id: 'project', project: true});
+    expect(screen.getAllByText('no welcome: true')).toHaveLength(2);
   });
 
   it('spotlights the instructions on a step with no progress', () => {

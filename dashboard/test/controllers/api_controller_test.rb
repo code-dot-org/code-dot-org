@@ -1445,6 +1445,46 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 0, response["students"].length
   end
 
+  test "teacher_panel_section returns archived section when passed its section id" do
+    teacher = create(:teacher)
+    sign_in teacher
+    create(:section, user: teacher, login_type: 'word')
+    archived_section = create(:section, user: teacher, login_type: 'word', hidden: true)
+    create(:follower, section: archived_section)
+
+    get :teacher_panel_section, params: {
+      section_id: archived_section.id
+    }
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+    assert_equal archived_section.id, response["id"]
+    assert_equal 1, response["students"].length
+  end
+
+  test "teacher_panel_section returns archived section when it is the teacher's only section and its id is passed" do
+    teacher = create(:teacher)
+    sign_in teacher
+    archived_section = create(:section, user: teacher, login_type: 'word', hidden: true)
+
+    get :teacher_panel_section, params: {
+      section_id: archived_section.id
+    }
+
+    assert_response :success
+    assert_equal archived_section.id, JSON.parse(@response.body)["id"]
+  end
+
+  test "teacher_panel_section returns no_content when no section id is passed and teacher's only section is archived" do
+    teacher = create(:teacher)
+    sign_in teacher
+    create(:section, user: teacher, login_type: 'word', hidden: true)
+
+    get :teacher_panel_section
+
+    assert_response :no_content
+  end
+
   test "teacher_panel_section returns no_content when passed section id not owned by logged in teacher" do
     teacher = create(:teacher)
     sign_in teacher

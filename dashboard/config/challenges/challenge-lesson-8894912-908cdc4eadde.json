@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894912-908cdc4eadde",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 11: Ownership, Ethics, and Creativity",
+  "question": "Almost nobody reads the fine print, and one line on this screen changes what happens to everything you post. Find it before you click.\n\nSteps:\n1. Use the arrow tool to point at the line that changes what happens to your photos.\n2. Place a shape on the box you would not tick yet.\n3. Record your voice with 2 questions you would ask the company before agreeing.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but the arrow is not on line 3, OR the voice recording asks no questions."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to line 3 AND a shape is on the \"I agree\" box AND the voice recording asks at least 2 questions about consent, payment, or what exactly will be used."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that agreeing gives the company something of value (the posts) in exchange for the service."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894912-908cdc4eadde-2f9a57de",
+  "whiteboard_starter_image_alt_text": "\"You are signing up for a photo app.\" A sign-up screen titled \"Join PicShare\" with email and password fields and four numbered lines of fine print: 1, \"You must be 13 or older to sign up.\"; 2, \"We may send you updates about new features.\"; 3, \"Anything you post can be used to train our AI products. You will not be paid.\"; and 4, \"We may change these terms at any time.\" Below the fine print are an empty checkbox labeled \"I agree to everything above\" and a \"Sign up\" button."
+}

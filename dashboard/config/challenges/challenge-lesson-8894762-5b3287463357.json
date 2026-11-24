@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894762-5b3287463357",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 7: Exploring Data in AI",
+  "question": "This answer sounds very sure of itself, but sounding sure is not the same as being right. Which details could you check?\n\nSteps:\n1. Use the shape tool to mark 3 details in the answer that could be checked.\n2. Record your voice naming one place or person where you would check one of those details.\n3. Bonus: say what is missing from the answer that would make checking easier.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student places fewer than 3 shapes, places shapes on words that cannot be checked (such as \"tower\" or \"the\"), or the voice recording does not name a place or person to check with."
+    },
+    {
+      "level": 2,
+      "description": "Student places 3 shapes on checkable details (1923, Samuel Hartwell, 42 meters, four bells, or most visited) AND the voice recording names a place or person to check one of them."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording says that the answer lists no sources and explains how that makes checking harder."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894762-5b3287463357-415cc34a",
+  "whiteboard_starter_image_alt_text": "\"A chatbot was asked: 'Tell me about the Millbrook Clock Tower.'\" The chatbot's answer: \"The Millbrook Clock Tower was built in 1923 by the architect Samuel Hartwell. It is 42 meters tall and has four bells that ring every hour. It is the most visited clock tower in the country.\" Below the answer: \"Sources listed: none.\" On the right is a drawing of a clock tower."
+}

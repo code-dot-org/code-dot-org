@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894763-c8b8e894b9eb",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 8: Defending Your Data",
+  "question": "Before a friend posts something, you are the traffic light. Red means stop, yellow means slow down, and green means go. Which one is it, and why?\n\nSteps:\n1. Start recording. Pick one post from the list below and read it out loud.\n2. Say red, yellow, or green, and name the specific detail that made you choose it.\n3. Say one change that would make the post safer.\n4. Say what someone could figure out by combining that detail with a second clue.\n\nPost list:\n- “Alex posts a photo of a new bike. The house number and street sign are visible behind it.”\n- “Priya posts: ‘Our whole family leaves for vacation tomorrow for two weeks!’”\n- “Marcus posts a photo of his team trophy. His shirt shows the team name and his school.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not pick a post or say a color on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says red, yellow, or green but gives no reason, names no specific detail in the post, or gives no change that would make it safer."
+    },
+    {
+      "level": 2,
+      "description": "Student says red, yellow, or green AND names a specific detail in the post as the reason AND says one change that would make it safer."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND explains what someone could figure out by combining that detail with a second clue."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

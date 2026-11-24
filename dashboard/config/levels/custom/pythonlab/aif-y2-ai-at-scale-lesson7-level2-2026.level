@@ -1,0 +1,51 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T19:14:52.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You’d now like to experiment to see if the neural network’s performance improves with more training iterations. This program includes a loop that trains a new neural network four times, allowing it 1, 10, 50 and 100 iterations over the items.\r\n\r\n**☑️ Do This:**\r\n\r\n- Run the program. It trains a network for 1 and 10 iterations. How accurate is the network on your three test items each time?\r\n- Change the list of `max_iter` values so the program also tries 50, then 100. Run it each time. How does the model's accuracy change as you increase the number of iterations? At which `max_iter` does the network get every item right?\r\n- Add one more value of your own, at least 200. Predict what you think will happen, then run it. Was your prediction right?\r\n- Compare the results with your predictions in Level 1. Look at the Small Jar. Why might the network you trained in Level 1 get the Small Jar wrong?\r\n\r\nYou'll answer questions about this output in the next level.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import SGDClassifier\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import make_pipeline\n\n# Recyclable items: [weight (ounces), transparency (0-10)]\ninputs = [[0.4, 0], [1.0, 0], [0.3, 0], [1.5, 0], [3, 5], [14, 6], \n          [10, 4], [10, 2], [2, 5], [3, 4], [0.5, 9], [2, 7]]\n          \n# The bin each item belongs in\noutputs = [\"Aluminum\", \"Aluminum\", \"Aluminum\", \"Aluminum\", \"Glass\", \"Glass\", \n           \"Glass\", \"Glass\", \"Plastic\", \"Plastic\", \"Plastic\", \"Plastic\"]\n           \n# Three new items the network has never seen: [weight (ounces), transparency (0-10)]\nred_can = [0.5, 0]\ngreen_bottle = [10, 6]\nsmall_jar = [4, 8]\n\n# The names of the new items and the bin each one actually belongs in\nitems = [red_can, green_bottle, small_jar]\nitem_names = [\"Red Can\", \"Green Bottle\", \"Small Jar\"]\nactual_bins = [\"Aluminum\", \"Glass\", \"Glass\"]\n\n# Train a new network for each max_iter and report how it did on the three new items\n# Then try training for more iterations by changing max_iter in [1, 10] to [1, 10, 50, 100]\nfor max_iter in [1, 10]:\n    # tol=None makes each network use all of its passes instead of stopping early\n    model = make_pipeline(StandardScaler(), SGDClassifier(max_iter=max_iter, tol=None, random_state=4))\n    model.fit(inputs, outputs)\n    predictions = model.predict(items)\n    results = []\n    number_correct = 0\n    for name, prediction, actual in zip(item_names, predictions, actual_bins):\n        if prediction == actual:\n            results.append(f\"{name}: correct\")\n            number_correct += 1\n        else:\n            results.append(f\"{name}: wrong\")\n    accuracy = number_correct / len(actual_bins)\n    print(f\"max_iter {max_iter}: {accuracy:.0%} correct | {', '.join(results)}\")\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 19:18:13 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 19:18:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 19:20:39 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

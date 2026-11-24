@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
 
@@ -7,13 +6,12 @@ import {KeyCodes} from '@cdo/apps/constants';
 import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
+import moduleStyles from './InlineDropdownMenu.module.scss';
+
 // HTML Adapted from:
 // https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-actions.html
 
 // Displays an accessible dropdown menu with actions or links
-// TODO: Convert to a functional component once Radium is upgraded past 0.26.0
-// Our version of Radium doesn't support useState, but it has been patched in
-// later versions
 export class InlineDropdownMenu extends Component {
   static propTypes = {
     // Icon class name to use as the selector for the dropdown. Takes precendence
@@ -73,6 +71,7 @@ export class InlineDropdownMenu extends Component {
       <>
         <button
           type="button"
+          className={moduleStyles.menuButton}
           style={styles.menuButton}
           onClick={() =>
             this.setState(state => {
@@ -95,6 +94,7 @@ export class InlineDropdownMenu extends Component {
                   onKeyDown={event =>
                     this.handleKeyDown(event, child.props.onClick)
                   }
+                  className={moduleStyles.dropdownOption}
                   style={styles.dropdownOptionContainer}
                   key={index}
                 >
@@ -109,7 +109,7 @@ export class InlineDropdownMenu extends Component {
   }
 }
 
-export default onClickOutside(Radium(InlineDropdownMenu));
+export default onClickOutside(InlineDropdownMenu);
 
 const styles = {
   menuButton: {
@@ -118,12 +118,6 @@ const styles = {
     border: '1px solid #fff',
     background: 'none',
     lineHeight: '18px',
-    ':hover': {
-      boxShadow: 'none',
-    },
-    ':active': {
-      boxShadow: 'none',
-    },
   },
   dropdownContainer: {
     top: 15,
@@ -142,13 +136,6 @@ const styles = {
     color: color.dark_charcoal,
     padding: '5px 12px',
     cursor: 'pointer',
-    ':hover': {
-      backgroundColor: color.lightest_gray,
-      textDecoration: 'none',
-    },
-    ':focus': {
-      textDecoration: 'none',
-    },
     display: 'flex',
     alignItems: 'center',
   },

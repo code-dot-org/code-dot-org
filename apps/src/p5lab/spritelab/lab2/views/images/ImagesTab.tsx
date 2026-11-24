@@ -13,6 +13,7 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {
   ImageKind,
+  imageKindLabel,
   imageKindPhrase,
   ImageSubject,
   ImageType,
@@ -36,6 +37,7 @@ import {
   FREEPLAY_TOOLS,
   PAINT_BRUSH_SIZES,
   PAINT_COLORS,
+  PAINT_START_COLOR,
   PAINT_TOOLBAR,
   PAINT_TOOLS,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/paintTools';
@@ -43,6 +45,8 @@ import SentenceScene from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/Sentenc
 import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
 import {readWordLayout} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/wordLayout';
 import PixelEditor from '@cdo/apps/pixelEditor/PixelEditor';
+import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
+import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import AdvancedPopover, {
@@ -63,9 +67,16 @@ import RatingBar from './teaching/RatingBar';
 import ReopenedBehindTheScenes from './teaching/ReopenedBehindTheScenes';
 import useLearningStory from './teaching/useLearningStory';
 import useDrawing from './useDrawing';
-import useImageWriter, {ImageTarget} from './useImageWriter';
+import useImageUpload, {MODERATION_APP_NAME} from './useImageUpload';
+import useImageWriter, {ImageTarget, UploadedImage} from './useImageWriter';
 
 import styles from './images-tab.module.scss';
+
+export interface UploadWarningSettings {
+  alreadyAgreed: boolean;
+  isTeacher: boolean;
+  onConfirm: () => void;
+}
 
 interface ImagesTabProps {
   uploadImage?: UploadImageFunction;
@@ -94,6 +105,7 @@ interface ImagesTabProps {
   generationsLeft?: number;
   /** Called when a generation request is sent to the model. */
   onGenerate?: () => void;
+  onGenerateFailed?: () => void;
   /** Students may add images, draw on them and delete them. */
   editingOffered?: boolean;
   /** No New button, even where `editingOffered` would show one: the
@@ -106,6 +118,9 @@ interface ImagesTabProps {
   limitedPaintTools?: boolean;
   /** The kinds of image the list shows. Every kind when unset. */
   imageKinds?: ImageType[];
+  /** Enable the user to upload their own images. */
+  enableImageUpload?: boolean;
+  uploadWarningSettings?: UploadWarningSettings;
   /** Any image can be chosen and looked at; nothing can be changed. */
   viewOnly?: boolean;
   /** Width of the right pane in px; it equals the preview column's width
@@ -133,6 +148,8 @@ interface ImagesTabProps {
 
 const DRAFT_ID = 'draft';
 
+const UPLOAD_ERROR_SHOWN_MS = 10_000;
+
 /** How an image the student drew on is shown. Default: it opens in the
     paint tools with the word menus beside them. `?images-edited=pane`
     shows a pane with Replace image and Edit this image buttons instead;
@@ -155,11 +172,14 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   levelId,
   generationsLeft,
   onGenerate,
+  onGenerateFailed,
   editingOffered,
   noNewImages,
   noDeletingImages,
   limitedPaintTools,
   imageKinds,
+  enableImageUpload,
+  uploadWarningSettings,
   viewOnly,
   paneWidth,
   onImageLanded,
@@ -314,6 +334,77 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
+  const {closedPicture, releaseClosedPicture} = tools;
+  // The canvas copy kept when Done closed the tools is for one image, so it
+  // is dropped when another image is chosen.
+  useEffect(() => {
+    if (closedPicture && closedPicture.key !== chosenId) {
+      releaseClosedPicture();
+    }
+  }, [chosenId, closedPicture, releaseClosedPicture]);
+
+  const [uploadError, setUploadError] = useState<{text: string} | null>(null);
+  const [uploadStatus, setUploadStatus] = useState('');
+  useEffect(() => {
+    if (!uploadError) {
+      return;
+    }
+    const timer = setTimeout(() => setUploadError(null), UPLOAD_ERROR_SHOWN_MS);
+    return () => clearTimeout(timer);
+  }, [uploadError]);
+  const handleUploaded = useCallback(
+    async (kind: ImageKind, image: UploadedImage) => {
+      const target: ImageTarget = {
+        key: null,
+        imageType: kind.imageType,
+        subject: kind.subject,
+      };
+      const key = await writer.acceptUploaded(target, image);
+      leaveDrawing();
+      setDraft(null);
+      startSession(key);
+      landedRef.current?.();
+      setUploadStatus(`${imageKindLabel(kind.imageType, kind.subject)} added.`);
+    },
+    [leaveDrawing, startSession, writer]
+  );
+  const upload = useImageUpload({
+    onAccepted: handleUploaded,
+    onError: message => setUploadError({text: message}),
+    onProgress: setUploadStatus,
+  });
+
+  const [pendingUpload, setPendingUpload] = useState<{
+    kind: ImageKind;
+    trigger: HTMLElement | null;
+  } | null>(null);
+
+  const handleUpload = useCallback(
+    (kind: ImageKind, trigger: HTMLElement | null) => {
+      setUploadError(null);
+      if (uploadWarningSettings && !uploadWarningSettings.alreadyAgreed) {
+        setPendingUpload({kind, trigger});
+        return;
+      }
+      upload.pickFile(kind, trigger);
+    },
+    [upload, uploadWarningSettings]
+  );
+
+  const cancelPendingUpload = useCallback(() => {
+    setPendingUpload(null);
+    pendingUpload?.trigger?.focus();
+  }, [pendingUpload]);
+
+  const confirmPendingUpload = useCallback(() => {
+    if (!pendingUpload) {
+      return;
+    }
+    setPendingUpload(null);
+    uploadWarningSettings?.onConfirm();
+    upload.pickFile(pendingUpload.kind, pendingUpload.trigger);
+  }, [pendingUpload, upload, uploadWarningSettings]);
+
   const handleKeep = useCallback(
     async (result: GeneratedImageResult) => {
       const target: ImageTarget = {
@@ -502,7 +593,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         </div>
       )}
       <ImageList
-        disabled={busy}
+        disabled={busy || upload.uploading}
         images={images}
         playing={
           sheet && chosenImage && shownPose
@@ -553,6 +644,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         chooseOffered={chooseOffered}
         heading={viewOnly ? 'Images' : undefined}
         newKind={lockedKind}
+        onUpload={enableImageUpload && newOffered ? handleUpload : undefined}
+        notice={uploadError?.text}
+        onNoticeClose={() => setUploadError(null)}
         onDelete={deleteOffered ? writer.deleteImage : undefined}
       />
       {sceneKind ? (
@@ -571,6 +665,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           ratingRequired={ratingRequired}
           generationsLeft={generationsLeft}
           onGenerateStart={onGenerate}
+          onGenerateFailed={onGenerateFailed}
           onBusyChange={setBusy}
           onKeep={handleKeep}
           onReady={offerStory}
@@ -593,6 +688,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
               : undefined
           }
           method="tab"
+          replacesGenerated={!!chosenImage?.props.generation}
           stillFrame={shownFrame}
           layout={parts => {
             const generating = parts.mode === 'generating';
@@ -636,6 +732,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 frame={shownFrame}
                 workspaceClassName={live ? styles.paintFrame : undefined}
                 above={above}
+                reserveAbove={!viewOnly}
+                cover={
+                  !live &&
+                  !generating &&
+                  closedPicture?.key === chosenImage?.key
+                    ? closedPicture?.canvas
+                    : undefined
+                }
+                onCoverDone={releaseClosedPicture}
                 live={
                   generating
                     ? parts.frame
@@ -649,7 +754,6 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                 under={generating ? undefined : under}
                 overlay={
                   <>
-                    {parts.cachedTag}
                     {parts.rating.offered && !sceneCopyStale && (
                       <RatingBar
                         verdict={parts.rating.verdict}
@@ -751,6 +855,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
                   }
                   tools={limitedTools ? PAINT_TOOLS : FREEPLAY_TOOLS}
                   palette={limitedTools ? PAINT_COLORS : undefined}
+                  startColor={limitedTools ? PAINT_START_COLOR : undefined}
                   brushSizes={
                     limitedTools ? PAINT_BRUSH_SIZES : FREEPLAY_BRUSH_SIZES
                   }
@@ -837,7 +942,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         />
       ) : (
         <>
-          <ImageFrame image={null} />
+          <ImageFrame image={null} reserveAbove={!viewOnly} />
           {!viewOnly && (
             <section
               className={styles.pane}
@@ -871,6 +976,26 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onClose={story.asked ? endStory : undefined}
         />
       )}
+      {pendingUpload && (
+        <ImageUploadModal
+          isOpen
+          isTeacher={!!uploadWarningSettings?.isTeacher}
+          cancelUpload={cancelPendingUpload}
+          confirmUploadWarning={confirmPendingUpload}
+          hasVersionHistory={false}
+        />
+      )}
+      <upload.FileInput />
+      {upload.flaggedImage && (
+        <FlaggedImageModal
+          appName={MODERATION_APP_NAME}
+          onAccept={upload.acceptFlaggedImage}
+          onCancel={upload.cancelFlaggedImage}
+        />
+      )}
+      <p aria-live="polite" className={styles.srOnly}>
+        {uploadStatus}
+      </p>
     </div>
   );
 };

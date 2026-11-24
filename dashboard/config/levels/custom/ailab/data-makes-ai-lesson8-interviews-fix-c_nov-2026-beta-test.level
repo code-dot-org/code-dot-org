@@ -1,0 +1,21 @@
+<Ailab>
+  <config><![CDATA[{
+  "game_id": 67,
+  "created_at": "2026-11-17T07:21:27.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"reserveLastRows\": true,\r\n  \"datasets\": [\r\n    \"SC1-L08-marketing-add-interviews\"\r\n  ],\r\n  \"features\": [\r\n    \"Clip Type\",\r\n    \"Length\",\r\n    \"Famous Actor\",\r\n    \"Funny\"\r\n  ],\r\n  \"lockFeatures\": true,\r\n  \"label\": \"Result\",\r\n  \"hideSelectLabel\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"results\": \"- Open the **Incorrect** tab. Is the premiere-night interview still there?\\n- Write what the tree says now for it: Hit or Meh.\\n- Click **Accuracy**. Write the number.\",\r\n  \"datasetView\": \"**Added clips** (each one is a Meh):\\n- Interview: the famous lead talks about their hometown\\n- Interview: the famous villain actor talks about their costume\\n- Interview: the famous lead talks about working with the director\\n- Interview: the famous lead answers questions about their favorite scene\\n\\n**Then:**\\n- In your guide, circle Fixed or Not fixed for the premiere-night interview.\\n- Click **Train**.\"\r\n}",
+    "display_name": "Test a Fix: Add More Interviews",
+    "thumbnail_url": "https://images.code.org/76afbc7697762893135dedf6d48edf5a-The Interview Room.jpg",
+    "bubble_choice_description": "Add four long interviews with famous actors. Will the premiere-night interview get fixed?",
+    "name_suffix": "_nov-2026-beta-test"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-17T07:21:27.891+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson8-interviews-fix-c\\\"\"],\"cloned_from\":\"data-makes-ai-lesson8-interviews-fix-c\"}]"
+}]]></config>
+</Ailab>

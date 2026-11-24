@@ -16,7 +16,7 @@ Both the **English source data in the DB** and **translated locale files** still
 
 ## Current Impact: v4 Icons Still Render Correctly
 
-**The v4 icon class names in locale files currently work fine** because we are on FA v6, which ships v4 backward-compatibility shims (`v4-shims.min.css` and `v4-font-face.min.css`). These are loaded on (almost) every dashboard page via `frontend/packages/fonts/src/loader/index.ts:injectFontAwesome()`, which is called from `apps/src/sites/studio/pages/code-studio.js`. The shims automatically map v4 class names (e.g. `fa fa-list-alt`) to their v6 equivalents at the CSS level.
+**The v4 icon class names in locale files currently work fine** because we are on FA v6, which ships v4 backward-compatibility shims (`v4-shims.min.css` and `v4-font-face.min.css`). These are loaded on (almost) every dashboard page via `frontend/packages/fonts/src/fontAwesome/index.ts:injectFontAwesome()`, which is called from `apps/src/sites/studio/pages/code-studio.js`. The shims automatically map v4 class names (e.g. `fa fa-list-alt`) to their v6 equivalents at the CSS level.
 
 **However, FA v7 update will drop v4 shims entirely.** When we upgrade from v6 to v7, these shims will no longer be available (due to how we serve font files), and all v4 class references in locale files will result in **missing/invisible icons** for ~40 translated locales. This might make the locale migration a **hard prerequisite for the FA v7 upgrade**.
 

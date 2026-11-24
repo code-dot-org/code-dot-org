@@ -1,3 +1,5 @@
+import type {LessonObjectiveReflectionValues} from '@code-dot-org/shared-constants';
+
 // Same shape as apps' HttpClient ResponseValidator; local so typecheck never crawls apps.
 export type ResponseValidator<ResponseType> = (
   bodyJson: Record<string, unknown> | unknown[],
@@ -13,6 +15,12 @@ export const EvaluationStatus = {
   ERROR: 'error',
   NONE: 'none',
   SUCCESS: 'success',
+};
+
+export type JsonVideoData = {
+  key: string;
+  url: string;
+  description: string;
 };
 
 export type ChallengeResponseAsset = {
@@ -202,4 +210,15 @@ export type PracticeProblem = {
   active: boolean;
   problem_text: string;
   solution: (MultiSolution | ScrambleSolution | MatchSolution)[];
+};
+
+export type LessonObjective = {id: string; description: string};
+
+export type ReflectionValue =
+  (typeof LessonObjectiveReflectionValues)[keyof typeof LessonObjectiveReflectionValues];
+
+export type ReflectionData = {
+  objectiveReflections: Record<string, ReflectionValue>;
+  success: string;
+  struggle: string;
 };

@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-20T04:12:27.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"datasets\": [\r\n    \"SC1-L12-run-or-pass-fixed\"\r\n  ],\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"**Test for My User**\\n\\nGoal: Test your model for two users.\\n\\n1. In **Predict** and **Using**, choose the label and only the Tree 2 features from **Tree 1 vs. Tree 2** in your guide.\\n2. Click **Train model**.\\n\\nYou are done when your tree shows. Go to the **Testing** tab.\",\r\n  \"results\": \"**Test for My User**\\n\\nGoal: Test your model for two users.\\n\\nDo these steps for each of your two users.\\n1. In **Make a Prediction**, choose a category for each feature that fits your user. Write them in **Test for My User** in your guide.\\n2. Click **Predict**. Wait until the path stops moving. Write the prediction.\\n3. Compare the prediction to what your user needs. In **Right for them?**, write ✓ if it fits or ✗ if it doesn't.\\n4. Click **Save image** (the camera under your tree). Click **Save to Backpack**.\\n\\nYou are done when Test for My User has both users and your Backpack has a tree for each user.\"\r\n}",
+    "display_name": "Football Plays",
+    "bubble_choice_description": "This dataset contains information about a variety of different football plays from the NFL.",
+    "thumbnail_url": "https://images.code.org/f393ee4e3e884addee0ea5b2634116ab-football-plays.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:27.814+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-project-football-alternative\\\"\"],\"cloned_from\":\"data-makes-ai-project-football-alternative\"},{\"changed_at\":\"2026-11-20 04:14:24 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:45 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:47:19 +0000\",\"changed\":[\"mode\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:04:05 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:07 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:36 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

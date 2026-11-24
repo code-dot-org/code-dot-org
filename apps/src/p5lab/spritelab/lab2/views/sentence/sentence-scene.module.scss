@@ -16,7 +16,6 @@
   object-fit: contain;
 }
 
-// The in-progress state: a centered spinner filling the frame.
 .generating {
   display: flex;
   flex-direction: column;
@@ -28,34 +27,13 @@
   box-sizing: border-box;
 }
 
-.spinner {
-  font-size: 48px;
-  color: var(--text-neutral-quaternary);
+// The design gives the dots a lighter purple on a dark surface.
+:global([data-theme='Dark']) .generating {
+  --codeai-anim-color: var(--brand-purple-20);
 }
 
 .error {
   color: var(--text-error-primary);
-}
-
-// Shows for three seconds, then fades.
-.cachedTag {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: var(--background-neutral-black-fixed);
-  color: var(--text-neutral-white-fixed);
-  font-size: 12px;
-  line-height: 1.5;
-  pointer-events: none;
-  animation: cached-tag-fade 0.4s ease 3s forwards;
-}
-
-@keyframes cached-tag-fade {
-  to {
-    opacity: 0;
-  }
 }
 
 // The Animated switch's row: its label at the left, the switch at the

@@ -5,7 +5,8 @@ require 'cdo/aws/metrics'
 # moderation without risk to the chat path running in production. Plan to
 # consolidate once the podcast prompt and the chat prompt have both stabilized.
 module AiPodcastsSafetyHelper
-  MODEL = SharedConstants::AICHAT_MODEL_VERSION
+  MODEL = SharedConstants::LESSON_DEEP_DIVE_MODEL_VERSION
+  REASONING = {effort: 'none'}.freeze
 
   class ToxicityDetector
     VALID_EVALUATION_RESPONSES_SIMPLE = ['INAPPROPRIATE', 'OK']
@@ -33,7 +34,7 @@ module AiPodcastsSafetyHelper
         attempts += 1
         start_time_unstructured = Time.now
         begin
-          client.request_chat_completion(input, 1, read_timeout: safety_read_timeout)
+          client.request_chat_completion(input, 1, options: {reasoning: REASONING}, read_timeout: safety_read_timeout)
         ensure
           duration = Time.now - start_time_unstructured
           report_detailed_latency(duration, output_type, role)
@@ -53,7 +54,7 @@ module AiPodcastsSafetyHelper
 
         start_time_structured = Time.now
         begin
-          response = client.request_chat_completion(input, 0, options: {text: structured_response_format}, read_timeout: safety_read_timeout)
+          response = client.request_chat_completion(input, 0, options: {text: structured_response_format, reasoning: REASONING}, read_timeout: safety_read_timeout)
         ensure
           duration = Time.now - start_time_structured
           report_detailed_latency(duration, output_type, role)
@@ -94,7 +95,7 @@ module AiPodcastsSafetyHelper
     end
 
     private def client
-      AichatOpenaiResponsesHelper::Client.new(CDO.openai_student_learning_api_key, MODEL)
+      AichatOpenaiResponsesHelper::Client.new(CDO.openai_lesson_deep_dive_api_key, MODEL)
     end
 
     private def get_safety_system_prompt

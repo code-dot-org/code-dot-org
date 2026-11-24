@@ -1,0 +1,88 @@
+name 'pl-aif-y2-u2-l6-facilitation-accountable'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Building Models Ethically
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> every discussion in this lesson has more than one good answer. Take several responses before you say anything, and invite students who chose differently to respond to each other.</div>
+</div>
+
+## Watch for: "The Model Is Accountable"
+
+<div style="display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 260px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9888;&#65039; Stuck</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students say the model itself should be blamed when someone is harmed by a snack it picked.</div>
+  </div>
+  <div style="flex: 1; min-width: 260px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9989; Strong</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students name a person: "I'm accountable because I chose the characteristic," or "I explained how my model works, so it's up to the school to decide whether to use it."</div>
+  </div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>Language to borrow:</b> "What would it look like in practice to hold a model accountable?"</p>
+</div>
+
+## Watch for: One "Best" Model
+
+<div style="display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 260px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9888;&#65039; Stuck</div>
+    <div style="font-size: 16px; line-height: 1.5;">The class converges on one answer, usually the model that fits the data best, and nobody explores another.</div>
+  </div>
+  <div style="flex: 1; min-width: 260px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 20px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9989; Strong</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students defend different picks: best fit, most calories for energy, or fewest allergens for safety.</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> when a student says "I picked allergens because I thought it was important," point out that this is a value, not a calculation. Different values lead to different models, and that is exactly why someone has to be accountable.</div>
+</div>
+
+<div style="background-color: #FFE3CE; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#9888;&#65039; Watch for:</b> allergen count is the characteristic students are most likely to bring up. Keep the conversation on accountability, not on harm, and be direct that no one needs to share personal medical information to make a point.</div>
+</div>
+
+## Circulate: Characteristic Names
+
+While students work, look for anyone who gets stuck passing a characteristic to the helper functions. The name has to be copied exactly, or the helpers won't recognize it.
+
+## Discussion Prompts
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>Discuss:</b> What was your best model, and how did you choose it?</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>Discuss:</b> If someone ate a snack from the vending machine and was harmed, could we hold you accountable? Why or why not?</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>Discuss:</b> Should the school pick snacks based on predicted ratings? What else could we predict instead?</p>
+</div>
+
+Strong answers on the last one either defend ratings ("students should get snacks they like") or propose something new, like a health score. If a student takes a stance with no reasoning, ask them to talk through it.
+
+## Wrap Up: Models Get Harder to Interpret
+
+Close by showing your students that the models in this lesson are the easy ones. On the left is a regression model with two variables. On the right is one visualization of a large language model, the kind of model behind AI chatbots.
+
+<div style="display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 260px;">
+    <img src="https://images.code.org/98913d8cd8bc67291a4e93125325aa01-image-1795121981536.png" alt="A 3D plot with calories and price on the horizontal axes and rating on the vertical axis. A flat plane tilts through the data points, showing a regression model that uses two variables." style="width: 100%; border-radius: 8px;">
+  </div>
+  <div style="flex: 1; min-width: 260px;">
+    <img src="https://images.code.org/47a0c9d5a8eccbe5fd54ebb34f5d7323-image-1795122041071.png" alt="A dense network of thousands of connected nodes, a visualization of a large language model that is too complex to read." style="width: 100%; border-radius: 8px;">
+  </div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>Reflection question:</b> if a model is hard to interpret and even the best researchers can't understand how it makes predictions, who can we hold accountable if it makes a harmful or incorrect decision?</p>
+</div>
+
+
+MARKDOWN

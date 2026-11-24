@@ -6,6 +6,10 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "hero",
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -14,7 +18,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -24,7 +28,13 @@
     "level_mode": {
       "kind": "code",
       "extraTabs": [
-        "Images"
+        "Images",
+        "World"
+      ],
+      "paletteRoles": [
+        "hero",
+        "treasure",
+        "block"
       ],
       "noNewImages": true,
       "noDeletingImages": true,
@@ -76,6 +86,13 @@
                 "fields": {
                   "COUNT": 20,
                   "LOOK": "confetti"
+                },
+                "inputs": {
+                  "ORIGIN": {
+                    "shadow": {
+                      "type": "gamelab_allSpritesWithAnimation"
+                    }
+                  }
                 }
               }
             }
@@ -92,6 +109,13 @@
           "fields": {
             "COUNT": 20,
             "LOOK": "confetti"
+          },
+          "inputs": {
+            "ORIGIN": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
           }
         },
         {
@@ -128,7 +152,7 @@
       "title": "**Touch event**",
       "items": [
         {
-          "text": "Choose a block to drag into the dotted outline under **when touches**.",
+          "text": "Choose a block to drag under **when touches**.",
           "check": {
             "kind": "block",
             "type": [
@@ -149,7 +173,7 @@
         }
       ]
     },
-    "long_instructions": "# Touch event\r\nWhen your player **touches** your object, something can happen. \r\n\r\nThis is called an **event**.",
+    "long_instructions": "# Touch event\r\nYour player touching the object is an **event**. You can choose what happens when that event occurs.",
     "header_label": "Touch event",
     "embed": "false",
     "instructions_important": "false",

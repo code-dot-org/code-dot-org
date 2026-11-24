@@ -1,0 +1,13 @@
+{
+  "key": "l8-rewrite-before-posting",
+  "description": "Learn how to rewrite a post to remove a risky detail so you can still share it safely.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l8-rewrite-before-posting.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "576c1cc0-5b8f-4628-ba33-6e4c6a208f37"
+  ]
+}

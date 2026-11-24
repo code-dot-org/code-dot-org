@@ -1,6 +1,5 @@
 <Pythonlab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 72,
   "created_at": "2026-09-01T15:31:37.000Z",
   "level_num": "custom",
@@ -13,7 +12,7 @@
           "name": "main.py",
           "contents": "from random import randint\n\nroll = randint(1, 6)\n\nprint(roll)",
           "folderId": "0",
-          "active": true
+          "active": false
         }
       },
       "folders": {
@@ -42,8 +41,17 @@
       ],
       "answerTypeCustomizations": {
       }
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import ast\nfrom unittest import TestCase\nfrom unittest_runner import ValidationProtocol\n\n\nclass TestModifyDiceRoll(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Parse the source to find the randint() call's current range,\n        and run the program several times to check the rolls stay\n        within that range.\"\"\"\n        with open(\"main.py\") as f:\n            cls.lines = f.read().splitlines()\n        cls.source = \"\\n\".join(cls.lines)\n        cls.tree = ast.parse(cls.source)\n        cls.randint_call = next(\n            (n for n in ast.walk(cls.tree)\n             if isinstance(n, ast.Call) and isinstance(n.func, ast.Name) and n.func.id == \"randint\"),\n            None,\n        )\n        cls.low, cls.high = cls._extract_bounds(cls.randint_call)\n\n        cls.rolls = []\n        for _ in range(10):\n            stdout = ValidationProtocol().get_stdout_logs()\n            if stdout:\n                try:\n                    cls.rolls.append(int(stdout[0]))\n                except ValueError:\n                    pass\n\n    @staticmethod\n    def _extract_bounds(call_node):\n        if call_node is None or len(call_node.args) != 2:\n            return None, None\n        low_node, high_node = call_node.args\n        low = low_node.value if isinstance(low_node, ast.Constant) else None\n        high = high_node.value if isinstance(high_node, ast.Constant) else None\n        return low, high\n\n    def test_die_range_changed_from_starter(self):\n        \"\"\"Changes randint()'s range away from the starter's 1-6\"\"\"\n        self.assertIsNotNone(\n            self.randint_call,\n            \"We didn't find a randint() call. Make sure it's still being used to roll the die.\"\n        )\n        self.assertIsNotNone(\n            self.low,\n            \"We couldn't read randint()'s range as two plain numbers. Make sure it looks like randint(1, 20).\"\n        )\n        self.assertFalse(\n            (self.low, self.high) == (1, 6),\n            \"randint() is still set to (1, 6), the starter code's range. Change it to roll a different kind of die.\"\n        )\n\n    def test_rolls_stay_within_new_range(self):\n        \"\"\"Repeated rolls stay within the new die's range\"\"\"\n        if self.low is None:\n            self.skipTest(\"Fix the randint() range first.\")\n        self.assertTrue(self.rolls, \"No valid numbers were printed across several runs. Make sure print(roll) is still there.\")\n        out_of_range = [r for r in self.rolls if not (self.low <= r <= self.high)]\n        self.assertFalse(\n            out_of_range,\n            f\"Found roll(s) outside your range of {self.low}-{self.high}: {out_of_range}. \"\n            \"Check that randint()'s arguments match the die size you intended.\"\n        )\n\n    def test_range_comment_completed(self):\n        \"\"\"Adds a comment explaining the smallest and largest possible values\"\"\"\n        has_comment_with_bounds = False\n        if self.low is not None and self.high is not None:\n            for line in self.lines:\n                if line.strip().startswith(\"#\") and str(self.low) in line and str(self.high) in line:\n                    has_comment_with_bounds = True\n                    break\n        self.assertTrue(\n            has_comment_with_bounds,\n            f\"We didn't find a comment mentioning your die's range ({self.low}-{self.high}). \"\n            \"Add a comment explaining the smallest and largest possible values.\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-01 16:05:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:05:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:07:53 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-09-01 16:05:22 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:05:27 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-09-01 16:07:53 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-11-17 21:12:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

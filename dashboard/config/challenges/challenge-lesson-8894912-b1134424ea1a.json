@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894912-b1134424ea1a",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 11: Ownership, Ethics, and Creativity",
+  "question": "A project just won prize money, and now everyone wants a share. Some of the people who helped never knew they were part of it. Decide what is fair.\n\nSteps:\n1. Start recording. Pick one scenario from the list below.\n2. Give a split of the money among the people and companies in the scenario. Your percentages must add up to 100.\n3. Give a reason for each share.\n4. Say what you would do about the people whose work was used but who were never asked.\n\nScenario list:\n- A group won $1,000 for a song. Maya wrote the lyrics. Jon made the beat with an AI tool. The company provides the AI tool. The tool learned from songs by artists who were never asked.\n- A school app earned $500 from a poster contest. Priya designed the layout. Eli wrote the slogans with AI help. The AI learned from posters by artists who never agreed.\n- A student video earned $300 online. Sam shot and edited it. An AI made the background music, learned from musicians who were not told.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not propose a split on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student gives percentages that do not add to 100, OR gives no reasons."
+    },
+    {
+      "level": 2,
+      "description": "Student gives percentages that add to 100 with a reason for each share AND names a specific action for the people who were never asked (such as asking, crediting, paying, or removing their work)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND states a principle for fair shares AND applies it to a second scenario."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

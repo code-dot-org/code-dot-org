@@ -17,6 +17,7 @@ import {
   LevelModeKind,
   tabsForMode,
 } from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
+import {ALL_TABS} from '@cdo/apps/p5lab/spritelab/lab2/redux/spriteLab2Redux';
 
 import {setJsonObjectValue} from '../jsonUtils';
 
@@ -50,6 +51,7 @@ const IMAGE_KEYS: (keyof LevelMode)[] = [
 
 const IMAGE_TAB_KEYS: (keyof LevelMode)[] = [
   'learning',
+  'enableImageUpload',
   'imageSource',
   'oneImage',
 ];
@@ -59,6 +61,7 @@ const IMAGE_TAB_KEYS: (keyof LevelMode)[] = [
 // set by editing the JSON, and are listed here so the form keeps them.
 const TAB_KEYS: (keyof LevelMode)[] = [
   'extraTabs',
+  'startTab',
   'paletteRoles',
   'noNewImages',
   'noDeletingImages',
@@ -122,11 +125,14 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
       return isNonEmptyUniqueListOf(value, isNonEmptyString);
     case 'extraTabs':
       return isNonEmptyUniqueListOf(value, isOneOf(EXTRA_TABS));
+    case 'startTab':
+      return isOneOf(ALL_TABS)(value);
     case 'imageKinds':
       return isNonEmptyUniqueListOf(value, isOneOf(IMAGE_TYPES));
     // A false flag reads the same as no flag, so only true is stored.
     case 'imageFirst':
     case 'learning':
+    case 'enableImageUpload':
     case 'oneImage':
     case 'noNewImages':
     case 'noDeletingImages':
@@ -197,8 +203,10 @@ export function fieldApplies(
     // kind is "world", or when it lists World among its extra tabs.
     case 'paletteRoles':
       return kind === 'world' || !!mode.extraTabs?.includes('World');
-    // Both act on a picture the student makes, so they need an Images tab.
+    // All three act on a picture the student makes, so they need an Images
+    // tab.
     case 'learning':
+    case 'enableImageUpload':
     case 'imageSource':
       return (
         kind === 'image' || kind === 'freeplay' || mode.imageFirst === true
@@ -275,6 +283,17 @@ export function setLearning(
   learning: boolean
 ): Partial<LevelMode> {
   return setJsonObjectValue(mode, 'learning', learning || undefined);
+}
+
+export function setEnableImageUpload(
+  mode: Partial<LevelMode>,
+  enableImageUpload: boolean
+): Partial<LevelMode> {
+  return setJsonObjectValue(
+    mode,
+    'enableImageUpload',
+    enableImageUpload || undefined
+  );
 }
 
 /** Unset reads as 'cached', so the default is stored by storing nothing. */

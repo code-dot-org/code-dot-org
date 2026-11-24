@@ -14,7 +14,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -47,7 +47,7 @@
           }
         },
         {
-          "text": "**Evaluate** the AI’s image with a thumbs up or thumbs down.",
+          "text": "Evaluate the AI’s image with a thumbs up or thumbs down.",
           "check": {
             "kind": "rated"
           },
@@ -57,7 +57,7 @@
         }
       ]
     },
-    "long_instructions": "# Make a character\r\nFirst, use AI to generate a sprite or draw your own.\r\n\r\n",
+    "long_instructions": "# Make a character",
     "header_label": "Make a character",
     "embed": "false",
     "instructions_important": "false",

@@ -1,0 +1,30 @@
+name 'pl-aif-y2-u2-l6-frequency-volume'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Representing Sound as Features
+
+The "Hearing" activity asks students to tell apart two instruments: a cello and a violin, just by listening to one note from each. Can your students guess which is which?
+
+Here's what makes the two notes distinguishable: their spectrograms, visualizations of how loud a sound's frequencies are over time. Louder frequencies appear darker.
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/instrument-spectrograms.html"
+    width="100%"
+    height="560"
+    frameborder="0"
+    scrolling="no"
+    title="Cello and violin frequency pictures. Select each speaker to hear the sound.">
+  </iframe>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <p>&#128161; <strong>Teacher tip:</strong> these are slides 23 and 31's real Praat spectrogram screenshots. The violin's is visibly darker overall with more stacked bands, that's the real visual difference the teaching guide asks students to notice.</p>
+</div>
+
+Violins tend to play higher, brighter notes than cellos. "Higher" shows up as frequency; "brighter" shows up as more, more tightly stacked bands in the spectrogram. Those two qualities, frequency and brightness, become the features a classifier can use.
+
+
+MARKDOWN

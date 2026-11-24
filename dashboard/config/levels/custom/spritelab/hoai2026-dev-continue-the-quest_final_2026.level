@@ -6,6 +6,11 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "friend",
+      "hero",
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -14,7 +19,7 @@
       "NativeSpriteLab",
       "zGameDev"
     ],
-    "standalone_app_name": "spritelab",
+    "standalone_app_name": "quest_builder",
     "skin": "gamelab",
     "hide_custom_blocks": true,
     "hide_share_and_remix": "true",
@@ -22,7 +27,21 @@
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
     "lock_earlier_blocks": true,
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "extraTabs": [
+        "Images",
+        "World"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "paletteRoles": [
+        "friend",
+        "hero",
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -127,6 +146,39 @@
               }
             }
           }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_burst",
+          "fields": {
+            "COUNT": 20,
+            "LOOK": "confetti"
+          },
+          "inputs": {
+            "ORIGIN": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_playSound"
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_setCameraZoom",
+          "fields": {
+            "ZOOM": 2
+          }
+        },
+        {
+          "kind": "block",
+          "type": "spritelab2_showTitle",
+          "fields": {
+            "TEXT": "Welcome to Scene 2"
+          }
         }
       ]
     },
@@ -141,16 +193,22 @@
           }
         },
         {
-          "text": "Drag a **say** block under **when run** and change the message if you like!",
+          "text": "Add code under **when run** to set up your new scene.",
           "check": {
             "kind": "block",
-            "type": "gamelab_spriteSay",
+            "type": [
+              "gamelab_spriteSay",
+              "spritelab2_burst",
+              "spritelab2_playSound",
+              "spritelab2_setCameraZoom",
+              "spritelab2_showTitle"
+            ],
             "under": "spritelab2_whenRun",
             "scene": "second-scene"
           }
         },
         {
-          "text": "Select **Run** to start your quest from the beginning. Play through it to reach **Scene 2**!",
+          "text": "Select **Run** to play from the beginning and test both scenes.",
           "check": {
             "kind": "scene",
             "id": "second-scene"
@@ -158,7 +216,7 @@
         }
       ]
     },
-    "long_instructions": "# Continue the quest!\r\nStart building the next scene of your quest.",
+    "long_instructions": "# Continue the quest!\r\nWhat happens next? Build the next scene of your quest.",
     "header_label": "Continue the quest",
     "embed": "false",
     "instructions_important": "false",

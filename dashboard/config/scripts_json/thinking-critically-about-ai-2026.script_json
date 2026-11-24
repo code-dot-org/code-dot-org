@@ -40,11 +40,12 @@
         "ai"
       ],
       "tts": true,
+      "tutor_plus_available": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-02 11:39:53 UTC",
+    "serialized_at": "2026-11-21 00:16:55 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -4726,6 +4727,9 @@
         "objective.key": "f68eb3c2-1fae-4aa0-bb26-4bb5817b8158"
       }
     }
+  ],
+  "objectives_script_levels": [
+
   ],
   "lessons_standards": [
     {

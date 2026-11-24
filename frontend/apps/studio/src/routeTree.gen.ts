@@ -9,11 +9,23 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as OfflineRouteImport } from './routes/offline'
+import { Route as LauncherRouteImport } from './routes/launcher'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as UsersEditRouteImport } from './routes/users/edit'
 import { Route as ProjectsLabTypeChannelIdEditRouteImport } from './routes/projects/$labType/$channelId/edit'
 import { Route as CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRouteImport } from './routes/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
 
+const OfflineRoute = OfflineRouteImport.update({
+  id: '/offline',
+  path: '/offline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LauncherRoute = LauncherRouteImport.update({
+  id: '/launcher',
+  path: '/launcher',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -41,12 +53,16 @@ const CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPosition
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/launcher': typeof LauncherRoute
+  '/offline': typeof OfflineRoute
   '/users/edit': typeof UsersEditRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/launcher': typeof LauncherRoute
+  '/offline': typeof OfflineRoute
   '/users/edit': typeof UsersEditRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
@@ -54,6 +70,8 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/launcher': typeof LauncherRoute
+  '/offline': typeof OfflineRoute
   '/users/edit': typeof UsersEditRoute
   '/projects/$labType/$channelId/edit': typeof ProjectsLabTypeChannelIdEditRoute
   '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition': typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
@@ -62,18 +80,24 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/launcher'
+    | '/offline'
     | '/users/edit'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/launcher'
+    | '/offline'
     | '/users/edit'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
   id:
     | '__root__'
     | '/'
+    | '/launcher'
+    | '/offline'
     | '/users/edit'
     | '/projects/$labType/$channelId/edit'
     | '/courses/$courseName/units/$unitPosition/lessons/$lessonPosition/levels/$levelPosition'
@@ -81,6 +105,8 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LauncherRoute: typeof LauncherRoute
+  OfflineRoute: typeof OfflineRoute
   UsersEditRoute: typeof UsersEditRoute
   ProjectsLabTypeChannelIdEditRoute: typeof ProjectsLabTypeChannelIdEditRoute
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute: typeof CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute
@@ -88,6 +114,20 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/offline': {
+      id: '/offline'
+      path: '/offline'
+      fullPath: '/offline'
+      preLoaderRoute: typeof OfflineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/launcher': {
+      id: '/launcher'
+      path: '/launcher'
+      fullPath: '/launcher'
+      preLoaderRoute: typeof LauncherRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -121,6 +161,8 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LauncherRoute: LauncherRoute,
+  OfflineRoute: OfflineRoute,
   UsersEditRoute: UsersEditRoute,
   ProjectsLabTypeChannelIdEditRoute: ProjectsLabTypeChannelIdEditRoute,
   CoursesCourseNameUnitsUnitPositionLessonsLessonPositionLevelsLevelPositionRoute:

@@ -367,8 +367,11 @@ export interface LevelProperties {
   spotlightInstructions?: boolean;
   // Suppress every product tour, automatic or replayed from student resources.
   disableProductTours?: boolean;
+  // Don't open the AI Tutor chat with the lab's welcome message.
+  disableAiTutorWelcome?: boolean;
   // Properties added for parity with non-lab2 AI Tutor levels
   aiTutorAvailable?: boolean;
+  hideAiTutor?: boolean;
   isAssessment?: boolean;
   type?: string;
   starterAssets?: {[key: string]: string};

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894914-19c7d8dcd34e",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 13: AI Time Capsule Project",
+  "question": "A prediction is only as good as the evidence behind it. Here are five pieces, and some are much stronger than others. Which ones would you trust?\n\nSteps:\n1. Use the shape tool to mark the 2 strongest pieces of evidence.\n2. Use the arrow tool to point at the weakest piece.\n3. Record your voice explaining why the weakest one is weak. Bonus points if you say what kind of evidence is still missing.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape or arrow is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places fewer than 2 shapes, OR places no arrow."
+    },
+    {
+      "level": 2,
+      "description": "Shapes are on cards 1 and 4 AND the arrow points to card 3 or card 5 AND the voice recording says why that card is weak (for example, a movie or a rumor is not evidence)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains that card 2 is a reason the prediction might come true more slowly, AND names one kind of evidence still missing (such as safety tests, costs, or rules)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894914-19c7d8dcd34e-94eba03e",
+  "whiteboard_starter_image_alt_text": "The prediction \"By 2035, most school buses will drive themselves.\" with five numbered pieces of evidence: 1, some cities already test self-driving shuttles; 2, many parents say they would feel nervous; 3, a movie showed flying cars; 4, cameras and sensors have gotten cheaper every year; and 5, my cousin said it will happen next year."
+}

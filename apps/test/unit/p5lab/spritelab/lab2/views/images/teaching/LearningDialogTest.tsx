@@ -43,7 +43,7 @@ describe('LearningDialog', () => {
     expect(screen.getByRole('status').textContent).toBe('Step 1 of 5');
     expect(screen.queryByRole('button', {name: 'Back'})).toBeNull();
     fireEvent.click(screen.getByRole('button', {name: 'Next'}));
-    expect(screen.getByText('A happy cat')).toBeTruthy();
+    expect(screen.getByText('“A happy cat”')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'Back'}));
     expect(screen.getByRole('status').textContent).toBe('Step 1 of 5');
     expect(readThrough()).toEqual([
@@ -57,6 +57,21 @@ describe('LearningDialog', () => {
     expect(onDone).not.toHaveBeenCalled();
     fireEvent.click(screen.getByRole('button', {name: 'Got it'}));
     expect(onDone).toHaveBeenCalledTimes(1);
+  });
+
+  it("lays out every panel's words and shows one panel's", () => {
+    render(
+      <LearningDialog
+        picture={{src: 'data:one'}}
+        prompt="A cat"
+        imageType="sprite"
+        onDone={jest.fn()}
+      />
+    );
+    expect(
+      screen.getAllByRole('heading', {level: 4, hidden: true})
+    ).toHaveLength(5);
+    expect(screen.getAllByRole('heading', {level: 4})).toHaveLength(1);
   });
 
   it('closes unread only when asked to', () => {
