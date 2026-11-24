@@ -37,6 +37,7 @@ const canParseUrl = (urlString: string | object | boolean): boolean => {
 import {getFullName} from '../manageStudents/utils';
 
 import AdaptiveSkillMapWidget from './adaptiveSkillMapWidget';
+import AdaptiveStatsWidget from './adaptiveStatsWidget';
 import ExemplarCodeWidget from './codeWidget/ExemplarCodeWidget';
 import StudentCodeWidget from './codeWidget/StudentCodeWidget';
 import Header from './header';
@@ -252,6 +253,12 @@ const StudentSnapshot: React.FC = () => {
           sectionId={sectionId}
         />
         <AdaptiveSkillMapWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+          hasAdaptiveLevel={!!selectedLesson?.hasAdaptiveLevel}
+        />
+        <AdaptiveStatsWidget
           selectedUnitId={selectedUnitId}
           selectedLessonId={selectedLessonId}
           selectedStudentId={selectedStudentId}

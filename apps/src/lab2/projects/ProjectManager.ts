@@ -38,6 +38,8 @@ import {SourcesStore} from './SourcesStore';
 
 const {reload} = require('@cdo/apps/utils');
 
+export type SaveTrigger = 'autosave' | 'flush' | 'unload';
+
 export default class ProjectManager {
   private readonly channelId: string;
   private readonly sourcesStore: SourcesStore;
@@ -52,6 +54,8 @@ export default class ProjectManager {
   // Resolves when the save currently in flight finishes.
   private saveInFlight: Promise<void> | undefined;
   private saveQueued = false;
+  // When the last save succeeded, or undefined if none has yet.
+  private lastSuccessfulSaveTime: number | undefined;
   private saveSuccessListeners: ((channel: Channel) => void)[] = [];
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
   private saveFailListeners: ((error: Error) => void)[] = [];
@@ -244,6 +248,7 @@ export default class ProjectManager {
    * @param sources ProjectSources: the source to save.
    * @param forceSave boolean: if the save should happen immediately
    * @param forceNewVersion boolean: if the save should create a new version
+   * @param trigger SaveTrigger: what started this save, reported with failures.
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
@@ -251,7 +256,8 @@ export default class ProjectManager {
     sources: ProjectSources,
     forceSave = false,
     forceNewVersion = false,
-    skipSourcesChangedCheck = false
+    skipSourcesChangedCheck = false,
+    trigger: SaveTrigger = 'autosave'
   ) {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
@@ -262,7 +268,8 @@ export default class ProjectManager {
     return await this.enqueueSaveOrSave(
       forceSave,
       forceNewVersion,
-      skipSourcesChangedCheck
+      skipSourcesChangedCheck,
+      trigger
     );
   }
 
@@ -273,13 +280,18 @@ export default class ProjectManager {
    * @returns a promise that resolves to a Response. If the save is successful, the response
    * will be empty, otherwise it will contain failure information.
    */
-  async flushSave(forceNewVersion = false) {
+  async flushSave(forceNewVersion = false, trigger: SaveTrigger = 'flush') {
     if (this.destroyed) {
       // If we have already been destroyed, don't attempt to save.
       this.resetSaveState();
       return this.getNoopResponseAndSendSaveNoopEvent();
     }
-    return await this.enqueueSaveOrSave(/* forceSave */ true, forceNewVersion);
+    return await this.enqueueSaveOrSave(
+      /* forceSave */ true,
+      forceNewVersion,
+      /* skipSourcesChangedCheck */ false,
+      trigger
+    );
   }
 
   /**
@@ -547,12 +559,14 @@ export default class ProjectManager {
    * save succeeded.
    * @param forceNewVersion boolean: If the save should create a new version.
    * @param skipSourcesChangedCheck boolean: If true, we will save the source even if it has not changed.
+   * @param trigger SaveTrigger: what started this save, reported with failures.
    * @returns a Promise<void> that resolves when the save is complete or when the save fails.
    * Listeners are notified of save status throughout the process.
    */
   private async saveHelper(
     forceNewVersion: boolean,
-    skipSourcesChangedCheck: boolean
+    skipSourcesChangedCheck: boolean,
+    trigger: SaveTrigger
   ): Promise<void> {
     // We can't save without a last channel or last source.
     // We also know we don't need to save if we have no sources to save, no pending
@@ -612,7 +626,13 @@ export default class ProjectManager {
         } else {
           errorToReport = new Error('Unknown error occurred');
         }
-        this.onSaveFail('Error saving sources', errorToReport, 'sources');
+        this.onSaveFail(
+          'Error saving sources',
+          errorToReport,
+          'sources',
+          trigger,
+          sourcesBeingSaved
+        );
         return;
       }
       this.lastSource = JSON.stringify(sourcesBeingSaved);
@@ -668,7 +688,12 @@ export default class ProjectManager {
         // they carry them along.
         this.pendingChannelUpdates ??= channelUpdatesBeingSaved;
         this.channelSaveNeeded = true;
-        this.onSaveFail('Error saving channel', error as Error, 'channel');
+        this.onSaveFail(
+          'Error saving channel',
+          error as Error,
+          'channel',
+          trigger
+        );
         return;
       }
       const channelSaveResponse = await channelResponse.json();
@@ -686,10 +711,17 @@ export default class ProjectManager {
     }
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
+    this.lastSuccessfulSaveTime = Date.now();
     this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
   }
 
-  private onSaveFail(errorMessage: string, error: Error, type: string) {
+  private onSaveFail(
+    errorMessage: string,
+    error: Error,
+    type: string,
+    trigger: SaveTrigger,
+    sources?: ProjectSources
+  ) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
     if (error.message.includes('409') || error.message.includes('401')) {
@@ -720,14 +752,31 @@ export default class ProjectManager {
       // Otherwise, we log the error, including the message as details.
       this.metricsReporter.logError(errorMessage, error, {
         message: error.message,
+        saveTrigger: trigger,
+        visibilityState: document.visibilityState,
+        navigatorOnline: navigator.onLine,
+        msSinceLastSuccessfulSave: this.lastSuccessfulSaveTime
+          ? Date.now() - this.lastSuccessfulSaveTime
+          : undefined,
+        payloadBytes: sources
+          ? ProjectManager.payloadBytes(sources)
+          : undefined,
       });
       this.metricsReporter.publishMetric(
         'Lab2.ProjectSaveFailure',
         1,
         'Count',
-        [{name: 'SaveType', value: type}]
+        [
+          {name: 'SaveType', value: type},
+          {name: 'SaveTrigger', value: trigger},
+        ]
       );
     }
+  }
+
+  // Returns the size of the save payload on the wire.
+  private static payloadBytes(sources: ProjectSources): number {
+    return new TextEncoder().encode(JSON.stringify(sources)).length;
   }
 
   private canSave(forceSave: boolean): boolean {
@@ -750,11 +799,13 @@ export default class ProjectManager {
    */
   private runSave(
     forceNewVersion: boolean,
-    skipSourcesChangedCheck: boolean
+    skipSourcesChangedCheck: boolean,
+    trigger: SaveTrigger
   ): Promise<void> {
     const save = this.saveHelper(
       forceNewVersion,
-      skipSourcesChangedCheck
+      skipSourcesChangedCheck,
+      trigger
     ).catch(error => {
       // An unexpected throw would otherwise leave saveInProgress set and wedge
       // every later save.
@@ -790,7 +841,8 @@ export default class ProjectManager {
   private async enqueueSaveOrSave(
     forceSave: boolean,
     forceNewVersion: boolean,
-    skipSourcesChangedCheck: boolean = false
+    skipSourcesChangedCheck: boolean = false,
+    trigger: SaveTrigger = 'autosave'
   ) {
     if (forceSave) {
       // A force save must land before we return, so wait out any save already in
@@ -807,7 +859,7 @@ export default class ProjectManager {
         this.saveQueued = true;
         this.currentTimeoutId = window.setTimeout(
           () => {
-            this.runSave(forceNewVersion, skipSourcesChangedCheck);
+            this.runSave(forceNewVersion, skipSourcesChangedCheck, trigger);
           },
           this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
         );
@@ -822,7 +874,11 @@ export default class ProjectManager {
     } else {
       // if we can save immediately, initiate a save now. This is an async
       // request.
-      return await this.runSave(forceNewVersion, skipSourcesChangedCheck);
+      return await this.runSave(
+        forceNewVersion,
+        skipSourcesChangedCheck,
+        trigger
+      );
     }
   }
 
