@@ -1,6 +1,6 @@
 import {Typography as MuiTypography} from '@mui/material';
 import classNames from 'classnames';
-import React, {useRef} from 'react';
+import React, {useLayoutEffect, useRef, useState} from 'react';
 
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import {PixelEditorHistory} from '@cdo/apps/pixelEditor/PixelEditor';
@@ -8,6 +8,9 @@ import {PixelEditorHistory} from '@cdo/apps/pixelEditor/PixelEditor';
 import EditorSwitch, {Editor} from './EditorSwitch';
 
 import moduleStyles from '../sprite-lab2-view.module.scss';
+
+// Least room between the bar's start and a title placed from the left.
+const START_GAP = 12;
 
 /** The open editor's undo and redo, offered across from the switch: the
     shape the pixel editor reports, which the Code tab fills from Blockly. */
@@ -26,7 +29,7 @@ interface EditorStripProps {
   /** Shown in place of the name. */
   titleContent?: React.ReactNode;
   /** Where titleContent starts, in pixels from the bar's left edge;
-      centered when left out. */
+      centered when left out. Never over the bar's start. */
   titleContentLeft?: number;
   /** The switch at the bar's start instead of its end; undo and redo
       sit across from it either way. */
@@ -57,6 +60,20 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   endSlotRef,
   style,
 }) => {
+  const startRef = useRef<HTMLDivElement>(null);
+  const [startEnd, setStartEnd] = useState(0);
+  const placedFromLeft = titleContent && titleContentLeft !== undefined;
+  useLayoutEffect(() => {
+    const start = startRef.current;
+    if (!placedFromLeft || !start) {
+      return;
+    }
+    const measure = () => setStartEnd(start.offsetLeft + start.offsetWidth);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(start);
+    return () => observer.disconnect();
+  }, [placedFromLeft]);
   // Takes focus from a button that its own click disables.
   const historyRef = useRef<HTMLDivElement>(null);
   const historyNode = history && (
@@ -110,7 +127,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
       )}
       style={style}
     >
-      <div className={moduleStyles.editorStripStart}>
+      <div ref={startRef} className={moduleStyles.editorStripStart}>
         {switchAtStart ? switchNode : historyNode}
       </div>
       {titleContent ? (
@@ -122,7 +139,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
           )}
           style={
             titleContentLeft !== undefined
-              ? {left: titleContentLeft}
+              ? {left: Math.max(titleContentLeft, startEnd + START_GAP)}
               : undefined
           }
         >
