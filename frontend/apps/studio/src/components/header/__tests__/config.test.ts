@@ -98,7 +98,7 @@ describe('buildTeacherMenuItems', () => {
 });
 
 describe('buildCreateMenuItems', () => {
-  it('leads with Quest Builder, linking to a fresh run of the tutorial', () => {
+  it('leads with Quest Builder, linking to the tutorial reset route', () => {
     const [first] = buildCreateMenuItems();
     expect(first.label).toBe('Quest Builder');
     expect(first.href).toBe('/courses/quest-builder-2026/units/1/reset');
