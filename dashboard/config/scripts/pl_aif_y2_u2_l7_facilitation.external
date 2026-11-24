@@ -1,0 +1,52 @@
+name 'pl-aif-y2-u2-l7-facilitation'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Facilitating Features That Work
+
+The most common problem in this project shows up before any code. Students choose features that don't actually separate their two categories, and everything built on them struggles. Your best chance to catch it is during Day 1 brainstorming.
+
+## Watch for: "Questions That Depend on Opinion"
+
+<div style="display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 260px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 20px;">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9888;&#65039; Stuck</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students write questions that depend on judgment, like "Are there very big waves?" Two people could answer differently.</div>
+  </div>
+  <div style="flex: 1; min-width: 260px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 20px;">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9989; Strong</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students write questions anyone would answer the same way, like "Are there white waves in the water?"</div>
+  </div>
+</div>
+
+## Watch for: "Questions That Don't Separate the Categories"
+
+<div style="display: flex; gap: 16px; margin: 16px 0; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 260px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 20px;">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9888;&#65039; Stuck</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students pick a question that is true of both categories, like "Is the water blue?" for oceans and rivers.</div>
+  </div>
+  <div style="flex: 1; min-width: 260px; background-color: #CCF1D0; border-radius: 10px; padding: 16px 20px;">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 6px;">&#9989; Strong</div>
+    <div style="font-size: 16px; line-height: 1.5;">Students pick a question whose answer usually differs between the categories, like "Are there trees next to the edge of the water?"</div>
+  </div>
+</div>
+
+## A Two-Question Check
+
+Give your students two questions to test any feature they're considering:
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>1. Is it clear?</b> Could two different people look at the same image and give the same answer?</p>
+  <p><b>2. Is it useful?</b> Would the answer usually be different for the two categories?</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p><b>Language to borrow:</b> "How would you explain to someone younger than you how to tell these two things apart?"</p>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> a feature doesn't have to be perfect on its own. Some rivers have white waves too. Remind your students that combining several imperfect features is what makes the classifier work.</div>
+</div>
+MARKDOWN
