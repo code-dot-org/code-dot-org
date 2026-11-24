@@ -82,6 +82,7 @@ class CourseOverview extends Component {
         EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
         {
           'unit group name': props.name,
+          'is verified instructor': props.isVerifiedInstructor,
         }
       );
     } else {

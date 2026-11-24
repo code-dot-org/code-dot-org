@@ -3,6 +3,8 @@ import React from 'react';
 
 import {UnconnectedUnitOverview as UnitOverview} from '@cdo/apps/code-studio/components/progress/UnitOverview';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 
@@ -72,6 +74,23 @@ describe('UnitOverview', () => {
     const wrapper = setUp({redirectScriptUrl: null});
     expect(wrapper.find('RedirectDialog').length).toEqual(0);
   });
+
+  it.each([true, false])(
+    'reports isVerifiedInstructor=%s in the teacher page visit event',
+    isVerifiedInstructor => {
+      const sendEventSpy = jest
+        .spyOn(analyticsReporter, 'sendEvent')
+        .mockImplementation(() => {});
+
+      setUp({userType: 'teacher', isVerifiedInstructor});
+
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {'unit name': 'csp1', 'is verified instructor': isVerifiedInstructor}
+      );
+      sendEventSpy.mockRestore();
+    }
+  );
 
   it('renders a UnitOverviewHeader', () => {
     const wrapper = setUp();

@@ -111,8 +111,6 @@ const courseSummaryCachedLoader = _.memoize(async courseVersionName =>
 const TeacherCourseOverview: React.FC = () => {
   const [courseSummary, setCourseSummary] =
     React.useState<CourseSummary | null>(null);
-  const [isVerifiedInstructor, setIsVerifiedInstructor] =
-    React.useState<boolean>(false);
   const [hiddenScripts, setHiddenScripts] = React.useState<string[] | null>(
     null
   );
@@ -127,6 +125,8 @@ const TeacherCourseOverview: React.FC = () => {
   const [searchParams] = useSearchParams();
 
   const selectedSection = useAppSelector(selectedSectionSelector);
+
+  const dispatch = useAppDispatch();
 
   React.useEffect(() => {
     if (
@@ -162,8 +162,11 @@ const TeacherCourseOverview: React.FC = () => {
     courseSummaryCachedLoader(selectedSection.courseVersionName)
       .then(response => {
         if (response) {
+          // CourseOverview reports this in its first render's analytics event.
+          if (response.is_verified_instructor) {
+            dispatch(setVerified());
+          }
           setCourseSummary(response.course_summary as CourseSummary);
-          setIsVerifiedInstructor(response.is_verified_instructor);
           setHiddenScripts(response.hidden_scripts as string[]);
           setShowVersionWarning(response.show_version_warning);
           setRedirectToCourseUrl(response.redirect_to_course_url || '');
@@ -188,16 +191,14 @@ const TeacherCourseOverview: React.FC = () => {
     selectedSection,
     params.courseVersionName,
     setCourseSummary,
-    setIsVerifiedInstructor,
     setHiddenScripts,
     params.sectionId,
+    dispatch,
   ]);
 
   const userId = useSelector(
     (state: {currentUser: {userId: number}}) => state.currentUser.userId
   );
-
-  const dispatch = useAppDispatch();
 
   React.useEffect(() => {
     if (!courseSummary) {
@@ -222,12 +223,6 @@ const TeacherCourseOverview: React.FC = () => {
       );
     }
   }, [courseSummary, dispatch]);
-
-  React.useEffect(() => {
-    if (isVerifiedInstructor) {
-      dispatch(setVerified());
-    }
-  }, [isVerifiedInstructor, dispatch]);
 
   React.useEffect(() => {
     if (hiddenScripts) {

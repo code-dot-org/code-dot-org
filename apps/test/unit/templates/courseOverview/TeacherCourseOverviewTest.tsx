@@ -16,7 +16,14 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import TeacherCourseOverview from '@cdo/apps/templates/courseOverview/TeacherCourseOverview';
 import currentUser, {
@@ -137,6 +144,7 @@ describe('TeacherCourseOverview', () => {
   let fetchSpy: jest.SpyInstance;
 
   beforeEach(() => {
+    stubRedux();
     const store = getStore();
 
     registerReducers({
@@ -168,6 +176,7 @@ describe('TeacherCourseOverview', () => {
 
   afterEach(() => {
     jest.resetAllMocks();
+    restoreRedux();
   });
 
   function renderDefault(initialRoute = '/sections/12/courses/csd-2024') {
@@ -198,6 +207,18 @@ describe('TeacherCourseOverview', () => {
     // renders announcement
     screen.getByText('Teachers are the best');
     expect(fetchSpy).toHaveBeenCalled();
+  });
+
+  it('reports a verified teacher in the page visit event', async () => {
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent');
+
+    renderDefault();
+
+    await screen.findByText('Computer Science Principles');
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+      {'unit group name': 'csp', 'is verified instructor': true}
+    );
   });
 
   it('redirects to course if no course name in URL', async () => {

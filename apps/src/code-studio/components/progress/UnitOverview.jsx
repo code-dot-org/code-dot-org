@@ -82,6 +82,7 @@ class UnitOverview extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     hiddenLessonState: PropTypes.object,
     selectedSectionId: PropTypes.number,
+    isVerifiedInstructor: PropTypes.bool,
     userId: PropTypes.number,
     userType: PropTypes.string,
   };
@@ -97,6 +98,7 @@ class UnitOverview extends React.Component {
         EVENTS.UNIT_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
         {
           'unit name': props.scriptName,
+          'is verified instructor': props.isVerifiedInstructor,
         }
       );
     } else if (props.userType === 'student') {
@@ -284,4 +286,5 @@ export default connect((state, ownProps) => ({
   viewAs: state.viewAs,
   hiddenLessonState: state.hiddenLesson,
   selectedSectionId: state.teacherSections.selectedSectionId,
+  isVerifiedInstructor: state.verifiedInstructor.isVerified,
 }))(UnconnectedUnitOverview);

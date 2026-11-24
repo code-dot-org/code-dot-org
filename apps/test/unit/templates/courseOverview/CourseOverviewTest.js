@@ -2,6 +2,8 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
 
@@ -114,6 +116,32 @@ describe('CourseOverview', () => {
       1
     );
   });
+
+  it.each([true, false])(
+    'reports isVerifiedInstructor=%s in the teacher page visit event',
+    isVerifiedInstructor => {
+      const sendEventSpy = jest
+        .spyOn(analyticsReporter, 'sendEvent')
+        .mockImplementation(() => {});
+
+      shallow(
+        <CourseOverview
+          {...defaultProps}
+          userType="teacher"
+          isVerifiedInstructor={isVerifiedInstructor}
+        />
+      );
+
+      expect(sendEventSpy).toHaveBeenCalledWith(
+        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
+        {
+          'unit group name': 'csp',
+          'is verified instructor': isVerifiedInstructor,
+        }
+      );
+      sendEventSpy.mockRestore();
+    }
+  );
 
   it('renders a CourseScript for each script', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
