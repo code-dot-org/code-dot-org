@@ -18,13 +18,15 @@
 
 # A student's state on one adaptive step; a level step's progress is its level's UserLevel.
 class UserAdaptiveStep < ApplicationRecord
+  export_to_analytics
+
   data_classification(
     id: :confidential,
     user_level_id: :confidential,
     step_id: :confidential,
-    progress: :confidential,
-    validation_history: :confidential,
-    generated_instructions: :confidential,
+    progress: :restricted,
+    validation_history: :restricted,
+    generated_instructions: :restricted,
     created_at: :confidential,
     updated_at: :confidential,
   )
