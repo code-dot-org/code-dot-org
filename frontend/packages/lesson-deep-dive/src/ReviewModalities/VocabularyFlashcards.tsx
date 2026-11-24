@@ -14,16 +14,23 @@ interface VocabularyFlashcardsProps {
 const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [announcement, setAnnouncement] = useState('');
 
   const currentCard = useMemo(
     () => vocabulary[currentIndex],
     [currentIndex, vocabulary],
   );
 
-  const goTo = useCallback((nextIndex: number) => {
-    setIsFlipped(false);
-    setCurrentIndex(nextIndex);
-  }, []);
+  const goTo = useCallback(
+    (nextIndex: number) => {
+      setIsFlipped(false);
+      setCurrentIndex(nextIndex);
+      setAnnouncement(
+        `Card ${nextIndex + 1} of ${vocabulary.length}: ${vocabulary[nextIndex].word}`,
+      );
+    },
+    [vocabulary],
+  );
 
   const goPrev = useCallback(() => {
     goTo((currentIndex - 1 + vocabulary.length) % vocabulary.length);
@@ -33,7 +40,15 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
     goTo((currentIndex + 1) % vocabulary.length);
   }, [currentIndex, vocabulary.length, goTo]);
 
-  const flip = useCallback(() => setIsFlipped(f => !f), []);
+  const flip = useCallback(() => {
+    const flipped = !isFlipped;
+    setIsFlipped(flipped);
+    setAnnouncement(
+      flipped
+        ? `Definition: ${currentCard.definition}`
+        : `Term: ${currentCard.word}`,
+    );
+  }, [isFlipped, currentCard]);
 
   if (vocabulary.length === 0) {
     return <p className={styles.emptyState}>No vocabulary available.</p>;
@@ -60,17 +75,25 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
               isFlipped ? styles.cardInnerFlipped : ''
             }`}
           >
-            <div className={styles.cardFace}>
+            {/* backface-visibility hides the far face from sight only. */}
+            <div className={styles.cardFace} aria-hidden={isFlipped}>
               <p className={styles.cardLabel}>Term</p>
               <p className={styles.cardWord}>{currentCard.word}</p>
               <p className={styles.flipHint}>Tap to see definition</p>
             </div>
-            <div className={`${styles.cardFace} ${styles.cardBack}`}>
+            <div
+              className={`${styles.cardFace} ${styles.cardBack}`}
+              aria-hidden={!isFlipped}
+            >
               <p className={styles.cardLabel}>Definition</p>
               <p className={styles.cardDefinition}>{currentCard.definition}</p>
             </div>
           </div>
         </div>
+      </div>
+
+      <div className={styles.visuallyHidden} role="status">
+        {announcement}
       </div>
 
       <div className={styles.controls}>

@@ -33,6 +33,18 @@
   color: var(--text-neutral-quaternary);
 }
 
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  white-space: nowrap;
+}
+
 // ── Card stack ────────────────────────────────────────────────────────────────
 
 .cardStack {
@@ -79,6 +91,10 @@
   height: 100%;
   transition: transform 0.55s ease;
   transform-style: preserve-3d;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
 }
 
 .cardInnerFlipped {
