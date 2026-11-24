@@ -1,14 +1,15 @@
 import * as BlocklyCore from 'blockly/core';
 
+import {createEmptyWorld, World} from '../world';
 import {drawWorldThumbnail, WORLD_THUMBNAIL_PX} from '../worldThumbnail';
 
 export const FIELD_WORLD_TYPE = 'field_spritelab2_world';
 
-/** Set by the view while ?world-block=true is on: draws the open scene's
-    world small and opens the world editor. */
+/** Set by the view while ?world-block is on. */
 interface WorldFieldHost {
-  thumbnail: () => string;
-  openEditor: () => void;
+  /** Cells per side for a block whose world is still empty. */
+  sceneSize: () => number;
+  openEditor: (field: WorldField) => void;
 }
 
 let host: WorldFieldHost | null = null;
@@ -17,38 +18,72 @@ export function setWorldFieldHost(next: WorldFieldHost | null): void {
   host = next;
 }
 
+/** The world a set world block's field value holds: its grid as JSON, or ''
+    for a block nothing has been drawn on. */
+export function worldFromFieldValue(value: unknown): World | undefined {
+  if (typeof value !== 'string' || !value) {
+    return undefined;
+  }
+  try {
+    const world = JSON.parse(value) as World;
+    return Array.isArray(world?.grid) ? world : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 /**
- * The set world block's picture of the open scene's world. Clicking it opens
- * the world editor. The world is the scene's, not the block's, so the field
- * saves nothing.
+ * The set world block's own world, shown as a small picture of its grid.
+ * Clicking the picture opens the world editor on this block's world. The
+ * value is saved with the block, so each block keeps its own world.
  */
 export class WorldField extends BlocklyCore.FieldImage {
-  constructor() {
-    super(
-      host?.thumbnail() || drawWorldThumbnail(undefined, () => {}),
-      WORLD_THUMBNAIL_PX,
-      WORLD_THUMBNAIL_PX,
-      'World'
-    );
-    this.setOnClickHandler(() => host?.openEditor());
+  override SERIALIZABLE = true;
+
+  constructor(value = '') {
+    super(value, WORLD_THUMBNAIL_PX, WORLD_THUMBNAIL_PX, 'World');
+    this.setOnClickHandler(field => {
+      // The toolbox's copy has no world of its own to edit.
+      if (!field.getSourceBlock()?.isInFlyout) {
+        host?.openEditor(field as WorldField);
+      }
+    });
   }
 
   static fromJson(): WorldField {
     return new WorldField();
   }
 
-  /** Draw the world again, after it or its pictures change. */
-  refresh(): void {
-    const src = host?.thumbnail();
-    if (!src) {
+  getWorld(): World | undefined {
+    return worldFromFieldValue(this.getValue());
+  }
+
+  setWorld(world: World): void {
+    this.setValue(JSON.stringify(world));
+  }
+
+  override initView(): void {
+    super.initView();
+    this.redraw();
+  }
+
+  // The value is the world, not an image source: draw the picture from it.
+  protected override doValueUpdate_(newValue: string): void {
+    this.value_ = newValue;
+    this.redraw();
+  }
+
+  /** Draw the picture again, as when the world's pictures finish loading. */
+  redraw(): void {
+    if (!this.imageElement) {
       return;
     }
-    BlocklyCore.Events.disable();
-    try {
-      this.setValue(src);
-    } finally {
-      BlocklyCore.Events.enable();
-    }
+    const world = this.getWorld() ?? createEmptyWorld(host?.sceneSize());
+    this.imageElement.setAttributeNS(
+      BlocklyCore.utils.dom.XLINK_NS,
+      'xlink:href',
+      drawWorldThumbnail(world, () => this.redraw())
+    );
   }
 }
 
@@ -66,7 +101,7 @@ function refreshIn(workspace: BlocklyCore.WorkspaceSvg | null | undefined) {
     block.inputList.forEach(input =>
       input.fieldRow.forEach(field => {
         if (field instanceof WorldField) {
-          field.refresh();
+          field.redraw();
         }
       })
     )

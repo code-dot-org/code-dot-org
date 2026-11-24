@@ -88,7 +88,11 @@ import {observeToolboxWidth} from '../blockly/flyoutRoom';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {codeFromSavedScene} from '../blockly/savedSceneCode';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
-import {refreshWorldFields, setWorldFieldHost} from '../blockly/worldField';
+import {
+  refreshWorldFields,
+  setWorldFieldHost,
+  WorldField,
+} from '../blockly/worldField';
 import {activeCallout, calloutSelector} from '../callouts';
 import defaultSources from '../defaultSources.json';
 import {categoriesForType, imageTypeFromCategories} from '../imageGallery';
@@ -153,6 +157,7 @@ import {
 } from '../types';
 import {
   compileWorldPrelude,
+  createEmptyWorld,
   DEFAULT_SCENE_GRID_SIZE,
   paintWorldCell,
   resizeWorld,
@@ -161,7 +166,6 @@ import {
   WorldCell,
 } from '../world';
 import {useWorldStartPattern} from '../worldStartPattern';
-import {drawWorldThumbnail} from '../worldThumbnail';
 
 import BlockCatalogDialog from './BlockCatalogDialog';
 import {isPointerClick} from './blurAfterPointerClick';
@@ -2357,21 +2361,48 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   }, [sceneDropdownInStrip, workspaceVersion]);
   const sceneSidebarShown =
     worldBlock && !sceneDropdownInStrip && scenesOffered && editorsShown;
-  const [worldEditorOpen, setWorldEditorOpen] = useState(false);
-  // Give the set world block the open scene's world to draw and the world
-  // editor dialog to open. Set on every render, not once: the dev server
-  // can reload the field's module, which starts with no host.
+  // The set world block whose world the dialog is editing, and that world.
+  const [worldEditor, setWorldEditor] = useState<{
+    field: WorldField;
+    world: World;
+  } | null>(null);
+  const worldEditorRef = useRef(worldEditor);
+  worldEditorRef.current = worldEditor;
+  const activeSceneSizeRef = useRef(activeSceneSize);
+  activeSceneSizeRef.current = activeSceneSize;
+  // Set on every render, not once: the dev server can reload the field's
+  // module, which starts with no host.
   useEffect(() => {
     if (worldBlock) {
       setWorldFieldHost({
-        thumbnail: () =>
-          drawWorldThumbnail(activeWorldRef.current, () =>
-            refreshWorldFields(Blockly.getMainWorkspace())
-          ),
-        openEditor: () => setWorldEditorOpen(true),
+        sceneSize: () => activeSceneSizeRef.current,
+        openEditor: field =>
+          setWorldEditor({
+            field,
+            world:
+              field.getWorld() ?? createEmptyWorld(activeSceneSizeRef.current),
+          }),
       });
     }
   });
+  const paintEditedWorld = useCallback(
+    (row: number, col: number, cell: WorldCell | null) => {
+      const editing = worldEditorRef.current;
+      if (!editing) {
+        return;
+      }
+      const world = paintWorldCell(editing.world, row, col, cell, worldKeeps);
+      if (world === editing.world) {
+        return;
+      }
+      // Read by the next paint before React renders again, as a drag paints
+      // several cells quickly.
+      worldEditorRef.current = {...editing, world};
+      editing.field.setWorld(world);
+      setWorldEditor(worldEditorRef.current);
+    },
+    [worldKeeps]
+  );
   // Redraw the block's picture when pictures finish trimming.
   useEffect(() => {
     if (!worldBlock) {
@@ -2389,7 +2420,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     if (worldBlock) {
       refreshWorldFields(Blockly.getMainWorkspace());
     }
-  }, [worldBlock, activeWorld, workspaceVersion]);
+  }, [worldBlock, activeSceneSize, workspaceVersion]);
   // No World tab in this experiment: a level that opens on it opens on the
   // scenes instead.
   useEffect(() => {
@@ -2510,21 +2541,21 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       {showCatalogArrow && catalogOffered && (
         <Callout selector={`#${DISCOVER_BLOCKS_BUTTON_ID}`} direction="down" />
       )}
-      {worldEditorOpen && (
+      {worldEditor && (
         <Modal
           title="World"
           className={moduleStyles.worldDialog}
-          onClose={() => setWorldEditorOpen(false)}
+          onClose={() => setWorldEditor(null)}
           primaryButtonProps={{
             children: 'Done',
-            onClick: () => setWorldEditorOpen(false),
+            onClick: () => setWorldEditor(null),
           }}
           customContent={
             <div className={moduleStyles.worldDialogBody}>
               <WorldTab
-                world={activeWorld}
-                sceneSize={activeSceneSize}
-                onPaintCell={handlePaintWorldCell}
+                world={worldEditor.world}
+                sceneSize={sceneGridSize(worldEditor.world)}
+                onPaintCell={paintEditedWorld}
                 emptyMessage={
                   picturesOffered && !levelProperties.levelMode?.noNewImages
                     ? 'Make some pictures first.'
