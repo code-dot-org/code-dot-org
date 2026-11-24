@@ -4,6 +4,7 @@
 import {APP_WIDTH} from '@cdo/apps/p5lab/constants';
 
 import {noteImageReference} from './imageReferences';
+import {PLAYER_GROUP} from './playerGroups';
 
 // Cells per side of the playfield, for a world being created now. The stored
 // grid is the playfield: its side is the playfield's.
@@ -23,6 +24,21 @@ export interface WorldCell {
 export interface World {
   // Row-major [row][col]; null = empty cell.
   grid: (WorldCell | null)[][];
+  // The image whose sprites start as the player (?world-block).
+  player?: string;
+}
+
+/** The sprite images on a world's squares, each once, in reading order. */
+export function worldSpriteImages(world?: World): string[] {
+  const images = new Set<string>();
+  for (const cells of world?.grid ?? []) {
+    for (const cell of cells) {
+      if (cell?.kind === 'sprite') {
+        images.add(cell.image);
+      }
+    }
+  }
+  return [...images];
 }
 
 /**
@@ -102,6 +118,7 @@ export function resizeWorld(
     return world;
   }
   return {
+    ...world,
     grid: Array.from({length: side}, (_, row) =>
       Array.from(
         {length: side},
@@ -170,19 +187,22 @@ export function paintWorldCell(
     grid[row] = grid[row].slice();
     grid[row][col] = cell;
   }
-  return {grid};
+  return {...world, grid};
 }
 
 // Interpreted-JS prelude that spawns the world's starter sprites, prepended
 // to the scene's compiled program. Blocks spawn before sprites so sprites
 // draw on top. Placed items are cell-sized: the prelude pins the default
-// sprite size to one cell, which platformer levels already use.
+// sprite size to one cell, which platformer levels already use. Sprites of
+// the world's player image join the player group with the arrow keys wired,
+// as set as player does.
 export function compileWorldPrelude(world?: World): string {
   const rows = world?.grid ?? [];
   const sceneSize = sceneGridSize(world);
   const cell = cellSize(sceneSize);
   const blocks: string[] = [];
   const sprites: string[] = [];
+  const players: string[] = [];
   for (let row = 0; row < sceneSize; row++) {
     for (let col = 0; col < sceneSize; col++) {
       const placement = rows[row]?.[col];
@@ -198,15 +218,26 @@ export function compileWorldPrelude(world?: World): string {
       const image = JSON.stringify(placement.image);
       if (placement.kind === 'block') {
         blocks.push(`makeNewGroupSprite(${image}, 'walls', ${location});`);
+      } else if (placement.image === world?.player) {
+        players.push(
+          `makeNewGroupSprite(${image}, ${JSON.stringify(
+            PLAYER_GROUP
+          )}, ${location});`
+        );
       } else {
         sprites.push(`makeNewSpriteAnon(${image}, ${location});`);
       }
     }
   }
-  if (!blocks.length && !sprites.length) {
+  if (!blocks.length && !sprites.length && !players.length) {
     return '';
   }
-  return [`setDefaultSpriteSize(${cell});`, ...blocks, ...sprites, ''].join(
-    '\n'
-  );
+  return [
+    `setDefaultSpriteSize(${cell});`,
+    ...blocks,
+    ...sprites,
+    ...players,
+    ...(players.length ? ['wirePlatformControls();'] : []),
+    '',
+  ].join('\n');
 }

@@ -182,6 +182,7 @@ import SceneDropdown, {sceneDropdownButtonId} from './components/SceneDropdown';
 import SceneSidebar from './components/SceneSidebar';
 import ShareActions from './components/ShareActions';
 import WorkspaceSceneBar from './components/WorkspaceSceneBar';
+import WorldPlayerPicker from './components/WorldPlayerPicker';
 import DiscoverBlocksButton, {
   DISCOVER_BLOCKS_BUTTON_ID,
 } from './DiscoverBlocksButton';
@@ -2407,6 +2408,18 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     },
     [worldKeeps]
   );
+  const setEditedPlayer = useCallback((player: string | undefined) => {
+    const editing = worldEditorRef.current;
+    if (!editing || editing.world.player === player) {
+      return;
+    }
+    worldEditorRef.current = {
+      ...editing,
+      world: {...editing.world, player},
+      changed: true,
+    };
+    setWorldEditor(worldEditorRef.current);
+  }, []);
   const closeWorldEditor = useCallback(() => {
     const editing = worldEditorRef.current;
     if (editing?.changed) {
@@ -2563,23 +2576,31 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
             onClick: closeWorldEditor,
           }}
           customContent={
-            <div className={moduleStyles.worldDialogBody}>
-              <WorldTab
-                world={worldEditor.world}
-                sceneSize={sceneGridSize(worldEditor.world)}
-                onPaintCell={paintEditedWorld}
-                emptyMessage={
-                  picturesOffered && !levelProperties.levelMode?.noNewImages
-                    ? 'Make some pictures first.'
-                    : 'Go back and make your image first.'
-                }
-                only={paletteOnly}
-                kept={worldKeeps}
-                selected={worldPaletteSelection}
-                onSelect={choosePaletteSelection}
-                minGridPixels={WORLD_DIALOG_MIN_GRID_PIXELS}
-              />
-            </div>
+            <>
+              <div className={moduleStyles.worldDialogPlayer}>
+                <WorldPlayerPicker
+                  world={worldEditor.world}
+                  onChange={setEditedPlayer}
+                />
+              </div>
+              <div className={moduleStyles.worldDialogBody}>
+                <WorldTab
+                  world={worldEditor.world}
+                  sceneSize={sceneGridSize(worldEditor.world)}
+                  onPaintCell={paintEditedWorld}
+                  emptyMessage={
+                    picturesOffered && !levelProperties.levelMode?.noNewImages
+                      ? 'Make some pictures first.'
+                      : 'Go back and make your image first.'
+                  }
+                  only={paletteOnly}
+                  kept={worldKeeps}
+                  selected={worldPaletteSelection}
+                  onSelect={choosePaletteSelection}
+                  minGridPixels={WORLD_DIALOG_MIN_GRID_PIXELS}
+                />
+              </div>
+            </>
           }
         />
       )}

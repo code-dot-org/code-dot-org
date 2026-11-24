@@ -389,6 +389,11 @@ $world-dialog-margin: 24px;
   }
 }
 
+.worldDialogPlayer {
+  flex: none;
+  margin-bottom: 12px;
+}
+
 .worldDialogBody {
   position: relative;
   align-self: stretch;
