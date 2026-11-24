@@ -20,7 +20,10 @@ import kotlin.math.roundToInt
  * this reports where the view lies unturned and turns the accessibility
  * bounds and character boxes Chromium builds from it.
  */
-internal class AppWebView(context: Context, attrs: AttributeSet?) : CapacitorWebView(context, attrs) {
+internal class AppWebView @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+) : CapacitorWebView(context, attrs) {
     private var turnedProvider: TurnedNodeProvider? = null
 
     // getLocationOnScreen() reads this too.
