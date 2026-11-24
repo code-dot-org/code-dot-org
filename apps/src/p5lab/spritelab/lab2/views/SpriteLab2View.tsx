@@ -2531,12 +2531,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 editors={EDITORS}
                 disabledEditors={disabledEditors}
                 between={
-                  sceneTabs &&
-                  scenesOffered &&
-                  (activeTab === 'Code' || activeTab === 'World')
+                  sceneTabs && scenesOffered
                     ? {
                         after: 'Images',
-                        node: <SceneDropdown {...sceneControls} />,
+                        node: activeTab !== 'Images' && (
+                          <SceneDropdown {...sceneControls} />
+                        ),
                       }
                     : undefined
                 }
