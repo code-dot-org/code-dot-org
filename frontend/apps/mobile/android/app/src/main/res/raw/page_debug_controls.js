@@ -73,7 +73,7 @@ function setShowingHidden(showing) {
     }
   } catch (e) {
     // Storage unavailable: the choice lasts until the page changes.
-    document.documentElement.classList.toggle(SHOWING_HIDDEN_CLASS, showing);
+    document.documentElement.classList.toggle(SHOWING_HIDEN_CLASS, showing);
     pageChanged();
     return;
   }
