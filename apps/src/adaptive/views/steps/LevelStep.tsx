@@ -224,8 +224,15 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   // the reply limit alone.
   const [chat, setChat] = useState<ChatHandle>();
   const chatHost = useMemo(
-    () => ({onChatReady: setChat, analyticsProperties: {stepId: step.id}}),
-    [step.id]
+    () => ({
+      onChatReady: setChat,
+      analyticsProperties: {
+        pathwayId: pathway.id,
+        checkpointId: checkpoint.id,
+        stepId: step.id,
+      },
+    }),
+    [pathway.id, checkpoint.id, step.id]
   );
   const latestValidationAttempt = latestValidation(entry);
   const checkedBuilds = workAttempts(entry).length;
