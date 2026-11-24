@@ -1,4 +1,4 @@
-import {Accordion} from '@code-dot-org/component-library/accordion';
+import {MuiAccordion} from '@code-dot-org/component-library/accordion';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
@@ -209,7 +209,7 @@ const ChallengeDialog: React.FC<ChallengeDialogProps> = ({
         </Typography>
       )}
 
-      <Accordion
+      <MuiAccordion
         className={moduleStyles.example}
         items={[
           {

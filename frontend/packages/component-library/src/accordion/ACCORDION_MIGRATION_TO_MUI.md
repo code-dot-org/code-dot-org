@@ -7,7 +7,8 @@ and `AccordionDetails`. The look goes into a theme override, so a bare
 `Accordion` from `@mui/material` gets it too. A thin wrapper in
 `src/accordion` keeps the legacy `items` API and the legacy behavior. It ships
 as `MuiAccordion` and `MuiFAQAccordion` beside the untouched legacy names.
-The one consumer, `TutorVideoDialog.jsx`, moves by hand in one stacked PR.
+The two consumers, `TutorVideoDialog.jsx` and `ChallengeDialog.tsx`, move
+by hand in one stacked PR.
 
 Each item stops being a native `<details>`/`<summary>`. It becomes MUI's
 root, a summary `<button type="button" aria-expanded>`, and a collapse panel
@@ -175,7 +176,7 @@ compare. The finish workflow's step 4 (RE-231) deletes the legacy source and
 renames the wrappers to the legacy names: `Accordion`, `AccordionProps`,
 `AccordionItem`, `FAQAccordion`, `FAQAccordionProps`, `FAQAccordionItem`
 and `default`. As in dialog's step 4 (RE-215), the `Mui` names do not stay
-as aliases: the same PR moves the one consumer and deletes them, so
+as aliases: the same PR moves the two consumers and deletes them, so
 `MuiAccordion` is left
 to mean MUI's own part, imported as
 `import {Accordion as MuiAccordion} from '@mui/material'` by a caller that
@@ -218,6 +219,9 @@ Expected hand edit:
 - No consumer SCSS edit. `.example` (`margin: 12px 0`) lands on the root
   `div`, which carries no emotion styles, as today. `.exampleCode` is on the
   `<pre>`, which no override reaches (`& > p` matches only a `<p>`).
+- `ChallengeDialog.tsx`, added to staging after this plan, has the same
+  shape and gets the same edit: `.example` on the root, `.exampleCode` on a
+  `<pre>`.
 - Checked by hand: the `<pre>` text takes `--text-neutral-primary` from the
   item root instead of the dialog's inherited color (the dark-text fix),
   and the summary is now a `<button>` under dashboard's global `button`
@@ -321,7 +325,7 @@ Not fixed:
 
 - Padding reaches only a direct `<p>`; `ul`, `pre` and fragments get none.
   Padding all content is a design call for the Figma run, and it would move
-  the one consumer's `<pre>`.
+  the consumers' `<pre>`.
 - The focus ring needs `:has`. Every supported browser has it, and a ring on
   the summary would change the focused render.
 - Item `id` stays off the DOM. Ids land with the region row below, from
@@ -370,9 +374,10 @@ workflow adds each as an MUI story when it deletes the legacy source.
 
 Chunk size 25. One PR, stacked on the Execute PR.
 
-| PR  | Scope                                                      | Files | Parity sample |
-| --- | ---------------------------------------------------------- | ----- | ------------- |
-| 1   | `apps/src/levelbuilder/lesson-editor/TutorVideoDialog.jsx` | 1     | 1             |
+| PR  | Scope                                                                | Files | Parity sample |
+| --- | -------------------------------------------------------------------- | ----- | ------------- |
+| 1   | `apps/src/levelbuilder/lesson-editor/TutorVideoDialog.jsx`           | 1     | 1             |
+| 1   | `apps/src/levelbuilder/lesson-editor/challenges/ChallengeDialog.tsx` | 1     | 0             |
 
 Per PR: `yarn build` the package, edit the import by hand, run
 `tools/hooks/lint.rb origin/staging <branch>`, and check the sample on the
@@ -464,28 +469,31 @@ Execute records here every place the code departs from this plan.
 
 ## Outcome
 
-This section records the whole stack: this PR and the one consumer PR. On
+This section records the whole stack: this PR and the consumer PR. On
 this PR alone no consumer has moved, and the status row reads In Progress.
 
-Consumers: the one consumer moved, none left on the legacy names. After the
-sweep the only file in `apps/` or `frontend/apps/` that imports
-`@code-dot-org/component-library/accordion` is
-`apps/src/levelbuilder/lesson-editor/TutorVideoDialog.jsx`, and it imports
-`MuiAccordion`. Nothing imports the `faqAccordion` path. The legacy sources
+Consumers: both moved, none left on the legacy names. After the sweep the
+only files in `apps/` or `frontend/apps/` that import
+`@code-dot-org/component-library/accordion` are
+`apps/src/levelbuilder/lesson-editor/TutorVideoDialog.jsx` and
+`apps/src/levelbuilder/lesson-editor/challenges/ChallengeDialog.tsx`, and
+both import `MuiAccordion`. Nothing imports the `faqAccordion` path. The legacy sources
 and exports still ship, `@deprecated`, until step 4 deletes them, and the
 READMEs keep their legacy sections until then.
 
 | PR  | Scope                                  | Files |
 | --- | -------------------------------------- | ----- |
-| 1   | `apps/src/levelbuilder/lesson-editor/` | 1     |
+| 1   | `apps/src/levelbuilder/lesson-editor/` | 2     |
 
-Consumer edit: by hand, in `TutorVideoDialog.jsx`, the import and the JSX
-name only. `TutorDeepDiveEditorTest.jsx` mounts the dialog through
+Consumer edit: by hand, in `TutorVideoDialog.jsx` and `ChallengeDialog.tsx`,
+the import and the JSX name only. `ChallengeDialog.tsx` reached staging
+(#76976) after the sweep and moved when staging was merged in.
+`ChallengesPanelTest.tsx` does not open the example, so it is untouched. `TutorDeepDiveEditorTest.jsx` mounts the dialog through
 `TutorDeepDiveEditor` and imports nothing from the entry point, so it is
 untouched. No SCSS, snapshot or selector needed an edit.
 
-Verify: green. ESLint over both files passes. Jest over
-`TutorDeepDiveEditorTest.jsx` passes, 9 of 9. In the worktree the run
+Verify: green. ESLint over both consumers passes. Jest over
+`TutorDeepDiveEditorTest.jsx` and `ChallengesPanelTest.tsx` passes, 18 of 18. In the worktree the run
 needed a scratch config that maps the gitignored generated modules
 (`@cdo/generated-scripts/*` and friends) to another checkout's copies;
 the accordion itself resolved to this branch's `dist/`.
