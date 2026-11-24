@@ -85,6 +85,16 @@ button.circle {
   }
 }
 
+.skeleton {
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton :global(.MuiSkeleton-root) {
+    animation: none;
+  }
+}
+
 // The ring fills with the share of steps complete: a conic fill behind the
 // border, the disc painted over the padding box.
 .inProgress .circle {

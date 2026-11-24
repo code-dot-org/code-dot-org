@@ -1679,6 +1679,16 @@ FactoryBot.define do
     postal_code {Faker::Address.unique.postcode}
   end
 
+  factory :anonymous_level_client, class: 'AnonymousLevel::Client' do
+    anon_user_id {Cdo::AnonUserId.generate}
+    name {Faker::Lorem.word.capitalize}
+
+    trait :amazon_mobile_app do
+      name {SharedConstants::MOBILE_APP_NAME}
+      install_source {'com.amazon.venezia'}
+    end
+  end
+
   factory :user_script do
     user {create(:student)}
     script {create(:single_unit_course, published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable).first_unit}

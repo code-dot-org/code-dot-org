@@ -3,9 +3,9 @@ import {
   IconButtonProps as MuiIconButtonProps,
 } from '@mui/material';
 import classNames from 'classnames';
-import {useCallback, AriaAttributes} from 'react';
+import {AriaAttributes} from 'react';
 
-import {useDropdownContext} from '@/common/contexts/DropdownContext';
+import {useCloseDropdownMenu} from '@/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import Tags from '@/tags';
@@ -52,6 +52,61 @@ export interface ActionDropdownProps extends AriaAttributes {
   useIconButton?: boolean;
 }
 
+const ActionDropdownMenu: React.FunctionComponent<
+  Pick<ActionDropdownProps, 'options' | 'disabled'>
+> = ({options, disabled}) => {
+  const closeMenu = useCloseDropdownMenu();
+
+  return (
+    <ul>
+      {options.map(option => {
+        const {
+          value,
+          label,
+          onClick,
+          isOptionDisabled,
+          isOptionDestructive,
+          tag,
+          icon: {
+            iconName,
+            iconStyle,
+            title: iconTitle,
+            className: iconClassName,
+          },
+        } = option;
+        return (
+          <li key={value}>
+            <button
+              className={classNames(
+                moduleStyles.dropdownMenuItem,
+                isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
+                isOptionDestructive && moduleStyles.destructiveDropdownMenuItem,
+              )}
+              disabled={isOptionDisabled || disabled}
+              type="button"
+              onClick={event => {
+                if (!disabled) {
+                  onClick();
+                  closeMenu(event.currentTarget);
+                }
+              }}
+            >
+              <FontAwesomeV6Icon
+                iconName={iconName}
+                iconStyle={iconStyle}
+                title={iconTitle}
+                className={iconClassName}
+              />
+              <span>{label}</span>
+              {tag && <Tags tagsList={[{label: tag}]} size="s" />}
+            </button>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
 /**
  * ### Production-ready Checklist:
  * * (✔) implementation of component approved by design team;
@@ -78,17 +133,6 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   useIconButton = true,
   ...rest
 }) => {
-  const {setActiveDropdownName} = useDropdownContext();
-  const onOptionClick = useCallback(
-    (optionOnClick: () => void) => {
-      if (!disabled) {
-        optionOnClick();
-        setActiveDropdownName('');
-      }
-    },
-    [disabled, setActiveDropdownName],
-  );
-
   return (
     <CustomDropdown
       useMuiButtonAsTrigger={!useIconButton}
@@ -103,48 +147,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
       {...rest}
       triggerButtonProps={triggerButtonProps}
     >
-      <ul>
-        {options.map(option => {
-          const {
-            value,
-            label,
-            onClick,
-            isOptionDisabled,
-            isOptionDestructive,
-            tag,
-            icon: {
-              iconName,
-              iconStyle,
-              title: iconTitle,
-              className: iconClassName,
-            },
-          } = option;
-          return (
-            <li key={value}>
-              <button
-                className={classNames(
-                  moduleStyles.dropdownMenuItem,
-                  isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
-                  isOptionDestructive &&
-                    moduleStyles.destructiveDropdownMenuItem,
-                )}
-                disabled={isOptionDisabled || disabled}
-                type="button"
-                onClick={() => onOptionClick(onClick)}
-              >
-                <FontAwesomeV6Icon
-                  iconName={iconName}
-                  iconStyle={iconStyle}
-                  title={iconTitle}
-                  className={iconClassName}
-                />
-                <span>{label}</span>
-                {tag && <Tags tagsList={[{label: tag}]} size="s" />}
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+      <ActionDropdownMenu options={options} disabled={disabled} />
     </CustomDropdown>
   );
 };

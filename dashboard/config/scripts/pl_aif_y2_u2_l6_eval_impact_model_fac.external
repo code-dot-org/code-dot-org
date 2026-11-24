@@ -13,7 +13,7 @@ Two regression models predict how many passengers a plane can safely carry at a 
   <iframe
     src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/regression-model-compare.html"
     width="100%"
-    height="1000"
+    height="950"
     frameborder="0"
     scrolling="no"
     title="Compare two regression models predicting airplane passenger capacity, and two predicting basketball points scored">

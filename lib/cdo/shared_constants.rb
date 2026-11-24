@@ -24,6 +24,10 @@ module SharedConstants
   STATSIG_STABLE_ID_KEY = 'statsig_stable_id'
   STATSIG_STABLE_ID_PATTERN = '[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}'.freeze
 
+  # Product name the CodeAI mobile app gives itself in its web view's user
+  # agent, the same on every platform.
+  MOBILE_APP_NAME = 'CodeAIMobileApp'.freeze
+
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
     {
@@ -135,6 +139,7 @@ module SharedConstants
     thebadguys
     music
     pythonlab
+    quest_builder
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met.

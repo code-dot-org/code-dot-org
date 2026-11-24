@@ -238,6 +238,7 @@ export const Codebridge = React.memo(
           <InnerLayout
             isProjectLevel={levelProperties.isProjectLevel}
             isWidgetView={levelProperties.widgetView}
+            isShowcaseView={!!levelProperties.showcaseView && !isStartMode}
           />
         </div>
       </CodebridgeContextProvider>

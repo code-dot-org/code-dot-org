@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-23 05:59:36 UTC",
+    "serialized_at": "2026-11-24 02:52:42 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1064,6 +1064,7 @@
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 2-4.\n- **Level 2:** Students reflect on whether the library chatbot is accurate enough to trust without human review, using evidence from their own testing.\n- **Level 3:** Students think about who would be affected if a patron had relied on the chatbot’s holiday-hours mistake.\n- **Level 4:** Students apply that same judgment to a new scenario — a parks department chatbot — and explain their reasoning.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** On Level 2, watch for students giving a blanket yes/no without citing a specific example from their own testing — prompt them to point to a response they actually scored. On Level 3, watch for vague answers like “people could be confused” — push students toward a specific, plausible person or consequence tied to the actual scenario. On Level 4, watch for students who answer without explaining why this situation differs from the ones that worked fine during testing, or who don’t connect their answer back to anything they noticed with the library chatbot.",
         "duration": "5",
         "name": "Check for Understanding",
+        "progression_name": "Check for Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1077,19 +1078,8 @@
       }
     },
     {
-      "key": "35248e41-51c2-4064-8a8e-ce09c0a54082",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives."
-      },
-      "seeding_key": {
-        "activity_section.key": "35248e41-51c2-4064-8a8e-ce09c0a54082",
-        "lesson_activity.key": "52c84f54-0bf6-434e-8671-95b37b37a86a"
-      }
-    },
-    {
       "key": "8d25f062-317a-4a5f-b727-6feb28fe8999",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day and give students a moment to think about what they learned today. Facilitate a whole-class discussion — invite a few students to share the pattern their team found in Step 4, and a few others to share their answer from Level 3 about who would be affected. Tie the discussion back to today’s lesson objectives. Listen for students connecting specific chatbot behavior to real consequences, not just general statements about AI being risky."
       },
@@ -1100,7 +1090,7 @@
     },
     {
       "key": "1d5b291e-c274-46c3-ad7b-bdd17d5c5496",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Teachers and students should complete the end of lesson survey."
       },
@@ -2259,17 +2249,16 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Test, Score, and Reflect"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-unit1-lesson16-library-chatbot_27_28"
         ],
-        "lesson.key": "lesson-22",
+        "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration",
-        "activity_section.key": "faa60a7f-de3a-4e5e-9f77-3c34630bc5a2"
+        "activity_section.key": "eee77988-024e-43f9-99c9-ffe71739b836"
       },
       "level_keys": [
         "csp-unit1-lesson16-library-chatbot_27_28"
@@ -2279,7 +2268,7 @@
       "chapter": 52,
       "position": 2,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "progression": "Check for Understanding"
       },
@@ -2288,10 +2277,10 @@
         "script_level.level_keys": [
           "csp-unit1-lesson16-cfu1_27_28"
         ],
-        "lesson.key": "lesson-22",
+        "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration",
-        "activity_section.key": "c907543f-641d-4d37-9201-d54d793c1186"
+        "activity_section.key": "dcb9f05f-e4c7-4a96-96eb-8c3d5a179cb0"
       },
       "level_keys": [
         "csp-unit1-lesson16-cfu1_27_28"
@@ -2301,7 +2290,7 @@
       "chapter": 53,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "progression": "Check for Understanding"
       },
@@ -2310,10 +2299,10 @@
         "script_level.level_keys": [
           "csp-unit1-lesson16-cfu2_27_28"
         ],
-        "lesson.key": "lesson-22",
+        "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration",
-        "activity_section.key": "c907543f-641d-4d37-9201-d54d793c1186"
+        "activity_section.key": "dcb9f05f-e4c7-4a96-96eb-8c3d5a179cb0"
       },
       "level_keys": [
         "csp-unit1-lesson16-cfu2_27_28"
@@ -2323,7 +2312,7 @@
       "chapter": 54,
       "position": 4,
       "activity_section_position": 3,
-      "assessment": true,
+      "assessment": false,
       "properties": {
         "progression": "Check for Understanding"
       },
@@ -2332,10 +2321,10 @@
         "script_level.level_keys": [
           "csp-unit1-lesson16-cfu3_27_28"
         ],
-        "lesson.key": "lesson-22",
+        "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration",
-        "activity_section.key": "c907543f-641d-4d37-9201-d54d793c1186"
+        "activity_section.key": "dcb9f05f-e4c7-4a96-96eb-8c3d5a179cb0"
       },
       "level_keys": [
         "csp-unit1-lesson16-cfu3_27_28"
@@ -3244,10 +3233,10 @@
         "script_level.level_keys": [
           "csp-unit1-lesson16-library-chatbot_27_28"
         ],
-        "lesson.key": "lesson-22",
+        "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration",
-        "activity_section.key": "faa60a7f-de3a-4e5e-9f77-3c34630bc5a2"
+        "activity_section.key": "eee77988-024e-43f9-99c9-ffe71739b836"
       }
     },
     {
@@ -3256,10 +3245,10 @@
         "script_level.level_keys": [
           "csp-unit1-lesson16-cfu1_27_28"
         ],
-        "lesson.key": "lesson-22",
+        "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration",
-        "activity_section.key": "c907543f-641d-4d37-9201-d54d793c1186"
+        "activity_section.key": "dcb9f05f-e4c7-4a96-96eb-8c3d5a179cb0"
       }
     },
     {
@@ -3268,10 +3257,10 @@
         "script_level.level_keys": [
           "csp-unit1-lesson16-cfu2_27_28"
         ],
-        "lesson.key": "lesson-22",
+        "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration",
-        "activity_section.key": "c907543f-641d-4d37-9201-d54d793c1186"
+        "activity_section.key": "dcb9f05f-e4c7-4a96-96eb-8c3d5a179cb0"
       }
     },
     {
@@ -3280,10 +3269,10 @@
         "script_level.level_keys": [
           "csp-unit1-lesson16-cfu3_27_28"
         ],
-        "lesson.key": "lesson-22",
+        "lesson.key": "lesson-23",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "scottsdale-levelbuilder-exploration",
-        "activity_section.key": "c907543f-641d-4d37-9201-d54d793c1186"
+        "activity_section.key": "dcb9f05f-e4c7-4a96-96eb-8c3d5a179cb0"
       }
     },
     {
@@ -3583,24 +3572,10 @@
 
   ],
   "vocabularies": [
-    {
-      "key": "lesson_studio_live_check_",
-      "word": "Lesson Studio live check 8898985",
-      "definition": "Temporary companion acceptance-test record; not curriculum content.",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "lesson_studio_live_check_"
-      }
-    }
+
   ],
   "lessons_vocabularies": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-23",
-        "vocabulary.key": "lesson_studio_live_check_"
-      }
-    }
+
   ],
   "lessons_programming_expressions": [
 
