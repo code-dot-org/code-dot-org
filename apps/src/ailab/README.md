@@ -62,8 +62,14 @@ The engine keeps state in three places:
 `selectDataset` comes first unless the level names a dataset. `datasetView`
 and `results` follow; the header's Dataset and Testing tabs switch between
 them, and `TrainingModal` runs a training pass on the way from one to the
-other. `saveModel` and `modelSummary` survive from the legacy flow, but
-nothing in Lab 2 opens them.
+other.
+
+Lab 2 does not yet let students save a trained model for use in App Lab.
+`saveModel` and `modelSummary` remain from the legacy flow, but nothing in
+Lab 2 opens them.
+
+TODO: Update this section, and `hideSave` below, when Lab 2 supports saving
+models.
 
 ### Trainers
 
@@ -120,7 +126,7 @@ keys below, and the levelbuilder editor drops keys Lab 2 does not read.
 | `reserveLastRows` | Tests on the last rows rather than a random sample. |
 | `hideColumnClicking` | Columns cannot be clicked to inspect them. |
 | `defaultCardView` | Opens the dataset as cards rather than a table. |
-| `hideSave` | Hides the save panel, which Lab 2 never opens. |
+| `hideSave` | Hides the save panel. No effect until Lab 2 supports saving models. |
 
 `label`, `features`, `hideSelectLabel`, `lockFeatures`, `idColumn` and
 `pretrained` require a dataset in `datasets`. Lab 2 never shows the
