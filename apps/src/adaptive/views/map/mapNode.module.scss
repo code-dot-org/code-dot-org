@@ -61,7 +61,7 @@ button.circle {
   &:focus-visible {
     transform: scale(1.08);
     box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
-    outline: 3px solid var(--borders-brand-purple-primary);
+    outline: 3px solid var(--border-focused-primary);
     outline-offset: 3px;
   }
 }

@@ -125,7 +125,7 @@
   &:focus-visible {
     outline: 2px solid var(--border-focused-primary);
     outline-offset: -2px;
-    border-color: var(--borders-brand-teal-primary);
+    border-color: var(--border-focused-primary);
   }
 }
 

@@ -215,6 +215,9 @@ $handle-grab-buffer: 10px;
 .edgeSelectionOutline {
   @include node-mixins.node-focus-ring;
 
+  // A selection, not focus: keep the selection colour.
+  outline-color: var(--borders-brand-teal-primary);
+
   position: absolute;
   pointer-events: none;
 }

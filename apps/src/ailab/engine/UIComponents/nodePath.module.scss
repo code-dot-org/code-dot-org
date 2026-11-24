@@ -81,7 +81,7 @@ $step-number-size: 18px;
   }
 
   &:focus-visible {
-    outline: 2px solid var(--border-brand-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
   }
 }

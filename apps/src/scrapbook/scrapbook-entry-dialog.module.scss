@@ -76,7 +76,7 @@
   box-shadow: none;
 
   &:focus {
-    outline: 2px solid var(--borders-brand-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: -1px;
   }
 
