@@ -25,6 +25,9 @@ interface EditorStripProps {
   title?: string;
   /** Shown in the middle in place of the name, such as a scene dropdown. */
   titleContent?: React.ReactNode;
+  /** Where titleContent starts, in pixels from the bar's left edge;
+      centered when left out. */
+  titleContentLeft?: number;
   /** The switch at the bar's start instead of its end; undo and redo
       sit across from it either way. */
   switchAtStart?: boolean;
@@ -48,6 +51,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   editorLabels,
   title,
   titleContent,
+  titleContentLeft,
   switchAtStart = false,
   history,
   endSlotRef,
@@ -110,7 +114,19 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
         {switchAtStart ? switchNode : historyNode}
       </div>
       {titleContent ? (
-        <div className={moduleStyles.editorStripTitle}>{titleContent}</div>
+        <div
+          className={classNames(
+            moduleStyles.editorStripTitle,
+            titleContentLeft !== undefined && moduleStyles.editorStripTitleAt
+          )}
+          style={
+            titleContentLeft !== undefined
+              ? {left: titleContentLeft}
+              : undefined
+          }
+        >
+          {titleContent}
+        </div>
       ) : (
         <MuiTypography
           component="h2"

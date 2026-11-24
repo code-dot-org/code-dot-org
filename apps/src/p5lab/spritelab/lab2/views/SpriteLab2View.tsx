@@ -84,6 +84,7 @@ import {
 } from '../blockly/blockDefinitions/setWorld';
 import {endKeyboardNavigation} from '../blockly/endKeyboardNavigation';
 import {FLYOUT_DOTS_MARGIN_FACTOR} from '../blockly/flyoutDots';
+import {observeToolboxWidth} from '../blockly/flyoutRoom';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
 import {codeFromSavedScene} from '../blockly/savedSceneCode';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
@@ -235,6 +236,8 @@ const EDITORS: Editor[] = ['Images', 'World', 'Code'];
 const WORLD_BLOCK_EDITORS: Editor[] = ['Images', 'Code'];
 const WORLD_BLOCK_LABELS = {Code: 'Scenes'};
 const WORLD_BLOCK_TYPES = [SET_WORLD_BLOCK_TYPE];
+// ?world-block=dropdown: the scene dropdown's distance past the toolbox.
+const SCENE_DROPDOWN_GAP = 12;
 // The preview column's share of the browser's width: beside a 280 px panel
 // at a 1280 px window this leaves the workspace about 720 px, free play's
 // widest toolbox block and widest stack side by side.
@@ -2342,6 +2345,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     onManageScenes: () => setScenesDialog({creating: false}),
   };
   const catalogOffered = catalog.length > 0 && isEditable;
+  const [toolboxWidth, setToolboxWidth] = useState<number>();
+  useEffect(() => {
+    if (!sceneDropdownInStrip || !workspaceVersion) {
+      return;
+    }
+    return observeToolboxWidth(Blockly.getMainWorkspace(), setToolboxWidth);
+  }, [sceneDropdownInStrip, workspaceVersion]);
   const sceneSidebarShown =
     worldBlock && !sceneDropdownInStrip && scenesOffered && editorsShown;
   const [worldEditorOpen, setWorldEditorOpen] = useState(false);
@@ -2631,6 +2641,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   sceneDropdownInStrip &&
                   scenesOffered &&
                   activeTab === 'Code' && <SceneDropdown {...sceneControls} />
+                }
+                titleContentLeft={
+                  toolboxWidth !== undefined
+                    ? toolboxWidth + SCENE_DROPDOWN_GAP
+                    : undefined
                 }
                 switchAtStart
                 history={

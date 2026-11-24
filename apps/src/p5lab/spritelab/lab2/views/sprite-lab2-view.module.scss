@@ -210,6 +210,16 @@ $z-over-blockly: 71;
   color: var(--text-neutral-quaternary);
 }
 
+// Placed from the bar's left edge: an absolute grid item with a column
+// would be placed within that column instead.
+.editorStripTitleAt {
+  grid-column: auto;
+  grid-row: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .editorStripEnd {
   grid-column: 3;
   grid-row: 1;
