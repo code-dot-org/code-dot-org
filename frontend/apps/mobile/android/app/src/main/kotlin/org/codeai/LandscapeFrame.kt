@@ -30,14 +30,14 @@ internal class LandscapeFrame @JvmOverloads constructor(
         val width = MeasureSpec.getSize(widthMeasureSpec)
         val height = MeasureSpec.getSize(heightMeasureSpec)
         super.onMeasure(
-            MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY),
+            MeasureSpec.makeMeasureSpec(sidewaysWidth(width, height), MeasureSpec.EXACTLY),
             MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY),
         )
         setMeasuredDimension(width, height)
     }
 
-    // Every child fills the frame, so turning each about its own center turns
-    // them together.
+    // Every child gets the same box, so turning each about its own center
+    // turns them together.
     override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
         val width = right - left
         val height = bottom - top
@@ -59,9 +59,10 @@ internal class LandscapeFrame @JvmOverloads constructor(
         for (i in 0 until childCount) {
             val child = getChildAt(i)
             if (sideways) {
-                val childLeft = (width - height) / 2
-                val childTop = (height - width) / 2
-                child.layout(childLeft, childTop, childLeft + height, childTop + width)
+                val childWidth = sidewaysWidth(width, height)
+                val childLeft = (width - childWidth) / 2
+                val childTop = (childWidth - width) / 2
+                child.layout(childLeft, childTop, childLeft + childWidth, childTop + width)
             } else {
                 child.layout(0, 0, width, height)
             }
@@ -72,6 +73,12 @@ internal class LandscapeFrame @JvmOverloads constructor(
     companion object {
         private fun isSideways(configuration: Configuration): Boolean =
             configuration.orientation == Configuration.ORIENTATION_PORTRAIT
+
+        // The width of a sideways child: the frame's height, but at least the
+        // frame's width, so a frame a tall keyboard leaves shorter than it is
+        // wide gets a square page running on under the keyboard, not a portrait
+        // one.
+        private fun sidewaysWidth(width: Int, height: Int): Int = maxOf(width, height)
 
         // Quarter turns as -1, 0, 1 or 2.
         private fun quarterTurns(steps: Int): Int = ((steps % 4) + 5) % 4 - 1
