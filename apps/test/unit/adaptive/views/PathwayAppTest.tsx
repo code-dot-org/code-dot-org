@@ -790,7 +790,7 @@ describe('PathwayApp', () => {
       expect(button).toBeDisabled();
       expect(button).toHaveAttribute(
         'title',
-        "Complete 1 more checkpoint to unlock I'm finished!"
+        'Complete 1 more checkpoint to unlock the "I\'m finished!" button.'
       );
       expect(screen.queryByText(/^finish callout/)).toBeNull();
     });

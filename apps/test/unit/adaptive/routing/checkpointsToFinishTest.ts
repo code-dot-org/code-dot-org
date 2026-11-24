@@ -42,7 +42,7 @@ describe('checkpointsToFinish', () => {
     expect(mockGet).toHaveBeenCalledWith(FINISH_LOCK_FLAG, true);
   });
 
-  it('counts complete and skipped checkpoints toward the requirement', () => {
+  it('counts completed checkpoints toward the requirement, not skipped ones', () => {
     expect(checkpointsToFinish(pathway(2), {})).toBe(2);
     expect(
       checkpointsToFinish(pathway(2), {
@@ -52,8 +52,15 @@ describe('checkpointsToFinish', () => {
       })
     ).toBe(1);
     expect(checkpointsToFinish(pathway(2), {a: 'complete', b: 'skipped'})).toBe(
-      0
+      1
     );
+    expect(
+      checkpointsToFinish(pathway(2), {
+        a: 'complete',
+        b: 'complete',
+        c: 'skipped',
+      })
+    ).toBe(0);
   });
 
   it('never goes below zero', () => {
@@ -74,10 +81,10 @@ describe('checkpointsToFinish', () => {
 describe('finishLockMessage', () => {
   it('counts what is left, singular and plural', () => {
     expect(finishLockMessage(1)).toBe(
-      "Complete 1 more checkpoint to unlock I'm finished!"
+      'Complete 1 more checkpoint to unlock the "I\'m finished!" button.'
     );
     expect(finishLockMessage(3)).toBe(
-      "Complete 3 more checkpoints to unlock I'm finished!"
+      'Complete 3 more checkpoints to unlock the "I\'m finished!" button.'
     );
   });
 });

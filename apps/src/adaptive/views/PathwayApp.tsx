@@ -362,7 +362,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     remainingToFinish === 0 && !finishCalloutDismissed
       ? {
           title: "You're ready to finish!",
-          body: "You've cleared enough checkpoints to wrap up. Click I'm finished! when you're ready, or keep practicing skills first.",
+          body: `You've completed enough checkpoints to wrap up. Click the "I'm finished" button when you're ready, or keep practicing skills first.`,
           onDismiss: () => setFinishCalloutDismissed(true),
         }
       : undefined;

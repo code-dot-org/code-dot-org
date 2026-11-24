@@ -21,7 +21,7 @@ export const finishDialogSchema = z.strictObject({
 export const finishSourceSchema = z.strictObject({
   dialog: finishDialogSchema.optional(),
   checkpoint: checkpointSourceSchema.optional(),
-  /** The number of checkpoints that must be cleared before I'm finished opens. */
+  /** The number of checkpoints that must be completed before I'm finished opens; skipped ones do not count. */
   requiredCheckpoints: z.number().int().positive().optional(),
 });
 
