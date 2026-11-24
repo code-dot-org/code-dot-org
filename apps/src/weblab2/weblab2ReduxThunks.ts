@@ -48,15 +48,11 @@ function resetAiTutorVersionState(dispatch: AppDispatch) {
  */
 export const acceptAiTutorVersion = createAsyncThunk<
   void,
-  {
-    files: ProjectFile[];
-    commitDescription: string;
-    analyticsProperties?: Record<string, string>;
-  },
+  {files: ProjectFile[]; commitDescription: string},
   {dispatch: AppDispatch; state: RootState}
 >(
   'weblab2/acceptAiTutorVersion',
-  async ({files, commitDescription, analyticsProperties}, thunkAPI) => {
+  async ({files, commitDescription}, thunkAPI) => {
     const state = thunkAPI.getState();
     const sources = state.lab2Project.projectSources;
     const channelId = state.lab.channel?.id;
@@ -88,7 +84,6 @@ export const acceptAiTutorVersion = createAsyncThunk<
     sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_ACCEPTED, {
       numFiles: files.length.toString(),
       fileTypes: getFileExtension(files[0].name),
-      ...analyticsProperties,
     });
     resetAiTutorVersionState(thunkAPI.dispatch);
 
@@ -176,27 +171,23 @@ export const acceptAiTutorVersion = createAsyncThunk<
  */
 export const rejectAiTutorVersion = createAsyncThunk<
   void,
-  {files: ProjectFile[]; analyticsProperties?: Record<string, string>},
+  ProjectFile[],
   {dispatch: AppDispatch; state: RootState}
->(
-  'weblab2/rejectAiTutorVersion',
-  async ({files, analyticsProperties}, thunkAPI) => {
-    const state = thunkAPI.getState();
-    const prevSource = state.lab2Project.projectSourceBeforeAiTutorVersion;
-    const source = state.lab2Project.projectSources?.source as MultiFileSource;
+>('weblab2/rejectAiTutorVersion', async (files, thunkAPI) => {
+  const state = thunkAPI.getState();
+  const prevSource = state.lab2Project.projectSourceBeforeAiTutorVersion;
+  const source = state.lab2Project.projectSources?.source as MultiFileSource;
 
-    // Add reject notification.
-    const notification = getRejectNotification(files);
-    thunkAPI.dispatch(addChatEvent(notification));
-    sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_REJECTED, {
-      numFiles: files.length.toString(),
-      fileTypes: getFileExtension(files[0].name),
-      ...analyticsProperties,
-    });
+  // Add reject notification.
+  const notification = getRejectNotification(files);
+  thunkAPI.dispatch(addChatEvent(notification));
+  sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_VERSION_REJECTED, {
+    numFiles: files.length.toString(),
+    fileTypes: getFileExtension(files[0].name),
+  });
 
-    // Revert to previous source.
-    thunkAPI.dispatch(setSource(prevSource || source));
+  // Revert to previous source.
+  thunkAPI.dispatch(setSource(prevSource || source));
 
-    resetAiTutorVersionState(thunkAPI.dispatch);
-  }
-);
+  resetAiTutorVersionState(thunkAPI.dispatch);
+});

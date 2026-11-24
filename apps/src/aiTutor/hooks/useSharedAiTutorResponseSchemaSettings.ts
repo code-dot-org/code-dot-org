@@ -1,6 +1,5 @@
 import {useCallback, useMemo, useRef} from 'react';
 
-import {useChatHost} from '@cdo/apps/aichat/host/ChatHostContext';
 import {JsonObjectSchema, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {
   AiTutorAcceptRejectResponse,
@@ -49,7 +48,6 @@ export const useSharedAiTutorResponseSchemaSettings = ({
   onAiTutorVersionLoaded,
 }: AiTutorResponseSchemaSettingsOptions): ResponseSchemaSettings => {
   const dispatch = useAppDispatch();
-  const analyticsProperties = useChatHost()?.analyticsProperties;
   // The chat keeps the handler from when the message was sent, so read the
   // project as it is when the answer arrives.
   const sourceRef = useRef(source);
@@ -88,7 +86,6 @@ export const useSharedAiTutorResponseSchemaSettings = ({
 
       sendLab2AnalyticsEvent(EVENTS.AI_TUTOR_GENERATED_CODE, {
         answerType: formatted.answerType,
-        ...analyticsProperties,
       });
       const currentSource = sourceRef.current;
       const aiTutorVersionFiles: ProjectFile[] = [];
@@ -108,12 +105,7 @@ export const useSharedAiTutorResponseSchemaSettings = ({
       dispatch(setSource(mergedSourceVersion));
       onAiTutorVersionLoaded?.(mergedSourceVersion, aiTutorVersionFiles);
     },
-    [
-      dispatch,
-      usesAcceptRejectFlow,
-      onAiTutorVersionLoaded,
-      analyticsProperties,
-    ]
+    [dispatch, usesAcceptRejectFlow, onAiTutorVersionLoaded]
   );
 
   return useMemo(

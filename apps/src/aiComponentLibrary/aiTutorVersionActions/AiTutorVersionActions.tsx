@@ -7,7 +7,6 @@ import {
 import React, {useState, useCallback, useEffect, useLayoutEffect} from 'react';
 
 import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
-import {useChatHost} from '@cdo/apps/aichat/host/ChatHostContext';
 import AiTutorVersionFileChip from '@cdo/apps/aiComponentLibrary/aiTutorVersionFileChip/AiTutorVersionFileChip';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
@@ -49,11 +48,10 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
 
   const dispatch = useAppDispatch();
   const dialogControl = useDialogControl();
-  const analyticsProperties = useChatHost()?.analyticsProperties;
 
   const handleReject = useCallback(async () => {
-    await dispatch(rejectAiTutorVersion({files, analyticsProperties}));
-  }, [dispatch, files, analyticsProperties]);
+    await dispatch(rejectAiTutorVersion(files));
+  }, [dispatch, files]);
 
   // Presents a confirmation dialog if the user attempts to navigate to another lab2 level with unsaved AI Tutor changes.
   // If the user confirms they want to navigate away, we log a "reject" event and reject the proposed changes.
@@ -134,9 +132,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     if (isSaving) return;
     setIsSaving(true);
     try {
-      await dispatch(
-        acceptAiTutorVersion({files, commitDescription, analyticsProperties})
-      );
+      await dispatch(acceptAiTutorVersion({files, commitDescription}));
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -147,7 +143,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
     } finally {
       setIsSaving(false);
     }
-  }, [dispatch, files, commitDescription, isSaving, analyticsProperties]);
+  }, [dispatch, files, commitDescription, isSaving]);
 
   // Scroll to the bottom of the page when switching to accept mode,
   // so that the commit description input and save button are visible to the user.

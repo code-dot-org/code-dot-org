@@ -1,8 +1,4 @@
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
-import {
-  acceptAiTutorVersion,
-  rejectAiTutorVersion,
-} from '@cdo/apps/weblab2/weblab2ReduxThunks';
+import {acceptAiTutorVersion} from '@cdo/apps/weblab2/weblab2ReduxThunks';
 
 const mockSetAndSaveProjectSources = jest.fn();
 jest.mock('@cdo/apps/lab2/redux/lab2ProjectReduxThunks', () => ({
@@ -15,7 +11,6 @@ jest.mock('@cdo/apps/aichat/redux/thunks/addChatEvent', () => ({
   addChatEvent: () => ({type: 'test/addChatEvent'}),
 }));
 jest.mock('@cdo/apps/lab2/utils', () => ({sendLab2AnalyticsEvent: jest.fn()}));
-jest.mock('@cdo/apps/weblab2/helpers/getRejectNotification', () => () => ({}));
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   getInstance: () => ({
     getProjectManager: () => undefined,
@@ -26,23 +21,21 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
 const file = {id: '1', name: 'main.py', contents: 'new', folderId: '0'};
 const labConfig = {miniApp: {name: 'neighborhood'}};
 
-const state = {
-  lab: {channel: {id: 'channel'}},
-  lab2Project: {
-    projectSources: {
-      source: {files: {'1': {...file, isAiTutorVersionUpdated: true}}},
-      labConfig,
-    },
-    projectSourceBeforeAiTutorVersion: {
-      files: {'1': {...file, contents: 'old'}},
-    },
-  },
-};
-
-beforeEach(() => jest.clearAllMocks());
-
 describe('acceptAiTutorVersion', () => {
   it('keeps labConfig in both saved versions', async () => {
+    const state = {
+      lab: {channel: {id: 'channel'}},
+      lab2Project: {
+        projectSources: {
+          source: {files: {'1': {...file, isAiTutorVersionUpdated: true}}},
+          labConfig,
+        },
+        projectSourceBeforeAiTutorVersion: {
+          files: {'1': {...file, contents: 'old'}},
+        },
+      },
+    };
+
     await acceptAiTutorVersion({files: [file], commitDescription: 'x'})(
       jest.fn(),
       () => state as never,
@@ -57,43 +50,5 @@ describe('acceptAiTutorVersion', () => {
     });
     expect(saved[1].labConfig).toEqual(labConfig);
     expect(saved[1].source.files['1'].isAiTutorVersionUpdated).toBe(false);
-  });
-
-  it('sends the host analytics properties only when there are some', async () => {
-    await acceptAiTutorVersion({
-      files: [file],
-      commitDescription: 'x',
-      analyticsProperties: {stepId: 's'},
-    })(jest.fn(), () => state as never, undefined);
-    await acceptAiTutorVersion({files: [file], commitDescription: 'x'})(
-      jest.fn(),
-      () => state as never,
-      undefined
-    );
-
-    expect(sendLab2AnalyticsEvent).toHaveBeenNthCalledWith(
-      1,
-      'AI Tutor Version Accepted',
-      {numFiles: '1', fileTypes: 'py', stepId: 's'}
-    );
-    expect(sendLab2AnalyticsEvent).toHaveBeenNthCalledWith(
-      2,
-      'AI Tutor Version Accepted',
-      {numFiles: '1', fileTypes: 'py'}
-    );
-  });
-});
-
-describe('rejectAiTutorVersion', () => {
-  it('sends the host analytics properties', async () => {
-    await rejectAiTutorVersion({
-      files: [file],
-      analyticsProperties: {stepId: 's'},
-    })(jest.fn(), () => state as never, undefined);
-
-    expect(sendLab2AnalyticsEvent).toHaveBeenCalledWith(
-      'AI Tutor Version Rejected',
-      {numFiles: '1', fileTypes: 'py', stepId: 's'}
-    );
   });
 });
