@@ -210,7 +210,9 @@ $z-over-blockly: 71;
   color: var(--text-neutral-quaternary);
 }
 
-// An absolute grid item with a column would be placed within that column.
+// grid-column: auto so that left is measured from the bar's edge; an
+// absolutely positioned grid item that keeps a column is positioned within
+// that column.
 .editorStripTitleFromLeft {
   grid-column: auto;
   grid-row: auto;

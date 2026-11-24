@@ -31,10 +31,7 @@ export function worldFromFieldValue(value: unknown): World | undefined {
   }
 }
 
-/**
- * The set world block's own world, shown as a small picture of its grid.
- * The value is saved with the block, so each block keeps its own world.
- */
+/** The set world block's own world, shown as a small picture of its grid. */
 export class WorldField extends BlocklyCore.FieldImage {
   override SERIALIZABLE = true;
 
