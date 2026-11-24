@@ -98,12 +98,10 @@ describe('buildTeacherMenuItems', () => {
 });
 
 describe('buildCreateMenuItems', () => {
-  it('leads with Quest Builder, linking to the tutorial', () => {
+  it('leads with Quest Builder, linking to a fresh run of the tutorial', () => {
     const [first] = buildCreateMenuItems();
     expect(first.label).toBe('Quest Builder');
-    expect(first.href).toBe(
-      '/courses/quest-builder-2026/units/1/lessons/1/levels/1',
-    );
+    expect(first.href).toBe('/courses/quest-builder-2026/units/1/reset');
   });
 
   it('omits Mix & Move with AI', () => {
