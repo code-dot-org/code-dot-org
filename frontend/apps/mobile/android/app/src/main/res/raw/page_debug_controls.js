@@ -62,10 +62,9 @@ function ensureDebugStyle() {
 var controls = null;
 
 // Shows, or hides again, what the app hides on site pages; the choice lasts
-// across pages. The translation widget, removed rather than hidden, comes
-// back on the next page.
+// across pages. The page reloads with it: the site measures "I finished!"
+// only once, so measured while hidden, it would stay clipped.
 function setShowingHidden(showing) {
-  document.documentElement.classList.toggle(SHOWING_HIDDEN_CLASS, showing);
   try {
     if (showing) {
       window.localStorage.setItem(SHOWING_HIDDEN_KEY, '1');
@@ -74,8 +73,11 @@ function setShowingHidden(showing) {
     }
   } catch (e) {
     // Storage unavailable: the choice lasts until the page changes.
+    document.documentElement.classList.toggle(SHOWING_HIDDEN_CLASS, showing);
+    pageChanged();
+    return;
   }
-  pageChanged();
+  window.location.reload();
 }
 
 function showHiddenButton() {
