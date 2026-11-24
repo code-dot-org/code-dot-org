@@ -1,0 +1,109 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-10-30T09:28:03.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "uses_lab2": "true",
+    "world_keeps_roles": [
+      "friend",
+      "hero",
+      "treasure"
+    ],
+    "block_pools": [
+      "GamelabJr",
+      "GameDev"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zGameDev"
+    ],
+    "standalone_app_name": "quest_builder",
+    "skin": "gamelab",
+    "hide_custom_blocks": true,
+    "hide_share_and_remix": "true",
+    "encrypted": "false",
+    "project_template_level_name": "UI Test Sprite Lab in Lab2 template",
+    "level_mode": {
+      "kind": "world",
+      "limitedPaintTools": true,
+      "generationLimit": 5,
+      "imageType": "sprite",
+      "imageRole": "friend",
+      "paletteRoles": [
+        "friend",
+        "hero",
+        "treasure",
+        "block"
+      ],
+      "imageFirst": true,
+      "oneImage": true
+    },
+    "pinned_scene": {
+      "id": "scene-1",
+      "name": "Scene 1"
+    },
+    "image_role_defaults": {
+      "sprite": "hero"
+    },
+    "objectives": {
+      "title": "**Friend or foe?**",
+      "items": [
+        {
+          "text": "In **Images**, select the **+** button to make a new character.",
+          "check": {
+            "kind": "image",
+            "imageType": "sprite"
+          }
+        },
+        {
+          "text": "In **World**, select squares to place one or more copies.",
+          "check": {
+            "kind": "world",
+            "role": "friend"
+          }
+        }
+      ]
+    },
+    "long_instructions": "# Who else is in your world?\r\n\r\nMake another character for your player to meet. Will it be a friend, or an enemy?",
+    "header_label": "Friend or foe?",
+    "callouts": [
+      {
+        "target": "world-tab",
+        "when": {
+          "done": [
+            0
+          ],
+          "tabNot": "World"
+        }
+      }
+    ],
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "use_modal_function_editor": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_animation_mode": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "use_default_sprites": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "preload_asset_list": null
+  },
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>
