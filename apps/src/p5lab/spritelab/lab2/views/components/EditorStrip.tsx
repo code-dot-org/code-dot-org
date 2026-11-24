@@ -21,8 +21,9 @@ interface EditorStripProps {
   disabledEditors?: Editor[];
   /** A control set into the switch (see EditorSwitch). */
   between?: {after: Editor; node: React.ReactNode};
-  /** The name in the middle; the open editor's unless given. */
-  title?: string;
+  /** The name in the middle; the open editor's unless given, none if
+      null. */
+  title?: string | null;
   /** The switch at the bar's start instead of its end; undo and redo
       sit across from it either way. */
   switchAtStart?: boolean;
@@ -32,6 +33,7 @@ interface EditorStripProps {
   endSlotRef?: (element: HTMLDivElement | null) => void;
   /** Room kept clear of the preview's column. */
   style?: React.CSSProperties;
+  className?: string;
 }
 
 /**
@@ -49,6 +51,7 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   history,
   endSlotRef,
   style,
+  className,
 }) => {
   // Takes focus from a button that its own click disables.
   const historyRef = useRef<HTMLDivElement>(null);
@@ -99,20 +102,23 @@ const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
     <div
       className={classNames(
         moduleStyles.editorStrip,
-        onChange && moduleStyles.editorStripEditors
+        onChange && moduleStyles.editorStripEditors,
+        className
       )}
       style={style}
     >
       <div className={moduleStyles.editorStripStart}>
         {switchAtStart ? switchNode : historyNode}
       </div>
-      <MuiTypography
-        component="h2"
-        variant="overline2"
-        className={moduleStyles.editorStripTitle}
-      >
-        {title ?? (editor === 'Code' ? 'Workspace' : editor)}
-      </MuiTypography>
+      {title !== null && (
+        <MuiTypography
+          component="h2"
+          variant="overline2"
+          className={moduleStyles.editorStripTitle}
+        >
+          {title ?? (editor === 'Code' ? 'Workspace' : editor)}
+        </MuiTypography>
+      )}
       <div className={moduleStyles.editorStripEnd}>
         {switchAtStart ? historyNode : switchNode}
         {endSlotRef && (
