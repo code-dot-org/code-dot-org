@@ -166,6 +166,68 @@ describe('QuestionsStep', () => {
       expect(onComplete).toHaveBeenCalledTimes(1);
     });
 
+    const toSecondQuestion = () => {
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      fireEvent.click(screen.getByRole('button', {name: /Next/}));
+      act(() => {
+        jest.runAllTimers();
+      });
+    };
+
+    it('shows Back only after the first question', () => {
+      renderStep({}, twoQuestionStep);
+      expect(
+        screen.queryByRole('button', {name: /Back/})
+      ).not.toBeInTheDocument();
+      toSecondQuestion();
+      expect(screen.getByRole('button', {name: /Back/})).toBeInTheDocument();
+    });
+
+    it('goes back to the previous question with its pick kept', () => {
+      renderStep({}, twoQuestionStep);
+      toSecondQuestion();
+      fireEvent.click(screen.getByRole('radio', {name: /No 2/}));
+      fireEvent.click(screen.getByRole('button', {name: /Back/}));
+      expect(screen.getByText('1/2 questions')).toBeInTheDocument();
+      expect(screen.getByRole('radio', {name: /Yes 1/})).toBeChecked();
+      expect(screen.queryByText('Correct!')).not.toBeInTheDocument();
+      expect(
+        screen.getByRole('heading', {name: 'Quick questions'})
+      ).toHaveFocus();
+
+      toSecondQuestion();
+      expect(screen.getByRole('radio', {name: /No 2/})).toBeChecked();
+    });
+
+    it('does not resave an unchanged answer after going back', () => {
+      const {saved} = renderStep({}, twoQuestionStep);
+      toSecondQuestion();
+      fireEvent.click(screen.getByRole('button', {name: /Back/}));
+      toSecondQuestion();
+      expect(saved).toEqual([[1, [{answerId: 'a', isCorrect: true}]]]);
+    });
+
+    it('ignores Back during the Correct! pause', () => {
+      renderStep(
+        {},
+        {
+          ...twoQuestionStep,
+          questions: [
+            question(1, 'First question'),
+            {...question(2, 'Second question'), correctChoiceId: 'a'},
+          ],
+        }
+      );
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      fireEvent.click(screen.getByRole('button', {name: /Next/}));
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 2/}));
+      fireEvent.click(screen.getByRole('button', {name: 'Submit'}));
+      const back = screen.getByRole('button', {name: /Back/});
+      expect(back).toHaveAttribute('aria-disabled', 'true');
+      fireEvent.click(back);
+      expect(screen.getByText('2/2 questions')).toBeInTheDocument();
+    });
+
     it('focuses the step title on the first question', () => {
       renderStep({}, twoQuestionStep);
       expect(

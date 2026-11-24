@@ -308,7 +308,7 @@ describe('LevelStep (LevelPlayer)', () => {
       sourcesState.isLoading = true;
       renderStep(projectStep(), true);
       expect(lastDecision()).toMatchObject({shouldGenerate: undefined});
-      expect(screen.getByText('Building your website...')).toBeInTheDocument();
+      expect(screen.getByText('Loading...')).toBeInTheDocument();
     });
 
     it('generates for the owner once the project has loaded, over the project when the level has no template', () => {

@@ -9,12 +9,12 @@
     "require_edit_to_continue": "true",
     "encrypted": "false",
     "project_template_level_name": "data-makes-ai-lesson12-sketch-lab-template-run-or-pass",
-    "long_instructions": "## Find the Problem\r\nGoal: Pick a move that fixes the problem you found.\r\n\r\n1. Drag your Data Scientist to **Prepare Stop 1**.\r\n2. Use **Find the Problem** in your guide to answer questions a–d.\r\n3. For question e, open your **Data Moves Reference**. Drag the red oval around one move. Write why you picked it.\r\n\r\nYou are done when Prepare Stop 1 has an answer for a–e. Go to the next level.",
+    "long_instructions": "## Find the Problem\r\nGoal: Pick a move that fixes the problem you found.\r\n\r\nClick the zoom **+** in the bottom corner of the map.\r\n\r\n1. Drag your Data Scientist to **Prepare Stop 1**.\r\n2. Use **Find the Problem** in your guide to answer questions a–d.\r\n3. For question e, open your **Data Moves Reference**. Drag the red oval around one move. Write why you picked it.\r\n\r\nYou are done when Prepare Stop 1 has an answer for a–e. Go to the next level.",
     "hide_share_and_remix": "false",
     "display_name": "Project Map: Football Plays",
     "bubble_choice_description": "This dataset contains information about a variety of different football plays from the NFL.",
     "thumbnail_url": "https://images.code.org/55a6d73fe13a94e28fd52b8fc4c2359a-k4b-football.jpg"
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:27.450+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-tree1-run-or-pass\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-tree1-run-or-pass\"},{\"changed_at\":\"2026-11-20 04:13:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:27.450+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-tree1-run-or-pass\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-tree1-run-or-pass\"},{\"changed_at\":\"2026-11-20 04:13:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:03:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:06:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

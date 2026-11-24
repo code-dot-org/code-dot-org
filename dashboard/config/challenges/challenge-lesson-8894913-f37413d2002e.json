@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894913-f37413d2002e",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 12: AI's Role in Society",
+  "question": "Every task has an electricity cost, and the costs are very different. Find the biggest one, and decide when it is worth it.\n\nSteps:\n1. Use the arrow tool to point at the task that uses the most electricity.\n2. Place a shape on one task where the extra cost is worth it.\n3. Use the text tool to write one way to use less without losing the benefit.\n4. Record your voice explaining who shares the cost of that electricity, and why “worth it” can be different for different people.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow, shape, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student places an arrow and a shape, but types no idea."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to the short AI video AND a shape is on a task where the extra cost is worth it AND the typed idea reduces use without losing the benefit AND the voice recording says who shares the cost."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains why \"worth it\" can be different for different people."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894913-f37413d2002e-1f6a60f1",
+  "whiteboard_starter_image_alt_text": "A bar chart titled \"Electricity used by one task (example numbers for practice)\": search for a web page, 1 unit; ask a chatbot one question, 5 units; make one AI image, 20 units; and make a short AI video, 100 units. At the bottom is a blank box labeled \"Space for your idea.\""
+}

@@ -377,6 +377,7 @@ const EVENTS = {
   TUTOR_PLUS_CHALLENGE_STARTED: 'tutor_plus_challenge_started',
   TUTOR_PLUS_CHALLENGE_RESTARTED: 'tutor_plus_challenge_restarted',
   TUTOR_PLUS_CHALLENGE_SUBMITTED: 'tutor_plus_challenge_submitted',
+  TUTOR_PLUS_CHALLENGES_TOGGLED: 'tutor_plus_challenges_toggled',
   TUTOR_PLUS_GALLERY_VIEWED: 'tutor_plus_gallery_viewed',
   TUTOR_PLUS_GALLERY_VISIBILITY_TOGGLED:
     'tutor_plus_gallery_visibility_toggled',
@@ -486,6 +487,12 @@ const EVENTS = {
   HOAI2026_LEVEL_COMPLETE: 'hoai2026-level-complete',
   HOAI2026_LEVEL_SESSION_END: 'hoai2026-level-session-end',
   HOAI2026_FINISH_DIALOG: 'hoai2026-finish-dialog',
+  HOAI2026_CATALOG_OPEN: 'hoai2026-catalog-open',
+  HOAI2026_CATALOG_ADD: 'hoai2026-catalog-add',
+  HOAI2026_SCENE_CREATE: 'hoai2026-scene-create',
+  HOAI2026_IMAGE_REPLACE_CONFIRM: 'hoai2026-image-replace-confirm',
+  HOAI2026_GENERATION_LIMIT_REACHED: 'hoai2026-generation-limit-reached',
+  HOAI2026_START_OVER: 'hoai2026-start-over',
 
   // Moderate model output image
   MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',

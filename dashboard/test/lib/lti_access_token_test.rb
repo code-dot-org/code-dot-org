@@ -17,7 +17,7 @@ class LtiAccessTokenTest < ActiveSupport::TestCase
       kid: jwk[:kid],
       private_key: jwk.signing_key.to_s,
     }
-    @cache_key = "#{Policies::Lti::NAMESPACE}/#{@lti_integration[:client_id]}-#{@lti_integration[:issuer]}"
+    @cache_key = LtiAccessToken.cache_key(@lti_integration[:client_id], @lti_integration[:issuer])
   end
 
   setup do
@@ -36,9 +36,17 @@ class LtiAccessTokenTest < ActiveSupport::TestCase
   end
 
   test 'get_access_token uses cached tokens if present' do
-    CDO.shared_cache.stubs(:read).with("#{Policies::Lti::NAMESPACE}/#{@lti_integration.client_id}-#{@lti_integration.issuer}").returns('cached_access_token')
+    CDO.shared_cache.stubs(:read).with(@cache_key).returns('cached_access_token')
     jwt = get_access_token(@lti_integration.client_id, @lti_integration.issuer, ['test_scope', 'test_scope2'])
     assert_equal 'cached_access_token', jwt
+  end
+
+  test 'cache_key has its own namespace' do
+    assert @cache_key.start_with?('lti_access_token/')
+  end
+
+  test 'cache_key differs for pairs that concatenate to the same string' do
+    refute_equal LtiAccessToken.cache_key('a-b', 'c'), LtiAccessToken.cache_key('a', 'b-c')
   end
 
   test 'expired tokens are removed from the cache' do

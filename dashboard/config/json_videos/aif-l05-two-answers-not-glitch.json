@@ -1,0 +1,13 @@
+{
+  "key": "aif-l05-two-answers-not-glitch",
+  "description": "Learn why AI can give two different answers to the same question without glitching.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/aif-l05-two-answers-not-glitch.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "26cc455f-c95a-4ee2-ada0-4ffc24f8b47d"
+  ]
+}

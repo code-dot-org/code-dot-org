@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894762-d05257b410ec",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 7: Exploring Data in AI",
+  "question": "Three sources are talking about the same pool, and they do not agree. Which one would you believe, and which would you trust the least?\n\nSteps:\n1. Use the arrow tool to point at the source you trust the most.\n2. Place a shape on the source you trust the least.\n3. Record your voice using clues from the cards to explain your choices. Then tell us whether the claim is probably true, and what you would do next to find out for sure.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on source A, the shape is not on source B or source C, or the voice recording names no clue (such as a date, who wrote it, or whether sources are listed)."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to source A AND a shape is on source B or source C AND the voice recording names at least one clue."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording says the claim is probably wrong because the most trusted source says 7 p.m., AND names a next step (such as calling the community center)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894762-d05257b410ec-849a34e6",
+  "whiteboard_starter_image_alt_text": "The claim \"The community pool is open until 8 p.m. on weekdays.\" Three sources. A, the community center website: \"Page updated last week: 'Weekday pool hours: 6 a.m. to 7 p.m.'\" B, a neighbor's post: \"Posted two years ago: 'The pool stays open until 8 p.m.'\" C, a chatbot's answer: \"'The pool is open until 8 p.m. on weekdays.' No sources listed.\""
+}

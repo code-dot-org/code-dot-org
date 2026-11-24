@@ -173,7 +173,15 @@ class SitePolicyTest {
     }
 
     @Test
-    fun userAgentToken_namesTheAppVersionAndEdition() {
-        assertEquals("CodeAIApp/1.0.0 (android; Amazon Kids+ Edition)", SitePolicy.userAgentToken("1.0.0"))
+    fun userAgentToken_namesAppVersionAndInstallSource() {
+        assertEquals(
+            "CodeAIMobileApp/1.0.0 (com.amazon.venezia)",
+            SitePolicy.userAgentToken("CodeAIMobileApp", "1.0.0", "com.amazon.venezia"),
+        )
+    }
+
+    @Test
+    fun userAgentToken_noCommentWithoutInstallSource() {
+        assertEquals("CodeAIMobileApp/1.0.0", SitePolicy.userAgentToken("CodeAIMobileApp", "1.0.0", null))
     }
 }

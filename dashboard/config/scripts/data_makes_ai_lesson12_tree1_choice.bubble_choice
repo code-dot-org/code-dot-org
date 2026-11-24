@@ -10,3 +10,4 @@ level 'data-makes-ai-lesson12-tree1-video-games'
 level 'data-makes-ai-lesson12-tree1-board-games'
 
 uses_lab2
+navigation_type 'next_sublevel'

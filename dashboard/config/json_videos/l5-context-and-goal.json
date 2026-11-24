@@ -1,0 +1,13 @@
+{
+  "key": "l5-context-and-goal",
+  "description": "See how giving your chatbot context and a goal helps it give you what you need.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l5-context-and-goal.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "912e8d0b-431d-4bcb-a0ea-e780c73b1fd3"
+  ]
+}

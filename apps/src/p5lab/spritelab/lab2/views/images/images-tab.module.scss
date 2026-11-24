@@ -58,12 +58,8 @@ $tip-line-height: 24px;
   gap: 16px;
   margin: 0;
   padding: 12px 14px;
-  background-color: color-mix(
-    in srgb,
-    var(--neutral-base-true-black) 65%,
-    transparent
-  );
-  color: var(--text-neutral-white-fixed);
+  background-color: var(--background-neutral-tertiary);
+  color: var(--text-neutral-primary);
   // The size of the lab's other running text.
   font-size: 16px;
   line-height: $tip-line-height;
@@ -393,10 +389,12 @@ $list-button-icon: 20px;
 }
 
 // .frameMatched marks a frame whose checkerboard matches the paint tools'
-// own. Any other frame hides its checkerboard while the tools are open:
-// the editor's canvas draws its own, and until it has, a plain background
-// shows through transparent pixels.
-.paintFrame:not(.frameMatched) {
+// own. Any other frame that shows a picture (.frameFilled) hides its
+// checkerboard while the tools are open: the tools' canvas draws its own,
+// and until it has, a plain background shows through transparent pixels.
+// The tools can still be open while a picture is being generated; that
+// frame has no checkerboard to hide, so the rule leaves it alone.
+.paintFrame.frameFilled:not(.frameMatched) {
   background-image: none;
   background-color: var(--background-neutral-secondary);
 }
@@ -458,9 +456,9 @@ $list-button-icon: 20px;
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
 
-  // The scene moves focus here on a mode change and announces it; no
-  // outline is drawn around the whole pane for that programmatic focus.
-  &:focus:not(:focus-visible) {
+  // The pane is never reached with Tab (`tabIndex={-1}`), so it shows no
+  // focus outline.
+  &:focus {
     outline: none;
   }
 }

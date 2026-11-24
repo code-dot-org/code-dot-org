@@ -13,6 +13,7 @@ module Services
     # - Email addresses
     # - Authentication tokens, secret words, secret pictures, and any other means of authenticating
     # - Physical addresses
+    # - Challenge responses (including their S3 assets) and practice problem attempts
     # Intended to be run on soft-deleted users after a 28-day grace period. Not for use on live users as it
     # renders the account unusuable.
     class PiiScrubber < Services::Base
@@ -101,6 +102,10 @@ module Services
 
         # Sections
         scrub_sections
+
+        # Student work, which may contain PII
+        delete_practice_problem_attempts
+        delete_challenge_responses
       end
 
       # Legacy delete acccounts helper client for purging data from deprecated tables
@@ -172,6 +177,15 @@ module Services
             section.update!(name: REDACTED_STRING)
           end
         end
+      end
+
+      private def delete_practice_problem_attempts
+        UserPracticeProblemAttempt.where(user_id: user.id).delete_all
+      end
+
+      # destroy, not delete_all: each asset removes its S3 object on destroy.
+      private def delete_challenge_responses
+        ChallengeResponse.where(user_id: user.id).find_each(&:destroy!)
       end
 
       private def mark_scrubbed

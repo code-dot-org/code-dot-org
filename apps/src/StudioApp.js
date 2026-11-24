@@ -14,6 +14,8 @@ import {
   appendSharedFunctionsToState,
   highlightBlock,
   loadBlocksToWorkspace,
+  localizeBlockInitDefinition,
+  localizeBlockStrings,
   processToolboxXml,
 } from '@cdo/apps/blockly/utils';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
@@ -550,7 +552,7 @@ StudioApp.prototype.init = function (config) {
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
     // Hook the blockly environment into the localization engine
-    if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
+    if (isLocalizingBlocks()) {
       localization.on('change', info => {
         const blockDefinitions =
           BlocklyUtils.getBlockDefinitionsForUpdatedLocale(info.rtl);
@@ -559,7 +561,16 @@ StudioApp.prototype.init = function (config) {
           blockDefinitions,
           customInputTypes: Blockly.SourceCustomInputTypes,
         });
+
+        Object.entries(BlocklyCore.Blocks).forEach(([key, blockDefinition]) => {
+          if (blockDefinition.init) {
+            BlocklyCore.Blocks[key] =
+              localizeBlockInitDefinition(blockDefinition);
+          }
+        });
+        this.relocalizeStartBlocks_();
         BlocklyUtils.refreshWorkspacesForUpdatedLocale(info.rtl);
+        this.snapshotStartBlocks_();
       });
     }
     // Store result so that we can cleanup later in tests
@@ -1329,6 +1340,10 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source) {
+  // setStartBlocks_ tracks again when what it loaded is the authored blocks.
+  if (!this.relocalizingStartBlocks_) {
+    this.untrackStartBlocks_();
+  }
   loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
 };
 
@@ -2902,6 +2917,28 @@ StudioApp.prototype.setCheckForEmptyBlocks = function (checkBlocks) {
   this.checkForEmptyBlocks_ = checkBlocks;
 };
 
+function isLocalizingBlocks() {
+  return (
+    localization.isLocalizeJS() ||
+    experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)
+  );
+}
+
+/**
+ * Records the procedure and behavior names the level authored, so their
+ * caller blocks may display a translation. A last attempt is never read:
+ * names the student made render as typed.
+ */
+StudioApp.prototype.registerCurriculumProcedureNames_ = function (config) {
+  if (!isLocalizingBlocks()) {
+    return;
+  }
+  BlocklyUtils.setCurriculumProcedureNames({
+    startBlocks: this.getStartBlocks_(config, false).startBlocks,
+    toolbox: Blockly.mainBlockSpace?.options?.languageTree,
+  });
+};
+
 /**
  * Add the starting block(s).  Don't load lastAttempt for Jigsaw levels or the
  * level will advance as soon as it's loaded.
@@ -2911,6 +2948,34 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   if (config.level.edit_blocks) {
     loadLastAttempt = false;
   }
+  const {startBlocks, authored} = this.getStartBlocks_(config, loadLastAttempt);
+  try {
+    this.loadBlocks(startBlocks);
+    if (authored && isLocalizingBlocks() && stringIsXml(startBlocks)) {
+      this.trackStartBlocks_(config, startBlocks);
+    }
+  } catch (e) {
+    if (loadLastAttempt) {
+      try {
+        BlocklyUtils.clearAllStudentWorkspaces();
+        // Try loading the default start blocks instead.
+        this.setStartBlocks_(config, false);
+      } catch (otherException) {
+        // re-throw the original exception
+        throw e;
+      }
+    } else {
+      throw e;
+    }
+  }
+};
+
+/**
+ * Returns the blocks setStartBlocks_ loads, and whether they are the level's
+ * authored start blocks rather than the student's last attempt.
+ */
+StudioApp.prototype.getStartBlocks_ = function (config, loadLastAttempt) {
+  let authored = true;
   var startBlocks = config.level.startBlocks || '';
   // When procedure definition blocks are set using the modal function editor,
   // they will end up deletable by the student unless the XML is manually
@@ -2920,8 +2985,16 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     startBlocks = stripUserCreated(startBlocks);
   }
   // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
-  if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
-    startBlocks = config.level.lastAttempt || startBlocks;
+  if (
+    loadLastAttempt &&
+    config.levelGameName !== 'Jigsaw' &&
+    config.level.lastAttempt
+  ) {
+    startBlocks = config.level.lastAttempt;
+    authored = false;
+  } else if (isLocalizingBlocks() && stringIsXml(startBlocks)) {
+    // A last attempt is the student's own work and loads as saved.
+    startBlocks = localizeBlockStrings(startBlocks);
   }
 
   // Only used in Sprite Lab.
@@ -2955,21 +3028,99 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
       config.blockArrangement
     );
   }
+  return {startBlocks, authored};
+};
+
+// How long to wait before retrying a re-translation that found the student
+// mid-drag or with an editor open.
+const RELOCALIZE_RETRY_MS = 250;
+
+/**
+ * Records authored start blocks that were just loaded, so a later locale
+ * change can re-translate them while the student has not edited them.
+ */
+StudioApp.prototype.trackStartBlocks_ = function (config, startBlocks) {
+  this.startBlocksConfig_ = config;
+  this.loadedStartBlocks_ = startBlocks;
+  this.startBlocksSnapshot_ = BlocklyUtils.startBlocksStateKey();
+};
+
+StudioApp.prototype.untrackStartBlocks_ = function () {
+  window.clearTimeout(this.relocalizeTimer_);
+  this.relocalizeTimer_ = null;
+  this.startBlocksConfig_ = null;
+  this.loadedStartBlocks_ = null;
+  this.startBlocksSnapshot_ = null;
+};
+
+/**
+ * Reloads the authored start blocks translated into the current locale, if
+ * the workspace still holds them unedited and the translation differs.
+ * Returns true if it reloaded. The check and the reload happen in one
+ * synchronous call, so no edit can land between them.
+ */
+StudioApp.prototype.relocalizeStartBlocks_ = function () {
+  window.clearTimeout(this.relocalizeTimer_);
+  this.relocalizeTimer_ = null;
+  if (!this.loadedStartBlocks_ || this.relocalizingStartBlocks_) {
+    return false;
+  }
+  // Once edited, the workspace is the student's; stop tracking for good so
+  // a later snapshot can never mistake their edits for the start blocks.
+  if (BlocklyUtils.startBlocksStateKey() !== this.startBlocksSnapshot_) {
+    this.untrackStartBlocks_();
+    return false;
+  }
+  const config = this.startBlocksConfig_;
+  const previous = this.loadedStartBlocks_;
+  const {startBlocks} = this.getStartBlocks_(config, false);
+  if (startBlocks === previous) {
+    return false;
+  }
+  if (BlocklyUtils.isWorkspaceBusy()) {
+    this.relocalizeTimer_ = window.setTimeout(
+      () => this.relocalizeStartBlocksWhenIdle_(),
+      RELOCALIZE_RETRY_MS
+    );
+    return false;
+  }
+
+  const positions = BlocklyUtils.saveTopBlockPositions(Blockly.mainBlockSpace);
+  this.relocalizingStartBlocks_ = true;
   try {
+    BlocklyUtils.clearAllStudentWorkspaces();
     this.loadBlocks(startBlocks);
   } catch (e) {
-    if (loadLastAttempt) {
-      try {
-        BlocklyUtils.clearAllStudentWorkspaces();
-        // Try loading the default start blocks instead.
-        this.setStartBlocks_(config, false);
-      } catch (otherException) {
-        // re-throw the original exception
-        throw e;
-      }
-    } else {
-      throw e;
-    }
+    // The previous translation loaded before; put it back and stop tracking.
+    BlocklyUtils.clearAllStudentWorkspaces();
+    this.loadBlocks(previous);
+    this.untrackStartBlocks_();
+    throw e;
+  } finally {
+    this.relocalizingStartBlocks_ = false;
+  }
+  BlocklyUtils.restoreTopBlockPositions(Blockly.mainBlockSpace, positions);
+  this.startBlocksConfig_ = config;
+  this.loadedStartBlocks_ = startBlocks;
+  return true;
+};
+
+StudioApp.prototype.relocalizeStartBlocksWhenIdle_ = function () {
+  this.relocalizeTimer_ = null;
+  if (this.relocalizeStartBlocks_()) {
+    BlocklyUtils.refreshWorkspacesForUpdatedLocale(localization.rtl);
+  }
+  this.snapshotStartBlocks_();
+};
+
+/**
+ * Retakes the snapshot after a refresh, which renames variables. Call only
+ * in the same synchronous turn as a relocalizeStartBlocks_ that found the
+ * workspace unedited.
+ */
+StudioApp.prototype.snapshotStartBlocks_ = function () {
+  if (this.loadedStartBlocks_) {
+    this.startBlocksSnapshot_ = BlocklyUtils.startBlocksStateKey();
   }
 };
 
@@ -3100,6 +3251,7 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   if (config.afterInject) {
     config.afterInject();
   }
+  this.registerCurriculumProcedureNames_(config);
   this.setStartBlocks_(config, true);
 
   // In some cases, resize events fire too early. For example, see:

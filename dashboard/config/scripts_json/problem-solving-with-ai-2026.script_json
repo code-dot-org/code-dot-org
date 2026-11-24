@@ -17,11 +17,12 @@
       "topic_tags": [
         "ai"
       ],
+      "tutor_plus_available": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-02 22:26:06 UTC",
+    "serialized_at": "2026-11-21 00:19:06 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -8972,6 +8973,9 @@
         "objective.key": "ee47e199-1a58-4719-ae9d-fa19221e1598"
       }
     }
+  ],
+  "objectives_script_levels": [
+
   ],
   "lessons_standards": [
     {

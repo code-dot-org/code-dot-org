@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "#Creating a Model Card\r\n\r\nRead the sections of the model card that have already been filled in.\r\n\r\nComplete the sections of the model card that are marked with the Pencil icon.",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "require_edit_to_continue": "true",
     "start_sources": {
       "source": {
@@ -737,6 +737,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-06T20:52:37.941+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-sketch-lab-model-card-template\\\"\"],\"cloned_from\":\"data-makes-ai-sketch-lab-model-card-template\"},{\"changed_at\":\"2026-11-06 20:52:45 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:32:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:42:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:46:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-06T20:52:37.941+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-sketch-lab-model-card-template\\\"\"],\"cloned_from\":\"data-makes-ai-sketch-lab-model-card-template\"},{\"changed_at\":\"2026-11-06 20:52:45 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:32:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:42:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:45:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 16:46:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:51:43 +0000\",\"changed\":[\"hide_share_and_remix\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>

@@ -65,6 +65,8 @@ export const StatsigStableIdKey = 'statsig_stable_id' as const;
 
 export const StatsigStableIdPattern = '[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}' as const;
 
+export const MobileAppName = 'CodeAIMobileApp' as const;
+
 export const ArtistAutorunOptions = {
   "full_auto_run": "FULL_AUTO_RUN"
 } as const;
@@ -164,7 +166,8 @@ export const AlwaysPublishableProjectTypes = [
   "poetry_hoc",
   "thebadguys",
   "music",
-  "pythonlab"
+  "pythonlab",
+  "quest_builder"
 ] as const;
 
 export const AllPublishableProjectTypes = [
@@ -193,6 +196,7 @@ export const AllPublishableProjectTypes = [
   "thebadguys",
   "music",
   "pythonlab",
+  "quest_builder",
   "applab",
   "gamelab",
   "spritelab"
@@ -256,7 +260,7 @@ export const ChildAccountComplianceStates = {
   "PERMISSION_GRANTED": "g"
 } as const;
 
-export const DanceSongManifestFilename = 'songManifest2026.json' as const;
+export const DanceSongManifestFilename = 'songManifest2026_v2.json' as const;
 
 export const AiEvaluationTypes = {
   "SINGLE_STUDENT": "single_student",

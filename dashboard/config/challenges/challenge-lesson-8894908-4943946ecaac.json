@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894908-4943946ecaac",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 7: AI's Wild Imagination",
+  "question": "You have 10 minutes to check a newsletter that goes out to the whole community, but checking every claim takes 15. Which ones do you check, and what do you do about the rest?\n\nSteps:\n1. Use the shape tool to mark the claims you will check. The checking times must add up to 10 minutes or less.\n2. Use the text tool to write what you will do with the claims you did not check.\n3. Record your voice explaining your choices, including the trade-off for one claim you left out.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape or voice recording is on the board."
+    },
+    {
+      "level": 1,
+      "description": "Shapes add up to more than 10 minutes, OR fewer than 2 claims are marked."
+    },
+    {
+      "level": 2,
+      "description": "Shapes mark claims that add up to 10 minutes or less AND include claim 5 (the soil) AND the voice recording gives a reason based on harm or time."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the typed text says what to do with the claims not checked (such as remove them or mark them unverified) AND the voice recording explains the trade-off for one claim left out."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894908-4943946ecaac-1c846ec7",
+  "whiteboard_starter_image_alt_text": "\"A chatbot wrote this community garden newsletter. You have 10 minutes to check claims.\" Five numbered claims, each with how long it takes to check: 1, \"The seed swap is on Saturday,\" 1 minute; 2, \"Donations to the garden are tax-deductible,\" 5 minutes; 3, \"The volunteer shift starts at 7:45 a.m.,\" 2 minutes; 4, \"The garden was founded in 1956 by Alan Moore,\" 4 minutes; and 5, \"The new soil has no lead, so it is safe for children's vegetables,\" 3 minutes."
+}

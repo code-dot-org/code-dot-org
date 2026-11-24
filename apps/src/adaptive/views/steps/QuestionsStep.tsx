@@ -114,6 +114,12 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
 
   const isAdvancing = feedback === 'correct';
 
+  const goBack = () => {
+    if (isAdvancing || completedRef.current || index === 0) return;
+    setFeedback(undefined);
+    setIndex(index - 1);
+  };
+
   const handleSubmit = () => {
     if (isViewingStudent) return;
     if (isAdvancing || completedRef.current || !question) return;
@@ -250,6 +256,20 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
           question as MultipleChoiceDiagnosticQuestion | FreeResponseQuestion
         )}
       <div className={styles.questionsActions}>
+        {index > 0 && (
+          <MuiButton
+            className={styles.questionsBack}
+            variant="outlined"
+            color="secondary"
+            size="medium"
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="arrow-left" />}
+            aria-disabled={isAdvancing}
+            onClick={goBack}
+          >
+            Back
+          </MuiButton>
+        )}
         <MuiTypography
           variant="body2"
           role="status"

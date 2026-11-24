@@ -1,0 +1,13 @@
+{
+  "key": "l4-name-the-detail",
+  "description": "Learn why naming the exact detail you want works better than hitting generate again and hoping.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l4-name-the-detail.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "b47fe95a-2f69-4b0b-9dbc-85ccd5a4af8c"
+  ]
+}

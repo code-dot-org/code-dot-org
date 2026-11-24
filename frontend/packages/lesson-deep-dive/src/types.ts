@@ -17,6 +17,12 @@ export const EvaluationStatus = {
   SUCCESS: 'success',
 };
 
+export type JsonVideoData = {
+  key: string;
+  url: string;
+  description: string;
+};
+
 export type ChallengeResponseAsset = {
   id: number;
   asset_type: 'whiteboard_image' | 'video' | 'audio';

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894913-bb2ed3291143",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 12: AI's Role in Society",
+  "question": "A new AI system is coming to your town, and it won’t be good for everyone. Predict who it will help, who it could hurt, and what would make it fairer. Use the weather words in the key below to organize your prediction.\n\nKey:\n- Sunny: People the AI helps\n- Cloudy: People the AI hurts or leaves out\n- Umbrella: A fix that protects them\n- Storm warning: A problem that could grow if no one checks\n\nSteps:\n1. Start recording. Pick one new AI system from the list below.\n2. Say who it helps and how (the “sunny” part). Name at least one group.\n3. Say who it hurts or leaves out and how (the “cloudy” part). Name at least one group.\n4. Give one fix that protects them (the “umbrella”), and say who it protects.\n5. Bonus: give a “storm warning,” a problem that could get worse if no one checks, and say who should watch for it.\n\nSystem list:\n- An AI that sets school bus routes\n- An AI that answers the city’s help line\n- An AI that picks which library programs to run\n- An AI that checks for water leaks in town",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give a forecast on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names only who benefits OR only who is harmed."
+    },
+    {
+      "level": 2,
+      "description": "Student names at least one group that benefits and how, at least one group that is harmed and how, and one fix (the \"umbrella\")."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND gives a \"storm warning\" (a harm that could grow if no one checks) AND names who should watch for it."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

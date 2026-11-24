@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894908-056aca5291b9",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 7: AI's Wild Imagination",
+  "question": "You have three tools for dealing with an AI’s claim, and each one does something different. Pick a claim and show what each tool looks like in action.\n\nSteps:\n1. Start recording. Pick one claim from the list below.\n2. Show Tool 1, the Better Request: say how you would rewrite your question so the AI is less likely to make something up.\n3. Show Tool 2, the Doubt Test: say what you would ask the AI about its own answer, and what gap you would look for.\n4. Show Tool 3, the Second Source: say exactly where you would check.\n5. Say which tool you would use first, and what result would make you trust or drop the claim.\n\nClaim list:\n- “An AI says the library is open until 9 p.m. on Sundays.”\n- “An AI says a famous scientist once said a certain quote.”\n- “An AI says it will not rain tomorrow, so the outdoor event can go ahead.”\n- “An AI says a wild mushroom is safe to eat.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not pick a claim or name any tools on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names the tools but does not say what they would look like for this claim."
+    },
+    {
+      "level": 2,
+      "description": "Student says what each of the 3 tools (a better request, the doubt test, and a second source) would look like for this specific claim."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND picks which tool to use first with a reason based on what is at stake AND says what result would make them trust or drop the claim."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}
