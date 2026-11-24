@@ -36,7 +36,7 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
   const flip = useCallback(() => setIsFlipped(f => !f), []);
 
   if (vocabulary.length === 0) {
-    return <p style={{color: '#d4dae1'}}>No vocabulary available.</p>;
+    return <p className={styles.emptyState}>No vocabulary available.</p>;
   }
 
   return (
