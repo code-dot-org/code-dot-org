@@ -21,8 +21,8 @@ interface EditorStripProps {
   disabledEditors?: Editor[];
   /** A control set into the switch (see EditorSwitch). */
   between?: {after: Editor; node: React.ReactNode};
-  /** The name in the middle; the open editor's unless given, none if
-      null. */
+  /** The name in the middle: the open editor's when left out; null shows
+      no name. */
   title?: string | null;
   /** The switch at the bar's start instead of its end; undo and redo
       sit across from it either way. */
@@ -38,7 +38,7 @@ interface EditorStripProps {
 
 /**
  * The bar over a pane, as Lab2's panel headers: the pane's name centered,
- * and over the editors the Code | World switch at its end.
+ * with the editor switch at one end and undo and redo at the other.
  */
 const EditorStrip: React.FunctionComponent<EditorStripProps> = ({
   editor,

@@ -347,8 +347,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   );
   const imagesAdvanced =
     (isLevelbuilder && imagesAdvancedParam) || isLevelEditMode;
-  // ?scene-tabs=true: an experiment that moves the scene picker from the bar
-  // under the editors up into the editor strip.
+  // ?scene-tabs=true: an experiment that puts a picture button per scene
+  // beside Images in the top strip, with World | Code in a second strip
+  // beneath.
   const sceneTabs = useMemo(() => queryParams('scene-tabs') === 'true', []);
   // The mode decides the tab set, and an image level's is empty: its panel
   // replaces the shell. A level with no mode, or one whose authored kind is

@@ -11,21 +11,22 @@ import moduleStyles from '../sprite-lab2-view.module.scss';
 interface SceneSwitchProps {
   scenes: SceneMetadata[];
   activeSceneId: string | null;
-  /** Whether a scene, rather than Images, is open: only then is the
-      active scene's button pressed. */
+  /** False while Images is open: a scene stays chosen then, but its button
+      should not look pressed. */
   sceneOpen: boolean;
-  /** New scene is off. */
+  /** The + button shows but is disabled, as on a level pinned to one
+      scene. */
   locked?: boolean;
   allowCreate?: boolean;
   onSelectScene: (sceneId: string) => void;
-  /** Starts a new scene, which the host names. */
+  /** Called by the + button; the caller asks for the new scene's name. */
   onNewScene: () => void;
 }
 
 /**
- * ?scene-tabs=true: one button per scene with its picture, and a last one
- * that adds a scene. Drawn like the design system's segmented buttons,
- * which take only text and icons.
+ * ?scene-tabs=true: a button per scene, with its picture, plus + for a new
+ * scene. Styled like the design system's segmented buttons, which can't
+ * hold pictures.
  */
 const SceneSwitch: React.FunctionComponent<SceneSwitchProps> = ({
   scenes,
