@@ -44,5 +44,9 @@
   gap: 0.375rem;
   margin: 0;
   padding-inline: 4px;
-  color: var(--text-warning-primary-fixed);
+  color: var(--text-neutral-primary);
+
+  i {
+    color: var(--text-warning-primary-fixed);
+  }
 }
