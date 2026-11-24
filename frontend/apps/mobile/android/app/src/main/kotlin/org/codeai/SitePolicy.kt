@@ -29,14 +29,6 @@ internal object SitePolicy {
     const val RESET_COURSE_COOKIE_NAME = "codeai_reset_course"
     const val RESET_COURSE_COOKIE_ATTRIBUTES = "Path=/; Max-Age=600; Secure; SameSite=Lax"
 
-    // Appended to the WebView's User-Agent, so the server can tell every
-    // request from the app (pages, API calls, iframes) from a browser's,
-    // e.g. "CodeAIApp/1.0.0 (android; Amazon Kids+ Edition)", the edition named
-    // as Amazon names it; a product name cannot hold spaces.
-    const val USER_AGENT_PRODUCT = "CodeAIApp"
-    const val PLATFORM = "android"
-    const val EDITION = "Amazon Kids+ Edition"
-
     // Item 3 of "Elements to Hide in the Wrapper": YouTube's player offers
     // "Watch on YouTube", which leaves the app. With these hosts unreachable,
     // Code.org's video levels play the same video from videos.code.org in
@@ -66,8 +58,12 @@ internal object SitePolicy {
     const val LOCALE_COOKIE =
         "$LOCALE_COOKIE_NAME=en-US; Domain=.code.org; Path=/; Max-Age=315569520; Secure; SameSite=Lax"
 
-    fun userAgentToken(versionName: String): String =
-        "$USER_AGENT_PRODUCT/$versionName ($PLATFORM; $EDITION)"
+    // Appended to the WebView's User-Agent, so the server can tell every
+    // request from the app (pages, API calls, iframes) from a browser's,
+    // e.g. "CodeAIMobileApp/1.0.0 (com.amazon.venezia)", the comment naming
+    // the app's install source, if Android records one.
+    fun userAgentToken(product: String, versionName: String, installSource: String?): String =
+        "$product/$versionName${installSource?.let { " ($it)" }.orEmpty()}"
 
     // The WebView takes Accept-Language and navigator.language from the
     // default locale when it is created, and the system resets the default

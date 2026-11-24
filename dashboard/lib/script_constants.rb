@@ -9,6 +9,8 @@ module ScriptConstants
   ACCELERATED_NAME = 'accelerated'.freeze
   ALGEBRA_NAME = 'algebra'.freeze
   AIML_2021_NAME = 'aiml-2021'.freeze
+  QUEST_BUILDER_2026 = 'quest-builder-2026'.freeze # 2026 hour of ai
+  AI_MAKERSPACE_2026 = 'ai-makerspace-2026'.freeze # 2026 hour of ai
 
   # Deprecated course constants (kept for deprecated course page rendering)
   COURSE1_NAME = 'course1'.freeze

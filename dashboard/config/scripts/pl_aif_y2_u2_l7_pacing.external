@@ -1,0 +1,81 @@
+name 'pl-aif-y2-u2-l7-pacing'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Pacing the Three Days
+
+The project runs three 45 minute class days. Each day follows the same shape: a quick warm up, one main stretch of work, and a short wrap up. Here is where the time goes.
+
+<div style="display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0;">
+  <div style="flex: 1; min-width: 280px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px;">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 10px;">Day 1: Plan and collect</div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">5 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Warm up</b><br>Discuss how to tell a river from the ocean.</div>
+    </div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">15 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Category brainstorming</b><br>Planning Guide, Steps 1 and 2.</div>
+    </div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">20 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Data collection</b><br>Lesson 13, Levels 1 and 2.</div>
+    </div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">5 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Wrap up</b><br>Day 1 Reflection in the Planning Guide.</div>
+    </div>
+  </div>
+  <div style="flex: 1; min-width: 280px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px;">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 10px;">Day 2: Label and start coding</div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">5 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Warm up</b><br>Is image 5 an ocean or a river? Why?</div>
+    </div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">15 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Labeling data</b><br>Planning Guide, Step 3.</div>
+    </div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">20 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Writing a classifier</b><br>Start Levels 3 to 6.</div>
+    </div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">5 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Wrap up</b><br>Day 2 Reflection in the Planning Guide.</div>
+    </div>
+  </div>
+  <div style="flex: 1; min-width: 280px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px;">
+    <div style="font-size: 16px; font-weight: bold; color: #1F1976; margin-bottom: 10px;">Day 3: Build and evaluate</div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">5 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Warm up</b><br>What is the distance if two images are the same?</div>
+    </div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">30 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Build and evaluate</b><br>Continue Levels 3 to 6.</div>
+    </div>
+    <div style="display: flex; gap: 10px; margin-bottom: 10px; align-items: flex-start;">
+      <div style="background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; border-radius: 6px; padding: 2px 8px; min-width: 56px; text-align: center;">5 min</div>
+      <div style="font-size: 16px; line-height: 1.5;"><b>Wrap up</b><br>Review the lesson objectives.</div>
+    </div>
+  </div>
+</div>
+
+## Where Your Students Will Need Slack
+
+Day 2 is the crunch. Your students go from a paper table to Python in 20 minutes, so most should finish Level 3 and get started on Level 4, and that is enough. Tell them up front that carrying work into Day 3 is expected, so nobody feels behind.
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> if your students can't search for images on Day 1, have them pick one of the four example pairs from the slides: basketball and soccer, coffee and tea, dolphin and shark, or rose and peony. The lesson provides ready-made datasets for those.</div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> for students who finish early on Day 3, suggest improving the classifier by adding more training images, changing a feature, or adding a feature.</div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p>&#10145;&#65039; Find the full details in the <a href="PASTE_UNIT_2_LESSON_13_URL_HERE" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">Lesson 13 lesson plan: Image Classifier Project</a>.</p>
+</div>
+MARKDOWN

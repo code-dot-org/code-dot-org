@@ -631,6 +631,11 @@ class ActivitiesControllerTest < ActionController::TestCase
           anon_user_id:,
           ip_address: @request.ip,
         ).once
+
+        Services::AnonymousLevel::ClientRecording.expects(:call).with(
+          anon_user_id:,
+          user_agent: @request.user_agent,
+        ).once
       end
 
       it 'saves progress from an empty session' do
@@ -671,6 +676,7 @@ class ActivitiesControllerTest < ActionController::TestCase
           tracked_anon_user_id = nil
           Services::AnonymousLevel::ProgressTracker.expects(:call).with {|args| tracked_anon_user_id = args[:anon_user_id]}.once
           Services::AnonymousLevel::GeoRecording.expects(:call).with {|args| args[:anon_user_id] == tracked_anon_user_id}.once
+          Services::AnonymousLevel::ClientRecording.expects(:call).with {|args| args[:anon_user_id] == tracked_anon_user_id}.once
 
           post :milestone, params: @milestone_params.merge(user_id: 0)
 

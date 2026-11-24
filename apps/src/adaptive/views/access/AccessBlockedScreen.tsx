@@ -3,13 +3,16 @@ import {
   Link as MuiLink,
   Typography as MuiTypography,
 } from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 
-import {VERIFIED_TEACHER_SUPPORT_LINK} from '@cdo/apps/aichat/constants';
+import sadBeeImage from '@cdo/static/adaptive/bee-sad.svg';
 import penguinImage from '@cdo/static/adaptive/penguin-shouting.svg';
 
 import styles from './accessBlockedScreen.module.scss';
 
+const MAKERSPACE_SETUP_SUPPORT_LINK =
+  'https://support.code.org/hc/en-us/articles/50616846268045-Getting-ready-for-AI-Makerspace-Hour-of-AI-grades-9-12';
 const QUEST_BUILDER_URL =
   '/courses/quest-builder-2026/units/1/lessons/1/levels/1';
 const HOMEPAGE_URL = '/home';
@@ -19,7 +22,8 @@ const NOT_AVAILABLE_HEADING = 'AI Makerspace isn’t available';
 export type BlockedReason =
   | 'unverifiedTeacher'
   | 'studentNoAccess'
-  | 'studentNoSection';
+  | 'studentNoSection'
+  | 'aiUnavailable';
 
 const QuestBuilderButton: React.FunctionComponent<{
   variant: 'outlined' | 'contained';
@@ -59,10 +63,38 @@ const Message: React.FunctionComponent<{heading: string; body: string}> = ({
 
 const AccessBlockedScreen: React.FunctionComponent<{
   reason: BlockedReason;
-  onContinue: () => void;
+  onContinue?: () => void;
 }> = ({reason, onContinue}) => (
-  <div className={styles.screen}>
-    <img src={penguinImage} alt="" className={styles.penguin} />
+  <div
+    className={classNames(
+      styles.screen,
+      reason === 'aiUnavailable' && styles.outage
+    )}
+  >
+    <img
+      src={reason === 'aiUnavailable' ? sadBeeImage : penguinImage}
+      alt=""
+      className={styles.illustration}
+    />
+    {reason === 'aiUnavailable' && (
+      <>
+        <Message
+          heading="AI Makerspace is temporarily unavailable"
+          body="AI Makerspace uses an AI service that’s having technical issues right now. Try our Quest Builder activity instead or check back later."
+        />
+        <div className={styles.buttons}>
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="large"
+            href={HOMEPAGE_URL}
+          >
+            Back to Home page
+          </MuiButton>
+          <QuestBuilderButton variant="contained" />
+        </div>
+      </>
+    )}
     {reason === 'unverifiedTeacher' && (
       <>
         <Message
@@ -76,11 +108,11 @@ const AccessBlockedScreen: React.FunctionComponent<{
               variant="contained"
               color="primary"
               size="large"
-              href={VERIFIED_TEACHER_SUPPORT_LINK}
+              href={MAKERSPACE_SETUP_SUPPORT_LINK}
               target="_blank"
               rel="noopener noreferrer"
             >
-              Get verified
+              Learn about setup
             </MuiButton>
           </div>
           <MuiLink

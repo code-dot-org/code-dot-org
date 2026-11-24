@@ -6,8 +6,6 @@ class AdminReportsController < ApplicationController
   before_action :require_admin
   check_authorization
 
-  before_action :set_script
-
   def directory
   end
 
@@ -50,78 +48,6 @@ class AdminReportsController < ApplicationController
         format.csv {return level_answers_csv}
       end
     end
-  end
-
-  def level_completions
-    require 'date'
-    # noinspection RubyResolve
-    require Rails.root.join('scripts/archive/ga_client/ga_client')
-
-    @is_sampled = false
-    # If the window dates are not explicitly specified, we render the page without data so as to
-    # not make the user wait on a lengthy GA query whose data will be discarded.
-    if params[:start_date].blank? || params[:end_date].blank?
-      @start_date = (DateTime.now - 7).strftime('%Y-%m-%d')
-      @end_date = DateTime.now.prev_day.strftime('%Y-%m-%d')
-
-      (render locals: {headers: [], data: []}) && return
-    end
-
-    @start_date = DateTime.parse(params[:start_date]).strftime('%Y-%m-%d')
-    @end_date = DateTime.parse(params[:end_date]).strftime('%Y-%m-%d')
-
-    output_data = {}
-    %w(Attempt Success).each do |key|
-      dimension = 'ga:eventLabel'
-      metric = 'ga:totalEvents,ga:uniqueEvents,ga:avgEventValue'
-      filter = "ga:eventAction==#{key};ga:eventCategory==Puzzle"
-      if params[:filter].present?
-        filter += ";ga:eventLabel=@#{params[:filter].to_s.tr('_', '/')}"
-      end
-      ga_data = GAClient.query_ga(@start_date, @end_date, dimension, metric, filter)
-
-      @is_sampled ||= ga_data.contains_sampled_data
-
-      ga_data.rows.each do |r|
-        label = r[0]
-        output_data[label] ||= {}
-        output_data[label]["Total#{key}"] = r[1].to_f
-        output_data[label]["Unique#{key}"] = r[2].to_f
-        output_data[label]["Avg#{key}"] = r[3].to_f
-      end
-    end
-    output_data.each_key do |key|
-      output_data[key]['Avg Success Rate'] = output_data[key].delete('AvgAttempt')
-      output_data[key]['Avg attempts per completion'] = output_data[key].delete('AvgSuccess')
-      output_data[key]['Avg Unique Success Rate'] = output_data[key]['UniqueSuccess'].to_f / output_data[key]['UniqueAttempt']
-      output_data[key]['Perceived Dropout'] = output_data[key]['UniqueAttempt'].to_f - output_data[key]['UniqueSuccess'].to_f
-    end
-
-    page_data = GAClient.query_ga(@start_date, @end_date, 'ga:pagePath', 'ga:avgTimeOnPage', 'ga:pagePath=~^/s/|^/flappy/|^/hoc/').rows.to_h
-
-    data_array = output_data.map do |key, value|
-      {'Puzzle' => key}.merge(value).merge('timeOnSite' => page_data[key]&.to_i)
-    end
-    require 'naturally'
-    data_array = data_array.select {|x| x['TotalAttempt'].to_i > 10}.sort_by {|i| Naturally.normalize(i.send(:fetch, 'Puzzle'))}
-    headers = [
-      "Puzzle",
-      "Total\nAttempts",
-      "Total Successful\nAttempts",
-      "Avg. Success\nRate",
-      "Avg. #attempts\nper Completion",
-      "Unique\nAttempts",
-      "Unique Successful\nAttempts",
-      "Perceived Dropout",
-      "Avg. Unique\nSuccess Rate",
-      "Avg. Time\non Page"
-    ]
-    render locals: {headers: headers, data: data_array}
-  end
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_script
-    @script = Unit.get_from_cache(params[:script_id]) if params[:script_id]
   end
 
   private def level_answers_csv

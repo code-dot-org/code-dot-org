@@ -1,8 +1,8 @@
 import classNames from 'classnames';
-import {useCallback, AriaAttributes} from 'react';
+import {AriaAttributes} from 'react';
 
 import {dropdownColors} from '@/common/constants';
-import {useDropdownContext} from '@/common/contexts/DropdownContext';
+import {useCloseDropdownMenu} from '@/common/contexts/DropdownContext';
 import {
   ComponentSizeXSToL,
   DropdownColor,
@@ -55,6 +55,60 @@ export interface IconDropdownProps
   menuVerticalPlacement?: CustomDropdownMenuVerticalPlacement;
 }
 
+const IconDropdownMenu: React.FunctionComponent<
+  Pick<IconDropdownProps, 'options' | 'onChange' | 'disabled'> & {
+    selectedValue?: string;
+  }
+> = ({options, selectedValue, onChange, disabled}) => {
+  const closeMenu = useCloseDropdownMenu();
+
+  return (
+    <ul>
+      {options.map(option => {
+        const {
+          value,
+          label,
+          isOptionDisabled,
+          icon: {
+            iconName,
+            iconStyle,
+            title: iconTitle,
+            className: iconClassName,
+          },
+        } = option;
+        return (
+          <li key={value}>
+            <button
+              className={classNames(
+                moduleStyles.dropdownMenuItem,
+                isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
+                selectedValue === value &&
+                  moduleStyles.selectedDropdownMenuItem,
+              )}
+              disabled={isOptionDisabled || disabled}
+              type="button"
+              onClick={event => {
+                if (!disabled && !isOptionDisabled) {
+                  onChange(option);
+                  closeMenu(event.currentTarget);
+                }
+              }}
+            >
+              <FontAwesomeV6Icon
+                iconName={iconName}
+                iconStyle={iconStyle}
+                title={iconTitle}
+                className={iconClassName}
+              />
+              <span>{label}</span>
+            </button>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
+
 /**
  * ### Production-ready Checklist:
  * * (✔) implementation of component approved by design team;
@@ -88,17 +142,6 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
   menuVerticalPlacement = 'bottom',
   ...rest
 }) => {
-  const {setActiveDropdownName} = useDropdownContext();
-  const onOptionClick = useCallback(
-    (option: IconDropdownOption) => {
-      if (!disabled && !option.isOptionDisabled) {
-        onChange(option);
-        setActiveDropdownName('');
-      }
-    },
-    [disabled, onChange, setActiveDropdownName],
-  );
-
   return (
     <CustomDropdown
       name={name}
@@ -119,44 +162,12 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       menuVerticalPlacement={menuVerticalPlacement}
       {...rest}
     >
-      <ul>
-        {options.map(option => {
-          const {
-            value,
-            label,
-            isOptionDisabled,
-            icon: {
-              iconName,
-              iconStyle,
-              title: iconTitle,
-              className: iconClassName,
-            },
-          } = option;
-          return (
-            <li key={value}>
-              <button
-                className={classNames(
-                  moduleStyles.dropdownMenuItem,
-                  isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
-                  selectedOption.value === value &&
-                    moduleStyles.selectedDropdownMenuItem,
-                )}
-                disabled={isOptionDisabled || disabled}
-                type="button"
-                onClick={() => onOptionClick(option)}
-              >
-                <FontAwesomeV6Icon
-                  iconName={iconName}
-                  iconStyle={iconStyle}
-                  title={iconTitle}
-                  className={iconClassName}
-                />
-                <span>{label}</span>
-              </button>
-            </li>
-          );
-        })}
-      </ul>
+      <IconDropdownMenu
+        options={options}
+        selectedValue={selectedOption?.value}
+        onChange={onChange}
+        disabled={disabled}
+      />
     </CustomDropdown>
   );
 };

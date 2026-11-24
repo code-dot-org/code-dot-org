@@ -1,4 +1,7 @@
-import {Typography as MuiTypography} from '@mui/material';
+import {
+  Skeleton as MuiSkeleton,
+  Typography as MuiTypography,
+} from '@mui/material';
 import React, {useMemo} from 'react';
 
 import {checkpointIcon} from './checkpointIcon';
@@ -6,7 +9,7 @@ import {DrawnEdge} from './layout/busRoutes';
 import {layoutCheckpoints} from './layout/tree';
 import {NODE_RADIUS} from './layout/types';
 import MapBoard from './MapBoard';
-import MapNode from './MapNode';
+import MapNode, {shouldSkeleton} from './MapNode';
 import {MapProps} from './MapView';
 
 import styles from './treeMap.module.scss';
@@ -25,6 +28,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
   fit,
   onSelect,
   tourFocusIds,
+  skeletonStyle,
 }) => {
   const layout = useMemo(
     () => layoutCheckpoints(pathway.checkpoints),
@@ -49,6 +53,8 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
     };
   }, [tourFocusIds, layout.nodes]);
   const firstCheckpointId = pathway.checkpoints[0]?.id;
+  const isCheckpointSkeleton = (id: string) =>
+    shouldSkeleton(skeletonStyle, id, firstCheckpointId);
   const firstSkippedId = useMemo(
     () => pathway.checkpoints.find(c => statusMap[c.id] === 'skipped')?.id,
     [pathway.checkpoints, statusMap]
@@ -91,7 +97,13 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
           width={NODE_WIDTH}
           above={
             <MuiTypography variant="strong" className={styles.nodeLabel}>
-              {checkpoint.title}
+              {isCheckpointSkeleton(checkpoint.id) ? (
+                <MuiSkeleton variant="rounded">
+                  <span>{checkpoint.title}</span>
+                </MuiSkeleton>
+              ) : (
+                checkpoint.title
+              )}
             </MuiTypography>
           }
           onSelect={onSelect}
@@ -102,6 +114,7 @@ const TreeMap: React.FunctionComponent<MapProps> = ({
               ? 'adaptive-tour-first-checkpoint'
               : undefined
           }
+          skeleton={isCheckpointSkeleton(checkpoint.id)}
         />
       ))}
     </MapBoard>

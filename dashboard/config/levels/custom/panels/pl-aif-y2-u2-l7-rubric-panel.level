@@ -1,0 +1,53 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-11-23T18:48:18.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "## Project Rubric\n\nStudents are assessed in four areas. \n- 1. Planning the task\n- 2. Labeling the data\n- 3. Coding the classifier\n- 4. Reflecting on the result\n\nThe rubric goes from extensive,  to convincing,  to limited, to no evidence.",
+        "imageUrl": "https://images.code.org/ce8d29d7e507ded64c4b04a365208019-image-1795468986246.png",
+        "key": "sp-pl-DS-pythonLab_tour-62a7ff61-8b6a-4901-8cb3-26fcd990f873",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Predictive Logic \nLook for a clear two-category task and yes/no questions that are specific and relevant.\n\n \"*Are there white waves in the water?\"* works. *\"Is it a nice picture?\"* does not. \n\nSpecific and relevant is **Extensive**. Vague is **Limited**.",
+        "imageUrl": "https://images.code.org/b56344347dc263a34903d5768bb13e68-image-1795469864670.png",
+        "key": "pl-aif-y2-u2-l7-rubric-panel-9a9988b1-4da1-4b15-a854-a6527e5728f5",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Labeling Data \nCheck three things. \n- 1. Both categories appear. \n- 2. The data is split into training and test sets that each include both categories.\n- 3.  The yes/no labels match the images.\n\n Mostly accurate labels land at ***Convincing***, and labeling only one category lands at ***Limited***.\n",
+        "imageUrl": "https://images.code.org/e6cd2e901b6c65a50cff43660d1d6dcb-image-1795470002476.png",
+        "key": "pl-aif-y2-u2-l7-rubric-panel-89603119-a691-4c0f-879c-c13c51fed4c2",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Python Programming\nStudents store each image as a dictionary of yes/no features, then write a distance function that counts how many features differ between two images. \n\n***Extensive*** means the function checks every feature the student chose. \n\nA common slip is checking only some of them, so the classifier ignores a feature it was supposed to use.",
+        "imageUrl": "https://images.code.org/77f9b441f104db9745056e22d5bfe51f-image-1795470807014.png",
+        "key": "pl-aif-y2-u2-l7-rubric-panel-ab2bed11-2339-40e4-8591-c186aeb1746c",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Reflection\nLook for students who say what the classifier can and can't do, then name a specific fix, like adding more training images or changing a feature\n\n General suggestions like \"make it better\" land at **Convincing**.",
+        "imageUrl": "https://images.code.org/cda20435f25b2337bb7c62d334870ede-image-1795470969517.png",
+        "key": "pl-aif-y2-u2-l7-rubric-panel-4b714273-b641-4997-b01a-3fd082636139",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "",
+        "imageUrl": "https://images.code.org/f1effabe78efbd23218514e1efb03051-Image classifier rubric.png",
+        "key": "pl-aif-y2-u2-l7-rubric-panel-5ed631a6-23c3-41ec-be8b-a14e8e30ca49"
+      }
+    ],
+    "name_suffix": "_2024",
+    "offer_browser_tts": "false",
+    "use_links": "false"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-23T18:48:18.490+00:00\",\"changed\":[\"cloned from \\\"csaif-PL-pythonLab_tour-L1-5_python\\\"\"],\"cloned_from\":\"csaif-PL-pythonLab_tour-L1-5_python\"},{\"changed_at\":\"2026-11-23 21:56:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

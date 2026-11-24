@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-21 08:41:00 UTC",
+    "serialized_at": "2026-11-23 18:17:40 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -107,7 +107,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "Students are Data Scientists for a wildlife park that wants to predict when elephants will visit a waterhole. They help Dr. Osei, the park's data scientist, turn camera photos into records. A record is all the data about one photo, such as the season, the time of day and whether elephants came. Students then test four models trained on different records. They explain why a model may predict poorly for a case its records left out. They also learn about PAWS, a real model trained on ranger patrol records.",
+        "overview": "Students are Data Scientists for a wildlife park that wants to predict when elephants will visit a waterhole. They help Dr. Osei, the park's data scientist, turn camera photos into records. A record is all the data about one photo, such as the season, the time of day and whether elephants came. Students then test four models trained on different records. They explain why a model may predict poorly for a case its records left out.",
         "preparation": "- Print one copy of the Data Makes AI - Lesson 4 - Activity Guide for each student.",
         "student_overview": "Today you are a Data Scientist on Dr. Osei's team at a wildlife park. The park wants a model that predicts when elephants will visit the waterhole. Your job is to choose the records the model needs. Then see what happens when some records are missing."
       },

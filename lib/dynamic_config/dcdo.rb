@@ -90,6 +90,8 @@ class DCDO < DynamicConfigBase
       'ai-diff-drawer': DCDO.get('ai-diff-drawer', false),
       'codeai-rebrand-banner': DCDO.get('codeai-rebrand-banner', false),
       'adaptive-ai-enabled': DCDO.get('adaptive-ai-enabled', false),
+      # Replaces every adaptive level with an outage page, for when all AI providers are down.
+      'adaptive-ai-outage': DCDO.get('adaptive-ai-outage', false),
       # Seconds the adaptive shell waits on one model call before giving up.
       'adaptive-ai-timeout-seconds': DCDO.get('adaptive-ai-timeout-seconds', 45),
       # Tutor replies on a checked step from which a judge rates the student's effort, and after which Continue opens regardless of the work.
@@ -103,7 +105,10 @@ class DCDO < DynamicConfigBase
       # Whether the AI gateway serves users with blocked providers from another provider;
       # also lets dashboard mint gateway tokens for those users.
       ai_gateway_fallback_is_enabled: DCDO.get('ai_gateway_fallback_is_enabled', false),
-      builders_challenge_url: DCDO.get('builders_challenge_url', nil),
+      # The challenge on the adaptive congrats panel shows only when the URL is set; unset copy uses the frontend's default.
+      'adaptive-challenge-url': DCDO.get('adaptive-challenge-url', nil),
+      'adaptive-challenge-description': DCDO.get('adaptive-challenge-description', nil),
+      'adaptive-challenge-button-text': DCDO.get('adaptive-challenge-button-text', nil),
       'statsig-plugin-enabled': DCDO.get('statsig-plugin-enabled', false)
     }
   end

@@ -3,7 +3,7 @@ import {useEffect, useState} from 'react';
 import {isPanelEnabled} from './helpers/navigationValidation';
 import {useAppDispatch} from './hooks';
 import {useProject} from './ProjectContext';
-import {setCurrentPanel} from './redux';
+import {getHideTestingView, setCurrentPanel} from './redux';
 import {getSelectableColumns} from './selectors';
 import {store} from './store';
 import train from './train';
@@ -28,7 +28,7 @@ export function useRestoreModel(): boolean {
     const trainedOn = project.historicResults[0];
     const describesRun =
       project.hyperparameters && project.accuracyCheckRowIndices && trainedOn;
-    if (trainedModel || !describesRun) {
+    if (trainedModel || !describesRun || getHideTestingView(store.getState())) {
       return;
     }
 

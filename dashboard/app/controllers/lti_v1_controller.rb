@@ -2,7 +2,6 @@ require "base64"
 require "queries/lti"
 require "services/lti"
 require "policies/lti"
-require "concerns/partial_registration"
 require "clients/lti_advantage_client"
 require "clients/lti_logger"
 require "cdo/honeybadger"
@@ -14,6 +13,12 @@ class LtiV1Controller < ApplicationController
   skip_before_action :verify_authenticity_token
 
   NAMESPACE = 'lti_v1_controller'.freeze
+
+  # The digest input is a JSON array so that two different (issuer, client_id)
+  # pairs never share a key.
+  def self.integration_cache_key(issuer, client_id)
+    "integration/#{Digest::SHA256.hexdigest([issuer, client_id].to_json)}"
+  end
 
   # [GET/POST] /lti/v1/login(/:platform_id)
   #
@@ -82,18 +87,20 @@ class LtiV1Controller < ApplicationController
     extracted_client_id = decoded_jwt_no_auth[:aud].is_a?(Array) ? decoded_jwt_no_auth[:aud].first : decoded_jwt_no_auth[:aud]
     extracted_issuer_id = decoded_jwt_no_auth[:iss]
 
-    return log_unauthorized('Missing aud or iss from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
-    # set cache key
-    integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
+    # The token is unverified at this point, so the claims can be any JSON type.
+    unless [extracted_client_id, extracted_issuer_id].all? {|claim| claim.is_a?(String) && claim.present?}
+      return log_unauthorized('Missing aud or iss from ID token')
+    end
+    integration_cache_key = self.class.integration_cache_key(extracted_issuer_id, extracted_client_id)
     # `read_cache` returns a symbolized hash, and a cache miss falls back to an
     # ActiveRecord object. Use bracket notation, not dot notation because it works for both.
     # Example: integration[:id] not integration.id
     integration = read_cache(integration_cache_key)
     unless integration
       integration = LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
-      # Cache integration for fast retrieval on subsequent LTI launches. Set
-      # expires_in to 1 week
-      write_cache(integration_cache_key, integration, 1.week)
+      # Cache integration for fast retrieval on subsequent LTI launches. A
+      # failed lookup is not cached: the claims are unverified.
+      write_cache(integration_cache_key, integration, 1.week, unless_exist: true) if integration
     end
     return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id}) unless integration
 
@@ -444,16 +451,19 @@ class LtiV1Controller < ApplicationController
     {state: state, nonce: nonce}
   end
 
-  private def write_cache(key, value, expires_in = 1.minute)
+  private def write_cache(key, value, expires_in = 1.minute, unless_exist: false)
     # TODO: Add error handling
-    CDO.shared_cache.write("#{NAMESPACE}/#{key}", value.to_json, expires_in: expires_in)
+    CDO.shared_cache.write("#{NAMESPACE}/#{key}", value.to_json, expires_in: expires_in, unless_exist: unless_exist)
   end
 
+  # Returns nil for a missing entry and for one that is not a JSON object.
   private def read_cache(key)
-    # TODO: Add error handling
     json_value = CDO.shared_cache.read("#{NAMESPACE}/#{key}")
     return nil unless json_value
-    JSON.parse(json_value).symbolize_keys
+    parsed = JSON.parse(json_value)
+    parsed.is_a?(Hash) ? parsed.symbolize_keys : nil
+  rescue JSON::ParserError, TypeError
+    nil
   end
 
   private def generate_random_string(length)
