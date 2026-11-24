@@ -99,9 +99,7 @@ class MainActivity : BridgeActivity() {
         })
 
         // Edge to edge on every API level, so Fire OS 7 and Android 16 lay out
-        // alike. The IME inset keeps controls above the on-screen keyboard,
-        // except on a page turned sideways (LandscapeFrame), where the keyboard
-        // covers its side and room made for it would make the page portrait.
+        // alike. The IME inset keeps controls above the on-screen keyboard.
         enableEdgeToEdge(
             SystemBarStyle.dark(Color.TRANSPARENT),
             SystemBarStyle.dark(Color.TRANSPARENT),
@@ -113,12 +111,10 @@ class MainActivity : BridgeActivity() {
             hide(WindowInsetsCompat.Type.statusBars())
         }
         ViewCompat.setOnApplyWindowInsetsListener(findViewById<View>(R.id.app_root)) { view, insets ->
-            val keyboard =
-                if (LandscapeFrame.isSideways(resources.configuration)) 0 else WindowInsetsCompat.Type.ime()
             val bars = insets.getInsets(
                 WindowInsetsCompat.Type.systemBars()
                     or WindowInsetsCompat.Type.displayCutout()
-                    or keyboard,
+                    or WindowInsetsCompat.Type.ime(),
             )
             view.setPadding(bars.left, bars.top, bars.right, bars.bottom)
             WindowInsetsCompat.CONSUMED

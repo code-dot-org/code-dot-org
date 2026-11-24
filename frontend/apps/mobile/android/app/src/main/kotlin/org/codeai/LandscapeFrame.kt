@@ -9,17 +9,17 @@ import android.widget.FrameLayout
 /**
  * Lays its children out in landscape whatever the shape of the window.
  * Android 16 ignores the activity's landscape lock on large screens, so a
- * tablet held upright gives the app a portrait window. There the children are
- * measured with width and height swapped and turned a quarter turn, to stay
- * where the last landscape screen showed them: turning the tablet upright
- * moves nothing, and only the half turn between the two landscapes rotates
- * the page.
+ * tablet held upright gives the app a portrait window, as split screen can on
+ * any version. There the children are measured with width and height swapped
+ * and turned a quarter turn, to stay where the last landscape screen showed
+ * them: turning the tablet upright moves nothing, and only the half turn
+ * between the two landscapes rotates the page.
  */
 internal class LandscapeFrame @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
 ) : FrameLayout(context, attrs) {
-    // Display rotation, in quarter turns, of the last landscape window.
+    // Display rotation, in quarter turns, of the landscape the children keep.
     private var landscapeRotation: Int? = null
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -43,13 +43,19 @@ internal class LandscapeFrame @JvmOverloads constructor(
         val height = bottom - top
         val rotation = display?.rotation ?: Surface.ROTATION_0
         val sideways = isSideways(resources.configuration)
-        if (!sideways) {
-            landscapeRotation = rotation
-        }
+        val kept = landscapeRotation
         // A display at rotation r draws a quarter turn clockwise per step, so
         // the children turn by the steps between r and the landscape they
-        // keep; with no landscape seen yet, a quarter turn clockwise.
-        val turn = if (sideways) quarterTurns((landscapeRotation ?: (rotation + 1)) - rotation) else 0
+        // keep. A sideways window needs an odd number; when the kept one is
+        // missing, as on a cold start upright, or even, as in a split-screen
+        // pane, they keep the one a step clockwise of r.
+        val landscape = when {
+            !sideways -> rotation
+            kept != null && (kept - rotation) % 2 != 0 -> kept
+            else -> (rotation + 1) % 4
+        }
+        landscapeRotation = landscape
+        val turn = quarterTurns(landscape - rotation)
         for (i in 0 until childCount) {
             val child = getChildAt(i)
             if (sideways) {
@@ -64,7 +70,7 @@ internal class LandscapeFrame @JvmOverloads constructor(
     }
 
     companion object {
-        fun isSideways(configuration: Configuration): Boolean =
+        private fun isSideways(configuration: Configuration): Boolean =
             configuration.orientation == Configuration.ORIENTATION_PORTRAIT
 
         // Quarter turns as -1, 0, 1 or 2.
