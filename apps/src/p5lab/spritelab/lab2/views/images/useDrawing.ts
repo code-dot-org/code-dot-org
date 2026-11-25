@@ -228,7 +228,7 @@ export default function useDrawing({
     () => () => {
       if (
         drawingRef.current &&
-        (dirtyRef.current || uploadPendingRef.current)
+        (dirtyRef.current || uploadPendingRef.current || inFlightRef.current)
       ) {
         leaveAfterSaveRef.current = true;
         editorRef.current?.save();
@@ -522,9 +522,16 @@ export default function useDrawing({
   );
 
   // A pause's save may be running without uploading the file; the last
-  // save, queued behind it, uploads it.
+  // save, queued behind it, uploads it and saves the project.
   const lastSaveNeeded = useCallback(
-    () => dirtyRef.current || uploadPendingRef.current || inFlightRef.current,
+    () =>
+      !!editorRef.current &&
+      (dirtyRef.current || uploadPendingRef.current || inFlightRef.current),
+    []
+  );
+  // Pause saves do not save the project, so it is saved now.
+  const saveProjectAtLeave = useCallback(
+    () => saveProjectNowRef.current?.(),
     []
   );
   const leaveDrawing = useCallback(
@@ -533,8 +540,7 @@ export default function useDrawing({
         leaveAfterSaveRef.current = true;
         editorRef.current?.save();
       } else if (drawingRef.current) {
-        // A pause's save leaves the project to its throttled save.
-        saveProjectNowRef.current?.();
+        saveProjectAtLeave();
       }
       clearIdleTimer();
       dirtyRef.current = false;
@@ -551,7 +557,7 @@ export default function useDrawing({
         previousCanvasRef.current = {canvas: copy, id: drawingIdRef.current};
       }
     },
-    [lastSaveNeeded]
+    [lastSaveNeeded, saveProjectAtLeave]
   );
 
   const finishDrawing = useCallback(() => {
@@ -559,11 +565,10 @@ export default function useDrawing({
       leaveAfterSaveRef.current = true;
       editorRef.current?.save();
     } else {
-      // A pause's save leaves the project to its throttled save.
-      saveProjectNowRef.current?.();
+      saveProjectAtLeave();
       closeAfterDone();
     }
-  }, [closeAfterDone, lastSaveNeeded]);
+  }, [closeAfterDone, lastSaveNeeded, saveProjectAtLeave]);
 
   // Leaving the tab is Done: what was drawn is saved and the tools close.
   useEffect(() => {

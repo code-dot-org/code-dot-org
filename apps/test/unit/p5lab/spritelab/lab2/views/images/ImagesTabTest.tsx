@@ -611,13 +611,13 @@ describe('ImagesTab', () => {
   it('deletes through the list, saves, and moves on to the next image', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     propsByKey.k2 = {name: 'Sprite 2', categories: []};
-    const onImageLanded = jest.fn();
-    const {rerender} = renderTab({editingOffered: true, onImageLanded});
+    const onSaveProjectNow = jest.fn();
+    const {rerender} = renderTab({editingOffered: true, onSaveProjectNow});
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
     deleteImage.mockImplementation(() => delete propsByKey.k1);
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
     expect(deleteImage).toHaveBeenCalledWith('k1');
-    expect(onImageLanded).toHaveBeenCalledTimes(1);
+    expect(onSaveProjectNow).toHaveBeenCalledTimes(1);
     rerender(
       <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
     );
@@ -659,8 +659,8 @@ describe('ImagesTab', () => {
 
   it("saves a pause after each stroke, so the image is the project's as it is drawn", async () => {
     jest.useFakeTimers();
-    const onImageLanded = jest.fn();
-    renderTab({editingOffered: true, onImageLanded});
+    const onSaveProjectNow = jest.fn();
+    renderTab({editingOffered: true, onSaveProjectNow});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
@@ -682,7 +682,7 @@ describe('ImagesTab', () => {
       subject: 'character',
     });
     expect(saveEdited.mock.calls[0][3]).toMatchObject({upload: true});
-    expect(onImageLanded).not.toHaveBeenCalled();
+    expect(onSaveProjectNow).not.toHaveBeenCalled();
     expect(screen.getByText('canvas')).toBeTruthy();
     expect(pressed()).toEqual(['Sprite 1']);
     // The next pause saves onto that image, pixels only.
@@ -703,7 +703,7 @@ describe('ImagesTab', () => {
     });
     expect(saveEdited).toHaveBeenCalledTimes(3);
     expect(saveEdited.mock.calls[2][3]).toMatchObject({upload: true});
-    expect(onImageLanded).toHaveBeenCalledTimes(1);
+    expect(onSaveProjectNow).toHaveBeenCalledTimes(1);
     expect(screen.queryByText('canvas')).toBeNull();
     jest.useRealTimers();
   });
@@ -1376,11 +1376,11 @@ describe('ImagesTab', () => {
     });
 
     it('stores a picked file as the kind the student chose', async () => {
-      const onImageLanded = jest.fn();
+      const onSaveProjectNow = jest.fn();
       const {container} = renderTab({
         editingOffered: true,
         enableImageUpload: true,
-        onImageLanded,
+        onSaveProjectNow,
       });
       fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
       fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
@@ -1396,7 +1396,7 @@ describe('ImagesTab', () => {
           filename: expect.stringMatching(/^upload_my_cat_\d+\.png$/),
         })
       );
-      expect(onImageLanded).toHaveBeenCalled();
+      expect(onSaveProjectNow).toHaveBeenCalled();
       expect(pressed()).toEqual(['Block 1']);
     });
 

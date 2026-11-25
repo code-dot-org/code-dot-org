@@ -126,9 +126,8 @@ interface ImagesTabProps {
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
-  /** The host should save the project now: a picture was stored or
-      deleted, or a drawing ended. */
-  onImageLanded?: () => void;
+  /** Saves the project at once instead of waiting for its throttled save. */
+  onSaveProjectNow?: () => void;
   /** The tab is the one showing; a drawing saves itself when it is not. */
   active?: boolean;
   /** The drawing's undo and redo, for the host's own buttons; null once
@@ -182,7 +181,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   uploadWarningSettings,
   viewOnly,
   paneWidth,
-  onImageLanded,
+  onSaveProjectNow,
   active = true,
   onDrawingHistory,
   advancedOffered,
@@ -283,8 +282,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // made it.
   const chosenKeyRef = useRef(chosenId);
   chosenKeyRef.current = chosenImage?.key ?? null;
-  const landedRef = useRef(onImageLanded);
-  landedRef.current = onImageLanded;
+  const saveProjectNowRef = useRef(onSaveProjectNow);
+  saveProjectNowRef.current = onSaveProjectNow;
   // `saveNow`: whether the project is saved at once after the picture is
   // stored; false leaves it to the project's throttled save.
   const storePicture = useCallback(
@@ -303,7 +302,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         setDraft(null);
       }
       if (saveNow) {
-        landedRef.current?.();
+        saveProjectNowRef.current?.();
       }
       return key;
     },
@@ -331,7 +330,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     storePicture,
     active,
     onDrawingHistory,
-    saveProjectNow: () => landedRef.current?.(),
+    saveProjectNow: () => saveProjectNowRef.current?.(),
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
@@ -358,7 +357,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const handleDelete = useCallback(
     (key: string) => {
       writer.deleteImage(key);
-      landedRef.current?.();
+      saveProjectNowRef.current?.();
     },
     [writer]
   );
@@ -373,7 +372,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       leaveDrawing();
       setDraft(null);
       startSession(key);
-      landedRef.current?.();
+      saveProjectNowRef.current?.();
       setUploadStatus(`${imageKindLabel(kind.imageType, kind.subject)} added.`);
     },
     [leaveDrawing, startSession, writer]

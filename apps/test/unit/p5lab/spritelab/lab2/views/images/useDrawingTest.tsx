@@ -275,6 +275,37 @@ describe('useDrawing', () => {
     expect(saveProjectNow).not.toHaveBeenCalled();
   });
 
+  it('uploads when the level is left during a pause save that does not upload', async () => {
+    const {saveEdited, tools, unmount} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:last', {}),
+      snapshot: () => null,
+    });
+    await act(async () => tools().handleSave('data:a', {}));
+    let finishSave: (key: string) => void = () => undefined;
+    saveEdited.mockImplementationOnce(
+      () => new Promise<string>(resolve => (finishSave = resolve))
+    );
+    act(() => tools().handleSave('data:b', {}));
+    unmount();
+    await act(async () => {
+      finishSave('k1');
+      await new Promise(resolve => setTimeout(resolve, 0));
+    });
+    const uploads = saveEdited.mock.calls.map(call => call[3]!.upload);
+    expect(uploads).toEqual([true, false, true]);
+  });
+
+  it('saves the project and closes on Done when the editor is gone', async () => {
+    const {saveProjectNow, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    act(() => tools().scheduleStrokeSave());
+    await act(async () => tools().finishDrawing());
+    expect(saveProjectNow).toHaveBeenCalledTimes(1);
+    expect(tools().drawing).toBeNull();
+  });
+
   it('uploads the file at most once per gap, and on the last save', async () => {
     jest.useFakeTimers();
     jest.setSystemTime(100000);

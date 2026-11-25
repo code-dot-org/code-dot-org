@@ -2621,7 +2621,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 imageKinds={levelProperties.levelMode?.imageKinds}
                 viewOnly={isViewOnly}
                 paneWidth={paneWidthPx}
-                onImageLanded={saveImagesNow}
+                onSaveProjectNow={saveImagesNow}
                 active={activeTab === 'Images'}
                 advancedOffered={imagesAdvanced}
                 onDrawingHistory={setDrawingHistory}
