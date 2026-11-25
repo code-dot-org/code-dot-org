@@ -1,9 +1,12 @@
 import * as BlocklyCore from 'blockly/core';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {flushSync} from 'react-dom';
 
 import color from '@cdo/apps/util/color';
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 import {PATTERN_AI_NUM_SEED_EVENTS} from '../constants';
@@ -78,7 +81,8 @@ class FieldPatternAi extends BlocklyCore.Field {
   showEditor_() {
     super.showEditor_();
 
-    const editor = this.dropdownCreate_();
+    // Synchronous: the drop-down is sized from this content when shown.
+    const editor = flushSync(() => this.dropdownCreate_());
     Blockly.DropDownDiv.getContentDiv().appendChild(editor);
 
     Blockly.DropDownDiv.setColour(
@@ -118,15 +122,12 @@ class FieldPatternAi extends BlocklyCore.Field {
           this.setValue(value);
         }}
       />,
-      this.newDiv_,
-      {
-        legacyReactDomRender: true,
-      }
+      this.newDiv_
     );
   }
 
   dropdownDispose_() {
-    ReactDOM.unmountComponentAtNode(this.newDiv_);
+    unmountReactRoot(this.newDiv_);
     this.newDiv_ = null;
   }
 
