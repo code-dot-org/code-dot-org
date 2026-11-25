@@ -1,0 +1,13 @@
+{
+  "key": "l6-pick-useful-feedback",
+  "description": "Learn how to decide which AI suggestions fit your audience and which ones to push back on.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l6-pick-useful-feedback.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "ab3c0320-90d8-45fb-9936-a6c2dee2a511"
+  ]
+}

@@ -22,8 +22,6 @@
 #   dashboard/db/schema_cache.yml          read at every boot
 #   dashboard/db/schema.rb                 db:schema:load works from the image
 #   shared/css, shared/wasm                served live by SharedResources
-#   dashboard/scripts                      ga_client is required by
-#                                          AdminReportsController per request
 
 # Curriculum and seed input, read when a database is seeded. The running
 # app serves this content from the database, never from these files.

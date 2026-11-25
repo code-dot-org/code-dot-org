@@ -25,6 +25,8 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('starwars')
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('flappy')
     assert_equal 'hour_of_ai_certificate.png', CertificateImage.certificate_template_for('playlab')
+    assert_equal 'quest_builder_hour_of_ai_certificate.png', CertificateImage.certificate_template_for('quest-builder-2026')
+    assert_equal 'ai_makerspace_hour_of_ai_certificate.png', CertificateImage.certificate_template_for('ai-makerspace-2026')
     assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('coursea-2025')
   end
 
@@ -39,6 +41,10 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_image mc_certificate_image, 1754, 1235, 'PNG'
     field_agent_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'fieldagent-mc')
     assert_image field_agent_certificate_image, 1754, 1235, 'PNG'
+    quest_builder_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'quest-builder-2026')
+    assert_image quest_builder_certificate_image, 1754, 1235, 'PNG'
+    ai_makerspace_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'ai-makerspace-2026')
+    assert_image ai_makerspace_certificate_image, 1754, 1235, 'PNG'
     hoc_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'flappy')
     assert_image hoc_certificate_image, 1754, 1235, 'PNG'
     hoc_certificate_image_with_ampersand = CertificateImage.create_course_certificate_image('Jeffrey & Peter', 'flappy')

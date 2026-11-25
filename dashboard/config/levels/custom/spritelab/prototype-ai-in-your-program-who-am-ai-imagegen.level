@@ -1,0 +1,1972 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2026-11-24T04:18:04.000Z",
+  "level_num": "custom",
+  "user_id": 23972,
+  "properties": {
+    "encrypted": "false",
+    "header_label": "Introduction",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "standalone_app_name": "spritelab",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "uses_lab2": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "start_sources": {
+      "animations": {
+        "orderedKeys": [
+          "98187a09-1aa5-417f-a15c-87e6dab8c230"
+        ],
+        "propsByKey": {
+          "98187a09-1aa5-417f-a15c-87e6dab8c230": {
+            "name": "Sprite 1",
+            "sourceUrl": "/level_starter_assets/prototype-ai-in-your-program-sprite-lab/uuid/d45fc0e9-67f6-426c-993f-d3ac6adb5152.png",
+            "frameSize": {
+              "x": 90,
+              "y": 90
+            },
+            "frameCount": 5,
+            "looping": true,
+            "frameDelay": 20,
+            "categories": [
+
+            ],
+            "pixelGridSize": 1,
+            "trimmed": false,
+            "generation": {
+              "prompt": "A robot",
+              "imageType": "sprite",
+              "style": "pixel",
+              "variant": 5,
+              "pixelGrid": 32,
+              "sentenceId": "character",
+              "choices": {
+                "creature": "robot"
+              }
+            },
+            "edited": false,
+            "fromGeneration": true,
+            "poses": {
+              "stand-right": {
+                "start": 0,
+                "count": 2,
+                "frameDelay": 20
+              },
+              "walk-right": {
+                "start": 1,
+                "count": 2,
+                "frameDelay": 8
+              },
+              "jump-right": {
+                "start": 3,
+                "count": 2,
+                "frameDelay": 8
+              }
+            }
+          }
+        }
+      },
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "scenes": [
+        {
+          "id": "scene-1",
+          "name": "Scene 1",
+          "source": {
+            "variables": [
+              {
+                "name": "question",
+                "id": "P^o!!jv/_LRYY+7Set[h"
+              },
+              {
+                "name": "questions_left",
+                "id": "?*0=x++dWup~KpjqFJVV"
+              },
+              {
+                "name": "next_step",
+                "id": "d;!4~O6.pjOgVylIef]y"
+              },
+              {
+                "name": "secret",
+                "id": "}kLcUH{GFYcT~$H@$Zd!"
+              },
+              {
+                "name": "ai_answer",
+                "id": "w6Jh$xs_ICIWfHC~E!Yn"
+              },
+              {
+                "name": "ai_hint",
+                "id": "[fDUUz+#v+/0?]@3o8J-"
+              },
+              {
+                "name": "guess",
+                "id": "Dtx_O*z@0bGIP0Oau8Vu"
+              },
+              {
+                "name": "typed_guess",
+                "id": "mz]89pciP:8kpVf;vifo"
+              },
+              {
+                "name": "ai_check",
+                "id": "W.OCjS[h2wS4i1=c~p%-"
+              },
+              {
+                "name": "my_prompt",
+                "id": "*:@cv[sLXxla6o?Uk|JG"
+              }
+            ],
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "a_6^Z|5sd{Wy4RuC|42x",
+                  "x": 1225,
+                  "y": 168,
+                  "extraState": {
+                    "procedureId": "Q,ZjFv=EDnhe{`yCIY!~",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "ask_a_question"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "gamelab_setPrompt",
+                        "id": "pQ(HaM(4)WPVvEU6@l5e",
+                        "inputs": {
+                          "QUESTION": {
+                            "block": {
+                              "type": "text",
+                              "id": "pff(;Jx3-V7J2z7pG))g",
+                              "fields": {
+                                "TEXT": "Ask me a yes-or-no question!"
+                              }
+                            }
+                          },
+                          "VAR": {
+                            "block": {
+                              "type": "variables_get",
+                              "id": "dkrjthaW9.zW#0f8;:p]",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "P^o!!jv/_LRYY+7Set[h"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "HU]XyhBTd~I1d7y)r}Ig",
+                  "x": 1180,
+                  "y": 283,
+                  "extraState": {
+                    "procedureId": "=H(I23;8X;*5H5yjgVLb",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "show_choices"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "gamelab_setPromptWithChoices",
+                        "id": ")J[?;;_3@P3C[w`f/MER",
+                        "inputs": {
+                          "QUESTION": {
+                            "block": {
+                              "type": "text_join_simple",
+                              "id": "2UMeO7@!sOsNL{h?)$6D",
+                              "extraState": {
+                                "itemCount": 2
+                              },
+                              "inputs": {
+                                "ADD0": {
+                                  "block": {
+                                    "type": "text",
+                                    "id": "[-p,Y0Z!aTtPEDIfHgx=",
+                                    "fields": {
+                                      "TEXT": "What next? Questions left: "
+                                    }
+                                  }
+                                },
+                                "ADD1": {
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "/~*@3|s7ZSr2lrvnY_(G",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "?*0=x++dWup~KpjqFJVV"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "VAR": {
+                            "block": {
+                              "type": "variables_get",
+                              "id": "z^jB/Lt6;1%c%xdahHrD",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "d;!4~O6.pjOgVylIef]y"
+                                }
+                              }
+                            }
+                          },
+                          "A": {
+                            "block": {
+                              "type": "text",
+                              "id": "YA#QP~J0JaV).pJ6Ld$^",
+                              "fields": {
+                                "TEXT": "Ask again"
+                              }
+                            }
+                          },
+                          "B": {
+                            "block": {
+                              "type": "text",
+                              "id": "b8.EHQXK:/0Py(4pqWDZ",
+                              "fields": {
+                                "TEXT": "Get a hint"
+                              }
+                            }
+                          },
+                          "C": {
+                            "block": {
+                              "type": "text",
+                              "id": ",kl-1pPS6q{fJ87$zP2S",
+                              "fields": {
+                                "TEXT": "Guess"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "*aM-}eem/(#tV-U:A`},",
+                  "x": 1181,
+                  "y": 514,
+                  "extraState": {
+                    "procedureId": "p92_6%f6yUDux#^91k%*",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "win"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "spritelab2_burst",
+                        "id": "n?=HDq^zgrl+Z9sTEVhq",
+                        "fields": {
+                          "COUNT": 20,
+                          "LOOK": "<field name=\"LOOK\">sparks</field>"
+                        },
+                        "inputs": {
+                          "ORIGIN": {
+                            "shadow": {
+                              "type": "gamelab_allSpritesWithAnimation",
+                              "id": "O}Z5M*;La}SKWL}J-~Po",
+                              "fields": {
+                                "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "gamelab_spriteSayTime",
+                            "id": "JBTF1/;Y#MdWqt!vz(Zu",
+                            "inputs": {
+                              "SPRITE": {
+                                "block": {
+                                  "type": "gamelab_allSpritesWithAnimation",
+                                  "id": "`C2NpM[(bMI7,}UIlRp?",
+                                  "fields": {
+                                    "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                  }
+                                }
+                              },
+                              "TEXT1": {
+                                "block": {
+                                  "type": "text_join_simple",
+                                  "id": "qW)bOf_?yyku2YCidIAU",
+                                  "extraState": {
+                                    "itemCount": 3
+                                  },
+                                  "inputs": {
+                                    "ADD0": {
+                                      "block": {
+                                        "type": "text",
+                                        "id": "|!?XLj06K/9RX]i$@??o",
+                                        "fields": {
+                                          "TEXT": "You got it! I'm a "
+                                        }
+                                      }
+                                    },
+                                    "ADD1": {
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "+6f07T6FB5!Rh!x:q=;=",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "}kLcUH{GFYcT~$H@$Zd!"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "ADD2": {
+                                      "block": {
+                                        "type": "text",
+                                        "id": "pr8uU%3zar_$IC-X2iYQ",
+                                        "fields": {
+                                          "TEXT": "!"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "NUM": {
+                                "block": {
+                                  "type": "math_number",
+                                  "id": "v!F`nX9!ebp]bGqt3JQ]",
+                                  "fields": {
+                                    "NUM": 10
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "|)?`~5Suv_|dHG(,]7l2",
+                  "x": 1180,
+                  "y": 730,
+                  "extraState": {
+                    "procedureId": "`C!:#B,?%6~rWFQnvNuo",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "answer_question"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "spritelab2_askAI",
+                        "id": "4mPmlRO4gpY9EwHR5#xB",
+                        "inputs": {
+                          "PROMPT": {
+                            "block": {
+                              "type": "variables_get",
+                              "id": "sBtJZP+h,dJ/ggYQ8DJM",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "P^o!!jv/_LRYY+7Set[h"
+                                }
+                              }
+                            }
+                          },
+                          "VAR": {
+                            "block": {
+                              "type": "variables_get",
+                              "id": "akOewPYldeg{{1?[3Wg[",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "w6Jh$xs_ICIWfHC~E!Yn"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "u1T.y#e#6WCxLwO;)zs`",
+                  "x": 673,
+                  "y": 20,
+                  "extraState": {
+                    "procedureId": "KpzJu9k-1?)YIXoxFs79",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "hint_by_rule"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "gamelab_spriteSayTime",
+                        "id": "lh)XNs42Rc}s[US6d0Cm",
+                        "inputs": {
+                          "SPRITE": {
+                            "block": {
+                              "type": "gamelab_allSpritesWithAnimation",
+                              "id": "PW|y4l7XkIj_rx?tQFh$",
+                              "fields": {
+                                "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                              }
+                            }
+                          },
+                          "TEXT1": {
+                            "block": {
+                              "type": "text",
+                              "id": "{XfU4L9rU9Szv+rR*k2G",
+                              "fields": {
+                                "TEXT": "Hint: I keep animals safe and healthy every day."
+                              }
+                            }
+                          },
+                          "NUM": {
+                            "block": {
+                              "type": "math_number",
+                              "id": "]2~`r7YdK,=g%qnCLfx[",
+                              "fields": {
+                                "NUM": 6
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "2x,)TSb4,gS1RNo,w.}I",
+                            "extraState": {
+                              "name": "show_choices"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "E@fue7gkH3v3Edcl$;Q_",
+                  "x": 673,
+                  "y": 168,
+                  "extraState": {
+                    "procedureId": "VTGe^?J!6x=J5,If]/u[",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "hint_by_AI"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "spritelab2_askAI",
+                        "id": "lVFVGWyrpy`d]L!s4sCT",
+                        "inputs": {
+                          "PROMPT": {
+                            "block": {
+                              "type": "text",
+                              "id": "*;kR.F));?|Z(jbb}-+c",
+                              "fields": {
+                                "TEXT": "Give the player one new hint about how you solve problems at work. Do not say your secret."
+                              }
+                            }
+                          },
+                          "VAR": {
+                            "block": {
+                              "type": "variables_get",
+                              "id": "yWxv,jpg398ArKNmy=A2",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "[fDUUz+#v+/0?]@3o8J-"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "Ev(.i2S`t*rK[l!`*XGm",
+                  "x": 662,
+                  "y": 560,
+                  "extraState": {
+                    "procedureId": "qvL6LR}[pTefa1^@:91$",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "guess_by_rule"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "gamelab_setPromptWithChoices",
+                        "id": "Bj/h8t(#D6USLuOgH3D-",
+                        "inputs": {
+                          "QUESTION": {
+                            "block": {
+                              "type": "text",
+                              "id": "PlTe?q@}(Ft02lxUaaci",
+                              "fields": {
+                                "TEXT": "Who am I?"
+                              }
+                            }
+                          },
+                          "VAR": {
+                            "block": {
+                              "type": "variables_get",
+                              "id": "[g`1iOr:#1W*y9ads$^l",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "Dtx_O*z@0bGIP0Oau8Vu"
+                                }
+                              }
+                            }
+                          },
+                          "A": {
+                            "block": {
+                              "type": "text",
+                              "id": "2:*DPe%K=mLg^WPDYp/k",
+                              "fields": {
+                                "TEXT": "chef"
+                              }
+                            }
+                          },
+                          "B": {
+                            "block": {
+                              "type": "text",
+                              "id": "6TI`v=%Gw5AIr`z,6!V~",
+                              "fields": {
+                                "TEXT": "zookeeper"
+                              }
+                            }
+                          },
+                          "C": {
+                            "block": {
+                              "type": "text",
+                              "id": "hd@`5|i8~gQiKlKWF(/}",
+                              "fields": {
+                                "TEXT": "firefighter"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "fz:n]$(plhCAYM${`vQL",
+                  "x": 600,
+                  "y": 900,
+                  "extraState": {
+                    "procedureId": "3(?Zym3Bb[y]u2wRBkKh",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "guess_by_AI"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "gamelab_setPrompt",
+                        "id": "18_tqLakf5D?@su$C~m9",
+                        "inputs": {
+                          "QUESTION": {
+                            "block": {
+                              "type": "text",
+                              "id": "nM~iB~:~%be`ak*WG!2X",
+                              "fields": {
+                                "TEXT": "Who am I? Type your guess."
+                              }
+                            }
+                          },
+                          "VAR": {
+                            "block": {
+                              "type": "variables_get",
+                              "id": "EZM-yj|S.8Q_kM@xuf7q",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "mz]89pciP:8kpVf;vifo"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "+=ZH;)ek{n7~[iR6%=9,",
+                  "x": 20,
+                  "y": 700,
+                  "extraState": {
+                    "procedureId": "x|d!Rm*Y7o5rQ:Uy.zv5",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "check_question"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": "xaPz6f9s%=1s,ArG4g`u",
+                        "extraState": {
+                          "name": "answer_question"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "9M~B=cr)Z52#Lrvvp7{Z",
+                  "x": 20,
+                  "y": 820,
+                  "extraState": {
+                    "procedureId": "5+po%/m^ll]Kj3@,V*G,",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "give_hint"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": "48-%qRfH$?~Pudh1B[ma",
+                        "extraState": {
+                          "name": "hint_by_AI"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": ".}#T{!|xc;cDdI7nl6Q:",
+                  "x": 20,
+                  "y": 906,
+                  "extraState": {
+                    "procedureId": "cRZEQi2uq*lV;hjXu!@w",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "make_a_guess"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "procedures_callnoreturn",
+                        "id": ":*Uxt%qoi}%`nIQh7zXQ",
+                        "extraState": {
+                          "name": "guess_by_rule"
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "$(nb;j.7J5*bdQ66mqnw",
+                  "x": 1180,
+                  "y": 845,
+                  "extraState": {
+                    "procedureId": "!39X(,i`y?-O`:]Fsvol",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true
+                  },
+                  "fields": {
+                    "NAME": "count_question"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "math_change",
+                        "id": "uRt9p`k2Krh=6YJY9?$]",
+                        "fields": {
+                          "VAR": {
+                            "id": "?*0=x++dWup~KpjqFJVV"
+                          }
+                        },
+                        "inputs": {
+                          "DELTA": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "`FDhiq|KGA0MQ4S[}@sM",
+                              "fields": {
+                                "NUM": -1
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "controls_if",
+                            "id": "gQWQ=KT)8vpkn^-[8GK,",
+                            "extraState": {
+                              "hasElse": true
+                            },
+                            "inputs": {
+                              "IF0": {
+                                "block": {
+                                  "type": "logic_compare",
+                                  "id": "PqsC-`C!~*~[/5t^+qY?",
+                                  "fields": {
+                                    "OP": "<field name=\"OP\">EQ</field>"
+                                  },
+                                  "inputs": {
+                                    "A": {
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "+1%9v4Q};5H}D/90Ou_]",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "?*0=x++dWup~KpjqFJVV"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "B": {
+                                      "block": {
+                                        "type": "math_number",
+                                        "id": "X=[+`eb=sPaFk7oS)1U%",
+                                        "fields": {
+                                          "NUM": 0
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "DO0": {
+                                "block": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "TZ:EnT_6knM:`ruK04o9",
+                                  "extraState": {
+                                    "name": "make_a_guess"
+                                  }
+                                }
+                              },
+                              "ELSE": {
+                                "block": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "yFNzx{EL^^=Z%ZUQeohh",
+                                  "extraState": {
+                                    "name": "show_choices"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "#zlr(%l|vBMg(:Le$[7%",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_makeNewSpriteAnon",
+                      "id": "yZ2K[GNUrQ`$SxMHC?{p",
+                      "fields": {
+                        "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Sprite 1\"</field>"
+                      },
+                      "inputs": {
+                        "LOCATION": {
+                          "block": {
+                            "type": "gamelab_location_picker",
+                            "id": "W0nglCVSD7`/[m[rX{uW",
+                            "fields": {
+                              "LOCATION": null
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "variables_set",
+                          "id": "6iW9TodQ]^NK1*Yc[xJ`",
+                          "extraState": {
+                          },
+                          "fields": {
+                            "VAR": {
+                              "id": "}kLcUH{GFYcT~$H@$Zd!"
+                            }
+                          },
+                          "inputs": {
+                            "VALUE": {
+                              "block": {
+                                "type": "text",
+                                "id": "p!}L5hPC4A,HvP|w28yU",
+                                "fields": {
+                                  "TEXT": "zookeeper"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "variables_set",
+                              "id": "!Qn?XPLZ]}`8D0eqz(dN",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "*:@cv[sLXxla6o?Uk|JG"
+                                }
+                              },
+                              "inputs": {
+                                "VALUE": {
+                                  "block": {
+                                    "type": "text",
+                                    "id": "nDRrnP?D2LFD*@7(DJG~",
+                                    "fields": {
+                                      "TEXT": "You are a friendly zookeeper. You love talking about your day at work."
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "yKBlL).I2xSw!QF@qD`!",
+                                  "extraState": {
+                                    "name": "start_game"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "FI24r`ggM(@Q5{rC1!kx",
+                  "x": 20,
+                  "y": 347,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "z!1@a{-jmYQzddOC)${D",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "P^o!!jv/_LRYY+7Set[h"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "procedures_callnoreturn",
+                      "id": "a:_a#wo9apm9yhQvC{@W",
+                      "extraState": {
+                        "name": "check_question"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "LRA|,y%+CaN:R;Fh8yW/",
+                  "x": 276,
+                  "y": 440,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "6S|S5t0MweMl2TM)P,v-",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "w6Jh$xs_ICIWfHC~E!Yn"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_spriteSayTime",
+                      "id": "mm%D0E[!3qM_Qla%6~|.",
+                      "inputs": {
+                        "SPRITE": {
+                          "block": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "pbK:rY2cG+WJ-fQcD{VI",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                            }
+                          }
+                        },
+                        "TEXT1": {
+                          "block": {
+                            "type": "variables_get",
+                            "id": "%7(uAXEU]O7|S+V2}Bv?",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "w6Jh$xs_ICIWfHC~E!Yn"
+                              }
+                            }
+                          }
+                        },
+                        "NUM": {
+                          "block": {
+                            "type": "math_number",
+                            "id": "wR3xplkWl6HaAG:V4]%Z",
+                            "fields": {
+                              "NUM": 6
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "@id|BVS4,gG5~`_m@eAM",
+                          "extraState": {
+                            "name": "count_question"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "8p$4ju4+pSk(~L;1]/yq",
+                  "x": 1180,
+                  "y": 1294,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "l~`x+*!231c|[5:(t2N_",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "d;!4~O6.pjOgVylIef]y"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "controls_if",
+                      "id": "lz`f_8`9p:f6vZ}4Jnv0",
+                      "inputs": {
+                        "IF0": {
+                          "block": {
+                            "type": "logic_compare",
+                            "id": ":0NK8V$!=asG3o`RC.%V",
+                            "fields": {
+                              "OP": "<field name=\"OP\">EQ</field>"
+                            },
+                            "inputs": {
+                              "A": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "M9x/Y{.6ZkXw5@`zdTv*",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "d;!4~O6.pjOgVylIef]y"
+                                    }
+                                  }
+                                }
+                              },
+                              "B": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "Bw+(7qIw7LC^t@*)w$2|",
+                                  "fields": {
+                                    "TEXT": "Ask again"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "DO0": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "*ky4L?3]zF4zN_j_ocF2",
+                            "extraState": {
+                              "name": "ask_a_question"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "controls_if",
+                          "id": "]2~:COWFYB^ubP(Xlj4+",
+                          "inputs": {
+                            "IF0": {
+                              "block": {
+                                "type": "logic_compare",
+                                "id": "Aw@Br3){!baiX$+13Dv]",
+                                "fields": {
+                                  "OP": "<field name=\"OP\">EQ</field>"
+                                },
+                                "inputs": {
+                                  "A": {
+                                    "block": {
+                                      "type": "variables_get",
+                                      "id": "6(dF(}|`NFlvj|f)f`)U",
+                                      "extraState": {
+                                      },
+                                      "fields": {
+                                        "VAR": {
+                                          "id": "d;!4~O6.pjOgVylIef]y"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "B": {
+                                    "block": {
+                                      "type": "text",
+                                      "id": "(|kcwf*]QxNk:dNt3Ags",
+                                      "fields": {
+                                        "TEXT": "Get a hint"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "DO0": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "A*m.QQx1]Rpr-EbW4+R^",
+                                "extraState": {
+                                  "name": "give_hint"
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "controls_if",
+                              "id": "=Q48.w$rIi,W$Y^MXDYa",
+                              "inputs": {
+                                "IF0": {
+                                  "block": {
+                                    "type": "logic_compare",
+                                    "id": "*|!Ls?_Ja8h0(F+2i%J[",
+                                    "fields": {
+                                      "OP": "<field name=\"OP\">EQ</field>"
+                                    },
+                                    "inputs": {
+                                      "A": {
+                                        "block": {
+                                          "type": "variables_get",
+                                          "id": "Gw1o{iB]=o{f6vHi_FNt",
+                                          "extraState": {
+                                          },
+                                          "fields": {
+                                            "VAR": {
+                                              "id": "d;!4~O6.pjOgVylIef]y"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "B": {
+                                        "block": {
+                                          "type": "text",
+                                          "id": "BJejMt)*9Nh)n@f$)^Y#",
+                                          "fields": {
+                                            "TEXT": "Guess"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "DO0": {
+                                  "block": {
+                                    "type": "procedures_callnoreturn",
+                                    "id": "l7X!.IeA|Her5bYAfU3(",
+                                    "extraState": {
+                                      "name": "make_a_guess"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "t5u;zTY(Vwp)(+HJ_M*I",
+                  "x": 673,
+                  "y": 280,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "j=CbcY0wen,S6c}cSuGx",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "[fDUUz+#v+/0?]@3o8J-"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_spriteSayTime",
+                      "id": "i!ZlYis=oO?`l35w-G^4",
+                      "inputs": {
+                        "SPRITE": {
+                          "block": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": ",PKd:@]]N.}tZ|(dJ?FX",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                            }
+                          }
+                        },
+                        "TEXT1": {
+                          "block": {
+                            "type": "variables_get",
+                            "id": "PHR`c2F9tuec9%g]]`(b",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "[fDUUz+#v+/0?]@3o8J-"
+                              }
+                            }
+                          }
+                        },
+                        "NUM": {
+                          "block": {
+                            "type": "math_number",
+                            "id": "i/0Ll@.BB=b_a9Zgm-RC",
+                            "fields": {
+                              "NUM": 6
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "ciEhq22)10Yk$P~5Z`,Q",
+                          "extraState": {
+                            "name": "show_choices"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "Hb1[rWRzgq14(-(:%mr8",
+                  "x": 899,
+                  "y": 1055,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "~qfEAg_7#cG!%8Pdxm=X",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "Dtx_O*z@0bGIP0Oau8Vu"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "controls_if",
+                      "id": "l~,H)z44F2%W2||d@eT^",
+                      "extraState": {
+                        "hasElse": true
+                      },
+                      "inputs": {
+                        "IF0": {
+                          "block": {
+                            "type": "logic_compare",
+                            "id": "XNiqn#W_vdj]aLX-Kbf`",
+                            "fields": {
+                              "OP": "<field name=\"OP\">EQ</field>"
+                            },
+                            "inputs": {
+                              "A": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "}~x}$TIpR;JmUo?s($3U",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "Dtx_O*z@0bGIP0Oau8Vu"
+                                    }
+                                  }
+                                }
+                              },
+                              "B": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "-ok^z*H?__lwgsEg}KA)",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "}kLcUH{GFYcT~$H@$Zd!"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "DO0": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "2kPI?3%[:xwx731fR`!F",
+                            "extraState": {
+                              "name": "win"
+                            }
+                          }
+                        },
+                        "ELSE": {
+                          "block": {
+                            "type": "gamelab_spriteSayTime",
+                            "id": "Affi{APH/sIKTf[Y4COS",
+                            "inputs": {
+                              "SPRITE": {
+                                "block": {
+                                  "type": "gamelab_allSpritesWithAnimation",
+                                  "id": "{}bEmK:89D%H+..Lg|8-",
+                                  "fields": {
+                                    "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                  }
+                                }
+                              },
+                              "TEXT1": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "(:Otekm[M!V,[?#R%[j:",
+                                  "fields": {
+                                    "TEXT": "Not quite! Try again."
+                                  }
+                                }
+                              },
+                              "NUM": {
+                                "block": {
+                                  "type": "math_number",
+                                  "id": ";k2[1$+xA}ZdAC5B}alX",
+                                  "fields": {
+                                    "NUM": 4
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "?`]r2=E!*1vNuhU-2$rw",
+                                "extraState": {
+                                  "name": "make_a_guess"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": ":9:gstZOT)i]7EJJ#^Rk",
+                  "x": 1008,
+                  "y": 1590,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "!Y-/aoe`h|DmZ(Z%n1G}",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "mz]89pciP:8kpVf;vifo"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_askAIWithChoices",
+                      "id": "KqNVah1[a}JGoKv@v^7)",
+                      "inputs": {
+                        "PROMPT": {
+                          "block": {
+                            "type": "text_join_simple",
+                            "id": "Qw?N2XDGSDO8ltdB@oO]",
+                            "extraState": {
+                              "itemCount": 5
+                            },
+                            "inputs": {
+                              "ADD0": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "p`OX1F1I`;]A=EfOUA76",
+                                  "fields": {
+                                    "TEXT": "My secret is "
+                                  }
+                                }
+                              },
+                              "ADD1": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "$+Afh3yJoRr9XQ1hO:H8",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "}kLcUH{GFYcT~$H@$Zd!"
+                                    }
+                                  }
+                                }
+                              },
+                              "ADD2": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "{~W1S-1W0d2J)d9*gJFL",
+                                  "fields": {
+                                    "TEXT": ". The player guessed: "
+                                  }
+                                }
+                              },
+                              "ADD3": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "bV_TcOqIFb(!dRQBy{Zo",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "mz]89pciP:8kpVf;vifo"
+                                    }
+                                  }
+                                }
+                              },
+                              "ADD4": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "Kb5g%_1y}9vV%$WuU/Ja",
+                                  "fields": {
+                                    "TEXT": ". Is the guess correct or very close?"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "CHOICE1": {
+                          "block": {
+                            "type": "text",
+                            "id": "NQL%1iJ3OHdW|Tkf_[1@",
+                            "fields": {
+                              "TEXT": "Yes"
+                            }
+                          }
+                        },
+                        "CHOICE2": {
+                          "block": {
+                            "type": "text",
+                            "id": "5}GRgcQqR(%|-xACq%yb",
+                            "fields": {
+                              "TEXT": "No"
+                            }
+                          }
+                        },
+                        "CHOICE3": {
+                          "block": {
+                            "type": "text",
+                            "id": "w=TPziwxI;N73CefHa_w",
+                            "fields": {
+                              "TEXT": "Not sure"
+                            }
+                          }
+                        },
+                        "VAR": {
+                          "block": {
+                            "type": "variables_get",
+                            "id": "FY0$^|dB!UIb_jtdKnfn",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "W.OCjS[h2wS4i1=c~p%-"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "U^p7gk[N$i#z0$=Q$CHQ",
+                  "x": 600,
+                  "y": 1904,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "=~RvH$:5$%-+d!])v{$i",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "W.OCjS[h2wS4i1=c~p%-"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "controls_if",
+                      "id": "NV3D}s.D6{lCBF(xY2}U",
+                      "inputs": {
+                        "IF0": {
+                          "block": {
+                            "type": "logic_compare",
+                            "id": "9+~=$D*y(9T=$(0mvq86",
+                            "fields": {
+                              "OP": "<field name=\"OP\">EQ</field>"
+                            },
+                            "inputs": {
+                              "A": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "]Yi6Qg%Am$v}L(4ZWe/#",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "W.OCjS[h2wS4i1=c~p%-"
+                                    }
+                                  }
+                                }
+                              },
+                              "B": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "mAr5V0gA5mJj5x%!GARh",
+                                  "fields": {
+                                    "TEXT": "Yes"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "DO0": {
+                          "block": {
+                            "type": "procedures_callnoreturn",
+                            "id": "F@@$q6Z,`$3R^l|K^zMZ",
+                            "extraState": {
+                              "name": "win"
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "controls_if",
+                          "id": "R[t^X4c=AO-)3QDQv1c$",
+                          "inputs": {
+                            "IF0": {
+                              "block": {
+                                "type": "logic_compare",
+                                "id": "yIIegubqTPv*e{!@.Q9*",
+                                "fields": {
+                                  "OP": "<field name=\"OP\">EQ</field>"
+                                },
+                                "inputs": {
+                                  "A": {
+                                    "block": {
+                                      "type": "variables_get",
+                                      "id": "o3Pe?5Cie;BW}xjsGMu}",
+                                      "extraState": {
+                                      },
+                                      "fields": {
+                                        "VAR": {
+                                          "id": "W.OCjS[h2wS4i1=c~p%-"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "B": {
+                                    "block": {
+                                      "type": "text",
+                                      "id": "ep{B]m7%r)`2~0U]*Ew@",
+                                      "fields": {
+                                        "TEXT": "Not sure"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "DO0": {
+                              "block": {
+                                "type": "gamelab_spriteSayTime",
+                                "id": "vC,JCBn:-T2xHZe3Bki,",
+                                "inputs": {
+                                  "SPRITE": {
+                                    "block": {
+                                      "type": "gamelab_allSpritesWithAnimation",
+                                      "id": ";ecL!MV03n1!A5uj?FH7",
+                                      "fields": {
+                                        "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                      }
+                                    }
+                                  },
+                                  "TEXT1": {
+                                    "block": {
+                                      "type": "text",
+                                      "id": "ut!mga+;?[EEiN68OV#M",
+                                      "fields": {
+                                        "TEXT": "Hmm, I'm not sure what you mean. Try again."
+                                      }
+                                    }
+                                  },
+                                  "NUM": {
+                                    "block": {
+                                      "type": "math_number",
+                                      "id": "=+wIhEJP-P;e+WY(Oi%U",
+                                      "fields": {
+                                        "NUM": 4
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "procedures_callnoreturn",
+                                    "id": ",_i#R|N~IhDA85F,N?vN",
+                                    "extraState": {
+                                      "name": "make_a_guess"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "controls_if",
+                              "id": "mrIOSe:,B9N+64]D9`2!",
+                              "inputs": {
+                                "IF0": {
+                                  "block": {
+                                    "type": "logic_compare",
+                                    "id": "A;I$XtkIu*cUkOPSoeu}",
+                                    "fields": {
+                                      "OP": "<field name=\"OP\">EQ</field>"
+                                    },
+                                    "inputs": {
+                                      "A": {
+                                        "block": {
+                                          "type": "variables_get",
+                                          "id": "V0KaKSWER)AlNOXZ.6i[",
+                                          "extraState": {
+                                          },
+                                          "fields": {
+                                            "VAR": {
+                                              "id": "W.OCjS[h2wS4i1=c~p%-"
+                                            }
+                                          }
+                                        }
+                                      },
+                                      "B": {
+                                        "block": {
+                                          "type": "text",
+                                          "id": "Zb.bBw]L$]KM=N?^#rp#",
+                                          "fields": {
+                                            "TEXT": "No"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
+                                "DO0": {
+                                  "block": {
+                                    "type": "gamelab_spriteSayTime",
+                                    "id": "]ky4wi`FJQ2W@$LN,.sd",
+                                    "inputs": {
+                                      "SPRITE": {
+                                        "block": {
+                                          "type": "gamelab_allSpritesWithAnimation",
+                                          "id": "i#:nX6B@5I}wr-NwQ};:",
+                                          "fields": {
+                                            "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                          }
+                                        }
+                                      },
+                                      "TEXT1": {
+                                        "block": {
+                                          "type": "text",
+                                          "id": "Af~M2GqG*85@1j_FBjE^",
+                                          "fields": {
+                                            "TEXT": "Not quite! Try again."
+                                          }
+                                        }
+                                      },
+                                      "NUM": {
+                                        "block": {
+                                          "type": "math_number",
+                                          "id": ":SlCNOQYlC#T2!JoyTx7",
+                                          "fields": {
+                                            "NUM": 4
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "procedures_callnoreturn",
+                                        "id": ",-}j$H*McoQ.#cGjM|W7",
+                                        "extraState": {
+                                          "name": "make_a_guess"
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "qi/Qo:$wMA]1XMBw9-II",
+                  "x": 20,
+                  "y": 600,
+                  "collapsed": true,
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
+                  "extraState": {
+                    "description": "Sets the game rules. Locked.",
+                    "procedureId": ")NY^]f%#Oxz]hKmvG@g,",
+                    "initialDeleteConfig": false,
+                    "initialEditConfig": false,
+                    "initialMoveConfig": false,
+                    "userCreated": false,
+                    "invisible": false
+                  },
+                  "fields": {
+                    "NAME": "start_game"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "spritelab2_setSystemPrompt",
+                        "id": "%AjrxpAA36#O*{uB}^y1",
+                        "inputs": {
+                          "PROMPT": {
+                            "block": {
+                              "type": "text_join_simple",
+                              "id": "K,f5C+0[4fvQTeCy8Gx2",
+                              "extraState": {
+                                "itemCount": 2
+                              },
+                              "inputs": {
+                                "ADD0": {
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "9^eC^B[m-?xt~m(e_,_^",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "*:@cv[sLXxla6o?Uk|JG"
+                                      }
+                                    }
+                                  }
+                                },
+                                "ADD1": {
+                                  "block": {
+                                    "type": "text",
+                                    "id": "PV,Wxqps|7^[=Z%;7ug^",
+                                    "fields": {
+                                      "TEXT": " You are playing a guessing game. Answer each question in one short sentence."
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "variables_set",
+                            "id": "92m2-O^x+Ce0jQpg=v#[",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "?*0=x++dWup~KpjqFJVV"
+                              }
+                            },
+                            "inputs": {
+                              "VALUE": {
+                                "block": {
+                                  "type": "math_number",
+                                  "id": "[lCGil-}lmw[F=M}aGs|",
+                                  "fields": {
+                                    "NUM": 5
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "SO[vfe$2zg.-0Bo3(tNi",
+                                "extraState": {
+                                  "name": "ask_a_question"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "procedures": [
+              {
+                "id": "Q,ZjFv=EDnhe{`yCIY!~",
+                "name": "ask_a_question",
+                "returnTypes": null
+              },
+              {
+                "id": "=H(I23;8X;*5H5yjgVLb",
+                "name": "show_choices",
+                "returnTypes": null
+              },
+              {
+                "id": "p92_6%f6yUDux#^91k%*",
+                "name": "win",
+                "returnTypes": null
+              },
+              {
+                "id": "`C!:#B,?%6~rWFQnvNuo",
+                "name": "answer_question",
+                "returnTypes": null
+              },
+              {
+                "id": "KpzJu9k-1?)YIXoxFs79",
+                "name": "hint_by_rule",
+                "returnTypes": null
+              },
+              {
+                "id": "VTGe^?J!6x=J5,If]/u[",
+                "name": "hint_by_AI",
+                "returnTypes": null
+              },
+              {
+                "id": "qvL6LR}[pTefa1^@:91$",
+                "name": "guess_by_rule",
+                "returnTypes": null
+              },
+              {
+                "id": "3(?Zym3Bb[y]u2wRBkKh",
+                "name": "guess_by_AI",
+                "returnTypes": null
+              },
+              {
+                "id": "x|d!Rm*Y7o5rQ:Uy.zv5",
+                "name": "check_question",
+                "returnTypes": null
+              },
+              {
+                "id": "5+po%/m^ll]Kj3@,V*G,",
+                "name": "give_hint",
+                "returnTypes": null
+              },
+              {
+                "id": "cRZEQi2uq*lV;hjXu!@w",
+                "name": "make_a_guess",
+                "returnTypes": null
+              },
+              {
+                "id": "!39X(,i`y?-O`:]Fsvol",
+                "name": "count_question",
+                "returnTypes": null
+              },
+              {
+                "id": ")NY^]f%#Oxz]hKmvG@g,",
+                "name": "start_game",
+                "returnTypes": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "##PROTOTYPE – SC2 AI in Your Program · Who Am AI? project\r\n###This version: Starter with image generation\r\n\r\nSame code as the default starter (104027). The only difference: the **Images tab is on**, so students can make their own mystery character with the image generator. Making a character is optional and not scored.\r\n\r\n- `start_game` is locked and collapsed and holds the game rules. Keeping the secret is the student's job in `my_prompt`.\r\n\r\n**All versions**\r\n- Starter, no image generation: [104027](https://levelbuilder-studio.code.org/levels/104027)\r\n- Starter with image generation (this level): [105336](https://levelbuilder-studio.code.org/levels/105336)\r\n- Finished sample (strong): [105337](https://levelbuilder-studio.code.org/levels/105337)\r\n- Calibration sample, middle: [105339](https://levelbuilder-studio.code.org/levels/105339)\r\n- Calibration sample, weak: [105340](https://levelbuilder-studio.code.org/levels/105340)\r\n- Prompt Helper (AI Chat level): [105338](https://levelbuilder-studio.code.org/levels/105338)\r\n\r\n**Open questions**\r\n- Is image generation funded at launch? If not, this version is cut.\r\n- Does making a character pull time away from the AI decisions the project assesses?\r\n- Should the Images tab let students make only a Character, not backgrounds or objects?"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-24T04:18:04.561+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-sprite-lab\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-sprite-lab\"},{\"changed_at\":\"2026-11-24 04:20:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:41:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:03:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:11:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 04:46:29 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:34:56 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

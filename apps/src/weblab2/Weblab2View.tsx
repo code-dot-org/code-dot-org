@@ -11,6 +11,7 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {ChatAsset} from '@cdo/apps/aichat/types/assets';
 import {sendStartedReportIfNotStarted} from '@cdo/apps/code-studio/progressRedux';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {setHasRun} from '@cdo/apps/lab2/redux/systemRedux';
 import {LabProps, MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {DEFAULT_START_HTML_FILE} from '@cdo/apps/weblab2/htmlPreview/constants';
@@ -31,6 +32,7 @@ import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchema
 import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import WidgetOnlyLayout from './layout/WidgetOnlyLayout';
 import {
   removeAiTutorAssetFromProject,
   syncAiTutorAssetToProject,
@@ -89,6 +91,20 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  // Use the widget-only layout for widget mode (no resource panel) if specified.
+  const layoutConfig = useMemo<ConfigType>(
+    () =>
+      levelProperties.widgetViewHideResourcePanel
+        ? {
+            ...config,
+            layoutComponents: {
+              ...config.layoutComponents,
+              widget: WidgetOnlyLayout,
+            },
+          }
+        : config,
+    [config, levelProperties.widgetViewHideResourcePanel]
+  );
   useWeblab2IntroTour(levelProperties);
 
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
@@ -181,9 +197,17 @@ const Weblab2View: React.FC<
     }
   }, [hasEdited, logLevelActivity, dispatch, levelProperties.appName]);
 
+  // Always use preview mode for showcase unless in start mode.
+  const isShowcaseView = !!levelProperties?.showcaseView && !getIsStartMode();
   useEffect(() => {
-    dispatch(setViewMode(levelProperties?.initialViewMode || ViewMode.SPLIT));
-  }, [dispatch, levelProperties?.initialViewMode]);
+    dispatch(
+      setViewMode(
+        isShowcaseView
+          ? ViewMode.PREVIEW
+          : levelProperties?.initialViewMode || ViewMode.SPLIT
+      )
+    );
+  }, [dispatch, isShowcaseView, levelProperties?.initialViewMode]);
 
   const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
     source,
@@ -194,7 +218,7 @@ const Weblab2View: React.FC<
     <div className={moduleStyles.weblab2Container}>
       {hasSource && sourceLevel === levelProperties.id && (
         <Codebridge
-          config={config}
+          config={layoutConfig}
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}

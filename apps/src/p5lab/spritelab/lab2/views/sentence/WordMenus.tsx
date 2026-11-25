@@ -8,6 +8,15 @@ import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useRef, useState} from 'react';
 
+import {useLocalization} from '@cdo/apps/localization';
+
+import {
+  isEnglish,
+  sentenceTemplate,
+  translateSentence,
+  translateText,
+  translateWord,
+} from './sentenceLocalization';
 import {hueClass, withPeriod, WordChip, WordText} from './sentencePieces';
 import {
   chainedSlotIds,
@@ -41,8 +50,9 @@ interface WordMenusProps {
 
 // An icon or a color dot is about this many letters wide.
 const ICON_WIDTH_IN_LETTERS = 2;
-const wordWidth = (w: Word) =>
-  w.text.length + (w.icon || w.color ? ICON_WIDTH_IN_LETTERS : 0);
+const wordWidth = (w: Word, slot: Slot) =>
+  translateWord(w, slot).length +
+  (w.icon || w.color ? ICON_WIDTH_IN_LETTERS : 0);
 
 // How many sets, in carousel order, the sentence keeps height for.
 const RESERVED_SETS = 4;
@@ -62,6 +72,7 @@ export function useWordMenus({
   layout,
   lead,
 }: WordMenusProps): WordMenuParts {
+  const locale = useLocalization();
   const shownSegments = lead
     ? withLead(sentence.segments, lead)
     : sentence.segments;
@@ -127,10 +138,19 @@ export function useWordMenus({
       .slice(0, RESERVED_SETS)
       .map(s => [
         s.id,
-        s.words.reduce((a, b) => (wordWidth(b) > wordWidth(a) ? b : a)).id,
+        s.words.reduce((a, b) => (wordWidth(b, s) > wordWidth(a, s) ? b : a))
+          .id,
       ])
   );
-  const filled = (id: string) => !!wordFor(sentence, id, choices[id]);
+  const filledIn = (which: Choices, id: string) =>
+    !!wordFor(sentence, id, which[id]);
+  const filled = (id: string) => filledIn(choices, id);
+  // A set's name, for screen readers: its label, translated.
+  const setName = (set: Slot) => translateText(set.label);
+  const setGroupName = (set: Slot) =>
+    set.required
+      ? translateText('{{set}} (pick one)', {set: setName(set)})
+      : setName(set);
 
   const choose = (slotId: string, wordId: string | undefined) => {
     const next = {...choices, [slotId]: wordId};
@@ -143,7 +163,13 @@ export function useWordMenus({
     onChange(next);
     const at = slots.findIndex(s => s.id === slotId);
     const word = wordFor(sentence, slotId, wordId ?? choices[slotId]);
-    setAnnouncement(word ? `${word.text} ${wordId ? 'added' : 'removed'}` : '');
+    setAnnouncement(
+      word
+        ? translateText(wordId ? '{{word}} added' : '{{word}} removed', {
+            word: translateWord(word, sentence.slots[slotId]),
+          })
+        : ''
+    );
     // A required word completes the sentence: a chime, not a tick.
     playSound(!wordId ? 'unpick' : slots[at].required ? 'complete' : 'pick');
     // Clearing a required word locks the carousel on that word's set.
@@ -227,6 +253,77 @@ export function useWordMenus({
   // Empty slots and unfilled phrases leave nothing, except the set on show,
   // whose empty slot is a dimmed blank with its phrase dimmed around it.
   // Keys carry each piece's path: an index alone repeats across phrases.
+  const renderSlot = (slotId: string, which: Choices): React.ReactNode[] => {
+    const s = sentence.slots[slotId];
+    const word = wordFor(sentence, s.id, which[s.id]);
+    if (!word) {
+      return s.id === slot.id
+        ? [
+            <WordChip
+              key={s.id}
+              sentence={sentence}
+              slotId={s.id}
+              className={classNames(
+                styles.placeholder,
+                overSlotId === s.id && styles.dropTarget
+              )}
+              aria-hidden
+              {...dropHandlers(s.id)}
+            >
+              {'\u00a0'}
+            </WordChip>,
+          ]
+        : [];
+    }
+    const chipEntrance = entranceFor(`chip:${s.id}-${word.id}`);
+    return [
+      <WordChip
+        // Keyed by word too, so a changed word remounts and replays the
+        // chip animation.
+        key={`${s.id}-${word.id}`}
+        sentence={sentence}
+        slotId={s.id}
+        className={classNames(
+          overSlotId === s.id && styles.dropTarget,
+          chipEntrance.played && styles.entrancePlayed
+        )}
+        onAnimationEnd={chipEntrance.onAnimationEnd}
+        {...dropHandlers(s.id)}
+      >
+        {disabled || !canMove || !isAvailable(s) || clusters ? (
+          <span className={styles.chipWord}>
+            <WordText word={word} slot={s} />
+          </span>
+        ) : (
+          <button
+            type="button"
+            className={styles.chipWord}
+            aria-label={translateText('{{word}}. Show {{set}} words', {
+              word: translateWord(word, s),
+              set: setName(s),
+            })}
+            onClick={() => goTo(slots.findIndex(x => x.id === s.id))}
+          >
+            <WordText word={word} slot={s} />
+          </button>
+        )}
+        <MuiIconButton
+          variant="contained"
+          color="secondary"
+          size="extraSmall"
+          className={styles.remove}
+          aria-label={translateText('Remove {{word}}', {
+            word: translateWord(word, s),
+          })}
+          disabled={disabled}
+          onClick={() => choose(s.id, undefined)}
+        >
+          <FontAwesomeV6Icon iconName="xmark" aria-hidden />
+        </MuiIconButton>
+      </WordChip>,
+    ];
+  };
+
   const renderSegments = (
     segments: Segment[],
     which: Choices,
@@ -245,69 +342,7 @@ export function useWordMenus({
         ];
       }
       if ('slot' in segment) {
-        const s = sentence.slots[segment.slot];
-        const word = wordFor(sentence, s.id, which[s.id]);
-        if (!word) {
-          return s.id === slot.id
-            ? [
-                <WordChip
-                  key={s.id}
-                  sentence={sentence}
-                  slotId={s.id}
-                  className={classNames(
-                    styles.placeholder,
-                    overSlotId === s.id && styles.dropTarget
-                  )}
-                  aria-hidden
-                  {...dropHandlers(s.id)}
-                >
-                  {'\u00a0'}
-                </WordChip>,
-              ]
-            : [];
-        }
-        const chipEntrance = entranceFor(`chip:${s.id}-${word.id}`);
-        return [
-          <WordChip
-            // Keyed by word too, so a changed word remounts and replays the
-            // chip animation.
-            key={`${s.id}-${word.id}`}
-            sentence={sentence}
-            slotId={s.id}
-            className={classNames(
-              overSlotId === s.id && styles.dropTarget,
-              chipEntrance.played && styles.entrancePlayed
-            )}
-            onAnimationEnd={chipEntrance.onAnimationEnd}
-            {...dropHandlers(s.id)}
-          >
-            {disabled || !canMove || !isAvailable(s) || clusters ? (
-              <span className={styles.chipWord}>
-                <WordText word={word} />
-              </span>
-            ) : (
-              <button
-                type="button"
-                className={styles.chipWord}
-                aria-label={`${word.text}. Show ${s.label} words`}
-                onClick={() => goTo(slots.findIndex(x => x.id === s.id))}
-              >
-                <WordText word={word} />
-              </button>
-            )}
-            <MuiIconButton
-              variant="contained"
-              color="secondary"
-              size="extraSmall"
-              className={styles.remove}
-              aria-label={`Remove ${word.text}`}
-              disabled={disabled}
-              onClick={() => choose(s.id, undefined)}
-            >
-              <FontAwesomeV6Icon iconName="xmark" aria-hidden />
-            </MuiIconButton>
-          </WordChip>,
-        ];
+        return renderSlot(segment.slot, which);
       }
       if (phraseFilled(sentence, segment.phrase, which)) {
         return renderSegments(segment.phrase, which, false, `${path}${i}.`);
@@ -316,6 +351,26 @@ export function useWordMenus({
         ? renderSegments(segment.phrase, which, true, `${path}${i}.`)
         : [];
     });
+
+  // Outside English the sentence is drawn from its translation, which may
+  // order the words differently. A phrase whose slot is on show is drawn
+  // undimmed: its words cannot be told apart in the translation.
+  const renderSentence = (which: Choices): React.ReactNode => {
+    if (isEnglish(locale)) {
+      return withPeriod(renderSegments(shownSegments, which));
+    }
+    const template = sentenceTemplate(
+      shownSegments,
+      id => filledIn(which, id) || id === slot.id,
+      phrase =>
+        phraseFilled(sentence, phrase, which) || mentions(phrase, slot.id)
+    );
+    return translateSentence(template).flatMap<React.ReactNode>((piece, i) =>
+      'slot' in piece
+        ? renderSlot(piece.slot, which)
+        : [<span key={`text${i}`}>{piece.text}</span>]
+    );
+  };
 
   // `setKey` is part of each word's entrance id. The carousel gives a set a
   // new key every time it comes into view, so the set's words animate in
@@ -348,7 +403,7 @@ export function useWordMenus({
           }}
           onClick={() => choose(set.id, chosen ? undefined : word.id)}
         >
-          <WordText word={word} />
+          <WordText word={word} slot={set} />
         </button>
       );
     });
@@ -359,19 +414,19 @@ export function useWordMenus({
   const wordsHeading = (set: Slot) =>
     set.heading && (
       <p className={styles.wordsHeading} aria-hidden>
-        {set.heading}
+        {translateText(set.heading)}
       </p>
     );
 
   const clustersNode = (
-    <div className={styles.clusters}>
+    <div className={styles.clusters} data-notranslate>
       {slots.map(
         set =>
           isAvailable(set) && (
             <div
               key={set.id}
               role="group"
-              aria-label={`${set.label}${set.required ? ' (pick one)' : ''}`}
+              aria-label={setGroupName(set)}
               className={styles.cluster}
             >
               {wordsHeading(set)}
@@ -386,18 +441,16 @@ export function useWordMenus({
     sentence: (
       <>
         {/* A hidden longest form shares the cell, so the height holds. */}
-        <div className={styles.srOnly} role="status">
+        <div className={styles.srOnly} role="status" data-notranslate>
           {announcement}
         </div>
-        <div className={styles.sentenceStack}>
-          <p className={styles.sentence}>
-            {withPeriod(renderSegments(shownSegments, choices))}
-          </p>
+        <div className={styles.sentenceStack} data-notranslate>
+          <p className={styles.sentence}>{renderSentence(choices)}</p>
           <p
             className={classNames(styles.sentence, styles.sentenceGhost)}
             aria-hidden
           >
-            {withPeriod(renderSegments(shownSegments, longestChoices))}
+            {renderSentence(longestChoices)}
           </p>
         </div>
       </>
@@ -412,6 +465,7 @@ export function useWordMenus({
               styles.carouselBox,
               layout === 'carousel' && styles.carouselTight
             )}
+            data-notranslate
           >
             <div
               className={classNames(
@@ -424,7 +478,7 @@ export function useWordMenus({
                 color="tertiary"
                 size="medium"
                 className={styles.arrow}
-                aria-label="Previous words"
+                aria-label={translateText('Previous words')}
                 disabled={!canMove || index === 0}
                 onClick={() => goTo(Math.max(0, index - 1))}
               >
@@ -457,9 +511,7 @@ export function useWordMenus({
                       )}
                       onAnimationEnd={setEntrance.onAnimationEnd}
                       role="group"
-                      aria-label={`${set.label}${
-                        set.required ? ' (pick one)' : ''
-                      }`}
+                      aria-label={setGroupName(set)}
                       aria-hidden={!inView}
                     >
                       {wordsHeading(set)}
@@ -475,7 +527,7 @@ export function useWordMenus({
                 color="tertiary"
                 size="medium"
                 className={styles.arrow}
-                aria-label="Next words"
+                aria-label={translateText('Next words')}
                 disabled={!canMove || index >= lastAvailable}
                 onClick={() => goTo(Math.min(lastAvailable, index + 1))}
               >

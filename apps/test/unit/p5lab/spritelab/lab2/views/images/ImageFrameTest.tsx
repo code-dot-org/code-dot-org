@@ -52,6 +52,36 @@ describe('ImageFrame', () => {
     expect(screen.getByRole('img', {name: 'Your picture'})).toBeTruthy();
   });
 
+  it("sizes the checkerboard as the paint tools do, and starts it at the picture's corner", () => {
+    const wide: ProjectImage = {
+      ...image,
+      props: {
+        name: 'Sprite 1',
+        sourceSize: {x: 90, y: 60},
+        pixelGridSize: 1,
+      },
+    };
+    render(<ImageFrame image={wide} />);
+    const frame = screen.getByRole('img', {name: 'Sprite 1'}).parentElement!;
+    // One square per art pixel: a tile of two is 2/90 of the frame.
+    expect(
+      parseFloat(frame.style.getPropertyValue('--checker-tile'))
+    ).toBeCloseTo(200 / 90, 6);
+    expect(frame.style.getPropertyValue('--checker-x')).toBe('0%');
+    // The picture is a sixth of the frame down: 16.67% of the frame, as a
+    // share of the frame less one tile.
+    expect(parseFloat(frame.style.getPropertyValue('--checker-y'))).toBeCloseTo(
+      100 / 6 / (1 - 2 / 90),
+      6
+    );
+  });
+
+  it('leaves the checkerboard alone for a picture of unknown size', () => {
+    render(<ImageFrame image={image} />);
+    const frame = screen.getByRole('img', {name: 'Sprite 1'}).parentElement!;
+    expect(frame.style.getPropertyValue('--checker-tile')).toBe('');
+  });
+
   it('keeps controls over the picture reachable, and reads the tip aloud', () => {
     render(
       <ImageFrame

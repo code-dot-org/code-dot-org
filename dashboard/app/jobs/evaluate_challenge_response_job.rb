@@ -14,7 +14,7 @@ require 'cdo/share_filtering'
 # is displayed at submit time — teacher view and student gallery are future
 # work — so nothing here notifies the client.
 class EvaluateChallengeResponseJob < ApplicationJob
-  MODEL = 'gpt-4o-mini-2024-07-18'.freeze
+  MODEL = SharedConstants::LESSON_DEEP_DIVE_MODEL_VERSION
 
   # Raised when OpenAI returns a non-200 response.
   class OpenaiRequestError < StandardError

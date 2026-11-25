@@ -40,8 +40,11 @@
       },
       "disableCommitMessages": true
     },
-    "require_edit_to_continue": "false"
+    "require_edit_to_continue": "false",
+    "showcase_view": "true",
+    "hide_ai_tutor": "true",
+    "long_instructions": "Look what you built! Review your final project.\r\n\r\nPress Continue when you're ready to wrap up!"
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-06T20:32:31.267+00:00\",\"changed\":[\"cloned from \\\"adaptive-HoAI26-wrap-up-showcase\\\"\"],\"cloned_from\":\"adaptive-HoAI26-wrap-up-showcase\"},{\"changed_at\":\"2026-11-06 20:32:41 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-06T20:32:31.267+00:00\",\"changed\":[\"cloned from \\\"adaptive-HoAI26-wrap-up-showcase\\\"\"],\"cloned_from\":\"adaptive-HoAI26-wrap-up-showcase\"},{\"changed_at\":\"2026-11-06 20:32:41 +0000\",\"changed\":[\"project_template_level_name\"],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 20:29:28 +0000\",\"changed\":[],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 20:31:03 +0000\",\"changed\":[],\"changed_by_id\":13506,\"changed_by_email\":\"sanchit+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

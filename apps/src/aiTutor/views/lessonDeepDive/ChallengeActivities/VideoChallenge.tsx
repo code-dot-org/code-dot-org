@@ -1,6 +1,5 @@
 import {
   Challenge,
-  ChallengeResponse,
   challengeResponseValidator,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
@@ -27,7 +26,7 @@ interface VideoChallengeProps {
   setEvaluationStatus: React.Dispatch<React.SetStateAction<string>>;
   setChallengeResponseId: React.Dispatch<React.SetStateAction<number>>;
   onSubmittableChange: (canSubmit: boolean) => void;
-  submitRef: React.MutableRefObject<(() => Promise<boolean>) | null>;
+  submitRef: React.MutableRefObject<(() => Promise<number | null>) | null>;
   resetRef: React.MutableRefObject<(() => void) | null>;
 }
 
@@ -87,7 +86,10 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         'Content-Type': 'application/json',
       })
         .then(response => response.json())
-        .then((json): ChallengeResponse => challengeResponseValidator(json))
+        .then(json => ({
+          challengeResponse: challengeResponseValidator(json),
+          attemptNumber: json.attempt_number as number,
+        }))
         .catch(error => {
           console.log(error);
           return undefined;
@@ -96,15 +98,16 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
     [challenge]
   );
 
-  const handleSubmit = async (): Promise<boolean> => {
-    if (!recordedBlob) return false;
+  const handleSubmit = async (): Promise<number | null> => {
+    if (!recordedBlob) return null;
     setIsUploading(true);
     try {
       const text = await transcribeAudio();
-      const challengeResponse = await createChallengeResponse(text);
-      if (!challengeResponse) {
+      const created = await createChallengeResponse(text);
+      if (!created) {
         throw new Error('The server did not create a challenge response.');
       }
+      const {challengeResponse, attemptNumber} = created;
       const assetId = challengeResponse.assets[0]?.id;
       if (!assetId) {
         throw new Error('The server did not return a video asset.');
@@ -125,10 +128,10 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
       // Only confirm once the upload actually succeeded; the confirmation
       // dialog in ChallengeBox keys off this.
       submitCallback(true);
-      return true;
+      return attemptNumber;
     } catch (error) {
       console.log(error);
-      return false;
+      return null;
     } finally {
       setIsUploading(false);
     }

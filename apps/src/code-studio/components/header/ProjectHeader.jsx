@@ -17,7 +17,7 @@ export default class ProjectHeader extends React.Component {
       <div style={{display: 'flex'}}>
         <EditableProjectName onChangedWidth={onChangedWidth} />
         <ProjectShare />
-        <ProjectRemix lightStyle />
+        <ProjectRemix lightStyle onChangedWidth={onChangedWidth} />
 
         {/* For Minecraft Code Connection (aka CodeBuilder) projects, add the
             option to import code from an Hour of Code share link */}

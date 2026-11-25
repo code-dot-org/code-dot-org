@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894913-f025bc7bcd70",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 12: AI's Role in Society",
+  "question": "Your town has $10,000 and four good ideas, but you cannot afford them all. Which ones do you fund, and who might be left out?\n\nSteps:\n1. Use the shape tool to mark the options you will fund. The costs must add up to $10,000 or less.\n2. Use the arrow tool to point at an option that could leave some people out.\n3. Use the text tool to write a rule that would make that option fairer.\n4. Record your voice explaining who benefits, who might be left out, and what an option you did not choose would have cost.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No shape, arrow, or text is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student's shapes add up to more than $10,000, OR no arrow is placed."
+    },
+    {
+      "level": 2,
+      "description": "Shapes mark options that total $10,000 or less AND an arrow points to an option that could leave some people out AND the typed rule is specific AND the voice recording names who benefits and who could be left out."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a cost or trade-off (such as energy, money, or access) of an option they did not choose."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894913-f025bc7bcd70-0b0cfb26",
+  "whiteboard_starter_image_alt_text": "\"Your town has $10,000 to spend. You can fund as many options as the money allows.\" Four options: A, AI tutor app for the school, $6,000: helps students who have internet at home and runs on cloud servers. B, AI that spots water-pipe leaks, $5,000: saves water for every neighborhood and needs sensors on pipes. C, free Wi-Fi in public places, $4,000: gives access to anyone, with no AI involved. D, AI chatbot for the city help line, $3,000: faster answers, English only, and fewer staff answer calls. At the bottom is a blank box labeled \"Space for your rule.\""
+}

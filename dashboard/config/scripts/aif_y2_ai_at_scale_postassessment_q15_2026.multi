@@ -1,0 +1,18 @@
+name 'aif-y2-ai-at-scale-postassessment-q15-2026'
+
+wrong 'There is not a relationship between recommendation quality and computational costs.'
+wrong 'As recommendation quality decreases, computational costs will increase.'
+wrong 'As recommendation quality increases, computational costs will decrease.'
+right 'As recommendation quality increases, computational costs will increase.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A company wants to run a neural network to recommend videos to users. The company chooses 10 possible videos to show the user, runs the network once for each of them, and then chooses to recommend the video with the highest score.
+
+The company is considering scoring 100 videos instead of 10. Which best describes how recommendation quality and computational costs relate?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Costs of AI
+MARKDOWN

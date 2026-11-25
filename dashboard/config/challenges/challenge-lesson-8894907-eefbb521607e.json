@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894907-eefbb521607e",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 6: Understanding Bias",
+  "question": "A company is about to release a new product, and you run the testing lab. Before it goes out, you need to find out whether it works for everyone, not just the people who built it.\n\nSteps:\n1. Start recording. Pick one product from the list below.\n2. Name 3 different kinds of testers, chosen because they differ in a way that matters for that product.\n3. For each tester, say what could go wrong.\n4. Say what the company should do if the product fails for one group, and why a high average success rate is not enough.\n\nProduct list:\n- An automatic soap dispenser\n- Face unlock on a phone\n- A voice assistant\n- A sleep-tracking watch",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not name a product or any testers on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names fewer than 3 testers, OR names testers without saying what could go wrong."
+    },
+    {
+      "level": 2,
+      "description": "Student names 3 different testers AND says what could go wrong for each one."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says what to do if the product fails for one group AND explains why a high average success rate is not enough."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

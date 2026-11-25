@@ -1,0 +1,11 @@
+.label {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// The header's slot is otherwise never narrower than the whole label.
+:has(> .button) {
+  min-width: 0;
+}

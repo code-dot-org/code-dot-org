@@ -54,6 +54,24 @@
   color: var(--text-neutral-quaternary);
 }
 
+.testRowLegend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.testRowSwatch {
+  flex-shrink: 0;
+  width: mixins.$test-row-marker-width;
+  height: 12px;
+  background-color: mixins.$test-row-marker-color;
+}
+
+.header .testRowLegendText {
+  color: var(--text-neutral-primary);
+}
+
 .tableContainer {
   @include mixins.data-table-flush-edges;
 

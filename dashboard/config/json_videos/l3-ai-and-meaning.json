@@ -1,0 +1,13 @@
+{
+  "key": "l3-ai-and-meaning",
+  "description": "Find out why AI can sound smart without understanding what its words mean.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l3-ai-and-meaning.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "b390a6d6-7f12-41e5-94df-5ab64033d684"
+  ]
+}

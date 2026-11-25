@@ -1,5 +1,6 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
 import Checkbox from '@code-dot-org/component-library/checkbox';
+import Tags from '@code-dot-org/component-library/tags';
 import Toggle from '@code-dot-org/component-library/toggle';
 import {Typography} from '@mui/material';
 import classNames from 'classnames';
@@ -25,7 +26,10 @@ import {
   AI_SETTINGS_SUPPORT_LINK,
   VERIFIED_TEACHER_SUPPORT_LINK,
 } from '../../constants';
-import {shouldShowAiChatEssentialAlert} from '../../helpers/aiChatAccess';
+import {
+  canToggleAiChallenges,
+  shouldShowAiChatEssentialAlert,
+} from '../../helpers/aiChatAccess';
 import {AiChatAccessLevel} from '../../types';
 
 import style from './ai-chat-access-controls.module.scss';
@@ -85,6 +89,15 @@ const AiChatAccessControls: React.FC = () => {
   const shouldShowAlert = shouldShowAiChatEssentialAlert({
     assignedAiChatToolsDependency: section.assignedAiChatToolsDependency,
     sectionAiChatAccessLevel: section.aiChatAccessLevel,
+    teacherAiChatAccessLevel,
+  });
+
+  const showChallengeToggle = canToggleAiChallenges({
+    lessonTutorAvailable: section.lessonTutorAvailable,
+    sectionAiChatAccessLevel: calculateAccessLevel(
+      accessToggle,
+      essentialOnlyCheckbox
+    ),
     teacherAiChatAccessLevel,
   });
 
@@ -150,6 +163,12 @@ const AiChatAccessControls: React.FC = () => {
         enabled: newValue,
         courseAssigned: section.courseVersionName,
         uiLocation: 'aiSettingsTeacherDashboardTab',
+      });
+      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGES_TOGGLED, {
+        section_id: section.id,
+        course_id: section.courseId,
+        unit_id: section.unitId,
+        enabled: newValue,
       });
     } catch (error) {
       setChallengeToggle(previousValue);
@@ -229,22 +248,23 @@ const AiChatAccessControls: React.FC = () => {
                 disabled={isCurrentUserAccessDisabled}
               />
             </div>
-            {accessToggle &&
-              !isCurrentUserAccessDisabled &&
-              section.lessonTutorAvailable && (
-                <div className={style.rowContainer}>
+            {showChallengeToggle && (
+              <div className={style.rowContainer}>
+                <div className={style.labelWithTag}>
                   <Typography className={style.semiBold} variant="body2">
                     AI Tutor+ Challenges
                   </Typography>
-                  <Toggle
-                    id="uitest-ai-challenge-section-toggle"
-                    name="aiChallengeSectionToggle"
-                    aria-label="AI Tutor+ Challenges"
-                    checked={challengeToggle}
-                    onChange={handleChallengeToggle}
-                  />
+                  <Tags tagsList={[{label: 'New', color: 'pink'}]} size="s" />
                 </div>
-              )}
+                <Toggle
+                  id="uitest-ai-challenge-section-toggle"
+                  name="aiChallengeSectionToggle"
+                  aria-label="AI Tutor+ Challenges"
+                  checked={challengeToggle}
+                  onChange={handleChallengeToggle}
+                />
+              </div>
+            )}
           </>
         )}
       </div>

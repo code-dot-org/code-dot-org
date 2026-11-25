@@ -27,13 +27,13 @@ Building AI Systems is a year-long course for high school students, built as par
         <li>Read and reason through foundational Python: variables, functions, and loops, well enough to support students writing it for the first time.</li><br>
         <li>Connect hands-on activities like hill climbing, decision trees, and debugging exercises to the reasoning skills they build, not just the code that results.</li><br>
         <li>Recognize where rule-based, logic-driven AI breaks down, and why that limitation sets up the shift to machine learning in Unit 2.</li><br>
-        <li>Understand how AI Foundations Year 2 aligns to the Microsoft Azure AI-901 certification, so you know which concepts carry exam weight and which don't.</li>
+        <li>Understand how Building AI Systems aligns to the Microsoft Azure AI-901 certification, so you know which concepts carry exam weight and which don't.</li>
     </ul>
 </div>
 
 **Suggested Total Time:** 120 minutes
 
-**Lesson One Suggested Time:** 10 minutes
+**Section One Suggested Time:** 10 minutes
 
 ---
 
@@ -43,5 +43,10 @@ CodeAI values and is responsive to feedback. Please fill out the pre-survey to t
 
 <div style="text-align: left;">
 <a class="btn btn-large btn-primary" href="[INSERT AIF Y2 PRE-SURVEY LINK]" target="_blank" rel="noopener noreferrer">Take the pre-survey</a>
+</div>
+<br>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px;">
+<p>👋 <b>New to the course?</b> If you haven't done <b>Getting Started with Building AI Systems</b> yet, consider starting there to get an overview of the entire semester and platform tools.</p>
 </div>
 MARKDOWN

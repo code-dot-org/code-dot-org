@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q6-2026'
+
+right 'More problems raise the prediction, and more sleep lowers it.'
+wrong 'More problems lower the prediction, and more sleep raises it.'
+wrong 'More problems and more sleep both raise the prediction.'
+wrong 'More problems and more sleep both lower the prediction.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+In a simple neural network that predicts how many minutes a student will need to finish their homework, each input connects directly to the output. The input “number of problems” has a weight of 4, and the input “hours of sleep last night” has a weight of -2. Which statement best describes how these inputs affect the output?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Neural Networks
+MARKDOWN

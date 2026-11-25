@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894903-ffa1c1b8533a",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 2: Beyond Words",
+  "question": "A radio announcer can only use words. A TV reporter can show the picture. Same scene, two jobs. Which one tells the story better?\n\nSteps:\n1. Start recording. Pick one scene from the list below.\n2. Be the radio announcer: describe the scene in 15 seconds using only words.\n3. Be the TV reporter: show the scene for 10 seconds using only gestures and facial expressions, and say no more than 5 words.\n4. Tell the camera one thing the words did better and one thing the picture did better.\n\nScene list:\n- A thunderstorm seen from a window\n- A dog catching a flying disc at the park\n- A crowded train platform in the morning\n- A surprise party the moment the guest walks in",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not perform either version on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student performs only one of the two versions (radio or TV)."
+    },
+    {
+      "level": 2,
+      "description": "Student performs both versions AND names at least one thing words did better or one thing the picture did better."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names one thing words did better AND one thing the picture did better, each with a specific example from the scene."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

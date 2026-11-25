@@ -167,6 +167,7 @@ const DanceView: React.FunctionComponent<{
 
   const guideMode = levelProperties.guideMode;
   const musicChannelId = useMusicProject();
+  const isInUnit = useAppSelector(state => !!state.progress.scriptName);
   const usingMusicProject =
     guideMode === 'instructions' ||
     (guideMode === 'aiCodeGenerate' && !!musicChannelId);
@@ -533,7 +534,8 @@ const DanceView: React.FunctionComponent<{
         .loadProject(
           guideMode === 'instructions'
             ? defaultMetadata.channelId
-            : musicChannelId!
+            : musicChannelId!,
+          isInUnit
         )
         .then(() => setLoadedMusicProject(true))
         .catch(error => {
@@ -546,7 +548,7 @@ const DanceView: React.FunctionComponent<{
           );
         });
     }
-  }, [usingMusicProject, musicChannelId, guideMode, dispatch]);
+  }, [usingMusicProject, musicChannelId, guideMode, isInUnit, dispatch]);
 
   // Set up the ProgramExecutor
   useEffect(() => {

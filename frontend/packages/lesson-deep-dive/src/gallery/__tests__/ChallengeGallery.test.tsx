@@ -383,4 +383,76 @@ describe('ChallengeGallery', () => {
       ).toBeInTheDocument(),
     );
   });
+
+  describe('analytics callbacks', () => {
+    it('reports the page view once with the initial section and unit', async () => {
+      stubFetches([videoResponse]);
+      const onViewed = vi.fn();
+
+      render(
+        <ChallengeGallery
+          tutorGalleryData={teacherGalleryData}
+          onViewed={onViewed}
+        />,
+      );
+      await waitFor(() =>
+        expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
+      );
+
+      expect(onViewed).toHaveBeenCalledTimes(1);
+      expect(onViewed).toHaveBeenCalledWith(5, 100);
+    });
+
+    it('reports a visibility toggle after the approve request', async () => {
+      mockSetApproved.mockResolvedValue(undefined);
+      stubFetches([videoResponse]);
+      const onVisibilityToggled = vi.fn();
+
+      render(
+        <ChallengeGallery
+          tutorGalleryData={teacherGalleryData}
+          onVisibilityToggled={onVisibilityToggled}
+        />,
+      );
+      await waitFor(() =>
+        expect(screen.getByText('Ada Lovelace')).toBeInTheDocument(),
+      );
+      await userEvent.click(
+        screen.getByRole('checkbox', {name: /Visible for students/}),
+      );
+
+      await waitFor(() =>
+        expect(onVisibilityToggled).toHaveBeenCalledWith(5, 7, true),
+      );
+    });
+
+    it('reports a reaction added on the project page', async () => {
+      mockDetail.mockResolvedValue(whiteboardDetail);
+      stubFetches([whiteboardResponse]);
+      mockAddReaction.mockResolvedValue([
+        {emoji: 'heart', count: 1, reacted: true},
+      ]);
+      const onReactionAdded = vi.fn();
+
+      render(
+        <ChallengeGallery
+          tutorGalleryData={teacherGalleryData}
+          onReactionAdded={onReactionAdded}
+        />,
+      );
+      await waitFor(() =>
+        expect(screen.getByText('Grace Hopper')).toBeInTheDocument(),
+      );
+      fireEvent.click(screen.getByRole('link', {name: 'Grace Hopper'}));
+      await waitFor(() =>
+        expect(
+          screen.getByText('Project Prompt: Draw a network.'),
+        ).toBeInTheDocument(),
+      );
+      fireEvent.click(screen.getByRole('button', {name: 'Add reaction'}));
+      fireEvent.click(screen.getByRole('menuitem', {name: 'Heart'}));
+
+      await waitFor(() => expect(onReactionAdded).toHaveBeenCalledWith(5, 8));
+    });
+  });
 });

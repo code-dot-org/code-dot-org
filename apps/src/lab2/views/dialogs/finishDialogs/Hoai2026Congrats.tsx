@@ -6,9 +6,11 @@ import {
   Typography,
 } from '@mui/material';
 import classNames from 'classnames';
-import React, {useId} from 'react';
+import React, {useEffect, useId} from 'react';
 
 import {ProjectType} from '@cdo/apps/lab2/types';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import studentsPicture from '@cdo/static/hoai2026/finish-dialog-students.gif';
 
 import {CopyToClipboardButton} from '../CopyToClipboardButton';
@@ -20,8 +22,22 @@ const DESTINATIONS = {
   elementary: 'https://studio.code.org/courses/k5-ai-data-2024/units/1/reset',
   middleSchool:
     'https://code.org/en-US/curriculum/artificial-intelligence-discoveries',
-  professionalLearning: 'https://code.org/en-US/professional-learning',
+  elevate: 'https://aka.ms/ElevateHourofAI',
 };
+
+type FinishDialogAction =
+  | 'shown'
+  | 'close'
+  | 'keep_playing'
+  | 'open_quest_builder_standalone'
+  | 'elementary'
+  | 'middle_school'
+  | 'copy_link'
+  | 'certificate'
+  | 'elevate_hour_of_ai';
+
+const report = (action: FinishDialogAction) =>
+  analyticsReporter.sendEvent(EVENTS.HOAI2026_FINISH_DIALOG, {action}, true);
 
 /** Button props that make an external link of a destination, in a new tab. */
 function linkProps(href: string): Partial<MuiButtonProps> {
@@ -36,11 +52,13 @@ const Resource: React.FunctionComponent<{
   grade: string;
   name: string;
   href: string;
-}> = ({grade, name, href}) => (
+  action: FinishDialogAction;
+}> = ({grade, name, href, action}) => (
   <MuiButton
     variant="text"
     className={styles.resource}
     endIcon={<ExternalIcon />}
+    onClick={() => report(action)}
     {...linkProps(href)}
   >
     <span className={styles.resourceText}>
@@ -75,7 +93,7 @@ const Offer: React.FunctionComponent<{
       <Typography variant="body2" className={styles.offerText}>
         {text}
       </Typography>
-      {children}
+      <div className={styles.offerAction}>{children}</div>
     </section>
   );
 };
@@ -108,146 +126,166 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
   certificateUrl,
   shareDisabled = false,
   showShareSpinner = false,
-}) => (
-  <Modal
-    className={styles.dialog}
-    title="Congratulations!"
-    description="You made sprites with AI, built a world, and coded your own game."
-    onClose={onClose}
-    closeLabel="Close"
-    // The one button is the quiet kind: it keeps the student where they are.
-    primaryButtonProps={{
-      children: 'Keep playing',
-      variant: 'outlined',
-      color: 'secondary',
-      size: 'large',
-      onClick: onClose,
-    }}
-    customContent={
-      <div className={styles.body}>
-        <div className={styles.cards}>
-          <section
-            className={classNames(styles.card, styles.students)}
-            aria-labelledby="hoai2026-congrats-students"
-          >
-            <Typography variant="overline2" className={styles.eyebrow}>
-              For students
-            </Typography>
-            <Typography
-              id="hoai2026-congrats-students"
-              component="h3"
-              variant="h4"
-              className={styles.cardTitle}
+}) => {
+  useEffect(() => {
+    report('shown');
+  }, []);
+  return (
+    <Modal
+      className={styles.dialog}
+      title="Congratulations!"
+      description="You made sprites with AI, built a world, and coded your own game."
+      onClose={() => {
+        report('close');
+        onClose();
+      }}
+      closeLabel="Close"
+      primaryButtonProps={{
+        children: 'Keep playing',
+        variant: 'outlined',
+        color: 'secondary',
+        size: 'large',
+        onClick: () => {
+          report('keep_playing');
+          onClose();
+        },
+      }}
+      customContent={
+        <div className={styles.body}>
+          <div className={styles.cards}>
+            <section
+              className={classNames(styles.card, styles.students)}
+              aria-labelledby="hoai2026-congrats-students"
             >
-              Discover even more blocks in Sprite Lab
-            </Typography>
-            <div>
-              {/* A remix of this game, as the header's Remix button makes;
-                held while the project may not be remixed. */}
-              <MuiButton
-                variant="contained"
-                color="white"
-                size="large"
-                className={styles.open}
-                endIcon={
-                  <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
-                }
-                disabled={!onRemix || shareDisabled}
-                onClick={onRemix}
-              >
-                Open Sprite Lab
-              </MuiButton>
-            </div>
-            <div className={styles.picture}>
-              <img src={studentsPicture} alt="" />
-            </div>
-          </section>
-          <section
-            className={classNames(styles.card, styles.teachers)}
-            aria-labelledby="hoai2026-congrats-teachers"
-          >
-            <Typography variant="overline2" className={styles.eyebrow}>
-              For teachers
-            </Typography>
-            <Typography
-              id="hoai2026-congrats-teachers"
-              component="h3"
-              variant="h4"
-              className={styles.cardTitle}
-            >
-              Bring AI to your classroom
-            </Typography>
-            <div className={styles.resources}>
-              <Resource
-                grade="Elementary"
-                name="How AI Makes Decisions"
-                href={DESTINATIONS.elementary}
-              />
-              <Resource
-                grade="Middle school"
-                name="AI Discoveries"
-                href={DESTINATIONS.middleSchool}
-              />
-            </div>
-          </section>
-        </div>
-        <div className={styles.offers}>
-          <Offer
-            icon="share"
-            title="Share your game"
-            text="Send it to friends to play."
-          >
-            {shareUrl && projectType ? (
-              <CopyToClipboardButton
-                shareUrl={shareUrl}
-                projectType={projectType}
-                label="Copy link"
-                iconName="link"
-                copiedIconName="check"
-                className={styles.copyLink}
-                disabled={shareDisabled}
-                busy={showShareSpinner}
-              />
-            ) : (
-              <Typography variant="body2" className={styles.offerText}>
-                This game can't be shared right now.
+              <Typography variant="overline2" className={styles.eyebrow}>
+                For students
               </Typography>
-            )}
-          </Offer>
-          <Offer
-            icon="award"
-            title="Get your certificate"
-            text="Print it with your name on it."
-          >
-            {/* The unit's own finish page, so it opens in place of the lab
-              as the lab's Finish would; held while the unit has none. */}
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              href={certificateUrl}
-              disabled={!certificateUrl}
+              <Typography
+                id="hoai2026-congrats-students"
+                component="h3"
+                variant="h4"
+                className={styles.cardTitle}
+              >
+                Discover more in Quest Builder
+              </Typography>
+              <div>
+                <MuiButton
+                  variant="contained"
+                  color="white"
+                  size="large"
+                  className={styles.open}
+                  endIcon={
+                    <FontAwesomeV6Icon
+                      iconName="arrow-right"
+                      iconStyle="solid"
+                    />
+                  }
+                  disabled={!onRemix || shareDisabled}
+                  onClick={() => {
+                    report('open_quest_builder_standalone');
+                    onRemix?.();
+                  }}
+                >
+                  Remix your project
+                </MuiButton>
+              </div>
+              <div className={styles.picture}>
+                <img src={studentsPicture} alt="" />
+              </div>
+            </section>
+            <section
+              className={classNames(styles.card, styles.teachers)}
+              aria-labelledby="hoai2026-congrats-teachers"
             >
-              Certificate
-            </MuiButton>
-          </Offer>
-          <Offer
-            icon="lightbulb"
-            title="Professional learning"
-            text="Learn to teach computer science and AI."
-          >
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              endIcon={<ExternalIcon />}
-              {...linkProps(DESTINATIONS.professionalLearning)}
+              <Typography variant="overline2" className={styles.eyebrow}>
+                For teachers
+              </Typography>
+              <Typography
+                id="hoai2026-congrats-teachers"
+                component="h3"
+                variant="h4"
+                className={styles.cardTitle}
+              >
+                Bring AI to your classroom
+              </Typography>
+              <div className={styles.resources}>
+                <Resource
+                  grade="Elementary"
+                  name="How AI Makes Decisions"
+                  href={DESTINATIONS.elementary}
+                  action="elementary"
+                />
+                <Resource
+                  grade="Middle school"
+                  name="AI Discoveries"
+                  href={DESTINATIONS.middleSchool}
+                  action="middle_school"
+                />
+              </div>
+            </section>
+          </div>
+          <div className={styles.offers}>
+            <Offer
+              icon="share"
+              title="Share your game"
+              text="Send it to friends to play."
             >
-              Learn more
-            </MuiButton>
-          </Offer>
+              {shareUrl && projectType ? (
+                <CopyToClipboardButton
+                  shareUrl={shareUrl}
+                  projectType={projectType}
+                  label="Copy link"
+                  iconName="link"
+                  copiedIconName="check"
+                  className={styles.copyLink}
+                  disabled={shareDisabled}
+                  busy={showShareSpinner}
+                  onCopy={() => report('copy_link')}
+                />
+              ) : (
+                <Typography variant="body3" className={styles.cannotShare}>
+                  <FontAwesomeV6Icon iconName="circle-info" iconStyle="solid" />
+                  This game can't be shared right now.
+                </Typography>
+              )}
+            </Offer>
+            <Offer
+              icon="award"
+              title="Get your certificate"
+              text="Print it with your name on it."
+            >
+              {/* Opens in the same tab, as the lab's Finish button does, because
+              this is the unit's own finish page. */}
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                href={certificateUrl}
+                disabled={!certificateUrl}
+                onClick={() => report('certificate')}
+              >
+                Certificate
+              </MuiButton>
+            </Offer>
+            <Offer
+              icon="lightbulb"
+              title="Elevate your Hour of AI"
+              text="Prepare to lead an Hour of AI."
+            >
+              <MuiButton
+                variant="outlined"
+                color="secondary"
+                endIcon={<ExternalIcon />}
+                onClick={() => report('elevate_hour_of_ai')}
+                {...linkProps(DESTINATIONS.elevate)}
+              >
+                Learn more
+              </MuiButton>
+            </Offer>
+          </div>
         </div>
-      </div>
-    }
-  />
-);
+      }
+    />
+  );
+};
 
 export default Hoai2026Congrats;

@@ -1,0 +1,63 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T18:34:40.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "example",
+        "explainCode",
+        "hint",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "first_name = \"Jordan\"\nnickname = first_name[0:2]\nprint(\"Your nickname is: \" + nickname)",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "long_instructions": "### Modify: Debug\r\n\r\nThe code is supposed to print the nickname \"Jor\" but it doesn't!\r\n\r\nFind the bug and fix it.",
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMqMbdw9PMYZqxN0\nvSZqLZi9bbItWm409LP2iI86ustAb0hrTmBr0zrVycv1BS0q8SmU3kJ/Jn61\nezeM75v5d2xh1fIfrKvTSKgklmai0J8ulocWq+kaTedKU97bmkZL4rGMHNbq\nU9jc2MQGF7vj2VkhRvbxDOsaZJziEW+RUkLbfiW5FcvPT2oPejgnYY8muVej\n7LC2OaUrStnApmXemgjm23qOgte1aOiH+nSLbQDsaArg+jPZehHXrZ+SQM9N\ncDY+a54d+KShoYSQx4iiQsYxSncKn0rDoV36bUbPc689tCXFl4QdKq+/lSyF\n3OVk4Q5IGMrr0umriz/LkGk0TmS6\n",
+    "display_name": "The Wrong Nickname",
+    "bubble_choice_description": "Fix a nickname generator that's grabbing the wrong letters.",
+    "thumbnail_url": "https://images.code.org/d93fa64f1202b79223daa60c1cf47f78-id-card.png",
+    "validation_file": {
+      "id": "1",
+      "name": "test.py",
+      "contents": "import contextlib\nimport io\nfrom unittest import TestCase\n\n\nclass TestDebugNickname(TestCase):\n    @classmethod\n    def setUpClass(cls):\n        \"\"\"Run the student's code once and capture output\"\"\"\n        with open(\"main.py\") as f:\n            cls.source = f.read()\n        cls.namespace = {}\n        stdout = io.StringIO()\n        cls.run_error = None\n        try:\n            with contextlib.redirect_stdout(stdout):\n                exec(compile(cls.source, \"main.py\", \"exec\"), cls.namespace)\n        except Exception as e:\n            cls.run_error = e\n        cls.stdout_text = stdout.getvalue()\n\n    def test_runs_without_error(self):\n        \"\"\"Runs without an error\"\"\"\n        self.assertIsNone(\n            self.run_error,\n            f\"Your program raised an error while running: {self.run_error}.\"\n        )\n\n    def test_prints_correct_nickname(self):\n        \"\"\"Prints the nickname 'Jor'\"\"\"\n        if self.run_error is not None:\n            self.skipTest(\"Fix the error above first.\")\n        self.assertTrue(\n            any(\"Your nickname is: Jor\" in line for line in self.stdout_text.splitlines()),\n            f\"Expected to see 'Your nickname is: Jor' printed, but got: {self.stdout_text.strip()}. \"\n            \"Check the slice on the nickname line -- how many characters is it currently grabbing from first_name?\"\n        )",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "name_suffix": "_pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20T18:34:40.697+00:00\",\"changed\":[\"cloned from \\\"csp-unit1-lesson25-modify-debug-b_27_28\\\"\"],\"cloned_from\":\"csp-unit1-lesson25-modify-debug-b_27_28\"}]"
+}]]></config>
+</Pythonlab>

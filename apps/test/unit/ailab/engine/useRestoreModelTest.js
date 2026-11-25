@@ -119,6 +119,15 @@ test('rebuilds nothing when the project describes no run', () => {
   expect(store.getState().currentPanel).toBe('datasetView');
 });
 
+test('ignores a saved run on a level that only shows the dataset', () => {
+  store.dispatch(setMode({hideTestingView: true}));
+
+  const rendered = openLab(savedAfterTraining());
+
+  expect(rendered.trainingData().trainedModel).toBeUndefined();
+  expect(store.getState().currentPanel).toBe('datasetView');
+});
+
 test('rebuilds rather than retrains on a pretrained level', () => {
   const saved = savedAfterTraining();
   store.dispatch(setMode({pretrained: true}));

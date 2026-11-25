@@ -1,0 +1,60 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T18:36:50.000Z",
+  "level_num": "custom",
+  "user_id": 23870,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "You are a robotics engineer on the Mars rover team. The program holds the twelve logged practice drives and creates an untrained speed network: a scaler followed by one neuron. It still needs to be trained on the drives and asked for two predictions.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Train the network on the inputs (the drives) and the outputs (the speeds).\r\n2. Predict the speed for drive 1 (rock height 2, ground slope 10) and drive 2 (rock height 4, ground slope 30), and print each prediction beside what the engineers’ model predicted: 62 and 14.\r\n3. Run the program. The rover’s log shows it managed 68 on drive 1 and 36 on drive 2. Which model predicted the drives better, the engineers’ or the trained one?\r\n\r\nIf you get stuck, you can ask AI Tutor for help with training the network and making a prediction.\r\n\r\n**💻 Coding Tip**\r\n\r\nUse `model.fit` to train the network on a list of inputs and a list of outputs. If `x` is one drive, written as a list of its two readings, `model.predict([x])[0]` returns the network’s prediction as a number, and round turns it into a whole number for printing.\r\n",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "documentation",
+        "explainCode",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "from sklearn.linear_model import SGDRegressor\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import make_pipeline\n\n# Twelve practice drives: [rock height (inches), ground slope (degrees)]\ninputs = [[0, 0], [3, 0], [0, 20], [1, 5], [3, 10], [4, 15],\n          [5, 20], [6, 30], [2, 25], [1, 30], [5, 5], [0, 10]]\n\n# The speed that got the rover through each drive (meters per hour)\noutputs = [90, 72, 70, 79, 62, 51, 40, 24, 53, 54, 55, 80]\n\n# This line creates a new, untrained network: a scaler, then one neuron\nmodel = make_pipeline(StandardScaler(), SGDRegressor())\n\n# TODO 1: Train the network on the drives\n\n# TODO 2: Predict and print the speed for drives 1 and 2\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "1",
+      "name": "validation.py",
+      "contents": "import contextlib\nimport io\nimport re\nfrom unittest import TestCase\n\nfrom sklearn.exceptions import NotFittedError\nfrom sklearn.utils.validation import check_is_fitted\nfrom unittest_runner import ValidationProtocol\n\n\ndef load_student_program():\n    \"\"\"Imports main into test, preventing additional output\"\"\"\n    with contextlib.redirect_stdout(io.StringIO()):\n        import main\n    return main\n\n\nclass TestSpeedNetwork(TestCase):\n    longMessage = False\n\n    def test_model_is_trained(self):\n        \"\"\"The network is trained\"\"\"\n        try:\n            check_is_fitted(load_student_program().model)\n        except NotFittedError:\n            self.fail(\"The network hasn't been trained yet\")\n\n    def test_print_drive_1(self):\n        \"\"\"Prints network's prediction for drive 1\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        printed = {round(float(n)) for n in re.findall(r\"-?\\d+(?:\\.\\d+)?\", output)}\n        self.assertIn(68, printed, \"Output doesn't include correct prediction for drive 1\")\n\n    def test_print_drive_2(self):\n        \"\"\"Prints network's prediction for drive 2\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        printed = {round(float(n)) for n in re.findall(r\"-?\\d+(?:\\.\\d+)?\", output)}\n        self.assertIn(36, printed, \"Output doesn't include correct prediction for drive 2\")\n",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFXFU4wUoGwMZZd5XD39qeii5wGPevnxczbgEwyFi\nWMD1VtUw+hiun2p9xPlDbE2m33rSwIF1oO1W9B9lPC7EzMrvo0yUe9qa3lNr\n1WbulZyilP1tOAPRNDLLGX4iChRSPHnj6+8UqCv4UvZITGcmvRqh2gzrjnEz\n84odu62AprJpwbIdujJLg5Qeys89rdlxhZb2dMR3RQQVsNqI9lfDdYoFJyop\nNYJ301NpsRT9oL093ugMws0iLlyYa+9TF3tLrsXuCFPse96Rtm9LCs7FNtRy\nCZ7chOcL4cpFPTWpoeM+p5IZ06rhz597xA5CF+E7jg58zFBexgpdSKD2VzPS\npq4pm7ZjBs1XgmIqcWsXaOFr7ut3AqfCOaxAB4Jo6OFImCqz90o8jFzioutF\nAGCFMbVXlkoKC0dafJf0rdlOYBf4chTCb3hYcU4sWmB7EU2GEv6dkh455ApP\nfUmhYmCr2bPIfBIlRJ/njE6iHLqrVX5E1dZlIa3VZvS4YRqX3ZT9aqvT58Py\nDruH6f4YAqMO9CIAfVEqb+UdnvhqSJi81vXeNhqBgOcTAHBs2z1DHHaqUXBp\nno4LLosRx9zauWjz9advKtxs7KF/ZiywYmjKmrhwlWUdVYDceoEgQlJUe+EU\nTuGsADVYqcPxwdRHD48YMO0q8PGoc5Lf1OPhQ0cExbQkbwj2xjSqRvf77S4Q\np3KaELTZ8XLJiXpnSbLVE1308dNQ2BMuC4HLGzB982tTeia/LeMJ4ucFU4Wg\nL7A0YIKZwHKe+PtiLXuLdQ/CdLlCWT5APLhs6M6+7gYgt7J73ABI+per6r6J\nZs2zPrNKadZfOyk+RZ/ODnaeYBGZfpZJOpF9pwn9W92aXSX94IItqugHVSqT\nXukrUVr7YRcVa82ZOuUsZKrp/QmYclhu3UzPmxpPqNiC+u3rc+67LAtwSyXx\nGI5jqYDQCTWmPPd0IPrWUbXF8ICI5d614XCA7idWbowvbuL5uw+xhcVoUYob\noE90teFuPNBDSL/vxvWe+a8EauLt+lUaUUJn1DXZFISw5ssrTclf9POL8wcB\nhrDscPr4l2DAoz0jWKmiYJinRalhj3qjHm0AwuzhvA9JxxYaxOLNx6tExqdR\nWV4LJdmjLmPEY+9aiSwv2zjoxin7oPyOB7XybDODDNK7IqadE0YFwsprmP4e\n5lj/ZdrWt5TTekg1TS5GNZ08iB6OQz87QMcBbAP2yF/uFv6XMyfO1dLhPwal\ncF7IHA2Pds8HV3EqWHK+VWnA9qc3IEaseNlRCIu7Ug6Cse5U/9HPZd+cqcBT\ncFdnWHfCsTureW8ey3gYbyZCtBZcN2KKPmEZV9PncC2fI6BVcuV8zR19f+st\nIsFiqLg=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 18:38:57 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 18:39:11 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 18:39:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"},{\"changed_at\":\"2026-11-20 18:40:21 +0000\",\"changed\":[],\"changed_by_id\":23870,\"changed_by_email\":\"carter.zenke@code.org\"}]"
+}]]></config>
+</Pythonlab>

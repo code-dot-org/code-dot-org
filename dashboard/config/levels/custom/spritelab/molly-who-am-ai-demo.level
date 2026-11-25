@@ -1,0 +1,1321 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2026-11-19T20:09:41.000Z",
+  "level_num": "custom",
+  "user_id": 1054,
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "true",
+    "show_type_hints": true,
+    "hide_custom_blocks": true,
+    "all_animations_single_frame": "true",
+    "use_modal_function_editor": "true",
+    "standalone_app_name": "spritelab",
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "## Sample \"Who Am AI\" Project",
+    "submittable": "false",
+    "uses_lab2": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "start_in_animation_tab": "false",
+    "mini_toolbox": "false",
+    "hide_pause_button": "false",
+    "enable_big_playspace": "false",
+    "level_mode": {
+      "kind": "freeplay",
+      "enableImageUpload": true
+    },
+    "start_sources": {
+      "animations": {
+        "orderedKeys": [
+          "01493db2-20c0-46d2-a5a2-b80e6f9be62f",
+          "ef1e82ef-4ad3-453d-880c-291b58667d5f"
+        ],
+        "propsByKey": {
+          "01493db2-20c0-46d2-a5a2-b80e6f9be62f": {
+            "name": "Sprite 2",
+            "sourceUrl": "/level_starter_assets/molly-who-am-ai-demo/uuid/6e52f6ce-c061-414d-ae58-783c469ebe89.png",
+            "frameSize": {
+              "x": 512,
+              "y": 512
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+
+            ],
+            "subject": "character",
+            "trimmed": false,
+            "edited": false
+          },
+          "ef1e82ef-4ad3-453d-880c-291b58667d5f": {
+            "name": "Sprite 1",
+            "sourceUrl": "/level_starter_assets/molly-who-am-ai-demo/uuid/97de9386-9082-45e7-81bb-f51355832ef1.png",
+            "frameSize": {
+              "x": 512,
+              "y": 512
+            },
+            "frameCount": 1,
+            "looping": true,
+            "frameDelay": 2,
+            "categories": [
+
+            ],
+            "subject": "character",
+            "trimmed": false,
+            "edited": false
+          }
+        }
+      },
+      "source": {
+        "blocks": {
+          "blocks": [
+            {
+              "type": "spritelab2_whenRun",
+              "x": 20,
+              "y": 20,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "scenes": [
+        {
+          "id": "scene-1",
+          "name": "Scene 1",
+          "source": {
+            "variables": [
+              {
+                "name": "questions_left",
+                "id": "3$j.|G%7q]g}{WTGq:B)"
+              },
+              {
+                "name": "question",
+                "id": "ER#lkC1^/^g?M!*G}?W@"
+              },
+              {
+                "name": "answer",
+                "id": "b*o;e/h:e5/f8#g(FH{j"
+              },
+              {
+                "name": "ask_or_guess",
+                "id": "JW6iHr%Lk0Ta_2|{*ppF"
+              },
+              {
+                "name": "ai_answer",
+                "id": "~aGKE;f0WG*[;79E}?n}"
+              }
+            ],
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "L|zxKA2vj!`4FrbIx*:O",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_makeNewSpriteAnon",
+                      "id": ".;Ng(;vnXBLs+~Kb;FDd",
+                      "fields": {
+                        "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Sprite 1\"</field>"
+                      },
+                      "inputs": {
+                        "LOCATION": {
+                          "block": {
+                            "type": "gamelab_location_picker",
+                            "id": ":4@JC|fPEmk?%XEf[2W:",
+                            "fields": {
+                              "LOCATION": null
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_setSystemPrompt",
+                          "id": "M@{wpiNgJihS~.T|6bP[",
+                          "inputs": {
+                            "PROMPT": {
+                              "block": {
+                                "type": "text",
+                                "id": "!!^DIs6hT1N:WQ)7BH)~",
+                                "fields": {
+                                  "TEXT": "Answer the question as if you are an astronaut. We are playing a 20-questions like game. Answer the question you are asked in 1 sentence or less. Never say that you are an astronaut."
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "variables_set",
+                              "id": "/O1wew4*5^GlPz_1{p#7",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "3$j.|G%7q]g}{WTGq:B)"
+                                }
+                              },
+                              "inputs": {
+                                "VALUE": {
+                                  "block": {
+                                    "type": "math_number",
+                                    "id": "G|j/=G,pELG[:71tyl2J",
+                                    "fields": {
+                                      "NUM": 5
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "gamelab_setPrompt",
+                                  "id": "xw$qSIopr^bn1l;d;l)Z",
+                                  "inputs": {
+                                    "QUESTION": {
+                                      "block": {
+                                        "type": "text",
+                                        "id": "@d#lDTa~J-IP@SH9J#w)",
+                                        "fields": {
+                                          "TEXT": "Ask me a question!"
+                                        }
+                                      }
+                                    },
+                                    "VAR": {
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "}C#hOX2YlF*Jy2zr)}g$",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "ER#lkC1^/^g?M!*G}?W@"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "A9T%=`e)P*XTn{ylORhp",
+                  "x": 25,
+                  "y": 278,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "}[t_LKT}(2LA+[v:9kE~",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "ER#lkC1^/^g?M!*G}?W@"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "spritelab2_askAI",
+                      "id": "Xgcz@+2Z9zaD^saiY:Q{",
+                      "inputs": {
+                        "PROMPT": {
+                          "block": {
+                            "type": "text_join_simple",
+                            "id": "T9BI{+;0oF~ptzk#aVjH",
+                            "extraState": {
+                              "itemCount": 2
+                            },
+                            "inputs": {
+                              "ADD0": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "ItJ=0T(Y?DYb%(yfCO[E",
+                                  "fields": {
+                                    "TEXT": "The user's question for the astronaut is: "
+                                  }
+                                }
+                              },
+                              "ADD1": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "jR0#HTvQqWa3-Skz+%m_",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "ER#lkC1^/^g?M!*G}?W@"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "VAR": {
+                          "block": {
+                            "type": "variables_get",
+                            "id": "eVV{1;m2cg=y#n9!d)r:",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "~aGKE;f0WG*[;79E}?n}"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "LDctlvzuS]xSRlMj[i$J",
+                  "x": 1231,
+                  "y": 111,
+                  "extraState": {
+                    "procedureId": "Abwhd)4Y.[`F|.=f`{|$",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true,
+                    "userCreated": true
+                  },
+                  "fields": {
+                    "NAME": "prompt_for_guess"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "gamelab_setPromptWithChoices",
+                        "id": "hbBEYm42eOJ,pBRMuy~g",
+                        "inputs": {
+                          "QUESTION": {
+                            "block": {
+                              "type": "text",
+                              "id": ")m34-(YasCb^8tS$)VGa",
+                              "fields": {
+                                "TEXT": "Who am I?"
+                              }
+                            }
+                          },
+                          "VAR": {
+                            "block": {
+                              "type": "variables_get",
+                              "id": "`JX03{rF*-JvFi(-H.(M",
+                              "extraState": {
+                              },
+                              "fields": {
+                                "VAR": {
+                                  "id": "b*o;e/h:e5/f8#g(FH{j"
+                                }
+                              }
+                            }
+                          },
+                          "A": {
+                            "block": {
+                              "type": "text",
+                              "id": "BpiKb#T;+S%w5p?{t/QB",
+                              "fields": {
+                                "TEXT": "An engineer"
+                              }
+                            }
+                          },
+                          "B": {
+                            "block": {
+                              "type": "text",
+                              "id": "+;#%w@7x~/B4cUWaamYV",
+                              "fields": {
+                                "TEXT": "An astronaut"
+                              }
+                            }
+                          },
+                          "C": {
+                            "block": {
+                              "type": "text",
+                              "id": "xB;`e.t~d1vYf[M.u@]Y",
+                              "fields": {
+                                "TEXT": "A doctor"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "37)xE4,TAuy~gsFEqBJL",
+                  "x": 694,
+                  "y": 16,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "gSC00;/TW5Q+^BL]Ct1o",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "JW6iHr%Lk0Ta_2|{*ppF"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "controls_if",
+                      "id": "Bq9Co=/].~bX|As7j*N_",
+                      "inputs": {
+                        "IF0": {
+                          "block": {
+                            "type": "logic_compare",
+                            "id": "}Tz%@pT8OKEji[Q*yVz~",
+                            "fields": {
+                              "OP": "<field name=\"OP\">EQ</field>"
+                            },
+                            "inputs": {
+                              "A": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "(Ipbj~)Fu|Kqa94Cc=S=",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "JW6iHr%Lk0Ta_2|{*ppF"
+                                    }
+                                  }
+                                }
+                              },
+                              "B": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "/IjI+^E1;PVHD9/FSjl}",
+                                  "fields": {
+                                    "TEXT": "Ask again"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "DO0": {
+                          "block": {
+                            "type": "gamelab_setPrompt",
+                            "id": "XCoGv_0A|W-V8V57A21*",
+                            "inputs": {
+                              "QUESTION": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "{WX,og0z]L/=/9iqQHHF",
+                                  "fields": {
+                                    "TEXT": "Ask me a question!"
+                                  }
+                                }
+                              },
+                              "VAR": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "^%eehoCP2Ihm;m+hxCmc",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "ER#lkC1^/^g?M!*G}?W@"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "controls_if",
+                          "id": "mh[^ZKG[I#}prYzETin6",
+                          "inputs": {
+                            "IF0": {
+                              "block": {
+                                "type": "logic_compare",
+                                "id": "O]:W@3[]XBSXPC2nH^/.",
+                                "fields": {
+                                  "OP": "<field name=\"OP\">EQ</field>"
+                                },
+                                "inputs": {
+                                  "A": {
+                                    "block": {
+                                      "type": "variables_get",
+                                      "id": "CD`)[yaQX+LC`o2^nbWh",
+                                      "extraState": {
+                                      },
+                                      "fields": {
+                                        "VAR": {
+                                          "id": "JW6iHr%Lk0Ta_2|{*ppF"
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "B": {
+                                    "block": {
+                                      "type": "text",
+                                      "id": "xtfJ,3#_*veoE1x,D2*0",
+                                      "fields": {
+                                        "TEXT": "I'm ready to guess!"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "DO0": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": ";1]waTI|!1|?:o5/x{4y",
+                                "extraState": {
+                                  "name": "prompt_for_guess"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "procedures_defnoreturn",
+                  "id": "qYkHqmq^^RMkeI![z2Sr",
+                  "x": 74,
+                  "y": 469,
+                  "extraState": {
+                    "procedureId": "S,X=TZ4,NE[hTm,M._?[",
+                    "initialDeleteConfig": true,
+                    "initialEditConfig": true,
+                    "initialMoveConfig": true,
+                    "userCreated": true
+                  },
+                  "fields": {
+                    "NAME": "question_answered"
+                  },
+                  "inputs": {
+                    "STACK": {
+                      "block": {
+                        "type": "math_change",
+                        "id": "sjqUn(1pLb%M}}RyrS#s",
+                        "fields": {
+                          "VAR": {
+                            "id": "3$j.|G%7q]g}{WTGq:B)"
+                          }
+                        },
+                        "inputs": {
+                          "DELTA": {
+                            "shadow": {
+                              "type": "math_number",
+                              "id": "F=`1HQ+#7~;DaE[86@ua",
+                              "fields": {
+                                "NUM": -1
+                              }
+                            }
+                          }
+                        },
+                        "next": {
+                          "block": {
+                            "type": "controls_if",
+                            "id": "c}J2Q:U#v8sNvx0TOi4,",
+                            "inputs": {
+                              "IF0": {
+                                "block": {
+                                  "type": "logic_compare",
+                                  "id": ",9=UjKXu`)%UrNri5C3$",
+                                  "fields": {
+                                    "OP": "<field name=\"OP\">EQ</field>"
+                                  },
+                                  "inputs": {
+                                    "A": {
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "?4ZiIe[7_u1(?_zPV#AA",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "3$j.|G%7q]g}{WTGq:B)"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "B": {
+                                      "block": {
+                                        "type": "math_number",
+                                        "id": "E#!{oq@~NS2g6QoOynAF",
+                                        "fields": {
+                                          "NUM": 0
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "DO0": {
+                                "block": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "Xs^$aAlc+DLLoCsda[u9",
+                                  "extraState": {
+                                    "name": "prompt_for_guess"
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "controls_if",
+                                "id": "TTDro(Pzj6+E87A)czC+",
+                                "inputs": {
+                                  "IF0": {
+                                    "block": {
+                                      "type": "logic_compare",
+                                      "id": "BT?ekaD7mh4rLR3(H+j=",
+                                      "fields": {
+                                        "OP": "<field name=\"OP\">GT</field>"
+                                      },
+                                      "inputs": {
+                                        "A": {
+                                          "block": {
+                                            "type": "variables_get",
+                                            "id": "]GuGa]#T},Y?DzFAgTdl",
+                                            "extraState": {
+                                            },
+                                            "fields": {
+                                              "VAR": {
+                                                "id": "3$j.|G%7q]g}{WTGq:B)"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "B": {
+                                          "block": {
+                                            "type": "math_number",
+                                            "id": "s^([M,WIJXPZ+ncBm+,/",
+                                            "fields": {
+                                              "NUM": 0
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  "DO0": {
+                                    "block": {
+                                      "type": "gamelab_setPromptWithChoices",
+                                      "id": "7EYORAzWjF}/AvK|TZtL",
+                                      "inputs": {
+                                        "QUESTION": {
+                                          "block": {
+                                            "type": "text_join_simple",
+                                            "id": "OYOX-^.KIhV,uX,]B?V~",
+                                            "extraState": {
+                                              "itemCount": 3
+                                            },
+                                            "inputs": {
+                                              "ADD0": {
+                                                "block": {
+                                                  "type": "text",
+                                                  "id": "vG5xG?7VL^WCcP:*;~PQ",
+                                                  "fields": {
+                                                    "TEXT": "Do you want to guess or ask me another question? You have "
+                                                  }
+                                                }
+                                              },
+                                              "ADD1": {
+                                                "block": {
+                                                  "type": "variables_get",
+                                                  "id": "U~y_4)_5--iI8[$Eu*R*",
+                                                  "extraState": {
+                                                  },
+                                                  "fields": {
+                                                    "VAR": {
+                                                      "id": "3$j.|G%7q]g}{WTGq:B)"
+                                                    }
+                                                  }
+                                                }
+                                              },
+                                              "ADD2": {
+                                                "block": {
+                                                  "type": "text",
+                                                  "id": "m~;?MMU/bl^Acl@m6H+)",
+                                                  "fields": {
+                                                    "TEXT": " questions left."
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "VAR": {
+                                          "block": {
+                                            "type": "variables_get",
+                                            "id": "gWN[q91K4=@r/.3p]Y|n",
+                                            "extraState": {
+                                            },
+                                            "fields": {
+                                              "VAR": {
+                                                "id": "JW6iHr%Lk0Ta_2|{*ppF"
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "A": {
+                                          "block": {
+                                            "type": "text",
+                                            "id": "Hd1jd_7_mxd{wP|I0)eu",
+                                            "fields": {
+                                              "TEXT": "Ask again"
+                                            }
+                                          }
+                                        },
+                                        "B": {
+                                          "block": {
+                                            "type": "text",
+                                            "id": "H$]CoP^NqFNTijm3W=N@",
+                                            "fields": {
+                                              "TEXT": "I'm ready to guess!"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "c,s/KIgopq!Ad+PT9jMI",
+                  "x": 833,
+                  "y": 481,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "ty$w]6!k!jLQ5Ysb#Psc",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "b*o;e/h:e5/f8#g(FH{j"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "controls_if",
+                      "id": "@O*rl0t1,+@U$~G/B59D",
+                      "extraState": {
+                        "hasElse": true
+                      },
+                      "inputs": {
+                        "IF0": {
+                          "block": {
+                            "type": "logic_compare",
+                            "id": "w!BYvWtK6#SVV)[GS8]~",
+                            "fields": {
+                              "OP": "<field name=\"OP\">EQ</field>"
+                            },
+                            "inputs": {
+                              "A": {
+                                "block": {
+                                  "type": "variables_get",
+                                  "id": "2UA70w}qQQ_]o=w*kSAu",
+                                  "extraState": {
+                                  },
+                                  "fields": {
+                                    "VAR": {
+                                      "id": "b*o;e/h:e5/f8#g(FH{j"
+                                    }
+                                  }
+                                }
+                              },
+                              "B": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "@pz{-5FetC_NrdflxM9m",
+                                  "fields": {
+                                    "TEXT": "An astronaut"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "DO0": {
+                          "block": {
+                            "type": "gamelab_destroy",
+                            "id": "S.MrK7@?CQu?g5AgsA#5",
+                            "inputs": {
+                              "THIS": {
+                                "block": {
+                                  "type": "gamelab_allSpritesWithAnimation",
+                                  "id": "IP,BSzgfBSmA4@XiRCU-",
+                                  "fields": {
+                                    "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "gamelab_makeNewSpriteAnon",
+                                "id": "$7x+hd.+jZF_h`M8.0))",
+                                "fields": {
+                                  "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Sprite 2\"</field>"
+                                },
+                                "inputs": {
+                                  "LOCATION": {
+                                    "block": {
+                                      "type": "gamelab_location_picker",
+                                      "id": "o6BdJNoyIh?WKKXI)m0j",
+                                      "fields": {
+                                        "LOCATION": null
+                                      }
+                                    }
+                                  }
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "spritelab2_burst",
+                                    "id": "zJW{9X^yFOjwI3yKW@5L",
+                                    "fields": {
+                                      "COUNT": 20,
+                                      "LOOK": "<field name=\"LOOK\">sparks</field>"
+                                    },
+                                    "inputs": {
+                                      "ORIGIN": {
+                                        "shadow": {
+                                          "type": "gamelab_allSpritesWithAnimation",
+                                          "id": "6447{ZDxC5iuXf~GkG3U",
+                                          "fields": {
+                                            "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 2\"</field>"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "gamelab_spriteSayTime",
+                                        "id": "*KKr2yg:}QYkSIVn(Y,#",
+                                        "inputs": {
+                                          "SPRITE": {
+                                            "block": {
+                                              "type": "gamelab_allSpritesWithAnimation",
+                                              "id": "5x4xmvB21B#mRDYfj4#3",
+                                              "fields": {
+                                                "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 2\"</field>"
+                                              }
+                                            }
+                                          },
+                                          "TEXT1": {
+                                            "block": {
+                                              "type": "text",
+                                              "id": "J3-!dFJUj85yrG;E,Ccg",
+                                              "fields": {
+                                                "TEXT": "You're right!"
+                                              }
+                                            }
+                                          },
+                                          "NUM": {
+                                            "block": {
+                                              "type": "math_number",
+                                              "id": "DljLHo_OY{,H(k(A+MXE",
+                                              "fields": {
+                                                "NUM": 20
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "ELSE": {
+                          "block": {
+                            "type": "gamelab_spriteSayTime",
+                            "id": "h5%=`S}?%o?^5sx?c253",
+                            "inputs": {
+                              "SPRITE": {
+                                "block": {
+                                  "type": "gamelab_allSpritesWithAnimation",
+                                  "id": "TNU.,+%|_$RVF!`%Gm7A",
+                                  "fields": {
+                                    "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                  }
+                                }
+                              },
+                              "TEXT1": {
+                                "block": {
+                                  "type": "text",
+                                  "id": "@(GmUlWm[5=:fI=KOo@(",
+                                  "fields": {
+                                    "TEXT": "Sorry, not quite! Guess again."
+                                  }
+                                }
+                              },
+                              "NUM": {
+                                "block": {
+                                  "type": "math_number",
+                                  "id": "Pw(]5IvsL%f6I!2?^:)o",
+                                  "fields": {
+                                    "NUM": 20
+                                  }
+                                }
+                              }
+                            },
+                            "next": {
+                              "block": {
+                                "type": "procedures_callnoreturn",
+                                "id": "9*CkdE9J)1bXy#FZ-hPJ",
+                                "extraState": {
+                                  "name": "prompt_for_guess"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "{AMpdHSuJ8E`NvUd-VbO",
+                  "x": 590,
+                  "y": 260,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "%gH*0)6}GL=XfhNV,Po2",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "~aGKE;f0WG*[;79E}?n}"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_spriteSayTime",
+                      "id": "vmtl`q*p(mJT:2G.z(/0",
+                      "inputs": {
+                        "SPRITE": {
+                          "block": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "kz~rc):oCHr3^[F|Khzn",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                            }
+                          }
+                        },
+                        "TEXT1": {
+                          "block": {
+                            "type": "variables_get",
+                            "id": "m)DeFmlii.GugjzlX|T%",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "~aGKE;f0WG*[;79E}?n}"
+                              }
+                            }
+                          }
+                        },
+                        "NUM": {
+                          "block": {
+                            "type": "math_number",
+                            "id": "7ep~$0A)8[NX2c$LAh~=",
+                            "fields": {
+                              "NUM": 20
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "procedures_callnoreturn",
+                          "id": "N7OMxX-h^Pj2mxJY9`S1",
+                          "extraState": {
+                            "name": "question_answered"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "procedures": [
+              {
+                "id": "Abwhd)4Y.[`F|.=f`{|$",
+                "name": "prompt_for_guess",
+                "returnTypes": null
+              },
+              {
+                "id": "S,X=TZ4,NE[hTm,M._?[",
+                "name": "question_answered",
+                "returnTypes": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "toolbox_definition": {
+      "contents": [
+        {
+          "kind": "category",
+          "name": "World",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_makeNewSpriteAnon",
+              "id": "Wx,r#qc}46wH`~A[QE!U",
+              "fields": {
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>"
+              },
+              "inputs": {
+                "LOCATION": {
+                  "block": {
+                    "type": "gamelab_location_picker",
+                    "fields": {
+                      "LOCATION": null
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "controls_if",
+              "id": "2MG?XB6G-%)+^Ob}NL?r",
+              "inputs": {
+                "IF0": {
+                  "block": {
+                    "type": "logic_compare",
+                    "fields": {
+                      "OP": "<field name=\"OP\">EQ</field>"
+                    },
+                    "inputs": {
+                      "A": {
+                        "block": {
+                          "type": "variables_get",
+                          "extraState": {
+                          },
+                          "fields": {
+                            "VAR": {
+                              "id": ",ENpigEPdW]6=}gyMp[v",
+                              "name": "item",
+                              "type": ""
+                            }
+                          }
+                        }
+                      },
+                      "B": {
+                        "block": {
+                          "type": "math_number",
+                          "fields": {
+                            "NUM": 0
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSayTime",
+              "id": "N+J;VcJu4Q4wiT!-]gB]",
+              "inputs": {
+                "SPRITE": {
+                  "block": {
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
+                  }
+                },
+                "TEXT1": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "NUM": {
+                  "block": {
+                    "type": "math_number",
+                    "fields": {
+                      "NUM": 10
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "math_number",
+              "id": "NB4~k[PRS#5:)9WbO~R0",
+              "fields": {
+                "NUM": 0
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "text",
+              "id": "W?hRHqd99Ydd}a*Kb/Se",
+              "fields": {
+                "TEXT": ""
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "text_join_simple",
+              "id": "6bw+b_VPJnB`3v:6K:*1",
+              "extraState": {
+                "itemCount": 2
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_burst",
+              "id": "0W@00H?ss/+GTY#_.(5h",
+              "fields": {
+                "COUNT": 20,
+                "LOOK": "<field name=\"LOOK\">sparks</field>"
+              },
+              "inputs": {
+                "ORIGIN": {
+                  "shadow": {
+                    "type": "gamelab_allSpritesWithAnimation",
+                    "id": "5-G9::%mv3buwDVeD=3d",
+                    "fields": {
+                      "ANIMATION": "<field name=\"ANIMATION\">null</field>"
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            }
+          ],
+          "id": "World"
+        },
+        {
+          "kind": "category",
+          "name": "Events",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_whenPromptAnswered",
+              "id": "IQXahyE3Er0yqs!|_;a1",
+              "inputs": {
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "extraState": {
+                    },
+                    "fields": {
+                      "VAR": {
+                        "id": ",ENpigEPdW]6=}gyMp[v",
+                        "name": "item",
+                        "type": ""
+                      }
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            }
+          ],
+          "id": "Events"
+        },
+        {
+          "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_setSystemPrompt",
+              "id": "?|@}s0(C[2s~vzi.=[R7",
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_askAI",
+              "id": "Kam}UbIrMv!89I|z=kkx",
+              "inputs": {
+                "PROMPT": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "extraState": {
+                    },
+                    "fields": {
+                      "VAR": {
+                        "id": ",ENpigEPdW]6=}gyMp[v",
+                        "name": "item",
+                        "type": ""
+                      }
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_askAIWithChoices",
+              "id": "mOfiMUcw)-Qje**k6Hri",
+              "inputs": {
+                "PROMPT": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "CHOICE1": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "CHOICE2": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "CHOICE3": {
+                  "block": {
+                    "type": "text",
+                    "fields": {
+                      "TEXT": ""
+                    }
+                  }
+                },
+                "VAR": {
+                  "block": {
+                    "type": "variables_get",
+                    "extraState": {
+                    },
+                    "fields": {
+                      "VAR": {
+                        "id": ",ENpigEPdW]6=}gyMp[v",
+                        "name": "item",
+                        "type": ""
+                      }
+                    }
+                  }
+                }
+              },
+              "enabled": true
+            }
+          ],
+          "id": "AI"
+        },
+        {
+          "kind": "category",
+          "name": "Variables",
+          "custom": "VARIABLE",
+          "id": "Variables"
+        },
+        {
+          "kind": "category",
+          "name": "Functions",
+          "custom": "PROCEDURE",
+          "id": "Functions"
+        }
+      ],
+      "kind": "categoryToolbox"
+    },
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-19 20:10:59 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\"],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2026-11-19 20:42:34 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2026-11-19 20:55:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2026-11-19 20:56:22 +0000\",\"changed\":[\"level_mode\",\"preload_asset_list\"],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"},{\"changed_at\":\"2026-11-19 21:01:09 +0000\",\"changed\":[],\"changed_by_id\":1054,\"changed_by_email\":\"molly@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks/>
+</GamelabJr>

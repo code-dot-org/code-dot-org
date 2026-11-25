@@ -6,7 +6,8 @@ import {AichatContext} from '@cdo/apps/aichat/types';
 
 import {sendAiStaticFallbackUsed} from '../../metricsHelpers';
 import {Checkpoint, LevelStep, Pathway} from '../../types';
-import {generate, isAdaptiveAiEnabled} from '../generate';
+import {isAdaptiveAiAvailable} from '../access';
+import {generate} from '../generate';
 import {ADAPTIVE_MODELS} from '../models';
 
 import {
@@ -51,7 +52,7 @@ export async function judgeEffort({
 }: JudgeEffortOptions): Promise<EffortJudgement | undefined> {
   const {validation} = step;
   if (!validation) return undefined;
-  if (!isAdaptiveAiEnabled()) return undefined;
+  if (!isAdaptiveAiAvailable()) return undefined;
 
   const prompt = buildEffortPrompt({
     pathway,

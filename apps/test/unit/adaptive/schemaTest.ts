@@ -270,11 +270,11 @@ describe('parsePathway', () => {
         logoUrl: 'https://images.code.org/logo.svg',
       },
       {
-        id: 'time',
-        title: 'Time',
+        id: 'changes',
+        title: 'Changes',
         kind: 'stats',
-        heading: 'Time',
-        stats: ['timeSpent', 'checkpoints'],
+        heading: 'Changes',
+        stats: ['aiChangesRejected', 'checkpoints'],
       }
     );
     expect(problemsOf(raw)).toEqual([]);
@@ -324,6 +324,21 @@ describe('parsePathway', () => {
     };
     expect(problemsOf(raw)).toEqual([]);
     expect(parsePathway(raw).finish?.checkpoint?.id).toBe('wrap-up');
+  });
+
+  it("accepts a finish block that holds I'm finished until some checkpoints are cleared", () => {
+    const raw = served();
+    raw.finish = {requiredCheckpoints: 2};
+    expect(problemsOf(raw)).toEqual([]);
+    expect(parsePathway(raw).finish?.requiredCheckpoints).toBe(2);
+  });
+
+  it('flags a finish requirement the pathway has too few checkpoints for', () => {
+    const raw = served();
+    raw.finish = {requiredCheckpoints: 99};
+    expect(problemsOf(raw)).toEqual([
+      "finish.requiredCheckpoints: 99 is more than the pathway's 3 checkpoints",
+    ]);
   });
 
   it('checks the finish checkpoint with the others, apart from its place on the map', () => {

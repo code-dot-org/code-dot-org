@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894763-d4f99616fa3a",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 8: Defending Your Data",
+  "question": "You have 30 seconds on the school announcements to teach younger students why small clues add up. Make it clear enough that a fourth grader would remember it.\n\nSteps:\n1. Start recording. Open like a school announcement, such as “Good morning, students.” Don’t say the name of your real school.\n2. Give a made-up example with 3 clues, and say what the clues reveal when put together.\n3. Give 2 safer habits.\n4. Say which clue each habit protects.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give an announcement on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says only general warnings (such as \"be careful online\") with no example, or gives an example with fewer than 3 clues or without saying what the clues reveal together."
+    },
+    {
+      "level": 2,
+      "description": "Student gives an example with 3 clues AND says what the clues reveal when put together."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND gives 2 specific safer habits AND explains which clue each habit would protect."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

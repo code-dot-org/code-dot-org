@@ -8,7 +8,11 @@ import {useSearchParams} from 'react-router-dom';
 import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {getSelectedUnitId} from '@cdo/apps/redux/unitSelectionRedux';
+import {
+  getSelectedUnitId,
+  getSelectedUnitName,
+} from '@cdo/apps/redux/unitSelectionRedux';
+import AiFoundationsCallout from '@cdo/apps/templates/aiFoundationsCallout/AiFoundationsCallout';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgressV2/sectionProgressLoader';
 import {
   isLearnToEvaluateTourOnSnapshotPage,
@@ -33,6 +37,7 @@ const canParseUrl = (urlString: string | object | boolean): boolean => {
 import {getFullName} from '../manageStudents/utils';
 
 import AdaptiveSkillMapWidget from './adaptiveSkillMapWidget';
+import AdaptiveStatsWidget from './adaptiveStatsWidget';
 import ExemplarCodeWidget from './codeWidget/ExemplarCodeWidget';
 import StudentCodeWidget from './codeWidget/StudentCodeWidget';
 import Header from './header';
@@ -91,6 +96,7 @@ const StudentSnapshot: React.FC = () => {
       : null
   );
   const selectedUnitId = useSelector(getSelectedUnitId);
+  const selectedUnitName = useSelector(getSelectedUnitName);
   const selectedUnitPosition = useAppSelector(state =>
     state.teacherSections.selectedSectionId
       ? state.teacherSections.sections[state.teacherSections.selectedSectionId]
@@ -191,6 +197,11 @@ const StudentSnapshot: React.FC = () => {
 
   return (
     <div className={styles.snapshotContainer}>
+      <AiFoundationsCallout
+        page="studentSnapshot"
+        unitName={selectedUnitName}
+        className={styles.aiFoundationsCallout}
+      />
       <Header
         lessons={lessons}
         selectedLessonId={selectedLessonId}
@@ -242,6 +253,12 @@ const StudentSnapshot: React.FC = () => {
           sectionId={sectionId}
         />
         <AdaptiveSkillMapWidget
+          selectedUnitId={selectedUnitId}
+          selectedLessonId={selectedLessonId}
+          selectedStudentId={selectedStudentId}
+          hasAdaptiveLevel={!!selectedLesson?.hasAdaptiveLevel}
+        />
+        <AdaptiveStatsWidget
           selectedUnitId={selectedUnitId}
           selectedLessonId={selectedLessonId}
           selectedStudentId={selectedStudentId}

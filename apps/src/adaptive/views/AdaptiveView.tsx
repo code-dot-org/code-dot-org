@@ -3,6 +3,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 import {LabProps} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {isAdaptiveAiDown} from '../ai/access';
 import {countAdaptive, reportAdaptiveError} from '../observability';
 import {ProgressKey} from '../progress/progressStore';
 import {AdaptiveContentError, parsePathway} from '../schema';
@@ -60,11 +61,16 @@ const AdaptiveView: React.FunctionComponent<
       inSection: state.currentUser.inSection,
     })
   );
+  const aiDown = useMemo(() => isAdaptiveAiDown(), []);
   const [teacherContinued, setTeacherContinued] = useState(false);
   useEffect(() => {
+    if (aiDown) {
+      countAdaptive('Adaptive.AccessBlocked', {reason: 'aiUnavailable'});
+      return;
+    }
     if (access === 'pending' || access === 'allowed') return;
-    countAdaptive('Adaptive.AccessBlocked', {Reason: access});
-  }, [access]);
+    countAdaptive('Adaptive.AccessBlocked', {reason: access});
+  }, [access, aiDown]);
   const parsed = useMemo(
     () => parseLevelContent(levelProperties),
     [levelProperties]
@@ -110,6 +116,9 @@ const AdaptiveView: React.FunctionComponent<
     );
   }
 
+  if (aiDown) {
+    return <AccessBlockedScreen reason="aiUnavailable" />;
+  }
   if (access === 'pending') return null;
   if (
     access !== 'allowed' &&

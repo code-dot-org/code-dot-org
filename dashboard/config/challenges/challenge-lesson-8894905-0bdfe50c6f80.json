@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894905-0bdfe50c6f80",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 4: Smart or Just Predictable?",
+  "question": "You are a quiz show contestant who never says “I don’t know,” no matter what they ask. Can you stay confident, and then show what an honest answer sounds like?\n\nSteps:\n1. Start recording. Pick one question from each list below.\n2. Be the know-it-all contestant: answer both questions in the same super-confident voice, even the one nobody could answer.\n3. Now answer the impossible question honestly.\n4. Tell the camera how a listener could tell your two confident answers apart, and why a confident voice doesn’t prove an answer is true.\n\nQuestions with real answers:\n- “What is the capital of France?”\n- “How many days are in a leap year?”\n- “What gas do plants take in?”\n\nQuestions nobody could answer:\n- “What did the first person in your town to ride a bicycle eat for breakfast?”\n- “Who won the 1962 Underwater Chess Championship?”\n- “How many leaves are on the oldest tree in the world?”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not answer any question on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student answers only one of the two questions, OR gives only one version of the answer to the impossible question."
+    },
+    {
+      "level": 2,
+      "description": "Student answers both questions in a confident voice AND then gives an honest answer to the question nobody could answer (such as \"I don't have that information\")."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names a specific way a listener could check the answers AND says why a confident voice does not show that an answer is true."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

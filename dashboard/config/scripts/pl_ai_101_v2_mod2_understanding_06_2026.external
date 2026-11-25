@@ -106,7 +106,7 @@ Let's take a closer look at how AI works. 👉 Click each step in the diagram be
 
 <div style="padding:18px 24px; background:white; border-top:1px solid #E5E7EB; font-size:15px; line-height:1.45; color:#555;">
 <p style="margin:0 0 12px 0;">Users influence AI output primarily through the prompts they write. The level of detail, constraints, and framing in a prompt strongly affect the response.</p>
-<p style="margin:0 0 8px 0;">AI tools may also have internal settings that influence how predictable or varied responses are. One of these settings is called <strong>temperature</strong>:</p>
+<p style="margin:0 0 8px 0;">AI apps may also have internal settings that influence how predictable or varied responses are. One of these settings is called <strong>temperature</strong>:</p>
 <ul style="margin:8px 0 12px 20px; padding-left:18px; font-size:15px; line-height:1.45; color:#555;">
   <li style="margin-bottom:4px;">Lower temperature → more predictable and consistent responses</li>
   <li>Higher temperature → more varied or creative responses</li>

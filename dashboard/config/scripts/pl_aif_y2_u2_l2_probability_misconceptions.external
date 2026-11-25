@@ -5,15 +5,30 @@ description 'description here'
 markdown <<MARKDOWN
 # Handling Uncertainty
 
-Lesson 2 opens by ranking three events by likelihood: guessing a 4-digit passcode on the first try, your favorite song playing first from a shuffled 100-song playlist, and sharing a birthday with a new friend.
+Lesson 2 opens by ranking three events by likelihood: 
+- guessing a 4-digit passcode on the first try
+- your favorite song playing first from a shuffled 100-song playlist
+- sharing a birthday with a new friend
 
-The real answer, ranked most to least likely: favorite song playing first (1 in 100), sharing a birthday (about 1 in 365), guessing the passcode (1 in 9,999). The strong-answer pattern is specific: compare the *number of possibilities*, not gut instinct, fewer possibilities means a higher chance any one of them happens.
+The real answer, ranked most to least likely: 
+- favorite song playing first (1 in 100)
+- sharing a birthday (about 1 in 365)
+- guessing the passcode (1 in 9,999)
+  
+The strong-answer pattern is specific: compare the *number of possibilities*, not gut instinct, fewer possibilities means a higher chance any one of them happens.
+
+## Probablity
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
   <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Probability:</strong> a way to measure how likely something is to happen.</div>
 </div>
 
-Probability runs from 0 to 1. Rolling a die: probability of landing on 1-6 is 1 (certain), probability of rolling a 7 is 0 (impossible), probability of rolling even is 0.5 (3 of 6 outcomes). To calculate it: outcomes for the event, divided by total possible outcomes.
+Probability runs from 0 to 1.
+- Rolling a die: probability of landing on 1-6 is 1 (certain)
+- probability of rolling a 7 is 0 (impossible)
+-  robability of rolling even is 0.5 (3 of 6 outcomes).
+
+To calculate it: outcomes for the event, divided by total possible outcomes.
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
   <div style="font-size: 16px; line-height: 1.5;"><strong>&#128214; Module:</strong> a Python file that can be imported into other Python files.</div>

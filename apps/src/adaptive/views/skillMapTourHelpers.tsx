@@ -5,6 +5,10 @@ export const SKILL_MAP_TOUR_INITIAL_STEP = 0;
 
 export function getSkillMapTourStepIndices(hasSkippedCheckpoints: boolean) {
   return {
+    /** Step on the first checkpoint, the rest of the map still a skeleton. */
+    firstCheckpoint: 1,
+    /** First step that shows the whole map. */
+    revealMap: 2,
     /** Step where the user picks a checkpoint by clicking the map. */
     pickCheckpoint: hasSkippedCheckpoints ? 3 : 2,
     /** Sidebar step — user ends the tour by clicking Start. */
