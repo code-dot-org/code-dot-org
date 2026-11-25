@@ -608,14 +608,16 @@ describe('ImagesTab', () => {
     expect(saveEdited).not.toHaveBeenCalled();
   });
 
-  it('deletes through the list and moves on to the next image', () => {
+  it('deletes through the list, saves, and moves on to the next image', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     propsByKey.k2 = {name: 'Sprite 2', categories: []};
-    const {rerender} = renderTab({editingOffered: true});
+    const onImageLanded = jest.fn();
+    const {rerender} = renderTab({editingOffered: true, onImageLanded});
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
     deleteImage.mockImplementation(() => delete propsByKey.k1);
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
     expect(deleteImage).toHaveBeenCalledWith('k1');
+    expect(onImageLanded).toHaveBeenCalledTimes(1);
     rerender(
       <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
     );
@@ -672,7 +674,7 @@ describe('ImagesTab', () => {
       jest.advanceTimersByTime(800);
     });
     // The blank became an image, file and all, and the tools stayed open
-    // on it; the project saves on its own clock, never forced by drawing.
+    // on it; a pause's save leaves the project to its own clock.
     expect(saveEdited).toHaveBeenCalledTimes(1);
     expect(saveEdited.mock.calls[0][0]).toEqual({
       key: null,
@@ -695,13 +697,13 @@ describe('ImagesTab', () => {
       subject: 'character',
     });
     expect(saveEdited.mock.calls[1][3]).toMatchObject({upload: false});
-    // Done sends the file those pixels are owed.
+    // Done sends the file those pixels are owed, and saves the project.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
     expect(saveEdited).toHaveBeenCalledTimes(3);
     expect(saveEdited.mock.calls[2][3]).toMatchObject({upload: true});
-    expect(onImageLanded).not.toHaveBeenCalled();
+    expect(onImageLanded).toHaveBeenCalledTimes(1);
     expect(screen.queryByText('canvas')).toBeNull();
     jest.useRealTimers();
   });

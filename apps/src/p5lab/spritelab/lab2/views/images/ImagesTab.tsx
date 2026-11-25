@@ -285,8 +285,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   chosenKeyRef.current = chosenImage?.key ?? null;
   const landedRef = useRef(onImageLanded);
   landedRef.current = onImageLanded;
-  // `saveNow`: a generated picture triggers an immediate project save; a
-  // drawing's saves wait for the project's throttled save.
+  // `saveNow`: a generated picture and a drawing's last save trigger an
+  // immediate project save; a drawing's saves after each pause wait for the
+  // project's throttled save.
   const storePicture = useCallback(
     async (
       target: ImageTarget,
@@ -352,6 +353,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     const timer = setTimeout(() => setUploadError(null), UPLOAD_ERROR_SHOWN_MS);
     return () => clearTimeout(timer);
   }, [uploadError]);
+  // A save right away, so the deleted picture's file goes as soon as the
+  // saved project no longer names it.
+  const handleDelete = useCallback(
+    (key: string) => {
+      writer.deleteImage(key);
+      landedRef.current?.();
+    },
+    [writer]
+  );
   const handleUploaded = useCallback(
     async (kind: ImageKind, image: UploadedImage) => {
       const target: ImageTarget = {
@@ -647,7 +657,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         onUpload={enableImageUpload && newOffered ? handleUpload : undefined}
         notice={uploadError?.text}
         onNoticeClose={() => setUploadError(null)}
-        onDelete={deleteOffered ? writer.deleteImage : undefined}
+        onDelete={deleteOffered ? handleDelete : undefined}
       />
       {sceneKind ? (
         <SentenceScene

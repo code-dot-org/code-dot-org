@@ -402,7 +402,7 @@ export default function useDrawing({
               stillWanted: () =>
                 abandonedDrawingIdRef.current !== drawingToSave.id,
             }),
-          false
+          final
         );
         if (abandonedDrawingIdRef.current === drawingToSave.id) {
           return;

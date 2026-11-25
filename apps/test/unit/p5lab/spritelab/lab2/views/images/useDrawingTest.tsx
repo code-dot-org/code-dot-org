@@ -49,7 +49,11 @@ function setup() {
   >;
   saveEdited.mockResolvedValue('k1');
   const storePicture = jest.fn(
-    async (_target: unknown, write: () => Promise<string>) => write()
+    async (
+      _target: unknown,
+      write: () => Promise<string>,
+      _saveNow?: boolean
+    ) => write()
   );
   const latest: {tools?: DrawingTools} = {};
   const Harness = () => {
@@ -209,6 +213,19 @@ describe('useDrawing', () => {
     expect(tools().drawing).toBeNull();
     // The image's key comes from that save.
     expect(tools().closedPicture).toEqual({key: 'k1', canvas: copy});
+  });
+
+  it("asks for a project save only on the drawing's last save", async () => {
+    const {storePicture, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:b', {}),
+      snapshot: () => null,
+    });
+    await act(async () => tools().handleSave('data:a', {}));
+    act(() => tools().scheduleStrokeSave());
+    await act(async () => tools().finishDrawing());
+    expect(storePicture.mock.calls.map(call => call[2])).toEqual([false, true]);
   });
 
   it('uploads the file at most once per gap, and on the last save', async () => {
