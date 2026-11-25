@@ -34,6 +34,10 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 
 const newManager = () => ({
   saved: {} as unknown,
+  saving: false,
+  isSaveInProgress() {
+    return this.saving;
+  },
   listeners: [] as (() => void)[],
   getLastSource() {
     return this.saved;
@@ -75,7 +79,8 @@ describe('useReclaimAsset', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     httpDelete.mockClear();
-    // A fresh manager per test: files still waiting stay with the old one.
+    // A fresh manager per test, so files one test leaves waiting for
+    // deletion are not checked in the next.
     manager = newManager();
     currentManager = manager;
   });
@@ -132,6 +137,17 @@ describe('useReclaimAsset', () => {
     reclaimer()('/v3/assets/chan/old.png');
     manager.finishSave(manager.saved);
     expect(httpDelete).toHaveBeenCalledWith('/v3/assets/chan/old.png', true);
+  });
+
+  it('waits while a save is in flight', async () => {
+    const reclaimed = reclaimer()('/v3/assets/chan/old.png');
+    manager.saving = true;
+    manager.finishSave({});
+    expect(httpDelete).not.toHaveBeenCalled();
+    manager.saving = false;
+    manager.finishSave({});
+    expect(httpDelete).toHaveBeenCalledWith('/v3/assets/chan/old.png', true);
+    await expect(reclaimed).resolves.toBe(true);
   });
 
   it('treats links that differ only in their query as one file', async () => {
