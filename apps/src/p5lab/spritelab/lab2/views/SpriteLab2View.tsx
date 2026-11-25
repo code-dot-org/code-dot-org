@@ -1242,7 +1242,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setOnStageSceneId(scene?.id ?? null);
   }, []);
 
-  // Re-run the stage once a reseeded animation list finishes loading. The
+  // Re-run the stage once a reseeded animation list has loaded. The
   // reseed-triggered run happens immediately, but reseeded entries carry
   // only a sourceUrl (dataURIs load async) and the engine can't draw
   // unloaded images (costume/background commands no-op on unknown names —
@@ -1264,12 +1264,19 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       );
     };
     if (allSettled()) {
-      // The reseed-triggered run has everything it needs.
       return;
     }
+    const startList = store.getState().animationList;
+    const lateKeys: string[] = startList.orderedKeys.filter(
+      (key: string) => !isLoadFromSourceSettled(startList.propsByKey[key])
+    );
     const finish = () => {
       cancel();
-      rerunStageRef.current();
+      const props = store.getState().animationList.propsByKey;
+      // Late images that all failed leave nothing new to show.
+      if (lateKeys.some(key => props[key]?.loadedFromSource)) {
+        rerunStageRef.current();
+      }
     };
     const unsubscribe = store.subscribe(() => allSettled() && finish());
     // Give up quietly if a load never completes; the playspace stays stale,

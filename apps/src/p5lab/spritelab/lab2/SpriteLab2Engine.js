@@ -241,8 +241,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Settles a pending image-grace wait (see
     // whenAnimationsAreReadyOrGivenUp_).
     this.imageWaitCancel_ = null;
-    // Unsubscribes the watch that re-runs when images arrive after a
-    // give-up (see onImageLoadGiveUp_).
+    // Unsubscribes the watch that re-runs when a late image arrives after
+    // a give-up (see onImageLoadGiveUp_).
     this.lateImagesUnsubscribe_ = null;
     // True while nobody can see the playspace (see setDrawPaused).
     this.drawPaused_ = false;
@@ -1273,17 +1273,18 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
-  // After a give-up: say what is still missing, and re-run once if it
-  // ever arrives.
+  // After a give-up: say what is still missing, and re-run once every late
+  // image has settled, if any of them arrived.
   onImageLoadGiveUp_() {
     if (this.areAnimationsReady_()) {
       // Ready and timed out in the same tick; nothing is missing.
       return;
     }
     const list = getStore().getState().animationList;
-    const pending = list.orderedKeys
-      .filter(key => !isLoadFromSourceSettled(list.propsByKey[key]))
-      .map(key => list.propsByKey[key]?.name || key);
+    const lateKeys = list.orderedKeys.filter(
+      key => !isLoadFromSourceSettled(list.propsByKey[key])
+    );
+    const pending = lateKeys.map(key => list.propsByKey[key]?.name || key);
     console.warn(
       `SpriteLab2: ${pending.join(', ')} did not load within ` +
         `${IMAGE_LOAD_GRACE_MS / 1000}s; running without ` +
@@ -1300,7 +1301,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       // image clear this instead.
       if (this.isTickTimerRunning()) {
         this.clearLateImagesWatch_();
-        this.rerun();
+        const props = getStore().getState().animationList.propsByKey;
+        // Late images that all failed leave nothing new to show.
+        if (lateKeys.some(key => props[key]?.loadedFromSource)) {
+          this.rerun();
+        }
       }
     });
   }

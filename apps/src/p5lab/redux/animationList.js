@@ -757,6 +757,15 @@ function loadAnimationFromSource(key, callback) {
       type: START_LOADING_FROM_SOURCE,
       key: key,
     });
+    // A file that downloads but is not an image (an error page, an empty
+    // file) fails here rather than at the fetch.
+    const failToDecode = objectUrl => err => {
+      console.log('Failed to decode animation ' + key, err);
+      if (objectUrl) {
+        URL.revokeObjectURL(objectUrl);
+      }
+      dispatch({type: FAILED_LOADING_FROM_SOURCE, key});
+    };
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load animation ' + key, err);
@@ -794,7 +803,7 @@ function loadAnimationFromSource(key, callback) {
             sourceSize,
           });
           callback();
-        });
+        }, failToDecode(objectUrl));
         return;
       }
       blobToDataURI(blob, dataURI => {
@@ -807,7 +816,7 @@ function loadAnimationFromSource(key, callback) {
             sourceSize,
           });
           callback();
-        });
+        }, failToDecode());
       });
     });
   };
