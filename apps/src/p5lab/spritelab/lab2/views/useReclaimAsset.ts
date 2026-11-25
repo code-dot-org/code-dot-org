@@ -13,33 +13,31 @@ const usedByAnImage = (url: string) => {
   return Object.values(list.propsByKey).some(p => p?.sourceUrl === url);
 };
 
-const savedProjectNames = (manager: ProjectManager, url: string) => {
+const savedProjectMayName = (manager: ProjectManager, url: string) => {
   const saved = manager.getLastSource();
-  // Nothing known to be saved yet: the file has to stay.
+  // No saved sources to check: assume they still name the file.
   return !saved || JSON.stringify(saved).includes(JSON.stringify(url));
 };
 
 // Files waiting to be deleted, each with the resolver of its reclaim
-// promise. Kept per project manager, since a save only says what one
-// project holds.
-const waiting = new WeakMap<
+// promise. Kept per project manager, since each manager's saves cover only
+// its own project.
+const pendingDeletes = new WeakMap<
   ProjectManager,
   Map<string, (deleted: boolean) => void>
 >();
 
-// Deletes each waiting file the saved project no longer names. Called only
-// when a save finishes: during a save, the last saved sources are not what
-// is being written. A file an image points at again is dropped from the
-// list, not deleted.
-function deleteUnsavedFiles(manager: ProjectManager) {
-  const files = waiting.get(manager);
+// Run only after a save finishes: while a save is in progress,
+// getLastSource() is not what is being written.
+function deleteFilesNoLongerSaved(manager: ProjectManager) {
+  const files = pendingDeletes.get(manager);
   files?.forEach((resolve, url) => {
     if (usedByAnImage(url)) {
       files.delete(url);
       resolve(false);
       return;
     }
-    if (savedProjectNames(manager, url)) {
+    if (savedProjectMayName(manager, url)) {
       return;
     }
     files.delete(url);
@@ -54,12 +52,12 @@ function deleteOnceSavedWithout(
   manager: ProjectManager,
   url: string
 ): Promise<boolean> {
-  let files = waiting.get(manager);
+  let files = pendingDeletes.get(manager);
   if (!files) {
     files = new Map();
-    waiting.set(manager, files);
-    manager.addSaveSuccessListener(() => deleteUnsavedFiles(manager));
-    manager.addSaveNoopListener(() => deleteUnsavedFiles(manager));
+    pendingDeletes.set(manager, files);
+    manager.addSaveSuccessListener(() => deleteFilesNoLongerSaved(manager));
+    manager.addSaveNoopListener(() => deleteFilesNoLongerSaved(manager));
   }
   const promise = new Promise<boolean>(resolve => {
     // A second request for the same file shares the first one's answer.
@@ -74,10 +72,12 @@ function deleteOnceSavedWithout(
 
 /**
  * Deletes an uploaded image file nothing uses anymore, once a save of the
- * project that no longer names it has finished; a file deleted earlier
- * would be missing from a project whose save was then lost.
- * Resolves true once the file is deleted (or, for an image held inside the
- * project, once the project no longer contains it) and false otherwise.
+ * project that no longer names it has finished; deleting it sooner
+ * could leave the saved project pointing at a missing file if the save
+ * that drops it never completes.
+ * Resolves true once the file is deleted (or, for a data URI, once the
+ * project no longer contains it) and false otherwise; until a save finishes
+ * it stays unresolved.
  * A file still waiting when the page closes is left on the server.
  */
 export default function useReclaimAsset(): (url?: string) => Promise<boolean> {

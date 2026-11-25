@@ -369,7 +369,7 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
-  it('reclaims the session uploads nothing points at when it ends', async () => {
+  it('reclaims the session uploads nothing points at after the session ends and a save finishes', async () => {
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer} = renderWriter();
     const target = {key: 'k1', imageType: 'sprite' as const};

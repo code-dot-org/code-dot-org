@@ -32,7 +32,6 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {delete: (...args: unknown[]) => httpDelete(...args)},
 }));
 
-// The project manager: what it last saved, and its save listeners.
 const manager = {
   saved: {} as unknown,
   listeners: [] as (() => void)[],
@@ -82,7 +81,7 @@ describe('useReclaimAsset', () => {
   it("deletes one of this project's uploads that no image points at", () => {
     propsByKey.k1 = {sourceUrl: '/v3/assets/chan/kept.png'};
     reclaimer()('/v3/assets/chan/old.png');
-    // Not before a save finishes: one in flight may still name the file.
+    // No delete until a save finishes: a save in progress may still name the file.
     expect(httpDelete).not.toHaveBeenCalled();
     manager.finishSave({});
     expect(httpDelete).toHaveBeenCalledWith('/v3/assets/chan/old.png', true);
