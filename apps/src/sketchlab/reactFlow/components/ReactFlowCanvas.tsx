@@ -857,20 +857,21 @@ export default function ReactFlowCanvas({
       : multiSelectedNodeIds,
   });
 
+  const focusedEdgeId =
+    nodeOrEdgeFocused && lastFocusedEntry?.type === 'edge'
+      ? lastFocusedEntry.id
+      : null;
+
   // Edges that show a selection ring: those React Flow marks selected, plus the
   // edge holding DOM focus. Read-only mode never marks an edge selected, so the
   // focused edge would otherwise have no visible indicator.
   const outlinedEdgeIds = useMemo(() => {
     const ids = displayEdges.filter(edge => edge.selected).map(edge => edge.id);
-    const focusedEdgeId =
-      nodeOrEdgeFocused && lastFocusedEntry?.type === 'edge'
-        ? lastFocusedEntry.id
-        : null;
     if (focusedEdgeId && !ids.includes(focusedEdgeId)) {
       ids.push(focusedEdgeId);
     }
     return ids;
-  }, [displayEdges, nodeOrEdgeFocused, lastFocusedEntry]);
+  }, [displayEdges, focusedEdgeId]);
 
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -1243,7 +1244,10 @@ export default function ReactFlowCanvas({
                         </Panel>
                       )}
                       <Background />
-                      <EdgeSelectionOutlines edgeIds={outlinedEdgeIds} />
+                      <EdgeSelectionOutlines
+                        edgeIds={outlinedEdgeIds}
+                        focusedEdgeId={focusedEdgeId}
+                      />
                       <CanvasControls
                         onUndo={handleUndo}
                         onRedo={handleRedo}

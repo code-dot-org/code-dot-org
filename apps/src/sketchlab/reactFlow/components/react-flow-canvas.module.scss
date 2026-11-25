@@ -215,11 +215,15 @@ $handle-grab-buffer: 10px;
 .edgeSelectionOutline {
   @include node-mixins.node-focus-ring;
 
-  // A selection, not focus: keep the selection colour.
+  // Selection matches the resize box on selected nodes.
   outline-color: var(--borders-brand-teal-primary);
 
   position: absolute;
   pointer-events: none;
+}
+
+.edgeFocusOutline {
+  outline-color: var(--border-focused-primary);
 }
 
 // Visually hidden but announced by screen readers.

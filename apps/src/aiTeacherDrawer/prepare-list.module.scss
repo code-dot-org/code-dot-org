@@ -130,7 +130,7 @@
   position: relative;
 
   &:focus {
-    outline: 2px solid var(--borders-brand-blue-primary, #0094ca);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
   }
 }

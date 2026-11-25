@@ -1,4 +1,5 @@
 import {ViewportPortal} from '@xyflow/react';
+import classNames from 'classnames';
 import React, {useLayoutEffect, useRef} from 'react';
 
 import {LINE_INTERACTION_WIDTH_PX} from '../constants';
@@ -15,6 +16,8 @@ import styles from './react-flow-canvas.module.scss';
 
 interface EdgeSelectionOutlinesProps {
   edgeIds: string[];
+  // Its ring is the edge's only focus indicator, so it takes the focus colour.
+  focusedEdgeId: string | null;
 }
 
 function sameBox(
@@ -39,6 +42,7 @@ function sameBox(
  */
 export default function EdgeSelectionOutlines({
   edgeIds,
+  focusedEdgeId,
 }: EdgeSelectionOutlinesProps) {
   const outlineRefs = useRef(new Map<string, HTMLDivElement>());
   const lastBoxes = useRef(new Map<string, EdgeSelectionBox>());
@@ -119,7 +123,9 @@ export default function EdgeSelectionOutlines({
               lastBoxes.current.delete(edgeId);
             }
           }}
-          className={styles.edgeSelectionOutline}
+          className={classNames(styles.edgeSelectionOutline, {
+            [styles.edgeFocusOutline]: edgeId === focusedEdgeId,
+          })}
           style={{display: 'none'}}
           aria-hidden="true"
         />

@@ -23,7 +23,7 @@ $visible-table-height: ($visible-rows + 1) * mixins.$data-table-row-height;
   }
 
   &:has(> :focus-visible)::after {
-    border: 2px solid var(--border-brand-primary);
+    border: 2px solid var(--border-focused-primary);
   }
 }
 
