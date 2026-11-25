@@ -788,8 +788,8 @@ export function loadAnimationFromSource(key, callback) {
       if (storeLoadedImagesAsObjectUrls) {
         const objectUrl = URL.createObjectURL(blob);
         dataURIToSourceSize(objectUrl).then(sourceSize => {
-          // Reloading over a previous object URL frees the old Blob, once
-          // the new picture has decoded.
+          // Free the old picture's Blob only after the new file has decoded,
+          // so a file that fails to decode leaves the old picture in place.
           const previous = getState().animationList.propsByKey[key]?.dataURI;
           if (previous?.startsWith('blob:')) {
             URL.revokeObjectURL(previous);

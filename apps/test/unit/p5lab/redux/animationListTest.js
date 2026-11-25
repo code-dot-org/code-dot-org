@@ -39,7 +39,6 @@ import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no
 import {createStore} from '../../../util/redux';
 import {setExternalGlobals} from '../../../util/testUtils';
 
-// The image helpers, real unless a test says otherwise.
 jest.mock('@cdo/apps/imageUtils', () => {
   const actual = jest.requireActual('@cdo/apps/imageUtils');
   return {
@@ -163,12 +162,6 @@ describe('animationList', function () {
   });
 
   describe('loadAnimationFromSource', function () {
-    // Note: I'm basically unable to test loadAnimationFromSource right now,
-    // because it makes an external request for a Blob and sinon can't fake
-    // a request for a blob under PhantomJS (grr) so I need to do some refactoring
-    // to allow me to stub a request method.  in the meantime, I'll show
-    // that the reducer responds as expected.
-
     const key = 'foo';
     let store;
 
@@ -233,7 +226,6 @@ describe('animationList', function () {
     });
 
     it('sets the loadedFromSource flag', function () {
-      // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].loadedFromSource).to
         .be.undefined;
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
@@ -261,7 +253,6 @@ describe('animationList', function () {
     });
 
     it('populates animation blob', function () {
-      // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].blob).to.be
         .undefined;
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
@@ -277,7 +268,6 @@ describe('animationList', function () {
     });
 
     it('populates animation dataURI', function () {
-      // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].dataURI).to.be
         .undefined;
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
@@ -293,7 +283,6 @@ describe('animationList', function () {
     });
 
     it('populates animation sourceSize', function () {
-      // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].sourceSize).to.be
         .undefined;
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
