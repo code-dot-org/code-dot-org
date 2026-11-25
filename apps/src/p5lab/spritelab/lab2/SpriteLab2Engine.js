@@ -4,6 +4,7 @@ import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {
+  isLoadFromSourceSettled,
   setRetainBlobsOnLoad,
   setStoreLoadedImagesAsObjectUrls,
 } from '@cdo/apps/p5lab/redux/animationList';
@@ -1237,11 +1238,15 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.preloadTrimmedSpriteImages_();
   }
 
-  /**
-   * Wait for the project's images, but not forever: the store never marks
-   * an image whose fetch failed, so after the grace period the run goes
-   * ahead with what has loaded.
-   */
+  // A failed image counts as ready, since it will not arrive: the run goes
+  // ahead without it.
+  areAnimationsReady_() {
+    const list = getStore().getState().animationList;
+    return list.orderedKeys.every(key =>
+      isLoadFromSourceSettled(list.propsByKey[key])
+    );
+  }
+
   whenAnimationsAreReadyOrGivenUp_() {
     if (this.areAnimationsReady_()) {
       return Promise.resolve();
@@ -1277,13 +1282,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     }
     const list = getStore().getState().animationList;
     const pending = list.orderedKeys
-      .filter(key => !list.propsByKey[key]?.loadedFromSource)
+      .filter(key => !isLoadFromSourceSettled(list.propsByKey[key]))
       .map(key => list.propsByKey[key]?.name || key);
     console.warn(
       `SpriteLab2: ${pending.join(', ')} did not load within ` +
         `${IMAGE_LOAD_GRACE_MS / 1000}s; running without ` +
         `${pending.length === 1 ? 'it' : 'them'}. Check the Network tab ` +
-        'for failing asset requests.'
+        'for slow or stalled asset requests.'
     );
     this.clearLateImagesWatch_();
     this.lateImagesUnsubscribe_ = getStore().subscribe(() => {

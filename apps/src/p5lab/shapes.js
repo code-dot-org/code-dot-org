@@ -100,6 +100,7 @@ const serializedAnimationPropsShape = {
  * @property {string} [version] - S3 version key
  *
  * @property {boolean} loadedFromSource - False at first, true after load successful.
+ * @property {boolean} [loadFailed] - True after the last load from source failed.
  * @property {Vector2} sourceSize
  * @property {boolean} saved - True if the current blob represents the last thing
  *           we uploaded to the animations API, false if we have a pending change
@@ -111,6 +112,7 @@ const serializedAnimationPropsShape = {
  */
 const animationPropsShape = _.assign({}, serializedAnimationPropsShape, {
   loadedFromSource: PropTypes.bool,
+  loadFailed: PropTypes.bool,
   sourceSize: Vector2,
   saved: PropTypes.bool,
   blob: PropTypes.object,

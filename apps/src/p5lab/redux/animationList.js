@@ -47,6 +47,9 @@ export const START_LOADING_FROM_SOURCE =
 // Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
 export const DONE_LOADING_FROM_SOURCE =
   'AnimationList/DONE_LOADING_FROM_SOURCE';
+// Args: {AnimationKey} key
+export const FAILED_LOADING_FROM_SOURCE =
+  'AnimationList/FAILED_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {string} version
 const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
 // Args: {AnimationKey} key, {!SerializedAnimation} props
@@ -140,6 +143,7 @@ function propsByKey(state, action) {
     case SET_ANIMATION_FRAME_DELAY:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
+    case FAILED_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
       return Object.assign({}, state, {
         [action.key]: animationPropsReducer(state[action.key], action),
@@ -189,15 +193,22 @@ function animationPropsReducer(state, action) {
     case START_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: false,
+        loadFailed: false,
       });
 
     case DONE_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: true,
+        loadFailed: false,
         saved: true,
         blob: action.blob,
         dataURI: action.dataURI,
         sourceSize: action.sourceSize,
+      });
+
+    case FAILED_LOADING_FROM_SOURCE:
+      return Object.assign({}, state, {
+        loadFailed: true,
       });
 
     case ON_ANIMATION_SAVED:
@@ -696,6 +707,16 @@ export function setStoreLoadedImagesAsObjectUrls(enable) {
 }
 
 /**
+ * True once an image's load from its source has finished, by arriving or by
+ * failing.
+ * @param {AnimationProps} [props]
+ * @returns {boolean}
+ */
+export function isLoadFromSourceSettled(props) {
+  return !!(props?.loadedFromSource || props?.loadFailed);
+}
+
+/**
  * Revoke a list's object-URL images, freeing their Blobs. Call when the
  * whole list is being replaced (level switch, Start Over re-seed).
  */
@@ -739,8 +760,7 @@ function loadAnimationFromSource(key, callback) {
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load animation ' + key, err);
-        // Brute-force recovery step: Remove the animation from our redux state;
-        // it looks like it's already gone from the server.
+        dispatch({type: FAILED_LOADING_FROM_SOURCE, key});
 
         if (isOwner()) {
           // Display error dialog

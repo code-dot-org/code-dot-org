@@ -7,6 +7,8 @@ import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
 import reducer, {
   START_LOADING_FROM_SOURCE,
   DONE_LOADING_FROM_SOURCE,
+  FAILED_LOADING_FROM_SOURCE,
+  isLoadFromSourceSettled,
   animationSourceUrl,
   setInitialAnimationList,
   deleteAnimation,
@@ -181,6 +183,19 @@ describe('animationList', function () {
       });
       expect(store.getState().animationList.propsByKey[key].loadedFromSource).to
         .be.true;
+    });
+
+    it('marks a failed load settled, and a new load clears the mark', function () {
+      const props = () => store.getState().animationList.propsByKey[key];
+      store.dispatch({type: START_LOADING_FROM_SOURCE, key});
+      expect(isLoadFromSourceSettled(props())).to.be.false;
+      store.dispatch({type: FAILED_LOADING_FROM_SOURCE, key});
+      expect(props().loadedFromSource).to.be.false;
+      expect(isLoadFromSourceSettled(props())).to.be.true;
+      store.dispatch({type: START_LOADING_FROM_SOURCE, key});
+      expect(isLoadFromSourceSettled(props())).to.be.false;
+      store.dispatch({type: DONE_LOADING_FROM_SOURCE, key});
+      expect(isLoadFromSourceSettled(props())).to.be.true;
     });
 
     it('populates animation blob', function () {

@@ -40,6 +40,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 // pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {
+  isLoadFromSourceSettled,
   revokeObjectUrlImages,
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
@@ -1256,13 +1257,13 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const rerunWhenAnimationsLoaded = useCallback(() => {
     cancelRerunWatchRef.current?.();
     const store = getStore();
-    const allLoaded = () => {
+    const allSettled = () => {
       const list = store.getState().animationList;
-      return list.orderedKeys.every(
-        (key: string) => list.propsByKey[key]?.loadedFromSource
+      return list.orderedKeys.every((key: string) =>
+        isLoadFromSourceSettled(list.propsByKey[key])
       );
     };
-    if (allLoaded()) {
+    if (allSettled()) {
       // The reseed-triggered run has everything it needs.
       return;
     }
@@ -1270,7 +1271,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
       cancel();
       rerunStageRef.current();
     };
-    const unsubscribe = store.subscribe(() => allLoaded() && finish());
+    const unsubscribe = store.subscribe(() => allSettled() && finish());
     // Give up quietly if a load never completes; the playspace stays stale,
     // no worse than not watching.
     const timer = window.setTimeout(() => cancel(), 10000);
