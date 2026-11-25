@@ -13,7 +13,6 @@ silenced = [
   'Starting in Rails 7.2, alias_attribute with non-attribute targets will raise.',
   'TestFixtures.fixture_path is deprecated and will be removed in Rails 7.2',
   'The `check_pending!` method is deprecated in favor of `check_all_pending!`',
-  '`wait: :exponentially_longer` will actually wait polynomially longer and is therefore deprecated.',
   'assert_deprecated without a deprecator is deprecated',
 ]
 

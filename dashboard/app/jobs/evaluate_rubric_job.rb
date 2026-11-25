@@ -161,8 +161,8 @@ class EvaluateRubricJob < ApplicationJob
     rubric_ai_evaluation.save!
   end
 
-  # Retry on any reported rate limit (429 status). With 3 attempts, 'exponentially_longer' waits 3s, then 18s.
-  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
+  # Retry on any reported rate limit (429 status). With 3 attempts, 'polynomially_longer' waits 3s, then 18s.
+  retry_on TooManyRequestsError, wait: :polynomially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
     AiRubricMetrics.log_metric(metric_name: :RateLimit)
     AiRubricMetrics.log_to_cloudwatch(job: job, error: error, event_name: 'rate-limit')
   end
@@ -175,7 +175,7 @@ class EvaluateRubricJob < ApplicationJob
 
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500.
-  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |job, error|
+  retry_on ServiceUnavailableError, wait: :polynomially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |job, error|
     agent = 'none'
     if error.message.downcase.include?('openai')
       agent = 'openai'
@@ -188,7 +188,7 @@ class EvaluateRubricJob < ApplicationJob
 
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
   # when openai request times out.
-  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |job, error|
+  retry_on GatewayTimeoutError, wait: :polynomially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |job, error|
     agent = 'none'
     if error.message.downcase.include?('openai')
       agent = 'openai'
