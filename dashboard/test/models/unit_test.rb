@@ -81,7 +81,7 @@ class UnitTest < ActiveSupport::TestCase
   end
 
   test 'can setup migrated unit with new models' do
-    Unit.stubs(:unit_json_directory).returns(File.join(self.class.fixture_path, 'config', 'scripts_json'))
+    Unit.stubs(:unit_json_directory).returns(File.join(self.class.fixture_paths.first, 'config', 'scripts_json'))
 
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
@@ -1119,7 +1119,7 @@ class UnitTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations I18n.locale, i18n['en']
 
-    Unit.stubs(:unit_json_directory).returns(self.class.fixture_path)
+    Unit.stubs(:unit_json_directory).returns(self.class.fixture_paths.first)
     unit = Unit.seed_from_json_file('test-plc')
 
     assert unit.old_professional_learning_course?
