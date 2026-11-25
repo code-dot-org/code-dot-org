@@ -650,7 +650,7 @@ describe('ImagesTab', () => {
       {key: null, imageType: 'sprite', subject: 'character'},
       'data:png',
       {pixelGridSize: 1},
-      expect.anything()
+      {stillWanted: expect.any(Function)}
     );
     expect(screen.queryByText('canvas')).toBeNull();
     expect(pressed()).toEqual(['Sprite 1']);

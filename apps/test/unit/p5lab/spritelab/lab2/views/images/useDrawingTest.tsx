@@ -305,8 +305,8 @@ describe('useDrawing', () => {
     expect(saveProjectNow).not.toHaveBeenCalled();
   });
 
-  it('makes a final save when the level is left during a pause save', async () => {
-    const {saveEdited, tools, unmount} = setup();
+  it('makes a final save, which saves the project, when the level is left during a pause save', async () => {
+    const {saveEdited, storePicture, tools, unmount} = setup();
     await act(() => tools().startDrawing(target));
     tools().attachEditor({
       save: () => tools().handleSave('data:last', {}),
@@ -327,6 +327,11 @@ describe('useDrawing', () => {
       'data:a',
       'data:b',
       'data:last',
+    ]);
+    expect(storePicture.mock.calls.map(call => call[2])).toEqual([
+      false,
+      false,
+      true,
     ]);
   });
 
@@ -417,7 +422,8 @@ describe('useDrawing', () => {
             )
         );
       const tick = () => new Promise(resolve => setTimeout(resolve, 0));
-      // A set's save reaches saveEdited a tick late, after its strip.
+      // A set's save calls saveEdited one tick late, after replaceFrame
+      // builds its strip, so release waits a tick first.
       const release = async () => {
         await act(async () => {
           await tick();
@@ -444,7 +450,7 @@ describe('useDrawing', () => {
       return {...tools, hold, release, open, pause, saves, saveNows};
     };
 
-    it("finishes the open picture's waiting save on Done, as its last save", async () => {
+    it("makes the open picture's last save on Done while its save waits behind another's", async () => {
       const t = queueSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
@@ -483,7 +489,7 @@ describe('useDrawing', () => {
       ]);
     });
 
-    it('makes a waiting save of a picture left untouched its last save', async () => {
+    it('makes a last save for a picture left while its save waits', async () => {
       const t = queueSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
@@ -562,6 +568,24 @@ describe('useDrawing', () => {
       ]);
     });
 
+    it('stays on the frame chosen again while a switch away from it waits', async () => {
+      const t = queueSetup();
+      await act(() => t.tools().startDrawing(pictures.set, 0));
+      t.tools().attachEditor({
+        save: () => t.tools().handleSave('f0', {}),
+        snapshot: () => null,
+      });
+      t.hold();
+      t.pause('f0');
+      await act(async () => {
+        t.tools().selectFrame(1);
+        t.tools().selectFrame(0);
+        await new Promise(resolve => setTimeout(resolve, 0));
+      });
+      await t.release();
+      expect(t.tools().drawing!.sheet!.index).toBe(0);
+    });
+
     it("runs a left picture's last save when its running save fails before the next picture opens", async () => {
       const t = queueSetup();
       await t.open(pictures.one, 'one:last');
@@ -586,8 +610,8 @@ describe('useDrawing', () => {
     it("never takes a left picture's running save for the next picture's", async () => {
       const t = queueSetup();
       await t.open(pictures.one, 'one:last');
-      // The pause's save and its last save are still running when the next
-      // picture opens.
+      // Both of the first picture's saves are held; the next picture opens
+      // while its last save is still running.
       t.hold();
       t.hold();
       t.pause('one:a');
@@ -613,7 +637,8 @@ describe('useDrawing', () => {
         ['k1', 'one:a'],
         ['k1', 'one:last'],
       ]);
-      // The last save leaves the next picture's opening alone.
+      // The last save does not clear the canvas kept up for the next
+      // picture.
       expect(t.tools().drawing).not.toBeNull();
     });
 

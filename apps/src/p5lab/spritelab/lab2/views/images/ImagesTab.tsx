@@ -296,8 +296,9 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       if (!target.key && stillOpen()) {
         // The student may have moved to another image while the upload was
         // in progress; only a draft still chosen becomes the new image's
-        // tile. A drawing left for a new draft is not that draft, though
-        // both are chosen as DRAFT_ID. The choice moves before the draft
+        // tile. If the student left this new drawing for another new one,
+        // both are chosen as DRAFT_ID; `stillOpen` keeps the left one from
+        // taking the new one's tile. The choice moves before the draft
         // goes, so no render sees a chosen draft that no longer exists.
         setChosenId(id => (id === DRAFT_ID ? key : id));
         setDraft(null);

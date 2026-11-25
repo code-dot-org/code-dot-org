@@ -1370,8 +1370,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     writeAnimations();
   }, [animationList, writeAnimations]);
   // Saves the project at once instead of waiting for its throttled save.
-  // The effect above may already have written the image list unforced, and
-  // an unchanged write saves nothing, so the waiting save is flushed too.
+  // The effect above may already have written the image list without
+  // forcing a save, and writing an unchanged list saves nothing, so the
+  // throttled save already waiting is flushed too.
   const saveImagesNow = useCallback(() => {
     writeAnimations(true);
     void Lab2Registry.getInstance().getProjectManager()?.flushSave();

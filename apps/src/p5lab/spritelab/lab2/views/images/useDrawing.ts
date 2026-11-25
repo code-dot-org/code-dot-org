@@ -20,9 +20,9 @@ import {cutFrame, frameCount, replaceFrame} from './frames';
 import {ImageProps, ProjectImage} from './projectImages';
 import {ImageTarget, ImageWriter} from './useImageWriter';
 
-// A pause this long after a stroke saves the drawing into the project and
-// uploads its file, so the image list's tile, the World tab's palette and
-// the next Run show the picture as it is drawn.
+// A pause this long after a stroke uploads the drawing's file and puts the
+// picture in the image list, so the image list's tile, the World tab's
+// palette and the next Run show the picture as it is drawn.
 const STROKE_SAVE_MS = 800;
 
 /** What the tools opened on. `other` is an image that is neither blank nor
@@ -192,8 +192,9 @@ export default function useDrawing({
     return !!waiting;
   }, []);
   const leaveAfterSaveRef = useRef(false);
-  // A pause's save does not save the project. The final save runs after it,
-  // or replaces it while it waits, and saves the project at once.
+  // A last save is needed after new strokes, and also while a save of the
+  // drawing runs or waits: a pause's save does not save the project, and
+  // the last save does, at once.
   const lastSaveNeeded = useCallback(
     (id: number) => dirtyRef.current || hasSaveFor(id),
     [hasSaveFor]
@@ -408,8 +409,9 @@ export default function useDrawing({
       if (openIdRef.current !== current.id) {
         return;
       }
-      // Strokes made meanwhile are on the frame still showing; they are
-      // saved into it first.
+      // Strokes made while the frame was being cut are on the frame still
+      // showing. They are saved into it, and the set's running or waiting
+      // saves finish, before the frame switches.
       if (dirtyRef.current || hasSaveFor(current.id)) {
         nextFrameRef.current = {id: current.id, index};
         if (dirtyRef.current) {
@@ -495,9 +497,9 @@ export default function useDrawing({
       } catch {
         if (openIdRef.current === drawingToSave.id) {
           // The picture is still on the canvas. It is marked unsaved, so the
-          // next pause, Done or leaving the tab tries again from the canvas
-          // as it is then; a waiting save of it would only carry older
-          // pixels.
+          // next pause, Done or leaving the tab saves the canvas as it is
+          // then. The canvas already has every stroke in this picture's
+          // waiting saves, so those saves are dropped.
           dirtyRef.current = true;
           queueRef.current = queueRef.current.filter(
             waiting => waiting.drawing.id !== drawingToSave.id
@@ -554,11 +556,13 @@ export default function useDrawing({
   const selectFrame = useCallback(
     (index: number) => {
       const open = drawingRef.current;
-      if (
-        !open?.sheet ||
-        openIdRef.current !== open.id ||
-        index === open.sheet.index
-      ) {
+      if (!open?.sheet || openIdRef.current !== open.id) {
+        return;
+      }
+      if (index === open.sheet.index) {
+        // Choosing the frame on screen cancels a frame switch that is
+        // waiting for the set's saves to finish.
+        nextFrameRef.current = null;
         return;
       }
       // The frame opens once the set's saves have finished, so it is cut

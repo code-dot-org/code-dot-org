@@ -371,7 +371,7 @@ describe('useImageWriter', () => {
     ]);
   });
 
-  it('saves drawn pixels onto an image, no longer as the prompt made them', async () => {
+  it('saves drawn pixels onto a generated image, uploading each save and marking it edited, not generated', async () => {
     propsByKey.k1 = {
       name: 'Sprite 1',
       sourceUrl: '/v3/assets/chan/old.png',
