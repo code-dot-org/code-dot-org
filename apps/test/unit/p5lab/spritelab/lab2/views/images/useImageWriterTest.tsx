@@ -527,7 +527,6 @@ describe('useImageWriter', () => {
     let now = 1000;
     beforeEach(() => {
       jest.spyOn(Date, 'now').mockImplementation(() => (now += 1));
-      // The image takes the patch's file, and the old one is returned.
       repointAnimation.mockImplementation((...args: unknown[]) => {
         const [, key, patch] = args as [unknown, string, {sourceUrl?: string}];
         const previous = propsByKey[key].sourceUrl as string;

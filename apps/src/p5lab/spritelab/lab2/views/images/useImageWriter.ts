@@ -1,7 +1,8 @@
 // Writing the Images tab's pictures into the project. A generated or drawn
-// picture becomes an image's pixels as soon as it is ready; each picture is
-// uploaded once; when a session ends, uploaded files that no image points
-// at are deleted.
+// picture becomes an image's pixels as soon as it is ready. A generated
+// picture is uploaded once; a drawing's uploads in one session all go to one
+// file. When a session ends, uploaded files that no image points at are
+// deleted.
 
 import {useCallback, useEffect, useRef} from 'react';
 import {AnyAction} from 'redux';
@@ -92,7 +93,8 @@ export interface ImageWriter {
       when the file cannot be uploaded. */
   acceptUploaded: (target: ImageTarget, file: UploadedImage) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
-      its key, as acceptGenerated does. Rejects when the file cannot be
+      its key, as acceptGenerated does. Within one session, each upload for
+      the same image replaces one file. Rejects when the file cannot be
       uploaded. */
   saveEdited: (
     target: ImageTarget,
@@ -123,8 +125,7 @@ const measuredSize = async (dataURI: string) =>
 const propsOf = (key: string): ImageProps | undefined =>
   getStore().getState().animationList.propsByKey[key];
 
-// The file a link names: a drawing's link carries ?t=<upload time> so a
-// replaced file is not served from a cache.
+// The URL without its query string: a drawing's URL ends in ?t=<upload time>.
 const fileOf = (url: string) => url.split('?')[0];
 
 export default function useImageWriter({
@@ -138,11 +139,13 @@ export default function useImageWriter({
   // Uploads keyed by the result's filename, so choosing an earlier picture
   // of the session again reuses its upload.
   const uploadsRef = useRef(new Map<string, Upload>());
-  // Every file the session uploaded or replaced; those no image points at
-  // when the session ends are deleted.
+  // The URL of every file the session uploaded, and of every file an image
+  // stopped pointing at; one file can appear under several ?t= URLs. At
+  // session end, files no image points at are deleted.
   const sessionUrlsRef = useRef(new Set<string>());
-  // The file each image's drawing uploads to this session; later uploads
-  // replace it rather than adding a file each time.
+  // Image key → the filename its drawing was uploaded under in this session.
+  // Later uploads of that drawing reuse the name, so they replace the file
+  // instead of adding one.
   const drawingFilesRef = useRef(new Map<string, string>());
   const recordSessionUrl = (url?: string) => {
     if (url) {
@@ -161,8 +164,8 @@ export default function useImageWriter({
   );
 
   const endSession = useCallback(() => {
-    // One file can be recorded under several links: the drawing's file
-    // after each upload.
+    // reclaimAsset matches whole URLs, so files are compared here without
+    // the query string, and each is deleted once.
     const inUse = new Set(
       Object.values(
         getStore().getState().animationList.propsByKey as Record<
@@ -298,6 +301,8 @@ export default function useImageWriter({
       const replaceable =
         !!uploadedUrl &&
         fileOf(uploadedUrl).endsWith(`/${encodeURIComponent(filename)}`);
+      // A new query string on each upload, so the browser and CDN do not
+      // serve the replaced file from cache.
       const sourceUrl =
         uploadedUrl && replaceable
           ? `${fileOf(uploadedUrl)}?t=${Date.now()}`
