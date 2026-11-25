@@ -1,3 +1,5 @@
+require 'csv'
+
 class AilabDatasetsController < ApplicationController
   # Students load the files of a stored dataset, so `csv` and `metadata` need no sign-in.
   before_action :authenticate_user!, only: [:create]
@@ -19,8 +21,8 @@ class AilabDatasetsController < ApplicationController
       name: params[:name].strip,
       is_toy: params[:is_toy] == 'true',
       row_count: params[:row_count].to_i,
-      csv: params[:csv].read,
-      metadata: JSON.parse(params[:metadata])
+      csv: csv_text,
+      metadata: parsed_metadata
     )
     render json: AilabDatasets.stored(params[:id])
   end
@@ -49,7 +51,8 @@ class AilabDatasetsController < ApplicationController
     errors << 'ID: use only letters, numbers, hyphens and underscores' unless AilabDatasets.valid_id?(params[:id])
     errors << 'Name: must not be blank' if params[:name].blank?
     errors << "Row count: must be #{MIN_ROW_COUNT} or more" unless params[:row_count].to_i >= MIN_ROW_COUNT
-    errors + csv_errors + metadata_errors
+    errors += csv_errors + metadata_errors
+    errors.any? ? errors : column_errors
   end
 
   private def csv_errors
@@ -60,11 +63,25 @@ class AilabDatasetsController < ApplicationController
   end
 
   private def metadata_errors
-    metadata = JSON.parse(params[:metadata].to_s)
-    return ['Metadata: must be a JSON object'] unless metadata.is_a?(Hash)
-    return ["Metadata: the name #{metadata['name'].inspect} is not the dataset ID"] unless metadata['name'] == params[:id]
+    return ['Metadata: must be a JSON object'] unless parsed_metadata.is_a?(Hash)
+    return ["Metadata: the name #{parsed_metadata['name'].inspect} is not the dataset ID"] unless parsed_metadata['name'] == params[:id]
     []
   rescue JSON::ParserError
     ['Metadata: is not valid JSON']
+  end
+
+  private def column_errors
+    columns = CSV.parse_line(csv_text.dup.force_encoding(Encoding::UTF_8).scrub.delete_prefix("\uFEFF")) || []
+    (parsed_metadata.fetch('fields', []).pluck('id') - columns).map {|id| "Metadata: the CSV has no column #{id.inspect}"}
+  rescue CSV::MalformedCSVError
+    ['CSV: is not valid CSV']
+  end
+
+  private def csv_text
+    @csv_text ||= params[:csv].read
+  end
+
+  private def parsed_metadata
+    @parsed_metadata ||= JSON.parse(params[:metadata].to_s)
   end
 end

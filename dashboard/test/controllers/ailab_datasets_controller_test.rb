@@ -18,6 +18,12 @@ class AilabDatasetsControllerTest < ActionDispatch::IntegrationTest
     FileUtils.remove_entry(@dir)
   end
 
+  test "create requires a signed-in user" do
+    post '/ailab_datasets', params: dataset_params
+    assert_response :redirect
+    assert_nil AilabDatasets.stored('birds')
+  end
+
   test "create requires a levelbuilder" do
     sign_in create(:teacher)
     post '/ailab_datasets', params: dataset_params
@@ -52,15 +58,24 @@ class AilabDatasetsControllerTest < ActionDispatch::IntegrationTest
       {name: ' '} => 'Name: must not be blank',
       {row_count: '1'} => 'Row count: must be 2 or more',
       {csv: 'Name,Legs'} => 'CSV: must be a file',
+      {csv: oversized_upload} => 'CSV: must be 5 MB or less',
+      {csv: upload("\"Name,Legs\nRex,4\n")} => 'CSV: is not valid CSV',
       {metadata: '{"name": "birds"'} => 'Metadata: is not valid JSON',
       {metadata: '["birds"]'} => 'Metadata: must be a JSON object',
       {metadata: '{"name": "ants"}'} => 'Metadata: the name "ants" is not the dataset ID',
+      {metadata: '{"name": "birds", "fields": [{"id": "Name"}, {"id": "Wings"}]}'} => 'Metadata: the CSV has no column "Wings"',
     }.each do |changes, error|
       post '/ailab_datasets', params: dataset_params(**changes)
       assert_response :unprocessable_entity, changes.to_s
       assert_equal [error], response.parsed_body['errors']
     end
     refute @dir.join('stored').exist?
+  end
+
+  test "create matches columns in a CSV that starts with a byte order mark" do
+    sign_in create(:levelbuilder)
+    post '/ailab_datasets', params: dataset_params(csv: upload("\uFEFF#{CSV}"))
+    assert_response :success
   end
 
   test "csv and metadata give the files of a stored dataset to all users" do
@@ -82,6 +97,16 @@ class AilabDatasetsControllerTest < ActionDispatch::IntegrationTest
     assert_response :not_found
     get '/ailab_datasets/zoo/metadata'
     assert_response :not_found
+  end
+
+  private def upload(text)
+    file = @dir.join("upload-#{SecureRandom.hex(4)}.csv")
+    file.write(text)
+    Rack::Test::UploadedFile.new(file.to_s, 'text/csv')
+  end
+
+  private def oversized_upload
+    upload('a' * (AilabDatasetsController::MAX_CSV_BYTES + 1))
   end
 
   private def dataset_params(**changes)

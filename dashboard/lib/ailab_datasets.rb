@@ -40,7 +40,8 @@ module AilabDatasets
   end
 
   def self.ids
-    all.map {|entry| entry['id']}
+    stored_ids = manifest_entries.pluck('id')
+    (read_json(bundled_manifest_file)['datasets'].pluck('id') - stored_ids) + stored_ids
   end
 
   # The manifest entry of a dataset that a levelbuilder saved. Nil for a bundled or unknown ID.
