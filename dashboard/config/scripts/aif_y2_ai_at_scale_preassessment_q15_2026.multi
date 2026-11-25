@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q15-2026'
+
+wrong 'A processing unit capable of 100 FLOP/s'
+wrong 'A processing unit capable of 1,000,000 FLOP/s'
+wrong 'A processing unit capable of 1 TFLOP/s'
+right 'A processing unit capable of 10 TFLOP/s'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which processing unit could run a neural network the fastest?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 12: Costs of AI
+MARKDOWN

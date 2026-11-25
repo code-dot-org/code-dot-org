@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q10-2026'
+
+wrong 'The system uses training data from past emergency room stays.'
+wrong 'The system was built by a team of engineers in collaboration with a doctor.'
+wrong 'The system is a neural network with three layers, and the hidden layer has 1,024 neurons.'
+right 'The system is less accurate for patients of one gender than another.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A hospital uses an AI system that assesses whether or not a patient needs emergency (i.e., immediate) treatment. Which best represents a problem an audit of the system might uncover?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Safeguards for AI
+MARKDOWN

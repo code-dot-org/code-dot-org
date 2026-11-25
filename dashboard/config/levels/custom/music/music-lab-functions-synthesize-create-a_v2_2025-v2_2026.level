@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2026-05-06T17:05:14.000Z",
   "level_num": "custom",
@@ -53,7 +54,7 @@
       "showSoundFilters": true,
       "validationTimeout": 1
     },
-    "long_instructions": "### Flip the Foundation\r\n\r\n**The Scenario:**\r\n\r\nYou're given the original tracks from a song - but instead of using the beat as the track's foundation and the vocals as the melody, you'll flip the roles. Try making the vocals or bass act like the rhythmic base, and turn the beat into something that decorates or accents.\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n**Do This:**\r\n\r\n- Create at least three functions: one for the foundational beat, one for the bass and leads, one for the vocals and effects.\r\n- Then mix different track types to create your song. For example, use vocals where you'd normally use beats, and use bass where you'd normally change up the vocals.\r\n- Use loops or volume to emphasize the new song.\r\n\r\n**Musical Suggestions:**\r\n\r\n- \"Angel\" - Halle (smooth vocals that can loop rhythmically)\r\n- \"Feather\" - Sabrina Carpenter (bass and vocals blend well as a base)\r\n- \"Do It\" - Chloe x Halle (great for experimenting with structural roles)\r\n\r\n**To pass this level, your remix must include at least 3 functions and use a non-beat track (like vocals or bass) as the main rhythmic foundation.**",
+    "long_instructions": "### Flip the Foundation\r\n\r\n**The Scenario:**\r\n\r\nYou're given the original tracks from a song - but instead of using the beat as the track's foundation and the vocals as the melody, you'll flip the roles. Try making the vocals or bass act like the rhythmic base, and turn the beat into something that decorates or accents.\r\n\r\nIf you want to pick a new song, you can click the restart button in the upper-right corner [<i class=\"fa-solid fa-lightbulb\"></i> <i class=\"fa-solid fa-square-right\"></i>](#clickable=start-over-button)\r\n\r\n**Do This:**\r\n\r\n- Create at least three functions: one for the foundational beat, one for the bass and leads, one for the vocals and effects.\r\n- Then mix different track types to create your song. For example, use vocals where you'd normally use beats, and use bass where you'd normally change up the vocals.\r\n- Use loops or volume to emphasize the new song.\r\n\r\n**Musical Suggestions:**\r\n\r\n- \"Strangers\" - Kenya Grace (looping vocal hook that can act as the rhythm)\r\n- \"Feather\" - Sabrina Carpenter (bass and vocals blend well as a base)\r\n- \"SNAP\" - Rosa Linn (repeating vocal phrases that can drive the beat)\r\n\r\n**To pass this level, your remix must include at least 3 functions and use a non-beat track (like vocals or bass) as the main rhythmic foundation.**",
     "display_name": "Flip the Foundation",
     "bubble_choice_description": "You're given the original tracks from a song - but instead of using the beat as the track's foundation and the vocals as the melody, you'll flip the roles.",
     "predict_settings": {
@@ -88,10 +89,11 @@
     "submittable": "false",
     "thumbnail_url": "https://images.code.org/9847a819d2a1b5d8b8754ffdf47a9a1b-purple.png",
     "ai_tutor_available": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-06T17:05:14.876+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesize-create-a_v2_2025-v2\\\"\"],\"cloned_from\":\"music-lab-functions-synthesize-create-a_v2_2025-v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-06T17:05:14.876+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesize-create-a_v2_2025-v2\\\"\"],\"cloned_from\":\"music-lab-functions-synthesize-create-a_v2_2025-v2\"},{\"changed_at\":\"2026-11-24 23:29:36 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

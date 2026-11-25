@@ -28,11 +28,11 @@
     "uses_lab2": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "false",
     "free_play": "false",
-    "expand_debugger": "false",
+    "expand_debugger": "true",
     "debugger_disabled": "false",
     "validation_enabled": "false",
     "start_in_animation_tab": "false",
@@ -159,8 +159,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "`2mt)Jd--*t1|ii_h2nW",
-                  "x": 1225,
-                  "y": 168,
+                  "x": 587,
+                  "y": 45,
                   "extraState": {
                     "procedureId": "Y4+D[E;-=L@9n}d71yeG",
                     "initialDeleteConfig": true,
@@ -206,8 +206,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "zLrz*}-xYkRa8p2F$AKu",
-                  "x": 1180,
-                  "y": 283,
+                  "x": 1028,
+                  "y": 870,
                   "extraState": {
                     "procedureId": "(W}J*MQd5Uvat[#4jfW-",
                     "initialDeleteConfig": true,
@@ -304,8 +304,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "fF9wvZ_-I`*fm_.H@T2;",
-                  "x": 1182,
-                  "y": 514,
+                  "x": 1026,
+                  "y": 616,
                   "extraState": {
                     "procedureId": "cXJZT}KzEo+1EIql%sTu",
                     "initialDeleteConfig": true,
@@ -410,8 +410,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "KTLkrBjNGlN;|/UMkyOo",
-                  "x": 1180,
-                  "y": 730,
+                  "x": 1046,
+                  "y": 1538,
                   "extraState": {
                     "procedureId": "k/(qdY:0jN:8S=,ow/C!",
                     "initialDeleteConfig": true,
@@ -461,8 +461,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "T/OUbILdq~22zah*(rct",
-                  "x": 673,
-                  "y": 20,
+                  "x": 1030,
+                  "y": 42,
                   "extraState": {
                     "procedureId": "]W7xHKTPu/+Wr.jm1@dI",
                     "initialDeleteConfig": true,
@@ -522,8 +522,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "Z9njlGvRm3Pi-xSRT};I",
-                  "x": 673,
-                  "y": 168,
+                  "x": 1027,
+                  "y": 224,
                   "extraState": {
                     "procedureId": "8X,xpn}x](]LjNr%:0YN",
                     "initialDeleteConfig": true,
@@ -569,8 +569,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "f/k~?{?xbh50YjQ#~Vnw",
-                  "x": 663,
-                  "y": 560,
+                  "x": 1023,
+                  "y": 376,
                   "extraState": {
                     "procedureId": "Km#6[OCb!HwQ{0OR6tAd",
                     "initialDeleteConfig": true,
@@ -643,8 +643,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "UvDp8+1`9Qo%/I5nf6jo",
-                  "x": 600,
-                  "y": 900,
+                  "x": 1027,
+                  "y": 1138,
                   "extraState": {
                     "procedureId": "vSA*a;^?VDe}n_Ho,ePl",
                     "initialDeleteConfig": true,
@@ -690,8 +690,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "y)T1RF]h5n_=:_R5IFeV",
-                  "x": 20,
-                  "y": 700,
+                  "x": 1033,
+                  "y": 2009,
                   "extraState": {
                     "procedureId": "Lu*F:z2,f;h6zf(*cB#I",
                     "initialDeleteConfig": true,
@@ -716,8 +716,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "+@Fpz*kYP0UmM![|.mm8",
-                  "x": 20,
-                  "y": 820,
+                  "x": 1046,
+                  "y": 1811,
                   "extraState": {
                     "procedureId": "6/UK,3Jhb,L=]8@p@nvq",
                     "initialDeleteConfig": true,
@@ -742,8 +742,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "z8Ve%N;r_mY_hc*$7R-p",
-                  "x": 20,
-                  "y": 906,
+                  "x": 1050,
+                  "y": 1693,
                   "extraState": {
                     "procedureId": "S!xMm=$]~M3Z6Vk(sJe*",
                     "initialDeleteConfig": true,
@@ -768,13 +768,18 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "~a?]#MCU(95/)ar~n6NQ",
-                  "x": 1180,
-                  "y": 845,
+                  "x": 1029,
+                  "y": 1290,
+                  "collapsed": true,
+                  "deletable": false,
+                  "movable": false,
+                  "editable": false,
                   "extraState": {
                     "procedureId": "XG(v@xvOj,;^bi,NJ{A]",
-                    "initialDeleteConfig": true,
-                    "initialEditConfig": true,
-                    "initialMoveConfig": true
+                    "initialDeleteConfig": false,
+                    "initialEditConfig": false,
+                    "initialMoveConfig": false,
+                    "invisible": false
                   },
                   "fields": {
                     "NAME": "count_question"
@@ -797,10 +802,79 @@
                               "fields": {
                                 "NUM": -1
                               }
+                            },
+                            "block": {
+                              "type": "math_number",
+                              "id": "kEH3pEYzrCuzRqYxI/A]",
+                              "fields": {
+                                "NUM": -1
+                              }
                             }
                           }
                         },
                         "next": {
+                          "shadow": {
+                            "type": "controls_if",
+                            "id": ")QLki_It=-rx_mO2uEb*",
+                            "extraState": {
+                              "hasElse": true
+                            },
+                            "inputs": {
+                              "IF0": {
+                                "shadow": {
+                                  "type": "logic_compare",
+                                  "id": "h_dmKycF(`g#35%p]qgM",
+                                  "fields": {
+                                    "OP": "<field name=\"OP\">EQ</field>"
+                                  },
+                                  "inputs": {
+                                    "A": {
+                                      "shadow": {
+                                        "type": "variables_get",
+                                        "id": "Mg.)LVXsyeL!,X%YlW$/",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "~WIO[JqOgD4DyuRI~|Li",
+                                            "name": "questions_left",
+                                            "type": ""
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "B": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "dOZbL_-*E0$29RQR8/hV",
+                                        "fields": {
+                                          "NUM": 0
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "DO0": {
+                                "shadow": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "|)2Tn+fk/d$D?sSUnn2t",
+                                  "extraState": {
+                                    "name": "make_a_guess"
+                                  }
+                                }
+                              },
+                              "ELSE": {
+                                "shadow": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "nm6Sz[?-0!DtAW!}%@?`",
+                                  "extraState": {
+                                    "name": "show_choices"
+                                  }
+                                }
+                              }
+                            }
+                          },
                           "block": {
                             "type": "controls_if",
                             "id": ")QLki_It=-rx_mO2uEb*",
@@ -809,6 +883,39 @@
                             },
                             "inputs": {
                               "IF0": {
+                                "shadow": {
+                                  "type": "logic_compare",
+                                  "id": "h_dmKycF(`g#35%p]qgM",
+                                  "fields": {
+                                    "OP": "<field name=\"OP\">EQ</field>"
+                                  },
+                                  "inputs": {
+                                    "A": {
+                                      "shadow": {
+                                        "type": "variables_get",
+                                        "id": "Mg.)LVXsyeL!,X%YlW$/",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "~WIO[JqOgD4DyuRI~|Li",
+                                            "name": "questions_left",
+                                            "type": ""
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "B": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "dOZbL_-*E0$29RQR8/hV",
+                                        "fields": {
+                                          "NUM": 0
+                                        }
+                                      }
+                                    }
+                                  }
+                                },
                                 "block": {
                                   "type": "logic_compare",
                                   "id": "h_dmKycF(`g#35%p]qgM",
@@ -817,6 +924,19 @@
                                   },
                                   "inputs": {
                                     "A": {
+                                      "shadow": {
+                                        "type": "variables_get",
+                                        "id": "Mg.)LVXsyeL!,X%YlW$/",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "~WIO[JqOgD4DyuRI~|Li",
+                                            "name": "questions_left",
+                                            "type": ""
+                                          }
+                                        }
+                                      },
                                       "block": {
                                         "type": "variables_get",
                                         "id": "Mg.)LVXsyeL!,X%YlW$/",
@@ -830,6 +950,13 @@
                                       }
                                     },
                                     "B": {
+                                      "shadow": {
+                                        "type": "math_number",
+                                        "id": "dOZbL_-*E0$29RQR8/hV",
+                                        "fields": {
+                                          "NUM": 0
+                                        }
+                                      },
                                       "block": {
                                         "type": "math_number",
                                         "id": "dOZbL_-*E0$29RQR8/hV",
@@ -842,6 +969,13 @@
                                 }
                               },
                               "DO0": {
+                                "shadow": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "|)2Tn+fk/d$D?sSUnn2t",
+                                  "extraState": {
+                                    "name": "make_a_guess"
+                                  }
+                                },
                                 "block": {
                                   "type": "procedures_callnoreturn",
                                   "id": "|)2Tn+fk/d$D?sSUnn2t",
@@ -851,6 +985,13 @@
                                 }
                               },
                               "ELSE": {
+                                "shadow": {
+                                  "type": "procedures_callnoreturn",
+                                  "id": "nm6Sz[?-0!DtAW!}%@?`",
+                                  "extraState": {
+                                    "name": "show_choices"
+                                  }
+                                },
                                 "block": {
                                   "type": "procedures_callnoreturn",
                                   "id": "nm6Sz[?-0!DtAW!}%@?`",
@@ -954,8 +1095,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "F;AYeWTjCBDJ3U$,rTe3",
-                  "x": 20,
-                  "y": 347,
+                  "x": 17,
+                  "y": 201,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -984,8 +1125,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "l?V6lBLu:G:;c(WjBg.1",
-                  "x": 276,
-                  "y": 440,
+                  "x": 16,
+                  "y": 276,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1053,8 +1194,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "f5F6I(a1:}Tat^9C+r-+",
-                  "x": 1180,
-                  "y": 1294,
+                  "x": 18,
+                  "y": 563,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1224,8 +1365,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "b}IXf;%]U!J?)Ez20-rR",
-                  "x": 673,
-                  "y": 280,
+                  "x": 20,
+                  "y": 421,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1293,8 +1434,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": ":n3xI#H7+n?_{aoy@mSb",
-                  "x": 899,
-                  "y": 1055,
+                  "x": 24,
+                  "y": 865,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1415,8 +1556,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "l~%%u9kjlJCWj`e%n+$5",
-                  "x": 1008,
-                  "y": 1590,
+                  "x": 18,
+                  "y": 1103,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1548,8 +1689,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "o.32WA9rIlwo#m^YcdXW",
-                  "x": 600,
-                  "y": 1904,
+                  "x": 22,
+                  "y": 1425,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1789,8 +1930,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "pub|YR(nosx=*2E0-3$0",
-                  "x": 20,
-                  "y": 600,
+                  "x": 1040,
+                  "y": 1932,
                   "collapsed": true,
                   "deletable": false,
                   "movable": false,
@@ -1960,10 +2101,158 @@
     "level_mode": {
       "kind": "code"
     },
+    "long_instructions": "**PROTOTYPE – SC2 AI in Your Program · Who Am AI? project**\r\n**This version: Calibration Sample C (Sam, chef) – weak**\r\n\r\nSample student work for rubric calibration. Score it **before** reading the author's key.\r\n\r\n- `my_prompt`: \"You are a chef.\" No rule to keep the secret.\r\n- Hint and guess check are the starter defaults (AI hint, button guess with chef / baker / farmer).\r\n- No off-topic check; the wrong-guess reply was changed to \"Wrong!\"\r\n- The unused rule hint still has the starter's zookeeper text.\r\n- Try \"Are you a chef?\" (in testing, the AI answered \"Yes, I am a chef.\").\r\n\r\n**All versions**\r\n- Starter, no image generation: [104027](https://levelbuilder-studio.code.org/levels/104027)\r\n- Starter with image generation: [105336](https://levelbuilder-studio.code.org/levels/105336)\r\n- Finished sample (strong): [105337](https://levelbuilder-studio.code.org/levels/105337)\r\n- Calibration sample, middle: [105339](https://levelbuilder-studio.code.org/levels/105339)\r\n- Calibration sample, weak (this level): [105340](https://levelbuilder-studio.code.org/levels/105340)\r\n- Prompt Helper (AI Chat level): [105338](https://levelbuilder-studio.code.org/levels/105338)\r\n\r\n**Open questions**\r\n- Is \"Level 0 on all four\" realistic for a student who finished the build? Should the weak sample show one Level 1?",
+    "toolbox_definition": {
+      "contents": [
+        {
+          "kind": "category",
+          "name": "Functions",
+          "custom": "PROCEDURE",
+          "id": "Functions",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_makeNewSpriteAnon",
+              "id": "Yric.5YGXM]Qqt1X`23t",
+              "fields": {
+                "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">null</field>"
+              },
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "kind": "category",
+          "name": "Variables",
+          "custom": "VARIABLE",
+          "id": "Variables"
+        },
+        {
+          "kind": "category",
+          "name": "AI",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "spritelab2_askAIWithChoices",
+              "id": "fSiy,$R}9_C@lg4CG9#F",
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_setSystemPrompt",
+              "id": "H+C(N?3#%X+~1AA%a~hO",
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "spritelab2_askAI",
+              "id": "Na/;/;si)zd]h;Yto|_z",
+              "enabled": true
+            }
+          ],
+          "id": "AI"
+        },
+        {
+          "kind": "category",
+          "name": "Logic",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "controls_if",
+              "id": "=N=a`v.LX#*(fv~K$K~0",
+              "enabled": true
+            }
+          ],
+          "id": "Logic"
+        },
+        {
+          "kind": "category",
+          "name": "Prompt User",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_setPrompt",
+              "id": "72LX2^+$yx?[7#rh=g]k",
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_setPromptWithChoices",
+              "id": ":ttLx?rZMFl_U;;L$QB!",
+              "enabled": true
+            }
+          ],
+          "id": "Prompt User"
+        },
+        {
+          "kind": "category",
+          "name": "Events",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_whenPromptAnswered",
+              "id": "cN!Q^K%x|p4w?4fosYpS",
+              "enabled": true
+            }
+          ],
+          "id": "Events"
+        },
+        {
+          "kind": "category",
+          "name": "Text",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "text",
+              "id": ";+~jP(mQZDs(*T-.f_3I",
+              "fields": {
+                "TEXT": ""
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "text_join_simple",
+              "id": "fr_XAd(hR?IEHsW*e1rk",
+              "extraState": {
+                "itemCount": 2
+              },
+              "enabled": true
+            },
+            {
+              "kind": "block",
+              "type": "gamelab_spriteSayTime",
+              "id": "H^?4?V-T{_}k6NPo.=Ns",
+              "enabled": true
+            }
+          ],
+          "id": "Text"
+        },
+        {
+          "kind": "category",
+          "name": "Everything Else",
+          "contents": [
+            {
+              "kind": "block",
+              "type": "gamelab_location_picker",
+              "id": "cwA-I;X+O+VV8E|R$D4-",
+              "fields": {
+                "LOCATION": null
+              },
+              "enabled": true
+            }
+          ],
+          "id": "Everything Else"
+        }
+      ],
+      "kind": "categoryToolbox"
+    },
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-24T05:12:18.152+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-sprite-lab\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-sprite-lab\"},{\"changed_at\":\"2026-11-24 05:12:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-24T05:12:18.152+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-sprite-lab\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-sprite-lab\"},{\"changed_at\":\"2026-11-24 05:12:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 04:47:31 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 04:55:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:06:06 +0000\",\"changed\":[\"hide_share_and_remix\",\"expand_debugger\",\"preload_asset_list\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:11:22 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:14:35 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:17:13 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:20:04 +0000\",\"changed\":[\"toolbox_definition\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:41:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:41:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:42:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:44:48 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 06:03:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>
