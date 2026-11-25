@@ -23,6 +23,7 @@ import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   getAppOptionsEditBlocks,
@@ -1369,10 +1370,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     writeAnimations();
   }, [animationList, writeAnimations]);
   // Saves the project at once instead of waiting for its throttled save.
-  const saveImagesNow = useCallback(
-    () => writeAnimations(true),
-    [writeAnimations]
-  );
+  // The effect above may already have written the image list unforced, and
+  // an unchanged write saves nothing, so the waiting save is flushed too.
+  const saveImagesNow = useCallback(() => {
+    writeAnimations(true);
+    void Lab2Registry.getInstance().getProjectManager()?.flushSave();
+  }, [writeAnimations]);
 
   const {
     workspaceVersion,
