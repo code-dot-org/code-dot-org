@@ -26,9 +26,9 @@ import {ImageTarget, ImageWriter} from './useImageWriter';
 const STROKE_SAVE_MS = 800;
 // A pause's save updates the picture on screen; the PNG upload behind the
 // image happens at most once per this gap, and once more when the drawing
-// is finished. The gap matches ProjectManager's 30 s saveInterval, the
-// shortest wait between the project's own throttled saves; uploading more
-// often adds traffic for little gain.
+// is finished. The gap is 30 s, ProjectManager's saveInterval: strokes since
+// the last upload are not in a saved project, so closing the browser tab
+// loses at most this much drawing.
 export const UPLOAD_GAP_MS = 30_000;
 
 /** What the tools opened on. `other` is an image that is neither blank nor

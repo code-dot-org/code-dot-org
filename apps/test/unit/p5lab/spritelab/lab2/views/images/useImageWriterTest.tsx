@@ -101,9 +101,9 @@ function renderWriter(
     });
     return null;
   };
-  render(<Harness />);
+  const {unmount} = render(<Harness />);
   const writer = () => latest.current as ImageWriter;
-  return {writer, uploadImage, onDeleteImage};
+  return {writer, uploadImage, onDeleteImage, unmount};
 }
 
 describe('useImageWriter', () => {
@@ -592,9 +592,20 @@ describe('useImageWriter', () => {
       await draw(writer);
       await draw(writer);
       act(() => writer().endSession());
+      mockSaveListeners.forEach(listener => listener());
       expect(httpDelete.mock.calls.map(call => call[0])).toEqual([
         '/v3/assets/chan/old.png',
       ]);
+    });
+
+    it("lets the drawing's last save after unmount keep its file", async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      const {writer, uploadImage, unmount} = renderWriter();
+      await draw(writer);
+      unmount();
+      await draw(writer);
+      const names = uploadImage.mock.calls.map(call => call[0]);
+      expect(names[1]).toBe(names[0]);
     });
 
     it('starts a new file in the next session', async () => {

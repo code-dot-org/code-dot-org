@@ -93,9 +93,10 @@ export interface ImageWriter {
       when the file cannot be uploaded. */
   acceptUploaded: (target: ImageTarget, file: UploadedImage) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
-      its key, as acceptGenerated does. Within one session, each upload for
-      the same image replaces one file. Rejects when the file cannot be
-      uploaded. */
+      its key, as acceptGenerated does. Within one session, later uploads
+      for the same image overwrite the file of its first upload; in
+      levelbuilder each upload is a new file. Rejects when the file cannot
+      be uploaded. */
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
@@ -112,7 +113,7 @@ export interface ImageWriter {
   deleteImage: (key: string) => void;
   /** Deletes the session's uploaded files that no image points at any
       more, and forgets its uploads. A session is one image's run of
-      generations. */
+      generations and drawings. */
   endSession: () => void;
 }
 
@@ -125,8 +126,8 @@ const measuredSize = async (dataURI: string) =>
 const propsOf = (key: string): ImageProps | undefined =>
   getStore().getState().animationList.propsByKey[key];
 
-// The URL without its query string: a drawing's URL ends in ?t=<upload time>.
-const fileOf = (url: string) => url.split('?')[0];
+// A drawing's URL ends in ?t=<upload time>.
+const withoutQuery = (url: string) => url.split('?')[0];
 
 export default function useImageWriter({
   uploadImage,
@@ -140,8 +141,7 @@ export default function useImageWriter({
   // of the session again reuses its upload.
   const uploadsRef = useRef(new Map<string, Upload>());
   // The URL of every file the session uploaded, and of every file an image
-  // stopped pointing at; one file can appear under several ?t= URLs. At
-  // session end, files no image points at are deleted.
+  // stopped pointing at; one file can appear under several ?t= URLs.
   const sessionUrlsRef = useRef(new Set<string>());
   // Image key → the filename its drawing was uploaded under in this session.
   // Later uploads of that drawing reuse the name, so they replace the file
@@ -163,30 +163,18 @@ export default function useImageWriter({
     [uploadImage]
   );
 
-  const endSession = useCallback(() => {
-    // reclaimAsset matches whole URLs, so files are compared here without
-    // the query string, and each is deleted once.
-    const inUse = new Set(
-      Object.values(
-        getStore().getState().animationList.propsByKey as Record<
-          string,
-          ImageProps | undefined
-        >
-      ).map(props => props?.sourceUrl && fileOf(props.sourceUrl))
-    );
-    const reclaimed = new Set<string>();
-    sessionUrlsRef.current.forEach(url => {
-      const file = fileOf(url);
-      if (!inUse.has(file) && !reclaimed.has(file)) {
-        reclaimed.add(file);
-        reclaimAsset(url);
-      }
-    });
+  const releaseSessionFiles = useCallback(() => {
+    sessionUrlsRef.current.forEach(url => reclaimAsset(url));
     sessionUrlsRef.current = new Set();
     uploadsRef.current = new Map();
-    drawingFilesRef.current = new Map();
   }, [reclaimAsset]);
-  useEffect(() => endSession, [endSession]);
+  const endSession = useCallback(() => {
+    releaseSessionFiles();
+    drawingFilesRef.current = new Map();
+  }, [releaseSessionFiles]);
+  // On unmount the drawing's last save can still follow, so it keeps its
+  // file name rather than starting a new file.
+  useEffect(() => releaseSessionFiles, [releaseSessionFiles]);
 
   const write = useCallback(
     (target: ImageTarget, patch: AnimationPatch): string => {
@@ -296,16 +284,17 @@ export default function useImageWriter({
         uploadNow || !existing
           ? await upload(filename, dataURIToBytes(dataURI), 'image/png')
           : undefined;
-      // A project upload is stored under the name it was given, so the next
-      // upload can replace it; a level's starter asset gets a new name.
+      // uploadImage keeps the given filename for the project's files, so a
+      // later upload under it replaces the file; in levelbuilder it uploads
+      // to the level under a new random name.
       const replaceable =
         !!uploadedUrl &&
-        fileOf(uploadedUrl).endsWith(`/${encodeURIComponent(filename)}`);
+        withoutQuery(uploadedUrl).endsWith(`/${encodeURIComponent(filename)}`);
       // A new query string on each upload, so the browser and CDN do not
       // serve the replaced file from cache.
       const sourceUrl =
         uploadedUrl && replaceable
-          ? `${fileOf(uploadedUrl)}?t=${Date.now()}`
+          ? `${withoutQuery(uploadedUrl)}?t=${Date.now()}`
           : uploadedUrl;
       recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
