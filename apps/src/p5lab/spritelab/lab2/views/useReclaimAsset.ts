@@ -9,7 +9,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // The file a link names; links to one file can differ in their query, such
 // as a cache-busting ?t=<upload time>.
-const fileOf = (url: string) => url.split('?')[0];
+export const fileOf = (url: string) => url.split('?')[0];
 
 const usedByAnImage = (url: string) => {
   // The classic store is untyped; its list has the lab's shape.

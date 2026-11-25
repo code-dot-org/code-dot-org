@@ -218,8 +218,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const [advanced, setAdvanced] = useState<AdvancedSettings>(DEFAULT_ADVANCED);
   const [draft, setDraft] = useState<DraftEntry | null>(null);
   const [chosenId, setChosenId] = useState<string | null>(null);
-  // A session is one image's run of generations. The sentence scene is
-  // remounted, and its state reset, when this number changes.
+  // A session is one image's run of generations and drawings. The sentence
+  // scene is remounted, and its state reset, when this number changes.
   const [session, setSession] = useState(0);
   const startSession = useCallback(
     (id: string | null) => {

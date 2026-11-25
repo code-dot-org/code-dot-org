@@ -34,7 +34,9 @@ import {
   repointAnimation,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
 import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
-import useReclaimAsset from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
+import useReclaimAsset, {
+  fileOf,
+} from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
 import useReleaseRemovedImages from '@cdo/apps/p5lab/spritelab/lab2/views/useReleaseRemovedImages';
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
@@ -126,9 +128,6 @@ const measuredSize = async (dataURI: string) =>
 const propsOf = (key: string): ImageProps | undefined =>
   getStore().getState().animationList.propsByKey[key];
 
-// A drawing's URL ends in ?t=<upload time>.
-const withoutQuery = (url: string) => url.split('?')[0];
-
 export default function useImageWriter({
   uploadImage,
   imageRole,
@@ -172,8 +171,9 @@ export default function useImageWriter({
     releaseSessionFiles();
     drawingFilesRef.current = new Map();
   }, [releaseSessionFiles]);
-  // On unmount the drawing's last save can still follow, so it keeps its
-  // file name rather than starting a new file.
+  // Unmount leaves drawingFilesRef in place: a drawing's last save can run
+  // after this, and it should overwrite the drawing's file, not start a new
+  // one.
   useEffect(() => releaseSessionFiles, [releaseSessionFiles]);
 
   const write = useCallback(
@@ -289,12 +289,12 @@ export default function useImageWriter({
       // to the level under a new random name.
       const replaceable =
         !!uploadedUrl &&
-        withoutQuery(uploadedUrl).endsWith(`/${encodeURIComponent(filename)}`);
+        fileOf(uploadedUrl).endsWith(`/${encodeURIComponent(filename)}`);
       // A new query string on each upload, so the browser and CDN do not
       // serve the replaced file from cache.
       const sourceUrl =
         uploadedUrl && replaceable
-          ? `${withoutQuery(uploadedUrl)}?t=${Date.now()}`
+          ? `${fileOf(uploadedUrl)}?t=${Date.now()}`
           : uploadedUrl;
       recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
