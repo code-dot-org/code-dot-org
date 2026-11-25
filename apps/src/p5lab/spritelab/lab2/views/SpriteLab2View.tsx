@@ -80,6 +80,7 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {endKeyboardNavigation} from '../blockly/endKeyboardNavigation';
 import {FLYOUT_DOTS_MARGIN_FACTOR} from '../blockly/flyoutDots';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {localizeLevelText} from '../blockly/localizeLevelText';
 import {codeFromSavedScene} from '../blockly/savedSceneCode';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
@@ -1980,11 +1981,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Sources generation and workspace the toolbox was last loaded into.
   const toolboxLoadedForRef = useRef('');
   // The level's added blocks, their outlines and their lock.
+  // The blocks a level adds go into the student's code in their language;
+  // levelbuilder edits them in English.
+  const addBlocks = useMemo(
+    () =>
+      isLevelEditMode
+        ? levelProperties.addBlocks
+        : localizeLevelText(levelProperties.addBlocks),
+    [levelProperties.addBlocks]
+  );
   const {addLevelBlocks, sceneLoadsRef, leavingResetRef} = useLevelBlocks({
     ready: labReady && !isToolboxMode,
     editing: isLevelEditMode,
     levelId: levelProperties.id,
-    addBlocks: levelProperties.addBlocks,
+    addBlocks,
     pinnedSceneId,
     activeSceneId: activeScene.id,
     objectives: levelProperties.objectives,
@@ -2471,6 +2481,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               instructionsCollapsed && moduleStyles.instructionsCollapsed
             )}
             collapsible={freeplayLevel || undefined}
+            hideCollapsedTabBorder
             // The objectives checklist, and the Continue button it enables,
             // render inside the instructions panel.
             objectives={objectives.active ? objectives : undefined}

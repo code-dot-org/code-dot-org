@@ -28,6 +28,7 @@ class Weblab2 < Level
   include Widget2Helper
   validate :validate_ai_tutor_prompt_settings
   validate :validate_widget2
+  validate :validate_widget_view_hide_resource_panel
 
   serialized_attrs %w(
     start_sources
@@ -37,6 +38,7 @@ class Weblab2 < Level
     submittable
     validation_enabled
     widget_view
+    widget_view_hide_resource_panel
     showcase_view
     initial_view_mode
     disable_edit_run_for_submission
@@ -117,6 +119,12 @@ class Weblab2 < Level
     unless disable_commit_messages.nil? || [true, false].include?(disable_commit_messages)
       errors.add(:ai_tutor_prompt_settings, 'disableCommitMessages must be a boolean.')
     end
+  end
+
+  private def validate_widget_view_hide_resource_panel
+    return unless widget_view_hide_resource_panel.to_s == 'true'
+    return if widget_view.to_s == 'true' || (widget2.is_a?(Hash) && widget2['id'].present?)
+    errors.add(:widget_view_hide_resource_panel, 'only applies when Widget View or Widget2 View is on.')
   end
 
   private def validate_widget2

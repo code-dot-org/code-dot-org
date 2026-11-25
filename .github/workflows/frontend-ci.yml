@@ -156,18 +156,14 @@ jobs:
           retention-days: 7
           if-no-files-found: ignore
 
-  # Publishes the Component Library storybook to GitHub Pages.
-  deploy:
-    name: deploy
+  # Builds the Component Library storybook for GitHub Pages.
+  build-pages:
+    name: build-pages
     if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' }}
     needs: [release-dryrun, test-ui]
     runs-on: ubuntu-24.04
     permissions:
       contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
     steps:
       - uses: actions/checkout@v4
         with:
@@ -189,6 +185,17 @@ jobs:
         with:
           path: frontend/apps/design-system-storybook/dist
 
+  # A separate job: deploy-pages can miss an artifact uploaded moments earlier in its own job.
+  deploy:
+    name: deploy
+    needs: build-pages
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
 

@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {useState} from 'react';
 
@@ -168,6 +168,42 @@ describe('Design System - Checkbox Dropdown Component', () => {
 
     expect(trigger.parentElement).not.toHaveClass('open');
     expect(trigger).toHaveFocus();
+  });
+
+  it('returns focus to the trigger when Done fires with a checkbox focused', async () => {
+    const user = userEvent.setup();
+    render(<TestCheckboxDropdown />);
+
+    const trigger = screen.getByRole('button', {
+      name: /test-dropdown filter dropdown/i,
+    });
+    await user.click(trigger);
+    const checkbox = screen.getByLabelText('option1');
+    await user.click(checkbox);
+    checkbox.focus();
+    fireEvent.click(screen.getByRole('button', {name: 'Done (1)'}));
+
+    expect(trigger.parentElement).not.toHaveClass('open');
+    expect(trigger).toHaveFocus();
+  });
+
+  it('returns focus from Done to its own trigger when names repeat', async () => {
+    const user = userEvent.setup();
+    render(
+      <>
+        <TestCheckboxDropdown />
+        <TestCheckboxDropdown />
+      </>,
+    );
+
+    const secondTrigger = screen.getAllByRole('button', {
+      name: /test-dropdown filter dropdown/i,
+    })[1];
+    await user.click(secondTrigger);
+    await user.click(screen.getAllByLabelText('option1')[1]);
+    await user.click(screen.getByRole('button', {name: 'Done (1)'}));
+
+    expect(secondTrigger).toHaveFocus();
   });
 
   it('renders with no action row when controls are hidden', () => {

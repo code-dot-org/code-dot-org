@@ -28,11 +28,9 @@
             android:exported="true">
 
             <!-- Android 16 ignores screenOrientation on large screens, which
-                 includes every Fire tablet, unless the app opts out. The
-                 opt-out is honored only while targetSdk is 36. -->
-            <property
-                android:name="android.window.PROPERTY_COMPAT_ALLOW_RESTRICTED_RESIZABILITY"
-                android:value="true" />
+                 includes every Fire tablet; its opt-out only letterboxes the
+                 app in a tablet held upright. LandscapeFrame keeps the page
+                 landscape there instead. -->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
