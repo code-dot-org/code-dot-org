@@ -548,14 +548,21 @@ describe('useImageWriter', () => {
   });
 
   describe('drawing', () => {
-    let now = 1000;
+    let now = 1795593000000;
     beforeEach(() => {
       jest.spyOn(Date, 'now').mockImplementation(() => (now += 1));
       repointAnimation.mockImplementation((...args: unknown[]) => {
-        const [, key, patch] = args as [unknown, string, {sourceUrl?: string}];
+        const [, key, patch] = args as [
+          unknown,
+          string,
+          {sourceUrl?: string; edited?: boolean}
+        ];
         const previous = propsByKey[key].sourceUrl as string;
         if (patch.sourceUrl) {
           propsByKey[key].sourceUrl = patch.sourceUrl;
+        }
+        if (patch.edited !== undefined) {
+          propsByKey[key].edited = patch.edited;
         }
         return previous;
       });
@@ -609,13 +616,33 @@ describe('useImageWriter', () => {
       expect(names[1]).toBe(names[0]);
     });
 
-    it('starts a new file in the next session', async () => {
+    it("reuses the drawing's file in a later session", async () => {
       propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
       const {writer, uploadImage} = renderWriter();
       await draw(writer);
       act(() => writer().endSession());
       await draw(writer);
       const names = uploadImage.mock.calls.map(call => call[0]);
+      expect(names[1]).toBe(names[0]);
+    });
+
+    it('never overwrites a generated or uploaded picture drawn on', async () => {
+      const {writer, uploadImage} = renderWriter();
+      for (const file of [
+        'generated-8f1c2b7e-0a4d-4c1e-9b3a-2d5e6f7a8b9c.png',
+        'upload_cat_1795593486793.png',
+      ]) {
+        propsByKey.k1 = {
+          name: 'Sprite 1',
+          sourceUrl: `/v3/assets/chan/${file}`,
+          edited: true,
+        };
+        await draw(writer);
+        act(() => writer().endSession());
+      }
+      const names = uploadImage.mock.calls.map(call => call[0]);
+      expect(names[0]).toMatch(/^sprite_1_\d+\.png$/);
+      expect(names[1]).toMatch(/^sprite_1_\d+\.png$/);
       expect(names[1]).not.toBe(names[0]);
     });
 

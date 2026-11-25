@@ -1,8 +1,8 @@
 // Writing the Images tab's pictures into the project. A generated or drawn
 // picture becomes an image's pixels as soon as it is ready. A generated
-// picture is uploaded once; a drawing's uploads in one session all go to one
-// file. When a session ends, uploaded files that no image points at are
-// deleted.
+// picture is uploaded once; a drawn picture keeps one file, which each of
+// its uploads overwrites. When a session ends, uploaded files that no image
+// points at are deleted.
 
 import {useCallback, useEffect, useRef} from 'react';
 import {AnyAction} from 'redux';
@@ -95,9 +95,9 @@ export interface ImageWriter {
       when the file cannot be uploaded. */
   acceptUploaded: (target: ImageTarget, file: UploadedImage) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
-      its key, as acceptGenerated does. Within one session, later uploads
-      for the same image overwrite the file of its first upload; in
-      levelbuilder each upload is a new file. Rejects when the file cannot
+      its key, as acceptGenerated does. Uploads for an image already drawn
+      on overwrite its drawing's file; in levelbuilder each upload is a new
+      file. Rejects when the file cannot
       be uploaded. */
   saveEdited: (
     target: ImageTarget,
@@ -127,6 +127,22 @@ const measuredSize = async (dataURI: string) =>
 
 const propsOf = (key: string): ImageProps | undefined =>
   getStore().getState().animationList.propsByKey[key];
+
+// The name saveEdited gives a drawing's file. Uploaded pictures are
+// upload_<name>_<time> and generated ones generated-<id>, so neither is
+// overwritten.
+const DRAWN_FILE = /^(?!upload_)[a-z0-9_]+_\d{13}\.png$/;
+
+// The file an earlier session's drawing left on an image drawn on since.
+const drawnFileOf = (props: ImageProps): string | undefined => {
+  if (!props.edited || !props.sourceUrl?.startsWith('/v3/assets/')) {
+    return undefined;
+  }
+  const name = decodeURIComponent(
+    props.sourceUrl.split('?')[0].split('/').pop() ?? ''
+  );
+  return DRAWN_FILE.test(name) ? name : undefined;
+};
 
 export default function useImageWriter({
   uploadImage,
@@ -277,7 +293,7 @@ export default function useImageWriter({
         .replace(/[^a-z0-9]+/g, '_');
       const drawingFile =
         target.key && existing
-          ? drawingFilesRef.current.get(target.key)
+          ? drawingFilesRef.current.get(target.key) ?? drawnFileOf(existing)
           : undefined;
       const filename = drawingFile ?? `${safeName}_${Date.now()}.png`;
       const uploadedUrl =
