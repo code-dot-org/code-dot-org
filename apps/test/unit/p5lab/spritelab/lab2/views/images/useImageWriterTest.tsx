@@ -45,6 +45,27 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/imageSave', () => ({
   createNamedAnimation: (...args: unknown[]) => createNamedAnimation(...args),
   repointAnimation: (...args: unknown[]) => repointAnimation(...args),
 }));
+// Each test's project manager; its last save names only the image's
+// current file.
+let mockSaveListeners: (() => void)[] = [];
+let mockManager: object = {};
+const newManager = () => {
+  mockSaveListeners = [];
+  return {
+    getLastSource: () => ({
+      animations: {propsByKey: {k1: {sourceUrl: '/v3/assets/chan/two.png'}}},
+    }),
+    addSaveSuccessListener: (listener: () => void) =>
+      mockSaveListeners.push(listener),
+    addSaveNoopListener: () => undefined,
+  };
+};
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {
+    getInstance: () => ({getProjectManager: () => mockManager}),
+  },
+}));
 const httpDelete = jest.fn((...args: unknown[]) => Promise.resolve());
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
@@ -92,6 +113,7 @@ describe('useImageWriter', () => {
     repointAnimation.mockClear();
     repointAnimation.mockImplementation(() => '/v3/assets/chan/old.png');
     httpDelete.mockClear();
+    mockManager = newManager();
     dispatch.mockClear();
     unflag.mockClear();
     labState = {channel: {id: 'chan'}};
@@ -348,7 +370,7 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
-  it('reclaims the session uploads nothing points at when it ends', async () => {
+  it('reclaims the session uploads nothing points at after the session ends and a save finishes', async () => {
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer} = renderWriter();
     const target = {key: 'k1', imageType: 'sprite' as const};
@@ -359,6 +381,7 @@ describe('useImageWriter', () => {
     // The image now points at two.png; one.png and old.png are leftovers.
     propsByKey.k1.sourceUrl = '/v3/assets/chan/two.png';
     act(() => writer().endSession());
+    mockSaveListeners.forEach(listener => listener());
     const deleted = httpDelete.mock.calls.map(call => call[0]).sort();
     expect(deleted).toEqual([
       '/v3/assets/chan/old.png',

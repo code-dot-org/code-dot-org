@@ -7,7 +7,8 @@ import type {ImageProps} from './images/projectImages';
 import useReclaimAsset from './useReclaimAsset';
 
 /**
- * When an image is removed, delete its uploaded file and unflag the project if necessary.
+ * When an image is removed, delete its uploaded file once a save no longer
+ * names it, then unflag the project if necessary.
  */
 export default function useReleaseRemovedImages(): (
   removed: (ImageProps | undefined)[]

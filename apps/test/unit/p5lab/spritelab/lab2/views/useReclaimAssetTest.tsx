@@ -32,6 +32,34 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {delete: (...args: unknown[]) => httpDelete(...args)},
 }));
 
+const newManager = () => ({
+  saved: {} as unknown,
+  listeners: [] as (() => void)[],
+  getLastSource() {
+    return this.saved;
+  },
+  addSaveSuccessListener(listener: () => void) {
+    this.listeners.push(listener);
+  },
+  addSaveNoopListener(listener: () => void) {
+    this.listeners.push(listener);
+  },
+  finishSave(saved: unknown) {
+    this.saved = saved;
+    this.listeners.forEach(listener => listener());
+  },
+});
+let manager = newManager();
+let currentManager: ReturnType<typeof newManager> | undefined = manager;
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {getInstance: () => ({getProjectManager: () => currentManager})},
+}));
+
+const savedNaming = (url: string) => ({
+  animations: {propsByKey: {k1: {sourceUrl: url}}},
+});
+
 function reclaimer() {
   let reclaim: (url?: string) => Promise<boolean> = () =>
     Promise.resolve(false);
@@ -47,11 +75,17 @@ describe('useReclaimAsset', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     httpDelete.mockClear();
+    // A fresh manager per test: files still waiting stay with the old one.
+    manager = newManager();
+    currentManager = manager;
   });
 
   it("deletes one of this project's uploads that no image points at", () => {
     propsByKey.k1 = {sourceUrl: '/v3/assets/chan/kept.png'};
     reclaimer()('/v3/assets/chan/old.png');
+    // No delete until a save finishes: a save in progress may still name the file.
+    expect(httpDelete).not.toHaveBeenCalled();
+    manager.finishSave({});
     expect(httpDelete).toHaveBeenCalledWith('/v3/assets/chan/old.png', true);
   });
 
@@ -68,13 +102,77 @@ describe('useReclaimAsset', () => {
   it('reports whether the file is gone', async () => {
     propsByKey.k1 = {sourceUrl: '/v3/assets/chan/used.png'};
     const reclaim = reclaimer();
-    await expect(reclaim('/v3/assets/chan/old.png')).resolves.toBe(true);
+    const old = reclaim('/v3/assets/chan/old.png');
+    manager.finishSave({});
+    await expect(old).resolves.toBe(true);
     await expect(reclaim('/v3/assets/chan/used.png')).resolves.toBe(false);
     httpDelete.mockRejectedValueOnce(new Error('503'));
-    await expect(reclaim('/v3/assets/chan/other.png')).resolves.toBe(false);
+    const other = reclaim('/v3/assets/chan/other.png');
+    manager.finishSave({});
+    await expect(other).resolves.toBe(false);
     // An older project can hold a picture inside itself, as a data URI.
     // It leaves no file behind, and deleting it must still unflag the
     // project.
     await expect(reclaim('data:image/png;base64,AAAA')).resolves.toBe(true);
+  });
+
+  it('waits for a save that no longer names the file', async () => {
+    manager.saved = savedNaming('/v3/assets/chan/old.png');
+    const reclaimed = reclaimer()('/v3/assets/chan/old.png');
+    expect(httpDelete).not.toHaveBeenCalled();
+    manager.finishSave(savedNaming('/v3/assets/chan/old.png'));
+    expect(httpDelete).not.toHaveBeenCalled();
+    manager.finishSave(savedNaming('/v3/assets/chan/new.png'));
+    expect(httpDelete).toHaveBeenCalledWith('/v3/assets/chan/old.png', true);
+    await expect(reclaimed).resolves.toBe(true);
+  });
+
+  it('matches the whole file name', async () => {
+    manager.saved = savedNaming('/v3/assets/chan/old.png2');
+    reclaimer()('/v3/assets/chan/old.png');
+    manager.finishSave(manager.saved);
+    expect(httpDelete).toHaveBeenCalledWith('/v3/assets/chan/old.png', true);
+  });
+
+  it('treats links that differ only in their query as one file', async () => {
+    manager.saved = savedNaming('/v3/assets/chan/drawn.png?t=2');
+    const reclaimed = reclaimer()('/v3/assets/chan/drawn.png?t=1');
+    manager.finishSave(manager.saved);
+    expect(httpDelete).not.toHaveBeenCalled();
+    propsByKey.k1 = {sourceUrl: '/v3/assets/chan/drawn.png?t=3'};
+    manager.finishSave({});
+    expect(httpDelete).not.toHaveBeenCalled();
+    await expect(reclaimed).resolves.toBe(false);
+  });
+
+  it('deletes a file once when asked under two links', async () => {
+    const reclaim = reclaimer();
+    const first = reclaim('/v3/assets/chan/drawn.png?t=1');
+    const second = reclaim('/v3/assets/chan/drawn.png?t=2');
+    manager.finishSave({});
+    expect(httpDelete.mock.calls).toEqual([
+      ['/v3/assets/chan/drawn.png', true],
+    ]);
+    await expect(first).resolves.toBe(true);
+    await expect(second).resolves.toBe(true);
+  });
+
+  it('keeps a file an image points at again before the save', async () => {
+    manager.saved = savedNaming('/v3/assets/chan/old.png');
+    const reclaimed = reclaimer()('/v3/assets/chan/old.png');
+    propsByKey.k1 = {sourceUrl: '/v3/assets/chan/old.png'};
+    manager.finishSave(savedNaming('/v3/assets/chan/old.png'));
+    manager.finishSave({});
+    expect(httpDelete).not.toHaveBeenCalled();
+    await expect(reclaimed).resolves.toBe(false);
+  });
+
+  it('keeps the file when nothing is known to be saved', async () => {
+    manager.saved = undefined;
+    reclaimer()('/v3/assets/chan/old.png');
+    expect(httpDelete).not.toHaveBeenCalled();
+    currentManager = undefined;
+    await expect(reclaimer()('/v3/assets/chan/other.png')).resolves.toBe(false);
+    expect(httpDelete).not.toHaveBeenCalled();
   });
 });
