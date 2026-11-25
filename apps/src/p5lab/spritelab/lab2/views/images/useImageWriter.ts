@@ -1,8 +1,8 @@
 // Writing the Images tab's pictures into the project. A generated or drawn
 // picture becomes an image's pixels as soon as it is ready. A generated
-// picture is uploaded once; a drawn picture keeps one file, which each of
-// its uploads overwrites. When a session ends, uploaded files that no image
-// points at are deleted.
+// picture is uploaded once; a drawn picture is uploaded to one file, and its
+// later uploads overwrite that file. When a session ends, uploaded files
+// that no image points at are deleted.
 
 import {useCallback, useEffect, useRef} from 'react';
 import {AnyAction} from 'redux';
@@ -95,10 +95,9 @@ export interface ImageWriter {
       when the file cannot be uploaded. */
   acceptUploaded: (target: ImageTarget, file: UploadedImage) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
-      its key, as acceptGenerated does. Uploads for an image already drawn
-      on overwrite its drawing's file; in levelbuilder each upload is a new
-      file. Rejects when the file cannot
-      be uploaded. */
+      its key, as acceptGenerated does. Later uploads for an image whose
+      file is a drawing overwrite that file; in levelbuilder each upload is
+      a new file. Rejects when the file cannot be uploaded. */
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
@@ -113,9 +112,9 @@ export interface ImageWriter {
     verdict: Verdict
   ) => ImageProps['generation'] | undefined;
   deleteImage: (key: string) => void;
-  /** Deletes the session's uploaded files that no image points at any
-      more, and forgets its uploads. A session is one image's run of
-      generations and drawings. */
+  /** Deletes, once a save no longer names them, the files this session
+      uploaded that no image points at, and starts a new session. A session
+      is one image's run of generations and drawings. */
   endSession: () => void;
 }
 
@@ -128,19 +127,25 @@ const measuredSize = async (dataURI: string) =>
 const propsOf = (key: string): ImageProps | undefined =>
   getStore().getState().animationList.propsByKey[key];
 
-// The name saveEdited gives a drawing's file. Uploaded pictures are
-// upload_<name>_<time> and generated ones generated-<id>, so neither is
-// overwritten.
+// The form of the name saveEdited gives a drawing's file. Uploaded pictures
+// are named upload_<name>_<time> and generated ones generated-<id>, so
+// neither matches.
 const DRAWN_FILE = /^(?!upload_)[a-z0-9_]+_\d{13}\.png$/;
 
-// The file an earlier session's drawing left on an image drawn on since.
+// The file name of a hand-drawn image whose file saveEdited uploaded;
+// undefined for any other image.
 const drawnFileOf = (props: ImageProps): string | undefined => {
   if (!props.edited || !props.sourceUrl?.startsWith('/v3/assets/')) {
     return undefined;
   }
-  const name = decodeURIComponent(
-    props.sourceUrl.split('?')[0].split('/').pop() ?? ''
-  );
+  let name: string;
+  try {
+    name = decodeURIComponent(
+      props.sourceUrl.split('?')[0].split('/').pop() ?? ''
+    );
+  } catch {
+    return undefined;
+  }
   return DRAWN_FILE.test(name) ? name : undefined;
 };
 
@@ -158,9 +163,8 @@ export default function useImageWriter({
   // The URL of every file the session uploaded, and of every file an image
   // stopped pointing at; one file can appear under several ?t= URLs.
   const sessionUrlsRef = useRef(new Set<string>());
-  // Image key → the filename its drawing was uploaded under in this session.
-  // Later uploads of that drawing reuse the name, so they replace the file
-  // instead of adding one.
+  // Image key → the file its drawing was uploaded to in this session, kept
+  // even after the image's link moves to another picture.
   const drawingFilesRef = useRef(new Map<string, string>());
   const recordSessionUrl = (url?: string) => {
     if (url) {
@@ -188,8 +192,8 @@ export default function useImageWriter({
     drawingFilesRef.current = new Map();
   }, [releaseSessionFiles]);
   // Unmount leaves drawingFilesRef in place: a drawing's last save can run
-  // after this, and it should overwrite the drawing's file, not start a new
-  // one.
+  // after this, and should overwrite the drawing's file even if the image's
+  // link has moved.
   useEffect(() => releaseSessionFiles, [releaseSessionFiles]);
 
   const write = useCallback(
