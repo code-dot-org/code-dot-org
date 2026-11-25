@@ -24,9 +24,6 @@ class SqlUserProvisionerTest < Minitest::Test
   end
 
   def test_reader_is_select_only
-    # The reader must never gain a write privilege; that is the whole point of
-    # provisioning it. Reproduces the read-only Aurora reader on the single
-    # writable MySQL server used in CI and local development.
     assert_equal ['SELECT'], Cdo::SqlUserProvisioner::PRIVILEGES.fetch(:reader)
   end
 
@@ -107,6 +104,38 @@ class SqlUserProvisionerTest < Minitest::Test
     assert_equal 8, client.queries.length
     assert_includes client.queries, 'GRANT SELECT,INSERT ON `dashboard%`.* TO `writer`@`%`'
     assert_includes client.queries, 'GRANT SELECT ON `pegasus%`.* TO `reader`@`%`'
+  end
+
+  def test_an_aurora_cluster_id_identifies_a_cloudformation_provisioned_deployment
+    ['adhoc-my-branch-cluster', 'autoscale-prod-cluster'].each do |cluster_id|
+      CDO.stubs(:db_cluster_id).returns(cluster_id)
+      assert Cdo::SqlUserProvisioner.aurora_cluster?, "expected #{cluster_id.inspect} to name an Aurora cluster"
+    end
+  end
+
+  def test_no_cluster_id_identifies_a_community_mysql_deployment
+    [Cdo::SqlUserProvisioner::NO_DB_CLUSTER, nil, ''].each do |cluster_id|
+      CDO.stubs(:db_cluster_id).returns(cluster_id)
+      refute Cdo::SqlUserProvisioner.aurora_cluster?, "expected #{cluster_id.inspect} to name no Aurora cluster"
+    end
+  end
+
+  def test_provision_from_config_does_nothing_on_an_aurora_cluster
+    # Returning before opening a client is what keeps an app server in a CloudFormation Stack from re-provisioning
+    # users the Custom::SQLUser Resources own, and from needing an admin credential production does not give it.
+    CDO.stubs(:db_cluster_id).returns('autoscale-prod-cluster')
+
+    assert_nil Cdo::SqlUserProvisioner.provision_from_config!
+  end
+
+  def test_provision_from_config_raises_where_it_is_responsible_but_has_no_admin_credential
+    CDO.stubs(:db_cluster_id).returns(Cdo::SqlUserProvisioner::NO_DB_CLUSTER)
+
+    [nil, '', {}, {'username' => ''}].each do |credential|
+      CDO.stubs(:db_credential_admin).returns(credential)
+      exception = assert_raises(RuntimeError) {Cdo::SqlUserProvisioner.provision_from_config!}
+      assert_match 'db_credential_admin', exception.message
+    end
   end
 
   def test_provision_skips_a_user_that_matches_the_admin
