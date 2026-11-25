@@ -16,6 +16,11 @@ import $ from 'jquery';
 import 'bootstrap-sass';
 import React from 'react';
 
+// Include this test utility here to support Cucumber-based UI tests. Once
+// we're fully migrated to Playwright, we can scope this import to only apply
+// to unit tests.
+import 'jquery-simulate';
+
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
 import initSigninState from '@cdo/apps/code-studio/initSigninState';
 import {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
