@@ -1242,13 +1242,11 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setOnStageSceneId(scene?.id ?? null);
   }, []);
 
-  // Re-run the stage once a reseeded animation list has loaded. The
-  // reseed-triggered run happens immediately, but reseeded entries carry
-  // only a sourceUrl (dataURIs load async) and the engine can't draw
-  // unloaded images (costume/background commands no-op on unknown names —
-  // a blank playspace until the next run). Kept in a ref (not effect
-  // cleanup): the reseed effect's deps churn on every animation
-  // write, which would cancel a pending watcher mid-load.
+  // Re-run the stage once every image of a reseeded animation list has
+  // settled, if any of them loaded: the run at reseed time cannot draw
+  // images that have not loaded yet. The watch is cancelled through a ref,
+  // not effect cleanup, because the effect that reseeds re-runs on every
+  // animation change and would cancel it mid-load.
   const cancelRerunWatchRef = useRef<() => void>();
   const restartSceneRef = useRef<() => void>(() => {});
   // Restarts the scene while the game plays, and runs the preview otherwise.
@@ -1273,7 +1271,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     const finish = () => {
       cancel();
       const props = store.getState().animationList.propsByKey;
-      // Late images that all failed leave nothing new to show.
+      // If every late image failed, a re-run would show nothing new.
       if (lateKeys.some(key => props[key]?.loadedFromSource)) {
         rerunStageRef.current();
       }

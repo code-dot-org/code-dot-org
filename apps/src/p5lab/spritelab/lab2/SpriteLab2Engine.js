@@ -241,8 +241,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Settles a pending image-grace wait (see
     // whenAnimationsAreReadyOrGivenUp_).
     this.imageWaitCancel_ = null;
-    // Unsubscribes the watch that re-runs when a late image arrives after
-    // a give-up (see onImageLoadGiveUp_).
+    // Unsubscribes the watch that re-runs once the images still loading at
+    // a give-up have settled (see onImageLoadGiveUp_).
     this.lateImagesUnsubscribe_ = null;
     // True while nobody can see the playspace (see setDrawPaused).
     this.drawPaused_ = false;
@@ -1274,7 +1274,7 @@ export default class SpriteLab2Engine extends SpriteLab {
   }
 
   // After a give-up: say what is still missing, and re-run once every late
-  // image has settled, if any of them arrived.
+  // image has settled, if any of them loaded.
   onImageLoadGiveUp_() {
     if (this.areAnimationsReady_()) {
       // Ready and timed out in the same tick; nothing is missing.
@@ -1302,7 +1302,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (this.isTickTimerRunning()) {
         this.clearLateImagesWatch_();
         const props = getStore().getState().animationList.propsByKey;
-        // Late images that all failed leave nothing new to show.
+        // If every late image failed, a re-run would show nothing new.
         if (lateKeys.some(key => props[key]?.loadedFromSource)) {
           this.rerun();
         }
