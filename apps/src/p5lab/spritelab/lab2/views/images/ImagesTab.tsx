@@ -285,9 +285,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   chosenKeyRef.current = chosenImage?.key ?? null;
   const landedRef = useRef(onImageLanded);
   landedRef.current = onImageLanded;
-  // `saveNow`: a generated picture and a drawing's last save trigger an
-  // immediate project save; a drawing's saves after each pause wait for the
-  // project's throttled save.
+  // `saveNow`: whether the project is saved at once after the picture is
+  // stored; false leaves it to the project's throttled save.
   const storePicture = useCallback(
     async (
       target: ImageTarget,
@@ -332,6 +331,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     storePicture,
     active,
     onDrawingHistory,
+    saveProject: () => landedRef.current?.(),
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
@@ -353,8 +353,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     const timer = setTimeout(() => setUploadError(null), UPLOAD_ERROR_SHOWN_MS);
     return () => clearTimeout(timer);
   }, [uploadError]);
-  // A save right away, so the deleted picture's file goes as soon as the
-  // saved project no longer names it.
+  // Save the project at once: the deleted picture's file is removed only
+  // after a saved project no longer names it.
   const handleDelete = useCallback(
     (key: string) => {
       writer.deleteImage(key);

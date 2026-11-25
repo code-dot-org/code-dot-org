@@ -43,7 +43,7 @@ const images: ProjectImage[] = [
 const target = {key: 'k1', imageType: 'sprite' as const};
 
 /** Renders the hook and hands back its latest tools. */
-function setup() {
+function setup(saveProject = jest.fn()) {
   const saveEdited = jest.fn() as jest.MockedFunction<
     ImageWriter['saveEdited']
   >;
@@ -62,6 +62,7 @@ function setup() {
       saveEdited,
       storePicture,
       active: true,
+      saveProject,
     });
     useEffect(() => {
       latest.tools = tools;
@@ -72,7 +73,14 @@ function setup() {
   const tools = () => latest.tools!;
   // The tools are read at render; a change that sets no state needs one.
   const rerender = () => view.rerender(<Harness />);
-  return {saveEdited, storePicture, tools, rerender, unmount: view.unmount};
+  return {
+    saveEdited,
+    storePicture,
+    saveProject,
+    tools,
+    rerender,
+    unmount: view.unmount,
+  };
 }
 
 const editor = () => ({save: jest.fn(), snapshot: jest.fn(() => null)});
@@ -226,6 +234,33 @@ describe('useDrawing', () => {
     act(() => tools().scheduleStrokeSave());
     await act(async () => tools().finishDrawing());
     expect(storePicture.mock.calls.map(call => call[2])).toEqual([false, true]);
+  });
+
+  it('saves the project when Done has nothing left to save', async () => {
+    const {saveProject, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor(editor());
+    await act(async () => tools().handleSave('data:a', {}));
+    await act(async () => tools().finishDrawing());
+    expect(saveProject).toHaveBeenCalledTimes(1);
+  });
+
+  it('saves the project after a pause save still in flight when the drawing is left', async () => {
+    const {saveEdited, saveProject, tools} = setup();
+    let finishSave: (key: string) => void = () => undefined;
+    saveEdited.mockImplementationOnce(
+      () => new Promise<string>(resolve => (finishSave = resolve))
+    );
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor(editor());
+    act(() => tools().handleSave('data:a', {}));
+    act(() => tools().leaveDrawing());
+    expect(saveProject).not.toHaveBeenCalled();
+    await act(async () => {
+      finishSave('k1');
+      await new Promise(resolve => setTimeout(resolve, 0));
+    });
+    expect(saveProject).toHaveBeenCalledTimes(1);
   });
 
   it('uploads the file at most once per gap, and on the last save', async () => {

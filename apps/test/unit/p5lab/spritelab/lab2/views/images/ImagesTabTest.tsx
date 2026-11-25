@@ -674,7 +674,7 @@ describe('ImagesTab', () => {
       jest.advanceTimersByTime(800);
     });
     // The blank became an image, file and all, and the tools stayed open
-    // on it; a pause's save leaves the project to its own clock.
+    // on it; a pause's save does not save the project at once.
     expect(saveEdited).toHaveBeenCalledTimes(1);
     expect(saveEdited.mock.calls[0][0]).toEqual({
       key: null,
@@ -697,7 +697,7 @@ describe('ImagesTab', () => {
       subject: 'character',
     });
     expect(saveEdited.mock.calls[1][3]).toMatchObject({upload: false});
-    // Done sends the file those pixels are owed, and saves the project.
+    // Done uploads the file for those pixels and saves the project at once.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });

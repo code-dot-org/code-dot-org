@@ -66,6 +66,8 @@ interface UseDrawingOptions {
   ) => Promise<string>;
   /** The tab is the one showing. */
   active: boolean;
+  /** Saves the project at once. */
+  saveProject?: () => void;
   onDrawingHistory?: (history: EditHistory | null) => void;
 }
 
@@ -137,7 +139,13 @@ export default function useDrawing({
   storePicture,
   active,
   onDrawingHistory,
+  saveProject,
 }: UseDrawingOptions): DrawingTools {
+  const saveProjectRef = useRef(saveProject);
+  saveProjectRef.current = saveProject;
+  // A project save asked for while a pause's save was still running; it
+  // follows that save, so the project includes the save's result.
+  const projectSaveOwedRef = useRef(false);
   const [drawing, setDrawing] = useState<Drawing | null>(null);
   const drawingRef = useRef(drawing);
   drawingRef.current = drawing;
@@ -365,8 +373,9 @@ export default function useDrawing({
   // `drawingToSave` is the drawing as the save knows it: the state, or for
   // a pending save what the save before it made, since React may not have
   // rendered that yet. `final` marks the drawing's last save (Done, the
-  // tab or another image): the file is uploaded and, if the drawing is
-  // still the open one, the tools close after it.
+  // tab or another image): the file is uploaded, the project is saved at
+  // once, and, if the drawing is still the open one, the tools close after
+  // it.
   const runSave = useCallback(
     async (
       dataURI: string,
@@ -450,6 +459,10 @@ export default function useDrawing({
         // there is nothing to retry.
       } finally {
         inFlightRef.current = false;
+        if (projectSaveOwedRef.current && !pendingRef.current) {
+          projectSaveOwedRef.current = false;
+          saveProjectRef.current?.();
+        }
       }
       const pending = pendingRef.current;
       if (pending) {
@@ -516,35 +529,50 @@ export default function useDrawing({
     [runSave]
   );
 
-  const leaveDrawing = useCallback((keepCanvasUp = false) => {
-    if (dirtyRef.current || uploadPendingRef.current) {
-      leaveAfterSaveRef.current = true;
-      editorRef.current?.save();
-    }
-    clearIdleTimer();
-    dirtyRef.current = false;
-    uploadPendingRef.current = false;
-    leaveAfterSaveRef.current = false;
-    const copy = keepCanvasUp ? editorRef.current?.snapshot() : null;
-    editorRef.current = null;
-    setSaveFailed(false);
-    if (!keepCanvasUp) {
-      setDrawing(null);
-      return;
-    }
-    if (copy) {
-      previousCanvasRef.current = {canvas: copy, id: drawingIdRef.current};
+  // Leaving or Done with nothing left to save still saves the project, as a
+  // drawing's last save does.
+  const requestProjectSave = useCallback(() => {
+    if (inFlightRef.current) {
+      projectSaveOwedRef.current = true;
+    } else {
+      saveProjectRef.current?.();
     }
   }, []);
+  const leaveDrawing = useCallback(
+    (keepCanvasUp = false) => {
+      if (dirtyRef.current || uploadPendingRef.current) {
+        leaveAfterSaveRef.current = true;
+        editorRef.current?.save();
+      } else {
+        requestProjectSave();
+      }
+      clearIdleTimer();
+      dirtyRef.current = false;
+      uploadPendingRef.current = false;
+      leaveAfterSaveRef.current = false;
+      const copy = keepCanvasUp ? editorRef.current?.snapshot() : null;
+      editorRef.current = null;
+      setSaveFailed(false);
+      if (!keepCanvasUp) {
+        setDrawing(null);
+        return;
+      }
+      if (copy) {
+        previousCanvasRef.current = {canvas: copy, id: drawingIdRef.current};
+      }
+    },
+    [requestProjectSave]
+  );
 
   const finishDrawing = useCallback(() => {
     if (dirtyRef.current || uploadPendingRef.current) {
       leaveAfterSaveRef.current = true;
       editorRef.current?.save();
     } else {
+      requestProjectSave();
       closeAfterDone();
     }
-  }, [closeAfterDone]);
+  }, [closeAfterDone, requestProjectSave]);
 
   // Leaving the tab is Done: what was drawn is saved and the tools close.
   useEffect(() => {

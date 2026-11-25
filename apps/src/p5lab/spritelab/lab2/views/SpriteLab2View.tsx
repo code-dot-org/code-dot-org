@@ -1368,7 +1368,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     writeAnimations();
   }, [animationList, writeAnimations]);
-  // A picture that just became an image is worth a save of its own.
+  // Saves the project at once instead of waiting for its throttled save.
   const saveImagesNow = useCallback(
     () => writeAnimations(true),
     [writeAnimations]
