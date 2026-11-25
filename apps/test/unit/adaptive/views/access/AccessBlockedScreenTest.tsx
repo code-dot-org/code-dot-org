@@ -16,10 +16,7 @@ describe('AccessBlockedScreen', () => {
     ).toHaveAttribute('href', '/home');
     expect(
       screen.getByRole('link', {name: 'Try Quest Builder'})
-    ).toHaveAttribute(
-      'href',
-      '/courses/quest-builder-2026/units/1/lessons/1/levels/1'
-    );
+    ).toHaveAttribute('href', '/s/quest-builder-2026/reset');
     expect(screen.queryByText(/Continue to AI Makerspace/)).toBeNull();
   });
 });
