@@ -1,5 +1,7 @@
 <%
   PRODUCTION_DB_CLUSTER_ID = 'autoscale-prod-cluster'.freeze
+  # DbiResourceId of autoscale-prod-0 and autoscale-prod-1. Replacing an instance changes it; resizing does not. These values are not secrets.
+  PRODUCTION_DB_INSTANCE_RESOURCE_IDS = %w[db-KR4SK7SXSOSIGGTKWT32K5Q4LE db-ELUDTT22K2F7WYQST3CQRBIMWQ].freeze
   # The admin credential that the Chef `cdo-mysql::server` recipe configures `mysqld` to use.
   MYSQL_DAEMON_ADMIN_CREDENTIAL = '{"username":"root", "password":""}'.freeze
   MYSQL_DAEMON_HOSTNAME = 'localhost'.freeze
@@ -414,44 +416,46 @@
 <%    end -%>
 <%  end -%>
 <%  if rack_env?(:production) -%>
-  # Aurora writer connections as a share of max_connections. The ceiling grows
-  # with the log of instance memory, so a larger instance buys few connections:
-  # 4,069 on db.r7i.4xlarge, 5,069 on 8xlarge, 5,654 on 12xlarge.
-  #
-  # Thresholds are fixed to the 4xlarge ceiling. The production cluster is not
-  # managed by this stack and is resized by hand, so the template cannot read
-  # the current instance class. Fixing them to the smallest class in use means
-  # the alarms fire early rather than late while the writer is scaled up.
-  #
-  # The Role=WRITER cluster dimension follows the writer through a failover; an
-  # instance ID would not.
-  #
-  # The Infra topics are defined in the alarms component of this same stack.
-<%    writer_max_connections = 4069 # db.r7i.4xlarge, Aurora MySQL default formula
-      {
+<%    {
         Warning: {percent: 70, periods: 5, topic: 'InfraLowPriority'},
         Critical: {percent: 85, periods: 2, topic: 'InfraUrgent'},
       }.each do |level, alarm|
-        threshold = (writer_max_connections * alarm[:percent] / 100.0).round
+        DB_INSTANCE_RANGE.each do |i|
+          resource_id = PRODUCTION_DB_INSTANCE_RESOURCE_IDS[i]
 -%>
-  DBWriterConnections<%=level%>:
+  DB<%=i%>Connections<%=level%>:
     Type: AWS::CloudWatch::Alarm
     Properties:
       AlarmActions:
         - !Ref <%=alarm[:topic]%>
-      AlarmName: <%="#{stack_name}_db_writer_connections_#{level.to_s.downcase}"%>
-      AlarmDescription: Aurora writer connections above <%=alarm[:percent]%>% of the db.r7i.4xlarge max_connections ceiling (<%=threshold%> of <%=writer_max_connections%>) for <%=alarm[:periods]%> minutes
-      Namespace: AWS/RDS
-      MetricName: DatabaseConnections
-      Dimensions:
-        - {Name: DBClusterIdentifier, Value: <%=PRODUCTION_DB_CLUSTER_ID%>}
-        - {Name: Role, Value: WRITER}
-      Statistic: Maximum
-      Period: 60
+<%        if level == :Warning -%>
+      InsufficientDataActions:
+        - !Ref <%=alarm[:topic]%>
+<%        end -%>
+      AlarmName: <%="#{stack_name}_db_#{i}_connections_#{level.to_s.downcase}"%>
+      AlarmDescription: >-
+        Connections to <%="#{stack_name}-#{i}"%> above <%=alarm[:percent]%>% of its max_connections for
+        <%=alarm[:periods]%> minutes.
+      # Performance Insights is the only mechanism to dynamically lookup the maximum connections permitted by an instance.
+      Metrics:
+        - Id: utilization
+          Label: Percent of max_connections open
+          Expression: 100 * connected / maximum
+          ReturnData: true
+        - Id: connected
+          Expression: "DB_PERF_INSIGHTS('RDS', '<%=resource_id%>', 'db.Users.Threads_connected.avg')"
+          Period: 60
+          ReturnData: false
+        - Id: maximum
+          Expression: "DB_PERF_INSIGHTS('RDS', '<%=resource_id%>', 'db.Users.max_connections.avg')"
+          Period: 60
+          ReturnData: false
       EvaluationPeriods: <%=alarm[:periods]%>
       ComparisonOperator: GreaterThanThreshold
-      Threshold: <%=threshold%>
-      TreatMissingData: notBreaching
-<%    end -%>
+      Threshold: <%=alarm[:percent]%>
+      TreatMissingData: missing
+<%        end
+        end
+-%>
 <%  end -%>
 <%end -%>
