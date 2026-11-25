@@ -1,7 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 
 import AddParentEmailModal from './AddParentEmailModal';
 
@@ -57,16 +59,13 @@ export default class AddParentEmailController {
         handleCancel={this.hideAddParentEmailModal}
         currentParentEmail={this.formParentEmailField.val()}
       />,
-      this.mountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      this.mountPoint
     );
   };
 
   hideAddParentEmailModal = () => {
     if (this.mountPoint) {
-      ReactDOM.unmountComponentAtNode(this.mountPoint);
+      unmountReactRoot(this.mountPoint);
       document.body.removeChild(this.mountPoint);
       delete this.mountPoint;
     }
