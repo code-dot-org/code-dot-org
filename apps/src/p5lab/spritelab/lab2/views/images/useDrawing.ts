@@ -222,8 +222,9 @@ export default function useDrawing({
   }, [stopDrawing]);
 
   // Leaving the level mid-drawing (the panel's Continue, or navigation)
-  // unmounts the tab without Done: unsaved strokes and any pending upload
-  // are saved now, while the editor's canvas still exists.
+  // unmounts the tab without Done: unsaved strokes, a pending upload, or a
+  // pause save still running get a last save now, while the editor's canvas
+  // still exists.
   useEffect(
     () => () => {
       if (
@@ -529,7 +530,8 @@ export default function useDrawing({
       (dirtyRef.current || uploadPendingRef.current || inFlightRef.current),
     []
   );
-  // Pause saves do not save the project, so it is saved now.
+  // Pause saves do not save the project, so leaving a drawing or Done saves
+  // it here when no last save will.
   const saveProjectAtLeave = useCallback(
     () => saveProjectNowRef.current?.(),
     []

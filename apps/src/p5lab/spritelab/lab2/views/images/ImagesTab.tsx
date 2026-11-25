@@ -126,7 +126,6 @@ interface ImagesTabProps {
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
-  /** Saves the project at once instead of waiting for its throttled save. */
   onSaveProjectNow?: () => void;
   /** The tab is the one showing; a drawing saves itself when it is not. */
   active?: boolean;
