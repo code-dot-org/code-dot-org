@@ -405,6 +405,14 @@ namespace :seed do
     MegaSection.seed
   end
 
+  desc "seed sample workshops for the PL workshop catalog; ZIP=<zip> sets the sample regional partner's ZIP (default 98101)"
+  timed_task_with_logging sample_workshops: :environment do
+    raise "Should not be run outside of adhoc or development" unless [:adhoc, :development].include?(CDO.rack_env)
+    # autoload_lib in config/application.rb ignores lib/devtools, so it does not autoload.
+    require Rails.root.join('lib/devtools/sample_workshops').to_s
+    SampleWorkshops.seed(zip: ENV['ZIP'] || SampleWorkshops::DEFAULT_ZIP)
+  end
+
   # Seeds shared tables in datablock storage
   timed_task_with_logging datablock_storage: :environment do
     DatablockStorageLibraryManifest.seed_all
