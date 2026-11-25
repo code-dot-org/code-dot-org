@@ -323,13 +323,15 @@ class TestRedshiftClient < Minitest::Test
     desc_failed = mock
     desc_failed.stubs(:status).returns('FAILED')
     desc_failed.stubs(:error).returns('permission denied for schema s')
+    desc_failed.stubs(:query_string).returns('DROP MATERIALIZED VIEW IF EXISTS s.v; CREATE MATERIALIZED VIEW s.v ...')
     ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
       with(id: 'batch-fail-123').
       returns(desc_failed)
 
     result = @redshift.batch_execute(['DROP MATERIALIZED VIEW IF EXISTS s.v', 'CREATE MATERIALIZED VIEW s.v AS SELECT 1'])
     assert_empty result[:finished]
-    assert_equal [[0, 'permission denied for schema s']], result[:failed]
+    assert_equal [0], result[:failed].map(&:first)
+    assert_includes result[:failed].first.last, 'permission denied for schema s'
   end
 
   def test_batch_execute_reports_each_batch_separately_on_the_split_path
@@ -345,6 +347,7 @@ class TestRedshiftClient < Minitest::Test
     bad = mock
     bad.stubs(:status).returns('FAILED')
     bad.stubs(:error).returns('boom')
+    bad.stubs(:query_string).returns('SELECT 40')
     ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
       with(id: 'batch-0').returns(ok)
     ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
@@ -355,7 +358,8 @@ class TestRedshiftClient < Minitest::Test
     result = @redshift.batch_execute(sqls, allow_separate_transactions: true)
 
     assert_equal [0], result[:finished]
-    assert_equal [[1, 'boom']], result[:failed]
+    assert_equal [1], result[:failed].map(&:first)
+    assert_includes result[:failed].first.last, 'boom'
   end
 
   def test_execute_failure_includes_sub_statement_errors
