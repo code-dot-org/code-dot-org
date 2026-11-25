@@ -176,6 +176,34 @@ module Cdo
           )
         end
 
+        # Schemas of `redshift_database` the connected Redshift user can read. SVV_ALL_SCHEMAS is
+        # permission-filtered, so a schema absent from it is one we hold no USAGE on.
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol, String]
+        # @return [Set<String>] readable schema names.
+        def self.readable_schema_names(client:, environment_type:)
+          rows = client.execute(<<~SQL)
+            SELECT schema_name FROM SVV_ALL_SCHEMAS
+            WHERE database_name = '#{redshift_database(environment_type)}';
+          SQL
+          Set.new(rows.map {|row| row['schema_name']})
+        end
+
+        # Schemas Zero ETL populates that the connected user cannot read. Redshift reports a
+        # cross-database reference into one of these as "Schema <name> does not exist in the
+        # database", and every Materialized View selecting from it becomes unrefreshable.
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol, String]
+        # @return [Array<String>] sorted schema names; empty when every populated schema is readable.
+        def self.unreadable_source_schemas(client:, environment_type:)
+          populated = Set.new(
+            all_table_states(client: client, environment_type: environment_type).map {|row| row['schema_name']}
+          )
+          (populated - readable_schema_names(client: client, environment_type: environment_type)).sort
+        end
+
         # Replication status of the tables we intend to export, cross-referencing `all_table_states`
         # against `table_names`. Reports a table with no integration row separately from one in a bad
         # state: no row means Zero ETL is not replicating it at all (excluded as incompatible, or not

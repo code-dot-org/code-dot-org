@@ -234,7 +234,9 @@ module Cdo
                 yield(:finished, key, duration) if block_given?
               when 'FAILED', 'ABORTED'
                 desc = describe_statement(statement_id)
-                msg = desc.error.to_s.lines.first&.strip || "(#{current})"
+                # The Data API leaves `error` empty for a statement that fails before execution, so the
+                # only pointer to the real message is the Redshift query id that `build_error_detail` surfaces.
+                msg = build_error_detail(desc)
                 pending.delete(key)
                 failed << [key, msg]
                 yield(:failed, key, msg) if block_given?

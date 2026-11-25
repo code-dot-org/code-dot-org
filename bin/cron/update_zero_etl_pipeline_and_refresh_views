@@ -28,6 +28,7 @@ require 'cdo/chat_client'
 require 'cdo/aws/rds'
 require 'cdo/aws/redshift/client'
 require 'cdo/aws/redshift/materialized_view_manager'
+require 'cdo/aws/redshift/zero_etl'
 
 DBT_MODEL_RUN_UTC_HOUR = 21 # Cron is configured to start this job in time to complete before the daily `dbt` model run.
 MAX_WAIT = 12.hours # Something is wrong if the REFRESH takes longer than this.
@@ -61,6 +62,23 @@ def update_zero_etl_filter(db_name:)
     "Updated the #{ENVIRONMENT_TYPE} Zero ETL table filter. " \
       "Added: #{result[:to_add].join(', ').presence || 'none'}. " \
       "Removed: #{result[:to_remove].join(', ').presence || 'none'}."
+end
+
+# Verify permission to the Redshift schemas that the Materialized Views source from. These schemas are Zero ETL
+# Integration Targets of data exported from Aurora MySQL.
+def require_readable_source_schemas(client:)
+  unreadable = Cdo::Aws::Redshift::ZeroEtl.unreadable_source_schemas(
+    client: client, environment_type: ENVIRONMENT_TYPE
+  )
+  if unreadable.empty?
+    CDO.log.info "[redshift-zero-etl] every #{ENVIRONMENT_TYPE} Zero ETL source schema is readable."
+    return
+  end
+
+  raise "Zero ETL populates #{unreadable.join(', ')} in " \
+    "#{Cdo::Aws::Redshift::ZeroEtl.redshift_database(ENVIRONMENT_TYPE)}, but #{CDO.redshift_username} holds no " \
+    "USAGE on #{unreadable.length == 1 ? 'it' : 'them'}. Re-apply the GRANTs in the infrastructure repository " \
+    '(aws/production/redshift/create_service_user_roles.sql) as the Redshift superuser.'
 end
 
 # Provision (create/update/delete) Materialized Views.
@@ -128,6 +146,7 @@ begin
   models = AnalyticsExportable.valid_exported_models
 
   update_zero_etl_filter(db_name: ActiveRecord::Base.connection.current_database)
+  require_readable_source_schemas(client: client)
   provision_views(client: client, models: models)
 
   CDO.log.info "[redshift-zero-etl] refreshing #{ENVIRONMENT_TYPE} materialized views."

@@ -323,13 +323,15 @@ class TestRedshiftClient < Minitest::Test
     desc_failed = mock
     desc_failed.stubs(:status).returns('FAILED')
     desc_failed.stubs(:error).returns('permission denied for schema s')
+    desc_failed.stubs(:query_string).returns('DROP MATERIALIZED VIEW IF EXISTS s.v; CREATE MATERIALIZED VIEW s.v ...')
     ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
       with(id: 'batch-fail-123').
       returns(desc_failed)
 
     result = @redshift.batch_execute(['DROP MATERIALIZED VIEW IF EXISTS s.v', 'CREATE MATERIALIZED VIEW s.v AS SELECT 1'])
     assert_empty result[:finished]
-    assert_equal [[0, 'permission denied for schema s']], result[:failed]
+    assert_equal [0], result[:failed].map(&:first)
+    assert_includes result[:failed].first.last, 'permission denied for schema s'
   end
 
   def test_batch_execute_reports_each_batch_separately_on_the_split_path
@@ -345,6 +347,7 @@ class TestRedshiftClient < Minitest::Test
     bad = mock
     bad.stubs(:status).returns('FAILED')
     bad.stubs(:error).returns('boom')
+    bad.stubs(:query_string).returns('SELECT 40')
     ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
       with(id: 'batch-0').returns(ok)
     ::Aws::RedshiftDataAPIService::Client.any_instance.stubs(:describe_statement).
@@ -355,7 +358,8 @@ class TestRedshiftClient < Minitest::Test
     result = @redshift.batch_execute(sqls, allow_separate_transactions: true)
 
     assert_equal [0], result[:finished]
-    assert_equal [[1, 'boom']], result[:failed]
+    assert_equal [1], result[:failed].map(&:first)
+    assert_includes result[:failed].first.last, 'boom'
   end
 
   def test_execute_failure_includes_sub_statement_errors
@@ -395,7 +399,16 @@ class TestRedshiftClient < Minitest::Test
   def test_wait_for_statements_polls_and_partitions_finished_and_failed
     @redshift.stubs(:status).with('id-a').returns('STARTED', 'FINISHED')
     @redshift.stubs(:status).with('id-b').returns('STARTED', 'STARTED', 'FAILED')
-    @redshift.stubs(:describe_statement).with('id-b').returns(stub('desc', error: "Bad query\nwith details", sub_statements: []))
+    @redshift.stubs(:describe_statement).with('id-b').returns(
+      stub(
+        'desc',
+        error: "Bad query\nwith details",
+        sub_statements: [],
+        redshift_query_id: 0,
+        query_string: 'SELECT 1',
+        status: 'FAILED'
+      )
+    )
 
     events = []
     result = @redshift.wait_for_statements(
@@ -403,9 +416,31 @@ class TestRedshiftClient < Minitest::Test
     ) {|event, key, _| events << [event, key]}
 
     assert_equal ['a'], result[:finished]
-    assert_equal [['b', 'Bad query']], result[:failed]
+    assert_equal 'b', result[:failed].first.first
+    # The whole detail is kept; truncating to the first line used to discard the only diagnostic we get.
+    assert_includes result[:failed].first.last, 'with details'
     assert_includes events, [:finished, 'a']
     assert_includes events, [:failed, 'b']
+  end
+
+  def test_wait_for_statements_reports_the_query_id_when_the_data_api_gives_no_message
+    @redshift.stubs(:status).with('id-a').returns('FAILED')
+    @redshift.stubs(:describe_statement).with('id-a').returns(
+      stub(
+        'desc',
+        error: nil,
+        sub_statements: [],
+        redshift_query_id: 296_648_777,
+        query_string: 'REFRESH MATERIALIZED VIEW learning_platform_test_pii.pd_application_tags',
+        status: 'FAILED'
+      )
+    )
+
+    result = @redshift.wait_for_statements(statements: {'a' => 'id-a'}, poll_interval: 0)
+
+    message = result[:failed].first.last
+    assert_includes message, 'returned no error message'
+    assert_includes message, '296648777'
   end
 
   def test_wait_for_statements_raises_on_timeout
@@ -427,11 +462,14 @@ class TestRedshiftClient < Minitest::Test
 
   def test_wait_for_statements_treats_aborted_as_failed
     @redshift.stubs(:status).with('id-a').returns('ABORTED')
-    @redshift.stubs(:describe_statement).with('id-a').returns(stub('desc', error: nil, sub_statements: []))
+    @redshift.stubs(:describe_statement).with('id-a').returns(
+      stub('desc', error: nil, sub_statements: [], redshift_query_id: 0, query_string: nil, status: 'ABORTED')
+    )
 
     result = @redshift.wait_for_statements(statements: {'a' => 'id-a'}, poll_interval: 0)
 
-    assert_equal [['a', '(ABORTED)']], result[:failed]
+    assert_equal 'a', result[:failed].first.first
+    assert_includes result[:failed].first.last, 'ABORTED'
   end
 
   private def create_field(str: nil, lng: nil, bool: nil, dbl: nil, blb: nil, is_null: false)
