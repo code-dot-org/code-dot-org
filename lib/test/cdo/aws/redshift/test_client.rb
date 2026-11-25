@@ -395,7 +395,16 @@ class TestRedshiftClient < Minitest::Test
   def test_wait_for_statements_polls_and_partitions_finished_and_failed
     @redshift.stubs(:status).with('id-a').returns('STARTED', 'FINISHED')
     @redshift.stubs(:status).with('id-b').returns('STARTED', 'STARTED', 'FAILED')
-    @redshift.stubs(:describe_statement).with('id-b').returns(stub('desc', error: "Bad query\nwith details", sub_statements: []))
+    @redshift.stubs(:describe_statement).with('id-b').returns(
+      stub(
+        'desc',
+        error: "Bad query\nwith details",
+        sub_statements: [],
+        redshift_query_id: 0,
+        query_string: 'SELECT 1',
+        status: 'FAILED'
+      )
+    )
 
     events = []
     result = @redshift.wait_for_statements(
@@ -403,9 +412,31 @@ class TestRedshiftClient < Minitest::Test
     ) {|event, key, _| events << [event, key]}
 
     assert_equal ['a'], result[:finished]
-    assert_equal [['b', 'Bad query']], result[:failed]
+    assert_equal 'b', result[:failed].first.first
+    # The whole detail is kept; truncating to the first line used to discard the only diagnostic we get.
+    assert_includes result[:failed].first.last, 'with details'
     assert_includes events, [:finished, 'a']
     assert_includes events, [:failed, 'b']
+  end
+
+  def test_wait_for_statements_reports_the_query_id_when_the_data_api_gives_no_message
+    @redshift.stubs(:status).with('id-a').returns('FAILED')
+    @redshift.stubs(:describe_statement).with('id-a').returns(
+      stub(
+        'desc',
+        error: nil,
+        sub_statements: [],
+        redshift_query_id: 296_648_777,
+        query_string: 'REFRESH MATERIALIZED VIEW learning_platform_test_pii.pd_application_tags',
+        status: 'FAILED'
+      )
+    )
+
+    result = @redshift.wait_for_statements(statements: {'a' => 'id-a'}, poll_interval: 0)
+
+    message = result[:failed].first.last
+    assert_includes message, 'returned no error message'
+    assert_includes message, '296648777'
   end
 
   def test_wait_for_statements_raises_on_timeout
@@ -427,11 +458,14 @@ class TestRedshiftClient < Minitest::Test
 
   def test_wait_for_statements_treats_aborted_as_failed
     @redshift.stubs(:status).with('id-a').returns('ABORTED')
-    @redshift.stubs(:describe_statement).with('id-a').returns(stub('desc', error: nil, sub_statements: []))
+    @redshift.stubs(:describe_statement).with('id-a').returns(
+      stub('desc', error: nil, sub_statements: [], redshift_query_id: 0, query_string: nil, status: 'ABORTED')
+    )
 
     result = @redshift.wait_for_statements(statements: {'a' => 'id-a'}, poll_interval: 0)
 
-    assert_equal [['a', '(ABORTED)']], result[:failed]
+    assert_equal 'a', result[:failed].first.first
+    assert_includes result[:failed].first.last, 'ABORTED'
   end
 
   private def create_field(str: nil, lng: nil, bool: nil, dbl: nil, blb: nil, is_null: false)

@@ -292,6 +292,49 @@ class TestZeroEtl < Minitest::Test
     assert_equal Set.new(['users']), ZeroEtl.synced_table_names(client: client, environment_type: 'production')
   end
 
+  def test_readable_schema_names_reads_the_permission_filtered_catalog
+    client = mock('client')
+    client.expects(:execute).with do |sql|
+      sql.include?('FROM SVV_ALL_SCHEMAS') &&
+        sql.include?("database_name = 'production_learningplatform_mysql_zeroetl'")
+    end.returns([{'schema_name' => 'dashboard_production'}, {'schema_name' => 'public'}])
+
+    assert_equal(
+      Set.new(%w[dashboard_production public]),
+      ZeroEtl.readable_schema_names(client: client, environment_type: 'production')
+    )
+  end
+
+  def test_unreadable_source_schemas_reports_a_populated_schema_we_cannot_read
+    client = mock('client')
+    client.stubs(:execute).with {|sql| sql.include?('SVV_INTEGRATION_TABLE_STATE')}.returns(
+      [
+        {'schema_name' => 'dashboard_production', 'table_name' => 'users', 'table_state' => 'Synced'},
+        {'schema_name' => 'pegasus', 'table_name' => 'hoc_activity', 'table_state' => 'Synced'},
+      ]
+    )
+    client.stubs(:execute).with {|sql| sql.include?('SVV_ALL_SCHEMAS')}.returns(
+      [{'schema_name' => 'pegasus'}, {'schema_name' => 'public'}]
+    )
+
+    assert_equal(
+      ['dashboard_production'],
+      ZeroEtl.unreadable_source_schemas(client: client, environment_type: 'production')
+    )
+  end
+
+  def test_unreadable_source_schemas_is_empty_when_every_populated_schema_is_readable
+    client = mock('client')
+    client.stubs(:execute).with {|sql| sql.include?('SVV_INTEGRATION_TABLE_STATE')}.returns(
+      [{'schema_name' => 'dashboard_production', 'table_name' => 'users', 'table_state' => 'Synced'}]
+    )
+    client.stubs(:execute).with {|sql| sql.include?('SVV_ALL_SCHEMAS')}.returns(
+      [{'schema_name' => 'dashboard_production'}, {'schema_name' => 'public'}]
+    )
+
+    assert_empty ZeroEtl.unreadable_source_schemas(client: client, environment_type: 'production')
+  end
+
   def test_export_status_buckets_tables_by_state
     client = mock('client')
     client.stubs(:execute).returns(
