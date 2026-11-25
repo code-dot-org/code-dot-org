@@ -132,6 +132,17 @@ describe('useReclaimAsset', () => {
     expect(httpDelete).toHaveBeenCalledWith('/v3/assets/chan/old.png', true);
   });
 
+  it('treats links that differ only in their query as one file', async () => {
+    manager.saved = savedNaming('/v3/assets/chan/drawn.png?t=2');
+    const reclaimed = reclaimer()('/v3/assets/chan/drawn.png?t=1');
+    manager.finishSave(manager.saved);
+    expect(httpDelete).not.toHaveBeenCalled();
+    propsByKey.k1 = {sourceUrl: '/v3/assets/chan/drawn.png?t=3'};
+    manager.finishSave({});
+    expect(httpDelete).not.toHaveBeenCalled();
+    await expect(reclaimed).resolves.toBe(false);
+  });
+
   it('keeps a file an image points at again before the save', async () => {
     manager.saved = savedNaming('/v3/assets/chan/old.png');
     const reclaimed = reclaimer()('/v3/assets/chan/old.png');

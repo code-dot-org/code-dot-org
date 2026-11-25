@@ -7,16 +7,28 @@ import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+// The file a link names; links to one file can differ in their query, such
+// as a drawing's ?t=<upload time>.
+const fileOf = (url: string) => url.split('?')[0];
+
 const usedByAnImage = (url: string) => {
   // The classic store is untyped; its list has the lab's shape.
   const list: RuntimeAnimationList = getStore().getState().animationList;
-  return Object.values(list.propsByKey).some(p => p?.sourceUrl === url);
+  return Object.values(list.propsByKey).some(
+    p => !!p?.sourceUrl && fileOf(p.sourceUrl) === fileOf(url)
+  );
 };
 
 const savedProjectMayName = (manager: ProjectManager, url: string) => {
   const saved = manager.getLastSource();
   // No saved sources to check: assume they still name the file.
-  return !saved || JSON.stringify(saved).includes(JSON.stringify(url));
+  if (!saved) {
+    return true;
+  }
+  const text = JSON.stringify(saved);
+  // The file's quoted path, followed by its closing quote or a query.
+  const opening = JSON.stringify(fileOf(url)).slice(0, -1);
+  return text.includes(`${opening}"`) || text.includes(`${opening}?`);
 };
 
 // Files waiting to be deleted, each with the resolver of its reclaim
