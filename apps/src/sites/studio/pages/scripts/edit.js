@@ -100,10 +100,7 @@ export default function initPage(unitEditorData) {
         }
       />
     </Provider>,
-    document.querySelector('.edit_container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.querySelector('.edit_container')
   );
 }
 

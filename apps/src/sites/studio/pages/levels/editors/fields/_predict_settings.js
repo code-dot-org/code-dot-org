@@ -10,9 +10,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <EditPredictSettings initialSettings={initialSettings} />,
-    document.getElementById('predict-settings-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('predict-settings-editor')
   );
 });

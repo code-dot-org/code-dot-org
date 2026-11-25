@@ -76,9 +76,6 @@ $(document).ready(function () {
         <ExpandableImageDialog />
       </div>
     </Provider>,
-    document.getElementById('edit-container'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('edit-container')
   );
 });
