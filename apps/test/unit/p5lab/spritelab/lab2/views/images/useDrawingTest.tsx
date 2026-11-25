@@ -43,7 +43,7 @@ const images: ProjectImage[] = [
 const target = {key: 'k1', imageType: 'sprite' as const};
 
 /** Renders the hook and hands back its latest tools. */
-function setup(saveProject = jest.fn()) {
+function setup(saveProjectNow = jest.fn()) {
   const saveEdited = jest.fn() as jest.MockedFunction<
     ImageWriter['saveEdited']
   >;
@@ -62,7 +62,7 @@ function setup(saveProject = jest.fn()) {
       saveEdited,
       storePicture,
       active: true,
-      saveProject,
+      saveProjectNow,
     });
     useEffect(() => {
       latest.tools = tools;
@@ -76,7 +76,7 @@ function setup(saveProject = jest.fn()) {
   return {
     saveEdited,
     storePicture,
-    saveProject,
+    saveProjectNow,
     tools,
     rerender,
     unmount: view.unmount,
@@ -237,30 +237,42 @@ describe('useDrawing', () => {
   });
 
   it('saves the project when Done has nothing left to save', async () => {
-    const {saveProject, tools} = setup();
+    const {saveProjectNow, tools} = setup();
     await act(() => tools().startDrawing(target));
     tools().attachEditor(editor());
     await act(async () => tools().handleSave('data:a', {}));
     await act(async () => tools().finishDrawing());
-    expect(saveProject).toHaveBeenCalledTimes(1);
+    expect(saveProjectNow).toHaveBeenCalledTimes(1);
   });
 
-  it('saves the project after a pause save still in flight when the drawing is left', async () => {
-    const {saveEdited, saveProject, tools} = setup();
+  it('uploads and saves the project when left during a pause save that does not upload', async () => {
+    const {saveEdited, storePicture, saveProjectNow, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:last', {}),
+      snapshot: () => null,
+    });
+    // The first pause uploads; the second, within the gap, does not.
+    await act(async () => tools().handleSave('data:a', {}));
     let finishSave: (key: string) => void = () => undefined;
     saveEdited.mockImplementationOnce(
       () => new Promise<string>(resolve => (finishSave = resolve))
     );
-    await act(() => tools().startDrawing(target));
-    tools().attachEditor(editor());
-    act(() => tools().handleSave('data:a', {}));
+    act(() => tools().handleSave('data:b', {}));
     act(() => tools().leaveDrawing());
-    expect(saveProject).not.toHaveBeenCalled();
     await act(async () => {
       finishSave('k1');
       await new Promise(resolve => setTimeout(resolve, 0));
     });
-    expect(saveProject).toHaveBeenCalledTimes(1);
+    const uploads = saveEdited.mock.calls.map(call => call[3]!.upload);
+    expect(uploads).toEqual([true, false, true]);
+    // The last save asks storePicture for the project save itself.
+    expect(storePicture.mock.calls.map(call => call[2])).toEqual([
+      false,
+      false,
+      true,
+    ]);
+    expect(saveProjectNow).not.toHaveBeenCalled();
   });
 
   it('uploads the file at most once per gap, and on the last save', async () => {

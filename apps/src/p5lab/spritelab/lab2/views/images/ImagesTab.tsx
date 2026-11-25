@@ -126,8 +126,8 @@ interface ImagesTabProps {
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
-  /** A generated or drawn picture has just been stored as a project image;
-      the host should save the project now. */
+  /** The host should save the project now: a picture was stored or
+      deleted, or a drawing ended. */
   onImageLanded?: () => void;
   /** The tab is the one showing; a drawing saves itself when it is not. */
   active?: boolean;
@@ -331,7 +331,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     storePicture,
     active,
     onDrawingHistory,
-    saveProject: () => landedRef.current?.(),
+    saveProjectNow: () => landedRef.current?.(),
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
