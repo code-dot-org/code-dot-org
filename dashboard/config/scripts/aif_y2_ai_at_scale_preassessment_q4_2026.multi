@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q4-2026'
+
+wrong 'A neuron\'s bias is adjusted based on its error on each example, while a neuron\'s weights are adjusted based on its error across all examples.'
+right 'A neuron\'s weights and bias are adjusted based on its errors on training examples.'
+wrong 'A neuron\'s weights and bias are adjusted until they converge to the same value.'
+wrong 'A neuron\'s bias is averaged across all training examples, while its weights are adjusted based on the neuron\'s error on each example.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which best describes what it means to train a neuron?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Training Neurons
+MARKDOWN

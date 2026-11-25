@@ -1,0 +1,20 @@
+name 'aif-y2-ai-at-scale-postassessment-q7-2026'
+
+wrong 'Network A will have 1 unit, while Network B will have 2 units.'
+wrong 'Network A will have 2 units, while Network B will have 1 unit.'
+wrong 'Network A will have 1 unit, while Network B will have 3 units.'
+right 'Network A will have 3 units, while Network B will have 1 unit.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Network A decides whether a recycling item belongs in the Aluminum, Glass, or Plastic bin. 
+
+Network B predicts how many minutes a user will watch a video.
+
+Which most likely describes how their output layers would be different?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Neural Networks
+MARKDOWN

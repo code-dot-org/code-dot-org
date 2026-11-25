@@ -15,7 +15,7 @@ Add each artist one at a time, then look for the pattern, and the one point that
   <iframe
     src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/correlation-scatter-plot.html"
     width="100%"
-    height="1160"
+    height="1400"
     frameborder="0"
     scrolling="no"
     title="Plot artist follower and stream data, identify the correlation and the outlier">

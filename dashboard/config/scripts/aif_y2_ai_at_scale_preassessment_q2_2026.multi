@@ -1,0 +1,18 @@
+name 'aif-y2-ai-at-scale-preassessment-q2-2026'
+
+wrong 'The training data doesn\'t include the right information.'
+wrong 'The training data isn\'t representative.'
+wrong 'There is too little training data.'
+right 'The training data contains a pattern the model can\'t learn.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+On any given day, hourly temperature data tends to look like a wave: it's low in the morning, high in the afternoon, then low again in the evening.
+
+A linear regression model is fit to many days of hourly temperature data. It takes an hour as input (e.g., 8am) and aims to predict the temperature. Which most likely explains why it rarely arrives at an accurate prediction?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Challenges at Scale
+MARKDOWN
