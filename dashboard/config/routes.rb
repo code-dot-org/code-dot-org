@@ -1036,6 +1036,7 @@ Dashboard::Application.routes.draw do
     get 'professional-learning/workshops_as_organizer_for_pl_page', to: 'pd/professional_learning#workshops_as_organizer_for_pl_page'
     get 'professional-learning/workshops_as_program_manager_for_pl_page', to: 'pd/professional_learning#workshops_as_program_manager_for_pl_page'
     get 'professional-learning/regional_workshop_data/:zip_code', to: 'pd/professional_learning#regional_workshop_data'
+    get 'professional-learning/workshop_catalog_data', to: 'pd/professional_learning#workshop_catalog_data'
 
     namespace :pd do
       # React-router will handle sub-routes on the client.

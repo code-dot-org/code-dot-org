@@ -229,9 +229,52 @@ class Pd::ProfessionalLearningController < ApplicationController
     national_workshops_in_future.sort_by {|ws| ws.sessions&.first&.start}&.map(&:summarize_for_regional_workshop_page)
   end
 
+  # GET professional-learning/workshop_catalog_data?zip=:zip_code
+  # Returns the regional partner of the optional zip, and its workshops merged with national ones.
+  def workshop_catalog_data
+    partner, _ = RegionalPartner.find_by_zip(params[:zip]) if params[:zip].present?
+    regional_workshops = partner ? catalog_regional_workshops(partner) : []
+    workshops = (regional_workshops + catalog_national_workshops).
+      uniq(&:id).
+      sort_by {|ws| [ws.sessions.first.start, ws.id]}
+
+    render json: {
+      status: :ok,
+      regional_partner: {name: partner&.name, additional_info: partner&.additional_program_information},
+      workshops: workshops.map do |ws|
+        ws.summarize_for_regional_workshop_page.merge(national: ws.participant_group_type == 'National')
+      end
+    }
+  end
+
   # Returns if the current_user can view the facilitator landing page of the given course.
   private def can_view_facilitator_page(course)
     current_user&.can_view_all_facilitator_landing_pages? || current_user&.courses_as_facilitator&.exists?(course: course)
+  end
+
+  # Same rules as regional_workshop_data, which workshop_catalog_data replaces.
+  private def catalog_regional_workshops(partner)
+    partner.pd_workshops.where(started_at: nil, hidden: [false, nil]).includes(:sessions, :enrollments).select do |ws|
+      ws.state == Pd::Workshop::STATE_NOT_STARTED &&
+        upcoming?(ws) &&
+        in_region?(ws, partner) &&
+        has_allowed_course_for_regional_ws_page?(ws)
+    end
+  end
+
+  # Same rules as national_workshop_data, which workshop_catalog_data replaces.
+  private def catalog_national_workshops
+    Pd::Workshop.
+      where(course: Pd::Workshop::COURSE_BUILD_YOUR_OWN, participant_group_type: 'National', started_at: nil, hidden: [false, nil]).
+      includes(:sessions, :enrollments).
+      select {|ws| upcoming?(ws)}
+  end
+
+  # Whether the workshop's first session starts after today in the workshop's time zone.
+  private def upcoming?(workshop)
+    start = workshop.sessions.first.try(:start)
+    start_date = workshop.time_zone ? start.in_time_zone(workshop.time_zone).to_date : start.to_date
+    start_date > Time.now.in_time_zone(workshop.time_zone || 'America/Chicago').to_date
   end
 
   # Returns if the given workshop is within the provided regional partner's area.

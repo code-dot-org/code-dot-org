@@ -705,6 +705,59 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     assert_equal [non_hidden_workshop.id], Pd::ProfessionalLearningController.national_workshop_data.pluck(:id)
   end
 
+  test 'workshop_catalog_data returns only national workshops when no zip is given' do
+    national_ws = create(:byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National')
+    create(:byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional')
+    RegionalPartner.expects(:find_by_zip).never
+
+    get :workshop_catalog_data
+    assert_response :success
+    response_data = JSON.parse(response.body)
+
+    assert_nil response_data['regional_partner']['name']
+    assert_equal [national_ws.id], response_data['workshops'].pluck('id')
+    assert response_data['workshops'].first['national']
+  end
+
+  test 'workshop_catalog_data returns only national workshops for a zip with no regional partner' do
+    RegionalPartner.stubs(:find_by_zip).with('00000').returns([nil, nil])
+    national_ws = create(:byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National')
+
+    get :workshop_catalog_data, params: {zip: '00000'}
+    assert_response :success
+    response_data = JSON.parse(response.body)
+
+    assert_nil response_data['regional_partner']['name']
+    assert_equal [national_ws.id], response_data['workshops'].pluck('id')
+  end
+
+  test 'workshop_catalog_data merges regional and national workshops once each, sorted by start date' do
+    rp = create(:regional_partner, additional_program_information: 'Partner details')
+    rp.mappings.find_or_create_by!(zip_code: '11111')
+    pm = create(:program_manager, regional_partner: rp)
+    distant_rp = create(:regional_partner)
+    distant_rp.mappings.find_or_create_by!(zip_code: '99999')
+    distant_pm = create(:program_manager, regional_partner: distant_rp)
+
+    regional_ws = create(:byo_workshop, sessions: [session_on_day(3)], participant_group_type: 'Regional', organizer: pm)
+    national_ws = create(:byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'National')
+    # Returned by both the regional and the national query.
+    rp_national_ws = create(:byo_workshop, sessions: [session_on_day(2)], participant_group_type: 'National', organizer: pm)
+    create(:byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: distant_pm)
+    create(:pd_enrollment, workshop: regional_ws)
+
+    get :workshop_catalog_data, params: {zip: '11111'}
+    assert_response :success
+    response_data = JSON.parse(response.body)
+    response_workshops = response_data['workshops']
+
+    assert_equal rp.name, response_data['regional_partner']['name']
+    assert_equal 'Partner details', response_data['regional_partner']['additional_info']
+    assert_equal [national_ws.id, rp_national_ws.id, regional_ws.id], response_workshops.pluck('id')
+    assert_equal [true, true, false], response_workshops.pluck('national')
+    assert_equal 1, response_workshops.last['num_enrollments']
+  end
+
   test 'logged-out users can view workshop marketing page' do
     workshop = create(:workshop)
     get :workshop_marketing_page, params: {workshop_id: workshop.id}
