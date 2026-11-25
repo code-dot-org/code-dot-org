@@ -14,6 +14,12 @@ jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
   __esModule: true,
   default: {sendEvent: jest.fn()},
 }));
+let mockViewAsUserId: number | null = null;
+jest.mock('@cdo/apps/redux', () => ({
+  getStore: () => ({
+    getState: () => ({progress: {viewAsUserId: mockViewAsUserId}}),
+  }),
+}));
 
 describe('adaptive metrics', () => {
   it('sends the pathway context with each event and drops unset properties', () => {
@@ -25,6 +31,23 @@ describe('adaptive metrics', () => {
       true,
       'x'
     );
+  });
+
+  it('sends nothing while a teacher views a student', () => {
+    (analyticsReporter.sendEvent as jest.Mock).mockClear();
+    mockViewAsUserId = 77;
+    try {
+      sendAdaptiveEvent('Event', {a: 'x'});
+      sendContinueUnlocked(
+        'validationPassed',
+        {id: 'c'} as Checkpoint,
+        {id: 's', title: 'S', kind: 'level', level: 'lvl'} as Step,
+        {validationAttempts: 1}
+      );
+    } finally {
+      mockViewAsUserId = null;
+    }
+    expect(analyticsReporter.sendEvent).not.toHaveBeenCalled();
   });
 
   it('names the pathway the context was set for', () => {

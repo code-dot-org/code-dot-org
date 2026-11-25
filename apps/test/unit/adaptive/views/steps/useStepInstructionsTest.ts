@@ -12,6 +12,10 @@ import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 jest.mock('@cdo/apps/adaptive/ai/resolveStepInstructions', () => ({
   resolveStepInstructions: jest.fn(),
 }));
+let mockIsReadonly = false;
+jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
+  usePathwayContext: () => ({isReadonly: mockIsReadonly}),
+}));
 const mockResolve = resolveStepInstructions as jest.Mock;
 
 const step: LevelStep = {
@@ -57,7 +61,22 @@ const base: StepInstructionsOptions = {
 };
 
 describe('useStepInstructions', () => {
-  beforeEach(() => jest.clearAllMocks());
+  beforeEach(() => {
+    jest.clearAllMocks();
+    mockIsReadonly = false;
+  });
+
+  it('tells the resolver when the pathway is read-only', async () => {
+    mockIsReadonly = true;
+    mockResolve.mockResolvedValue('Saved.');
+    const {waitForNextUpdate} = renderHook(() => useStepInstructions(base));
+
+    await waitForNextUpdate();
+
+    expect(mockResolve).toHaveBeenCalledWith(
+      expect.objectContaining({isReadonly: true})
+    );
+  });
 
   it('stays unresolved and asks nothing while the project is loading', () => {
     const {result} = renderHook(() =>

@@ -4,6 +4,7 @@
 // also requested of the pathway, for the project step after to carry out.
 
 import {Dialog} from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
 import React, {useEffect, useRef, useState} from 'react';
 
@@ -32,9 +33,16 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
   onSaveAnswers,
   onComplete,
 }) => {
-  const {pathway, checkpoint, progress, setBuildRequested} =
-    usePathwayContext();
+  const {
+    pathway,
+    checkpoint,
+    progress,
+    isViewingStudent,
+    isReadonly,
+    setBuildRequested,
+  } = usePathwayContext();
   const decide = (decision: ReviewDecision) => {
+    if (isReadonly) return;
     onSaveAnswers([{answerId: decision}]);
     setBuildRequested(decision === 'build');
     onComplete();
@@ -50,6 +58,9 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
     : [];
   // Without AI a build would land on the template; offer only the skip.
   const canBuild = isAdaptiveAiAvailable();
+  const studentDecision = progress.steps[step.id]?.answers?.[
+    step.questionId
+  ]?.at(-1)?.answerId as ReviewDecision | undefined;
 
   const titleRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
@@ -104,11 +115,21 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
         )}
       </div>
       <div className={styles.questionsActions}>
+        {isViewingStudent && (
+          <MuiTypography variant="body2" role="status">
+            {studentDecision === 'build'
+              ? 'The student chose to build with AI.'
+              : studentDecision === 'skip'
+              ? 'The student chose to skip building.'
+              : 'The student has not decided yet.'}
+          </MuiTypography>
+        )}
         <MuiButton
           variant={canBuild ? 'outlined' : 'contained'}
           color="primary"
           size="medium"
           type="button"
+          disabled={isReadonly}
           onClick={() => decide('skip')}
         >
           {hasWork ? 'Continue to your project' : step.skipLabel ?? 'Skip'}
@@ -119,9 +140,22 @@ const ReviewStep: React.FunctionComponent<ReviewStepProps> = ({
             color="primary"
             size="medium"
             type="button"
+            disabled={isReadonly}
             onClick={onBuild}
           >
             {hasWork ? 'Re-build with AI' : step.buildLabel ?? 'Build site'}
+          </MuiButton>
+        )}
+        {isReadonly && (
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            type="button"
+            endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+            onClick={onComplete}
+          >
+            Continue
           </MuiButton>
         )}
       </div>

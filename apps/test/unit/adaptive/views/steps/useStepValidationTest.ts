@@ -19,6 +19,10 @@ jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
   ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
   sendContinueUnlocked: jest.fn(),
 }));
+let mockIsReadonly = false;
+jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
+  usePathwayContext: () => ({isReadonly: mockIsReadonly}),
+}));
 jest.mock('@cdo/apps/redux', () => ({
   getStore: () => ({
     getState: () => ({
@@ -106,7 +110,10 @@ const baseOptions = (chat: ChatHandle | undefined) => ({
 const render = (
   chat: ChatHandle | undefined,
   stepOverrides: Partial<LevelStep> = {},
-  extra: {progress?: StepProgress; continueAllowed?: boolean} = {}
+  extra: {
+    progress?: StepProgress;
+    continueAllowed?: boolean;
+  } = {}
 ) => {
   const options = baseOptions(chat);
   const hook = renderHook(() =>
@@ -123,6 +130,7 @@ describe('useStepValidation', () => {
   beforeEach(() => {
     mockValidateStep.mockReset();
     mockSendUnlocked.mockReset();
+    mockIsReadonly = false;
   });
 
   it("judges each piece of the lab's work, records the verdict and has the lab say a check is running, then the verdict", async () => {
@@ -279,6 +287,14 @@ describe('useStepValidation', () => {
     const {unmount} = render(chat);
     expect(listeners).toHaveLength(1);
     unmount();
+    expect(listeners).toHaveLength(0);
+  });
+
+  it('judges nothing while a teacher views a student', () => {
+    const {chat, listeners} = fakeChat();
+    mockIsReadonly = true;
+    render(chat);
+
     expect(listeners).toHaveLength(0);
   });
 });
