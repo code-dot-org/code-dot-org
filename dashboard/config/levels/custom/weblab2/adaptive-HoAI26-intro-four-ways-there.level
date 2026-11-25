@@ -12,6 +12,7 @@
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
     "widget_view": "true",
+    "widget_view_hide_resource_panel": "true",
     "require_edit_to_continue": "false",
     "initial_view_mode": "preview",
     "predict_settings": {
