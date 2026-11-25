@@ -32,7 +32,7 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
   default: {delete: (...args: unknown[]) => httpDelete(...args)},
 }));
 
-const manager = {
+const newManager = () => ({
   saved: {} as unknown,
   listeners: [] as (() => void)[],
   getLastSource() {
@@ -48,8 +48,9 @@ const manager = {
     this.saved = saved;
     this.listeners.forEach(listener => listener());
   },
-};
-let currentManager: typeof manager | undefined = manager;
+});
+let manager = newManager();
+let currentManager: ReturnType<typeof newManager> | undefined = manager;
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {getInstance: () => ({getProjectManager: () => currentManager})},
@@ -74,7 +75,8 @@ describe('useReclaimAsset', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     httpDelete.mockClear();
-    manager.saved = {};
+    // A fresh manager per test: files still waiting stay with the old one.
+    manager = newManager();
     currentManager = manager;
   });
 

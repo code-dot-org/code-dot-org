@@ -19,19 +19,23 @@ const usedByAnImage = (url: string) => {
   );
 };
 
-const savedProjectMayName = (manager: ProjectManager, url: string) => {
+// The last saved sources as text, or undefined when nothing is known to be
+// saved yet.
+const savedText = (manager: ProjectManager) => {
   const saved = manager.getLastSource();
+  return saved ? JSON.stringify(saved) : undefined;
+};
+
+const savedTextMayName = (text: string | undefined, url: string) => {
   // No saved sources to check: assume they still name the file.
-  if (!saved) {
+  if (text === undefined) {
     return true;
   }
-  const text = JSON.stringify(saved);
-  const quotedPathWithoutEnd = JSON.stringify(fileOf(url)).slice(0, -1);
-  // Followed by the closing quote or a query, so a file whose name only
-  // starts with this path does not match.
+  const openQuotedPath = JSON.stringify(fileOf(url)).slice(0, -1);
+  // The path must be followed by its closing quote or a ?, so a file whose
+  // name only starts with this path does not match.
   return (
-    text.includes(`${quotedPathWithoutEnd}"`) ||
-    text.includes(`${quotedPathWithoutEnd}?`)
+    text.includes(`${openQuotedPath}"`) || text.includes(`${openQuotedPath}?`)
   );
 };
 
@@ -43,17 +47,18 @@ const pendingDeletes = new WeakMap<
   Map<string, (deleted: boolean) => void>
 >();
 
-// Run only after a save finishes: while a save is in progress,
-// getLastSource() is not what is being written.
+// Run only on save and noop events, which never fire while a save is in
+// progress, so getLastSource() is what the server last stored.
 function deleteFilesNoLongerSaved(manager: ProjectManager) {
   const files = pendingDeletes.get(manager);
+  const text = files?.size ? savedText(manager) : undefined;
   files?.forEach((resolve, url) => {
     if (usedByAnImage(url)) {
       files.delete(url);
       resolve(false);
       return;
     }
-    if (savedProjectMayName(manager, url)) {
+    if (savedTextMayName(text, url)) {
       return;
     }
     files.delete(url);
@@ -92,8 +97,10 @@ function deleteOnceSavedWithout(
  * project that no longer names it has finished; deleting it sooner
  * could leave the saved project pointing at a missing file if the save
  * that drops it never completes.
- * Resolves true once the file is deleted, at once for a data URI or no url,
- * and false otherwise; until a save finishes it stays unresolved.
+ * Resolves true when the file is deleted, and at once for a data URI or no
+ * url. Resolves false at once if an image uses the file or it is not one of
+ * this project's uploads, and later if an image takes it back or the delete
+ * fails. It stays unresolved until a save that no longer names the file.
  * A file still waiting when the page closes is left on the server.
  */
 export default function useReclaimAsset(): (url?: string) => Promise<boolean> {

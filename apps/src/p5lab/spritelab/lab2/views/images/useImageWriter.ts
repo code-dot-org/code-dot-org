@@ -1,7 +1,7 @@
 // Writing the Images tab's pictures into the project. A generated or drawn
 // picture becomes an image's pixels as soon as it is ready; each picture is
 // uploaded once; when a session ends, uploaded files that no image points
-// at are deleted once a save of the project no longer names them.
+// at are deleted.
 
 import {useCallback, useEffect, useRef} from 'react';
 import {AnyAction} from 'redux';
@@ -108,9 +108,9 @@ export interface ImageWriter {
     verdict: Verdict
   ) => ImageProps['generation'] | undefined;
   deleteImage: (key: string) => void;
-  /** Marks the session's uploaded files that no image points at any more
-      for deletion (each is deleted once a save no longer names it), and
-      forgets its uploads. A session is one image's run of generations. */
+  /** Deletes the session's uploaded files that no image points at any
+      more, and forgets its uploads. A session is one image's run of
+      generations. */
   endSession: () => void;
 }
 
@@ -135,7 +135,7 @@ export default function useImageWriter({
   // of the session again reuses its upload.
   const uploadsRef = useRef(new Map<string, Upload>());
   // Every file the session uploaded or replaced; those no image points at
-  // when the session ends are deleted once a save no longer names them.
+  // when the session ends are deleted.
   const sessionUrlsRef = useRef(new Set<string>());
   const recordSessionUrl = (url?: string) => {
     if (url) {
