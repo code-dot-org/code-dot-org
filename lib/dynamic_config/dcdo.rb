@@ -98,6 +98,8 @@ class DCDO < DynamicConfigBase
       'adaptive-effort-check-replies': DCDO.get('adaptive-effort-check-replies', 4),
       'adaptive-reply-limit': DCDO.get('adaptive-reply-limit', 8),
       'adaptive-skill-map-tour-enabled': DCDO.get('adaptive-skill-map-tour-enabled', true),
+      # Whether a pathway's finish.requiredCheckpoints holds I'm finished until that many checkpoints are cleared.
+      'adaptive-finish-lock-enabled': DCDO.get('adaptive-finish-lock-enabled', true),
       # AI descriptions of Python Lab theater output; also gates the access token server-side.
       'theater-ai-descriptions-enabled': DCDO.get('theater-ai-descriptions-enabled', false),
       # Kill switch for Tutor+ (lesson deep dive); also gates its endpoints and chat server-side.
