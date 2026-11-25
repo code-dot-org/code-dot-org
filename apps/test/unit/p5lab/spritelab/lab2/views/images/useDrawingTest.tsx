@@ -3,6 +3,7 @@ import React, {useEffect} from 'react';
 
 import {ProjectImage} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
 import useDrawing, {
+  UPLOAD_GAP_MS,
   DrawingTools,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/images/useDrawing';
 import {ImageWriter} from '@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter';
@@ -210,7 +211,7 @@ describe('useDrawing', () => {
     expect(tools().closedPicture).toEqual({key: 'k1', canvas: copy});
   });
 
-  it('uploads the file at most every few seconds, and on the last save', async () => {
+  it('uploads the file at most once per gap, and on the last save', async () => {
     jest.useFakeTimers();
     jest.setSystemTime(100000);
     const {saveEdited, tools} = setup();
@@ -220,9 +221,12 @@ describe('useDrawing', () => {
     await act(async () => tools().handleSave('data:a', {}));
     await act(async () => tools().handleSave('data:b', {}));
     expect(uploads()).toEqual([true, false]);
-    jest.setSystemTime(100000 + 5000);
+    jest.setSystemTime(100000 + UPLOAD_GAP_MS - 1);
+    await act(async () => tools().handleSave('data:b2', {}));
+    expect(uploads()).toEqual([true, false, false]);
+    jest.setSystemTime(100000 + UPLOAD_GAP_MS);
     await act(async () => tools().handleSave('data:c', {}));
-    expect(uploads()).toEqual([true, false, true]);
+    expect(uploads()).toEqual([true, false, false, true]);
     await act(async () => tools().finishDrawing());
     expect(tools().drawing).toBeNull();
   });
