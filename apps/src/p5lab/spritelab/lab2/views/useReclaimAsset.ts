@@ -8,7 +8,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // The file a link names; links to one file can differ in their query, such
-// as a drawing's ?t=<upload time>.
+// as a cache-busting ?t=<upload time>.
 const fileOf = (url: string) => url.split('?')[0];
 
 const usedByAnImage = (url: string) => {
@@ -26,9 +26,13 @@ const savedProjectMayName = (manager: ProjectManager, url: string) => {
     return true;
   }
   const text = JSON.stringify(saved);
-  // The file's quoted path, followed by its closing quote or a query.
-  const opening = JSON.stringify(fileOf(url)).slice(0, -1);
-  return text.includes(`${opening}"`) || text.includes(`${opening}?`);
+  const quotedPathWithoutEnd = JSON.stringify(fileOf(url)).slice(0, -1);
+  // Followed by the closing quote or a query, so a file whose name only
+  // starts with this path does not match.
+  return (
+    text.includes(`${quotedPathWithoutEnd}"`) ||
+    text.includes(`${quotedPathWithoutEnd}?`)
+  );
 };
 
 // Files waiting to be deleted, each with the resolver of its reclaim
@@ -72,9 +76,10 @@ function deleteOnceSavedWithout(
     manager.addSaveNoopListener(() => deleteFilesNoLongerSaved(manager));
   }
   const promise = new Promise<boolean>(resolve => {
-    // A second request for the same file shares the first one's answer.
-    const earlier = files.get(url);
-    files.set(url, deleted => {
+    // A second request for the same file, under any link, shares the first
+    // one's answer.
+    const earlier = files.get(fileOf(url));
+    files.set(fileOf(url), deleted => {
       earlier?.(deleted);
       resolve(deleted);
     });
@@ -87,9 +92,8 @@ function deleteOnceSavedWithout(
  * project that no longer names it has finished; deleting it sooner
  * could leave the saved project pointing at a missing file if the save
  * that drops it never completes.
- * Resolves true once the file is deleted (or, for a data URI, once the
- * project no longer contains it) and false otherwise; until a save finishes
- * it stays unresolved.
+ * Resolves true once the file is deleted, at once for a data URI or no url,
+ * and false otherwise; until a save finishes it stays unresolved.
  * A file still waiting when the page closes is left on the server.
  */
 export default function useReclaimAsset(): (url?: string) => Promise<boolean> {

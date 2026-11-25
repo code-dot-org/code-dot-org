@@ -143,6 +143,18 @@ describe('useReclaimAsset', () => {
     await expect(reclaimed).resolves.toBe(false);
   });
 
+  it('deletes a file once when asked under two links', async () => {
+    const reclaim = reclaimer();
+    const first = reclaim('/v3/assets/chan/drawn.png?t=1');
+    const second = reclaim('/v3/assets/chan/drawn.png?t=2');
+    manager.finishSave({});
+    expect(httpDelete.mock.calls).toEqual([
+      ['/v3/assets/chan/drawn.png', true],
+    ]);
+    await expect(first).resolves.toBe(true);
+    await expect(second).resolves.toBe(true);
+  });
+
   it('keeps a file an image points at again before the save', async () => {
     manager.saved = savedNaming('/v3/assets/chan/old.png');
     const reclaimed = reclaimer()('/v3/assets/chan/old.png');
