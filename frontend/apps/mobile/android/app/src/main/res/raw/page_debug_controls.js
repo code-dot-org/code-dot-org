@@ -7,17 +7,14 @@ var CONTROLS_ID = 'codeai-site-controls';
 var HIDE_AGAIN_ID = 'codeai-hide-again';
 var DEBUG_STYLE_ID = 'codeai-debug-style';
 
-// Laid over the right of .header_right, in the space its invisible sign-in
-// and menu keep, and drawn like the site's own header buttons (.header_button:
-// Rename, Share, Remix). The page has the CodeAI tokens and Font Awesome.
-// While hidden elements show, the header's own items take this space back:
-// the controls step aside, and one floating button hides the elements again
-// and brings the controls back.
+// In .header_right, which the app otherwise empties, and drawn like the
+// site's own header buttons (.header_button: Rename, Share, Remix). The page
+// has the CodeAI tokens and Font Awesome. While hidden elements show, the
+// header's own items take this space back: the controls step aside, and one
+// floating button hides the elements again and brings the controls back.
 var CONTROLS_CSS = `
   #${CONTROLS_ID} {
-    position: absolute; top: 50%; right: var(--spacing-p-xs);
     display: flex; align-items: center; gap: var(--spacing-p-xxs);
-    transform: translateY(-50%);
   }
   #${CONTROLS_ID} span {
     color: var(--text-neutral-white-fixed); font-size: var(--font-size-body-sm);
@@ -50,7 +47,6 @@ var CONTROLS_CSS = `
   #${CONTROLS_ID} button:disabled {
     background-color: transparent; opacity: 0.5; cursor: default;
   }
-  ${selectorList(['.header_right'])} { position: relative; }
 `;
 
 function ensureDebugStyle() {
@@ -66,10 +62,9 @@ function ensureDebugStyle() {
 var controls = null;
 
 // Shows, or hides again, what the app hides on site pages; the choice lasts
-// across pages. The translation widget, removed rather than hidden, comes
-// back on the next page.
+// across pages. The page reloads with it: the site measures "I finished!"
+// only once, so measured while hidden, it would stay clipped.
 function setShowingHidden(showing) {
-  document.documentElement.classList.toggle(SHOWING_HIDDEN_CLASS, showing);
   try {
     if (showing) {
       window.localStorage.setItem(SHOWING_HIDDEN_KEY, '1');
@@ -78,8 +73,11 @@ function setShowingHidden(showing) {
     }
   } catch (e) {
     // Storage unavailable: the choice lasts until the page changes.
+    document.documentElement.classList.toggle(SHOWING_HIDDEN_CLASS, showing);
+    pageChanged();
+    return;
   }
-  pageChanged();
+  window.location.reload();
 }
 
 function showHiddenButton() {
@@ -203,7 +201,7 @@ function alignControls() {
   var rightInset =
     document.documentElement.clientWidth - headerRight.getBoundingClientRect().right;
   var inset = logo.getBoundingClientRect().left - rightInset;
-  controls.style.right = `${Math.max(0, inset)}px`;
+  controls.style.marginRight = `${Math.max(0, inset)}px`;
 }
 
 window.addEventListener('resize', function () {

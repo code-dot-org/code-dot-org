@@ -60,6 +60,8 @@ interface StepPlayerProps {
   onFinish: () => void;
   /** Leaves for the final project; the header offers it when given. */
   onFinishPathway?: () => void;
+  /** Keeps the header's I'm finished disabled, with this as the reason. */
+  finishDisabledReason?: string;
   /** Active top-level tab; shows the My project / Practice skills switcher. */
   activeTab?: 'map' | 'project';
   onTabChange?: (tab: 'map' | 'project') => void;
@@ -115,6 +117,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onExit,
   onFinish,
   onFinishPathway,
+  finishDisabledReason,
   activeTab,
   onTabChange,
   projectName,
@@ -349,6 +352,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             leave(onFinishPathway);
           })
         }
+        finishDisabledReason={finishDisabledReason}
       />
       {activeTab !== undefined && onTabChange && (
         <AdaptiveTabBar

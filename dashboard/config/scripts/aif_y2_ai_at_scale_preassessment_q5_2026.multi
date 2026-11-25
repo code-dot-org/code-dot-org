@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q5-2026'
+
+wrong 'A user clicks "I agree" to a terms of service agreement that allows their data to be used for model training.'
+wrong 'A user opts out of allowing their data to be used for model training.'
+right 'A user understands how their data will be used in model training and agrees to that specific use.'
+wrong 'A user posts their data online, including a self-authored license with an "informed consent" clause.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of these examples best represents the idea of informed consent in the context of using data for model training?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Collecting Data for AI
+MARKDOWN

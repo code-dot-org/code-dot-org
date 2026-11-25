@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q1-2026'
+
+wrong 'A system that serves 100 users with 70% accuracy'
+wrong 'A system that serves 100,000 users with 80% accuracy'
+wrong 'A system that serves 1,000,000 users with 90% accuracy'
+right 'A system that serves 100,000,000 users with 99% accuracy'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+For which AI system would the expected **number** of inaccurate predictions be the highest?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Challenges at Scale
+MARKDOWN

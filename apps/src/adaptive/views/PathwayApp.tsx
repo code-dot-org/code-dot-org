@@ -37,6 +37,10 @@ import {
   visibleSteps,
 } from '../progress';
 import {ProgressKey} from '../progress/progressStore';
+import {
+  checkpointsToFinish,
+  finishLockMessage,
+} from '../routing/checkpointsToFinish';
 import {nextCheckpoint} from '../routing/route';
 import {findCheckpoint} from '../schema/helpers';
 import {Checkpoint, Pathway, Step} from '../types';
@@ -50,6 +54,7 @@ import {getSkillProgress} from './map/groupProgress';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
 import StepPlayer from './steps/StepPlayer';
+import useDismissed from './useDismissed';
 
 import styles from './shared.module.scss';
 
@@ -137,13 +142,15 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
     c.steps.some(s => progress.steps[s.id]?.status)
   );
 
+  const finishLocked = (checkpointsToFinish(pathway, statusMap) ?? 0) > 0;
   if (urlCheckpointId === 'project') {
     // The project screen writes this; a teacher who picks another student
     // there stays on it, since the app remounts once their progress loads.
     initialProject = true;
   } else if (urlCheckpointId) {
     if (
-      statusMap[urlCheckpointId] === 'locked' &&
+      (statusMap[urlCheckpointId] === 'locked' ||
+        (finishLocked && urlCheckpointId === pathway.finish?.checkpoint?.id)) &&
       !restProgress.isViewingStudent
     ) {
       // Silently drop the URL rather than let the student bypass a lock.
@@ -248,6 +255,14 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       ? {kind: 'step', checkpointId: initialCheckpointId, stepId: initialStepId}
       : {kind: 'map'}
   );
+  const remainingToFinish = useMemo(
+    () => checkpointsToFinish(pathway, statusMap),
+    [pathway, statusMap]
+  );
+  const finishDisabledReason = remainingToFinish
+    ? finishLockMessage(remainingToFinish)
+    : undefined;
+  const finishLocked = !!finishDisabledReason;
 
   const hasReportedInitialLoad = useRef(false);
   useEffect(() => {
@@ -270,7 +285,10 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   if (lockedAtOpen.current.id !== openedId) {
     lockedAtOpen.current = {
       id: openedId,
-      locked: !!openedId && statusMap[openedId] === 'locked',
+      locked:
+        !!openedId &&
+        (statusMap[openedId] === 'locked' ||
+          (finishLocked && openedId === pathway.finish?.checkpoint?.id)),
     };
   }
   const lastOpenedId = useRef<string>();
@@ -325,7 +343,11 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         setView({kind: 'map'});
       } else if (checkpointId === 'project') {
         setView({kind: 'project'});
-      } else if (statusMap[checkpointId] === 'locked' && !isViewingStudent) {
+      } else if (
+        (statusMap[checkpointId] === 'locked' ||
+          (finishLocked && checkpointId === pathway.finish?.checkpoint?.id)) &&
+        !isViewingStudent
+      ) {
         clearUrl();
         setView({kind: 'map'});
       } else {
@@ -343,7 +365,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     };
     window.addEventListener('popstate', handler);
     return () => window.removeEventListener('popstate', handler);
-  }, [pathway, progress, statusMap, isViewingStudent]);
+  }, [pathway, progress, statusMap, finishLocked, isViewingStudent]);
   // After a routing checkpoint, zoom the map to the next suggested checkpoint.
   useEffect(() => {
     if (view.kind === 'map' && view.focusNext) {
@@ -363,8 +385,27 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   const allCheckpointsComplete = pathway.checkpoints.every(
     c => statusMap[c.id] === 'complete' || statusMap[c.id] === 'skipped'
   );
-  const [calloutDismissed, setCalloutDismissed] = useState(false);
-  const dismissCallout = () => setCalloutDismissed(true);
+  // Each callout shows until dismissed, once per student, browser and pathway.
+  const userId = useAppSelector(state => state.currentUser.userId);
+  const [calloutDismissed, dismissCallout] = useDismissed(
+    'project',
+    userId,
+    pathway.id
+  );
+  const [finishCalloutDismissed, dismissFinishCallout] = useDismissed(
+    'finish',
+    userId,
+    pathway.id
+  );
+  // Shown once the lock lifts; the project callout waits its turn.
+  const finishCallout =
+    remainingToFinish === 0 && !finishCalloutDismissed
+      ? {
+          title: "You're ready to finish!",
+          body: `You've completed enough checkpoints to wrap up. Click the "I'm finished" button when you're ready, or keep practicing skills first.`,
+          onDismiss: dismissFinishCallout,
+        }
+      : undefined;
 
   // I'm finished does what the pathway's finish block says: asks through
   // its dialog, plays its checkpoint, then finishes the level the way any
@@ -383,8 +424,11 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     clearUrl();
     setView({kind: 'step', checkpointId: finishCheckpoint.id});
   };
-  const requestFinish = () =>
-    finishDialogContent ? setFinishAsked(true) : enterFinish();
+  const requestFinish = () => {
+    if (finishLocked) return;
+    if (finishDialogContent) setFinishAsked(true);
+    else enterFinish();
+  };
   const finishDialog = finishAsked && finishDialogContent && (
     <FinishDialog
       dialog={finishDialogContent}
@@ -512,6 +556,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
               });
             }}
             onFinishPathway={isProject || isFinish ? undefined : requestFinish}
+            finishDisabledReason={finishDisabledReason}
             activeTab={isProject ? 'project' : undefined}
             onTabChange={
               isProject
@@ -540,6 +585,8 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           sendFinalProjectClicked('mapHeader', statusMap);
           requestFinish();
         }}
+        finishDisabledReason={finishDisabledReason}
+        finishCallout={finishCallout}
       />
       <div style={{position: 'relative'}}>
         <AdaptiveTabBar
@@ -554,7 +601,7 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
           skills={getSkillProgress(pathway, statusMap)}
           timeSpentSeconds={totalTimeSpent(progress)}
         />
-        {allCheckpointsComplete && !calloutDismissed && (
+        {allCheckpointsComplete && !calloutDismissed && !finishCallout && (
           <FinalProjectCallout onDismiss={dismissCallout} />
         )}
       </div>

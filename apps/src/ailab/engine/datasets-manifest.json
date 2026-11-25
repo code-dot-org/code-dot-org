@@ -174,7 +174,7 @@
       "path": "datasets/SC1-L12-run-or-pass-base.csv",
       "metadataPath": "datasets/SC1-L12-run-or-pass-base.json",
       "isToy": true,
-      "rowCount": 51
+      "rowCount": 65
     },
         {
       "id": "SC1-L12-run-or-pass-fixed",
@@ -182,7 +182,7 @@
       "path": "datasets/SC1-L12-run-or-pass-fixed.csv",
       "metadataPath": "datasets/SC1-L12-run-or-pass-fixed.json",
       "isToy": true,
-      "rowCount": 54
+      "rowCount": 68
     },
     {
       "id": "SC1-L12-run-or-pass-add-game-clock",
@@ -246,7 +246,7 @@
       "path": "datasets/SC1-L12-study-playlist-base.csv",
       "metadataPath": "datasets/SC1-L12-study-playlist-base.json",
       "isToy": true,
-      "rowCount": 53
+      "rowCount": 64
     },
     {
       "id": "SC1-L12-study-playlist-fixed",
@@ -254,7 +254,7 @@
       "path": "datasets/SC1-L12-study-playlist-fixed.csv",
       "metadataPath": "datasets/SC1-L12-study-playlist-fixed.json",
       "isToy": true,
-      "rowCount": 56
+      "rowCount": 76
     },
     {
       "id": "SC1-L12-study-playlist-add-danceability",
@@ -286,7 +286,7 @@
       "path": "datasets/SC1-L12-snacks-base.csv",
       "metadataPath": "datasets/SC1-L12-snacks-base.json",
       "isToy": true,
-      "rowCount": 51
+      "rowCount": 57
     },
     {
       "id": "SC1-L12-snacks-fixed",
@@ -294,7 +294,7 @@
       "path": "datasets/SC1-L12-snacks-fixed.csv",
       "metadataPath": "datasets/SC1-L12-snacks-fixed.json",
       "isToy": true,
-      "rowCount": 56
+      "rowCount": 70
     },
     {
       "id": "SC1-L12-snacks-cut-chips-and-bar",
@@ -326,7 +326,7 @@
       "path": "datasets/SC1-L12-video-games-base.csv",
       "metadataPath": "datasets/SC1-L12-video-games-base.json",
       "isToy": true,
-      "rowCount": 61
+      "rowCount": 74
     },
     {
       "id": "SC1-L12-video-games-fixed",
@@ -334,7 +334,7 @@
       "path": "datasets/SC1-L12-video-games-fixed.csv",
       "metadataPath": "datasets/SC1-L12-video-games-fixed.json",
       "isToy": true,
-      "rowCount": 70
+      "rowCount": 83
     },
     {
       "id": "SC1-L12-video-games-cut-recent-handheld",
@@ -366,7 +366,7 @@
       "path": "datasets/SC1-L12-board-games-base.csv",
       "metadataPath": "datasets/SC1-L12-board-games-base.json",
       "isToy": true,
-      "rowCount": 51
+      "rowCount": 65
     },
     {
       "id": "SC1-L12-board-games-fixed",
@@ -374,7 +374,7 @@
       "path": "datasets/SC1-L12-board-games-fixed.csv",
       "metadataPath": "datasets/SC1-L12-board-games-fixed.json",
       "isToy": true,
-      "rowCount": 60
+      "rowCount": 74
     },
     {
       "id": "SC1-L12-board-games-complexity-feature",

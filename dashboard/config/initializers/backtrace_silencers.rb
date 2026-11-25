@@ -8,13 +8,19 @@
 
 # In addition to backtrace silencing, we also want to silence annoying deprecations:
 silenced = [
-  # No deprecations being silenced right now!
+  'Calling warn on ActiveSupport::Deprecation is deprecated and will be removed from Rails',
+  'Passing the coder as positional argument is deprecated and will be removed in Rails 7.2',
+  'Starting in Rails 7.2, alias_attribute with non-attribute targets will raise.',
+  'TestFixtures.fixture_path is deprecated and will be removed in Rails 7.2',
+  'The `check_pending!` method is deprecated in favor of `check_all_pending!`',
+  '`wait: :exponentially_longer` will actually wait polynomially longer and is therefore deprecated.',
+  'assert_deprecated without a deprecator is deprecated',
 ]
 
 silenced_expr = Regexp.new(silenced.join('|'))
 
-ActiveSupport::Deprecation.behavior = lambda do |message, callstack, deprecation_horizon, gem_name|
-  unless message&.match?(silenced_expr)
-    ActiveSupport::Deprecation::DEFAULT_BEHAVIORS[:stderr].call(message, callstack, deprecation_horizon, gem_name)
+Rails.application.deprecators.behavior = lambda do |message, callstack, deprecator|
+  unless silenced.any? && message&.match?(silenced_expr)
+    ActiveSupport::Deprecation::DEFAULT_BEHAVIORS[:stderr].call(message, callstack, deprecator)
   end
 end

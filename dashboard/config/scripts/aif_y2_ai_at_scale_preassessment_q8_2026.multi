@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q8-2026'
+
+wrong 'It lowers the model\'s weights and biases until they form a gradient suitable for making predictions.'
+right 'It adjusts the model\'s weights and biases in the direction that makes the model\'s loss smaller.'
+wrong 'It lowers the model\'s loss to zero.'
+wrong 'It ranks the model on a gradient representing model quality, gradually lowering the model on the gradient if its accuracy becomes lower over time.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which best describes what gradient descent does?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Regression with Neural Networks
+MARKDOWN

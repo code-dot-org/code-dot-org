@@ -1,6 +1,7 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React, {useState} from 'react';
 
+import localization from '@cdo/apps/localization';
 import {
   Choices,
   Sentence,
@@ -304,5 +305,57 @@ describe('WordMenus', () => {
     expect(screen.getByRole('button', {name: 'Next words'})).toBeTruthy();
     next();
     expect(screen.getByRole('group', {name: 'adjective'})).toBeTruthy();
+  });
+});
+
+describe('WordMenus in another language', () => {
+  const SPANISH: {[source: string]: string} = {
+    'A {{adjective}} {{creature}}.': 'Un {{creature}} {{adjective}}.',
+    '[Noun] cat': '[Noun] gato',
+    '[Adjective] spooky': '[Adjective] espeluznante',
+    'Remove {{word}}': 'Quitar {{word}}',
+  };
+
+  beforeEach(() => {
+    jest.spyOn(localization, 'locale', 'get').mockReturnValue('es-MX');
+    // Like LocalizeJS: a phrase element's <var>s are named by their first
+    // attribute, and come back where the translation puts them.
+    jest.spyOn(localization, 'translate').mockImplementation(((
+      input: unknown
+    ) => {
+      if (typeof input === 'string') {
+        return SPANISH[input] ?? input;
+      }
+      const source = Array.from((input as HTMLElement).childNodes)
+        .map(node =>
+          node instanceof HTMLElement
+            ? `{{${node.attributes[0].name}}}`
+            : node.textContent
+        )
+        .join('');
+      const out = document.createElement('span');
+      out.innerHTML = (SPANISH[source] ?? source).replace(
+        /\{\{(\w+)\}\}/g,
+        (_m, name) => `<var ${name}>${name}</var>`
+      );
+      return out;
+    }) as never);
+  });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
+
+  it('places the words in the order of the translation', () => {
+    render(<Harness initial={{creature: 'cat', adjective: 'spooky'}} />);
+    expect(sentenceText()).toBe('Un gato espeluznante.');
+    expect(screen.getByRole('button', {name: 'Quitar gato'})).toBeTruthy();
+  });
+
+  it('keeps the automatic translator out of the sentence', () => {
+    render(<Harness initial={{creature: 'cat'}} />);
+    expect(
+      (document.querySelector('p') as HTMLElement).closest('[data-notranslate]')
+    ).toBeTruthy();
   });
 });

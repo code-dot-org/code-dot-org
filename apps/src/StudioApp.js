@@ -14,7 +14,6 @@ import {
   appendSharedFunctionsToState,
   highlightBlock,
   loadBlocksToWorkspace,
-  localizeBlockInitDefinition,
   localizeBlockStrings,
   processToolboxXml,
 } from '@cdo/apps/blockly/utils';
@@ -562,12 +561,7 @@ StudioApp.prototype.init = function (config) {
           customInputTypes: Blockly.SourceCustomInputTypes,
         });
 
-        Object.entries(BlocklyCore.Blocks).forEach(([key, blockDefinition]) => {
-          if (blockDefinition.init) {
-            BlocklyCore.Blocks[key] =
-              localizeBlockInitDefinition(blockDefinition);
-          }
-        });
+        BlocklyUtils.localizeInitBlocks();
         this.relocalizeStartBlocks_();
         BlocklyUtils.refreshWorkspacesForUpdatedLocale(info.rtl);
         this.snapshotStartBlocks_();
