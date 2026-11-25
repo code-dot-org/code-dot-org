@@ -58,7 +58,7 @@ export function buildCreateMenuItems(): CreateMenuItem[] {
     {
       id: 'quest_builder',
       label: 'Quest Builder',
-      href: '/courses/quest-builder-2026/units/1/reset',
+      href: '/s/quest-builder-2026/reset',
       iconUrl: QuestBuilderIcon,
     },
     {
