@@ -48,7 +48,7 @@ function setup(scenes: Scene[]) {
 describe('useSceneEditing', () => {
   beforeEach(() => reclaim.mockClear());
 
-  it("leaves a deleted scene's thumbnail for deletion once a save drops it", () => {
+  it("hands a deleted scene's thumbnail to useReclaimAsset instead of deleting it", () => {
     const remove = jest.spyOn(HttpClient, 'delete');
     const t = setup([
       scene('one', '/v3/assets/chan/one.png'),

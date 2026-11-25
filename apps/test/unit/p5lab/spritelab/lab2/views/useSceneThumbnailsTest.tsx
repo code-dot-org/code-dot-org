@@ -22,7 +22,7 @@ jest.mock('@cdo/apps/redux', () => ({
 }));
 
 describe('useSceneThumbnails', () => {
-  it("leaves a scene's old thumbnail for deletion once a save drops it", async () => {
+  it("hands a scene's old thumbnail to useReclaimAsset instead of deleting it", async () => {
     const remove = jest.spyOn(HttpClient, 'delete');
     const scenes = [
       {
