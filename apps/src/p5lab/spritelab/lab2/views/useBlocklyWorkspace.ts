@@ -194,6 +194,7 @@ export default function useBlocklyWorkspace({
     toolboxRef.current = toolbox;
     workspaceRef.current = Blockly.inject(blocklyDiv, {
       toolbox: toolbox && shownToolbox(toolbox),
+      rtl: localization.rtl,
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
       trashcan: true,
       readOnly: !!readOnly,
