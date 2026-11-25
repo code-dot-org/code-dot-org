@@ -415,47 +415,44 @@
       DBParameterGroupName: default.aurora-mysql8.0 #Explicitly stop setting a custom Instance ParameterGroup.
 <%    end -%>
 <%  end -%>
-<%  if rack_env?(:production) -%>
-<%    {
-        Warning: {percent: 70, periods: 5, topic: 'InfraLowPriority'},
-        Critical: {percent: 85, periods: 2, topic: 'InfraUrgent'},
-      }.each do |level, alarm|
-        DB_INSTANCE_RANGE.each do |i|
-          resource_id = PRODUCTION_DB_INSTANCE_RESOURCE_IDS[i]
+<%  if rack_env?(:production)
+      DB_INSTANCE_RANGE.each do |i|
 -%>
-  DB<%=i%>Connections<%=level%>:
+  DB<%=i%>ConnectionsCritical:
     Type: AWS::CloudWatch::Alarm
     Properties:
       AlarmActions:
-        - !Ref <%=alarm[:topic]%>
-<%        if level == :Warning -%>
+        - !Ref InfraUrgent
       InsufficientDataActions:
-        - !Ref <%=alarm[:topic]%>
-<%        end -%>
-      AlarmName: <%="#{stack_name}_db_#{i}_connections_#{level.to_s.downcase}"%>
+        - !Ref InfraLowPriority
+      AlarmName: <%="#{stack_name}_db_#{i}_connections_critical"%>
       AlarmDescription: >-
-        Connections to <%="#{stack_name}-#{i}"%> above <%=alarm[:percent]%>% of its max_connections for
-        <%=alarm[:periods]%> minutes.
-      # Performance Insights is the only mechanism to dynamically lookup the maximum connections permitted by an instance.
+        Connections to <%="#{stack_name}-#{i}"%> above 85% of its max_connections for 2 minutes.
       Metrics:
         - Id: utilization
           Label: Percent of max_connections open
-          Expression: 100 * connected / maximum
+          Expression: 100 * connections / maximum
           ReturnData: true
-        - Id: connected
-          Expression: "DB_PERF_INSIGHTS('RDS', '<%=resource_id%>', 'db.Users.Threads_connected.avg')"
-          Period: 60
+        - Id: connections
+          MetricStat:
+            Metric:
+              Namespace: AWS/RDS
+              MetricName: DatabaseConnections
+              Dimensions:
+                - {Name: DBInstanceIdentifier, Value: <%="#{stack_name}-#{i}"%>}
+            Period: 60
+            Stat: Maximum
           ReturnData: false
+        # Performance Insights is the only mechanism to dynamically lookup the maximum connections permitted by an instance.
         - Id: maximum
-          Expression: "DB_PERF_INSIGHTS('RDS', '<%=resource_id%>', 'db.Users.max_connections.avg')"
+          Expression: "DB_PERF_INSIGHTS('RDS', '<%=PRODUCTION_DB_INSTANCE_RESOURCE_IDS[i]%>', 'db.Users.max_connections.avg')"
           Period: 60
           ReturnData: false
-      EvaluationPeriods: <%=alarm[:periods]%>
+      EvaluationPeriods: 2
       ComparisonOperator: GreaterThanThreshold
-      Threshold: <%=alarm[:percent]%>
+      Threshold: 85
       TreatMissingData: missing
-<%        end
-        end
+<%    end
+    end
 -%>
-<%  end -%>
 <%end -%>
