@@ -11,8 +11,8 @@ class AilabDatasetsController < ApplicationController
 
   # POST /ailab_datasets
   def create
-    problems = problems_in_params
-    return render status: :unprocessable_entity, json: {errors: problems} if problems.any?
+    errors = validation_errors
+    return render status: :unprocessable_entity, json: {errors: errors} if errors.any?
 
     AilabDatasets.save(
       id: params[:id],
@@ -44,22 +44,22 @@ class AilabDatasetsController < ApplicationController
     head :not_found unless AilabDatasets.stored(params[:id])
   end
 
-  private def problems_in_params
-    problems = []
-    problems << 'ID: use only letters, numbers, hyphens and underscores' unless AilabDatasets.valid_id?(params[:id])
-    problems << 'Name: must not be blank' if params[:name].blank?
-    problems << "Row count: must be #{MIN_ROW_COUNT} or more" unless params[:row_count].to_i >= MIN_ROW_COUNT
-    problems + problems_in_csv + problems_in_metadata
+  private def validation_errors
+    errors = []
+    errors << 'ID: use only letters, numbers, hyphens and underscores' unless AilabDatasets.valid_id?(params[:id])
+    errors << 'Name: must not be blank' if params[:name].blank?
+    errors << "Row count: must be #{MIN_ROW_COUNT} or more" unless params[:row_count].to_i >= MIN_ROW_COUNT
+    errors + csv_errors + metadata_errors
   end
 
-  private def problems_in_csv
+  private def csv_errors
     csv = params[:csv]
     return ['CSV: must be a file'] unless csv.is_a?(ActionDispatch::Http::UploadedFile)
     return ["CSV: must be #{MAX_CSV_BYTES / 1.megabyte} MB or less"] if csv.size > MAX_CSV_BYTES
     []
   end
 
-  private def problems_in_metadata
+  private def metadata_errors
     metadata = JSON.parse(params[:metadata].to_s)
     return ['Metadata: must be a JSON object'] unless metadata.is_a?(Hash)
     return ["Metadata: the name #{metadata['name'].inspect} is not the dataset ID"] unless metadata['name'] == params[:id]

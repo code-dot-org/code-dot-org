@@ -55,10 +55,10 @@ class AilabDatasetsControllerTest < ActionDispatch::IntegrationTest
       {metadata: '{"name": "birds"'} => 'Metadata: is not valid JSON',
       {metadata: '["birds"]'} => 'Metadata: must be a JSON object',
       {metadata: '{"name": "ants"}'} => 'Metadata: the name "ants" is not the dataset ID',
-    }.each do |changes, problem|
+    }.each do |changes, error|
       post '/ailab_datasets', params: dataset_params(**changes)
       assert_response :unprocessable_entity, changes.to_s
-      assert_equal [problem], response.parsed_body['errors']
+      assert_equal [error], response.parsed_body['errors']
     end
     refute @dir.join('stored').exist?
   end
