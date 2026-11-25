@@ -123,6 +123,10 @@ const measuredSize = async (dataURI: string) =>
 const propsOf = (key: string): ImageProps | undefined =>
   getStore().getState().animationList.propsByKey[key];
 
+// The file a link names: a drawing's link carries ?t=<upload time> so a
+// replaced file is not served from a cache.
+const fileOf = (url: string) => url.split('?')[0];
+
 export default function useImageWriter({
   uploadImage,
   imageRole,
@@ -137,6 +141,9 @@ export default function useImageWriter({
   // Every file the session uploaded or replaced; those no image points at
   // when the session ends are deleted.
   const sessionUrlsRef = useRef(new Set<string>());
+  // The file each image's drawing uploads to this session; later uploads
+  // replace it rather than adding a file each time.
+  const drawingFilesRef = useRef(new Map<string, string>());
   const recordSessionUrl = (url?: string) => {
     if (url) {
       sessionUrlsRef.current.add(url);
@@ -154,9 +161,27 @@ export default function useImageWriter({
   );
 
   const endSession = useCallback(() => {
-    sessionUrlsRef.current.forEach(url => reclaimAsset(url));
+    // One file can be recorded under several links: the drawing's file
+    // after each upload.
+    const inUse = new Set(
+      Object.values(
+        getStore().getState().animationList.propsByKey as Record<
+          string,
+          ImageProps | undefined
+        >
+      ).map(props => props?.sourceUrl && fileOf(props.sourceUrl))
+    );
+    const reclaimed = new Set<string>();
+    sessionUrlsRef.current.forEach(url => {
+      const file = fileOf(url);
+      if (!inUse.has(file) && !reclaimed.has(file)) {
+        reclaimed.add(file);
+        reclaimAsset(url);
+      }
+    });
     sessionUrlsRef.current = new Set();
     uploadsRef.current = new Map();
+    drawingFilesRef.current = new Map();
   }, [reclaimAsset]);
   useEffect(() => endSession, [endSession]);
 
@@ -259,14 +284,24 @@ export default function useImageWriter({
       const safeName = (existing?.name || 'image')
         .toLowerCase()
         .replace(/[^a-z0-9]+/g, '_');
-      const sourceUrl =
-        uploadNow || !existing
-          ? await upload(
-              `${safeName}_${Date.now()}.png`,
-              dataURIToBytes(dataURI),
-              'image/png'
-            )
+      const drawingFile =
+        target.key && existing
+          ? drawingFilesRef.current.get(target.key)
           : undefined;
+      const filename = drawingFile ?? `${safeName}_${Date.now()}.png`;
+      const uploadedUrl =
+        uploadNow || !existing
+          ? await upload(filename, dataURIToBytes(dataURI), 'image/png')
+          : undefined;
+      // A project upload is stored under the name it was given, so the next
+      // upload can replace it; a level's starter asset gets a new name.
+      const replaceable =
+        !!uploadedUrl &&
+        fileOf(uploadedUrl).endsWith(`/${encodeURIComponent(filename)}`);
+      const sourceUrl =
+        uploadedUrl && replaceable
+          ? `${fileOf(uploadedUrl)}?t=${Date.now()}`
+          : uploadedUrl;
       recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
       if (stillWanted && !stillWanted()) {
@@ -276,7 +311,7 @@ export default function useImageWriter({
       // stored it.
       const subject =
         existing?.subject ?? existing?.generation?.subject ?? target.subject;
-      return write(target, {
+      const key = write(target, {
         ...(sourceUrl && {sourceUrl}),
         dataURI,
         ...(subject && {subject}),
@@ -293,6 +328,10 @@ export default function useImageWriter({
         edited: true,
         recentColors: meta.recentColors,
       });
+      if (replaceable) {
+        drawingFilesRef.current.set(key, filename);
+      }
+      return key;
     },
     [upload, write]
   );

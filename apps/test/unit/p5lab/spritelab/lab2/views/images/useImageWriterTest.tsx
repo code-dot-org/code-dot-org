@@ -90,6 +90,7 @@ describe('useImageWriter', () => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     createNamedAnimation.mockClear();
     repointAnimation.mockClear();
+    repointAnimation.mockImplementation(() => '/v3/assets/chan/old.png');
     httpDelete.mockClear();
     dispatch.mockClear();
     unflag.mockClear();
@@ -519,6 +520,81 @@ describe('useImageWriter', () => {
       const {writer} = renderWriter();
       act(() => writer().deleteImage('k1'));
       expect(unflag).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('drawing', () => {
+    let now = 1000;
+    beforeEach(() => {
+      jest.spyOn(Date, 'now').mockImplementation(() => (now += 1));
+      // The image takes the patch's file, and the old one is returned.
+      repointAnimation.mockImplementation((...args: unknown[]) => {
+        const [, key, patch] = args as [unknown, string, {sourceUrl?: string}];
+        const previous = propsByKey[key].sourceUrl as string;
+        if (patch.sourceUrl) {
+          propsByKey[key].sourceUrl = patch.sourceUrl;
+        }
+        return previous;
+      });
+    });
+    afterEach(() => jest.restoreAllMocks());
+
+    const draw = async (writer: () => ImageWriter) => {
+      await act(async () => {
+        await writer().saveEdited(
+          {key: 'k1', imageType: 'sprite'},
+          'data:image/png;base64,AA',
+          {}
+        );
+      });
+    };
+
+    it('replaces one file per image for the session, with a fresh link each time', async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      const {writer, uploadImage} = renderWriter();
+      await draw(writer);
+      const first = propsByKey.k1.sourceUrl as string;
+      await draw(writer);
+      const second = propsByKey.k1.sourceUrl as string;
+      const names = uploadImage.mock.calls.map(call => call[0]);
+      expect(names).toHaveLength(2);
+      expect(names[1]).toBe(names[0]);
+      expect(first.split('?')[0]).toBe(second.split('?')[0]);
+      expect(first).toMatch(/\?t=\d+$/);
+      expect(second).not.toBe(first);
+    });
+
+    it("keeps the drawing's file at session end, under any of its links", async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      const {writer} = renderWriter();
+      await draw(writer);
+      await draw(writer);
+      act(() => writer().endSession());
+      expect(httpDelete.mock.calls.map(call => call[0])).toEqual([
+        '/v3/assets/chan/old.png',
+      ]);
+    });
+
+    it('starts a new file in the next session', async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      const {writer, uploadImage} = renderWriter();
+      await draw(writer);
+      act(() => writer().endSession());
+      await draw(writer);
+      const names = uploadImage.mock.calls.map(call => call[0]);
+      expect(names[1]).not.toBe(names[0]);
+    });
+
+    it("gives a level's starter asset no link suffix and no reuse", async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      let n = 0;
+      const {writer, uploadImage} = renderWriter(
+        jest.fn(async (name: string) => `/level_starter_assets/lvl/${++n}.png`)
+      );
+      await draw(writer);
+      await draw(writer);
+      expect(propsByKey.k1.sourceUrl).toBe('/level_starter_assets/lvl/2.png');
+      expect(uploadImage).toHaveBeenCalledTimes(2);
     });
   });
 });
