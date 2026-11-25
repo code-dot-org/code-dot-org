@@ -46,6 +46,15 @@ describe('priorOutputFromLevelProperties', () => {
     expect(out?.multi?.summary).toBe('Multi — Q: What is 2+2?; A: 4');
   });
 
+  it('carries a video brief through from level properties', () => {
+    const out = priorOutputFromLevelProperties(
+      props({longInstructions: '## Video placeholder'}),
+      'video'
+    );
+    expect(out?.video?.longInstructions).toBe('## Video placeholder');
+    expect(priorOutputFromLevelProperties(props({}), 'video')).toBeUndefined();
+  });
+
   it('summarizes a free response question', () => {
     const out = priorOutputFromLevelProperties(
       props({longInstructions: 'Explain loops\nin your own words.'}),
@@ -71,6 +80,25 @@ describe('priorOutputFromLevelProperties', () => {
 });
 
 describe('formatPrecedingLevels', () => {
+  it('propagates a video brief', () => {
+    const text = formatPrecedingLevels([
+      {
+        position: 1,
+        name: 'l-watch',
+        labType: 'video',
+        description: 'Watch how sensors work.',
+        output: {
+          video: {
+            longInstructions: '## Video placeholder\n- Show a sensor.',
+            teacherMarkdown: '',
+          },
+        },
+      },
+    ]);
+    expect(text).toContain('  Video brief:');
+    expect(text).toContain('    - Show a sensor.');
+  });
+
   it('returns the empty string for no entries', () => {
     expect(formatPrecedingLevels([])).toBe('');
   });

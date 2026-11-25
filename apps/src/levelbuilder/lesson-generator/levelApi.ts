@@ -4,7 +4,12 @@ import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {Panel} from '@cdo/apps/panels/types';
 import HttpClient, {isNetworkError} from '@cdo/apps/util/HttpClient';
 
-import {LabType, RAILS_TYPE_BY_LAB, SerializedActivity} from './types';
+import {
+  CREATE_PROPERTIES_BY_LAB,
+  LabType,
+  RAILS_TYPE_BY_LAB,
+  SerializedActivity,
+} from './types';
 
 export interface CreatedLevel {
   id: number;
@@ -27,13 +32,18 @@ export async function createOrFindLevel(
   if (existing) return {...existing, reused: true};
 
   try {
+    // Rails only auto-wraps column names into params[:level], so property
+    // keys sent at the top level never reach the permit list.
     const response = await HttpClient.post(
       '/levels?do_not_redirect=true',
       JSON.stringify({
-        type: RAILS_TYPE_BY_LAB[type],
-        name,
-        published: true,
-        ...(dslText !== undefined ? {dsl_text: dslText} : {}),
+        level: {
+          type: RAILS_TYPE_BY_LAB[type],
+          name,
+          published: true,
+          ...CREATE_PROPERTIES_BY_LAB[type],
+          ...(dslText !== undefined ? {dsl_text: dslText} : {}),
+        },
       }),
       true,
       {
@@ -150,7 +160,8 @@ export type LevelProperty =
   | 'bubble_choice_description'
   | 'display_name'
   | 'placeholder'
-  | 'solution';
+  | 'solution'
+  | 'teacher_markdown';
 
 export async function updateLevelProperty(
   levelId: number,
