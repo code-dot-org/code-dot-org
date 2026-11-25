@@ -86,9 +86,6 @@ include_recipe 'cdo-postfix'
 include_recipe 'cdo-otel-collector'
 include_recipe 'cdo-syslog'
 
-# Production analytics utilities.
-include_recipe 'cdo-analytics' if %w[production-daemon production-console].include?(node.name)
-
 include_recipe 'cdo-apps::jemalloc' if node['cdo-apps']['jemalloc']
 include_recipe 'cdo-apps::bundle_bootstrap'
 include_recipe 'cdo-apps::build'

@@ -22,9 +22,6 @@ describe 'cdo-apps::default' do
   let(:node_name) {'_default'}
   subject {chef_run.node}
 
-  it 'does not include cdo-analytics' do
-    is_expected.not_to include_recipe('cdo-analytics::default')
-  end
   it 'does not include daemon_ssh' do
     is_expected.not_to include_recipe('cdo-apps::daemon_ssh')
   end
@@ -40,9 +37,6 @@ describe 'cdo-apps::default' do
       }
     end
     let(:node_name) {'production-daemon'}
-    it 'includes cdo-analytics' do
-      is_expected.to include_recipe('cdo-analytics::default')
-    end
     it 'includes daemon_ssh' do
       is_expected.to include_recipe('cdo-apps::daemon_ssh')
     end
