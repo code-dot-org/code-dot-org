@@ -1242,11 +1242,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setOnStageSceneId(scene?.id ?? null);
   }, []);
 
-  // Re-run the stage once every image of a reseeded animation list has
-  // settled, if any of them loaded: the run at reseed time cannot draw
-  // images that have not loaded yet. The watch is cancelled through a ref,
-  // not effect cleanup, because the effect that reseeds re-runs on every
-  // animation change and would cancel it mid-load.
+  // When the project's images are replaced all at once (previewing or
+  // restoring an older version, or Start Over on a level whose starting code
+  // has images), the game runs right away, before those images have loaded,
+  // so it can't show them yet. This waits for them and runs the game again
+  // once they're in. If they all fail to load there's nothing new to show,
+  // so it doesn't.
+  // The watcher is kept in a ref because the effect that replaces the images
+  // runs again on every image change, and its cleanup would cancel the watcher
+  // too early.
   const cancelRerunWatchRef = useRef<() => void>();
   const restartSceneRef = useRef<() => void>(() => {});
   // Restarts the scene while the game plays, and runs the preview otherwise.
