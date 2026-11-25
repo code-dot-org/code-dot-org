@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q1-2026'
+
+wrong 'The error rate goes up as more people use the app, so it will make more mistakes per user.'
+right 'The error rate stays the same, but the number of wrong answers grows with the number of users.'
+wrong 'The error rate stays the same, but students are more likely to be dissatisfied with it.'
+wrong 'The app will encounter more homework problems it wasn\'t trained on.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+An AI-based homework-help app gives the wrong answer about 2 out of every 100 times. Which statement best explains why this could be a problem as the app gains more users?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Challenges at Scale
+MARKDOWN

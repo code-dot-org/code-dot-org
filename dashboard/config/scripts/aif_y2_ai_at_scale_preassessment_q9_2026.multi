@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q9-2026'
+
+right 'It could use each unit in its output layer to represent the probability an example belongs to a category.'
+wrong 'It could assign each unit in its hidden layers to a given category.'
+wrong 'It could sum the level of activation across all of its units that belong to each category, arriving at the probability an example belongs to each category.'
+wrong 'It could encode categorical—rather than numeric—features in its input layer.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which best describes how a neural network could solve a classification problem?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Classification with Neural Networks
+MARKDOWN

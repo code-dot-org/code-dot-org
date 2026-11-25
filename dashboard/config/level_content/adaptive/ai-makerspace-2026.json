@@ -922,8 +922,7 @@
           "title": "Your final project",
           "kind": "level",
           "level": "adaptive-less-checkpoints-wrap-up-showcase",
-          "project": true,
-          "instructions": "Look what you built! Review your final project."
+          "project": true
         },
         {
           "id": "wrap-up-congrats",

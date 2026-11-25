@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q4-2026'
+
+wrong 'How many examples it can learn from at one time'
+right 'How much its parameters change at one time'
+wrong 'How quickly it will make predictions'
+wrong 'How often it will adjust its parameters during training'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Adjusting the learning rate when training a neuron changes...
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 3: Training Neurons
+MARKDOWN

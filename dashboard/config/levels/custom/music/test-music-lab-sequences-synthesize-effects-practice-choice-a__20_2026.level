@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2026-05-06T17:03:55.000Z",
   "level_num": "custom",
@@ -49,7 +50,7 @@
       "allowChangeStartingPlayheadPosition": true,
       "showSoundFilters": true
     },
-    "long_instructions": "### Loud & Quiet\r\n\r\n**The Scenario:**\r\n\r\nImagine an artist wants a song that plays with extreme quiet and loud contrasts to build tension and excitement. Your job is to create a remix that highlights that dynamic range — not just with volume, but with timing and layers too.\r\n\r\n**Do This:**\r\n\r\n- Use volume settings to make some parts of your song whisper quiet and others bold and loud.\r\n- Sequence those shifts so they happen in a pattern — for example, a quiet part after every 8 beats.\r\n- Layer sounds with **rests** to emphasize when something cuts out or surges in.\r\n- Try using effects like filters or fades to make the volume transitions feel smoother or more dramatic.\r\n\r\n**Musical Suggestions:**\r\n\r\n- “Something Just Like This” – The Chainsmokers & Coldplay *(builds into explosive choruses from calm openings)*\r\n- “Tightrope” – Tinashe *(delicate moments mixed with big dynamic peaks)*\r\n- “Angel” – Halle *(soft vocals that can contrast beautifully with louder beats)*\r\n\r\n**To pass this level, your song must include at least 2 quiet sections and 2 loud sections, clearly sequenced and layered to show contrast using volume changes, rests, or effects.**",
+    "long_instructions": "### Loud & Quiet\r\n\r\n**The Scenario:**\r\n\r\nImagine an artist wants a song that plays with extreme quiet and loud contrasts to build tension and excitement. Your job is to create a remix that highlights that dynamic range — not just with volume, but with timing and layers too.\r\n\r\n**Do This:**\r\n\r\n- Use volume settings to make some parts of your song whisper quiet and others bold and loud.\r\n- Sequence those shifts so they happen in a pattern — for example, a quiet part after every 8 beats.\r\n- Layer sounds with **rests** to emphasize when something cuts out or surges in.\r\n- Try using effects like filters or fades to make the volume transitions feel smoother or more dramatic.\r\n\r\n**Musical Suggestions:**\r\n\r\n- “Something Just Like This” – The Chainsmokers & Coldplay *(builds into explosive choruses from calm openings)*\r\n- “Tightrope” – Tinashe *(delicate moments mixed with big dynamic peaks)*\r\n- “Beautiful Things” – Benson Boone *(quiet, intimate verses that swell into a powerful chorus)*\r\n\r\n**To pass this level, your song must include at least 2 quiet sections and 2 loud sections, clearly sequenced and layered to show contrast using volume changes, rests, or effects.**",
     "display_name": "Loud & Quiet",
     "bubble_choice_description": "Help an artist create a song that plays with extreme quiet and loud contrasts to build tension and excitement.",
     "predict_settings": {
@@ -83,10 +84,12 @@
     "name_suffix": "_2026",
     "thumbnail_url": "https://images.code.org/9ba4f79572fcec4fb4176114a2b51f7b-volume.png",
     "ai_tutor_available": "true",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-05-06T17:03:55.323+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-a__2025-v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-a__2025-v2\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-05-06T17:03:55.323+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-sequences-synthesize-effects-practice-choice-a__2025-v2\\\"\"],\"cloned_from\":\"test-music-lab-sequences-synthesize-effects-practice-choice-a__2025-v2\"},{\"changed_at\":\"2026-11-24 23:40:08 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

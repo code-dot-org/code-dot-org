@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q12-2026'
+
+wrong 'The network hasn\’t trained long enough, and more training iterations would eventually fix the predictions.'
+wrong 'Temperature and plant growth aren\’t related, so no model could learn a useful pattern from this data.'
+wrong 'The temperature weight is too small, and a larger weight would let the network fit the data.'
+right 'A single-layer network\’s output can only move in one direction as an input increases.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A student wants to predict how much a plant will grow based on the temperature. Plants in the training data grow best around 75°F and grow less when it’s either colder or hotter. The student trains a neural network with no hidden layers, but its predictions are poor no matter how long it trains. Which statement best explains why?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: What Neurons Learn
+MARKDOWN

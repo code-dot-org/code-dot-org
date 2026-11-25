@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q10-2026'
+
+right 'Have a teacher review each flagged essay and talk with the student before any grade is given.'
+wrong 'Keep the automatic zeros, because 98% accuracy is high enough that mistakes don\’t matter.'
+wrong 'Keep how the tool works secret so students can\’t learn to fool it.'
+wrong 'Audit the tool\’s decisions at the end of the school year to look for mistakes.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A school district starts using an AI tool that flags student essays as possibly written by AI. The tool is correct 98 out of every 100 times, and the district plans to give an automatic zero to every flagged essay. Which safeguard would best protect students from the tool’s mistakes?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Safeguards for AI
+MARKDOWN

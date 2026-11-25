@@ -1,0 +1,20 @@
+name 'aif-y2-ai-at-scale-postassessment-q13-2026'
+
+wrong 'A negative weight for video length and a positive weight for average watch time.'
+right 'A positive weight for video length and a negative weight for average watch time.'
+wrong 'Positive weights for both video length and average watch time.'
+wrong 'Weights of 0 for both.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A neural network predicts how much a user will enjoy a video.
+
+A neuron in a hidden layer answers the question "Is this video too long?" The neuron takes two inputs: the video length (in minutes) and the user's average video watch time (in minutes).
+
+Which weights for these inputs make the most sense for this neuron?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Deep Learning
+MARKDOWN
