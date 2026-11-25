@@ -10,9 +10,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <EditChildLevelSettings initialChildLevelSettings={childLevels} />,
-    document.getElementById('child-level-bubble-choice-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('child-level-bubble-choice-editor')
   );
 });

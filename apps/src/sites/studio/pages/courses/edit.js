@@ -91,9 +91,6 @@ function showCourseEditor() {
         }
       />
     </Provider>,
-    document.getElementById('course_editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('course_editor')
   );
 }

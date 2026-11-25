@@ -10,9 +10,6 @@ $(document).ready(function () {
 
   createReactRoot(
     <EditAichatSettings initialSettings={initialSettings} />,
-    document.getElementById('aichat-settings-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('aichat-settings-editor')
   );
 });

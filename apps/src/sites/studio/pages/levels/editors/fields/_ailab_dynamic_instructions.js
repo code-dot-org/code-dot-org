@@ -28,9 +28,6 @@ $(document).ready(function () {
       initialUsesLab2={!!lab2Checkbox?.checked}
       subscribeToUsesLab2={subscribeToUsesLab2}
     />,
-    document.getElementById('ailab-dynamic-instructions-editor'),
-    {
-      legacyReactDomRender: true,
-    }
+    document.getElementById('ailab-dynamic-instructions-editor')
   );
 });
