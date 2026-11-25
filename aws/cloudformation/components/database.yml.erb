@@ -425,10 +425,12 @@
   #
   # The Role=WRITER cluster dimension follows the writer through a failover; an
   # instance ID would not.
+  #
+  # The Infra topics are defined in the alarms component of this same stack.
 <%    writer_max_connections = 4069 # db.r7i.4xlarge, Aurora MySQL default formula
       {
-        Warning: {percent: 70, periods: 5, topic: 'LowPriority'},
-        Critical: {percent: 85, periods: 2, topic: 'Urgent'},
+        Warning: {percent: 70, periods: 5, topic: 'InfraLowPriority'},
+        Critical: {percent: 85, periods: 2, topic: 'InfraUrgent'},
       }.each do |level, alarm|
         threshold = (writer_max_connections * alarm[:percent] / 100.0).round
 -%>
@@ -436,7 +438,7 @@
     Type: AWS::CloudWatch::Alarm
     Properties:
       AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-<%=alarm[:topic]%>"
+        - !Ref <%=alarm[:topic]%>
       AlarmName: <%="#{stack_name}_db_writer_connections_#{level.to_s.downcase}"%>
       AlarmDescription: Aurora writer connections above <%=alarm[:percent]%>% of the db.r7i.4xlarge max_connections ceiling (<%=threshold%> of <%=writer_max_connections%>) for <%=alarm[:periods]%> minutes
       Namespace: AWS/RDS
