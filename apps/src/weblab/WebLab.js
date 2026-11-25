@@ -1,4 +1,5 @@
 import React from 'react';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -225,25 +226,25 @@ WebLab.prototype.init = function (config) {
     }
   }
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <WebLabView
-        onAddFileHTML={onAddFileHTML.bind(this)}
-        onAddFileCSS={onAddFileCSS.bind(this)}
-        onAddFileImage={onAddFileImage.bind(this)}
-        onUndo={onUndo.bind(this)}
-        onRedo={onRedo.bind(this)}
-        onRefreshPreview={onRefreshPreview.bind(this)}
-        onStartFullScreenPreview={this.onStartFullScreenPreview.bind(this)}
-        onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
-        onToggleInspector={this.onToggleInspector.bind(this)}
-        onMount={() => this.onMount(config)}
-      />
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <WebLabView
+          onAddFileHTML={onAddFileHTML.bind(this)}
+          onAddFileCSS={onAddFileCSS.bind(this)}
+          onAddFileImage={onAddFileImage.bind(this)}
+          onUndo={onUndo.bind(this)}
+          onRedo={onRedo.bind(this)}
+          onRefreshPreview={onRefreshPreview.bind(this)}
+          onStartFullScreenPreview={this.onStartFullScreenPreview.bind(this)}
+          onEndFullScreenPreview={onEndFullScreenPreview.bind(this)}
+          onToggleInspector={this.onToggleInspector.bind(this)}
+          onMount={() => this.onMount(config)}
+        />
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));

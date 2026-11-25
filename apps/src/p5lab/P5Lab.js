@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
+import {flushSync} from 'react-dom';
 
 import {getCode} from '@cdo/apps/blockly/utils';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
@@ -498,21 +499,21 @@ export default class P5Lab {
     const loader = this.studioApp_
       .loadLibraries(this.level.helperLibraries)
       .then(() =>
-        createReactRoot(
-          <Provider store={getStore()}>
-            <P5LabView
-              showFinishButton={finishButtonFirstLine && showFinishButton}
-              onMount={onMount}
-              pauseHandler={this.onPause?.bind(this)}
-              hidePauseButton={!!this.level.hidePauseButton}
-              onPromptAnswer={this.onPromptAnswer?.bind(this)}
-              labType={this.getLabType()}
-            />
-          </Provider>,
-          document.getElementById(config.containerId),
-          {
-            legacyReactDomRender: true,
-          }
+        // Synchronous: onMount initializes the app before init resolves.
+        flushSync(() =>
+          createReactRoot(
+            <Provider store={getStore()}>
+              <P5LabView
+                showFinishButton={finishButtonFirstLine && showFinishButton}
+                onMount={onMount}
+                pauseHandler={this.onPause?.bind(this)}
+                hidePauseButton={!!this.level.hidePauseButton}
+                onPromptAnswer={this.onPromptAnswer?.bind(this)}
+                labType={this.getLabType()}
+              />
+            </Provider>,
+            document.getElementById(config.containerId)
+          )
         )
       );
 

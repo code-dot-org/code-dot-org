@@ -5,6 +5,7 @@
 
 import $ from 'jquery';
 import React from 'react';
+import {flushSync} from 'react-dom';
 
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
@@ -271,17 +272,17 @@ NetSim.prototype.init = function (config) {
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config);
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <NetSimView
-        generateCodeAppHtml={generateCodeAppHtmlFromEjs}
-        onMount={onMount}
-      />
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <NetSimView
+          generateCodeAppHtml={generateCodeAppHtmlFromEjs}
+          onMount={onMount}
+        />
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 };
 
