@@ -442,6 +442,31 @@ describe('animationList', function () {
         store.getState().animationTab.currentAnimations.ANIMATION
       ).to.equal('');
     });
+
+    it("deletes the animation's file when there is a project id", function () {
+      project.getCurrentId.returns('123');
+      const store = createStore(
+        combineReducers({animationList: reducer, animationTab}),
+        {}
+      );
+      store.dispatch(setInitialAnimationList(createAnimationList(1)));
+      store.dispatch(deleteAnimation('animation_1'));
+      const deletes = server.requests.filter(r => r.method === 'DELETE');
+      expect(deletes.map(r => r.url)).to.deep.equal([
+        '/v3/animations/123/animation_1.png',
+      ]);
+    });
+
+    it('sends no delete without a project id', function () {
+      const store = createStore(
+        combineReducers({animationList: reducer, animationTab}),
+        {}
+      );
+      store.dispatch(setInitialAnimationList(createAnimationList(1)));
+      store.dispatch(deleteAnimation('animation_1'));
+      const deletes = server.requests.filter(r => r.method === 'DELETE');
+      expect(deletes).to.have.length(0);
+    });
   });
 
   describe('action: clone animation', function () {
