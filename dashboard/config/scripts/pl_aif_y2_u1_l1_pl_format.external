@@ -5,21 +5,19 @@ description 'description here'
 markdown <<MARKDOWN
 # Where Unit 1 Fits
 
-Unit 1 doesn't map directly onto AI-901's tested content. That's by design, not a gap.
+<p>Semester 1 of Building AI Systems is the foundation for Semester 2, when students work in Microsoft Foundry and prepare for the AI-901 certification. </p>
+  
+<p>Unit 1 is where that foundation starts. Here's what students carry forward:</p>
 
-What Unit 1 actually builds is the foundation the rest of the year assumes you already have:
+<p>• <b>Python fluency.</b> Students write Python in every unit of Semester 1, so they arrive in Semester 2 ready to use it in Foundry without also learning the language.</p>
 
-<div style="background: #FFFFFF; border: 1px solid #D5EFFF; padding: 18px 20px; border-radius: 10px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1); margin: 20px 0;">
-  <ul style="list-style-type: disc; padding-left: 20px; font-size: 16px;">
-    <li>Basic Python fluency, which Domain 2's Foundry SDK work assumes students already have</li><br>
-    <li>Comfort reasoning about different approaches to AI, a light first pass at Domain 1's conceptual territory</li><br>
-    <li>Debugging habits students will lean on all year, especially once they're troubleshooting real Foundry implementations</li>
-  </ul>
-</div>
+<p>• <b>Reasoning about different approaches to AI.</b> In Unit 1, students build rule-based systems and see where they break down. That's a light first pass at the concepts Domain 1 covers later.</p>
 
-<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px;">
+<p>• <b>Debugging habits.</b> Students start practicing in Unit 1 how to read an error, test a small change, and try again. They'll lean on those habits all year, especially once they're troubleshooting real Foundry implementations.</p>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
   <div style="font-size: 16px; color: #06338D; line-height: 1.5;">
-    <strong>The takeaway:</strong> if Unit 1 feels disconnected from AI-901, that's expected. You're building foundations here, not chasing exam content. You'll see Cert Lit framing get more direct as the units go on and the content starts mapping onto tested domains.
+    <strong>The takeaway:</strong> if Unit 1 feels disconnected from AI-901, that's expected. You're building foundations here, not chasing exam content. You'll see the certification framing get more direct as the units go on and the content starts mapping onto tested domains.
   </div>
 </div>
 
@@ -36,7 +34,7 @@ What Unit 1 actually builds is the foundation the rest of the year assumes you a
 </div>
 
 <div style="background-color: #4C42CF; color: #FFFFFF; border-radius: 8px; padding: 14px 20px; margin-bottom: 16px;">
-  <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Up Next</span><br>
+  <span style="font-size: 16px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.8;">Up Next</span><br>
   <span style="font-size: 18px; font-weight: bold;">Section 2: What Is AI, Really?</span>
 </div>
 MARKDOWN

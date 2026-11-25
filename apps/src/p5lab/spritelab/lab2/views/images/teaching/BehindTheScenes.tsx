@@ -8,7 +8,8 @@ import Modal from '@code-dot-org/component-library/modal';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
+import {createPortal} from 'react-dom';
 
 import {FrameSize} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
@@ -59,13 +60,22 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
   story,
   onTellStory,
 }) => {
-  const [open, setOpen] = useState(false);
   const [view, setView] = useState<View>('picture');
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  // Where the open dialog is drawn: the nearest element that sets a theme.
+  // The button can sit in a bar that is layered under the page header, and
+  // a dialog drawn there could not cover the header with its backdrop.
+  const [dialogHost, setDialogHost] = useState<Element | null>(null);
+  const setOpen = (open: boolean) =>
+    setDialogHost(
+      open ? triggerRef.current?.closest('[data-theme]') ?? document.body : null
+    );
   const openDialog = () => {
     setView('picture');
     setOpen(true);
   };
   const triggerProps = {
+    ref: triggerRef,
     variant: 'text',
     color: 'tertiary',
     size: 'small',
@@ -79,7 +89,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           Then, for each pose, we sent the first picture back with these words.
           Only the part in brackets changed.
         </p>
-        <p className={styles.promptCommon}>
+        <p className={styles.promptCommon} data-notranslate>
           {sent.poses.common.split(POSE_MARK).flatMap((piece, i) =>
             i === 0
               ? [piece]
@@ -97,13 +107,15 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
               <span className={styles.poseLabel}>
                 {POSE_NAMES[frame.label] ?? frame.label}:
               </span>{' '}
-              {frame.pose}
+              <span data-notranslate>{frame.pose}</span>
             </li>
           ))}
         </ul>
       </>
     ) : (
-      <p className={styles.promptCommon}>{sent.picture}</p>
+      <p className={styles.promptCommon} data-notranslate>
+        {sent.picture}
+      </p>
     );
   return (
     <>
@@ -119,67 +131,69 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           {TITLE}
         </MuiButton>
       )}
-      {open && (
-        <Modal
-          title={TITLE}
-          className={styles.dialog}
-          customContent={
-            <div className={styles.body}>
-              <div className={styles.lead}>
-                {picture && (
-                  <div className={styles.thumbBox}>
-                    <div
-                      className={classNames(
-                        styles.thumb,
-                        picture.pixelated && styles.pixelArt,
-                        // The strip is scaled so its first frame fills the
-                        // box; the later frames fall past the box's right
-                        // edge and are clipped.
-                        picture.sheet && styles.thumbStrip
-                      )}
-                      style={{backgroundImage: `url(${picture.src})`}}
-                      role="img"
-                      aria-label={picture.name ?? 'Your picture'}
-                    />
-                  </div>
+      {dialogHost &&
+        createPortal(
+          <Modal
+            title={TITLE}
+            className={styles.dialog}
+            customContent={
+              <div className={styles.body}>
+                <div className={styles.lead}>
+                  {picture && (
+                    <div className={styles.thumbBox}>
+                      <div
+                        className={classNames(
+                          styles.thumb,
+                          picture.pixelated && styles.pixelArt,
+                          // The strip is scaled so its first frame fills the
+                          // box; the later frames fall past the box's right
+                          // edge and are clipped.
+                          picture.sheet && styles.thumbStrip
+                        )}
+                        style={{backgroundImage: `url(${picture.src})`}}
+                        role="img"
+                        aria-label={picture.name ?? 'Your picture'}
+                      />
+                    </div>
+                  )}
+                  <p id="dsco-dialog-description" className={styles.intro}>
+                    We sent the AI these words. It made a picture to match them.
+                    The first sentence is yours; the rest is what the lab adds
+                    every time.
+                  </p>
+                </div>
+                {sent.poses && (
+                  <SegmentedButtons
+                    size="s"
+                    className={styles.views}
+                    buttons={VIEWS.map(([value, label]) => ({value, label}))}
+                    selectedButtonValue={view}
+                    onChange={value => setView(value as View)}
+                  />
                 )}
-                <p id="dsco-dialog-description" className={styles.intro}>
-                  We sent the AI these words. It made a picture to match them.
-                  The first sentence is yours; the rest is what the lab adds
-                  every time.
-                </p>
-              </div>
-              {sent.poses && (
-                <SegmentedButtons
-                  size="s"
-                  className={styles.views}
-                  buttons={VIEWS.map(([value, label]) => ({value, label}))}
-                  selectedButtonValue={view}
-                  onChange={value => setView(value as View)}
-                />
-              )}
-              {/* No tabIndex needed: browsers make a scrollable container
+                {/* No tabIndex needed: browsers make a scrollable container
                   keyboard-focusable on their own. */}
-              <div className={styles.promptFrame}>{promptView}</div>
-            </div>
-          }
-          onClose={() => setOpen(false)}
-          secondaryButtonProps={
-            story &&
-            onTellStory && {
-              children: STORY_BUTTON,
-              onClick: () => {
-                setOpen(false);
-                onTellStory(story);
-              },
+                <div className={styles.promptFrame}>{promptView}</div>
+              </div>
             }
-          }
-          primaryButtonProps={{
-            children: 'Got it',
-            onClick: () => setOpen(false),
-          }}
-        />
-      )}
+            onClose={() => setOpen(false)}
+            secondaryButtonProps={
+              story &&
+              onTellStory && {
+                children: STORY_BUTTON,
+                onClick: () => {
+                  setOpen(false);
+                  onTellStory(story);
+                },
+              }
+            }
+            primaryButtonProps={{
+              children: 'Got it',
+              onClick: () => setOpen(false),
+            }}
+          />,
+          dialogHost
+        )}
     </>
   );
 };

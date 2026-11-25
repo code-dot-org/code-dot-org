@@ -4,7 +4,8 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import classNames from 'classnames';
 import React from 'react';
 
-import {Sentence, Word} from './sentences';
+import {translateWord} from './sentenceLocalization';
+import {Sentence, Slot, Word} from './sentences';
 import {hueFor} from './wordHues';
 
 import styles from './word-menus.module.scss';
@@ -25,8 +26,13 @@ export function hueClass(sentence: Sentence, slotId: string): string {
   return styles[`hue_${hueFor(sentence, slotId)}`];
 }
 
-/** A word's icon, or its color as a dot, then the word. */
-export const WordText: React.FunctionComponent<{word: Word}> = ({word}) => (
+/** A word's icon, or its color as a dot, then the word in the current
+    language. */
+export const WordText: React.FunctionComponent<{
+  word: Word;
+  /** The word's slot, whose heading gives the translation its context. */
+  slot?: Pick<Slot, 'heading' | 'label'>;
+}> = ({word, slot}) => (
   <>
     {word.color ? (
       <span
@@ -43,7 +49,7 @@ export const WordText: React.FunctionComponent<{word: Word}> = ({word}) => (
         />
       )
     )}
-    {word.text}
+    {translateWord(word, slot)}
   </>
 );
 

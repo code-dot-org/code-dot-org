@@ -126,8 +126,11 @@ export const SectionList: React.FC<SectionListProps> = ({
     [setSortableSectionIds]
   );
 
+  const reduxSectionOrderRef = React.useRef(reduxSectionOrder);
+  reduxSectionOrderRef.current = reduxSectionOrder;
+
   React.useEffect(() => {
-    if (!_.isEqual(sortableSectionIds, reduxSectionOrder)) {
+    if (!_.isEqual(sortableSectionIds, reduxSectionOrderRef.current)) {
       // sortableSectionIds trails a change to sections by one render, so
       // reconcile it with them before saving.
       const sectionOrder = getFilteredSectionOrderIds(
@@ -137,7 +140,7 @@ export const SectionList: React.FC<SectionListProps> = ({
       dispatch(setSectionOrder(sectionOrder));
       saveSectionOrder(sectionOrder);
     }
-  }, [sortableSectionIds, dispatch, reduxSectionOrder, sections]);
+  }, [sortableSectionIds, dispatch, sections]);
 
   const onDeleteClickCallback = (sectionId: number) => {
     setSectionToDelete(sectionId);

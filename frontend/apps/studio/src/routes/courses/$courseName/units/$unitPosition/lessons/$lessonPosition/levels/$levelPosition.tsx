@@ -9,6 +9,7 @@ import {
 } from '@code-dot-org/core/api';
 import {Lab} from '@code-dot-org/lab/host';
 
+import {BRAND_NAME} from '@/components/header/config';
 import FullHeightLabFrame from '@/modules/labs/router/FullHeightLabFrame';
 import {getLabEntrypointByAppName} from '@/modules/labs/router/getLabEntrypointByAppName';
 import LevelNavigation from '@/modules/labs/router/LevelNavigation';
@@ -17,6 +18,7 @@ import {
   nextDestination,
   resolveCourseLevel,
 } from '@/modules/labs/router/resolveCourseLevel';
+import {pageTitle} from '@/modules/router/pageTitle';
 import queryClient from '@/modules/router/queryClient';
 // Register fish/standalone_video level kinds before the loader fetches level
 // properties, so per-level fields (mode, displayName) survive the parse.
@@ -129,8 +131,8 @@ export const Route = createFileRoute(
       | {displayName?: string}
       | undefined;
     const name =
-      props?.displayName ?? loaderData?.resolved.scriptTitle ?? 'CodeAI';
-    return {meta: [{title: `${name} | CodeAI`}]};
+      props?.displayName ?? loaderData?.resolved.scriptTitle ?? BRAND_NAME;
+    return {meta: [{title: pageTitle(name)}]};
   },
   component: CourseLevelRoute,
   notFoundComponent: () => (

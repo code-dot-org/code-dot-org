@@ -125,9 +125,10 @@ class ActivitiesController < ApplicationController
       track_progress
 
       # If a student is submitting work on an AI-enabled level, and their teachers haven't opted-out, trigger the AI evaluation job.
-      is_ai_enabled = current_user && Policies::Ai.ai_rubrics_enabled_for_script_level?(current_user, @script_level)
-      is_level_ai_enabled = AiRubricConfig.ai_enabled?(@script_level)
-      if is_ai_enabled && is_level_ai_enabled && params[:submitted] == 'true'
+      if params[:submitted] == 'true' &&
+          current_user &&
+          AiRubricConfig.ai_enabled?(@script_level) &&
+          Policies::Ai.ai_rubrics_enabled_for_script_level?(current_user, @script_level)
         metadata = {
           'studentId' => current_user.id,
           'unitName' => @script_level.script.name,
@@ -198,6 +199,11 @@ class ActivitiesController < ApplicationController
         Services::AnonymousLevel::GeoRecording.call(
           anon_user_id: request.anon_user_id,
           ip_address:   request.ip,
+        )
+
+        Services::AnonymousLevel::ClientRecording.call(
+          anon_user_id: request.anon_user_id,
+          user_agent:   request.user_agent,
         )
       end
 

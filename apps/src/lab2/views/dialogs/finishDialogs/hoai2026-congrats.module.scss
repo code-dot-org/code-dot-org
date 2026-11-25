@@ -3,10 +3,9 @@
 // height. Wider than the modal's own cap, for the cards side by side.
 .dialog {
   --gap: 14px;
-  --card-padding: 22px 28px;
+  --card-and-offer-padding: 22px;
   --picture-height: 96px;
   --row-padding: 14px 18px;
-  --offer-padding: 14px 20px;
 
   box-sizing: border-box;
   width: min(1120px, calc(100vw - 32px));
@@ -29,10 +28,9 @@
 @media (max-height: 800px) {
   .dialog {
     --gap: 8px;
-    --card-padding: 12px 22px;
+    --card-and-offer-padding: 12px;
     --picture-height: 36px;
     --row-padding: 9px 16px;
-    --offer-padding: 10px 18px;
 
     > div:nth-of-type(1),
     > div:nth-of-type(3) {
@@ -69,7 +67,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: var(--card-padding);
+  padding: var(--card-and-offer-padding);
   border-radius: 12px;
   color: var(--text-neutral-white-fixed);
 }
@@ -117,6 +115,12 @@
 .card .cardTitle {
   margin: 0;
   color: inherit;
+}
+
+// Moved up by the empty space above its letters, so a card's first line is
+// as far from the top edge as from the left.
+.card .eyebrow {
+  margin-top: -4px;
 }
 
 // Sized so the longer card title stays on one line down to the smallest
@@ -219,7 +223,9 @@ $ground-shown: 10px;
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  padding: var(--offer-padding);
+  // One pixel less than a card's padding, to make up for the border, so an
+  // offer's content is inset the same distance as a card's.
+  padding: calc(var(--card-and-offer-padding) - 1px);
   border: 1px solid var(--borders-neutral-primary);
   border-radius: 12px;
 }
@@ -235,7 +241,10 @@ $ground-shown: 10px;
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 0;
+
+  // Moved up by the empty space above its letters, as a card's first line
+  // is. In em, because the font size changes with the window width.
+  margin: -0.28em 0 0;
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   color: var(--text-neutral-primary);
 }
@@ -247,6 +256,29 @@ $ground-shown: 10px;
 .offer .offerText {
   margin: 0 0 4px;
   color: var(--text-neutral-secondary);
+}
+
+// At the bottom of the offer, so the offers' buttons line up when one
+// offer's text takes more lines.
+.offerAction {
+  margin-top: auto;
+}
+
+// At least as tall as the Copy link button it stands in for.
+.offer .cannotShare {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-content: center;
+  align-items: start;
+  column-gap: 12px;
+  min-height: 40px;
+  color: var(--text-neutral-tertiary);
+
+  // The icon takes the text's line height, so it sits level with the first
+  // line when the text takes two.
+  i {
+    line-height: inherit;
+  }
 }
 
 @media (max-width: 760px) {

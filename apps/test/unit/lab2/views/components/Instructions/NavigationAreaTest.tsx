@@ -1,5 +1,5 @@
 import {ThemeProvider} from '@code-dot-org/component-library/common/contexts';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -36,6 +36,7 @@ interface ContinueButtonMockProps {
   hideIfDisabled?: boolean;
   endIcon?: React.ReactNode;
   buttonColor?: string;
+  size?: string;
   onContinue: () => void;
 }
 interface SubmitButtonMockProps {
@@ -55,6 +56,7 @@ jest.mock(
       tooltipMessage,
       endIcon,
       buttonColor,
+      size,
       onContinue,
     }: ContinueButtonMockProps) => (
       <button
@@ -62,6 +64,7 @@ jest.mock(
         data-disabled={String(disabled)}
         data-tooltip={tooltipMessage}
         data-button-color={buttonColor}
+        data-size={size}
         onClick={onContinue}
       >
         {endIcon}
@@ -334,6 +337,68 @@ describe('NavigationArea', () => {
     });
   });
 
+  describe('announcing Continue', () => {
+    const READY = /Level complete! The .+ button is ready\./;
+    const nextFrame = () =>
+      new Promise(resolve => requestAnimationFrame(resolve));
+    const atLevel = (props: Partial<Parameters<typeof NavigationArea>[0]>) => (
+      <ThemeProvider>
+        <Provider store={store}>
+          <NavigationArea
+            levelProperties={makeLevelProperties()}
+            isRunning={false}
+            hasRun={false}
+            hasEdited={false}
+            {...props}
+          />
+        </Provider>
+      </ThemeProvider>
+    );
+
+    it('announces Continue once the checklist is done', async () => {
+      const {rerender} = render(
+        atLevel({objectivesDone: false, hideContinueIfDisabled: true})
+      );
+      expect(screen.queryByText(READY)).toBeNull();
+      rerender(atLevel({objectivesDone: true, hideContinueIfDisabled: true}));
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('announces on opening a level whose checklist is done', async () => {
+      render(atLevel({objectivesDone: true}));
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('announces again on entering another finished level', async () => {
+      const {rerender} = render(
+        atLevel({
+          levelProperties: makeLevelProperties({id: 1}),
+          objectivesDone: true,
+        })
+      );
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+      rerender(
+        atLevel({
+          levelProperties: makeLevelProperties({id: 2}),
+          objectivesDone: true,
+        })
+      );
+      expect(screen.queryByText(READY)).toBeNull();
+      expect(await screen.findByText(READY)).toBeInTheDocument();
+    });
+
+    it('says nothing when Continue turns on without a checklist', async () => {
+      const {rerender} = render(atLevel({requireRun: true}));
+      rerender(atLevel({requireRun: true, hasRun: true}));
+      await act(nextFrame);
+      expect(screen.getByRole('button')).toHaveAttribute(
+        'data-disabled',
+        'false'
+      );
+      expect(screen.queryByText(READY)).toBeNull();
+    });
+  });
+
   describe('null rendering', () => {
     it('returns null when hideContinueIfDisabled=true, continue disabled, no feedback', () => {
       // requireRun=true and hasRun=false disables the continue button.
@@ -365,6 +430,16 @@ describe('NavigationArea', () => {
       expect(
         screen.queryByRole('button', {name: 'Submit'})
       ).not.toBeInTheDocument();
+    });
+
+    it('renders Continue small unless told otherwise', () => {
+      renderDefault();
+      expect(screen.getByRole('button')).toHaveAttribute('data-size', 'small');
+    });
+
+    it('renders Continue at the size it is given', () => {
+      renderDefault({continueButtonSize: 'medium'});
+      expect(screen.getByRole('button')).toHaveAttribute('data-size', 'medium');
     });
 
     it('renders SubmitButton when submittable=true', () => {

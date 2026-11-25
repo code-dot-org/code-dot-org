@@ -3,16 +3,16 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Education Specific AI Tools
+# Education Specific AI Apps
 
-Some tools are specifically designed for educational settings and may better align with school requirements. These tools can provide a safer entry point for integrating AI directly into classrooms.
+Some apps are specifically designed for educational settings and may better align with school requirements. These apps can provide a safer entry point for integrating AI directly into classrooms.
 
-When looking for student-friendly AI tools, look for ones that:
+When looking for student-friendly AI apps, look for ones that:
 * Prioritize student privacy
 * Offer teacher controls or dashboards
 * Focus on learning support rather than answer-giving
 
-Below are a few examples of AI tools developed specificaly for educational use.
+Below are a few examples of AI apps developed specificaly for educational use.
 
 👉 If you are interested, click on the logo to learn more. 
 
@@ -26,7 +26,7 @@ Below are a few examples of AI tools developed specificaly for educational use.
     border-left: 5px solid #8148B2; 
     border-right: 5px solid #8148B2;
     display: inline-block;
-  "><strong>Important Disclaimer</strong> <br><br>Just because a tool was designed specifically for educational use does not mean it's okay to use in your school or classroom. <br><br><strong>When in doubt always follow school and district guidelines.</strong>
+  "><strong>Important Disclaimer</strong> <br><br>Just because a app was designed specifically for educational use does not mean it's okay to use in your school or classroom. <br><br><strong>When in doubt always follow school and district guidelines.</strong>
   </p>
 </div>
 
@@ -75,7 +75,7 @@ style="max-width:180px; max-height:80px; object-fit:contain;">
 <div>
 <div style="font-size:22px; font-weight:700; margin-bottom:6px;">Grammarly</div>
 <div style="font-size:16px; line-height:1.5;">
-An AI-powered writing support tool that helps students generate ideas, receive feedback, and improve clarity in their work.
+An AI-powered writing support app that helps students generate ideas, receive feedback, and improve clarity in their work.
 </div>
 </div>
 
@@ -88,5 +88,5 @@ style="max-width:180px; max-height:80px; object-fit:contain;">
 
 </div>
 
-We'll return to choosing AI tools in Moduel 5, Ensuring a Responsible Approach to AI.
+We'll return to choosing AI apps in Moduel 5, Ensuring a Responsible Approach to AI.
 MARKDOWN

@@ -21,7 +21,8 @@
     "hide_share_and_remix": "false",
     "encrypted": "false",
     "level_mode": {
-      "kind": "freeplay"
+      "kind": "freeplay",
+      "startTab": "Images"
     },
     "image_role_defaults": {
       "sprite": "hero",
@@ -128,6 +129,31 @@
         },
         {
           "kind": "block",
+          "type": "gamelab_spriteClicked",
+          "inputs": {
+            "SPRITE": {
+              "shadow": {
+                "type": "gamelab_allSpritesWithAnimation"
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
+          "type": "gamelab_atTime",
+          "inputs": {
+            "N": {
+              "shadow": {
+                "type": "math_number",
+                "fields": {
+                  "NUM": 3
+                }
+              }
+            }
+          }
+        },
+        {
+          "kind": "block",
           "type": "gamelab_spriteSay",
           "fields": {
             "SPEECH": "Hello!"
@@ -155,6 +181,20 @@
     },
     "header_label": "Free play",
     "is_project_level": true,
+    "block_catalog": true,
+    "blocks_always_in_toolbox": [
+      "spritelab2_setAsPlatformPlayer",
+      "gamelab_setBackgroundImageAs",
+      "gamelab_checkTouching",
+      "spritelab2_beginsBehavior",
+      "spritelab2_goToScene",
+      "spritelab2_burst",
+      "spritelab2_playSound",
+      "gamelab_spriteSay",
+      "spritelab2_setCameraZoom",
+      "spritelab2_restartScene",
+      "spritelab2_showTitle"
+    ],
     "preload_asset_list": null,
     "encrypted_examples": [
 

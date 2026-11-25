@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q5-2026'
+
+wrong 'Only use photos from the app\’s most active users.'
+right 'Ask users to opt in before their photos are used to train the AI.'
+wrong 'Only use the photos if the AI gives accurate advice.'
+wrong 'No condition is needed, because users already accepted the terms of service.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A fitness app wants to train a model on users’ workout photos so it can give tips on exercise form. Users accepted the app’s terms of service, but they were never told their photos would be used to train AI. Which condition would best address the main ethical problem with using this data?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 4: Collecting Data for AI
+MARKDOWN

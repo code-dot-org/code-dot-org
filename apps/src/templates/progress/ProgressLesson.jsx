@@ -88,6 +88,10 @@ class ProgressLesson extends React.Component {
       userType,
       view: 'progress-lesson',
     });
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_OPENED, {
+      lesson_id: lesson.id,
+      source: 'unit_overview',
+    });
   };
 
   render() {

@@ -12,7 +12,7 @@ interface PaletteSwatchesProps {
   onChange: (color: RGBA) => void;
 }
 
-/** A fixed palette as round swatches, which wrap onto more rows when they
+/** A fixed palette as square swatches, which wrap onto more rows when they
     do not fit on one. */
 const PaletteSwatches: React.FunctionComponent<PaletteSwatchesProps> = ({
   palette,

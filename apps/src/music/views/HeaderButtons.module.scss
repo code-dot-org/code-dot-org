@@ -28,6 +28,19 @@
     text-overflow: ellipsis;
     cursor: default;
   }
+
+  &Removed {
+    align-items: center;
+    gap: 0.375rem;
+    padding-inline-start: 0.25rem;
+    border-radius: 0.25rem;
+
+    @include mixins.focus-styles;
+
+    i {
+      color: var(--text-warning-primary-fixed);
+    }
+  }
 }
 
 .startOverButton {

@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894756-f52ddd2a4493",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 1: Investigating AI Tools",
+  "question": "An AI hears “a pizza” and has to guess everything else. You get to decide what goes on the order.\n\nSteps:\n1. Use the arrow tool to point at the 3 phrases you’d add to the prompt.\n2. Place a shape next to the phrase that would make the pizza the most surprising.\n3. Record your voice describing the pizza the AI would make now. Bonus points if you say what it might still guess wrong.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student places arrows on fewer than 3 phrases, places no shape, or the voice recording does not describe the pizza using at least 2 of the chosen phrases."
+    },
+    {
+      "level": 2,
+      "description": "Student places arrows on 3 phrases AND a shape next to 1 phrase, AND the voice recording describes the pizza using at least 2 of the chosen phrases."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above, AND the voice recording explains why the shape phrase is the most surprising, AND/OR names one detail the AI might still guess on its own (for example, the crust color or the plate)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894756-f52ddd2a4493-f446c163",
+  "whiteboard_starter_image_alt_text": "The prompt \"a pizza\" above a plain cheese pizza, with eight phrases around it: pepperoni and mushrooms, crispy thin crust, melting cheese stretching, on a picnic table, cartoon style, shaped like a heart, with sparkly sprinkles, and close-up, from above."
+}

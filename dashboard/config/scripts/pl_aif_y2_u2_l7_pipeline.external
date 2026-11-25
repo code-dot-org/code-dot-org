@@ -1,0 +1,88 @@
+name 'pl-aif-y2-u2-l7-pipeline'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Project from Start to Finish
+
+Your students build the same four things in the same order, whatever two categories they pick. Knowing the order lets you tell where a stuck student actually is, and what they need next.
+
+<div style="display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0;">
+  <div style="flex: 1; min-width: 260px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+      <div style="width: 32px; height: 32px; min-width: 32px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; text-align: center; line-height: 32px;">1</div>
+      <div style="font-size: 16px; font-weight: bold; color: #1F1976;">Pick two categories</div>
+    </div>
+    <div style="font-size: 16px; line-height: 1.5;">Your students choose two kinds of images an AI could tell apart, like oceans and rivers, or roses and peonies.</div>
+    <div style="font-size: 16px; line-height: 1.5; margin-top: 8px; color: #1F1976;"><b>Builds on:</b> classification, Lessons 8 and 9</div>
+  </div>
+  <div style="flex: 1; min-width: 260px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+      <div style="width: 32px; height: 32px; min-width: 32px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; text-align: center; line-height: 32px;">2</div>
+      <div style="font-size: 16px; font-weight: bold; color: #1F1976;">Turn questions into features</div>
+    </div>
+    <div style="font-size: 16px; line-height: 1.5;">They write yes/no questions about the images, like "Are there white waves in the water?" Each good question becomes a feature.</div>
+    <div style="font-size: 16px; line-height: 1.5; margin-top: 8px; color: #1F1976;"><b>Builds on:</b> features, Lessons 8 and 10</div>
+  </div>
+</div>
+
+<div style="display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0;">
+  <div style="flex: 1; min-width: 260px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+      <div style="width: 32px; height: 32px; min-width: 32px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; text-align: center; line-height: 32px;">3</div>
+      <div style="font-size: 16px; font-weight: bold; color: #1F1976;">Label the data</div>
+    </div>
+    <div style="font-size: 16px; line-height: 1.5;">For each image, they record its category and a yes or no for each of three features, then mark it as training or test data.</div>
+    <div style="font-size: 16px; line-height: 1.5; margin-top: 8px; color: #1F1976;"><b>Builds on:</b> training and test data, Lesson 9</div>
+  </div>
+  <div style="flex: 1; min-width: 260px; background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 10px; padding: 16px 20px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+      <div style="width: 32px; height: 32px; min-width: 32px; border-radius: 50%; background-color: #4C42CF; color: #FFFFFF; font-size: 16px; font-weight: bold; text-align: center; line-height: 32px;">4</div>
+      <div style="font-size: 16px; font-weight: bold; color: #1F1976;">Build the classifier</div>
+    </div>
+    <div style="font-size: 16px; line-height: 1.5;">They turn each row into a Python dictionary, write a distance function that counts how many features two images disagree on, then test and reflect.</div>
+    <div style="font-size: 16px; line-height: 1.5; margin-top: 8px; color: #1F1976;"><b>Builds on:</b> dictionaries, Lesson 10, and nearest neighbors, Lesson 8</div>
+  </div>
+</div>
+
+## What a Finished Data Table Looks Like
+
+By step 3, each student has a table like this one from the exemplar, with one row per image. Every row becomes one dictionary in step 4.
+
+<div role="table" aria-label="Example labeled data table for oceans and rivers" style="margin: 16px 0; max-width: 700px; border: 1px solid #ACA8EA; border-radius: 8px; overflow: hidden;">
+  <div role="row" style="display: flex; background-color: #4C42CF; color: #FFFFFF; font-weight: bold; font-size: 16px;">
+    <div role="columnheader" style="flex: 1; padding: 8px 10px;">Image</div>
+    <div role="columnheader" style="flex: 1; padding: 8px 10px;">Category</div>
+    <div role="columnheader" style="flex: 1; padding: 8px 10px;">White waves</div>
+    <div role="columnheader" style="flex: 1; padding: 8px 10px;">Trees next to water</div>
+    <div role="columnheader" style="flex: 1; padding: 8px 10px;">Water touches sky</div>
+    <div role="columnheader" style="flex: 1; padding: 8px 10px;">Train or test</div>
+  </div>
+  <div role="row" style="display: flex; background-color: #F7F7FB; font-size: 16px;">
+    <div role="cell" style="flex: 1; padding: 8px 10px;">1</div><div role="cell" style="flex: 1; padding: 8px 10px;">Ocean</div><div role="cell" style="flex: 1; padding: 8px 10px;">Yes</div><div role="cell" style="flex: 1; padding: 8px 10px;">No</div><div role="cell" style="flex: 1; padding: 8px 10px;">Yes</div><div role="cell" style="flex: 1; padding: 8px 10px;">Train</div>
+  </div>
+  <div role="row" style="display: flex; background-color: #FFFFFF; font-size: 16px;">
+    <div role="cell" style="flex: 1; padding: 8px 10px;">2</div><div role="cell" style="flex: 1; padding: 8px 10px;">Ocean</div><div role="cell" style="flex: 1; padding: 8px 10px;">Yes</div><div role="cell" style="flex: 1; padding: 8px 10px;">Yes</div><div role="cell" style="flex: 1; padding: 8px 10px;">Yes</div><div role="cell" style="flex: 1; padding: 8px 10px;">Train</div>
+  </div>
+  <div role="row" style="display: flex; background-color: #F7F7FB; font-size: 16px;">
+    <div role="cell" style="flex: 1; padding: 8px 10px;">7</div><div role="cell" style="flex: 1; padding: 8px 10px;">River</div><div role="cell" style="flex: 1; padding: 8px 10px;">No</div><div role="cell" style="flex: 1; padding: 8px 10px;">Yes</div><div role="cell" style="flex: 1; padding: 8px 10px;">No</div><div role="cell" style="flex: 1; padding: 8px 10px;">Train</div>
+  </div>
+  <div role="row" style="display: flex; background-color: #FFFFFF; font-size: 16px;">
+    <div role="cell" style="flex: 1; padding: 8px 10px;">11</div><div role="cell" style="flex: 1; padding: 8px 10px;">River</div><div role="cell" style="flex: 1; padding: 8px 10px;">No</div><div role="cell" style="flex: 1; padding: 8px 10px;">Yes</div><div role="cell" style="flex: 1; padding: 8px 10px;">No</div><div role="cell" style="flex: 1; padding: 8px 10px;">Test</div>
+  </div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;"><b>&#128161; Teacher tip:</b> steps 1 and 2 decide everything that follows. If a student's features are weak, the table and the code will be too, no matter how well they program. Catch it early.</div>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
+  <p>&#10145;&#65039; Find the full details in the <a href="PASTE_UNIT_2_LESSON_13_URL_HERE" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">Lesson 13 lesson plan: Image Classifier Project</a>.</p>
+</div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 20px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <img src="https://images.code.org/5ec7d742efa4da97d9ae60b79611ef3d-image-1790625929941.png" alt="Microsoft Foundry logo" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;"> <strong>AI-901 connection:</strong> The exam asks students to identify common AI workloads, including computer vision. The image classifier students build is one small example of that workload.
+  </div>
+</div>
+MARKDOWN

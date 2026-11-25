@@ -1,0 +1,13 @@
+name 'data-makes-ai-lesson12-tree1-choice'
+display_name 'Train Tree 1'
+description 'Click the same dataset you chose in Meet the Data.'
+
+sublevels
+level 'data-makes-ai-lesson12-tree1-snacks'
+level 'data-makes-ai-lesson12-tree1-run-or-pass'
+level 'data-makes-ai-lesson12-tree1-study-playlist'
+level 'data-makes-ai-lesson12-tree1-video-games'
+level 'data-makes-ai-lesson12-tree1-board-games'
+
+uses_lab2
+navigation_type 'next_sublevel'

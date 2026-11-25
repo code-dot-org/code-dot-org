@@ -3,21 +3,22 @@ import {
   Challenges,
   PodcastsBox,
   ReflectionData,
+  VideosBox,
   VocabularyFlashcards,
 } from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
-import React, {FC, useCallback, useState} from 'react';
+import React, {FC, useCallback, useRef, useState} from 'react';
 
 import {
   LessonDeepDiveData,
   AssessmentQuestionResult,
 } from '@cdo/apps/aiTutor/views/lessonDeepDive/types';
+import TutorVideo from '@cdo/apps/jsonVideo/TutorVideo';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import Chat from './Chat';
-import VideosBox from './VideosBox';
 
 import styles from './intervention-box.module.scss';
 
@@ -110,9 +111,11 @@ const InterventionBox: FC<InterventionBoxProps> = ({
 }) => {
   const [selected, setSelected] = useState<CardId | null>(initialSelection);
   const userId = useAppSelector(state => state.currentUser.userId);
+  const startTimeRef = useRef(Date.now());
+  const modalitiesUsedRef = useRef(new Set<CardId>());
 
   const handleCardSelect = useCallback(
-    (cardId: CardId) => {
+    (cardId: CardId, source: 'picker' | 'tab_switch') => {
       setSelected(cardId);
       analyticsReporter.sendEvent(
         EVENTS.AI_TUTOR_LESSON_DEEP_DIVE_MODALITY_CLICKED,
@@ -123,9 +126,61 @@ const InterventionBox: FC<InterventionBoxProps> = ({
           userId,
         }
       );
+      if (cardId === 'challenge') {
+        analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN, {
+          lesson_id: lessonId,
+          choice: 'challenge',
+          source: 'practice_screen',
+        });
+      } else {
+        modalitiesUsedRef.current.add(cardId);
+        analyticsReporter.sendEvent(
+          EVENTS.TUTOR_PLUS_PRACTICE_MODALITY_SELECTED,
+          {lesson_id: lessonId, modality: cardId, source}
+        );
+      }
     },
     [lessonId, lessonName, userId]
   );
+
+  const handleReviewInstead = useCallback(() => {
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_NEXT_STEP_CHOSEN, {
+      lesson_id: lessonId,
+      choice: 'practice',
+      source: 'challenge_screen',
+    });
+    setSelected(null);
+  }, [lessonId]);
+
+  const handleChallengeModalityChange = useCallback(
+    (type: 'video' | 'whiteboard') => {
+      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_TYPE_SELECTED, {
+        lesson_id: lessonId,
+        type,
+      });
+    },
+    [lessonId]
+  );
+
+  const handleChallengeStarted = useCallback(
+    (challenge: {id: number}, type: string) => {
+      analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_CHALLENGE_STARTED, {
+        lesson_id: lessonId,
+        challenge_id: challenge.id,
+        type,
+      });
+    },
+    [lessonId]
+  );
+
+  const handleDone = useCallback(() => {
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_PRACTICE_DONE, {
+      lesson_id: lessonId,
+      modalities_used: Array.from(modalitiesUsedRef.current),
+      duration_seconds: Math.round((Date.now() - startTimeRef.current) / 1000),
+    });
+    onDone?.();
+  }, [lessonId, onDone]);
 
   const showNavBar = selected !== null && REVIEW_MODALITY_IDS.has(selected);
 
@@ -155,7 +210,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                     key={card.id}
                     type="button"
                     className={styles.choiceCard}
-                    onClick={() => handleCardSelect(card.id)}
+                    onClick={() => handleCardSelect(card.id, 'picker')}
                   >
                     <span
                       className={styles.cardIcon}
@@ -171,7 +226,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                 <MuiButton
                   variant="text"
                   className={styles.challengeLink}
-                  onClick={() => handleCardSelect('challenge')}
+                  onClick={() => handleCardSelect('challenge', 'picker')}
                 >
                   {CHALLENGE_CARD.label}
                 </MuiButton>
@@ -196,10 +251,14 @@ const InterventionBox: FC<InterventionBoxProps> = ({
         {selected === 'challenge' && (
           <Challenges
             lessonId={lessonId}
-            onReviewInstead={() => setSelected(null)}
+            onReviewInstead={handleReviewInstead}
+            onModalityChange={handleChallengeModalityChange}
+            onChallengeStarted={handleChallengeStarted}
           />
         )}
-        {selected === 'videos' && <VideosBox jsonVideos={jsonVideos} />}
+        {selected === 'videos' && (
+          <VideosBox jsonVideos={jsonVideos} VideoPlayer={TutorVideo} />
+        )}
         {selected === 'podcasts' && (
           <PodcastsBox
             lessonId={lessonId}
@@ -229,7 +288,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
                 className={`${styles.navItem}${
                   selected === card.id ? ` ${styles.navItemActive}` : ''
                 }`}
-                onClick={() => handleCardSelect(card.id)}
+                onClick={() => handleCardSelect(card.id, 'tab_switch')}
                 aria-current={selected === card.id ? 'page' : undefined}
               >
                 <span className={styles.navIcon}>
@@ -244,7 +303,7 @@ const InterventionBox: FC<InterventionBoxProps> = ({
             <button
               type="button"
               className={styles.doneButton}
-              onClick={onDone}
+              onClick={handleDone}
             >
               Done
               <span className={styles.doneIcon}>

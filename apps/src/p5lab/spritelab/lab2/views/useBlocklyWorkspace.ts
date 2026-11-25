@@ -16,10 +16,18 @@ import {
 } from '@cdo/apps/blockly/utils/workspace/themes';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import localization from '@cdo/apps/localization';
+import {isEnglishLocale} from '@cdo/apps/localization/templates';
 
 import {OUTLINE_EVENT_GROUP, withoutOutlines} from '../addBlocks';
 import {withoutBlockTypes} from '../blockCatalog';
 import {lockBlocks, withoutLocks} from '../blockLocks';
+import {widenFlyoutMargin} from '../blockly/flyoutRoom';
+import {
+  createLocaleChangeHandler,
+  localizeBlockDefinitions,
+  shownToolbox as localizedToolbox,
+} from '../blockly/localizeBlocks';
 import PlaceholderPreviewer from '../blockly/placeholderPreviewer';
 import {installSharedBlocks} from '../blockly/setup';
 import {getCompleteToolboxDefinition} from '../blockly/toolbox/completeToolbox';
@@ -37,6 +45,13 @@ const editBlocksMode = getAppOptionsEditBlocks();
 const isToolboxMode = editBlocksMode === TOOLBOX_BLOCKS;
 const isStartMode = editBlocksMode === START_SOURCES;
 
+// Levelbuilder edits blocks and toolboxes in English.
+const localizesBlocks = !isToolboxMode && !isStartMode;
+const shownToolbox = (
+  toolbox: BlocklyCore.utils.toolbox.ToolboxDefinition
+): BlocklyCore.utils.toolbox.ToolboxDefinition =>
+  localizesBlocks ? localizedToolbox(toolbox) : toolbox;
+
 interface UseBlocklyWorkspaceOptions {
   enabled: boolean;
   toolboxDefinition?: BlocklyCore.utils.toolbox.ToolboxInfo;
@@ -46,6 +61,8 @@ interface UseBlocklyWorkspaceOptions {
   theme: 'Light' | 'Dark';
   /** The blocks can be read and not changed, and there is no toolbox. */
   readOnly?: boolean;
+  /** Multiplies the flyout's margin; read at inject. */
+  flyoutMarginFactor?: number;
 }
 
 interface UseBlocklyWorkspaceResult {
@@ -99,10 +116,13 @@ export default function useBlocklyWorkspace({
   sharedBlocks,
   theme,
   readOnly,
+  flyoutMarginFactor,
 }: UseBlocklyWorkspaceOptions): UseBlocklyWorkspaceResult {
   const workspaceRef = useRef<BlocklyCore.WorkspaceSvg | null>(null);
   const hiddenRef = useRef(hiddenBlockTypes);
   hiddenRef.current = hiddenBlockTypes;
+  const flyoutMarginRef = useRef(flyoutMarginFactor);
+  flyoutMarginRef.current = flyoutMarginFactor;
   // A level's authored definition with the lab's additions, filtered to
   // registered blocks and less the hidden ones.
   const prepareToolbox = useCallback(
@@ -135,6 +155,10 @@ export default function useBlocklyWorkspace({
       return;
     }
     const blocksByCategory = installSharedBlocks(sharedBlocks || []);
+    // Before inject, so the first blocks drawn are already translated.
+    if (localizesBlocks && !isEnglishLocale()) {
+      localizeBlockDefinitions();
+    }
 
     const blocklyDiv = document.getElementById(BLOCKLY_DIV_ID);
     if (!blocklyDiv) {
@@ -169,13 +193,20 @@ export default function useBlocklyWorkspace({
 
     toolboxRef.current = toolbox;
     workspaceRef.current = Blockly.inject(blocklyDiv, {
-      toolbox,
+      toolbox: toolbox && shownToolbox(toolbox),
+      rtl: localization.rtl,
       theme: themeRef.current === 'Dark' ? cdoDark : cdoTheme,
       trashcan: true,
       readOnly: !!readOnly,
       customSimpleDialog,
       editBlocks: getAppOptionsEditBlocks(),
     } as BlocklyCore.BlocklyOptions);
+    if (flyoutMarginRef.current && toolbox) {
+      // Inject lays the flyout out at Blockly's own margin, so it is laid
+      // out again here, before the browser draws it.
+      widenFlyoutMargin(workspaceRef.current, flyoutMarginRef.current);
+      workspaceRef.current.updateToolbox(shownToolbox(toolbox));
+    }
 
     // Drags onto a placeholder keep the placeholder showing, not a marker.
     workspaceRef.current.options.plugins[
@@ -278,7 +309,26 @@ export default function useBlocklyWorkspace({
         : watchStackRoom(workspaceRef.current);
     setWorkspaceVersion(version => version + 1);
 
+    // A new language redraws every block from retranslated definitions.
+    // The reload counts as a load, not an edit, so nothing is saved for it.
+    // localization.on calls this at once; inject has already drawn that.
+    const localeChange = createLocaleChangeHandler({
+      getWorkspace: () => workspaceRef.current,
+      getToolbox: () => toolboxRef.current,
+      beforeReload: () => pendingLoadsRef.current++,
+    });
+    let subscribed = false;
+    const onLocaleChange = () => {
+      if (subscribed && localizesBlocks) {
+        localeChange.handle();
+      }
+    };
+    localization.on('change', onLocaleChange);
+    subscribed = true;
+
     return () => {
+      localization.off('change', onLocaleChange);
+      localeChange.dispose();
       stopStackRoom?.();
       workspaceRef.current?.dispose();
       workspaceRef.current = null;
@@ -383,7 +433,7 @@ export default function useBlocklyWorkspace({
         toolboxRef.current = prepareToolbox(definition);
       }
       if (workspaceRef.current?.rendered && toolboxRef.current) {
-        workspaceRef.current.updateToolbox(toolboxRef.current);
+        workspaceRef.current.updateToolbox(shownToolbox(toolboxRef.current));
       }
     },
     [prepareToolbox]

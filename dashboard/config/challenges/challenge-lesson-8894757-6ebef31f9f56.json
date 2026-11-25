@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894757-6ebef31f9f56",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 2: A Deeper Look Into AI",
+  "question": "Everything you own was designed for someone. Grab something near you and figure out who it was made for.\n\nSteps:\n1. Start recording. Hold up one thing you can reach, like a shoe, a hoodie, a water bottle, or a notebook. Pick something that does not show your name, your school’s name, or where you live.\n2. Point to two design choices on it, like a color, a logo or picture, a shape, or the style of the lettering.\n3. Say who you think it was designed for, and how you can tell.\n4. Pick a totally different audience. Say one thing you’d change about the design to fit them.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not hold up an object on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student holds up an object and points to one design choice or none, or names no audience."
+    },
+    {
+      "level": 2,
+      "description": "Student holds up an object, points to two design choices on it, and names an audience it was designed for."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND gives a reason linking at least one design choice to the audience AND names a second, different audience and one specific change they’d make for it."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

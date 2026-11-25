@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Using AI Tools
+# Using AI Apps
 
 AI can help teachers save time on planning, feedback, and administrative tasks. But deciding when and how to use AI is just as important as knowing what it can do.
 
@@ -59,7 +59,7 @@ N
 <div style="padding:16px;">
 <div style="font-weight:800; font-size:18px; margin-bottom:6px;">No Sensitive Data</div>
 <div style="font-size:15px; line-height:1.5;">
-Protect student privacy when using AI tools. Avoid sharing personal or sensitive information, and follow your school's or district's AI policies.</div>
+Protect student privacy when using AI apps. Avoid sharing personal or sensitive information, and follow your school's or district's AI policies.</div>
 </div>
 </div>
 
@@ -71,7 +71,7 @@ K
 <div style="padding:16px;">
 <div style="font-weight:800; font-size:18px; margin-bottom:6px;">Keep Professional Judgment First</div>
 <div style="font-size:15px; line-height:1.5;">
-AI is a tool, not a replacement for your expertise. AI does not know your students, classroom context, or instructional goals, so your judgment is essential</div>
+AI is a app, not a replacement for your expertise. AI does not know your students, classroom context, or instructional goals, so your judgment is essential</div>
 </div>
 </div>
 
@@ -80,5 +80,5 @@ AI is a tool, not a replacement for your expertise. AI does not know your studen
 
 <br>
 
-In Module 5, Ensuring a Responsible Approach, you'll explore data privacy, responsible AI use, and other important considerations in greater depth.
+In Module 5, Ensuring a Responsible Approach, you'll explore data privacy, responsible computing, and other important considerations in greater depth.
 MARKDOWN

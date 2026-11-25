@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894904-5f0e4457a29b",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 3: The AI's Brain",
+  "question": "A puppy AI just got its first question, and it is not good at it yet. You play both the puppy and the trainer, and help it get better one round at a time.\n\nSteps:\n1. Start recording. Pick one request from the list below.\n2. Be the puppy AI: give a clumsy first answer on purpose.\n3. Be the trainer: give one piece of specific feedback that names what to change. “Bad” doesn’t count.\n4. Be the puppy again: give an improved answer, then say what changed.\n\nRequest list:\n- “Tell me a joke.”\n- “Describe a sunset.”\n- “Explain gravity to a 5-year-old.”\n- “Give me advice for a first day at a new school.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give a first answer or any feedback on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student gives a first answer and feedback, but the feedback is only \"good\" or \"bad\" with no detail, OR there is no improved answer."
+    },
+    {
+      "level": 2,
+      "description": "Student gives a clumsy first answer, then specific feedback that names one thing to change, then an improved answer that reflects that feedback."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names what changed between the two answers AND says that real AI gets better when people rate or correct its answers."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

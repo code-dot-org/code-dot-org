@@ -67,6 +67,10 @@
   max-width: 800px;
 }
 
+.questionsBack {
+  margin-right: auto;
+}
+
 .feedbackCorrect {
   color: var(--text-success-primary);
 }
@@ -312,46 +316,4 @@
   flex-direction: column;
   gap: 8px;
   width: 100%;
-}
-
-// Tiles in two columns; a figure added later takes the next cell.
-.statsList {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-  width: 100%;
-  margin: 0;
-}
-
-// The label reads before the figure but shows beneath it.
-.statsItem {
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  min-width: 0;
-  padding: 16px;
-  border: 1px solid var(--borders-neutral-primary);
-  border-radius: var(--shape-md);
-  background: var(--background-neutral-primary);
-
-  dd {
-    margin: 0;
-  }
-}
-
-// Rings sit a little further from their label than a figure does.
-.statsItemRings {
-  gap: 12px;
-}
-
-.statsFigure {
-  color: var(--text-brand-purple-primary);
-}
-
-.statsRings {
-  display: flex;
-  align-items: center;
-  min-height: 60px;
 }

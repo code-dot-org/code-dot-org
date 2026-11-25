@@ -134,6 +134,18 @@ class PracticeProblemGeneratorTest < ActiveSupport::TestCase
     ], result.first[:solution]
   end
 
+  test 'Client requests the lesson deep dive model with reasoning effort none' do
+    HTTParty.expects(:post).with do |url, options|
+      body = JSON.parse(options[:body])
+      url == PracticeProblemGenerator::Client::OPEN_AI_URL &&
+        options[:headers]['Authorization'] == 'Bearer test-key' &&
+        body['model'] == SharedConstants::LESSON_DEEP_DIVE_MODEL_VERSION &&
+        body['reasoning_effort'] == 'none'
+    end.returns(mock('response'))
+
+    PracticeProblemGenerator::Client.new('test-key', PracticeProblemGenerator::MODEL).request_completion('prompt')
+  end
+
   test 'raises OpenaiError on a non-200 response' do
     client = mock('client')
     response = mock('response')

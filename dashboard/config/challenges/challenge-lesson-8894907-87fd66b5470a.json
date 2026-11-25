@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894907-87fd66b5470a",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 6: Understanding Bias",
+  "question": "Your company just discovered that its AI works better for some people than for others, and the reporters are waiting. Explain what happened, own it, and say what you will do.\n\nSteps:\n1. Start recording. Pick one situation from the list below and open with “Today we found a problem.”\n2. Explain the cause in the data.\n3. Say who was affected and how.\n4. Give two actions you will take, say how you will check that they worked, and name one thing you cannot promise.\n\nSituation list:\n- A scholarship-matching app shows fewer options to students from small towns.\n- A voice-to-text tool makes more mistakes with some accents.\n- A map app suggests safer-looking routes only in wealthier neighborhoods.\n- A photo app “enhances” pictures in a way that lightens some faces.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not give a statement on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student describes the problem but does not explain the cause in the data."
+    },
+    {
+      "level": 2,
+      "description": "Student explains the cause in the data AND says who is affected AND gives two actions the company will take."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND says how the company will check that the actions worked AND names one thing the company cannot promise."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

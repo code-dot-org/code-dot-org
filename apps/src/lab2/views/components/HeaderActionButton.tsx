@@ -14,6 +14,7 @@ import {HEADER_ACTION_ID} from '@cdo/apps/code-studio/components/header/SimpleHe
 import {ButtonColor} from './buttonColor';
 
 import colorStyles from './button-color.module.scss';
+import styles from './header-action-button.module.scss';
 
 function useHeaderSlot(): HTMLElement | null {
   const [slot, setSlot] = useState(() =>
@@ -61,11 +62,14 @@ const HeaderActionButton: React.FunctionComponent<HeaderActionButtonProps> = ({
       variant="contained"
       color="primary"
       size="extraSmall"
-      className={classNames(buttonColor === 'success' && colorStyles.success)}
+      className={classNames(
+        styles.button,
+        buttonColor === 'success' && colorStyles.success
+      )}
       endIcon={<FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />}
       onClick={onClick}
     >
-      {children}
+      <span className={styles.label}>{children}</span>
     </MuiButton>,
     slot
   );

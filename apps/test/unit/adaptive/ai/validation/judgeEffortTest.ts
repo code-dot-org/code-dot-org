@@ -1,19 +1,22 @@
-import {generate, isAdaptiveAiEnabled} from '@cdo/apps/adaptive/ai/generate';
+import {isAdaptiveAiAvailable} from '@cdo/apps/adaptive/ai/access';
+import {generate} from '@cdo/apps/adaptive/ai/generate';
 import {judgeEffort} from '@cdo/apps/adaptive/ai/validation/judgeEffort';
 import {sendAiStaticFallbackUsed} from '@cdo/apps/adaptive/metricsHelpers';
 import {Checkpoint, LevelStep, Pathway} from '@cdo/apps/adaptive/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
+jest.mock('@cdo/apps/adaptive/ai/access', () => ({
+  isAdaptiveAiAvailable: jest.fn(() => true),
+}));
 jest.mock('@cdo/apps/adaptive/ai/generate', () => ({
   generate: jest.fn(),
-  isAdaptiveAiEnabled: jest.fn(() => true),
 }));
 jest.mock('@cdo/apps/adaptive/metricsHelpers', () => ({
   ...jest.requireActual('@cdo/apps/adaptive/metricsHelpers'),
   sendAiStaticFallbackUsed: jest.fn(),
 }));
 const mockGenerate = generate as jest.Mock;
-const mockEnabled = isAdaptiveAiEnabled as jest.Mock;
+const mockAvailable = isAdaptiveAiAvailable as jest.Mock;
 
 const step: LevelStep = {
   id: 'build',
@@ -59,7 +62,7 @@ const options = {
 describe('judgeEffort', () => {
   beforeEach(() => {
     mockGenerate.mockReset();
-    mockEnabled.mockReturnValue(true);
+    mockAvailable.mockReturnValue(true);
     (sendAiStaticFallbackUsed as jest.Mock).mockClear();
   });
 
@@ -111,7 +114,7 @@ describe('judgeEffort', () => {
     expect(
       await judgeEffort({...options, step: {...step, validation: undefined}})
     ).toBeUndefined();
-    mockEnabled.mockReturnValue(false);
+    mockAvailable.mockReturnValue(false);
     expect(await judgeEffort(options)).toBeUndefined();
     expect(mockGenerate).not.toHaveBeenCalled();
   });

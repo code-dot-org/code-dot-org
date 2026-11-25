@@ -24,6 +24,10 @@ module SharedConstants
   STATSIG_STABLE_ID_KEY = 'statsig_stable_id'
   STATSIG_STABLE_ID_PATTERN = '[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}'.freeze
 
+  # Product name the CodeAI mobile app gives itself in its web view's user
+  # agent, the same on every platform.
+  MOBILE_APP_NAME = 'CodeAIMobileApp'.freeze
+
   # Used to communicate different types of levels.
   LEVEL_KIND = OpenStruct.new(
     {
@@ -135,6 +139,7 @@ module SharedConstants
     thebadguys
     music
     pythonlab
+    quest_builder
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met.
@@ -748,7 +753,7 @@ module SharedConstants
   # Current song manifest file name for Dance Party. Note that different manifests
   # can be tested using query params (?manifest=...), but once this value is updated
   # the default manifest will change for all users.
-  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2026.json'
+  DANCE_SONG_MANIFEST_FILENAME = 'songManifest2026_v2.json'
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5.
@@ -756,6 +761,8 @@ module SharedConstants
   EVALUATE_STUDENT_LEARNING_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   STUDENT_SNAPSHOT_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
   PERSONALIZATION_MODEL_VERSION = 'gpt-4o-mini-2024-07-18'
+  # Tutor+ only. OpenAI publishes no dated snapshot of this model.
+  LESSON_DEEP_DIVE_MODEL_VERSION = 'gpt-6-luna'
 
   AI_EVALUATION_TYPES = {
     SINGLE_STUDENT: 'single_student',
@@ -1144,6 +1151,7 @@ module SharedConstants
     'api.waqi.info',               # Air quality data - API key required 🔑
     'dataservice.accuweather.com', # Weather data - API key required 🔑
     'data.weather.gov.hk',         # Hong Kong weather
+    'opendataapi.dmi.dk',          # Danish Meteorological Institute - Public API
     'noaa.gov',                    # Weather/climate data - API key required 🔑
 
     # === PLACES & GEOGRAPHY ===

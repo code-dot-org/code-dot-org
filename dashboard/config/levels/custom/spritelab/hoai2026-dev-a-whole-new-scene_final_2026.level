@@ -6,6 +6,11 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "friend",
+      "hero",
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -22,7 +27,21 @@
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
     "lock_earlier_blocks": true,
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "extraTabs": [
+        "Images",
+        "World"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "paletteRoles": [
+        "friend",
+        "hero",
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",

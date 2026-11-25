@@ -25,6 +25,7 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
       "NetSim" => "Net Simulator: students interact with an internet simulator widget",
       "Weblab2" => "Web Lab: students interact with a web IDE using HTML, CS, and JS to solve a given problem",
       "Sketchlab" => "Sketch Lab: students interact with a whiteboarding tool to create visual designs",
+      "Adaptive" => "Adaptive: students follow an AI-tutored pathway of checkpoints and build one project (e.g., Web Lab) along the way",
     }.freeze
 
   LESSON_INSIGHT_PROMPT_FALLBACK = <<~INSIGHT_PROMPT
@@ -122,7 +123,15 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
 
     levels = lesson.levels.order(:position)
     assessment_level = Queries::Lessons.get_assessment_level_for_lesson(lesson)
-    level_info_data = levels.map {|level| if assessment_level && level.id == assessment_level.id then get_assessment_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) else get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id) end}
+    level_info_data = levels.map do |level|
+      if level.is_a?(Adaptive)
+        get_adaptive_level_prompt_info(level, student_id, unit.id, section_id, teacher_id)
+      elsif assessment_level && level.id == assessment_level.id
+        get_assessment_level_prompt_info(level, student_id, unit.id, section_id, teacher_id)
+      else
+        get_brief_level_prompt_info(level, student_id, unit.id, section_id, teacher_id)
+      end
+    end
 
     level_info_strings = level_info_data.map {|level_data| format_level_info(level_data)}
 
@@ -261,6 +270,27 @@ module AiSystemPrompts::StudentSnapshotPromptHelper
       rubrics: rubric_data,
       section_stats: section_stats,
       attempted: true
+    }
+  end
+
+  # An adaptive level is the only level in its lesson, and its project is the
+  # lesson's assessment.
+  def self.get_adaptive_level_prompt_info(level, student_id, unit_id, section_id, teacher_id)
+    user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
+    script_level = level.script_levels.first
+
+    level_data = {
+      "Assessment Level" => "weight this more heavily towards student mastery",
+      'Level Number' => get_level_number(level, script_level).to_s,
+      "Level Type" => LEVEL_TYPE_PROMPTS[level.type],
+      "Finished status" => user_level&.passing? || false,
+    }
+    pathway = AiSystemPrompts::AdaptiveSnapshotContext.build(level, student_id, unit_id)
+
+    {
+      basic_info: level_data,
+      level_content: pathway ? {"Student's pathway" => "\n#{pathway}"} : {},
+      section_stats: get_section_stats_for_level(level, section_id, teacher_id, unit_id),
     }
   end
 

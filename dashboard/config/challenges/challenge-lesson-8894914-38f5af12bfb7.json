@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894914-38f5af12bfb7",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 13: AI Time Capsule Project",
+  "question": "Some predictions sound exciting but can’t possibly be true. Ring your hype alarm every time you hear a word that goes too far, then fix the prediction so it could actually happen.\n\nSteps:\n1. Start recording. Pick two predictions from the list below.\n2. Read each one out loud. Say “ding!” at every hype word, such as everyone, always, never, all, or perfectly.\n3. Rewrite one prediction so it is believable. Add at least 2 limits (who, where, when, or how much).\n4. Say why your version is more useful than the original.\n\nPrediction list:\n- “In 2035, everyone will have a personal AI that is always right.”\n- “AI will never make a mistake in a hospital again.”\n- “By 2030, all jobs will be done by robots.”\n- “Schools won’t need teachers because AI will teach everything perfectly.”",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not read any predictions on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names fewer than 3 hype words, OR does not rewrite a prediction."
+    },
+    {
+      "level": 2,
+      "description": "Student names at least 3 hype words (such as everyone, always, never, all, or perfectly) AND rewrites one prediction with at least 2 limits (who, where, when, or how much)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND explains why the believable version is more useful (for example, it can be tested or checked later)."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

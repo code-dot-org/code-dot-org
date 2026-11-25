@@ -15,11 +15,30 @@ import AiChatToolsInfoAlert from './AiChatToolsInfoAlert';
 
 import styles from './ai-chat-tools-dependency-alerts.module.scss';
 
+//TODO(lc): remove this code after CSEdWeek
+const MAKERSPACE_SETUP_SUPPORT_LINK =
+  'https://support.code.org/hc/en-us/articles/50616846268045-Getting-ready-for-AI-Makerspace-Hour-of-AI-grades-9-12';
+
+// Unit and course names; every overview URL has one as a path segment.
+const MAKERSPACE_NAMES = [
+  'ai-makerspace1-2026',
+  'ai-makerspace-2026',
+  'hoai2026-adaptive',
+];
+
+const isMakerspacePage = () =>
+  window.location.pathname
+    .split('/')
+    .some(segment => MAKERSPACE_NAMES.includes(segment));
+
 /**
  * Alerts the teacher that a course or unit requires AI Chat tools, or
  * warns them loudly if they have it turned off.
  */
 const RequiresAiChatToolsAlert: React.FC = () => {
+  const supportLink = isMakerspacePage()
+    ? MAKERSPACE_SETUP_SUPPORT_LINK
+    : AI_SETTINGS_SUPPORT_LINK;
   const selectedSection = useAppSelector(selectedSectionSelector);
   const handleReviewAiSettings = React.useCallback(() => {
     navigateToHref(
@@ -37,6 +56,7 @@ const RequiresAiChatToolsAlert: React.FC = () => {
         <AiChatToolsInfoAlert
           className={styles.overviewSpacing}
           text="This course requires the use of AI chat tools to complete."
+          supportLink={supportLink}
         />
       )}
       {aiChatAccessLevel === AiChatAccessLevels.DISABLED && (
@@ -51,7 +71,7 @@ const RequiresAiChatToolsAlert: React.FC = () => {
               currently disabled in this class section, so students won't be
               able to complete some lessons in this course.&nbsp;&nbsp;
               <Link
-                href={AI_SETTINGS_SUPPORT_LINK}
+                href={supportLink}
                 text="Learn more"
                 type="secondary"
                 size="s"

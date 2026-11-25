@@ -1,0 +1,20 @@
+<Ailab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 67,
+  "created_at": "2026-11-20T04:12:28.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "mode": "{\r\n  \"trainer\": \"decisionTree\",\r\n  \"datasets\": [\r\n    \"SC1-L12-study-playlist-base\"\r\n  ],\r\n  \"reserveLastRows\": true\r\n}",
+    "uses_lab2": "true",
+    "dynamic_instructions": "{\r\n  \"datasetView\": \"**Find the Problem**\\n\\nGoal: Find what in the data made Tree 1 get records wrong.\\n\\n1. In **Predict**, choose your label from **My Data** in your guide. In **Using**, choose only the two features from **Tree 1** in your guide. Click **Train model**.\\n2. Go to the **Testing** tab. Do steps a and b there.\\n3. Come back to this tab. Do steps c and d:\\n    - c. Click **Has Lyrics** to open Column Analysis, even if you didn't pick it. Write **Has Lyrics** as the feature and **Yes** as the category. Then write how many records have **Yes**, in **Find the Problem** in your guide.\\n    - d. Click **Filter**. Choose that category. Write how many records are in each category of your label.\\n\\nYou are done when **Find the Problem** in your guide is full.\",\r\n  \"results\": \"**Find the Problem**\\n\\nGoal: Find what in the data made Tree 1 get records wrong.\\n\\n- a. Click **Accuracy**. Then click **Incorrect**. Write the **Incorrect** number in **Find the Problem** in your guide. Add **Correct** and **Incorrect**. Write the total as the test records.\\n- b. Click **Expand columns**. Look at one feature at a time in the incorrect records. Write the category that shows up in most of them. If no category shows up most, write \\\"none\\\".\\n\\nThen go back to the **Dataset** tab for steps c and d.\"\r\n}",
+    "display_name": "Study Playlist",
+    "bubble_choice_description": "This dataset contains different song qualities that might be in a study playlist.",
+    "thumbnail_url": "https://images.code.org/3d0b6b2913fa592cdcab3d0592378aef-study-music.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-11-20T04:12:28.594+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-tree1-study-playlist\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-tree1-study-playlist\"},{\"changed_at\":\"2026-11-20 04:14:25 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 19:03:59 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:00 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 00:01:01 +0000\",\"changed\":[\"dynamic_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+}]]></config>
+</Ailab>

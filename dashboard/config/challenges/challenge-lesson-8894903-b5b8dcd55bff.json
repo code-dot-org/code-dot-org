@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894903-b5b8dcd55bff",
+  "unit_name": "problem-solving-with-ai-2026",
+  "lesson_key": "Lesson 2: Beyond Words",
+  "question": "You are designing smart glasses with a built-in AI that can see, hear, and read. Build them for one job, and decide what they must never record.\n\nSteps:\n1. Start recording. Pick one job from the list below.\n2. Describe at least 2 kinds of input your glasses use (such as pictures, sound, or text) and what each one is used for.\n3. Say why one kind of input alone would not be enough.\n4. Give one thing that could go wrong, and one privacy rule your glasses must follow.\n\nJob list:\n- A search-and-rescue team\n- A beekeeper\n- A theater stage manager\n- A tour guide in a new city",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe a design on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student names only one kind of input, OR names two kinds without saying what each one is used for."
+    },
+    {
+      "level": 2,
+      "description": "Student names at least 2 kinds of input and what each one is used for AND gives one thing that could go wrong."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND explains why one kind of input alone would not be enough AND states one privacy rule with a reason."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

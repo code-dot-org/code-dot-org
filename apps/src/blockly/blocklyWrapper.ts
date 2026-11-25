@@ -31,6 +31,8 @@ import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
 import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldParameter from './addons/cdoFieldParameter';
+import CdoFieldProcedureName from './addons/cdoFieldProcedureName';
+import CdoFieldProcedureNameInput from './addons/cdoFieldProcedureNameInput';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
 import {gestureOverrides} from './addons/cdoGesture';
@@ -252,6 +254,8 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     ['field_label', CdoFieldLabel],
     ['field_number', CdoFieldNumber],
     ['field_parameter', CdoFieldParameter],
+    ['field_procedure_name', CdoFieldProcedureName],
+    ['field_procedure_name_input', CdoFieldProcedureNameInput],
     ['field_variable', CdoFieldVariable],
   ];
   // Tell Blockly to use our custom versions of fields
@@ -852,11 +856,11 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   // various Blockly metadata that gets installed. These are used by the
   // updateLocale(), localizeVariables(), etc, functions to translate a
   // variety of both custom and built-in Blockly content.
-  blocklyWrapper.SourceMsg = {};
   blocklyWrapper.SourceVariables = {};
   blocklyWrapper.SourceCustomBlocks = {
     blockDefinitionsByName: {},
     blockTexts: {},
+    blockArgs: {},
   };
   blocklyWrapper.SourceCustomInputTypes = {};
 

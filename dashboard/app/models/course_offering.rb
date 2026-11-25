@@ -544,8 +544,7 @@ class CourseOffering < ApplicationRecord
   end
 
   # AI Foundations (AIF) and AI Discovery (AID) are the AI-focused student
-  # curricula. Used to scope AI-specific features (e.g. the lesson tutor) to
-  # these initiatives.
+  # curricula.
   def ai_initiative?
     [
       Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.aif,

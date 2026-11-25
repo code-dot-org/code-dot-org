@@ -99,6 +99,28 @@ class StudentSnapshotPromptHelperTest < ActiveSupport::TestCase
   end
 
   # ---------------------------------------------------------------------------
+  # get_snapshot_prompt_variables
+  # ---------------------------------------------------------------------------
+
+  test 'get_snapshot_prompt_variables describes an adaptive level with its pathway as the assessment' do
+    dir = Pathname.new(Dir.mktmpdir)
+    dir.join('snapshot.json').write({'id' => 'snapshot', 'title' => 'Snapshot pathway', 'checkpoints' => []}.to_json)
+    AdaptiveContent.stubs(:content_dir).returns(dir)
+    AdaptiveContent.reset_cache!
+    lesson = create(:lesson, script: @unit, lesson_group: @lesson_group)
+    create(:script_level, script: @unit, lesson: lesson, levels: [create(:adaptive, adaptive_id: 'snapshot')])
+
+    levels_info = AiSystemPrompts::StudentSnapshotPromptHelper.get_snapshot_prompt_variables(lesson.id, @unit.id, @student.id, @teacher.id, @section.id)[:levels_info]
+
+    assert_includes levels_info, 'Assessment Level: weight this more heavily towards student mastery'
+    assert_includes levels_info, 'Level Type: Adaptive: students follow an AI-tutored pathway'
+    assert_includes levels_info, "Student's pathway: \nAdaptive pathway: Snapshot pathway"
+  ensure
+    AdaptiveContent.reset_cache!
+    FileUtils.remove_entry(dir) if dir
+  end
+
+  # ---------------------------------------------------------------------------
   # allowlist_source_files
   # ---------------------------------------------------------------------------
 

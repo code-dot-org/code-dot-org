@@ -29473,8 +29473,8 @@ en:
           title: Introducing AI for Educators
           description_audience: ''
           description_short: ''
-          description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe digital fluency and explain the benefits of AI fluency for both educators and students.\n\n\n**Suggested time:** 60 minutes"
-          student_description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe digital fluency and explain the benefits of AI fluency for both educators and students.\n\n\n**Suggested time:** 60 minutes"
+          description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe digital fluency and explain the benefits of digital fluency for both educators and students.\n\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to introduce you to AI and its impact on your role as an educator. \n\n**You will:**\n\n**By the end of this professional learning module, you will be able to:**\n\n* Explain what AI is as well as its impact on industry and education.\n* Begin to realize the benefits and address the risks of AI in an educational setting.\n* Describe digital fluency and explain the benefits of digital fluency for both educators and students.\n\n\n**Suggested time:** 60 minutes"
         self-paced-pl-ai-101-mod2-2026:
           lessons: {}
           lesson_groups: {}
@@ -29499,7 +29499,7 @@ en:
             * Explain key principles for using AI effectively and responsibly in an educational context.
             * Identify ways AI can support teaching practice across planning, communication, and reflection.
             * Develop and refine prompts to improve the quality and usefulness of AI outputs.
-            * Practice using AI tools to support common instructional tasks.
+            * Practice using AI applications to support common instructional tasks.
 
             **Suggested time:** 60 minutes
           student_description: |-
@@ -29510,7 +29510,7 @@ en:
             * Explain key principles for using AI effectively and responsibly in an educational context.
             * Identify ways AI can support teaching practice across planning, communication, and reflection.
             * Develop and refine prompts to improve the quality and usefulness of AI outputs.
-            * Practice using AI tools to support common instructional tasks.
+            * Practice using AI applications to support common instructional tasks.
 
             **Suggested time:** 60 minutes
         self-paced-pl-ai-101-mod5-2026:
@@ -29527,7 +29527,7 @@ en:
             * Identify and analyze ethical issues in AI including misinformation, bias, and data privacy.
             * Apply strategies to recognize and respond to AI-generated misinformation and biased outputs.
             * Model and implement responsible AI practices in your classroom, including guiding students in ethical use and data privacy awareness.
-            * Evaluate AI tools for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
+            * Evaluate AI applications for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
 
 
             **Suggested time:** 60 minutes
@@ -29538,7 +29538,7 @@ en:
             * Identify and analyze ethical issues in AI including misinformation, bias, and data privacy.
             * Apply strategies to recognize and respond to AI-generated misinformation and biased outputs.
             * Model and implement responsible AI practices in your classroom, including guiding students in ethical use and data privacy awareness.
-            * Evaluate AI tools for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
+            * Evaluate AI applications for safe and appropriate use by applying key considerations such as privacy, transparency, and educational alignment.
 
 
             **Suggested time:** 60 minutes
@@ -29748,14 +29748,65 @@ en:
             :::
           student_description: This unit introduces you to problems in the domain of natural language processing, inviting you to explore strategies computers can use to understand and generate natural language.
         aif-year2-semester1-unit6:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
+            lesson-6:
+              name: Lesson 6
+            lesson-7:
+              name: Lesson 7
+            lesson-8:
+              name: Lesson 8
+            lesson-9:
+              name: Lesson 9
+            lesson-10:
+              name: Lesson 10
+            lesson-11:
+              name: Lesson 11
+            lesson-12:
+              name: Lesson 12
+            lesson-13:
+              name: Lesson 13
+            lesson-14:
+              name: Pre-Assessment
+            lesson-15:
+              name: End of Unit Assessment
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Pre-Assessment
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Assessment
           name: aif-year2-semester1-unit6
-          title: AIF Year 2 Semester 1 Unit 6
+          title: AI at Scale
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit introduces students to the challenges and costs that arise when building and improving AI models designed to solve larger problems for more people. They learn about models and techniques in AI and machine learning used to enable AI to learn more complex patterns.
+
+            Students are introduced to neural networks as an approach to training machine learning models that can solve classification and regression problems. Students implement single-layer networks and identify their limitations, which motivates the introduction of multi-layer neural networks for deep learning as a technique for learning to solve more complex problems. Throughout the unit, students explore societal and ethical questions that arise as AI is deployed at larger scales.
+
+            ::: details [<i class="fa-solid fa-badge-check"></i> **By the end of this unit, students will be able to . . .**]
+            - Use deep learning to improve the performance of machine learning models.
+            - Analyze the results of AI training for underfitting and overfitting.
+            - Describe the kinds of hardware used to train AI efficiently.
+            - Design safeguards for AI that protect against undesirable behavior.
+            - Evaluate the costs and benefits of increasing the complexity of machine learning models.
+            - Evaluate tradeoffs between different ways to develop and deploy AI systems.
+            - Experiment with the role that hyperparameters play in designing AI systems.
+            - Collect data to be used in AI training.
+            - Implement strategies for evaluating machine learning models and assessing their performance.
+            :::
+          student_description: This unit introduces you to challenges, costs, and strategies that arise when building and improving AI models designed to solve larger problems for more people.
         self-paced-pl-teaching-thinking-critically-about-ai-2026:
           lessons:
             lesson-3:
@@ -31086,6 +31137,10 @@ en:
               name: Emily- Quiz
             lesson-21:
               name: Angelina- Quiz
+            lesson-22:
+              name: Julian Playground
+            lesson-23:
+              name: Julian Playground - ChatGPT
           lesson_groups:
             lessonGroup-2:
               display_name: Level Builder AI Tools
@@ -31249,7 +31304,13 @@ en:
               name: Data Makes AI Project (Day Three)
             lesson-15:
               name: Data Makes AI Project (Day Four)
-          lesson_groups: {}
+            lesson-16:
+              name: Vocabulary Flashcards
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Data Makes AI
+            lessonGroup-3:
+              display_name: Vocabulary Flashcards
           name: 6-12-aid-data-makes-ai-2026
           title: "[DEV] AI Discoveries SC1: Data Makes AI"
           description_audience: ''
@@ -31257,7 +31318,37 @@ en:
           description: ''
           student_description: ''
         6-12-aid-ai-in-your-program-2026:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Lesson 1
+            lesson-2:
+              name: Lesson 2
+            lesson-3:
+              name: Lesson 3
+            lesson-4:
+              name: Lesson 4
+            lesson-5:
+              name: Lesson 5
+            lesson-6:
+              name: Lesson 6
+            lesson-7:
+              name: Lesson 7
+            lesson-8:
+              name: Lesson 8
+            lesson-9:
+              name: Lesson 9
+            lesson-10:
+              name: Lesson 10
+            lesson-11:
+              name: Lesson 11
+            lesson-12:
+              name: Lesson 12
+            lesson-13:
+              name: Lesson 13
+            lesson-14:
+              name: Lesson 14
+            lesson-15:
+              name: Lesson 15
           lesson_groups: {}
           name: 6-12-aid-ai-in-your-program-2026
           title: "[DEV] AI Discoveries SC2: AI in Your Program"
@@ -31322,6 +31413,24 @@ en:
           lesson_groups: {}
           name: decision-tree-beta-test
           title: Decision Tree Beta Test
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csp-pilot-2026-unit-1:
+          lessons: {}
+          lesson_groups: {}
+          name: csp-pilot-2026-unit-1
+          title: "[PILOT] Creating Purposeful Apps and Programs"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csp-pilot-2026-unit-2:
+          lessons: {}
+          lesson_groups: {}
+          name: csp-pilot-2026-unit-2
+          title: "[PILOT] Building Solutions Using Selection and Iteration"
           description_audience: ''
           description_short: ''
           description: ''

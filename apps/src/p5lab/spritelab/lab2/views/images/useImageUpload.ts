@@ -171,11 +171,14 @@ export default function useImageUpload({
     triggerRef.current?.focus();
   }, [handleAcceptFlaggedImage]);
 
-  const cancelFlaggedImage = useCallback(() => {
-    handleCancelFlaggedImage(MODERATION_APP_NAME);
-    onProgress?.('Picture not added.');
-    triggerRef.current?.focus();
-  }, [handleCancelFlaggedImage, onProgress]);
+  const cancelFlaggedImage = useCallback(
+    (appName: string, isSignedOut: boolean) => {
+      handleCancelFlaggedImage(MODERATION_APP_NAME, isSignedOut);
+      onProgress?.('Picture not added.');
+      triggerRef.current?.focus();
+    },
+    [handleCancelFlaggedImage, onProgress]
+  );
 
   return {
     pickFile,

@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q3-2026'
+
+wrong '-10'
+wrong '10'
+right '0'
+wrong '14'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A neuron has a bias of 2 and takes one input with a weight of -3. Its input value is 4, and the neuron uses ReLU as its activation function. What is the neuron’s final output?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Artificial Neurons
+MARKDOWN

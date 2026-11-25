@@ -72,6 +72,10 @@ function SummaryProgressRow({
       userType,
       view: 'summary-row',
     });
+    analyticsReporter.sendEvent(EVENTS.TUTOR_PLUS_OPENED, {
+      lesson_id: lesson.id,
+      source: 'unit_overview',
+    });
   };
 
   const displayDashedBorder = lessonIsHiddenForStudents || showAsLocked;

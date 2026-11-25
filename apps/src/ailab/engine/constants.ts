@@ -21,7 +21,7 @@ export const ResultsGrades = {
   ALL: 'all',
 };
 
-export const PERCENT_OF_DATASET_FOR_TESTING = 0.1;
+export const DEFAULT_TEST_ROWS_PERCENT = 10;
 
 export const TestDataLocations = {
   END: 'end',

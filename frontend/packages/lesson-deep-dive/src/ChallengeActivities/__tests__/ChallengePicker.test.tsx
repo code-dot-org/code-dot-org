@@ -357,4 +357,22 @@ describe('ChallengePicker', () => {
       screen.getByRole('button', {name: /I want to review instead/i}),
     ).toBeInTheDocument();
   });
+
+  it('reports the selected modality through onModalityChange', () => {
+    mockList.mockResolvedValue(fakeChallenges);
+    const onModalityChange = vi.fn();
+    render(
+      <MemoryRouter>
+        <ChallengePicker
+          lessonId={42}
+          challengeSetCallback={vi.fn()}
+          onModalityChange={onModalityChange}
+        />
+      </MemoryRouter>,
+    );
+
+    fireEvent.click(screen.getByRole('button', {name: /Create a video/i}));
+
+    expect(onModalityChange).toHaveBeenCalledWith('video');
+  });
 });

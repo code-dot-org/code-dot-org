@@ -36,10 +36,10 @@ steps that are related to running MySQL and Redis.
 > brew services stop redis
 > ```
 
-If you plan to use S3 emulation (recommended), run the minio install script via:
+If you plan to use S3 emulation (recommended), run the silo install script via:
 
 ```shell
-docker compose run minio-install
+docker compose run silo-install
 ```
 
 ### Initialization
@@ -87,10 +87,10 @@ file metadata, delete files, and download content that is locally stored.
 ### Removing Local S3 Data
 
 If you want to remove all data, you can delete the buckets on the dashboard and re-run the
-minio install script via:
+silo install script via:
 
 ```shell
-docker compose run minio-install
+docker compose run silo-install
 ```
 
 This will recreate any missing buckets corresponding to subdirectories found in

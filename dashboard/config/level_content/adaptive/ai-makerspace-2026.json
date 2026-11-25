@@ -172,7 +172,8 @@
               "id": 213,
               "type": "freeResponse",
               "text": "Brainstorm your website",
-              "placeholder": "What website would you love to have, or what problem could a website help with? Jot down a few ideas. Any idea counts, even a rough one, and nothing here is final.",
+              "descriptionText": "What website would you love to have, or what problem could a website help with? Jot down a few ideas. Any idea counts, even a rough one, and nothing here is final.",
+              "placeholder": "I want a website that...",
               "plan": "ideas"
             },
             {
@@ -896,6 +897,7 @@
     }
   ],
   "finish": {
+    "requiredCheckpoints": 4,
     "dialog": {
       "title": "Ready to wrap up?",
       "body": "If you’re done, click Finish to review your final project and see everything you’ve accomplished! Or use Keep Working to continue working on your project and learning new skills.",
@@ -920,8 +922,7 @@
           "title": "Your final project",
           "kind": "level",
           "level": "adaptive-less-checkpoints-wrap-up-showcase",
-          "project": true,
-          "instructions": "Look what you built! Review your final project."
+          "project": true
         },
         {
           "id": "wrap-up-congrats",

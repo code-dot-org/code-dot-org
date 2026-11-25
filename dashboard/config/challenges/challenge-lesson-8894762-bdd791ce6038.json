@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894762-bdd791ce6038",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 7: Exploring Data in AI",
+  "question": "A game show host says everything in the same confident voice, even the made-up parts. Can you say something made up so smoothly that nobody can tell?\n\nSteps:\n1. Start recording. Pick one topic from the list below.\n2. Say three statements about it in the same confident voice: two true and one made up.\n3. Reveal which one is made up.\n4. Name one person or place where someone could check it.\n\nTopic list:\n- A planet\n- A sport\n- An animal\n- A food you like",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say any statements on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says fewer than 3 statements, or does not reveal which one is made up."
+    },
+    {
+      "level": 2,
+      "description": "Student says 3 statements about one topic (two true and one made up) AND reveals which one is made up."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names a specific person or place where someone could check the made-up statement (for example, \"ask the librarian\" or \"a book about animals\")."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

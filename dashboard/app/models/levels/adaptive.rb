@@ -33,6 +33,11 @@ class Adaptive < Level
 
   PROJECT_STEP_ID = 'project'.freeze
 
+  AI_METRIC_NOTIFICATION_TYPES = {
+    'aiTutorVersionActionAccept' => 'accepted',
+    'aiTutorVersionActionReject' => 'rejected',
+  }.freeze
+
   # What a level made with only a name points at, until the author picks
   # content in the editor.
   DEFAULT_ADAPTIVE_ID = 'sample'.freeze
@@ -91,8 +96,27 @@ class Adaptive < Level
     {'steps' => steps}
   end
 
+  # How many of the tutor's proposed changes the user accepted and rejected
+  # in this pathway's level steps in one unit, as their chats logged them.
+  def ai_metrics(user_id:, script_id:)
+    type = Arel.sql("aichat_event->>'$.notificationType'")
+    counts = AichatEvent.
+      where(user_id: user_id, script_id: script_id, level_id: step_levels.values.map(&:id).uniq).
+      where("#{type} IN (?)", AI_METRIC_NOTIFICATION_TYPES.keys).
+      group(type).
+      count
+    AI_METRIC_NOTIFICATION_TYPES.to_h {|notification_type, key| [key, counts[notification_type] || 0]}
+  end
+
   def sharing_levels
     Adaptive.order(:name).select {|level| level.adaptive_id == adaptive_id}
+  end
+
+  # The level whose channel is each student's pathway project.
+  def pathway_template_level_name
+    project = content&.dig('project')
+    name = project.is_a?(Hash) ? project['templateLevel'] : nil
+    name.is_a?(String) ? name : nil
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)

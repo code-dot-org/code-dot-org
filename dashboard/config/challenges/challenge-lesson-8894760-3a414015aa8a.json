@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894760-3a414015aa8a",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 5: Trust and Credibility",
+  "question": "Your brain makes a picture before you even try. Let’s catch it, then see where it came from.\n\nSteps:\n1. Start recording. Pick one word from the list below.\n2. Describe the very first picture that appears in your mind. Include the color, the size, and where it is.\n3. Now describe a second picture that is different from the first.\n4. Tell the camera where you think your first picture came from, such as a show, a movie, a book, a game, or a kind of place you’ve been (like a beach or a city). Say why it came to mind first.\n\nWord list:\n- A bird\n- A street\n- A birthday party\n- A market\n- A school day",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not describe a picture on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student describes only one picture, the first picture has fewer than 3 details, or the two pictures are the same."
+    },
+    {
+      "level": 2,
+      "description": "Student describes a first picture with at least 3 details (such as color, size, place) AND a second picture that differs in at least one detail."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names a specific source for the first picture (such as a show, a book, a game, or a kind of place) and says why it came to mind first."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}
