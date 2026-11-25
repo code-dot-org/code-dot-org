@@ -2,7 +2,12 @@ import * as BlocklyCore from 'blockly/core';
 
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
+import {
+  BLOCK_LABELS,
+  translate,
+} from '@cdo/apps/blockly/utils/localization/blockDefinitions';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import localization from '@cdo/apps/localization';
 
 import {playPreset, synthPresetOf, synthSoundUrl} from '../../soundEffects';
 
@@ -42,6 +47,19 @@ export const PLAY_SOUND_OPTIONS: [string, string][] = [
   ['win', 'sound://category_achievements/melodic_win_1.mp3'],
 ];
 
+// The options in the current language, built once per language: fromJson
+// runs for every block made, including the one in the flyout.
+let localizedSoundOptions: [string, string][] | undefined;
+localization.on('change', () => (localizedSoundOptions = undefined));
+
+function soundOptions(): [string, string][] {
+  localizedSoundOptions ||= PLAY_SOUND_OPTIONS.map(([label, url]) => [
+    translate(label, BLOCK_LABELS),
+    url,
+  ]);
+  return localizedSoundOptions;
+}
+
 /**
  * The sound dropdown. Picking from the open menu plays the sound once, the
  * same way the block does at run time; a value set any other way (a saved
@@ -49,7 +67,7 @@ export const PLAY_SOUND_OPTIONS: [string, string][] = [
  */
 export class SoundDropdown extends BlocklyCore.FieldDropdown {
   static fromJson(_options: BlocklyCore.FieldConfig) {
-    return new SoundDropdown(PLAY_SOUND_OPTIONS);
+    return new SoundDropdown(soundOptions());
   }
 
   protected override onItemSelected_(

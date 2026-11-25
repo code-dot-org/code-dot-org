@@ -5,9 +5,12 @@ import * as blockUtils from '@cdo/apps/block_utils';
 import {
   BlockConfig,
   BlockDefinition,
+  BlockJson,
   CustomInputTypes,
 } from '@cdo/apps/blockly/types';
+import {localizeJsonBlockDefinition} from '@cdo/apps/blockly/utils/localization/blockDefinitions';
 import * as blocksCommonModule from '@cdo/apps/blocksCommon';
+import localization from '@cdo/apps/localization';
 import spritelabBlocks from '@cdo/apps/p5lab/spritelab/blocks';
 
 import labBlockDefinitions from './blockDefinitions';
@@ -59,6 +62,20 @@ const blocksCommon = blocksCommonModule as unknown as {
   install: (blockly: unknown, options: object) => void;
 };
 
+// The lab's blocks in the current language, built once per language: a
+// block's init runs for every block made, including each one in the flyout.
+const localizedDefinitions = new Map<BlockJson, BlockJson>();
+localization.on('change', () => localizedDefinitions.clear());
+
+function localizedDefinition(definition: BlockJson): BlockJson {
+  let localized = localizedDefinitions.get(definition);
+  if (!localized) {
+    localized = localizeJsonBlockDefinition(definition);
+    localizedDefinitions.set(definition, localized);
+  }
+  return localized;
+}
+
 // StudioApp-free equivalent of appMain.js's block install. Relies on Sprite
 // Lab's own install() because it also wires the behavior FunctionEditor and
 // custom procedure blocks.
@@ -108,8 +125,11 @@ function installLabBlocks(): void {
   );
   for (const {definition, generator} of labBlockDefinitions) {
     Blockly.Blocks[definition.type] = {
+      // Translated from its JSON definition here, rather than by
+      // localizeInitBlocks.
+      isLocalized: true,
       init: function (this: BlocklyCore.Block) {
-        this.jsonInit(definition);
+        this.jsonInit(localizedDefinition(definition));
       },
     };
     Blockly.getGenerator().forBlock[definition.type] = generator;
