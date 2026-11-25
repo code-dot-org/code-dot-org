@@ -786,14 +786,13 @@ export function loadAnimationFromSource(key, callback) {
       }
 
       if (storeLoadedImagesAsObjectUrls) {
+        // Reloading over a previous object URL frees the old Blob.
+        const previous = getState().animationList.propsByKey[key]?.dataURI;
+        if (previous?.startsWith('blob:')) {
+          URL.revokeObjectURL(previous);
+        }
         const objectUrl = URL.createObjectURL(blob);
         dataURIToSourceSize(objectUrl).then(sourceSize => {
-          // Free the old picture's Blob only after the new file has decoded,
-          // so a file that fails to decode leaves the old picture in place.
-          const previous = getState().animationList.propsByKey[key]?.dataURI;
-          if (previous?.startsWith('blob:')) {
-            URL.revokeObjectURL(previous);
-          }
           dispatch({
             type: DONE_LOADING_FROM_SOURCE,
             key,

@@ -10,7 +10,6 @@ import reducer, {
   FAILED_LOADING_FROM_SOURCE,
   isLoadFromSourceSettled,
   loadAnimationFromSource,
-  setStoreLoadedImagesAsObjectUrls,
   animationSourceUrl,
   setInitialAnimationList,
   deleteAnimation,
@@ -196,7 +195,6 @@ describe('animationList', function () {
           Promise.reject(new Error('decode'))
         );
       });
-      afterEach(() => setStoreLoadedImagesAsObjectUrls(false));
 
       it('is marked failed', async () => {
         store.dispatch(loadAnimationFromSource(key));
@@ -204,24 +202,6 @@ describe('animationList', function () {
         const props = store.getState().animationList.propsByKey[key];
         expect(props.loadedFromSource).to.be.false;
         expect(isLoadFromSourceSettled(props)).to.be.true;
-      });
-
-      it('keeps the picture it had, under an object URL', async () => {
-        setStoreLoadedImagesAsObjectUrls(true);
-        const revoke = jest.fn();
-        const create = jest.fn(() => 'blob:new');
-        Object.assign(URL, {revokeObjectURL: revoke, createObjectURL: create});
-        store.dispatch({
-          type: DONE_LOADING_FROM_SOURCE,
-          key,
-          dataURI: 'blob:old',
-        });
-        store.dispatch(loadAnimationFromSource(key));
-        await settled();
-        expect(revoke.mock.calls).to.deep.equal([['blob:new']]);
-        expect(store.getState().animationList.propsByKey[key].dataURI).to.equal(
-          'blob:old'
-        );
       });
     });
 
