@@ -1,9 +1,10 @@
-import {act, render, screen} from '@testing-library/react';
+import {act, cleanup, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {EMPTY_PROGRESS, Progress} from '@cdo/apps/adaptive/progress';
 import {Pathway} from '@cdo/apps/adaptive/types';
 import PathwayApp from '@cdo/apps/adaptive/views/PathwayApp';
+import {dismissedKey} from '@cdo/apps/adaptive/views/useDismissed';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
 jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
@@ -28,17 +29,45 @@ jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
 }));
 jest.mock('@cdo/apps/adaptive/views/AdaptiveHeader', () => ({
   __esModule: true,
-  default: ({title, onFinish}: {title: string; onFinish?: () => void}) => (
+  default: ({
+    title,
+    onFinish,
+    finishDisabledReason,
+    finishCallout,
+  }: {
+    title: string;
+    onFinish?: () => void;
+    finishDisabledReason?: string;
+    finishCallout?: {title: string; body: string; onDismiss: () => void};
+  }) => (
     <div>
       header: {title}
       {onFinish && (
-        <button type="button" onClick={onFinish}>
+        <button
+          type="button"
+          onClick={onFinish}
+          disabled={!!finishDisabledReason}
+          title={finishDisabledReason}
+        >
           I'm finished!
         </button>
+      )}
+      {finishCallout && (
+        <div>
+          finish callout: {finishCallout.title}
+          <button type="button" onClick={finishCallout.onDismiss}>
+            dismiss finish callout
+          </button>
+        </div>
       )}
     </div>
   ),
 }));
+jest.mock('@cdo/apps/dcdo', () => ({
+  __esModule: true,
+  default: {get: (_key: string, fallback: unknown) => mockDcdoGet(fallback)},
+}));
+const mockDcdoGet = jest.fn((fallback: unknown) => fallback);
 jest.mock('@cdo/apps/adaptive/views/AdaptiveTabBar', () => ({
   __esModule: true,
   default: ({
@@ -81,6 +110,7 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onExit,
     onFinish,
     onFinishPathway,
+    finishDisabledReason,
     activeTab,
     onTabChange,
     projectName,
@@ -91,6 +121,7 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
     onExit: () => void;
     onFinish: () => void;
     onFinishPathway?: () => void;
+    finishDisabledReason?: string;
     activeTab?: string;
     onTabChange?: (tab: string) => void;
     projectName?: string;
@@ -113,7 +144,12 @@ jest.mock('@cdo/apps/adaptive/views/steps/StepPlayer', () => ({
         finish
       </button>
       {onFinishPathway && (
-        <button type="button" onClick={onFinishPathway}>
+        <button
+          type="button"
+          onClick={onFinishPathway}
+          disabled={!!finishDisabledReason}
+          title={finishDisabledReason}
+        >
           finish pathway
         </button>
       )}
@@ -228,10 +264,15 @@ describe('PathwayApp', () => {
   beforeEach(() => {
     mockDispatch.mockClear();
     mockSetAiGatewayOptIn.mockClear();
+    mockDcdoGet.mockReset().mockImplementation(fallback => fallback);
     mockAiEnabled.mockReturnValue(false);
     mockLoad.mockResolvedValue(EMPTY_PROGRESS);
-    mockUseAppSelector.mockReturnValue(undefined);
+    // No channel name; a signed-in student for the callouts' storage keys.
+    mockUseAppSelector.mockImplementation(sel =>
+      sel({lab: {channel: undefined}, currentUser: {userId: 42}})
+    );
     window.history.replaceState({}, '', '/');
+    localStorage.clear();
   });
 
   afterEach(() => {
@@ -735,6 +776,121 @@ describe('PathwayApp', () => {
     });
   });
 
+  describe('finish lock', () => {
+    const locked = {...pathway, finish: {...finish, requiredCheckpoints: 2}};
+    const oneCleared: Progress = {
+      steps: {'intro-step': {status: 'complete', timeSpent: 0}},
+    };
+    const twoCleared: Progress = {
+      steps: {
+        'intro-step': {status: 'complete', timeSpent: 0},
+        'next-step': {status: 'complete', timeSpent: 0},
+      },
+    };
+
+    it("disables I'm finished on the map and says what is left", async () => {
+      mockLoad.mockResolvedValue(oneCleared);
+      await renderSettled(locked);
+      const button = screen.getByRole('button', {name: "I'm finished!"});
+      expect(button).toBeDisabled();
+      expect(button).toHaveAttribute(
+        'title',
+        'Complete 1 more checkpoint to unlock the "I\'m finished!" button.'
+      );
+      expect(screen.queryByText(/^finish callout/)).toBeNull();
+    });
+
+    it('disables it in a step too', async () => {
+      mockLoad.mockResolvedValue(oneCleared);
+      await renderSettled(locked);
+      act(() => screen.getByText('start multi').click());
+      expect(
+        screen.getByRole('button', {name: 'finish pathway'})
+      ).toBeDisabled();
+    });
+
+    it('opens it with a callout once enough checkpoints are cleared', async () => {
+      mockLoad.mockResolvedValue(twoCleared);
+      await renderSettled(locked);
+      expect(screen.getByRole('button', {name: "I'm finished!"})).toBeEnabled();
+      expect(screen.getByText(/finish callout: You're ready/)).toBeTruthy();
+
+      act(() =>
+        screen.getByRole('button', {name: 'dismiss finish callout'}).click()
+      );
+      expect(screen.queryByText(/^finish callout/)).toBeNull();
+    });
+
+    it('remembers the dismissal across visits, per pathway', async () => {
+      mockLoad.mockResolvedValue(twoCleared);
+      await renderSettled(locked);
+      act(() =>
+        screen.getByRole('button', {name: 'dismiss finish callout'}).click()
+      );
+      expect(localStorage.getItem(dismissedKey('finish', 42, 'p'))).toBe('1');
+
+      cleanup();
+      await renderSettled(locked);
+      expect(screen.queryByText(/^finish callout/)).toBeNull();
+
+      cleanup();
+      await renderSettled({...locked, id: 'other'});
+      expect(screen.getByText(/^finish callout/)).toBeTruthy();
+    });
+
+    it('keeps the dismissal to the visit when there is no user id', async () => {
+      mockUseAppSelector.mockReturnValue(undefined);
+      mockLoad.mockResolvedValue(twoCleared);
+      await renderSettled(locked);
+      act(() =>
+        screen.getByRole('button', {name: 'dismiss finish callout'}).click()
+      );
+      expect(screen.queryByText(/^finish callout/)).toBeNull();
+      expect(localStorage.length).toBe(0);
+    });
+
+    it('shows no callout for a pathway without a requirement', async () => {
+      mockLoad.mockResolvedValue(twoCleared);
+      await renderSettled({...pathway, finish});
+      expect(screen.getByRole('button', {name: "I'm finished!"})).toBeEnabled();
+      expect(screen.queryByText(/^finish callout/)).toBeNull();
+    });
+
+    it("leaves I'm finished open when the DCDO flag is off", async () => {
+      mockDcdoGet.mockReturnValue(false);
+      mockLoad.mockResolvedValue(oneCleared);
+      await renderSettled(locked);
+      expect(screen.getByRole('button', {name: "I'm finished!"})).toBeEnabled();
+      expect(screen.queryByText(/^finish callout/)).toBeNull();
+    });
+
+    it('drops a URL that names the finish checkpoint while it is locked', async () => {
+      window.history.replaceState({}, '', '/?checkpoint=wrap-up');
+      mockLoad.mockResolvedValue(oneCleared);
+      await renderSettled(locked);
+      expect(screen.getByText('map screen')).toBeTruthy();
+      expect(window.location.search).toBe('');
+    });
+
+    it('lets the finish callout take the place of the project callout', async () => {
+      mockLoad.mockResolvedValue({
+        steps: {
+          'intro-step': {status: 'complete', timeSpent: 0},
+          'next-step': {status: 'complete', timeSpent: 0},
+          'multi-b-step': {status: 'complete', timeSpent: 0},
+        },
+      });
+      await renderSettled(locked);
+      expect(screen.getByText(/^finish callout/)).toBeTruthy();
+      expect(screen.queryByText('final project callout')).toBeNull();
+
+      act(() =>
+        screen.getByRole('button', {name: 'dismiss finish callout'}).click()
+      );
+      expect(screen.getByText('final project callout')).toBeTruthy();
+    });
+  });
+
   describe('final project callout', () => {
     // Progress that marks every checkpoint in `pathway` complete. isComplete
     // checks the last visible step, so multi only needs multi-b-step done.
@@ -762,14 +918,25 @@ describe('PathwayApp', () => {
       expect(screen.queryByText('final project callout')).toBeNull();
     });
 
-    it('hides the callout for the session when dismissed', async () => {
+    it('hides the callout once dismissed, on this visit and the next', async () => {
       mockLoad.mockResolvedValue(allCompleteProgress);
       await renderSettled();
       expect(screen.getByText('final project callout')).toBeTruthy();
 
       act(() => screen.getByRole('button', {name: 'dismiss callout'}).click());
-
       expect(screen.queryByText('final project callout')).toBeNull();
+      expect(localStorage.getItem(dismissedKey('project', 42, 'p'))).toBe('1');
+
+      cleanup();
+      await renderSettled();
+      expect(screen.queryByText('final project callout')).toBeNull();
+    });
+
+    it('shows the callout again for another pathway', async () => {
+      localStorage.setItem(dismissedKey('project', 42, 'p'), '1');
+      mockLoad.mockResolvedValue(allCompleteProgress);
+      await renderSettled({...pathway, id: 'other'});
+      expect(screen.getByText('final project callout')).toBeTruthy();
     });
   });
 });
