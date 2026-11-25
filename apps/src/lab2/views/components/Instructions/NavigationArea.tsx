@@ -1,6 +1,7 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {ToastAnnouncer} from '@code-dot-org/component-library/toast';
+import {ButtonProps as MuiButtonProps} from '@mui/material';
 import classNames from 'classnames';
 import React, {
   useCallback,
@@ -49,6 +50,8 @@ interface NavigationAreaProps {
   /** Continue's color; the last level's outlined Finish keeps its own
       look. */
   continueButtonColor?: ButtonColor;
+  /** Continue's size. */
+  continueButtonSize?: MuiButtonProps['size'];
   /** The level's checklist is all done, or not yet; unset without one. */
   objectivesDone?: boolean;
   className?: string;
@@ -77,6 +80,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
   handleInstructionsTextClick,
   hideContinueIfDisabled,
   continueButtonColor,
+  continueButtonSize = 'small',
   objectivesDone,
   className,
   markdownClassName,
@@ -379,6 +383,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
                   variant={variant}
                   color={color}
                   buttonColor={buttonColor}
+                  size={continueButtonSize}
                   endIcon={externalNavigation.endIcon ?? endIcon}
                   tooltipMessage={continueTooltip}
                   hideIfDisabled={hideContinueIfDisabled}
@@ -393,6 +398,7 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
                 variant={variant}
                 color={color}
                 buttonColor={buttonColor}
+                size={continueButtonSize}
                 endIcon={externalNavigation?.endIcon ?? endIcon}
                 tooltipMessage={continueTooltip}
                 hideIfDisabled={hideContinueIfDisabled}

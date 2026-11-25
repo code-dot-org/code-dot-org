@@ -3,6 +3,7 @@ import {render} from '@testing-library/react';
 import React from 'react';
 import '@testing-library/jest-dom';
 
+import {ChatHostContext} from '@cdo/apps/aichat/host/ChatHostContext';
 import {AichatState} from '@cdo/apps/aichat/redux';
 import {
   AssetSource,
@@ -12,6 +13,7 @@ import {
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import {AichatLabState} from '@cdo/apps/aichatLab/redux';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   AiChatClientTypes,
   AiChatModelIds,
@@ -158,5 +160,25 @@ describe('ChatWorkspace', () => {
     );
 
     expect(mockGetAssetUrl).toHaveBeenCalledWith(asset, 'abc123', 'no-level');
+  });
+
+  it("adds the host's analytics properties to project properties while mounted", () => {
+    const setProjectProperty = jest.spyOn(
+      analyticsReporter,
+      'setProjectProperty'
+    );
+    const host = {onChatReady: jest.fn(), analyticsProperties: {stepId: 's'}};
+    const {unmount} = render(
+      <ThemeProvider>
+        <ChatHostContext.Provider value={host}>
+          <ChatWorkspace {...baseProps} levelId={1} levelName="level-one" />
+        </ChatHostContext.Provider>
+      </ThemeProvider>
+    );
+    expect(setProjectProperty).toHaveBeenLastCalledWith('stepId', 's');
+
+    unmount();
+    expect(setProjectProperty).toHaveBeenLastCalledWith('stepId', undefined);
+    setProjectProperty.mockRestore();
   });
 });

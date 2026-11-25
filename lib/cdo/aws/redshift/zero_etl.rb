@@ -43,6 +43,9 @@ module Cdo
         # https://docs.aws.amazon.com/redshift/latest/dg/r_SVV_INTEGRATION_TABLE_STATE.html
         HEALTHY_TABLE_STATES = %w[Synced ResyncInitiated].freeze
 
+        # The only state in which Zero ETL has finished populating a table and it's safe to build a View on the table.
+        SYNCED_TABLE_STATE = 'Synced'.freeze
+
         # We only have Zero ETL Integration provisioned for the production and managed test systems.
         VALID_ENVIRONMENT_TYPES = %w[production test].freeze
 
@@ -158,6 +161,19 @@ module Cdo
             SELECT * FROM SVV_INTEGRATION_TABLE_STATE
             WHERE target_database = '#{redshift_database(environment_type)}';
           SQL
+        end
+
+        # Bare names of the tables Zero ETL has finished populating and are safe to build a new View on.
+        #
+        # @param client [Cdo::Aws::Redshift::Client]
+        # @param environment_type [Symbol, String]
+        # @return [Set<String>] bare table names in `SYNCED_TABLE_STATE`.
+        def self.synced_table_names(client:, environment_type:)
+          Set.new(
+            all_table_states(client: client, environment_type: environment_type).
+              select {|row| row['table_state'] == SYNCED_TABLE_STATE}.
+              map {|row| row['table_name']}
+          )
         end
 
         # Replication status of the tables we intend to export, cross-referencing `all_table_states`

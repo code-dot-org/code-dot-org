@@ -257,6 +257,7 @@ class StudentSnapshotsController < ApplicationController
     render json: {
       pathway: level.content,
       progress: level.progress_json(user_id: student.id, script_id: params[:unit_id]),
+      aiMetrics: level.ai_metrics(user_id: student.id, script_id: params[:unit_id]),
     }
   end
 

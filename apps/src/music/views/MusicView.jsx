@@ -348,6 +348,7 @@ export class UnconnectedMusicView extends React.Component {
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
     this.library.setAllowedSounds(levelData?.sounds);
+    this.library.setPlayRemovedPacks(!!this.props.scriptName);
 
     let packId = levelData?.packId || initialSources?.labConfig?.music.packId;
 
