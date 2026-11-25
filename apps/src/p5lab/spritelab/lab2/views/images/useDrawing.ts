@@ -165,27 +165,43 @@ export default function useDrawing({
   const dirtyRef = useRef(false);
   const editorRef = useRef<DrawingEditor | null>(null);
   const idleTimerRef = useRef<number>();
-  // One save in flight at a time. A save asked for meanwhile waits as the
-  // pending one; each carries the whole picture, so only the latest matters.
-  const inFlightRef = useRef(false);
-  // The drawing the save in flight belongs to.
-  const inFlightDrawingIdRef = useRef<number | null>(null);
-  const pendingRef = useRef<PendingSave | null>(null);
-  // A save of another drawing, waiting behind a pending last save so that it
-  // cannot replace it.
-  const laterRef = useRef<PendingSave | null>(null);
-  // Whether the save in flight is the open drawing's.
-  const savingThisDrawing = useCallback(
-    () =>
-      inFlightRef.current &&
-      inFlightDrawingIdRef.current === drawingRef.current?.id,
+  // Saves run one at a time. One asked for meanwhile waits in the queue,
+  // which holds at most one save per drawing: a newer save of a drawing
+  // carries its whole picture, so it replaces the older one, and is a last
+  // save if either was.
+  const queueRef = useRef<PendingSave[]>([]);
+  // Each drawing as its last save left it: a blank's key, a set's strip.
+  // React may not have rendered that into the state a later save carries.
+  const savedDrawingsRef = useRef(new Map<number, Drawing>());
+  const savingRef = useRef(false);
+  const savingDrawingIdRef = useRef<number | null>(null);
+  const hasSaveFor = useCallback(
+    (id: number) =>
+      savingDrawingIdRef.current === id ||
+      queueRef.current.some(save => save.drawing.id === id),
     []
   );
+  // Makes a drawing's waiting save its last save; false if none waits.
+  const markWaitingSaveLast = useCallback((id: number) => {
+    const waiting = queueRef.current.find(save => save.drawing.id === id);
+    if (waiting) {
+      waiting.final = true;
+    }
+    return !!waiting;
+  }, []);
   // When the drawing's PNG was last uploaded, and whether pixels saved
   // since then have not been uploaded yet.
   const lastUploadRef = useRef(0);
   const uploadPendingRef = useRef(false);
   const leaveAfterSaveRef = useRef(false);
+  // A pause's save of the drawing may be running or waiting without
+  // uploading the file; the last save, queued behind it, uploads it and
+  // saves the project.
+  const lastSaveNeeded = useCallback(
+    (id: number) =>
+      dirtyRef.current || uploadPendingRef.current || hasSaveFor(id),
+    [hasSaveFor]
+  );
   // The image's generation record when the tools opened; if it changes, a
   // generated picture replaced the image while it was being drawn on.
   const openedOnGenerationRef = useRef<ImageProps['generation']>();
@@ -212,8 +228,13 @@ export default function useDrawing({
   const stopDrawing = useCallback(() => {
     clearIdleTimer();
     dirtyRef.current = false;
-    pendingRef.current = null;
-    laterRef.current = null;
+    const closedId = drawingRef.current?.id;
+    queueRef.current = queueRef.current.filter(
+      save => save.drawing.id !== closedId
+    );
+    if (closedId !== undefined) {
+      savedDrawingsRef.current.delete(closedId);
+    }
     lastUploadRef.current = 0;
     uploadPendingRef.current = false;
     editorRef.current = null;
@@ -242,15 +263,18 @@ export default function useDrawing({
   // still exists.
   useEffect(
     () => () => {
-      if (
-        drawingRef.current &&
-        (dirtyRef.current || uploadPendingRef.current || savingThisDrawing())
-      ) {
+      const open = drawingRef.current;
+      if (!open) {
+        return;
+      }
+      if (editorRef.current && lastSaveNeeded(open.id)) {
         leaveAfterSaveRef.current = true;
-        editorRef.current?.save();
+        editorRef.current.save();
+      } else {
+        markWaitingSaveLast(open.id);
       }
     },
-    [savingThisDrawing]
+    [lastSaveNeeded, markWaitingSaveLast]
   );
   // The host's undo and redo are cleared when the drawing ends or the tab
   // unmounts; switching pictures within one drawing keeps them.
@@ -382,26 +406,28 @@ export default function useDrawing({
     );
   }, []);
 
-  // `drawingToSave` is the drawing as the save knows it: the state, or for
-  // a pending save what the save before it made, since React may not have
-  // rendered that yet. `final` marks the drawing's last save (Done, the
-  // tab or another image): the file is uploaded, the project is saved at
-  // once, and, if the drawing is still the open one, the tools close after
-  // it.
-  const runSave = useCallback(
-    async (
-      dataURI: string,
-      meta: PixelEditorSaveMeta,
-      drawingToSave: Drawing,
-      final: boolean
-    ) => {
+  // Runs one save. It builds on the drawing as its last save left it, but
+  // keeps its own frame index: the student may have switched frames since.
+  // A last save (Done, the tab or another image) uploads the file, saves the
+  // project at once, and closes the tools if the drawing is still open.
+  const runOne = useCallback(
+    async (save: PendingSave) => {
+      const {dataURI, meta, final} = save;
+      const previous = savedDrawingsRef.current.get(save.drawing.id);
+      const drawingToSave = previous
+        ? {
+            ...previous,
+            ...(previous.sheet &&
+              save.drawing.sheet && {
+                sheet: {...previous.sheet, index: save.drawing.sheet.index},
+              }),
+          }
+        : save.drawing;
       if (abandonedDrawingIdRef.current === drawingToSave.id) {
-        pendingRef.current = null;
         return;
       }
-      inFlightRef.current = true;
-      inFlightDrawingIdRef.current = drawingToSave.id;
-      let saved = drawingToSave;
+      let saved: Drawing | null = null;
+      savingDrawingIdRef.current = drawingToSave.id;
       try {
         // A set's frame goes back into its strip, and the strip is saved.
         const pixels = drawingToSave.sheet
@@ -445,6 +471,7 @@ export default function useDrawing({
             sheet: {...drawingToSave.sheet, src: pixels},
           }),
         };
+        savedDrawingsRef.current.set(saved.id, saved);
         setDrawing(d =>
           d && d.id === drawingToSave.id
             ? {
@@ -458,53 +485,54 @@ export default function useDrawing({
         if (drawingRef.current?.id === drawingToSave.id) {
           // The picture is still on the canvas. It is marked unsaved, so the
           // next pause, Done or leaving the tab tries again from the canvas
-          // as it is then; a pending save would only carry older pixels.
+          // as it is then; a waiting save of it would only carry older
+          // pixels.
           dirtyRef.current = true;
           uploadPendingRef.current = true;
-          pendingRef.current = null;
+          queueRef.current = queueRef.current.filter(
+            waiting => waiting.drawing.id !== drawingToSave.id
+          );
           leaveAfterSaveRef.current = false;
           nextFrameRef.current = null;
-          inFlightRef.current = false;
           setSaveFailed(true);
-          return;
         }
-        // This failed save was for a drawing that is no longer open, so
-        // there is nothing to retry.
+        return;
       } finally {
-        inFlightRef.current = false;
-        inFlightDrawingIdRef.current = null;
+        savingDrawingIdRef.current = null;
       }
-      const pending = pendingRef.current;
-      if (pending) {
-        pendingRef.current = laterRef.current;
-        laterRef.current = null;
-        // A queued save reuses this save's result when both belong to the
-        // same drawing, but keeps its own frame index: the student may
-        // have switched frames while this save ran.
-        await runSave(
-          pending.dataURI,
-          pending.meta,
-          pending.drawing.id === saved.id
-            ? {
-                ...saved,
-                ...(saved.sheet &&
-                  pending.drawing.sheet && {
-                    sheet: {...saved.sheet, index: pending.drawing.sheet.index},
-                  }),
-              }
-            : pending.drawing,
-          pending.final
-        );
-      } else if (final && drawingRef.current?.id === saved.id) {
+      const stillOpen =
+        drawingRef.current?.id === saved.id && !hasSaveFor(saved.id);
+      if (final && stillOpen) {
         // A new image's key is in `saved` before it is in `drawingRef`.
         closeAfterDone(saved.target.key);
-      } else if (nextFrameRef.current !== null) {
+      } else if (stillOpen && nextFrameRef.current !== null) {
         const next = nextFrameRef.current;
         nextFrameRef.current = null;
         await openFrame(next);
       }
     },
-    [storePicture, saveEdited, closeAfterDone, openFrame]
+    [storePicture, saveEdited, closeAfterDone, openFrame, hasSaveFor]
+  );
+
+  // Runs `first`, then each waiting save in turn.
+  const drainSaves = useCallback(
+    async (first: PendingSave) => {
+      savingRef.current = true;
+      try {
+        let save: PendingSave | undefined = first;
+        while (save) {
+          await runOne(save);
+          const {id} = save.drawing;
+          if (drawingRef.current?.id !== id && !hasSaveFor(id)) {
+            savedDrawingsRef.current.delete(id);
+          }
+          save = queueRef.current.shift();
+        }
+      } finally {
+        savingRef.current = false;
+      }
+    },
+    [runOne, hasSaveFor]
   );
 
   const selectFrame = useCallback(
@@ -530,30 +558,29 @@ export default function useDrawing({
       }
       clearIdleTimer();
       dirtyRef.current = false;
-      const final = leaveAfterSaveRef.current;
-      if (inFlightRef.current) {
-        const save = {dataURI, meta, drawing: current, final};
-        const waiting = pendingRef.current;
-        if (waiting?.final && waiting.drawing.id !== current.id) {
-          laterRef.current = save;
-        } else {
-          pendingRef.current = save;
-        }
+      const save = {
+        dataURI,
+        meta,
+        drawing: current,
+        final: leaveAfterSaveRef.current,
+      };
+      if (!savingRef.current) {
+        drainSaves(save);
         return;
       }
-      runSave(dataURI, meta, current, final);
+      const queue = queueRef.current;
+      const index = queue.findIndex(
+        waiting => waiting.drawing.id === current.id
+      );
+      if (index < 0) {
+        queue.push(save);
+      } else {
+        queue[index] = {...save, final: save.final || queue[index].final};
+      }
     },
-    [runSave]
+    [drainSaves]
   );
 
-  // A pause's save may be running without uploading the file; the last
-  // save, queued behind it, uploads it and saves the project.
-  const lastSaveNeeded = useCallback(
-    () =>
-      !!editorRef.current &&
-      (dirtyRef.current || uploadPendingRef.current || savingThisDrawing()),
-    [savingThisDrawing]
-  );
   // Pause saves do not save the project, so leaving a drawing or Done saves
   // it here when no last save will.
   const saveProjectAtLeave = useCallback(
@@ -562,10 +589,15 @@ export default function useDrawing({
   );
   const leaveDrawing = useCallback(
     (keepCanvasUp = false) => {
-      if (lastSaveNeeded()) {
+      const open = drawingRef.current;
+      if (open && editorRef.current && lastSaveNeeded(open.id)) {
         leaveAfterSaveRef.current = true;
-        editorRef.current?.save();
-      } else if (drawingRef.current) {
+        editorRef.current.save();
+      } else if (
+        open &&
+        !markWaitingSaveLast(open.id) &&
+        savingDrawingIdRef.current !== open.id
+      ) {
         saveProjectAtLeave();
       }
       clearIdleTimer();
@@ -583,18 +615,28 @@ export default function useDrawing({
         previousCanvasRef.current = {canvas: copy, id: drawingIdRef.current};
       }
     },
-    [lastSaveNeeded, saveProjectAtLeave]
+    [lastSaveNeeded, markWaitingSaveLast, saveProjectAtLeave]
   );
 
   const finishDrawing = useCallback(() => {
-    if (lastSaveNeeded()) {
-      leaveAfterSaveRef.current = true;
-      editorRef.current?.save();
-    } else {
-      saveProjectAtLeave();
-      closeAfterDone();
+    const open = drawingRef.current;
+    if (!open) {
+      return;
     }
-  }, [closeAfterDone, lastSaveNeeded, saveProjectAtLeave]);
+    if (editorRef.current && lastSaveNeeded(open.id)) {
+      leaveAfterSaveRef.current = true;
+      editorRef.current.save();
+      return;
+    }
+    // With no editor to save from, a waiting save of the drawing becomes its
+    // last save, which closes the tools when it finishes.
+    if (markWaitingSaveLast(open.id)) {
+      leaveAfterSaveRef.current = true;
+      return;
+    }
+    saveProjectAtLeave();
+    closeAfterDone();
+  }, [closeAfterDone, lastSaveNeeded, markWaitingSaveLast, saveProjectAtLeave]);
 
   // Leaving the tab is Done: what was drawn is saved and the tools close.
   useEffect(() => {

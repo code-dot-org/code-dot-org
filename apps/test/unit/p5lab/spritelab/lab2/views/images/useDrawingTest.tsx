@@ -6,7 +6,10 @@ import useDrawing, {
   UPLOAD_GAP_MS,
   DrawingTools,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/images/useDrawing';
-import {ImageWriter} from '@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter';
+import {
+  ImageTarget,
+  ImageWriter,
+} from '@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter';
 
 // The picture decodes at once.
 jest.mock('@cdo/apps/imageUtils', () => ({
@@ -366,6 +369,166 @@ describe('useDrawing', () => {
       // Within the upload gap; its file goes up on its own last save.
       ['k2', 'data:b', false],
     ]);
+  });
+
+  describe('saves of several pictures', () => {
+    const pictures = {
+      one: {key: 'k1', imageType: 'sprite' as const},
+      two: {key: 'k2', imageType: 'sprite' as const},
+      three: {key: 'k3', imageType: 'sprite' as const},
+    };
+    // Each save resolves to its image's key; `hold` keeps the next one
+    // running until the test releases it.
+    const queueSetup = () => {
+      const tools = setup();
+      const held: (() => void)[] = [];
+      tools.saveEdited.mockImplementation(async target => target.key ?? 'kNew');
+      const hold = () =>
+        tools.saveEdited.mockImplementationOnce(
+          target =>
+            new Promise<string>(resolve =>
+              held.push(() => resolve(target.key ?? 'kNew'))
+            )
+        );
+      const release = async () => {
+        await act(async () => {
+          held.shift()?.();
+          await new Promise(resolve => setTimeout(resolve, 0));
+        });
+      };
+      const open = async (target: ImageTarget, pixels: string) => {
+        await act(() => tools.tools().startDrawing(target));
+        tools.tools().attachEditor({
+          save: () => tools.tools().handleSave(pixels, {}),
+          snapshot: () => null,
+        });
+      };
+      const pause = (pixels: string) =>
+        act(() => tools.tools().handleSave(pixels, {}));
+      const saves = () =>
+        tools.saveEdited.mock.calls.map(call => [
+          call[0].key,
+          call[1],
+          call[3]!.upload,
+        ]);
+      const saveNows = () =>
+        tools.storePicture.mock.calls.map(call => [
+          (call[0] as ImageTarget).key,
+          call[2],
+        ]);
+      return {...tools, hold, release, open, pause, saves, saveNows};
+    };
+
+    it("finishes the open picture's waiting save on Done, as its last save", async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().leaveDrawing());
+      await t.open(pictures.two, 'two:last');
+      t.pause('two:a');
+      await act(async () => t.tools().finishDrawing());
+      await t.release();
+      await t.release();
+      expect(t.saves()).toEqual([
+        ['k1', 'one:a', true],
+        ['k1', 'one:last', true],
+        ['k2', 'two:last', true],
+      ]);
+      expect(t.saveNows()).toEqual([
+        ['k1', false],
+        ['k1', true],
+        ['k2', true],
+      ]);
+      expect(t.tools().drawing).toBeNull();
+    });
+
+    it("keeps another picture's waiting last save when the open one closes untouched", async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().leaveDrawing());
+      await t.open(pictures.two, 'two:last');
+      await act(async () => t.tools().finishDrawing());
+      await t.release();
+      expect(t.saves()).toEqual([
+        ['k1', 'one:a', true],
+        ['k1', 'one:last', true],
+      ]);
+    });
+
+    it('makes a waiting save of a picture left untouched its last save', async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().leaveDrawing());
+      await t.open(pictures.two, 'two:last');
+      t.pause('two:a');
+      act(() => t.tools().leaveDrawing());
+      await t.release();
+      expect(t.saves()).toEqual([
+        ['k1', 'one:a', true],
+        ['k1', 'one:last', true],
+        ['k2', 'two:last', true],
+      ]);
+    });
+
+    it("keeps every picture's last save when three pictures save in turn", async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().leaveDrawing());
+      await t.open(pictures.two, 'two:last');
+      act(() => t.tools().scheduleStrokeSave());
+      act(() => t.tools().leaveDrawing());
+      await t.open(pictures.three, 'three:last');
+      t.pause('three:a');
+      await t.release();
+      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+        ['k1', 'one:a'],
+        ['k1', 'one:last'],
+        ['k2', 'two:last'],
+        ['k3', 'three:a'],
+      ]);
+    });
+
+    it('runs the waiting saves after an abandoned save', async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().abandonDrawing());
+      await t.open(pictures.two, 'two:last');
+      t.pause('two:a');
+      await t.release();
+      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+        ['k1', 'one:a'],
+        ['k2', 'two:a'],
+      ]);
+    });
+
+    it("gives a new picture's later saves the key its first save made", async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().leaveDrawing());
+      await t.open({key: null, imageType: 'sprite'}, 'new:last');
+      t.pause('new:a');
+      t.pause('new:b');
+      await t.release();
+      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+        ['k1', 'one:a'],
+        ['k1', 'one:last'],
+        [null, 'new:b'],
+      ]);
+      t.pause('new:c');
+      await t.release();
+      expect(t.saves()[3].slice(0, 2)).toEqual(['kNew', 'new:c']);
+    });
   });
 
   it('uploads the file at most once per gap, and on the last save', async () => {
