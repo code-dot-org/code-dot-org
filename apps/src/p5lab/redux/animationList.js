@@ -744,7 +744,7 @@ export function setRetainBlobsOnLoad(retain) {
  * @param {!AnimationKey} key
  * @param {function} [callback]
  */
-function loadAnimationFromSource(key, callback) {
+export function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState();
@@ -786,13 +786,14 @@ function loadAnimationFromSource(key, callback) {
       }
 
       if (storeLoadedImagesAsObjectUrls) {
-        // Reloading over a previous object URL frees the old Blob.
-        const previous = getState().animationList.propsByKey[key]?.dataURI;
-        if (previous?.startsWith('blob:')) {
-          URL.revokeObjectURL(previous);
-        }
         const objectUrl = URL.createObjectURL(blob);
         dataURIToSourceSize(objectUrl).then(sourceSize => {
+          // Reloading over a previous object URL frees the old Blob, once
+          // the new picture has decoded.
+          const previous = getState().animationList.propsByKey[key]?.dataURI;
+          if (previous?.startsWith('blob:')) {
+            URL.revokeObjectURL(previous);
+          }
           dispatch({
             type: DONE_LOADING_FROM_SOURCE,
             key,

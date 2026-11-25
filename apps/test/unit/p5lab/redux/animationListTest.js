@@ -9,6 +9,8 @@ import reducer, {
   DONE_LOADING_FROM_SOURCE,
   FAILED_LOADING_FROM_SOURCE,
   isLoadFromSourceSettled,
+  loadAnimationFromSource,
+  setStoreLoadedImagesAsObjectUrls,
   animationSourceUrl,
   setInitialAnimationList,
   deleteAnimation,
@@ -36,6 +38,19 @@ import pageConstantsReducer, {
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {createStore} from '../../../util/redux';
 import {setExternalGlobals} from '../../../util/testUtils';
+
+// The image helpers, real unless a test says otherwise.
+jest.mock('@cdo/apps/imageUtils', () => {
+  const actual = jest.requireActual('@cdo/apps/imageUtils');
+  return {
+    ...actual,
+    fetchURLAsBlob: jest.fn((...args) => actual.fetchURLAsBlob(...args)),
+    dataURIToSourceSize: jest.fn((...args) =>
+      actual.dataURIToSourceSize(...args)
+    ),
+  };
+});
+const imageUtils = jest.requireMock('@cdo/apps/imageUtils');
 
 const project = require('@cdo/apps/code-studio/initApp/project');
 
@@ -167,6 +182,53 @@ describe('animationList', function () {
             },
           },
         },
+      });
+    });
+
+    describe('a file that downloads but does not decode', () => {
+      const settled = async () => {
+        for (let i = 0; i < 50; i++) {
+          const props = store.getState().animationList.propsByKey[key];
+          if (isLoadFromSourceSettled(props)) {
+            return;
+          }
+          await new Promise(resolve => setTimeout(resolve, 10));
+        }
+      };
+      beforeEach(() => {
+        imageUtils.fetchURLAsBlob.mockImplementationOnce((url, callback) =>
+          callback(null, new Blob(['not an image']))
+        );
+        imageUtils.dataURIToSourceSize.mockImplementationOnce(() =>
+          Promise.reject(new Error('decode'))
+        );
+      });
+      afterEach(() => setStoreLoadedImagesAsObjectUrls(false));
+
+      it('is marked failed', async () => {
+        store.dispatch(loadAnimationFromSource(key));
+        await settled();
+        const props = store.getState().animationList.propsByKey[key];
+        expect(props.loadedFromSource).to.be.false;
+        expect(isLoadFromSourceSettled(props)).to.be.true;
+      });
+
+      it('keeps the picture it had, under an object URL', async () => {
+        setStoreLoadedImagesAsObjectUrls(true);
+        const revoke = jest.fn();
+        const create = jest.fn(() => 'blob:new');
+        Object.assign(URL, {revokeObjectURL: revoke, createObjectURL: create});
+        store.dispatch({
+          type: DONE_LOADING_FROM_SOURCE,
+          key,
+          dataURI: 'blob:old',
+        });
+        store.dispatch(loadAnimationFromSource(key));
+        await settled();
+        expect(revoke.mock.calls).to.deep.equal([['blob:new']]);
+        expect(store.getState().animationList.propsByKey[key].dataURI).to.equal(
+          'blob:old'
+        );
       });
     });
 
