@@ -16,6 +16,19 @@ jest.mock('@cdo/apps/imageUtils', () => ({
   toImage: async () => ({decode: async () => undefined}),
 }));
 
+// A strip is a string of the frames saved into it, so a test can read them.
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/images/frames', () => ({
+  cutFrame: async (src: string, _size: unknown, index: number) =>
+    `${src}#${index}`,
+  replaceFrame: async (
+    src: string,
+    _size: unknown,
+    index: number,
+    frame: string
+  ) => `${src}|${index}=${frame}`,
+  frameCount: () => 3,
+}));
+
 const sendEvent = jest.fn();
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
   __esModule: true,
@@ -41,6 +54,19 @@ const images: ProjectImage[] = [
     imageType: 'sprite',
     src: 'data:two',
     pixelated: false,
+  },
+  {
+    key: 'k4',
+    props: {name: 'Set'},
+    name: 'Set',
+    imageType: 'sprite',
+    src: 'data:set',
+    pixelated: false,
+    sheet: {
+      src: 'strip',
+      frameSize: {x: 64, y: 64},
+      poses: {} as NonNullable<ProjectImage['sheet']>['poses'],
+    },
   },
 ];
 const target = {key: 'k1', imageType: 'sprite' as const};
@@ -376,6 +402,7 @@ describe('useDrawing', () => {
       one: {key: 'k1', imageType: 'sprite' as const},
       two: {key: 'k2', imageType: 'sprite' as const},
       three: {key: 'k3', imageType: 'sprite' as const},
+      set: {key: 'k4', imageType: 'sprite' as const},
     };
     // Each save resolves to its image's key; `hold` keeps the next one
     // running until the test releases it.
@@ -390,10 +417,13 @@ describe('useDrawing', () => {
               held.push(() => resolve(target.key ?? 'kNew'))
             )
         );
+      const tick = () => new Promise(resolve => setTimeout(resolve, 0));
+      // A set's save reaches saveEdited a tick late, after its strip.
       const release = async () => {
         await act(async () => {
+          await tick();
           held.shift()?.();
-          await new Promise(resolve => setTimeout(resolve, 0));
+          await tick();
         });
       };
       const open = async (target: ImageTarget, pixels: string) => {
@@ -508,6 +538,90 @@ describe('useDrawing', () => {
         ['k1', 'one:a'],
         ['k2', 'two:a'],
       ]);
+    });
+
+    it("opens a set's next frame only after its saves finish", async () => {
+      const t = queueSetup();
+      await act(() => t.tools().startDrawing(pictures.set, 0));
+      t.tools().attachEditor({
+        save: () => t.tools().handleSave('f0', {}),
+        snapshot: () => null,
+      });
+      t.hold();
+      // Frame 0's save is running, with nothing new drawn, when frame 1 is
+      // chosen.
+      t.pause('f0');
+      await act(async () => {
+        t.tools().selectFrame(1);
+        await new Promise(resolve => setTimeout(resolve, 0));
+      });
+      expect(t.tools().drawing!.sheet!.index).toBe(0);
+      await t.release();
+      expect(t.tools().drawing!.sheet!.index).toBe(1);
+      t.pause('f1');
+      await t.release();
+      // The second save builds on the strip the first one left.
+      expect(t.saveEdited.mock.calls.map(call => call[1])).toEqual([
+        'strip|0=f0',
+        'strip|0=f0|1=f1',
+      ]);
+    });
+
+    it("runs a left picture's last save when its running save fails before the next picture opens", async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.saveEdited.mockImplementationOnce(() =>
+        Promise.reject(new Error('network'))
+      );
+      t.hold();
+      t.pause('one:a');
+      // Choosing another picture keeps the canvas up until it opens.
+      act(() => t.tools().leaveDrawing(true));
+      await t.release();
+      await act(async () => {
+        await new Promise(resolve => setTimeout(resolve, 0));
+      });
+      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+        ['k1', 'one:a'],
+        ['k1', 'one:last'],
+      ]);
+      expect(t.tools().saveFailed).toBe(false);
+    });
+
+    it("never takes a left picture's unuploaded save for the next picture's", async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.pause('one:first');
+      await t.release();
+      // Within the upload gap: this pause stores pixels without uploading.
+      // Its last save is still running when the next picture opens.
+      t.hold();
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().leaveDrawing(true));
+      await t.release();
+      await t.open(pictures.two, 'two:untouched');
+      await act(async () => t.tools().finishDrawing());
+      await t.release();
+      await act(async () => {
+        await new Promise(resolve => setTimeout(resolve, 0));
+      });
+      expect(t.saves().map(save => save[0])).not.toContain('k2');
+    });
+
+    it("keeps the canvas up when a left picture's last save finishes before the next opens", async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().leaveDrawing(true));
+      await t.release();
+      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+        ['k1', 'one:a'],
+        ['k1', 'one:last'],
+      ]);
+      // The last save leaves the next picture's opening alone.
+      expect(t.tools().drawing).not.toBeNull();
     });
 
     it("gives a new picture's later saves the key its first save made", async () => {
