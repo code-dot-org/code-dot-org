@@ -35,6 +35,7 @@ describe('cleanLevelMode', () => {
       limitedPaintTools: true,
       imageKinds: ['sprite', 'block'],
       generationLimit: 5,
+      worldSizes: true,
     };
     expect(cleanLevelMode(mode)).toEqual({mode, removed: []});
   });

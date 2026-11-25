@@ -67,11 +67,11 @@ export function paintPattern(
   const grid = (
     world?.grid?.length ? world.grid : createEmptyWorld(size).grid
   ).map(cells => [...cells]);
-  const rowShift = size - pattern.length;
+  const rowShift = grid.length - pattern.length;
   let painted = false;
   pattern.forEach((rowText, patternRow) => {
     const row = patternRow + rowShift;
-    if (row < 0 || row >= size) {
+    if (row < 0 || row >= grid.length) {
       return;
     }
     [...rowText].slice(0, size).forEach((char, col) => {
@@ -94,7 +94,7 @@ export function paintPattern(
       painted = true;
     });
   });
-  return painted ? {grid} : null;
+  return painted ? {...world, grid} : null;
 }
 
 /** Where the one cell showing this image sits, or null when the grid holds

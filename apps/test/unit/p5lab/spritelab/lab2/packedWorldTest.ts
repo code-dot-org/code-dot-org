@@ -65,6 +65,17 @@ describe('packedWorld', () => {
     expect(packWorld(oblong)).toBe(oblong);
   });
 
+  it('leaves a world of several screens as a grid, square or not', () => {
+    const square = {
+      grid: [
+        [legend.B, null],
+        [null, null],
+      ],
+      screenCells: 1,
+    };
+    expect(packWorld(square)).toBe(square);
+  });
+
   it('packs every scene world for a level file', () => {
     const sources: Sources = {
       source: '',

@@ -79,7 +79,7 @@ import {
   synthPresetOf,
 } from './soundEffects';
 import {drawSpeechBubble} from './speechBubble';
-import {cellSize, DEFAULT_SCENE_GRID_SIZE} from './world';
+import {cellSize, DEFAULT_SCENE_GRID_SIZE, ONE_SCREEN} from './world';
 
 // A burst from the player starts at its take-off spot this many frames
 // after the jump event fires: the handler runs on the interpreter's next
@@ -530,6 +530,18 @@ export default class SpriteLab2Engine extends SpriteLab {
     library.commands.setCameraZoom = value => {
       this.cameraZoomTarget_ = clampZoom(Number(value));
     };
+    // A world larger than one screen says so as its scene starts (world.ts);
+    // a fresh run starts back at one screen.
+    this.worldBounds_ = ONE_SCREEN;
+    library.commands.setWorldSize = (width, height) => {
+      const wide = Math.max(APP_WIDTH, Number(width) || 0);
+      const tall = Math.max(APP_HEIGHT, Number(height) || 0);
+      this.worldBounds_ =
+        wide === APP_WIDTH && tall === APP_HEIGHT
+          ? ONE_SCREEN
+          : {left: 0, top: APP_HEIGHT - tall, right: wide, bottom: APP_HEIGHT};
+    };
+    library.commands.getWorldWidth = () => this.worldBounds_.right;
     if (this.usesPlatformPhysics_) {
       this.installZoomedDrawLoop_(library);
     }
@@ -588,9 +600,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       if (!this.usesPlatformPhysics_) {
         return true;
       }
-      const p5 = this.p5Wrapper.p5;
       const walls = this.wallsThisFrame_(library);
-      const view = {width: p5.width, height: p5.height};
+      const view = this.physicsView_();
       return library.getSpriteArray(spriteArg).some(sprite => {
         const gravity = isPlayerGroup(sprite.group)
           ? this.platformGravity_
@@ -1422,7 +1433,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       engine.resolvePlatformPhysics_();
       engine.physicsResolvedThisFrame_ = true;
       const player = this.getSpriteArray({group: PLAYER_GROUP})[0];
-      const focus = cameraFocus(zoom, player ? player.position : null);
+      const focus = cameraFocus(
+        zoom,
+        player ? player.position : null,
+        engine.worldBounds_
+      );
       if (engine.frameCaptureArmed_) {
         // The picture shows the whole world: drawn at zoom 1, copied by the
         // callbacks (synchronously), then painted over by the real frame
@@ -1443,12 +1458,18 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
   }
 
+  /** The world the platform physics keeps bodies inside. */
+  physicsView_() {
+    const {top, right, bottom} = this.worldBounds_ || ONE_SCREEN;
+    return {width: right, height: bottom, top};
+  }
+
   /** Background, sprites and speech bubbles through the camera. */
   drawWorld_(library, zoom, focus) {
     const {p5} = library;
     const {camera} = p5;
     camera.off();
-    library.drawBackground(backgroundFrame(zoom, focus));
+    library.drawBackground(backgroundFrame(zoom, focus, this.worldBounds_));
     camera.zoom = zoom;
     camera.position.x = focus.x;
     camera.position.y = focus.y;
@@ -1488,7 +1509,6 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (!this.usesPlatformPhysics_ || !this.library || !this.p5Wrapper.p5) {
       return;
     }
-    const p5 = this.p5Wrapper.p5;
     // Snapshot positions before the stock pass below: the movement
     // reconstruction must not see its shove.
     const snapshot = sprite => ({
@@ -1541,7 +1561,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         walls.forEach(wall => sprite.collide(wall));
       }
     });
-    const view = {width: p5.width, height: p5.height};
+    const view = this.physicsView_();
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
@@ -1740,7 +1760,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     const walls = this.wallsThisFrame_(library);
-    const view = {width: p5.width, height: p5.height};
+    const view = this.physicsView_();
     Object.values(library.nativeSpriteMap).forEach(sprite => {
       const poses = this.posesByName_.get(sprite.getAnimationLabel());
       const animation = sprite.animation;

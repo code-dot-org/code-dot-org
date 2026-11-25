@@ -6,9 +6,13 @@ import {
   isLegacyWorld,
   imagesWithOneLeft,
   paintWorldCell,
+  placementsLostByResize,
   resizeWorld,
+  resizeWorldScreens,
   sceneGridSize,
   trimLegacyWorld,
+  worldBounds,
+  worldScreens,
   World,
   WorldCell,
 } from '@cdo/apps/p5lab/spritelab/lab2/world';
@@ -243,5 +247,88 @@ describe('world', () => {
     expect(compileWorldPrelude(world)).toContain(
       'makeNewSpriteAnon("say \\"hi\\"", {x: 25, y: 25});'
     );
+  });
+});
+
+describe('a world of several screens', () => {
+  const stone: WorldCell = {image: 'Stone', kind: 'block'};
+  const hero: WorldCell = {image: 'Hero', kind: 'sprite'};
+  // One screen with a block on the floor's left end and the hero above it.
+  const oneScreen = (): World => {
+    const world = createEmptyWorld();
+    world.grid[9][0] = stone;
+    world.grid[8][0] = hero;
+    return world;
+  };
+
+  it('is one screen until it is made larger', () => {
+    expect(worldScreens(oneScreen())).toEqual({wide: 1, tall: 1});
+    expect(worldBounds(oneScreen())).toEqual({
+      left: 0,
+      top: 0,
+      right: 400,
+      bottom: 400,
+    });
+  });
+
+  it('grows to the right and upward, keeping the first screen in place', () => {
+    const world = resizeWorldScreens(oneScreen(), {wide: 3, tall: 2});
+    expect(world.grid).toHaveLength(20);
+    expect(world.grid[0]).toHaveLength(30);
+    expect(worldScreens(world)).toEqual({wide: 3, tall: 2});
+    expect(sceneGridSize(world)).toBe(10);
+    // The floor's left end is still the floor's left end.
+    expect(world.grid[19][0]).toEqual(stone);
+    expect(world.grid[18][0]).toEqual(hero);
+    expect(worldBounds(world)).toEqual({
+      left: 0,
+      top: -400,
+      right: 1200,
+      bottom: 400,
+    });
+  });
+
+  it('starts the scene with the first screen at the playfield coordinates', () => {
+    const world = resizeWorldScreens(oneScreen(), {wide: 2, tall: 2});
+    world.grid[0][19] = stone;
+    const code = compileWorldPrelude(world);
+    expect(code).toContain('setWorldSize(800, 800);');
+    expect(code).toContain(
+      'makeNewGroupSprite("Stone", \'walls\', {x: 20, y: 380});'
+    );
+    expect(code).toContain('makeNewSpriteAnon("Hero", {x: 20, y: 340});');
+    // The far corner: the right-hand screen, above the first.
+    expect(code).toContain(
+      'makeNewGroupSprite("Stone", \'walls\', {x: 780, y: -380});'
+    );
+    expect(compileWorldPrelude(oneScreen())).not.toContain('setWorldSize');
+  });
+
+  it('counts what a smaller size would erase, and erases it', () => {
+    const world = resizeWorldScreens(oneScreen(), {wide: 2, tall: 2});
+    world.grid[0][0] = stone;
+    world.grid[19][15] = stone;
+    expect(placementsLostByResize(world, {wide: 2, tall: 2})).toBe(0);
+    expect(placementsLostByResize(world, {wide: 1, tall: 2})).toBe(1);
+    expect(placementsLostByResize(world, {wide: 1, tall: 1})).toBe(2);
+    expect(placementsLostByResize(world, {wide: 3, tall: 3})).toBe(0);
+
+    const back = resizeWorldScreens(world, {wide: 1, tall: 1});
+    expect(back).toEqual(oneScreen());
+    expect(back.screenCells).toBeUndefined();
+  });
+
+  it('keeps its size through a paint and through a level asking for its own', () => {
+    const world = resizeWorldScreens(oneScreen(), {wide: 2, tall: 1});
+    const painted = paintWorldCell(world, 0, 15, stone);
+    expect(painted.screenCells).toBe(10);
+    expect(painted.grid[0][15]).toEqual(stone);
+    expect(resizeWorld(world, DEFAULT_SCENE_GRID_SIZE)).toBe(world);
+  });
+
+  it('is not taken for a legacy world at three screens tall', () => {
+    const world = resizeWorldScreens(oneScreen(), {wide: 3, tall: 3});
+    expect(world.grid).toHaveLength(30);
+    expect(isLegacyWorld(world)).toBe(false);
   });
 });
