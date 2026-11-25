@@ -1,9 +1,10 @@
-import {act, render, screen} from '@testing-library/react';
+import {act, cleanup, render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {EMPTY_PROGRESS, Progress} from '@cdo/apps/adaptive/progress';
 import {Pathway} from '@cdo/apps/adaptive/types';
 import PathwayApp from '@cdo/apps/adaptive/views/PathwayApp';
+import {dismissedKey} from '@cdo/apps/adaptive/views/useDismissed';
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
 jest.mock('@cdo/apps/adaptive/views/MapScreen', () => ({
@@ -266,8 +267,12 @@ describe('PathwayApp', () => {
     mockDcdoGet.mockReset().mockImplementation(fallback => fallback);
     mockAiEnabled.mockReturnValue(false);
     mockLoad.mockResolvedValue(EMPTY_PROGRESS);
-    mockUseAppSelector.mockReturnValue(undefined);
+    // No channel name; a signed-in student for the callouts' storage keys.
+    mockUseAppSelector.mockImplementation(sel =>
+      sel({lab: {channel: undefined}, currentUser: {userId: 42}})
+    );
     window.history.replaceState({}, '', '/');
+    localStorage.clear();
   });
 
   afterEach(() => {
@@ -816,6 +821,34 @@ describe('PathwayApp', () => {
       expect(screen.queryByText(/^finish callout/)).toBeNull();
     });
 
+    it('remembers the dismissal across visits, per pathway', async () => {
+      mockLoad.mockResolvedValue(twoCleared);
+      await renderSettled(locked);
+      act(() =>
+        screen.getByRole('button', {name: 'dismiss finish callout'}).click()
+      );
+      expect(localStorage.getItem(dismissedKey('finish', 42, 'p'))).toBe('1');
+
+      cleanup();
+      await renderSettled(locked);
+      expect(screen.queryByText(/^finish callout/)).toBeNull();
+
+      cleanup();
+      await renderSettled({...locked, id: 'other'});
+      expect(screen.getByText(/^finish callout/)).toBeTruthy();
+    });
+
+    it('keeps the dismissal to the visit when there is no user id', async () => {
+      mockUseAppSelector.mockReturnValue(undefined);
+      mockLoad.mockResolvedValue(twoCleared);
+      await renderSettled(locked);
+      act(() =>
+        screen.getByRole('button', {name: 'dismiss finish callout'}).click()
+      );
+      expect(screen.queryByText(/^finish callout/)).toBeNull();
+      expect(localStorage.length).toBe(0);
+    });
+
     it('shows no callout for a pathway without a requirement', async () => {
       mockLoad.mockResolvedValue(twoCleared);
       await renderSettled({...pathway, finish});
@@ -885,14 +918,25 @@ describe('PathwayApp', () => {
       expect(screen.queryByText('final project callout')).toBeNull();
     });
 
-    it('hides the callout for the session when dismissed', async () => {
+    it('hides the callout once dismissed, on this visit and the next', async () => {
       mockLoad.mockResolvedValue(allCompleteProgress);
       await renderSettled();
       expect(screen.getByText('final project callout')).toBeTruthy();
 
       act(() => screen.getByRole('button', {name: 'dismiss callout'}).click());
-
       expect(screen.queryByText('final project callout')).toBeNull();
+      expect(localStorage.getItem(dismissedKey('project', 42, 'p'))).toBe('1');
+
+      cleanup();
+      await renderSettled();
+      expect(screen.queryByText('final project callout')).toBeNull();
+    });
+
+    it('shows the callout again for another pathway', async () => {
+      localStorage.setItem(dismissedKey('project', 42, 'p'), '1');
+      mockLoad.mockResolvedValue(allCompleteProgress);
+      await renderSettled({...pathway, id: 'other'});
+      expect(screen.getByText('final project callout')).toBeTruthy();
     });
   });
 });

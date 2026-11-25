@@ -53,6 +53,7 @@ import {getSkillProgress} from './map/groupProgress';
 import MapScreen from './MapScreen';
 import {PathwayContext} from './PathwayContext';
 import StepPlayer from './steps/StepPlayer';
+import useDismissed from './useDismissed';
 
 import styles from './shared.module.scss';
 
@@ -354,16 +355,25 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   const allCheckpointsComplete = pathway.checkpoints.every(
     c => statusMap[c.id] === 'complete' || statusMap[c.id] === 'skipped'
   );
-  const [calloutDismissed, setCalloutDismissed] = useState(false);
-  const dismissCallout = () => setCalloutDismissed(true);
+  // Each callout shows until dismissed, once per student, browser and pathway.
+  const userId = useAppSelector(state => state.currentUser.userId);
+  const [calloutDismissed, dismissCallout] = useDismissed(
+    'project',
+    userId,
+    pathway.id
+  );
+  const [finishCalloutDismissed, dismissFinishCallout] = useDismissed(
+    'finish',
+    userId,
+    pathway.id
+  );
   // Shown once the lock lifts; the project callout waits its turn.
-  const [finishCalloutDismissed, setFinishCalloutDismissed] = useState(false);
   const finishCallout =
     remainingToFinish === 0 && !finishCalloutDismissed
       ? {
           title: "You're ready to finish!",
           body: `You've completed enough checkpoints to wrap up. Click the "I'm finished" button when you're ready, or keep practicing skills first.`,
-          onDismiss: () => setFinishCalloutDismissed(true),
+          onDismiss: dismissFinishCallout,
         }
       : undefined;
 
