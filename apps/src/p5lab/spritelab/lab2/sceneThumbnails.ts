@@ -5,7 +5,6 @@
 // the scene list those pictures decorate, and the removal of a superseded
 // picture's asset.
 
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {hashString} from '@cdo/apps/utils';
 
 import {SceneMetadata} from './redux/spriteLab2Redux';
@@ -127,14 +126,4 @@ export function sceneMetadataFor(
     }
     return {id: scene.id, name: scene.name, thumbnail};
   });
-}
-
-/** Best-effort removal of one of this project's own uploads. */
-export function deleteProjectAsset(
-  channelId: string | undefined,
-  url: string | undefined
-): void {
-  if (url && channelId && url.startsWith(`/v3/assets/${channelId}/`)) {
-    HttpClient.delete(url, true).catch(() => undefined);
-  }
 }

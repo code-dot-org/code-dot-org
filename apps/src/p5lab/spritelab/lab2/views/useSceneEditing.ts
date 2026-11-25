@@ -6,15 +6,15 @@ import {createUuid} from '@cdo/apps/utils';
 
 import defaultSources from '../defaultSources.json';
 import {setActiveTab, Tab} from '../redux/spriteLab2Redux';
-import {deleteProjectAsset} from '../sceneThumbnails';
 import {Scene, Sources} from '../types';
+
+import useReclaimAsset from './useReclaimAsset';
 
 interface SceneEditingOptions {
   scenes: Scene[];
   activeSceneId: string | null;
   setActiveSceneId: Dispatch<SetStateAction<string | null>>;
   activeTab: Tab;
-  channelId: string | undefined;
   updateSources: UseSourcesOutput<Sources>['updateSources'];
   getScenes: (sources: Sources) => Scene[];
 }
@@ -38,11 +38,11 @@ export default function useSceneEditing({
   activeSceneId,
   setActiveSceneId,
   activeTab,
-  channelId,
   updateSources,
   getScenes,
 }: SceneEditingOptions): SceneEditing {
   const dispatch = useAppDispatch();
+  const reclaimAsset = useReclaimAsset();
 
   const lastSceneTabRef = useRef<Tab>('Code');
   useEffect(() => {
@@ -108,7 +108,7 @@ export default function useSceneEditing({
         ...prev,
         scenes: getScenes(prev).filter(s => s.id !== sceneId),
       }));
-      deleteProjectAsset(channelId, doomed.thumbnail?.url);
+      void reclaimAsset(doomed.thumbnail?.url);
     },
     [
       scenes,
@@ -116,7 +116,7 @@ export default function useSceneEditing({
       setActiveSceneId,
       updateSources,
       getScenes,
-      channelId,
+      reclaimAsset,
     ]
   );
 
