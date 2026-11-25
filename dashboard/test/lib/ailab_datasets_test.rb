@@ -25,7 +25,7 @@ class AilabDatasetsTest < ActiveSupport::TestCase
   end
 
   test "all gives the bundled datasets URLs when no dataset is stored" do
-    assert_equal %w[zoo pets_toy], AilabDatasets.ids
+    assert_equal %w[zoo pets_toy], AilabDatasets.all.pluck('id')
     assert_equal(
       {
         'id' => 'zoo',
@@ -62,18 +62,28 @@ class AilabDatasetsTest < ActiveSupport::TestCase
         'id' => 'birds',
         'name' => 'Birds',
         'rowCount' => 2,
-        'path' => '/ailab_datasets/birds/csv?v=1700000000',
-        'metadataPath' => '/ailab_datasets/birds/metadata?v=1700000000',
+        'path' => '/ailab_datasets/birds/csv?v=1700000000000000000',
+        'metadataPath' => '/ailab_datasets/birds/metadata?v=1700000000000000000',
       },
       AilabDatasets.stored('birds')
     )
-    assert_equal %w[zoo pets_toy birds], AilabDatasets.ids
+    assert_equal %w[zoo pets_toy birds], AilabDatasets.all.pluck('id')
+  end
+
+  test "a dataset saved twice in one second gets new URLs" do
+    save_dataset('birds')
+    first = AilabDatasets.stored('birds')
+    save_dataset('birds')
+    second = AilabDatasets.stored('birds')
+
+    refute_equal first['path'], second['path']
+    refute_equal first['metadataPath'], second['metadataPath']
   end
 
   test "a stored dataset replaces the bundled dataset with the same ID" do
     save_dataset('zoo', name: 'New Zoo')
 
-    assert_equal %w[pets_toy zoo], AilabDatasets.ids
+    assert_equal %w[pets_toy zoo], AilabDatasets.all.pluck('id')
     assert_equal 'New Zoo', AilabDatasets.all.last['name']
     assert_match %r{\A/ailab_datasets/zoo/csv\?v=\d+\z}, AilabDatasets.all.last['path']
   end
@@ -97,6 +107,7 @@ class AilabDatasetsTest < ActiveSupport::TestCase
     assert_raises(ArgumentError) {AilabDatasets.csv_file('../zoo')}
     assert_raises(ArgumentError) {AilabDatasets.metadata_file('zoo toy')}
     assert_raises(ArgumentError) {AilabDatasets.csv_file(nil)}
+    assert_raises(ArgumentError) {AilabDatasets.metadata_file('Manifest')}
   end
 
   private def save_dataset(id, name: 'Birds', is_toy: false)

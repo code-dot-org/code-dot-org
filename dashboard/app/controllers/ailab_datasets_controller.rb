@@ -48,7 +48,7 @@ class AilabDatasetsController < ApplicationController
 
   private def validation_errors
     errors = []
-    errors << 'ID: use only letters, numbers, hyphens and underscores' unless AilabDatasets.valid_id?(params[:id])
+    errors << "ID: use only letters, numbers, hyphens and underscores, other than \"#{AilabDatasets::MANIFEST_NAME}\"" unless AilabDatasets.valid_id?(params[:id])
     errors << 'Name: must not be blank' if params[:name].blank?
     errors << "Row count: must be #{MIN_ROW_COUNT} or more" unless params[:row_count].to_i >= MIN_ROW_COUNT
     errors += csv_errors + metadata_errors
@@ -65,6 +65,7 @@ class AilabDatasetsController < ApplicationController
   private def metadata_errors
     return ['Metadata: must be a JSON object'] unless parsed_metadata.is_a?(Hash)
     return ["Metadata: the name #{parsed_metadata['name'].inspect} is not the dataset ID"] unless parsed_metadata['name'] == params[:id]
+    return ['Metadata: fields must be a list of objects'] unless metadata_fields.is_a?(Array) && metadata_fields.all?(Hash)
     []
   rescue JSON::ParserError
     ['Metadata: is not valid JSON']
@@ -72,7 +73,7 @@ class AilabDatasetsController < ApplicationController
 
   private def column_errors
     columns = CSV.parse_line(csv_text.dup.force_encoding(Encoding::UTF_8).scrub.delete_prefix("\uFEFF")) || []
-    (parsed_metadata.fetch('fields', []).pluck('id') - columns).map {|id| "Metadata: the CSV has no column #{id.inspect}"}
+    (metadata_fields.pluck('id') - columns).map {|id| "Metadata: the CSV has no column #{id.inspect}"}
   rescue CSV::MalformedCSVError
     ['CSV: is not valid CSV']
   end
@@ -83,5 +84,9 @@ class AilabDatasetsController < ApplicationController
 
   private def parsed_metadata
     @parsed_metadata ||= JSON.parse(params[:metadata].to_s)
+  end
+
+  private def metadata_fields
+    parsed_metadata['fields'] || []
   end
 end

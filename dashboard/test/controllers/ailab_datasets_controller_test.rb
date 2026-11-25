@@ -54,7 +54,8 @@ class AilabDatasetsControllerTest < ActionDispatch::IntegrationTest
   test "create rejects parameters that are not a dataset" do
     sign_in create(:levelbuilder)
     {
-      {id: 'my birds', metadata: '{"name": "my birds"}'} => 'ID: use only letters, numbers, hyphens and underscores',
+      {id: 'my birds', metadata: '{"name": "my birds"}'} => 'ID: use only letters, numbers, hyphens and underscores, other than "manifest"',
+      {id: 'Manifest', metadata: '{"name": "Manifest"}'} => 'ID: use only letters, numbers, hyphens and underscores, other than "manifest"',
       {name: ' '} => 'Name: must not be blank',
       {row_count: '1'} => 'Row count: must be 2 or more',
       {csv: 'Name,Legs'} => 'CSV: must be a file',
@@ -64,6 +65,8 @@ class AilabDatasetsControllerTest < ActionDispatch::IntegrationTest
       {metadata: '["birds"]'} => 'Metadata: must be a JSON object',
       {metadata: '{"name": "ants"}'} => 'Metadata: the name "ants" is not the dataset ID',
       {metadata: '{"name": "birds", "fields": [{"id": "Name"}, {"id": "Wings"}]}'} => 'Metadata: the CSV has no column "Wings"',
+      {metadata: '{"name": "birds", "fields": [null]}'} => 'Metadata: fields must be a list of objects',
+      {metadata: '{"name": "birds", "fields": "Name"}'} => 'Metadata: fields must be a list of objects',
     }.each do |changes, error|
       post '/ailab_datasets', params: dataset_params(**changes)
       assert_response :unprocessable_entity, changes.to_s
@@ -75,6 +78,12 @@ class AilabDatasetsControllerTest < ActionDispatch::IntegrationTest
   test "create matches columns in a CSV that starts with a byte order mark" do
     sign_in create(:levelbuilder)
     post '/ailab_datasets', params: dataset_params(csv: upload("\uFEFF#{CSV}"))
+    assert_response :success
+  end
+
+  test "create accepts metadata with null fields" do
+    sign_in create(:levelbuilder)
+    post '/ailab_datasets', params: dataset_params(metadata: '{"name": "birds", "fields": null}')
     assert_response :success
   end
 

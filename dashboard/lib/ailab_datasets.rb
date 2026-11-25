@@ -5,6 +5,7 @@
 # Parsed files are cached; callers must not mutate them.
 module AilabDatasets
   ID_PATTERN = /\A[A-Za-z0-9_-]+\z/
+  MANIFEST_NAME = 'manifest'.freeze
 
   # The apps build serves the files of the bundled datasets from this URL.
   BUNDLED_FILES_URL = '/blockly/media/skins/ailab/'.freeze
@@ -21,7 +22,8 @@ module AilabDatasets
   end
 
   def self.valid_id?(id)
-    id.is_a?(String) && id.match?(ID_PATTERN)
+    # Case-insensitive because macOS file names are.
+    id.is_a?(String) && id.match?(ID_PATTERN) && !id.casecmp?(MANIFEST_NAME)
   end
 
   def self.csv_file(id)
@@ -37,11 +39,6 @@ module AilabDatasets
     stored = stored_entries
     stored_ids = stored.map {|entry| entry['id']}
     bundled_entries.reject {|entry| stored_ids.include?(entry['id'])} + stored
-  end
-
-  def self.ids
-    stored_ids = manifest_entries.pluck('id')
-    (read_json(bundled_manifest_file)['datasets'].pluck('id') - stored_ids) + stored_ids
   end
 
   # The manifest entry of a dataset that a levelbuilder saved. Nil for a bundled or unknown ID.
@@ -76,7 +73,7 @@ module AilabDatasets
   end
 
   private_class_method def self.manifest_file
-    content_dir.join('manifest.json')
+    content_dir.join("#{MANIFEST_NAME}.json")
   end
 
   # The lock stops two writes at the same time from losing a manifest entry.
@@ -115,7 +112,7 @@ module AilabDatasets
 
   # The file time in the URL makes a browser get a replaced file again.
   private_class_method def self.file_url(id, action, file)
-    "/ailab_datasets/#{id}/#{action}?v=#{File.mtime(file).to_i}"
+    "/ailab_datasets/#{id}/#{action}?v=#{File.mtime(file).strftime('%s%N')}"
   end
 
   private_class_method def self.bundled_entries
