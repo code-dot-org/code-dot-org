@@ -70,6 +70,13 @@ interface UseDrawingOptions {
   onDrawingHistory?: (history: EditHistory | null) => void;
 }
 
+interface PendingSave {
+  dataURI: string;
+  meta: PixelEditorSaveMeta;
+  drawing: Drawing;
+  final: boolean;
+}
+
 export interface DrawingTools {
   drawing: Drawing | null;
   /** The image's generation record when the tools opened on it. */
@@ -161,12 +168,19 @@ export default function useDrawing({
   // One save in flight at a time. A save asked for meanwhile waits as the
   // pending one; each carries the whole picture, so only the latest matters.
   const inFlightRef = useRef(false);
-  const pendingRef = useRef<{
-    dataURI: string;
-    meta: PixelEditorSaveMeta;
-    drawing: Drawing;
-    final: boolean;
-  } | null>(null);
+  // The drawing the save in flight belongs to.
+  const inFlightDrawingIdRef = useRef<number | null>(null);
+  const pendingRef = useRef<PendingSave | null>(null);
+  // A save of another drawing, waiting behind a pending last save so that it
+  // cannot replace it.
+  const laterRef = useRef<PendingSave | null>(null);
+  // Whether the save in flight is the open drawing's.
+  const savingThisDrawing = useCallback(
+    () =>
+      inFlightRef.current &&
+      inFlightDrawingIdRef.current === drawingRef.current?.id,
+    []
+  );
   // When the drawing's PNG was last uploaded, and whether pixels saved
   // since then have not been uploaded yet.
   const lastUploadRef = useRef(0);
@@ -199,6 +213,7 @@ export default function useDrawing({
     clearIdleTimer();
     dirtyRef.current = false;
     pendingRef.current = null;
+    laterRef.current = null;
     lastUploadRef.current = 0;
     uploadPendingRef.current = false;
     editorRef.current = null;
@@ -229,13 +244,13 @@ export default function useDrawing({
     () => () => {
       if (
         drawingRef.current &&
-        (dirtyRef.current || uploadPendingRef.current || inFlightRef.current)
+        (dirtyRef.current || uploadPendingRef.current || savingThisDrawing())
       ) {
         leaveAfterSaveRef.current = true;
         editorRef.current?.save();
       }
     },
-    []
+    [savingThisDrawing]
   );
   // The host's undo and redo are cleared when the drawing ends or the tab
   // unmounts; switching pictures within one drawing keeps them.
@@ -385,6 +400,7 @@ export default function useDrawing({
         return;
       }
       inFlightRef.current = true;
+      inFlightDrawingIdRef.current = drawingToSave.id;
       let saved = drawingToSave;
       try {
         // A set's frame goes back into its strip, and the strip is saved.
@@ -456,10 +472,12 @@ export default function useDrawing({
         // there is nothing to retry.
       } finally {
         inFlightRef.current = false;
+        inFlightDrawingIdRef.current = null;
       }
       const pending = pendingRef.current;
       if (pending) {
-        pendingRef.current = null;
+        pendingRef.current = laterRef.current;
+        laterRef.current = null;
         // A queued save reuses this save's result when both belong to the
         // same drawing, but keeps its own frame index: the student may
         // have switched frames while this save ran.
@@ -514,7 +532,13 @@ export default function useDrawing({
       dirtyRef.current = false;
       const final = leaveAfterSaveRef.current;
       if (inFlightRef.current) {
-        pendingRef.current = {dataURI, meta, drawing: current, final};
+        const save = {dataURI, meta, drawing: current, final};
+        const waiting = pendingRef.current;
+        if (waiting?.final && waiting.drawing.id !== current.id) {
+          laterRef.current = save;
+        } else {
+          pendingRef.current = save;
+        }
         return;
       }
       runSave(dataURI, meta, current, final);
@@ -527,8 +551,8 @@ export default function useDrawing({
   const lastSaveNeeded = useCallback(
     () =>
       !!editorRef.current &&
-      (dirtyRef.current || uploadPendingRef.current || inFlightRef.current),
-    []
+      (dirtyRef.current || uploadPendingRef.current || savingThisDrawing()),
+    [savingThisDrawing]
   );
   // Pause saves do not save the project, so leaving a drawing or Done saves
   // it here when no last save will.

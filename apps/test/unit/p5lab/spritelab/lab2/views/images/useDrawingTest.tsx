@@ -306,6 +306,68 @@ describe('useDrawing', () => {
     expect(tools().drawing).toBeNull();
   });
 
+  it("leaves another picture alone while one picture's last save uploads", async () => {
+    const {saveEdited, tools} = setup();
+    const second = {key: 'k2', imageType: 'sprite' as const};
+    let finishSave: (key: string) => void = () => undefined;
+    saveEdited.mockImplementationOnce(
+      () => new Promise<string>(resolve => (finishSave = resolve))
+    );
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:a', {}),
+      snapshot: () => null,
+    });
+    act(() => tools().scheduleStrokeSave());
+    act(() => tools().leaveDrawing());
+    // The second picture opens and closes untouched while the first uploads.
+    await act(() => tools().startDrawing(second));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:b', {}),
+      snapshot: () => null,
+    });
+    await act(async () => tools().finishDrawing());
+    await act(async () => {
+      finishSave('k1');
+      await new Promise(resolve => setTimeout(resolve, 0));
+    });
+    expect(saveEdited.mock.calls.map(call => call[0].key)).toEqual(['k1']);
+  });
+
+  it("keeps a picture's waiting last save when another picture saves", async () => {
+    const {saveEdited, tools} = setup();
+    const second = {key: 'k2', imageType: 'sprite' as const};
+    let finishSave: (key: string) => void = () => undefined;
+    saveEdited.mockImplementationOnce(
+      () => new Promise<string>(resolve => (finishSave = resolve))
+    );
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:last', {}),
+      snapshot: () => null,
+    });
+    act(() => tools().handleSave('data:a', {}));
+    act(() => tools().leaveDrawing());
+    await act(() => tools().startDrawing(second));
+    tools().attachEditor(editor());
+    act(() => tools().handleSave('data:b', {}));
+    await act(async () => {
+      finishSave('k1');
+      await new Promise(resolve => setTimeout(resolve, 0));
+    });
+    const calls = saveEdited.mock.calls.map(call => [
+      call[0].key,
+      call[1],
+      call[3]!.upload,
+    ]);
+    expect(calls).toEqual([
+      ['k1', 'data:a', true],
+      ['k1', 'data:last', true],
+      // Within the upload gap; its file goes up on its own last save.
+      ['k2', 'data:b', false],
+    ]);
+  });
+
   it('uploads the file at most once per gap, and on the last save', async () => {
     jest.useFakeTimers();
     jest.setSystemTime(100000);
