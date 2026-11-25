@@ -86,7 +86,18 @@ export function isWorkspaceBusy(workspace: BlocklyCore.WorkspaceSvg): boolean {
   );
 }
 
-// How long to wait before retrying a redraw that found the student busy.
+/**
+ * How long to wait before retrying a redraw that found the student busy.
+ *
+ * This is used because when you change the locale or very soon after loading,
+ * the dictionary will load and cause the workspace to redraw in your language.
+ *
+ * If this happens when you are dragging a block or in the middle of an edit,
+ * the process of reserializing the workspace will cause Blockly to error and
+ * clear the workspace. You just need to reload, so the risk is still fairly
+ * low, but this will detect a 'busy' workspace during a refresh and delay that
+ * refresh by the given time.
+ */
 export const RELOCALIZE_RETRY_MS = 250;
 
 interface LocaleChangeOptions {
