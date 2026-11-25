@@ -87,4 +87,28 @@ describe('CheckpointCard', () => {
       'Skipped! You already demonstrated an understanding of Build with AI.'
     );
   });
+
+  it('offers a locked checkpoint only to a teacher viewing a student', () => {
+    const onStart = jest.fn();
+    const renderCard = (canOpenLocked: boolean) =>
+      render(
+        <CheckpointCard
+          pathway={pathway}
+          checkpoint={details}
+          status="locked"
+          statusMap={{intro: 'available', details: 'locked'}}
+          evidence={{}}
+          onStart={onStart}
+          canOpenLocked={canOpenLocked}
+          onSelectCheckpoint={jest.fn()}
+        />
+      );
+
+    renderCard(false).unmount();
+    expect(screen.queryByRole('button', {name: 'View'})).toBeNull();
+
+    renderCard(true);
+    screen.getByRole('button', {name: 'View'}).click();
+    expect(onStart).toHaveBeenCalled();
+  });
 });

@@ -131,6 +131,24 @@ describe('resolveStepInstructions', () => {
     expect(mockGenerate).not.toHaveBeenCalled();
   });
 
+  it("shows a viewed student's saved instructions, stale or not, without generating", async () => {
+    const {result, saveGeneratedInstructions} = resolve({
+      isReadonly: true,
+      generatedInstructions: {instructions: 'Theirs.', inputsHash: 'old'},
+    });
+
+    expect(await result).toBe('Theirs.');
+    expect(mockGenerate).not.toHaveBeenCalled();
+    expect(saveGeneratedInstructions).not.toHaveBeenCalled();
+  });
+
+  it('shows the authored text to a teacher viewing a student with none saved, without generating', async () => {
+    const {result} = resolve({isReadonly: true});
+
+    expect(await result).toBe('Authored.');
+    expect(mockGenerate).not.toHaveBeenCalled();
+  });
+
   it('returns cached instructions whose hash matches, without generating', async () => {
     const {result} = resolve({
       generatedInstructions: {instructions: 'Cached.', inputsHash},

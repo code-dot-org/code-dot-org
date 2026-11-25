@@ -1,5 +1,7 @@
 <%
   PRODUCTION_DB_CLUSTER_ID = 'autoscale-prod-cluster'.freeze
+  # DbiResourceId of autoscale-prod-0 and autoscale-prod-1. Replacing an instance changes it; resizing does not. These values are not secrets.
+  PRODUCTION_DB_INSTANCE_RESOURCE_IDS = %w[db-KR4SK7SXSOSIGGTKWT32K5Q4LE db-ELUDTT22K2F7WYQST3CQRBIMWQ].freeze
   # The admin credential that the Chef `cdo-mysql::server` recipe configures `mysqld` to use.
   MYSQL_DAEMON_ADMIN_CREDENTIAL = '{"username":"root", "password":""}'.freeze
   MYSQL_DAEMON_HOSTNAME = 'localhost'.freeze
@@ -413,4 +415,44 @@
       DBParameterGroupName: default.aurora-mysql8.0 #Explicitly stop setting a custom Instance ParameterGroup.
 <%    end -%>
 <%  end -%>
+<%  if rack_env?(:production)
+      DB_INSTANCE_RANGE.each do |i|
+-%>
+  DB<%=i%>ConnectionsCritical:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmActions:
+        - !Ref InfraUrgent
+      InsufficientDataActions:
+        - !Ref InfraLowPriority
+      AlarmName: <%="#{stack_name}_db_#{i}_connections_critical"%>
+      AlarmDescription: >-
+        Connections to <%="#{stack_name}-#{i}"%> above 85% of its max_connections for 2 minutes.
+      Metrics:
+        - Id: utilization
+          Label: Percent of max_connections open
+          Expression: 100 * connections / maximum
+          ReturnData: true
+        - Id: connections
+          MetricStat:
+            Metric:
+              Namespace: AWS/RDS
+              MetricName: DatabaseConnections
+              Dimensions:
+                - {Name: DBInstanceIdentifier, Value: <%="#{stack_name}-#{i}"%>}
+            Period: 60
+            Stat: Maximum
+          ReturnData: false
+        # Performance Insights is the only mechanism to dynamically lookup the maximum connections permitted by an instance.
+        - Id: maximum
+          Expression: "DB_PERF_INSIGHTS('RDS', '<%=PRODUCTION_DB_INSTANCE_RESOURCE_IDS[i]%>', 'db.Users.max_connections.avg')"
+          Period: 60
+          ReturnData: false
+      EvaluationPeriods: 2
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 85
+      TreatMissingData: missing
+<%    end
+    end
+-%>
 <%end -%>

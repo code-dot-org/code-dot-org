@@ -21,6 +21,7 @@ import {
   workAttempts,
 } from '../../progress/model';
 import {Checkpoint, LevelStep, Pathway} from '../../types';
+import {usePathwayContext} from '../PathwayContext';
 
 export interface ChatUnlockOptions extends LabHandles {
   pathway: Pathway;
@@ -52,8 +53,9 @@ export function useChatUnlock(options: ChatUnlockOptions): void {
   // One judge at a time, across resubscribes.
   const judging = useRef(false);
   const {chat, step, continueAllowed} = options;
+  const {isReadonly} = usePathwayContext();
   const adapter =
-    step.validation && !continueAllowed
+    step.validation && !continueAllowed && !isReadonly
       ? workAdapterFor(step.levelProperties?.appName ?? '')
       : undefined;
   const observe = adapter?.observeReplies;

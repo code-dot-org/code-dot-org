@@ -49,6 +49,8 @@ export interface StepInstructionsOptions {
   ) => void;
   /** The shell's own context, not the mounted chat's. */
   aichatContext: AichatContext;
+  /** Shows what was saved and generates nothing. */
+  isReadonly?: boolean;
 }
 
 /**
@@ -66,8 +68,12 @@ export async function resolveStepInstructions({
   generatedInstructions,
   saveGeneratedInstructions,
   aichatContext,
+  isReadonly = false,
 }: StepInstructionsOptions): Promise<string | undefined> {
   if (!step.instructionsPrompt || !step.project) return authoredInstructions;
+  if (isReadonly) {
+    return generatedInstructions?.instructions ?? authoredInstructions;
+  }
   if (sources === undefined) return authoredInstructions;
   if (!isAdaptiveAiAvailable()) {
     sendAiStaticFallbackUsed('instructions', 'aiUnavailable', checkpoint, step);
