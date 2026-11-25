@@ -38,7 +38,7 @@ module Services
 
     test 'converts from and to XML level format' do
       name = 'Test level convert'
-      level = Services::LevelFiles.load_custom_level_xml(File.read(File.join(self.class.fixture_path, 'test_level.xml')), Level.new(name: name))
+      level = Services::LevelFiles.load_custom_level_xml(File.read(File.join(self.class.fixture_paths.first, 'test_level.xml')), Level.new(name: name))
       xml = level.to_xml
       xml2 = Services::LevelFiles.load_custom_level_xml(xml, Level.new(name: name.next)).to_xml
       level.destroy

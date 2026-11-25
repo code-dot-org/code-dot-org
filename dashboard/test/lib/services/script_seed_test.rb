@@ -26,7 +26,7 @@ module Services
     test 'serialize_seeding_json' do
       script = create_script_tree(name_prefix: 'test-serialize-seeding-json')
 
-      filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
+      filename = File.join(self.class.fixture_paths.first, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
       # File.write(filename, ScriptSeed.serialize_seeding_json(script))
 
