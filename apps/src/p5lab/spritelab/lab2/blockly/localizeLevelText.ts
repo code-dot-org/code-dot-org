@@ -1,6 +1,6 @@
 // The text a level puts in its blocks, such as what a sprite says, in the
-// student's language. Only level data passes through here, never a
-// student's saved project.
+// student's language. A student's saved project must not be passed in: its
+// text is the student's own.
 
 import {
   isEnglishLocale,

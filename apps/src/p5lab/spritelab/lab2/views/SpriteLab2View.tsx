@@ -647,9 +647,12 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [catalog, inToolboxBlocks]
   );
 
-  // Toolbox mode has no scenes to pin, so the pinned and extra scenes are
-  // cleared here and everything below sees neither.
+  // Toolbox mode has no scenes to pin, so it ignores the level's pinned and
+  // extra scenes.
   const pinnedScene = isToolboxMode ? undefined : levelProperties.pinnedScene;
+  const levelExtraScene = isToolboxMode
+    ? undefined
+    : levelProperties.extraScene;
   const pinnedSceneId = pinnedScene?.id;
   const pinnedSceneName = pinnedScene?.name;
   // The level's pinned and extra scenes are copied into the student's
@@ -661,9 +664,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
         : localizeLevelText(pinnedScene?.source),
     [pinnedScene?.source]
   );
-  const levelExtraScene = isToolboxMode
-    ? undefined
-    : levelProperties.extraScene;
   const extraScene = useMemo(
     () =>
       isLevelEditMode || !levelExtraScene?.source
@@ -678,8 +678,9 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // reinit count is in the deps). On a project with no scenes the pinned
   // scene becomes the only one: materializing the synthesized default scene
   // too would leave a stray "Scene 1" in every level sharing the project.
-  // A pin whose id is the default scene's adopts that scene however it was
-  // saved.
+  // A pinned scene whose id is the default scene's ('scene-1') uses that
+  // existing scene instead of adding one, whether the project stored it as
+  // top-level code or in its scenes list.
   useEffect(() => {
     if (!pinnedSceneId) {
       return;
