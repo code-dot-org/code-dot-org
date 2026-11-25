@@ -156,16 +156,16 @@
 
   # OldestWaitingToStartJobAge is the age of the oldest job that could run now but that no
   # worker has locked. It reads the database, so it holds wherever the workers run. These two
-  # alarms keep the rules and topics of the hand-made console alarms they replace ("Urgent Alert
-  # if ActiveJob is Down" and "Warn if ActiveJob Queue is Backing Up", December 2024).
-  # TreatMissingData changes from missing to breaching: once the daemon's cron is the only
-  # publisher (#76800), a dead daemon shows up as no data, and missing would hold the alarm in
-  # INSUFFICIENT_DATA.
+  # alarms keep the rules of the hand-made console alarms they replace ("Urgent Alert if
+  # ActiveJob is Down" and "Warn if ActiveJob Queue is Backing Up", December 2024), but page the
+  # Infra topics instead of CDO-Urgent and CDO-WorkdayUrgent. TreatMissingData changes from
+  # missing to breaching: once the daemon's cron is the only publisher (#76800), a dead daemon
+  # shows up as no data, and missing would hold the alarm in INSUFFICIENT_DATA.
   ActiveJobQueueStalledAlarm:
     Type: "AWS::CloudWatch::Alarm"
     Properties:
       AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-Urgent"
+        - !Ref InfraUrgent
       AlarmName: <%="#{stack_name}_activejob_queue_stalled" %>
       AlarmDescription: >-
         A job that could run now has waited over 5 minutes for a worker, for 5 minutes in a row.
@@ -189,7 +189,7 @@
     Type: "AWS::CloudWatch::Alarm"
     Properties:
       AlarmActions:
-        - !Sub "arn:aws:sns:${AWS::Region}:${AWS::AccountId}:CDO-WorkdayUrgent"
+        - !Ref InfraWorkdayUrgent
       AlarmName: <%="#{stack_name}_activejob_queue_backing_up" %>
       AlarmDescription: >-
         A job that could run now has waited over 60 seconds for a worker, for 5 minutes in a row.
