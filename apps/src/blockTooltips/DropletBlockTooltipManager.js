@@ -156,10 +156,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ =
                       }}
                       sourceCode={library.source}
                     />,
-                    document.querySelector('#libraryFunctionTooltipModal'),
-                    {
-                      legacyReactDomRender: true,
-                    }
+                    document.querySelector('#libraryFunctionTooltipModal')
                   );
                 }
               });

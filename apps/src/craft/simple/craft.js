@@ -6,6 +6,7 @@ import {
 import {ThemeProvider} from '@mui/material/styles';
 import $ from 'jquery';
 import React from 'react';
+import {flushSync} from 'react-dom';
 
 import {getCodeBlocks, getCode} from '@cdo/apps/blockly/utils';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
@@ -455,30 +456,32 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <div>
-        <ThemeProvider theme={minecraftMuiTheme}>
-          <AppView
-            upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
-            downIcon={
-              <img style={{width: '15px'}} src={downButtonImg} alt="" />
-            }
-            visualizationColumn={
-              <CraftVisualizationColumn
-                showFinishButton={!config.level.isProjectLevel}
-              />
-            }
-            onMount={onMount}
-          />
-          <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
-        </ThemeProvider>
-      </div>
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <div>
+          <ThemeProvider theme={minecraftMuiTheme}>
+            <AppView
+              upIcon={<img style={{width: '15px'}} src={upButtonImg} alt="" />}
+              downIcon={
+                <img style={{width: '15px'}} src={downButtonImg} alt="" />
+              }
+              visualizationColumn={
+                <CraftVisualizationColumn
+                  showFinishButton={!config.level.isProjectLevel}
+                />
+              }
+              onMount={onMount}
+            />
+            <PlayerSelectionDialog
+              players={[CHARACTER_STEVE, CHARACTER_ALEX]}
+            />
+          </ThemeProvider>
+        </div>
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 };
 
