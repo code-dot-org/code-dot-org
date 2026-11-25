@@ -23,6 +23,7 @@ import AnimatedSheetPreview from '@cdo/apps/p5lab/spritelab/lab2/views/AnimatedS
 
 import ImageKindMenu, {NewImageKind} from './ImageKindMenu';
 import {ProjectImage} from './projectImages';
+import SheetFrame from './SheetFrame';
 
 import styles from './images-tab.module.scss';
 
@@ -294,6 +295,13 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                         <AnimatedSheetPreview
                           {...playing.sheet}
                           only={playing.only}
+                        />
+                      ) : image.tileFrame ? (
+                        <SheetFrame
+                          {...image.tileFrame}
+                          className={classNames(
+                            image.pixelated && styles.pixelArt
+                          )}
                         />
                       ) : (
                         image.thumb && (

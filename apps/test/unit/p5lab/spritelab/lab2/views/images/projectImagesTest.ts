@@ -1,3 +1,4 @@
+import {CHARACTER_STRIP_BASE_FRAME} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {listProjectImages} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
 
 const thumbs: Record<string, string> = {};
@@ -95,5 +96,49 @@ describe('listProjectImages', () => {
       propsByKey: {a: {categories: []}},
     });
     expect(image.name).toBe('image');
+  });
+
+  describe('tileFrame', () => {
+    const poses = {'stand-right': {start: 0, count: 2, frameDelay: 8}};
+    const sheet = {
+      categories: [],
+      sourceUrl: 'set.png',
+      frameCount: 5,
+      frameSize: {x: 30, y: 30},
+    };
+
+    it('gives a sheet with no thumbnail yet the frame to cut', () => {
+      const [set, strip] = listProjectImages({
+        orderedKeys: ['a', 'b'],
+        propsByKey: {
+          a: {...sheet, name: 'Set', poses},
+          b: {...sheet, name: 'Strip'},
+        },
+      });
+      expect(set.tileFrame).toEqual({
+        src: 'set.png',
+        frameSize: {x: 30, y: 30},
+        index: CHARACTER_STRIP_BASE_FRAME,
+      });
+      expect(strip.tileFrame?.index).toBe(0);
+    });
+
+    it('leaves it out once the thumbnail exists, and for a single frame', () => {
+      thumbs['Ready'] = 'data:ready';
+      const [ready, single] = listProjectImages({
+        orderedKeys: ['a', 'b'],
+        propsByKey: {
+          a: {...sheet, name: 'Ready', poses},
+          b: {
+            name: 'Single',
+            categories: [],
+            sourceUrl: 's.png',
+            frameCount: 1,
+          },
+        },
+      });
+      expect(ready.tileFrame).toBeUndefined();
+      expect(single.tileFrame).toBeUndefined();
+    });
   });
 });

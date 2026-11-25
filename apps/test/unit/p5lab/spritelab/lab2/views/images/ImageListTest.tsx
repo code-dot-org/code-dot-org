@@ -172,6 +172,31 @@ describe('ImageList', () => {
     ).toBeTruthy();
   });
 
+  it("shows a sheet's frame in its tile until the thumbnail exists", () => {
+    const frame = {src: 'set.png', frameSize: {x: 30, y: 30}, index: 1};
+    const {rerender} = render(
+      <ImageList
+        images={[{...image('a', 'Sprite 1'), tileFrame: frame}]}
+        draft={null}
+        chosenId={null}
+        onChoose={jest.fn()}
+      />
+    );
+    const tile = screen.getByRole('button', {name: 'Sprite 1'});
+    expect(tile.querySelector('canvas')).toBeTruthy();
+    expect(tile.querySelector('img')).toBeNull();
+    rerender(
+      <ImageList
+        images={[image('a', 'Sprite 1')]}
+        draft={null}
+        chosenId={null}
+        onChoose={jest.fn()}
+      />
+    );
+    expect(tile.querySelector('canvas')).toBeNull();
+    expect(tile.querySelector('img')?.getAttribute('src')).toBe('data:a');
+  });
+
   it('chooses on a tile and adds on the plus', async () => {
     const onChoose = jest.fn();
     const onNew = jest.fn();
