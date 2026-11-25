@@ -59,14 +59,14 @@ class Policies::DemoSections
       login_type: 'email',
       participant_type: 'student',
       grades: %w[9 10 11 12],
-      unit_name: 'aif2-v2-2025',
-      unit_group_name: 'artificial-intelligence-foundations-2026',
+      unit_name: 'ai-and-algorithmic-decisions-2026',
+      unit_group_name: 'ai-foundations-year1-2026',
       # Green robot: COLORS[8] = Green, EMOJIS[5] = 🤖
       avatar_color: 8,
       avatar_emoji: 5,
       ai_chat_access_level: 'enabled',
-      student_snapshot_default_tour_lesson: 1,
-      review_syllabus_quiz_lesson: 1,
+      student_snapshot_default_tour_lesson: 4,
+      review_syllabus_quiz_lesson: 4,
       review_syllabus_quiz_options: [
         {label: 'Level 1', correct: false},
         {label: 'Level 2', correct: false},
