@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
+import {flushSync} from 'react-dom';
 
 import {getCode} from '@cdo/apps/blockly/utils';
 import {files} from '@cdo/apps/clientApi';
@@ -181,17 +182,17 @@ export function setupApp(appOptions) {
         const lessonName = `${msg.lesson()} ${lessonInfo.position}: ${
           lessonInfo.name
         }`;
-        createReactRoot(
-          <PlayZone
-            lessonName={lessonName}
-            onContinue={() => {
-              dialog.hide();
-            }}
-          />,
-          body,
-          {
-            legacyReactDomRender: true,
-          }
+        // Synchronous so the dialog is complete when it is shown.
+        flushSync(() =>
+          createReactRoot(
+            <PlayZone
+              lessonName={lessonName}
+              onContinue={() => {
+                dialog.hide();
+              }}
+            />,
+            body
+          )
         );
         const dialog = new LegacyDialog({
           body: body,
