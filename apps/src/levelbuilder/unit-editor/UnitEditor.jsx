@@ -472,7 +472,10 @@ class UnitEditor extends React.Component {
               onChange={e => this.setState({tts: e.target.checked})}
             />
             <HelpTip>
-              <p>Check to enable text-to-speech for this unit.</p>
+              <p>
+                Check to enable text-to-speech for this unit. This only plays
+                audio that already exists; no new audio is generated.
+              </p>
             </HelpTip>
           </label>
           {this.props.isLevelbuilder && (

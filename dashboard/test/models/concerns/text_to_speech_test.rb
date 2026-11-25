@@ -243,6 +243,17 @@ class TextToSpeechTest < ActiveSupport::TestCase
     assert_equal level.tts_url(TextToSpeech.sanitize('edited hint')), hint['tts_url']
   end
 
+  test 'refresh_authored_hint_tts_urls leaves hints alone on unpublished levels' do
+    level = create(:level, name: 'unpublished level with hints', type: 'Blockly', published: false)
+    level.authored_hints = JSON.dump([{hint_markdown: 'edited hint', tts_url: 'https://tts.code.org/stale.mp3'}])
+    Policies::LevelFiles.stubs(:write_to_file?).returns(true)
+
+    level.refresh_authored_hint_tts_urls
+
+    hint = JSON.parse(level.authored_hints).first
+    assert_equal 'https://tts.code.org/stale.mp3', hint['tts_url']
+  end
+
   test 'tts_url should return nil given locale not supported for TTS' do
     assert_nil(@level_without_instructions.tts_url(@level_without_instructions.tts_short_instructions_text, :'te-ST'))
 
