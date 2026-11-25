@@ -3,7 +3,6 @@ import React, {useEffect} from 'react';
 
 import {ProjectImage} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
 import useDrawing, {
-  UPLOAD_GAP_MS,
   DrawingTools,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/images/useDrawing';
 import {
@@ -274,14 +273,13 @@ describe('useDrawing', () => {
     expect(saveProjectNow).toHaveBeenCalledTimes(1);
   });
 
-  it('uploads and saves the project when left during a pause save that does not upload', async () => {
+  it('makes a final save, which saves the project, when left during a pause save', async () => {
     const {saveEdited, storePicture, saveProjectNow, tools} = setup();
     await act(() => tools().startDrawing(target));
     tools().attachEditor({
       save: () => tools().handleSave('data:last', {}),
       snapshot: () => null,
     });
-    // The first pause uploads; the second, within the gap, does not.
     await act(async () => tools().handleSave('data:a', {}));
     let finishSave: (key: string) => void = () => undefined;
     saveEdited.mockImplementationOnce(
@@ -293,8 +291,11 @@ describe('useDrawing', () => {
       finishSave('k1');
       await new Promise(resolve => setTimeout(resolve, 0));
     });
-    const uploads = saveEdited.mock.calls.map(call => call[3]!.upload);
-    expect(uploads).toEqual([true, false, true]);
+    expect(saveEdited.mock.calls.map(call => call[1])).toEqual([
+      'data:a',
+      'data:b',
+      'data:last',
+    ]);
     // The last save asks storePicture for the project save itself.
     expect(storePicture.mock.calls.map(call => call[2])).toEqual([
       false,
@@ -304,7 +305,7 @@ describe('useDrawing', () => {
     expect(saveProjectNow).not.toHaveBeenCalled();
   });
 
-  it('uploads when the level is left during a pause save that does not upload', async () => {
+  it('makes a final save when the level is left during a pause save', async () => {
     const {saveEdited, tools, unmount} = setup();
     await act(() => tools().startDrawing(target));
     tools().attachEditor({
@@ -322,8 +323,11 @@ describe('useDrawing', () => {
       finishSave('k1');
       await new Promise(resolve => setTimeout(resolve, 0));
     });
-    const uploads = saveEdited.mock.calls.map(call => call[3]!.upload);
-    expect(uploads).toEqual([true, false, true]);
+    expect(saveEdited.mock.calls.map(call => call[1])).toEqual([
+      'data:a',
+      'data:b',
+      'data:last',
+    ]);
   });
 
   it('saves the project and closes on Done when the editor is gone', async () => {
@@ -384,16 +388,11 @@ describe('useDrawing', () => {
       finishSave('k1');
       await new Promise(resolve => setTimeout(resolve, 0));
     });
-    const calls = saveEdited.mock.calls.map(call => [
-      call[0].key,
-      call[1],
-      call[3]!.upload,
-    ]);
+    const calls = saveEdited.mock.calls.map(call => [call[0].key, call[1]]);
     expect(calls).toEqual([
-      ['k1', 'data:a', true],
-      ['k1', 'data:last', true],
-      // A drawing's first save uploads: each drawing has its own gap.
-      ['k2', 'data:b', true],
+      ['k1', 'data:a'],
+      ['k1', 'data:last'],
+      ['k2', 'data:b'],
     ]);
   });
 
@@ -436,11 +435,7 @@ describe('useDrawing', () => {
       const pause = (pixels: string) =>
         act(() => tools.tools().handleSave(pixels, {}));
       const saves = () =>
-        tools.saveEdited.mock.calls.map(call => [
-          call[0].key,
-          call[1],
-          call[3]!.upload,
-        ]);
+        tools.saveEdited.mock.calls.map(call => [call[0].key, call[1]]);
       const saveNows = () =>
         tools.storePicture.mock.calls.map(call => [
           (call[0] as ImageTarget).key,
@@ -461,9 +456,9 @@ describe('useDrawing', () => {
       await t.release();
       await t.release();
       expect(t.saves()).toEqual([
-        ['k1', 'one:a', true],
-        ['k1', 'one:last', true],
-        ['k2', 'two:last', true],
+        ['k1', 'one:a'],
+        ['k1', 'one:last'],
+        ['k2', 'two:last'],
       ]);
       expect(t.saveNows()).toEqual([
         ['k1', false],
@@ -483,8 +478,8 @@ describe('useDrawing', () => {
       await act(async () => t.tools().finishDrawing());
       await t.release();
       expect(t.saves()).toEqual([
-        ['k1', 'one:a', true],
-        ['k1', 'one:last', true],
+        ['k1', 'one:a'],
+        ['k1', 'one:last'],
       ]);
     });
 
@@ -499,9 +494,9 @@ describe('useDrawing', () => {
       act(() => t.tools().leaveDrawing());
       await t.release();
       expect(t.saves()).toEqual([
-        ['k1', 'one:a', true],
-        ['k1', 'one:last', true],
-        ['k2', 'two:last', true],
+        ['k1', 'one:a'],
+        ['k1', 'one:last'],
+        ['k2', 'two:last'],
       ]);
     });
 
@@ -517,7 +512,7 @@ describe('useDrawing', () => {
       await t.open(pictures.three, 'three:last');
       t.pause('three:a');
       await t.release();
-      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+      expect(t.saves()).toEqual([
         ['k1', 'one:a'],
         ['k1', 'one:last'],
         ['k2', 'two:last'],
@@ -534,7 +529,7 @@ describe('useDrawing', () => {
       await t.open(pictures.two, 'two:last');
       t.pause('two:a');
       await t.release();
-      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+      expect(t.saves()).toEqual([
         ['k1', 'one:a'],
         ['k2', 'two:a'],
       ]);
@@ -581,20 +576,18 @@ describe('useDrawing', () => {
       await act(async () => {
         await new Promise(resolve => setTimeout(resolve, 0));
       });
-      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+      expect(t.saves()).toEqual([
         ['k1', 'one:a'],
         ['k1', 'one:last'],
       ]);
       expect(t.tools().saveFailed).toBe(false);
     });
 
-    it("never takes a left picture's unuploaded save for the next picture's", async () => {
+    it("never takes a left picture's running save for the next picture's", async () => {
       const t = queueSetup();
       await t.open(pictures.one, 'one:last');
-      t.pause('one:first');
-      await t.release();
-      // Within the upload gap: this pause stores pixels without uploading.
-      // Its last save is still running when the next picture opens.
+      // The pause's save and its last save are still running when the next
+      // picture opens.
       t.hold();
       t.hold();
       t.pause('one:a');
@@ -616,7 +609,7 @@ describe('useDrawing', () => {
       t.pause('one:a');
       act(() => t.tools().leaveDrawing(true));
       await t.release();
-      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+      expect(t.saves()).toEqual([
         ['k1', 'one:a'],
         ['k1', 'one:last'],
       ]);
@@ -640,8 +633,8 @@ describe('useDrawing', () => {
       act(() => t.tools().scheduleStrokeSave());
       await t.release();
       expect(t.saves()).toEqual([
-        ['k1', 'one:done', true],
-        ['k1', 'one:after', true],
+        ['k1', 'one:done'],
+        ['k1', 'one:after'],
       ]);
       expect(t.tools().drawing).toBeNull();
     });
@@ -682,34 +675,14 @@ describe('useDrawing', () => {
       t.pause('new:a');
       t.pause('new:b');
       await t.release();
-      expect(t.saves().map(save => save.slice(0, 2))).toEqual([
+      expect(t.saves()).toEqual([
         ['k1', 'one:a'],
         ['k1', 'one:last'],
         [null, 'new:b'],
       ]);
       t.pause('new:c');
       await t.release();
-      expect(t.saves()[3].slice(0, 2)).toEqual(['kNew', 'new:c']);
+      expect(t.saves()[3]).toEqual(['kNew', 'new:c']);
     });
-  });
-
-  it('uploads the file at most once per gap, and on the last save', async () => {
-    jest.useFakeTimers();
-    jest.setSystemTime(100000);
-    const {saveEdited, tools} = setup();
-    await act(() => tools().startDrawing(target));
-    tools().attachEditor(editor());
-    const uploads = () => saveEdited.mock.calls.map(call => call[3]!.upload);
-    await act(async () => tools().handleSave('data:a', {}));
-    await act(async () => tools().handleSave('data:b', {}));
-    expect(uploads()).toEqual([true, false]);
-    jest.setSystemTime(100000 + UPLOAD_GAP_MS - 1);
-    await act(async () => tools().handleSave('data:b2', {}));
-    expect(uploads()).toEqual([true, false, false]);
-    jest.setSystemTime(100000 + UPLOAD_GAP_MS);
-    await act(async () => tools().handleSave('data:c', {}));
-    expect(uploads()).toEqual([true, false, false, true]);
-    await act(async () => tools().finishDrawing());
-    expect(tools().drawing).toBeNull();
   });
 });

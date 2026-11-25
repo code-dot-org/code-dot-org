@@ -20,15 +20,10 @@ import {cutFrame, frameCount, replaceFrame} from './frames';
 import {ImageProps, ProjectImage} from './projectImages';
 import {ImageTarget, ImageWriter} from './useImageWriter';
 
-// A pause this long after a stroke saves the drawing into the project, so
-// the image list's tile, the World tab's palette and the next Run show the
-// picture as it is drawn.
+// A pause this long after a stroke saves the drawing into the project and
+// uploads its file, so the image list's tile, the World tab's palette and
+// the next Run show the picture as it is drawn.
 const STROKE_SAVE_MS = 800;
-// A pause's save updates the picture on screen; the PNG upload behind the
-// image happens at most once per this gap, once more when the gap runs out
-// after a pause that skipped it, and once when the drawing is finished. The
-// gap matches ProjectManager's saveInterval.
-export const UPLOAD_GAP_MS = 30_000;
 
 /** What the tools opened on. `other` is an image that is neither blank nor
     AI-made: a drawing, an upload, or a hand-edited AI picture. */
@@ -105,8 +100,7 @@ export interface DrawingTools {
       `keepCanvasUp` a copy of the canvas stays on screen until the next
       image's editor has painted. */
   leaveDrawing: (keepCanvasUp?: boolean) => void;
-  /** Done: what is drawn is saved, including pixels a pause's save stored
-      without uploading, and the tools close once it is. */
+  /** Done: what is drawn is saved, and the tools close once it is. */
   finishDrawing: () => void;
   /** Closes the tools without saving. */
   stopDrawing: () => void;
@@ -165,10 +159,6 @@ export default function useDrawing({
   const dirtyRef = useRef(false);
   const editorRef = useRef<DrawingEditor | null>(null);
   const idleTimerRef = useRef<number>();
-  // Uploads the open drawing once the upload gap after its last upload has
-  // passed, when a pause's save stored pixels without uploading them and no
-  // stroke has followed.
-  const uploadTimerRef = useRef<number>();
   // Saves run one at a time. One asked for meanwhile waits in the queue,
   // which holds at most one save per drawing. A newer save carries the whole
   // picture (for a set, the whole open frame; frames do not switch while a
@@ -201,16 +191,11 @@ export default function useDrawing({
     }
     return !!waiting;
   }, []);
-  // When the open drawing's PNG was last uploaded, and whether pixels saved
-  // since then have not been uploaded yet.
-  const lastUploadRef = useRef(0);
-  const uploadPendingRef = useRef(false);
   const leaveAfterSaveRef = useRef(false);
-  // A pause's save may skip the upload. The final save runs after it, or
-  // replaces it while it waits, and uploads the file and saves the project.
+  // A pause's save does not save the project. The final save runs after it,
+  // or replaces it while it waits, and saves the project at once.
   const lastSaveNeeded = useCallback(
-    (id: number) =>
-      dirtyRef.current || uploadPendingRef.current || hasSaveFor(id),
+    (id: number) => dirtyRef.current || hasSaveFor(id),
     [hasSaveFor]
   );
   // The image's generation record when the tools opened; if it changes, a
@@ -230,16 +215,14 @@ export default function useDrawing({
     id: number;
   } | null>(null);
 
-  const clearSaveTimers = () => {
+  const clearIdleTimer = () => {
     window.clearTimeout(idleTimerRef.current);
     idleTimerRef.current = undefined;
-    window.clearTimeout(uploadTimerRef.current);
-    uploadTimerRef.current = undefined;
   };
-  useEffect(() => clearSaveTimers, []);
+  useEffect(() => clearIdleTimer, []);
 
   const stopDrawing = useCallback(() => {
-    clearSaveTimers();
+    clearIdleTimer();
     dirtyRef.current = false;
     const closedId = openIdRef.current;
     if (closedId !== null) {
@@ -250,8 +233,6 @@ export default function useDrawing({
     }
     openIdRef.current = null;
     nextFrameRef.current = null;
-    lastUploadRef.current = 0;
-    uploadPendingRef.current = false;
     editorRef.current = null;
     leaveAfterSaveRef.current = false;
     setSaveFailed(false);
@@ -273,9 +254,9 @@ export default function useDrawing({
   }, [stopDrawing]);
 
   // Leaving the level mid-drawing (the panel's Continue, or navigation)
-  // unmounts the tab without Done: unsaved strokes, a pending upload, or a
-  // pause save still running get a last save now, while the editor's canvas
-  // still exists.
+  // unmounts the tab without Done: unsaved strokes, or a save still running
+  // or waiting, get a final save now, while the editor's canvas still
+  // exists.
   useEffect(
     () => () => {
       const open = drawingRef.current;
@@ -318,8 +299,6 @@ export default function useDrawing({
       };
       leaveAfterSaveRef.current = false;
       dirtyRef.current = false;
-      uploadPendingRef.current = false;
-      lastUploadRef.current = 0;
       nextFrameRef.current = null;
       setClosedPicture(null);
       const id = ++drawingIdRef.current;
@@ -408,7 +387,7 @@ export default function useDrawing({
       );
     }
     dirtyRef.current = true;
-    clearSaveTimers();
+    clearIdleTimer();
     idleTimerRef.current = window.setTimeout(() => {
       if (dirtyRef.current) {
         editorRef.current?.save();
@@ -447,9 +426,9 @@ export default function useDrawing({
 
   // A save builds on the drawing as the previous save of it left it, but
   // keeps its own frame index: the student may have switched frames after
-  // that save. A final save uploads the file, saves the project at once, and
-  // closes the tools if the drawing is still open, no other save of it runs
-  // or waits, and nothing new has been drawn.
+  // that save. A final save saves the project at once, and closes the tools
+  // if the drawing is still open, no other save of it runs or waits, and
+  // nothing new has been drawn.
   const runOne = useCallback(
     async (save: PendingSave) => {
       const {dataURI, meta, final} = save;
@@ -478,15 +457,10 @@ export default function useDrawing({
               dataURI
             )
           : dataURI;
-        const upload =
-          !drawingToSave.target.key ||
-          final ||
-          Date.now() - lastUploadRef.current >= UPLOAD_GAP_MS;
         const key = await storePicture(
           drawingToSave.target,
           () =>
             saveEdited(drawingToSave.target, pixels, meta, {
-              upload,
               stillWanted: () =>
                 abandonedDrawingIdRef.current !== drawingToSave.id,
             }),
@@ -497,22 +471,7 @@ export default function useDrawing({
           return;
         }
         if (openIdRef.current === drawingToSave.id) {
-          if (upload) {
-            lastUploadRef.current = Date.now();
-          }
-          uploadPendingRef.current = !upload;
           setSaveFailed(false);
-          if (!upload) {
-            window.clearTimeout(uploadTimerRef.current);
-            uploadTimerRef.current = window.setTimeout(() => {
-              if (
-                openIdRef.current === drawingToSave.id &&
-                uploadPendingRef.current
-              ) {
-                editorRef.current?.save();
-              }
-            }, lastUploadRef.current + UPLOAD_GAP_MS - Date.now());
-          }
         }
         // A blank that was saved is an image now: later saves replace it;
         // a saved strip is what the next frame is cut from.
@@ -540,7 +499,6 @@ export default function useDrawing({
           // as it is then; a waiting save of it would only carry older
           // pixels.
           dirtyRef.current = true;
-          uploadPendingRef.current = true;
           queueRef.current = queueRef.current.filter(
             waiting => waiting.drawing.id !== drawingToSave.id
           );
@@ -623,7 +581,7 @@ export default function useDrawing({
       if (!current || openIdRef.current !== current.id) {
         return;
       }
-      clearSaveTimers();
+      clearIdleTimer();
       dirtyRef.current = false;
       const save = {
         dataURI,
@@ -673,9 +631,8 @@ export default function useDrawing({
       }
       openIdRef.current = null;
       nextFrameRef.current = null;
-      clearSaveTimers();
+      clearIdleTimer();
       dirtyRef.current = false;
-      uploadPendingRef.current = false;
       leaveAfterSaveRef.current = false;
       const copy = keepCanvasUp ? editorRef.current?.snapshot() : null;
       editorRef.current = null;

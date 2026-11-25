@@ -65,11 +65,6 @@ interface WriterOptions {
 }
 
 export interface SaveEditedOptions {
-  /** Whether this save uploads the picture's file. Defaults to true. False
-      is for an image that already has a file: the picture on screen
-      changes, and the file is uploaded by a later save. A new image has no
-      file yet, so false is ignored for it. */
-  upload?: boolean;
   /** Called after the upload and before the image is updated; returning
       false abandons the save, for a drawing a picture replaced meanwhile. */
   stillWanted?: () => boolean;
@@ -289,7 +284,7 @@ export default function useImageWriter({
       target: ImageTarget,
       dataURI: string,
       meta: PixelEditorSaveMeta,
-      {upload: uploadNow = true, stillWanted}: SaveEditedOptions = {}
+      {stillWanted}: SaveEditedOptions = {}
     ) => {
       const existing = target.key ? propsOf(target.key) : undefined;
       const safeName = (existing?.name || 'image')
@@ -300,22 +295,22 @@ export default function useImageWriter({
           ? drawingFilesRef.current.get(target.key) ?? drawnFileOf(existing)
           : undefined;
       const filename = drawingFile ?? `${safeName}_${Date.now()}.png`;
-      const uploadedUrl =
-        uploadNow || !existing
-          ? await upload(filename, dataURIToBytes(dataURI), 'image/png')
-          : undefined;
+      const uploadedUrl = await upload(
+        filename,
+        dataURIToBytes(dataURI),
+        'image/png'
+      );
       // uploadImage keeps the given filename for the project's files, so a
       // later upload under it replaces the file; in levelbuilder it uploads
       // to the level under a new random name.
-      const replaceable =
-        !!uploadedUrl &&
-        fileOf(uploadedUrl).endsWith(`/${encodeURIComponent(filename)}`);
+      const replaceable = fileOf(uploadedUrl).endsWith(
+        `/${encodeURIComponent(filename)}`
+      );
       // A new query string on each upload, so the browser and CDN do not
       // serve the replaced file from cache.
-      const sourceUrl =
-        uploadedUrl && replaceable
-          ? `${fileOf(uploadedUrl)}?t=${Date.now()}`
-          : uploadedUrl;
+      const sourceUrl = replaceable
+        ? `${fileOf(uploadedUrl)}?t=${Date.now()}`
+        : uploadedUrl;
       recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
       if (stillWanted && !stillWanted()) {
@@ -326,7 +321,7 @@ export default function useImageWriter({
       const subject =
         existing?.subject ?? existing?.generation?.subject ?? target.subject;
       const key = write(target, {
-        ...(sourceUrl && {sourceUrl}),
+        sourceUrl,
         dataURI,
         ...(subject && {subject}),
         // An edited character set keeps its frame grid (the editor hands

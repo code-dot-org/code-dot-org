@@ -267,25 +267,6 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
-  it('shows a pause in drawing on screen with no upload, so it cannot fail', async () => {
-    propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
-    const {writer} = renderWriter(
-      jest.fn(async (name: string): Promise<string> => {
-        throw new Error('upload failed');
-      })
-    );
-    await act(async () => {
-      await writer().saveEdited(
-        {key: 'k1', imageType: 'sprite'},
-        'data:image/png;base64,AA',
-        {},
-        {upload: false}
-      );
-    });
-    expect(repointAnimation).toHaveBeenCalledTimes(1);
-    expect(repointAnimation.mock.calls[0][2]).not.toHaveProperty('sourceUrl');
-  });
-
   it('keeps what an image depicts when an edit drops the prompt', async () => {
     propsByKey.k1 = {
       name: 'Sprite 1',
@@ -390,7 +371,7 @@ describe('useImageWriter', () => {
     ]);
   });
 
-  it('saves drawn pixels onto an image, uploading only when asked', async () => {
+  it('saves drawn pixels onto an image, no longer as the prompt made them', async () => {
     propsByKey.k1 = {
       name: 'Sprite 1',
       sourceUrl: '/v3/assets/chan/old.png',
@@ -399,50 +380,38 @@ describe('useImageWriter', () => {
     const {writer, uploadImage} = renderWriter();
     const target = {key: 'k1', imageType: 'sprite' as const};
     await act(async () => {
-      await writer().saveEdited(
-        target,
-        'data:image/png;base64,AA',
-        {},
-        {
-          upload: false,
-        }
-      );
+      await writer().saveEdited(target, 'data:image/png;base64,AA', {});
     });
-    expect(uploadImage).not.toHaveBeenCalled();
+    expect(uploadImage).toHaveBeenCalledTimes(1);
     expect(repointAnimation).toHaveBeenCalledTimes(1);
-    const quiet = repointAnimation.mock.calls[0][2] as Record<string, unknown>;
-    // The pixels go in; the file behind the image waits, and the pixels
-    // are no longer the prompt's.
-    expect(quiet).toMatchObject({
+    const first = repointAnimation.mock.calls[0][2] as Record<string, unknown>;
+    expect(first).toMatchObject({
       dataURI: 'data:image/png;base64,AA',
       generation: undefined,
       fromGeneration: true,
       edited: true,
       trimmed: false,
     });
-    expect(quiet).not.toHaveProperty('sourceUrl');
+    expect(first.sourceUrl).toMatch(/^\/v3\/assets\/chan\/sprite_1_/);
     // Store the first edit, so the second edit starts from an image with no
     // `generation`. `fromGeneration` must still be true.
-    propsByKey.k1 = {...propsByKey.k1, ...quiet};
+    propsByKey.k1 = {...propsByKey.k1, ...first};
     await act(async () => {
       await writer().saveEdited(target, 'data:image/png;base64,AB', {});
     });
     expect(repointAnimation.mock.calls[1][2]).toMatchObject({
       fromGeneration: true,
     });
-    expect(uploadImage).toHaveBeenCalledTimes(1);
-    const loud = repointAnimation.mock.calls[1][2] as Record<string, unknown>;
-    expect(loud.sourceUrl).toMatch(/^\/v3\/assets\/chan\/sprite_1_/);
+    expect(uploadImage).toHaveBeenCalledTimes(2);
   });
 
-  it('gives a drawn blank its file whether or not an upload was asked for', async () => {
+  it('gives a drawn blank its file', async () => {
     const {writer, uploadImage} = renderWriter();
     await act(async () => {
       await writer().saveEdited(
         {key: null, imageType: 'sprite'},
         'data:image/png;base64,AA',
-        {pixelGridSize: 1},
-        {upload: false}
+        {pixelGridSize: 1}
       );
     });
     expect(uploadImage).toHaveBeenCalledTimes(1);

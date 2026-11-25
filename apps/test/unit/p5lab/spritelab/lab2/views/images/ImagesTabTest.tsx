@@ -650,7 +650,7 @@ describe('ImagesTab', () => {
       {key: null, imageType: 'sprite', subject: 'character'},
       'data:png',
       {pixelGridSize: 1},
-      expect.objectContaining({upload: true})
+      expect.anything()
     );
     expect(screen.queryByText('canvas')).toBeNull();
     expect(pressed()).toEqual(['Sprite 1']);
@@ -681,11 +681,10 @@ describe('ImagesTab', () => {
       imageType: 'sprite',
       subject: 'character',
     });
-    expect(saveEdited.mock.calls[0][3]).toMatchObject({upload: true});
     expect(onSaveProjectNow).not.toHaveBeenCalled();
     expect(screen.getByText('canvas')).toBeTruthy();
     expect(pressed()).toEqual(['Sprite 1']);
-    // The next pause saves onto that image, pixels only.
+    // The next pause saves onto that image.
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     await act(async () => {
       jest.advanceTimersByTime(800);
@@ -696,13 +695,11 @@ describe('ImagesTab', () => {
       imageType: 'sprite',
       subject: 'character',
     });
-    expect(saveEdited.mock.calls[1][3]).toMatchObject({upload: false});
-    // Done uploads the file for those pixels and saves the project at once.
+    // Done, with nothing drawn since that save, saves the project at once.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
-    expect(saveEdited).toHaveBeenCalledTimes(3);
-    expect(saveEdited.mock.calls[2][3]).toMatchObject({upload: true});
+    expect(saveEdited).toHaveBeenCalledTimes(2);
     expect(onSaveProjectNow).toHaveBeenCalledTimes(1);
     expect(screen.queryByText('canvas')).toBeNull();
     jest.useRealTimers();
@@ -934,8 +931,8 @@ describe('ImagesTab', () => {
     expect(await screen.findByText('canvas')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     // The next image: the canvas stays up while its picture is decoded,
-    // then its tools take over, while the first image's last pixels go
-    // up with their file.
+    // then its tools take over, while the first image's last pixels are
+    // saved.
     fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
     expect(screen.getByText('canvas')).toBeTruthy();
     await act(async () => {});
@@ -946,7 +943,6 @@ describe('ImagesTab', () => {
       imageType: 'sprite',
       subject: undefined,
     });
-    expect(saveEdited.mock.calls[0][3]).toMatchObject({upload: true});
     expect(pressed()).toEqual(['Sprite 2']);
     finishFirst('k1');
   });
