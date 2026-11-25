@@ -657,8 +657,28 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const pinnedScene = isToolboxMode ? undefined : levelProperties.pinnedScene;
   const pinnedSceneId = pinnedScene?.id;
   const pinnedSceneName = pinnedScene?.name;
-  const pinnedSceneSource = pinnedScene?.source;
-  const extraScene = isToolboxMode ? undefined : levelProperties.extraScene;
+  // The scenes' code goes into the student's project in their language, as
+  // the added blocks do.
+  const pinnedSceneSource = useMemo(
+    () =>
+      isLevelEditMode
+        ? pinnedScene?.source
+        : localizeLevelText(pinnedScene?.source),
+    [pinnedScene?.source]
+  );
+  const levelExtraScene = isToolboxMode
+    ? undefined
+    : levelProperties.extraScene;
+  const extraScene = useMemo(
+    () =>
+      isLevelEditMode || !levelExtraScene?.source
+        ? levelExtraScene
+        : {
+            ...levelExtraScene,
+            source: localizeLevelText(levelExtraScene.source),
+          },
+    [levelExtraScene]
+  );
   useEffect(() => {
     if (!pinnedSceneId) {
       return;
