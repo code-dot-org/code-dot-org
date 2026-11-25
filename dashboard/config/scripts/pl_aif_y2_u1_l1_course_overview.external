@@ -9,7 +9,7 @@ Building AI Systems is a year-long course built around two semesters with differ
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 20px 0;">
   <div style="font-size: 16px; line-height: 1.5;">
-    <img src="https://images.code.org/5ec7d742efa4da97d9ae60b79611ef3d-image-1790625929941.png" alt="Microsoft Foundry logo" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;"> <strong>Microsoft Foundry</strong> is Microsoft's platform for deploying, testing, and building applications with AI models that already exist. Instead of writing an AI system from scratch, like students do in Semester 1, students use Foundry to put existing models to work: prompting them, testing them, and building programs around them.
+    <img src="https://images.code.org/5ec7d742efa4da97d9ae60b79611ef3d-image-1790625929941.png" alt="Microsoft Foundry logo" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;"> <strong>Microsoft Foundry</strong> is Microsoft's Software Development Kit (SDK)for deploying, testing, and building applications with AI models that already exist. Instead of writing an AI system from scratch, like students do in Semester 1, students use Foundry to put existing models to work: prompting them, testing them, and building programs around them.
   </div>
 </div>
 
@@ -49,8 +49,8 @@ Building AI Systems is a year-long course built around two semesters with differ
         <div>Unit 6: AI at Scale</div>
       </td>
       <td style="padding: 12px; vertical-align: top; font-size: 16px;">
-        <div style="margin-bottom: 6px;">Unit 7: Integrating Software Systems</div>
-        <div style="margin-bottom: 6px;">Unit 8: Generative AI</div>
+        <div style="margin-bottom: 6px;">Unit 7: Generative AI</div>
+        <div style="margin-bottom: 6px;">Unit 8: Integrating Software Systems</div>
         <div style="margin-bottom: 6px;">Unit 9: Multimodal Data</div>
         <div>Unit 10: Problem-Solving with AI</div>
       </td>
@@ -60,7 +60,7 @@ Building AI Systems is a year-long course built around two semesters with differ
 
 <div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-bottom: 12px;">
   <div style="font-size: 16px; color: #06338D; line-height: 1.5;">
-    <strong>&#8505; Note:</strong> At time of publishing, Semester 2 activities are expected to run as an in-platform simulation of Microsoft Foundry rather than live Foundry accounts. This page will be updated if that changes.
+    <strong>&#8505; Note:</strong> Semester 2 activities use real Microsoft Foundry accounts. You'll find more about this in the Getting Started with Microsoft Foundry module.
   </div>
 </div>
 

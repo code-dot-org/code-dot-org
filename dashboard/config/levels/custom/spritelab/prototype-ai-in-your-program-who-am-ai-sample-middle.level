@@ -643,8 +643,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "UvDp8+1`9Qo%/I5nf6jo",
-                  "x": 600,
-                  "y": 900,
+                  "x": 618,
+                  "y": 1007,
                   "extraState": {
                     "procedureId": "vSA*a;^?VDe}n_Ho,ePl",
                     "initialDeleteConfig": true,
@@ -805,7 +805,7 @@
                   "type": "procedures_defnoreturn",
                   "id": "+@Fpz*kYP0UmM![|.mm8",
                   "x": 20,
-                  "y": 820,
+                  "y": 943,
                   "extraState": {
                     "procedureId": "6/UK,3Jhb,L=]8@p@nvq",
                     "initialDeleteConfig": true,
@@ -830,7 +830,7 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "z8Ve%N;r_mY_hc*$7R-p",
-                  "x": 54,
+                  "x": 618,
                   "y": 921,
                   "extraState": {
                     "procedureId": "S!xMm=$]~M3Z6Vk(sJe*",
@@ -1312,8 +1312,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "b}IXf;%]U!J?)Ez20-rR",
-                  "x": 673,
-                  "y": 280,
+                  "x": 685,
+                  "y": 290,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1381,7 +1381,7 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": ":n3xI#H7+n?_{aoy@mSb",
-                  "x": 899,
+                  "x": 1026,
                   "y": 1055,
                   "inputs": {
                     "VAR": {
@@ -2048,10 +2048,13 @@
     "level_mode": {
       "kind": "code"
     },
+    "long_instructions": "**PROTOTYPE – SC2 AI in Your Program · Who Am AI? project**\r\n**This version: Calibration Sample B (Jordan, firefighter) – middle**\r\n\r\nSample student work for rubric calibration. Score it on the four task-specific rubrics **before** reading the author's key in the calibration samples file.\r\n\r\n- `my_prompt`: \"You are a brave firefighter. Never say firefighter.\"\r\n- Hint: fixed rule (\"I help people in emergencies\").\r\n- Guess check: AI that picks (Yes / No / Not sure). A wrong guess gets a fixed rule reply.\r\n- Off-topic check: a rule that only catches an empty question.\r\n- No plan for when the AI sends nothing back.\r\n- Try \"Are you a firefighter?\" (in testing, the AI answered \"You are close, I help people in danger!\") and the guess \"fireman\".\r\n\r\n**All versions**\r\n- Starter, no image generation: [104027](https://levelbuilder-studio.code.org/levels/104027)\r\n- Starter with image generation: [105336](https://levelbuilder-studio.code.org/levels/105336)\r\n- Finished sample (strong): [105337](https://levelbuilder-studio.code.org/levels/105337)\r\n- Calibration sample, middle (this level): [105339](https://levelbuilder-studio.code.org/levels/105339)\r\n- Calibration sample, weak: [105340](https://levelbuilder-studio.code.org/levels/105340)\r\n- Prompt Helper (AI Chat level): [105338](https://levelbuilder-studio.code.org/levels/105338)\r\n\r\n**Open questions**\r\n- Is this a clear \"Level 1\" on all four concepts, or does C1 read as Level 2? (The author's notes flag C1 as the likely disagreement.)\r\n- Should the middle sample show one Level 2 concept so the rubrics have a mixed profile to calibrate on?",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-24T05:11:53.556+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-sprite-lab\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-sprite-lab\"},{\"changed_at\":\"2026-11-24 05:13:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-24T05:11:53.556+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-sprite-lab\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-sprite-lab\"},{\"changed_at\":\"2026-11-24 05:13:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 04:47:13 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:31:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:31:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:33:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

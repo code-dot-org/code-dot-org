@@ -8,8 +8,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-20 23:07:52 UTC",
-    "hide_within_course": true,
+    "serialized_at": "2026-11-25 02:00:17 UTC",
+    "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -58,15 +58,31 @@
   ],
   "lessons": [
     {
+      "key": "lesson-14",
+      "name": "Pre-Assessment",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-year2-semester1-unit6"
+      }
+    },
+    {
       "key": "lesson-1",
       "name": "Challenges at Scale",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
         "overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What are the challenges with using AI at scale?**\n\nIn this lesson, students take on the role of reliability engineers considering the challenges that arise when scaling an AI product. They consider error rates, calculate what that error rate might mean in a large user base, and compare the error rate different AI systems can tolerate. Students also write Python code to build linear regression models and evaluate situations in which models might fail to learn useful patterns.",
-        "preparation": "- Print copies of the Error Budget Activity Guide (one for each student)\n- Provide, or ask students to bring, calculators\n",
+        "preparation": "- Print copies of the Error Budget Activity Guide (one for each student)\n- Print copies of the AI at Scale Unit Guide (one for each student)\n- Provide, or ask students to bring, calculators\n",
         "student_overview": "<i class=\"fa-solid fa-user-graduate\"></i> ***Career Journeys***\n\n**What are the challenges with using AI at scale?**\n\nIn this lesson, you'll take on the role of reliability engineers considering the challenges that arise when scaling an AI product. You'll consider error rates, calculate what that error rate might mean in a large user base, and compare the error rate different AI systems can tolerate."
       },
       "seeding_key": {
@@ -78,7 +94,7 @@
     {
       "key": "lesson-2",
       "name": "Artificial Neurons",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -96,7 +112,7 @@
     {
       "key": "lesson-3",
       "name": "Training Neurons",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -114,7 +130,7 @@
     {
       "key": "lesson-4",
       "name": "Collecting Data for AI",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -133,7 +149,7 @@
     {
       "key": "lesson-5",
       "name": "Neural Networks",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -152,7 +168,7 @@
     {
       "key": "lesson-6",
       "name": "Regression with Neural Networks",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -170,7 +186,7 @@
     {
       "key": "lesson-7",
       "name": "Classification with Neural Networks",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -188,7 +204,7 @@
     {
       "key": "lesson-8",
       "name": "Safeguards for AI",
-      "absolute_position": 8,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -206,7 +222,7 @@
     {
       "key": "lesson-9",
       "name": "What Neurons Learn",
-      "absolute_position": 9,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
@@ -224,7 +240,7 @@
     {
       "key": "lesson-10",
       "name": "Deep Learning",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
@@ -242,7 +258,7 @@
     {
       "key": "lesson-11",
       "name": "Hardware for AI",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
@@ -260,7 +276,7 @@
     {
       "key": "lesson-12",
       "name": "Costs of AI",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
@@ -278,7 +294,7 @@
     {
       "key": "lesson-13",
       "name": "Neural Network Project",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -292,9 +308,37 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit6"
       }
+    },
+    {
+      "key": "lesson-15",
+      "name": "End of Unit Assessment",
+      "absolute_position": 15,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif-year2-semester1-unit6"
+      }
     }
   ],
   "lesson_activities": [
+    {
+      "key": "5248fcb3-6dcf-4f05-b663-99a94b85a43d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5248fcb3-6dcf-4f05-b663-99a94b85a43d",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-year2-semester1-unit6"
+      }
+    },
     {
       "key": "f8d78219-d330-41d8-b624-ea495154fb77",
       "position": 1,
@@ -863,9 +907,32 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "aif-year2-semester1-unit6"
       }
+    },
+    {
+      "key": "6766dffb-2e54-4f57-8b2e-f701f3f92fa0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6766dffb-2e54-4f57-8b2e-f701f3f92fa0",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif-year2-semester1-unit6"
+      }
     }
   ],
   "activity_sections": [
+    {
+      "key": "ee4e5cb7-6057-4eb7-9bba-1fe16a5b1e0c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee4e5cb7-6057-4eb7-9bba-1fe16a5b1e0c",
+        "lesson_activity.key": "5248fcb3-6dcf-4f05-b663-99a94b85a43d"
+      }
+    },
     {
       "key": "1f79e394-1588-4cd8-ab2a-4aebee1179d3",
       "position": 1,
@@ -4901,11 +4968,44 @@
         "activity_section.key": "5258b370-8190-474f-b14b-7bcb1d8ddff7",
         "lesson_activity.key": "834ba9c0-00b6-4ed1-8e17-ed261bbf3d86"
       }
+    },
+    {
+      "key": "8ebdff06-5967-4a83-91f1-9f1d0910e94c",
+      "position": 1,
+      "properties": {
+        "progression_name": "End of Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "8ebdff06-5967-4a83-91f1-9f1d0910e94c",
+        "lesson_activity.key": "6766dffb-2e54-4f57-8b2e-f701f3f92fa0"
+      }
     }
   ],
   "script_levels": [
     {
       "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Pre-Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-ai-at-scale-preassessment-levelgroup-2026"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-year2-semester1-unit6",
+        "activity_section.key": "ee4e5cb7-6057-4eb7-9bba-1fe16a5b1e0c"
+      },
+      "level_keys": [
+        "aif-y2-ai-at-scale-preassessment-levelgroup-2026"
+      ]
+    },
+    {
+      "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4927,7 +5027,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4949,7 +5049,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4971,7 +5071,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -4993,7 +5093,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5015,7 +5115,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5037,7 +5137,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5059,7 +5159,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5081,7 +5181,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5103,7 +5203,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5125,7 +5225,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5147,7 +5247,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -5169,7 +5269,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5191,7 +5291,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5213,7 +5313,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5235,7 +5335,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5257,7 +5357,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5279,7 +5379,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5301,7 +5401,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5323,7 +5423,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5345,7 +5445,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5367,7 +5467,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5389,7 +5489,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5411,7 +5511,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5433,7 +5533,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5455,7 +5555,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5477,7 +5577,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5499,7 +5599,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5521,7 +5621,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5543,7 +5643,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5565,7 +5665,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5587,7 +5687,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5609,7 +5709,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5631,7 +5731,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5653,7 +5753,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5675,7 +5775,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -5697,7 +5797,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5717,9 +5817,43 @@
       "level_keys": [
         "aif-y2-ai-at-scale-lesson13-level8-2026"
       ]
+    },
+    {
+      "chapter": 39,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "End of Unit Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-y2-ai-at-scale-postassessment-levelgroup-2026"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif-year2-semester1-unit6",
+        "activity_section.key": "8ebdff06-5967-4a83-91f1-9f1d0910e94c"
+      },
+      "level_keys": [
+        "aif-y2-ai-at-scale-postassessment-levelgroup-2026"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-ai-at-scale-preassessment-levelgroup-2026",
+        "script_level.level_keys": [
+          "aif-y2-ai-at-scale-preassessment-levelgroup-2026"
+        ],
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "aif-year2-semester1-unit6",
+        "activity_section.key": "ee4e5cb7-6057-4eb7-9bba-1fe16a5b1e0c"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "aif-y2-ai-at-scale-lesson1-level1-2026",
@@ -6163,6 +6297,18 @@
         "script.name": "aif-year2-semester1-unit6",
         "activity_section.key": "9449dda7-8b17-4897-898f-2d24b0b0d310"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-y2-ai-at-scale-postassessment-levelgroup-2026",
+        "script_level.level_keys": [
+          "aif-y2-ai-at-scale-postassessment-levelgroup-2026"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "aif-year2-semester1-unit6",
+        "activity_section.key": "8ebdff06-5967-4a83-91f1-9f1d0910e94c"
+      }
     }
   ],
   "resources": [
@@ -6339,6 +6485,32 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_video_score"
+      }
+    },
+    {
+      "name": "[KEY] AI at Scale Unit Guide",
+      "url": "https://docs.google.com/document/d/19hIayHG04cb7s4tQ7yIvfMj7CsPTOdipmX4wX64jC2w/edit?usp=sharing",
+      "key": "_key_ai_at_scale_unit_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_ai_at_scale_unit_guide"
+      }
+    },
+    {
+      "name": "AI at Scale Unit Guide",
+      "url": "https://docs.google.com/document/d/1nizJhuzkfzn30VwbvQbttj3OVMzE6yOsK_Wd7MTd72s/edit?usp=sharing",
+      "key": "ai_at_scale_unit_guide",
+      "properties": {
+        "audience": "Student",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "ai_at_scale_unit_guide"
       }
     },
     {
@@ -6739,6 +6911,18 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "_exemplar_error_budget"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "_key_ai_at_scale_unit_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "ai_at_scale_unit_guide"
       }
     },
     {
