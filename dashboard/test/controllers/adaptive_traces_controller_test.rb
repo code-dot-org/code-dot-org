@@ -14,7 +14,7 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
       usage: {input: 10, output: 2, total: 12},
       startedAt: 1_767_225_600_000,
       endedAt: 1_767_225_602_000,
-      metadata: {pathwayId: 'p', stepId: 's', inputsHash: 'h', promptVersion: 'v1', workAt: 't', instructionsTraceId: 'i', nested: {no: 1}, secret: 'nope'},
+      metadata: {pathwayId: 'p', stepId: 's', inputsHash: 'h', promptVersion: 'v1', workAt: 't', instructionsTraceId: 'i', replies: 5, nested: {no: 1}, secret: 'nope'},
     }
   end
 
@@ -96,7 +96,7 @@ class AdaptiveTracesControllerTest < ActionController::TestCase
 
     opts = capture_trace
 
-    assert_equal({pathway_id: 'p', step_id: 's', inputs_hash: 'h', prompt_version: 'v1', work_at: 't', instructions_trace_id: 'i', level_id: 7}, opts[:metadata])
+    assert_equal({pathway_id: 'p', step_id: 's', inputs_hash: 'h', prompt_version: 'v1', work_at: 't', instructions_trace_id: 'i', replies: 5, level_id: 7}, opts[:metadata])
   end
 
   test 'groups traces into a session per student, unit and level' do

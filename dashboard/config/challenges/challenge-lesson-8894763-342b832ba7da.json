@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894763-342b832ba7da",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 8: Defending Your Data",
+  "question": "A mystery guest is coming to a party, and you give out clues one at a time. Watch how fast the group of possible guests shrinks as the clues add up.\n\nSteps:\n1. Start recording. Invent a made-up person. Do not use a real person.\n2. Say clue 1, something many people share (like “likes music”). Say how many people it could fit.\n3. Say clue 2 and clue 3, each one narrower than the last. After each, say how many people it could fit now.\n4. Tell the camera which clue made the person easy to find, and why.",
+  "default_modality": "video",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "Student does not say any clues on camera."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student says fewer than 3 clues, the clues do not get narrower, or the student does not say how many people each clue could fit."
+    },
+    {
+      "level": 2,
+      "description": "Student says 3 clues about a made-up person, each narrower than the last, AND says after each one how many people it could fit (for example, \"many,\" \"a few,\" or a number)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND names the clue that made the person easy to find AND explains why."
+    }
+  ],
+  "whiteboard_starter_image_key": null,
+  "whiteboard_starter_image_alt_text": null
+}

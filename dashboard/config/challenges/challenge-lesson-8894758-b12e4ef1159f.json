@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894758-b12e4ef1159f",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 3: Responsible Co-Creation",
+  "question": "Patterns are everywhere, even in friendship bracelets. Can you predict the next bead before it’s strung?\n\nSteps:\n1. Use the arrow tool to point at the bead you think comes next on each bracelet.\n2. Place a shape next to the bracelet that was the hardest to predict.\n3. Record your voice explaining how you knew the answers. Bonus points if you say why the hard one was hard.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the student places arrows on fewer than 3 bracelets, an arrow is on a bead that does not fit the pattern, no shape is placed, or the voice recording gives no explanation."
+    },
+    {
+      "level": 2,
+      "description": "Student places an arrow on B for Bracelet 1, G for Bracelet 2, and either P or V for Bracelet 3, AND places a shape next to a bracelet, AND the voice recording describes the pattern in at least one bracelet."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the shape is next to Bracelet 3 AND the voice recording explains that it could continue two ways (repeat the pattern, or add another V)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894758-b12e4ef1159f-7af147ca",
+  "whiteboard_starter_image_alt_text": "\"Which bead comes next?\" Three bracelets, each ending in a question mark, with three bead options on the right. Bracelet 1: R, B, R, B, R, B, R, then ?; options R, B, Y. Bracelet 2: Y, G, G, Y, G, G, Y, G, then ?; options Y, G, P. Bracelet 3: P, P, V, then ?; options P, V, O. (R is red, B is blue, Y is yellow, G is green, P is pink, V is violet, and O is orange.)"
+}

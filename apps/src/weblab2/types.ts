@@ -1,4 +1,4 @@
-import {LevelProperties} from '@cdo/apps/lab2/types';
+import {CodebridgeLevelProperties} from '@codebridge/types';
 
 export interface AiTutorPromptSettings {
   answerTypes: AiTutorAnswerType[];
@@ -12,8 +12,9 @@ export type Widget2 = {
   parameters?: object;
 };
 
-export interface Weblab2LevelProperties extends LevelProperties {
-  widgetView?: boolean;
+export interface Weblab2LevelProperties extends CodebridgeLevelProperties {
+  /** Hides the resource panel in widget view (the sidebar is still shown). */
+  widgetViewHideResourcePanel?: boolean;
   initialViewMode?: ViewMode;
   aiTutorMode?: string;
   levelSystemPrompt?: string;

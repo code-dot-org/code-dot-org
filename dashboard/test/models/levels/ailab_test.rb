@@ -104,6 +104,21 @@ class AilabTest < ActiveSupport::TestCase
     end
   end
 
+  test 'lab2 level tests on a whole number of rows or a percentage of them' do
+    [{count: 1}, {count: 30}, {percent: 0.5}, {percent: 25}, {percent: 99.5}].each do |test_rows|
+      level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], testRows: test_rows}.to_json)
+      assert level.valid?, "expected testRows #{test_rows.inspect} to be valid: #{level.errors.full_messages.join(', ')}"
+    end
+  end
+
+  test 'lab2 level rejects test rows that are not one count or percentage in range' do
+    [{count: 0}, {count: 2.5}, {count: '5'}, {percent: 0}, {percent: 100}, {count: 5, percent: 10}, {}, {rows: 5}, 5, nil].each do |test_rows|
+      level = build(:ailab, uses_lab2: 'true', mode: {datasets: ['zoo'], testRows: test_rows}.to_json)
+      refute level.valid?, "expected testRows #{test_rows.inspect} to be invalid"
+      assert_equal ['must test on a whole number of rows of at least 1, or a percentage of rows above 0 and below 100.'], level.errors[:mode]
+    end
+  end
+
   test 'lab2 level pretrains only on a locked label and features, with no random rows or required accuracy' do
     pretrained = {datasets: ['zoo'], pretrained: true, hideSelectLabel: true, lockFeatures: true, reserveLastRows: true, label: 'Type', features: ['Legs']}
     assert build(:ailab, uses_lab2: 'true', mode: pretrained.to_json).valid?

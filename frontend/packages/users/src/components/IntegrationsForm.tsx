@@ -12,6 +12,7 @@ import {
   useUpdateProfile,
   type UserSettings,
 } from '@code-dot-org/core/api';
+import {sendEvent} from '@code-dot-org/core/plugins/analytics';
 
 import IntegrationSettings from '../sections/IntegrationSettings';
 import LinkedAccounts from '../sections/LinkedAccounts';
@@ -38,9 +39,15 @@ export default function IntegrationsForm({settings}: {settings: UserSettings}) {
       return;
     }
 
+    const ltiRosterSyncEnabled = rosterSync === 'true';
+    sendEvent(
+      ltiRosterSyncEnabled ? 'lti_opt_out_toggle_on' : 'lti_opt_out_toggle_off',
+      {lms_name: integrations.lmsName},
+    );
+
     dispatch({type: 'saveStarted'});
     try {
-      await mutation.mutateAsync({ltiRosterSyncEnabled: rosterSync === 'true'});
+      await mutation.mutateAsync({ltiRosterSyncEnabled});
       dispatch({type: 'saveSucceeded'});
       toast('Changes saved.');
     } catch (error) {

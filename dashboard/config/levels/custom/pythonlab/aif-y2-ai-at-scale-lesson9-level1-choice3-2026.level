@@ -1,0 +1,77 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-11-20T20:40:51.000Z",
+  "level_num": "custom",
+  "user_id": 23838,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "Comfort",
+    "long_instructions": "You are building a neural network for a school to predict whether its classrooms are comfortable or uncomfortable for students, based on the temperature of the room and the humidity.\r\n\r\n**☑️ Do This:**\r\n\r\n1. Open the `classroom.csv` file and read the data into a variable called `rooms` that stores a list of rows.\r\n2. Fill in the `TODO`s in the definitions of `inputs` and `outputs` with names of columns from `classroom.csv`. For the first input, use the temperature of the room; for the second input, use the humidity of the room.\r\n3. Fit the model to the training input and output data.\r\n4. Score the model on the test input and output data. Print out the accuracy score.\r\n5. Run the program. Look at the accuracy score, then look at the visualization of the data and what the model learned. How well did the model learn the pattern in the data? You’ll answer a question about this in the next level.\r\n\r\n**💻 Coding Tip**\r\n\r\nUse `open` to open a file and `csv.DictReader` to read that file into dictionaries.\r\n\r\nUse the `fit` method to train a model and the `score` method to score it. Both methods accept two arguments: a list of inputs and a list of outputs.\r\n",
+    "bubble_choice_description": "Evaluate a neural network for a school to predict whether its classrooms are comfortable or uncomfortable for students.",
+    "thumbnail_url": "https://images.code.org/2a65db9aa75b065bfea4f58f919681b5-lecture.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "debug",
+        "example",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "contents": "import csv\n\nfrom sklearn.linear_model import SGDClassifier\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n\nfrom helpers import visualize_model\n\n# TODO 1: Open classroom.csv and read the data into a variable called rooms\nrooms = []\n\n# TODO 2: Fill in the TODOs with the column names for inputs and outputs\ninputs = [[float(room[\"TODO\"]), float(room[\"TODO\"])] for room in rooms]\noutputs = [room[\"TODO\"] for room in rooms]\n\n# Split into training and testing data\ntrain_inputs, test_inputs, train_outputs, test_outputs = train_test_split(\n    inputs,\n    outputs,\n    test_size=0.4,\n)\n\n# Configure the classifier\nmodel = make_pipeline(StandardScaler(), SGDClassifier(max_iter=1000))\n\n# TODO 3: Train the model\n\n# TODO 4: Score the model and print the accuracy score\n\n# Visualize model\nvisualize_model(model, inputs, outputs, \"Temperature\", \"Humidity\")\n",
+          "folderId": "0",
+          "active": true
+        },
+        "1": {
+          "id": "1",
+          "name": "classroom.csv",
+          "contents": "temperature_f,humidity_pct,label\n72,23,uncomfortable\n71,53,comfortable\n86,63,uncomfortable\n69,44,comfortable\n71,58,comfortable\n77,55,comfortable\n70,56,comfortable\n71,53,comfortable\n67,30,uncomfortable\n90,37,uncomfortable\n87,74,uncomfortable\n75,37,comfortable\n73,56,comfortable\n63,16,uncomfortable\n83,18,uncomfortable\n68,56,comfortable\n72,52,comfortable\n75,34,comfortable\n81,29,uncomfortable\n73,37,comfortable\n75,46,comfortable\n68,32,comfortable\n77,46,comfortable\n73,45,comfortable\n61,85,uncomfortable\n77,33,comfortable\n75,34,comfortable\n63,65,uncomfortable\n70,51,comfortable\n85,22,uncomfortable\n76,48,comfortable\n76,55,comfortable\n85,72,uncomfortable\n72,60,comfortable\n71,41,comfortable\n66,81,uncomfortable\n73,49,comfortable\n80,10,uncomfortable\n77,53,comfortable\n61,20,uncomfortable\n85,16,uncomfortable\n78,42,uncomfortable\n89,77,uncomfortable\n71,35,comfortable\n76,86,uncomfortable\n77,53,comfortable\n67,71,uncomfortable\n81,49,uncomfortable\n68,30,comfortable\n64,83,uncomfortable\n77,45,comfortable\n68,51,comfortable\n74,35,comfortable\n74,33,comfortable\n78,82,uncomfortable\n76,40,comfortable\n88,18,uncomfortable\n75,66,uncomfortable\n74,36,comfortable\n76,51,comfortable\n69,28,uncomfortable\n71,65,uncomfortable\n76,48,comfortable\n68,33,comfortable\n80,65,uncomfortable\n75,83,uncomfortable\n84,55,uncomfortable\n63,77,uncomfortable\n73,41,comfortable\n79,30,uncomfortable\n84,68,uncomfortable\n70,46,comfortable\n67,13,uncomfortable\n77,60,comfortable\n79,25,uncomfortable\n84,22,uncomfortable\n81,24,uncomfortable\n76,58,comfortable\n72,64,uncomfortable\n71,48,comfortable\n90,24,uncomfortable\n84,53,uncomfortable\n75,13,uncomfortable\n87,61,uncomfortable\n77,38,comfortable\n74,47,comfortable\n70,32,comfortable\n77,60,comfortable\n63,20,uncomfortable\n78,64,uncomfortable\n80,81,uncomfortable\n59,87,uncomfortable\n65,80,uncomfortable\n74,35,comfortable\n65,46,uncomfortable\n74,56,comfortable\n86,39,uncomfortable\n64,57,uncomfortable\n72,38,comfortable\n72,39,comfortable\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "helpers.py",
+          "contents": "import matplotlib.pyplot as plt\nimport numpy as np\nfrom matplotlib.colors import ListedColormap\nfrom sklearn.inspection import DecisionBoundaryDisplay\n\nPALETTE = [\"tab:blue\", \"tab:orange\"]\n\n\ndef visualize_model(model, inputs, outputs, x_label, y_label):\n    labels = list(model.classes_)\n    colors = PALETTE[: len(labels)]\n    display = DecisionBoundaryDisplay.from_estimator(\n        model,\n        np.array(inputs),\n        response_method=\"predict\",\n        cmap=ListedColormap(colors),\n        alpha=0.25,\n        xlabel=x_label,\n        ylabel=y_label,\n    )\n    for label, color in zip(labels, colors):\n        xs = [x for (x, y), out in zip(inputs, outputs) if out == label]\n        ys = [y for (x, y), out in zip(inputs, outputs) if out == label]\n        display.ax_.scatter(xs, ys, c=color, label=label, edgecolors=\"black\")\n    display.ax_.legend()\n    plt.show()\n\n\n",
+          "folderId": "0",
+          "active": false,
+          "type": "support"
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "validation_file": {
+      "id": "2",
+      "name": "validation.py",
+      "contents": "import contextlib\nimport io\nfrom unittest import TestCase\n\nfrom sklearn.exceptions import NotFittedError\nfrom sklearn.utils.validation import check_is_fitted\nfrom unittest_runner import ValidationProtocol\n\n\ndef load_student_program():\n    \"\"\"Imports main into test, preventing additional output and chart calls\"\"\"\n    import helpers\n    helpers.visualize_model = lambda *args, **kwargs: None\n    with contextlib.redirect_stdout(io.StringIO()):\n        import main\n    return main\n\n\nclass TestComfortPredictor(TestCase):\n    longMessage = False\n\n    def test_inputs_use_right_columns(self):\n        \"\"\"Inputs are temperature, then humidity\"\"\"\n        main = load_student_program()\n        first = main.rooms[0]\n        expected = [float(first[\"temperature_f\"]), float(first[\"humidity_pct\"])]\n        self.assertEqual(main.inputs[0], expected, \"Inputs don't use temperature, then humidity\")\n\n    def test_model_is_trained(self):\n        \"\"\"The model is trained\"\"\"\n        try:\n            check_is_fitted(load_student_program().model)\n        except NotFittedError:\n            self.fail(\"The model hasn't been trained yet\")\n\n    def test_print_accuracy(self):\n        \"\"\"Prints the model's accuracy score\"\"\"\n        output = \"\\n\".join(ValidationProtocol().get_stdout_logs())\n        self.assertRegex(output, r\"\\d\", \"Output doesn't include the accuracy score\")\n",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    },
+    "encrypted_exemplar_sources": "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\nXA==\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-11-20 20:42:00 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 20:42:15 +0000\",\"changed\":[],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+}]]></config>
+</Pythonlab>

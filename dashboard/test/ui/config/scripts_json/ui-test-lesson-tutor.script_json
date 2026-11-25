@@ -55,6 +55,7 @@
         "zh-CN",
         "zh-TW"
       ],
+      "tutor_plus_available": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,

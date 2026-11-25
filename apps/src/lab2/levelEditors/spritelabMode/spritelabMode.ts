@@ -17,6 +17,7 @@ import {
   LevelModeKind,
   tabsForMode,
 } from '@cdo/apps/p5lab/spritelab/lab2/levelMode';
+import {ALL_TABS} from '@cdo/apps/p5lab/spritelab/lab2/redux/spriteLab2Redux';
 
 import {setJsonObjectValue} from '../jsonUtils';
 
@@ -60,6 +61,7 @@ const IMAGE_TAB_KEYS: (keyof LevelMode)[] = [
 // set by editing the JSON, and are listed here so the form keeps them.
 const TAB_KEYS: (keyof LevelMode)[] = [
   'extraTabs',
+  'startTab',
   'paletteRoles',
   'noNewImages',
   'noDeletingImages',
@@ -123,6 +125,8 @@ function isValidLevelModeValue(key: string, value: unknown): boolean {
       return isNonEmptyUniqueListOf(value, isNonEmptyString);
     case 'extraTabs':
       return isNonEmptyUniqueListOf(value, isOneOf(EXTRA_TABS));
+    case 'startTab':
+      return isOneOf(ALL_TABS)(value);
     case 'imageKinds':
       return isNonEmptyUniqueListOf(value, isOneOf(IMAGE_TYPES));
     // A false flag reads the same as no flag, so only true is stored.

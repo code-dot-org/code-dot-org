@@ -1,0 +1,13 @@
+name 'data-makes-ai-lesson15-new-user-choice'
+display_name 'New User'
+description 'Click the same dataset you chose in Meet the Data.'
+navigation_type 'next_sublevel'
+
+sublevels
+level 'data-makes-ai-lesson15-new-user-snacks'
+level 'data-makes-ai-lesson15-new-user-run-or-pass'
+level 'data-makes-ai-lesson15-new-user-study-playlist'
+level 'data-makes-ai-lesson15-new-user-video-games'
+level 'data-makes-ai-lesson15-new-user-board-games'
+
+uses_lab2

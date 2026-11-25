@@ -9,6 +9,7 @@ export {default as Match} from './SkillsCheck/QuestionTypes/Match';
 export {default as MultipleChoice} from './SkillsCheck/QuestionTypes/MultipleChoice';
 export {default as NextStepPicker} from './NextStepPicker';
 export {default as PersonalizedWelcomeBox} from './PersonalizedWelcomeBox';
+export {default as PodcastsBox} from './ReviewModalities/PodcastsBox';
 export {default as PreSkillsCheck} from './PreSkillsCheck';
 export {default as ReflectionBox} from './Reflection/ReflectionBox';
 export {default as Scramble} from './SkillsCheck/QuestionTypes/Scramble';
@@ -17,6 +18,7 @@ export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
 export {default as TutorSummaryBox} from './TutorSummaryBox';
 export {default as ValidatedLevelsBox} from './StudentLessonStats/ValidatedLevelsBox';
 export {default as VideoRecorder} from './ChallengeActivities/VideoRecorder';
+export {default as VideosBox} from './ReviewModalities/VideosBox';
 export {default as VocabularyFlashcards} from './ReviewModalities/VocabularyFlashcards';
 export type {VocabularyItem} from './ReviewModalities/VocabularyFlashcards';
 export {default as WelcomeBox} from './WelcomeBox';
@@ -32,6 +34,7 @@ export type {
   Challenge,
   ChallengeResponse,
   ChallengeResponseAsset,
+  JsonVideoData,
   LessonObjective,
   MatchSolution,
   MultiSolution,

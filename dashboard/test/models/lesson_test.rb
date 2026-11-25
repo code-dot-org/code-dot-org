@@ -45,6 +45,22 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal level1.id, lockable_state[0][:user_level_data][:level_id], 'level id should correspond to active level'
   end
 
+  test "lockable_state with Quiz as last level" do
+    script = create(:script, :in_single_unit_course)
+    quiz = create(:quiz, purpose: 'exam')
+    lesson = create(:lesson, script: script, lockable: true)
+    create(:script_level, script: script, levels: [quiz], assessment: true, lesson: lesson)
+
+    lockable_state = lesson.lockable_state [@student]
+    assert_equal true, lockable_state[0][:locked], 'Quiz without user_level should be locked'
+    assert_equal quiz.id, lockable_state[0][:user_level_data][:level_id]
+
+    UserLevel.update_lockable_state(@student.id, quiz.id, script.id, false, false)
+
+    lockable_state = lesson.lockable_state [@student]
+    assert_equal false, lockable_state[0][:locked], 'unlocked Quiz should be unlocked'
+  end
+
   test "summary for single page long assessment" do
     script = create(:script, :in_single_unit_course)
     create(:text_match, name: 'level_free_response', type: 'TextMatch')
@@ -1582,41 +1598,33 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal summary[:lessonEditPath].sub(%r{/edit\z}, '/generate'), summary[:lessonGeneratePath]
   end
 
-  test 'lesson_tutor_available? is true for a lesson with a lesson plan in an AIF/AID course' do
-    unit = ai_course_unit('AIF')
+  test 'lesson_tutor_available? is true for a lesson with a lesson plan in a tutor_plus_available unit' do
+    unit = create(:unit, tutor_plus_available: true)
     lesson = create(:lesson, script: unit, has_lesson_plan: true)
     assert lesson.lesson_tutor_available?
     assert_equal "#{lesson.get_uncached_show_path}/tutor", lesson.summarize[:lessonTutorPath]
   end
 
   test 'lesson_tutor_available? is false for a lesson without a lesson plan' do
-    unit = ai_course_unit('AIF')
+    unit = create(:unit, tutor_plus_available: true)
     lesson = create(:lesson, script: unit, has_lesson_plan: false)
     refute lesson.lesson_tutor_available?
     assert_nil lesson.summarize[:lessonTutorPath]
   end
 
-  test 'lesson_tutor_available? is false for a lesson in a non-AI course' do
-    unit = ai_course_unit('CSD')
+  test 'lesson_tutor_available? is false for a lesson in a unit without tutor_plus_available' do
+    unit = create(:unit)
     lesson = create(:lesson, script: unit, has_lesson_plan: true)
     refute lesson.lesson_tutor_available?
     assert_nil lesson.summarize[:lessonTutorPath]
   end
 
   test 'lesson_tutor_path returns the tutor path when available and nil otherwise' do
-    unit = ai_course_unit('AIF')
+    unit = create(:unit, tutor_plus_available: true)
     available = create(:lesson, script: unit, has_lesson_plan: true)
     assert_equal "#{available.get_uncached_show_path}/tutor", available.lesson_tutor_path
 
     unavailable = create(:lesson, script: unit, has_lesson_plan: false)
     assert_nil unavailable.lesson_tutor_path
-  end
-
-  # Builds the single unit of a course whose offering has the given marketing
-  # initiative, so lessons created on it inherit that course's tutor eligibility.
-  private def ai_course_unit(marketing_initiative)
-    unit_group = create(:single_unit_course, :with_course_offering, family_name: "ai-course-#{marketing_initiative.downcase}", version_year: '2026')
-    unit_group.course_version.course_offering.update!(marketing_initiative: marketing_initiative)
-    unit_group.first_unit
   end
 end

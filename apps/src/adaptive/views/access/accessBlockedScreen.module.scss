@@ -1,0 +1,56 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+  overflow-y: auto;
+  padding: 40px 16px;
+  background: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  text-align: center;
+
+  > * {
+    flex: none;
+  }
+}
+
+.outage {
+  gap: 40px;
+}
+
+.illustration {
+  display: block;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.continue {
+  color: var(--text-neutral-tertiary);
+}
+
+.footnote {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: flex-end;
+}

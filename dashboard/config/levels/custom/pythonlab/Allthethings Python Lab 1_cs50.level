@@ -13,25 +13,17 @@
           "id": "0",
           "name": "main.py",
           "language": "py",
-          "contents": "import csv\nimport sys\n\n\ndef read_rows(filename):\n    with open(filename, newline=\"\", encoding=\"utf-8\") as f:\n        return [row for row in csv.reader(f)]\n\n\ndef column_widths(rows):\n    widths = []\n    for row in rows:\n        for i, cell in enumerate(row):\n            if i == len(widths):\n                widths.append(0)\n            widths[i] = max(widths[i], len(cell))\n    return widths\n\n\ndef separator(widths):\n    return \"+\" + \"+\".join(\"-\" * (w + 2) for w in widths) + \"+\"\n\n\ndef format_row(row, widths):\n    cells = []\n    for i, w in enumerate(widths):\n        cell = row[i] if i < len(row) else \"\"\n        cells.append(\" \" + cell.ljust(w) + \" \")\n    return \"|\" + \"|\".join(cells) + \"|\"\n\n\ndef main():\n    rows = read_rows(\"example.csv\")\n    if not rows:\n        sys.exit(\"empty file\")\n\n    widths = column_widths(rows)\n    line = separator(widths)\n\n    print(line)\n    print(format_row(rows[0], widths))\n    print(line)\n    for row in rows[1:]:\n        print(format_row(row, widths))\n    print(line)\n\n\nmain()",
+          "contents": "print(\"Hello, world!\")",
           "folderId": "0",
-          "active": true,
+          "active": false,
           "open": true,
-          "type": "support"
-        },
-        "1": {
-          "id": "1",
-          "name": "example.csv",
-          "contents": "one,two\nthree,four\nfive,six\nseven,eight",
-          "folderId": "0",
-          "active": false
+          "type": "starter"
         }
       },
       "folders": {
       },
       "openFiles": [
-        "0",
-        "1"
+        "0"
       ]
     },
     "long_instructions": "## Example Instructions Title\r\n\r\nThis is an example description.",
@@ -47,9 +39,17 @@
     "disable_edit_run_for_submission": "false",
     "enable_micro_bit": "false",
     "widget_view": "false",
-    "widget_view_allow_show_code": "false"
+    "widget_view_allow_show_code": "false",
+    "validation_file": {
+      "id": "1",
+      "name": "validation.py",
+      "contents": "",
+      "folderId": "0",
+      "active": false,
+      "type": "validation"
+    }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-12-19T16:13:52.465+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2026-03-06 20:23:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-06 21:47:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-06 21:48:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-04 04:11:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:13:52.465+00:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2026-03-06 20:23:44 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-06 21:47:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-03-06 21:48:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-08-04 04:11:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-19 22:25:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 03:33:45 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 03:48:35 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 03:48:57 +0000\",\"changed\":[\"validation_file\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 04:04:52 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 04:30:50 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"},{\"changed_at\":\"2026-11-20 04:31:11 +0000\",\"changed\":[\"start_sources\",\"validation_file\"],\"changed_by_id\":23838,\"changed_by_email\":\"brian@fifty.foundation\"}]"
 }]]></config>
 </Pythonlab>

@@ -1,12 +1,13 @@
 name 'data-makes-ai-lesson12-sketch-lab-choice'
-display_name 'Choose Your Dataset'
-description 'Pick the dataset you chose in Meet the Data. Your Project Sketch for that dataset opens.'
+display_name 'Start Your Project Map'
+description 'Click the same dataset you chose in Meet the Data. Your Project Map for it will open.'
+navigation_type 'next_sublevel'
 
 sublevels
-level 'data-makes-ai-lesson12-sketch-lab'
 level 'data-makes-ai-lesson12-sketch-lab-snacks'
-level 'data-makes-ai-lesson12-sketch-lab-board-games'
-level 'data-makes-ai-lesson12-sketch-lab-study-playlist'
 level 'data-makes-ai-lesson12-sketch-lab-run-or-pass'
+level 'data-makes-ai-lesson12-sketch-lab-study-playlist'
+level 'data-makes-ai-lesson12-sketch-lab'
+level 'data-makes-ai-lesson12-sketch-lab-board-games'
 
 uses_lab2

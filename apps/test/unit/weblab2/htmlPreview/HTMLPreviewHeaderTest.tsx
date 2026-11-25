@@ -5,7 +5,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
-import labReducer, {setIsShareView} from '@cdo/apps/lab2/lab2Redux';
+import labReducer from '@cdo/apps/lab2/lab2Redux';
 import {
   getStore,
   registerReducers,
@@ -34,10 +34,11 @@ describe('HTMLPreviewHeader inspector toggle', () => {
     restoreRedux();
   });
 
-  function renderHeader() {
+  function renderHeader(viewOnly = false) {
     return render(
       <Provider store={store}>
         <HTMLPreviewHeader
+          viewOnly={viewOnly}
           value="index.html"
           onChange={() => {}}
           onSubmit={() => {}}
@@ -84,11 +85,14 @@ describe('HTMLPreviewHeader inspector toggle', () => {
     expect(inspectorEnabled()).toBe(true);
   });
 
-  it('is hidden in share view', () => {
-    store.dispatch(setIsShareView(true));
-    renderHeader();
+  it('is hidden, with the debug panel and full screen toggles, when the header is view only', () => {
+    renderHeader(true);
     expect(
       screen.queryByRole('button', {name: ENABLE_LABEL})
     ).not.toBeInTheDocument();
+    expect(
+      screen.queryByRole('button', {name: 'Open debug panel'})
+    ).not.toBeInTheDocument();
+    expect(screen.getByRole('button', {name: 'Stop Preview'})).toBeVisible();
   });
 });

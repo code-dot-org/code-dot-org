@@ -1,0 +1,13 @@
+{
+  "key": "l10-nuance-is-growth",
+  "description": "Find out why an opinion about AI that isn't just “good” or “bad” shows your thinking has grown.",
+  "s3_uri": "s3://cdo-supplemental-curricular-content/json-videos/l10-nuance-is-growth.json",
+  "labs": [
+
+  ],
+  "json_schema_version": 1,
+  "audience": "Student",
+  "objective_keys": [
+    "153c51bf-4018-4ed9-8949-697ea18dcfe4"
+  ]
+}

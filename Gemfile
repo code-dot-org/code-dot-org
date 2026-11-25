@@ -69,7 +69,6 @@ gem 'xxhash'
 # See https://github.com/googleapis/google-api-ruby-client/blob/main/google-api-client/OVERVIEW.md
 gem 'google-apis-core'
 
-gem 'google-apis-analytics_v3'
 gem 'google-apis-classroom_v1'
 gem 'google-apis-youtube_v3'
 
@@ -192,8 +191,6 @@ gem 'omniauth-rails_csrf_protection', '~> 1.0.2'
 gem 'sass', '~> 3.2'
 
 gem 'haml', '~> 5.2.0'
-
-gem 'jquery-ui-rails', '~> 6.0.1'
 
 gem 'nokogiri', '~> 1.18.9'
 

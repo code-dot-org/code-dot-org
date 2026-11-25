@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894761-584c25ab63ed",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 6: The AI Credibility Guide",
+  "question": "Jo got three comments on his card. Only one tells him something he can use. Which one?\n\nSteps:\n1. Use the arrow tool to point at the comment that would help Jo the most.\n2. Place a shape on the part of the card that the comment is about.\n3. Record your voice explaining what makes that comment useful. Bonus points if you say why one of the other comments would not help.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the arrow is not on comment B, no shape is on the words on the card, or the voice recording does not mention that Jo's grandfather has trouble reading small words."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to comment B AND a shape is on the words on the card AND the voice recording mentions that Jo's grandfather has trouble reading small words."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording explains why comment A or comment C would not help Jo (for example, A does not say what to change, or C does not fix the problem)."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894761-584c25ab63ed-b5ec7684",
+  "whiteboard_starter_image_alt_text": "\"Jo made a birthday card for his grandfather.\" The card shows five balloons and a star, with \"Happy Birthday, Grandfather!\" and \"Love, Jo\" in very small, faint text. Three comments. A: \"Nice job!\" B: \"The words are very small. Jo's grandfather has trouble reading small print. Make them bigger and darker.\" C: \"Add 50 more stickers.\""
+}

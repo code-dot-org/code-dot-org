@@ -24,6 +24,10 @@ $list-share: 0.2;
 // The frame's rounded corners, and the border inside them.
 $frame-radius: 12px;
 $frame-border: 2px;
+// One row of the paint tools (the pixel editor's tool buttons are this
+// tall), and the space between it and the frame.
+$tools-row-height: 34px;
+$tools-row-gap: 8px;
 
 // The tab starts at the top of the editors' strip, which lies over its
 // first two columns; the pane column carries its own header there.
@@ -39,6 +43,8 @@ $frame-border: 2px;
   container-type: inline-size;
 }
 
+$tip-line-height: 24px;
+
 // A tip over the frame's bottom part while a picture is made; the frame
 // clips it to its corners.
 .frameTip {
@@ -48,25 +54,23 @@ $frame-border: 2px;
   bottom: 0;
   z-index: 1;
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 16px;
   margin: 0;
   padding: 12px 14px;
-  background-color: color-mix(
-    in srgb,
-    var(--neutral-base-true-black) 65%,
-    transparent
-  );
-  color: var(--text-neutral-white-fixed);
-  // The same font size as an h6 heading in the design system.
-  font-size: 1.25rem;
-  line-height: 1.4;
+  background-color: var(--background-neutral-tertiary);
+  color: var(--text-neutral-primary);
+  // The size of the lab's other running text.
+  font-size: 16px;
+  line-height: $tip-line-height;
   text-align: left;
 }
 
+// The bulb is centered on the tip's first line.
 .frameTipIcon {
   flex: none;
   font-size: 22px;
+  line-height: $tip-line-height;
 }
 
 // The pane's header, the same height as the editors' strip, across the top
@@ -148,29 +152,39 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   color: var(--text-neutral-quaternary);
 }
 
-// The plus: a brand square like a dialog header's icon.
-.newButton {
+$list-button-icon: 20px;
+
+// The plus: a brand square like a dialog header's icon. The trash can is
+// the same size.
+.newButton,
+.deleteButton {
   flex: none;
   width: 40px;
   height: 40px;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: $list-button-icon;
 }
 
-// The trash can, in a row pinned to the column's bottom.
+// Doubled to outrank the theme, which sizes a small icon button's icon.
+.deleteButton.deleteButton i {
+  width: auto;
+  font-size: $list-button-icon;
+}
+
+// The trash can, in a row along the pane's foot, the height of the bars
+// at the foot of the other tabs.
 .listFooter {
   display: flex;
   flex: none;
   align-items: center;
   justify-content: flex-start;
-  min-height: 36px;
-  // A hairline separates the delete button's row from the images above.
-  // The row reaches past the list on both sides, through the tab's padding
-  // on the left and the gap between the columns on the right, so the
-  // hairline runs the full width of the list's pane. The padding keeps
-  // the button where it was.
-  margin: auto (-$column-gap) 0 (-$pad);
-  padding: 8px $column-gap 0 $pad;
+  box-sizing: border-box;
+  height: strip.$foot-height;
+  // The row and its hairline run the full width of the list's pane and
+  // down to the tab's bottom edge; the padding keeps the button in line
+  // with the tiles.
+  margin: auto (-$column-gap) (-$pad) (-$pad);
+  padding: 0 $column-gap 0 $pad;
   border-top: 1px solid var(--border-neutral-primary);
 }
 
@@ -281,10 +295,9 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   min-width: 0;
   min-height: 0;
   // The well runs through the gap between the columns, so its gray reaches
-  // the hairline at the pane's left edge. The extra padding keeps its
-  // contents where they were.
+  // the hairline at the pane's left edge.
   margin: (-$pad) (-$column-gap) (-$pad) 0;
-  padding: $pad (16px + $column-gap) $pad 16px;
+  padding: $pad;
   background-color: var(--background-neutral-secondary);
 }
 
@@ -328,11 +341,15 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   }
 }
 
-// The checkerboard shows a picture's transparency.
+// The checkerboard shows a picture's transparency. With the custom
+// properties set, its squares are the ones the paint tools draw for the
+// picture, so the checkerboard does not change as the tools open and
+// close.
 .frameFilled {
   border-style: solid;
+  background-position: var(--checker-x, 0) var(--checker-y, 0);
 
-  @include checkerboard.light-checkerboard(24px);
+  @include checkerboard.light-checkerboard-tiles(var(--checker-tile, 24px));
 }
 
 // The picture's box is the frame's full size, so a stored image smaller
@@ -351,20 +368,33 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   object-fit: contain;
 }
 
-// The drawing tools, across the column above the frame.
+// The drawing tools, across the column above the frame. The row keeps
+// the height of one row of tools while it is empty.
 .above {
   display: flex;
+  flex: none;
+  // The save notice takes a row of its own under the tools.
+  flex-wrap: wrap;
   justify-content: center;
+  box-sizing: border-box;
   width: 100%;
-  padding-bottom: 8px;
+  min-height: $tools-row-height + $tools-row-gap;
+  padding-bottom: $tools-row-gap;
 }
 
 // The editor's canvas fills the frame, so the editor's own border and
-// background are removed. The frame's checkerboard is hidden under the
-// tools: the editor's canvas paints its own, and until it has, a plain
-// neutral background shows through transparent pixels.
+// background are removed.
 .paintFrame {
   border-style: solid;
+}
+
+// .frameMatched marks a frame whose checkerboard matches the paint tools'
+// own. Any other frame that shows a picture (.frameFilled) hides its
+// checkerboard while the tools are open: the tools' canvas draws its own,
+// and until it has, a plain background shows through transparent pixels.
+// The tools can still be open while a picture is being generated; that
+// frame has no checkerboard to hide, so the rule leaves it alone.
+.paintFrame.frameFilled:not(.frameMatched) {
   background-image: none;
   background-color: var(--background-neutral-secondary);
 }
@@ -426,9 +456,9 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);
 
-  // The scene moves focus here on a mode change and announces it; no
-  // outline is drawn around the whole pane for that programmatic focus.
-  &:focus:not(:focus-visible) {
+  // The pane is never reached with Tab (`tabIndex={-1}`), so it shows no
+  // focus outline.
+  &:focus {
     outline: none;
   }
 }
@@ -497,6 +527,14 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   gap: 10px;
 }
 
+// A label too long for one line in a narrow pane wraps, and its button
+// grows to hold it. Nested under the pane to outrank the library button's
+// fixed height.
+.pane .paneBottom button {
+  height: auto;
+  line-height: 1.25;
+}
+
 // The quieter neutral: Generate is the main call to action. Nested under
 // the pane to outrank the library button's own colors.
 .pane .drawButton {
@@ -536,7 +574,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   margin-right: 10px;
   font-size: 16px;
   font-weight: 600;
-  user-select: none;
 }
 
 // Nested under the bar to outrank the library button's own colors.
@@ -611,7 +648,6 @@ $two-columns-at: math.div(2 * $tile-px + $tile-gap, $list-share);
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  user-select: none;
 
   &:hover {
     border-color: var(--border-neutral-secondary);
@@ -657,7 +693,6 @@ $frame-strip-width: $strip-frames * $frame-tile-width + $frame-strip-gaps;
 
 .frameGroupTitle {
   color: var(--text-neutral-quaternary);
-  user-select: none;
 }
 
 .frameGroupTiles {

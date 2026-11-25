@@ -2,6 +2,7 @@ import {type Mock, describe, expect, it, vi} from 'vitest';
 
 import {
   generatePodcast,
+  getPodcast,
   listChallenges,
   saveLessonObjectiveReflection,
   saveLessonReflection,
@@ -82,6 +83,21 @@ describe('saveLessonObjectiveReflection', () => {
       method: 'POST',
       url: '/user_lesson_objective_reflections',
       body: {objective_id: '7', reflection: 'unsure'},
+    });
+  });
+});
+
+describe('getPodcast', () => {
+  it('should request the podcast for the query', async () => {
+    const {transport, request} = makeTransport();
+    request.mockResolvedValue({podcast_script: null});
+
+    expect(
+      await getPodcast(transport, 'lesson_id=42&objective_ids%5B%5D=1'),
+    ).toEqual({podcast_script: null});
+    expect(request).toHaveBeenCalledWith({
+      method: 'GET',
+      url: '/ai_student_podcasts?lesson_id=42&objective_ids%5B%5D=1',
     });
   });
 });

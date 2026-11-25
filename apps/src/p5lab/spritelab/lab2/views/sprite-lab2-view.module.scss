@@ -1,6 +1,7 @@
 @use '../../../../pixelEditor/dialogChrome' as chrome;
 @use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 @use './editor-strip' as strip;
+@use 'sass:math';
 
 // A browser draws scrollbars, and its own menus and fields, for a light page
 // unless color-scheme tells it the page is dark. The theme sets its colors
@@ -25,6 +26,39 @@
   width: 100%;
   height: 100%;
   min-height: 0;
+  // The closed Images pane waits past the right edge. Without the clip, a
+  // touch browser lets the page pan sideways to it.
+  overflow-x: clip;
+  // The lab is controls, not text to copy, so a drag across it selects
+  // nothing. Safari reads only the prefixed property.
+  -webkit-user-select: none;
+  user-select: none;
+
+  // code-studio.css sets `p, pre, span` back to selectable, so they are
+  // named too. `:where` adds no specificity, so an ordinary class in a
+  // part of the lab can make its text selectable again.
+  :where(p, pre, span) {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  // The instructions are text to copy, and a field's text is selected to
+  // change it.
+  :global(#instructions),
+  :global(#instructions) *,
+  input,
+  textarea {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+
+  // The panel around the instructions also has the id `instructions`, so
+  // the rule above matches its header. The header is a label, not text to
+  // copy.
+  :global(#instructions .panelContainerHeader) * {
+    -webkit-user-select: none;
+    user-select: none;
+  }
 
   .tabShell {
     flex: 1;
@@ -38,9 +72,12 @@
   display: block;
 }
 
-// From this width up the footer shares the lab's bottom row with the share
-// buttons. Under it, the lab's row moves up and the footer has its own row.
-$share-one-row-min-width: 1024px;
+// From this width up, the page footer and the lab's bottom bar share one
+// row: the bar's five centered buttons do not overlap the footer's
+// controls. Below it, the lab's row moves up and the footer has its own
+// row.
+$share-one-row-min-width: 1180px;
+$share-footer-control-height: 26px;
 
 .labRowShareView {
   @media screen and (max-width: #{$share-one-row-min-width - 1px}) {
@@ -52,7 +89,17 @@ $share-one-row-min-width: 1024px;
 @media screen and (min-width: $share-one-row-min-width) {
   // `html` so this outranks the page's own footer rule on a dark page.
   :global(html body.spritelab2-share #page-small-footer .small-footer-base) {
-    margin-bottom: 7px;
+    // Centers the footer's controls on the bar's row.
+    margin-bottom: math.floor(
+      math.div(strip.$foot-height - $share-footer-control-height, 2)
+    );
+    // The footer's box is wider than its controls and lies over the bar's
+    // buttons, so only the controls take clicks.
+    pointer-events: none;
+
+    > * {
+      pointer-events: auto;
+    }
   }
 }
 
@@ -106,14 +153,6 @@ $tab-item-height: 34px;
   // The tabs are distinct destinations, not a continuous strip: separate them
   // enough to be told apart at a glance.
   gap: 10px;
-  // Tab labels and controls, not text to copy. code-studio.css sets
-  // `p, pre, span` back to selectable, so the labels are named too.
-  user-select: none;
-
-  span,
-  p {
-    user-select: none;
-  }
 }
 
 
@@ -130,6 +169,7 @@ $tab-item-height: 34px;
 
 // The editors start under the strip.
 $editor-strip-height: strip.$height;
+$foot-height: strip.$foot-height;
 // Above Blockly's category list (z 70) and flyout (z 20), so a menu from a
 // bar opens over them; below its block drag surface (z 80).
 $z-over-blockly: 71;
@@ -229,18 +269,17 @@ $z-over-blockly: 71;
 
 // ?bar=workspace: the editors stop above the scene bar at their base.
 .aboveWorkspaceSceneBar {
-  bottom: $editor-strip-height;
+  bottom: $foot-height;
 }
 
-// The scene bar along the bottom of the editors. It is the same height as
-// the editor strip along their top. The project-wide controls are at its
-// start and the scene controls are at its end.
+// The scene bar along the bottom of the editors. The project-wide controls
+// are at its start and the scene controls are at its end.
 .workspaceSceneBar {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  height: $editor-strip-height;
+  height: $foot-height;
   box-sizing: border-box;
   z-index: $z-over-blockly;
   display: flex;
@@ -256,18 +295,6 @@ $z-over-blockly: 71;
   height: $tab-item-height;
   padding: 0 12px;
   line-height: 1;
-}
-
-// The scene dropdown's name is a control, not text to copy, wherever the
-// dropdown stands. code-studio.css sets `p, span` back to selectable, so
-// the name's span is named too.
-.sceneDropdown {
-  user-select: none;
-
-  span,
-  p {
-    user-select: none;
-  }
 }
 
 // The trigger reads as one of the bar's buttons. Higher specificity than
@@ -302,7 +329,6 @@ $z-over-blockly: 71;
 .sceneMenu {
   margin: 0;
   padding: 4px 0;
-  user-select: none;
   min-width: 200px;
   max-height: 60vh;
   overflow-y: auto;
@@ -328,13 +354,29 @@ $z-over-blockly: 71;
   text-align: left;
   cursor: pointer;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background: var(--background-neutral-tertiary);
   }
 
   &:focus-visible {
     outline: 2px solid var(--borders-brand-teal-primary);
     outline-offset: -2px;
+  }
+
+  &:disabled {
+    color: var(--text-neutral-disabled);
+    cursor: default;
+  }
+}
+
+// Override CustomDropdown's hover and press styles on a disabled item.
+.sceneDropdown .sceneMenu.sceneMenu li:has(> .sceneMenuItem:disabled) {
+  background: none;
+
+  span,
+  i::before {
+    background: none;
+    color: var(--text-neutral-disabled);
   }
 }
 
@@ -478,22 +520,19 @@ $z-over-blockly: 71;
 }
 
 // The bar along the bottom of the stage, level with the editors' scene
-// bar. It holds the Run buttons under the preview, and Stop while the game
-// plays. The overlay passes pointer events through; the bar takes its own.
+// bar. The overlay passes pointer events through; the bar takes its own.
 .bottomBar {
   position: absolute;
   bottom: 0;
-  // The bar is at least as tall as the scene bar, and grows taller when
-  // its buttons stack in two rows. The 4px of padding above and below is
-  // the space left around a single row of buttons, so a bar with one row
-  // is exactly the scene bar's height.
-  min-height: $editor-strip-height;
+  // The bar is the scene bar's height, and taller when its buttons stack
+  // in two rows.
+  min-height: $foot-height;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 4px 8px;
+  padding: 8px;
   background: var(--background-neutral-primary);
   border-top: 1px solid var(--borders-neutral-primary);
   pointer-events: auto;
@@ -505,20 +544,48 @@ $z-over-blockly: 71;
   border-inline-start: 1px solid var(--borders-neutral-primary);
 }
 
+// Between the game's buttons and the share page's buttons, which have the
+// line between them.
+$play-bar-group-gap: 40px;
+
 .playBarButtons {
   display: flex;
   min-width: 0;
   align-items: center;
-  gap: 16px;
-  // In a narrow column the second button moves to a row of its own, and
-  // each row is centered. A button's label never breaks onto two lines.
+  column-gap: $play-bar-group-gap;
   flex-wrap: wrap;
   justify-content: center;
   row-gap: 8px;
 
+  // A button's label never breaks onto two lines.
   button {
     white-space: nowrap;
   }
+}
+
+.playBarGroup {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 16px;
+  // In a narrow column a button that does not fit moves to the next row,
+  // and each row is centered.
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 8px;
+}
+
+// Centered in the gap before the group and taken out of the flow, so
+// showing it never makes the row wrap.
+.playBarGroupDivided::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: math.div(-$play-bar-group-gap, 2) - 0.5px;
+  width: 1px;
+  background: var(--borders-neutral-strong);
 }
 
 // Placed by the playspace beside or under the game; the cross inside takes
@@ -603,20 +670,6 @@ $arrow-gap: 6px;
       var(--background-neutral-primary-inverse)
     );
   }
-}
-
-// Restart buttons in the play area's top-right corner; the playspace keeps
-// the game clear of them (CONTROLS_INSET repeats the inset). The overlay
-// ignores pointer events; these buttons accept them.
-.playControls {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 6px;
-  pointer-events: auto;
 }
 
 .playspacePrompt {

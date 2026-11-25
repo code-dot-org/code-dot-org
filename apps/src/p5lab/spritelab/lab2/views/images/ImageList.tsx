@@ -330,6 +330,7 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
             variant="contained"
             color="error"
             size="small"
+            className={styles.deleteButton}
             aria-label="Delete image"
             disabled={disabled}
             onClick={() => setConfirming(true)}
@@ -354,9 +355,14 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                   )}
                 />
               )}
-              <p id="dsco-dialog-description" className={styles.deleteText}>
+              <MuiTypography
+                variant="body2"
+                component="p"
+                id="dsco-dialog-description"
+                className={styles.deleteText}
+              >
                 It goes from your project, and from any scene using it.
-              </p>
+              </MuiTypography>
             </div>
           }
           onClose={() => setConfirming(false)}

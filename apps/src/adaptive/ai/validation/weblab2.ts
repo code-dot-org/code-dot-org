@@ -2,7 +2,8 @@
 // partner, read through the chat's handle. The files the build changed are
 // the change, the exchange that produced it is the process, and the project
 // as the lab holds it is the context. Checks and verdicts go back into the
-// chat as alerts, and the chat takes nothing new while a check runs.
+// chat as alerts, and the chat takes nothing new while a check runs. The
+// chat's replies are reported too, for the chat checks.
 
 import {AcceptedBuild} from '@cdo/apps/aichat/host/ChatHostContext';
 import {getStore} from '@cdo/apps/redux';
@@ -17,6 +18,10 @@ export const weblab2Adapter: WorkAdapter = {
     return chat.onBuildAccepted(build =>
       listener({...workFromBuild(build), project: currentProject()})
     );
+  },
+  observeReplies: ({chat}, listener) => {
+    if (!chat) return () => {};
+    return chat.onReply(listener);
   },
   notifyChecking: ({chat}) => {
     if (!chat) return () => {};
@@ -38,6 +43,13 @@ export const weblab2Adapter: WorkAdapter = {
       includeInChatHistory: true,
       hideTimestamp: true,
       text: attempt.reason,
+    }),
+  reportUnlock: ({chat}, check) =>
+    chat?.post({
+      notificationType: 'info',
+      includeInChatHistory: true,
+      hideTimestamp: true,
+      text: check.reason,
     }),
 };
 

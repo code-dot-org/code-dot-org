@@ -103,7 +103,7 @@ export default function useImageUpload({
       if (!file || !kind) {
         return;
       }
-      if (!ACCEPTED_TYPES.includes(file.type)) {
+      if (!ACCEPTED_TYPES.includes(file.type.toLowerCase())) {
         onError(UPLOAD_ERRORS.wrongType);
         return;
       }
@@ -152,7 +152,7 @@ export default function useImageUpload({
 
   const [openFileInput, FileInput] = useHiddenFileInput(
     handleFile,
-    ACCEPTED_TYPES.join(','),
+    [...ACCEPTED_TYPES, '.png', '.jpg', '.jpeg'].join(','),
     false
   );
 
@@ -171,11 +171,14 @@ export default function useImageUpload({
     triggerRef.current?.focus();
   }, [handleAcceptFlaggedImage]);
 
-  const cancelFlaggedImage = useCallback(() => {
-    handleCancelFlaggedImage(MODERATION_APP_NAME);
-    onProgress?.('Picture not added.');
-    triggerRef.current?.focus();
-  }, [handleCancelFlaggedImage, onProgress]);
+  const cancelFlaggedImage = useCallback(
+    (appName: string, isSignedOut: boolean) => {
+      handleCancelFlaggedImage(MODERATION_APP_NAME, isSignedOut);
+      onProgress?.('Picture not added.');
+      triggerRef.current?.focus();
+    },
+    [handleCancelFlaggedImage, onProgress]
+  );
 
   return {
     pickFile,

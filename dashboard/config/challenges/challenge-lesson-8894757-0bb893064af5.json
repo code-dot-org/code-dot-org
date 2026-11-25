@@ -1,0 +1,27 @@
+{
+  "key": "challenge-lesson-8894757-0bb893064af5",
+  "unit_name": "thinking-critically-about-ai-2026",
+  "lesson_key": "Lesson 2: A Deeper Look Into AI",
+  "question": "Three students used the same music app and ended up with three very different songs. Who gets to say “I made this”?\n\nSteps:\n1. Use the arrow tool to point at the student you think is most the author of their song.\n2. Place a shape on the sentence that shows the decision that matters most.\n3. Record your voice finishing this sentence: “It’s their song because they decided ___.” Bonus points if you tell us what BeatBot did and what another student did.",
+  "default_modality": "whiteboard",
+  "rubric": [
+    {
+      "level": 0,
+      "description": "No arrow or shape is placed on the board, or the voice recording is missing or blank."
+    },
+    {
+      "level": 1,
+      "description": "Student attempts the task but does not meet Level 2. For example, the voice recording gives no reason, or gives only effort-based reasoning (such as “she worked hardest”) with no specific decision named."
+    },
+    {
+      "level": 2,
+      "description": "Arrow points to one student AND a shape is on a sentence on the same card AND the voice recording names at least one specific decision that student made (for example, swapped the drums, wrote the melody, added lyrics, or posted with no changes)."
+    },
+    {
+      "level": 3,
+      "description": "Meets all of the above AND the voice recording names a specific decision for a second student AND states what BeatBot did versus what that student did."
+    }
+  ],
+  "whiteboard_starter_image_key": "challenge-lesson-8894757-0bb893064af5-c3ca5d84",
+  "whiteboard_starter_image_alt_text": "\"BeatBot: 3 students made a song. Who's the author?\" Three cards. Maya: \"Pressed 'Make My Song' on BeatBot. Posted it with no changes.\" Jay: \"Pressed 'Make My Song.' Then swapped the drums, slowed it down, and added his own lyrics about his dog.\" Priya: \"Wrote her own melody and lyrics. Asked BeatBot for a drum beat and used it exactly as it came.\""
+}

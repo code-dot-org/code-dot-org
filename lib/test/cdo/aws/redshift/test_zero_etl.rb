@@ -278,6 +278,20 @@ class TestZeroEtl < Minitest::Test
     assert_equal 'users', result.first['table_name']
   end
 
+  # `ResyncInitiated` is in HEALTHY_TABLE_STATES but must not be reported here: the table is mid-load.
+  def test_synced_table_names_excludes_a_table_mid_resync
+    client = mock('client')
+    client.stubs(:execute).returns(
+      [
+        {'schema_name' => 'dashboard_production', 'table_name' => 'users', 'table_state' => 'Synced'},
+        {'schema_name' => 'pegasus', 'table_name' => 'hoc_activity', 'table_state' => 'ResyncInitiated'},
+        {'schema_name' => 'dashboard_production', 'table_name' => 'levels', 'table_state' => 'Failed'},
+      ]
+    )
+
+    assert_equal Set.new(['users']), ZeroEtl.synced_table_names(client: client, environment_type: 'production')
+  end
+
   def test_export_status_buckets_tables_by_state
     client = mock('client')
     client.stubs(:execute).returns(

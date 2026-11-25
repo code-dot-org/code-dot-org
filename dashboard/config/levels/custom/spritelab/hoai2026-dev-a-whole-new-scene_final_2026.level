@@ -6,6 +6,11 @@
   "user_id": 1,
   "properties": {
     "uses_lab2": "true",
+    "world_keeps_roles": [
+      "friend",
+      "hero",
+      "treasure"
+    ],
     "block_pools": [
       "GamelabJr",
       "GameDev"
@@ -22,7 +27,21 @@
     "project_template_level_name": "hoai2026-dev-revised-template_final_2026",
     "lock_earlier_blocks": true,
     "level_mode": {
-      "kind": "code"
+      "kind": "code",
+      "extraTabs": [
+        "Images",
+        "World"
+      ],
+      "noNewImages": true,
+      "noDeletingImages": true,
+      "generationLimit": 5,
+      "limitedPaintTools": true,
+      "paletteRoles": [
+        "friend",
+        "hero",
+        "treasure",
+        "block"
+      ]
     },
     "pinned_scene": {
       "id": "scene-1",
@@ -151,7 +170,7 @@
           }
         },
         {
-          "text": "Select **Run** and get to **Scene 2**.",
+          "text": "Select **Run**, then move your player to touch the object or character that takes it to **Scene 2**.",
           "check": {
             "kind": "scene",
             "id": "second-scene"
@@ -159,7 +178,7 @@
         }
       ]
     },
-    "long_instructions": "# A new scene\r\nA **scene** is one screen of your quest. We made you a second one!",
+    "long_instructions": "# A new scene\r\nA **scene** is a new area of your game for your player to explore. Your quest now has a second scene ready for you to build.",
     "header_label": "A new scene",
     "embed": "false",
     "instructions_important": "false",

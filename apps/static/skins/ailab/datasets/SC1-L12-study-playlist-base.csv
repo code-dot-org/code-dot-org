@@ -1,57 +1,54 @@
-Song,Energy,Tempo (BPM),Length (min),Has Lyrics,Major Key?,Cheerful?,Study Song?
+Song,Energy,Tempo (BPM),Length (min),Has Lyrics,Danceable?,Acoustic?,Study Song?
 Oblivion,Low,Medium,Short,No,Yes,Yes,Yes
-Experience,Medium,Medium,Long,No,Yes,No,Yes
+Experience,Medium,Medium,Long,No,No,Yes,Yes
 The Middle,Medium,Medium,Medium,Yes,Yes,No,No
-Turning Page,Low,Medium,Long,Yes,Yes,No,Yes
-Take You Dancing,High,Medium,Medium,Yes,Yes,Yes,No
+Take You Dancing,High,Medium,Medium,Yes,Yes,No,No
 Imagination,Low,Medium,Short,No,Yes,Yes,Yes
-Don't Start Now,High,Fast,Medium,Yes,No,Yes,No
-Perfect Strangers,High,Medium,Medium,Yes,Yes,Yes,No
-Peaceful Patterns,Low,Slow,Short,No,Yes,No,Yes
-River Flows In You,Low,Fast,Medium,No,Yes,No,Yes
-Baller,High,Fast,Short,Yes,Yes,Yes,No
-Do It All Again,High,Fast,Short,Yes,No,Yes,No
+Don't Start Now,High,Fast,Medium,Yes,Yes,No,No
+Perfect Strangers,High,Medium,Medium,Yes,Yes,No,No
+Peaceful Patterns,Low,Slow,Short,No,No,Yes,Yes
+River Flows In You,Low,Fast,Medium,No,No,Yes,Yes
+Baller,High,Fast,Short,Yes,Yes,No,No
+Do It All Again,High,Fast,Short,Yes,Yes,No,No
 comethru,Low,Medium,Medium,Yes,Yes,Yes,No
-Fracture,Low,Slow,Medium,No,Yes,No,Yes
-On The Floor,High,Fast,Long,Yes,No,Yes,No
-Hideaway,Low,Slow,Short,No,Yes,No,Yes
-better off,Low,Medium,Medium,Yes,No,No,No
-Rasputin,High,Fast,Medium,Yes,No,Yes,No
-New Rules,Medium,Medium,Medium,Yes,No,Yes,No
+Fracture,Low,Slow,Medium,No,No,Yes,Yes
+On The Floor,High,Fast,Long,Yes,Yes,No,No
+Hideaway,Low,Slow,Short,No,No,Yes,Yes
+better off,Low,Medium,Medium,Yes,Yes,Yes,No
+Rasputin,High,Fast,Medium,Yes,Yes,No,No
+New Rules,Medium,Medium,Medium,Yes,Yes,No,No
 Hills,Low,Medium,Short,Yes,Yes,No,No
-Blanket of White,Low,Slow,Medium,No,Yes,No,Yes
-I Like Me Better,Medium,Medium,Medium,Yes,Yes,No,No
-Weightless,Low,Slow,Long,No,No,No,Yes
+Blanket of White,Low,Slow,Medium,No,No,Yes,Yes
+I Like Me Better,Medium,Medium,Medium,Yes,Yes,Yes,No
+Weightless,Low,Slow,Long,No,No,Yes,Yes
 No Lie,High,Medium,Medium,Yes,Yes,No,No
-Beautiful Imagination,Low,Slow,Short,No,Yes,No,Yes
-Better Days,Medium,Fast,Medium,No,No,Yes,Yes
+Beautiful Imagination,Low,Slow,Short,No,No,Yes,Yes
+Better Days,Medium,Fast,Medium,No,Yes,Yes,Yes
 Feelings,Low,Medium,Medium,Yes,Yes,No,No
-Sunsetz,Medium,Slow,Medium,No,Yes,No,Yes
+Sunsetz,Medium,Slow,Medium,No,No,No,Yes
 On the Nature of Daylight,Low,Slow,Long,No,No,No,Yes
 Ma Belle,Low,Medium,Short,Yes,Yes,No,No
-Nuvole Bianche,Low,Fast,Long,No,Yes,No,Yes
-Wolves,High,Fast,Medium,Yes,No,No,No
-Already Gone,Low,Fast,Long,Yes,Yes,No,Yes
-Saying Things,Low,Slow,Short,No,Yes,No,Yes
-Attention,Medium,Medium,Medium,Yes,No,Yes,No
-Break My Heart,High,Medium,Medium,Yes,No,No,No
+Nuvole Bianche,Low,Fast,Long,No,No,Yes,Yes
+Wolves,High,Fast,Medium,Yes,Yes,No,No
+Saying Things,Low,Slow,Short,No,No,Yes,Yes
+Attention,Medium,Medium,Medium,Yes,Yes,No,No
+Break My Heart,High,Medium,Medium,Yes,Yes,No,No
 Replay,High,Medium,Medium,Yes,Yes,No,No
-Herinneringen,Low,Slow,Short,No,Yes,No,Yes
-Heal,Low,Slow,Medium,Yes,Yes,No,Yes
-Temple White,Low,Slow,Long,No,Yes,No,Yes
-Stitches,High,Fast,Medium,Yes,Yes,Yes,No
-Wind Song,Low,Slow,Medium,No,No,No,Yes
-Sucker,High,Fast,Medium,Yes,No,Yes,No
-Hearing,Low,Fast,Long,No,Yes,No,Yes
+Herinneringen,Low,Slow,Short,No,No,Yes,Yes
+Temple White,Low,Slow,Long,No,No,Yes,Yes
+Stitches,High,Fast,Medium,Yes,Yes,No,No
+Wind Song,Low,Slow,Medium,No,No,Yes,Yes
+Sucker,High,Fast,Medium,Yes,Yes,No,No
+Hearing,Low,Fast,Long,No,No,Yes,Yes
 Gimme More,High,Medium,Long,Yes,Yes,No,No
-Ride It,High,Medium,Short,Yes,No,Yes,No
-Lean On,High,Medium,Short,Yes,No,No,No
-Excuses,High,Medium,Short,Yes,No,No,No
+Ride It,High,Medium,Short,Yes,Yes,No,No
+Lean On,High,Medium,Short,Yes,Yes,No,No
+Excuses,High,Medium,Short,Yes,Yes,No,No
 School Rooftop,Low,Slow,Short,No,Yes,No,Yes
-Spheroidal,Low,Medium,Medium,No,Yes,No,Yes
-Ontario,Low,Slow,Medium,Yes,Yes,No,Yes
-Dvala,Low,Slow,Medium,No,Yes,No,Yes
+Spheroidal,Low,Medium,Medium,No,No,Yes,Yes
+Ontario,Low,Slow,Medium,Yes,No,Yes,Yes
+Dvala,Low,Slow,Medium,No,No,Yes,Yes
 Roses,High,Medium,Medium,Yes,Yes,No,No
-Love You Like A Love Song,Medium,Medium,Medium,Yes,No,Yes,No
-overwhelmed,Low,Slow,Short,Yes,No,No,No
-Offshore,Low,Fast,Short,Yes,No,Yes,No
+Love You Like A Love Song,Medium,Medium,Medium,Yes,Yes,No,No
+overwhelmed,Low,Slow,Short,Yes,Yes,No,No
+Offshore,Low,Fast,Short,Yes,Yes,No,No

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Replaces Capacitor's layout of the same name so MainActivity can pad the
      root for system bars and the keyboard. The background shows behind the
-     status and navigation bars and matches the site header. -->
+     status and navigation bars and matches the site header. The page and the
+     loading cover live in app_content, which keeps them landscape. -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_root"
@@ -10,8 +11,14 @@
     android:background="@color/codeai_purple"
     tools:context=".MainActivity">
 
-    <com.getcapacitor.CapacitorWebView
-        android:id="@+id/webview"
+    <org.codeai.LandscapeFrame
+        android:id="@+id/app_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <org.codeai.AppWebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </org.codeai.LandscapeFrame>
 </FrameLayout>
