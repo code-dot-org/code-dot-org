@@ -153,10 +153,11 @@
   }
 }
 
-// Thick labels take the body ramp at semi-bold and inherit their colour.
+// Thick labels take the body ramp at semi-bold and set no colour of their own.
 @mixin thick-label($font-size, $line-height) {
   font-family: var(--font-family-main);
   font-weight: var(--font-weight-semi-bold);
+  font-style: normal;
   font-size: $font-size;
   line-height: $line-height;
   margin-bottom: 0;
