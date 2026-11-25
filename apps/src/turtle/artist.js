@@ -56,6 +56,7 @@ import ArtistSkins from './skins';
 
 var _ = require('lodash');
 var React = require('react');
+var {flushSync} = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var commonMsg = require('@cdo/locale');
@@ -421,17 +422,17 @@ Artist.prototype.init = function (config) {
     this.preloadAllShapeImages(),
     this.preloadAllPatternImages(),
   ]).then(() => {
-    createReactRoot(
-      <Provider store={getStore()}>
-        <AppView
-          visualizationColumn={visualizationColumn}
-          onMount={onMount.bind(this)}
-        />
-      </Provider>,
-      document.getElementById(config.containerId),
-      {
-        legacyReactDomRender: true,
-      }
+    // Synchronous: onMount initializes the app before init returns.
+    flushSync(() =>
+      createReactRoot(
+        <Provider store={getStore()}>
+          <AppView
+            visualizationColumn={visualizationColumn}
+            onMount={onMount.bind(this)}
+          />
+        </Provider>,
+        document.getElementById(config.containerId)
+      )
     );
   });
 };

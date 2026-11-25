@@ -13,6 +13,7 @@ import AppView from '../templates/AppView';
 import {createReactRoot} from '../util/createReactRoot';
 
 var React = require('react');
+var {flushSync} = require('react-dom');
 var Provider = require('react-redux').Provider;
 
 var studioApp = require('../StudioApp').singleton;
@@ -194,17 +195,17 @@ Jigsaw.init = function (config) {
     noVisualization: true,
   });
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <AppView
-        visualizationColumn={<JigsawVisualizationColumn />}
-        onMount={onMount}
-      />
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <AppView
+          visualizationColumn={<JigsawVisualizationColumn />}
+          onMount={onMount}
+        />
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 };
 

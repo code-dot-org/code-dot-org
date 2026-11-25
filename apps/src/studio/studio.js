@@ -8,7 +8,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {flushSync} from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {loadBlocksToWorkspace, getCode} from '@cdo/apps/blockly/utils';
@@ -17,7 +17,10 @@ import {
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+import {
+  createReactRoot,
+  unmountReactRoot,
+} from '@cdo/apps/util/createReactRoot';
 import commonMsg from '@cdo/locale';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
@@ -2398,14 +2401,14 @@ Studio.init = function (config) {
     />
   );
 
-  createReactRoot(
-    <Provider store={getStore()}>
-      <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
-    </Provider>,
-    document.getElementById(config.containerId),
-    {
-      legacyReactDomRender: true,
-    }
+  // Synchronous: onMount initializes the app before init returns.
+  flushSync(() =>
+    createReactRoot(
+      <Provider store={getStore()}>
+        <AppView visualizationColumn={visualizationColumn} onMount={onMount} />
+      </Provider>,
+      document.getElementById(config.containerId)
+    )
   );
 };
 
@@ -5929,10 +5932,7 @@ Studio.askForInput = function (question, callback) {
 
   createReactRoot(
     <InputPrompt question={question} onInputReceived={onInputReceived} />,
-    target,
-    {
-      legacyReactDomRender: true,
-    }
+    target
   );
 };
 
@@ -5940,7 +5940,7 @@ Studio.hideInputPrompt = function () {
   const target = Studio.inputPromptElement;
 
   if (target) {
-    ReactDOM.unmountComponentAtNode(target);
+    unmountReactRoot(target);
     target.parentNode.removeChild(target);
     Studio.inputPromptElement = null;
   }
