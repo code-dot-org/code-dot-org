@@ -73,15 +73,18 @@ describe('buildProjectZip', () => {
     expect(okFetch).toHaveBeenCalledWith('/v3/files/abc/cat.png');
   });
 
-  it('rejects when an uploaded file cannot be fetched', async () => {
+  it('rejects without naming the file when an upload cannot be fetched', async () => {
     const failingFetch = jest.fn(async () => ({
       ok: false,
       status: 404,
       statusText: 'Not Found',
     })) as unknown as typeof fetch;
-    await expect(
-      buildProjectZip(source, 'My Site', failingFetch)
-    ).rejects.toThrow('images/cat.png');
+    const error = await buildProjectZip(source, 'My Site', failingFetch).catch(
+      e => e
+    );
+    expect(error.message).toBe(
+      'Failed to fetch an uploaded file: 404 Not Found'
+    );
   });
 });
 

@@ -46,8 +46,9 @@ export async function buildProjectZip(
         if (file.url) {
           const response = await fetchFile(file.url);
           if (!response.ok) {
+            // No file name: the student chose it, and this message is logged.
             throw new Error(
-              `Failed to fetch ${path}: ${response.status} ${response.statusText}`
+              `Failed to fetch an uploaded file: ${response.status} ${response.statusText}`
             );
           }
           root.file(path, await response.blob());

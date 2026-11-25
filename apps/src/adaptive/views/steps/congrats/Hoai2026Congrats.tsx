@@ -18,6 +18,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import heroImage from '@cdo/static/hoai2026/adaptive/ai-makerspace-celebration.png';
 
 import {sendAdaptiveEvent} from '../../../metricsHelpers';
+import {reportAdaptiveError} from '../../../observability';
 import {buildProjectZip, exportName} from '../../../project/exportProjectZip';
 import {isMultiFile} from '../../../project/summarizeProjectFiles';
 import {usePathwayProject} from '../../../project/usePathwayProject';
@@ -148,7 +149,7 @@ const ExportCodeButton: React.FunctionComponent<{
       const name = exportName(projectName);
       fileDownload(await buildProjectZip(source, name), `${name}.zip`);
     } catch (error) {
-      console.error('Error exporting project code', error);
+      reportAdaptiveError('Adaptive project export failed', error);
       setFailed(true);
     } finally {
       setIsExporting(false);
