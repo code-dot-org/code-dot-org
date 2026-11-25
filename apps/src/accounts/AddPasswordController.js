@@ -22,10 +22,7 @@ export default class AddPasswordController {
         userAge={this.userAge}
         userUsState={this.userUsState}
       />,
-      this.mountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      this.mountPoint
     );
   };
 

@@ -38,10 +38,7 @@ export default class ManageLinkedAccountsController {
       <Provider store={store}>
         <ManageLinkedAccounts />
       </Provider>,
-      mountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      mountPoint
     );
   }
 }

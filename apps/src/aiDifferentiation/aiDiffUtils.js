@@ -19,10 +19,7 @@ export function displayDifferentiationChat() {
       <Provider store={getStore()}>
         <AiDiffFloatingActionButton context={context} />
       </Provider>,
-      aiDiffFabMountPoint,
-      {
-        legacyReactDomRender: true,
-      }
+      aiDiffFabMountPoint
     );
   }
 }

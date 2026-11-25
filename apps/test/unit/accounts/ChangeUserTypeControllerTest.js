@@ -1,8 +1,8 @@
 import $ from 'jquery';
-import ReactDOM from 'react-dom';
 import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ChangeUserTypeController from '@cdo/apps/accounts/ChangeUserTypeController';
+import * as createReactRootModule from '@cdo/apps/util/createReactRoot';
 import * as utils from '@cdo/apps/utils';
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -12,15 +12,15 @@ describe('ChangeUserTypeController', () => {
 
   beforeEach(() => {
     stub(utils, 'reload');
-    spy(ReactDOM, 'render');
-    spy(ReactDOM, 'unmountComponentAtNode');
+    spy(createReactRootModule, 'createReactRoot');
+    spy(createReactRootModule, 'unmountReactRoot');
   });
 
   afterEach(() => {
     controller && controller.hideChangeUserTypeModal();
     utils.reload.restore();
-    ReactDOM.render.restore();
-    ReactDOM.unmountComponentAtNode.restore();
+    createReactRootModule.createReactRoot.restore();
+    createReactRootModule.unmountReactRoot.restore();
   });
 
   function setupWithInitialUserType(userType) {
@@ -106,16 +106,16 @@ describe('ChangeUserTypeController', () => {
     });
 
     it('opens the email-confirmation modal when changing to teacher', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(createReactRootModule.createReactRoot).not.to.have.been.called;
       const result = controller.handleConfirm('teacher');
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
       expect(result).to.be.undefined;
     });
 
     it('submits the form directly when changing to student', () => {
       const result = controller.handleConfirm('student');
       expect(form.submit).to.have.been.calledOnce;
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(createReactRootModule.createReactRoot).not.to.have.been.called;
       expect(result).to.be.an.instanceof(Promise);
     });
   });
@@ -124,28 +124,28 @@ describe('ChangeUserTypeController', () => {
     beforeEach(() => setupWithInitialUserType('student'));
 
     it('show is idempotent', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(createReactRootModule.createReactRoot).not.to.have.been.called;
       controller.showChangeUserTypeModal();
       controller.showChangeUserTypeModal();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
     });
 
     it('can hide the modal dialog', () => {
       controller.showChangeUserTypeModal();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
 
-      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
+      expect(createReactRootModule.unmountReactRoot).not.to.have.been.called;
       controller.hideChangeUserTypeModal();
-      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
+      expect(createReactRootModule.unmountReactRoot).to.have.been.calledOnce;
     });
 
     it('hide is idempotent', () => {
       controller.showChangeUserTypeModal();
 
-      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
+      expect(createReactRootModule.unmountReactRoot).not.to.have.been.called;
       controller.hideChangeUserTypeModal();
       controller.hideChangeUserTypeModal();
-      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
+      expect(createReactRootModule.unmountReactRoot).to.have.been.calledOnce;
     });
   });
 });
