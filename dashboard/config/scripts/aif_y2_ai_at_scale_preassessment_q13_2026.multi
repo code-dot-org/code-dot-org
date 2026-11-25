@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q13-2026'
+
+right 'A group of neurons that takes in values from the layer before it and passes its results on to the next layer'
+wrong 'A part of the network that programmers keep secret from users'
+wrong 'The layer that holds the input values fed into the network'
+wrong 'A layer that stores training examples the network hasn\'t used yet'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+In a neural network, what is a hidden layer?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 10: Deep Learning
+MARKDOWN

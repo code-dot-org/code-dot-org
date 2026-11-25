@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2026-11-24T04:18:04.000Z",
   "level_num": "custom",
@@ -1957,10 +1958,15 @@
         }
       ]
     },
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "##PROTOTYPE – SC2 AI in Your Program · Who Am AI? project\r\n###This version: Starter with image generation\r\n\r\nSame code as the default starter (104027). The only difference: the **Images tab is on**, so students can make their own mystery character with the image generator. Making a character is optional and not scored.\r\n\r\n- `start_game` is locked and collapsed and holds the game rules. Keeping the secret is the student's job in `my_prompt`.\r\n\r\n**All versions**\r\n- Starter, no image generation: [104027](https://levelbuilder-studio.code.org/levels/104027)\r\n- Starter with image generation (this level): [105336](https://levelbuilder-studio.code.org/levels/105336)\r\n- Finished sample (strong): [105337](https://levelbuilder-studio.code.org/levels/105337)\r\n- Calibration sample, middle: [105339](https://levelbuilder-studio.code.org/levels/105339)\r\n- Calibration sample, weak: [105340](https://levelbuilder-studio.code.org/levels/105340)\r\n- Prompt Helper (AI Chat level): [105338](https://levelbuilder-studio.code.org/levels/105338)\r\n\r\n**Open questions**\r\n- Is image generation funded at launch? If not, this version is cut.\r\n- Does making a character pull time away from the AI decisions the project assesses?\r\n- Should the Images tab let students make only a Character, not backgrounds or objects?"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-24T04:18:04.561+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-sprite-lab\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-sprite-lab\"},{\"changed_at\":\"2026-11-24 04:20:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:41:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:03:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:11:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-24T04:18:04.561+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-sprite-lab\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-sprite-lab\"},{\"changed_at\":\"2026-11-24 04:20:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:41:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:03:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:11:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 04:46:29 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:34:56 +0000\",\"changed\":[\"preload_asset_list\",\"encrypted_examples\",\"long_instructions\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

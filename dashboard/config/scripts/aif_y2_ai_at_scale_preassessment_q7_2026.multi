@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q7-2026'
+
+right 'The value of one feature'
+wrong 'A list of values for each feature'
+wrong 'An activation function'
+wrong 'The name of each feature'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+In a neural network, what does each unit in the input layer hold?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Neural Networks
+MARKDOWN

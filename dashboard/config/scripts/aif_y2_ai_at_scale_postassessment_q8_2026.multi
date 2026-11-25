@@ -1,0 +1,18 @@
+name 'aif-y2-ai-at-scale-postassessment-q8-2026'
+
+wrong 'The learning rate shrank to zero.'
+wrong 'The model ran out of training examples.'
+wrong 'The training failed.'
+right 'The training process converged.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A student trains a regression model with gradient descent. First the weight changes by 4.0, then by 1.5, then by 0.4, then by 0.05, and finally by only 0.01. By the last few steps, the model’s predictions are barely changing. 
+
+Which statement best explains what happened?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Regression with Neural Networks
+MARKDOWN
