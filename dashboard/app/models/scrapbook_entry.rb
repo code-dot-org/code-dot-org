@@ -27,7 +27,7 @@ class ScrapbookEntry < ApplicationRecord
   # An entry is keyed either by (script_id, level_id) for in-curriculum levels,
   # or by channel_id for standalone projects. Exactly one of those keyings must
   # be present.
-  serialize :entry_text, JSON
+  serialize :entry_text, coder: JSON
 
   validate :keyed_by_script_level_or_channel
   validates :user_id, uniqueness: {scope: [:script_id, :level_id]}, if: -> {channel_id.blank?}
