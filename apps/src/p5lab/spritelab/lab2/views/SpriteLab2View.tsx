@@ -674,13 +674,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
           },
     [levelExtraScene]
   );
-  // Create the pinned scene on first load, and again after Start Over (the
-  // reinit count is in the deps). On a project with no scenes the pinned
-  // scene becomes the only one: materializing the synthesized default scene
-  // too would leave a stray "Scene 1" in every level sharing the project.
-  // A pinned scene whose id is the default scene's ('scene-1') uses that
-  // existing scene instead of adding one, whether the project stored it as
-  // top-level code or in its scenes list.
+  // Create the pinned and extra scenes on first load, and again after Start
+  // Over (the reinit count is in the deps). On a project with no scenes list
+  // whose top-level code is still the default workspace, the pinned scene
+  // becomes the only scene: also saving the 'Scene 1' that getScenes makes
+  // for such a project would leave a stray 'Scene 1' in every level that
+  // shares the project. A pinned scene whose id is DEFAULT_SCENE_ID uses the
+  // project's existing scene with that id, from its scenes list or its
+  // top-level code, instead of adding one.
   useEffect(() => {
     if (!pinnedSceneId) {
       return;

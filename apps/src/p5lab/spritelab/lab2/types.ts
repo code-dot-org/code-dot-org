@@ -134,8 +134,9 @@ export interface SpriteLab2LevelProperties extends BlocklyLevelProperties {
   /** The one scene this level edits, created on first load if the project
       lacks it. The id is the key the go-to-scene block stores; the name is
       what the student sees, applied only at creation. The id 'scene-1' is
-      the default scene a scene-less project synthesizes from its top-level
-      code: a pin with that id adopts it instead of adding a scene. */
+      the default scene that getScenes makes from a scene-less project's
+      top-level code; a pinned scene with that id uses it instead of adding
+      a scene. */
   pinnedScene?: {
     id: string;
     name: string;
