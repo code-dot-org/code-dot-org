@@ -838,8 +838,7 @@
           // Checkbox items focus the hidden input, not a
           // .dropdownMenuItem, so the row focus fill comes via :has();
           // the ring itself is drawn by the Checkbox component on the
-          // glyph (the bridge resolves it to the same indigo as
-          // focused/primary).
+          // glyph.
           &:has(input[type='checkbox']:focus-visible):not(
               :has(input[type='checkbox']:checked)
             ) {
