@@ -52,6 +52,7 @@ let mockManager: object = {};
 const newManager = () => {
   mockSaveListeners = [];
   return {
+    isSaveInProgress: () => false,
     getLastSource: () => ({
       animations: {propsByKey: {k1: {sourceUrl: '/v3/assets/chan/two.png'}}},
     }),

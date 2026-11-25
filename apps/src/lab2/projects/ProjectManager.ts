@@ -510,6 +510,10 @@ export default class ProjectManager {
     return this.forceReloading;
   }
 
+  isSaveInProgress(): boolean {
+    return this.saveInProgress;
+  }
+
   setLastSource(lastSource: ProjectSources) {
     this.lastSource = JSON.stringify(lastSource);
   }

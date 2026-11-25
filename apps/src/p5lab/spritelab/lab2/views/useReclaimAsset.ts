@@ -47,9 +47,13 @@ const pendingDeletes = new WeakMap<
   Map<string, (deleted: boolean) => void>
 >();
 
-// Run only on save and noop events, which never fire while a save is in
-// progress, so getLastSource() is what the server last stored.
+// getLastSource() is what the server last stored: ProjectManager sets it
+// only on load and after a save of the sources succeeds. A save still in
+// flight may name a file the last stored sources don't, so wait for it.
 function deleteFilesNoLongerSaved(manager: ProjectManager) {
+  if (manager.isSaveInProgress()) {
+    return;
+  }
   const files = pendingDeletes.get(manager);
   const text = files?.size ? savedText(manager) : undefined;
   files?.forEach((resolve, url) => {
@@ -97,10 +101,9 @@ function deleteOnceSavedWithout(
  * project that no longer names it has finished; deleting it sooner
  * could leave the saved project pointing at a missing file if the save
  * that drops it never completes.
- * Resolves true when the file is deleted, and at once for a data URI or no
- * url. Resolves false at once if an image uses the file or it is not one of
- * this project's uploads, and later if an image takes it back or the delete
- * fails. It stays unresolved until a save that no longer names the file.
+ * Resolves true once the file is deleted, and at once for a data URI or no
+ * url. Resolves false if an image uses the file, it is not one of this
+ * project's uploads, or the delete fails. Until then it stays unresolved.
  * A file still waiting when the page closes is left on the server.
  */
 export default function useReclaimAsset(): (url?: string) => Promise<boolean> {
