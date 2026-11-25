@@ -502,6 +502,38 @@ class QuizAttemptsControllerTest < ActionController::TestCase
     assert_nil attempt.reload.submitted_at
   end
 
+  test "index shows a student released read-only the score, correctness, and explanation, whatever the Quiz's settings" do
+    quiz = create(:quiz, show_correctness: false, reveal_answer_explanation: false)
+    question = create(:multiple_choice_question, explanation: 'because math')
+    create(:quiz_question_placement, level: quiz, quiz_question: question)
+    unit = create_unit_with_lock_quiz(quiz)
+    attempt = create(:quiz_attempt, user: @student, level: quiz, unit: unit, submitted_at: Time.now, score: 1, max_score: 1)
+    create(
+      :quiz_question_response,
+      quiz_attempt: attempt,
+      quiz_question: question,
+      response_data: {'selectedChoiceId' => 'b'},
+      grading_status: 'auto_graded',
+      score: 1,
+      max_score: 1
+    )
+    sign_in @student
+
+    get :index, params: {levelId: quiz.id, unitId: unit.id}
+    assert_nil JSON.parse(response.body)['score'], 'before release, the Quiz settings apply'
+
+    UserLevel.update_lockable_state(@student.id, quiz.id, unit.id, false, true)
+    get :index, params: {levelId: quiz.id, unitId: unit.id}
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['score']
+    result = body['questionResults'].first
+    assert result['correct']
+    assert_equal 'because math', result['explanation']
+    assert_equal 'b', result['correctChoiceId']
+  end
+
   private def create_unit_with_quiz(quiz)
     unit = create(:unit)
     lesson = create(:lesson, script: unit)

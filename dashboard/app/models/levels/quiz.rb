@@ -173,11 +173,14 @@ class Quiz < Level
 
   # True when a lockable lesson holding this Quiz is locked or read-only for user; see ScriptLevel#locked?.
   def locked_for?(user, unit_id)
-    script_levels.where(script_id: unit_id).includes(lesson: :script_levels).any? do |script_level|
-      lesson = script_level.lesson
-      next false unless lesson&.lockable?
-      next true if script_level.locked?(user)
-      lock_level = lesson.script_levels.last
+    lockable_script_levels(unit_id).any? {|script_level| script_level.locked?(user)} || read_only_for?(user, unit_id)
+  end
+
+  # True when the teacher has released a lockable lesson holding this Quiz to user read-only ("Show answers").
+  def read_only_for?(user, unit_id)
+    lockable_script_levels(unit_id).any? do |script_level|
+      next false if script_level.locked?(user)
+      lock_level = script_level.lesson.script_levels.last
       UserLevel.find_by(user: user, script_id: unit_id, level: lock_level.oldest_active_level)&.readonly_answers?
     end
   end
@@ -210,10 +213,15 @@ class Quiz < Level
         page: placement.page,
       }
     end
+    properties_camelized[:readOnly] = !!(script && current_user && read_only_for?(current_user, script.id))
     properties_camelized
   end
 
   # delete_all/insert_all! skip the per-placement after_commit that rewrites the .level file.
+  private def lockable_script_levels(unit_id)
+    script_levels.where(script_id: unit_id).includes(lesson: :script_levels).select {|script_level| script_level.lesson&.lockable?}
+  end
+
   private def write_placement_rows!(rows)
     transaction do
       QuizQuestionPlacement.where(level_id: id).delete_all
