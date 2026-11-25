@@ -49,7 +49,6 @@ const donor_prefixes = [
   '/courses/elem-game-design-2024',
   '/courses/mix-move-ai-2025',
   '/courses/quest-builder-2026',
-  '/courses/hoai2026-dev',
 ];
 
 const aif_prefixes = [
@@ -104,7 +103,6 @@ const live = [
   '/courses/artificial-intelligence-foundations-2025',
   '/courses/mix-move-ai-2025',
   '/courses/quest-builder-2026',
-  '/courses/hoai2026-dev',
   '/courses/teaching-ai-foundations-2025',
   '/courses/teaching-csd-aiml-2025',
   '/courses/teaching-csd-unit1-2025',
