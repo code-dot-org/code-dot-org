@@ -170,6 +170,39 @@ class ProjectsListTest < ActionController::TestCase
     assert_nil returned_project["thumbnailUrl"]
   end
 
+  test 'fetch_section_projects issues the same queries however many projects the students have' do
+    section = create(:section, user: @teacher)
+    bea = create(:student, name: 'Bea')
+    al = create(:student, name: 'Al')
+    [bea, al].each {|student| create(:follower, section: section, student_user: student)}
+
+    DASHBOARD_DB.transaction(rollback: :always) do
+      storage_ids = {al => create_storage_id_for_user(al.id), bea => create_storage_id_for_user(bea.id)}
+      create_project = lambda do |student, value|
+        Projects.new(storage_ids[student]).create(value, ip: '127.0.0.1')
+      end
+
+      al_channel = create_project.call(al, {'name' => 'Al App', 'level' => '/projects/applab'})
+      create_project.call(al, {'name' => 'Al Level', 'level' => '/projects/applab', 'hidden' => true})
+      bea_channel = create_project.call(bea, {'name' => 'Bea App', 'level' => '/projects/spritelab'})
+
+      projects = nil
+      few_projects_queries = count_dashboard_db_selects {projects = ProjectsList.fetch_section_projects(section)}
+      assert_equal(
+        [['Al', 'Al App', al_channel, 'applab'], ['Bea', 'Bea App', bea_channel, 'spritelab']],
+        projects.map {|project| project.values_at(:studentName, :name, :channel, :type)}
+      )
+
+      10.times do |i|
+        create_project.call(al, {'name' => "Al Level #{i}", 'level' => '/projects/applab', 'hidden' => true})
+        create_project.call(bea, {'name' => "Bea App #{i}", 'level' => '/projects/spritelab'})
+      end
+      many_projects_queries = count_dashboard_db_selects {projects = ProjectsList.fetch_section_projects(section)}
+      assert_equal 12, projects.size
+      assert_equal few_projects_queries, many_projects_queries
+    end
+  end
+
   test 'fetch_section_libraries filters by library_name' do
     applab_lib_name = 'applab_library'
     gamelab_lib_name = 'gamelab_library'
@@ -333,6 +366,16 @@ class ProjectsListTest < ActionController::TestCase
 
   test 'fetch_updated_library_channels returns empty array if no libraries given' do
     assert_equal [], ProjectsList.fetch_updated_library_channels([])
+  end
+
+  private def count_dashboard_db_selects
+    log = StringIO.new
+    logger = Logger.new(log)
+    DASHBOARD_DB.loggers << logger
+    yield
+    log.string.lines.count {|line| line.include?('SELECT')}
+  ensure
+    DASHBOARD_DB.loggers.delete(logger)
   end
 
   private def user_db_result(result)

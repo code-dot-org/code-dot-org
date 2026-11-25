@@ -213,6 +213,21 @@ class StorageIdTest < Minitest::Test
     assert_equal uuid, result
   end
 
+  def test_get_project_channel_id_with_loaded_project
+    storage_id = 123
+    project_id = 456
+    uuid = SecureRandom.uuid
+    project = {id: project_id, storage_id: storage_id, uuid: uuid}
+    Projects.expects(:table).never
+
+    DCDO.stubs(:get).with('project-uuid-in-url', false).returns(false)
+    assert_equal storage_encrypt_channel_id(storage_id, project_id),
+      get_project_channel_id(storage_id, project_id, project: project)
+
+    DCDO.stubs(:get).with('project-uuid-in-url', false).returns(true)
+    assert_equal uuid, get_project_channel_id(storage_id, project_id, project: project)
+  end
+
   def test_get_storage_id_and_project_id
     project_id = 789
     storage_id = 456

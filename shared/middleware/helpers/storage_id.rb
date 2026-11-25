@@ -105,12 +105,14 @@ def storage_encrypt_id(id)
   storage_encrypt("#{SecureRandom.random_number(65536)}:#{id}:#{SecureRandom.random_number(65536)}")
 end
 
-def get_project_channel_id(storage_id, project_id)
+# @param project [Hash, nil] The projects row for project_id. A caller that has
+#   already loaded it passes it here to save a query.
+def get_project_channel_id(storage_id, project_id, project: nil)
   storage_id = storage_id.to_i
   raise ArgumentError, "`storage_id` must be an integer > 0" unless storage_id > 0
   project_id = project_id.to_i
   raise ArgumentError, "`project_id` must be an integer > 0" unless project_id > 0
-  project = Projects.table.where(id: project_id).first || Project.find_by(id: project_id)
+  project ||= Projects.table.where(id: project_id).first || Project.find_by(id: project_id)
 
   # return uuid if it exists
   return project[:uuid] if DCDO.get('project-uuid-in-url', false) && project && project[:uuid]

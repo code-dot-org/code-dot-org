@@ -78,21 +78,26 @@ module ProjectsList
     # @param section [Section]
     # @return [Array<Hash>] An array with each entry representing a project.
     def fetch_section_projects(section)
-      section_students = section.students
-      [].tap do |projects_list_data|
-        student_storage_ids = get_storage_ids_by_user_ids(section_students.pluck(:id))
-        adaptive_ids = adaptive_project_ids(student_storage_ids.values)
-        section_students.each do |student|
-          next unless student_storage_id = student_storage_ids[student.id]
-          Projects.new(student_storage_id).get_active_projects.each do |project|
-            # The channel id stored in the project's value field may not be reliable
-            # when apps are remixed, so recompute the channel id.
-            channel_id = get_project_channel_id(student_storage_id, project[:id])
-            project_data = adaptive_ids.include?(project[:id]) ?
-              get_adaptive_project_row_data(project, channel_id, student) :
-              get_project_row_data(project, channel_id, student)
-            projects_list_data << project_data if project_data
-          end
+      students = section.students.to_a
+      storage_ids_by_user_id = get_storage_ids_by_user_ids(students.map(&:id))
+      adaptive_ids = adaptive_project_ids(storage_ids_by_user_id.values)
+      projects_by_storage_id = Projects.table.
+        where(storage_id: storage_ids_by_user_id.values, state: 'active').
+        to_a.
+        group_by {|project| project[:storage_id]}
+
+      students.flat_map do |student|
+        projects = projects_by_storage_id.fetch(storage_ids_by_user_id[student.id], [])
+        projects.filter_map do |project|
+          # Most rows are hidden level channels; of those, only Adaptive projects are listed.
+          project_data = adaptive_ids.include?(project[:id]) ?
+            get_adaptive_project_row_data(project, nil, student) :
+            get_project_row_data(project, nil, student)
+          next unless project_data
+          # The channel id stored in the project's value field may not be reliable
+          # when apps are remixed, so recompute the channel id.
+          project_data[:channel] = get_project_channel_id(project[:storage_id], project[:id], project: project)
+          project_data
         end
       end
     end
