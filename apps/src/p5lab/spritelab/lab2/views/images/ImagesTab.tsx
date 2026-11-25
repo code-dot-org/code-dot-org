@@ -289,14 +289,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     async (
       target: ImageTarget,
       write: () => Promise<string>,
-      saveNow = true
+      saveNow = true,
+      stillOpen: () => boolean = () => true
     ) => {
       const key = await write();
-      if (!target.key) {
+      if (!target.key && stillOpen()) {
         // The student may have moved to another image while the upload was
         // in progress; only a draft still chosen becomes the new image's
-        // tile. The choice moves before the draft goes, so no render sees
-        // a chosen draft that no longer exists.
+        // tile. A drawing left for a new draft is not that draft, though
+        // both are chosen as DRAFT_ID. The choice moves before the draft
+        // goes, so no render sees a chosen draft that no longer exists.
         setChosenId(id => (id === DRAFT_ID ? key : id));
         setDraft(null);
       }

@@ -392,8 +392,8 @@ describe('useDrawing', () => {
     expect(calls).toEqual([
       ['k1', 'data:a', true],
       ['k1', 'data:last', true],
-      // Within the upload gap; its file goes up on its own last save.
-      ['k2', 'data:b', false],
+      // A drawing's first save uploads: each drawing has its own gap.
+      ['k2', 'data:b', true],
     ]);
   });
 
@@ -622,6 +622,54 @@ describe('useDrawing', () => {
       ]);
       // The last save leaves the next picture's opening alone.
       expect(t.tools().drawing).not.toBeNull();
+    });
+
+    it('saves strokes made while the final save ran before closing', async () => {
+      const t = queueSetup();
+      let pixels = 'one:done';
+      await act(() => t.tools().startDrawing(pictures.one));
+      t.tools().attachEditor({
+        save: () => t.tools().handleSave(pixels, {}),
+        snapshot: () => null,
+      });
+      t.hold();
+      act(() => t.tools().scheduleStrokeSave());
+      await act(async () => t.tools().finishDrawing());
+      // A stroke while the final save uploads.
+      pixels = 'one:after';
+      act(() => t.tools().scheduleStrokeSave());
+      await t.release();
+      expect(t.saves()).toEqual([
+        ['k1', 'one:done', true],
+        ['k1', 'one:after', true],
+      ]);
+      expect(t.tools().drawing).toBeNull();
+    });
+
+    it('saves strokes made while a frame switch waits into the frame they were on', async () => {
+      const t = queueSetup();
+      let pixels = 'f0';
+      await act(() => t.tools().startDrawing(pictures.set, 0));
+      t.tools().attachEditor({
+        save: () => t.tools().handleSave(pixels, {}),
+        snapshot: () => null,
+      });
+      t.hold();
+      t.pause('f0');
+      await act(async () => {
+        t.tools().selectFrame(1);
+        await new Promise(resolve => setTimeout(resolve, 0));
+      });
+      // The frame row still shows frame 0, so the student draws on.
+      pixels = 'f0+more';
+      act(() => t.tools().scheduleStrokeSave());
+      await t.release();
+      await t.release();
+      expect(t.saveEdited.mock.calls.map(call => call[1])).toEqual([
+        'strip|0=f0',
+        'strip|0=f0|0=f0+more',
+      ]);
+      expect(t.tools().drawing!.sheet!.index).toBe(1);
     });
 
     it("gives a new picture's later saves the key its first save made", async () => {
