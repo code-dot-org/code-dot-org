@@ -1,5 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
+import {flushSync} from 'react-dom';
 
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
@@ -15,17 +16,17 @@ export default {
         container.id = 'pairing';
         document.body.appendChild(container);
 
-        createReactRoot(
-          <PairingDialog
-            source={pairingUrl}
-            ref={dialog => {
-              pairingDialog = dialog;
-            }}
-          />,
-          container,
-          {
-            legacyReactDomRender: true,
-          }
+        // Synchronous: the ref is read right after this returns.
+        flushSync(() =>
+          createReactRoot(
+            <PairingDialog
+              source={pairingUrl}
+              ref={dialog => {
+                pairingDialog = dialog;
+              }}
+            />,
+            container
+          )
         );
       }
       if (pairingDialog) {
