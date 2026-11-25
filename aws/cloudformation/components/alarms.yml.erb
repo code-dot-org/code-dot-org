@@ -144,6 +144,102 @@
       TreatMissingData: notBreaching
 <%  end -%>
 
+<% if environment == :production -%>
+  # ---------------------------------------------
+  # ActiveJob (delayed_job) Alarms
+  #
+  # Metrics are in namespace code-dot-org/ActiveJob, dimension Environment, published by
+  # bin/cron/report_activejob_metrics on the daemon. WorkerCount counts delayed_job.N
+  # processes in the daemon's `ps`, so it cannot see workers on any other host, including
+  # Kubernetes pods.
+  # ---------------------------------------------
+
+  # OldestWaitingToStartJobAge is the age of the oldest job that could run now but that no
+  # worker has locked. It reads the database, so it holds wherever the workers run. These two
+  # alarms keep the rules of the hand-made console alarms they replace ("Urgent Alert if
+  # ActiveJob is Down" and "Warn if ActiveJob Queue is Backing Up", December 2024), but page the
+  # Infra topics instead of CDO-Urgent and CDO-WorkdayUrgent. TreatMissingData changes from
+  # missing to breaching: once the daemon's cron is the only publisher (#76800), a dead daemon
+  # shows up as no data, and missing would hold the alarm in INSUFFICIENT_DATA.
+  ActiveJobQueueStalledAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Ref InfraUrgent
+      AlarmName: <%="#{stack_name}_activejob_queue_stalled" %>
+      AlarmDescription: >-
+        A job that could run now has waited over 5 minutes for a worker, for 5 minutes in a row.
+        Normal is under 5 seconds. Check WorkerCount. 0: the daemon's workers are down
+        (2026-10-29); run bin/restart-active-job-workers on the daemon. Normal: the workers are
+        alive but not picking up work (2026-10-02, 2026-10-13); check which job classes are
+        queued and running. No data on either metric: the metrics cron or the whole daemon is
+        down; start with the report_activejob_metrics cron monitor in Sentry.
+      Namespace: code-dot-org/ActiveJob
+      MetricName: OldestWaitingToStartJobAge
+      Dimensions: [{Name: Environment, Value: <%=environment%>}]
+      Statistic: Maximum
+      Period: 60
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 5
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 300
+      TreatMissingData: breaching
+
+  ActiveJobQueueBackingUpAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Ref InfraWorkdayUrgent
+      AlarmName: <%="#{stack_name}_activejob_queue_backing_up" %>
+      AlarmDescription: >-
+        A job that could run now has waited over 60 seconds for a worker, for 5 minutes in a row.
+        Normal is under 5 seconds. This is the early warning for activejob_queue_stalled; if the
+        wait keeps growing, follow that alarm's steps.
+      Namespace: code-dot-org/ActiveJob
+      MetricName: OldestWaitingToStartJobAge
+      Dimensions: [{Name: Environment, Value: <%=environment%>}]
+      Statistic: Maximum
+      Period: 60
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 5
+      ComparisonOperator: GreaterThanThreshold
+      Threshold: 60
+      TreatMissingData: breaching
+
+  # Pairs with the two alarms above, which catch jobs waiting whatever the cause. This one says
+  # whether the cause is missing workers.
+  #
+  # Remove or replace this alarm when the daemon stops running workers, or it will stay in ALARM.
+  ActiveJobNoWorkersAlarm:
+    Type: "AWS::CloudWatch::Alarm"
+    Properties:
+      AlarmActions:
+        - !Ref InfraWorkdayUrgent
+      AlarmName: <%="#{stack_name}_activejob_no_workers" %>
+      AlarmDescription: >-
+        The daemon has reported no delayed_job workers for 5 minutes. Check
+        OldestWaitingToStartJobAge. Rising: the daemon's workers are down (2026-10-29: 25
+        minutes, workable backlog 81 to 560); run bin/restart-active-job-workers on the daemon.
+        Flat: the workers are fine and the metrics cron has stopped (2026-11-17: 79 minutes of
+        failed runs). No recent data: the cron or the whole daemon is down. In the last two
+        cases, start with the report_activejob_metrics cron monitor in Sentry.
+      Namespace: code-dot-org/ActiveJob
+      MetricName: WorkerCount
+      Dimensions: [{Name: Environment, Value: <%=environment%>}]
+      # Maximum, so a 0 published into this series by any other host cannot mask the daemon's
+      # count. App servers have done so on every enqueue.
+      Statistic: Maximum
+      Period: 60
+      # The cron has gone up to 4 minutes between reports while healthy (2026-11-08).
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 5
+      ComparisonOperator: LessThanThreshold
+      Threshold: 1
+      # No data means the daemon's cron did not report, which is how a whole-daemon outage
+      # looks. Breaching keeps the alarm out of INSUFFICIENT_DATA when that happens.
+      TreatMissingData: breaching
+<% end -%>
+
   # ---------------------------------------------
   # Team Alerting SNS Topics
   # 
