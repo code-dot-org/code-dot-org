@@ -198,8 +198,7 @@
     "hide_pause_button": "false",
     "enable_big_playspace": "false",
     "name_suffix": "_final_2026",
-    "preload_asset_list": null,
-    "offer_browser_tts": "true"
+    "preload_asset_list": null
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2026-11-13T13:28:26.986+00:00\",\"changed\":[\"cloned from \\\"hoai2026-dev-when-you-meet\\\"\"],\"cloned_from\":\"hoai2026-dev-when-you-meet\"}]",
