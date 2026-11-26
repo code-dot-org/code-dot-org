@@ -4,6 +4,7 @@ import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {APP_HEIGHT, APP_WIDTH} from '@cdo/apps/p5lab/constants';
 import {
+  isLoadFromSourceSettled,
   setRetainBlobsOnLoad,
   setStoreLoadedImagesAsObjectUrls,
 } from '@cdo/apps/p5lab/redux/animationList';
@@ -240,8 +241,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     // Settles a pending image-grace wait (see
     // whenAnimationsAreReadyOrGivenUp_).
     this.imageWaitCancel_ = null;
-    // Unsubscribes the watch that re-runs when images arrive after a
-    // give-up (see onImageLoadGiveUp_).
+    // Unsubscribes the watch that re-runs once the images still loading at
+    // a give-up have settled (see onImageLoadGiveUp_).
     this.lateImagesUnsubscribe_ = null;
     // True while nobody can see the playspace (see setDrawPaused).
     this.drawPaused_ = false;
@@ -1237,11 +1238,15 @@ export default class SpriteLab2Engine extends SpriteLab {
     return this.preloadTrimmedSpriteImages_();
   }
 
-  /**
-   * Wait for the project's images, but not forever: the store never marks
-   * an image whose fetch failed, so after the grace period the run goes
-   * ahead with what has loaded.
-   */
+  // A failed image counts as ready, since it will not arrive: the run goes
+  // ahead without it.
+  areAnimationsReady_() {
+    const list = getStore().getState().animationList;
+    return list.orderedKeys.every(key =>
+      isLoadFromSourceSettled(list.propsByKey[key])
+    );
+  }
+
   whenAnimationsAreReadyOrGivenUp_() {
     if (this.areAnimationsReady_()) {
       return Promise.resolve();
@@ -1268,22 +1273,23 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
   }
 
-  // After a give-up: say what is still missing, and re-run once if it
-  // ever arrives.
+  // After a give-up: say what is still missing, and re-run once every late
+  // image has settled, if any of them loaded.
   onImageLoadGiveUp_() {
     if (this.areAnimationsReady_()) {
       // Ready and timed out in the same tick; nothing is missing.
       return;
     }
     const list = getStore().getState().animationList;
-    const pending = list.orderedKeys
-      .filter(key => !list.propsByKey[key]?.loadedFromSource)
-      .map(key => list.propsByKey[key]?.name || key);
+    const lateKeys = list.orderedKeys.filter(
+      key => !isLoadFromSourceSettled(list.propsByKey[key])
+    );
+    const pending = lateKeys.map(key => list.propsByKey[key]?.name || key);
     console.warn(
       `SpriteLab2: ${pending.join(', ')} did not load within ` +
         `${IMAGE_LOAD_GRACE_MS / 1000}s; running without ` +
         `${pending.length === 1 ? 'it' : 'them'}. Check the Network tab ` +
-        'for failing asset requests.'
+        'for slow or stalled asset requests.'
     );
     this.clearLateImagesWatch_();
     this.lateImagesUnsubscribe_ = getStore().subscribe(() => {
@@ -1295,7 +1301,11 @@ export default class SpriteLab2Engine extends SpriteLab {
       // image clear this instead.
       if (this.isTickTimerRunning()) {
         this.clearLateImagesWatch_();
-        this.rerun();
+        const props = getStore().getState().animationList.propsByKey;
+        // If every late image failed, a re-run would show nothing new.
+        if (lateKeys.some(key => props[key]?.loadedFromSource)) {
+          this.rerun();
+        }
       }
     });
   }

@@ -47,6 +47,9 @@ export const START_LOADING_FROM_SOURCE =
 // Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
 export const DONE_LOADING_FROM_SOURCE =
   'AnimationList/DONE_LOADING_FROM_SOURCE';
+// Args: {AnimationKey} key, {{reason: string, status?: number}} failure
+export const FAILED_LOADING_FROM_SOURCE =
+  'AnimationList/FAILED_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {string} version
 const ON_ANIMATION_SAVED = 'AnimationList/ON_ANIMATION_SAVED';
 // Args: {AnimationKey} key, {!SerializedAnimation} props
@@ -140,6 +143,7 @@ function propsByKey(state, action) {
     case SET_ANIMATION_FRAME_DELAY:
     case START_LOADING_FROM_SOURCE:
     case DONE_LOADING_FROM_SOURCE:
+    case FAILED_LOADING_FROM_SOURCE:
     case ON_ANIMATION_SAVED:
       return Object.assign({}, state, {
         [action.key]: animationPropsReducer(state[action.key], action),
@@ -189,15 +193,25 @@ function animationPropsReducer(state, action) {
     case START_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: false,
+        loadFailed: false,
+        loadFailure: undefined,
       });
 
     case DONE_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: true,
+        loadFailed: false,
+        loadFailure: undefined,
         saved: true,
         blob: action.blob,
         dataURI: action.dataURI,
         sourceSize: action.sourceSize,
+      });
+
+    case FAILED_LOADING_FROM_SOURCE:
+      return Object.assign({}, state, {
+        loadFailed: true,
+        loadFailure: action.failure,
       });
 
     case ON_ANIMATION_SAVED:
@@ -696,6 +710,16 @@ export function setStoreLoadedImagesAsObjectUrls(enable) {
 }
 
 /**
+ * True once an image's load from its source has finished, by arriving or by
+ * failing.
+ * @param {AnimationProps} [props]
+ * @returns {boolean}
+ */
+export function isLoadFromSourceSettled(props) {
+  return !!(props?.loadedFromSource || props?.loadFailed);
+}
+
+/**
  * Revoke a list's object-URL images, freeing their Blobs. Call when the
  * whole list is being replaced (level switch, Start Over re-seed).
  */
@@ -717,13 +741,17 @@ export function setRetainBlobsOnLoad(retain) {
   retainBlobsOnLoad = retain;
 }
 
+// How many loads have been started for each key. Only the newest load of
+// a key may mark the image failed.
+const latestLoadByKey = new Map();
+
 /**
  * Load the indicated animation (which must already have an entry in the project
  * animation list) from its source, whether that is S3 or the animation library.
  * @param {!AnimationKey} key
  * @param {function} [callback]
  */
-function loadAnimationFromSource(key, callback) {
+export function loadAnimationFromSource(key, callback) {
   callback = callback || function () {};
   return (dispatch, getState) => {
     const state = getState();
@@ -736,11 +764,34 @@ function loadAnimationFromSource(key, callback) {
       type: START_LOADING_FROM_SOURCE,
       key: key,
     });
+    const loadNumber = (latestLoadByKey.get(key) || 0) + 1;
+    latestLoadByKey.set(key, loadNumber);
+    const markFailed = failure => {
+      if (latestLoadByKey.get(key) === loadNumber) {
+        dispatch({type: FAILED_LOADING_FROM_SOURCE, key, failure});
+      }
+    };
+    // A file that downloads but is not an image (an error page, an empty
+    // file) fails here rather than at the fetch.
+    const failToDecode = objectUrl => err => {
+      console.log('Failed to decode animation ' + key, err);
+      if (objectUrl) {
+        URL.revokeObjectURL(objectUrl);
+      }
+      markFailed({reason: 'notImage'});
+    };
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load animation ' + key, err);
-        // Brute-force recovery step: Remove the animation from our redux state;
-        // it looks like it's already gone from the server.
+        // fetchURLAsBlob gives the response status only inside its error
+        // message ("responded with code 404"); a request that got no
+        // response uses other wording.
+        const status = Number(
+          /responded with code (\d+)/.exec(err.message)?.[1]
+        );
+        markFailed(
+          status ? {reason: 'httpError', status} : {reason: 'network'}
+        );
 
         if (isOwner()) {
           // Display error dialog
@@ -774,7 +825,7 @@ function loadAnimationFromSource(key, callback) {
             sourceSize,
           });
           callback();
-        });
+        }, failToDecode(objectUrl));
         return;
       }
       blobToDataURI(blob, dataURI => {
@@ -787,7 +838,7 @@ function loadAnimationFromSource(key, callback) {
             sourceSize,
           });
           callback();
-        });
+        }, failToDecode());
       });
     });
   };

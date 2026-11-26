@@ -40,6 +40,7 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 // pull the ones the engine and image list need by key.
 import * as p5labReducersModule from '@cdo/apps/p5lab/reducers';
 import {
+  isLoadFromSourceSettled,
   revokeObjectUrlImages,
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
@@ -194,6 +195,7 @@ import usePicturesSheet from './usePicturesSheet';
 import usePreviewRefresh from './usePreviewRefresh';
 import useProjectPicture from './useProjectPicture';
 import useReleaseRemovedImages from './useReleaseRemovedImages';
+import useReportImageLoadFailures from './useReportImageLoadFailures';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -814,6 +816,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
+  useReportImageLoadFailures(animationList, levelProperties, channelId);
 
   const sceneMetadata = useMemo(
     () => sceneMetadataFor(scenes, animationList),
@@ -1264,13 +1267,15 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     setOnStageSceneId(scene?.id ?? null);
   }, []);
 
-  // Re-run the stage once a reseeded animation list finishes loading. The
-  // reseed-triggered run happens immediately, but reseeded entries carry
-  // only a sourceUrl (dataURIs load async) and the engine can't draw
-  // unloaded images (costume/background commands no-op on unknown names —
-  // a blank playspace until the next run). Kept in a ref (not effect
-  // cleanup): the reseed effect's deps churn on every animation
-  // write, which would cancel a pending watcher mid-load.
+  // When the project's images are replaced all at once (previewing or
+  // restoring an older version, or Start Over on a level whose starting code
+  // has images), the game runs right away, before those images have loaded,
+  // so it can't show them yet. This waits for them and runs the game again
+  // once they're in. If they all fail to load there's nothing new to show,
+  // so it doesn't.
+  // The watcher is kept in a ref because the effect that replaces the images
+  // runs again on every image change, and its cleanup would cancel the watcher
+  // too early.
   const cancelRerunWatchRef = useRef<() => void>();
   const restartSceneRef = useRef<() => void>(() => {});
   // Restarts the scene while the game plays, and runs the preview otherwise.
@@ -1279,21 +1284,28 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const rerunWhenAnimationsLoaded = useCallback(() => {
     cancelRerunWatchRef.current?.();
     const store = getStore();
-    const allLoaded = () => {
+    const allSettled = () => {
       const list = store.getState().animationList;
-      return list.orderedKeys.every(
-        (key: string) => list.propsByKey[key]?.loadedFromSource
+      return list.orderedKeys.every((key: string) =>
+        isLoadFromSourceSettled(list.propsByKey[key])
       );
     };
-    if (allLoaded()) {
-      // The reseed-triggered run has everything it needs.
+    if (allSettled()) {
       return;
     }
+    const startList = store.getState().animationList;
+    const lateKeys: string[] = startList.orderedKeys.filter(
+      (key: string) => !isLoadFromSourceSettled(startList.propsByKey[key])
+    );
     const finish = () => {
       cancel();
-      rerunStageRef.current();
+      const props = store.getState().animationList.propsByKey;
+      // If every late image failed, a re-run would show nothing new.
+      if (lateKeys.some(key => props[key]?.loadedFromSource)) {
+        rerunStageRef.current();
+      }
     };
-    const unsubscribe = store.subscribe(() => allLoaded() && finish());
+    const unsubscribe = store.subscribe(() => allSettled() && finish());
     // Give up quietly if a load never completes; the playspace stays stale,
     // no worse than not watching.
     const timer = window.setTimeout(() => cancel(), 10000);

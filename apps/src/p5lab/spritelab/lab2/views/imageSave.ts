@@ -90,6 +90,8 @@ export function repointAnimation(
         ...current.propsByKey[key],
         ...changes,
         loadedFromSource: true,
+        loadFailed: false,
+        loadFailure: undefined,
         saved: false,
       },
     },

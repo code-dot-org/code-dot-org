@@ -96,10 +96,26 @@ describe('imageSave', () => {
             sourceUrl: 'new.png',
             trimmed: false,
             loadedFromSource: true,
+            loadFailed: false,
+            loadFailure: undefined,
             saved: false,
           },
         },
       },
     });
+  });
+
+  it('clears a failed load from an animation it repoints', () => {
+    propsByKey.k1 = {
+      name: 'Sprite 1',
+      sourceUrl: 'gone.png',
+      loadFailed: true,
+      loadFailure: {reason: 'httpError', status: 404},
+    };
+    const dispatch = jest.fn();
+    repointAnimation(dispatch, 'k1', {sourceUrl: 'new.png'});
+    const repointed = dispatch.mock.calls[0][0].animationList.propsByKey.k1;
+    expect(repointed.loadFailed).toBe(false);
+    expect(repointed.loadFailure).toBeUndefined();
   });
 });

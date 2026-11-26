@@ -7,6 +7,9 @@ import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
 import reducer, {
   START_LOADING_FROM_SOURCE,
   DONE_LOADING_FROM_SOURCE,
+  FAILED_LOADING_FROM_SOURCE,
+  isLoadFromSourceSettled,
+  loadAnimationFromSource,
   animationSourceUrl,
   setInitialAnimationList,
   deleteAnimation,
@@ -34,6 +37,18 @@ import pageConstantsReducer, {
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {createStore} from '../../../util/redux';
 import {setExternalGlobals} from '../../../util/testUtils';
+
+jest.mock('@cdo/apps/imageUtils', () => {
+  const actual = jest.requireActual('@cdo/apps/imageUtils');
+  return {
+    ...actual,
+    fetchURLAsBlob: jest.fn((...args) => actual.fetchURLAsBlob(...args)),
+    dataURIToSourceSize: jest.fn((...args) =>
+      actual.dataURIToSourceSize(...args)
+    ),
+  };
+});
+const imageUtils = jest.requireMock('@cdo/apps/imageUtils');
 
 const project = require('@cdo/apps/code-studio/initApp/project');
 
@@ -146,12 +161,6 @@ describe('animationList', function () {
   });
 
   describe('loadAnimationFromSource', function () {
-    // Note: I'm basically unable to test loadAnimationFromSource right now,
-    // because it makes an external request for a Blob and sinon can't fake
-    // a request for a blob under PhantomJS (grr) so I need to do some refactoring
-    // to allow me to stub a request method.  in the meantime, I'll show
-    // that the reducer responds as expected.
-
     const key = 'foo';
     let store;
 
@@ -168,8 +177,97 @@ describe('animationList', function () {
       });
     });
 
+    describe('a file that downloads but does not decode', () => {
+      const settled = async () => {
+        for (let i = 0; i < 50; i++) {
+          const props = store.getState().animationList.propsByKey[key];
+          if (isLoadFromSourceSettled(props)) {
+            return;
+          }
+          await new Promise(resolve => setTimeout(resolve, 10));
+        }
+      };
+      beforeEach(() => {
+        imageUtils.fetchURLAsBlob.mockImplementationOnce((url, callback) =>
+          callback(null, new Blob(['not an image']))
+        );
+        imageUtils.dataURIToSourceSize.mockImplementationOnce(() =>
+          Promise.reject(new Error('decode'))
+        );
+      });
+
+      it('is marked failed', async () => {
+        store.dispatch(loadAnimationFromSource(key));
+        await settled();
+        const props = store.getState().animationList.propsByKey[key];
+        expect(props.loadedFromSource).to.be.false;
+        expect(isLoadFromSourceSettled(props)).to.be.true;
+        expect(props.loadFailure).to.deep.equal({reason: 'notImage'});
+      });
+    });
+
+    it('clears a failed load when a new load of the image starts', async () => {
+      imageUtils.fetchURLAsBlob.mockImplementationOnce((url, callback) =>
+        callback(new Error('URL a.png responded with code 404'))
+      );
+      store.dispatch(loadAnimationFromSource(key));
+      await new Promise(resolve => setTimeout(resolve, 0));
+      expect(store.getState().animationList.propsByKey[key].loadFailed).to.be
+        .true;
+      // The next request stays unanswered.
+      imageUtils.fetchURLAsBlob.mockImplementationOnce(() => undefined);
+      store.dispatch(loadAnimationFromSource(key));
+      const props = store.getState().animationList.propsByKey[key];
+      expect(props.loadFailed).to.be.false;
+      expect(props.loadFailure).to.be.undefined;
+    });
+
+    it('ignores the failure of a load that a newer load replaced', async () => {
+      let failFirst = () => undefined;
+      imageUtils.fetchURLAsBlob.mockImplementationOnce((url, callback) => {
+        failFirst = () =>
+          callback(new Error('URL a.png responded with code 404'));
+      });
+      store.dispatch(loadAnimationFromSource(key));
+      // The newer request stays unanswered.
+      imageUtils.fetchURLAsBlob.mockImplementationOnce(() => undefined);
+      store.dispatch(loadAnimationFromSource(key));
+      failFirst();
+      const props = store.getState().animationList.propsByKey[key];
+      expect(props.loadFailed).to.be.false;
+      expect(isLoadFromSourceSettled(props)).to.be.false;
+    });
+
+    describe('a file that does not download', () => {
+      const loadFailing = async error => {
+        imageUtils.fetchURLAsBlob.mockImplementationOnce((url, callback) =>
+          callback(error)
+        );
+        store.dispatch(loadAnimationFromSource(key));
+        await new Promise(resolve => setTimeout(resolve, 0));
+        return store.getState().animationList.propsByKey[key];
+      };
+
+      it('records the status it was answered with', async () => {
+        const props = await loadFailing(
+          new Error('URL /v3/assets/c/a.png responded with code 404')
+        );
+        expect(isLoadFromSourceSettled(props)).to.be.true;
+        expect(props.loadFailure).to.deep.equal({
+          reason: 'httpError',
+          status: 404,
+        });
+      });
+
+      it('records a request that got no answer as a network failure', async () => {
+        const props = await loadFailing(
+          new Error('Error 0 occurred while receiving the document.')
+        );
+        expect(props.loadFailure).to.deep.equal({reason: 'network'});
+      });
+    });
+
     it('sets the loadedFromSource flag', function () {
-      // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].loadedFromSource).to
         .be.undefined;
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
@@ -183,8 +281,20 @@ describe('animationList', function () {
         .be.true;
     });
 
+    it('marks a failed load settled, and a new load clears the mark', function () {
+      const props = () => store.getState().animationList.propsByKey[key];
+      store.dispatch({type: START_LOADING_FROM_SOURCE, key});
+      expect(isLoadFromSourceSettled(props())).to.be.false;
+      store.dispatch({type: FAILED_LOADING_FROM_SOURCE, key});
+      expect(props().loadedFromSource).to.be.false;
+      expect(isLoadFromSourceSettled(props())).to.be.true;
+      store.dispatch({type: START_LOADING_FROM_SOURCE, key});
+      expect(isLoadFromSourceSettled(props())).to.be.false;
+      store.dispatch({type: DONE_LOADING_FROM_SOURCE, key});
+      expect(isLoadFromSourceSettled(props())).to.be.true;
+    });
+
     it('populates animation blob', function () {
-      // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].blob).to.be
         .undefined;
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
@@ -200,7 +310,6 @@ describe('animationList', function () {
     });
 
     it('populates animation dataURI', function () {
-      // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].dataURI).to.be
         .undefined;
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
@@ -216,7 +325,6 @@ describe('animationList', function () {
     });
 
     it('populates animation sourceSize', function () {
-      // TODO run loadAnimationFromSource action here when we can stub the request
       expect(store.getState().animationList.propsByKey[key].sourceSize).to.be
         .undefined;
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
