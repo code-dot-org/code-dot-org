@@ -20,8 +20,8 @@ interface HeldPixels {
 const held = new Map<string, Map<string, HeldPixels>>();
 let nextRevision = 1;
 
-/** Whether this project's saves upload held pixels, so a drawing on one of
-    its images can wait for the save instead of uploading. */
+/** Whether this project's saves upload the pixels held for its images:
+    false unless it is the current project manager's project. */
 export function uploadsWithSave(channelId: string | undefined): boolean {
   const manager = Lab2Registry.getInstance().getProjectManager();
   return (
@@ -139,9 +139,9 @@ interface PreparerOptions {
  * The sources preparer for a project: uploads the held pixels of every image
  * the sources mark `pendingUpload`, and returns the sources with each such
  * image's link set to its file and the mark removed. When an upload fails,
- * the save goes ahead without those pixels: an image that has a file keeps
- * it, a new image is left out, the pixels stay held, and the save is
- * incomplete, so another follows.
+ * the sources returned do not include those pixels: an image that has a file
+ * keeps its link, a new image is left out, the pixels stay held, and the
+ * result is `incomplete`, so the project manager saves again.
  */
 export function makeSourcesPreparer({
   channelId,

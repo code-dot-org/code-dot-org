@@ -1129,7 +1129,7 @@ describe('ProjectManager', () => {
       try {
         const projectManager = await makeManager();
         const preparer = sinon.stub();
-        // What the preparer can save is what is already saved.
+        // The preparer returns the sources that are already saved.
         preparer.resolves({sources: FAKE_SOURCE, incomplete: true});
         projectManager.setSourcesPreparer(preparer);
         const noopListener = sinon.stub();
@@ -1171,6 +1171,73 @@ describe('ProjectManager', () => {
           source: 'whole',
         });
         assert.isFalse(projectManager.hasUnsavedChanges());
+      } finally {
+        clock.restore();
+      }
+    });
+
+    it('saves again after an incomplete save whose write fails', async () => {
+      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
+      try {
+        const projectManager = await makeManager();
+        const preparer = sinon.stub();
+        preparer.onFirstCall().resolves({
+          sources: {source: 'partial'},
+          incomplete: true,
+        });
+        preparer.onSecondCall().resolves({sources: {source: 'whole'}});
+        projectManager.setSourcesPreparer(preparer);
+        sourcesStore.save.onFirstCall().rejects(new Error('500'));
+        await projectManager.save(UPDATED_SOURCE, true);
+        await clock.tickAsync(30 * 1000);
+        assert.isTrue(preparer.calledTwice);
+        assert.deepEqual(sourcesStore.save.secondCall.args[1], {
+          source: 'whole',
+        });
+      } finally {
+        clock.restore();
+      }
+    });
+
+    it('writes prepared sources that match the last known saved ones after a failed save', async () => {
+      const projectManager = await makeManager();
+      const preparer = sinon.stub();
+      preparer.onFirstCall().resolves({sources: UPDATED_SOURCE});
+      preparer
+        .onSecondCall()
+        .resolves({sources: FAKE_SOURCE, incomplete: true});
+      projectManager.setSourcesPreparer(preparer);
+      // The server can have stored UPDATED_SOURCE though the save failed.
+      sourcesStore.save.onFirstCall().rejects(new Error('500'));
+      await projectManager.save(UPDATED_SOURCE, true);
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.deepEqual(sourcesStore.save.secondCall.args[1], FAKE_SOURCE);
+    });
+
+    it('does not save again once it is destroyed', async () => {
+      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
+      try {
+        const projectManager = await makeManager();
+        let finishPreparing: (prepared: {
+          sources: ProjectSources;
+          incomplete: boolean;
+        }) => void = () => undefined;
+        const preparer = sinon.spy(
+          () =>
+            new Promise<{sources: ProjectSources; incomplete: boolean}>(
+              resolve => (finishPreparing = resolve)
+            )
+        );
+        projectManager.setSourcesPreparer(preparer);
+        const save = projectManager.save(UPDATED_SOURCE, true);
+        // The save runs past the save interval, so one that follows it
+        // could start at once.
+        await clock.tickAsync(31 * 1000);
+        projectManager.destroy();
+        finishPreparing({sources: {source: 'partial'}, incomplete: true});
+        await save;
+        await clock.tickAsync(31 * 1000);
+        assert.isTrue(preparer.calledOnce);
       } finally {
         clock.restore();
       }

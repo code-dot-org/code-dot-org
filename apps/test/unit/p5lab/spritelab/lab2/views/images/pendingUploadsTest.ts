@@ -136,7 +136,7 @@ describe('pendingUploads', () => {
     expect(Object.keys(saved(result, 'k1'))[1]).toBe('sourceUrl');
   });
 
-  it("saves without a failed upload's pixels, keeping the old file and holding the pixels for the next save", async () => {
+  it("returns incomplete sources without a failed upload's pixels, keeping the old file and holding the pixels for the next save", async () => {
     const upload = jest
       .fn()
       .mockRejectedValueOnce(new Error('upload failed'))
@@ -163,7 +163,7 @@ describe('pendingUploads', () => {
     expect(onUploaded).toHaveBeenCalledTimes(1);
   });
 
-  it('leaves a new image whose upload failed out of the save', async () => {
+  it('leaves a new image whose upload failed out of the sources it returns', async () => {
     const upload = jest.fn().mockRejectedValue(new Error('upload failed'));
     const {preparer, onUploadFailed} = setup(upload);
     holdPixels('chan', 'kNew', 'data:image/png;base64,AA');

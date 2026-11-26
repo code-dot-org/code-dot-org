@@ -14,8 +14,8 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {hasNewerPixels, makeSourcesPreparer} from './pendingUploads';
 
 /**
- * Makes the project's saves upload the drawn pixels its images hold, so a
- * drawing is uploaded at most once per save.
+ * Makes the project's saves upload the drawn pixels held for its images, so
+ * several drawings on an image between two saves cost one upload.
  */
 export default function useUploadDrawingsOnSave(
   channelId: string | undefined,

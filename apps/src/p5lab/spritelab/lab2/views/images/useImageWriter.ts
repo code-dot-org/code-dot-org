@@ -110,9 +110,10 @@ export interface ImageWriter {
     verdict: Verdict
   ) => ImageProps['generation'] | undefined;
   deleteImage: (key: string) => void;
-  /** Deletes, once a save no longer names them, the files this session
-      uploaded that no image points at, and starts a new session. A session
-      is one image's run of generations and drawings. */
+  /** Starts a new session, and deletes the files the ended session uploaded
+      or replaced that no image points at, each once neither the project's
+      saved sources nor its sources waiting to be saved name it. A session is
+      one image's run of generations and drawings. */
   endSession: () => void;
 }
 
@@ -312,7 +313,8 @@ export default function useImageWriter({
         },
         waitForSave
       );
-      // A save for an image deleted meanwhile wrote nothing.
+      // `write` stores nothing for an image that was deleted while this
+      // call was waiting, so no pixels are held for it.
       if (waitForSave && channelId && propsOf(key)) {
         holdPixels(channelId, key, dataURI);
       }

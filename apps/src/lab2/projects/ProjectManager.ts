@@ -81,7 +81,8 @@ export default class ProjectManager {
   private saveFailListeners: ((error: Error) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
   private sourcesPreparer: SourcesPreparer | undefined;
-  // Set by a save whose sources preparer left something out.
+  // Set when a save's sources preparer returns `incomplete`; another save is
+  // queued when that save settles.
   private saveAgainNeeded = false;
   private sourcesSettledListeners: ((settled: SettledSources) => void)[] = [];
   private savesInFlightCount = 0;
@@ -478,9 +479,10 @@ export default class ProjectManager {
   }
 
   /**
-   * Sets the step that each save runs on the sources just before writing
-   * them, for a lab that stores part of a project elsewhere first, such as
-   * image files. The sources it returns are what is saved. A step that
+   * Sets the step that a save runs on its sources just before writing them,
+   * for a lab that stores part of a project elsewhere first, such as image
+   * files. The save writes the sources the step returns, or nothing when the
+   * step reports them `incomplete` and they are already saved. A step that
    * throws fails the save. A manager has one step: setting another replaces
    * it. The step runs only in a save whose sources have changed, so a lab
    * with something to store must change the sources to have it run.
@@ -722,17 +724,21 @@ export default class ProjectManager {
           : {sources: sourcesBeingSaved};
         sourcesSaved = prepared.sources;
         incomplete = !!prepared.incomplete;
+        if (incomplete) {
+          this.saveAgainNeeded = true;
+        }
         if (
           incomplete &&
           !skipSourcesChangedCheck &&
           !channelChanged &&
           !this.channelSaveNeeded &&
+          !this.savedSourcesUncertain &&
           JSON.stringify(prepared.sources) === this.lastSource
         ) {
-          // What could be prepared is already saved; only the part left out
-          // remains, and it is tried again with the next save.
+          // The prepared sources match what is already saved, so nothing is
+          // written. The part the preparer left out is tried again by the
+          // save that is queued when this one settles.
           this.saveInProgress = false;
-          this.saveAgainNeeded = true;
           this.executeSaveNoopListeners(this.lastChannel);
           return;
         }
@@ -842,9 +848,6 @@ export default class ProjectManager {
     this.initialSaveComplete = true;
     this.lastSuccessfulSaveTime = Date.now();
     this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
-    if (incomplete) {
-      this.saveAgainNeeded = true;
-    }
   }
 
   private onSaveFail(
@@ -973,7 +976,9 @@ export default class ProjectManager {
         this.executeSourcesSettledListeners();
         if (this.saveAgainNeeded) {
           this.saveAgainNeeded = false;
-          void this.enqueueSaveOrSave(false, false).catch(() => undefined);
+          if (!this.destroyed) {
+            void this.enqueueSaveOrSave(false, false).catch(() => undefined);
+          }
         }
       });
     this.saveInFlight = save.catch(() => undefined);

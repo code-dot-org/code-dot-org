@@ -768,12 +768,6 @@ describe('useImageWriter', () => {
     });
 
     it('makes a new image without uploading, marked for the next save', async () => {
-      makeSourcesPreparer({
-        channelId: 'chan',
-        upload: jest.fn(),
-        onUploaded: () => undefined,
-        onUploadFailed: () => undefined,
-      });
       const {writer, uploadImage} = renderWriter();
       let key = '';
       await act(async () => {
