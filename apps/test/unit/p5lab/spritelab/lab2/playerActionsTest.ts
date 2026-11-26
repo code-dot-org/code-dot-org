@@ -90,6 +90,18 @@ describe('createPlayerActionTracker', () => {
     expect(walks).toEqual([1, 5, 8, 11, 14]);
   });
 
+  it('reports a jump that starts in the air just after the player left its footing', () => {
+    const inAir = (y: number, jumpStarted = false) => ({
+      ...frame(100, y),
+      jumpStarted,
+    });
+    // Falling for two frames, then moving up: with a jump command it is a
+    // jump, and without one it is not.
+    const fall = [inAir(STANDING_Y - 60), inAir(STANDING_Y - 52)];
+    expect(run([...fall, inAir(STANDING_Y - 64, true)])[2]).toEqual(['jump']);
+    expect(run([...fall, inAir(STANDING_Y - 64)])[2]).toEqual([]);
+  });
+
   it('treats a gravity change in the air as neither jump nor landing', () => {
     const tracker = createPlayerActionTracker();
     tracker.observe(frame(100, STANDING_Y - 60), 0);

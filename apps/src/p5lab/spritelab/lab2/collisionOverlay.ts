@@ -18,8 +18,9 @@ export interface OverlayBox extends CollisionBox {
   touching: boolean;
 }
 
-/** Each block's cell and each other sprite's body, as the physics and
-    touches with blocks measure them. */
+/** Each block's cell and each sprite's body, as the platform physics and
+    touches with blocks measure them, each marked with whether it is in such
+    a touch. */
 export function collisionOverlayBoxes(
   sprites: PhysicsBox[],
   walls: PhysicsBox[]

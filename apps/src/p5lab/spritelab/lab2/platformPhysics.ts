@@ -153,9 +153,9 @@ export function touchesWall(sprite: PhysicsBox, wall: PhysicsBox): boolean {
 // How many frames a player may be off its footing and still start a jump,
 // so a press just after walking off a ledge is not lost: about 0.1 s at the
 // game's 30 frames a second.
-export const COYOTE_FRAMES = 3;
+export const JUMP_GRACE_FRAMES = 3;
 
-/** Whether a jump may start: with footing, or within COYOTE_FRAMES of
+/** Whether a jump may start: with footing, or within JUMP_GRACE_FRAMES of
     losing it while falling. `fallSpeed` is the speed along gravity; a
     sprite moving against gravity is in a jump already. */
 export function canStartJump(
@@ -163,7 +163,17 @@ export function canStartJump(
   airborneFrames: number,
   fallSpeed: number
 ): boolean {
-  return supported || (fallSpeed >= 0 && airborneFrames <= COYOTE_FRAMES);
+  return supported || (fallSpeed >= 0 && airborneFrames <= JUMP_GRACE_FRAMES);
+}
+
+/** The take-off speed for a jump that starts `drop` pixels below where a
+    jump at `speed` would start, and reaches the same height. */
+export function jumpSpeedFromBelow(
+  speed: number,
+  drop: number,
+  gravity: number
+): number {
+  return Math.sqrt(speed * speed + 2 * Math.abs(gravity) * Math.max(0, drop));
 }
 
 function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {

@@ -7,7 +7,8 @@ import {
   isSupported,
   touchesWall,
   canStartJump,
-  COYOTE_FRAMES,
+  jumpSpeedFromBelow,
+  JUMP_GRACE_FRAMES,
   resolvePlatformPhysics,
   PhysicsBox,
   PhysicsSprite,
@@ -412,12 +413,25 @@ describe('platformPhysics with custom gravity', () => {
   it('canStartJump allows a jump with footing, or just after losing it while falling', () => {
     expect(canStartJump(true, 0, 0.75)).toBe(true);
     expect(canStartJump(false, 1, 8.75)).toBe(true);
-    expect(canStartJump(false, COYOTE_FRAMES, 10)).toBe(true);
-    expect(canStartJump(false, COYOTE_FRAMES + 1, 10)).toBe(false);
+    expect(canStartJump(false, JUMP_GRACE_FRAMES, 10)).toBe(true);
+    expect(canStartJump(false, JUMP_GRACE_FRAMES + 1, 10)).toBe(false);
     // Moving against gravity: a jump is under way.
     expect(canStartJump(false, 1, -12)).toBe(false);
     // Never stood on anything.
     expect(canStartJump(false, Infinity, 5)).toBe(false);
+  });
+
+  it('jumpSpeedFromBelow adds the speed that covers the drop', () => {
+    // A jump at speed v under gravity g rises v * v / (2 * g).
+    const rise = (speed: number) => (speed * speed) / (2 * PLATFORM_GRAVITY);
+    const speed = 14;
+    expect(jumpSpeedFromBelow(speed, 0, PLATFORM_GRAVITY)).toBe(speed);
+    const fromBelow = jumpSpeedFromBelow(speed, 19, PLATFORM_GRAVITY);
+    expect(rise(fromBelow)).toBeCloseTo(rise(speed) + 19);
+    // Upward gravity is the same jump mirrored.
+    expect(jumpSpeedFromBelow(speed, 19, -PLATFORM_GRAVITY)).toBe(fromBelow);
+    // A start above the footing takes no speed away.
+    expect(jumpSpeedFromBelow(speed, -5, PLATFORM_GRAVITY)).toBe(speed);
   });
 
   it('isSupported sees floor, block tops, and flipped undersides', () => {
