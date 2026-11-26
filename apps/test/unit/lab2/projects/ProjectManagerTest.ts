@@ -1199,7 +1199,7 @@ describe('ProjectManager', () => {
       }
     });
 
-    it('writes prepared sources that match the last known saved ones after a failed save', async () => {
+    it('writes an incomplete save that has nothing new to store when the save before it failed', async () => {
       const projectManager = await makeManager();
       const preparer = sinon.stub();
       preparer.onFirstCall().resolves({sources: UPDATED_SOURCE});
@@ -1212,9 +1212,10 @@ describe('ProjectManager', () => {
       await projectManager.save(UPDATED_SOURCE, true);
       await projectManager.save(UPDATED_SOURCE, true);
       assert.deepEqual(sourcesStore.save.secondCall.args[1], FAKE_SOURCE);
+      projectManager.destroy();
     });
 
-    it('does not save again once it is destroyed', async () => {
+    it('does not save again after an incomplete save once the manager is destroyed', async () => {
       const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
       try {
         const projectManager = await makeManager();

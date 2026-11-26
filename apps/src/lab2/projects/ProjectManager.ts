@@ -81,8 +81,8 @@ export default class ProjectManager {
   private saveFailListeners: ((error: Error) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
   private sourcesPreparer: SourcesPreparer | undefined;
-  // Set when a save's sources preparer returns `incomplete`; another save is
-  // queued when that save settles.
+  // Set when a save's sources preparer returns `incomplete`, so that another
+  // save follows when that save ends.
   private saveAgainNeeded = false;
   private sourcesSettledListeners: ((settled: SettledSources) => void)[] = [];
   private savesInFlightCount = 0;
@@ -737,7 +737,7 @@ export default class ProjectManager {
         ) {
           // The prepared sources match what is already saved, so nothing is
           // written. The part the preparer left out is tried again by the
-          // save that is queued when this one settles.
+          // save that follows this one.
           this.saveInProgress = false;
           this.executeSaveNoopListeners(this.lastChannel);
           return;
