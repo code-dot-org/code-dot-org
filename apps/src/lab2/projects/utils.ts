@@ -26,6 +26,9 @@ export interface PartialAppOptions {
  *
  * Note: We are trying to use app options as little as possible.
  */
+/** A file's URL without its query, such as a cache-busting ?t=<time>. */
+export const urlWithoutQuery = (url: string) => url.split('?')[0];
+
 export function getStandaloneProjectId(): string | undefined {
   if (hasScriptData('script[data-appoptions]')) {
     const appOptions = getScriptData('appoptions') as PartialAppOptions;

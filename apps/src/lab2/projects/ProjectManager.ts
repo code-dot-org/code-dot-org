@@ -35,8 +35,22 @@ import {
 import {ChannelsStore} from './ChannelsStore';
 import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
 import {SourcesStore} from './SourcesStore';
+import {urlWithoutQuery} from './utils';
 
 const {reload} = require('@cdo/apps/utils');
+
+interface FileToDelete {
+  isInUse?: () => boolean;
+  resolve: (deleted: boolean) => void;
+}
+
+// Whether serialized sources name a file. The path must be followed by its
+// closing quote (escaped, when the sources hold JSON inside a string) or a
+// query, so a file whose name only starts with this path does not match.
+function textNamesFile(text: string, file: string): boolean {
+  const openQuotedPath = JSON.stringify(file).slice(0, -1);
+  return ['"', '?', '\\'].some(next => text.includes(openQuotedPath + next));
+}
 
 export type SaveTrigger = 'autosave' | 'flush' | 'unload';
 
@@ -60,6 +74,8 @@ export default class ProjectManager {
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
   private saveFailListeners: ((error: Error) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
+  // Asset files waiting to be deleted, by URL without query.
+  private filesToDelete = new Map<string, FileToDelete>();
   // The last source we saved or loaded, or undefined if we have not saved a source yet.
   private lastSource: string | undefined;
   // The next source to save, or undefined if we have no source to save.
@@ -436,6 +452,72 @@ export default class ProjectManager {
     this.saveFailListeners.push(listener);
   }
 
+  /**
+   * Deletes one of this project's asset files once neither the saved sources
+   * nor the sources waiting to be saved name it, so a saved project never
+   * names a deleted file. `isInUse` reports a use of the file not yet written
+   * to the sources; a file in use is kept and no longer waits.
+   * Resolves true once the file is deleted. Resolves false for a file that is
+   * not this project's asset, a file in use, or a failed delete. Stays
+   * unresolved while the file waits; a file still waiting when the page
+   * closes is left on the server.
+   */
+  deleteFileOnceUnnamed(
+    url: string,
+    isInUse?: () => boolean
+  ): Promise<boolean> {
+    const file = urlWithoutQuery(url);
+    if (this.destroyed || !file.startsWith(`/v3/assets/${this.channelId}/`)) {
+      return Promise.resolve(false);
+    }
+    const promise = new Promise<boolean>(resolve => {
+      // A second request for a file shares the first one's answer.
+      const earlier = this.filesToDelete.get(file);
+      this.filesToDelete.set(file, {
+        isInUse: isInUse ?? earlier?.isInUse,
+        resolve: deleted => {
+          earlier?.resolve(deleted);
+          resolve(deleted);
+        },
+      });
+    });
+    this.deleteUnnamedFiles();
+    return promise;
+  }
+
+  private deleteUnnamedFiles(): void {
+    // A save in flight may name a file that the last saved sources don't.
+    // With no saved sources to check, every file is taken to be named.
+    if (
+      this.saveInProgress ||
+      this.destroyed ||
+      this.lastSource === undefined ||
+      !this.lastChannel?.isOwner ||
+      this.filesToDelete.size === 0
+    ) {
+      return;
+    }
+    const saved = this.lastSource;
+    const pending = this.sourcesToSave
+      ? JSON.stringify(this.sourcesToSave)
+      : '';
+    this.filesToDelete.forEach(({isInUse, resolve}, file) => {
+      if (isInUse?.()) {
+        this.filesToDelete.delete(file);
+        resolve(false);
+        return;
+      }
+      if (textNamesFile(saved, file) || textNamesFile(pending, file)) {
+        return;
+      }
+      this.filesToDelete.delete(file);
+      HttpClient.delete(file, true).then(
+        () => resolve(true),
+        () => resolve(false)
+      );
+    });
+  }
+
   addSaveStartListener(listener: () => void) {
     this.saveStartListeners.push(listener);
   }
@@ -508,10 +590,6 @@ export default class ProjectManager {
 
   isForceReloading(): boolean {
     return this.forceReloading;
-  }
-
-  isSaveInProgress(): boolean {
-    return this.saveInProgress;
   }
 
   setLastSource(lastSource: ProjectSources) {
@@ -608,6 +686,7 @@ export default class ProjectManager {
       // We can clear sourcesToSave since they have not changed.
       this.sourcesToSave = undefined;
       this.executeSaveNoopListeners(this.lastChannel);
+      this.deleteUnnamedFiles();
       return;
     }
     // Only save the source if it has changed or we are skipping the changed check.
@@ -717,6 +796,7 @@ export default class ProjectManager {
     this.initialSaveComplete = true;
     this.lastSuccessfulSaveTime = Date.now();
     this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
+    this.deleteUnnamedFiles();
   }
 
   private onSaveFail(
@@ -728,6 +808,7 @@ export default class ProjectManager {
   ) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
+    this.deleteUnnamedFiles();
     if (error.message.includes('409') || error.message.includes('401')) {
       // If this is a conflict or the user has somehow become unauthorized,
       // we need to reload the page.

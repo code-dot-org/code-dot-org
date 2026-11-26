@@ -1043,6 +1043,194 @@ describe('ProjectManager', () => {
     expect(details.navigatorOnline).to.equal(navigator.onLine);
     expect(details.visibilityState).to.equal(document.visibilityState);
   });
+
+  describe('deleteFileOnceUnnamed', () => {
+    const FILE = `/v3/assets/${FAKE_CHANNEL_ID}/old.png`;
+    const naming = (url: string, extra = '') =>
+      ({
+        source: `code${extra}`,
+        images: {k1: {sourceUrl: url}},
+      } as ProjectSources);
+    let httpDelete: sinon.SinonStub;
+
+    beforeEach(() => {
+      httpDelete = sinon.stub(HttpClient, 'delete').resolves();
+    });
+    afterEach(() => httpDelete.restore());
+
+    const makeManager = async () => {
+      stubSuccessfulSourceLoad(sourcesStore);
+      const projectManager = new ProjectManager({
+        sourcesStore,
+        channelsStore,
+        channelId: FAKE_CHANNEL_ID,
+        reduceChannelUpdates: false,
+        isStandaloneProjectLevel: false,
+      });
+      await projectManager.load();
+      return projectManager;
+    };
+
+    it('deletes at once a file that no sources name', async () => {
+      const projectManager = await makeManager();
+      const deleted = projectManager.deleteFileOnceUnnamed(`${FILE}?t=1`);
+      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
+      assert.isTrue(await deleted);
+    });
+
+    it('waits for a save that no longer names the file', async () => {
+      const projectManager = await makeManager();
+      await projectManager.save(naming(FILE), true);
+      const deleted = projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.notCalled);
+      await projectManager.save(naming(FILE, ' edited'), true);
+      assert.isTrue(httpDelete.notCalled);
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
+      assert.isTrue(await deleted);
+    });
+
+    it('keeps a file that the sources waiting to be saved name', async () => {
+      const projectManager = await makeManager();
+      await projectManager.save(UPDATED_SOURCE, true);
+      // Within the save interval, so these sources wait.
+      projectManager.save(naming(FILE));
+      projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.notCalled);
+      await projectManager.flushSave();
+      assert.isTrue(httpDelete.notCalled);
+    });
+
+    it('waits while a save that names the file is in flight', async () => {
+      const projectManager = await makeManager();
+      let finishSave: (response: Response) => void = () => undefined;
+      sourcesStore.save.callsFake(
+        () => new Promise<Response>(resolve => (finishSave = resolve))
+      );
+      const save = projectManager.save(naming(FILE), true);
+      await drainMicrotasks();
+      // Newer sources take the waiting place, so the sources in flight are
+      // neither the saved ones nor the waiting ones.
+      projectManager.save(UPDATED_SOURCE);
+      const deleted = projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.notCalled);
+      sourcesStore.save.callsFake(() => Promise.resolve(new Response('')));
+      finishSave(new Response(''));
+      await save;
+      // The save that landed names the file.
+      assert.isTrue(httpDelete.notCalled);
+      await projectManager.flushSave();
+      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
+      assert.isTrue(await deleted);
+    });
+
+    it('checks again after a save fails', async () => {
+      const projectManager = await makeManager();
+      let failSave: (error: Error) => void = () => undefined;
+      sourcesStore.save.callsFake(
+        () => new Promise<Response>((_resolve, reject) => (failSave = reject))
+      );
+      const save = projectManager.save(UPDATED_SOURCE, true);
+      await drainMicrotasks();
+      projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.notCalled);
+      failSave(new Error('500'));
+      await save;
+      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
+    });
+
+    it('matches the whole file name, under any query', async () => {
+      const projectManager = await makeManager();
+      await projectManager.save(naming(`${FILE}2`), true);
+      projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
+      httpDelete.resetHistory();
+      await projectManager.save(naming(`${FILE}?t=2`), true);
+      projectManager.deleteFileOnceUnnamed(`${FILE}?t=1`);
+      assert.isTrue(httpDelete.notCalled);
+    });
+
+    it('keeps a file named in JSON that the sources hold as a string', async () => {
+      const projectManager = await makeManager();
+      await projectManager.save(
+        {source: JSON.stringify({sourceUrl: FILE})},
+        true
+      );
+      projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.notCalled);
+    });
+
+    it('refuses a file that is not an asset of this project', async () => {
+      const projectManager = await makeManager();
+      assert.isFalse(
+        await projectManager.deleteFileOnceUnnamed('/v3/assets/other/old.png')
+      );
+      assert.isFalse(
+        await projectManager.deleteFileOnceUnnamed(
+          `/v3/animations/${FAKE_CHANNEL_ID}/old.png`
+        )
+      );
+      assert.isTrue(httpDelete.notCalled);
+    });
+
+    it('keeps a file in use again, and stops waiting on it', async () => {
+      const projectManager = await makeManager();
+      await projectManager.save(naming(FILE), true);
+      let inUse = false;
+      const deleted = projectManager.deleteFileOnceUnnamed(FILE, () => inUse);
+      inUse = true;
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isFalse(await deleted);
+      inUse = false;
+      await projectManager.save(UPDATED_SOURCE_2, true);
+      assert.isTrue(httpDelete.notCalled);
+    });
+
+    it('deletes a file once when asked under two links', async () => {
+      const projectManager = await makeManager();
+      await projectManager.save(naming(FILE), true);
+      const first = projectManager.deleteFileOnceUnnamed(`${FILE}?t=1`);
+      const second = projectManager.deleteFileOnceUnnamed(`${FILE}?t=2`);
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
+      assert.isTrue(await first);
+      assert.isTrue(await second);
+    });
+
+    it('resolves false when the delete fails', async () => {
+      const projectManager = await makeManager();
+      httpDelete.rejects(new Error('503'));
+      assert.isFalse(await projectManager.deleteFileOnceUnnamed(FILE));
+    });
+
+    it('deletes nothing before the saved sources are known', async () => {
+      const projectManager = new ProjectManager({
+        sourcesStore,
+        channelsStore,
+        channelId: FAKE_CHANNEL_ID,
+        reduceChannelUpdates: false,
+        isStandaloneProjectLevel: false,
+      });
+      projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.notCalled);
+    });
+
+    it("deletes nothing from a project that is not the user's", async () => {
+      channelsStore.load.returns(
+        Promise.resolve({...FAKE_CHANNEL, isOwner: false})
+      );
+      const projectManager = await makeManager();
+      projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.notCalled);
+    });
+
+    it('refuses once destroyed', async () => {
+      const projectManager = await makeManager();
+      projectManager.destroy();
+      assert.isFalse(await projectManager.deleteFileOnceUnnamed(FILE));
+      assert.isTrue(httpDelete.notCalled);
+    });
+  });
 });
 
 // Helper functions
