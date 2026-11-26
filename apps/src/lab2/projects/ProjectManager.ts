@@ -76,6 +76,11 @@ export default class ProjectManager {
   private saveStartListeners: (() => void)[] = [];
   // Asset files waiting to be deleted, by URL without query.
   private filesToDelete = new Map<string, FileToDelete>();
+  // Counted, because a queued save can start while a slow one is running.
+  private savesInFlightCount = 0;
+  // Set while lastSource may not be what the server holds: a save that
+  // was reported as failed can still have been stored.
+  private savedSourcesUncertain = false;
   // The last source we saved or loaded, or undefined if we have not saved a source yet.
   private lastSource: string | undefined;
   // The next source to save, or undefined if we have no source to save.
@@ -199,6 +204,7 @@ export default class ProjectManager {
     }
     // Flush the enqueued save, if it exists, before restoring.
     await this.flushSave();
+    this.savedSourcesUncertain = true;
     try {
       await this.sourcesStore.restore(this.channelId, versionId);
     } catch (e) {
@@ -454,13 +460,18 @@ export default class ProjectManager {
 
   /**
    * Deletes one of this project's asset files once neither the saved sources
-   * nor the sources waiting to be saved name it, so a saved project never
-   * names a deleted file. `isInUse` reports a use of the file not yet written
-   * to the sources; a file in use is kept and no longer waits.
+   * nor the sources waiting to be saved name it, so the latest saved sources
+   * never name a deleted file. Earlier versions of the project can still
+   * name one. `isInUse` reports a use of the file not yet written to the
+   * sources; a file in use is kept and no longer waits. This relies on the
+   * manager knowing the saved sources, so a lab that sets them itself with
+   * setLastSource must pass the sources the server holds.
    * Resolves true once the file is deleted. Resolves false for a file that is
-   * not this project's asset, a file in use, or a failed delete. Stays
-   * unresolved while the file waits; a file still waiting when the page
-   * closes is left on the server.
+   * not this project's asset, a file in use, a failed delete, or a manager
+   * already destroyed when called. Stays unresolved while the file waits. A
+   * file still waiting when the manager is destroyed or the page closes is
+   * left on the server and its promise never resolves, as is every file of a
+   * project the user does not own.
    */
   deleteFileOnceUnnamed(
     url: string,
@@ -487,10 +498,15 @@ export default class ProjectManager {
 
   private deleteUnnamedFiles(): void {
     // A save in flight may name a file that the last saved sources don't.
-    // With no saved sources to check, every file is taken to be named.
+    // After a conflict has started a reload, the server holds sources this
+    // manager has not loaded. With no saved sources to check, or with saved
+    // sources that may not be what the server holds, every file is taken to
+    // be named.
     if (
-      this.saveInProgress ||
+      this.savesInFlightCount > 0 ||
       this.destroyed ||
+      this.forceReloading ||
+      this.savedSourcesUncertain ||
       this.lastSource === undefined ||
       !this.lastChannel?.isOwner ||
       this.filesToDelete.size === 0
@@ -502,7 +518,14 @@ export default class ProjectManager {
       ? JSON.stringify(this.sourcesToSave)
       : '';
     this.filesToDelete.forEach(({isInUse, resolve}, file) => {
-      if (isInUse?.()) {
+      let inUse: boolean;
+      try {
+        inUse = !!isInUse?.();
+      } catch {
+        // If isInUse throws, the file stays waiting.
+        return;
+      }
+      if (inUse) {
         this.filesToDelete.delete(file);
         resolve(false);
         return;
@@ -686,7 +709,6 @@ export default class ProjectManager {
       // We can clear sourcesToSave since they have not changed.
       this.sourcesToSave = undefined;
       this.executeSaveNoopListeners(this.lastChannel);
-      this.deleteUnnamedFiles();
       return;
     }
     // Only save the source if it has changed or we are skipping the changed check.
@@ -709,6 +731,7 @@ export default class ProjectManager {
         } else {
           errorToReport = new Error('Unknown error occurred');
         }
+        this.savedSourcesUncertain = true;
         this.onSaveFail(
           'Error saving sources',
           errorToReport,
@@ -719,6 +742,7 @@ export default class ProjectManager {
         return;
       }
       this.lastSource = JSON.stringify(sourcesBeingSaved);
+      this.savedSourcesUncertain = false;
 
       // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
       if (forceNewVersion || this.getForceNewVersion()) {
@@ -796,7 +820,6 @@ export default class ProjectManager {
     this.initialSaveComplete = true;
     this.lastSuccessfulSaveTime = Date.now();
     this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
-    this.deleteUnnamedFiles();
   }
 
   private onSaveFail(
@@ -808,7 +831,6 @@ export default class ProjectManager {
   ) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
-    this.deleteUnnamedFiles();
     if (error.message.includes('409') || error.message.includes('401')) {
       // If this is a conflict or the user has somehow become unauthorized,
       // we need to reload the page.
@@ -887,16 +909,22 @@ export default class ProjectManager {
     skipSourcesChangedCheck: boolean,
     trigger: SaveTrigger
   ): Promise<void> {
+    this.savesInFlightCount++;
     const save = this.saveHelper(
       forceNewVersion,
       skipSourcesChangedCheck,
       trigger
-    ).catch(error => {
-      // An unexpected throw would otherwise leave saveInProgress set and wedge
-      // every later save.
-      this.saveInProgress = false;
-      throw error;
-    });
+    )
+      .catch(error => {
+        // An unexpected throw would otherwise leave saveInProgress set and wedge
+        // every later save.
+        this.saveInProgress = false;
+        throw error;
+      })
+      .finally(() => {
+        this.savesInFlightCount--;
+        this.deleteUnnamedFiles();
+      });
     this.saveInFlight = save.catch(() => undefined);
     return save;
   }
@@ -1050,6 +1078,9 @@ export default class ProjectManager {
   private async loadAndStoreSources(versionId?: string) {
     const sources = await this.loadSources(versionId);
     this.lastSource = JSON.stringify(sources);
+    if (versionId === undefined) {
+      this.savedSourcesUncertain = false;
+    }
     return sources;
   }
 

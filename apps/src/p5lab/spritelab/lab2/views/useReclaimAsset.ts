@@ -18,8 +18,8 @@ const usedByAnImage = (url: string) => {
  * sources no longer name it (see ProjectManager.deleteFileOnceUnnamed).
  * Resolves true once the file is deleted, and at once for a data URI or no
  * url. Resolves false if an image uses the file, it is not one of this
- * project's uploads, or the delete fails. It stays unresolved while the
- * file waits.
+ * project's uploads, there is no project manager, or the delete fails. It
+ * stays unresolved while the file waits.
  */
 export default function useReclaimAsset(): (url?: string) => Promise<boolean> {
   return useCallback(async (url?: string) => {

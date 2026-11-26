@@ -62,7 +62,7 @@ describe('useReclaimAsset', () => {
     expect(deleteFileOnceUnnamed).not.toHaveBeenCalled();
   });
 
-  it('tells the project manager when an image points at the file again', async () => {
+  it('gives the project manager a check for an image pointing at the file again', async () => {
     await reclaimer()('/v3/assets/chan/old.png');
     const isInUse = deleteFileOnceUnnamed.mock.calls[0][1]!;
     expect(isInUse()).toBe(false);
@@ -80,7 +80,7 @@ describe('useReclaimAsset', () => {
     expect(deleteFileOnceUnnamed).not.toHaveBeenCalled();
   });
 
-  it('deletes nothing with no project manager', async () => {
+  it('resolves false with no project manager', async () => {
     currentManager = undefined;
     await expect(reclaimer()('/v3/assets/chan/old.png')).resolves.toBe(false);
   });

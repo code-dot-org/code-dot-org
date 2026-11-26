@@ -356,7 +356,7 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
-  it('hands the session uploads no image points at to the project manager when the session ends', async () => {
+  it('when the session ends, asks the project manager to delete the files the session uploaded or replaced that no image points at', async () => {
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer} = renderWriter();
     const target = {key: 'k1', imageType: 'sprite' as const};

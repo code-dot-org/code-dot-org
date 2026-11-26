@@ -1109,8 +1109,9 @@ describe('ProjectManager', () => {
       );
       const save = projectManager.save(naming(FILE), true);
       await drainMicrotasks();
-      // Newer sources take the waiting place, so the sources in flight are
-      // neither the saved ones nor the waiting ones.
+      // These newer sources become the ones waiting to be saved, so the
+      // sources in flight are neither the saved sources nor the waiting
+      // ones.
       projectManager.save(UPDATED_SOURCE);
       const deleted = projectManager.deleteFileOnceUnnamed(FILE);
       assert.isTrue(httpDelete.notCalled);
@@ -1124,19 +1125,85 @@ describe('ProjectManager', () => {
       assert.isTrue(await deleted);
     });
 
-    it('checks again after a save fails', async () => {
+    it('deletes nothing after a failed sources save until one succeeds', async () => {
       const projectManager = await makeManager();
-      let failSave: (error: Error) => void = () => undefined;
-      sourcesStore.save.callsFake(
-        () => new Promise<Response>((_resolve, reject) => (failSave = reject))
+      // A save reported as failed may still have been stored, so the server
+      // may hold the sources of the failed save below, which name the file.
+      sourcesStore.save.callsFake(() => Promise.reject(new Error('500')));
+      await projectManager.save(naming(FILE), true);
+      projectManager.save(UPDATED_SOURCE);
+      const deleted = projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.notCalled);
+      sourcesStore.save.callsFake(() => Promise.resolve(new Response('')));
+      await projectManager.flushSave();
+      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
+      assert.isTrue(await deleted);
+    });
+
+    it('deletes a waiting file after a save that finds nothing changed', async () => {
+      const projectManager = await makeManager();
+      await projectManager.save(UPDATED_SOURCE, true);
+      projectManager.save(naming(FILE));
+      projectManager.deleteFileOnceUnnamed(FILE);
+      // The waiting sources go back to what is saved.
+      projectManager.save(UPDATED_SOURCE);
+      assert.isTrue(httpDelete.notCalled);
+      await projectManager.flushSave();
+      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
+    });
+
+    it('waits for every save in flight when a queued save overlaps a slow one', async () => {
+      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
+      try {
+        const projectManager = await makeManager();
+        let finishSlow: (response: Response) => void = () => undefined;
+        sourcesStore.save
+          .onFirstCall()
+          .callsFake(
+            () => new Promise<Response>(resolve => (finishSlow = resolve))
+          );
+        const slow = projectManager.save(naming(FILE), true);
+        await clock.tickAsync(0);
+        projectManager.save(UPDATED_SOURCE);
+        projectManager.deleteFileOnceUnnamed(FILE);
+        // The queued save starts and finishes while the slow one runs.
+        await clock.tickAsync(30 * 1000);
+        assert.isTrue(sourcesStore.save.calledTwice);
+        assert.isTrue(httpDelete.notCalled);
+        finishSlow(new Response(''));
+        await slow;
+        // The slow save, which names the file, was stored last.
+        assert.isTrue(httpDelete.notCalled);
+      } finally {
+        clock.restore();
+      }
+    });
+
+    it('keeps a file waiting when its in-use check throws', async () => {
+      const projectManager = await makeManager();
+      projectManager.deleteFileOnceUnnamed(FILE, () => {
+        throw new Error('no store');
+      });
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isTrue(httpDelete.notCalled);
+    });
+
+    it('deletes nothing while a version is being restored', async () => {
+      const projectManager = await makeManager();
+      let finishRestore: () => void = () => undefined;
+      sourcesStore.restore.callsFake(
+        () => new Promise<void>(resolve => (finishRestore = resolve))
       );
-      const save = projectManager.save(UPDATED_SOURCE, true);
+      sourcesStore.load.returns(Promise.resolve(naming(FILE)));
+      const restored = projectManager.restoreSources('v1');
       await drainMicrotasks();
       projectManager.deleteFileOnceUnnamed(FILE);
       assert.isTrue(httpDelete.notCalled);
-      failSave(new Error('500'));
-      await save;
-      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
+      finishRestore();
+      await restored;
+      // The restored version names the file.
+      await projectManager.save(naming(FILE, ' edited'), true);
+      assert.isTrue(httpDelete.notCalled);
     });
 
     it('matches the whole file name, under any query', async () => {
@@ -1186,7 +1253,7 @@ describe('ProjectManager', () => {
       assert.isTrue(httpDelete.notCalled);
     });
 
-    it('deletes a file once when asked under two links', async () => {
+    it('deletes a file once when asked under two queries', async () => {
       const projectManager = await makeManager();
       await projectManager.save(naming(FILE), true);
       const first = projectManager.deleteFileOnceUnnamed(`${FILE}?t=1`);
@@ -1203,7 +1270,7 @@ describe('ProjectManager', () => {
       assert.isFalse(await projectManager.deleteFileOnceUnnamed(FILE));
     });
 
-    it('deletes nothing before the saved sources are known', async () => {
+    it('deletes nothing before the project loads', async () => {
       const projectManager = new ProjectManager({
         sourcesStore,
         channelsStore,
@@ -1211,6 +1278,20 @@ describe('ProjectManager', () => {
         reduceChannelUpdates: false,
         isStandaloneProjectLevel: false,
       });
+      projectManager.deleteFileOnceUnnamed(FILE);
+      assert.isTrue(httpDelete.notCalled);
+    });
+
+    it('deletes nothing while the saved sources are unknown', async () => {
+      const projectManager = new ProjectManager({
+        sourcesStore,
+        channelsStore,
+        channelId: FAKE_CHANNEL_ID,
+        reduceChannelUpdates: false,
+        isStandaloneProjectLevel: false,
+      });
+      // A reset load reads the channel and not the sources.
+      await projectManager.load(true);
       projectManager.deleteFileOnceUnnamed(FILE);
       assert.isTrue(httpDelete.notCalled);
     });
