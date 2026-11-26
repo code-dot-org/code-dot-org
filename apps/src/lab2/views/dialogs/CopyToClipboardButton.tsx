@@ -5,6 +5,10 @@ import React, {useCallback, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType} from '@cdo/apps/lab2/types';
+import {
+  reportShareLinkCopied,
+  ShareSource,
+} from '@cdo/apps/lab2/utils/shareEvents';
 import CopiedTooltip from '@cdo/apps/sharedComponents/CopiedTooltip';
 import {commonI18n as i18n} from '@cdo/apps/types/locale';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -15,6 +19,8 @@ import moduleStyles from './share-dialog.module.scss';
 export const CopyToClipboardButton: React.FunctionComponent<{
   shareUrl: string;
   projectType: ProjectType;
+  /** The dialog this button is in, for analytics. */
+  source: ShareSource;
   /** The button's text, "Copy link to project" by default. */
   label?: string;
   className?: string;
@@ -29,6 +35,7 @@ export const CopyToClipboardButton: React.FunctionComponent<{
 }> = ({
   shareUrl,
   projectType,
+  source,
   label = i18n.copyLinkToProject(),
   className,
   iconName = 'clipboard',
@@ -46,8 +53,14 @@ export const CopyToClipboardButton: React.FunctionComponent<{
       () => console.error('Error copying share link to clipboard')
     );
     trackEvent('share', 'share_copy_url', {value: projectType});
+    const channelId = Lab2Registry.getInstance()
+      .getProjectManager()
+      ?.getChannelId();
+    if (channelId) {
+      reportShareLinkCopied({projectType, channelId}, source);
+    }
     onCopy?.();
-  }, [shareUrl, projectType, onCopy]);
+  }, [shareUrl, projectType, source, onCopy]);
 
   const clearCopiedAt = useCallback(() => setCopiedAt(null), []);
 

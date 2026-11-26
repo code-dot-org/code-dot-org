@@ -17,6 +17,7 @@ import {
   ShareFailure,
   ShareFailureType,
 } from '@cdo/apps/lab2/types';
+import {shareSource} from '@cdo/apps/lab2/utils/shareEvents';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
 import {commonI18n as i18n} from '@cdo/apps/types/locale';
@@ -324,6 +325,7 @@ const ShareDialog: React.FunctionComponent<{
                   <CopyToClipboardButton
                     shareUrl={shareUrl}
                     projectType={projectType}
+                    source={shareSource(dialogId)}
                   />
                   <SubmitButtonInfo
                     submissionStatus={submissionStatus}

@@ -8,6 +8,7 @@ import trackEvent from '@cdo/apps/util/trackEvent';
 
 import {waitForShareFailureRefresh} from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
+import {reportShareDialogOpened, shareSource} from '../utils/shareEvents';
 import Lab2ShareDialogWrapper from '../views/Lab2ShareDialogWrapper';
 
 const PROJECT_SHARE_DIALOG_ID = 'project-share-dialog';
@@ -57,5 +58,9 @@ export function shareLab2Project(dialogId, finishUrl) {
             ? 'share_open_dialog_congrats_hoc2024'
             : projectType,
       });
+      reportShareDialogOpened(
+        {projectType, channelId: projectManager.getChannelId()},
+        shareSource(dialogId)
+      );
     });
 }

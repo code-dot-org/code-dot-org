@@ -686,6 +686,9 @@ const EVENTS = {
   LAB2_VERSION_RESTORED: 'Version restored on lab2',
   LAB2_VERSION_VIEWED: 'Version viewed on lab2',
   LAB2_VERSION_COMMITTED: 'Version committed on lab2',
+  LAB2_SHARE_DIALOG_OPENED: 'lab2-share-dialog-opened',
+  LAB2_SHARE_LINK_COPIED: 'lab2-share-link-copied',
+  LAB2_SHARE_PAGE_VISITED: 'lab2-share-page-visited',
 
   // Resource Panel
   RESOURCE_PANEL_TAB_CLICKED: 'Resource Panel Tab Clicked',

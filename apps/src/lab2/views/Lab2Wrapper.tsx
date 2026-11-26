@@ -41,6 +41,7 @@ import {PERMISSIONS} from '../constants';
 import ErrorBoundary from '../ErrorBoundary';
 import useLifecycleNotifier from '../hooks/useLifecycleNotifier';
 import useLoadLevelProperties from '../hooks/useLoadLevelProperties';
+import useReportSharePageVisit from '../hooks/useReportSharePageVisit';
 import {LabState, setIsShareView, setPermissions} from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
 import {PartialUserAppOptions} from '../types';
@@ -148,6 +149,7 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
       dispatch(setIsShareView(isShareView));
     }
   }, [isShareView, dispatch]);
+  useReportSharePageVisit();
 
   // If there is a user app options path because we are in a script level, prefetch it.
   // This is the shared source for both pairing data and teacher-role state. We use it

@@ -3,7 +3,10 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {ShareFailureType} from '@cdo/apps/lab2/types';
+import {reportShareLinkCopied} from '@cdo/apps/lab2/utils/shareEvents';
 import ShareDialog, {
   SHARE_FAILURE_FALLBACK_PREFIX,
   SHARE_FAILURE_MESSAGE_PREFIXES,
@@ -22,6 +25,12 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: jest.fn(),
   useAppDispatch: jest.fn(),
 }));
+
+jest.mock('@cdo/apps/lab2/utils/shareEvents', () => ({
+  ...jest.requireActual('@cdo/apps/lab2/utils/shareEvents'),
+  reportShareLinkCopied: jest.fn(),
+}));
+jest.mock('@cdo/apps/util/copyToClipboard', () => jest.fn());
 
 const mockedUseAppSelector = useAppSelector as jest.Mock;
 const mockedUseAppDispatch = useAppDispatch as jest.Mock;
@@ -270,5 +279,32 @@ describe('Lab2 ShareDialog', () => {
     expect(
       screen.getByRole('button', {name: 'Copy link to project'})
     ).toBeInTheDocument();
+  });
+
+  describe('copying the share link', () => {
+    const manager = {getChannelId: () => 'abc123'} as ProjectManager;
+    beforeEach(() => Lab2Registry.getInstance().setProjectManager(manager));
+    afterEach(() => Lab2Registry.getInstance().clearProjectManager(manager));
+
+    it.each([
+      ['share', undefined, 'Copy link to project', 'share_dialog'],
+      ['hoc2024', 'hoc2024', 'Copy link to project', 'hoc2024_finish_dialog'],
+      [
+        'hoai2025',
+        'hoai2025',
+        'Copy link to project',
+        'hoai2025_finish_dialog',
+      ],
+      ['hoai2026', 'hoai2026', 'Copy link', 'hoai2026_finish_dialog'],
+    ] as const)(
+      'reports a copy from the %s dialog',
+      (_name, dialogId, buttonName, source) => {
+        renderShareDialog({dialogId, finishUrl: '/done'});
+        fireEvent.click(screen.getByRole('button', {name: buttonName}));
+        expect((reportShareLinkCopied as jest.Mock).mock.calls).toEqual([
+          [{projectType: 'sketchlab', channelId: 'abc123'}, source],
+        ]);
+      }
+    );
   });
 });
