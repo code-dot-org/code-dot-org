@@ -63,8 +63,8 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
     assert_equal 'email', preset[:login_type]
     assert_equal 'student', preset[:participant_type]
     assert_equal %w[9 10 11 12], preset[:grades]
-    assert_equal 'aif2-v2-2025', preset[:unit_name]
-    assert_equal 'artificial-intelligence-foundations-2026', preset[:unit_group_name]
+    assert_equal 'ai-and-algorithmic-decisions-2026', preset[:unit_name]
+    assert_equal 'ai-foundations-year1-2026', preset[:unit_group_name]
   end
 
   test 'get_preset uses ui test curriculum names in test' do
@@ -118,8 +118,8 @@ class Policies::DemoSectionsTest < ActiveSupport::TestCase
 
     preset = Policies::DemoSections.get_preset(:high)
 
-    assert_equal 'aif2-v2-2025', preset[:unit_name]
-    assert_equal 'artificial-intelligence-foundations-2026', preset[:unit_group_name]
+    assert_equal 'ai-and-algorithmic-decisions-2026', preset[:unit_name]
+    assert_equal 'ai-foundations-year1-2026', preset[:unit_group_name]
   end
 
   test 'get_preset returns preset for each demo type' do

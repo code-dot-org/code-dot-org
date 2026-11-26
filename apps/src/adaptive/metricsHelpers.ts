@@ -1,5 +1,6 @@
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 
 import {
   CheckpointStatus,
@@ -28,6 +29,8 @@ export function sendAdaptiveEvent(
   properties: Properties = {},
   value?: string
 ) {
+  // A teacher viewing a student is not the student using the pathway.
+  if (getStore().getState()?.progress?.viewAsUserId) return;
   const payload = Object.fromEntries(
     Object.entries({...pathwayProperties, ...properties}).filter(
       ([, v]) => v !== undefined

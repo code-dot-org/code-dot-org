@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/code-studio/progressRedux';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import Loading from '@cdo/apps/lab2/views/Loading';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -113,11 +114,13 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       dispatch(sendAdaptiveStepReport(levelId, appType, result, timeMs)),
     [dispatch]
   );
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const {progress, statusMap, ...restProgress} = useProgress(
     pathway,
     progressKey,
     {
       reportLevelStep,
+      viewAsUserId,
     }
   );
   if (!progress) {
@@ -132,6 +135,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
 
   let initialCheckpointId: string | undefined;
   let initialStepId: string | undefined;
+  let initialProject = false;
   // A step with generatedInstructions but no status doesn't count as started.
   // Only a checkpoint's steps count; time on the project screen does not.
   const hasProgress = pathway.checkpoints.some(c =>
@@ -139,10 +143,15 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
   );
 
   const finishLocked = (checkpointsToFinish(pathway, statusMap) ?? 0) > 0;
-  if (urlCheckpointId) {
+  if (urlCheckpointId === 'project') {
+    // The project screen writes this; a teacher who picks another student
+    // there stays on it, since the app remounts once their progress loads.
+    initialProject = true;
+  } else if (urlCheckpointId) {
     if (
-      statusMap[urlCheckpointId] === 'locked' ||
-      (finishLocked && urlCheckpointId === pathway.finish?.checkpoint?.id)
+      (statusMap[urlCheckpointId] === 'locked' ||
+        (finishLocked && urlCheckpointId === pathway.finish?.checkpoint?.id)) &&
+      !restProgress.isViewingStudent
     ) {
       // Silently drop the URL rather than let the student bypass a lock.
       clearUrl();
@@ -177,6 +186,7 @@ const PathwayApp: React.FunctionComponent<PathwayAppProps> = ({
       statusMap={statusMap}
       initialCheckpointId={initialCheckpointId}
       initialStepId={initialStepId}
+      initialProject={initialProject}
       isFirstVisit={!hasProgress}
       {...restProgress}
     />
@@ -192,6 +202,8 @@ type LoadedPathwayAppProps = PathwayAppProps &
     initialCheckpointId?: string;
     /** Step within initialCheckpointId to start on. */
     initialStepId?: string;
+    /** Open the project screen on mount, over any initial checkpoint. */
+    initialProject?: boolean;
     isFirstVisit: boolean;
   };
 
@@ -212,7 +224,11 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   statusMap,
   initialCheckpointId,
   initialStepId,
+  initialProject = false,
   isFirstVisit,
+  isViewingStudent,
+  isReadonly,
+  viewAsUserId,
   startStep,
   completeStep,
   leaveStep,
@@ -233,7 +249,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     [pathway, progress]
   );
   const [view, setView] = useState<View>(
-    initialCheckpointId
+    initialProject
+      ? {kind: 'project'}
+      : initialCheckpointId
       ? {kind: 'step', checkpointId: initialCheckpointId, stepId: initialStepId}
       : {kind: 'map'}
   );
@@ -263,6 +281,16 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
 
   // Reads the status at open, before the first step's start changes it.
   const openedId = view.kind === 'step' ? view.checkpointId : undefined;
+  const lockedAtOpen = useRef<{id?: string; locked: boolean}>({locked: false});
+  if (lockedAtOpen.current.id !== openedId) {
+    lockedAtOpen.current = {
+      id: openedId,
+      locked:
+        !!openedId &&
+        (statusMap[openedId] === 'locked' ||
+          (finishLocked && openedId === pathway.finish?.checkpoint?.id)),
+    };
+  }
   const lastOpenedId = useRef<string>();
   // A skip is credited to the checkpoint played last.
   const lastPlayedId = useRef<string>();
@@ -316,8 +344,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       } else if (checkpointId === 'project') {
         setView({kind: 'project'});
       } else if (
-        statusMap[checkpointId] === 'locked' ||
-        (finishLocked && checkpointId === pathway.finish?.checkpoint?.id)
+        (statusMap[checkpointId] === 'locked' ||
+          (finishLocked && checkpointId === pathway.finish?.checkpoint?.id)) &&
+        !isViewingStudent
       ) {
         clearUrl();
         setView({kind: 'map'});
@@ -336,20 +365,21 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     };
     window.addEventListener('popstate', handler);
     return () => window.removeEventListener('popstate', handler);
-  }, [pathway, progress, statusMap, finishLocked]);
+  }, [pathway, progress, statusMap, finishLocked, isViewingStudent]);
   // After a routing checkpoint, zoom the map to the next suggested checkpoint.
   useEffect(() => {
     if (view.kind === 'map' && view.focusNext) {
       setView({kind: 'map', focusId: nextCheckpoint(pathway, statusMap)});
     }
   }, [view, pathway, statusMap]);
+  // A teacher viewing a student would otherwise start the level as themselves.
   useEffect(() => {
-    if (initialCheckpointId)
+    if (initialCheckpointId && !isReadonly)
       dispatch(sendStartedReportIfNotStarted('adaptive'));
-  }, [initialCheckpointId, dispatch]);
+  }, [initialCheckpointId, isReadonly, dispatch]);
   const project = useMemo(() => projectCheckpoint(pathway), [pathway]);
   const openProject = () => {
-    dispatch(sendStartedReportIfNotStarted('adaptive'));
+    if (!isReadonly) dispatch(sendStartedReportIfNotStarted('adaptive'));
     setView({kind: 'project'});
   };
   const allCheckpointsComplete = pathway.checkpoints.every(
@@ -383,7 +413,12 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
   const {dialog: finishDialogContent, checkpoint: finishCheckpoint} =
     pathway.finish ?? {};
   const [finishAsked, setFinishAsked] = useState(false);
-  const finishLevel = () => dispatch(continueOrFinishLesson());
+  // A viewing teacher must not report success or leave the student's level.
+  const finishLevel = () => {
+    if (!isReadonly) return dispatch(continueOrFinishLesson());
+    clearUrl();
+    setView({kind: 'map'});
+  };
   const enterFinish = () => {
     if (!finishCheckpoint) return finishLevel();
     clearUrl();
@@ -437,6 +472,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         checkpoint: playing,
         statusMap,
         progress,
+        isViewingStudent,
+        isReadonly,
+        viewAsUserId,
         saveGeneratedInstructions,
         recordValidation,
         aiContext,
@@ -449,6 +487,9 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
       playing,
       statusMap,
       progress,
+      isViewingStudent,
+      isReadonly,
+      viewAsUserId,
       saveGeneratedInstructions,
       recordValidation,
       aiContext,
@@ -482,6 +523,18 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
     };
     return (
       <div className={styles.app}>
+        {isViewingStudent && !isProject && lockedAtOpen.current.locked && (
+          <TeacherViewingStudentProjectAlert
+            inWorkspaceContainer
+            type="warning"
+            getAlertText={name => (
+              <>
+                <strong>{name ?? 'This student'}</strong> has not unlocked this
+                checkpoint
+              </>
+            )}
+          />
+        )}
         <PathwayContext.Provider value={pathwayContext}>
           <StepPlayer
             key={checkpoint.id}
@@ -560,8 +613,11 @@ const LoadedPathwayApp: React.FunctionComponent<LoadedPathwayAppProps> = ({
         evidence={evidence}
         focusId={view.kind === 'map' ? view.focusId : undefined}
         onFocus={focusId => setView({kind: 'map', focusId})}
+        canOpenLocked={isViewingStudent}
         onStart={id => {
-          dispatch(sendStartedReportIfNotStarted('adaptive'));
+          if (!isReadonly) {
+            dispatch(sendStartedReportIfNotStarted('adaptive'));
+          }
           const cp = findCheckpoint(pathway, id);
           setView({
             kind: 'step',

@@ -1,17 +1,13 @@
 Snack,Food Group,Sugar (g),Sodium (mg),Calories,Vitamin C Source?,Some Protein?,Meets Snack Rules?
-Unsweetened applesauce,Fruit/Veg,Medium,200 or Less,Low,No,No,Yes
 Skim milk,Dairy/Protein,Medium,200 or Less,Low,No,Yes,Yes
 Rice cakes,Grain,Low,200 or Less,Low,No,No,Yes
 Ice cream,Sweets,High,200 or Less,Medium,No,No,No
 Oven fries,Fruit/Veg,Low,Over 200,Medium,No,No,No
 White rice,Grain,Low,200 or Less,Medium,No,No,Yes
-Red bell pepper strips,Fruit/Veg,Low,200 or Less,Low,Yes,No,Yes
 Vanilla pudding,Sweets,High,200 or Less,Low,No,No,Yes
-Pear,Fruit/Veg,High,200 or Less,Low,No,No,Yes
 Granola bar,Grain,Medium,200 or Less,Medium,No,Yes,No
 Chocolate chip cookies,Sweets,Medium,200 or Less,Medium,No,No,No
 Brownie,Sweets,High,200 or Less,High,No,Yes,No
-Strawberries,Fruit/Veg,Medium,200 or Less,Low,Yes,No,Yes
 Buttered popcorn,Grain,Low,Over 200,Medium,No,Yes,No
 Dill pickle,Fruit/Veg,Low,Over 200,Low,No,No,No
 Pretzels,Grain,Low,Over 200,Medium,No,Yes,No
@@ -19,22 +15,18 @@ Milk chocolate bar,Sweets,High,200 or Less,High,No,Yes,No
 Salted pita chips,Grain,Low,Over 200,Medium,No,Yes,No
 Corn chips,Grain,Low,200 or Less,Medium,No,No,No
 Jelly beans,Sweets,High,200 or Less,Medium,No,No,No
-Apple slices,Fruit/Veg,Medium,200 or Less,Low,No,No,Yes
 Gelatin cup,Sweets,High,200 or Less,Low,No,No,Yes
 Tortilla chips,Grain,Low,200 or Less,Medium,No,No,No
 Unsalted tortilla chips,Grain,Low,200 or Less,Medium,No,No,No
 Fruit yogurt,Dairy/Protein,High,200 or Less,Medium,No,Yes,Yes
-Baby carrots,Fruit/Veg,Low,200 or Less,Low,No,No,Yes
 Cottage cheese,Dairy/Protein,Medium,Over 200,Low,No,Yes,No
 Potato chips,Grain,Low,200 or Less,Medium,No,No,No
 Black beans,Dairy/Protein,Low,200 or Less,Medium,No,Yes,Yes
 Greek yogurt,Dairy/Protein,Medium,200 or Less,Medium,No,Yes,Yes
-Watermelon,Fruit/Veg,Medium,200 or Less,Low,Yes,No,Yes
 Fruit leather,Sweets,Medium,200 or Less,Low,Yes,No,No
 Waffle,Grain,Low,Over 200,Low,No,No,No
 Beef jerky,Dairy/Protein,Low,Over 200,Medium,No,Yes,No
 Black olives,Fruit/Veg,Low,Over 200,Low,No,No,No
-Orange sections,Fruit/Veg,High,200 or Less,Low,Yes,No,Yes
 Beef hot dog,Dairy/Protein,Low,Over 200,Low,No,Yes,No
 Fruit pop,Sweets,Medium,200 or Less,Low,No,No,Yes
 Canned tuna,Dairy/Protein,Low,200 or Less,Low,No,Yes,Yes
@@ -50,3 +42,17 @@ Pineapple chunks,Fruit/Veg,High,200 or Less,Low,Yes,No,Yes
 Sugar cookies,Sweets,Medium,200 or Less,Medium,No,No,No
 Corn tortillas,Grain,Low,200 or Less,Medium,No,Yes,Yes
 Marshmallows,Sweets,High,200 or Less,Low,No,No,No
+Saltine crackers,Grain,Low,Over 200,Medium,No,No,No
+String cheese,Dairy/Protein,Low,200 or Less,Low,No,Yes,No
+Cheddar cheese slice,Dairy/Protein,Low,200 or Less,Medium,No,Yes,No
+Honeydew melon,Fruit/Veg,High,200 or Less,Low,Yes,No,Yes
+Plain yogurt,Dairy/Protein,High,200 or Less,Medium,No,Yes,No
+Blackberries,Fruit/Veg,Medium,200 or Less,Low,Yes,No,Yes
+Cheese puffs,Grain,Low,Over 200,Medium,No,No,No
+Kiwi,Fruit/Veg,Medium,200 or Less,Low,Yes,No,Yes
+Chocolate sandwich cookies,Sweets,Medium,200 or Less,Medium,No,No,No
+Pomegranate seeds,Fruit/Veg,Medium,200 or Less,Low,No,No,Yes
+Soft pretzel,Grain,Low,200 or Less,High,No,Yes,No
+Vanilla sandwich cookies,Sweets,Medium,200 or Less,Medium,No,No,No
+Apricots,Fruit/Veg,Low,200 or Less,Low,No,No,Yes
+Rice crackers,Grain,Low,200 or Less,Medium,No,No,Yes
