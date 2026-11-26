@@ -47,18 +47,20 @@ export const CopyToClipboardButton: React.FunctionComponent<{
   const [copiedAt, setCopiedAt] = useState<number | null>(null);
 
   const handleCopyToClipboard = useCallback(() => {
-    copyToClipboard(
-      shareUrl,
-      () => setCopiedAt(Date.now()),
-      () => console.error('Error copying share link to clipboard')
-    );
-    trackEvent('share', 'share_copy_url', {value: projectType});
     const channelId = Lab2Registry.getInstance()
       .getProjectManager()
       ?.getChannelId();
-    if (channelId) {
-      reportShareLinkCopied({projectType, channelId}, source);
-    }
+    copyToClipboard(
+      shareUrl,
+      () => {
+        setCopiedAt(Date.now());
+        if (channelId) {
+          reportShareLinkCopied({projectType, channelId}, source);
+        }
+      },
+      () => console.error('Error copying share link to clipboard')
+    );
+    trackEvent('share', 'share_copy_url', {value: projectType});
     onCopy?.();
   }, [shareUrl, projectType, source, onCopy]);
 

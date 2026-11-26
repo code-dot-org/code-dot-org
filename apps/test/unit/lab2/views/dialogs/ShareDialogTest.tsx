@@ -13,6 +13,7 @@ import ShareDialog, {
   SHARE_FAILURE_TITLE,
 } from '@cdo/apps/lab2/views/dialogs/ShareDialog';
 import {SPINNER_DELAY_MS} from '@cdo/apps/lab2/views/dialogs/useDelayedSpinner';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // The real code draws on a canvas, which has no name to find it by.
@@ -31,6 +32,7 @@ jest.mock('@cdo/apps/lab2/utils/shareEvents', () => ({
   reportShareLinkCopied: jest.fn(),
 }));
 jest.mock('@cdo/apps/util/copyToClipboard', () => jest.fn());
+const mockCopyToClipboard = copyToClipboard as jest.Mock;
 
 const mockedUseAppSelector = useAppSelector as jest.Mock;
 const mockedUseAppDispatch = useAppDispatch as jest.Mock;
@@ -283,7 +285,10 @@ describe('Lab2 ShareDialog', () => {
 
   describe('copying the share link', () => {
     const manager = {getChannelId: () => 'abc123'} as ProjectManager;
-    beforeEach(() => Lab2Registry.getInstance().setProjectManager(manager));
+    beforeEach(() => {
+      Lab2Registry.getInstance().setProjectManager(manager);
+      mockCopyToClipboard.mockImplementation((_text, onSuccess) => onSuccess());
+    });
     afterEach(() => Lab2Registry.getInstance().clearProjectManager(manager));
 
     it.each([
@@ -306,5 +311,17 @@ describe('Lab2 ShareDialog', () => {
         ]);
       }
     );
+
+    it('reports nothing when the link could not be copied', () => {
+      mockCopyToClipboard.mockImplementation((_text, _onSuccess, onFailure) =>
+        onFailure()
+      );
+      jest.spyOn(console, 'error').mockImplementation(() => undefined);
+      renderShareDialog();
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Copy link to project'})
+      );
+      expect(reportShareLinkCopied).not.toHaveBeenCalled();
+    });
   });
 });

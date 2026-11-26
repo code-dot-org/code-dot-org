@@ -58,9 +58,13 @@ export function shareLab2Project(dialogId, finishUrl) {
             ? 'share_open_dialog_congrats_hoc2024'
             : projectType,
       });
-      reportShareDialogOpened(
-        {projectType, channelId: projectManager.getChannelId()},
-        shareSource(dialogId)
-      );
+      // Without a project type the project has not loaded, and no dialog
+      // shows.
+      if (projectType) {
+        reportShareDialogOpened(
+          {projectType, channelId: projectManager.getChannelId()},
+          shareSource(dialogId)
+        );
+      }
     });
 }
