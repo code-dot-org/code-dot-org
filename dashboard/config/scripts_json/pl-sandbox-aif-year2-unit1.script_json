@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-02 19:29:33 UTC",
+    "serialized_at": "2026-11-25 17:19:33 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1743,6 +1743,28 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-conversational-ai-sim"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      },
+      "level_keys": [
+        "pl-aif-y2-u1-l7-conversational-ai-sim"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Conversational AI Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "pl-aif-y2-u1-l7-pacing-notes"
         ],
         "lesson.key": "lesson-7",
@@ -1755,9 +1777,9 @@
       ]
     },
     {
-      "chapter": 63,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 64,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "progression": "Conversational AI Project"
@@ -1777,9 +1799,9 @@
       ]
     },
     {
-      "chapter": 64,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 65,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "progression": "Conversational AI Project"
@@ -1799,9 +1821,9 @@
       ]
     },
     {
-      "chapter": 65,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 66,
+      "position": 9,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "progression": "Conversational AI Project"
@@ -2556,6 +2578,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-y2-u1-l7-conversational-ai-sim",
+        "script_level.level_keys": [
+          "pl-aif-y2-u1-l7-conversational-ai-sim"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit1",
+        "activity_section.key": "f801b34b-061f-43d2-ae72-0b01cea175fa"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-y2-u1-l7-pacing-notes",
         "script_level.level_keys": [
           "pl-aif-y2-u1-l7-pacing-notes"
@@ -2625,6 +2659,9 @@
 
   ],
   "objectives": [
+
+  ],
+  "objectives_script_levels": [
 
   ],
   "lessons_standards": [

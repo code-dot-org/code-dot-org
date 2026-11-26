@@ -8,10 +8,10 @@
   "properties": {
     "encrypted": "false",
     "link_title": "End of Lesson Survey ",
-    "url": "https://form.jotform.com/262170765959167",
-    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End of Lesson Survey](https://form.jotform.com/262164695629166).",
+    "url": "https://form.jotform.com/263136057005045",
+    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End of Lesson Survey](https://form.jotform.com/263278787884178).",
     "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCodeAI takes your privacy seriously. Your responses will be kept **anonymous**."
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-10T18:58:41.357+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson6-survey\\\"\"],\"cloned_from\":\"data-makes-ai-lesson6-survey\"},{\"changed_at\":\"2026-11-10 18:58:42 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-10T18:58:41.357+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson6-survey\\\"\"],\"cloned_from\":\"data-makes-ai-lesson6-survey\"},{\"changed_at\":\"2026-11-10 18:58:42 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 21:12:09 +0000\",\"changed\":[\"url\",\"teacher_markdown\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </ExternalLink>

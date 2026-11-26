@@ -46,6 +46,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-11-10T16:03:55.940+00:00\",\"changed\":[\"cloned from \\\"aif-y2-machine-learning-fundamentals-lesson7-level2-choice1-2026\\\"\"],\"cloned_from\":\"aif-y2-machine-learning-fundamentals-lesson7-level2-choice1-2026\"},{\"changed_at\":\"2026-11-12 21:09:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-10T16:03:55.940+00:00\",\"changed\":[\"cloned from \\\"aif-y2-machine-learning-fundamentals-lesson7-level2-choice1-2026\\\"\"],\"cloned_from\":\"aif-y2-machine-learning-fundamentals-lesson7-level2-choice1-2026\"},{\"changed_at\":\"2026-11-12 21:09:17 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-11-25 18:12:14 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Pythonlab>

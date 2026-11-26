@@ -3,51 +3,52 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Defining Functions
+<h1>Defining Functions</h1>
 
-Repeating the same steps over and over gets tedious to write out every time. Here's the same two workouts logged two different ways, same outcome either way.
+<p>Repeating the same steps over and over gets tedious to write out every time. Here's the same two workouts logged two different ways, same outcome either way.</p>
 
-<div style="display: flex; gap: 16px; margin: 16px 0;">
-  <div style="width: 48%;">
-    <div style="font-size: 14px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">Without a Function</div>
-    <div style="border-radius: 10px; overflow: hidden; border: 1px solid #E4E2F8;">
-      <div style="background-color: #1F1976; padding: 28px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
-print("Workout complete!")<br>
-print(f"You walked 2000 steps.")<br>
-<br>
-print("Workout complete!")<br>
-print(f"You walked 3000 steps.")
-      </div>
-      <div style="background-color: #E4E2F8; padding: 10px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976; line-height: 1.7;">
-Workout complete!<br>
-You walked 2000 steps.<br>
-Workout complete!<br>
-You walked 3000 steps.
-      </div>
+<div style="margin: 16px 0;">
+  <div style="font-size: 16px; font-weight: 700; color: #1F1976; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">Without a Function</div>
+  <div style="border-radius: 10px; overflow: hidden; border: 1px solid #E4E2F8;">
+    <div style="background-color: #1F1976; padding: 16px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
+      <div style="line-height: 2;">print("Workout complete!")</div>
+      <div style="line-height: 2;">print("You walked 2000 steps.")</div>
+      <div style="height: 16px;"></div>
+      <div style="line-height: 2;">print("Workout complete!")</div>
+      <div style="line-height: 2;">print("You walked 3000 steps.")</div>
     </div>
-  </div>
-  <div style="width: 48%;">
-    <div style="font-size: 14px; font-weight: 700; color: #555; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">With a Function</div>
-    <div style="border-radius: 10px; overflow: hidden; border: 1px solid #E4E2F8;">
-      <div style="background-color: #1F1976; padding: 16px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
-def log_workout(steps):<br>
-&nbsp;&nbsp;print("Workout complete!")<br>
-&nbsp;&nbsp;print(f"You walked {steps} steps.")<br>
-<br>
-log_workout(2000)<br>
-log_workout(3000)
-      </div>
-      <div style="background-color: #E4E2F8; padding: 10px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976; line-height: 1.7;">
-Workout complete!<br>
-You walked 2000 steps.<br>
-Workout complete!<br>
-You walked 3000 steps.
-      </div>
+    <div style="background-color: #E4E2F8; padding: 12px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976;">
+      <div style="line-height: 1.9;">Workout complete!</div>
+      <div style="line-height: 1.9;">You walked 2000 steps.</div>
+      <div style="line-height: 1.9;">Workout complete!</div>
+      <div style="line-height: 1.9;">You walked 3000 steps.</div>
     </div>
   </div>
 </div>
 
-<p>Identical output, but the function version writes the repeated logic once and reuses it. <code style="font-size:16px;">def</code>, short for "define," starts a function. Everything belonging to it is indented beneath it, that's how Python knows what's inside and what isn't. Once defined, calling it by name, <code style="font-size:16px;">log_workout(2000)</code>, runs that code.</p>
+<div style="margin: 16px 0;">
+  <div style="font-size: 16px; font-weight: 700; color: #1F1976; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">With a Function</div>
+  <div style="border-radius: 10px; overflow: hidden; border: 1px solid #E4E2F8;">
+    <div style="background-color: #1F1976; padding: 16px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
+      <div style="line-height: 2;">def log_workout(steps):</div>
+      <div style="line-height: 2;">&nbsp;&nbsp;print("Workout complete!")</div>
+      <div style="line-height: 2;">&nbsp;&nbsp;print(f"You walked {steps} steps.")</div>
+      <div style="height: 16px;"></div>
+      <div style="line-height: 2;">log_workout(2000)</div>
+      <div style="line-height: 2;">log_workout(3000)</div>
+    </div>
+    <div style="background-color: #E4E2F8; padding: 12px 18px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976;">
+      <div style="line-height: 1.9;">Workout complete!</div>
+      <div style="line-height: 1.9;">You walked 2000 steps.</div>
+      <div style="line-height: 1.9;">Workout complete!</div>
+      <div style="line-height: 1.9;">You walked 3000 steps.</div>
+    </div>
+  </div>
+</div>
+
+<div style="line-height: 1.1;">
+  <div style="font-size: 16px; line-height: 1.5;">Identical output, but the function version writes the repeated logic once and reuses it. <code style="font-size: 16px; line-height: 1; padding: 0 4px;">def</code>, short for "define," starts a function. Everything belonging to it is indented beneath it, that's how Python knows what's inside and what isn't. Once defined, calling it by name, <code style="font-size: 16px; line-height: 1; padding: 0 4px;">log_workout(2000)</code>, runs that code.</div>
+</div>
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
   <div style="font-size: 16px; color: #222222; line-height: 1.5;">
@@ -55,9 +56,9 @@ You walked 3000 steps.
   </div>
 </div>
 
----
+<h2>Parameters: Giving a Function Its Input</h2>
 
-## Parameters
+<p>Right now, <code style="font-size:16px;">log_workout</code> can log any number of steps without being rewritten. The piece that makes that possible is the parameter.</p>
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
   <div style="font-size: 16px; line-height: 1.5;">
@@ -65,5 +66,26 @@ You walked 3000 steps.
   </div>
 </div>
 
-<p>Look back at that same function: <code style="font-size:16px;">steps</code> is the parameter. It's a variable the function can use internally, which is why <code style="font-size:16px;">log_workout(2000)</code> and <code style="font-size:16px;">log_workout(3000)</code> each print a different number, same function, different input.</p>
+<p>Here's the same function again, with the parameter marked in both places it appears.</p>
+
+<div style="background-color: #1F1976; border-radius: 10px; padding: 16px 18px; margin: 16px 0; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
+  <div style="line-height: 2;">def log_workout(<span style="background-color: #4C42CF; color: #FFFFFF; border-bottom: 3px solid #34BD43; padding: 1px 4px; border-radius: 3px;">steps</span>):</div>
+  <div style="line-height: 2;">&nbsp;&nbsp;print("Workout complete!")</div>
+  <div style="line-height: 2;">&nbsp;&nbsp;print(f"You walked {<span style="background-color: #4C42CF; color: #FFFFFF; border-bottom: 3px solid #34BD43; padding: 1px 4px; border-radius: 3px;">steps</span>} steps.")</div>
+</div>
+
+<div style="background-color: #F7F7FB; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <strong>How it works:</strong>
+  </div>
+  <div style="font-size: 16px; line-height: 1.5; margin-top: 8px;">1. <strong>The parameter is a placeholder.</strong> <code style="font-size:16px;">steps</code> in the <code style="font-size:16px;">def</code> line is a variable the function can use inside its body.</div>
+  <div style="font-size: 16px; line-height: 1.5; margin-top: 6px;">2. <strong>The call fills it in.</strong> <code style="font-size:16px;">log_workout(2000)</code> sets <code style="font-size:16px;">steps</code> to 2000 for that run. <code style="font-size:16px;">log_workout(3000)</code> sets it to 3000.</div>
+  <div style="font-size: 16px; line-height: 1.5; margin-top: 6px;">3. <strong>Same function, different input.</strong> That's why each call prints a different number.</div>
+</div>
+
+<div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #222222; line-height: 1.5;">
+    <strong>&#128161; Teacher tip:</strong> some students think a parameter has to match a variable they already made. It doesn't. It's just a name the function uses for whatever value gets passed in, so <code style="font-size:16px;">steps</code> could be called anything.
+  </div>
+</div>
 MARKDOWN
