@@ -160,17 +160,17 @@ $slider-aqua-track-disabled-color: var(--background-neutral-disabled);
       outline: none;
 
       &::-webkit-slider-thumb {
-        outline: 2px solid var(--borders-brand-teal-primary);
+        outline: 2px solid var(--border-focused-primary);
         outline-offset: 2px;
       }
 
       &::-moz-range-thumb {
-        outline: 2px solid var(--borders-brand-teal-primary);
+        outline: 2px solid var(--border-focused-primary);
         outline-offset: 2px;
       }
 
       &::-ms-thumb {
-        outline: 2px solid var(--borders-brand-teal-primary);
+        outline: 2px solid var(--border-focused-primary);
         outline-offset: 2px;
       }
     }

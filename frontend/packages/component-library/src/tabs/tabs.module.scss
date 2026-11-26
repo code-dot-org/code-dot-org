@@ -143,7 +143,7 @@
 
       &:focus-visible {
         color: var(--text-brand-teal-primary);
-        outline: 2px solid var(--borders-brand-teal-primary);
+        outline: 2px solid var(--border-focused-primary);
       }
 
       &:active:not([aria-disabled='true']) {
@@ -181,7 +181,7 @@
 
       &:focus-visible {
         color: var(--text-neutral-inverse);
-        outline: 2px solid var(--borders-brand-teal-primary);
+        outline: 2px solid var(--border-focused-primary);
       }
 
       &:active:not([aria-disabled='true']) {
@@ -233,7 +233,7 @@
         border-left: none;
         border-right: none;
         border-bottom-color: var(--borders-neutral-primary);
-        outline: 2px solid var(--borders-brand-teal-primary);
+        outline: 2px solid var(--border-focused-primary);
         outline-offset: 2px;
 
         &:not(.selectedTab, :active) button {
@@ -287,7 +287,7 @@
         border-left: none;
         border-right: none;
         border-bottom-color: var(--borders-neutral-primary);
-        outline: 2px solid var(--borders-brand-teal-primary);
+        outline: 2px solid var(--border-focused-primary);
         outline-offset: 2px;
 
         &:not(.selectedTab) button {
