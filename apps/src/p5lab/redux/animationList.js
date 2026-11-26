@@ -47,7 +47,7 @@ export const START_LOADING_FROM_SOURCE =
 // Args: {AnimationKey} key, {Blob} blob, {String} dataURI. Version?
 export const DONE_LOADING_FROM_SOURCE =
   'AnimationList/DONE_LOADING_FROM_SOURCE';
-// Args: {AnimationKey} key
+// Args: {AnimationKey} key, {{reason: string, status?: number}} failure
 export const FAILED_LOADING_FROM_SOURCE =
   'AnimationList/FAILED_LOADING_FROM_SOURCE';
 // Args: {AnimationKey} key, {string} version
@@ -194,12 +194,14 @@ function animationPropsReducer(state, action) {
       return Object.assign({}, state, {
         loadedFromSource: false,
         loadFailed: false,
+        loadFailure: undefined,
       });
 
     case DONE_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
         loadedFromSource: true,
         loadFailed: false,
+        loadFailure: undefined,
         saved: true,
         blob: action.blob,
         dataURI: action.dataURI,
@@ -209,6 +211,7 @@ function animationPropsReducer(state, action) {
     case FAILED_LOADING_FROM_SOURCE:
       return Object.assign({}, state, {
         loadFailed: true,
+        loadFailure: action.failure,
       });
 
     case ON_ANIMATION_SAVED:
@@ -764,12 +767,26 @@ export function loadAnimationFromSource(key, callback) {
       if (objectUrl) {
         URL.revokeObjectURL(objectUrl);
       }
-      dispatch({type: FAILED_LOADING_FROM_SOURCE, key});
+      dispatch({
+        type: FAILED_LOADING_FROM_SOURCE,
+        key,
+        failure: {reason: 'notImage'},
+      });
     };
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
         console.log('Failed to load animation ' + key, err);
-        dispatch({type: FAILED_LOADING_FROM_SOURCE, key});
+        // fetchURLAsBlob gives the response status only inside its error
+        // message ("responded with code 404"); a request that got no
+        // response uses other wording.
+        const status = Number(
+          /responded with code (\d+)/.exec(err.message)?.[1]
+        );
+        dispatch({
+          type: FAILED_LOADING_FROM_SOURCE,
+          key,
+          failure: status ? {reason: 'httpError', status} : {reason: 'network'},
+        });
 
         if (isOwner()) {
           // Display error dialog

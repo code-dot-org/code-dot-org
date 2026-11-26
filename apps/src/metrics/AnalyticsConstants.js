@@ -493,6 +493,7 @@ const EVENTS = {
   HOAI2026_IMAGE_REPLACE_CONFIRM: 'hoai2026-image-replace-confirm',
   HOAI2026_GENERATION_LIMIT_REACHED: 'hoai2026-generation-limit-reached',
   HOAI2026_START_OVER: 'hoai2026-start-over',
+  HOAI2026_IMAGE_LOAD_FAILED: 'hoai2026-image-load-failed',
 
   // Moderate model output image
   MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',

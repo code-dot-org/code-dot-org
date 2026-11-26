@@ -70,6 +70,8 @@ export interface SerializedAnimationList {
 // the loaded image. dataURI is stripped on save.
 export interface RuntimeAnimationProps extends SerializedAnimationProps {
   dataURI?: string;
+  /** Why the image's file did not load, once loading it has failed. */
+  loadFailure?: {reason: 'httpError' | 'network' | 'notImage'; status?: number};
 }
 
 export interface RuntimeAnimationList {

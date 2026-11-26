@@ -202,6 +202,36 @@ describe('animationList', function () {
         const props = store.getState().animationList.propsByKey[key];
         expect(props.loadedFromSource).to.be.false;
         expect(isLoadFromSourceSettled(props)).to.be.true;
+        expect(props.loadFailure).to.deep.equal({reason: 'notImage'});
+      });
+    });
+
+    describe('a file that does not download', () => {
+      const loadFailing = async error => {
+        imageUtils.fetchURLAsBlob.mockImplementationOnce((url, callback) =>
+          callback(error)
+        );
+        store.dispatch(loadAnimationFromSource(key));
+        await new Promise(resolve => setTimeout(resolve, 0));
+        return store.getState().animationList.propsByKey[key];
+      };
+
+      it('records the status it was answered with', async () => {
+        const props = await loadFailing(
+          new Error('URL /v3/assets/c/a.png responded with code 404')
+        );
+        expect(isLoadFromSourceSettled(props)).to.be.true;
+        expect(props.loadFailure).to.deep.equal({
+          reason: 'httpError',
+          status: 404,
+        });
+      });
+
+      it('records a request that got no answer as a network failure', async () => {
+        const props = await loadFailing(
+          new Error('Error 0 occurred while receiving the document.')
+        );
+        expect(props.loadFailure).to.deep.equal({reason: 'network'});
       });
     });
 

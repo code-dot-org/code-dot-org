@@ -195,6 +195,7 @@ import usePicturesSheet from './usePicturesSheet';
 import usePreviewRefresh from './usePreviewRefresh';
 import useProjectPicture from './useProjectPicture';
 import useReleaseRemovedImages from './useReleaseRemovedImages';
+import useReportImageLoadFailures from './useReportImageLoadFailures';
 import useSceneEditing from './useSceneEditing';
 import useSceneMusic from './useSceneMusic';
 import useSceneThumbnails from './useSceneThumbnails';
@@ -1378,6 +1379,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     writeAnimations();
   }, [animationList, writeAnimations]);
+  useReportImageLoadFailures(animationList);
   // A picture that just became an image is worth a save of its own.
   const saveImagesNow = useCallback(
     () => writeAnimations(true),
