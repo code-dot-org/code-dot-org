@@ -1,13 +1,12 @@
 import {useEffect, useRef} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {urlWithoutQuery} from '@cdo/apps/lab2/projects/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {UploadImageFunction} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {repointAnimation} from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
-import useReclaimAsset, {
-  fileOf,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
+import useReclaimAsset from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
 import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -55,7 +54,10 @@ export default function useUploadDrawingsOnSave(
               pendingUpload: undefined,
             }),
           });
-          if (previousUrl && fileOf(previousUrl) !== fileOf(sourceUrl)) {
+          if (
+            previousUrl &&
+            urlWithoutQuery(previousUrl) !== urlWithoutQuery(sourceUrl)
+          ) {
             void reclaimAsset(previousUrl);
           }
         },

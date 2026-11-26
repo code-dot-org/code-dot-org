@@ -4,12 +4,12 @@
 // writes the sources that name that file.
 
 import type {SourcesPreparer} from '@cdo/apps/lab2/projects/ProjectManager';
+import {urlWithoutQuery} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {dataURIToBytes} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {UploadImageFunction} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {SerializedAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
-import {fileOf} from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
 
 interface HeldPixels {
   dataURI: string;
@@ -107,10 +107,12 @@ export async function uploadDrawing(
     dataURIToBytes(dataURI),
     'image/png'
   );
-  const replaceable = fileOf(uploadedUrl).endsWith(
+  const replaceable = urlWithoutQuery(uploadedUrl).endsWith(
     `/${encodeURIComponent(filename)}`
   );
-  return replaceable ? `${fileOf(uploadedUrl)}?t=${Date.now()}` : uploadedUrl;
+  return replaceable
+    ? `${urlWithoutQuery(uploadedUrl)}?t=${Date.now()}`
+    : uploadedUrl;
 }
 
 interface PreparerOptions {

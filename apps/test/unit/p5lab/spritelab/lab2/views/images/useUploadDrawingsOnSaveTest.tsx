@@ -45,7 +45,6 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/imageSave', () => ({
 const reclaim = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset', () => ({
   __esModule: true,
-  ...jest.requireActual('@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset'),
   default: () => (url?: string) => reclaim(url),
 }));
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
