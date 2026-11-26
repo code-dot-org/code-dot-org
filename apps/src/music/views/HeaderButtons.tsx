@@ -1,5 +1,6 @@
+import {useTheme} from '@code-dot-org/component-library/common/contexts';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Typography, Button as MuiButton, Tooltip} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
@@ -11,45 +12,106 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {getBaseAssetUrl} from '../appConfig';
+import {PACK_REMOVED_MESSAGE} from '../constants';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 
 import moduleStyles from './HeaderButtons.module.scss';
 
-interface CurrentPackProps {
+const REMOVED_PACK_ICON_ID = 'removed-pack-icon';
+
+const isPackFolderRemoved = (packFolder: SoundFolder | null) =>
+  !!packFolder && !!MusicLibrary.getInstance()?.isPackRemoved(packFolder.id);
+
+interface CurrentPackProps extends React.HTMLAttributes<HTMLDivElement> {
   packFolder: SoundFolder;
 }
 
-const CurrentPack: React.FunctionComponent<CurrentPackProps> = ({
+// Forwards its ref and props so a Tooltip can attach its listeners.
+const CurrentPack = React.forwardRef<HTMLDivElement, CurrentPackProps>(
+  ({packFolder, className, ...props}, ref) => {
+    const library = MusicLibrary.getInstance();
+    const isRemoved = isPackFolderRemoved(packFolder);
+
+    let packImageSrc = null;
+
+    if (library && packFolder) {
+      const libraryGroupPath = library.getPath();
+      packImageSrc =
+        packFolder.imageSrc &&
+        `${getBaseAssetUrl()}${libraryGroupPath}/${packFolder.path}/${
+          packFolder.imageSrc
+        }`;
+    }
+
+    return (
+      <div
+        {...props}
+        ref={ref}
+        data-notranslate
+        className={classNames(
+          className,
+          moduleStyles.currentPack,
+          isRemoved && moduleStyles.currentPackRemoved
+        )}
+      >
+        {isRemoved && (
+          <FontAwesomeV6Icon
+            id={REMOVED_PACK_ICON_ID}
+            iconName="exclamation-circle"
+            iconStyle="solid"
+          />
+        )}
+        {packImageSrc && (
+          <img
+            src={packImageSrc}
+            className={moduleStyles.buttonWideImage}
+            alt=""
+          />
+        )}
+        <Typography variant="body4">
+          {packFolder.name} &bull; {packFolder.artist}
+        </Typography>
+      </div>
+    );
+  }
+);
+CurrentPack.displayName = 'CurrentPack';
+
+interface RemovedPackTooltipProps {
+  packFolder: SoundFolder | null;
+  children: React.ReactElement;
+}
+
+const RemovedPackTooltip: React.FunctionComponent<RemovedPackTooltipProps> = ({
   packFolder,
+  children,
 }) => {
-  const library = MusicLibrary.getInstance();
+  // The bubble portals to <body>, so it cannot inherit data-theme.
+  const {theme} = useTheme(true);
 
-  let packImageSrc = null;
-
-  if (library && packFolder) {
-    const libraryGroupPath = library.getPath();
-    packImageSrc =
-      packFolder.imageSrc &&
-      `${getBaseAssetUrl()}${libraryGroupPath}/${packFolder.path}/${
-        packFolder.imageSrc
-      }`;
+  if (!isPackFolderRemoved(packFolder)) {
+    return children;
   }
 
   return (
-    <div data-notranslate className={moduleStyles.currentPack}>
-      {packImageSrc && (
-        <img
-          src={packImageSrc}
-          className={moduleStyles.buttonWideImage}
-          alt=""
-        />
-      )}
-      <Typography variant="body4">
-        {packFolder.name} &bull; {packFolder.artist}
-      </Typography>
-    </div>
+    <Tooltip
+      title={PACK_REMOVED_MESSAGE}
+      placement="bottom"
+      describeChild
+      slotProps={{
+        tooltip: theme ? {'data-theme': theme} : {},
+        // Hovering anywhere on the children opens it, but it points at the info icon.
+        popper: {
+          anchorEl: () => document.getElementById(REMOVED_PACK_ICON_ID),
+          // The icon sits inside the button, so clear the button's bottom edge.
+          modifiers: [{name: 'offset', options: {offset: [0, 8]}}],
+        },
+      }}
+    >
+      {children}
+    </Tooltip>
   );
 };
 
@@ -139,27 +201,37 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     <div className={moduleStyles.container} ref={containerRef} tabIndex={-1}>
       {/* Show static pack information. */}
       {!allowPackSelection && packFolder && (
-        <CurrentPack packFolder={packFolder} />
+        <RemovedPackTooltip packFolder={packFolder}>
+          {/* Focusable so keyboard users can open the tooltip. */}
+          <CurrentPack
+            packFolder={packFolder}
+            tabIndex={isPackFolderRemoved(packFolder) ? 0 : undefined}
+          />
+        </RemovedPackTooltip>
       )}
       {/* Show Start Over button, possibly with pack information inside it. */}
       {!readOnlyWorkspace && (
         <>
-          <button
-            onClick={onClickStartOver}
-            type="button"
-            id="start-over-button"
-            className={classNames(
-              moduleStyles.startOverButton,
-              allowPackSelection &&
-                packFolder &&
-                moduleStyles.startOverButtonWithPack
-            )}
+          <RemovedPackTooltip
+            packFolder={allowPackSelection ? packFolder : null}
           >
-            {allowPackSelection && packFolder && (
-              <CurrentPack packFolder={packFolder} />
-            )}
-            <FontAwesomeV6Icon iconName="refresh" iconStyle="solid" />
-          </button>
+            <button
+              onClick={onClickStartOver}
+              type="button"
+              id="start-over-button"
+              className={classNames(
+                moduleStyles.startOverButton,
+                allowPackSelection &&
+                  packFolder &&
+                  moduleStyles.startOverButtonWithPack
+              )}
+            >
+              {allowPackSelection && packFolder && (
+                <CurrentPack packFolder={packFolder} />
+              )}
+              <FontAwesomeV6Icon iconName="refresh" iconStyle="solid" />
+            </button>
+          </RemovedPackTooltip>
         </>
       )}
       {!readOnlyWorkspace && (

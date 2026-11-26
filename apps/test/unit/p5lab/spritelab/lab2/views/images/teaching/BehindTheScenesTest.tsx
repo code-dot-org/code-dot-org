@@ -55,6 +55,25 @@ describe('BehindTheScenes', () => {
     expect(onTellStory).toHaveBeenCalledWith(story);
   });
 
+  it('keeps the words as sent out of page translation, and the rest in', () => {
+    const notranslate = (element: Element) =>
+      !!element.closest('[data-notranslate]');
+    renderBehind({
+      sent: sentPromptsFor('A dragon', OPTIONS, 'pixel', true, 'quadruped'),
+    });
+    fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));
+    expect(
+      notranslate(screen.getByText(/^A dragon\. Show the whole character/))
+    ).toBe(true);
+    fireEvent.click(screen.getByRole('button', {name: 'Other poses'}));
+    expect(notranslate(screen.getByText(/^Then, for each pose/))).toBe(false);
+    screen.getAllByRole('listitem').forEach(pose => {
+      const [label, words] = Array.from(pose.children);
+      expect(notranslate(label)).toBe(false);
+      expect(notranslate(words)).toBe(true);
+    });
+  });
+
   it('closes on the corner x as well', () => {
     renderBehind({sent: sentPromptsFor('A cat', OPTIONS, 'pixel', false)});
     fireEvent.click(screen.getByRole('button', {name: 'Behind the scenes'}));

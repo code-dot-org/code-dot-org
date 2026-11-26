@@ -112,6 +112,13 @@ class Adaptive < Level
     Adaptive.order(:name).select {|level| level.adaptive_id == adaptive_id}
   end
 
+  # The level whose channel is each student's pathway project.
+  def pathway_template_level_name
+    project = content&.dig('project')
+    name = project.is_a?(Hash) ? project['templateLevel'] : nil
+    name.is_a?(String) ? name : nil
+  end
+
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil, unit_group_unit: nil)
     properties = super
     pathway = content

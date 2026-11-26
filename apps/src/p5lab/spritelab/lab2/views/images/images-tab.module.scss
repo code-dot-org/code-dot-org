@@ -171,20 +171,19 @@ $list-button-icon: 20px;
   font-size: $list-button-icon;
 }
 
-// The trash can, in a row along the pane's foot, the height of the bars
-// at the foot of the other tabs.
+// The trash can, in a row along the pane's foot. The padding above and
+// below it matches the AI prompt pane's bottom padding, so the trash
+// can's bottom lines up with that pane's last button.
 .listFooter {
   display: flex;
   flex: none;
   align-items: center;
   justify-content: flex-start;
-  box-sizing: border-box;
-  height: strip.$foot-height;
   // The row and its hairline run the full width of the list's pane and
-  // down to the tab's bottom edge; the padding keeps the button in line
+  // down to the tab's bottom edge; the left padding keeps the button in line
   // with the tiles.
   margin: auto (-$column-gap) (-$pad) (-$pad);
-  padding: 0 $column-gap 0 $pad;
+  padding: $pad $column-gap $pad $pad;
   border-top: 1px solid var(--border-neutral-primary);
 }
 
@@ -451,7 +450,7 @@ $list-button-icon: 20px;
   box-sizing: border-box;
   min-height: 0;
   margin: (-$pad) (-$pad) (-$pad) 0;
-  padding: 16px;
+  padding: $pad;
   border-left: 1px solid var(--border-neutral-primary);
   background-color: var(--background-neutral-secondary);
   color: var(--text-neutral-primary);

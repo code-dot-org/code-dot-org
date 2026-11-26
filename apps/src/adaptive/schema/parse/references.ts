@@ -396,6 +396,13 @@ function findCheckpointProblems(pathway: Pathway): string[] {
     }
   }
 
+  const required = pathway.finish?.requiredCheckpoints;
+  if (required !== undefined && required > pathway.checkpoints.length) {
+    problems.push(
+      `finish.requiredCheckpoints: ${required} is more than the pathway's ${pathway.checkpoints.length} checkpoints`
+    );
+  }
+
   const finish = pathway.finish?.checkpoint;
   if (finish && ids.has(finish.id)) {
     problems.push(

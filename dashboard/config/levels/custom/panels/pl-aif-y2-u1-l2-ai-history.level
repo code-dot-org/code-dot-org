@@ -9,7 +9,7 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "# Many Fields, One Breakthrough\nAI didn't come from one field or one breakthrough. It's the product of decades of separate work in computer science, psychology, neurology, and linguistics, four different kinds of researchers solving four different problems that all turned out to matter for AI.",
+        "text": "# Many Fields, One Breakthrough\nAI didn't come from one field or one breakthrough. It's the product of decades of separate work in computer science, psychology, neurology, and linguistics, four different kinds of researchers solving four different problems that all turned out to matter for AI. \n\nIn Lesson 2, students explore these feilds.",
         "imageUrl": "https://images.code.org/24cdefb5ecb27e172600a70b2bd53f23-panel1.png",
         "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce",
         "layout": "text-bottom-right"
@@ -33,7 +33,7 @@
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Linguistics:\n### Understanding Language\nLinguistics, the study of how language is structured and how it carries meaning, is why AI can process and generate human language at all, from early chatbots to today's models.",
+        "text": "## Linguistics:\n### Understanding Language\nLinguistics is the study of how language is structured and how it carries meaning. Its ideas have shaped how AI processes and generates human language, from early chatbots to today's models.",
         "imageUrl": "https://images.code.org/73fc52da2d73fd2ed2aedde112bda7d3-panel5.png",
         "key": "pl-sandbox-aif2-U1-weblab-panels_10_2026-31887a3d-5ad5-424f-a333-ceecdb0181f9",
         "layout": "text-bottom-right"
@@ -49,6 +49,6 @@
     "offer_browser_tts": "false",
     "use_links": "false"
   },
-  "audit_log": "[{\"changed_at\":\"2026-09-29T15:07:35.540+00:00\",\"changed\":[\"cloned from \\\"pl-aif1-weblab-panels\\\"\"],\"cloned_from\":\"pl-aif1-weblab-panels\"},{\"changed_at\":\"2026-09-29 16:19:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:29:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:31:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:41:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-30 16:20:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-09-29T15:07:35.540+00:00\",\"changed\":[\"cloned from \\\"pl-aif1-weblab-panels\\\"\"],\"cloned_from\":\"pl-aif1-weblab-panels\"},{\"changed_at\":\"2026-09-29 16:19:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:29:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:31:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-29 18:41:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-09-30 16:20:46 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-11-24 16:10:03 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-11-24 16:11:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

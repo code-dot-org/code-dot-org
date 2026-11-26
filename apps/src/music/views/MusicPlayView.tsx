@@ -13,6 +13,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
 
+import {PROJECT_PACK_REMOVED_MESSAGE} from '../constants';
 import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 
@@ -24,12 +25,14 @@ interface MusicPlayViewProps {
   setPlaying: (value: boolean) => void;
   projectName?: string;
   overrideProjectManager?: ProjectManager;
+  isPackRemoved?: boolean;
 }
 
 const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   setPlaying,
   projectName,
   overrideProjectManager,
+  isPackRemoved,
 }) => {
   const isPlaying = useAppSelector(state => state.music.isPlaying);
   const percentPlayed = useAppSelector(state => {
@@ -109,6 +112,20 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
             >
               {musicI18n.builtWithMusicLab()}
             </Typography>
+            {isPackRemoved && (
+              // The card is dark in every theme.
+              <Typography
+                className={moduleStyles.packRemoved}
+                variant="body3"
+                data-theme="Dark"
+              >
+                <FontAwesomeV6Icon
+                  iconName="exclamation-circle"
+                  iconStyle="solid"
+                />
+                {PROJECT_PACK_REMOVED_MESSAGE}
+              </Typography>
+            )}
           </div>
           <div className={moduleStyles.playSection}>
             <MuiIconButton

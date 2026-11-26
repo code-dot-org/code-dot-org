@@ -16,6 +16,12 @@ var REMOVED_ID = 'localize-widget';
 var HIDDEN = [
   // 1. Site links in the header.
   '.headerlinks',
+  // 1. New project, account or sign-in, help and the menu, the right side of
+  // the header; balanceHeader() keeps the lesson navigation centered.
+  '.create_menu',
+  '#sign_in_or_user',
+  '#help-button',
+  '#hamburger',
   // 2. Footers and their language dropdown.
   'footer.footer',
   '#page-small-footer',
@@ -31,6 +37,9 @@ var HIDDEN = [
   '.sharing-content',
   // 8. "Need help?" videos and hints beside the lab.
   '#reference_area',
+  // 9. "I finished!" in the header, which the site keeps room for beside the
+  // lesson navigation even where it hides it.
+  '.header_finished',
   // "You are not signed in" callout on a course's levels: the app has no
   // sign-in, and its links lead to sign-in and sign-up.
   '.signin_callout_wrapper',
@@ -47,19 +56,13 @@ var HIDDEN = [
   '#localize-widget',
 ];
 
-// Invisible and untappable but still laid out, so the lesson navigation
-// stays where it is on the site. Descendants are listed too because a child
-// may set visibility: visible and show through.
+// Invisible and untappable but still laid out, so what is beside them stays
+// where it is on the site. Descendants are listed too because a child may
+// set visibility: visible and show through.
 var INVISIBLE = [
-  // 1. New project, account or sign-in, help and the menu.
-  '.create_menu',
-  '#sign_in_or_user',
-  '#help-button',
-  '#hamburger',
-  // 9. Share, Remix and "I finished!" in the header.
+  // 9. Share and Remix in the header.
   '.project_share',
   '.project_remix',
-  '.header_finished',
 ];
 
 // Rules for a single level, keyed by path.
@@ -141,8 +144,16 @@ var OUTLINED_SELECTORS = HIDDEN.concat(INVISIBLE, [
   return `html.${SHOWING_HIDDEN_CLASS} ${selector}`;
 });
 
+// How much wider the header's left side is than its right; balanceHeader()
+// sets it.
+var HEADER_OFFSET = '--codeai-header-offset';
+
 var CSS = `
   ${hidingSelectorList(HIDDEN)} { display: none !important; }
+  ${hidingSelectorList(['.header_middle'])} {
+    margin-left: max(0px, calc(-1 * var(${HEADER_OFFSET}, 0px)));
+    margin-right: max(0px, var(${HEADER_OFFSET}, 0px));
+  }
   ${hidingSelectorList(INVISIBLE_AND_CONTENTS)} {
     visibility: hidden !important; pointer-events: none !important;
   }
@@ -168,6 +179,41 @@ function ensureLogoLink() {
     logo.setAttribute('href', HOME_URL);
     logo.removeAttribute('target');
   }
+}
+
+// The site centers the lesson navigation in the header's middle, the space
+// between its two sides. With the right side emptied, the middle gives up
+// the difference on the wider side, so the navigation centers on the screen.
+var headerSides = null;
+var headerObserver = null;
+
+function balanceHeader() {
+  var left = headerSides[0].getBoundingClientRect();
+  var right = headerSides[1].getBoundingClientRect();
+  var header = headerSides[0].parentElement.getBoundingClientRect();
+  var offset = `${Math.round(left.right - header.left - (header.right - right.left))}px`;
+  var root = document.documentElement;
+  if (root.style.getPropertyValue(HEADER_OFFSET) !== offset) {
+    root.style.setProperty(HEADER_OFFSET, offset);
+    // The site fits the navigation to the middle only on resize, scroll and
+    // font load, and the logo can load after that.
+    window.dispatchEvent(new Event('resize'));
+  }
+}
+
+function watchHeader() {
+  var left = document.querySelector('.header_left');
+  var right = document.querySelector('.header_right');
+  if (!left || !right || (headerSides && headerSides[0] === left && headerSides[1] === right)) {
+    return;
+  }
+  headerSides = [left, right];
+  if (headerObserver) {
+    headerObserver.disconnect();
+  }
+  headerObserver = new ResizeObserver(balanceHeader);
+  headerObserver.observe(left);
+  headerObserver.observe(right);
 }
 
 function removeWidgets() {
@@ -217,4 +263,5 @@ function removeWidgets() {
 
 onPageChange(ensureStyle);
 onPageChange(ensureLogoLink);
+onPageChange(watchHeader);
 onPageChange(removeWidgets);

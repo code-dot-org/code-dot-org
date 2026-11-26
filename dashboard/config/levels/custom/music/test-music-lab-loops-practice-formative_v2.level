@@ -1,5 +1,6 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T02:59:46.000Z",
   "level_num": "custom",
@@ -325,10 +326,6 @@
       "allowChangeStartingPlayheadPosition": true,
       "packId": "shakira_whenever_wherever",
       "sounds": {
-        "shakira_whenever_wherever": [
-          "drum_fill_1",
-          "bass_intro"
-        ]
       }
     },
     "long_instructions": "### Check-In\r\nMike created this beat before he learned about loops, but now he'd like to simplify it using loops instead. Can you re-create his code using a **nested loop**?\r\n\r\nHint: use patterns to identify where to use loops!",
@@ -400,10 +397,10 @@
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "ai_tutor_available": "true",
+    "hide_version_history": "false",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:46.449+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-formative\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-formative\"},{\"changed_at\":\"2025-09-02 17:52:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-31T02:59:46.449+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-practice-formative\\\"\"],\"cloned_from\":\"test-music-lab-loops-practice-formative\"},{\"changed_at\":\"2025-09-02 17:52:57 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-11-24 23:47:23 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 23:47:52 +0000\",\"changed\":[\"level_data\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

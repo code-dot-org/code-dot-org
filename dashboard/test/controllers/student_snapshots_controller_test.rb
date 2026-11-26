@@ -1014,6 +1014,7 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
       assert_equal 'snapshot', response_data['pathway']['id']
       assert_equal level.progress_json(user_id: student.id, script_id: @unit.id), response_data['progress']
       assert_equal 'complete', response_data['progress']['steps']['read']['status']
+      assert_equal({'accepted' => 0, 'rejected' => 0}, response_data['aiMetrics'])
     end
   end
 

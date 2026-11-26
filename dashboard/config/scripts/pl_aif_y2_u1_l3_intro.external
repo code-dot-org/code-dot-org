@@ -48,4 +48,10 @@ markdown <<MARKDOWN
   <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 6</div>
   <div style="flex: 1; text-align: center; background-color: #FFFFFF; color: #ACA8EA; font-weight: bold; font-size: 13px; padding: 10px 4px; border-radius: 6px; border: 1.5px solid #E4E2F8;">Section 7</div>
 </div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
+  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
+    <strong>&#8505; Note:</strong> this PL assumes basic familiarity with Python and doesn't re-teach it in depth. If you'd like more practice before teaching this lesson, two good options: work through the curriculum lessons yourself before your students do, and/or complete the Intro to Python Programming PL module.
+  </div>
+</div>
 MARKDOWN

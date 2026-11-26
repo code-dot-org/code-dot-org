@@ -89,7 +89,7 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
           Then, for each pose, we sent the first picture back with these words.
           Only the part in brackets changed.
         </p>
-        <p className={styles.promptCommon}>
+        <p className={styles.promptCommon} data-notranslate>
           {sent.poses.common.split(POSE_MARK).flatMap((piece, i) =>
             i === 0
               ? [piece]
@@ -107,13 +107,15 @@ const BehindTheScenes: React.FunctionComponent<BehindTheScenesProps> = ({
               <span className={styles.poseLabel}>
                 {POSE_NAMES[frame.label] ?? frame.label}:
               </span>{' '}
-              {frame.pose}
+              <span data-notranslate>{frame.pose}</span>
             </li>
           ))}
         </ul>
       </>
     ) : (
-      <p className={styles.promptCommon}>{sent.picture}</p>
+      <p className={styles.promptCommon} data-notranslate>
+        {sent.picture}
+      </p>
     );
   return (
     <>

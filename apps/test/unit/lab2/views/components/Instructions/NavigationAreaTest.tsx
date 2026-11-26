@@ -36,6 +36,7 @@ interface ContinueButtonMockProps {
   hideIfDisabled?: boolean;
   endIcon?: React.ReactNode;
   buttonColor?: string;
+  size?: string;
   onContinue: () => void;
 }
 interface SubmitButtonMockProps {
@@ -55,6 +56,7 @@ jest.mock(
       tooltipMessage,
       endIcon,
       buttonColor,
+      size,
       onContinue,
     }: ContinueButtonMockProps) => (
       <button
@@ -62,6 +64,7 @@ jest.mock(
         data-disabled={String(disabled)}
         data-tooltip={tooltipMessage}
         data-button-color={buttonColor}
+        data-size={size}
         onClick={onContinue}
       >
         {endIcon}
@@ -427,6 +430,16 @@ describe('NavigationArea', () => {
       expect(
         screen.queryByRole('button', {name: 'Submit'})
       ).not.toBeInTheDocument();
+    });
+
+    it('renders Continue small unless told otherwise', () => {
+      renderDefault();
+      expect(screen.getByRole('button')).toHaveAttribute('data-size', 'small');
+    });
+
+    it('renders Continue at the size it is given', () => {
+      renderDefault({continueButtonSize: 'medium'});
+      expect(screen.getByRole('button')).toHaveAttribute('data-size', 'medium');
     });
 
     it('renders SubmitButton when submittable=true', () => {

@@ -16,12 +16,6 @@ interface CreateQuestionDropdownProps {
   disabledReason?: string;
 }
 
-// ActionDropdown closes its menu through a context it doesn't share with
-// CustomDropdown; a mousedown outside is what actually closes it.
-function closeDropdown() {
-  document.body.dispatchEvent(new MouseEvent('mousedown', {bubbles: true}));
-}
-
 const CreateQuestionDropdown: React.FunctionComponent<
   CreateQuestionDropdownProps
 > = ({name, onCreate, variant = 'contained', disabledReason}) => (
@@ -50,10 +44,7 @@ const CreateQuestionDropdown: React.FunctionComponent<
         value: type,
         label,
         icon: {iconName},
-        onClick: () => {
-          onCreate(type);
-          closeDropdown();
-        },
+        onClick: () => onCreate(type),
       }))}
     />
   </DisabledReason>

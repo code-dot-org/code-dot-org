@@ -12,7 +12,7 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setUpWithLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {resetProjectMetadata} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {isReadOnlyAndShouldNotBeSaved} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -41,9 +41,10 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   const isOwnerOfChannel = useAppSelector(
     state => state.lab.channel && state.lab.channel.isOwner
   );
+  const isReadOnlyForSave = useAppSelector(isReadOnlyAndShouldNotBeSaved);
 
   const dispatch = useAppDispatch();
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
   const managesOwnProject =
     lab2EntryPoints[levelProperties.appName]?.managesOwnProject;
 
@@ -91,25 +92,28 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   ]);
 
   useEffect(() => {
-    window.addEventListener('beforeunload', event => {
+    const saveBeforeUnload = (event: BeforeUnloadEvent) => {
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
       // We skip this if we are already force reloading, as that will occur when
-      // saving already encountered an issue. We also can skip this in read only mode,
-      // as we never save in read only mode.
+      // saving already encountered an issue. We also usually skip this in read only mode.
+      // Some read only states are still saveable
+      // (such as running a python lab program), which isReadOnlyForSave validates.
       if (
         projectManager &&
         !projectManager.isForceReloading() &&
         projectManager.hasUnsavedChanges() &&
-        !isReadOnly
+        !isReadOnlyForSave
       ) {
-        projectManager.cleanUp();
+        projectManager.flushSave(/* forceNewVersion */ false, 'unload');
         event.preventDefault();
         event.returnValue = '';
       }
-    });
-  }, [isReadOnly]);
+    };
+    window.addEventListener('beforeunload', saveBeforeUnload);
+    return () => window.removeEventListener('beforeunload', saveBeforeUnload);
+  }, [isReadOnlyForSave]);
 
   useEffect(() => {
     // Ensure the header is cleared when we have a change,

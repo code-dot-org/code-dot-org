@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2026-11-24T04:23:28.000Z",
   "level_num": "custom",
@@ -28,7 +29,7 @@
     "uses_lab2": "true",
     "never_autoplay_video": "false",
     "disable_param_editing": "true",
-    "hide_share_and_remix": "false",
+    "hide_share_and_remix": "true",
     "disable_if_else_editing": "false",
     "include_shared_functions": "false",
     "free_play": "false",
@@ -171,8 +172,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "#i9ta@vN`jijmJ]i{:I.",
-                  "x": 1230,
-                  "y": 168,
+                  "x": 1379,
+                  "y": 503,
                   "extraState": {
                     "procedureId": "!1|K#(YW(PP5q0ZlHn9~",
                     "initialDeleteConfig": true,
@@ -218,8 +219,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "]k5vWr3Bj1Czl[h,.92E",
-                  "x": 1180,
-                  "y": 283,
+                  "x": 1377,
+                  "y": 1755,
                   "extraState": {
                     "procedureId": ";|U,sPiM(zvEPqZxSH?9",
                     "initialDeleteConfig": true,
@@ -316,8 +317,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "D[iO?4Y;U@=K!{G}LrC+",
-                  "x": 1181,
-                  "y": 514,
+                  "x": 1393,
+                  "y": 48,
                   "extraState": {
                     "procedureId": "vr)G-!$/e^R#GJz9Awcv",
                     "initialDeleteConfig": true,
@@ -422,8 +423,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "8J.+q0R~1+hdKBTD@7cd",
-                  "x": 1235,
-                  "y": 730,
+                  "x": 1121,
+                  "y": 136,
                   "extraState": {
                     "procedureId": "to`P85Td;{VSMBB8;?0[",
                     "initialDeleteConfig": true,
@@ -473,8 +474,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "c:cw29,EOxvhRf@Sk1Q(",
-                  "x": 678,
-                  "y": 20,
+                  "x": 1379,
+                  "y": 315,
                   "extraState": {
                     "procedureId": "QaJjTMnPm/(y$%qY@o[B",
                     "initialDeleteConfig": true,
@@ -534,8 +535,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "NXbGOu^63ED/rW|;a#:,",
-                  "x": 678,
-                  "y": 168,
+                  "x": 1366,
+                  "y": 1597,
                   "extraState": {
                     "procedureId": "{FIB7PBi:fwF0Q-CAcVq",
                     "initialDeleteConfig": true,
@@ -581,8 +582,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "%2XSe^V_i{6d(q=)!=:e",
-                  "x": 936,
-                  "y": 730,
+                  "x": 1378,
+                  "y": 662,
                   "extraState": {
                     "procedureId": "_@VEf4`P*4(nxgWcxM,z",
                     "initialDeleteConfig": true,
@@ -655,8 +656,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "`b7mTJ%PN]:qg%yzm,Lq",
-                  "x": 683,
-                  "y": 932,
+                  "x": 1385,
+                  "y": 1185,
                   "extraState": {
                     "procedureId": "@Z^e*G7GFvrJ8RKU3Sg(",
                     "initialDeleteConfig": true,
@@ -702,8 +703,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "mk$vK*@CbjMNK+f4(93K",
-                  "x": 20,
-                  "y": 817,
+                  "x": 1384,
+                  "y": 908,
                   "extraState": {
                     "procedureId": "pZ^|Om:bBEk]i/v_Wo.e",
                     "initialDeleteConfig": true,
@@ -800,8 +801,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "u0L.)k93q@Dpr=cDVmj%",
-                  "x": 20,
-                  "y": 1048,
+                  "x": 1193,
+                  "y": 667,
                   "extraState": {
                     "procedureId": "h1MD|%nXyBwWfB^c1v2S",
                     "initialDeleteConfig": true,
@@ -826,8 +827,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "|e,A?HBxSk]!?US=VPBg",
-                  "x": 20,
-                  "y": 1134,
+                  "x": 1143,
+                  "y": 955,
                   "extraState": {
                     "procedureId": "pw=$F`o`m%n|^R]SAS.b",
                     "initialDeleteConfig": true,
@@ -852,8 +853,8 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "|yDV?zO*9Mueu-2S,mZ#",
-                  "x": 1235,
-                  "y": 845,
+                  "x": 1375,
+                  "y": 1352,
                   "extraState": {
                     "procedureId": ";{~7YaL9.~L|0:M-iALm",
                     "initialDeleteConfig": true,
@@ -1139,8 +1140,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "Dy^vNx|1WoKRpZ|+{X?x",
-                  "x": 20,
-                  "y": 434,
+                  "x": 698,
+                  "y": 150,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1169,8 +1170,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "sv=l1=ZHelMJ*oGQp#,r",
-                  "x": 276,
-                  "y": 516,
+                  "x": 15,
+                  "y": 727,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1326,8 +1327,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "MH-MVJzxZ~lge=x$F2qr",
-                  "x": 1237,
-                  "y": 1055,
+                  "x": 699,
+                  "y": 419,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1497,8 +1498,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "*WT+~dIRZ-P-d-(.q/57",
-                  "x": 678,
-                  "y": 280,
+                  "x": 698,
+                  "y": 269,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1566,8 +1567,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": ")IN%Hm+b6mMy@f!d%_Eh",
-                  "x": 680,
-                  "y": 1055,
+                  "x": 16,
+                  "y": 1029,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1688,8 +1689,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "^}j?m$kfvo?*yVU*tZTm",
-                  "x": 683,
-                  "y": 1294,
+                  "x": 12,
+                  "y": 411,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -1821,8 +1822,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "PNPpQy7*E1z-r87!.=U8",
-                  "x": 917,
-                  "y": 1608,
+                  "x": 12,
+                  "y": 1507,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -2103,8 +2104,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "lHVPYav;O0+}^nDAcDdx",
-                  "x": 917,
-                  "y": 2111,
+                  "x": 10,
+                  "y": 2030,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -2172,8 +2173,8 @@
                 {
                   "type": "gamelab_whenPromptAnswered",
                   "id": "gd[r.r=ZFcNH@`N-sv+e",
-                  "x": 190,
-                  "y": 1608,
+                  "x": 7,
+                  "y": 1267,
                   "inputs": {
                     "VAR": {
                       "block": {
@@ -2290,18 +2291,17 @@
                 {
                   "type": "procedures_defnoreturn",
                   "id": "hbhGw3kksZ$2G%qfBvTi",
-                  "x": 20,
-                  "y": 600,
+                  "x": 1113,
+                  "y": 48,
                   "collapsed": true,
                   "deletable": false,
-                  "movable": false,
                   "editable": false,
                   "extraState": {
                     "description": "Sets the game rules. Locked.",
                     "procedureId": "%80z*bv(gK~ZW,}+5kG{",
                     "initialDeleteConfig": false,
                     "initialEditConfig": false,
-                    "initialMoveConfig": false,
+                    "initialMoveConfig": true,
                     "userCreated": false,
                     "invisible": false
                   },
@@ -2458,10 +2458,18 @@
         }
       ]
     },
-    "preload_asset_list": null
+    "long_instructions": "##**PROTOTYPE – SC2 AI in Your Program · Who Am AI? project**\r\n**This version: Finished sample – teacher exemplar and calibration Sample A (Riley, strong)**\r\n\r\nA completed project at the target level, for teachers and for scoring practice.\r\n\r\n- `my_prompt` has a character, chosen facts (a `facts` variable), and a rule that keeps the secret: \"Never say the word [secret]. If asked your job, give a clue instead.\"\r\n- **Off-topic check (Job 3):** AI that picks from choices checks each question. Try \"What is 2 plus 2?\"\r\n- **Hint:** AI writes a hint about how the worker solves problems.\r\n- **Guess check:** the player types a guess and AI picks Yes / No / Not sure. A wrong guess gets AI feedback on how close it was. Try \"a farmer\", then \"animal keeper\".\r\n- An empty AI answer gets \"I didn't catch that.\"\r\n- Lab2 levels don't save exemplar code, so this sample is its own level.\r\n\r\n**All versions**\r\n- Starter, no image generation: [104027](https://levelbuilder-studio.code.org/levels/104027)\r\n- Starter with image generation: [105336](https://levelbuilder-studio.code.org/levels/105336)\r\n- Finished sample (this level): [105337](https://levelbuilder-studio.code.org/levels/105337)\r\n- Calibration sample, middle: [105339](https://levelbuilder-studio.code.org/levels/105339)\r\n- Calibration sample, weak: [105340](https://levelbuilder-studio.code.org/levels/105340)\r\n- Prompt Helper (AI Chat level): [105338](https://levelbuilder-studio.code.org/levels/105338)\r\n\r\n**Open questions**\r\n- Two AI calls per question (question check + answer) take about 9 seconds. Is that too slow for players?\r\n- Should students see this sample before they build, or only at the end?\r\n- The \"AI sends nothing back\" branch can't catch a failed AI call (the game just waits). Request a \"when AI fails\" event?",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "level_mode": {
+      "kind": "code"
+    }
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-24T04:23:28.485+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-who-am-ai-imagegen\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-who-am-ai-imagegen\"},{\"changed_at\":\"2026-11-24 04:23:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:40:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:59:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:59:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:00:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:10:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-24T04:23:28.485+00:00\",\"changed\":[\"cloned from \\\"prototype-ai-in-your-program-who-am-ai-imagegen\\\"\"],\"cloned_from\":\"prototype-ai-in-your-program-who-am-ai-imagegen\"},{\"changed_at\":\"2026-11-24 04:23:57 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:40:16 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:59:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:59:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:00:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:10:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 17:45:43 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 17:49:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 17:51:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 18:07:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 18:07:26 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 04:46:55 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 05:34:03 +0000\",\"changed\":[\"hide_share_and_remix\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks/>
 </GamelabJr>

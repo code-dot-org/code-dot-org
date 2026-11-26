@@ -87,6 +87,136 @@ describe('Design System - Action Dropdown Component', () => {
     expect(allOptions[1].onClick).toHaveBeenCalledTimes(1);
   });
 
+  it('closes the menu and refocuses the trigger after an option is selected', async () => {
+    const user = userEvent.setup();
+    render(
+      <ActionDropdown
+        name="close-dropdown"
+        options={allOptions}
+        labelText="Close label"
+        triggerButtonProps={triggerButtonProps}
+      />,
+    );
+
+    const triggerButton = screen.getByRole('button', {name: 'Close label'});
+    await user.click(triggerButton);
+    expect(triggerButton.parentElement).toHaveClass('open');
+
+    await user.click(screen.getByText('option1'));
+    expect(triggerButton.parentElement).not.toHaveClass('open');
+    expect(triggerButton).toHaveFocus();
+  });
+
+  it('closes and refocuses the trigger when an option is chosen by keyboard', async () => {
+    const user = userEvent.setup();
+    render(
+      <ActionDropdown
+        name="keyboard-dropdown"
+        options={allOptions}
+        labelText="Keyboard label"
+        triggerButtonProps={triggerButtonProps}
+      />,
+    );
+
+    const triggerButton = screen.getByRole('button', {name: 'Keyboard label'});
+    await user.click(triggerButton);
+    screen.getByText('option2').closest('button')?.focus();
+    await user.keyboard('{Enter}');
+
+    expect(allOptions[1].onClick).toHaveBeenCalledTimes(1);
+    expect(triggerButton.parentElement).not.toHaveClass('open');
+    expect(triggerButton).toHaveFocus();
+  });
+
+  // Safari does not focus a clicked button, so focus is on body at that point.
+  it('refocuses the trigger when focus is on body after the click', async () => {
+    const user = userEvent.setup();
+    render(
+      <ActionDropdown
+        name="body-focus-dropdown"
+        options={[
+          {
+            ...allOptions[0],
+            onClick: () => (document.activeElement as HTMLElement).blur(),
+          },
+        ]}
+        labelText="Body focus label"
+        triggerButtonProps={triggerButtonProps}
+      />,
+    );
+
+    const triggerButton = screen.getByRole('button', {
+      name: 'Body focus label',
+    });
+    await user.click(triggerButton);
+    await user.click(screen.getByText('option1'));
+    expect(triggerButton).toHaveFocus();
+  });
+
+  it('refocuses its own trigger when several dropdowns share a name', async () => {
+    const user = userEvent.setup();
+    render(
+      <>
+        <ActionDropdown
+          name="row-dropdown"
+          options={allOptions}
+          labelText="Row 1"
+        />
+        <ActionDropdown
+          name="row-dropdown"
+          options={allOptions}
+          labelText="Row 2"
+        />
+      </>,
+    );
+
+    const secondTrigger = screen.getByRole('button', {name: 'Row 2'});
+    await user.click(secondTrigger);
+    await user.click(screen.getAllByText('option1')[1]);
+    expect(secondTrigger).toHaveFocus();
+  });
+
+  it('refocuses a trigger whose id is overridden', async () => {
+    const user = userEvent.setup();
+    render(
+      <ActionDropdown
+        name="custom-id-dropdown"
+        options={allOptions}
+        labelText="Custom id"
+        triggerButtonProps={{...triggerButtonProps, id: 'custom-trigger'}}
+      />,
+    );
+
+    const triggerButton = screen.getByRole('button', {name: 'Custom id'});
+    await user.click(triggerButton);
+    await user.click(screen.getByText('option1'));
+    expect(triggerButton).toHaveFocus();
+  });
+
+  it('leaves focus where the option handler moved it', async () => {
+    const user = userEvent.setup();
+    render(
+      <>
+        <input aria-label="Elsewhere" />
+        <ActionDropdown
+          name="focus-dropdown"
+          options={[
+            {
+              ...allOptions[0],
+              onClick: () => screen.getByLabelText('Elsewhere').focus(),
+            },
+          ]}
+          labelText="Focus label"
+          triggerButtonProps={triggerButtonProps}
+        />
+      </>,
+    );
+
+    await user.click(screen.getByRole('button', {name: 'Focus label'}));
+    await user.click(screen.getByText('option1'));
+    expect(screen.getByLabelText('Elsewhere')).toHaveFocus();
+  });
+
   it("doesn't call onClick when dropdown is disabled", async () => {
     // MUI disabled IconButton sets pointer-events: none, so we need to
     // bypass the pointer-events check to test click behavior.

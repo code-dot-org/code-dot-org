@@ -15,6 +15,7 @@ import {
   Progress,
   StepAnswers,
   totalTimeSpent,
+  studentWorkSteps,
   visibleSteps,
 } from '../../progress';
 import {Checkpoint, Step} from '../../types';
@@ -59,6 +60,8 @@ interface StepPlayerProps {
   onFinish: () => void;
   /** Leaves for the final project; the header offers it when given. */
   onFinishPathway?: () => void;
+  /** Keeps the header's I'm finished disabled, with this as the reason. */
+  finishDisabledReason?: string;
   /** Active top-level tab; shows the My project / Practice skills switcher. */
   activeTab?: 'map' | 'project';
   onTabChange?: (tab: 'map' | 'project') => void;
@@ -86,9 +89,21 @@ function withAnswers(
 }
 
 /**
+ * Index of step to play; -1 if none.
+ */
+function indexAtOrAfter(checkpoint: Checkpoint, steps: Step[], stepId: string) {
+  const exact = steps.findIndex(s => s.id === stepId);
+  if (exact >= 0) return exact;
+  const order = checkpoint.steps.map(s => s.id);
+  const from = order.indexOf(stepId);
+  return steps.findIndex(s => order.indexOf(s.id) >= from);
+}
+
+/**
  * Plays a checkpoint's visible steps in order, then reports the checkpoint
  * finished. A step behind a showIf appears once its answer is in, so the
- * current step is tracked by id rather than position.
+ * current step is tracked by id rather than position. A teacher viewing a
+ * student is only shown interactive steps (e.g. no panel or video steps).
  */
 const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   checkpoint,
@@ -102,21 +117,26 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
   onExit,
   onFinish,
   onFinishPathway,
+  finishDisabledReason,
   activeTab,
   onTabChange,
   projectName,
 }) => {
-  const {pathway, progress, statusMap} = usePathwayContext();
+  const {pathway, progress, statusMap, isViewingStudent} = usePathwayContext();
+  const playableSteps = isViewingStudent ? studentWorkSteps : visibleSteps;
   const steps = useMemo(
-    () => visibleSteps(checkpoint, progress),
-    [checkpoint, progress]
+    () => playableSteps(checkpoint, progress),
+    [playableSteps, checkpoint, progress]
   );
   const [currentStepId, setCurrentStepId] = useState(
     () => initialStepId ?? checkpoint.steps[0].id
   );
+  // A teacher resuming at a skipped step lands on the next one shown.
   const currentStepIndex = Math.max(
     0,
-    steps.findIndex(s => s.id === currentStepId)
+    isViewingStudent
+      ? indexAtOrAfter(checkpoint, steps, currentStepId)
+      : steps.findIndex(s => s.id === currentStepId)
   );
   const step = steps[currentStepIndex];
   const last = currentStepIndex === steps.length - 1;
@@ -179,7 +199,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
     // Read visible steps from the ref, not the `steps` memo: an answer saved
     // in this same click can decide which step plays next, and the memo
     // lags until progress updates on the next render.
-    const visibleStepsFromLatestProgress = visibleSteps(
+    const visibleStepsFromLatestProgress = playableSteps(
       checkpoint,
       latestProgress.current
     );
@@ -332,6 +352,7 @@ const StepPlayer: React.FunctionComponent<StepPlayerProps> = ({
             leave(onFinishPathway);
           })
         }
+        finishDisabledReason={finishDisabledReason}
       />
       {activeTab !== undefined && onTabChange && (
         <AdaptiveTabBar

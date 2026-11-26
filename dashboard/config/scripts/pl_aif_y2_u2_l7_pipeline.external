@@ -79,4 +79,10 @@ By step 3, each student has a table like this one from the exemplar, with one ro
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
   <p>&#10145;&#65039; Find the full details in the <a href="PASTE_UNIT_2_LESSON_13_URL_HERE" target="_blank" rel="noopener noreferrer" style="font-weight: bold;">Lesson 13 lesson plan: Image Classifier Project</a>.</p>
 </div>
+
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 20px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <img src="https://images.code.org/5ec7d742efa4da97d9ae60b79611ef3d-image-1790625929941.png" alt="Microsoft Foundry logo" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;"> <strong>AI-901 connection:</strong> The exam asks students to identify common AI workloads, including computer vision. The image classifier students build is one small example of that workload.
+  </div>
+</div>
 MARKDOWN

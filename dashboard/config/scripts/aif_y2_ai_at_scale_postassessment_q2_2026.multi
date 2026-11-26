@@ -1,0 +1,20 @@
+name 'aif-y2-ai-at-scale-postassessment-q2-2026'
+
+wrong 'The company could sort apples more quickly, and they\'ll make fewer mistakes.'
+wrong 'The company could sort apples more quickly, but they\'ll make more mistakes.'
+right 'The company could sort apples more quickly, and they\'ll make the same number of mistakes.'
+wrong 'The company could sort apples less quickly, but they\'ll make fewer mistakes.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A produce company harvests apples. Afterward, they need to sort their harvest: that is, separate good apples from bad apples. The company is considering whether an AI system would be a worthwhile investment.
+
+The company usually harvests 100,000 apples. A team of humans can sort 1,000 apples per day with 98% accuracy. The AI system could sort 10,000 apples per day with 98% accuracy.
+
+Which best describes the expected results of the sorting process after adopting the AI system?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 1: Challenges at Scale
+MARKDOWN

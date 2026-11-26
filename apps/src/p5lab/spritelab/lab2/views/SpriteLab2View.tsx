@@ -80,6 +80,7 @@ import {PLAY_MUSIC_BLOCK_TYPE} from '../blockly/blockDefinitions/playMusic';
 import {endKeyboardNavigation} from '../blockly/endKeyboardNavigation';
 import {FLYOUT_DOTS_MARGIN_FACTOR} from '../blockly/flyoutDots';
 import {refreshAnimationDropdownThumbnails} from '../blockly/imagePickerFields';
+import {localizeLevelText} from '../blockly/localizeLevelText';
 import {codeFromSavedScene} from '../blockly/savedSceneCode';
 import {withoutAiBlocks} from '../blockly/toolbox/aiBlocks';
 import {activeCallout, calloutSelector} from '../callouts';
@@ -646,18 +647,41 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     [catalog, inToolboxBlocks]
   );
 
-  // Create the pinned scene on first load, and again after Start Over (the
-  // reinit count is in the deps). On a project with no scenes the pinned
-  // scene becomes the only one: materializing the synthesized default scene
-  // too would leave a stray "Scene 1" in every level sharing the project.
-  // A pin whose id is the default scene's adopts that scene however it was
-  // saved. Toolbox mode has no scenes to pin, so the property is cleared at
-  // this one read and everything below sees no pin.
+  // Toolbox mode has no scenes to pin, so it ignores the level's pinned and
+  // extra scenes.
   const pinnedScene = isToolboxMode ? undefined : levelProperties.pinnedScene;
+  const levelExtraScene = isToolboxMode
+    ? undefined
+    : levelProperties.extraScene;
   const pinnedSceneId = pinnedScene?.id;
   const pinnedSceneName = pinnedScene?.name;
-  const pinnedSceneSource = pinnedScene?.source;
-  const extraScene = isToolboxMode ? undefined : levelProperties.extraScene;
+  // The level's pinned and extra scenes are copied into the student's
+  // project in the student's language; levelbuilder edits them in English.
+  const pinnedSceneSource = useMemo(
+    () =>
+      isLevelEditMode
+        ? pinnedScene?.source
+        : localizeLevelText(pinnedScene?.source),
+    [pinnedScene?.source]
+  );
+  const extraScene = useMemo(
+    () =>
+      isLevelEditMode || !levelExtraScene?.source
+        ? levelExtraScene
+        : {
+            ...levelExtraScene,
+            source: localizeLevelText(levelExtraScene.source),
+          },
+    [levelExtraScene]
+  );
+  // Create the pinned and extra scenes on first load, and again after Start
+  // Over (the reinit count is in the deps). On a project with no scenes list
+  // whose top-level code is still the default workspace, the pinned scene
+  // becomes the only scene: also saving the 'Scene 1' that getScenes makes
+  // for such a project would leave a stray 'Scene 1' in every level that
+  // shares the project. A pinned scene whose id is DEFAULT_SCENE_ID uses the
+  // project's existing scene with that id, from its scenes list or its
+  // top-level code, instead of adding one.
   useEffect(() => {
     if (!pinnedSceneId) {
       return;
@@ -1980,11 +2004,20 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   // Sources generation and workspace the toolbox was last loaded into.
   const toolboxLoadedForRef = useRef('');
   // The level's added blocks, their outlines and their lock.
+  // The blocks a level adds go into the student's code in their language;
+  // levelbuilder edits them in English.
+  const addBlocks = useMemo(
+    () =>
+      isLevelEditMode
+        ? levelProperties.addBlocks
+        : localizeLevelText(levelProperties.addBlocks),
+    [levelProperties.addBlocks]
+  );
   const {addLevelBlocks, sceneLoadsRef, leavingResetRef} = useLevelBlocks({
     ready: labReady && !isToolboxMode,
     editing: isLevelEditMode,
     levelId: levelProperties.id,
-    addBlocks: levelProperties.addBlocks,
+    addBlocks,
     pinnedSceneId,
     activeSceneId: activeScene.id,
     objectives: levelProperties.objectives,
@@ -2471,6 +2504,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
               instructionsCollapsed && moduleStyles.instructionsCollapsed
             )}
             collapsible={freeplayLevel || undefined}
+            hideCollapsedTabBorder
             // The objectives checklist, and the Continue button it enables,
             // render inside the instructions panel.
             objectives={objectives.active ? objectives : undefined}

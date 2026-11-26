@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q9-2026'
+
+wrong '1 unit, for the probability the sound is a cello, viola, or violin'
+wrong '2 units, for the probabilities the sound is or isn\'t a string instrument'
+right '3 units, one for the probability of each instrument'
+wrong '4 units, one for each instrument plus one for later expansion'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+You want to build a neural network to distinguish the sounds of three string instruments: cello, viola, and violin. How many units would the output layer most likely have, and what would they represent?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 7: Classification with Neural Networks
+MARKDOWN

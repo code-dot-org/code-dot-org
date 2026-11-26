@@ -9,16 +9,18 @@ import styles from './ai-chat-tools-dependency-alerts.module.scss';
 /**
  * Displays an aqua alert with the bot icon, a help link, and custom text.
  */
-const AiChatToolsInfoAlert: React.FC<{text: string; className?: string}> = ({
-  text,
-  className,
-}) => {
+const AiChatToolsInfoAlert: React.FC<{
+  text: string;
+  className?: string;
+  //TODO(lc): remove this code after CSEdWeek
+  supportLink?: string;
+}> = ({text, className, supportLink = AI_SETTINGS_SUPPORT_LINK}) => {
   return (
     <Alert
       type={alertTypes.aqua}
       text={text}
       link={{
-        href: AI_SETTINGS_SUPPORT_LINK,
+        href: supportLink,
         text: 'Learn more',
         openInNewTab: true,
       }}

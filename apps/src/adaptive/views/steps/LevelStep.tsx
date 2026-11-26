@@ -141,6 +141,7 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     checkpoint,
     statusMap,
     progress,
+    isReadonly,
     saveGeneratedInstructions,
     recordValidation,
     aiContext,
@@ -205,15 +206,16 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
     saveGeneratedInstructions,
     aichatContext: aiContext,
   });
-  // The lab's own Continue button advances the step. A step whose work is
-  // checked waits for work that passes, for enough failed checks that the
-  // judge may be at fault, or for the chat to reach its reply limit, unless no
-  // judge can run: the shell makes no AI calls, or the lab takes no part in
-  // checking.
+  // The lab's Continue button advances the step (always while read-only,
+  // where no check can open it). A step whose work is checked waits for work
+  // that passes, for enough failed checks that the judge may be at fault, or
+  // for the chat to reach its reply limit, unless no judge can run: the shell
+  // makes no AI calls, or the lab takes no part in checking.
   const entry = progress.steps[step.id];
   const unlockReason = continueUnlockReason(entry);
   const aiAvailable = isAdaptiveAiAvailable();
   const continueEnabled =
+    isReadonly ||
     !step.validation ||
     !aiAvailable ||
     !workAdapterFor(levelProperties.appName) ||
@@ -223,7 +225,17 @@ const LevelPlayer: React.FunctionComponent<LevelPlayerProps> = ({
   // handle the lab's chat hands back. The chat's replies open Continue on
   // the reply limit alone.
   const [chat, setChat] = useState<ChatHandle>();
-  const chatHost = useMemo(() => ({onChatReady: setChat}), []);
+  const chatHost = useMemo(
+    () => ({
+      onChatReady: setChat,
+      analyticsProperties: {
+        pathwayId: pathway.id,
+        checkpointId: checkpoint.id,
+        stepId: step.id,
+      },
+    }),
+    [pathway.id, checkpoint.id, step.id]
+  );
   const latestValidationAttempt = latestValidation(entry);
   const checkedBuilds = workAttempts(entry).length;
   const recordStepValidation = useCallback(

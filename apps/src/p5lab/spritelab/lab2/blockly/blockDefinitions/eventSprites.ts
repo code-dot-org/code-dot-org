@@ -3,6 +3,8 @@ import {Order} from 'blockly/javascript';
 
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
+import {BLOCK_LABELS} from '@cdo/apps/blockly/utils/localization/blockDefinitions';
+import {translateFilled} from '@cdo/apps/localization/templates';
 
 export const TOUCHED_SPRITE_BLOCK_TYPE = 'spritelab2_touchedSprite';
 export const CLICKED_SPRITE_BLOCK_TYPE = 'spritelab2_clickedSprite';
@@ -54,9 +56,17 @@ export function eventSpriteWarning(this: Block): void {
       this.getRootBlock().isEnabled() && !isInItsHandler(this);
     this.setWarningText(
       picksNothing
-        ? `This block picks a sprite only in the blocks below "${
-            EVENT_SPRITES[this.type].eventName
-          }".`
+        ? translateFilled(
+            'This block picks a sprite only in the blocks below "{{event}}".',
+            {
+              event: translateFilled(
+                EVENT_SPRITES[this.type].eventName,
+                {},
+                BLOCK_LABELS
+              ),
+            },
+            BLOCK_LABELS
+          )
         : null
     );
   });

@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q14-2026'
+
+right 'The GPU will compute the output faster, because it can calculate more neurons in parallel.'
+wrong 'The GPU will compute the output faster, because its cores are more powerful.'
+wrong 'The CPU will compute the output faster, because its cores are more powerful.'
+wrong 'The CPU will compute the output faster, because it can calculate more neurons in parallel.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+One computer has a CPU with 8 cores and another has a GPU with 16,000 cores. Which best explains the difference in how these two processing units will compute the output of a neural network?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Hardware for AI
+MARKDOWN

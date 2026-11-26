@@ -12,6 +12,7 @@ import React, {
   useImperativeHandle,
 } from 'react';
 
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -369,6 +370,16 @@ const ChatWorkspace = forwardRef<ChatWorkspaceHandle, ChatWorkspaceProps>(
         enableSend: () => setHostDisabledSend(false),
       });
     }, [host, dispatch]);
+    useEffect(() => {
+      const properties = host?.analyticsProperties;
+      if (!properties) return;
+      for (const [key, value] of Object.entries(properties))
+        analyticsReporter.setProjectProperty(key, value);
+      return () => {
+        for (const key of Object.keys(properties))
+          analyticsReporter.setProjectProperty(key, undefined);
+      };
+    }, [host]);
     useEffect(() => {
       if (buildListeners.current.size === 0) return;
       for (const build of acceptedBuilds(unfilteredVisibleItems)) {

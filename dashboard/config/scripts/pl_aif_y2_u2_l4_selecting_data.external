@@ -32,5 +32,9 @@ The model predicts Anita will sell around 400 units in January and only around 1
   <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> this is the core idea worth repeating: a model is only as good as the data it's trained on. Good model fit doesn't mean good predictions, if the training context doesn't match the real-world context, the model will confidently get it wrong.</div>
 </div>
 
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 20px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <img src="https://images.code.org/5ec7d742efa4da97d9ae60b79611ef3d-image-1790625929941.png" alt="Microsoft Foundry logo" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;"> <strong>AI-901 connection:</strong> The exam asks students to describe fairness and inclusiveness considerations in an AI solution. Checking whether training data represents every group a model will serve is where that thinking starts.
+  </div>
 
 MARKDOWN

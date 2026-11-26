@@ -32,6 +32,7 @@ import {useAiTutorResponseSchemaSettings} from './hooks/useAiTutorResponseSchema
 import useWeblab2IntroTour from './hooks/useWeblab2IntroTour';
 import ShareView from './layout/ShareView';
 import VerticalLayout from './layout/VerticalLayout';
+import WidgetOnlyLayout from './layout/WidgetOnlyLayout';
 import {
   removeAiTutorAssetFromProject,
   syncAiTutorAssetToProject,
@@ -90,6 +91,20 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
+  // Use the widget-only layout for widget mode (no resource panel) if specified.
+  const layoutConfig = useMemo<ConfigType>(
+    () =>
+      levelProperties.widgetViewHideResourcePanel
+        ? {
+            ...config,
+            layoutComponents: {
+              ...config.layoutComponents,
+              widget: WidgetOnlyLayout,
+            },
+          }
+        : config,
+    [config, levelProperties.widgetViewHideResourcePanel]
+  );
   useWeblab2IntroTour(levelProperties);
 
   const logLevelActivity = useLevelActivityMetrics(levelProperties);
@@ -203,7 +218,7 @@ const Weblab2View: React.FC<
     <div className={moduleStyles.weblab2Container}>
       {hasSource && sourceLevel === levelProperties.id && (
         <Codebridge
-          config={config}
+          config={layoutConfig}
           setConfig={setConfig}
           startSources={startSources}
           levelProperties={levelProperties}

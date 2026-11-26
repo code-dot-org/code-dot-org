@@ -1,0 +1,14 @@
+# cdo-devdb is mysql:8.0 carrying a pre-seeded dashboard datadir.
+#
+#   .devcontainer/preseed-db.sh
+#   docker build -f .devcontainer/Dockerfile.db -t cdo-devdb:local .devcontainer
+
+FROM mysql:8.0
+
+# Not /var/lib/mysql: the base image declares that path a VOLUME, which
+# docker copies on every start. This path is read in place. 999 is the
+# image's mysql user.
+COPY --chown=999:999 mysql-data/ /opt/mysql-data/
+
+# Stands in for SETUP.md's SET PERSIST time_zone, which a datadir holds.
+CMD ["--datadir=/opt/mysql-data", "--default-time-zone=+00:00"]

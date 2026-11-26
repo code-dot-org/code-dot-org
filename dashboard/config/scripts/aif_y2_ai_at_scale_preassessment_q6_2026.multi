@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q6-2026'
+
+wrong 'It describes the network at the highest layer of abstraction.'
+wrong 'It stores training examples the network can reference the output of.'
+right 'It determines the network\'s final answer.'
+wrong 'It ensures every neuron produces the correct output.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+In a neural network, what is the job of the output layer?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 5: Neural Networks
+MARKDOWN

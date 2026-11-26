@@ -29775,6 +29775,10 @@ en:
               name: Lesson 12
             lesson-13:
               name: Lesson 13
+            lesson-14:
+              name: Pre-Assessment
+            lesson-15:
+              name: End of Unit Assessment
           lesson_groups:
             lessonGroup-3:
               display_name: Pre-Assessment

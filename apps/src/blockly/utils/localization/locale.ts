@@ -1,9 +1,11 @@
+import * as BlocklyCore from 'blockly/core';
+
 import {BlockDefinition, ExtendedWorkspaceSvg} from '@cdo/apps/blockly/types';
 import localization from '@cdo/apps/localization';
 
 import {refreshWorkspace} from '../workspace/refresh';
 
-import {translate} from './blockDefinitions';
+import {localizeBlockInitDefinition, translate} from './blockDefinitions';
 import {localizeVariables} from './variables';
 
 /**
@@ -117,6 +119,15 @@ export function refreshWorkspacesForUpdatedLocale(rtl: boolean) {
       workspace.RTL = rtl;
       localizeVariables(workspace as ExtendedWorkspaceSvg);
       refreshWorkspace(workspace);
+    }
+  });
+}
+
+/** Wraps every init() block so the blocks it builds are translated. */
+export function localizeInitBlocks(): void {
+  Object.entries(BlocklyCore.Blocks).forEach(([key, blockDefinition]) => {
+    if (blockDefinition.init) {
+      BlocklyCore.Blocks[key] = localizeBlockInitDefinition(blockDefinition);
     }
   });
 }

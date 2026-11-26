@@ -18,3 +18,8 @@
   - if @level.is_a?(Weblab2) && @widget2_ids.present?
     %h2 Widget2 View
     = render partial: 'levels/editors/fields/widget2', locals: {f: f}
+
+  - if @level.is_a? Weblab2
+    = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :widget_view_hide_resource_panel, description: "Hide resource panel (only applies when Widget View or Widget2 View above is on)"}
+    %p
+      If checked, the widget level shows just the widget, with the Continue button under it: no resource panel tabs and no code workspace (only the resource panel sidebar is shown). The level does not save with this checked unless one of the widget views is on.

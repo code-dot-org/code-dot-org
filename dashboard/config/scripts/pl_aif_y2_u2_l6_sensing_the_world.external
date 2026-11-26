@@ -45,5 +45,9 @@ Two terms carry this lesson, click each card to see its definition:
 
 This lesson's two activities explore two of those input types: images, through the "Seeing" activity next, and sound, through the "Hearing" activity after that.
 
-
+<div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 20px 0;">
+  <div style="font-size: 16px; line-height: 1.5;">
+    <img src="https://images.code.org/5ec7d742efa4da97d9ae60b79611ef3d-image-1790625929941.png" alt="Microsoft Foundry logo" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 6px;"> <strong>AI-901 connection:</strong> The exam covers the features and capabilities of computer vision and speech. Representing an image as a grid of bits and a sound as a set of features is how those systems begin.
+  </div>
+</div>
 MARKDOWN

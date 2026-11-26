@@ -1954,16 +1954,368 @@
               }
             ]
           }
+        },
+        {
+          "id": "0ff43999-9c6b-4432-99c3-ceddeed43bc8",
+          "name": "Test A - say too early",
+          "source": {
+            "variables": [
+              {
+                "name": "reply",
+                "id": "=~aeC{nfZk(AioNYa8~^"
+              }
+            ],
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "oYSfuCMp[cGsa*w?-@R|",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_makeNewSpriteAnon",
+                      "id": "6ECW!N/}HAC?c?~!%RTL",
+                      "fields": {
+                        "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Sprite 1\"</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_askAI",
+                          "id": "*gd`J(mZF)W2T3pbZNy(",
+                          "inputs": {
+                            "PROMPT": {
+                              "block": {
+                                "type": "text",
+                                "id": "ol];d5axx3;OF(Y)l_0H",
+                                "fields": {
+                                  "TEXT": "Say hello in three words."
+                                }
+                              }
+                            },
+                            "VAR": {
+                              "block": {
+                                "type": "variables_get",
+                                "id": "kA;._S$*.8z9zDw#S0^l",
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": "=~aeC{nfZk(AioNYa8~^"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "gamelab_spriteSayTime",
+                              "id": "){|+ISp-(@reh8eKzw~p",
+                              "inputs": {
+                                "SPRITE": {
+                                  "block": {
+                                    "type": "gamelab_allSpritesWithAnimation",
+                                    "id": "*eOR]#xY5BOcqCx}tb$h",
+                                    "fields": {
+                                      "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                    }
+                                  }
+                                },
+                                "TEXT1": {
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "8oU2wV+=gxqKOP.SDh8u",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "=~aeC{nfZk(AioNYa8~^"
+                                      }
+                                    }
+                                  }
+                                },
+                                "NUM": {
+                                  "block": {
+                                    "type": "math_number",
+                                    "id": "^Okob/c9_#Qy|Cj,rjK5",
+                                    "fields": {
+                                      "NUM": 10
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "59617d4f-72f1-46a6-9bf7-80fe19d9294e",
+          "name": "Test B - waiting first",
+          "source": {
+            "variables": [
+              {
+                "name": "reply",
+                "id": "Z^z*+Y!Qgn/#|E63mAOx"
+              }
+            ],
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": ":lb|W+XMc0Rm4o~1Hb:F",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_makeNewSpriteAnon",
+                      "id": "sV-Xl)W{^^ClcCUax7+3",
+                      "fields": {
+                        "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Sprite 1\"</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "variables_set",
+                          "id": "wWx/KD,at.Hk^^*c(c#s",
+                          "extraState": {
+                          },
+                          "fields": {
+                            "VAR": {
+                              "id": "Z^z*+Y!Qgn/#|E63mAOx"
+                            }
+                          },
+                          "inputs": {
+                            "VALUE": {
+                              "block": {
+                                "type": "text",
+                                "id": "uCJnLIa`oZn(GU:Y;-x_",
+                                "fields": {
+                                  "TEXT": "waiting..."
+                                }
+                              }
+                            }
+                          },
+                          "next": {
+                            "block": {
+                              "type": "spritelab2_askAI",
+                              "id": "7IGrlDulx~ITN:c3RE,x",
+                              "inputs": {
+                                "PROMPT": {
+                                  "block": {
+                                    "type": "text",
+                                    "id": "Bk([n]@F29zQ2[HMo}.n",
+                                    "fields": {
+                                      "TEXT": "Say hello in three words."
+                                    }
+                                  }
+                                },
+                                "VAR": {
+                                  "block": {
+                                    "type": "variables_get",
+                                    "id": "[v2D:t@-%#WHE:tm45s;",
+                                    "extraState": {
+                                    },
+                                    "fields": {
+                                      "VAR": {
+                                        "id": "Z^z*+Y!Qgn/#|E63mAOx"
+                                      }
+                                    }
+                                  }
+                                }
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "gamelab_spriteSayTime",
+                                  "id": "Eyc!f~PYrY}k.3,Q.(IK",
+                                  "inputs": {
+                                    "SPRITE": {
+                                      "block": {
+                                        "type": "gamelab_allSpritesWithAnimation",
+                                        "id": "Mdr-zue:p8gspJw#PTv_",
+                                        "fields": {
+                                          "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                                        }
+                                      }
+                                    },
+                                    "TEXT1": {
+                                      "block": {
+                                        "type": "variables_get",
+                                        "id": "UV{nE9HpdA_~=2:N/a6]",
+                                        "extraState": {
+                                        },
+                                        "fields": {
+                                          "VAR": {
+                                            "id": "Z^z*+Y!Qgn/#|E63mAOx"
+                                          }
+                                        }
+                                      }
+                                    },
+                                    "NUM": {
+                                      "block": {
+                                        "type": "math_number",
+                                        "id": "mszj_D}?Y[In?ZoGN|qr",
+                                        "fields": {
+                                          "NUM": 10
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "154959e1-e5a5-42ac-834d-e9716897284c",
+          "name": "Test C - when answered",
+          "source": {
+            "variables": [
+              {
+                "name": "reply",
+                "id": "[[1s$2TQ,AYk+/c/Mq4H"
+              }
+            ],
+            "blocks": {
+              "languageVersion": 0,
+              "blocks": [
+                {
+                  "type": "spritelab2_whenRun",
+                  "id": "GBbSQ]J4na/6@CZUD+X#",
+                  "x": 20,
+                  "y": 20,
+                  "deletable": false,
+                  "movable": false,
+                  "next": {
+                    "block": {
+                      "type": "gamelab_makeNewSpriteAnon",
+                      "id": "u@44=`UC@Z,]|Xgm;@[g",
+                      "fields": {
+                        "ANIMATION_NAME": "<field name=\"ANIMATION_NAME\">\"Sprite 1\"</field>"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "spritelab2_askAI",
+                          "id": "*_`}6I/^_f!DT}@~s2*?",
+                          "inputs": {
+                            "PROMPT": {
+                              "block": {
+                                "type": "text",
+                                "id": "/+pVO1?V,djtA!+?9Kia",
+                                "fields": {
+                                  "TEXT": "Say hello in three words."
+                                }
+                              }
+                            },
+                            "VAR": {
+                              "block": {
+                                "type": "variables_get",
+                                "id": "e+U5zVL~f5|r=~*:q-E+",
+                                "extraState": {
+                                },
+                                "fields": {
+                                  "VAR": {
+                                    "id": "[[1s$2TQ,AYk+/c/Mq4H"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "gamelab_whenPromptAnswered",
+                  "id": "Mf~We2m+H9SS9-Rxr*Un",
+                  "x": 341,
+                  "y": 317,
+                  "inputs": {
+                    "VAR": {
+                      "block": {
+                        "type": "variables_get",
+                        "id": "k-d3wQ%$DgY3C#iC$S8-",
+                        "extraState": {
+                        },
+                        "fields": {
+                          "VAR": {
+                            "id": "[[1s$2TQ,AYk+/c/Mq4H"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "gamelab_spriteSayTime",
+                      "id": "zrO;=XVLx1N_Jd^}wU@,",
+                      "inputs": {
+                        "SPRITE": {
+                          "block": {
+                            "type": "gamelab_allSpritesWithAnimation",
+                            "id": "Au5~!#gVo(edgucBk(M,",
+                            "fields": {
+                              "ANIMATION": "<field name=\"ANIMATION\">\"Sprite 1\"</field>"
+                            }
+                          }
+                        },
+                        "TEXT1": {
+                          "block": {
+                            "type": "variables_get",
+                            "id": "i=FG+ba@os$9m(!MNiZe",
+                            "extraState": {
+                            },
+                            "fields": {
+                              "VAR": {
+                                "id": "[[1s$2TQ,AYk+/c/Mq4H"
+                              }
+                            }
+                          }
+                        },
+                        "NUM": {
+                          "block": {
+                            "type": "math_number",
+                            "id": "/5KI2Do|2[Z$)[m#.{D8",
+                            "fields": {
+                              "NUM": 10
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
         }
       ]
     },
-    "level_mode": {
-      "kind": "code"
-    },
+    "long_instructions": "**PROTOTYPE – SC2 AI in Your Program · Who Am AI? project**\r\n**This version: Starter, no image generation (default)**\r\n\r\nThis is what students start from. An AI plays a secret career (starter: zookeeper) and answers yes-or-no questions. Students change the `secret` and `my_prompt` variables, choose rule or AI for the hint and the guess check, build their own off-topic question check (`check_question`), and build feedback for a wrong guess.\r\n\r\n- Level mode is **Code**: students see only the Code and Play tabs, with a premade robot character.\r\n- `start_game` is **locked and collapsed**. It adds the game rules (\"You are playing a guessing game. Answer each question in one short sentence.\") to the student's `my_prompt`. Keeping the secret is the student's job: the starter prompt has no rule for it, so the AI will give the secret away until students add one.\r\n- Try it: ask \"Are you a zookeeper?\" and watch the AI answer.\r\n\r\n**All versions**\r\n- Starter, no image generation (this level): [104027](https://levelbuilder-studio.code.org/levels/104027)\r\n- Starter with image generation: [105336](https://levelbuilder-studio.code.org/levels/105336)\r\n- Finished sample (strong): [105337](https://levelbuilder-studio.code.org/levels/105337)\r\n- Calibration sample, middle: [105339](https://levelbuilder-studio.code.org/levels/105339)\r\n- Calibration sample, weak: [105340](https://levelbuilder-studio.code.org/levels/105340)\r\n- Prompt Helper (AI Chat level): [105338](https://levelbuilder-studio.code.org/levels/105338)\r\n- Molly's original demo: [105075](https://levelbuilder-studio.code.org/levels/105075)\r\n\r\n**Open questions**\r\n- Is image generation funded at launch? If not, this is the only starter.\r\n- Keep the 5-question limit? Each question can take two AI calls (about 9 seconds).\r\n- Should students also write feedback for wrong guesses on the button (rule) path, or only on the AI path?\r\n- Keep the rules locked but visible, or request functions that are fully hidden? (Hidden functions don't run in Sprite Lab 2 today.)\r\n- Known lab issues: `ask AI` sometimes shows its answer twice in one bubble, and a failed AI call makes the game wait forever.",
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-24 04:02:27 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:05:48 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:15:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:18:36 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:21:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:41:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:02:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:10:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-11-24 04:02:27 +0000\",\"changed\":[\"show_debug_watch\",\"use_default_sprites\",\"hide_animation_mode\",\"all_animations_single_frame\",\"use_modal_function_editor\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:05:48 +0000\",\"changed\":[],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:15:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:18:36 +0000\",\"changed\":[\"preload_asset_list\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:21:11 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 04:41:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:02:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-24 05:10:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 04:50:09 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-26 00:12:04 +0000\",\"changed\":[\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-26 00:12:32 +0000\",\"changed\":[\"level_mode\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-26 00:16:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-26 00:18:46 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-26 00:19:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

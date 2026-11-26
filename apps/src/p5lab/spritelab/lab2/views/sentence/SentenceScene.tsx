@@ -11,6 +11,7 @@ import {
   MAX_LEAVING_MS,
   useStopWhenResting,
 } from '@cdo/apps/aiComponentLibrary/loadingAnimations/useStopWhenResting';
+import {useLocalization} from '@cdo/apps/localization';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {generateCharacterSet} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet';
@@ -45,6 +46,7 @@ import {LearningStory, storyFor} from '../images/teaching/useLearningStory';
 import StripFrame from '../StripFrame';
 
 import {FirstShowingOnly, PixelReveal, SparkleBurst} from './PixelReveal';
+import {displayTextFromImage} from './sentenceLocalization';
 import SentenceReadOnly from './SentenceReadOnly';
 import {
   Choices,
@@ -583,6 +585,12 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     lead: SENTENCE_LEAD,
   });
   const showingResult = mode === 'result' && !!chosenPicture;
+  // The picture's words as the student reads them; the prompt itself stays
+  // in English.
+  useLocalization();
+  const chosenText = chosenPicture
+    ? displayTextFromImage(chosenPicture.result.generation)
+    : '';
 
   // The control that changed the mode unmounts with it, so focus moves to
   // the panel; not on the first render, which is the level opening.
@@ -658,14 +666,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
           frameSize={sheet.frameSize}
           index={stillFrame}
           className={styles.preview}
-          label={chosenPicture.prompt}
+          label={chosenText}
         />
       ) : sheet ? (
         <AnimatedSheetPreview {...sheet} />
       ) : (
         <img
           src={chosenPicture.dataURI}
-          alt={chosenPicture.prompt}
+          alt={chosenText}
           className={classNames(
             styles.preview,
             chosenPicture.result.pixelGridSize && styles.pixelArt
@@ -707,13 +715,13 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         src: chosenPicture.dataURI,
         pixelated: !!chosenPicture.result.pixelGridSize,
         sheet: sheet && {frameSize: sheet.frameSize},
-        name: chosenPicture.prompt,
+        name: chosenText,
       }}
       disabled={busy}
       compact={compactBehindTheScenes}
       story={storyFor(
         chosenPicture.dataURI,
-        chosenPicture.prompt,
+        chosenText,
         imageType,
         sheet?.frameSize
       )}

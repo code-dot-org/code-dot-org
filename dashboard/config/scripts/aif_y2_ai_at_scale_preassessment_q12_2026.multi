@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q12-2026'
+
+right 'A pattern where the output only goes up, or only goes down, as an input increases'
+wrong 'Any pattern at all, as long as there is enough training data'
+wrong 'Only patterns that use exactly one input'
+wrong 'Only patterns where every input is a positive number'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+What kind of pattern can a single neuron learn?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 9: What Neurons Learn
+MARKDOWN

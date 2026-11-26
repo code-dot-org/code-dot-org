@@ -71,6 +71,29 @@ class ProjectsListTest < ActionController::TestCase
     assert_nil ProjectsList.send(:get_project_row_data, @hidden_project, @channel_id, @student)
   end
 
+  test 'adaptive_project_ids finds the channels of pathway template levels only' do
+    adaptive = create(:adaptive)
+    template_name = adaptive.pathway_template_level_name
+    template = Level.find_by(name: template_name) || create(:weblab2, name: template_name)
+    create(:channel_token, storage_id: @storage_id, level: template, storage_app_id: 55)
+    create(:channel_token, storage_id: @storage_id, level: create(:weblab2), storage_app_id: 66)
+
+    assert_equal Set[55], ProjectsList.send(:adaptive_project_ids, [@storage_id])
+    assert_equal Set[], ProjectsList.send(:adaptive_project_ids, [])
+  end
+
+  test 'get_adaptive_project_row_data includes the hidden, unnamed level channel' do
+    adaptive_project = {
+      id: 55,
+      project_type: 'weblab2',
+      value: {hidden: true, updatedAt: '2026-11-20T00:00:00.000-08:00'}.to_json,
+    }
+    project_row = ProjectsList.send(:get_adaptive_project_row_data, adaptive_project, @channel_id, @student)
+    assert_equal 'My Website', project_row['name']
+    assert_equal 'weblab2', project_row['type']
+    assert_equal @student.name, project_row['studentName']
+  end
+
   test 'get_project_row_data still correctly parses project data even if no student is passed' do
     project_row = ProjectsList.send(:get_project_row_data, @student_project, @channel_id)
     assert_nil @channel_id

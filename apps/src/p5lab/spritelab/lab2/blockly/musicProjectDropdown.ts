@@ -1,5 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
+import {BLOCK_LABELS} from '@cdo/apps/blockly/utils/localization/blockDefinitions';
+import {translateFilled} from '@cdo/apps/localization/templates';
 import {getStore} from '@cdo/apps/redux';
 
 import {MusicProjectOption} from '../redux/spriteLab2Redux';
@@ -19,7 +21,7 @@ function musicProjectMenuOptions(
   const own = this?.getValue?.();
   const offered = projects.filter(p => !p.unavailable || p.channel === own);
   if (offered.length === 0) {
-    return [['no songs yet', '']];
+    return [[translateFilled('no songs yet', {}, BLOCK_LABELS), '']];
   }
   return offered.map(p => [p.name, p.channel]);
 }

@@ -1,0 +1,77 @@
+// Callout card hung below its anchor; the parent sets the horizontal offset.
+
+.callout {
+  position: absolute;
+  top: 100%;
+  width: 320px;
+  // Stay above lab content; below modal overlays.
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.start {
+  align-items: flex-start;
+}
+
+.end {
+  right: 0;
+  align-items: flex-end;
+}
+
+// Upward-pointing caret; two stacked triangles give it a 1 px border.
+.caret {
+  margin-inline: 20px;
+  // Pull the caret 1px into the body so the white inner triangle paints over
+  // the body's top border at the junction, hiding the seam.
+  margin-bottom: -1px;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--border-neutral-primary);
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--background-neutral-primary);
+  }
+}
+
+.body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 20px;
+  background: var(--background-neutral-primary);
+  border: 1px solid var(--border-neutral-primary);
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 6px -4px rgb(0 0 0 / 10%), 0 10px 15px -3px rgb(0 0 0 / 10%);
+  text-align: start;
+}
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.title {
+  margin: 0;
+  // Leave room for the close button.
+  padding-right: 24px;
+}
+
+.content {
+  margin: 0;
+}

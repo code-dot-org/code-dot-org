@@ -31,7 +31,9 @@ private val PAGE_SCRIPT_FILES = listOf(
  * The script the app puts in every studio.code.org page: the files above in
  * one function, so they share a scope, after the values they read from the
  * app. It runs in the top page only; a document-start script also reaches
- * studio.code.org iframes.
+ * studio.code.org iframes. The fallback, evaluateJavascript, runs it in
+ * whatever page is current when the call lands: a later page before it has
+ * an html element, or another site's, is left to the call for its own page.
  */
 internal fun pageScript(resources: Resources, resetToken: String?): String {
     val files = PAGE_SCRIPT_FILES.joinToString("\n") { id ->
@@ -41,7 +43,8 @@ internal fun pageScript(resources: Resources, resetToken: String?): String {
         var codeaiDebugBuild = ${BuildConfig.DEBUG};
         var codeaiResetToken = ${JSONObject.quote(resetToken ?: "")};
         (function () {
-        if (window.top !== window || window.$PAGE_SCRIPT_GUARD) {
+        if (window.top !== window || window.$PAGE_SCRIPT_GUARD ||
+            location.origin !== '$SITE_ORIGIN' || !document.documentElement) {
           return;
         }
         window.$PAGE_SCRIPT_GUARD = true;

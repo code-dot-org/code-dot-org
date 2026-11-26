@@ -7,7 +7,7 @@
     "context": {
       "createdBy": "CodeAI",
       "potentialUses": "Use the checker's predictions to help pick snacks for the after-school program.",
-      "potentialMisuses": "The checker is trained on only 50 foods picked by one person, so it may predict poorly for foods that are not in the data. It checks the snack rules only. It does not say a food is good or bad."
+      "potentialMisuses": "The checker is trained on a small set of foods that one person picked, so it may predict poorly for foods that are not in the data. It checks the snack rules only. It does not say a food is good or bad."
     }
   },
   "defaultLabelColumn": "Meets Snack Rules?",

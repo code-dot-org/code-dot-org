@@ -17,6 +17,7 @@ import {
   MultipleChoiceDiagnosticQuestion,
   QuestionsStep as QuestionsStepContent,
 } from '../../types';
+import {usePathwayContext} from '../PathwayContext';
 
 import styles from './stepPlayer.module.scss';
 
@@ -37,6 +38,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   onSaveAnswers,
   onComplete,
 }) => {
+  const {isReadonly} = usePathwayContext();
   const {questions} = step;
   const [index, setIndex] = useState(0);
   const question = questions[index];
@@ -119,6 +121,7 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
   };
 
   const handleSubmit = () => {
+    if (isReadonly) return;
     if (isAdvancing || completedRef.current || !question) return;
 
     if (question.type === 'MultipleChoiceQuestion') {
@@ -159,12 +162,13 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
     }
   };
 
-  const isDisabled =
-    question?.type === 'MultipleChoiceQuestion'
-      ? !selectedChoiceId || (isOtherPicked && !otherText.trim())
-      : question?.type === 'freeResponse'
-      ? !freeResponseText.trim()
-      : true;
+  const isDisabled = isReadonly
+    ? true
+    : question?.type === 'MultipleChoiceQuestion'
+    ? !selectedChoiceId || (isOtherPicked && !otherText.trim())
+    : question?.type === 'freeResponse'
+    ? !freeResponseText.trim()
+    : true;
 
   const questionLabel =
     questions.length > 1
@@ -295,6 +299,18 @@ const QuestionsStep: React.FunctionComponent<QuestionsStepProps> = ({
         >
           {isLastQuestion ? 'Submit' : 'Next'}
         </MuiButton>
+        {isReadonly && (
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            type="button"
+            endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+            onClick={advance}
+          >
+            Continue
+          </MuiButton>
+        )}
       </div>
     </div>
   );

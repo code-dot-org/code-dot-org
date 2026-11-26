@@ -38,6 +38,7 @@ import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {Trigger} from '../constants';
 import musicI18n from '../locale';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
+import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
 import {
@@ -58,6 +59,7 @@ import useUpdateAnalytics from './hooks/useUpdateAnalytics';
 import useUpdatePlayer from './hooks/useUpdatePlayer';
 import MusicPlayView from './MusicPlayView';
 import PackDialog from './PackDialog';
+import PackRemovedAlert from './PackRemovedAlert';
 import Timeline from './Timeline';
 
 import moduleStyles from './music-view.module.scss';
@@ -166,6 +168,9 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
   );
+  const packId = useAppSelector(state => state.music.packId);
+  const isPackRemoved =
+    !!packId && !!MusicLibrary.getInstance()?.isPackRemoved(packId);
 
   // Pass music validator to Progress Manager
   useEffect(() => {
@@ -325,6 +330,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
         setPlaying={setPlaying}
         projectName={channel?.name}
         overrideProjectManager={overrideProjectManager}
+        isPackRemoved={isPackRemoved}
       />
     );
   }
@@ -446,6 +452,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
                   {WARNING_BANNER_MESSAGES.VIEWING_VERSION}
                 </div>
               )}
+              {isPackRemoved && <PackRemovedAlert key={packId} />}
               {isStartMode && (
                 <div
                   id="startSourcesWarningBanner"

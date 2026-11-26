@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q14-2026'
+
+wrong 'A process where each step depends on the previous'
+right 'A process where each step can be done independently'
+wrong 'A process where each step could depend on the previous, but it\'s not yet certain'
+wrong 'A process where each step could be done independently, but it\'s not yet certain'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which process would benefit the most from parallel processing?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 11: Hardware for AI
+MARKDOWN

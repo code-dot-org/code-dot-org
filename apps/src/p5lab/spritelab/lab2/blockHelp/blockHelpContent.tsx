@@ -1,3 +1,4 @@
+import animAtATime from '@cdo/static/spritelab_lab2/block-help/at-a-time.gif';
 import animBurst from '@cdo/static/spritelab_lab2/block-help/burst.gif';
 import animPlaySound from '@cdo/static/spritelab_lab2/block-help/play-sound.gif';
 import animPlayer2 from '@cdo/static/spritelab_lab2/block-help/player-2.gif';
@@ -10,6 +11,7 @@ import animSetWeather from '@cdo/static/spritelab_lab2/block-help/set-weather.gi
 import animSetZoom from '@cdo/static/spritelab_lab2/block-help/set-zoom.gif';
 import animShowTitle from '@cdo/static/spritelab_lab2/block-help/show-title.gif';
 import animThePlayer from '@cdo/static/spritelab_lab2/block-help/the-player.gif';
+import animWhenClicked from '@cdo/static/spritelab_lab2/block-help/when-clicked.gif';
 import animWhenPlayer from '@cdo/static/spritelab_lab2/block-help/when-player.gif';
 
 import {MAX_ZOOM, MIN_ZOOM} from '../camera';
@@ -173,6 +175,21 @@ export const BLOCK_HELP: Record<string, BlockHelp> = {
     body:
       'Try it under "when touching" a foe, so a touch sends the player back ' +
       'to the start.',
+  },
+  gamelab_spriteClicked: {
+    title: 'When clicked',
+    animation: {
+      src: animWhenClicked,
+      alt: 'The when clicked block in action.',
+    },
+    summary: 'Runs the blocks below each time a sprite is clicked.',
+    body: 'Choose the sprite in the block.',
+  },
+  gamelab_atTime: {
+    title: 'At a time',
+    animation: {src: animAtATime, alt: 'The at a time block in action.'},
+    summary: 'Runs the blocks below once, after this many seconds.',
+    body: 'Pick **frames** to count frames instead of seconds.',
   },
   gamelab_everyInterval: {
     title: 'Repeat every',

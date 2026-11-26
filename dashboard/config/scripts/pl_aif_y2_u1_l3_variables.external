@@ -42,7 +42,7 @@ Students will use three of these most often:
 
 <ul style="list-style-type: disc; padding-left: 20px; font-size: 16px;">
   <li><strong>Integer</strong> (<code style="font-size:16px;">int</code>): a whole number</li><br>
-  <li><strong>String</strong> (<code style="font-size:16px;">string</code>): text</li><br>
+  <li><strong>String</strong> (<code style="font-size:16px;">str</code>): text</li><br>
   <li><strong>Boolean</strong> (<code style="font-size:16px;">bool</code>): True or False</li>
 </ul>
 
@@ -58,9 +58,5 @@ following = True <span style="color:#ACA8EA;"># bool</span>
   </div>
 </div>
 
-<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
-  <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
-    <strong>&#8505; Note:</strong> this PL assumes basic familiarity with Python and doesn't re-teach it in depth. If you'd like more practice before teaching this lesson, two good options: work through the curriculum lessons yourself before your students do, and/or complete the Intro to Python Programming PL module.
-  </div>
-</div>
+
 MARKDOWN

@@ -8,7 +8,7 @@ import {
   IconButton as MuiIconButton,
 } from '@mui/material';
 import {PDFDownloadLink} from '@react-pdf/renderer';
-import React, {useCallback, useMemo, useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
 import {PersonalizationData} from '@cdo/apps/aiDifferentiation/hooks/useTeachingProfileData';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -78,51 +78,31 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
   const [suggestPromptsMenuOpen, setSuggestPromptsMenuOpen] = useState(false);
   const threadId = useAppSelector(state => state.aiDiffChat.threadId);
 
-  // ActionDropdown calls setActiveDropdownName('') on the outer DropdownContext,
-  // but CustomDropdown reads its own inner DropdownProviderWrapper — they don't
-  // share state. Trigger CustomDropdown's existing mousedown-outside handler by
-  // dispatching on document.body, which is always outside the dropdown ref.
-  const closeDropdown = useCallback(() => {
-    document.body.dispatchEvent(new MouseEvent('mousedown', {bubbles: true}));
-  }, []);
-
   const suggestedPromptsDropdownOptions = useMemo(() => {
     const baseOptions: ActionDropdownOption[] = [
       {
         value: 'support',
         label: 'Get Started',
         icon: {iconName: 'rocket-launch'},
-        onClick: () => {
-          onSuggestPrompts('support');
-          closeDropdown();
-        },
+        onClick: () => onSuggestPrompts('support'),
       },
       {
         value: 'plan',
         label: 'Ideate',
         icon: {iconName: 'spinner-scale'},
-        onClick: () => {
-          onSuggestPrompts('plan');
-          closeDropdown();
-        },
+        onClick: () => onSuggestPrompts('plan'),
       },
       {
         value: 'create',
         label: 'Create',
         icon: {iconName: 'file-pen'},
-        onClick: () => {
-          onSuggestPrompts('create');
-          closeDropdown();
-        },
+        onClick: () => onSuggestPrompts('create'),
       },
       {
         value: 'apcsp',
         label: 'AP Prep',
         icon: {iconName: 'laptop-code'},
-        onClick: () => {
-          onSuggestPrompts('apcsp');
-          closeDropdown();
-        },
+        onClick: () => onSuggestPrompts('apcsp'),
       },
     ];
 
@@ -133,10 +113,8 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
     if (personaOption) {
       baseOptions.push({
         ...personaOption,
-        onClick: () => {
-          onSuggestPrompts(personaOption.value as SuggestPromptsType);
-          closeDropdown();
-        },
+        onClick: () =>
+          onSuggestPrompts(personaOption.value as SuggestPromptsType),
       });
     }
 
@@ -151,7 +129,7 @@ const AiDiffChatHeader: React.FC<AiDiffChatHeaderProps> = ({
         option.onClick?.();
       },
     }));
-  }, [onSuggestPrompts, personalizationData?.matchedPersona, closeDropdown]);
+  }, [onSuggestPrompts, personalizationData?.matchedPersona]);
 
   return (
     <div className={style.chatHeader}>

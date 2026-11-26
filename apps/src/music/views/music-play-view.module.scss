@@ -42,6 +42,14 @@
         color: $light_white;
         margin-bottom: 0;
       }
+
+      .packRemoved {
+        display: flex;
+        align-items: baseline;
+        gap: 0.5rem;
+        margin-bottom: 0;
+        color: var(--text-warning-primary-fixed);
+      }
     }
 
     .playSection {

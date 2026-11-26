@@ -1,6 +1,7 @@
 import * as BlocklyCore from 'blockly/core';
 
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import localization from '@cdo/apps/localization';
 import playSound, {
   PLAY_SOUND_OPTIONS,
   SoundDropdown,
@@ -112,6 +113,27 @@ describe('spritelab2_playSound', () => {
     }
     expect(soundEffects.playPreset).not.toHaveBeenCalled();
     expect(audioCommands.playSound).not.toHaveBeenCalled();
+  });
+
+  it('translates the labels and keeps the sounds as values', () => {
+    const translateSpy = jest
+      .spyOn(localization, 'translate')
+      .mockImplementation(text => `fr:${text}`);
+    try {
+      // A language change drops the options built for the last one.
+      localization.emit('change', {locale: 'fr-FR', rtl: false});
+      const field = SoundDropdown.fromJson({});
+      const options = field.getOptions() as [string, string][];
+      expect(options.map(([, value]) => value)).toEqual(
+        PLAY_SOUND_OPTIONS.map(([, value]) => value)
+      );
+      options.forEach(([label]) => expect(label).toMatch(/^fr:/));
+    } finally {
+      translateSpy.mockRestore();
+      localization.emit('change', {locale: 'en-US', rtl: false});
+    }
+    // Back in English, the next field is built with the English labels.
+    expect(SoundDropdown.fromJson({}).getOptions()).toEqual(PLAY_SOUND_OPTIONS);
   });
 
   it('generates a playSound call with the chosen value', () => {

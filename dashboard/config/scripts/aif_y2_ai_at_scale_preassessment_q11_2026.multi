@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q11-2026'
+
+wrong 'To ensure hospital workers\' decisions not to deploy the AI system are well-justified'
+wrong 'To ensure decisions that a patient needs emergency treatment are correct'
+right 'To ensure decisions that a patient does not need emergency treatment are correct'
+wrong 'To ensure patients\' decisions to opt out of the system are reasonable'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A hospital uses an AI system that assesses whether or not a patient needs emergency (i.e., immediate) treatment. Prioritizing safety, which would be the **best** role for human review?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Safeguards for AI
+MARKDOWN

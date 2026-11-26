@@ -55,6 +55,8 @@ interface MapScreenProps {
   onFocus: (id: string | undefined) => void;
   onStart: (checkpointId: string) => void;
   hasSkippedCheckpoints: boolean;
+  /** A teacher viewing a student may open checkpoints the student has not unlocked. */
+  canOpenLocked?: boolean;
 }
 
 const MapScreen: React.FunctionComponent<MapScreenProps> = ({
@@ -67,6 +69,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
   onFocus,
   onStart,
   hasSkippedCheckpoints,
+  canOpenLocked = false,
 }) => {
   const themeSetting = useThemeSetting('adaptive');
   // Load the project channel into Redux so PathwayApp can read its name for
@@ -311,6 +314,7 @@ const MapScreen: React.FunctionComponent<MapScreenProps> = ({
               status={statusMap[focused.id]}
               statusMap={statusMap}
               evidence={evidence}
+              canOpenLocked={canOpenLocked}
               onStart={() => {
                 if (tourEnabled) tourRef.current?.complete();
                 onStart(focused.id);

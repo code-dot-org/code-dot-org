@@ -35,7 +35,7 @@ Students are building their first real Python programs here, which means they're
   </div>
 </div>
 
-### Watch for: F-String Syntax
+## Watch for: F-String Syntax
 
 <div style="display: flex; gap: 16px; margin: 20px 0; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 250px; background-color: #FFE3CE; border-radius: 10px; padding: 16px 18px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">

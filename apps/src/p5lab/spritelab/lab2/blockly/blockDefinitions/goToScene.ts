@@ -2,6 +2,8 @@ import * as BlocklyCore from 'blockly/core';
 
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {BlockJson, GeneratorFunction} from '@cdo/apps/blockly/types';
+import {BLOCK_LABELS} from '@cdo/apps/blockly/utils/localization/blockDefinitions';
+import {translateFilled} from '@cdo/apps/localization/templates';
 import {getStore} from '@cdo/apps/redux';
 
 import {SceneMetadata} from '../../redux/spriteLab2Redux';
@@ -40,7 +42,7 @@ function sceneMenuOptions(): [string, string][] {
     getStore().getState().spriteLab2?.scenes || [];
   const others = scenes.filter(s => s.id !== activeSceneId);
   if (others.length === 0) {
-    return [['no scenes', '']];
+    return [[translateFilled('no scenes', {}, BLOCK_LABELS), '']];
   }
   return others.map(s => [s.name, s.id]);
 }

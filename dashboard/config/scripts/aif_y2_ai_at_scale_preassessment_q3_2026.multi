@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-preassessment-q3-2026'
+
+wrong 'Summing inputs, adding a bias, then passing the result through an output function'
+right 'Summing weighted inputs, adding a bias, then passing the result through an activation function'
+wrong 'Multiplying inputs together, adding a bias and a weight, then passing the result through a selection function'
+wrong 'Accepting electrochemical signals, modulating them, and passing them to another neuron'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+An artificial neuron computes an output by...
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 2: Artificial Neurons
+MARKDOWN

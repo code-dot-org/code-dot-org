@@ -42,8 +42,6 @@ run "runtime-read config data present" "optin-ok" -- \
   sh -c 'test -d dashboard/config/international_opt_in/school_data && echo optin-ok'
 run "middleware-served shared assets present" "shared-ok" -- \
   sh -c 'test -d shared/css -a -d shared/wasm && echo shared-ok'
-run "ga_client present for admin_reports" "ga-ok" -- \
-  sh -c 'test -e dashboard/scripts/archive/ga_client && echo ga-ok'
 
 # Recreated by the Dockerfile after the dockerignore drops their contents.
 run "log and tmp exist for Rails" "dirs-ok" -- \

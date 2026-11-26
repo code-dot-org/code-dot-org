@@ -6,6 +6,10 @@ services:
     image: docker.io/library/mysql:8.0
     environment:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    # No binary log: nothing here replicates, and a seed writes gigabytes of it.
+    command: ["--skip-log-bin"]
+    # The default 10 s ends in SIGKILL mid-flush after a large seed.
+    stop_grace_period: 2m
     # An anonymous volume does not survive `docker compose down`.
     volumes:
       - mysql-data:/var/lib/mysql

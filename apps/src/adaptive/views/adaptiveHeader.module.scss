@@ -56,6 +56,13 @@ $inset: 2px;
   color: var(--text-neutral-quaternary);
 }
 
+// Anchors the finish callout under the button.
+.finish {
+  position: relative;
+  flex: none;
+  display: flex;
+}
+
 // Until the page header's slot exists, or on a page without one.
 .inline {
   display: flex;

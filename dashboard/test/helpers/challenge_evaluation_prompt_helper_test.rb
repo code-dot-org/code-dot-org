@@ -27,6 +27,15 @@ class ChallengeEvaluationPromptHelperTest < ActiveSupport::TestCase
       _(prompt).must_include 'addressed directly to the student'
       _(prompt).must_include 'never mention scores, levels, grades, or the rubric'
     end
+
+    it 'instructs the model to grade every response modality equally, after the rubric' do
+      prompt = ChallengeEvaluationPromptHelper.system_prompt(challenge)
+
+      _(prompt).must_include 'Never choose a lower level because of how the student responded'
+      _(prompt).must_include 'the voice recording is missing'
+      # Placed after the rubric so it reads as an override of the rubric's own wording.
+      _(prompt.index('Never choose a lower level')).must_be :>, prompt.index('Level 3:')
+    end
   end
 
   describe '.user_content' do

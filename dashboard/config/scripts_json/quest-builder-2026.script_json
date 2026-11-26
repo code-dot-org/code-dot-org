@@ -9,7 +9,8 @@
       "has_unnumbered_lessons": true,
       "is_migrated": true,
       "simple_progress": true,
-      "simple_progress_image": "/blockly/media/hoai2026/logo.png"
+      "simple_progress_image": "/blockly/media/hoai2026/logo.png",
+      "tts": true
     },
     "new_name": null,
     "family_name": null,

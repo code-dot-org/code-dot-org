@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Facilitating Algorithms & Pseudocode
 
-This lesson moves from paired brainstorming into individual, precise writing, then into critical evaluation of AI suggestions. Each stage has its own way for students to get stuck, and its own language to help them past it.
+Lesson 3 moves from paired brainstorming into individual, precise writing, then into critical evaluation of AI suggestions. Each stage has its own way for students to get stuck, and its own language to help them past it.
 
 ## What's Actually Happening in This Lesson
 
@@ -65,7 +65,7 @@ Here's what a strong answer to the sentiment analysis task actually looks like:
 
 <hr>
 
-### Watch for: Skipped Steps
+## Watch for: Skipped Steps
 
 When students write their own pseudocode, expect some to skip steps that feel too obvious to write down.
 

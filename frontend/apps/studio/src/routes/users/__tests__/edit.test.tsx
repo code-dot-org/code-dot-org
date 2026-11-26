@@ -47,3 +47,10 @@ describe('/users/edit auth guard (beforeLoad)', () => {
     expect(() => runGuard(ERROR)).not.toThrow();
   });
 });
+
+describe('/users/edit document title (head)', () => {
+  it('names the page in the Studio brand', () => {
+    const head = Route.options.head as () => {meta: {title: string}[]};
+    expect(head()).toEqual({meta: [{title: 'My Account | CodeAI'}]});
+  });
+});

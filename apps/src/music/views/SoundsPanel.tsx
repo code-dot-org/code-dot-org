@@ -248,11 +248,17 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
   onSelect,
   onPreview,
 }) => {
-  const folders = library.getAvailableSounds();
+  const playableFolders = library.getPlayableSounds();
+  // A level may allow only a removed pack's sounds; offer those rather than nothing.
+  const folders = playableFolders.length
+    ? playableFolders
+    : library.getAvailableSounds();
   const libraryGroupPath = library.getPath();
 
   const [selectedFolder, setSelectedFolder] = useState<SoundFolder>(
-    library.getAllowedFolderForSoundId(currentValue) || folders[0]
+    (!library.isSoundRemoved(currentValue) &&
+      library.getAllowedFolderForSoundId(currentValue)) ||
+      folders[0]
   );
   const [mode, setMode] = useState<Mode>(defaultMode);
   const [filter, setFilter] = useState<Filter>('all');

@@ -4,7 +4,11 @@
 // until that slot exists.
 
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, Typography as MuiTypography} from '@mui/material';
+import {
+  Button as MuiButton,
+  Tooltip,
+  Typography as MuiTypography,
+} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 import {createPortal} from 'react-dom';
 import {useSelector} from 'react-redux';
@@ -12,6 +16,8 @@ import {useSelector} from 'react-redux';
 import {ADAPTIVE_HEADER_ID} from '@cdo/apps/code-studio/components/header/AdaptiveHeaderPortal';
 import {SAVE_STATUS_ICONS} from '@cdo/apps/code-studio/components/header/saveStatusIcons';
 import {ProjectState} from '@cdo/apps/code-studio/projectRedux';
+
+import Callout from './Callout';
 
 import styles from './adaptiveHeader.module.scss';
 
@@ -40,12 +46,18 @@ interface AdaptiveHeaderProps {
   onViewSkillMap?: () => void;
   /** Shows "I'm finished!" when given. */
   onFinish?: () => void;
+  /** Disables I'm finished and says why on hover or focus. */
+  finishDisabledReason?: string;
+  /** Hangs a callout under I'm finished until dismissed. */
+  finishCallout?: {title: string; body: string; onDismiss: () => void};
 }
 
 const AdaptiveHeader: React.FunctionComponent<AdaptiveHeaderProps> = ({
   title,
   onViewSkillMap,
   onFinish,
+  finishDisabledReason,
+  finishCallout,
 }) => {
   const slot = useHeaderSlot();
   const status = useSelector(
@@ -90,15 +102,25 @@ const AdaptiveHeader: React.FunctionComponent<AdaptiveHeaderProps> = ({
         </span>
       </div>
       {onFinish && (
-        <MuiButton
-          variant="outlined"
-          color="tertiary"
-          size="extraSmall"
-          endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
-          onClick={onFinish}
-        >
-          I'm finished!
-        </MuiButton>
+        <div className={styles.finish}>
+          {/* A disabled button takes no hover, so the reason hangs off a wrapper. */}
+          <Tooltip title={finishDisabledReason ?? ''} arrow>
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex -- a disabled button cannot be focused, so this is the keyboard's way to the reason */}
+            <span tabIndex={finishDisabledReason ? 0 : undefined}>
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
+                endIcon={<FontAwesomeV6Icon iconName="arrow-right" />}
+                onClick={onFinish}
+                disabled={!!finishDisabledReason}
+              >
+                I'm finished!
+              </MuiButton>
+            </span>
+          </Tooltip>
+          {finishCallout && <Callout align="end" {...finishCallout} />}
+        </div>
       )}
     </div>
   );

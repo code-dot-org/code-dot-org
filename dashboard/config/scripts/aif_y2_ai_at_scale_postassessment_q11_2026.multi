@@ -1,0 +1,16 @@
+name 'aif-y2-ai-at-scale-postassessment-q11-2026'
+
+right 'If past decisions were unfair to certain groups of people, the system could repeat that unfairness automatically for thousands of applicants.'
+wrong 'The system might process applications faster than human employees did.'
+wrong 'The system might forget older applications after it processes many new ones.'
+wrong 'Applicants might find the bank\’s online application form confusing.'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+A bank plans to use an AI system to automatically approve or deny loan applications. The system was trained on the bank’s loan decisions from the past 20 years. Which risk is most important for the bank to identify before it deploys the system?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 8: Safeguards for AI
+MARKDOWN
