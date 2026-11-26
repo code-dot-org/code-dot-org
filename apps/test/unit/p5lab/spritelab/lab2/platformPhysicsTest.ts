@@ -6,6 +6,8 @@ import {
   isAtEdge,
   isSupported,
   touchesWall,
+  canStartJump,
+  COYOTE_FRAMES,
   resolvePlatformPhysics,
   PhysicsBox,
   PhysicsSprite,
@@ -384,9 +386,38 @@ describe('platformPhysics with custom gravity', () => {
     expect(touchesWall(makeSprite(110, 325), wall)).toBe(true);
     // Head under it: body top on the underside.
     expect(touchesWall(makeSprite(75, 365), wall)).toBe(true);
+    // Well inside it.
+    expect(touchesWall(makeSprite(75, 320), wall)).toBe(true);
     // Two pixels off is a gap.
     expect(touchesWall(makeSprite(75, 273), wall)).toBe(false);
     expect(touchesWall(makeSprite(112, 325), wall)).toBe(false);
+  });
+
+  it('touchesWall needs a quarter of the body along the face it meets', () => {
+    // The same cell: its left edge is at x 50, its top at y 300. The body
+    // is 20 wide, so a quarter of it is 5px.
+    const wall = wallAt(1, 6);
+    // Standing with 3px of the body over the block's top, then 5px.
+    expect(touchesWall(makeSprite(43, 275), wall)).toBe(false);
+    expect(touchesWall(makeSprite(45, 275), wall)).toBe(true);
+    // Against the right side with 3px of the body's 40px height beside it,
+    // then 10px.
+    expect(touchesWall(makeSprite(110, 278), wall)).toBe(false);
+    expect(touchesWall(makeSprite(110, 285), wall)).toBe(true);
+    // Corner to corner, and a corner 3px inside on both axes.
+    expect(touchesWall(makeSprite(40, 275), wall)).toBe(false);
+    expect(touchesWall(makeSprite(43, 278), wall)).toBe(false);
+  });
+
+  it('canStartJump allows a jump with footing, or just after losing it while falling', () => {
+    expect(canStartJump(true, 0, 0.75)).toBe(true);
+    expect(canStartJump(false, 1, 8.75)).toBe(true);
+    expect(canStartJump(false, COYOTE_FRAMES, 10)).toBe(true);
+    expect(canStartJump(false, COYOTE_FRAMES + 1, 10)).toBe(false);
+    // Moving against gravity: a jump is under way.
+    expect(canStartJump(false, 1, -12)).toBe(false);
+    // Never stood on anything.
+    expect(canStartJump(false, Infinity, 5)).toBe(false);
   });
 
   it('isSupported sees floor, block tops, and flipped undersides', () => {

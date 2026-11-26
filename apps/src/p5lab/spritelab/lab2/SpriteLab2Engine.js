@@ -39,6 +39,11 @@ import {
   teeterTicks,
 } from './characterAnimations';
 import {
+  collisionBoxesRequested,
+  collisionOverlayBoxes,
+  isCollisionBoxesShortcut,
+} from './collisionOverlay';
+import {
   animationNames,
   filterAnimationsToNames,
   loadedAnimations,
@@ -56,6 +61,7 @@ import {
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   bodyBox,
+  canStartJump,
   resolvePlatformPhysics,
   touchesWall,
   usesPlatformPhysics,
@@ -119,6 +125,17 @@ const CANVAS_DENSITY_FACTOR = 2;
 const RESTART_QUIET_MS = 1000;
 // The inputEvents type a when-player hat registers.
 const PLAYER_ACTION_EVENT = 'playerAction';
+// The collision boxes overlay's fills, as [apart, touching] for each kind.
+const COLLISION_BOX_FILLS = {
+  wall: [
+    [60, 140, 255, 90],
+    [255, 60, 60, 150],
+  ],
+  body: [
+    [60, 220, 120, 110],
+    [255, 60, 60, 170],
+  ],
+};
 // How much a platform scene dims its background, so the blocks and the
 // player read against it: the alpha of a black fill over it.
 const PLATFORM_BACKGROUND_DIM = 0.25;
@@ -172,6 +189,13 @@ export default class SpriteLab2Engine extends SpriteLab {
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
     setRetainBlobsOnLoad(false);
+    this.collisionBoxesShown_ = collisionBoxesRequested();
+    this.onCollisionBoxesKey_ = event => {
+      if (isCollisionBoxesShortcut(event)) {
+        this.collisionBoxesShown_ = !this.collisionBoxesShown_;
+      }
+    };
+    window.addEventListener('keydown', this.onCollisionBoxesKey_);
     // captureFirstFrame() callbacks, called with the canvas as the first
     // frame of the next run is drawn (see onP5Setup and the draw loops).
     this.frameCaptureWaiters_ = [];
@@ -598,16 +622,29 @@ export default class SpriteLab2Engine extends SpriteLab {
         return gravity === 0 || test(sprite, walls, view, gravity);
       });
     };
-    // Jump against gravity if any player of the group has footing.
+    // Jump against gravity if any player of the group has footing, or lost
+    // it within the last few frames (see COYOTE_FRAMES).
     library.commands.platformJump = (speed, group = PLAYER_GROUP) => {
       // Weightless, the player is steered up and down instead.
       if (this.platformGravity_ === 0) {
         return;
       }
-      if (!footing({group}, isSupported)) {
+      const up = this.platformGravity_ < 0 ? 1 : -1;
+      const frame = this.p5Wrapper.p5.frameCount;
+      const supported = footing({group}, isSupported);
+      if (
+        !library.getSpriteArray({group}).some(sprite =>
+          canStartJump(
+            supported,
+            // Footing is recorded after a frame's movement, so the frame
+            // before this one is the latest it can name.
+            frame - 1 - (sprite.__slab2FootingFrame ?? -Infinity),
+            -up * sprite.velocity.y
+          )
+        )
+      ) {
         return;
       }
-      const up = this.platformGravity_ < 0 ? 1 : -1;
       // TODO: When we support configurable grid sizes (vs. just 10x10),
       // consider updating the code everywhere we have
       // library.defaultSpriteSize and cellSize(DEFAULT_SCENE_GRID_SIZE),
@@ -640,6 +677,8 @@ export default class SpriteLab2Engine extends SpriteLab {
           });
         }
         sprite.velocity.y = up * jumpSpeed;
+        // One jump per footing: no second one from the grace period.
+        sprite.__slab2FootingFrame = undefined;
       });
     };
     // A behavior that wants gravity for its sprite marks it for the platform
@@ -1219,6 +1258,7 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   destroy() {
     this.destroyed_ = true;
+    window.removeEventListener('keydown', this.onCollisionBoxesKey_);
     stopSoundEffects();
     this.reset();
     getStore().dispatch(clearPrompt());
@@ -1454,6 +1494,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     camera.position.y = focus.y;
     camera.on();
     p5.drawSprites();
+    if (this.collisionBoxesShown_) {
+      this.drawCollisionBoxes_(library);
+    }
     this.bubbleView_ = {
       x: focus.x - APP_WIDTH / (2 * zoom),
       y: focus.y - APP_HEIGHT / (2 * zoom),
@@ -1462,6 +1505,36 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     library.drawSpeechBubbles();
     camera.off();
+  }
+
+  // Over the sprites, in world coordinates: each block's cell and each
+  // other sprite's body filled, brighter while they touch, and the outline
+  // of the shape that touches between two sprites are judged by.
+  drawCollisionBoxes_(library) {
+    const {p5} = library;
+    const sprites = Object.values(library.nativeSpriteMap).filter(
+      sprite => sprite.group !== 'walls' && !sprite.removed
+    );
+    p5.push();
+    p5.rectMode(p5.CENTER);
+    p5.noStroke();
+    collisionOverlayBoxes(sprites, this.wallsThisFrame_(library)).forEach(
+      box => {
+        p5.fill(...COLLISION_BOX_FILLS[box.kind][box.touching ? 1 : 0]);
+        p5.rect(box.x, box.y, box.halfW * 2, box.halfH * 2);
+      }
+    );
+    p5.rectMode(p5.CORNER);
+    p5.noFill();
+    p5.stroke(255, 255, 255, 200);
+    p5.strokeWeight(1);
+    sprites.forEach(sprite => {
+      const bounds = sprite.collider?.getBoundingBox();
+      if (bounds) {
+        p5.rect(bounds.left, bounds.top, bounds.width, bounds.height);
+      }
+    });
+    p5.pop();
   }
 
   /**
@@ -1543,6 +1616,18 @@ export default class SpriteLab2Engine extends SpriteLab {
     });
     const view = {width: p5.width, height: p5.height};
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
+    // The last frame each player stood on something, for the jump's grace
+    // period. A player moving against gravity has just jumped.
+    const gravity = this.platformGravity_;
+    players.forEach(({sprite}) => {
+      if (
+        gravity !== 0 &&
+        sprite.velocity.y * gravity >= 0 &&
+        isSupported(sprite, walls, view, gravity)
+      ) {
+        sprite.__slab2FootingFrame = p5.frameCount;
+      }
+    });
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }

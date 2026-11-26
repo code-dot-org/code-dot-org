@@ -128,15 +128,42 @@ export function bodyBox(sprite: PhysicsBox): CollisionBox {
 // miss it.
 export const TOUCH_SLACK = 1;
 
-/** Whether a sprite's body touches a wall, from any side: the boxes meet
-    or overlap, within TOUCH_SLACK. */
+// A touch needs the body and the wall to share at least this fraction of
+// the narrower one along the face where they meet, so brushing a corner is
+// not a touch.
+export const FIRM_TOUCH_SHARE = 0.25;
+
+/** Whether a sprite's body touches a wall firmly, from any side: the boxes
+    meet or overlap, within TOUCH_SLACK, and share at least FIRM_TOUCH_SHARE
+    of the narrower one along the face where they meet. */
 export function touchesWall(sprite: PhysicsBox, wall: PhysicsBox): boolean {
   const body = bodyBox(sprite);
   const box = wallBox(wall);
+  const overlapX = body.halfW + box.halfW - Math.abs(body.x - box.x);
+  const overlapY = body.halfH + box.halfH - Math.abs(body.y - box.y);
+  if (overlapX < -TOUCH_SLACK || overlapY < -TOUCH_SLACK) {
+    return false;
+  }
   return (
-    Math.abs(body.x - box.x) <= body.halfW + box.halfW + TOUCH_SLACK &&
-    Math.abs(body.y - box.y) <= body.halfH + box.halfH + TOUCH_SLACK
+    overlapX >= FIRM_TOUCH_SHARE * 2 * Math.min(body.halfW, box.halfW) ||
+    overlapY >= FIRM_TOUCH_SHARE * 2 * Math.min(body.halfH, box.halfH)
   );
+}
+
+// How many frames a player may be off its footing and still start a jump,
+// so a press just after walking off a ledge is not lost: about 0.1 s at the
+// game's 30 frames a second.
+export const COYOTE_FRAMES = 3;
+
+/** Whether a jump may start: with footing, or within COYOTE_FRAMES of
+    losing it while falling. `fallSpeed` is the speed along gravity; a
+    sprite moving against gravity is in a jump already. */
+export function canStartJump(
+  supported: boolean,
+  airborneFrames: number,
+  fallSpeed: number
+): boolean {
+  return supported || (fallSpeed >= 0 && airborneFrames <= COYOTE_FRAMES);
 }
 
 function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {
