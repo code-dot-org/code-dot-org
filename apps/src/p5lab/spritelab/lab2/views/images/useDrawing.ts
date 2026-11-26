@@ -154,8 +154,9 @@ export default function useDrawing({
   const dirtyRef = useRef(false);
   const editorRef = useRef<DrawingEditor | null>(null);
   const idleTimerRef = useRef<number>();
-  // Saves, and what waits for them, run in order: a save builds on the one
-  // before it (a new image's key, a set's strip).
+  // Picture saves, and the steps that wait for them, run one after another,
+  // because a save uses what the save before it made: a new image's key, or
+  // a character set's strip with the earlier frame in it.
   const chainRef = useRef<Promise<void>>(Promise.resolve());
   const afterSaves = useCallback((step: () => void | Promise<void>) => {
     chainRef.current = chainRef.current.then(step).catch(() => undefined);
@@ -198,15 +199,13 @@ export default function useDrawing({
     setSaveFailed(failed);
   };
 
-  // Saves what is drawn on the open drawing, if anything is.
   const saveStrokes = () => {
     if (dirtyRef.current) {
       editorRef.current?.save();
     }
   };
 
-  // Ends a drawing: its saved state is forgotten once its saves are done.
-  const forget = useCallback(
+  const forgetSavedDrawing = useCallback(
     (id: number) =>
       afterSaves(() => {
         if (openIdRef.current !== id) {
@@ -221,14 +220,14 @@ export default function useDrawing({
     dirtyRef.current = false;
     const closedId = openIdRef.current;
     if (closedId !== null) {
-      forget(closedId);
+      forgetSavedDrawing(closedId);
     }
     openIdRef.current = null;
     nextFrameRef.current = null;
     editorRef.current = null;
     showSaveFailed(false);
     setDrawing(null);
-  }, [forget]);
+  }, [forgetSavedDrawing]);
 
   const closeAfterDone = useCallback(
     (key = drawingRef.current?.target.key) => {
@@ -467,9 +466,9 @@ export default function useDrawing({
   );
 
   // Opens the frame asked for once the saves before it are done, so it is
-  // cut from the strip they leave. Strokes made while it was cut are on the
-  // frame still showing, so they are saved into it first, and the frame is
-  // asked for again.
+  // cut from the strip they leave. Strokes made while the frame was being
+  // cut are on the frame still showing; they are saved into that frame
+  // first, and the switch waits for that save too.
   const openNextFrame = useCallback(
     (id: number) =>
       afterSaves(async () => {
@@ -525,7 +524,7 @@ export default function useDrawing({
       if (current && openIdRef.current === current.id) {
         saveStrokes();
         afterSaves(() => saveProjectNowRef.current?.());
-        forget(current.id);
+        forgetSavedDrawing(current.id);
       }
       openIdRef.current = null;
       nextFrameRef.current = null;
@@ -542,7 +541,7 @@ export default function useDrawing({
         previousCanvasRef.current = {canvas: copy, id: drawingIdRef.current};
       }
     },
-    [afterSaves, forget]
+    [afterSaves, forgetSavedDrawing]
   );
 
   // Done saves what is drawn and then the project, and closes the tools,

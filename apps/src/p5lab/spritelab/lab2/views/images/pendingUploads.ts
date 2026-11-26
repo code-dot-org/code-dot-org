@@ -17,14 +17,13 @@ interface HeldPixels {
 }
 
 const held = new Map<string, Map<string, HeldPixels>>();
-// Projects whose saves run a preparer made here.
-const preparing = new Set<string>();
+const channelsWithPreparer = new Set<string>();
 let nextRevision = 1;
 
 /** Whether this project's saves upload held pixels, so a drawing on one of
     its images can wait for the save instead of uploading. */
 export function uploadsWithSave(channelId: string | undefined): boolean {
-  return !!channelId && preparing.has(channelId);
+  return !!channelId && channelsWithPreparer.has(channelId);
 }
 
 /** Keeps an image's latest drawn pixels for the project's next save. */
@@ -35,6 +34,11 @@ export function holdPixels(channelId: string, key: string, dataURI: string) {
     held.set(channelId, images);
   }
   images.set(key, {dataURI, revision: nextRevision++});
+}
+
+/** Forgets an image's held pixels, once its picture is replaced. */
+export function dropHeldPixels(channelId: string, key: string) {
+  held.get(channelId)?.delete(key);
 }
 
 /** Whether pixels newer than `revision` are held for the image. */
@@ -50,10 +54,10 @@ export function hasNewerPixels(
 /** Forgets every held image, for tests. */
 export function resetHeldPixels() {
   held.clear();
-  preparing.clear();
+  channelsWithPreparer.clear();
 }
 
-// What naming a drawing's file reads from its image.
+// The image fields uploadDrawing reads to name the file.
 interface DrawnImage {
   name?: string;
   edited?: boolean;
@@ -84,10 +88,11 @@ const drawnFileOf = (props: DrawnImage): string | undefined => {
 
 /**
  * Uploads drawn pixels for an image and returns the link to store. A drawn
- * image's file is overwritten, and its link gets a new ?t= so the browser
- * and CDN do not serve the replaced file from cache. Any other image gets a
- * new file named after it. A level's starter assets get a new name from the
- * server on every upload, so their link is used as it is.
+ * image's file is overwritten; any other image gets a new file named after
+ * it. When the server keeps the file name, the link gets a new ?t= so the
+ * browser and CDN do not serve an older file under that name from cache; a
+ * name the server picks itself, as for a level's starter images, is used as
+ * it is.
  */
 export async function uploadDrawing(
   upload: UploadImageFunction,
@@ -139,7 +144,7 @@ export function makeSourcesPreparer({
   onUploaded,
   onUploadFailed,
 }: PreparerOptions): SourcesPreparer {
-  preparing.add(channelId);
+  channelsWithPreparer.add(channelId);
   return async (sources: ProjectSources) => {
     const list = (sources as {animations?: SerializedAnimationList}).animations;
     const marked = list?.orderedKeys.filter(

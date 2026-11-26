@@ -13,9 +13,11 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {hasNewerPixels, makeSourcesPreparer} from './pendingUploads';
 
+const reportedFailures = new Set<string>();
+
 /**
- * Has the project's saves upload the drawn pixels its images hold, so a
- * drawing is uploaded once per save instead of on every pause.
+ * Makes the project's saves upload the drawn pixels its images hold, so a
+ * drawing is uploaded at most once per save.
  */
 export default function useUploadDrawingsOnSave(
   channelId: string | undefined,
@@ -33,12 +35,13 @@ export default function useUploadDrawingsOnSave(
         channelId,
         upload: uploadImage,
         onUploaded: (key, sourceUrl, revision, previousUrl) => {
-          // The save can finish after the level has changed; the store then
-          // holds another project's images.
+          // The save can finish after the level has changed, when the store
+          // holds another project's images, or after another picture has
+          // replaced this one.
           const state = getStore().getState();
           if (
             state.lab.channel?.id !== channelId ||
-            !state.animationList.propsByKey[key]
+            state.animationList.propsByKey[key]?.sourceUrl !== previousUrl
           ) {
             return;
           }
@@ -54,7 +57,12 @@ export default function useUploadDrawingsOnSave(
             void reclaimAsset(previousUrl);
           }
         },
-        onUploadFailed: (key, error, hadFile) =>
+        onUploadFailed: (key, error, hadFile) => {
+          // A failed upload is tried again on every save; it is reported once.
+          if (reportedFailures.has(key)) {
+            return;
+          }
+          reportedFailures.add(key);
           analyticsReporter.sendEvent(
             EVENTS.HOAI2026_IMAGE_UPLOAD_FAILED,
             {
@@ -62,7 +70,8 @@ export default function useUploadDrawingsOnSave(
               hadFile,
             },
             true
-          ),
+          );
+        },
       })
     );
   }, [channelId, uploadImage, dispatch, reclaimAsset]);

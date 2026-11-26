@@ -228,7 +228,7 @@ describe('useDrawing', () => {
     expect(saveProjectNow).not.toHaveBeenCalled();
   });
 
-  it("saves the project after a left drawing's running save, and adds no save of its own", async () => {
+  it("saves the project after a left drawing's running save, and saves no picture again when nothing new was drawn", async () => {
     const {saveEdited, saveProjectNow, tools} = setup();
     await act(() => tools().startDrawing(target));
     tools().attachEditor({
@@ -360,7 +360,7 @@ describe('useDrawing', () => {
     expect(tools().drawing).toBeNull();
   });
 
-  it("leaves another picture alone while one picture's last save uploads", async () => {
+  it("leaves another picture alone while one picture's save runs", async () => {
     const {saveEdited, tools} = setup();
     const second = {key: 'k2', imageType: 'sprite' as const};
     let finishSave: (key: string) => void = () => undefined;
@@ -374,7 +374,8 @@ describe('useDrawing', () => {
     });
     act(() => tools().scheduleStrokeSave());
     act(() => tools().leaveDrawing());
-    // The second picture opens and closes untouched while the first uploads.
+    // The second picture opens and closes untouched while the first's save
+    // runs.
     await act(() => tools().startDrawing(second));
     tools().attachEditor({
       save: () => tools().handleSave('data:b', {}),
@@ -397,7 +398,7 @@ describe('useDrawing', () => {
     };
     // Each save resolves to its image's key; `hold` keeps the next one
     // running until the test releases it.
-    const queueSetup = () => {
+    const savesSetup = () => {
       const tools = setup();
       const held: (() => void)[] = [];
       tools.saveEdited.mockImplementation(async target => target.key ?? 'kNew');
@@ -429,16 +430,11 @@ describe('useDrawing', () => {
         act(() => tools.tools().handleSave(pixels, {}));
       const saves = () =>
         tools.saveEdited.mock.calls.map(call => [call[0].key, call[1]]);
-      const saveNows = () =>
-        tools.storePicture.mock.calls.map(call => [
-          (call[0] as ImageTarget).key,
-          call[2],
-        ]);
-      return {...tools, hold, release, open, pause, saves, saveNows};
+      return {...tools, hold, release, open, pause, saves};
     };
 
     it('saves pictures in order, and saves the project after each is left or done', async () => {
-      const t = queueSetup();
+      const t = savesSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
       t.pause('one:a');
@@ -457,7 +453,7 @@ describe('useDrawing', () => {
     });
 
     it("saves each picture's strokes when three pictures are drawn in turn", async () => {
-      const t = queueSetup();
+      const t = savesSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
       t.pause('one:a');
@@ -476,7 +472,7 @@ describe('useDrawing', () => {
     });
 
     it('still saves the next picture after an abandoned one', async () => {
-      const t = queueSetup();
+      const t = savesSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
       t.pause('one:a');
@@ -492,7 +488,7 @@ describe('useDrawing', () => {
     });
 
     it("keeps the canvas up when a left picture's save finishes before the next opens", async () => {
-      const t = queueSetup();
+      const t = savesSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
       t.pause('one:a');
@@ -503,7 +499,7 @@ describe('useDrawing', () => {
     });
 
     it("gives a new picture's later saves the key its first save made", async () => {
-      const t = queueSetup();
+      const t = savesSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
       t.pause('one:a');
@@ -520,7 +516,7 @@ describe('useDrawing', () => {
     });
 
     it("opens a set's next frame only after its saves finish", async () => {
-      const t = queueSetup();
+      const t = savesSetup();
       await act(() => t.tools().startDrawing(pictures.set, 0));
       t.tools().attachEditor({
         save: () => t.tools().handleSave('f0', {}),
@@ -547,7 +543,7 @@ describe('useDrawing', () => {
     });
 
     it('stays on the frame chosen again while a switch away from it waits', async () => {
-      const t = queueSetup();
+      const t = savesSetup();
       await act(() => t.tools().startDrawing(pictures.set, 0));
       t.tools().attachEditor({
         save: () => t.tools().handleSave('f0', {}),
@@ -565,11 +561,10 @@ describe('useDrawing', () => {
     });
 
     it("never takes a left picture's running save for the next picture's", async () => {
-      const t = queueSetup();
+      const t = savesSetup();
       await t.open(pictures.one, 'one:last');
-      // Both of the first picture's saves are held; the next picture opens
-      // while its last save is still running.
-      t.hold();
+      // The first picture's save is held; the next picture opens while it
+      // runs.
       t.hold();
       t.pause('one:a');
       act(() => t.tools().leaveDrawing(true));
@@ -583,8 +578,8 @@ describe('useDrawing', () => {
       expect(t.saves().map(save => save[0])).not.toContain('k2');
     });
 
-    it('saves strokes made while the final save ran before closing', async () => {
-      const t = queueSetup();
+    it("saves strokes made while Done's save ran before closing", async () => {
+      const t = savesSetup();
       let pixels = 'one:done';
       await act(() => t.tools().startDrawing(pictures.one));
       t.tools().attachEditor({
@@ -594,7 +589,7 @@ describe('useDrawing', () => {
       t.hold();
       act(() => t.tools().scheduleStrokeSave());
       await act(async () => t.tools().finishDrawing());
-      // A stroke while the final save uploads.
+      // A stroke while Done's save runs.
       pixels = 'one:after';
       act(() => t.tools().scheduleStrokeSave());
       await t.release();
@@ -606,7 +601,7 @@ describe('useDrawing', () => {
     });
 
     it('saves strokes made while a frame switch waits into the frame they were on', async () => {
-      const t = queueSetup();
+      const t = savesSetup();
       let pixels = 'f0';
       await act(() => t.tools().startDrawing(pictures.set, 0));
       t.tools().attachEditor({

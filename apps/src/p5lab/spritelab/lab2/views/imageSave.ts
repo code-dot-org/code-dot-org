@@ -71,9 +71,9 @@ export function createNamedAnimation(
 }
 
 /**
- * Add an animation whose pixels are already in hand, at the top of the list
- * as Sprite Lab adds them, without loading it from a file, and return its
- * key. The name must already be free.
+ * Adds an animation from the pixels in `props.dataURI`, without loading a
+ * file, at the top of the list where Sprite Lab puts new animations, and
+ * returns its key. The name must not be in use.
  */
 export function createDrawnAnimation(
   dispatch: Dispatch,

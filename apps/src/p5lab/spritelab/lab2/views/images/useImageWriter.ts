@@ -1,8 +1,9 @@
 // Writing the Images tab's pictures into the project. A generated or drawn
 // picture becomes an image's pixels as soon as it is ready. A generated
-// picture is uploaded at once. In a project, drawn pixels wait for the
-// project's next save to upload them (see pendingUploads.ts). When a
-// session ends, uploaded files that no image points at are deleted.
+// picture is uploaded at once. In a project whose saves upload drawings,
+// drawn pixels wait for the next save (see pendingUploads.ts); otherwise
+// they are uploaded at once. When a session ends, uploaded files that no
+// image points at are deleted.
 
 import {useCallback, useEffect, useRef} from 'react';
 import {AnyAction} from 'redux';
@@ -38,7 +39,12 @@ import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {holdPixels, uploadDrawing, uploadsWithSave} from './pendingUploads';
+import {
+  dropHeldPixels,
+  holdPixels,
+  uploadDrawing,
+  uploadsWithSave,
+} from './pendingUploads';
 import {ImageProps} from './projectImages';
 
 /** Which image a picture is for: an existing one by key, or a new one. */
@@ -189,6 +195,15 @@ export default function useImageWriter({
     },
     [dispatch, imageRole]
   );
+  // A picture that replaces a drawing replaces its held pixels too.
+  const dropDrawing = useCallback(
+    (target: ImageTarget) => {
+      if (target.key && channelId) {
+        dropHeldPixels(channelId, target.key);
+      }
+    },
+    [channelId]
+  );
 
   const acceptGenerated = useCallback(
     async (target: ImageTarget, result: GeneratedImageResult) => {
@@ -204,6 +219,7 @@ export default function useImageWriter({
         uploadsRef.current.set(result.filename, uploaded);
         recordSessionUrl(sourceUrl);
       }
+      dropDrawing(target);
       return write(target, {
         sourceUrl: uploaded.sourceUrl,
         dataURI,
@@ -217,9 +233,10 @@ export default function useImageWriter({
         generation: result.generation,
         fromGeneration: true,
         edited: false,
+        pendingUpload: undefined,
       });
     },
-    [upload, write]
+    [upload, write, dropDrawing]
   );
 
   const acceptUploaded = useCallback(
@@ -232,6 +249,7 @@ export default function useImageWriter({
       recordSessionUrl(sourceUrl);
       const dataURI = bytesToDataURI(file.uint8Array, file.mediaType);
       const frameSize = await measuredSize(dataURI);
+      dropDrawing(target);
       return write(target, {
         sourceUrl,
         dataURI,
@@ -245,9 +263,10 @@ export default function useImageWriter({
         fromGeneration: false,
         edited: false,
         flagged: file.flagged,
+        pendingUpload: undefined,
       });
     },
-    [upload, write]
+    [upload, write, dropDrawing]
   );
 
   const saveEdited = useCallback(

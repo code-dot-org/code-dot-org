@@ -62,11 +62,13 @@ describe('pendingUploads', () => {
   });
 
   it('returns sources with no marked image as they are, complete', async () => {
-    const {prepare, upload} = setup();
+    const {preparer, upload} = setup();
     const sources = sourcesWith({
       k1: image({sourceUrl: '/v3/assets/chan/a.png'}),
     });
-    expect(await prepare(sources)).toBe(sources);
+    const result = await preparer(sources);
+    expect(result.sources).toBe(sources);
+    expect(result.incomplete).toBeFalsy();
     expect(upload).not.toHaveBeenCalled();
   });
 
@@ -93,8 +95,9 @@ describe('pendingUploads', () => {
       expect.any(Number),
       previous
     );
-    // The pixels are uploaded; nothing is held for the next save.
+    // The returned sources mark no image, so preparing them uploads nothing.
     expect(await prepare(result)).toBe(result);
+    expect(hasNewerPixels('chan', 'k1', 0)).toBe(false);
   });
 
   it("overwrites a drawing's own file", async () => {
@@ -112,7 +115,7 @@ describe('pendingUploads', () => {
     expect(upload.mock.calls[0][0]).toBe('sprite_1_1795593000001.png');
   });
 
-  it('keeps the field order of the image list, so equal sources compare equal', async () => {
+  it("writes each image's fields in the usual order, so equal sources compare equal", async () => {
     const {prepare} = setup();
     holdPixels('chan', 'k1', 'data:image/png;base64,AA');
     const result = await prepare(
@@ -121,7 +124,7 @@ describe('pendingUploads', () => {
     expect(Object.keys(saved(result, 'k1'))[1]).toBe('sourceUrl');
   });
 
-  it('saves around a failed upload, keeping the old file and the pixels for the next save', async () => {
+  it("saves without a failed upload's pixels, keeping the old file and holding the pixels for the next save", async () => {
     const upload = jest
       .fn()
       .mockRejectedValueOnce(new Error('upload failed'))

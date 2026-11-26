@@ -688,7 +688,52 @@ describe('useImageWriter', () => {
       );
     });
 
-    it('makes a new image without uploading, its pixels held for the save', async () => {
+    it("drops a drawing's held pixels and mark when a generated picture replaces it", async () => {
+      const preparerUpload = jest.fn(
+        async (name: string) => `/v3/assets/chan/${name}`
+      );
+      const prepare = makeSourcesPreparer({
+        channelId: 'chan',
+        upload: preparerUpload,
+        onUploaded: () => undefined,
+        onUploadFailed: () => undefined,
+      });
+      propsByKey.k1 = {
+        name: 'Sprite 1',
+        sourceUrl: '/v3/assets/chan/old.png',
+        frameSize: {x: 8, y: 8},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 2,
+      };
+      const {writer} = renderWriter();
+      await act(async () => {
+        await writer().saveEdited(
+          {key: 'k1', imageType: 'sprite'},
+          'data:image/png;base64,AAAA',
+          {}
+        );
+        await writer().acceptGenerated(
+          {key: 'k1', imageType: 'sprite'},
+          result('cat.png')
+        );
+      });
+      const patch = repointAnimation.mock.calls[1][2] as Record<
+        string,
+        unknown
+      >;
+      expect(patch).toHaveProperty('pendingUpload', undefined);
+      // Even sources still marked from before upload nothing for the image.
+      await prepare({
+        animations: {
+          orderedKeys: ['k1'],
+          propsByKey: {k1: {...propsByKey.k1, pendingUpload: true}},
+        },
+      } as never);
+      expect(preparerUpload).not.toHaveBeenCalled();
+    });
+
+    it('makes a new image without uploading, marked for the next save', async () => {
       makeSourcesPreparer({
         channelId: 'chan',
         upload: jest.fn(),
