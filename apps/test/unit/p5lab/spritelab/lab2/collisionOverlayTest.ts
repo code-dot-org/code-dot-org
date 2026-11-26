@@ -45,7 +45,8 @@ describe('collisionOverlay', () => {
     expect(collisionOverlayBoxes(sprites, walls)[1].touching).toBe(false);
   });
 
-  // The choice is module state, so each case loads the module afresh.
+  // Whether the overlay is shown is module state, so each case loads the
+  // module afresh.
   const freshOverlay = (param: string | undefined) => {
     (queryParams as jest.Mock).mockImplementation((name: string) =>
       name === 'collision-boxes' ? param : undefined

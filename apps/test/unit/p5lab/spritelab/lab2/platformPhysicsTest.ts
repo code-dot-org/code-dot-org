@@ -9,6 +9,7 @@ import {
   bodyBox,
   canStartJump,
   jumpSpeedFromBelow,
+  LEDGE_FALL_SPEED,
   MAX_GRACE_DROP,
   JUMP_GRACE_FRAMES,
   resolvePlatformPhysics,
@@ -424,9 +425,16 @@ describe('platformPhysics with custom gravity', () => {
   });
 
   it('MAX_GRACE_DROP covers a fall at full speed for the whole grace period', () => {
-    expect(MAX_GRACE_DROP).toBe(
-      JUMP_GRACE_FRAMES * (TERMINAL_FALL_SPEED + PLATFORM_GRAVITY)
-    );
+    // A falling player's step is capped at TERMINAL_FALL_SPEED, plus the
+    // gravity added after the cap.
+    let fallen = 0;
+    let speed = LEDGE_FALL_SPEED;
+    for (let frame = 0; frame < JUMP_GRACE_FRAMES; frame++) {
+      speed = Math.min(speed, TERMINAL_FALL_SPEED) + PLATFORM_GRAVITY;
+      fallen += speed;
+    }
+    expect(MAX_GRACE_DROP).toBeGreaterThanOrEqual(fallen);
+    expect(MAX_GRACE_DROP).toBeLessThan(fallen + TERMINAL_FALL_SPEED);
   });
 
   it('canStartJump allows a jump with footing, or just after losing it while falling', () => {

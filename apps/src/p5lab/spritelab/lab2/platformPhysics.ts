@@ -169,7 +169,7 @@ export function touchesWall(
 export const JUMP_GRACE_FRAMES = 3;
 
 // The furthest a player can fall in the grace period. A player further than
-// this from where it last stood was moved there by the program.
+// this below where it last stood was moved there by the program.
 export const MAX_GRACE_DROP =
   JUMP_GRACE_FRAMES * (TERMINAL_FALL_SPEED + PLATFORM_GRAVITY);
 

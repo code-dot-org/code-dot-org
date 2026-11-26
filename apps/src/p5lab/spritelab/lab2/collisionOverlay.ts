@@ -45,8 +45,8 @@ export function collisionOverlayBoxes<Sprite extends PhysicsBox>(
   ];
 }
 
-// Kept here, not on a game engine: the page makes a new engine for each
-// level, and the choice outlasts it.
+// Whether the overlay is shown. It is module state so that it outlasts the
+// game engine: the page makes a new engine for each level.
 let shown: boolean | undefined;
 
 export function collisionBoxesShown(): boolean {

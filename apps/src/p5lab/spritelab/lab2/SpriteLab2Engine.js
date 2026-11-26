@@ -644,12 +644,13 @@ export default class SpriteLab2Engine extends SpriteLab {
       const p5 = this.p5Wrapper.p5;
       const frame = p5 ? p5.frameCount : -Infinity;
       const supported = footing({group}, isSupported);
-      // Whether this sprite stood on something within the last
-      // JUMP_GRACE_FRAMES frames and is not rising. A key's handler runs
-      // after its frame's movement is resolved, so for a player standing
-      // this frame, __slab2Footing was written this frame.
       const dropOf = sprite =>
         -up * (sprite.position.y - sprite.__slab2Footing.y);
+      // Whether this sprite stood on something within the last
+      // JUMP_GRACE_FRAMES frames, is not rising, and is no higher than, and
+      // at most MAX_GRACE_DROP below, where it stood. A key's handler runs
+      // after its frame's movement is resolved, so for a player standing
+      // this frame, __slab2Footing was written this frame.
       const inGrace = sprite =>
         !!sprite.__slab2Footing &&
         canStartJump(
@@ -659,8 +660,9 @@ export default class SpriteLab2Engine extends SpriteLab {
         ) &&
         dropOf(sprite) >= -CONTACT_EPSILON &&
         dropOf(sprite) <= MAX_GRACE_DROP;
-      // With footing, every sprite of the group jumps. Without it, only the
-      // ones in their grace period do.
+      // When any sprite of the group has footing, every sprite of the group
+      // jumps. When none has, only the sprites in their own grace period
+      // jump.
       const jumpers = library
         .getSpriteArray({group})
         .filter(sprite => supported || inGrace(sprite));
@@ -839,10 +841,10 @@ export default class SpriteLab2Engine extends SpriteLab {
               : null;
           const other = wall === target ? sprite : target;
           const player = wall && isPlayerGroup(other.group);
-          // A player is measured where the last frame's movement was
-          // resolved to. Its position while events run is that frame's
-          // next step, which can be deep inside a block it will be pushed
-          // out of.
+          // A player is measured at the position the last frame's movement
+          // was resolved to. While events run, its position holds this
+          // frame's movement, which is not resolved yet and can be deep
+          // inside a block it will be pushed out of.
           const touching =
             wall &&
             (player
@@ -1560,7 +1562,7 @@ export default class SpriteLab2Engine extends SpriteLab {
     camera.off();
   }
 
-  // The outline is the rectangle around a sprite's collider, which the
+  // Each sprite's outline is the rectangle around its collider, which the
   // stock overlap test measures: for a touch between two sprites, and as
   // the second test between a block and a sprite that is not a player.
   drawCollisionBoxes_(library) {
