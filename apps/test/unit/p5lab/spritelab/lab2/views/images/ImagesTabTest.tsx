@@ -5,6 +5,12 @@ import {CHARACTER_STRIP_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAni
 import ImagesTab from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImagesTab';
 import type {SentenceSceneParts} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
+const sendEvent = jest.fn();
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: (...args: unknown[]) => sendEvent(...args)},
+}));
+
 // The scene is stood in for: a button that lands a picture of the kind it
 // was given, so the tab's own moves can be watched.
 // The player is a canvas that says which pose it plays.
@@ -608,16 +614,16 @@ describe('ImagesTab', () => {
     expect(saveEdited).not.toHaveBeenCalled();
   });
 
-  it('deletes through the list, saves the project, and moves on to the next image', () => {
+  it('deletes through the list, saves, and moves on to the next image', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     propsByKey.k2 = {name: 'Sprite 2', categories: []};
-    const onImageLanded = jest.fn();
-    const {rerender} = renderTab({editingOffered: true, onImageLanded});
+    const onSaveProjectNow = jest.fn();
+    const {rerender} = renderTab({editingOffered: true, onSaveProjectNow});
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
     deleteImage.mockImplementation(() => delete propsByKey.k1);
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
     expect(deleteImage).toHaveBeenCalledWith('k1');
-    expect(onImageLanded).toHaveBeenCalledTimes(1);
+    expect(onSaveProjectNow).toHaveBeenCalledTimes(1);
     rerender(
       <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
     );
@@ -650,7 +656,7 @@ describe('ImagesTab', () => {
       {key: null, imageType: 'sprite', subject: 'character'},
       'data:png',
       {pixelGridSize: 1},
-      expect.objectContaining({upload: true})
+      {stillWanted: expect.any(Function)}
     );
     expect(screen.queryByText('canvas')).toBeNull();
     expect(pressed()).toEqual(['Sprite 1']);
@@ -659,8 +665,8 @@ describe('ImagesTab', () => {
 
   it("saves a pause after each stroke, so the image is the project's as it is drawn", async () => {
     jest.useFakeTimers();
-    const onImageLanded = jest.fn();
-    renderTab({editingOffered: true, onImageLanded});
+    const onSaveProjectNow = jest.fn();
+    renderTab({editingOffered: true, onSaveProjectNow});
     fireEvent.click(screen.getByRole('button', {name: 'New image'}));
     fireEvent.click(screen.getByRole('menuitem', {name: 'Character'}));
     fireEvent.click(screen.getByRole('button', {name: 'Draw my own'}));
@@ -674,18 +680,17 @@ describe('ImagesTab', () => {
       jest.advanceTimersByTime(800);
     });
     // The blank became an image, file and all, and the tools stayed open
-    // on it; the project saves on its own clock, never forced by drawing.
+    // on it; a pause's save does not save the project at once.
     expect(saveEdited).toHaveBeenCalledTimes(1);
     expect(saveEdited.mock.calls[0][0]).toEqual({
       key: null,
       imageType: 'sprite',
       subject: 'character',
     });
-    expect(saveEdited.mock.calls[0][3]).toMatchObject({upload: true});
-    expect(onImageLanded).not.toHaveBeenCalled();
+    expect(onSaveProjectNow).not.toHaveBeenCalled();
     expect(screen.getByText('canvas')).toBeTruthy();
     expect(pressed()).toEqual(['Sprite 1']);
-    // The next pause saves onto that image, pixels only.
+    // The next pause saves onto that image.
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     await act(async () => {
       jest.advanceTimersByTime(800);
@@ -696,14 +701,12 @@ describe('ImagesTab', () => {
       imageType: 'sprite',
       subject: 'character',
     });
-    expect(saveEdited.mock.calls[1][3]).toMatchObject({upload: false});
-    // Done sends the file those pixels are owed.
+    // Done, with nothing drawn since that save, saves the project at once.
     await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
-    expect(saveEdited).toHaveBeenCalledTimes(3);
-    expect(saveEdited.mock.calls[2][3]).toMatchObject({upload: true});
-    expect(onImageLanded).not.toHaveBeenCalled();
+    expect(saveEdited).toHaveBeenCalledTimes(2);
+    expect(onSaveProjectNow).toHaveBeenCalledTimes(1);
     expect(screen.queryByText('canvas')).toBeNull();
     jest.useRealTimers();
   });
@@ -718,13 +721,13 @@ describe('ImagesTab', () => {
     );
     saveEdited.mockResolvedValue('k1');
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
-    act(() => {
+    await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
     expect(saveEdited).toHaveBeenCalledTimes(1);
     // Another stroke and Done while the first save is out: it waits.
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
-    act(() => {
+    await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
     expect(saveEdited).toHaveBeenCalledTimes(1);
@@ -934,8 +937,8 @@ describe('ImagesTab', () => {
     expect(await screen.findByText('canvas')).toBeTruthy();
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
     // The next image: the canvas stays up while its picture is decoded,
-    // then its tools take over, while the first image's last pixels go
-    // up with their file.
+    // then its tools take over, while the first image's last pixels are
+    // saved.
     fireEvent.click(screen.getByRole('button', {name: 'Sprite 2'}));
     expect(screen.getByText('canvas')).toBeTruthy();
     await act(async () => {});
@@ -946,7 +949,6 @@ describe('ImagesTab', () => {
       imageType: 'sprite',
       subject: undefined,
     });
-    expect(saveEdited.mock.calls[0][3]).toMatchObject({upload: true});
     expect(pressed()).toEqual(['Sprite 2']);
     finishFirst('k1');
   });
@@ -1376,11 +1378,11 @@ describe('ImagesTab', () => {
     });
 
     it('stores a picked file as the kind the student chose', async () => {
-      const onImageLanded = jest.fn();
+      const onSaveProjectNow = jest.fn();
       const {container} = renderTab({
         editingOffered: true,
         enableImageUpload: true,
-        onImageLanded,
+        onSaveProjectNow,
       });
       fireEvent.click(screen.getByRole('button', {name: 'Upload image'}));
       fireEvent.click(screen.getByRole('menuitem', {name: 'Upload a block'}));
@@ -1396,7 +1398,7 @@ describe('ImagesTab', () => {
           filename: expect.stringMatching(/^upload_my_cat_\d+\.png$/),
         })
       );
-      expect(onImageLanded).toHaveBeenCalled();
+      expect(onSaveProjectNow).toHaveBeenCalled();
       expect(pressed()).toEqual(['Block 1']);
     });
 
@@ -1483,9 +1485,15 @@ describe('ImagesTab', () => {
       fireEvent.click(
         screen.getByRole('menuitem', {name: 'Upload a character'})
       );
+      sendEvent.mockClear();
       await pickFile(container, pngFile('Huge.png', 6 * 1024 * 1024));
       expect(acceptUploaded).not.toHaveBeenCalled();
       expect(screen.getByRole('alert').textContent).toMatch(/too big/);
+      expect(sendEvent).toHaveBeenCalledWith(
+        'hoai2026-image-upload-failed',
+        {picture: 'uploaded', reason: 'tooBig'},
+        true
+      );
     });
 
     it('refuses a file of a kind that cannot be used', async () => {
@@ -1642,12 +1650,18 @@ describe('ImagesTab', () => {
       moderate.mockResolvedValue('flagged');
       acceptUploaded.mockRejectedValue(new Error('no'));
       await pickCharacter();
+      sendEvent.mockClear();
       await act(async () => {
         fireEvent.click(screen.getByRole('button', {name: /^accept$/i}));
       });
       await settle();
       expect(screen.getByRole('alert').textContent).toMatch(
         /couldn't be added/
+      );
+      expect(sendEvent).toHaveBeenCalledWith(
+        'hoai2026-image-upload-failed',
+        {picture: 'uploaded', reason: 'failed', detail: 'no'},
+        true
       );
       expect(httpPost).not.toHaveBeenCalledWith(
         '/v3/channels/c1/abuse/image',

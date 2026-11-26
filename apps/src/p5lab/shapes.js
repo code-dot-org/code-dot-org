@@ -145,6 +145,7 @@ function getSerializedAnimationProps(animation) {
     'fromGeneration',
     'poses',
     'flagged',
+    'pendingUpload',
   ]);
 }
 

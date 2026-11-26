@@ -58,6 +58,9 @@ export interface SerializedAnimationProps {
   poses?: AnimationPoses;
   /** An upload moderation flagged and the student kept anyway. */
   flagged?: boolean;
+  /** Set while the image has drawn pixels that the project's next save
+      uploads before writing the sources; never present in saved sources. */
+  pendingUpload?: boolean;
 }
 
 // Mirrors the JSDoc `SerializedAnimationList` typedef in p5lab/shapes.js.

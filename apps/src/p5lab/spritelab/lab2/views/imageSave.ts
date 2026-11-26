@@ -71,6 +71,37 @@ export function createNamedAnimation(
 }
 
 /**
+ * Adds an animation from the pixels in `props.dataURI`, without loading a
+ * file, at the top of the list where Sprite Lab puts new animations, and
+ * returns its key. The name must not be in use.
+ */
+export function createDrawnAnimation(
+  dispatch: Dispatch,
+  name: string,
+  props: AnimationPatch
+): string {
+  const key = createUuid();
+  const current = getStore().getState().animationList;
+  dispatch({
+    type: SET_INITIAL_ANIMATION_LIST,
+    animationList: {
+      orderedKeys: [key, ...current.orderedKeys],
+      propsByKey: {
+        ...current.propsByKey,
+        [key]: {
+          name,
+          ...SINGLE_FRAME_PROPS,
+          ...props,
+          loadedFromSource: true,
+          saved: false,
+        },
+      },
+    },
+  });
+  return key;
+}
+
+/**
  * Point an existing animation at new pixels and refresh its thumbnails.
  * Uses the raw list-replace action because the classic edit action clears
  * sourceUrl, which is what Lab2 saves. Returns the file URL the change

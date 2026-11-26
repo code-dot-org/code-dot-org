@@ -1,7 +1,8 @@
 // Writing the Images tab's pictures into the project. A generated or drawn
-// picture becomes an image's pixels as soon as it is ready; each picture is
-// uploaded once; when a session ends, uploaded files that no image points
-// at are deleted.
+// picture becomes an image's pixels as soon as it is ready. A generated
+// picture is uploaded at once. In a project, drawn pixels wait for the next
+// save (see pendingUploads.ts); outside a project they are uploaded at once.
+// When a session ends, uploaded files that no image points at are deleted.
 
 import {useCallback, useEffect, useRef} from 'react';
 import {AnyAction} from 'redux';
@@ -11,10 +12,7 @@ import {
   deleteAnimation,
   isNameUnique,
 } from '@cdo/apps/p5lab/redux/animationList';
-import {
-  bytesToDataURI,
-  dataURIToBytes,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
+import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -28,6 +26,7 @@ import {categoriesForType} from '@cdo/apps/p5lab/spritelab/lab2/imageGallery';
 import {nextImageName} from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
 import {
   AnimationPatch,
+  createDrawnAnimation,
   createNamedAnimation,
   framesPatch,
   repointAnimation,
@@ -37,8 +36,14 @@ import useReclaimAsset from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsse
 import useReleaseRemovedImages from '@cdo/apps/p5lab/spritelab/lab2/views/useReleaseRemovedImages';
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {
+  dropHeldPixels,
+  holdPixels,
+  uploadDrawing,
+  uploadsWithSave,
+} from './pendingUploads';
 import {ImageProps} from './projectImages';
 
 /** Which image a picture is for: an existing one by key, or a new one. */
@@ -62,11 +67,6 @@ interface WriterOptions {
 }
 
 export interface SaveEditedOptions {
-  /** Whether this save uploads the picture's file. Defaults to true. False
-      is for an image that already has a file: the picture on screen
-      changes, and the file is uploaded by a later save. A new image has no
-      file yet, so false is ignored for it. */
-  upload?: boolean;
   /** Called after the upload and before the image is updated; returning
       false abandons the save, for a drawing a picture replaced meanwhile. */
   stillWanted?: () => boolean;
@@ -92,8 +92,10 @@ export interface ImageWriter {
       when the file cannot be uploaded. */
   acceptUploaded: (target: ImageTarget, file: UploadedImage) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
-      its key, as acceptGenerated does. Rejects when the file cannot be
-      uploaded. */
+      its key, as acceptGenerated does. In a project, the pixels wait for
+      the next save, and a drawing that arrives with no save left is not
+      stored. Outside a project they are uploaded first, and a failed upload
+      rejects. */
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
@@ -108,9 +110,10 @@ export interface ImageWriter {
     verdict: Verdict
   ) => ImageProps['generation'] | undefined;
   deleteImage: (key: string) => void;
-  /** Deletes the session's uploaded files that no image points at any
-      more, and forgets its uploads. A session is one image's run of
-      generations. */
+  /** Starts a new session, and deletes the files the ended session uploaded
+      or replaced that no image points at, each once neither the project's
+      saved sources nor its sources waiting to be saved name it. A session is
+      one image's run of generations and drawings. */
   endSession: () => void;
 }
 
@@ -129,13 +132,14 @@ export default function useImageWriter({
   onDeleteImage,
 }: WriterOptions): ImageWriter {
   const dispatch = useAppDispatch();
+  const channelId = useAppSelector(state => state.lab.channel?.id);
   const reclaimAsset = useReclaimAsset();
   const releaseRemovedImages = useReleaseRemovedImages();
   // Uploads keyed by the result's filename, so choosing an earlier picture
   // of the session again reuses its upload.
   const uploadsRef = useRef(new Map<string, Upload>());
-  // Every file the session uploaded or replaced; those no image points at
-  // when the session ends are deleted.
+  // The URL of every file the session uploaded, and of every file an image
+  // stopped pointing at; one file can appear under several ?t= URLs.
   const sessionUrlsRef = useRef(new Set<string>());
   const recordSessionUrl = (url?: string) => {
     if (url) {
@@ -153,15 +157,16 @@ export default function useImageWriter({
     [uploadImage]
   );
 
-  const endSession = useCallback(() => {
+  const releaseSessionFiles = useCallback(() => {
     sessionUrlsRef.current.forEach(url => reclaimAsset(url));
     sessionUrlsRef.current = new Set();
     uploadsRef.current = new Map();
   }, [reclaimAsset]);
-  useEffect(() => endSession, [endSession]);
+  const endSession = releaseSessionFiles;
+  useEffect(() => releaseSessionFiles, [releaseSessionFiles]);
 
   const write = useCallback(
-    (target: ImageTarget, patch: AnimationPatch): string => {
+    (target: ImageTarget, patch: AnimationPatch, drawn = false): string => {
       if (target.key) {
         // An image deleted while its save was in progress stays deleted:
         // nothing is written for it.
@@ -178,14 +183,28 @@ export default function useImageWriter({
             getStore().getState().animationList.propsByKey
           )
       );
-      return createNamedAnimation(dispatch, name, {
-        ...patch,
-        categories: categoriesForType(target.imageType),
-        ...(imageRole && {role: imageRole}),
-        ...(target.subject && {subject: target.subject}),
-      });
+      return (drawn ? createDrawnAnimation : createNamedAnimation)(
+        dispatch,
+        name,
+        {
+          ...patch,
+          categories: categoriesForType(target.imageType),
+          ...(imageRole && {role: imageRole}),
+          ...(target.subject && {subject: target.subject}),
+        }
+      );
     },
     [dispatch, imageRole]
+  );
+  // A generated or uploaded picture discards any drawn pixels still waiting
+  // to upload for that image, so the next save does not upload them over it.
+  const dropHeldPixelsOf = useCallback(
+    (target: ImageTarget) => {
+      if (target.key && channelId) {
+        dropHeldPixels(channelId, target.key);
+      }
+    },
+    [channelId]
   );
 
   const acceptGenerated = useCallback(
@@ -202,6 +221,7 @@ export default function useImageWriter({
         uploadsRef.current.set(result.filename, uploaded);
         recordSessionUrl(sourceUrl);
       }
+      dropHeldPixelsOf(target);
       return write(target, {
         sourceUrl: uploaded.sourceUrl,
         dataURI,
@@ -215,9 +235,10 @@ export default function useImageWriter({
         generation: result.generation,
         fromGeneration: true,
         edited: false,
+        pendingUpload: undefined,
       });
     },
-    [upload, write]
+    [upload, write, dropHeldPixelsOf]
   );
 
   const acceptUploaded = useCallback(
@@ -230,6 +251,7 @@ export default function useImageWriter({
       recordSessionUrl(sourceUrl);
       const dataURI = bytesToDataURI(file.uint8Array, file.mediaType);
       const frameSize = await measuredSize(dataURI);
+      dropHeldPixelsOf(target);
       return write(target, {
         sourceUrl,
         dataURI,
@@ -243,9 +265,10 @@ export default function useImageWriter({
         fromGeneration: false,
         edited: false,
         flagged: file.flagged,
+        pendingUpload: undefined,
       });
     },
-    [upload, write]
+    [upload, write, dropHeldPixelsOf]
   );
 
   const saveEdited = useCallback(
@@ -253,20 +276,21 @@ export default function useImageWriter({
       target: ImageTarget,
       dataURI: string,
       meta: PixelEditorSaveMeta,
-      {upload: uploadNow = true, stillWanted}: SaveEditedOptions = {}
+      {stillWanted}: SaveEditedOptions = {}
     ) => {
       const existing = target.key ? propsOf(target.key) : undefined;
-      const safeName = (existing?.name || 'image')
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '_');
-      const sourceUrl =
-        uploadNow || !existing
-          ? await upload(
-              `${safeName}_${Date.now()}.png`,
-              dataURIToBytes(dataURI),
-              'image/png'
-            )
-          : undefined;
+      // A project's saves upload its drawings. A level edited outside a
+      // project has no such save, so its drawings are uploaded here.
+      const waitForSave = !!channelId;
+      if (waitForSave && !uploadsWithSave(channelId)) {
+        // The level is being left, and no save of its project will start
+        // after this, so nothing would save the link to a file uploaded
+        // here.
+        return target.key ?? '';
+      }
+      const sourceUrl = waitForSave
+        ? undefined
+        : await uploadDrawing(upload, existing ?? {}, dataURI);
       recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
       if (stillWanted && !stillWanted()) {
@@ -276,25 +300,35 @@ export default function useImageWriter({
       // stored it.
       const subject =
         existing?.subject ?? existing?.generation?.subject ?? target.subject;
-      return write(target, {
-        ...(sourceUrl && {sourceUrl}),
-        dataURI,
-        ...(subject && {subject}),
-        // An edited character set keeps its frame grid (the editor hands
-        // back the same canvas); a plain picture takes the measured size.
-        ...(existing?.poses
-          ? {}
-          : {frameSize, sourceSize: frameSize, ...framesPatch(undefined)}),
-        pixelGridSize: meta.pixelGridSize,
-        trimmed: false,
-        // Hand-edited pixels are not the prompt's output anymore.
-        generation: undefined,
-        fromGeneration: existing?.fromGeneration || !!existing?.generation,
-        edited: true,
-        recentColors: meta.recentColors,
-      });
+      const key = write(
+        target,
+        {
+          ...(sourceUrl ? {sourceUrl} : {pendingUpload: true}),
+          dataURI,
+          ...(subject && {subject}),
+          // An edited character set keeps its frame grid (the editor hands
+          // back the same canvas); a plain picture takes the measured size.
+          ...(existing?.poses
+            ? {}
+            : {frameSize, sourceSize: frameSize, ...framesPatch(undefined)}),
+          pixelGridSize: meta.pixelGridSize,
+          trimmed: false,
+          // Hand-edited pixels are not the prompt's output anymore.
+          generation: undefined,
+          fromGeneration: existing?.fromGeneration || !!existing?.generation,
+          edited: true,
+          recentColors: meta.recentColors,
+        },
+        waitForSave
+      );
+      // `write` stores nothing for an image that was deleted while this
+      // call was waiting, so no pixels are held for it.
+      if (waitForSave && channelId && propsOf(key)) {
+        holdPixels(channelId, key, dataURI);
+      }
+      return key;
     },
-    [upload, write]
+    [upload, write, channelId]
   );
 
   const rateGenerated = useCallback(
@@ -313,6 +347,9 @@ export default function useImageWriter({
   const deleteImage = useCallback(
     (key: string) => {
       const removed = propsOf(key);
+      if (channelId) {
+        dropHeldPixels(channelId, key);
+      }
       dispatch(
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
         deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
@@ -322,7 +359,7 @@ export default function useImageWriter({
         onDeleteImage(removed.name);
       }
     },
-    [dispatch, releaseRemovedImages, onDeleteImage]
+    [dispatch, releaseRemovedImages, onDeleteImage, channelId]
   );
 
   return {

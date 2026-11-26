@@ -38,6 +38,17 @@ import {SourcesStore} from './SourcesStore';
 
 const {reload} = require('@cdo/apps/utils');
 
+export interface PreparedSources {
+  sources: ProjectSources;
+  /** Set when the sources given have changes this save could not include.
+      The sources given stay pending, and another save is queued. */
+  incomplete?: boolean;
+}
+
+export type SourcesPreparer = (
+  sources: ProjectSources
+) => Promise<PreparedSources>;
+
 /** A project's saved sources and its sources waiting to be saved, when both
     are certain (see getSettledSources). */
 export interface SettledSources {
@@ -69,6 +80,10 @@ export default class ProjectManager {
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
   private saveFailListeners: ((error: Error) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
+  private sourcesPreparer: SourcesPreparer | undefined;
+  // Set when a save's sources preparer returns `incomplete`, so that another
+  // save follows when that save ends.
+  private saveAgainNeeded = false;
   private sourcesSettledListeners: ((settled: SettledSources) => void)[] = [];
   private savesInFlightCount = 0;
   private restoringSources = false;
@@ -464,6 +479,23 @@ export default class ProjectManager {
   }
 
   /**
+   * Sets the step that a save runs on its sources just before writing them,
+   * for a lab that stores part of a project elsewhere first, such as image
+   * files. The save writes the sources the step returns, or nothing when the
+   * step reports them `incomplete` and they are already saved. A step that
+   * throws fails the save. A manager has one step: setting another replaces
+   * it. The step runs only in a save whose sources have changed, so a lab
+   * with something to store must change the sources to have it run.
+   */
+  setSourcesPreparer(preparer: SourcesPreparer | undefined) {
+    this.sourcesPreparer = preparer;
+  }
+
+  hasSourcesPreparer(): boolean {
+    return !!this.sourcesPreparer;
+  }
+
+  /**
    * The sources the server holds for this project and the sources waiting
    * to be saved, or undefined while the manager cannot be sure what the
    * server holds. A save or a restore reported as failed can still have been
@@ -682,12 +714,37 @@ export default class ProjectManager {
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
-    // Only save the source if it has changed or we are skipping the changed check.
+    // The sources written, which a sources preparer may have changed.
+    let sourcesSaved = sourcesBeingSaved;
+    let incomplete = false;
     if (sourcesBeingSaved && (sourceChanged || skipSourcesChangedCheck)) {
       try {
+        const prepared = this.sourcesPreparer
+          ? await this.sourcesPreparer(sourcesBeingSaved)
+          : {sources: sourcesBeingSaved};
+        sourcesSaved = prepared.sources;
+        incomplete = !!prepared.incomplete;
+        if (incomplete) {
+          this.saveAgainNeeded = true;
+        }
+        if (
+          incomplete &&
+          !skipSourcesChangedCheck &&
+          !channelChanged &&
+          !this.channelSaveNeeded &&
+          !this.savedSourcesUncertain &&
+          JSON.stringify(prepared.sources) === this.lastSource
+        ) {
+          // The prepared sources match what is already saved, so nothing is
+          // written. The part the preparer left out is tried again by the
+          // save that follows this one.
+          this.saveInProgress = false;
+          this.executeSaveNoopListeners(this.lastChannel);
+          return;
+        }
         await this.sourcesStore.save(
           this.channelId,
-          sourcesBeingSaved,
+          prepared.sources,
           this.lastChannel.projectType,
           forceNewVersion || this.getForceNewVersion()
         );
@@ -712,7 +769,7 @@ export default class ProjectManager {
         );
         return;
       }
-      this.lastSource = JSON.stringify(sourcesBeingSaved);
+      this.lastSource = JSON.stringify(sourcesSaved);
       this.savedSourcesUncertain = false;
 
       // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
@@ -743,10 +800,10 @@ export default class ProjectManager {
       // If the sources contain a labConfig entry, then also save this to the
       // channel, which means that the labConfig entry will also be saved in the
       // Project model in the database, specifically inside the value field JSON.
-      if (sourcesBeingSaved?.labConfig) {
+      if (sourcesSaved?.labConfig) {
         channelUpdate = {
           ...channelUpdate,
-          labConfig: sourcesBeingSaved.labConfig,
+          labConfig: sourcesSaved.labConfig,
         };
       }
 
@@ -781,7 +838,7 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     // Anything that changed while we were saving stays pending for the next save.
-    if (this.sourcesToSave === sourcesBeingSaved) {
+    if (this.sourcesToSave === sourcesBeingSaved && !incomplete) {
       this.sourcesToSave = undefined;
     }
     if (this.pendingChannelUpdates === channelUpdatesBeingSaved) {
@@ -917,6 +974,12 @@ export default class ProjectManager {
       .finally(() => {
         this.savesInFlightCount--;
         this.executeSourcesSettledListeners();
+        if (this.saveAgainNeeded) {
+          this.saveAgainNeeded = false;
+          if (!this.destroyed) {
+            void this.enqueueSaveOrSave(false, false).catch(() => undefined);
+          }
+        }
       });
     this.saveInFlight = save.catch(() => undefined);
     return save;

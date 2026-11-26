@@ -23,6 +23,7 @@ import {useBlocklySettings} from '@cdo/apps/lab2/hooks/useBlocklySettings';
 import useLevelEditMode from '@cdo/apps/lab2/hooks/useLevelEditMode';
 import {UseSourcesOutput} from '@cdo/apps/lab2/hooks/useSources';
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import continueOrFinishLesson from '@cdo/apps/lab2/progress/continueOrFinishLesson';
 import {
   getAppOptionsEditBlocks,
@@ -175,6 +176,7 @@ import DiscoverBlocksButton, {
 } from './DiscoverBlocksButton';
 import FreeplayIntroDialog from './FreeplayIntroDialog';
 import ImagesTab, {UploadWarningSettings} from './images/ImagesTab';
+import useUploadDrawingsOnSave from './images/useUploadDrawingsOnSave';
 import {createNamedAnimation} from './imageSave';
 import {
   ArrowSet,
@@ -474,6 +476,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     return undefined;
   }, [channelId, levelProperties.name]);
+  useUploadDrawingsOnSave(channelId, uploadImage);
 
   const isTeacher = useAppSelector(
     state => state.currentUser.userType === 'teacher'
@@ -1368,11 +1371,14 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     writeAnimations();
   }, [animationList, writeAnimations]);
-  // A picture that just became an image is worth a save of its own.
-  const saveImagesNow = useCallback(
-    () => writeAnimations(true),
-    [writeAnimations]
-  );
+  // Saves the project at once instead of waiting for its throttled save.
+  // The effect above may already have written the image list without
+  // forcing a save, and writing an unchanged list saves nothing, so the
+  // throttled save already waiting is flushed too.
+  const saveImagesNow = useCallback(() => {
+    writeAnimations(true);
+    void Lab2Registry.getInstance().getProjectManager()?.flushSave();
+  }, [writeAnimations]);
 
   const {
     workspaceVersion,
@@ -2620,7 +2626,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                 imageKinds={levelProperties.levelMode?.imageKinds}
                 viewOnly={isViewOnly}
                 paneWidth={paneWidthPx}
-                onImageLanded={saveImagesNow}
+                onSaveProjectNow={saveImagesNow}
                 active={activeTab === 'Images'}
                 advancedOffered={imagesAdvanced}
                 onDrawingHistory={setDrawingHistory}

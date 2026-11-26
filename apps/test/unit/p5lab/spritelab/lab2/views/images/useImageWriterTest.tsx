@@ -1,6 +1,10 @@
 import {act, render} from '@testing-library/react';
 import React from 'react';
 
+import {
+  makeSourcesPreparer,
+  resetHeldPixels,
+} from '@cdo/apps/p5lab/spritelab/lab2/views/images/pendingUploads';
 import useImageWriter, {
   ImageWriter,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/images/useImageWriter';
@@ -27,6 +31,9 @@ const propsByKey = (
 ).mockPropsByKey;
 const dispatch = jest.fn();
 let labState: Record<string, unknown> = {channel: {id: 'chan'}};
+// A level edited outside a project has no channel, and each of its drawings
+// is uploaded at once.
+const OUTSIDE_A_PROJECT = {};
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppDispatch: () => dispatch,
   useAppSelector: (select: (state: unknown) => unknown) =>
@@ -37,15 +44,19 @@ jest.mock('@cdo/apps/lab2/redux/lab2ProjectReduxThunks', () => ({
   unflagProjectChannel: (...args: unknown[]) => unflag(...args),
 }));
 const createNamedAnimation = jest.fn((...args: unknown[]) => 'new-key');
+const createDrawnAnimation = jest.fn((...args: unknown[]) => 'drawn-key');
 const repointAnimation = jest.fn(
   (...args: unknown[]) => '/v3/assets/chan/old.png'
 );
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/imageSave', () => ({
   ...jest.requireActual('@cdo/apps/p5lab/spritelab/lab2/views/imageSave'),
   createNamedAnimation: (...args: unknown[]) => createNamedAnimation(...args),
+  createDrawnAnimation: (...args: unknown[]) => createDrawnAnimation(...args),
   repointAnimation: (...args: unknown[]) => repointAnimation(...args),
 }));
-// A project manager whose saved sources name no file.
+// A project manager whose saved sources name no file. Its saves upload
+// drawings only in the tests that set mockHasPreparer.
+let mockHasPreparer = false;
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
@@ -55,6 +66,7 @@ jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
         getLastChannel: () => ({isOwner: true}),
         getSettledSources: () => ({saved: {}}),
         addSourcesSettledListener: () => undefined,
+        hasSourcesPreparer: () => mockHasPreparer,
       }),
     }),
   },
@@ -94,17 +106,20 @@ function renderWriter(
     });
     return null;
   };
-  render(<Harness />);
+  const {unmount} = render(<Harness />);
   const writer = () => latest.current as ImageWriter;
-  return {writer, uploadImage, onDeleteImage};
+  return {writer, uploadImage, onDeleteImage, unmount};
 }
 
 describe('useImageWriter', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     createNamedAnimation.mockClear();
+    createDrawnAnimation.mockClear();
     repointAnimation.mockClear();
+    repointAnimation.mockImplementation(() => '/v3/assets/chan/old.png');
     httpDelete.mockClear();
+    mockHasPreparer = false;
     dispatch.mockClear();
     unflag.mockClear();
     labState = {channel: {id: 'chan'}};
@@ -220,6 +235,7 @@ describe('useImageWriter', () => {
   });
 
   it('leaves an image as it was when a drawing on it cannot be uploaded', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer} = renderWriter(
       jest.fn(async (name: string): Promise<string> => {
@@ -237,6 +253,7 @@ describe('useImageWriter', () => {
   });
 
   it('stores no generated or drawn picture with nowhere to put the file', async () => {
+    labState = OUTSIDE_A_PROJECT;
     const latest: {current: ImageWriter | null} = {current: null};
     const Harness = () => {
       latest.current = useImageWriter({onDeleteImage: jest.fn()});
@@ -257,26 +274,8 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
-  it('shows a pause in drawing on screen with no upload, so it cannot fail', async () => {
-    propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
-    const {writer} = renderWriter(
-      jest.fn(async (name: string): Promise<string> => {
-        throw new Error('upload failed');
-      })
-    );
-    await act(async () => {
-      await writer().saveEdited(
-        {key: 'k1', imageType: 'sprite'},
-        'data:image/png;base64,AA',
-        {},
-        {upload: false}
-      );
-    });
-    expect(repointAnimation).toHaveBeenCalledTimes(1);
-    expect(repointAnimation.mock.calls[0][2]).not.toHaveProperty('sourceUrl');
-  });
-
   it('keeps what an image depicts when an edit drops the prompt', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {
       name: 'Sprite 1',
       sourceUrl: '/v3/assets/chan/old.png',
@@ -335,6 +334,7 @@ describe('useImageWriter', () => {
   });
 
   it('drops an edit no longer wanted once its file is up', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer, uploadImage} = renderWriter();
     await act(async () => {
@@ -379,7 +379,8 @@ describe('useImageWriter', () => {
     ]);
   });
 
-  it('saves drawn pixels onto an image, uploading only when asked', async () => {
+  it('saves drawn pixels onto a generated image, uploading each save and marking it edited, not generated', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {
       name: 'Sprite 1',
       sourceUrl: '/v3/assets/chan/old.png',
@@ -388,50 +389,39 @@ describe('useImageWriter', () => {
     const {writer, uploadImage} = renderWriter();
     const target = {key: 'k1', imageType: 'sprite' as const};
     await act(async () => {
-      await writer().saveEdited(
-        target,
-        'data:image/png;base64,AA',
-        {},
-        {
-          upload: false,
-        }
-      );
+      await writer().saveEdited(target, 'data:image/png;base64,AA', {});
     });
-    expect(uploadImage).not.toHaveBeenCalled();
+    expect(uploadImage).toHaveBeenCalledTimes(1);
     expect(repointAnimation).toHaveBeenCalledTimes(1);
-    const quiet = repointAnimation.mock.calls[0][2] as Record<string, unknown>;
-    // The pixels go in; the file behind the image waits, and the pixels
-    // are no longer the prompt's.
-    expect(quiet).toMatchObject({
+    const first = repointAnimation.mock.calls[0][2] as Record<string, unknown>;
+    expect(first).toMatchObject({
       dataURI: 'data:image/png;base64,AA',
       generation: undefined,
       fromGeneration: true,
       edited: true,
       trimmed: false,
     });
-    expect(quiet).not.toHaveProperty('sourceUrl');
+    expect(first.sourceUrl).toMatch(/^\/v3\/assets\/chan\/sprite_1_/);
     // Store the first edit, so the second edit starts from an image with no
     // `generation`. `fromGeneration` must still be true.
-    propsByKey.k1 = {...propsByKey.k1, ...quiet};
+    propsByKey.k1 = {...propsByKey.k1, ...first};
     await act(async () => {
       await writer().saveEdited(target, 'data:image/png;base64,AB', {});
     });
     expect(repointAnimation.mock.calls[1][2]).toMatchObject({
       fromGeneration: true,
     });
-    expect(uploadImage).toHaveBeenCalledTimes(1);
-    const loud = repointAnimation.mock.calls[1][2] as Record<string, unknown>;
-    expect(loud.sourceUrl).toMatch(/^\/v3\/assets\/chan\/sprite_1_/);
+    expect(uploadImage).toHaveBeenCalledTimes(2);
   });
 
-  it('gives a drawn blank its file whether or not an upload was asked for', async () => {
+  it('gives a drawn blank its file', async () => {
+    labState = OUTSIDE_A_PROJECT;
     const {writer, uploadImage} = renderWriter();
     await act(async () => {
       await writer().saveEdited(
         {key: null, imageType: 'sprite'},
         'data:image/png;base64,AA',
-        {pixelGridSize: 1},
-        {upload: false}
+        {pixelGridSize: 1}
       );
     });
     expect(uploadImage).toHaveBeenCalledTimes(1);
@@ -451,6 +441,7 @@ describe('useImageWriter', () => {
   });
 
   it('keeps a character set its frames when a frame is drawn on', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {
       name: 'Sprite 1',
       sourceUrl: '/v3/assets/chan/old.png',
@@ -533,6 +524,304 @@ describe('useImageWriter', () => {
       const {writer} = renderWriter();
       act(() => writer().deleteImage('k1'));
       expect(unflag).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('drawing', () => {
+    let now = 1795593000000;
+    beforeEach(() => {
+      labState = OUTSIDE_A_PROJECT;
+      jest.spyOn(Date, 'now').mockImplementation(() => (now += 1));
+      repointAnimation.mockImplementation((...args: unknown[]) => {
+        const [, key, patch] = args as [
+          unknown,
+          string,
+          {sourceUrl?: string; edited?: boolean}
+        ];
+        const previous = propsByKey[key].sourceUrl as string;
+        if (patch.sourceUrl) {
+          propsByKey[key].sourceUrl = patch.sourceUrl;
+        }
+        if (patch.edited !== undefined) {
+          propsByKey[key].edited = patch.edited;
+        }
+        return previous;
+      });
+    });
+    afterEach(() => jest.restoreAllMocks());
+
+    const draw = async (writer: () => ImageWriter) => {
+      await act(async () => {
+        await writer().saveEdited(
+          {key: 'k1', imageType: 'sprite'},
+          'data:image/png;base64,AA',
+          {}
+        );
+      });
+    };
+
+    it('replaces one file per image for the session, with a fresh link each time', async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      const {writer, uploadImage} = renderWriter();
+      await draw(writer);
+      const first = propsByKey.k1.sourceUrl as string;
+      await draw(writer);
+      const second = propsByKey.k1.sourceUrl as string;
+      const names = uploadImage.mock.calls.map(call => call[0]);
+      expect(names).toHaveLength(2);
+      expect(names[1]).toBe(names[0]);
+      expect(first.split('?')[0]).toBe(second.split('?')[0]);
+      expect(first).toMatch(/\?t=\d+$/);
+      expect(second).not.toBe(first);
+    });
+
+    it("keeps the drawing's file at session end, under any of its links", async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      const {writer} = renderWriter();
+      await draw(writer);
+      await draw(writer);
+      act(() => writer().endSession());
+      expect(httpDelete.mock.calls.map(call => call[0])).toEqual([
+        '/v3/assets/chan/old.png',
+      ]);
+    });
+
+    it("lets the drawing's last save after unmount keep its file", async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      const {writer, uploadImage, unmount} = renderWriter();
+      await draw(writer);
+      unmount();
+      await draw(writer);
+      const names = uploadImage.mock.calls.map(call => call[0]);
+      expect(names[1]).toBe(names[0]);
+    });
+
+    it("reuses the drawing's file in a later session", async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      const {writer, uploadImage} = renderWriter();
+      await draw(writer);
+      act(() => writer().endSession());
+      await draw(writer);
+      const names = uploadImage.mock.calls.map(call => call[0]);
+      expect(names[1]).toBe(names[0]);
+    });
+
+    it('never overwrites a generated or uploaded picture drawn on', async () => {
+      const {writer, uploadImage} = renderWriter();
+      for (const file of [
+        'generated-8f1c2b7e-0a4d-4c1e-9b3a-2d5e6f7a8b9c.png',
+        'upload_cat_1795593486793.png',
+      ]) {
+        propsByKey.k1 = {
+          name: 'Sprite 1',
+          sourceUrl: `/v3/assets/chan/${file}`,
+          edited: true,
+        };
+        await draw(writer);
+        act(() => writer().endSession());
+      }
+      const names = uploadImage.mock.calls.map(call => call[0]);
+      expect(names[0]).toMatch(/^sprite_1_\d+\.png$/);
+      expect(names[1]).toMatch(/^sprite_1_\d+\.png$/);
+      expect(names[1]).not.toBe(names[0]);
+    });
+
+    it("gives a level's starter asset no link suffix and no reuse", async () => {
+      propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
+      let n = 0;
+      const {writer, uploadImage} = renderWriter(
+        jest.fn(async (name: string) => `/level_starter_assets/lvl/${++n}.png`)
+      );
+      await draw(writer);
+      await draw(writer);
+      expect(propsByKey.k1.sourceUrl).toBe('/level_starter_assets/lvl/2.png');
+      expect(uploadImage).toHaveBeenCalledTimes(2);
+    });
+  });
+  describe('in a project whose saves upload drawings', () => {
+    beforeEach(() => {
+      resetHeldPixels();
+      mockHasPreparer = true;
+    });
+    afterEach(() => resetHeldPixels());
+
+    it('marks an existing image and holds its pixels, uploading nothing', async () => {
+      const preparerUpload = jest.fn(
+        async (name: string, bytes: Uint8Array) => `/v3/assets/chan/${name}`
+      );
+      const prepare = makeSourcesPreparer({
+        channelId: 'chan',
+        upload: preparerUpload,
+        onUploaded: () => undefined,
+        onUploadFailed: () => undefined,
+      });
+      propsByKey.k1 = {
+        name: 'Sprite 1',
+        sourceUrl: '/v3/assets/chan/old.png',
+        frameSize: {x: 8, y: 8},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 2,
+      };
+      const {writer, uploadImage} = renderWriter();
+      await act(async () => {
+        await writer().saveEdited(
+          {key: 'k1', imageType: 'sprite'},
+          'data:image/png;base64,AAAA',
+          {}
+        );
+      });
+      expect(uploadImage).not.toHaveBeenCalled();
+      const patch = repointAnimation.mock.calls[0][2] as Record<
+        string,
+        unknown
+      >;
+      expect(patch).toMatchObject({
+        pendingUpload: true,
+        dataURI: 'data:image/png;base64,AAAA',
+        edited: true,
+      });
+      expect(patch).not.toHaveProperty('sourceUrl');
+      // The project's next save uploads the held pixels.
+      await prepare({
+        animations: {
+          orderedKeys: ['k1'],
+          propsByKey: {k1: {...propsByKey.k1, ...patch}},
+        },
+      } as never);
+      expect(preparerUpload).toHaveBeenCalledTimes(1);
+      expect(Array.from(preparerUpload.mock.calls[0][1] as Uint8Array)).toEqual(
+        [0, 0, 0]
+      );
+    });
+
+    it("drops a drawing's held pixels and mark when a generated picture replaces it", async () => {
+      const preparerUpload = jest.fn(
+        async (name: string) => `/v3/assets/chan/${name}`
+      );
+      const prepare = makeSourcesPreparer({
+        channelId: 'chan',
+        upload: preparerUpload,
+        onUploaded: () => undefined,
+        onUploadFailed: () => undefined,
+      });
+      propsByKey.k1 = {
+        name: 'Sprite 1',
+        sourceUrl: '/v3/assets/chan/old.png',
+        frameSize: {x: 8, y: 8},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 2,
+      };
+      const {writer} = renderWriter();
+      await act(async () => {
+        await writer().saveEdited(
+          {key: 'k1', imageType: 'sprite'},
+          'data:image/png;base64,AAAA',
+          {}
+        );
+        await writer().acceptGenerated(
+          {key: 'k1', imageType: 'sprite'},
+          result('cat.png')
+        );
+      });
+      const patch = repointAnimation.mock.calls[1][2] as Record<
+        string,
+        unknown
+      >;
+      expect(patch).toHaveProperty('pendingUpload', undefined);
+      // Sources that still carry the old pendingUpload mark upload nothing
+      // for the image, because its held pixels are gone.
+      await prepare({
+        animations: {
+          orderedKeys: ['k1'],
+          propsByKey: {k1: {...propsByKey.k1, pendingUpload: true}},
+        },
+      } as never);
+      expect(preparerUpload).not.toHaveBeenCalled();
+    });
+
+    it("drops a deleted image's held pixels", async () => {
+      const preparerUpload = jest.fn(
+        async (name: string) => `/v3/assets/chan/${name}`
+      );
+      const prepare = makeSourcesPreparer({
+        channelId: 'chan',
+        upload: preparerUpload,
+        onUploaded: () => undefined,
+        onUploadFailed: () => undefined,
+      });
+      propsByKey.k1 = {
+        name: 'Sprite 1',
+        sourceUrl: '/v3/assets/chan/old.png',
+        frameSize: {x: 8, y: 8},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 2,
+      };
+      const {writer} = renderWriter();
+      await act(async () => {
+        await writer().saveEdited(
+          {key: 'k1', imageType: 'sprite'},
+          'data:image/png;base64,AAAA',
+          {}
+        );
+      });
+      act(() => writer().deleteImage('k1'));
+      // Sources still naming the image as marked upload nothing for it.
+      await prepare({
+        animations: {
+          orderedKeys: ['k1'],
+          propsByKey: {k1: {...propsByKey.k1, pendingUpload: true}},
+        },
+      } as never);
+      expect(preparerUpload).not.toHaveBeenCalled();
+    });
+
+    it('drops a drawing once the project has no save left to upload it', async () => {
+      mockHasPreparer = false;
+      propsByKey.k1 = {
+        name: 'Sprite 1',
+        sourceUrl: '/v3/assets/chan/sprite_1_1795593000001.png?t=5',
+        edited: true,
+      };
+      const {writer, uploadImage} = renderWriter();
+      let key = '';
+      await act(async () => {
+        key = await writer().saveEdited(
+          {key: 'k1', imageType: 'sprite'},
+          'data:image/png;base64,AA',
+          {}
+        );
+      });
+      expect(key).toBe('k1');
+      expect(uploadImage).not.toHaveBeenCalled();
+      expect(repointAnimation).not.toHaveBeenCalled();
+    });
+
+    it('makes a new image without uploading, marked for the next save', async () => {
+      const {writer, uploadImage} = renderWriter();
+      let key = '';
+      await act(async () => {
+        key = await writer().saveEdited(
+          {key: null, imageType: 'sprite'},
+          'data:image/png;base64,AA',
+          {pixelGridSize: 1}
+        );
+      });
+      expect(uploadImage).not.toHaveBeenCalled();
+      expect(createNamedAnimation).not.toHaveBeenCalled();
+      expect(createDrawnAnimation).toHaveBeenCalledTimes(1);
+      const patch = createDrawnAnimation.mock.calls[0][2] as Record<
+        string,
+        unknown
+      >;
+      expect(patch).toMatchObject({
+        pendingUpload: true,
+        dataURI: 'data:image/png;base64,AA',
+      });
+      expect(patch).not.toHaveProperty('sourceUrl');
+      expect(key).toBe('drawn-key');
     });
   });
 });

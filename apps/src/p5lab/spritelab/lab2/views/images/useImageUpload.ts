@@ -1,6 +1,8 @@
 import {ChangeEvent, useCallback, useRef, useState} from 'react';
 
 import {useFlaggedImage} from '@cdo/apps/lab2/hooks/useFlaggedImage';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import useHiddenFileInput from '@cdo/apps/util/hooks/useHiddenFileInput';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -23,6 +25,9 @@ const EXTENSIONS: Record<string, string> = {
   'image/png': 'png',
   'image/jpeg': 'jpg',
 };
+
+const errorDetail = (error: unknown) =>
+  error instanceof Error ? error.message : String(error);
 
 export const UPLOAD_ERRORS = {
   tooBig: 'That picture is too big. Pick one smaller than 5 MB.',
@@ -95,6 +100,22 @@ export default function useImageUpload({
     [onAccepted]
   );
 
+  const fail = useCallback(
+    (reason: keyof typeof UPLOAD_ERRORS, error?: unknown) => {
+      onError(UPLOAD_ERRORS[reason]);
+      analyticsReporter.sendEvent(
+        EVENTS.HOAI2026_IMAGE_UPLOAD_FAILED,
+        {
+          picture: 'uploaded',
+          reason,
+          ...(error !== undefined && {detail: errorDetail(error)}),
+        },
+        true
+      );
+    },
+    [onError]
+  );
+
   const handleFile = useCallback(
     async (event: ChangeEvent<HTMLInputElement>) => {
       const file = event.target.files?.[0];
@@ -104,18 +125,18 @@ export default function useImageUpload({
         return;
       }
       if (!ACCEPTED_TYPES.includes(file.type.toLowerCase())) {
-        onError(UPLOAD_ERRORS.wrongType);
+        fail('wrongType');
         return;
       }
       if (file.size >= MAX_UPLOAD_BYTES) {
-        onError(UPLOAD_ERRORS.tooBig);
+        fail('tooBig');
         return;
       }
       setWorking(true);
       onProgress?.('Checking your picture.');
       try {
         if (!(await decodable(file))) {
-          onError(UPLOAD_ERRORS.wrongType);
+          fail('wrongType');
           return;
         }
         if (channelId) {
@@ -129,7 +150,7 @@ export default function useImageUpload({
               try {
                 await store(kind, file, true);
               } catch (error) {
-                onError(UPLOAD_ERRORS.failed);
+                fail('failed', error);
                 // Rethrow so useFlaggedImage leaves the project unflagged.
                 throw error;
               } finally {
@@ -141,13 +162,13 @@ export default function useImageUpload({
         }
         onProgress?.('Adding your picture.');
         await store(kind, file);
-      } catch {
-        onError(UPLOAD_ERRORS.failed);
+      } catch (error) {
+        fail('failed', error);
       } finally {
         setWorking(false);
       }
     },
-    [channelId, onError, onImageFlagged, onProgress, store]
+    [channelId, fail, onImageFlagged, onProgress, store]
   );
 
   const [openFileInput, FileInput] = useHiddenFileInput(

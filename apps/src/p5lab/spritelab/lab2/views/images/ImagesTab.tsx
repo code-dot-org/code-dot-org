@@ -126,9 +126,7 @@ interface ImagesTabProps {
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
-  /** A generated or drawn picture has just been stored as a project image,
-      or an image was deleted; the host should save the project now. */
-  onImageLanded?: () => void;
+  onSaveProjectNow?: () => void;
   /** The tab is the one showing; a drawing saves itself when it is not. */
   active?: boolean;
   /** The drawing's undo and redo, for the host's own buttons; null once
@@ -182,7 +180,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   uploadWarningSettings,
   viewOnly,
   paneWidth,
-  onImageLanded,
+  onSaveProjectNow,
   active = true,
   onDrawingHistory,
   advancedOffered,
@@ -218,8 +216,8 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   const [advanced, setAdvanced] = useState<AdvancedSettings>(DEFAULT_ADVANCED);
   const [draft, setDraft] = useState<DraftEntry | null>(null);
   const [chosenId, setChosenId] = useState<string | null>(null);
-  // A session is one image's run of generations. The sentence scene is
-  // remounted, and its state reset, when this number changes.
+  // A session is one image's run of generations and drawings. The sentence
+  // scene is remounted, and its state reset, when this number changes.
   const [session, setSession] = useState(0);
   const startSession = useCallback(
     (id: string | null) => {
@@ -283,41 +281,34 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   // made it.
   const chosenKeyRef = useRef(chosenId);
   chosenKeyRef.current = chosenImage?.key ?? null;
-  const landedRef = useRef(onImageLanded);
-  landedRef.current = onImageLanded;
-  // `saveNow`: a generated picture triggers an immediate project save; a
-  // drawing's saves wait for the project's throttled save.
+  const saveProjectNowRef = useRef(onSaveProjectNow);
+  saveProjectNowRef.current = onSaveProjectNow;
+  // `saveNow`: whether the project is saved at once after the picture is
+  // stored; false leaves it to the project's throttled save.
   const storePicture = useCallback(
     async (
       target: ImageTarget,
       write: () => Promise<string>,
-      saveNow = true
+      saveNow = true,
+      stillOpen: () => boolean = () => true
     ) => {
       const key = await write();
-      if (!target.key) {
+      if (!target.key && stillOpen()) {
         // The student may have moved to another image while the upload was
         // in progress; only a draft still chosen becomes the new image's
-        // tile. The choice moves before the draft goes, so no render sees
-        // a chosen draft that no longer exists.
+        // tile. If the student left this new drawing for another new one,
+        // both are chosen as DRAFT_ID; `stillOpen` keeps the left one from
+        // taking the new one's tile. The choice moves before the draft
+        // goes, so no render sees a chosen draft that no longer exists.
         setChosenId(id => (id === DRAFT_ID ? key : id));
         setDraft(null);
       }
       if (saveNow) {
-        landedRef.current?.();
+        saveProjectNowRef.current?.();
       }
       return key;
     },
     []
-  );
-  // Save the project at once: the deleted picture's file is removed, and a
-  // project blocked for that picture is unblocked, only after a saved
-  // project no longer names it.
-  const handleDelete = useCallback(
-    (key: string) => {
-      writer.deleteImage(key);
-      landedRef.current?.();
-    },
-    [writer]
   );
   // The element at the right end of the pane's header bar, where the pane
   // draws its info button.
@@ -341,6 +332,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     storePicture,
     active,
     onDrawingHistory,
+    saveProjectNow: () => saveProjectNowRef.current?.(),
   });
   const {drawing, startDrawing, leaveDrawing, stopDrawing, adoptGeneration} =
     tools;
@@ -362,6 +354,15 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
     const timer = setTimeout(() => setUploadError(null), UPLOAD_ERROR_SHOWN_MS);
     return () => clearTimeout(timer);
   }, [uploadError]);
+  // Save the project at once: the deleted picture's file is removed only
+  // after a saved project no longer names it.
+  const handleDelete = useCallback(
+    (key: string) => {
+      writer.deleteImage(key);
+      saveProjectNowRef.current?.();
+    },
+    [writer]
+  );
   const handleUploaded = useCallback(
     async (kind: ImageKind, image: UploadedImage) => {
       const target: ImageTarget = {
@@ -373,7 +374,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       leaveDrawing();
       setDraft(null);
       startSession(key);
-      landedRef.current?.();
+      saveProjectNowRef.current?.();
       setUploadStatus(`${imageKindLabel(kind.imageType, kind.subject)} added.`);
     },
     [leaveDrawing, startSession, writer]

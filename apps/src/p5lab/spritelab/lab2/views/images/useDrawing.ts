@@ -20,14 +20,10 @@ import {cutFrame, frameCount, replaceFrame} from './frames';
 import {ImageProps, ProjectImage} from './projectImages';
 import {ImageTarget, ImageWriter} from './useImageWriter';
 
-// A pause this long after a stroke saves the drawing into the project, so
+// A pause this long after a stroke puts the picture in the image list, so
 // the image list's tile, the World tab's palette and the next Run show the
 // picture as it is drawn.
 const STROKE_SAVE_MS = 800;
-// A pause's save updates the picture on screen; the PNG upload behind the
-// image happens at most once per this gap, and once more when the drawing
-// is finished. The project's own save keeps its own throttle.
-const UPLOAD_GAP_MS = 5000;
 
 /** What the tools opened on. `other` is an image that is neither blank nor
     AI-made: a drawing, an upload, or a hand-edited AI picture. */
@@ -35,8 +31,8 @@ type DrawingOrigin = 'blank' | 'generated' | 'other';
 
 /** A drawing in progress: what it writes to, and what the editor opened. */
 export interface Drawing {
-  /** Tells a save in flight which drawing it belongs to; a later drawing
-      is left alone. */
+  /** A new number each time the tools open, so two openings of one image
+      are different drawings. */
   id: number;
   target: ImageTarget;
   imageUrl: string;
@@ -60,10 +56,12 @@ interface UseDrawingOptions {
   storePicture: (
     target: ImageTarget,
     write: () => Promise<string>,
-    saveNow?: boolean
+    saveNow?: boolean,
+    stillOpen?: () => boolean
   ) => Promise<string>;
   /** The tab is the one showing. */
   active: boolean;
+  saveProjectNow?: () => void;
   onDrawingHistory?: (history: EditHistory | null) => void;
 }
 
@@ -85,18 +83,18 @@ export interface DrawingTools {
       been drawn. */
   closedPicture: {key: string; canvas: HTMLCanvasElement} | null;
   releaseClosedPicture: () => void;
-  /** The last pause-save failed; it is tried again at the next pause,
-      Done or tab change. */
+  /** A save of the open drawing failed; it is tried again at the next
+      pause, Done or tab change. */
   saveFailed: boolean;
   /** Opens `target` in the tools, a set on `frame` or its standing frame. */
   startDrawing: (target: ImageTarget, frame?: number) => Promise<void>;
   /** Leaves the drawing for another image or a new draft: unsaved pixels
-      are saved in the background and the tools close at once. With
+      are saved, the project is saved, and the tools close at once. With
       `keepCanvasUp` a copy of the canvas stays on screen until the next
       image's editor has painted. */
   leaveDrawing: (keepCanvasUp?: boolean) => void;
-  /** Done: what is drawn is saved, including pixels a pause's save stored
-      without uploading, and the tools close. */
+  /** Done: what is drawn is saved, the project is saved, and the tools
+      close. */
   finishDrawing: () => void;
   /** Closes the tools without saving. */
   stopDrawing: () => void;
@@ -135,37 +133,44 @@ export default function useDrawing({
   storePicture,
   active,
   onDrawingHistory,
+  saveProjectNow,
 }: UseDrawingOptions): DrawingTools {
+  const saveProjectNowRef = useRef(saveProjectNow);
+  saveProjectNowRef.current = saveProjectNow;
   const [drawing, setDrawing] = useState<Drawing | null>(null);
   const drawingRef = useRef(drawing);
   drawingRef.current = drawing;
   const [saveFailed, setSaveFailed] = useState(false);
+  const saveFailedRef = useRef(false);
   const [closedPicture, setClosedPicture] =
     useState<DrawingTools['closedPicture']>(null);
   const releaseClosedPicture = useCallback(() => setClosedPicture(null), []);
   // The drawing that a generated picture replaced while a save of it was
-  // still in flight; that save must not set the image's pixels back to the
+  // still running; that save must not set the image's pixels back to the
   // drawing.
   const abandonedDrawingIdRef = useRef<number | null>(null);
-  // Whether strokes were made since the last save, and the editor's save
-  // and snapshot functions.
+  // Whether strokes were made since the most recent save, and the editor's
+  // save and snapshot functions.
   const dirtyRef = useRef(false);
   const editorRef = useRef<DrawingEditor | null>(null);
   const idleTimerRef = useRef<number>();
-  // One save in flight at a time. A save asked for meanwhile waits as the
-  // pending one; each carries the whole picture, so only the latest matters.
-  const inFlightRef = useRef(false);
-  const pendingRef = useRef<{
-    dataURI: string;
-    meta: PixelEditorSaveMeta;
-    drawing: Drawing;
-    final: boolean;
-  } | null>(null);
-  // When the drawing's PNG was last uploaded, and whether pixels saved
-  // since then have not been uploaded yet.
-  const lastUploadRef = useRef(0);
-  const uploadPendingRef = useRef(false);
-  const leaveAfterSaveRef = useRef(false);
+  // Picture saves, and the steps that wait for them, run one after another,
+  // because a save uses what the save before it made: a new image's key, or
+  // a character set's strip with the earlier frame in it.
+  const chainRef = useRef<Promise<void>>(Promise.resolve());
+  const afterSaves = useCallback((step: () => void | Promise<void>) => {
+    chainRef.current = chainRef.current.then(step).catch(() => undefined);
+  }, []);
+  // Each drawing as its most recent save left it: the key a new image got,
+  // and a set's strip with the saved frame in it.
+  const savedDrawingsRef = useRef(new Map<number, Drawing>());
+  // The drawing whose tools are open, from the start of startDrawing until
+  // it is left or closed or the tab unmounts. A drawing left with its canvas
+  // still showing is no longer open.
+  const openIdRef = useRef<number | null>(null);
+  // The character set's frame asked for, opened once the saves before it
+  // have finished.
+  const nextFrameRef = useRef<{id: number; index: number} | null>(null);
   // The image's generation record when the tools opened; if it changes, a
   // generated picture replaced the image while it was being drawn on.
   const openedOnGenerationRef = useRef<ImageProps['generation']>();
@@ -189,17 +194,40 @@ export default function useDrawing({
   };
   useEffect(() => clearIdleTimer, []);
 
+  const showSaveFailed = (failed: boolean) => {
+    saveFailedRef.current = failed;
+    setSaveFailed(failed);
+  };
+
+  const saveStrokes = () => {
+    if (dirtyRef.current) {
+      editorRef.current?.save();
+    }
+  };
+
+  const forgetSavedDrawing = useCallback(
+    (id: number) =>
+      afterSaves(() => {
+        if (openIdRef.current !== id) {
+          savedDrawingsRef.current.delete(id);
+        }
+      }),
+    [afterSaves]
+  );
+
   const stopDrawing = useCallback(() => {
     clearIdleTimer();
     dirtyRef.current = false;
-    pendingRef.current = null;
-    lastUploadRef.current = 0;
-    uploadPendingRef.current = false;
+    const closedId = openIdRef.current;
+    if (closedId !== null) {
+      forgetSavedDrawing(closedId);
+    }
+    openIdRef.current = null;
+    nextFrameRef.current = null;
     editorRef.current = null;
-    leaveAfterSaveRef.current = false;
-    setSaveFailed(false);
+    showSaveFailed(false);
     setDrawing(null);
-  }, []);
+  }, [forgetSavedDrawing]);
 
   const closeAfterDone = useCallback(
     (key = drawingRef.current?.target.key) => {
@@ -216,19 +244,19 @@ export default function useDrawing({
   }, [stopDrawing]);
 
   // Leaving the level mid-drawing (the panel's Continue, or navigation)
-  // unmounts the tab without Done: unsaved strokes and any pending upload
-  // are saved now, while the editor's canvas still exists.
+  // unmounts the tab without Done: what is drawn is saved now, while the
+  // editor's canvas still exists, and then the project.
   useEffect(
     () => () => {
-      if (
-        drawingRef.current &&
-        (dirtyRef.current || uploadPendingRef.current)
-      ) {
-        leaveAfterSaveRef.current = true;
-        editorRef.current?.save();
+      const open = drawingRef.current;
+      if (!open || openIdRef.current !== open.id) {
+        return;
       }
+      saveStrokes();
+      afterSaves(() => saveProjectNowRef.current?.());
+      openIdRef.current = null;
     },
-    []
+    [afterSaves]
   );
   // The host's undo and redo are cleared when the drawing ends or the tab
   // unmounts; switching pictures within one drawing keeps them.
@@ -254,9 +282,11 @@ export default function useDrawing({
           : 'other',
         target,
       };
-      leaveAfterSaveRef.current = false;
+      dirtyRef.current = false;
+      nextFrameRef.current = null;
       setClosedPicture(null);
       const id = ++drawingIdRef.current;
+      openIdRef.current = id;
       if (existing?.sheet) {
         const {src, frameSize, poses} = existing.sheet;
         const startFrame = frame ?? standingFrameIndex(poses);
@@ -324,6 +354,9 @@ export default function useDrawing({
   }, []);
 
   const scheduleStrokeSave = useCallback(() => {
+    if (openIdRef.current !== drawingRef.current?.id) {
+      return;
+    }
     const unreported = firstEditReportRef.current;
     if (unreported) {
       firstEditReportRef.current = null;
@@ -339,90 +372,66 @@ export default function useDrawing({
     }
     dirtyRef.current = true;
     clearIdleTimer();
-    idleTimerRef.current = window.setTimeout(() => {
-      if (dirtyRef.current) {
-        editorRef.current?.save();
-      }
-    }, STROKE_SAVE_MS);
+    idleTimerRef.current = window.setTimeout(saveStrokes, STROKE_SAVE_MS);
   }, []);
 
-  // The frame to open once the one on the canvas has saved.
-  const nextFrameRef = useRef<number | null>(null);
-  const openFrame = useCallback(async (index: number) => {
-    const current = drawingRef.current;
-    if (!current?.sheet) {
-      return;
-    }
-    const {src, frameSize} = current.sheet;
-    const imageUrl = await cutFrame(src, frameSize, index);
-    setDrawing(d =>
-      d?.sheet ? {...d, imageUrl, sheet: {...d.sheet, index}} : d
-    );
-  }, []);
-
-  // `drawingToSave` is the drawing as the save knows it: the state, or for
-  // a pending save what the save before it made, since React may not have
-  // rendered that yet. `final` marks the drawing's last save (Done, the
-  // tab or another image): the file is uploaded and, if the drawing is
-  // still the open one, the tools close after it.
-  const runSave = useCallback(
+  // A save builds on the drawing as the previous save of it left it, but
+  // keeps the frame index it was made on: the student may have switched
+  // frames since that save.
+  const savePicture = useCallback(
     async (
       dataURI: string,
       meta: PixelEditorSaveMeta,
-      drawingToSave: Drawing,
-      final: boolean
-    ) => {
-      if (abandonedDrawingIdRef.current === drawingToSave.id) {
-        pendingRef.current = null;
+      madeOn: Drawing
+    ): Promise<void> => {
+      const previous = savedDrawingsRef.current.get(madeOn.id);
+      const base = previous
+        ? {
+            ...previous,
+            ...(previous.sheet &&
+              madeOn.sheet && {
+                sheet: {...previous.sheet, index: madeOn.sheet.index},
+              }),
+          }
+        : madeOn;
+      const isOpen = () => openIdRef.current === base.id;
+      if (abandonedDrawingIdRef.current === base.id) {
         return;
       }
-      inFlightRef.current = true;
-      let saved = drawingToSave;
       try {
         // A set's frame goes back into its strip, and the strip is saved.
-        const pixels = drawingToSave.sheet
+        const pixels = base.sheet
           ? await replaceFrame(
-              drawingToSave.sheet.src,
-              drawingToSave.sheet.frameSize,
-              drawingToSave.sheet.index,
+              base.sheet.src,
+              base.sheet.frameSize,
+              base.sheet.index,
               dataURI
             )
           : dataURI;
-        const upload =
-          !drawingToSave.target.key ||
-          final ||
-          Date.now() - lastUploadRef.current >= UPLOAD_GAP_MS;
         const key = await storePicture(
-          drawingToSave.target,
+          base.target,
           () =>
-            saveEdited(drawingToSave.target, pixels, meta, {
-              upload,
-              stillWanted: () =>
-                abandonedDrawingIdRef.current !== drawingToSave.id,
+            saveEdited(base.target, pixels, meta, {
+              stillWanted: () => abandonedDrawingIdRef.current !== base.id,
             }),
-          false
+          false,
+          isOpen
         );
-        if (abandonedDrawingIdRef.current === drawingToSave.id) {
+        if (abandonedDrawingIdRef.current === base.id) {
           return;
         }
-        if (upload) {
-          lastUploadRef.current = Date.now();
-        }
-        if (drawingRef.current?.id === drawingToSave.id) {
-          uploadPendingRef.current = !upload;
-        }
-        setSaveFailed(false);
         // A blank that was saved is an image now: later saves replace it;
         // a saved strip is what the next frame is cut from.
-        saved = {
-          ...drawingToSave,
-          target: {...drawingToSave.target, key},
-          ...(drawingToSave.sheet && {
-            sheet: {...drawingToSave.sheet, src: pixels},
-          }),
-        };
+        savedDrawingsRef.current.set(base.id, {
+          ...base,
+          target: {...base.target, key},
+          ...(base.sheet && {sheet: {...base.sheet, src: pixels}}),
+        });
+        if (isOpen()) {
+          showSaveFailed(false);
+        }
         setDrawing(d =>
-          d && d.id === drawingToSave.id
+          d && d.id === base.id
             ? {
                 ...d,
                 target: {...d.target, key},
@@ -431,118 +440,135 @@ export default function useDrawing({
             : d
         );
       } catch {
-        if (drawingRef.current?.id === drawingToSave.id) {
-          // The picture is still on the canvas. It is marked unsaved, so the
-          // next pause, Done or leaving the tab tries again from the canvas
-          // as it is then; a pending save would only carry older pixels.
+        if (isOpen()) {
+          // The picture is still on the canvas; the next pause, Done or
+          // leaving the tab saves it as it is then.
           dirtyRef.current = true;
-          uploadPendingRef.current = true;
-          pendingRef.current = null;
-          leaveAfterSaveRef.current = false;
           nextFrameRef.current = null;
-          inFlightRef.current = false;
-          setSaveFailed(true);
-          return;
+          showSaveFailed(true);
         }
-        // This failed save was for a drawing that is no longer open, so
-        // there is nothing to retry.
-      } finally {
-        inFlightRef.current = false;
-      }
-      const pending = pendingRef.current;
-      if (pending) {
-        pendingRef.current = null;
-        // A queued save reuses this save's result when both belong to the
-        // same drawing, but keeps its own frame index: the student may
-        // have switched frames while this save ran.
-        await runSave(
-          pending.dataURI,
-          pending.meta,
-          pending.drawing.id === saved.id
-            ? {
-                ...saved,
-                ...(saved.sheet &&
-                  pending.drawing.sheet && {
-                    sheet: {...saved.sheet, index: pending.drawing.sheet.index},
-                  }),
-              }
-            : pending.drawing,
-          pending.final
-        );
-      } else if (final && drawingRef.current?.id === saved.id) {
-        // A new image's key is in `saved` before it is in `drawingRef`.
-        closeAfterDone(saved.target.key);
-      } else if (nextFrameRef.current !== null) {
-        const next = nextFrameRef.current;
-        nextFrameRef.current = null;
-        await openFrame(next);
       }
     },
-    [storePicture, saveEdited, closeAfterDone, openFrame]
-  );
-
-  const selectFrame = useCallback(
-    (index: number) => {
-      if (index === drawingRef.current?.sheet?.index) {
-        return;
-      }
-      if (dirtyRef.current) {
-        nextFrameRef.current = index;
-        editorRef.current?.save();
-      } else {
-        openFrame(index);
-      }
-    },
-    [openFrame]
+    [storePicture, saveEdited]
   );
 
   const handleSave = useCallback(
     (dataURI: string, meta: PixelEditorSaveMeta) => {
       const current = drawingRef.current;
-      if (!current) {
+      if (!current || openIdRef.current !== current.id) {
         return;
       }
       clearIdleTimer();
       dirtyRef.current = false;
-      const final = leaveAfterSaveRef.current;
-      if (inFlightRef.current) {
-        pendingRef.current = {dataURI, meta, drawing: current, final};
-        return;
-      }
-      runSave(dataURI, meta, current, final);
+      afterSaves(() => savePicture(dataURI, meta, current));
     },
-    [runSave]
+    [afterSaves, savePicture]
   );
 
-  const leaveDrawing = useCallback((keepCanvasUp = false) => {
-    if (dirtyRef.current || uploadPendingRef.current) {
-      leaveAfterSaveRef.current = true;
-      editorRef.current?.save();
-    }
-    clearIdleTimer();
-    dirtyRef.current = false;
-    uploadPendingRef.current = false;
-    leaveAfterSaveRef.current = false;
-    const copy = keepCanvasUp ? editorRef.current?.snapshot() : null;
-    editorRef.current = null;
-    setSaveFailed(false);
-    if (!keepCanvasUp) {
-      setDrawing(null);
+  // Opens the frame asked for once the saves before it are done, so it is
+  // cut from the strip they leave. Strokes made while the frame was being
+  // cut are on the frame still showing; they are saved into that frame
+  // first, and the switch waits for that save too.
+  const openNextFrame = useCallback(
+    (id: number) =>
+      afterSaves(async () => {
+        const next = nextFrameRef.current;
+        const current = drawingRef.current;
+        if (!next || next.id !== id || openIdRef.current !== id || !current) {
+          return;
+        }
+        const sheet = savedDrawingsRef.current.get(id)?.sheet ?? current.sheet;
+        if (!sheet) {
+          return;
+        }
+        const imageUrl = await cutFrame(sheet.src, sheet.frameSize, next.index);
+        if (nextFrameRef.current !== next || openIdRef.current !== id) {
+          return;
+        }
+        if (dirtyRef.current) {
+          saveStrokes();
+          openNextFrame(id);
+          return;
+        }
+        nextFrameRef.current = null;
+        setDrawing(d =>
+          d?.sheet
+            ? {...d, imageUrl, sheet: {...d.sheet, index: next.index}}
+            : d
+        );
+      }),
+    [afterSaves]
+  );
+
+  const selectFrame = useCallback(
+    (index: number) => {
+      const open = drawingRef.current;
+      if (!open?.sheet || openIdRef.current !== open.id) {
+        return;
+      }
+      if (index === open.sheet.index) {
+        // Choosing the frame on screen cancels a frame switch still waiting.
+        nextFrameRef.current = null;
+        return;
+      }
+      nextFrameRef.current = {id: open.id, index};
+      saveStrokes();
+      openNextFrame(open.id);
+    },
+    [openNextFrame]
+  );
+
+  const leaveDrawing = useCallback(
+    (keepCanvasUp = false) => {
+      const current = drawingRef.current;
+      if (current && openIdRef.current === current.id) {
+        saveStrokes();
+        afterSaves(() => saveProjectNowRef.current?.());
+        forgetSavedDrawing(current.id);
+      }
+      openIdRef.current = null;
+      nextFrameRef.current = null;
+      clearIdleTimer();
+      dirtyRef.current = false;
+      const copy = keepCanvasUp ? editorRef.current?.snapshot() : null;
+      editorRef.current = null;
+      showSaveFailed(false);
+      if (!keepCanvasUp) {
+        setDrawing(null);
+        return;
+      }
+      if (copy) {
+        previousCanvasRef.current = {canvas: copy, id: drawingIdRef.current};
+      }
+    },
+    [afterSaves, forgetSavedDrawing]
+  );
+
+  // Done saves what is drawn and then the project, and closes the tools,
+  // unless the save failed. Strokes made while the save ran are saved
+  // before the tools close.
+  const finishDrawingRef = useRef<() => void>(() => undefined);
+  const finishDrawing = useCallback(() => {
+    const open = drawingRef.current;
+    if (!open || openIdRef.current !== open.id) {
       return;
     }
-    if (copy) {
-      previousCanvasRef.current = {canvas: copy, id: drawingIdRef.current};
-    }
-  }, []);
-
-  const finishDrawing = useCallback(() => {
-    if (dirtyRef.current || uploadPendingRef.current) {
-      leaveAfterSaveRef.current = true;
-      editorRef.current?.save();
-    } else {
-      closeAfterDone();
-    }
-  }, [closeAfterDone]);
+    saveStrokes();
+    afterSaves(() => {
+      if (openIdRef.current !== open.id || saveFailedRef.current) {
+        return;
+      }
+      if (dirtyRef.current && editorRef.current) {
+        finishDrawingRef.current();
+        return;
+      }
+      saveProjectNowRef.current?.();
+      closeAfterDone(
+        savedDrawingsRef.current.get(open.id)?.target.key ?? open.target.key
+      );
+    });
+  }, [afterSaves, closeAfterDone]);
+  finishDrawingRef.current = finishDrawing;
 
   // Leaving the tab is Done: what was drawn is saved and the tools close.
   useEffect(() => {
