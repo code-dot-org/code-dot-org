@@ -132,6 +132,14 @@ export function bodyBox(
   };
 }
 
+/** Boxes that only meet at an edge do not overlap. */
+export function boxesOverlap(a: CollisionBox, b: CollisionBox): boolean {
+  return (
+    Math.abs(a.x - b.x) < a.halfW + b.halfW &&
+    Math.abs(a.y - b.y) < a.halfH + b.halfH
+  );
+}
+
 // How close a body and a wall may be, in playfield pixels, and still count
 // as touching: resting contact is exact, so a strict overlap test would
 // miss it.

@@ -6,6 +6,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 
 import {
   bodyBox,
+  boxesOverlap,
   CollisionBox,
   PhysicsBox,
   PLATFORM_GRAVITY,
@@ -15,32 +16,38 @@ import {
 
 export interface OverlayBox extends CollisionBox {
   kind: 'wall' | 'body';
-  /** A body and a block touch by touchesWall. For a sprite that is not a
-      player, "when touches" can also fire while this is false. */
+  /** Two bodies touch when they overlap. A body and a block touch when
+      touchesWall holds and `marksBlocks` is true for the sprite. */
   touching: boolean;
 }
 
-/** Each block's cell and each sprite's body, each marked with whether
-    touchesWall holds for it. */
+/**
+ * Each block's cell and each sprite's body, each marked with whether it
+ * touches anything. A sprite for which `marksBlocks` is false is not marked
+ * for touching a block, nor the block for touching it: an object placed on a
+ * block would keep both marked the whole game.
+ */
 export function collisionOverlayBoxes<Sprite extends PhysicsBox>(
   sprites: Sprite[],
   walls: PhysicsBox[],
-  gravityOf: (sprite: Sprite) => number = () => PLATFORM_GRAVITY
+  gravityOf: (sprite: Sprite) => number = () => PLATFORM_GRAVITY,
+  marksBlocks: (sprite: Sprite) => boolean = () => true
 ): OverlayBox[] {
+  const bodies = sprites.map(sprite => bodyBox(sprite, gravityOf(sprite)));
+  const touchesBlock = (sprite: Sprite, wall: PhysicsBox) =>
+    marksBlocks(sprite) && touchesWall(sprite, wall, gravityOf(sprite));
   return [
     ...walls.map(wall => ({
       ...wallBox(wall),
       kind: 'wall' as const,
-      touching: sprites.some(sprite =>
-        touchesWall(sprite, wall, gravityOf(sprite))
-      ),
+      touching: sprites.some(sprite => touchesBlock(sprite, wall)),
     })),
-    ...sprites.map(sprite => ({
-      ...bodyBox(sprite, gravityOf(sprite)),
+    ...sprites.map((sprite, i) => ({
+      ...bodies[i],
       kind: 'body' as const,
-      touching: walls.some(wall =>
-        touchesWall(sprite, wall, gravityOf(sprite))
-      ),
+      touching:
+        walls.some(wall => touchesBlock(sprite, wall)) ||
+        bodies.some((other, j) => j !== i && boxesOverlap(bodies[i], other)),
     })),
   ];
 }

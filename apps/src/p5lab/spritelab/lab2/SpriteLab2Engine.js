@@ -62,6 +62,7 @@ import {
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   bodyBox,
+  boxesOverlap,
   canStartJump,
   jumpSpeedFromBelow,
   MAX_GRACE_DROP,
@@ -128,8 +129,6 @@ const CANVAS_DENSITY_FACTOR = 2;
 const RESTART_QUIET_MS = 1000;
 // The inputEvents type a when-player hat registers.
 const PLAYER_ACTION_EVENT = 'playerAction';
-// The collision boxes overlay's outline of a sprite's collider.
-const COLLIDER_OUTLINE = [255, 255, 255, 200];
 // The collision boxes overlay's fills, as [apart, touching] for each kind.
 const COLLISION_BOX_FILLS = {
   wall: [
@@ -824,51 +823,17 @@ export default class SpriteLab2Engine extends SpriteLab {
       const id = addSprite(opts);
       const sprite = id === undefined ? null : library.nativeSpriteMap[id];
       if (sprite) {
-        // "When touches" against a platform block: the stock overlap misses
-        // a body that rests on a block without overlapping it, so
-        // touchesWall is asked first. For a player it is the only test: the
-        // stock one measures the whole picture, which is wider than the
-        // body, and counts a corner brush. Other sprites get the stock test
-        // too: the stock collide stops most of them when their picture
-        // meets a block, before their body reaches it.
+        // The "when touches" block calls sprite.overlap.
         const overlap = sprite.overlap.bind(sprite);
         sprite.overlap = (target, callback) => {
-          const wall =
-            target?.group === 'walls' && sprite.group !== 'walls'
-              ? target
-              : sprite.group === 'walls' && target?.group !== 'walls'
-              ? sprite
-              : null;
-          const other = wall === target ? sprite : target;
-          const player = wall && isPlayerGroup(other.group);
-          // A player is measured at the position the last frame's movement
-          // was resolved to. While events run, its position holds this
-          // frame's movement, which is not resolved yet and can be deep
-          // inside a block it will be pushed out of.
-          const touching =
-            wall &&
-            (player
-              ? touchesWall(
-                  {
-                    position: other.__slab2Prev || other.position,
-                    width: other.width,
-                    height: other.height,
-                    scale: other.scale,
-                  },
-                  wall,
-                  this.platformGravity_
-                )
-              : touchesWall(other, wall));
-          if (touching) {
-            if (callback) {
-              callback(sprite, target);
-            }
-            return true;
+          const touching = this.platformTouch_(sprite, target);
+          if (touching === undefined) {
+            return overlap(target, callback);
           }
-          if (player) {
-            return false;
+          if (touching && callback) {
+            callback(sprite, target);
           }
-          return overlap(target, callback);
+          return touching;
         };
       }
       return id;
@@ -1562,9 +1527,71 @@ export default class SpriteLab2Engine extends SpriteLab {
     camera.off();
   }
 
-  // Each sprite's outline is the rectangle around its collider, which the
-  // stock overlap test measures: for a touch between two sprites, and as
-  // the second test between a block and a sprite that is not a player.
+  // Whether two sprites touch, where the engine has a rule for the pair;
+  // undefined leaves the pair to the stock overlap test.
+  platformTouch_(sprite, target) {
+    if (!target?.position) {
+      return undefined;
+    }
+    const spriteIsWall = sprite.group === 'walls';
+    const targetIsWall = target.group === 'walls';
+    if (spriteIsWall !== targetIsWall) {
+      const wall = spriteIsWall ? sprite : target;
+      const other = spriteIsWall ? target : sprite;
+      // The stock test misses a body that rests on a block without
+      // overlapping it, so every sprite gets touchesWall.
+      if (touchesWall(this.measuredBox_(other), wall, this.gravityOf_(other))) {
+        return true;
+      }
+      // For a player touchesWall is the only test: the stock one measures
+      // the whole picture, which is wider than the body, and counts a
+      // corner brush.
+      // The stock collide stops most other sprites when their picture meets
+      // a block, before their body reaches it, so they need the stock test
+      // too.
+      return isPlayerGroup(other.group) ? false : undefined;
+    }
+    if (spriteIsWall || !this.usesPlatformPhysics_) {
+      return undefined;
+    }
+    return boxesOverlap(
+      bodyBox(this.measuredBox_(sprite), this.gravityOf_(sprite)),
+      bodyBox(this.measuredBox_(target), this.gravityOf_(target))
+    );
+  }
+
+  // Whether the platform physics moves this sprite: a player, or a sprite a
+  // behavior marked the last time the physics ran (see usePlatformBody).
+  resolvesMovement_(sprite) {
+    return isPlayerGroup(sprite.group) || this.prevBodies_.includes(sprite);
+  }
+
+  // The gravity that says which end of the picture a sprite's body is
+  // anchored at.
+  gravityOf_(sprite) {
+    return isPlayerGroup(sprite.group)
+      ? this.platformGravity_
+      : this.prevBodies_.includes(sprite)
+      ? this.bodyGravity_()
+      : PLATFORM_GRAVITY;
+  }
+
+  // The sprite's box for a touch. A sprite the platform physics moves is
+  // measured at the position the last frame's movement was resolved to:
+  // while events run, its position holds this frame's movement, which is
+  // not resolved yet and can be deep inside a block it will be pushed out
+  // of.
+  measuredBox_(sprite) {
+    return {
+      position:
+        (this.resolvesMovement_(sprite) && sprite.__slab2Prev) ||
+        sprite.position,
+      width: sprite.width,
+      height: sprite.height,
+      scale: sprite.scale,
+    };
+  }
+
   drawCollisionBoxes_(library) {
     const {p5} = library;
     const sprites = Object.values(library.nativeSpriteMap).filter(
@@ -1573,21 +1600,14 @@ export default class SpriteLab2Engine extends SpriteLab {
     p5.push();
     p5.rectMode(p5.CENTER);
     p5.noStroke();
-    collisionOverlayBoxes(sprites, this.wallsThisFrame_(library), sprite =>
-      isPlayerGroup(sprite.group) ? this.platformGravity_ : PLATFORM_GRAVITY
+    collisionOverlayBoxes(
+      sprites,
+      this.wallsThisFrame_(library),
+      sprite => this.gravityOf_(sprite),
+      sprite => this.resolvesMovement_(sprite)
     ).forEach(box => {
       p5.fill(...COLLISION_BOX_FILLS[box.kind][box.touching ? 1 : 0]);
       p5.rect(box.x, box.y, box.halfW * 2, box.halfH * 2);
-    });
-    p5.rectMode(p5.CORNER);
-    p5.noFill();
-    p5.stroke(...COLLIDER_OUTLINE);
-    p5.strokeWeight(1);
-    sprites.forEach(sprite => {
-      const bounds = sprite.collider?.getBoundingBox();
-      if (bounds) {
-        p5.rect(bounds.left, bounds.top, bounds.width, bounds.height);
-      }
     });
     p5.pop();
   }

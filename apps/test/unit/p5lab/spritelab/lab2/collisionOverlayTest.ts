@@ -26,6 +26,35 @@ describe('collisionOverlay', () => {
     ]);
   });
 
+  it('marks two sprites whose bodies overlap, and neither when only their pictures overlap', () => {
+    // 25x50 sprites have 20x40 bodies. 24px apart, the pictures overlap by
+    // 1px and the bodies are 4px apart; 19px apart, the bodies overlap.
+    const touching = (dx: number) =>
+      collisionOverlayBoxes(
+        [box(100, 100, 25, 50), box(100 + dx, 100, 25, 50)],
+        []
+      ).map(b => b.touching);
+    expect(touching(24)).toEqual([false, false]);
+    expect(touching(19)).toEqual([true, true]);
+  });
+
+  it('leaves an object on a block unmarked when marksBlocks is false for it, until a sprite overlaps it', () => {
+    const walls = [box(75, 325, 50, 50)];
+    const object = box(75, 275, 25, 50);
+    const marks = (sprites: ReturnType<typeof box>[]) =>
+      collisionOverlayBoxes(
+        sprites,
+        walls,
+        undefined,
+        sprite => sprite !== object
+      ).map(b => b.touching);
+    // The block, then the object.
+    expect(marks([object])).toEqual([false, false]);
+    // A second sprite standing on the block and overlapping the object marks
+    // all three.
+    expect(marks([object, box(85, 275, 25, 50)])).toEqual([true, true, true]);
+  });
+
   it('marks nothing when a sprite only brushes a corner', () => {
     const walls = [box(75, 325, 50, 50)];
     // 3px of the body over the block's top-left corner on both axes.

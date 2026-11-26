@@ -7,6 +7,7 @@ import {
   isSupported,
   touchesWall,
   bodyBox,
+  boxesOverlap,
   canStartJump,
   jumpSpeedFromBelow,
   LEDGE_FALL_SPEED,
@@ -422,6 +423,18 @@ describe('platformPhysics with custom gravity', () => {
     expect(bodyBox(resting, -PLATFORM_GRAVITY).y).toBe(370);
     // Measured as if gravity were down, the body is 10px below the block.
     expect(touchesWall(resting, wall)).toBe(false);
+  });
+
+  it('boxesOverlap is true for boxes that share area, and false for boxes that only meet', () => {
+    const at = (x: number, y: number) => ({x, y, halfW: 10, halfH: 20});
+    expect(boxesOverlap(at(0, 0), at(19, 0))).toBe(true);
+    expect(boxesOverlap(at(0, 0), at(0, 39))).toBe(true);
+    // Edge to edge on each axis, then apart.
+    expect(boxesOverlap(at(0, 0), at(20, 0))).toBe(false);
+    expect(boxesOverlap(at(0, 0), at(0, 40))).toBe(false);
+    expect(boxesOverlap(at(0, 0), at(25, 0))).toBe(false);
+    // Overlapping on one axis only.
+    expect(boxesOverlap(at(0, 0), at(5, 45))).toBe(false);
   });
 
   it('MAX_GRACE_DROP covers a fall at full speed for the whole grace period', () => {
