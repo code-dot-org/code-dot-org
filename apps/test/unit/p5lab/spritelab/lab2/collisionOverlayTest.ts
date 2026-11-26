@@ -38,7 +38,7 @@ describe('collisionOverlay', () => {
     expect(touching(19)).toEqual([true, true]);
   });
 
-  it('leaves an object on a block unmarked when marksBlocks is false for it, until a sprite overlaps it', () => {
+  it('leaves an object unmarked for the block it rests on when ignoresFooting is true for it', () => {
     const walls = [box(75, 325, 50, 50)];
     const object = box(75, 275, 25, 50);
     const marks = (sprites: ReturnType<typeof box>[]) =>
@@ -46,13 +46,24 @@ describe('collisionOverlay', () => {
         sprites,
         walls,
         undefined,
-        sprite => sprite !== object
+        sprite => sprite === object
       ).map(b => b.touching);
     // The block, then the object.
     expect(marks([object])).toEqual([false, false]);
     // A second sprite standing on the block and overlapping the object marks
     // all three.
     expect(marks([object, box(85, 275, 25, 50)])).toEqual([true, true, true]);
+  });
+
+  it('still marks a sprite pressed against the side of a block when ignoresFooting is true for it', () => {
+    // The block's right edge is at x 100; the body is 20px wide.
+    const boxes = collisionOverlayBoxes(
+      [box(110, 325, 25, 50)],
+      [box(75, 325, 50, 50)],
+      undefined,
+      () => true
+    );
+    expect(boxes.map(b => b.touching)).toEqual([true, true]);
   });
 
   it('marks nothing when a sprite only brushes a corner', () => {

@@ -66,6 +66,7 @@ import {
   canStartJump,
   jumpSpeedFromBelow,
   MAX_GRACE_DROP,
+  pushBodyOutOfWalls,
   resolvePlatformPhysics,
   touchesWall,
   usesPlatformPhysics,
@@ -1538,18 +1539,17 @@ export default class SpriteLab2Engine extends SpriteLab {
     if (spriteIsWall !== targetIsWall) {
       const wall = spriteIsWall ? sprite : target;
       const other = spriteIsWall ? target : sprite;
-      // The stock test misses a body that rests on a block without
-      // overlapping it, so every sprite gets touchesWall.
+      // The stock test counts any overlap of the whole picture, which is
+      // wider than the body, so it counts a corner brush. It misses a body
+      // that rests on a block without overlapping it.
       if (touchesWall(this.measuredBox_(other), wall, this.gravityOf_(other))) {
         return true;
       }
-      // For a player touchesWall is the only test: the stock one measures
-      // the whole picture, which is wider than the body, and counts a
-      // corner brush.
-      // The stock collide stops most other sprites when their picture meets
-      // a block, before their body reaches it, so they need the stock test
-      // too.
-      return isPlayerGroup(other.group) ? false : undefined;
+      // In a platform scene sprites are stopped where their bodies meet a
+      // block, so touchesWall alone decides. Outside one nothing stops a
+      // sprite at a block, and the stock test decides when touchesWall says
+      // no.
+      return this.usesPlatformPhysics_ ? false : undefined;
     }
     if (spriteIsWall || !this.usesPlatformPhysics_) {
       return undefined;
@@ -1604,7 +1604,7 @@ export default class SpriteLab2Engine extends SpriteLab {
       sprites,
       this.wallsThisFrame_(library),
       sprite => this.gravityOf_(sprite),
-      sprite => this.resolvesMovement_(sprite)
+      sprite => !this.resolvesMovement_(sprite)
     ).forEach(box => {
       p5.fill(...COLLISION_BOX_FILLS[box.kind][box.touching ? 1 : 0]);
       p5.rect(box.x, box.y, box.halfW * 2, box.halfH * 2);
@@ -1637,8 +1637,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     const p5 = this.p5Wrapper.p5;
-    // Snapshot positions before the stock pass below: the movement
-    // reconstruction must not see its shove.
+    // Each sprite's position as this frame's movement left it, which the
+    // resolver reconstructs the movement from.
     const snapshot = sprite => ({
       sprite,
       x: sprite.position.x,
@@ -1678,15 +1678,15 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
     const bodyUpright = this.bodyGravity_() < 0 ? -1 : 1;
     bodies.forEach(({sprite}) => sprite.mirrorY(bodyUpright));
-    // Other sprites keep the stock resolver; running it pre-paint means
-    // props draw already resolved. A sprite marked as passing through walls
-    // this frame is left where its behavior put it.
+    // A sprite the resolver does not move is stopped where its body meets a
+    // block, as the resolver stops the ones it moves. A sprite marked as
+    // passing through walls this frame is left where its behavior put it.
     const walls = this.library.getSpriteArray({group: 'walls'});
     this.library.getSpriteArray({group: ''}).forEach(sprite => {
       const passing = sprite.__slab2PassWalls;
       sprite.__slab2PassWalls = false;
-      if (!passing) {
-        walls.forEach(wall => sprite.collide(wall));
+      if (!passing && !bodies.some(b => b.sprite === sprite)) {
+        pushBodyOutOfWalls(sprite, walls);
       }
     });
     const view = {width: p5.width, height: p5.height};
@@ -1884,8 +1884,8 @@ export default class SpriteLab2Engine extends SpriteLab {
    * itself (p5.play would run the whole sheet end to end) and the sprite
    * never changes costume. A player that stops with its toes over a drop
    * holds back from the edge: the jump pose's first frame for a moment,
-   * then standing; moving again re-arms it. Only players can be airborne: patrollers and
-   * props ride the stock resolver and would read as jumping at every seam.
+   * then standing; moving again re-arms it. Only players can be airborne:
+   * patrollers and props would read as jumping at every seam.
    */
   updateCharacterAnimations_() {
     const p5 = this.p5Wrapper.p5;

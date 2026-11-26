@@ -10,6 +10,7 @@ import {
   CollisionBox,
   PhysicsBox,
   PLATFORM_GRAVITY,
+  TOUCH_SLACK,
   touchesWall,
   wallBox,
 } from './platformPhysics';
@@ -17,25 +18,31 @@ import {
 export interface OverlayBox extends CollisionBox {
   kind: 'wall' | 'body';
   /** Two bodies touch when they overlap. A body and a block touch when
-      touchesWall holds and `marksBlocks` is true for the sprite. */
+      touchesWall holds, unless the sprite only rests on the block and
+      `ignoresFooting` is true for it. */
   touching: boolean;
 }
 
 /**
  * Each block's cell and each sprite's body, each marked with whether it
- * touches anything. A sprite for which `marksBlocks` is false is not marked
- * for touching a block, nor the block for touching it: an object placed on a
- * block would keep both marked the whole game.
+ * touches anything. A sprite for which `ignoresFooting` is true is not
+ * marked for the block it rests on, nor that block for it: an object placed
+ * on a block would keep both marked the whole game.
  */
 export function collisionOverlayBoxes<Sprite extends PhysicsBox>(
   sprites: Sprite[],
   walls: PhysicsBox[],
   gravityOf: (sprite: Sprite) => number = () => PLATFORM_GRAVITY,
-  marksBlocks: (sprite: Sprite) => boolean = () => true
+  ignoresFooting: (sprite: Sprite) => boolean = () => false
 ): OverlayBox[] {
   const bodies = sprites.map(sprite => bodyBox(sprite, gravityOf(sprite)));
+  const restsOn = (body: CollisionBox, wall: PhysicsBox) => {
+    const box = wallBox(wall);
+    return Math.abs(body.y + body.halfH - (box.y - box.halfH)) <= TOUCH_SLACK;
+  };
   const touchesBlock = (sprite: Sprite, wall: PhysicsBox) =>
-    marksBlocks(sprite) && touchesWall(sprite, wall, gravityOf(sprite));
+    touchesWall(sprite, wall, gravityOf(sprite)) &&
+    !(ignoresFooting(sprite) && restsOn(bodies[sprites.indexOf(sprite)], wall));
   return [
     ...walls.map(wall => ({
       ...wallBox(wall),

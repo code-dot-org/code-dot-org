@@ -70,8 +70,8 @@ export interface PhysicsSprite extends PhysicsBox {
   __slab2Prev?: {x: number; y: number};
 }
 
-// A player with its position snapshotted before any stock collide pass
-// this frame: the movement reconstruction must not see that pass's shove.
+// A player with the position this frame's movement left it at, which the
+// resolver reconstructs the movement from.
 export interface MovedPlayer {
   sprite: PhysicsSprite;
   x: number;
@@ -144,6 +144,39 @@ export function boxesOverlap(a: CollisionBox, b: CollisionBox): boolean {
 // as touching: resting contact is exact, so a strict overlap test would
 // miss it.
 export const TOUCH_SLACK = 1;
+
+/**
+ * Pushes a sprite's body out of each wall it overlaps, the short way, and
+ * drops the sprite's speed into that wall. A body that rests on a wall does
+ * not overlap it and stays put.
+ */
+export function pushBodyOutOfWalls(
+  sprite: PhysicsSprite,
+  walls: PhysicsBox[]
+): void {
+  walls.forEach(wall => {
+    const body = bodyBox(sprite);
+    const box = wallBox(wall);
+    const overlapX = body.halfW + box.halfW - Math.abs(body.x - box.x);
+    const overlapY = body.halfH + box.halfH - Math.abs(body.y - box.y);
+    if (overlapX <= 0 || overlapY <= 0) {
+      return;
+    }
+    if (overlapX <= overlapY) {
+      const out = body.x < box.x ? -1 : 1;
+      sprite.position.x += out * overlapX;
+      if (sprite.velocity.x * out < 0) {
+        sprite.velocity.x = 0;
+      }
+    } else {
+      const out = body.y < box.y ? -1 : 1;
+      sprite.position.y += out * overlapY;
+      if (sprite.velocity.y * out < 0) {
+        sprite.velocity.y = 0;
+      }
+    }
+  });
+}
 
 // A touch needs the body and the wall to share at least this fraction of
 // the narrower one along the face where they meet, so brushing a corner is

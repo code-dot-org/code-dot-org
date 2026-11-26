@@ -12,6 +12,7 @@ import {
   jumpSpeedFromBelow,
   LEDGE_FALL_SPEED,
   MAX_GRACE_DROP,
+  pushBodyOutOfWalls,
   JUMP_GRACE_FRAMES,
   resolvePlatformPhysics,
   PhysicsBox,
@@ -423,6 +424,48 @@ describe('platformPhysics with custom gravity', () => {
     expect(bodyBox(resting, -PLATFORM_GRAVITY).y).toBe(370);
     // Measured as if gravity were down, the body is 10px below the block.
     expect(touchesWall(resting, wall)).toBe(false);
+  });
+
+  describe('pushBodyOutOfWalls', () => {
+    // Cell (col 1, row 6): x 50 to 100, y 300 to 350. The sprite's body is
+    // 20x40, centred 5px below the picture's centre.
+    const wall = wallAt(1, 6);
+
+    it('pushes a body that entered a side back out of it, and drops its speed into the wall', () => {
+      // Body from x 34 to 54: 4px inside the left side.
+      const sprite = makeSprite(44, 325);
+      sprite.velocity.x = 5;
+      sprite.velocity.y = 2;
+      pushBodyOutOfWalls(sprite, [wall]);
+      expect(sprite.position).toEqual({x: 40, y: 325});
+      expect(sprite.velocity).toEqual({x: 0, y: 2});
+    });
+
+    it('pushes a body that entered from above up onto the top', () => {
+      // Body bottom at y 303: 3px inside the top.
+      const sprite = makeSprite(75, 278);
+      sprite.velocity.y = 3;
+      pushBodyOutOfWalls(sprite, [wall]);
+      expect(sprite.position).toEqual({x: 75, y: 275});
+      expect(sprite.velocity.y).toBe(0);
+    });
+
+    it('keeps the speed of a body that is moving away from the wall', () => {
+      const sprite = makeSprite(44, 325);
+      sprite.velocity.x = -5;
+      pushBodyOutOfWalls(sprite, [wall]);
+      expect(sprite.velocity.x).toBe(-5);
+    });
+
+    it('does not move a body that rests on a wall, or whose picture alone overlaps it', () => {
+      const resting = makeSprite(75, 275);
+      pushBodyOutOfWalls(resting, [wall]);
+      expect(resting.position).toEqual({x: 75, y: 275});
+      // The 25px picture reaches x 51.5, the 20px body only x 49.
+      const beside = makeSprite(39, 325);
+      pushBodyOutOfWalls(beside, [wall]);
+      expect(beside.position).toEqual({x: 39, y: 325});
+    });
   });
 
   it('boxesOverlap is true for boxes that share area, and false for boxes that only meet', () => {
