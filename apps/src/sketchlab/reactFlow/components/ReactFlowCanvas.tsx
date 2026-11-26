@@ -554,7 +554,7 @@ export default function ReactFlowCanvas({
     [duplicateNode, duplicateLine]
   );
 
-  const {focusEntry, handleFocusCapture} = useFocusManagement(
+  const {focusEntry, handleFocusCapture, focusVisible} = useFocusManagement(
     tabOrder,
     edges,
     nodeOrEdgeFocused,
@@ -841,7 +841,7 @@ export default function ReactFlowCanvas({
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
 
-  const {displayNodes, displayEdges} = useDisplayElements({
+  const {displayNodes, displayEdges, focusedEdgeId} = useDisplayElements({
     nodes,
     edges,
     activeEntry,
@@ -862,15 +862,11 @@ export default function ReactFlowCanvas({
   // focused edge would otherwise have no visible indicator.
   const outlinedEdgeIds = useMemo(() => {
     const ids = displayEdges.filter(edge => edge.selected).map(edge => edge.id);
-    const focusedEdgeId =
-      nodeOrEdgeFocused && lastFocusedEntry?.type === 'edge'
-        ? lastFocusedEntry.id
-        : null;
     if (focusedEdgeId && !ids.includes(focusedEdgeId)) {
       ids.push(focusedEdgeId);
     }
     return ids;
-  }, [displayEdges, nodeOrEdgeFocused, lastFocusedEntry]);
+  }, [displayEdges, focusedEdgeId]);
 
   // Debounced save: sync ReactFlow state back to project sources.
   const saveTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -1243,7 +1239,10 @@ export default function ReactFlowCanvas({
                         </Panel>
                       )}
                       <Background />
-                      <EdgeSelectionOutlines edgeIds={outlinedEdgeIds} />
+                      <EdgeSelectionOutlines
+                        edgeIds={outlinedEdgeIds}
+                        focusVisibleEdgeId={focusVisible ? focusedEdgeId : null}
+                      />
                       <CanvasControls
                         onUndo={handleUndo}
                         onRedo={handleRedo}

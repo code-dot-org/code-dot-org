@@ -7,7 +7,7 @@ $button-height-narrow: 40px;
 $button-height-small: 20px;
 
 @mixin focus-outline {
-  outline: var(--borders-brand-teal-primary, #0093a4) solid 2px;
+  outline: var(--border-focused-primary, #0093a4) solid 2px;
   outline-offset: 2px;
 }
 

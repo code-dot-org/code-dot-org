@@ -5,6 +5,7 @@ import {
   SketchlabReactFlowNode,
 } from '@cdo/apps/lab2/types';
 import {useDisplayElements} from '@cdo/apps/sketchlab/reactFlow/hooks/useDisplayElements';
+import type {TabOrderEntry} from '@cdo/apps/sketchlab/reactFlow/utils/computeTabOrder';
 
 const node = (
   id: string,
@@ -21,15 +22,16 @@ const node = (
 
 const display = (
   nodes: SketchlabReactFlowNode[],
-  edges: SketchlabReactFlowEdge[] = []
+  edges: SketchlabReactFlowEdge[] = [],
+  lastFocusedEntry: TabOrderEntry | null = null
 ) =>
   renderHook(() =>
     useDisplayElements({
       nodes,
       edges,
       activeEntry: null,
-      nodeOrEdgeFocused: false,
-      lastFocusedEntry: null,
+      nodeOrEdgeFocused: lastFocusedEntry !== null,
+      lastFocusedEntry,
       connectingFrom: null,
       readOnly: false,
       grabMode: false,
@@ -84,5 +86,23 @@ describe('useDisplayElements ariaLabel', () => {
     expect(display(ends, [locked]).displayEdges[0].ariaLabel).toBe(
       'Line from A to B, locked'
     );
+  });
+});
+
+describe('useDisplayElements focusedEdgeId', () => {
+  const ends = [node('a', 'text', {text: 'A'}), node('b', 'text', {text: 'B'})];
+  const edge = {id: 'e', source: 'a', target: 'b'} as SketchlabReactFlowEdge;
+
+  it('is the focused edge', () => {
+    expect(display(ends, [edge], {type: 'edge', id: 'e'}).focusedEdgeId).toBe(
+      'e'
+    );
+  });
+
+  it('is null when a node or nothing is focused', () => {
+    expect(
+      display(ends, [edge], {type: 'node', id: 'a'}).focusedEdgeId
+    ).toBeNull();
+    expect(display(ends, [edge]).focusedEdgeId).toBeNull();
   });
 });
