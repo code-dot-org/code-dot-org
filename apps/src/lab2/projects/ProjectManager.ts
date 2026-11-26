@@ -38,6 +38,10 @@ import {SourcesStore} from './SourcesStore';
 
 const {reload} = require('@cdo/apps/utils');
 
+export type SourcesPreparer = (
+  sources: ProjectSources
+) => Promise<ProjectSources>;
+
 export type SaveTrigger = 'autosave' | 'flush' | 'unload';
 
 export default class ProjectManager {
@@ -60,6 +64,7 @@ export default class ProjectManager {
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
   private saveFailListeners: ((error: Error) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
+  private sourcesPreparer: SourcesPreparer | undefined;
   // The last source we saved or loaded, or undefined if we have not saved a source yet.
   private lastSource: string | undefined;
   // The next source to save, or undefined if we have no source to save.
@@ -436,6 +441,16 @@ export default class ProjectManager {
     this.saveFailListeners.push(listener);
   }
 
+  /**
+   * Sets a step that each save runs on the sources just before writing them,
+   * for a lab that stores part of a project elsewhere first, such as image
+   * files. What it returns is what is saved. A step that throws fails the
+   * save.
+   */
+  setSourcesPreparer(preparer: SourcesPreparer | undefined) {
+    this.sourcesPreparer = preparer;
+  }
+
   addSaveStartListener(listener: () => void) {
     this.saveStartListeners.push(listener);
   }
@@ -611,11 +626,17 @@ export default class ProjectManager {
       return;
     }
     // Only save the source if it has changed or we are skipping the changed check.
+    // What was written, which a sources preparer may have changed.
+    let sourcesSaved = sourcesBeingSaved;
     if (sourcesBeingSaved && (sourceChanged || skipSourcesChangedCheck)) {
       try {
+        const prepared = this.sourcesPreparer
+          ? await this.sourcesPreparer(sourcesBeingSaved)
+          : sourcesBeingSaved;
+        sourcesSaved = prepared;
         await this.sourcesStore.save(
           this.channelId,
-          sourcesBeingSaved,
+          prepared,
           this.lastChannel.projectType,
           forceNewVersion || this.getForceNewVersion()
         );
@@ -639,7 +660,7 @@ export default class ProjectManager {
         );
         return;
       }
-      this.lastSource = JSON.stringify(sourcesBeingSaved);
+      this.lastSource = JSON.stringify(sourcesSaved);
 
       // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
       if (forceNewVersion || this.getForceNewVersion()) {
@@ -669,10 +690,10 @@ export default class ProjectManager {
       // If the sources contain a labConfig entry, then also save this to the
       // channel, which means that the labConfig entry will also be saved in the
       // Project model in the database, specifically inside the value field JSON.
-      if (sourcesBeingSaved?.labConfig) {
+      if (sourcesSaved?.labConfig) {
         channelUpdate = {
           ...channelUpdate,
-          labConfig: sourcesBeingSaved.labConfig,
+          labConfig: sourcesSaved.labConfig,
         };
       }
 

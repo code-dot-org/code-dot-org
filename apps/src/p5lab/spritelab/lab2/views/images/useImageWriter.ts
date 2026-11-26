@@ -1,8 +1,8 @@
 // Writing the Images tab's pictures into the project. A generated or drawn
 // picture becomes an image's pixels as soon as it is ready. A generated
-// picture is uploaded once; a drawn picture is uploaded to one file, and its
-// later uploads overwrite that file. When a session ends, uploaded files
-// that no image points at are deleted.
+// picture is uploaded at once. Drawn pixels on an existing image wait for
+// the project's next save to upload them (see pendingUploads.ts). When a
+// session ends, uploaded files that no image points at are deleted.
 
 import {useCallback, useEffect, useRef} from 'react';
 import {AnyAction} from 'redux';
@@ -12,10 +12,7 @@ import {
   deleteAnimation,
   isNameUnique,
 } from '@cdo/apps/p5lab/redux/animationList';
-import {
-  bytesToDataURI,
-  dataURIToBytes,
-} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
+import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {
   GeneratedImageResult,
   UploadImageFunction,
@@ -34,14 +31,13 @@ import {
   repointAnimation,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
 import {Verdict} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/verdict';
-import useReclaimAsset, {
-  fileOf,
-} from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
+import useReclaimAsset from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
 import useReleaseRemovedImages from '@cdo/apps/p5lab/spritelab/lab2/views/useReleaseRemovedImages';
 import {PixelEditorSaveMeta} from '@cdo/apps/pixelEditor/PixelEditor';
 import {getStore} from '@cdo/apps/redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {holdPixels, uploadDrawing, uploadsWithSave} from './pendingUploads';
 import {ImageProps} from './projectImages';
 
 /** Which image a picture is for: an existing one by key, or a new one. */
@@ -90,9 +86,9 @@ export interface ImageWriter {
       when the file cannot be uploaded. */
   acceptUploaded: (target: ImageTarget, file: UploadedImage) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
-      its key, as acceptGenerated does. Later uploads for an image whose
-      file is a drawing overwrite that file; in levelbuilder each upload is
-      a new file. Rejects when the file cannot be uploaded. */
+      its key, as acceptGenerated does. On an existing image of a project
+      whose saves upload drawings, the pixels wait for the next save;
+      otherwise they are uploaded first, and a failed upload rejects. */
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
@@ -122,34 +118,13 @@ const measuredSize = async (dataURI: string) =>
 const propsOf = (key: string): ImageProps | undefined =>
   getStore().getState().animationList.propsByKey[key];
 
-// The form of the name saveEdited gives a drawing's file. Uploaded pictures
-// are named upload_<name>_<time> and generated ones generated-<id>, so
-// neither matches.
-const DRAWN_FILE = /^(?!upload_)[a-z0-9_]+_\d{13}\.png$/;
-
-// The file name of a hand-drawn image whose file saveEdited uploaded;
-// undefined for any other image.
-const drawnFileOf = (props: ImageProps): string | undefined => {
-  if (!props.edited || !props.sourceUrl?.startsWith('/v3/assets/')) {
-    return undefined;
-  }
-  let name: string;
-  try {
-    name = decodeURIComponent(
-      props.sourceUrl.split('?')[0].split('/').pop() ?? ''
-    );
-  } catch {
-    return undefined;
-  }
-  return DRAWN_FILE.test(name) ? name : undefined;
-};
-
 export default function useImageWriter({
   uploadImage,
   imageRole,
   onDeleteImage,
 }: WriterOptions): ImageWriter {
   const dispatch = useAppDispatch();
+  const channelId = useAppSelector(state => state.lab.channel?.id);
   const reclaimAsset = useReclaimAsset();
   const releaseRemovedImages = useReleaseRemovedImages();
   // Uploads keyed by the result's filename, so choosing an earlier picture
@@ -158,9 +133,6 @@ export default function useImageWriter({
   // The URL of every file the session uploaded, and of every file an image
   // stopped pointing at; one file can appear under several ?t= URLs.
   const sessionUrlsRef = useRef(new Set<string>());
-  // Image key → the file its drawing was uploaded to in this session, kept
-  // even after the image's link moves to another picture.
-  const drawingFilesRef = useRef(new Map<string, string>());
   const recordSessionUrl = (url?: string) => {
     if (url) {
       sessionUrlsRef.current.add(url);
@@ -182,13 +154,7 @@ export default function useImageWriter({
     sessionUrlsRef.current = new Set();
     uploadsRef.current = new Map();
   }, [reclaimAsset]);
-  const endSession = useCallback(() => {
-    releaseSessionFiles();
-    drawingFilesRef.current = new Map();
-  }, [releaseSessionFiles]);
-  // Unmount leaves drawingFilesRef in place: a drawing's last save can run
-  // after this, and should overwrite the drawing's file even if the image's
-  // link has moved.
+  const endSession = releaseSessionFiles;
   useEffect(() => releaseSessionFiles, [releaseSessionFiles]);
 
   const write = useCallback(
@@ -287,41 +253,25 @@ export default function useImageWriter({
       {stillWanted}: SaveEditedOptions = {}
     ) => {
       const existing = target.key ? propsOf(target.key) : undefined;
-      const safeName = (existing?.name || 'image')
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '_');
-      const drawingFile =
-        target.key && existing
-          ? drawingFilesRef.current.get(target.key) ?? drawnFileOf(existing)
-          : undefined;
-      const filename = drawingFile ?? `${safeName}_${Date.now()}.png`;
-      const uploadedUrl = await upload(
-        filename,
-        dataURIToBytes(dataURI),
-        'image/png'
-      );
-      // uploadImage keeps the given filename for the project's files, so a
-      // later upload under it replaces the file; in levelbuilder it uploads
-      // to the level under a new random name.
-      const replaceable = fileOf(uploadedUrl).endsWith(
-        `/${encodeURIComponent(filename)}`
-      );
-      // A new query string on each upload, so the browser and CDN do not
-      // serve the replaced file from cache.
-      const sourceUrl = replaceable
-        ? `${fileOf(uploadedUrl)}?t=${Date.now()}`
-        : uploadedUrl;
+      // A new image is uploaded at once, so it has a file from the start.
+      const waitForSave = !!existing && uploadsWithSave(channelId);
+      const sourceUrl = waitForSave
+        ? undefined
+        : await uploadDrawing(upload, existing ?? {}, dataURI);
       recordSessionUrl(sourceUrl);
       const frameSize = await measuredSize(dataURI);
       if (stillWanted && !stillWanted()) {
         return target.key ?? '';
+      }
+      if (waitForSave && channelId && target.key) {
+        holdPixels(channelId, target.key, dataURI);
       }
       // Keep the subject: the edit clears `generation`, where an older image
       // stored it.
       const subject =
         existing?.subject ?? existing?.generation?.subject ?? target.subject;
       const key = write(target, {
-        sourceUrl,
+        ...(sourceUrl ? {sourceUrl} : {pendingUpload: true}),
         dataURI,
         ...(subject && {subject}),
         // An edited character set keeps its frame grid (the editor hands
@@ -337,12 +287,9 @@ export default function useImageWriter({
         edited: true,
         recentColors: meta.recentColors,
       });
-      if (replaceable) {
-        drawingFilesRef.current.set(key, filename);
-      }
       return key;
     },
-    [upload, write]
+    [upload, write, channelId]
   );
 
   const rateGenerated = useCallback(

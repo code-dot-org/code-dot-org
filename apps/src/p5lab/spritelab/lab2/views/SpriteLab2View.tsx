@@ -176,6 +176,7 @@ import DiscoverBlocksButton, {
 } from './DiscoverBlocksButton';
 import FreeplayIntroDialog from './FreeplayIntroDialog';
 import ImagesTab, {UploadWarningSettings} from './images/ImagesTab';
+import useUploadDrawingsOnSave from './images/useUploadDrawingsOnSave';
 import {createNamedAnimation} from './imageSave';
 import {
   ArrowSet,
@@ -475,6 +476,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     }
     return undefined;
   }, [channelId, levelProperties.name]);
+  useUploadDrawingsOnSave(channelId, uploadImage);
 
   const isTeacher = useAppSelector(
     state => state.currentUser.userType === 'teacher'

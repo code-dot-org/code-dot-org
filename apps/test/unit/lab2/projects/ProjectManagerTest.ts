@@ -1043,6 +1043,48 @@ describe('ProjectManager', () => {
     expect(details.navigatorOnline).to.equal(navigator.onLine);
     expect(details.visibilityState).to.equal(document.visibilityState);
   });
+
+  describe('a sources preparer', () => {
+    const makeManager = async () => {
+      stubSuccessfulSourceLoad(sourcesStore);
+      const projectManager = new ProjectManager({
+        sourcesStore,
+        channelsStore,
+        channelId: FAKE_CHANNEL_ID,
+        reduceChannelUpdates: false,
+        isStandaloneProjectLevel: false,
+      });
+      await projectManager.load();
+      return projectManager;
+    };
+
+    it('saves what the preparer returns, and compares later saves with it', async () => {
+      const projectManager = await makeManager();
+      const prepared = {source: 'prepared'};
+      const preparer = sinon.fake.resolves(prepared);
+      projectManager.setSourcesPreparer(preparer);
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isTrue(preparer.calledOnceWith(UPDATED_SOURCE));
+      assert.deepEqual(sourcesStore.save.firstCall.args[1], prepared);
+      expect(projectManager.getLastSource()).to.deep.equal(prepared);
+      // Sources equal to what the preparer returned need no save.
+      await projectManager.save({source: 'prepared'}, true);
+      assert.isTrue(sourcesStore.save.calledOnce);
+    });
+
+    it('fails the save when the preparer throws', async () => {
+      const projectManager = await makeManager();
+      const failed = sinon.fake();
+      projectManager.addSaveFailListener(failed);
+      projectManager.setSourcesPreparer(() =>
+        Promise.reject(new Error('upload failed'))
+      );
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isTrue(sourcesStore.save.notCalled);
+      assert.isTrue(failed.calledOnce);
+      assert.isTrue(projectManager.hasUnsavedChanges());
+    });
+  });
 });
 
 // Helper functions
