@@ -312,7 +312,8 @@ export default function useImageWriter({
         },
         waitForSave
       );
-      if (waitForSave && channelId) {
+      // A save for an image deleted meanwhile wrote nothing.
+      if (waitForSave && channelId && propsOf(key)) {
         holdPixels(channelId, key, dataURI);
       }
       return key;
@@ -336,6 +337,9 @@ export default function useImageWriter({
   const deleteImage = useCallback(
     (key: string) => {
       const removed = propsOf(key);
+      if (channelId) {
+        dropHeldPixels(channelId, key);
+      }
       dispatch(
         // deleteAnimation is an untyped JS thunk; cast for dispatch.
         deleteAnimation(key, true /* isSpriteLab */) as unknown as AnyAction
@@ -345,7 +349,7 @@ export default function useImageWriter({
         onDeleteImage(removed.name);
       }
     },
-    [dispatch, releaseRemovedImages, onDeleteImage]
+    [dispatch, releaseRemovedImages, onDeleteImage, channelId]
   );
 
   return {

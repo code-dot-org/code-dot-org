@@ -17,15 +17,50 @@ const propsByKey = (
     mockPropsByKey: Record<string, Record<string, unknown>>;
   }
 ).mockPropsByKey;
+const httpDelete = jest.fn((...args: unknown[]) => Promise.resolve());
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  __esModule: true,
+  default: {delete: (...args: unknown[]) => httpDelete(...args)},
+}));
 
-const deleteFileOnceUnnamed = jest.fn((url: string, isInUse?: () => boolean) =>
-  Promise.resolve(true)
-);
-let currentManager: {deleteFileOnceUnnamed: unknown} | undefined;
+// A project manager that says what the server holds, or undefined while it
+// cannot. `settle` is a save finishing with these sources stored.
+const newManager = () => ({
+  saved: {} as unknown,
+  waiting: undefined as unknown,
+  certain: true,
+  isOwner: true,
+  listeners: [] as (() => void)[],
+  getChannelId: () => 'chan',
+  getLastChannel() {
+    return {isOwner: this.isOwner};
+  },
+  getSettledSources() {
+    return this.certain
+      ? {saved: this.saved, waiting: this.waiting}
+      : undefined;
+  },
+  addSourcesSettledListener(listener: () => void) {
+    this.listeners.push(listener);
+  },
+  settle(saved: unknown, waiting?: unknown) {
+    this.saved = saved;
+    this.waiting = waiting;
+    this.certain = true;
+    this.listeners.forEach(listener => listener());
+  },
+});
+let manager = newManager();
+let currentManager: ReturnType<typeof newManager> | undefined = manager;
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {getInstance: () => ({getProjectManager: () => currentManager})},
 }));
+
+const FILE = '/v3/assets/chan/old.png';
+const naming = (url: string) => ({
+  animations: {propsByKey: {k1: {sourceUrl: url}}},
+});
 
 function reclaimer() {
   let reclaim: (url?: string) => Promise<boolean> = () =>
@@ -41,33 +76,101 @@ function reclaimer() {
 describe('useReclaimAsset', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
-    deleteFileOnceUnnamed.mockClear();
-    currentManager = {deleteFileOnceUnnamed};
+    httpDelete.mockClear();
+    // A fresh manager per test, so files one test leaves waiting are not
+    // checked in the next.
+    manager = newManager();
+    currentManager = manager;
   });
 
-  it('asks the project manager to delete a file no image points at', async () => {
-    propsByKey.k1 = {sourceUrl: '/v3/assets/chan/kept.png'};
-    await expect(reclaimer()('/v3/assets/chan/old.png')).resolves.toBe(true);
-    expect(deleteFileOnceUnnamed).toHaveBeenCalledWith(
-      '/v3/assets/chan/old.png',
-      expect.any(Function)
-    );
+  it('deletes at once a file that no sources name', async () => {
+    await expect(reclaimer()(`${FILE}?t=1`)).resolves.toBe(true);
+    expect(httpDelete.mock.calls).toEqual([[FILE, true]]);
+  });
+
+  it('waits for a save that no longer names the file', async () => {
+    manager.saved = naming(FILE);
+    const reclaimed = reclaimer()(FILE);
+    expect(httpDelete).not.toHaveBeenCalled();
+    manager.settle(naming(FILE));
+    expect(httpDelete).not.toHaveBeenCalled();
+    manager.settle(naming('/v3/assets/chan/new.png'));
+    expect(httpDelete.mock.calls).toEqual([[FILE, true]]);
+    await expect(reclaimed).resolves.toBe(true);
+  });
+
+  it('keeps a file that the sources waiting to be saved name', () => {
+    manager.waiting = naming(FILE);
+    reclaimer()(FILE);
+    manager.settle({}, naming(FILE));
+    expect(httpDelete).not.toHaveBeenCalled();
+  });
+
+  it('deletes nothing while the manager cannot say what the server holds', async () => {
+    manager.certain = false;
+    const reclaimed = reclaimer()(FILE);
+    expect(httpDelete).not.toHaveBeenCalled();
+    manager.settle({});
+    expect(httpDelete.mock.calls).toEqual([[FILE, true]]);
+    await expect(reclaimed).resolves.toBe(true);
+  });
+
+  it('matches the whole file name, under any query', () => {
+    manager.saved = naming(`${FILE}2`);
+    const reclaim = reclaimer();
+    reclaim(FILE);
+    expect(httpDelete.mock.calls).toEqual([[FILE, true]]);
+    httpDelete.mockClear();
+    manager.saved = naming(`${FILE}?t=2`);
+    reclaim(`${FILE}?t=1`);
+    expect(httpDelete).not.toHaveBeenCalled();
+  });
+
+  it('keeps a file named in JSON that the sources hold as a string', () => {
+    manager.saved = {source: JSON.stringify(naming(FILE))};
+    reclaimer()(FILE);
+    expect(httpDelete).not.toHaveBeenCalled();
   });
 
   it('leaves a file an image points at, under any query', async () => {
-    propsByKey.k1 = {sourceUrl: '/v3/assets/chan/used.png?t=2'};
-    await expect(reclaimer()('/v3/assets/chan/used.png?t=1')).resolves.toBe(
-      false
-    );
-    expect(deleteFileOnceUnnamed).not.toHaveBeenCalled();
+    propsByKey.k1 = {sourceUrl: `${FILE}?t=2`};
+    await expect(reclaimer()(`${FILE}?t=1`)).resolves.toBe(false);
+    expect(httpDelete).not.toHaveBeenCalled();
   });
 
-  it('gives the project manager a check for an image pointing at the file again', async () => {
-    await reclaimer()('/v3/assets/chan/old.png');
-    const isInUse = deleteFileOnceUnnamed.mock.calls[0][1]!;
-    expect(isInUse()).toBe(false);
-    propsByKey.k1 = {sourceUrl: '/v3/assets/chan/old.png?t=3'};
-    expect(isInUse()).toBe(true);
+  it('keeps a file an image points at again before the save, and stops waiting on it', async () => {
+    manager.saved = naming(FILE);
+    const reclaimed = reclaimer()(FILE);
+    propsByKey.k1 = {sourceUrl: `${FILE}?t=3`};
+    manager.settle({});
+    await expect(reclaimed).resolves.toBe(false);
+    delete propsByKey.k1;
+    manager.settle({});
+    expect(httpDelete).not.toHaveBeenCalled();
+  });
+
+  it('refuses files of another project, and files of a project the user does not own', async () => {
+    const reclaim = reclaimer();
+    await expect(reclaim('/v3/assets/other/old.png')).resolves.toBe(false);
+    manager.isOwner = false;
+    await expect(reclaim(FILE)).resolves.toBe(false);
+    expect(httpDelete).not.toHaveBeenCalled();
+  });
+
+  it('deletes a file once when asked under two queries', async () => {
+    manager.saved = naming(FILE);
+    const reclaim = reclaimer();
+    const first = reclaim(`${FILE}?t=1`);
+    const second = reclaim(`${FILE}?t=2`);
+    manager.settle({});
+    expect(httpDelete.mock.calls).toEqual([[FILE, true]]);
+    await expect(first).resolves.toBe(true);
+    await expect(second).resolves.toBe(true);
+  });
+
+  it('resolves false when the delete fails', async () => {
+    httpDelete.mockRejectedValueOnce(new Error('503'));
+    await expect(reclaimer()(FILE)).resolves.toBe(false);
   });
 
   it('counts a picture with no file as gone', async () => {
@@ -77,11 +180,11 @@ describe('useReclaimAsset', () => {
     // project.
     await expect(reclaim('data:image/png;base64,AAAA')).resolves.toBe(true);
     await expect(reclaim(undefined)).resolves.toBe(true);
-    expect(deleteFileOnceUnnamed).not.toHaveBeenCalled();
+    expect(httpDelete).not.toHaveBeenCalled();
   });
 
   it('resolves false with no project manager', async () => {
     currentManager = undefined;
-    await expect(reclaimer()('/v3/assets/chan/old.png')).resolves.toBe(false);
+    await expect(reclaimer()(FILE)).resolves.toBe(false);
   });
 });

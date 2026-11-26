@@ -35,7 +35,6 @@ import {
 import {ChannelsStore} from './ChannelsStore';
 import {getProjectThumbnailUrl, updateProjectThumbnail} from './filesApi';
 import {SourcesStore} from './SourcesStore';
-import {urlWithoutQuery} from './utils';
 
 const {reload} = require('@cdo/apps/utils');
 
@@ -50,17 +49,12 @@ export type SourcesPreparer = (
   sources: ProjectSources
 ) => Promise<PreparedSources>;
 
-interface FileToDelete {
-  isInUse?: () => boolean;
-  resolve: (deleted: boolean) => void;
-}
-
-// Whether serialized sources name a file. The path must be followed by its
-// closing quote (escaped, when the sources hold JSON inside a string) or a
-// query, so a file whose name only starts with this path does not match.
-function textNamesFile(text: string, file: string): boolean {
-  const openQuotedPath = JSON.stringify(file).slice(0, -1);
-  return ['"', '?', '\\'].some(next => text.includes(openQuotedPath + next));
+/** What the server holds for a project, as far as this page can know. */
+export interface SettledSources {
+  /** The sources the server holds. */
+  saved: ProjectSources;
+  /** Newer sources waiting to be saved, if there are any. */
+  waiting?: ProjectSources;
 }
 
 export type SaveTrigger = 'autosave' | 'flush' | 'unload';
@@ -86,10 +80,11 @@ export default class ProjectManager {
   private saveFailListeners: ((error: Error) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
   private sourcesPreparer: SourcesPreparer | undefined;
-  // Asset files waiting to be deleted, by URL without query.
-  private filesToDelete = new Map<string, FileToDelete>();
-  // Counted, because a queued save can start while a slow one is running.
+  // Set by a save whose sources preparer left something out.
+  private saveAgainNeeded = false;
+  private sourcesSettledListeners: ((settled: SettledSources) => void)[] = [];
   private savesInFlightCount = 0;
+  private restoringSources = false;
   // Set while lastSource may not be what the server holds: a save that
   // was reported as failed can still have been stored.
   private savedSourcesUncertain = false;
@@ -216,16 +211,25 @@ export default class ProjectManager {
     }
     // Flush the enqueued save, if it exists, before restoring.
     await this.flushSave();
-    this.savedSourcesUncertain = true;
+    this.restoringSources = true;
     try {
-      await this.sourcesStore.restore(this.channelId, versionId);
+      try {
+        await this.sourcesStore.restore(this.channelId, versionId);
+      } catch (e) {
+        throw new Error('Error restoring sources', {cause: e});
+      }
+      // Now that we've restored to the previous version, loading sources
+      // will load the newly-restored version.
+      const sources = await this.loadAndStoreSources();
+      return sources;
     } catch (e) {
-      throw new Error('Error restoring sources', {cause: e});
+      // The restore may or may not have been stored.
+      this.savedSourcesUncertain = true;
+      throw e;
+    } finally {
+      this.restoringSources = false;
+      this.executeSourcesSettledListeners();
     }
-    // Now that we've restored to the previous version, loading sources
-    // will load the newly-restored version.
-    const sources = await this.loadAndStoreSources();
-    return sources;
   }
 
   /**
@@ -471,95 +475,68 @@ export default class ProjectManager {
   }
 
   /**
-   * Sets a step that each save runs on the sources just before writing them,
-   * for a lab that stores part of a project elsewhere first, such as image
-   * files. The sources it returns are what is saved. A step that throws
-   * fails the save.
+   * Sets the step that each save runs on the sources just before writing
+   * them, for a lab that stores part of a project elsewhere first, such as
+   * image files. The sources it returns are what is saved. A step that
+   * throws fails the save. A manager has one step: setting another replaces
+   * it. The step runs only in a save whose sources have changed, so a lab
+   * with something to store must change the sources to have it run.
    */
   setSourcesPreparer(preparer: SourcesPreparer | undefined) {
     this.sourcesPreparer = preparer;
   }
 
-  /**
-   * Deletes one of this project's asset files once neither the saved sources
-   * nor the sources waiting to be saved name it, so the latest saved sources
-   * never name a deleted file. Earlier versions of the project can still
-   * name one. `isInUse` reports a use of the file not yet written to the
-   * sources; a file in use is kept and no longer waits. This relies on the
-   * manager knowing the saved sources, so a lab that sets them itself with
-   * setLastSource must pass the sources the server holds.
-   * Resolves true once the file is deleted. Resolves false for a file that is
-   * not this project's asset, a file in use, a failed delete, or a manager
-   * already destroyed when called. Stays unresolved while the file waits. A
-   * file still waiting when the manager is destroyed or the page closes is
-   * left on the server and its promise never resolves, as is every file of a
-   * project the user does not own.
-   */
-  deleteFileOnceUnnamed(
-    url: string,
-    isInUse?: () => boolean
-  ): Promise<boolean> {
-    const file = urlWithoutQuery(url);
-    if (this.destroyed || !file.startsWith(`/v3/assets/${this.channelId}/`)) {
-      return Promise.resolve(false);
-    }
-    const promise = new Promise<boolean>(resolve => {
-      // A second request for a file shares the first one's answer.
-      const earlier = this.filesToDelete.get(file);
-      this.filesToDelete.set(file, {
-        isInUse: isInUse ?? earlier?.isInUse,
-        resolve: deleted => {
-          earlier?.resolve(deleted);
-          resolve(deleted);
-        },
-      });
-    });
-    this.deleteUnnamedFiles();
-    return promise;
+  hasSourcesPreparer(): boolean {
+    return !!this.sourcesPreparer;
   }
 
-  private deleteUnnamedFiles(): void {
-    // A save in flight may name a file that the last saved sources don't.
-    // After a conflict has started a reload, the server holds sources this
-    // manager has not loaded. With no saved sources to check, or with saved
-    // sources that may not be what the server holds, every file is taken to
-    // be named.
+  /**
+   * The sources the server holds for this project and the sources waiting
+   * to be saved, or undefined while that is not certain: before the sources
+   * have loaded, while a save or a restore is in flight, and after a sources
+   * save has failed, since a save reported as failed can still have been
+   * stored, until one succeeds or the sources are loaded again. A lab that
+   * sets the saved sources itself with setLastSource must pass the sources
+   * the server holds.
+   */
+  getSettledSources(): SettledSources | undefined {
     if (
-      this.savesInFlightCount > 0 ||
       this.destroyed ||
-      this.forceReloading ||
+      this.savesInFlightCount > 0 ||
+      this.restoringSources ||
       this.savedSourcesUncertain ||
-      this.lastSource === undefined ||
-      !this.lastChannel?.isOwner ||
-      this.filesToDelete.size === 0
+      this.lastSource === undefined
     ) {
+      return undefined;
+    }
+    return {
+      saved: JSON.parse(this.lastSource) as ProjectSources,
+      waiting: this.sourcesToSave,
+    };
+  }
+
+  /**
+   * Adds a listener called with the settled sources each time a save or a
+   * restore finishes and leaves them certain (see getSettledSources).
+   */
+  addSourcesSettledListener(listener: (settled: SettledSources) => void) {
+    this.sourcesSettledListeners.push(listener);
+  }
+
+  private executeSourcesSettledListeners() {
+    const settled = this.getSettledSources();
+    if (!settled) {
       return;
     }
-    const saved = this.lastSource;
-    const pending = this.sourcesToSave
-      ? JSON.stringify(this.sourcesToSave)
-      : '';
-    this.filesToDelete.forEach(({isInUse, resolve}, file) => {
-      let inUse: boolean;
+    this.sourcesSettledListeners.forEach(listener => {
       try {
-        inUse = !!isInUse?.();
-      } catch {
-        // If isInUse throws, the file stays waiting.
-        return;
+        listener(settled);
+      } catch (error) {
+        this.metricsReporter.logError(
+          'Error in a sources settled listener',
+          error as Error
+        );
       }
-      if (inUse) {
-        this.filesToDelete.delete(file);
-        resolve(false);
-        return;
-      }
-      if (textNamesFile(saved, file) || textNamesFile(pending, file)) {
-        return;
-      }
-      this.filesToDelete.delete(file);
-      HttpClient.delete(file, true).then(
-        () => resolve(true),
-        () => resolve(false)
-      );
     });
   }
 
@@ -743,6 +720,20 @@ export default class ProjectManager {
           : {sources: sourcesBeingSaved};
         sourcesSaved = prepared.sources;
         incomplete = !!prepared.incomplete;
+        if (
+          incomplete &&
+          !skipSourcesChangedCheck &&
+          !channelChanged &&
+          !this.channelSaveNeeded &&
+          JSON.stringify(prepared.sources) === this.lastSource
+        ) {
+          // What could be prepared is already saved; only the part left out
+          // remains, and it is tried again with the next save.
+          this.saveInProgress = false;
+          this.saveAgainNeeded = true;
+          this.executeSaveNoopListeners(this.lastChannel);
+          return;
+        }
         await this.sourcesStore.save(
           this.channelId,
           prepared.sources,
@@ -850,7 +841,7 @@ export default class ProjectManager {
     this.lastSuccessfulSaveTime = Date.now();
     this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
     if (incomplete) {
-      void this.enqueueSaveOrSave(false, false);
+      this.saveAgainNeeded = true;
     }
   }
 
@@ -932,6 +923,28 @@ export default class ProjectManager {
   }
 
   /**
+   * Start the queued save once the save in flight, if any, has finished, so
+   * an older save is never stored after a newer one.
+   */
+  private runQueuedSave(
+    forceNewVersion: boolean,
+    skipSourcesChangedCheck: boolean,
+    trigger: SaveTrigger
+  ): void {
+    // Another save has taken the queued save's place.
+    if (this.destroyed || !this.saveQueued) {
+      return;
+    }
+    if (this.saveInProgress && this.saveInFlight) {
+      void this.saveInFlight.then(() =>
+        this.runQueuedSave(forceNewVersion, skipSourcesChangedCheck, trigger)
+      );
+      return;
+    }
+    this.runSave(forceNewVersion, skipSourcesChangedCheck, trigger);
+  }
+
+  /**
    * Start a save, tracking it so a later force save can wait for it to finish.
    * @returns the save promise, which rejects only on an unexpected failure;
    * saveHelper reports the failures it expects to its listeners itself.
@@ -955,7 +968,11 @@ export default class ProjectManager {
       })
       .finally(() => {
         this.savesInFlightCount--;
-        this.deleteUnnamedFiles();
+        this.executeSourcesSettledListeners();
+        if (this.saveAgainNeeded) {
+          this.saveAgainNeeded = false;
+          void this.enqueueSaveOrSave(false, false).catch(() => undefined);
+        }
       });
     this.saveInFlight = save.catch(() => undefined);
     return save;
@@ -1004,7 +1021,11 @@ export default class ProjectManager {
         this.saveQueued = true;
         this.currentTimeoutId = window.setTimeout(
           () => {
-            this.runSave(forceNewVersion, skipSourcesChangedCheck, trigger);
+            this.runQueuedSave(
+              forceNewVersion,
+              skipSourcesChangedCheck,
+              trigger
+            );
           },
           this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
         );

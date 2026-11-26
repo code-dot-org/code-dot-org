@@ -3,13 +3,14 @@
 // preparer uploads each marked image's pixels to its file before the save
 // writes the sources that name that file.
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import type {SourcesPreparer} from '@cdo/apps/lab2/projects/ProjectManager';
-import {urlWithoutQuery} from '@cdo/apps/lab2/projects/utils';
 import {ProjectSources} from '@cdo/apps/lab2/types';
 import {getSerializedAnimationList} from '@cdo/apps/p5lab/shapes';
 import {dataURIToBytes} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding';
 import {UploadImageFunction} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {SerializedAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
+import {urlWithoutQuery} from '@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset';
 
 interface HeldPixels {
   dataURI: string;
@@ -17,13 +18,17 @@ interface HeldPixels {
 }
 
 const held = new Map<string, Map<string, HeldPixels>>();
-const channelsWithPreparer = new Set<string>();
 let nextRevision = 1;
 
 /** Whether this project's saves upload held pixels, so a drawing on one of
     its images can wait for the save instead of uploading. */
 export function uploadsWithSave(channelId: string | undefined): boolean {
-  return !!channelId && channelsWithPreparer.has(channelId);
+  const manager = Lab2Registry.getInstance().getProjectManager();
+  return (
+    !!channelId &&
+    manager?.getChannelId() === channelId &&
+    manager.hasSourcesPreparer()
+  );
 }
 
 /** Keeps an image's latest drawn pixels for the project's next save. */
@@ -53,7 +58,6 @@ export function hasNewerPixels(
 /** Forgets every held image, for tests. */
 export function resetHeldPixels() {
   held.clear();
-  channelsWithPreparer.clear();
 }
 
 // The image fields uploadDrawing reads to name the file.
@@ -145,7 +149,6 @@ export function makeSourcesPreparer({
   onUploaded,
   onUploadFailed,
 }: PreparerOptions): SourcesPreparer {
-  channelsWithPreparer.add(channelId);
   return async (sources: ProjectSources) => {
     const list = (sources as {animations?: SerializedAnimationList}).animations;
     const marked = list?.orderedKeys.filter(

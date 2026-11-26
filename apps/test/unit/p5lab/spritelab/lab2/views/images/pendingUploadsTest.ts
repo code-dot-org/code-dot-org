@@ -7,6 +7,14 @@ import {
   uploadsWithSave,
 } from '@cdo/apps/p5lab/spritelab/lab2/views/images/pendingUploads';
 
+let mockManager:
+  | {getChannelId: () => string; hasSourcesPreparer: () => boolean}
+  | undefined;
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {getInstance: () => ({getProjectManager: () => mockManager})},
+}));
+
 const image = (props: Record<string, unknown>) => ({
   name: 'Sprite 1',
   frameSize: {x: 8, y: 8},
@@ -53,12 +61,16 @@ describe('pendingUploads', () => {
     return {prepare, preparer, upload, onUploaded, onUploadFailed};
   };
 
-  it('has a project upload drawings with its saves once it has a preparer', () => {
+  it("has a project's drawings wait for its saves while its manager has a preparer", () => {
+    mockManager = {getChannelId: () => 'chan', hasSourcesPreparer: () => false};
     expect(uploadsWithSave('chan')).toBe(false);
-    setup();
+    mockManager = {getChannelId: () => 'chan', hasSourcesPreparer: () => true};
     expect(uploadsWithSave('chan')).toBe(true);
+    // Another project's manager is current.
     expect(uploadsWithSave('other')).toBe(false);
     expect(uploadsWithSave(undefined)).toBe(false);
+    mockManager = undefined;
+    expect(uploadsWithSave('chan')).toBe(false);
   });
 
   it('returns sources with no marked image as they are, complete', async () => {

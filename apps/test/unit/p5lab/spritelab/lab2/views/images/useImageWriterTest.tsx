@@ -51,19 +51,27 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/imageSave', () => ({
   createDrawnAnimation: (...args: unknown[]) => createDrawnAnimation(...args),
   repointAnimation: (...args: unknown[]) => repointAnimation(...args),
 }));
-const deleteFileOnceUnnamed = jest.fn((...args: unknown[]) =>
-  Promise.resolve(true)
-);
+// A project manager whose saved sources name no file. Its saves upload
+// drawings only in the tests that set mockHasPreparer.
+let mockHasPreparer = false;
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
     getInstance: () => ({
       getProjectManager: () => ({
-        deleteFileOnceUnnamed: (...args: unknown[]) =>
-          deleteFileOnceUnnamed(...args),
+        getChannelId: () => 'chan',
+        getLastChannel: () => ({isOwner: true}),
+        getSettledSources: () => ({saved: {}}),
+        addSourcesSettledListener: () => undefined,
+        hasSourcesPreparer: () => mockHasPreparer,
       }),
     }),
   },
+}));
+const httpDelete = jest.fn((...args: unknown[]) => Promise.resolve());
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  __esModule: true,
+  default: {delete: (...args: unknown[]) => httpDelete(...args)},
 }));
 jest.mock('@cdo/apps/imageUtils', () => ({
   dataURIToSourceSize: () => Promise.resolve({x: 64, y: 64}),
@@ -107,7 +115,8 @@ describe('useImageWriter', () => {
     createDrawnAnimation.mockClear();
     repointAnimation.mockClear();
     repointAnimation.mockImplementation(() => '/v3/assets/chan/old.png');
-    deleteFileOnceUnnamed.mockClear();
+    httpDelete.mockClear();
+    mockHasPreparer = false;
     dispatch.mockClear();
     unflag.mockClear();
     labState = {channel: {id: 'chan'}};
@@ -345,7 +354,7 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
-  it('when the session ends, asks the project manager to delete the files the session uploaded or replaced that no image points at', async () => {
+  it('when the session ends, deletes the files the session uploaded or replaced that no image points at', async () => {
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer} = renderWriter();
     const target = {key: 'k1', imageType: 'sprite' as const};
@@ -356,10 +365,8 @@ describe('useImageWriter', () => {
     // The image now points at two.png; one.png and old.png are leftovers.
     propsByKey.k1.sourceUrl = '/v3/assets/chan/two.png';
     act(() => writer().endSession());
-    const released = deleteFileOnceUnnamed.mock.calls
-      .map(call => call[0])
-      .sort();
-    expect(released).toEqual([
+    const deleted = httpDelete.mock.calls.map(call => call[0]).sort();
+    expect(deleted).toEqual([
       '/v3/assets/chan/old.png',
       '/v3/assets/chan/one.png',
     ]);
@@ -563,7 +570,7 @@ describe('useImageWriter', () => {
       await draw(writer);
       await draw(writer);
       act(() => writer().endSession());
-      expect(deleteFileOnceUnnamed.mock.calls.map(call => call[0])).toEqual([
+      expect(httpDelete.mock.calls.map(call => call[0])).toEqual([
         '/v3/assets/chan/old.png',
       ]);
     });
@@ -621,7 +628,10 @@ describe('useImageWriter', () => {
     });
   });
   describe('in a project whose saves upload drawings', () => {
-    beforeEach(() => resetHeldPixels());
+    beforeEach(() => {
+      resetHeldPixels();
+      mockHasPreparer = true;
+    });
     afterEach(() => resetHeldPixels());
 
     it('marks an existing image and holds its pixels, uploading nothing', async () => {
@@ -711,6 +721,43 @@ describe('useImageWriter', () => {
       expect(patch).toHaveProperty('pendingUpload', undefined);
       // Sources that still carry the old pendingUpload mark upload nothing
       // for the image, because its held pixels are gone.
+      await prepare({
+        animations: {
+          orderedKeys: ['k1'],
+          propsByKey: {k1: {...propsByKey.k1, pendingUpload: true}},
+        },
+      } as never);
+      expect(preparerUpload).not.toHaveBeenCalled();
+    });
+
+    it("drops a deleted image's held pixels", async () => {
+      const preparerUpload = jest.fn(
+        async (name: string) => `/v3/assets/chan/${name}`
+      );
+      const prepare = makeSourcesPreparer({
+        channelId: 'chan',
+        upload: preparerUpload,
+        onUploaded: () => undefined,
+        onUploadFailed: () => undefined,
+      });
+      propsByKey.k1 = {
+        name: 'Sprite 1',
+        sourceUrl: '/v3/assets/chan/old.png',
+        frameSize: {x: 8, y: 8},
+        frameCount: 1,
+        looping: true,
+        frameDelay: 2,
+      };
+      const {writer} = renderWriter();
+      await act(async () => {
+        await writer().saveEdited(
+          {key: 'k1', imageType: 'sprite'},
+          'data:image/png;base64,AAAA',
+          {}
+        );
+      });
+      act(() => writer().deleteImage('k1'));
+      // Sources still naming the image as marked upload nothing for it.
       await prepare({
         animations: {
           orderedKeys: ['k1'],

@@ -45,6 +45,7 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/imageSave', () => ({
 const reclaim = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset', () => ({
   __esModule: true,
+  ...jest.requireActual('@cdo/apps/p5lab/spritelab/lab2/views/useReclaimAsset'),
   default: () => (url?: string) => reclaim(url),
 }));
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
@@ -136,6 +137,25 @@ describe('useUploadDrawingsOnSave', () => {
     ).animations.propsByKey.k1.sourceUrl;
     await prepare(sources);
     expect(repointAnimation).not.toHaveBeenCalled();
+  });
+
+  it("reports an image's failed upload again after an upload of it has succeeded", async () => {
+    let fail = true;
+    const prepare = setup(name =>
+      fail
+        ? Promise.reject(new Error('500'))
+        : Promise.resolve(`/v3/assets/chan/${name}`)
+    );
+    const failOnce = async () => {
+      holdPixels('chan', 'k1', 'data:image/png;base64,AA');
+      await prepare(marked('/v3/assets/chan/generated-1.png'));
+    };
+    await failOnce();
+    fail = false;
+    await prepare(marked('/v3/assets/chan/generated-1.png'));
+    fail = true;
+    await failOnce();
+    expect(sendEvent).toHaveBeenCalledTimes(2);
   });
 
   it("reports an image's failed upload once, though every save tries again", async () => {
