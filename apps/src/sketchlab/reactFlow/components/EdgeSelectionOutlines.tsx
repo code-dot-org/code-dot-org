@@ -16,8 +16,9 @@ import styles from './react-flow-canvas.module.scss';
 
 interface EdgeSelectionOutlinesProps {
   edgeIds: string[];
-  // Its ring is the edge's only focus indicator, so it takes the focus colour.
-  focusedEdgeId: string | null;
+  // Takes the focus colour, as a node does under :focus-visible; a clicked edge
+  // keeps the selection colour.
+  focusVisibleEdgeId: string | null;
 }
 
 function sameBox(
@@ -42,7 +43,7 @@ function sameBox(
  */
 export default function EdgeSelectionOutlines({
   edgeIds,
-  focusedEdgeId,
+  focusVisibleEdgeId,
 }: EdgeSelectionOutlinesProps) {
   const outlineRefs = useRef(new Map<string, HTMLDivElement>());
   const lastBoxes = useRef(new Map<string, EdgeSelectionBox>());
@@ -124,7 +125,7 @@ export default function EdgeSelectionOutlines({
             }
           }}
           className={classNames(styles.edgeSelectionOutline, {
-            [styles.edgeFocusOutline]: edgeId === focusedEdgeId,
+            [styles.edgeFocusOutline]: edgeId === focusVisibleEdgeId,
           })}
           style={{display: 'none'}}
           aria-hidden="true"

@@ -11,7 +11,7 @@
 }
 
 // Selected or keyboard-focused: solid ring, same spacing as hover.
-// Declared after hover so it wins when both apply.
+// Order matters: focus after selected after hover, so the later state wins.
 :global(.react-flow__node-group.selected) .groupNode {
   outline: 2px solid var(--borders-brand-teal-primary);
   outline-offset: 4px;

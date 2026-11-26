@@ -554,7 +554,7 @@ export default function ReactFlowCanvas({
     [duplicateNode, duplicateLine]
   );
 
-  const {focusEntry, handleFocusCapture} = useFocusManagement(
+  const {focusEntry, handleFocusCapture, focusVisible} = useFocusManagement(
     tabOrder,
     edges,
     nodeOrEdgeFocused,
@@ -841,7 +841,7 @@ export default function ReactFlowCanvas({
     [setLastFocusedEntry, setNodeOrEdgeFocused]
   );
 
-  const {displayNodes, displayEdges} = useDisplayElements({
+  const {displayNodes, displayEdges, focusedEdgeId} = useDisplayElements({
     nodes,
     edges,
     activeEntry,
@@ -856,11 +856,6 @@ export default function ReactFlowCanvas({
       ? pendingSelectedIds
       : multiSelectedNodeIds,
   });
-
-  const focusedEdgeId =
-    nodeOrEdgeFocused && lastFocusedEntry?.type === 'edge'
-      ? lastFocusedEntry.id
-      : null;
 
   // Edges that show a selection ring: those React Flow marks selected, plus the
   // edge holding DOM focus. Read-only mode never marks an edge selected, so the
@@ -1246,7 +1241,7 @@ export default function ReactFlowCanvas({
                       <Background />
                       <EdgeSelectionOutlines
                         edgeIds={outlinedEdgeIds}
-                        focusedEdgeId={focusedEdgeId}
+                        focusVisibleEdgeId={focusVisible ? focusedEdgeId : null}
                       />
                       <CanvasControls
                         onUndo={handleUndo}
