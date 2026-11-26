@@ -109,7 +109,7 @@ describe('useUploadDrawingsOnSave', () => {
     expect(reclaim).toHaveBeenCalledWith('/v3/assets/chan/generated-1.png');
   });
 
-  it('leaves an image alone that another picture replaced while the upload ran', async () => {
+  it('leaves an image alone that another picture replaced while the upload ran, and releases the uploaded file', async () => {
     const prepare = setup(async name => {
       state.animationList.propsByKey.k1 = {
         sourceUrl: '/v3/assets/chan/generated-2.png',
@@ -119,10 +119,12 @@ describe('useUploadDrawingsOnSave', () => {
     holdPixels('chan', 'k1', 'data:image/png;base64,AA');
     await prepare(marked('/v3/assets/chan/generated-1.png'));
     expect(repointAnimation).not.toHaveBeenCalled();
-    expect(reclaim).not.toHaveBeenCalled();
+    expect(reclaim.mock.calls).toEqual([
+      [expect.stringMatching(/^\/v3\/assets\/chan\/sprite_1_\d+\.png\?t=/)],
+    ]);
   });
 
-  it('leaves alone a new image deleted while its first upload ran', async () => {
+  it('releases the file of a new image deleted while its first upload ran', async () => {
     state.animationList.propsByKey.k1 = {};
     const prepare = setup(async name => {
       delete state.animationList.propsByKey.k1;
@@ -137,6 +139,26 @@ describe('useUploadDrawingsOnSave', () => {
     ).animations.propsByKey.k1.sourceUrl;
     await prepare(sources);
     expect(repointAnimation).not.toHaveBeenCalled();
+    expect(reclaim.mock.calls).toEqual([
+      [expect.stringMatching(/^\/v3\/assets\/chan\/sprite_1_\d+\.png\?t=/)],
+    ]);
+  });
+
+  it('releases nothing once the level has changed to another project', async () => {
+    const prepare = setup(async name => {
+      (state as unknown as {lab: {channel: {id: string}}}).lab.channel.id =
+        'other';
+      return `/v3/assets/chan/${name}`;
+    });
+    holdPixels('chan', 'k1', 'data:image/png;base64,AA');
+    try {
+      await prepare(marked('/v3/assets/chan/generated-1.png'));
+      expect(repointAnimation).not.toHaveBeenCalled();
+      expect(reclaim).not.toHaveBeenCalled();
+    } finally {
+      (state as unknown as {lab: {channel: {id: string}}}).lab.channel.id =
+        'chan';
+    }
   });
 
   it("reports an image's failed upload again after an upload of it has succeeded", async () => {

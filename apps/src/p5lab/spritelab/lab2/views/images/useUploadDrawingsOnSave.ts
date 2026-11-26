@@ -36,16 +36,18 @@ export default function useUploadDrawingsOnSave(
         upload: uploadImage,
         onUploaded: (key, sourceUrl, revision, previousUrl) => {
           reportedFailuresRef.current.delete(key);
-          // The save can finish after the level has changed, when the store
-          // holds another project's images, or after another picture has
-          // replaced this one.
+          // The upload can finish after the level has changed, when the store
+          // holds another project's images.
           const state = getStore().getState();
+          if (state.lab.channel?.id !== channelId) {
+            return;
+          }
           const props = state.animationList.propsByKey[key];
-          if (
-            state.lab.channel?.id !== channelId ||
-            !props ||
-            props.sourceUrl !== previousUrl
-          ) {
+          if (!props || props.sourceUrl !== previousUrl) {
+            // The image was deleted, or another picture replaced it, while
+            // the upload ran, so no image in the store points at the uploaded
+            // file.
+            void reclaimAsset(sourceUrl);
             return;
           }
           repointAnimation(dispatch, key, {
