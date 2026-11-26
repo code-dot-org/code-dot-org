@@ -36,7 +36,6 @@ export function holdPixels(channelId: string, key: string, dataURI: string) {
   images.set(key, {dataURI, revision: nextRevision++});
 }
 
-/** Forgets an image's held pixels, once its picture is replaced. */
 export function dropHeldPixels(channelId: string, key: string) {
   held.get(channelId)?.delete(key);
 }

@@ -122,6 +122,23 @@ describe('useUploadDrawingsOnSave', () => {
     expect(reclaim).not.toHaveBeenCalled();
   });
 
+  it('leaves alone a new image deleted while its first upload ran', async () => {
+    state.animationList.propsByKey.k1 = {};
+    const prepare = setup(async name => {
+      delete state.animationList.propsByKey.k1;
+      return `/v3/assets/chan/${name}`;
+    });
+    holdPixels('chan', 'k1', 'data:image/png;base64,AA');
+    const sources = marked('');
+    delete (
+      sources as unknown as {
+        animations: {propsByKey: {k1: {sourceUrl?: string}}};
+      }
+    ).animations.propsByKey.k1.sourceUrl;
+    await prepare(sources);
+    expect(repointAnimation).not.toHaveBeenCalled();
+  });
+
   it("reports an image's failed upload once, though every save tries again", async () => {
     const prepare = setup(() => Promise.reject(new Error('500')));
     holdPixels('chan', 'k1', 'data:image/png;base64,AA');

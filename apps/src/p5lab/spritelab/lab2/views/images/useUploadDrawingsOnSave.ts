@@ -1,4 +1,4 @@
-import {useEffect} from 'react';
+import {useEffect, useRef} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -13,8 +13,6 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {hasNewerPixels, makeSourcesPreparer} from './pendingUploads';
 
-const reportedFailures = new Set<string>();
-
 /**
  * Makes the project's saves upload the drawn pixels its images hold, so a
  * drawing is uploaded at most once per save.
@@ -25,6 +23,8 @@ export default function useUploadDrawingsOnSave(
 ) {
   const dispatch = useAppDispatch();
   const reclaimAsset = useReclaimAsset();
+  // Images whose failed upload has been reported on this visit.
+  const reportedFailuresRef = useRef(new Set<string>());
   useEffect(() => {
     const manager = Lab2Registry.getInstance().getProjectManager();
     if (!channelId || !uploadImage || manager?.getChannelId() !== channelId) {
@@ -39,9 +39,11 @@ export default function useUploadDrawingsOnSave(
           // holds another project's images, or after another picture has
           // replaced this one.
           const state = getStore().getState();
+          const props = state.animationList.propsByKey[key];
           if (
             state.lab.channel?.id !== channelId ||
-            state.animationList.propsByKey[key]?.sourceUrl !== previousUrl
+            !props ||
+            props.sourceUrl !== previousUrl
           ) {
             return;
           }
@@ -59,10 +61,11 @@ export default function useUploadDrawingsOnSave(
         },
         onUploadFailed: (key, error, hadFile) => {
           // A failed upload is tried again on every save; it is reported once.
-          if (reportedFailures.has(key)) {
+          const reported = reportedFailuresRef.current;
+          if (reported.has(key)) {
             return;
           }
-          reportedFailures.add(key);
+          reported.add(key);
           analyticsReporter.sendEvent(
             EVENTS.HOAI2026_IMAGE_UPLOAD_FAILED,
             {

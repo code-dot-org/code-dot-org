@@ -115,7 +115,7 @@ describe('pendingUploads', () => {
     expect(upload.mock.calls[0][0]).toBe('sprite_1_1795593000001.png');
   });
 
-  it("writes each image's fields in the usual order, so equal sources compare equal", async () => {
+  it("writes each image's fields in getSerializedAnimationList's order, so equal sources compare equal", async () => {
     const {prepare} = setup();
     holdPixels('chan', 'k1', 'data:image/png;base64,AA');
     const result = await prepare(

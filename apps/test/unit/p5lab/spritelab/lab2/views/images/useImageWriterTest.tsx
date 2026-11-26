@@ -723,7 +723,8 @@ describe('useImageWriter', () => {
         unknown
       >;
       expect(patch).toHaveProperty('pendingUpload', undefined);
-      // Even sources still marked from before upload nothing for the image.
+      // Sources that still carry the old pendingUpload mark upload nothing
+      // for the image, because its held pixels are gone.
       await prepare({
         animations: {
           orderedKeys: ['k1'],

@@ -195,8 +195,9 @@ export default function useImageWriter({
     },
     [dispatch, imageRole]
   );
-  // A picture that replaces a drawing replaces its held pixels too.
-  const dropDrawing = useCallback(
+  // A generated or uploaded picture discards any drawn pixels still waiting
+  // to upload for that image, so the next save does not upload them over it.
+  const dropHeldPixelsOf = useCallback(
     (target: ImageTarget) => {
       if (target.key && channelId) {
         dropHeldPixels(channelId, target.key);
@@ -219,7 +220,7 @@ export default function useImageWriter({
         uploadsRef.current.set(result.filename, uploaded);
         recordSessionUrl(sourceUrl);
       }
-      dropDrawing(target);
+      dropHeldPixelsOf(target);
       return write(target, {
         sourceUrl: uploaded.sourceUrl,
         dataURI,
@@ -236,7 +237,7 @@ export default function useImageWriter({
         pendingUpload: undefined,
       });
     },
-    [upload, write, dropDrawing]
+    [upload, write, dropHeldPixelsOf]
   );
 
   const acceptUploaded = useCallback(
@@ -249,7 +250,7 @@ export default function useImageWriter({
       recordSessionUrl(sourceUrl);
       const dataURI = bytesToDataURI(file.uint8Array, file.mediaType);
       const frameSize = await measuredSize(dataURI);
-      dropDrawing(target);
+      dropHeldPixelsOf(target);
       return write(target, {
         sourceUrl,
         dataURI,
@@ -266,7 +267,7 @@ export default function useImageWriter({
         pendingUpload: undefined,
       });
     },
-    [upload, write, dropDrawing]
+    [upload, write, dropHeldPixelsOf]
   );
 
   const saveEdited = useCallback(

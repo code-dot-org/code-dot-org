@@ -40,9 +40,8 @@ const {reload} = require('@cdo/apps/utils');
 
 export interface PreparedSources {
   sources: ProjectSources;
-  /** Set when part of the sources could not be prepared; `sources` then
-      holds that part as it was last saved. The sources given stay pending,
-      and another save is queued. */
+  /** Set when the sources given have changes this save could not include.
+      The sources given stay pending, and another save is queued. */
   incomplete?: boolean;
 }
 
@@ -636,7 +635,6 @@ export default class ProjectManager {
     // The sources written, which a sources preparer may have changed.
     let sourcesSaved = sourcesBeingSaved;
     let incomplete = false;
-    // Only save the source if it has changed or we are skipping the changed check.
     if (sourcesBeingSaved && (sourceChanged || skipSourcesChangedCheck)) {
       try {
         const prepared = this.sourcesPreparer
