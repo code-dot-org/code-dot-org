@@ -13,7 +13,7 @@
   cursor: help;
 
   &:focus-visible {
-    outline: 2px solid var(--borders-brand-purple-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
   }
 }

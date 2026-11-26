@@ -111,7 +111,7 @@ $file-list-gap: 8px;
   outline: none;
 
   .unsupportedToggle {
-    outline: 2px solid var(--borders-brand-teal-primary);
+    outline: 2px solid var(--border-focused-primary);
     outline-offset: 2px;
     border-radius: 0.375rem;
   }
