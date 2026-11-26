@@ -45,19 +45,24 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/imageSave', () => ({
   createNamedAnimation: (...args: unknown[]) => createNamedAnimation(...args),
   repointAnimation: (...args: unknown[]) => repointAnimation(...args),
 }));
-const deleteFileOnceUnnamed = jest.fn((...args: unknown[]) =>
-  Promise.resolve(true)
-);
+// A project manager whose saved sources name no file.
 jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
   __esModule: true,
   default: {
     getInstance: () => ({
       getProjectManager: () => ({
-        deleteFileOnceUnnamed: (...args: unknown[]) =>
-          deleteFileOnceUnnamed(...args),
+        getChannelId: () => 'chan',
+        getLastChannel: () => ({isOwner: true}),
+        getSettledSources: () => ({saved: {}}),
+        addSourcesSettledListener: () => undefined,
       }),
     }),
   },
+}));
+const httpDelete = jest.fn((...args: unknown[]) => Promise.resolve());
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  __esModule: true,
+  default: {delete: (...args: unknown[]) => httpDelete(...args)},
 }));
 jest.mock('@cdo/apps/imageUtils', () => ({
   dataURIToSourceSize: () => Promise.resolve({x: 64, y: 64}),
@@ -99,7 +104,7 @@ describe('useImageWriter', () => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     createNamedAnimation.mockClear();
     repointAnimation.mockClear();
-    deleteFileOnceUnnamed.mockClear();
+    httpDelete.mockClear();
     dispatch.mockClear();
     unflag.mockClear();
     labState = {channel: {id: 'chan'}};
@@ -356,7 +361,7 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
-  it('when the session ends, asks the project manager to delete the files the session uploaded or replaced that no image points at', async () => {
+  it('when the session ends, deletes the files the session uploaded or replaced that no image points at', async () => {
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer} = renderWriter();
     const target = {key: 'k1', imageType: 'sprite' as const};
@@ -367,10 +372,8 @@ describe('useImageWriter', () => {
     // The image now points at two.png; one.png and old.png are leftovers.
     propsByKey.k1.sourceUrl = '/v3/assets/chan/two.png';
     act(() => writer().endSession());
-    const released = deleteFileOnceUnnamed.mock.calls
-      .map(call => call[0])
-      .sort();
-    expect(released).toEqual([
+    const deleted = httpDelete.mock.calls.map(call => call[0]).sort();
+    expect(deleted).toEqual([
       '/v3/assets/chan/old.png',
       '/v3/assets/chan/one.png',
     ]);

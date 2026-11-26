@@ -1044,20 +1044,7 @@ describe('ProjectManager', () => {
     expect(details.visibilityState).to.equal(document.visibilityState);
   });
 
-  describe('deleteFileOnceUnnamed', () => {
-    const FILE = `/v3/assets/${FAKE_CHANNEL_ID}/old.png`;
-    const naming = (url: string, extra = '') =>
-      ({
-        source: `code${extra}`,
-        images: {k1: {sourceUrl: url}},
-      } as ProjectSources);
-    let httpDelete: sinon.SinonStub;
-
-    beforeEach(() => {
-      httpDelete = sinon.stub(HttpClient, 'delete').resolves();
-    });
-    afterEach(() => httpDelete.restore());
-
+  describe('settled sources', () => {
     const makeManager = async () => {
       stubSuccessfulSourceLoad(sourcesStore);
       const projectManager = new ProjectManager({
@@ -1070,246 +1057,210 @@ describe('ProjectManager', () => {
       await projectManager.load();
       return projectManager;
     };
-
-    it('deletes at once a file that no sources name', async () => {
-      const projectManager = await makeManager();
-      const deleted = projectManager.deleteFileOnceUnnamed(`${FILE}?t=1`);
-      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
-      assert.isTrue(await deleted);
-    });
-
-    it('waits for a save that no longer names the file', async () => {
-      const projectManager = await makeManager();
-      await projectManager.save(naming(FILE), true);
-      const deleted = projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.notCalled);
-      await projectManager.save(naming(FILE, ' edited'), true);
-      assert.isTrue(httpDelete.notCalled);
-      await projectManager.save(UPDATED_SOURCE, true);
-      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
-      assert.isTrue(await deleted);
-    });
-
-    it('keeps a file that the sources waiting to be saved name', async () => {
-      const projectManager = await makeManager();
-      await projectManager.save(UPDATED_SOURCE, true);
-      // Within the save interval, so these sources wait.
-      projectManager.save(naming(FILE));
-      projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.notCalled);
-      await projectManager.flushSave();
-      assert.isTrue(httpDelete.notCalled);
-    });
-
-    it('waits while a save that names the file is in flight', async () => {
-      const projectManager = await makeManager();
-      let finishSave: (response: Response) => void = () => undefined;
+    // A sources save that stays in flight until the test finishes it.
+    const holdNextSave = () => {
+      let finish: (response: Response) => void = () => undefined;
+      let fail: (error: Error) => void = () => undefined;
       sourcesStore.save.callsFake(
-        () => new Promise<Response>(resolve => (finishSave = resolve))
+        () =>
+          new Promise<Response>((resolve, reject) => {
+            finish = resolve;
+            fail = reject;
+          })
       );
-      const save = projectManager.save(naming(FILE), true);
-      await drainMicrotasks();
-      // These newer sources become the ones waiting to be saved, so the
-      // sources in flight are neither the saved sources nor the waiting
-      // ones.
-      projectManager.save(UPDATED_SOURCE);
-      const deleted = projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.notCalled);
-      sourcesStore.save.callsFake(() => Promise.resolve(new Response('')));
-      finishSave(new Response(''));
-      await save;
-      // The save that landed names the file.
-      assert.isTrue(httpDelete.notCalled);
-      await projectManager.flushSave();
-      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
-      assert.isTrue(await deleted);
+      const release = () =>
+        sourcesStore.save.callsFake(() => Promise.resolve(new Response('')));
+      return {
+        finish: () => {
+          release();
+          finish(new Response(''));
+        },
+        fail: () => {
+          release();
+          fail(new Error('500'));
+        },
+      };
+    };
+
+    it('has none before the project loads, or when only the channel loaded', async () => {
+      const projectManager = new ProjectManager({
+        sourcesStore,
+        channelsStore,
+        channelId: FAKE_CHANNEL_ID,
+        reduceChannelUpdates: false,
+        isStandaloneProjectLevel: false,
+      });
+      assert.isUndefined(projectManager.getSettledSources());
+      // A reset load reads the channel and not the sources.
+      await projectManager.load(true);
+      assert.isUndefined(projectManager.getSettledSources());
     });
 
-    it('deletes nothing after a failed sources save until one succeeds', async () => {
+    it('gives the saved sources, and the sources waiting to be saved', async () => {
       const projectManager = await makeManager();
-      // A save reported as failed may still have been stored, so the server
-      // may hold the sources of the failed save below, which name the file.
-      sourcesStore.save.callsFake(() => Promise.reject(new Error('500')));
-      await projectManager.save(naming(FILE), true);
-      projectManager.save(UPDATED_SOURCE);
-      const deleted = projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.notCalled);
-      sourcesStore.save.callsFake(() => Promise.resolve(new Response('')));
-      await projectManager.flushSave();
-      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
-      assert.isTrue(await deleted);
-    });
-
-    it('deletes a waiting file after a save that finds nothing changed', async () => {
-      const projectManager = await makeManager();
-      await projectManager.save(UPDATED_SOURCE, true);
-      projectManager.save(naming(FILE));
-      projectManager.deleteFileOnceUnnamed(FILE);
-      // The waiting sources go back to what is saved.
-      projectManager.save(UPDATED_SOURCE);
-      assert.isTrue(httpDelete.notCalled);
-      await projectManager.flushSave();
-      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
-    });
-
-    it('waits for every save in flight when a queued save overlaps a slow one', async () => {
-      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
-      try {
-        const projectManager = await makeManager();
-        let finishSlow: (response: Response) => void = () => undefined;
-        sourcesStore.save
-          .onFirstCall()
-          .callsFake(
-            () => new Promise<Response>(resolve => (finishSlow = resolve))
-          );
-        const slow = projectManager.save(naming(FILE), true);
-        await clock.tickAsync(0);
-        projectManager.save(UPDATED_SOURCE);
-        projectManager.deleteFileOnceUnnamed(FILE);
-        // The queued save starts and finishes while the slow one runs.
-        await clock.tickAsync(30 * 1000);
-        assert.isTrue(sourcesStore.save.calledTwice);
-        assert.isTrue(httpDelete.notCalled);
-        finishSlow(new Response(''));
-        await slow;
-        // The slow save, which names the file, was stored last.
-        assert.isTrue(httpDelete.notCalled);
-      } finally {
-        clock.restore();
-      }
-    });
-
-    it('keeps a file waiting when its in-use check throws', async () => {
-      const projectManager = await makeManager();
-      projectManager.deleteFileOnceUnnamed(FILE, () => {
-        throw new Error('no store');
+      assert.deepEqual(projectManager.getSettledSources(), {
+        saved: FAKE_SOURCE,
+        waiting: undefined,
       });
       await projectManager.save(UPDATED_SOURCE, true);
-      assert.isTrue(httpDelete.notCalled);
+      // Within the save interval, so these sources wait.
+      projectManager.save(UPDATED_SOURCE_2);
+      assert.deepEqual(projectManager.getSettledSources(), {
+        saved: UPDATED_SOURCE,
+        waiting: UPDATED_SOURCE_2,
+      });
     });
 
-    it('deletes nothing while a version is being restored', async () => {
+    it('has none while a save is in flight', async () => {
+      const projectManager = await makeManager();
+      const held = holdNextSave();
+      const save = projectManager.save(UPDATED_SOURCE, true);
+      await drainMicrotasks();
+      assert.isUndefined(projectManager.getSettledSources());
+      held.finish();
+      await save;
+      assert.deepEqual(
+        projectManager.getSettledSources()?.saved,
+        UPDATED_SOURCE
+      );
+    });
+
+    it('has none after a failed sources save, until one succeeds', async () => {
+      const projectManager = await makeManager();
+      // A save reported as failed may still have been stored.
+      sourcesStore.save.callsFake(() => Promise.reject(new Error('500')));
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isUndefined(projectManager.getSettledSources());
+      sourcesStore.save.callsFake(() => Promise.resolve(new Response('')));
+      await projectManager.save(UPDATED_SOURCE_2, true);
+      assert.deepEqual(
+        projectManager.getSettledSources()?.saved,
+        UPDATED_SOURCE_2
+      );
+    });
+
+    it('has none while a version is being restored, then gives the restored sources', async () => {
       const projectManager = await makeManager();
       let finishRestore: () => void = () => undefined;
       sourcesStore.restore.callsFake(
         () => new Promise<void>(resolve => (finishRestore = resolve))
       );
-      sourcesStore.load.returns(Promise.resolve(naming(FILE)));
+      sourcesStore.load.returns(Promise.resolve(UPDATED_SOURCE));
+      const settledListener = sinon.stub();
+      projectManager.addSourcesSettledListener(settledListener);
       const restored = projectManager.restoreSources('v1');
       await drainMicrotasks();
-      projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.notCalled);
+      assert.isUndefined(projectManager.getSettledSources());
       finishRestore();
       await restored;
-      // The restored version names the file.
-      await projectManager.save(naming(FILE, ' edited'), true);
-      assert.isTrue(httpDelete.notCalled);
-    });
-
-    it('matches the whole file name, under any query', async () => {
-      const projectManager = await makeManager();
-      await projectManager.save(naming(`${FILE}2`), true);
-      projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
-      httpDelete.resetHistory();
-      await projectManager.save(naming(`${FILE}?t=2`), true);
-      projectManager.deleteFileOnceUnnamed(`${FILE}?t=1`);
-      assert.isTrue(httpDelete.notCalled);
-    });
-
-    it('keeps a file named in JSON that the sources hold as a string', async () => {
-      const projectManager = await makeManager();
-      await projectManager.save(
-        {source: JSON.stringify({sourceUrl: FILE})},
-        true
+      assert.deepEqual(
+        projectManager.getSettledSources()?.saved,
+        UPDATED_SOURCE
       );
-      projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.notCalled);
+      assert.deepEqual(settledListener.lastCall.args[0].saved, UPDATED_SOURCE);
     });
 
-    it('refuses a file that is not an asset of this project', async () => {
+    it('has none after a failed restore, until a save succeeds', async () => {
       const projectManager = await makeManager();
-      assert.isFalse(
-        await projectManager.deleteFileOnceUnnamed('/v3/assets/other/old.png')
-      );
-      assert.isFalse(
-        await projectManager.deleteFileOnceUnnamed(
-          `/v3/animations/${FAKE_CHANNEL_ID}/old.png`
-        )
-      );
-      assert.isTrue(httpDelete.notCalled);
-    });
-
-    it('keeps a file in use again, and stops waiting on it', async () => {
-      const projectManager = await makeManager();
-      await projectManager.save(naming(FILE), true);
-      let inUse = false;
-      const deleted = projectManager.deleteFileOnceUnnamed(FILE, () => inUse);
-      inUse = true;
+      sourcesStore.restore.callsFake(() => Promise.reject(new Error('500')));
+      let thrown: unknown;
+      try {
+        await projectManager.restoreSources('v1');
+      } catch (error) {
+        thrown = error;
+      }
+      assert.instanceOf(thrown, Error);
+      assert.isUndefined(projectManager.getSettledSources());
       await projectManager.save(UPDATED_SOURCE, true);
-      assert.isFalse(await deleted);
-      inUse = false;
-      await projectManager.save(UPDATED_SOURCE_2, true);
-      assert.isTrue(httpDelete.notCalled);
-    });
-
-    it('deletes a file once when asked under two queries', async () => {
-      const projectManager = await makeManager();
-      await projectManager.save(naming(FILE), true);
-      const first = projectManager.deleteFileOnceUnnamed(`${FILE}?t=1`);
-      const second = projectManager.deleteFileOnceUnnamed(`${FILE}?t=2`);
-      await projectManager.save(UPDATED_SOURCE, true);
-      assert.isTrue(httpDelete.calledOnceWith(FILE, true));
-      assert.isTrue(await first);
-      assert.isTrue(await second);
-    });
-
-    it('resolves false when the delete fails', async () => {
-      const projectManager = await makeManager();
-      httpDelete.rejects(new Error('503'));
-      assert.isFalse(await projectManager.deleteFileOnceUnnamed(FILE));
-    });
-
-    it('deletes nothing before the project loads', async () => {
-      const projectManager = new ProjectManager({
-        sourcesStore,
-        channelsStore,
-        channelId: FAKE_CHANNEL_ID,
-        reduceChannelUpdates: false,
-        isStandaloneProjectLevel: false,
-      });
-      projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.notCalled);
-    });
-
-    it('deletes nothing while the saved sources are unknown', async () => {
-      const projectManager = new ProjectManager({
-        sourcesStore,
-        channelsStore,
-        channelId: FAKE_CHANNEL_ID,
-        reduceChannelUpdates: false,
-        isStandaloneProjectLevel: false,
-      });
-      // A reset load reads the channel and not the sources.
-      await projectManager.load(true);
-      projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.notCalled);
-    });
-
-    it("deletes nothing from a project that is not the user's", async () => {
-      channelsStore.load.returns(
-        Promise.resolve({...FAKE_CHANNEL, isOwner: false})
+      assert.deepEqual(
+        projectManager.getSettledSources()?.saved,
+        UPDATED_SOURCE
       );
-      const projectManager = await makeManager();
-      projectManager.deleteFileOnceUnnamed(FILE);
-      assert.isTrue(httpDelete.notCalled);
     });
 
-    it('refuses once destroyed', async () => {
+    it('has none once destroyed', async () => {
       const projectManager = await makeManager();
       projectManager.destroy();
-      assert.isFalse(await projectManager.deleteFileOnceUnnamed(FILE));
-      assert.isTrue(httpDelete.notCalled);
+      assert.isUndefined(projectManager.getSettledSources());
+    });
+
+    it('calls its listeners after a save that succeeds or finds nothing changed, and not after one that fails', async () => {
+      const projectManager = await makeManager();
+      const settledListener = sinon.stub();
+      projectManager.addSourcesSettledListener(settledListener);
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isTrue(settledListener.calledOnce);
+      assert.deepEqual(settledListener.firstCall.args[0], {
+        saved: UPDATED_SOURCE,
+        waiting: undefined,
+      });
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isTrue(settledListener.calledTwice);
+      sourcesStore.save.callsFake(() => Promise.reject(new Error('500')));
+      await projectManager.save(UPDATED_SOURCE_2, true);
+      assert.isTrue(settledListener.calledTwice);
+    });
+
+    it('saves normally when a listener throws', async () => {
+      const projectManager = await makeManager();
+      const later = sinon.stub();
+      projectManager.addSourcesSettledListener(() => {
+        throw new Error('lab bug');
+      });
+      projectManager.addSourcesSettledListener(later);
+      const successListener = sinon.stub();
+      projectManager.addSaveSuccessListener(successListener);
+      await projectManager.save(UPDATED_SOURCE, true);
+      assert.isTrue(successListener.calledOnce);
+      assert.isTrue(later.calledOnce);
+    });
+
+    it('gives settled sources again after a save ends in an unexpected error', async () => {
+      const projectManager = await makeManager();
+      channelsStore.save
+        .onFirstCall()
+        .callsFake(() => Promise.resolve(new Response('not json')));
+      let thrown: unknown;
+      try {
+        await projectManager.save(UPDATED_SOURCE, true);
+      } catch (error) {
+        thrown = error;
+      }
+      assert.instanceOf(thrown, Error);
+      // The sources were stored before the channel response failed to parse.
+      assert.deepEqual(
+        projectManager.getSettledSources()?.saved,
+        UPDATED_SOURCE
+      );
+    });
+
+    it('starts a queued save only once the save in flight has finished', async () => {
+      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
+      try {
+        const projectManager = await makeManager();
+        const held = holdNextSave();
+        const slow = projectManager.save(UPDATED_SOURCE, true);
+        await clock.tickAsync(0);
+        projectManager.save(UPDATED_SOURCE_2);
+        // The queued save comes due while the slow one is still in flight.
+        await clock.tickAsync(30 * 1000);
+        assert.isTrue(sourcesStore.save.calledOnce);
+        assert.isUndefined(projectManager.getSettledSources());
+        held.finish();
+        await slow;
+        await clock.tickAsync(0);
+        assert.isTrue(sourcesStore.save.calledTwice);
+        assert.deepEqual(
+          sourcesStore.save.secondCall.args[1],
+          UPDATED_SOURCE_2
+        );
+        assert.deepEqual(
+          projectManager.getSettledSources()?.saved,
+          UPDATED_SOURCE_2
+        );
+      } finally {
+        clock.restore();
+      }
     });
   });
 });
