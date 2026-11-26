@@ -641,9 +641,10 @@ export default class SpriteLab2Engine extends SpriteLab {
       const p5 = this.p5Wrapper.p5;
       const frame = p5 ? p5.frameCount : -Infinity;
       const supported = footing({group}, isSupported);
-      // Whether this sprite left its footing so recently that it may still
-      // jump. A key's handler runs after its frame's movement is resolved,
-      // so a player standing this frame has this frame's record.
+      // Whether this sprite stood on something within the last
+      // JUMP_GRACE_FRAMES frames and is not rising. A key's handler runs
+      // after its frame's movement is resolved, so for a player standing
+      // this frame, __slab2Footing was written this frame.
       const inGrace = sprite =>
         !!sprite.__slab2Footing &&
         canStartJump(
@@ -691,7 +692,7 @@ export default class SpriteLab2Engine extends SpriteLab {
           : 0;
         sprite.velocity.y =
           up * jumpSpeedFromBelow(jumpSpeed, drop, this.platformGravity_);
-        // Clear the record, so the grace period cannot start a second
+        // Without __slab2Footing, the grace period cannot start a second
         // jump in the air.
         sprite.__slab2Footing = undefined;
       });
@@ -816,9 +817,9 @@ export default class SpriteLab2Engine extends SpriteLab {
         // a body that rests on a block without overlapping it, so
         // touchesWall is asked first. For a player it is the only test: the
         // stock one measures the whole picture, which is wider than the
-        // body, and counts a corner brush. Other sprites are stopped at
-        // their picture's edge, short of their body, so the stock test
-        // still serves them.
+        // body, and counts a corner brush. Other sprites get the stock test
+        // too: the stock collide stops most of them when their picture
+        // meets a block, before their body reaches it.
         const overlap = sprite.overlap.bind(sprite);
         sprite.overlap = (target, callback) => {
           const wall =
@@ -1534,7 +1535,9 @@ export default class SpriteLab2Engine extends SpriteLab {
   // Drawn over the sprites, in world coordinates. Each block's cell is
   // filled blue and each other sprite's body green; both turn red while the
   // body touches a block. The white outline is the rectangle around a
-  // sprite's collider, which touches between two sprites are measured with.
+  // sprite's collider, which the stock overlap test measures: for a touch
+  // between two sprites, and as the second test between a block and a
+  // sprite that is not a player.
   drawCollisionBoxes_(library) {
     const {p5} = library;
     const sprites = Object.values(library.nativeSpriteMap).filter(
@@ -1642,7 +1645,8 @@ export default class SpriteLab2Engine extends SpriteLab {
     const view = {width: p5.width, height: p5.height};
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
     // When and where each player last stood on something, for the jump's
-    // grace period. A player moving against gravity has just jumped.
+    // grace period. A player moving against gravity has jumped, so it does
+    // not count as standing.
     const gravity = this.platformGravity_;
     players.forEach(({sprite}) => {
       if (

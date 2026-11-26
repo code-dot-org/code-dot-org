@@ -14,13 +14,13 @@ import {
 
 export interface OverlayBox extends CollisionBox {
   kind: 'wall' | 'body';
-  /** In a touch that "when touches" reports between a sprite and a block. */
+  /** A body and a block touch by touchesWall. For a sprite that is not a
+      player, "when touches" can also fire while this is false. */
   touching: boolean;
 }
 
-/** Each block's cell and each sprite's body, as the platform physics and
-    touches with blocks measure them, each marked with whether it is in such
-    a touch. */
+/** Each block's cell and each sprite's body, each marked with whether
+    touchesWall holds for it. */
 export function collisionOverlayBoxes(
   sprites: PhysicsBox[],
   walls: PhysicsBox[]

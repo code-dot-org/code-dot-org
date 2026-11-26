@@ -133,9 +133,9 @@ export const TOUCH_SLACK = 1;
 // not a touch.
 export const FIRM_TOUCH_SHARE = 0.25;
 
-/** Whether a sprite's body touches a wall firmly, from any side: the boxes
-    meet or overlap, within TOUCH_SLACK, and share at least FIRM_TOUCH_SHARE
-    of the narrower one along the face where they meet. */
+/** Whether a sprite's body touches a wall, from any side: the boxes meet
+    or overlap, within TOUCH_SLACK, along enough of a face (see
+    FIRM_TOUCH_SHARE). */
 export function touchesWall(sprite: PhysicsBox, wall: PhysicsBox): boolean {
   const body = bodyBox(sprite);
   const box = wallBox(wall);

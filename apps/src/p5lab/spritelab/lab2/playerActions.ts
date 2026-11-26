@@ -22,8 +22,8 @@ export function isPlayerAction(value: unknown): value is PlayerAction {
 export const WALK_PERIOD_MS = 333;
 
 export interface PlayerFrame extends ObservedFrame {
-  /** A jump command ran since the frame before: a jump started in the air,
-      just after the player left its footing, is a jump too. */
+  /** A jump started since the last observed frame. A jump in the grace
+      period starts in the air, so the last frame was not grounded. */
   jumpStarted?: boolean;
   /** The frame the character's animation shows, and how many it has. */
   animationFrame?: number;

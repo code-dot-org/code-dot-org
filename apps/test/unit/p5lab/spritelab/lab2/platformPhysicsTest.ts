@@ -395,8 +395,8 @@ describe('platformPhysics with custom gravity', () => {
   });
 
   it('touchesWall needs a quarter of the body along the face it meets', () => {
-    // The same cell: its left edge is at x 50, its top at y 300. The body
-    // is 20 wide, so a quarter of it is 5px.
+    // Cell (col 1, row 6): its left edge is at x 50, its top at y 300. The
+    // body is 20 wide, so a quarter of it is 5px.
     const wall = wallAt(1, 6);
     // Standing with 3px of the body over the block's top, then 5px.
     expect(touchesWall(makeSprite(43, 275), wall)).toBe(false);
