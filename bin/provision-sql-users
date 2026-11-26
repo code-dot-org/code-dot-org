@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+require_relative '../deployment'
+require 'cdo/sql_user_provisioner'
+
+# Provision the non-root `writer` and `reader` MySQL users. These users must exist before pretty much any Rails or
+# legacy Pegasus / Sequel code initializes.
+
+result = Cdo::SqlUserProvisioner.provision_from_config!
+
+if result.nil?
+  puts "Skipping: CloudFormation provisions these users on Aurora cluster #{CDO.db_cluster_id}."
+  exit
+end
+
+result[:provisioned].each do |username|
+  puts "Provisioned '#{username}'@'#{Cdo::SqlUserProvisioner::CLIENT_HOST}' on #{CDO.db_endpoint_writer}."
+end
+result[:skipped].each do |username|
+  puts "Skipped '#{username}': same as the admin user (db_credential_* not pointed at a non-root user)."
+end
