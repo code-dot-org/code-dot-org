@@ -5,9 +5,11 @@ description 'description here'
 markdown <<MARKDOWN
 # While Loops: Conditions
 
-In 2022, Lionel Messi's post celebrating the World Cup win reached 10 million likes in just 39 minutes. Lesson 8 uses that real event to introduce a different kind of loop.
+In 2022, Lionel Messi's post celebrating the World Cup win reached 10 million likes in just 39 minutes. Lesson 8 opens by asking students to guess how long that took, then uses the event to introduce a different kind of loop.
 
-The "Time to 10 Million" simulation starts a post at 1 like, growing by a factor of 10 every minute, 1, 10, 100, 1,000, and so on, until it crosses 10 million. Notice the difference from Lesson 7: there, you knew exactly how many days to simulate. Here, you don't know how many minutes it'll take, you just know you want to keep going until you hit the target.
+The "Time to 10 Million" simulation starts a post at 1 like, growing by a factor of 10 every minute: 1, 10, 100, 1,000, and so on. In the simulation, it crosses 10 million after 7 minutes, not 39. That gap is the lesson's big question: if simulations aren't reality, why are they still useful?
+
+Notice the difference from Lesson 7: there, you knew exactly how many days to simulate. Here, you don't know how many minutes it'll take. You only know the condition: keep going while the post hasn't reached 10 million.
 
 <div style="background-color: #F7F7FB; border-left: 4px solid #4C42CF; border-radius: 8px; padding: 12px 16px; margin: 16px 0;">
   <div style="font-size: 16px; line-height: 1.5;">
@@ -15,33 +17,59 @@ The "Time to 10 Million" simulation starts a post at 1 like, growing by a factor
   </div>
 </div>
 
-Here's the exact code from the lesson:
+## The Code From the Lesson
+
+Students first meet the while loop with this short example.
 
 <div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
-  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
-i = 0<br>
-while i &lt; 3:<br>
-&nbsp;&nbsp;print(i)<br>
-&nbsp;&nbsp;i += 1
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
+    <div style="line-height: 2;">i = 0</div>
+    <div style="line-height: 2;">while i &lt; 3:</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;print(i)</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;i += 1</div>
   </div>
-  <div style="background-color: #E4E2F8; padding: 10px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976; line-height: 1.7;">
-0<br>
-1<br>
-2
+  <div style="background-color: #E4E2F8; padding: 12px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976;">
+    <div style="line-height: 1.9;">0</div>
+    <div style="line-height: 1.9;">1</div>
+    <div style="line-height: 1.9;">2</div>
   </div>
 </div>
 
-Before every iteration, Python checks the condition, <code style="font-size:16px;">i &lt; 3</code>. If it's true, the indented lines run and <code style="font-size:16px;">i</code> updates. The moment the condition is false, 3 &lt; 3 is false, the loop stops, no more and no fewer iterations than the condition allows.
+<div style="line-height: 2;">
+  <div style="font-size: 16px; line-height: 2;">Before every iteration, Python checks the condition, <code style="font-size: 16px; line-height: 1; padding: 0 4px;">i &lt; 3</code>. While it's true, the indented lines run and <code style="font-size: 16px; line-height: 1; padding: 0 4px;">i</code> updates. The moment it's false, when 3 &lt; 3 is false, the loop stops.</div>
+</div>
+
+## The Same Idea With Messi's Post
+
+Here's how the "Time to 10 Million" simulation looks as a while loop. It follows the same pattern: a condition at the top, and a line inside that changes what the condition checks.
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
+    <div style="line-height: 2;">likes = 1</div>
+    <div style="line-height: 2;">minutes = 0</div>
+    <div style="line-height: 2;">while likes &lt; 10000000:</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;likes = likes * 10</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;minutes += 1</div>
+    <div style="line-height: 2;">print(f"{minutes} minutes")</div>
+  </div>
+  <div style="background-color: #E4E2F8; padding: 12px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #1F1976;">
+    <div style="line-height: 1.9;">7 minutes</div>
+  </div>
+</div>
+
+<div style="line-height: 2;">
+  <div style="font-size: 16px; line-height: 2;">The loop keeps running <strong>while</strong> <code style="font-size: 16px; line-height: 1; padding: 0 4px;">likes &lt; 10000000</code> is true. Nobody told the program how many minutes it would take. It stops on its own once the post crosses 10 million.</div>
+</div>
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
   <div style="font-size: 16px; color: #222222; line-height: 1.5;">
-    <strong>&#128161; Teacher tip:</strong> the real distinction to give students isn't "for is simpler" or "while is harder," it's this: use a for loop when you know the number of repetitions in advance, use a while loop when you're repeating until something becomes true. Lesson 7's days were known in advance. Lesson 8's minutes-to-10-million weren't.
+    <strong>&#128161; Teacher tip:</strong> the real distinction to give students isn't "for is simpler" or "while is harder," it's this: use a for loop when you know the number of repetitions in advance, use a while loop when you don't know how many, but you know the condition that should keep it going. Lesson 7's days were known in advance. Lesson 8's minutes-to-10-million weren't.
   </div>
 </div>
 
 <div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin-top: 20px;">
   <div style="font-size: 16px; color: #06338D; line-height: 1.6;">
-    <strong>&#8505; Keep this in mind:</strong> that <code style="font-size:16px;">i += 1</code> line isn't optional decoration, it's what eventually makes the condition false. Hold onto that thought, it matters a lot in a few levels.
+    <strong>&#8505; Keep this in mind:</strong> the line inside the loop that changes <code style="font-size: 16px; line-height: 1; padding: 0 4px;">i</code> or <code style="font-size: 16px; line-height: 1; padding: 0 4px;">likes</code> isn't optional decoration. It's what eventually makes the condition false. Hold onto that thought, it matters a lot in a few levels.
   </div>
 </div>
 MARKDOWN

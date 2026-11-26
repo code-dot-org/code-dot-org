@@ -3,11 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-## Facilitating While Loops
+# Facilitating While Loops
 
 Students are debugging an existing program here, not writing one from scratch, which makes this a different kind of stuck than earlier labs. The real risk: converting a for loop to a while loop while forgetting the one line that makes it ever stop.
 
-### What's Actually Happening in This Lesson
+## What's Actually Happening in This Lesson
 
 <div style="background-color: #F7F7FB; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
   <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
@@ -22,7 +22,7 @@ Students are debugging an existing program here, not writing one from scratch, w
 
 <hr>
 
-### Watch for: Infinite Loops
+## Watch for: Infinite Loops
 
 A while loop only stops when its condition becomes false. If nothing inside the loop ever changes that condition, it never will.
 

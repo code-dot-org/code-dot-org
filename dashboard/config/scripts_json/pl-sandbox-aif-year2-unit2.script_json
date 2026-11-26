@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-23 20:56:55 UTC",
+    "serialized_at": "2026-11-25 19:08:19 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -992,6 +992,28 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "pl-aif-y2-u2-l4-regression-walkthrough"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "f8232d24-febd-4323-8d84-1f44abd74009"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l4-regression-walkthrough"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Testing Regression Models"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "pl-aif-y2-u2-l4-testing-models-lab"
         ],
         "lesson.key": "lesson-4",
@@ -1004,9 +1026,9 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 8,
-      "activity_section_position": 3,
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Testing Regression Models"
@@ -1026,8 +1048,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 9,
+      "chapter": 31,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1048,9 +1070,31 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 10,
+      "chapter": 32,
+      "position": 11,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Selecting Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l4-filtering-lists"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "abe562af-98a6-407f-bf74-b0340d967d34"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l4-filtering-lists"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 12,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "progression": "Selecting Data"
@@ -1070,9 +1114,9 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 11,
-      "activity_section_position": 3,
+      "chapter": 34,
+      "position": 13,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "progression": "Selecting Data"
@@ -1092,9 +1136,9 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 12,
-      "activity_section_position": 4,
+      "chapter": 35,
+      "position": 14,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Selecting Data"
@@ -1114,7 +1158,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1136,7 +1180,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1158,7 +1202,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1180,9 +1224,31 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Building Classifiers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-code-walkthrough"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      },
+      "level_keys": [
+        "pl-aif-y2-u2-l5-code-walkthrough"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Building Classifiers"
@@ -1202,9 +1268,9 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 41,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Building Classifiers"
@@ -1224,8 +1290,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 6,
+      "chapter": 42,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1246,8 +1312,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 7,
+      "chapter": 43,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -1256,7 +1322,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "pl-aif-y2-u2-l5-confidence-threshold"
+          "pl-aif-y2-u2-l5-berry-widget"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -1264,12 +1330,12 @@
         "activity_section.key": "fce83942-2a4e-4e34-a72a-1ccc5b43361b"
       },
       "level_keys": [
-        "pl-aif-y2-u2-l5-confidence-threshold"
+        "pl-aif-y2-u2-l5-berry-widget"
       ]
     },
     {
-      "chapter": 41,
-      "position": 8,
+      "chapter": 44,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -1290,8 +1356,8 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 9,
+      "chapter": 45,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -1312,7 +1378,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1334,7 +1400,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1356,7 +1422,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1378,7 +1444,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1400,7 +1466,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1422,7 +1488,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1444,7 +1510,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -1466,7 +1532,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -1488,7 +1554,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -1510,7 +1576,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -1532,7 +1598,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 11,
       "activity_section_position": 4,
       "assessment": false,
@@ -1554,7 +1620,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 12,
       "activity_section_position": 5,
       "assessment": false,
@@ -1576,7 +1642,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 58,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -1598,7 +1664,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -1620,7 +1686,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -1642,7 +1708,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 16,
       "activity_section_position": 4,
       "assessment": false,
@@ -1664,7 +1730,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1686,7 +1752,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1708,7 +1774,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1730,7 +1796,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1752,7 +1818,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1774,7 +1840,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1796,7 +1862,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1818,7 +1884,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -2167,6 +2233,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l4-regression-walkthrough",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l4-regression-walkthrough"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "f8232d24-febd-4323-8d84-1f44abd74009"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-y2-u2-l4-testing-models-lab",
         "script_level.level_keys": [
           "pl-aif-y2-u2-l4-testing-models-lab"
@@ -2194,6 +2272,18 @@
         "level.key": "pl-aif-y2-u2-l4-selecting-data",
         "script_level.level_keys": [
           "pl-aif-y2-u2-l4-selecting-data"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "abe562af-98a6-407f-bf74-b0340d967d34"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l4-filtering-lists",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l4-filtering-lists"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -2275,6 +2365,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "pl-aif-y2-u2-l5-code-walkthrough",
+        "script_level.level_keys": [
+          "pl-aif-y2-u2-l5-code-walkthrough"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-year2-unit2",
+        "activity_section.key": "1c7ec3c4-8659-4c81-b15e-d816b912432c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "pl-aif-y2-u2-l5-python-dictionaries",
         "script_level.level_keys": [
           "pl-aif-y2-u2-l5-python-dictionaries"
@@ -2311,9 +2413,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "pl-aif-y2-u2-l5-confidence-threshold",
+        "level.key": "pl-aif-y2-u2-l5-berry-widget",
         "script_level.level_keys": [
-          "pl-aif-y2-u2-l5-confidence-threshold"
+          "pl-aif-y2-u2-l5-berry-widget"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",

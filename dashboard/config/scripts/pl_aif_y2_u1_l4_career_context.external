@@ -3,15 +3,20 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Career Context: Operations Researcher
+# Career Journeys: Operations Researcher
 
-Lesson 6 ties hill climbing directly to a real profession:
-
-<div style="background-color: #D5EFFF; border-radius: 10px; padding: 18px 20px; margin: 16px 0;">
-  <div style="font-size: 16px; color: #06338D; line-height: 1.6;"><strong>&#128188; Operations Researcher:</strong> uses data and AI to find the best solutions to big, real-world problems. They help improve hospitals, airlines, deliveries, and more.</div>
+<div style="display: flex; gap: 16px; align-items: center; background-color: #F7F7FB; border-radius: 10px; padding: 16px 20px; margin: 16px 0; flex-wrap: wrap;">
+  <img src="https://images.code.org/94e525a6c1512c3224bb75e712faffe9-image-1795120246162.png" alt="graduation cap and gown icon" style="width: 120px; border-radius: 8px; flex-shrink: 0;">
+  <div style="flex: 1; min-width: 200px; font-size: 16px; line-height: 1.5;">An operations researcher uses data and AI to find the best solutions to big, real-world problems. They help improve hospitals, airlines, deliveries, and more. Hill climbing isn't a classroom exercise here, it's the kind of thinking this job is built on.</div>
 </div>
 
-This isn't a loose connection. An operations researcher optimizing a delivery route or a hospital schedule is doing exactly what the thermostat activity simulates: searching step by step for a better solution, without knowing in advance what the perfect answer looks like.
+## What You'll Do With This in the Lesson
+
+Career Journeys comes up right before the Smart Thermostat activity. You'll share the operations researcher slide, then frame the activity this way: an operations researcher is designing a smart thermostat, and it has to find the temperature most people prefer without knowing in advance what that is.
+
+From there, your students collect their own temperature preferences as a class and chart them. Then they follow a step-by-step algorithm to search for the most comfortable temperature, starting from different places. That search is hill climbing.
+
+This isn't a loose connection. An operations researcher optimizing a delivery route or a hospital schedule is doing what the thermostat activity simulates: searching step by step for a better solution, without knowing what the perfect answer looks like.
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
   <div style="font-size: 16px; color: #222222; line-height: 1.5;"><strong>&#128161; Teacher tip:</strong> this is the local-vs-global optimum trade-off from the facilitation notes, showing up in a real career. Worth naming for students: the same limitation their thermostat has is one professionals actually work around every day.</div>
