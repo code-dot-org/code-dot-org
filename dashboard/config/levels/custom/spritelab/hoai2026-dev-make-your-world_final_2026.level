@@ -27,9 +27,9 @@
     "level_mode": {
       "kind": "world",
       "paletteRoles": [
-        "hero",
         "treasure",
-        "block"
+        "block",
+        "hero"
       ],
       "extraTabs": [
         "Images"

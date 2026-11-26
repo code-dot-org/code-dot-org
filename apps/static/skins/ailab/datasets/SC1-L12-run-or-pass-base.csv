@@ -50,3 +50,17 @@ Play 51,2nd,Short,Winning,Yes,Yes,Run
 Play 52,1st,Long,Tied,Yes,Yes,Run
 Play 53,1st,Long,Winning,Yes,Yes,Run
 Play 54,2nd,Long,Tied,No,No,Pass
+Play 55,2nd,Long,Winning,No,No,Pass
+Play 56,2nd,Medium,Losing,Yes,No,Pass
+Play 57,2nd,Long,Winning,No,Yes,Pass
+Play 58,1st,Long,Tied,Yes,No,Run
+Play 59,1st,Long,Winning,No,Yes,Run
+Play 60,3rd,Long,Winning,No,Yes,Pass
+Play 61,2nd,Long,Winning,No,No,Pass
+Play 62,3rd,Medium,Losing,No,No,Pass
+Play 63,1st,Long,Tied,Yes,No,Run
+Play 64,2nd,Medium,Losing,No,No,Pass
+Play 65,2nd,Long,Losing,No,No,Pass
+Play 66,2nd,Long,Tied,No,No,Run
+Play 67,1st,Long,Winning,No,Yes,Run
+Play 68,1st,Long,Losing,No,No,Pass

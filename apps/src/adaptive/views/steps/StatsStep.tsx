@@ -24,7 +24,7 @@ const StatsStep: React.FunctionComponent<StatsStepProps> = ({
   continueLabel,
   onComplete,
 }) => {
-  const {pathway, progressKey, statusMap} = usePathwayContext();
+  const {pathway, progressKey, statusMap, viewAsUserId} = usePathwayContext();
   const headingRef = useRef<HTMLHeadingElement>(null);
   useEffect(() => {
     headingRef.current?.focus();
@@ -32,13 +32,15 @@ const StatsStep: React.FunctionComponent<StatsStepProps> = ({
   const [aiMetrics, setAiMetrics] = useState<AiMetrics>();
   useEffect(() => {
     let cancelled = false;
-    serverProgressStore.loadAiMetrics(progressKey).then(counts => {
-      if (!cancelled) setAiMetrics(counts);
-    });
+    serverProgressStore
+      .loadAiMetrics(progressKey, viewAsUserId ?? undefined)
+      .then(counts => {
+        if (!cancelled) setAiMetrics(counts);
+      });
     return () => {
       cancelled = true;
     };
-  }, [progressKey]);
+  }, [progressKey, viewAsUserId]);
 
   return (
     <div className={styles.questionsStep}>

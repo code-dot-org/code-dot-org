@@ -367,6 +367,45 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     assert_empty steps
   end
 
+  test "a teacher reads their student's progress, level steps included" do
+    put_step 'read', started: true
+    create(:user_level, user: @student, level: @sandbox, script: @unit, best_result: ActivityConstants::BEST_PASS_RESULT)
+    teacher = create(:teacher)
+    create(:follower, section: create(:section, user: teacher), student_user: @student)
+    sign_out @student
+    sign_in teacher
+
+    get :show, params: {**params, user_id: @student.id}
+
+    assert_response :success
+    entries = JSON.parse(response.body)['steps']
+    assert_equal 'started', entries['read']['status']
+    assert_equal 'complete', entries['retry']['status']
+  end
+
+  test "a teacher cannot read the progress of someone who is not their student" do
+    put_step 'read', started: true
+    sign_out @student
+    sign_in create(:teacher)
+
+    get :show, params: {**params, user_id: @student.id}
+
+    assert_response :forbidden
+  end
+
+  test "a student cannot read another student's progress by id" do
+    other = create(:student)
+    sign_out @student
+    sign_in other
+    put_step 'read', started: true
+    sign_out other
+    sign_in @student
+
+    get :show, params: {**params, user_id: other.id}
+
+    assert_response :forbidden
+  end
+
   test "ai metrics are zero for a student with no chat" do
     get :ai_metrics, params: params
 
@@ -386,6 +425,20 @@ class AdaptiveProgressControllerTest < ActionController::TestCase
     get :ai_metrics, params: params
 
     assert_equal({'accepted' => 2, 'rejected' => 1}, JSON.parse(response.body))
+  end
+
+  test "a teacher reads their student's ai metrics, and no one else's" do
+    log_chat_event @sandbox, 'aiTutorVersionActionAccept'
+    teacher = create(:teacher)
+    create(:follower, section: create(:section, user: teacher), student_user: @student)
+    sign_out @student
+    sign_in teacher
+
+    get :ai_metrics, params: {**params, user_id: @student.id}
+    assert_equal({'accepted' => 1, 'rejected' => 0}, JSON.parse(response.body))
+
+    get :ai_metrics, params: {**params, user_id: create(:student).id}
+    assert_response :forbidden
   end
 
   test "ai metrics refuse an adaptive level that is not in the unit" do

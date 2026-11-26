@@ -9,7 +9,7 @@ def warn_unless_sql_users_provisioned
   return if denied.empty?
 
   warn "WARNING: MySQL will not authenticate the #{denied.join(' and ')} user#{'s' if denied.length > 1}."
-  warn "         Run `bundle exec rake db:provision_sql_users` from dashboard/ to provision #{denied.length > 1 ? 'them' : 'it'}."
+  warn "         Run `bin/provision-sql-users` to provision #{denied.length > 1 ? 'them' : 'it'}."
 end
 
 def main

@@ -19,6 +19,7 @@ import {
   ValidationAttempt,
   workAttempts,
 } from '../../progress/model';
+import {usePathwayContext} from '../PathwayContext';
 
 import {useChatUnlock} from './useChatUnlock';
 
@@ -46,9 +47,11 @@ export function useStepValidation(options: StepValidationOptions): void {
   const latestOptions = useRef(options);
   latestOptions.current = options;
   const {chat, step} = options;
-  const adapter = step.validation
-    ? workAdapterFor(step.levelProperties?.appName ?? '')
-    : undefined;
+  const {isReadonly} = usePathwayContext();
+  const adapter =
+    step.validation && !isReadonly
+      ? workAdapterFor(step.levelProperties?.appName ?? '')
+      : undefined;
 
   useChatUnlock({
     pathway: options.pathway,

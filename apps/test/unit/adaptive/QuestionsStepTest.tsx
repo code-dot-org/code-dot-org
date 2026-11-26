@@ -10,6 +10,11 @@ import {
 } from '@cdo/apps/adaptive/types';
 import QuestionsStep from '@cdo/apps/adaptive/views/steps/QuestionsStep';
 
+let mockIsReadonly = false;
+jest.mock('@cdo/apps/adaptive/views/PathwayContext', () => ({
+  usePathwayContext: () => ({isReadonly: mockIsReadonly}),
+}));
+
 const frQuestion = (
   id: number,
   text: string,
@@ -72,7 +77,12 @@ const mixedStep: Step = {
 };
 
 // Holds answers as PathwayApp does, so selections feed back in.
-function renderStep(initial: StepAnswers = {}, content: Step = step) {
+function renderStep(
+  initial: StepAnswers = {},
+  content: Step = step,
+  isReadonly = false
+) {
+  mockIsReadonly = isReadonly;
   const onComplete = jest.fn();
   const saved: [number, Answer[]][] = [];
   const Host = () => {
@@ -433,6 +443,40 @@ describe('QuestionsStep', () => {
       fireEvent.click(screen.getByRole('button', {name: /Next/}));
       expect(screen.getByRole('textbox')).toBeInTheDocument();
       expect(screen.getByText('2/2 questions')).toBeInTheDocument();
+    });
+  });
+
+  describe('while a teacher views a student', () => {
+    it("shows the student's answer with Submit disabled, and saves nothing", () => {
+      const {saved} = renderStep(
+        {1: [{answerId: '', text: 'Their answer.'}]},
+        freeResponseStep,
+        true
+      );
+
+      expect(screen.getByRole('textbox')).toHaveValue('Their answer.');
+      expect(screen.getByRole('button', {name: 'Submit'})).toBeDisabled();
+      expect(saved).toEqual([]);
+    });
+
+    it('pages through the questions with Continue, then completes the step', () => {
+      const {onComplete, saved} = renderStep({}, mixedStep, true);
+      fireEvent.click(screen.getByRole('radio', {name: /Yes 1/}));
+      expect(screen.getByRole('button', {name: /Next/})).toBeDisabled();
+
+      fireEvent.click(screen.getByRole('button', {name: /Continue/}));
+      expect(screen.getByText('2/2 questions')).toBeInTheDocument();
+      fireEvent.click(screen.getByRole('button', {name: /Continue/}));
+
+      expect(onComplete).toHaveBeenCalled();
+      expect(saved).toEqual([]);
+    });
+
+    it('offers no Continue to the student', () => {
+      renderStep({}, mixedStep);
+      expect(
+        screen.queryByRole('button', {name: /Continue/})
+      ).not.toBeInTheDocument();
     });
   });
 });

@@ -12,6 +12,7 @@ import {
   continueUnlockReason,
   skippedAttempts,
   validationAllowsContinue,
+  studentWorkSteps,
   visibleSteps,
   workAttempts,
 } from '@cdo/apps/adaptive/progress';
@@ -285,6 +286,29 @@ describe('workAttempts, skippedAttempts and latestValidation', () => {
   });
 });
 
+describe('studentWorkSteps', () => {
+  const level = (id: string) =>
+    ({id, title: id, kind: 'level', level: id} as Step);
+  const video = (id: string) =>
+    ({id, title: id, kind: 'video', videoKey: id} as unknown as Step);
+  const ids = (cp: Checkpoint) =>
+    studentWorkSteps(cp, EMPTY_PROGRESS).map(s => s.id);
+
+  it('drops panels and videos, keeping the steps with student work', () => {
+    const cp = checkpoint('mixed', undefined, [
+      panels('read'),
+      video('watch'),
+      level('try'),
+    ]);
+    expect(ids(cp)).toEqual(['try']);
+  });
+
+  it('keeps every step of a checkpoint with no student work', () => {
+    const cp = checkpoint('reading', undefined, [panels('a'), panels('b')]);
+    expect(ids(cp)).toEqual(['a', 'b']);
+  });
+});
+
 describe('visibleSteps', () => {
   const ask: Step = {
     id: 'ask',
@@ -519,7 +543,7 @@ describe('useProgress', () => {
       intro: 'complete',
       basics: 'available',
     });
-    expect(store.load).toHaveBeenCalledWith(key);
+    expect(store.load).toHaveBeenCalledWith(key, undefined);
   });
 
   it('shows no progress and logs when the load fails', async () => {
@@ -662,6 +686,62 @@ describe('useProgress', () => {
       pass: true,
     });
     expect(reportLevelStep).not.toHaveBeenCalled();
+  });
+
+  it("loads a viewed student's progress and leaves it as loaded, on the page and the server", async () => {
+    const store = fakeStore();
+    const reportLevelStep = jest.fn().mockResolvedValue(undefined);
+    const {result, waitForNextUpdate} = renderHook(() =>
+      useProgress(hookPathway, key, {store, reportLevelStep, viewAsUserId: 77})
+    );
+    await waitForNextUpdate();
+    expect(store.load).toHaveBeenCalledWith(key, 77);
+    expect(result.current.isViewingStudent).toBe(true);
+    expect(result.current.isReadonly).toBe(true);
+    const loaded = result.current.progress;
+    const statusMap = result.current.statusMap;
+
+    act(() => {
+      result.current.startStep(read);
+      result.current.completeStep(read, 1000);
+      result.current.startStep(sandbox);
+      result.current.completeStep(sandbox, 1000);
+      result.current.saveAnswers(quiz, 1, [{answerId: 'a'}], 0);
+      result.current.saveGeneratedInstructions('try', {
+        instructions: 'Hi',
+        inputsHash: 'ab',
+      });
+      result.current.recordValidation(sandbox, {
+        pass: true,
+        evidenceLevel: 1,
+        reason: 'Yes.',
+      });
+    });
+
+    expect(result.current.progress).toBe(loaded);
+    expect(result.current.statusMap).toEqual(statusMap);
+    expect(result.current.statusMap.intro).not.toBe('complete');
+    expect(store.saveStep).not.toHaveBeenCalled();
+    expect(store.saveInstructions).not.toHaveBeenCalled();
+    expect(store.saveValidation).not.toHaveBeenCalled();
+    expect(reportLevelStep).not.toHaveBeenCalled();
+  });
+
+  it('loads again when the teacher picks another student', async () => {
+    const store = fakeStore();
+    const {rerender, waitForNextUpdate} = renderHook(
+      ({viewAsUserId}: {viewAsUserId: number | null}) =>
+        useProgress(hookPathway, key, {store, viewAsUserId}),
+      {initialProps: {viewAsUserId: 77}}
+    );
+    await waitForNextUpdate();
+    rerender({viewAsUserId: 78});
+    await waitForNextUpdate();
+
+    expect(store.load.mock.calls).toEqual([
+      [key, 77],
+      [key, 78],
+    ]);
   });
 
   it('restores loaded generated instructions', async () => {
