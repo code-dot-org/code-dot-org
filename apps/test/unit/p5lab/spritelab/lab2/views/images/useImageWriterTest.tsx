@@ -31,6 +31,9 @@ const propsByKey = (
 ).mockPropsByKey;
 const dispatch = jest.fn();
 let labState: Record<string, unknown> = {channel: {id: 'chan'}};
+// A level edited outside a project has no channel, and each of its drawings
+// is uploaded at once.
+const OUTSIDE_A_PROJECT = {};
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppDispatch: () => dispatch,
   useAppSelector: (select: (state: unknown) => unknown) =>
@@ -232,6 +235,7 @@ describe('useImageWriter', () => {
   });
 
   it('leaves an image as it was when a drawing on it cannot be uploaded', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer} = renderWriter(
       jest.fn(async (name: string): Promise<string> => {
@@ -249,6 +253,7 @@ describe('useImageWriter', () => {
   });
 
   it('stores no generated or drawn picture with nowhere to put the file', async () => {
+    labState = OUTSIDE_A_PROJECT;
     const latest: {current: ImageWriter | null} = {current: null};
     const Harness = () => {
       latest.current = useImageWriter({onDeleteImage: jest.fn()});
@@ -270,6 +275,7 @@ describe('useImageWriter', () => {
   });
 
   it('keeps what an image depicts when an edit drops the prompt', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {
       name: 'Sprite 1',
       sourceUrl: '/v3/assets/chan/old.png',
@@ -328,6 +334,7 @@ describe('useImageWriter', () => {
   });
 
   it('drops an edit no longer wanted once its file is up', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer, uploadImage} = renderWriter();
     await act(async () => {
@@ -373,6 +380,7 @@ describe('useImageWriter', () => {
   });
 
   it('saves drawn pixels onto a generated image, uploading each save and marking it edited, not generated', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {
       name: 'Sprite 1',
       sourceUrl: '/v3/assets/chan/old.png',
@@ -407,6 +415,7 @@ describe('useImageWriter', () => {
   });
 
   it('gives a drawn blank its file', async () => {
+    labState = OUTSIDE_A_PROJECT;
     const {writer, uploadImage} = renderWriter();
     await act(async () => {
       await writer().saveEdited(
@@ -432,6 +441,7 @@ describe('useImageWriter', () => {
   });
 
   it('keeps a character set its frames when a frame is drawn on', async () => {
+    labState = OUTSIDE_A_PROJECT;
     propsByKey.k1 = {
       name: 'Sprite 1',
       sourceUrl: '/v3/assets/chan/old.png',
@@ -520,6 +530,7 @@ describe('useImageWriter', () => {
   describe('drawing', () => {
     let now = 1795593000000;
     beforeEach(() => {
+      labState = OUTSIDE_A_PROJECT;
       jest.spyOn(Date, 'now').mockImplementation(() => (now += 1));
       repointAnimation.mockImplementation((...args: unknown[]) => {
         const [, key, patch] = args as [
@@ -765,6 +776,27 @@ describe('useImageWriter', () => {
         },
       } as never);
       expect(preparerUpload).not.toHaveBeenCalled();
+    });
+
+    it('drops a drawing once the project has no save left to upload it', async () => {
+      mockHasPreparer = false;
+      propsByKey.k1 = {
+        name: 'Sprite 1',
+        sourceUrl: '/v3/assets/chan/sprite_1_1795593000001.png?t=5',
+        edited: true,
+      };
+      const {writer, uploadImage} = renderWriter();
+      let key = '';
+      await act(async () => {
+        key = await writer().saveEdited(
+          {key: 'k1', imageType: 'sprite'},
+          'data:image/png;base64,AA',
+          {}
+        );
+      });
+      expect(key).toBe('k1');
+      expect(uploadImage).not.toHaveBeenCalled();
+      expect(repointAnimation).not.toHaveBeenCalled();
     });
 
     it('makes a new image without uploading, marked for the next save', async () => {
