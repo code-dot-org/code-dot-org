@@ -28,15 +28,14 @@ describe('useReportSharePageVisit', () => {
     expect(report).not.toHaveBeenCalled();
     mockLab = {isShareView: true, channel};
     rerender();
-    // The channel object is replaced on every save.
-    mockLab = {isShareView: true, channel: {...channel}};
+    mockLab = {isShareView: true, channel: {...channel, isOwner: true}};
     rerender();
     expect(report.mock.calls).toEqual([
       [{projectType: 'quest_builder', channelId: 'abc'}, false],
     ]);
   });
 
-  it('says when the visitor owns the project', () => {
+  it('reports that the visitor owns the project', () => {
     mockLab = {isShareView: true, channel: {...channel, isOwner: true}};
     renderHook(() => useReportSharePageVisit());
     expect(report).toHaveBeenCalledWith(

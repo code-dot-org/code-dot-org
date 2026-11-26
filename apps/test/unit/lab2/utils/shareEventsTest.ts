@@ -25,6 +25,7 @@ describe('shareEvents', () => {
 
   it('names the share dialog and each finish dialog as a source', () => {
     expect(shareSource()).toBe('share_dialog');
+    expect(shareSource('hoai2025')).toBe('hoai2025_finish_dialog');
     expect(shareSource('hoai2026')).toBe('hoai2026_finish_dialog');
     expect(shareSource('hoc2024')).toBe('hoc2024_finish_dialog');
   });
@@ -54,7 +55,7 @@ describe('shareEvents', () => {
     ]);
   });
 
-  it('reports a share page visit with who is visiting and whether a QR code led there', () => {
+  it('reports a share page visit with whether the visitor owns the project and whether a QR code led there', () => {
     mockQueryParams.mockReturnValue(undefined);
     reportSharePageVisited(project, true);
     mockQueryParams.mockImplementation((name: string) =>

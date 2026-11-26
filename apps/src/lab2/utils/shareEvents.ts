@@ -40,7 +40,7 @@ export function reportSharePageVisited(
   sendLab2AnalyticsEvent(EVENTS.LAB2_SHARE_PAGE_VISITED, {
     ...project,
     isOwner,
-    // The QR codes in the share and finish dialogs add this parameter.
+    // A dialog's QR code adds this parameter to the share link.
     fromQrCode: queryParams('qr') === 'true',
   });
 }
