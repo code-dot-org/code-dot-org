@@ -1,0 +1,28 @@
+name 'pl-aif-y2-u2-l4-regression-walkthrough'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Reading the Lab Code
+
+<div style="line-height: 2;">
+  <div style="font-size: 16px; line-height: 1.5;">Your students' Python lab uses four things they haven't met in a lesson: an import from a file the course wrote, the <code style="font-size: 16px; line-height: 1; padding: 0 4px;">abs</code> function, models written as functions, and functions passed into other functions. Step through a similar program here so none of it catches you off guard.</div>
+</div>
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/regression-code-walkthrough.html"
+    width="100%"
+    height="1650"
+    frameborder="0"
+    scrolling="no"
+    title="Code walkthrough: the import line, the loss function, abs, model functions, and passing functions into visualize_model">
+  </iframe>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #06338D; line-height: 2;">
+    <strong>&#8505; In the lab:</strong> students complete the <code style="font-size: 16px; line-height: 1; padding: 0 4px;">loss</code> function, run their code, then change which model they pass to <code style="font-size: 16px; line-height: 1; padding: 0 4px;">visualize_model</code> and compare the loss for each one.
+  </div>
+</div>
+MARKDOWN

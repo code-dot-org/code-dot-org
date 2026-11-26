@@ -1,0 +1,28 @@
+name 'pl-aif-y2-u2-l5-code-walkthrough'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Following the Data in the Lab Code
+
+<div style="line-height: 2;">
+  <div style="font-size: 16px; line-height: 1.25;">Your students' classifier lab uses names they did not write: three imports from <code style="font-size: 16px; line-height: 1; padding: 0 4px;">helpers</code>, a trained model, and a dictionary for today's features. Step through a similar program, one line at a time, to see what each name holds. The lab also uses temperature and traffic as features, instead of the snowfall and visibility you just saw.</div>
+</div>
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/classifier-code-walkthrough.html"
+    width="100%"
+    height="1800"
+    frameborder="0"
+    scrolling="no"
+    title="Code walkthrough: importing from helpers, choosing neighbors, training a model, describing today, and drawing the chart">
+  </iframe>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #06338D; line-height: 2;">
+    <strong>&#8505; In the lab:</strong> students edit the values in <code style="font-size: 16px; line-height: 1; padding: 0 4px;">today</code>, run the program again, and watch how the prediction changes. They leave the key names alone.
+  </div>
+</div>
+MARKDOWN

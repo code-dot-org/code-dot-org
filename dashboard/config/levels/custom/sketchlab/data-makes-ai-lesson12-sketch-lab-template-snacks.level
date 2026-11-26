@@ -3515,8 +3515,8 @@
             "width": 330,
             "height": 266,
             "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-snacks/uuid/f5fc3b17-d8e7-4820-9e74-583c610bde60.jpg",
-              "altText": "Ms. Lee sets out a bowl of peach slices for the after-school snack",
+              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-snacks/uuid/46e506a3-dbae-4c48-933e-f2a23462a5f4.jpg",
+              "altText": "Ms. Lee sets out a bowl of mandarin orange cups for the after-school snack",
               "locked": true
             }
           },
@@ -3654,7 +3654,7 @@
             "id": "tu-img-Omar",
             "type": "image",
             "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-snacks/uuid/e6a62321-c0e3-42c5-8cd0-d4c31bee60d6.jpg",
+              "src": "/level_starter_assets/data-makes-ai-project-snack-weblab/uuid/76260c8c-995a-4f94-a8b1-8920d64bf44c.jpg",
               "altText": "User Profile card picture: Ms. Okafor",
               "locked": false
             },
@@ -3674,7 +3674,7 @@
             "id": "tu-img-Dani",
             "type": "image",
             "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-snacks/uuid/88ae2da7-0c4a-45aa-9d0b-71d5b1cfcfaa.jpg",
+              "src": "/level_starter_assets/data-makes-ai-project-snack-weblab/uuid/8caae9e8-bfa5-4bec-90d8-1d43221b2729.jpg",
               "altText": "User Profile card picture: Devon",
               "locked": false
             },
@@ -3694,7 +3694,7 @@
             "id": "tu-img-Nguyen",
             "type": "image",
             "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-snacks/uuid/98834447-d632-4372-b660-3add6921f83d.jpg",
+              "src": "/level_starter_assets/data-makes-ai-project-snack-weblab/uuid/954806ac-a375-4e03-808f-f33f024faf31.jpg",
               "altText": "User Profile card picture: Coach Rivera",
               "locked": false
             },
@@ -3822,7 +3822,7 @@
             "id": "t9-img-Omar",
             "type": "image",
             "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-snacks/uuid/e6a62321-c0e3-42c5-8cd0-d4c31bee60d6.jpg",
+              "src": "/level_starter_assets/data-makes-ai-project-snack-weblab/uuid/76260c8c-995a-4f94-a8b1-8920d64bf44c.jpg",
               "altText": "User Profile card picture: Ms. Okafor",
               "locked": false
             },
@@ -3842,7 +3842,7 @@
             "id": "t9-img-Dani",
             "type": "image",
             "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-snacks/uuid/88ae2da7-0c4a-45aa-9d0b-71d5b1cfcfaa.jpg",
+              "src": "/level_starter_assets/data-makes-ai-project-snack-weblab/uuid/8caae9e8-bfa5-4bec-90d8-1d43221b2729.jpg",
               "altText": "User Profile card picture: Devon",
               "locked": false
             },
@@ -3862,7 +3862,7 @@
             "id": "t9-img-Nguyen",
             "type": "image",
             "data": {
-              "src": "/level_starter_assets/data-makes-ai-lesson12-sketch-lab-template-snacks/uuid/98834447-d632-4372-b660-3add6921f83d.jpg",
+              "src": "/level_starter_assets/data-makes-ai-project-snack-weblab/uuid/954806ac-a375-4e03-808f-f33f024faf31.jpg",
               "altText": "User Profile card picture: Coach Rivera",
               "locked": false
             },
@@ -4043,6 +4043,6 @@
     }
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-11-17T04:46:28.408+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-template\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-template\"},{\"changed_at\":\"2026-11-17 04:49:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 19:40:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:13:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:14:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:16:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:17:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:33:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 02:28:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:21:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-11-17T04:46:28.408+00:00\",\"changed\":[\"cloned from \\\"data-makes-ai-lesson12-sketch-lab-template\\\"\"],\"cloned_from\":\"data-makes-ai-lesson12-sketch-lab-template\"},{\"changed_at\":\"2026-11-17 04:49:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 19:40:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 20:13:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:14:27 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:16:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:17:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-17 21:33:56 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 02:28:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 04:14:51 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:07:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-20 20:21:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 22:04:53 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"},{\"changed_at\":\"2026-11-25 23:10:06 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":23972,\"changed_by_email\":\"julian.jackson+levelbuilder@code.org\"}]"
 }]]></config>
 </Sketchlab>
