@@ -317,6 +317,15 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       } catch (e) {
         console.error('Saving the image failed:', e);
         setError("Couldn't save the picture. Try again.");
+        analyticsReporter.sendEvent(
+          EVENTS.HOAI2026_IMAGE_UPLOAD_FAILED,
+          {
+            picture: 'generated',
+            reason: 'saveFailed',
+            detail: e instanceof Error ? e.message : String(e),
+          },
+          true
+        );
         return false;
       } finally {
         setSaving(false);

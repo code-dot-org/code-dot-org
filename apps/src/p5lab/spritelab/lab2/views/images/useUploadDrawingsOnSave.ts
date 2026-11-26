@@ -69,7 +69,9 @@ export default function useUploadDrawingsOnSave(
           analyticsReporter.sendEvent(
             EVENTS.HOAI2026_IMAGE_UPLOAD_FAILED,
             {
-              reason: error instanceof Error ? error.message : String(error),
+              picture: 'drawn',
+              reason: 'uploadFailed',
+              detail: error instanceof Error ? error.message : String(error),
               hadFile,
             },
             true

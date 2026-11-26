@@ -199,6 +199,11 @@ describe('SentenceScene', () => {
     expect(
       screen.getByText("Couldn't save the picture. Try again.")
     ).toBeTruthy();
+    expect(sendEvent).toHaveBeenCalledWith(
+      'hoai2026-image-upload-failed',
+      {picture: 'generated', reason: 'saveFailed', detail: 'upload failed'},
+      true
+    );
     expect(screen.queryByRole('button', {name: 'Good'})).toBeNull();
     // A picture that was not saved is not passed to onReady.
     expect(onReady).not.toHaveBeenCalled();

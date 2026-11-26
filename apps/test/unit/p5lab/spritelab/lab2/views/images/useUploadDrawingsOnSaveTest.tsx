@@ -145,6 +145,11 @@ describe('useUploadDrawingsOnSave', () => {
     await prepare(marked('/v3/assets/chan/generated-1.png'));
     await prepare(marked('/v3/assets/chan/generated-1.png'));
     expect(sendEvent).toHaveBeenCalledTimes(1);
-    expect(sendEvent.mock.calls[0][1]).toEqual({reason: '500', hadFile: true});
+    expect(sendEvent.mock.calls[0][1]).toEqual({
+      picture: 'drawn',
+      reason: 'uploadFailed',
+      detail: '500',
+      hadFile: true,
+    });
   });
 });

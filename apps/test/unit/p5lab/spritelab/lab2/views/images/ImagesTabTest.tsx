@@ -5,6 +5,12 @@ import {CHARACTER_STRIP_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAni
 import ImagesTab from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImagesTab';
 import type {SentenceSceneParts} from '@cdo/apps/p5lab/spritelab/lab2/views/sentence/SentenceScene';
 
+const sendEvent = jest.fn();
+jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
+  __esModule: true,
+  default: {sendEvent: (...args: unknown[]) => sendEvent(...args)},
+}));
+
 // The scene is stood in for: a button that lands a picture of the kind it
 // was given, so the tab's own moves can be watched.
 // The player is a canvas that says which pose it plays.
@@ -1479,9 +1485,15 @@ describe('ImagesTab', () => {
       fireEvent.click(
         screen.getByRole('menuitem', {name: 'Upload a character'})
       );
+      sendEvent.mockClear();
       await pickFile(container, pngFile('Huge.png', 6 * 1024 * 1024));
       expect(acceptUploaded).not.toHaveBeenCalled();
       expect(screen.getByRole('alert').textContent).toMatch(/too big/);
+      expect(sendEvent).toHaveBeenCalledWith(
+        'hoai2026-image-upload-failed',
+        {picture: 'uploaded', reason: 'tooBig'},
+        true
+      );
     });
 
     it('refuses a file of a kind that cannot be used', async () => {
@@ -1638,12 +1650,18 @@ describe('ImagesTab', () => {
       moderate.mockResolvedValue('flagged');
       acceptUploaded.mockRejectedValue(new Error('no'));
       await pickCharacter();
+      sendEvent.mockClear();
       await act(async () => {
         fireEvent.click(screen.getByRole('button', {name: /^accept$/i}));
       });
       await settle();
       expect(screen.getByRole('alert').textContent).toMatch(
         /couldn't be added/
+      );
+      expect(sendEvent).toHaveBeenCalledWith(
+        'hoai2026-image-upload-failed',
+        {picture: 'uploaded', reason: 'failed', detail: 'no'},
+        true
       );
       expect(httpPost).not.toHaveBeenCalledWith(
         '/v3/channels/c1/abuse/image',
