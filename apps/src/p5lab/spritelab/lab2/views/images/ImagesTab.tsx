@@ -126,8 +126,8 @@ interface ImagesTabProps {
   /** Width of the right pane in px; it equals the preview column's width
       so the pane sits under that column's header. */
   paneWidth: number;
-  /** A generated or drawn picture has just been stored as a project image;
-      the host should save the project now. */
+  /** A generated or drawn picture has just been stored as a project image,
+      or an image was deleted; the host should save the project now. */
   onImageLanded?: () => void;
   /** The tab is the one showing; a drawing saves itself when it is not. */
   active?: boolean;
@@ -308,6 +308,16 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
       return key;
     },
     []
+  );
+  // Save the project at once: the deleted picture's file is removed, and a
+  // project blocked for that picture is unblocked, only after a saved
+  // project no longer names it.
+  const handleDelete = useCallback(
+    (key: string) => {
+      writer.deleteImage(key);
+      landedRef.current?.();
+    },
+    [writer]
   );
   // The element at the right end of the pane's header bar, where the pane
   // draws its info button.
@@ -647,7 +657,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
         onUpload={enableImageUpload && newOffered ? handleUpload : undefined}
         notice={uploadError?.text}
         onNoticeClose={() => setUploadError(null)}
-        onDelete={deleteOffered ? writer.deleteImage : undefined}
+        onDelete={deleteOffered ? handleDelete : undefined}
       />
       {sceneKind ? (
         <SentenceScene

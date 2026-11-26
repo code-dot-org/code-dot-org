@@ -2,7 +2,6 @@ import {useCallback} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
-import {ProjectSources} from '@cdo/apps/lab2/types';
 import {RuntimeAnimationList} from '@cdo/apps/p5lab/spritelab/lab2/types';
 import {getStore} from '@cdo/apps/redux';
 import HttpClient from '@cdo/apps/util/HttpClient';
@@ -18,14 +17,10 @@ const usedByAnImage = (url: string) => {
   );
 };
 
-// Whether sources name a file. The path must be followed by its closing
-// quote (escaped, when the sources hold JSON inside a string) or a query, so
-// a file whose name only starts with this path does not match.
-const sourcesNameFile = (sources: ProjectSources | undefined, file: string) => {
-  if (!sources) {
-    return false;
-  }
-  const text = JSON.stringify(sources);
+// Whether serialized sources name a file. The path must be followed by its
+// closing quote (escaped, when the sources hold JSON inside a string) or a
+// query, so a file whose name only starts with this path does not match.
+const textNamesFile = (text: string, file: string) => {
   const openQuotedPath = JSON.stringify(file).slice(0, -1);
   return ['"', '?', '\\'].some(next => text.includes(openQuotedPath + next));
 };
@@ -38,26 +33,24 @@ const waitingFiles = new WeakMap<
   Map<string, (deleted: boolean) => void>
 >();
 
-// Deletes the waiting files that neither the project's saved sources nor
-// its sources waiting to be saved name. Nothing is deleted while the
-// manager cannot say what the server holds.
+// Deletes each waiting file that no image uses and that neither the
+// project's saved sources nor its sources waiting to be saved name. A file
+// an image uses stops waiting. Nothing is deleted while the manager cannot
+// say what the server holds.
 function deleteUnnamedFiles(manager: ProjectManager) {
   const files = waitingFiles.get(manager);
   const settled = files?.size ? manager.getSettledSources() : undefined;
   if (!files || !settled) {
     return;
   }
-  // Copied, because a resolver may ask for another file to be deleted.
-  Array.from(files).forEach(([file, resolve]) => {
+  const sourcesText = JSON.stringify([settled.saved, settled.waiting ?? null]);
+  files.forEach((resolve, file) => {
     if (usedByAnImage(file)) {
       files.delete(file);
       resolve(false);
       return;
     }
-    if (
-      sourcesNameFile(settled.saved, file) ||
-      sourcesNameFile(settled.waiting, file)
-    ) {
+    if (textNamesFile(sourcesText, file)) {
       return;
     }
     files.delete(file);
@@ -98,8 +91,9 @@ function deleteOnceUnnamed(
  * the saved project never names a deleted file. Earlier versions of the
  * project can still name one.
  * Resolves true once the file is deleted, and at once for a data URI or no
- * url. Resolves false if an image uses the file, it is not one of this
- * project's own uploads, there is no project manager, or the delete fails.
+ * url. Resolves false if an image uses the file, the user does not own the
+ * project, the file is not one of this project's uploads, there is no
+ * project manager, or the delete fails.
  * It stays unresolved while the file waits, and a file still waiting when
  * the level or the page closes is left on the server.
  */

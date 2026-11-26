@@ -608,14 +608,16 @@ describe('ImagesTab', () => {
     expect(saveEdited).not.toHaveBeenCalled();
   });
 
-  it('deletes through the list and moves on to the next image', () => {
+  it('deletes through the list, saves the project, and moves on to the next image', () => {
     propsByKey.k1 = {name: 'Sprite 1', categories: []};
     propsByKey.k2 = {name: 'Sprite 2', categories: []};
-    const {rerender} = renderTab({editingOffered: true});
+    const onImageLanded = jest.fn();
+    const {rerender} = renderTab({editingOffered: true, onImageLanded});
     fireEvent.click(screen.getByRole('button', {name: 'Delete image'}));
     deleteImage.mockImplementation(() => delete propsByKey.k1);
     fireEvent.click(screen.getByRole('button', {name: 'Delete'}));
     expect(deleteImage).toHaveBeenCalledWith('k1');
+    expect(onImageLanded).toHaveBeenCalledTimes(1);
     rerender(
       <ImagesTab onDeleteImage={jest.fn()} paneWidth={280} editingOffered />
     );
