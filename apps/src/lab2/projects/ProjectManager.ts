@@ -49,7 +49,8 @@ export type SourcesPreparer = (
   sources: ProjectSources
 ) => Promise<PreparedSources>;
 
-/** What the server holds for a project, as far as this page can know. */
+/** A project's saved sources and its sources waiting to be saved, when both
+    are certain (see getSettledSources). */
 export interface SettledSources {
   /** The sources the server holds. */
   saved: ProjectSources;
@@ -223,7 +224,9 @@ export default class ProjectManager {
       const sources = await this.loadAndStoreSources();
       return sources;
     } catch (e) {
-      // The restore may or may not have been stored.
+      // lastSource may not be what the server holds: a restore reported as
+      // failed can still have been stored, and when the load after a restore
+      // fails, lastSource is still the older version.
       this.savedSourcesUncertain = true;
       throw e;
     } finally {
@@ -492,12 +495,11 @@ export default class ProjectManager {
 
   /**
    * The sources the server holds for this project and the sources waiting
-   * to be saved, or undefined while that is not certain: before the sources
-   * have loaded, while a save or a restore is in flight, and after a sources
-   * save has failed, since a save reported as failed can still have been
-   * stored, until one succeeds or the sources are loaded again. A lab that
-   * sets the saved sources itself with setLastSource must pass the sources
-   * the server holds.
+   * to be saved, or undefined while the manager cannot be sure what the
+   * server holds. A save or a restore reported as failed can still have been
+   * stored, so this stays undefined after one until a sources save succeeds
+   * or the latest sources are loaded. A lab that sets the saved sources
+   * itself with setLastSource must pass the sources the server holds.
    */
   getSettledSources(): SettledSources | undefined {
     if (

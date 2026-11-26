@@ -69,6 +69,19 @@ describe('useReleaseRemovedImages', () => {
     expect(unflag).toHaveBeenCalledWith('chan', expect.anything());
   });
 
+  it('asks to unblock only once the flagged file has been deleted', async () => {
+    let finishDelete: (deleted: boolean) => void = () => undefined;
+    reclaim.mockImplementation(
+      () => new Promise<boolean>(resolve => (finishDelete = resolve))
+    );
+    releaser()([image({sourceUrl: 'b.png', flagged: true})]);
+    await settle();
+    expect(unflag).not.toHaveBeenCalled();
+    finishDelete(true);
+    await settle();
+    expect(unflag).toHaveBeenCalledTimes(1);
+  });
+
   it('asks for nothing when the file could not be deleted', async () => {
     reclaim.mockImplementation(() => Promise.resolve(false));
     releaser()([image({sourceUrl: 'b.png', flagged: true})]);

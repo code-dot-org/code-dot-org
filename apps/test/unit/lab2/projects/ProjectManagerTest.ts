@@ -1177,7 +1177,133 @@ describe('ProjectManager', () => {
     });
   });
 
-  describe('settled sources', () => {
+  it('starts a queued save only once the save in flight has finished', async () => {
+    const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
+    try {
+      stubSuccessfulSourceLoad(sourcesStore);
+      const projectManager = new ProjectManager({
+        sourcesStore,
+        channelsStore,
+        channelId: FAKE_CHANNEL_ID,
+        reduceChannelUpdates: false,
+        isStandaloneProjectLevel: false,
+      });
+      await projectManager.load();
+      let finishSlow: (response: Response) => void = () => undefined;
+      sourcesStore.save
+        .onFirstCall()
+        .callsFake(
+          () => new Promise<Response>(resolve => (finishSlow = resolve))
+        );
+      const slow = projectManager.save(UPDATED_SOURCE, true);
+      await clock.tickAsync(0);
+      projectManager.save(UPDATED_SOURCE_2);
+      // The queued save comes due while the slow one is still in flight.
+      await clock.tickAsync(30 * 1000);
+      assert.isTrue(sourcesStore.save.calledOnce);
+      assert.isUndefined(projectManager.getSettledSources());
+      finishSlow(new Response(''));
+      await slow;
+      await clock.tickAsync(0);
+      assert.isTrue(sourcesStore.save.calledTwice);
+      assert.deepEqual(sourcesStore.save.secondCall.args[1], UPDATED_SOURCE_2);
+      assert.deepEqual(
+        projectManager.getSettledSources()?.saved,
+        UPDATED_SOURCE_2
+      );
+    } finally {
+      clock.restore();
+    }
+  });
+
+  describe('a queued save that comes due during a slow save', () => {
+    // A loaded manager with one forced save in flight and newer sources
+    // queued behind it, at the time the queued save comes due.
+    const queuedBehindSlowSave = async (clock: sinon.SinonFakeTimers) => {
+      stubSuccessfulSourceLoad(sourcesStore);
+      const projectManager = new ProjectManager({
+        sourcesStore,
+        channelsStore,
+        channelId: FAKE_CHANNEL_ID,
+        reduceChannelUpdates: false,
+        isStandaloneProjectLevel: false,
+      });
+      await projectManager.load();
+      let finishSlow: (response: Response) => void = () => undefined;
+      let failSlow: (error: Error) => void = () => undefined;
+      sourcesStore.save.onFirstCall().callsFake(
+        () =>
+          new Promise<Response>((resolve, reject) => {
+            finishSlow = resolve;
+            failSlow = reject;
+          })
+      );
+      const slow = projectManager.save(UPDATED_SOURCE, true);
+      await clock.tickAsync(0);
+      projectManager.save(UPDATED_SOURCE_2);
+      await clock.tickAsync(30 * 1000);
+      return {
+        projectManager,
+        slow,
+        finishSlow: () => finishSlow(new Response('')),
+        failSlow: () => failSlow(new Error('500')),
+      };
+    };
+
+    it('runs once the slow save has failed', async () => {
+      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
+      try {
+        const t = await queuedBehindSlowSave(clock);
+        assert.isTrue(sourcesStore.save.calledOnce);
+        t.failSlow();
+        await t.slow;
+        await clock.tickAsync(0);
+        assert.isTrue(sourcesStore.save.calledTwice);
+        assert.deepEqual(
+          sourcesStore.save.secondCall.args[1],
+          UPDATED_SOURCE_2
+        );
+      } finally {
+        clock.restore();
+      }
+    });
+
+    it('saves the queued sources once when a forced save also waits', async () => {
+      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
+      try {
+        const t = await queuedBehindSlowSave(clock);
+        const flushed = t.projectManager.flushSave();
+        t.finishSlow();
+        await t.slow;
+        await flushed;
+        await clock.tickAsync(0);
+        assert.isTrue(sourcesStore.save.calledTwice);
+        assert.deepEqual(
+          sourcesStore.save.secondCall.args[1],
+          UPDATED_SOURCE_2
+        );
+        assert.isFalse(t.projectManager.hasUnsavedChanges());
+      } finally {
+        clock.restore();
+      }
+    });
+
+    it('does not run once the manager is destroyed', async () => {
+      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
+      try {
+        const t = await queuedBehindSlowSave(clock);
+        t.projectManager.destroy();
+        t.finishSlow();
+        await t.slow;
+        await clock.tickAsync(0);
+        assert.isTrue(sourcesStore.save.calledOnce);
+      } finally {
+        clock.restore();
+      }
+    });
+  });
+
+  describe('getSettledSources', () => {
     const makeManager = async () => {
       stubSuccessfulSourceLoad(sourcesStore);
       const projectManager = new ProjectManager({
@@ -1215,7 +1341,7 @@ describe('ProjectManager', () => {
       };
     };
 
-    it('has none before the project loads, or when only the channel loaded', async () => {
+    it('returns undefined before the project loads, or when only the channel loaded', async () => {
       const projectManager = new ProjectManager({
         sourcesStore,
         channelsStore,
@@ -1229,7 +1355,7 @@ describe('ProjectManager', () => {
       assert.isUndefined(projectManager.getSettledSources());
     });
 
-    it('gives the saved sources, and the sources waiting to be saved', async () => {
+    it('returns the saved sources, and the sources waiting to be saved', async () => {
       const projectManager = await makeManager();
       assert.deepEqual(projectManager.getSettledSources(), {
         saved: FAKE_SOURCE,
@@ -1244,7 +1370,7 @@ describe('ProjectManager', () => {
       });
     });
 
-    it('has none while a save is in flight', async () => {
+    it('returns undefined while a save is in flight', async () => {
       const projectManager = await makeManager();
       const held = holdNextSave();
       const save = projectManager.save(UPDATED_SOURCE, true);
@@ -1258,7 +1384,7 @@ describe('ProjectManager', () => {
       );
     });
 
-    it('has none after a failed sources save, until one succeeds', async () => {
+    it('returns undefined after a failed sources save, until one succeeds', async () => {
       const projectManager = await makeManager();
       // A save reported as failed may still have been stored.
       sourcesStore.save.callsFake(() => Promise.reject(new Error('500')));
@@ -1272,7 +1398,7 @@ describe('ProjectManager', () => {
       );
     });
 
-    it('has none while a version is being restored, then gives the restored sources', async () => {
+    it('returns undefined while a version is being restored, then the restored sources', async () => {
       const projectManager = await makeManager();
       let finishRestore: () => void = () => undefined;
       sourcesStore.restore.callsFake(
@@ -1293,7 +1419,7 @@ describe('ProjectManager', () => {
       assert.deepEqual(settledListener.lastCall.args[0].saved, UPDATED_SOURCE);
     });
 
-    it('has none after a failed restore, until a save succeeds', async () => {
+    it('returns undefined after a failed restore, until a save succeeds', async () => {
       const projectManager = await makeManager();
       sourcesStore.restore.callsFake(() => Promise.reject(new Error('500')));
       let thrown: unknown;
@@ -1311,13 +1437,13 @@ describe('ProjectManager', () => {
       );
     });
 
-    it('has none once destroyed', async () => {
+    it('returns undefined once destroyed', async () => {
       const projectManager = await makeManager();
       projectManager.destroy();
       assert.isUndefined(projectManager.getSettledSources());
     });
 
-    it('calls its listeners after a save that succeeds or finds nothing changed, and not after one that fails', async () => {
+    it('calls the sources settled listeners after a save that succeeds or finds nothing changed, and not after one that fails', async () => {
       const projectManager = await makeManager();
       const settledListener = sinon.stub();
       projectManager.addSourcesSettledListener(settledListener);
@@ -1334,7 +1460,7 @@ describe('ProjectManager', () => {
       assert.isTrue(settledListener.calledTwice);
     });
 
-    it('saves normally when a listener throws', async () => {
+    it('a listener that throws does not fail the save or stop the listeners after it', async () => {
       const projectManager = await makeManager();
       const later = sinon.stub();
       projectManager.addSourcesSettledListener(() => {
@@ -1348,7 +1474,7 @@ describe('ProjectManager', () => {
       assert.isTrue(later.calledOnce);
     });
 
-    it('gives settled sources again after a save ends in an unexpected error', async () => {
+    it('returns the saved sources again after a save ends in an unexpected error', async () => {
       const projectManager = await makeManager();
       channelsStore.save
         .onFirstCall()
@@ -1365,35 +1491,6 @@ describe('ProjectManager', () => {
         projectManager.getSettledSources()?.saved,
         UPDATED_SOURCE
       );
-    });
-
-    it('starts a queued save only once the save in flight has finished', async () => {
-      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
-      try {
-        const projectManager = await makeManager();
-        const held = holdNextSave();
-        const slow = projectManager.save(UPDATED_SOURCE, true);
-        await clock.tickAsync(0);
-        projectManager.save(UPDATED_SOURCE_2);
-        // The queued save comes due while the slow one is still in flight.
-        await clock.tickAsync(30 * 1000);
-        assert.isTrue(sourcesStore.save.calledOnce);
-        assert.isUndefined(projectManager.getSettledSources());
-        held.finish();
-        await slow;
-        await clock.tickAsync(0);
-        assert.isTrue(sourcesStore.save.calledTwice);
-        assert.deepEqual(
-          sourcesStore.save.secondCall.args[1],
-          UPDATED_SOURCE_2
-        );
-        assert.deepEqual(
-          projectManager.getSettledSources()?.saved,
-          UPDATED_SOURCE_2
-        );
-      } finally {
-        clock.restore();
-      }
     });
   });
 });
