@@ -1,0 +1,28 @@
+name 'pl-aif-y2-u2-l4-filtering-lists'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Filtering Lists with Conditions
+
+<div style="line-height: 2;">
+  <div style="font-size: 16px; line-height: 1.5;">Your students' lab asks them to pull children, adults, and seniors out of one list of ages. That takes an <code style="font-size: 16px; line-height: 1; padding: 0 4px;">if</code> inside a <code style="font-size: 16px; line-height: 1; padding: 0 4px;">for</code> loop and, for adults, two conditions joined with <code style="font-size: 16px; line-height: 1; padding: 0 4px;">and</code>. Try it with a different list before you see theirs.</div>
+</div>
+
+<div style="width:100%; border-radius:10px; overflow:hidden; margin:20px 0;">
+  <iframe
+    src="https://amandadennard-dotcom.github.io/AIFY2/unit-2/age-filter-sorter.html"
+    width="100%"
+    height="1800"
+    frameborder="0"
+    scrolling="no"
+    title="Filtering a list with conditions: pick a list and a group, run the program, and try common mistakes">
+  </iframe>
+</div>
+
+<div style="background-color: #D5EFFF; border-radius: 10px; padding: 16px 18px; margin: 16px 0;">
+  <div style="font-size: 16px; color: #06338D; line-height: 2;">
+    <strong>&#8505; In the lab:</strong> the children loop prints its header and nothing else, because no one in the dataset is under 18. Students may think their code is broken. It is not: an empty result is the finding, and it connects straight back to biased data.
+  </div>
+</div>
+MARKDOWN

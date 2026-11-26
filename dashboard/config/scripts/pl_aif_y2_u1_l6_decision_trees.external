@@ -15,28 +15,81 @@ Lesson 11 opens with a partner game: one person thinks of an item in the room, t
 
 The lesson's running example: a patient named Hao calls his doctor with a fever. The doctor asks a few questions, then gives advice based on the answers, exactly a decision tree, just not written in code yet.
 
-Here's that same logic as a decision tree, then as Python:
+Here's that same logic as a decision tree, then as Python.
 
-<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
-  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8; line-height: 1.8;">
-if fever:<br>
-&nbsp;&nbsp;if cough:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return "Visit clinic"<br>
-&nbsp;&nbsp;else:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return "Get rest"<br>
-else:<br>
-&nbsp;&nbsp;if cough:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return "Take cough medicine"<br>
-&nbsp;&nbsp;else:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;return "Hydrate"
+## As a Decision Tree
+
+Start at the top and follow Yes or No at each question until you reach a conclusion. Hao has a fever but no cough, so he follows Yes, then No, and ends at "Get rest."
+
+<div role="img" aria-label="Decision tree. Start at the question Fever. If yes, ask Cough. Fever and cough leads to Visit clinic. Fever and no cough leads to Get rest, which is Hao's path. If no fever, ask Cough. No fever and cough leads to Take cough medicine. No fever and no cough leads to Hydrate." style="background-color: #F7F7FB; border-radius: 10px; padding: 20px 16px; margin: 16px 0;">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <div style="background-color: #4C42CF; color: #FFFFFF; box-sizing: border-box; border-radius: 10px; padding: 10px 14px; font-size: 16px; font-weight: 700; line-height: 1.4; text-align: center;">Fever?</div>
+    <div style="width: 2px; height: 14px; background-color: #ACA8EA;"></div>
+  </div>
+  <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 260px; display: flex; flex-direction: column; align-items: center;">
+      <div style="background-color: #FFFFFF; border: 2px solid #ACA8EA; border-radius: 12px; padding: 0 12px; font-size: 16px; font-weight: 700; color: #1F1976; line-height: 1.6;">Yes</div>
+      <div style="width: 2px; height: 14px; background-color: #ACA8EA;"></div>
+      <div style="background-color: #E4E2F8; border: 2px solid #4C42CF; color: #1F1976; box-sizing: border-box; border-radius: 10px; padding: 10px 14px; font-size: 16px; font-weight: 700; line-height: 1.4; text-align: center;">Cough?</div>
+      <div style="width: 2px; height: 14px; background-color: #ACA8EA;"></div>
+      <div style="display: flex; gap: 12px; width: 100%;">
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center;">
+          <div style="background-color: #FFFFFF; border: 2px solid #ACA8EA; border-radius: 12px; padding: 0 12px; font-size: 16px; font-weight: 700; color: #1F1976; line-height: 1.6;">Yes</div>
+          <div style="width: 2px; height: 14px; background-color: #ACA8EA;"></div>
+          <div style="background-color: #CCF1D0; color: #222222; border: 3px solid #CCF1D0; box-sizing: border-box; border-radius: 10px; padding: 10px 14px; font-size: 16px; font-weight: 700; line-height: 1.4; text-align: center; width: 100%;">Visit clinic</div>
+        </div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center;">
+          <div style="background-color: #FFFFFF; border: 2px solid #ACA8EA; border-radius: 12px; padding: 0 12px; font-size: 16px; font-weight: 700; color: #1F1976; line-height: 1.6;">No</div>
+          <div style="width: 2px; height: 14px; background-color: #ACA8EA;"></div>
+          <div style="background-color: #CCF1D0; color: #222222; border: 3px solid #1F1976; box-sizing: border-box; border-radius: 10px; padding: 10px 14px; font-size: 16px; font-weight: 700; line-height: 1.4; text-align: center; width: 100%;">Get rest<br>Hao's path</div>
+        </div>
+      </div>
+    </div>
+    <div style="flex: 1; min-width: 260px; display: flex; flex-direction: column; align-items: center;">
+      <div style="background-color: #FFFFFF; border: 2px solid #ACA8EA; border-radius: 12px; padding: 0 12px; font-size: 16px; font-weight: 700; color: #1F1976; line-height: 1.6;">No</div>
+      <div style="width: 2px; height: 14px; background-color: #ACA8EA;"></div>
+      <div style="background-color: #E4E2F8; border: 2px solid #4C42CF; color: #1F1976; box-sizing: border-box; border-radius: 10px; padding: 10px 14px; font-size: 16px; font-weight: 700; line-height: 1.4; text-align: center;">Cough?</div>
+      <div style="width: 2px; height: 14px; background-color: #ACA8EA;"></div>
+      <div style="display: flex; gap: 12px; width: 100%;">
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center;">
+          <div style="background-color: #FFFFFF; border: 2px solid #ACA8EA; border-radius: 12px; padding: 0 12px; font-size: 16px; font-weight: 700; color: #1F1976; line-height: 1.6;">Yes</div>
+          <div style="width: 2px; height: 14px; background-color: #ACA8EA;"></div>
+          <div style="background-color: #CCF1D0; color: #222222; border: 3px solid #CCF1D0; box-sizing: border-box; border-radius: 10px; padding: 10px 14px; font-size: 16px; font-weight: 700; line-height: 1.4; text-align: center; width: 100%;">Take cough medicine</div>
+        </div>
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center;">
+          <div style="background-color: #FFFFFF; border: 2px solid #ACA8EA; border-radius: 12px; padding: 0 12px; font-size: 16px; font-weight: 700; color: #1F1976; line-height: 1.6;">No</div>
+          <div style="width: 2px; height: 14px; background-color: #ACA8EA;"></div>
+          <div style="background-color: #CCF1D0; color: #222222; border: 3px solid #CCF1D0; box-sizing: border-box; border-radius: 10px; padding: 10px 14px; font-size: 16px; font-weight: 700; line-height: 1.4; text-align: center; width: 100%;">Hydrate</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
-Each branch of the tree, fever or not, cough or not, becomes a nested <code style="font-size:16px;">if</code>/<code style="font-size:16px;">else</code>. Four possible paths through the questions, four <code style="font-size:16px;">return</code> statements, one for each possible conclusion.
+## As Python
+
+<div style="border-radius: 10px; overflow: hidden; margin: 12px 0 16px 0; border: 1px solid #E4E2F8;">
+  <div style="background-color: #1F1976; padding: 16px 20px; font-family: 'Consolas', 'Courier New', monospace; font-size: 16px; color: #E4E2F8;">
+    <div style="line-height: 2;">if fever:</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;if cough:</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;&nbsp;&nbsp;return "Visit clinic"</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;else:</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;&nbsp;&nbsp;return "Get rest"</div>
+    <div style="line-height: 2;">else:</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;if cough:</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;&nbsp;&nbsp;return "Take cough medicine"</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;else:</div>
+    <div style="line-height: 2;">&nbsp;&nbsp;&nbsp;&nbsp;return "Hydrate"</div>
+  </div>
+</div>
+
+<div style="line-height: 2;">
+  <div style="font-size: 16px; line-height: 2;">Each branch of the tree, fever or not, cough or not, becomes a nested <code style="font-size: 16px; line-height: 1; padding: 0 4px;">if</code>/<code style="font-size: 16px; line-height: 1; padding: 0 4px;">else</code>. Four possible paths through the questions, four <code style="font-size: 16px; line-height: 1; padding: 0 4px;">return</code> statements, one for each possible conclusion.</div>
+</div>
 
 <div style="background-color: #E4E2F8; border-radius: 10px; padding: 16px 20px; margin: 16px 0;">
   <div style="font-size: 16px; color: #222222; line-height: 1.5;">
-    <strong>&#128161; Teacher tip:</strong> this is a natural moment to connect back to Defining Functions. Each <code style="font-size:16px;">return</code> here works exactly like the return values students already practiced, a decision tree function hands back one of several possible conclusions instead of a single calculation.
+    <strong>&#128161; Teacher tip:</strong> this is a natural moment to connect back to Defining Functions. Each <code style="font-size: 16px; line-height: 1; padding: 0 4px;">return</code> here works exactly like the return values students already practiced, a decision tree function hands back one of several possible conclusions instead of a single calculation.
   </div>
 </div>
 MARKDOWN

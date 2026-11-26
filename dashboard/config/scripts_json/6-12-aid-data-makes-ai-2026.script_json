@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-11-23 18:17:40 UTC",
+    "serialized_at": "2026-11-25 21:23:43 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -3393,7 +3393,6 @@
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students finish Level 2 before they train, since the rule only works as a comparison if it comes first. On Level 4, ask students to say each branch out loud as they follow it.",
         "tips": [
           {
-            "key": "tip-12-1-6-0",
             "type": "assessmentOpportunity",
             "markdown": "Level 2 can be used as a formative assessment. A strong answer names a specific person and says what the model predicts for them. An answer that needs support says the model is for \"anyone\" or describes the goal as getting the model to work."
           }
@@ -3412,17 +3411,6 @@
       },
       "seeding_key": {
         "activity_section.key": "bc8685ab-505a-491d-958a-e839c48c9d40",
-        "lesson_activity.key": "e2c7f3c9-6996-4694-946f-f8656345d35e"
-      }
-    },
-    {
-      "key": "483eb536-cfcd-41a6-962e-058ed4a01fb8",
-      "position": 2,
-      "properties": {
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "483eb536-cfcd-41a6-962e-058ed4a01fb8",
         "lesson_activity.key": "e2c7f3c9-6996-4694-946f-f8656345d35e"
       }
     },
@@ -3691,7 +3679,6 @@
         "name": "Reflection",
         "tips": [
           {
-            "key": "tip-15-1-2-0",
             "type": "assessmentOpportunity",
             "markdown": "The revised model card can be used as a summative check. A strong model card names who the model works for and who it doesn't, and backs each one with a specific prediction or sticky note. A model card that needs support stays general, such as \"it works for most people,\" or leaves out the feedback."
           }
@@ -3710,6 +3697,17 @@
       },
       "seeding_key": {
         "activity_section.key": "270224d5-a80a-4bb8-9fda-c42c1d4a3a44",
+        "lesson_activity.key": "8df7742e-b18c-4ab0-83da-bf96387962be"
+      }
+    },
+    {
+      "key": "af640c6f-abd8-43c9-8b36-666c6f426ac2",
+      "position": 2,
+      "properties": {
+        "progression_name": "End of Project Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "af640c6f-abd8-43c9-8b36-666c6f426ac2",
         "lesson_activity.key": "8df7742e-b18c-4ab0-83da-bf96387962be"
       }
     },
@@ -5180,28 +5178,6 @@
     },
     {
       "chapter": 67,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "data-makes-ai-lesson12-survey"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "483eb536-cfcd-41a6-962e-058ed4a01fb8"
-      },
-      "level_keys": [
-        "data-makes-ai-lesson12-survey"
-      ]
-    },
-    {
-      "chapter": 68,
       "position": 1,
       "activity_section_position": 2,
       "assessment": false,
@@ -5223,7 +5199,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5245,7 +5221,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 4,
       "assessment": false,
@@ -5267,7 +5243,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5289,7 +5265,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5311,7 +5287,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5333,7 +5309,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5355,7 +5331,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5377,9 +5353,9 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 75,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "progression": "User Testing"
@@ -5396,6 +5372,28 @@
       },
       "level_keys": [
         "data-makes-ai-lesson15-sketch-lab-reflect-choice"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End of Project Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-makes-ai-lesson15-survey"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "af640c6f-abd8-43c9-8b36-666c6f426ac2"
+      },
+      "level_keys": [
+        "data-makes-ai-lesson15-survey"
       ]
     },
     {
@@ -6216,18 +6214,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "data-makes-ai-lesson12-survey",
-        "script_level.level_keys": [
-          "data-makes-ai-lesson12-survey"
-        ],
-        "lesson.key": "lesson-12",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "6-12-aid-data-makes-ai-2026",
-        "activity_section.key": "483eb536-cfcd-41a6-962e-058ed4a01fb8"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "data-makes-ai-lesson13-problem-choice",
         "script_level.level_keys": [
           "data-makes-ai-lesson13-problem-choice"
@@ -6332,6 +6318,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "6-12-aid-data-makes-ai-2026",
         "activity_section.key": "0f3e75a2-ea92-4e33-99fd-f0db2589a7d2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-makes-ai-lesson15-survey",
+        "script_level.level_keys": [
+          "data-makes-ai-lesson15-survey"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "6-12-aid-data-makes-ai-2026",
+        "activity_section.key": "af640c6f-abd8-43c9-8b36-666c6f426ac2"
       }
     },
     {
@@ -8546,7 +8544,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "The sketch moves each item down the right path. The response names a new question and where it goes in the tree, and it fixes the wrong item.",
+      "teacher_description": "The sketch follows the questions for some items, but at least one path is wrong or skipped. Or the response names a useful new question but doesn't say where it goes in the tree.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -8558,7 +8556,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Also explains why the tree got it wrong: the people who wrote the questions never asked about that feature, so the tree had no way to catch it.",
+      "teacher_description": "The sketch moves each item down the right path. The response names a new question and where it goes in the tree, and it fixes the wrong item.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -8570,7 +8568,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Rare here. Notices the new question might send a different item the wrong way, or that a whole kind of item keeps getting missed.",
+      "teacher_description": "Also explains why the tree got it wrong: the people who wrote the questions never asked about that feature, so the tree had no way to catch it.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -8594,7 +8592,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Names a specific missing feature and connects it to a mistake the app could make.",
+      "teacher_description": "Names a missing feature, but the mistake it connects to is vague.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -8606,7 +8604,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Also names the assumption behind the choice.",
+      "teacher_description": "Names a specific missing feature and connects it to a mistake the app could make.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -8618,7 +8616,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Names whose idea of \"clean\" the dataset reflects and how someone else would build it differently.",
+      "teacher_description": "Also names the assumption behind the choice.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -8630,7 +8628,7 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Apologizes or repeats the complaint.",
+      "teacher_description": "Fills the blanks with the complaint repeated, an apology, or something generic. Treats this as one bad result and doesn't connect it to a choice the builders made.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -8642,7 +8640,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Describes what the app did to the student, maybe that it happens to others too, but not why.",
+      "teacher_description": "Describes how the app decides and what it did to the student, maybe that it happens to others, but not why. The \"decided\" blank restates the result or blames the app, and the fix is general.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -8654,7 +8652,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Explains how the model decides, shows it happens to a group (not a one-time glitch), ties it to a decision a person made, and suggests a fix that matches the cause.",
+      "teacher_description": "Explains how the model decides, shows it happens to a group (not a one-time glitch), ties it to a specific decision a person made, and suggests a fix that matches the cause. The unfairness, the decision, and the fix are aligned.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -8678,7 +8676,7 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Treats the records as \"just the data.\" Calls the model good or bad without saying what's in the records.",
+      "teacher_description": "Gives a yes or no answer without pointing to what the records contain or leave out. Justifies answer with general quality (”it’s real photos,” “there’s plenty of records,” “AI is smart”) or does not provide justification. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -8690,7 +8688,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Names what the records leave out and which cases the model can't answer because of it.",
+      "teacher_description": "Notices something is missing from the records, but doesn't say what's missing or which case the model can't answer.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -8702,7 +8700,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Also names the choice behind the gap and what that choice assumes about the park.",
+      "teacher_description": "Names what the records leave out and which cases the model can't answer because of it.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -8714,7 +8712,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Says who would build the dataset differently and what their records would catch.",
+      "teacher_description": "Also names the choice behind the gap and what that choice assumes about the park.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -8738,7 +8736,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Names a group the bot leaves out.",
+      "teacher_description": "Says some people won't like the playlist, but doesn't name a group.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -8750,7 +8748,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Ties that group to Bot A's records and says what it means for those people. May suggest a fix.",
+      "teacher_description": "Names a group the bot leaves out and how the bot impacts them.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -8762,7 +8760,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Rare. Sees impact at more than one level, or notes a fix could leave out someone else.",
+      "teacher_description": "Ties that group to Bot A's records and says what it means for those people. May suggest a fix.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -8774,7 +8772,7 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Blames the computer. No path, no data.",
+      "teacher_description": "Blames the model with no reason, or gives a prediction with no link to the data.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -8786,7 +8784,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Describes the path a clip took, or says the data mattered without naming which clips.",
+      "teacher_description": "Describes the path a prediction took, or says the data mattered without naming which examples.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -8798,7 +8796,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Names a specific prediction and the training clips that caused it, and says what change would give a different result. Either the dance clip or the premiere clip works.",
+      "teacher_description": "Names a specific wrong prediction and the training examples that caused it, and says what change to the data would give a different result. The example can come from class or be new.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -8810,7 +8808,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Sees a pattern across clips and what it says about how the data was collected.",
+      "teacher_description": "Treats the mistake as a pattern, not a one-time error: says which kinds of cases will keep being wrong and why, based on what the training data covers.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -8834,7 +8832,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Names one human-written rule and one computer-learned rule from the gaming chat, and ties each to what happened to a message.",
+      "teacher_description": "Names one kind of rule and ties it to a message, but not the other kind. Or names both kinds without tying either one to a message.",
       "ai_prompt": "Picks a specific input and names each check the system makes, in order, with the input’s result at each check, ending at the output. For data-trained cards, uses the rules on the peek-inside card. Sounds like: “The room was 65. The thermostat checked whether it’s below 68. It is, so the heat turned on.” / “The email said ‘FREE prize.’ The filter checked for ‘free.’ It had it, so it checked for a link. It had one, so it went to junk.”",
       "seeding_key": {
         "understanding": 1,
@@ -8846,7 +8844,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Also explains why each rule is that kind: exact rules can't judge what a message means, so people gave that job to a rule learned from examples. Says what would have to change to get a different result.",
+      "teacher_description": "Names one human-written rule and one computer-learned rule from the gaming chat, and ties each to what happened to a message.",
       "ai_prompt": "Explains where a check came from (a person who wrote it, or examples it was trained on), or what would have to change to get a different output. Sounds like: “A person picked 68. If they’d set it to 65, the heat would stay off.” / “It checks for ‘free’ because lots of the spam it learned from said ‘free.’ Without that word, my email would go to the inbox.”",
       "seeding_key": {
         "understanding": 2,
@@ -8858,7 +8856,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Rare here. Sees a pattern across many messages and reasons about what the learned rule must have been trained on.",
+      "teacher_description": "Also explains why each rule is that kind: exact rules can't judge what a message means, so people gave that job to a rule learned from examples. Says what would have to change to get a different result.",
       "ai_prompt": "Recognizes that a check will repeat across a whole group of inputs. Or, for a data-trained card with no peek-inside card, works out a likely rule by comparing several outputs. Sounds like: “It’s not just my email. Every real message that says ‘free’ will end up in junk.”",
       "seeding_key": {
         "understanding": 3,
@@ -8870,7 +8868,7 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Says the data is \"bad\" or the tree is \"wrong.\" No choice or assumption.",
+      "teacher_description": "Calls the tree wrong or the data bad without pointing to anything specific. Treats the data as a factual record of what's true about movies.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -8882,7 +8880,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Names a problem with a feature or a prediction but not what the data takes for granted. A feature with no reason.",
+      "teacher_description": "Names a problem with a feature or a prediction but not what the data takes for granted about movies. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -8906,7 +8904,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Sees the data as past teams' decisions, not facts about filmmaking, and says how a different team would have labeled it.",
+      "teacher_description": "Treats the labels as past teams' decisions, not facts about filmmaking, and says how a team with different priorities would have labeled the scene.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
