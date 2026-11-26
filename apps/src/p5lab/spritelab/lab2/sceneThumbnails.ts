@@ -2,10 +2,8 @@
 // scene's most recent run, kept as a project asset. Captured cheaply on every
 // run, but persisted only when the scene has changed in a way that could
 // change the picture, and only once the student has paused editing. Also
-// the scene list those pictures decorate, and the removal of a superseded
-// picture's asset.
+// the scene list those pictures decorate.
 
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {hashString} from '@cdo/apps/utils';
 
 import {SceneMetadata} from './redux/spriteLab2Redux';
@@ -49,10 +47,16 @@ function namesImage(body: string, name: string): boolean {
   return body.includes(plain) || body.includes(literal);
 }
 
-/** The asset a thumbnail is stored under; the fingerprint keeps a stale
-    browser cache from showing an old picture under a reused name. */
-export function thumbnailFileName(sceneId: string, fingerprint: string) {
-  return `scene-thumb-${sceneId}-${fingerprint.slice(0, 8)}.png`;
+/** The asset a thumbnail is stored under. The time makes each upload's
+    name new, so an upload never overwrites an older file that a saved
+    project may still name, and the browser never shows a cached old
+    picture under a reused name. */
+export function thumbnailFileName(
+  sceneId: string,
+  fingerprint: string,
+  time: number = Date.now()
+) {
+  return `scene-thumb-${sceneId}-${fingerprint.slice(0, 8)}-${time}.png`;
 }
 
 /** A square copy of the stage, `size` pixels on a side. Synchronous, so the
@@ -127,14 +131,4 @@ export function sceneMetadataFor(
     }
     return {id: scene.id, name: scene.name, thumbnail};
   });
-}
-
-/** Best-effort removal of one of this project's own uploads. */
-export function deleteProjectAsset(
-  channelId: string | undefined,
-  url: string | undefined
-): void {
-  if (url && channelId && url.startsWith(`/v3/assets/${channelId}/`)) {
-    HttpClient.delete(url, true).catch(() => undefined);
-  }
 }

@@ -670,6 +670,11 @@ export function deleteAnimation(
 
     dispatch({type: DELETE_ANIMATION, key});
     projectChanged();
+    // Animation files are stored under the project id, so without one there
+    // is no file to delete. Sprite Lab in Lab2 does not set a project id.
+    if (!animationsApi.getProjectId()) {
+      return;
+    }
     animationsApi.ajax(
       'DELETE',
       key + '.png',

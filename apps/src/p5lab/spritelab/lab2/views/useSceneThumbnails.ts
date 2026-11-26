@@ -7,13 +7,14 @@ import {UploadImageFunction} from '../ai/images/imageGeneration';
 import {
   canvasToPngBytes,
   copyFrame,
-  deleteProjectAsset,
   sceneFingerprint,
   THUMBNAIL_QUIET_MS,
   thumbnailFileName,
 } from '../sceneThumbnails';
 import SpriteLab2Engine from '../SpriteLab2Engine';
 import {Scene, Sources} from '../types';
+
+import useReclaimAsset from './useReclaimAsset';
 
 interface SceneThumbnailsOptions {
   engineRef: React.RefObject<SpriteLab2Engine | null>;
@@ -58,6 +59,7 @@ export default function useSceneThumbnails({
   // scene's picture.
   const capturingSceneRef = useRef<string | null>(null);
   const active = enabled && !!channelId && !!uploadImage;
+  const reclaimAsset = useReclaimAsset();
 
   const commit = useCallback(async () => {
     const capture = pending.current;
@@ -92,13 +94,13 @@ export default function useSceneThumbnails({
         ),
       }));
       if (previous !== url) {
-        deleteProjectAsset(channelId, previous);
+        void reclaimAsset(previous);
       }
     } catch (e) {
       // Best effort; the next quiet moment tries again.
       console.warn('Scene thumbnail not saved', e);
     }
-  }, [channelId, uploadImage, updateSources, getScenes]);
+  }, [channelId, uploadImage, updateSources, getScenes, reclaimAsset]);
 
   const requestThumbnail = useCallback(
     (sceneId: string) => {

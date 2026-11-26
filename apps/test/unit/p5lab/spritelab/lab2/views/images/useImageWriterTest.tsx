@@ -45,6 +45,20 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/imageSave', () => ({
   createNamedAnimation: (...args: unknown[]) => createNamedAnimation(...args),
   repointAnimation: (...args: unknown[]) => repointAnimation(...args),
 }));
+// A project manager whose saved sources name no file.
+jest.mock('@cdo/apps/lab2/Lab2Registry', () => ({
+  __esModule: true,
+  default: {
+    getInstance: () => ({
+      getProjectManager: () => ({
+        getChannelId: () => 'chan',
+        getLastChannel: () => ({isOwner: true}),
+        getSettledSources: () => ({saved: {}}),
+        addSourcesSettledListener: () => undefined,
+      }),
+    }),
+  },
+}));
 const httpDelete = jest.fn((...args: unknown[]) => Promise.resolve());
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   __esModule: true,
@@ -347,7 +361,7 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
-  it('reclaims the session uploads nothing points at when it ends', async () => {
+  it('when the session ends, deletes the files the session uploaded or replaced that no image points at', async () => {
     propsByKey.k1 = {name: 'Sprite 1', sourceUrl: '/v3/assets/chan/old.png'};
     const {writer} = renderWriter();
     const target = {key: 'k1', imageType: 'sprite' as const};

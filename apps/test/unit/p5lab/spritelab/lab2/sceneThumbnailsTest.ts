@@ -138,9 +138,15 @@ describe('sceneThumbnails', () => {
     });
   });
 
-  it('names the asset after the scene and the fingerprint prefix', () => {
-    expect(thumbnailFileName('scene-1', 'abcdef0123456789')).toBe(
-      'scene-thumb-scene-1-abcdef01.png'
+  it('names the asset after the scene, the fingerprint prefix and the time', () => {
+    expect(
+      thumbnailFileName('scene-1', 'abcdef0123456789', 1795650000000)
+    ).toBe('scene-thumb-scene-1-abcdef01-1795650000000.png');
+  });
+
+  it('gives each upload of the same picture its own name', () => {
+    expect(thumbnailFileName('scene-1', 'abcdef01', 1)).not.toBe(
+      thumbnailFileName('scene-1', 'abcdef01', 2)
     );
   });
 });

@@ -2095,7 +2095,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
     activeSceneId,
     setActiveSceneId,
     activeTab,
-    channelId,
     updateSources,
     getScenes,
   });

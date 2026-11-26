@@ -38,6 +38,15 @@ import {SourcesStore} from './SourcesStore';
 
 const {reload} = require('@cdo/apps/utils');
 
+/** A project's saved sources and its sources waiting to be saved, when both
+    are certain (see getSettledSources). */
+export interface SettledSources {
+  /** The sources the server holds. */
+  saved: ProjectSources;
+  /** Newer sources waiting to be saved, if there are any. */
+  waiting?: ProjectSources;
+}
+
 export type SaveTrigger = 'autosave' | 'flush' | 'unload';
 
 export default class ProjectManager {
@@ -60,6 +69,12 @@ export default class ProjectManager {
   private saveNoopListeners: ((channel?: Channel) => void)[] = [];
   private saveFailListeners: ((error: Error) => void)[] = [];
   private saveStartListeners: (() => void)[] = [];
+  private sourcesSettledListeners: ((settled: SettledSources) => void)[] = [];
+  private savesInFlightCount = 0;
+  private restoringSources = false;
+  // Set while lastSource may not be what the server holds: a save that
+  // was reported as failed can still have been stored.
+  private savedSourcesUncertain = false;
   // The last source we saved or loaded, or undefined if we have not saved a source yet.
   private lastSource: string | undefined;
   // The next source to save, or undefined if we have no source to save.
@@ -183,15 +198,27 @@ export default class ProjectManager {
     }
     // Flush the enqueued save, if it exists, before restoring.
     await this.flushSave();
+    this.restoringSources = true;
     try {
-      await this.sourcesStore.restore(this.channelId, versionId);
+      try {
+        await this.sourcesStore.restore(this.channelId, versionId);
+      } catch (e) {
+        throw new Error('Error restoring sources', {cause: e});
+      }
+      // Now that we've restored to the previous version, loading sources
+      // will load the newly-restored version.
+      const sources = await this.loadAndStoreSources();
+      return sources;
     } catch (e) {
-      throw new Error('Error restoring sources', {cause: e});
+      // lastSource may not be what the server holds: a restore reported as
+      // failed can still have been stored, and when the load after a restore
+      // fails, lastSource is still the older version.
+      this.savedSourcesUncertain = true;
+      throw e;
+    } finally {
+      this.restoringSources = false;
+      this.executeSourcesSettledListeners();
     }
-    // Now that we've restored to the previous version, loading sources
-    // will load the newly-restored version.
-    const sources = await this.loadAndStoreSources();
-    return sources;
   }
 
   /**
@@ -436,6 +463,55 @@ export default class ProjectManager {
     this.saveFailListeners.push(listener);
   }
 
+  /**
+   * The sources the server holds for this project and the sources waiting
+   * to be saved, or undefined while the manager cannot be sure what the
+   * server holds. A save or a restore reported as failed can still have been
+   * stored, so this stays undefined after one until a sources save succeeds
+   * or the latest sources are loaded. A lab that sets the saved sources
+   * itself with setLastSource must pass the sources the server holds.
+   */
+  getSettledSources(): SettledSources | undefined {
+    if (
+      this.destroyed ||
+      this.savesInFlightCount > 0 ||
+      this.restoringSources ||
+      this.savedSourcesUncertain ||
+      this.lastSource === undefined
+    ) {
+      return undefined;
+    }
+    return {
+      saved: JSON.parse(this.lastSource) as ProjectSources,
+      waiting: this.sourcesToSave,
+    };
+  }
+
+  /**
+   * Adds a listener called with the settled sources each time a save or a
+   * restore finishes and leaves them certain (see getSettledSources).
+   */
+  addSourcesSettledListener(listener: (settled: SettledSources) => void) {
+    this.sourcesSettledListeners.push(listener);
+  }
+
+  private executeSourcesSettledListeners() {
+    const settled = this.getSettledSources();
+    if (!settled) {
+      return;
+    }
+    this.sourcesSettledListeners.forEach(listener => {
+      try {
+        listener(settled);
+      } catch (error) {
+        this.metricsReporter.logError(
+          'Error in a sources settled listener',
+          error as Error
+        );
+      }
+    });
+  }
+
   addSaveStartListener(listener: () => void) {
     this.saveStartListeners.push(listener);
   }
@@ -626,6 +702,7 @@ export default class ProjectManager {
         } else {
           errorToReport = new Error('Unknown error occurred');
         }
+        this.savedSourcesUncertain = true;
         this.onSaveFail(
           'Error saving sources',
           errorToReport,
@@ -636,6 +713,7 @@ export default class ProjectManager {
         return;
       }
       this.lastSource = JSON.stringify(sourcesBeingSaved);
+      this.savedSourcesUncertain = false;
 
       // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
       if (forceNewVersion || this.getForceNewVersion()) {
@@ -793,6 +871,28 @@ export default class ProjectManager {
   }
 
   /**
+   * Start the queued save once the save in flight, if any, has finished, so
+   * an older save is never stored after a newer one.
+   */
+  private runQueuedSave(
+    forceNewVersion: boolean,
+    skipSourcesChangedCheck: boolean,
+    trigger: SaveTrigger
+  ): void {
+    // Another save has taken the queued save's place.
+    if (this.destroyed || !this.saveQueued) {
+      return;
+    }
+    if (this.saveInProgress && this.saveInFlight) {
+      void this.saveInFlight.then(() =>
+        this.runQueuedSave(forceNewVersion, skipSourcesChangedCheck, trigger)
+      );
+      return;
+    }
+    this.runSave(forceNewVersion, skipSourcesChangedCheck, trigger);
+  }
+
+  /**
    * Start a save, tracking it so a later force save can wait for it to finish.
    * @returns the save promise, which rejects only on an unexpected failure;
    * saveHelper reports the failures it expects to its listeners itself.
@@ -802,16 +902,22 @@ export default class ProjectManager {
     skipSourcesChangedCheck: boolean,
     trigger: SaveTrigger
   ): Promise<void> {
+    this.savesInFlightCount++;
     const save = this.saveHelper(
       forceNewVersion,
       skipSourcesChangedCheck,
       trigger
-    ).catch(error => {
-      // An unexpected throw would otherwise leave saveInProgress set and wedge
-      // every later save.
-      this.saveInProgress = false;
-      throw error;
-    });
+    )
+      .catch(error => {
+        // An unexpected throw would otherwise leave saveInProgress set and wedge
+        // every later save.
+        this.saveInProgress = false;
+        throw error;
+      })
+      .finally(() => {
+        this.savesInFlightCount--;
+        this.executeSourcesSettledListeners();
+      });
     this.saveInFlight = save.catch(() => undefined);
     return save;
   }
@@ -859,7 +965,11 @@ export default class ProjectManager {
         this.saveQueued = true;
         this.currentTimeoutId = window.setTimeout(
           () => {
-            this.runSave(forceNewVersion, skipSourcesChangedCheck, trigger);
+            this.runQueuedSave(
+              forceNewVersion,
+              skipSourcesChangedCheck,
+              trigger
+            );
           },
           this.nextSaveTime ? this.nextSaveTime - Date.now() : this.saveInterval
         );
@@ -965,6 +1075,9 @@ export default class ProjectManager {
   private async loadAndStoreSources(versionId?: string) {
     const sources = await this.loadSources(versionId);
     this.lastSource = JSON.stringify(sources);
+    if (versionId === undefined) {
+      this.savedSourcesUncertain = false;
+    }
     return sources;
   }
 
