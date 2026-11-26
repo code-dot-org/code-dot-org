@@ -1,6 +1,5 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {
-  collisionBoxesRequested,
   collisionOverlayBoxes,
   isCollisionBoxesShortcut,
 } from '@cdo/apps/p5lab/spritelab/lab2/collisionOverlay';
@@ -34,13 +33,44 @@ describe('collisionOverlay', () => {
     expect(boxes.map(b => b.touching)).toEqual([false, false]);
   });
 
-  it('is requested by ?collision-boxes=true', () => {
-    (queryParams as jest.Mock).mockReturnValue(undefined);
-    expect(collisionBoxesRequested()).toBe(false);
+  it('measures a sprite under upward gravity by a body anchored at its top', () => {
+    // The sprite rests under the block: picture top on the underside (350).
+    const walls = [box(75, 325, 50, 50)];
+    const sprites = [box(75, 375, 25, 50)];
+    expect(collisionOverlayBoxes(sprites, walls, () => -0.75)).toEqual([
+      {kind: 'wall', touching: true, x: 75, y: 325, halfW: 25, halfH: 25},
+      {kind: 'body', touching: true, x: 75, y: 370, halfW: 10, halfH: 20},
+    ]);
+    // Measured as if gravity were down, the body is 10px below the block.
+    expect(collisionOverlayBoxes(sprites, walls)[1].touching).toBe(false);
+  });
+
+  // The choice is module state, so each case loads the module afresh.
+  const freshOverlay = (param: string | undefined) => {
     (queryParams as jest.Mock).mockImplementation((name: string) =>
-      name === 'collision-boxes' ? 'true' : undefined
+      name === 'collision-boxes' ? param : undefined
     );
-    expect(collisionBoxesRequested()).toBe(true);
+    let overlay!: typeof import('@cdo/apps/p5lab/spritelab/lab2/collisionOverlay');
+    jest.isolateModules(() => {
+      overlay = require('@cdo/apps/p5lab/spritelab/lab2/collisionOverlay');
+    });
+    return overlay;
+  };
+
+  it('starts shown with ?collision-boxes=true, and hidden without it', () => {
+    expect(freshOverlay(undefined).collisionBoxesShown()).toBe(false);
+    expect(freshOverlay('true').collisionBoxesShown()).toBe(true);
+  });
+
+  it('toggles from either start', () => {
+    const hidden = freshOverlay(undefined);
+    hidden.toggleCollisionBoxes();
+    expect(hidden.collisionBoxesShown()).toBe(true);
+    hidden.toggleCollisionBoxes();
+    expect(hidden.collisionBoxesShown()).toBe(false);
+    const shown = freshOverlay('true');
+    shown.toggleCollisionBoxes();
+    expect(shown.collisionBoxesShown()).toBe(false);
   });
 
   it('takes Alt+Shift+T as its shortcut, by the physical key', () => {

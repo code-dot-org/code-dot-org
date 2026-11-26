@@ -116,11 +116,20 @@ export function wallBox(wall: PhysicsBox): CollisionBox {
   return {x: wall.position.x, y: wall.position.y, halfW: half, halfH: half};
 }
 
-/** The box a character or object occupies for collision: its feet-anchored
-    body, as the resolver measures a player. */
-export function bodyBox(sprite: PhysicsBox): CollisionBox {
+/** The box a character or object occupies for collision: its body, as the
+    resolver measures a player. The body is anchored at the feet, which are
+    at the picture's top under upward gravity. */
+export function bodyBox(
+  sprite: PhysicsBox,
+  gravity: number = PLATFORM_GRAVITY
+): CollisionBox {
   const {halfW, halfH, drop} = playerBody(sprite);
-  return {x: sprite.position.x, y: sprite.position.y + drop, halfW, halfH};
+  return {
+    x: sprite.position.x,
+    y: sprite.position.y + (gravity < 0 ? -drop : drop),
+    halfW,
+    halfH,
+  };
 }
 
 // How close a body and a wall may be, in playfield pixels, and still count
@@ -136,8 +145,12 @@ export const FIRM_TOUCH_SHARE = 0.25;
 /** Whether a sprite's body touches a wall, from any side: the boxes meet
     or overlap, within TOUCH_SLACK, along enough of a face (see
     FIRM_TOUCH_SHARE). */
-export function touchesWall(sprite: PhysicsBox, wall: PhysicsBox): boolean {
-  const body = bodyBox(sprite);
+export function touchesWall(
+  sprite: PhysicsBox,
+  wall: PhysicsBox,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  const body = bodyBox(sprite, gravity);
   const box = wallBox(wall);
   const overlapX = body.halfW + box.halfW - Math.abs(body.x - box.x);
   const overlapY = body.halfH + box.halfH - Math.abs(body.y - box.y);
@@ -154,6 +167,11 @@ export function touchesWall(sprite: PhysicsBox, wall: PhysicsBox): boolean {
 // so a press just after walking off a ledge is not lost: about 0.1 s at the
 // game's 30 frames a second.
 export const JUMP_GRACE_FRAMES = 3;
+
+// The furthest a player can fall in the grace period. A player further than
+// this from where it last stood was moved there by the program.
+export const MAX_GRACE_DROP =
+  JUMP_GRACE_FRAMES * (TERMINAL_FALL_SPEED + PLATFORM_GRAVITY);
 
 /** Whether a jump may start: with footing, or within JUMP_GRACE_FRAMES of
     losing it while falling. `fallSpeed` is the speed along gravity; a

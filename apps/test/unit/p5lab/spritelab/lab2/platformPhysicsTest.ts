@@ -6,8 +6,10 @@ import {
   isAtEdge,
   isSupported,
   touchesWall,
+  bodyBox,
   canStartJump,
   jumpSpeedFromBelow,
+  MAX_GRACE_DROP,
   JUMP_GRACE_FRAMES,
   resolvePlatformPhysics,
   PhysicsBox,
@@ -408,6 +410,23 @@ describe('platformPhysics with custom gravity', () => {
     // Corner to corner, and a corner 3px inside on both axes.
     expect(touchesWall(makeSprite(40, 275), wall)).toBe(false);
     expect(touchesWall(makeSprite(43, 278), wall)).toBe(false);
+  });
+
+  it('touchesWall measures a body anchored at the top of the picture under upward gravity', () => {
+    // Cell (col 1, row 6): its underside is at y 350. A sprite resting
+    // under it has its picture's top there, so its centre is at y 375.
+    const wall = wallAt(1, 6);
+    const resting = makeSprite(75, 375);
+    expect(touchesWall(resting, wall, -PLATFORM_GRAVITY)).toBe(true);
+    expect(bodyBox(resting, -PLATFORM_GRAVITY).y).toBe(370);
+    // Measured as if gravity were down, the body is 10px below the block.
+    expect(touchesWall(resting, wall)).toBe(false);
+  });
+
+  it('MAX_GRACE_DROP covers a fall at full speed for the whole grace period', () => {
+    expect(MAX_GRACE_DROP).toBe(
+      JUMP_GRACE_FRAMES * (TERMINAL_FALL_SPEED + PLATFORM_GRAVITY)
+    );
   });
 
   it('canStartJump allows a jump with footing, or just after losing it while falling', () => {

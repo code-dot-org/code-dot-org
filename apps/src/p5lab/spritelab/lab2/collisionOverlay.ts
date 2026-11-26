@@ -8,6 +8,7 @@ import {
   bodyBox,
   CollisionBox,
   PhysicsBox,
+  PLATFORM_GRAVITY,
   touchesWall,
   wallBox,
 } from './platformPhysics';
@@ -21,26 +22,42 @@ export interface OverlayBox extends CollisionBox {
 
 /** Each block's cell and each sprite's body, each marked with whether
     touchesWall holds for it. */
-export function collisionOverlayBoxes(
-  sprites: PhysicsBox[],
-  walls: PhysicsBox[]
+export function collisionOverlayBoxes<Sprite extends PhysicsBox>(
+  sprites: Sprite[],
+  walls: PhysicsBox[],
+  gravityOf: (sprite: Sprite) => number = () => PLATFORM_GRAVITY
 ): OverlayBox[] {
   return [
     ...walls.map(wall => ({
       ...wallBox(wall),
       kind: 'wall' as const,
-      touching: sprites.some(sprite => touchesWall(sprite, wall)),
+      touching: sprites.some(sprite =>
+        touchesWall(sprite, wall, gravityOf(sprite))
+      ),
     })),
     ...sprites.map(sprite => ({
-      ...bodyBox(sprite),
+      ...bodyBox(sprite, gravityOf(sprite)),
       kind: 'body' as const,
-      touching: walls.some(wall => touchesWall(sprite, wall)),
+      touching: walls.some(wall =>
+        touchesWall(sprite, wall, gravityOf(sprite))
+      ),
     })),
   ];
 }
 
-export function collisionBoxesRequested(): boolean {
-  return queryParams('collision-boxes') === 'true';
+// Kept here, not on a game engine: the page makes a new engine for each
+// level, and the choice outlasts it.
+let shown: boolean | undefined;
+
+export function collisionBoxesShown(): boolean {
+  if (shown === undefined) {
+    shown = queryParams('collision-boxes') === 'true';
+  }
+  return shown;
+}
+
+export function toggleCollisionBoxes(): void {
+  shown = !collisionBoxesShown();
 }
 
 /** Alt+Shift+T. `code` is the physical key: with Alt held, some keyboards

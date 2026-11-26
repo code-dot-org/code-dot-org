@@ -39,9 +39,10 @@ import {
   teeterTicks,
 } from './characterAnimations';
 import {
-  collisionBoxesRequested,
+  collisionBoxesShown,
   collisionOverlayBoxes,
   isCollisionBoxesShortcut,
+  toggleCollisionBoxes,
 } from './collisionOverlay';
 import {
   animationNames,
@@ -63,6 +64,7 @@ import {
   bodyBox,
   canStartJump,
   jumpSpeedFromBelow,
+  MAX_GRACE_DROP,
   resolvePlatformPhysics,
   touchesWall,
   usesPlatformPhysics,
@@ -126,6 +128,8 @@ const CANVAS_DENSITY_FACTOR = 2;
 const RESTART_QUIET_MS = 1000;
 // The inputEvents type a when-player hat registers.
 const PLAYER_ACTION_EVENT = 'playerAction';
+// The collision boxes overlay's outline of a sprite's collider.
+const COLLIDER_OUTLINE = [255, 255, 255, 200];
 // The collision boxes overlay's fills, as [apart, touching] for each kind.
 const COLLISION_BOX_FILLS = {
   wall: [
@@ -190,10 +194,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
     setRetainBlobsOnLoad(false);
-    this.collisionBoxesShown_ = collisionBoxesRequested();
     this.onCollisionBoxesKey_ = event => {
       if (isCollisionBoxesShortcut(event) && !event.repeat) {
-        this.collisionBoxesShown_ = !this.collisionBoxesShown_;
+        toggleCollisionBoxes();
       }
     };
     window.addEventListener('keydown', this.onCollisionBoxesKey_);
@@ -355,7 +358,7 @@ export default class SpriteLab2Engine extends SpriteLab {
   weatherScene_(view) {
     const bodies = Object.values(this.library.nativeSpriteMap)
       .filter(sprite => sprite.group !== 'walls' && !sprite.removed)
-      .map(bodyBox);
+      .map(sprite => bodyBox(sprite));
     return {
       ...view,
       walls: this.wallsThisFrame_(this.library).map(wallBox),
@@ -645,15 +648,23 @@ export default class SpriteLab2Engine extends SpriteLab {
       // JUMP_GRACE_FRAMES frames and is not rising. A key's handler runs
       // after its frame's movement is resolved, so for a player standing
       // this frame, __slab2Footing was written this frame.
+      const dropOf = sprite =>
+        -up * (sprite.position.y - sprite.__slab2Footing.y);
       const inGrace = sprite =>
         !!sprite.__slab2Footing &&
         canStartJump(
           false,
           frame - sprite.__slab2Footing.frame,
           -up * sprite.velocity.y
-        );
-      const jumpers = library.getSpriteArray({group});
-      if (!supported && !jumpers.some(inGrace)) {
+        ) &&
+        dropOf(sprite) >= -CONTACT_EPSILON &&
+        dropOf(sprite) <= MAX_GRACE_DROP;
+      // With footing, every sprite of the group jumps. Without it, only the
+      // ones in their grace period do.
+      const jumpers = library
+        .getSpriteArray({group})
+        .filter(sprite => supported || inGrace(sprite));
+      if (!jumpers.length) {
         return;
       }
       // TODO: When we support configurable grid sizes (vs. just 10x10),
@@ -687,9 +698,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         }
         // A jump in the grace period starts below the footing it left, and
         // still reaches the height a jump from that footing reaches.
-        const drop = inGrace(sprite)
-          ? -up * (sprite.position.y - sprite.__slab2Footing.y)
-          : 0;
+        const drop = inGrace(sprite) ? dropOf(sprite) : 0;
         sprite.velocity.y =
           up * jumpSpeedFromBelow(jumpSpeed, drop, this.platformGravity_);
         // Without __slab2Footing, the grace period cannot start a second
@@ -829,13 +838,32 @@ export default class SpriteLab2Engine extends SpriteLab {
               ? sprite
               : null;
           const other = wall === target ? sprite : target;
-          if (wall && touchesWall(other, wall)) {
+          const player = wall && isPlayerGroup(other.group);
+          // A player is measured where the last frame's movement was
+          // resolved to. Its position while events run is that frame's
+          // next step, which can be deep inside a block it will be pushed
+          // out of.
+          const touching =
+            wall &&
+            (player
+              ? touchesWall(
+                  {
+                    position: other.__slab2Prev || other.position,
+                    width: other.width,
+                    height: other.height,
+                    scale: other.scale,
+                  },
+                  wall,
+                  this.platformGravity_
+                )
+              : touchesWall(other, wall));
+          if (touching) {
             if (callback) {
               callback(sprite, target);
             }
             return true;
           }
-          if (wall && isPlayerGroup(other.group)) {
+          if (player) {
             return false;
           }
           return overlap(target, callback);
@@ -1495,7 +1523,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         engine.drawWorld_(this, 1, cameraFocus(1, null));
         engine.settleFrameCaptures_(p5.canvas);
       }
-      engine.drawWorld_(this, zoom, focus, engine.collisionBoxesShown_);
+      engine.drawWorld_(this, zoom, focus, collisionBoxesShown());
       this.drawVariableBubbles();
       if (!this.isPreviewFrame()) {
         this.foregroundEffects.forEach(effect => effect.func());
@@ -1532,12 +1560,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     camera.off();
   }
 
-  // Drawn over the sprites, in world coordinates. Each block's cell is
-  // filled blue and each other sprite's body green; both turn red while the
-  // body touches a block. The white outline is the rectangle around a
-  // sprite's collider, which the stock overlap test measures: for a touch
-  // between two sprites, and as the second test between a block and a
-  // sprite that is not a player.
+  // The outline is the rectangle around a sprite's collider, which the
+  // stock overlap test measures: for a touch between two sprites, and as
+  // the second test between a block and a sprite that is not a player.
   drawCollisionBoxes_(library) {
     const {p5} = library;
     const sprites = Object.values(library.nativeSpriteMap).filter(
@@ -1546,15 +1571,15 @@ export default class SpriteLab2Engine extends SpriteLab {
     p5.push();
     p5.rectMode(p5.CENTER);
     p5.noStroke();
-    collisionOverlayBoxes(sprites, this.wallsThisFrame_(library)).forEach(
-      box => {
-        p5.fill(...COLLISION_BOX_FILLS[box.kind][box.touching ? 1 : 0]);
-        p5.rect(box.x, box.y, box.halfW * 2, box.halfH * 2);
-      }
-    );
+    collisionOverlayBoxes(sprites, this.wallsThisFrame_(library), sprite =>
+      isPlayerGroup(sprite.group) ? this.platformGravity_ : PLATFORM_GRAVITY
+    ).forEach(box => {
+      p5.fill(...COLLISION_BOX_FILLS[box.kind][box.touching ? 1 : 0]);
+      p5.rect(box.x, box.y, box.halfW * 2, box.halfH * 2);
+    });
     p5.rectMode(p5.CORNER);
     p5.noFill();
-    p5.stroke(255, 255, 255, 200);
+    p5.stroke(...COLLIDER_OUTLINE);
     p5.strokeWeight(1);
     sprites.forEach(sprite => {
       const bounds = sprite.collider?.getBoundingBox();
