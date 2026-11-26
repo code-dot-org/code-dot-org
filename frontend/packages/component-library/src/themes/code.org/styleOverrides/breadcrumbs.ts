@@ -68,7 +68,7 @@ export const BREADCRUMBS_OVERRIDES: Components<Theme>['MuiBreadcrumbs'] = {
           // Focus styles
           '&:focus-visible': {
             color: 'var(--text-neutral-primary)',
-            outline: '2px solid var(--borders-brand-teal-primary)',
+            outline: '2px solid var(--border-focused-primary)',
             outlineOffset: '2px',
           },
         },
