@@ -793,6 +793,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
+  useReportImageLoadFailures(animationList);
 
   const sceneMetadata = useMemo(
     () => sceneMetadataFor(scenes, animationList),
@@ -1379,7 +1380,6 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   useEffect(() => {
     writeAnimations();
   }, [animationList, writeAnimations]);
-  useReportImageLoadFailures(animationList);
   // A picture that just became an image is worth a save of its own.
   const saveImagesNow = useCallback(
     () => writeAnimations(true),
