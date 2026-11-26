@@ -272,9 +272,16 @@ $border-subtle: chrome.$border-subtle;
   }
 }
 
+// A host's panel may show a checkerboard behind the canvas area, so the
+// message brings its own background.
 .loadError {
-  padding: 40px;
-  color: var(--dialog-danger-text);
+  margin: 24px;
+  padding: 16px 20px;
+  border: 1px solid var(--borders-neutral-primary);
+  border-radius: 8px;
+  background-color: var(--background-neutral-primary);
+  color: var(--text-neutral-primary);
+  text-align: center;
 }
 
 .footer {
