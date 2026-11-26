@@ -741,6 +741,10 @@ export function setRetainBlobsOnLoad(retain) {
   retainBlobsOnLoad = retain;
 }
 
+// How many loads have been started for each key. Only the newest load of
+// a key may mark the image failed.
+const latestLoadByKey = new Map();
+
 /**
  * Load the indicated animation (which must already have an entry in the project
  * animation list) from its source, whether that is S3 or the animation library.
@@ -760,6 +764,13 @@ export function loadAnimationFromSource(key, callback) {
       type: START_LOADING_FROM_SOURCE,
       key: key,
     });
+    const loadNumber = (latestLoadByKey.get(key) || 0) + 1;
+    latestLoadByKey.set(key, loadNumber);
+    const markFailed = failure => {
+      if (latestLoadByKey.get(key) === loadNumber) {
+        dispatch({type: FAILED_LOADING_FROM_SOURCE, key, failure});
+      }
+    };
     // A file that downloads but is not an image (an error page, an empty
     // file) fails here rather than at the fetch.
     const failToDecode = objectUrl => err => {
@@ -767,11 +778,7 @@ export function loadAnimationFromSource(key, callback) {
       if (objectUrl) {
         URL.revokeObjectURL(objectUrl);
       }
-      dispatch({
-        type: FAILED_LOADING_FROM_SOURCE,
-        key,
-        failure: {reason: 'notImage'},
-      });
+      markFailed({reason: 'notImage'});
     };
     fetchURLAsBlob(sourceUrl, (err, blob) => {
       if (err) {
@@ -782,11 +789,9 @@ export function loadAnimationFromSource(key, callback) {
         const status = Number(
           /responded with code (\d+)/.exec(err.message)?.[1]
         );
-        dispatch({
-          type: FAILED_LOADING_FROM_SOURCE,
-          key,
-          failure: status ? {reason: 'httpError', status} : {reason: 'network'},
-        });
+        markFailed(
+          status ? {reason: 'httpError', status} : {reason: 'network'}
+        );
 
         if (isOwner()) {
           // Display error dialog

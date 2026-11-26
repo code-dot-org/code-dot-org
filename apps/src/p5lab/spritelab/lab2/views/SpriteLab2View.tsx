@@ -793,7 +793,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
   const activeSceneSize = sceneGridSize(activeWorld);
   // The project's images, for guide steps waiting on some being made.
   const animationList = useAppSelector(state => state.animationList);
-  useReportImageLoadFailures(animationList);
+  useReportImageLoadFailures(animationList, levelProperties, channelId);
 
   const sceneMetadata = useMemo(
     () => sceneMetadataFor(scenes, animationList),

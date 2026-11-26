@@ -206,6 +206,38 @@ describe('animationList', function () {
       });
     });
 
+    it('clears a failed load when a new load of the image starts', async () => {
+      imageUtils.fetchURLAsBlob.mockImplementationOnce((url, callback) =>
+        callback(new Error('URL a.png responded with code 404'))
+      );
+      store.dispatch(loadAnimationFromSource(key));
+      await new Promise(resolve => setTimeout(resolve, 0));
+      expect(store.getState().animationList.propsByKey[key].loadFailed).to.be
+        .true;
+      // The next request stays unanswered.
+      imageUtils.fetchURLAsBlob.mockImplementationOnce(() => undefined);
+      store.dispatch(loadAnimationFromSource(key));
+      const props = store.getState().animationList.propsByKey[key];
+      expect(props.loadFailed).to.be.false;
+      expect(props.loadFailure).to.be.undefined;
+    });
+
+    it('ignores the failure of a load that a newer load replaced', async () => {
+      let failFirst = () => undefined;
+      imageUtils.fetchURLAsBlob.mockImplementationOnce((url, callback) => {
+        failFirst = () =>
+          callback(new Error('URL a.png responded with code 404'));
+      });
+      store.dispatch(loadAnimationFromSource(key));
+      // The newer request stays unanswered.
+      imageUtils.fetchURLAsBlob.mockImplementationOnce(() => undefined);
+      store.dispatch(loadAnimationFromSource(key));
+      failFirst();
+      const props = store.getState().animationList.propsByKey[key];
+      expect(props.loadFailed).to.be.false;
+      expect(isLoadFromSourceSettled(props)).to.be.false;
+    });
+
     describe('a file that does not download', () => {
       const loadFailing = async error => {
         imageUtils.fetchURLAsBlob.mockImplementationOnce((url, callback) =>
