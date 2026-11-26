@@ -120,18 +120,24 @@ interface PreparerOptions {
     revision: number,
     previousUrl: string | undefined
   ) => void;
+  /** Called when an image's held pixels could not be uploaded; `hadFile`
+      is whether the image already had a file to keep. */
+  onUploadFailed: (key: string, error: unknown, hadFile: boolean) => void;
 }
 
 /**
  * The sources preparer for a project: uploads the held pixels of every image
  * the sources mark `pendingUpload`, and returns the sources with each such
- * image's link set to its file and the mark removed. A failed upload rejects,
- * which fails the save; the pixels stay held for the next one.
+ * image's link set to its file and the mark removed. When an upload fails,
+ * the save goes ahead without those pixels: an image that has a file keeps
+ * it, a new image is left out, the pixels stay held, and the save is
+ * incomplete, so another follows.
  */
 export function makeSourcesPreparer({
   channelId,
   upload,
   onUploaded,
+  onUploadFailed,
 }: PreparerOptions): SourcesPreparer {
   preparing.add(channelId);
   return async (sources: ProjectSources) => {
@@ -140,33 +146,46 @@ export function makeSourcesPreparer({
       key => list.propsByKey[key]?.pendingUpload
     );
     if (!list || !marked?.length) {
-      return sources;
+      return {sources};
     }
     const propsByKey = {...list.propsByKey};
+    const leftOut = new Set<string>();
     for (const key of marked) {
       const props = {...propsByKey[key]};
       delete props.pendingUpload;
-      const pixels = held.get(channelId)?.get(key);
-      if (pixels) {
-        props.sourceUrl = await uploadDrawing(upload, props, pixels.dataURI);
-        if (!hasNewerPixels(channelId, key, pixels.revision)) {
-          held.get(channelId)?.delete(key);
-        }
-        onUploaded(
-          key,
-          props.sourceUrl,
-          pixels.revision,
-          propsByKey[key].sourceUrl
-        );
-      }
       propsByKey[key] = props;
+      const pixels = held.get(channelId)?.get(key);
+      if (!pixels) {
+        continue;
+      }
+      let sourceUrl: string;
+      try {
+        sourceUrl = await uploadDrawing(upload, props, pixels.dataURI);
+      } catch (error) {
+        onUploadFailed(key, error, !!props.sourceUrl);
+        if (!props.sourceUrl) {
+          leftOut.add(key);
+        }
+        continue;
+      }
+      if (!hasNewerPixels(channelId, key, pixels.revision)) {
+        held.get(channelId)?.delete(key);
+      }
+      onUploaded(key, sourceUrl, pixels.revision, props.sourceUrl);
+      props.sourceUrl = sourceUrl;
     }
+    // Pixels still held: an upload failed, or newer pixels came in while it
+    // ran.
+    const stillHeld = marked.some(key => held.get(channelId)?.has(key));
     return {
-      ...sources,
-      animations: getSerializedAnimationList({
-        orderedKeys: list.orderedKeys,
-        propsByKey,
-      }),
+      sources: {
+        ...sources,
+        animations: getSerializedAnimationList({
+          orderedKeys: list.orderedKeys.filter(key => !leftOut.has(key)),
+          propsByKey,
+        }),
+      },
+      incomplete: stillHeld,
     };
   };
 }

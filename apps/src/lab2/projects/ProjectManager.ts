@@ -38,9 +38,16 @@ import {SourcesStore} from './SourcesStore';
 
 const {reload} = require('@cdo/apps/utils');
 
+export interface PreparedSources {
+  sources: ProjectSources;
+  /** Part of the sources could not be prepared and is saved as it last was;
+      the sources given stay pending, and another save is queued. */
+  incomplete?: boolean;
+}
+
 export type SourcesPreparer = (
   sources: ProjectSources
-) => Promise<ProjectSources>;
+) => Promise<PreparedSources>;
 
 export type SaveTrigger = 'autosave' | 'flush' | 'unload';
 
@@ -444,8 +451,8 @@ export default class ProjectManager {
   /**
    * Sets a step that each save runs on the sources just before writing them,
    * for a lab that stores part of a project elsewhere first, such as image
-   * files. What it returns is what is saved. A step that throws fails the
-   * save.
+   * files. The sources it returns are what is saved. A step that throws
+   * fails the save.
    */
   setSourcesPreparer(preparer: SourcesPreparer | undefined) {
     this.sourcesPreparer = preparer;
@@ -628,15 +635,17 @@ export default class ProjectManager {
     // Only save the source if it has changed or we are skipping the changed check.
     // What was written, which a sources preparer may have changed.
     let sourcesSaved = sourcesBeingSaved;
+    let incomplete = false;
     if (sourcesBeingSaved && (sourceChanged || skipSourcesChangedCheck)) {
       try {
         const prepared = this.sourcesPreparer
           ? await this.sourcesPreparer(sourcesBeingSaved)
-          : sourcesBeingSaved;
-        sourcesSaved = prepared;
+          : {sources: sourcesBeingSaved};
+        sourcesSaved = prepared.sources;
+        incomplete = !!prepared.incomplete;
         await this.sourcesStore.save(
           this.channelId,
-          prepared,
+          prepared.sources,
           this.lastChannel.projectType,
           forceNewVersion || this.getForceNewVersion()
         );
@@ -728,7 +737,7 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     // Anything that changed while we were saving stays pending for the next save.
-    if (this.sourcesToSave === sourcesBeingSaved) {
+    if (this.sourcesToSave === sourcesBeingSaved && !incomplete) {
       this.sourcesToSave = undefined;
     }
     if (this.pendingChannelUpdates === channelUpdatesBeingSaved) {
@@ -738,6 +747,9 @@ export default class ProjectManager {
     this.initialSaveComplete = true;
     this.lastSuccessfulSaveTime = Date.now();
     this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
+    if (incomplete) {
+      void this.enqueueSaveOrSave(false, false);
+    }
   }
 
   private onSaveFail(

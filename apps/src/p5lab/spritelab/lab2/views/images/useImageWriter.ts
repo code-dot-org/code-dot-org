@@ -1,7 +1,7 @@
 // Writing the Images tab's pictures into the project. A generated or drawn
 // picture becomes an image's pixels as soon as it is ready. A generated
-// picture is uploaded at once. Drawn pixels on an existing image wait for
-// the project's next save to upload them (see pendingUploads.ts). When a
+// picture is uploaded at once. In a project, drawn pixels wait for the
+// project's next save to upload them (see pendingUploads.ts). When a
 // session ends, uploaded files that no image points at are deleted.
 
 import {useCallback, useEffect, useRef} from 'react';
@@ -26,6 +26,7 @@ import {categoriesForType} from '@cdo/apps/p5lab/spritelab/lab2/imageGallery';
 import {nextImageName} from '@cdo/apps/p5lab/spritelab/lab2/imageReferences';
 import {
   AnimationPatch,
+  createDrawnAnimation,
   createNamedAnimation,
   framesPatch,
   repointAnimation,
@@ -86,9 +87,9 @@ export interface ImageWriter {
       when the file cannot be uploaded. */
   acceptUploaded: (target: ImageTarget, file: UploadedImage) => Promise<string>;
   /** Stores drawn pixels as the target image's pixels and resolves with
-      its key, as acceptGenerated does. On an existing image of a project
-      whose saves upload drawings, the pixels wait for the next save;
-      otherwise they are uploaded first, and a failed upload rejects. */
+      its key, as acceptGenerated does. In a project whose saves upload
+      drawings, the pixels wait for the next save; otherwise they are
+      uploaded first, and a failed upload rejects. */
   saveEdited: (
     target: ImageTarget,
     dataURI: string,
@@ -158,7 +159,7 @@ export default function useImageWriter({
   useEffect(() => releaseSessionFiles, [releaseSessionFiles]);
 
   const write = useCallback(
-    (target: ImageTarget, patch: AnimationPatch): string => {
+    (target: ImageTarget, patch: AnimationPatch, drawn = false): string => {
       if (target.key) {
         // An image deleted while its save was in progress stays deleted:
         // nothing is written for it.
@@ -175,12 +176,16 @@ export default function useImageWriter({
             getStore().getState().animationList.propsByKey
           )
       );
-      return createNamedAnimation(dispatch, name, {
-        ...patch,
-        categories: categoriesForType(target.imageType),
-        ...(imageRole && {role: imageRole}),
-        ...(target.subject && {subject: target.subject}),
-      });
+      return (drawn ? createDrawnAnimation : createNamedAnimation)(
+        dispatch,
+        name,
+        {
+          ...patch,
+          categories: categoriesForType(target.imageType),
+          ...(imageRole && {role: imageRole}),
+          ...(target.subject && {subject: target.subject}),
+        }
+      );
     },
     [dispatch, imageRole]
   );
@@ -253,8 +258,7 @@ export default function useImageWriter({
       {stillWanted}: SaveEditedOptions = {}
     ) => {
       const existing = target.key ? propsOf(target.key) : undefined;
-      // A new image is uploaded at once, so it has a file from the start.
-      const waitForSave = !!existing && uploadsWithSave(channelId);
+      const waitForSave = uploadsWithSave(channelId);
       const sourceUrl = waitForSave
         ? undefined
         : await uploadDrawing(upload, existing ?? {}, dataURI);
@@ -263,30 +267,34 @@ export default function useImageWriter({
       if (stillWanted && !stillWanted()) {
         return target.key ?? '';
       }
-      if (waitForSave && channelId && target.key) {
-        holdPixels(channelId, target.key, dataURI);
-      }
       // Keep the subject: the edit clears `generation`, where an older image
       // stored it.
       const subject =
         existing?.subject ?? existing?.generation?.subject ?? target.subject;
-      const key = write(target, {
-        ...(sourceUrl ? {sourceUrl} : {pendingUpload: true}),
-        dataURI,
-        ...(subject && {subject}),
-        // An edited character set keeps its frame grid (the editor hands
-        // back the same canvas); a plain picture takes the measured size.
-        ...(existing?.poses
-          ? {}
-          : {frameSize, sourceSize: frameSize, ...framesPatch(undefined)}),
-        pixelGridSize: meta.pixelGridSize,
-        trimmed: false,
-        // Hand-edited pixels are not the prompt's output anymore.
-        generation: undefined,
-        fromGeneration: existing?.fromGeneration || !!existing?.generation,
-        edited: true,
-        recentColors: meta.recentColors,
-      });
+      const key = write(
+        target,
+        {
+          ...(sourceUrl ? {sourceUrl} : {pendingUpload: true}),
+          dataURI,
+          ...(subject && {subject}),
+          // An edited character set keeps its frame grid (the editor hands
+          // back the same canvas); a plain picture takes the measured size.
+          ...(existing?.poses
+            ? {}
+            : {frameSize, sourceSize: frameSize, ...framesPatch(undefined)}),
+          pixelGridSize: meta.pixelGridSize,
+          trimmed: false,
+          // Hand-edited pixels are not the prompt's output anymore.
+          generation: undefined,
+          fromGeneration: existing?.fromGeneration || !!existing?.generation,
+          edited: true,
+          recentColors: meta.recentColors,
+        },
+        waitForSave
+      );
+      if (waitForSave && channelId) {
+        holdPixels(channelId, key, dataURI);
+      }
       return key;
     },
     [upload, write, channelId]

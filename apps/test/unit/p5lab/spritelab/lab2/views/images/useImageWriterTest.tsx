@@ -41,12 +41,14 @@ jest.mock('@cdo/apps/lab2/redux/lab2ProjectReduxThunks', () => ({
   unflagProjectChannel: (...args: unknown[]) => unflag(...args),
 }));
 const createNamedAnimation = jest.fn((...args: unknown[]) => 'new-key');
+const createDrawnAnimation = jest.fn((...args: unknown[]) => 'drawn-key');
 const repointAnimation = jest.fn(
   (...args: unknown[]) => '/v3/assets/chan/old.png'
 );
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/imageSave', () => ({
   ...jest.requireActual('@cdo/apps/p5lab/spritelab/lab2/views/imageSave'),
   createNamedAnimation: (...args: unknown[]) => createNamedAnimation(...args),
+  createDrawnAnimation: (...args: unknown[]) => createDrawnAnimation(...args),
   repointAnimation: (...args: unknown[]) => repointAnimation(...args),
 }));
 // Each test's project manager; its last save names only the image's
@@ -115,6 +117,7 @@ describe('useImageWriter', () => {
   beforeEach(() => {
     Object.keys(propsByKey).forEach(key => delete propsByKey[key]);
     createNamedAnimation.mockClear();
+    createDrawnAnimation.mockClear();
     repointAnimation.mockClear();
     repointAnimation.mockImplementation(() => '/v3/assets/chan/old.png');
     httpDelete.mockClear();
@@ -643,6 +646,7 @@ describe('useImageWriter', () => {
         channelId: 'chan',
         upload: preparerUpload,
         onUploaded: () => undefined,
+        onUploadFailed: () => undefined,
       });
       propsByKey.k1 = {
         name: 'Sprite 1',
@@ -684,27 +688,35 @@ describe('useImageWriter', () => {
       );
     });
 
-    it('uploads a new image at once, so it has a file from the start', async () => {
+    it('makes a new image without uploading, its pixels held for the save', async () => {
       makeSourcesPreparer({
         channelId: 'chan',
         upload: jest.fn(),
         onUploaded: () => undefined,
+        onUploadFailed: () => undefined,
       });
       const {writer, uploadImage} = renderWriter();
+      let key = '';
       await act(async () => {
-        await writer().saveEdited(
+        key = await writer().saveEdited(
           {key: null, imageType: 'sprite'},
           'data:image/png;base64,AA',
           {pixelGridSize: 1}
         );
       });
-      expect(uploadImage).toHaveBeenCalledTimes(1);
-      const patch = createNamedAnimation.mock.calls[0][2] as Record<
+      expect(uploadImage).not.toHaveBeenCalled();
+      expect(createNamedAnimation).not.toHaveBeenCalled();
+      expect(createDrawnAnimation).toHaveBeenCalledTimes(1);
+      const patch = createDrawnAnimation.mock.calls[0][2] as Record<
         string,
         unknown
       >;
-      expect(patch.sourceUrl).toMatch(/^\/v3\/assets\/chan\/image_\d+\.png/);
-      expect(patch).not.toHaveProperty('pendingUpload');
+      expect(patch).toMatchObject({
+        pendingUpload: true,
+        dataURI: 'data:image/png;base64,AA',
+      });
+      expect(patch).not.toHaveProperty('sourceUrl');
+      expect(key).toBe('drawn-key');
     });
   });
 });

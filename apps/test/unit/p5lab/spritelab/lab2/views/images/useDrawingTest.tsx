@@ -139,19 +139,6 @@ describe('useDrawing', () => {
     );
   });
 
-  it('retries a failed pause-save at the next save', async () => {
-    const {saveEdited, tools} = setup();
-    await act(() => tools().startDrawing(target));
-    tools().attachEditor(editor());
-    saveEdited.mockRejectedValueOnce(new Error('down'));
-    await act(async () => tools().handleSave('data:a', {}));
-    expect(saveEdited).toHaveBeenCalledTimes(1);
-    expect(tools().drawing).toBeTruthy();
-    await act(async () => tools().handleSave('data:b', {}));
-    expect(saveEdited).toHaveBeenCalledTimes(2);
-    expect(saveEdited.mock.calls[1]![1]).toBe('data:b');
-  });
-
   it('says nothing on the next drawing when a left drawing fails to save', async () => {
     const {saveEdited, tools} = setup();
     await act(() => tools().startDrawing(target));
@@ -165,7 +152,7 @@ describe('useDrawing', () => {
       () => new Promise<string>((_resolve, reject) => (fail = reject))
     );
     act(() => tools().scheduleStrokeSave());
-    act(() => tools().leaveDrawing(true));
+    await act(async () => tools().leaveDrawing(true));
     expect(saveEdited).toHaveBeenCalledTimes(1);
     await act(() => tools().startDrawing(target));
     const next = editor();
@@ -177,6 +164,128 @@ describe('useDrawing', () => {
     expect(next.save).not.toHaveBeenCalled();
   });
 
+  it("drops an abandoned drawing's running save, which is no longer wanted", async () => {
+    const {saveEdited, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor(editor());
+    let finish: (key: string) => void = () => undefined;
+    saveEdited.mockImplementationOnce(
+      () => new Promise<string>(resolve => (finish = resolve))
+    );
+    await act(async () => tools().handleSave('data:a', {}));
+    const options = saveEdited.mock.calls[0]![3]!;
+    expect(options.stillWanted?.()).toBe(true);
+    act(() => tools().abandonDrawing());
+    expect(tools().drawing).toBeNull();
+    expect(options.stillWanted?.()).toBe(false);
+    await act(async () => finish('k1'));
+    expect(tools().drawing).toBeNull();
+  });
+
+  it("drops an abandoned drawing's save that has not started", async () => {
+    const {saveEdited, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor(editor());
+    act(() => {
+      tools().handleSave('data:a', {});
+      tools().abandonDrawing();
+    });
+    await act(async () => undefined);
+    expect(saveEdited).not.toHaveBeenCalled();
+  });
+
+  it('saves the project once Done has saved what is drawn, and not on a pause', async () => {
+    const {storePicture, saveProjectNow, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:b', {}),
+      snapshot: () => null,
+    });
+    await act(async () => tools().handleSave('data:a', {}));
+    expect(saveProjectNow).not.toHaveBeenCalled();
+    act(() => tools().scheduleStrokeSave());
+    await act(async () => tools().finishDrawing());
+    expect(storePicture.mock.calls.map(call => call[2])).toEqual([
+      false,
+      false,
+    ]);
+    expect(saveProjectNow).toHaveBeenCalledTimes(1);
+    expect(tools().drawing).toBeNull();
+  });
+
+  it('keeps the tools open, with the failure shown, when Done cannot save', async () => {
+    const {saveEdited, saveProjectNow, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:a', {}),
+      snapshot: () => null,
+    });
+    saveEdited.mockRejectedValueOnce(new Error('down'));
+    act(() => tools().scheduleStrokeSave());
+    await act(async () => tools().finishDrawing());
+    expect(tools().drawing).not.toBeNull();
+    expect(tools().saveFailed).toBe(true);
+    expect(saveProjectNow).not.toHaveBeenCalled();
+  });
+
+  it("saves the project after a left drawing's running save, and adds no save of its own", async () => {
+    const {saveEdited, saveProjectNow, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:extra', {}),
+      snapshot: () => null,
+    });
+    let finishSave: (key: string) => void = () => undefined;
+    saveEdited.mockImplementationOnce(
+      () => new Promise<string>(resolve => (finishSave = resolve))
+    );
+    await act(async () => tools().handleSave('data:a', {}));
+    act(() => tools().leaveDrawing());
+    expect(saveProjectNow).not.toHaveBeenCalled();
+    await act(async () => finishSave('k1'));
+    expect(saveEdited.mock.calls.map(call => call[1])).toEqual(['data:a']);
+    expect(saveProjectNow).toHaveBeenCalledTimes(1);
+  });
+
+  it('saves what is drawn and then the project when the level is left', async () => {
+    const {saveEdited, saveProjectNow, tools, unmount} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor({
+      save: () => tools().handleSave('data:last', {}),
+      snapshot: () => null,
+    });
+    let finishSave: (key: string) => void = () => undefined;
+    saveEdited.mockImplementationOnce(
+      () => new Promise<string>(resolve => (finishSave = resolve))
+    );
+    await act(async () => tools().handleSave('data:a', {}));
+    act(() => tools().scheduleStrokeSave());
+    unmount();
+    expect(saveProjectNow).not.toHaveBeenCalled();
+    await act(async () => {
+      finishSave('k1');
+      await new Promise(resolve => setTimeout(resolve, 0));
+    });
+    expect(saveEdited.mock.calls.map(call => call[1])).toEqual([
+      'data:a',
+      'data:last',
+    ]);
+    expect(saveProjectNow).toHaveBeenCalledTimes(1);
+  });
+
+  it('retries a failed pause-save at the next save', async () => {
+    const {saveEdited, tools} = setup();
+    await act(() => tools().startDrawing(target));
+    tools().attachEditor(editor());
+    saveEdited.mockRejectedValueOnce(new Error('down'));
+    await act(async () => tools().handleSave('data:a', {}));
+    expect(saveEdited).toHaveBeenCalledTimes(1);
+    expect(tools().drawing).toBeTruthy();
+    await act(async () => tools().handleSave('data:b', {}));
+    expect(saveEdited).toHaveBeenCalledTimes(2);
+    expect(saveEdited.mock.calls[1]![1]).toBe('data:b');
+  });
+
   it('saves unsaved strokes when the tab goes away', async () => {
     const {tools, unmount} = setup();
     await act(() => tools().startDrawing(target));
@@ -185,24 +294,6 @@ describe('useDrawing', () => {
     act(() => tools().scheduleStrokeSave());
     unmount();
     expect(parts.save).toHaveBeenCalledTimes(1);
-  });
-
-  it("drops an abandoned drawing's save, which is no longer wanted", async () => {
-    const {saveEdited, tools} = setup();
-    await act(() => tools().startDrawing(target));
-    tools().attachEditor(editor());
-    let finish: (key: string) => void = () => undefined;
-    saveEdited.mockImplementationOnce(
-      () => new Promise<string>(resolve => (finish = resolve))
-    );
-    act(() => tools().handleSave('data:a', {}));
-    const options = saveEdited.mock.calls[0]![3]!;
-    expect(options.stillWanted?.()).toBe(true);
-    act(() => tools().abandonDrawing());
-    expect(tools().drawing).toBeNull();
-    expect(options.stillWanted?.()).toBe(false);
-    await act(async () => finish('k1'));
-    expect(tools().drawing).toBeNull();
   });
 
   it('keeps a copy of the left canvas up until the next tools have painted', async () => {
@@ -251,19 +342,6 @@ describe('useDrawing', () => {
     expect(tools().closedPicture).toEqual({key: 'k1', canvas: copy});
   });
 
-  it("asks for a project save only on the drawing's last save", async () => {
-    const {storePicture, tools} = setup();
-    await act(() => tools().startDrawing(target));
-    tools().attachEditor({
-      save: () => tools().handleSave('data:b', {}),
-      snapshot: () => null,
-    });
-    await act(async () => tools().handleSave('data:a', {}));
-    act(() => tools().scheduleStrokeSave());
-    await act(async () => tools().finishDrawing());
-    expect(storePicture.mock.calls.map(call => call[2])).toEqual([false, true]);
-  });
-
   it('saves the project when Done has nothing left to save', async () => {
     const {saveProjectNow, tools} = setup();
     await act(() => tools().startDrawing(target));
@@ -271,68 +349,6 @@ describe('useDrawing', () => {
     await act(async () => tools().handleSave('data:a', {}));
     await act(async () => tools().finishDrawing());
     expect(saveProjectNow).toHaveBeenCalledTimes(1);
-  });
-
-  it('makes a final save, which saves the project, when left during a pause save', async () => {
-    const {saveEdited, storePicture, saveProjectNow, tools} = setup();
-    await act(() => tools().startDrawing(target));
-    tools().attachEditor({
-      save: () => tools().handleSave('data:last', {}),
-      snapshot: () => null,
-    });
-    await act(async () => tools().handleSave('data:a', {}));
-    let finishSave: (key: string) => void = () => undefined;
-    saveEdited.mockImplementationOnce(
-      () => new Promise<string>(resolve => (finishSave = resolve))
-    );
-    act(() => tools().handleSave('data:b', {}));
-    act(() => tools().leaveDrawing());
-    await act(async () => {
-      finishSave('k1');
-      await new Promise(resolve => setTimeout(resolve, 0));
-    });
-    expect(saveEdited.mock.calls.map(call => call[1])).toEqual([
-      'data:a',
-      'data:b',
-      'data:last',
-    ]);
-    // The last save asks storePicture for the project save itself.
-    expect(storePicture.mock.calls.map(call => call[2])).toEqual([
-      false,
-      false,
-      true,
-    ]);
-    expect(saveProjectNow).not.toHaveBeenCalled();
-  });
-
-  it('makes a final save, which saves the project, when the level is left during a pause save', async () => {
-    const {saveEdited, storePicture, tools, unmount} = setup();
-    await act(() => tools().startDrawing(target));
-    tools().attachEditor({
-      save: () => tools().handleSave('data:last', {}),
-      snapshot: () => null,
-    });
-    await act(async () => tools().handleSave('data:a', {}));
-    let finishSave: (key: string) => void = () => undefined;
-    saveEdited.mockImplementationOnce(
-      () => new Promise<string>(resolve => (finishSave = resolve))
-    );
-    act(() => tools().handleSave('data:b', {}));
-    unmount();
-    await act(async () => {
-      finishSave('k1');
-      await new Promise(resolve => setTimeout(resolve, 0));
-    });
-    expect(saveEdited.mock.calls.map(call => call[1])).toEqual([
-      'data:a',
-      'data:b',
-      'data:last',
-    ]);
-    expect(storePicture.mock.calls.map(call => call[2])).toEqual([
-      false,
-      false,
-      true,
-    ]);
   });
 
   it('saves the project and closes on Done when the editor is gone', async () => {
@@ -370,35 +386,6 @@ describe('useDrawing', () => {
       await new Promise(resolve => setTimeout(resolve, 0));
     });
     expect(saveEdited.mock.calls.map(call => call[0].key)).toEqual(['k1']);
-  });
-
-  it("keeps a picture's waiting last save when another picture saves", async () => {
-    const {saveEdited, tools} = setup();
-    const second = {key: 'k2', imageType: 'sprite' as const};
-    let finishSave: (key: string) => void = () => undefined;
-    saveEdited.mockImplementationOnce(
-      () => new Promise<string>(resolve => (finishSave = resolve))
-    );
-    await act(() => tools().startDrawing(target));
-    tools().attachEditor({
-      save: () => tools().handleSave('data:last', {}),
-      snapshot: () => null,
-    });
-    act(() => tools().handleSave('data:a', {}));
-    act(() => tools().leaveDrawing());
-    await act(() => tools().startDrawing(second));
-    tools().attachEditor(editor());
-    act(() => tools().handleSave('data:b', {}));
-    await act(async () => {
-      finishSave('k1');
-      await new Promise(resolve => setTimeout(resolve, 0));
-    });
-    const calls = saveEdited.mock.calls.map(call => [call[0].key, call[1]]);
-    expect(calls).toEqual([
-      ['k1', 'data:a'],
-      ['k1', 'data:last'],
-      ['k2', 'data:b'],
-    ]);
   });
 
   describe('saves of several pictures', () => {
@@ -450,7 +437,7 @@ describe('useDrawing', () => {
       return {...tools, hold, release, open, pause, saves, saveNows};
     };
 
-    it("makes the open picture's last save on Done while its save waits behind another's", async () => {
+    it('saves pictures in order, and saves the project after each is left or done', async () => {
       const t = queueSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
@@ -459,54 +446,17 @@ describe('useDrawing', () => {
       await t.open(pictures.two, 'two:last');
       t.pause('two:a');
       await act(async () => t.tools().finishDrawing());
-      await t.release();
+      expect(t.saveProjectNow).not.toHaveBeenCalled();
       await t.release();
       expect(t.saves()).toEqual([
         ['k1', 'one:a'],
-        ['k1', 'one:last'],
-        ['k2', 'two:last'],
+        ['k2', 'two:a'],
       ]);
-      expect(t.saveNows()).toEqual([
-        ['k1', false],
-        ['k1', true],
-        ['k2', true],
-      ]);
+      expect(t.saveProjectNow).toHaveBeenCalledTimes(2);
       expect(t.tools().drawing).toBeNull();
     });
 
-    it("keeps another picture's waiting last save when the open one closes untouched", async () => {
-      const t = queueSetup();
-      await t.open(pictures.one, 'one:last');
-      t.hold();
-      t.pause('one:a');
-      act(() => t.tools().leaveDrawing());
-      await t.open(pictures.two, 'two:last');
-      await act(async () => t.tools().finishDrawing());
-      await t.release();
-      expect(t.saves()).toEqual([
-        ['k1', 'one:a'],
-        ['k1', 'one:last'],
-      ]);
-    });
-
-    it('makes a last save for a picture left while its save waits', async () => {
-      const t = queueSetup();
-      await t.open(pictures.one, 'one:last');
-      t.hold();
-      t.pause('one:a');
-      act(() => t.tools().leaveDrawing());
-      await t.open(pictures.two, 'two:last');
-      t.pause('two:a');
-      act(() => t.tools().leaveDrawing());
-      await t.release();
-      expect(t.saves()).toEqual([
-        ['k1', 'one:a'],
-        ['k1', 'one:last'],
-        ['k2', 'two:last'],
-      ]);
-    });
-
-    it("keeps every picture's last save when three pictures save in turn", async () => {
+    it("saves each picture's strokes when three pictures are drawn in turn", async () => {
       const t = queueSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
@@ -520,17 +470,17 @@ describe('useDrawing', () => {
       await t.release();
       expect(t.saves()).toEqual([
         ['k1', 'one:a'],
-        ['k1', 'one:last'],
         ['k2', 'two:last'],
         ['k3', 'three:a'],
       ]);
     });
 
-    it('runs the waiting saves after an abandoned save', async () => {
+    it('still saves the next picture after an abandoned one', async () => {
       const t = queueSetup();
       await t.open(pictures.one, 'one:last');
       t.hold();
       t.pause('one:a');
+      await act(async () => undefined);
       act(() => t.tools().abandonDrawing());
       await t.open(pictures.two, 'two:last');
       t.pause('two:a');
@@ -538,6 +488,34 @@ describe('useDrawing', () => {
       expect(t.saves()).toEqual([
         ['k1', 'one:a'],
         ['k2', 'two:a'],
+      ]);
+    });
+
+    it("keeps the canvas up when a left picture's save finishes before the next opens", async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().leaveDrawing(true));
+      await t.release();
+      expect(t.saves()).toEqual([['k1', 'one:a']]);
+      expect(t.tools().drawing).not.toBeNull();
+    });
+
+    it("gives a new picture's later saves the key its first save made", async () => {
+      const t = queueSetup();
+      await t.open(pictures.one, 'one:last');
+      t.hold();
+      t.pause('one:a');
+      act(() => t.tools().leaveDrawing());
+      await t.open({key: null, imageType: 'sprite'}, 'new:last');
+      t.pause('new:a');
+      t.pause('new:b');
+      await t.release();
+      expect(t.saves()).toEqual([
+        ['k1', 'one:a'],
+        [null, 'new:a'],
+        ['kNew', 'new:b'],
       ]);
     });
 
@@ -586,27 +564,6 @@ describe('useDrawing', () => {
       expect(t.tools().drawing!.sheet!.index).toBe(0);
     });
 
-    it("runs a left picture's last save when its running save fails before the next picture opens", async () => {
-      const t = queueSetup();
-      await t.open(pictures.one, 'one:last');
-      t.saveEdited.mockImplementationOnce(() =>
-        Promise.reject(new Error('network'))
-      );
-      t.hold();
-      t.pause('one:a');
-      // Choosing another picture keeps the canvas up until it opens.
-      act(() => t.tools().leaveDrawing(true));
-      await t.release();
-      await act(async () => {
-        await new Promise(resolve => setTimeout(resolve, 0));
-      });
-      expect(t.saves()).toEqual([
-        ['k1', 'one:a'],
-        ['k1', 'one:last'],
-      ]);
-      expect(t.tools().saveFailed).toBe(false);
-    });
-
     it("never takes a left picture's running save for the next picture's", async () => {
       const t = queueSetup();
       await t.open(pictures.one, 'one:last');
@@ -624,22 +581,6 @@ describe('useDrawing', () => {
         await new Promise(resolve => setTimeout(resolve, 0));
       });
       expect(t.saves().map(save => save[0])).not.toContain('k2');
-    });
-
-    it("keeps the canvas up when a left picture's last save finishes before the next opens", async () => {
-      const t = queueSetup();
-      await t.open(pictures.one, 'one:last');
-      t.hold();
-      t.pause('one:a');
-      act(() => t.tools().leaveDrawing(true));
-      await t.release();
-      expect(t.saves()).toEqual([
-        ['k1', 'one:a'],
-        ['k1', 'one:last'],
-      ]);
-      // The last save does not clear the canvas kept up for the next
-      // picture.
-      expect(t.tools().drawing).not.toBeNull();
     });
 
     it('saves strokes made while the final save ran before closing', async () => {
@@ -688,26 +629,6 @@ describe('useDrawing', () => {
         'strip|0=f0|0=f0+more',
       ]);
       expect(t.tools().drawing!.sheet!.index).toBe(1);
-    });
-
-    it("gives a new picture's later saves the key its first save made", async () => {
-      const t = queueSetup();
-      await t.open(pictures.one, 'one:last');
-      t.hold();
-      t.pause('one:a');
-      act(() => t.tools().leaveDrawing());
-      await t.open({key: null, imageType: 'sprite'}, 'new:last');
-      t.pause('new:a');
-      t.pause('new:b');
-      await t.release();
-      expect(t.saves()).toEqual([
-        ['k1', 'one:a'],
-        ['k1', 'one:last'],
-        [null, 'new:b'],
-      ]);
-      t.pause('new:c');
-      await t.release();
-      expect(t.saves()[3]).toEqual(['kNew', 'new:c']);
     });
   });
 });

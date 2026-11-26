@@ -1,6 +1,8 @@
 import {useEffect} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {UploadImageFunction} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageGeneration';
 import {repointAnimation} from '@cdo/apps/p5lab/spritelab/lab2/views/imageSave';
 import useReclaimAsset, {
@@ -52,6 +54,15 @@ export default function useUploadDrawingsOnSave(
             void reclaimAsset(previousUrl);
           }
         },
+        onUploadFailed: (key, error, hadFile) =>
+          analyticsReporter.sendEvent(
+            EVENTS.HOAI2026_IMAGE_UPLOAD_FAILED,
+            {
+              reason: error instanceof Error ? error.message : String(error),
+              hadFile,
+            },
+            true
+          ),
       })
     );
   }, [channelId, uploadImage, dispatch, reclaimAsset]);

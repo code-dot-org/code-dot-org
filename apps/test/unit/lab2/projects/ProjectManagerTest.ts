@@ -1061,7 +1061,7 @@ describe('ProjectManager', () => {
     it('saves what the preparer returns, and compares later saves with it', async () => {
       const projectManager = await makeManager();
       const prepared = {source: 'prepared'};
-      const preparer = sinon.fake.resolves(prepared);
+      const preparer = sinon.fake.resolves({sources: prepared});
       projectManager.setSourcesPreparer(preparer);
       await projectManager.save(UPDATED_SOURCE, true);
       assert.isTrue(preparer.calledOnceWith(UPDATED_SOURCE));
@@ -1083,6 +1083,33 @@ describe('ProjectManager', () => {
       assert.isTrue(sourcesStore.save.notCalled);
       assert.isTrue(failed.calledOnce);
       assert.isTrue(projectManager.hasUnsavedChanges());
+    });
+
+    it('keeps the sources pending and saves again after an incomplete save', async () => {
+      const clock = sinon.useFakeTimers({toFake: ['setTimeout', 'Date']});
+      try {
+        const projectManager = await makeManager();
+        const preparer = sinon.stub();
+        preparer.onFirstCall().resolves({
+          sources: {source: 'partial'},
+          incomplete: true,
+        });
+        preparer.onSecondCall().resolves({sources: {source: 'whole'}});
+        projectManager.setSourcesPreparer(preparer);
+        await projectManager.save(UPDATED_SOURCE, true);
+        assert.deepEqual(sourcesStore.save.firstCall.args[1], {
+          source: 'partial',
+        });
+        assert.isTrue(projectManager.hasUnsavedChanges());
+        await clock.tickAsync(30 * 1000);
+        assert.isTrue(preparer.secondCall.calledWith(UPDATED_SOURCE));
+        assert.deepEqual(sourcesStore.save.secondCall.args[1], {
+          source: 'whole',
+        });
+        assert.isFalse(projectManager.hasUnsavedChanges());
+      } finally {
+        clock.restore();
+      }
     });
   });
 });

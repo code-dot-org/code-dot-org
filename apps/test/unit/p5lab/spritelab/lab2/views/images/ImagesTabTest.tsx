@@ -715,13 +715,13 @@ describe('ImagesTab', () => {
     );
     saveEdited.mockResolvedValue('k1');
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
-    act(() => {
+    await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
     expect(saveEdited).toHaveBeenCalledTimes(1);
     // Another stroke and Done while the first save is out: it waits.
     fireEvent.click(screen.getByRole('button', {name: 'stroke'}));
-    act(() => {
+    await act(async () => {
       fireEvent.click(screen.getByRole('button', {name: 'Done editing'}));
     });
     expect(saveEdited).toHaveBeenCalledTimes(1);

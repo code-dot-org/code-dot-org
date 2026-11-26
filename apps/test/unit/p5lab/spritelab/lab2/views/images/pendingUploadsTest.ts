@@ -41,12 +41,16 @@ describe('pendingUploads', () => {
     upload = jest.fn(async (name: string) => `/v3/assets/chan/${name}`)
   ) => {
     const onUploaded = jest.fn();
-    const prepare = makeSourcesPreparer({
+    const onUploadFailed = jest.fn();
+    const preparer = makeSourcesPreparer({
       channelId: 'chan',
       upload,
       onUploaded,
+      onUploadFailed,
     });
-    return {prepare, upload, onUploaded};
+    const prepare = async (sources: ProjectSources) =>
+      (await preparer(sources)).sources;
+    return {prepare, preparer, upload, onUploaded, onUploadFailed};
   };
 
   it('has a project upload drawings with its saves once it has a preparer', () => {
@@ -57,7 +61,7 @@ describe('pendingUploads', () => {
     expect(uploadsWithSave(undefined)).toBe(false);
   });
 
-  it('returns sources with no marked image as they are', async () => {
+  it('returns sources with no marked image as they are, complete', async () => {
     const {prepare, upload} = setup();
     const sources = sourcesWith({
       k1: image({sourceUrl: '/v3/assets/chan/a.png'}),
@@ -117,12 +121,12 @@ describe('pendingUploads', () => {
     expect(Object.keys(saved(result, 'k1'))[1]).toBe('sourceUrl');
   });
 
-  it('fails on a failed upload and keeps the pixels for the next save', async () => {
+  it('saves around a failed upload, keeping the old file and the pixels for the next save', async () => {
     const upload = jest
       .fn()
       .mockRejectedValueOnce(new Error('upload failed'))
       .mockImplementation(async (name: string) => `/v3/assets/chan/${name}`);
-    const {prepare, onUploaded} = setup(upload);
+    const {preparer, onUploaded, onUploadFailed} = setup(upload);
     holdPixels('chan', 'k1', 'data:image/png;base64,AA');
     const sources = sourcesWith({
       k1: image({
@@ -131,11 +135,42 @@ describe('pendingUploads', () => {
         pendingUpload: true,
       }),
     });
-    await expect(prepare(sources)).rejects.toThrow('upload failed');
+    const first = await preparer(sources);
+    expect(first.incomplete).toBe(true);
+    expect(saved(first.sources, 'k1')).toEqual(
+      image({sourceUrl: '/v3/assets/chan/a.png', edited: true})
+    );
+    expect(onUploadFailed).toHaveBeenCalledWith('k1', expect.any(Error), true);
     expect(onUploaded).not.toHaveBeenCalled();
-    await prepare(sources);
+    const second = await preparer(sources);
+    expect(second.incomplete).toBe(false);
     expect(upload).toHaveBeenCalledTimes(2);
     expect(onUploaded).toHaveBeenCalledTimes(1);
+  });
+
+  it('leaves a new image whose upload failed out of the save', async () => {
+    const upload = jest.fn().mockRejectedValue(new Error('upload failed'));
+    const {preparer, onUploadFailed} = setup(upload);
+    holdPixels('chan', 'kNew', 'data:image/png;base64,AA');
+    const result = await preparer(
+      sourcesWith({
+        kNew: image({edited: true, pendingUpload: true}),
+        k2: image({name: 'Other', sourceUrl: '/v3/assets/chan/b.png'}),
+      })
+    );
+    expect(result.incomplete).toBe(true);
+    const list = (
+      result.sources as unknown as {
+        animations: {orderedKeys: string[]; propsByKey: object};
+      }
+    ).animations;
+    expect(list.orderedKeys).toEqual(['k2']);
+    expect(list.propsByKey).not.toHaveProperty('kNew');
+    expect(onUploadFailed).toHaveBeenCalledWith(
+      'kNew',
+      expect.any(Error),
+      false
+    );
   });
 
   it('keeps pixels drawn while the upload ran for the next save', async () => {
