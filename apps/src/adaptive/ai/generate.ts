@@ -119,7 +119,11 @@ export async function generate<T>({
           prompt,
           output: Output.object({schema}),
         },
-        {phase: 'generation', aichatContext: context}
+        {
+          phase: 'generation',
+          aichatContext: context,
+          purpose: traceOptions.name,
+        }
       ),
       timeoutMs()
     );
@@ -164,7 +168,7 @@ async function moderate(
   let result: ModerationResult;
   try {
     const safe = await withTimeout(
-      isTextSafe(text, phase, SAFETY_CONFIG, context),
+      isTextSafe(text, phase, SAFETY_CONFIG, context, 'adaptive-moderation'),
       timeoutMs()
     );
     result = safe ? 'ok' : 'flagged';

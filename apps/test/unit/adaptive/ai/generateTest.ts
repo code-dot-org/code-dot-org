@@ -105,6 +105,7 @@ describe('generate', () => {
     expect(mockGenerateText.mock.calls[0][1]).toMatchObject({
       phase: 'generation',
       aichatContext: context,
+      purpose: 'adaptive-instructions',
     });
   });
 
@@ -298,6 +299,7 @@ describe('moderateInput', () => {
     expect(mockGenerateText.mock.calls[0][1]).toEqual({
       phase: 'input_filter',
       aichatContext: context,
+      purpose: 'adaptive-moderation',
     });
   });
 
@@ -345,6 +347,7 @@ describe('moderateOutput', () => {
     expect(mockGenerateText.mock.calls[0][1]).toEqual({
       phase: 'output_filter',
       aichatContext: context,
+      purpose: 'adaptive-moderation',
     });
     expect(mockCount).toHaveBeenCalledWith('adaptive.text_moderation', 1, {
       phase: 'output_filter',

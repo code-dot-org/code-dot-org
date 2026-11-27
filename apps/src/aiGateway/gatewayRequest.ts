@@ -22,9 +22,10 @@ export async function sendGatewayRequest(
     challengeToken: ChallengeToken | null
   ) => Promise<Response>
 ): Promise<Response> {
+  const {clientType} = aichatContext;
   const issueAccessToken = () =>
     getAccessToken(aichatContext).catch((error: unknown) => {
-      recordTokenNotIssued();
+      recordTokenNotIssued(clientType);
       throw error;
     });
 
@@ -41,10 +42,10 @@ export async function sendGatewayRequest(
     } = issued.reusable ? await issueAccessToken() : issued;
     try {
       const response = await send(accessToken, challengeToken);
-      recordGatewayRequestOk(signingKey);
+      recordGatewayRequestOk(clientType, signingKey);
       return response;
     } catch (error) {
-      await recordGatewayRequestError(signingKey, error);
+      await recordGatewayRequestError(clientType, signingKey, error);
       if (!(await isAccessTokenRejection(error))) {
         throw error;
       }

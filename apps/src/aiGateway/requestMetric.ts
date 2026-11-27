@@ -1,5 +1,6 @@
 import * as Observability from '@code-dot-org/core/plugins/observability';
 
+import {AiChatClientType} from '@cdo/apps/aichat/types';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 // One metric for every outcome, so alert rules can divide errors by the total.
@@ -47,22 +48,28 @@ async function errorBody(error: unknown): Promise<Record<string, unknown>> {
   }
 }
 
-function count(outcome: GatewayRequestOutcome, signingKey?: SigningKey) {
+function count(
+  outcome: GatewayRequestOutcome,
+  clientType: AiChatClientType,
+  signingKey?: SigningKey
+) {
   Observability.metrics.count(REQUEST_METRIC, 1, {
     outcome,
+    client_type: clientType,
     ...(signingKey && {signing_key: signingKey}),
   });
 }
 
 // No token exists, so there is no key to label it with.
-export function recordTokenNotIssued(): void {
-  count('token_not_issued');
+export function recordTokenNotIssued(clientType: AiChatClientType): void {
+  count('token_not_issued', clientType);
 }
 
 export function recordGatewayRequestOk(
+  clientType: AiChatClientType,
   signingKey: SigningKey | undefined
 ): void {
-  count('ok', signingKey);
+  count('ok', clientType, signingKey);
 }
 
 // The worker also answers 401 to a failed Turnstile check, which is not the access token's fault.
@@ -74,15 +81,16 @@ export async function isAccessTokenRejection(error: unknown): Promise<boolean> {
 }
 
 export async function recordGatewayRequestError(
+  clientType: AiChatClientType,
   signingKey: SigningKey | undefined,
   error: unknown
 ): Promise<void> {
   const status = error instanceof NetworkError ? error.response.status : 0;
   if (await isAccessTokenRejection(error)) {
-    count('token_rejected', signingKey);
+    count('token_rejected', clientType, signingKey);
   } else if (status >= 500) {
-    count('gateway_error', signingKey);
+    count('gateway_error', clientType, signingKey);
   } else {
-    count('other_error', signingKey);
+    count('other_error', clientType, signingKey);
   }
 }
