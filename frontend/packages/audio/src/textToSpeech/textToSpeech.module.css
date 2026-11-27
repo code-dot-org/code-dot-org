@@ -22,6 +22,7 @@
 }
 
 .icon {
+  --fa-width: 1.25em;
   /* Fixed-width, centered glyph (FontAwesome fa-fw style) so the button width
      stays consistent between the volume and stop icons, whose glyphs differ in
      width. */
