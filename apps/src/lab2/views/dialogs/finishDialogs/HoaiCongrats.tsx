@@ -56,6 +56,7 @@ const HoaiCongrats: React.FC<Props> = ({
               <CopyToClipboardButton
                 shareUrl={shareUrl}
                 projectType={projectType}
+                source="hoai2025_finish_dialog"
               />
             </div>
           </div>

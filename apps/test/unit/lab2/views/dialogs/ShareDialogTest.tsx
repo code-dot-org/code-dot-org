@@ -3,13 +3,17 @@ import '@testing-library/jest-dom';
 import React from 'react';
 
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {ShareFailureType} from '@cdo/apps/lab2/types';
+import {reportShareLinkCopied} from '@cdo/apps/lab2/utils/shareEvents';
 import ShareDialog, {
   SHARE_FAILURE_FALLBACK_PREFIX,
   SHARE_FAILURE_MESSAGE_PREFIXES,
   SHARE_FAILURE_TITLE,
 } from '@cdo/apps/lab2/views/dialogs/ShareDialog';
 import {SPINNER_DELAY_MS} from '@cdo/apps/lab2/views/dialogs/useDelayedSpinner';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 // The real code draws on a canvas, which has no name to find it by.
@@ -22,6 +26,13 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
   useAppSelector: jest.fn(),
   useAppDispatch: jest.fn(),
 }));
+
+jest.mock('@cdo/apps/lab2/utils/shareEvents', () => ({
+  ...jest.requireActual('@cdo/apps/lab2/utils/shareEvents'),
+  reportShareLinkCopied: jest.fn(),
+}));
+jest.mock('@cdo/apps/util/copyToClipboard', () => jest.fn());
+const mockCopyToClipboard = copyToClipboard as jest.Mock;
 
 const mockedUseAppSelector = useAppSelector as jest.Mock;
 const mockedUseAppDispatch = useAppDispatch as jest.Mock;
@@ -270,5 +281,47 @@ describe('Lab2 ShareDialog', () => {
     expect(
       screen.getByRole('button', {name: 'Copy link to project'})
     ).toBeInTheDocument();
+  });
+
+  describe('copying the share link', () => {
+    const manager = {getChannelId: () => 'abc123'} as ProjectManager;
+    beforeEach(() => {
+      Lab2Registry.getInstance().setProjectManager(manager);
+      mockCopyToClipboard.mockImplementation((_text, onSuccess) => onSuccess());
+    });
+    afterEach(() => Lab2Registry.getInstance().clearProjectManager(manager));
+
+    it.each([
+      ['share', undefined, 'Copy link to project', 'share_dialog'],
+      ['hoc2024', 'hoc2024', 'Copy link to project', 'hoc2024_finish_dialog'],
+      [
+        'hoai2025',
+        'hoai2025',
+        'Copy link to project',
+        'hoai2025_finish_dialog',
+      ],
+      ['hoai2026', 'hoai2026', 'Copy link', 'hoai2026_finish_dialog'],
+    ] as const)(
+      'reports a copy from the %s dialog',
+      (_name, dialogId, buttonName, source) => {
+        renderShareDialog({dialogId, finishUrl: '/done'});
+        fireEvent.click(screen.getByRole('button', {name: buttonName}));
+        expect((reportShareLinkCopied as jest.Mock).mock.calls).toEqual([
+          [{projectType: 'sketchlab', channelId: 'abc123'}, source],
+        ]);
+      }
+    );
+
+    it('reports nothing when the link could not be copied', () => {
+      mockCopyToClipboard.mockImplementation((_text, _onSuccess, onFailure) =>
+        onFailure()
+      );
+      jest.spyOn(console, 'error').mockImplementation(() => undefined);
+      renderShareDialog();
+      fireEvent.click(
+        screen.getByRole('button', {name: 'Copy link to project'})
+      );
+      expect(reportShareLinkCopied).not.toHaveBeenCalled();
+    });
   });
 });

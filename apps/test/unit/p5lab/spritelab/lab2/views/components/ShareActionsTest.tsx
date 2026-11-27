@@ -3,12 +3,21 @@ import React from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
+import {
+  reportShareMakeMyOwnClicked,
+  reportShareViewCodeClicked,
+} from '@cdo/apps/lab2/utils/shareEvents';
 import ShareActions from '@cdo/apps/p5lab/spritelab/lab2/views/components/ShareActions';
 import {navigateToHref} from '@cdo/apps/utils';
 
 jest.mock('@cdo/apps/utils', () => ({
   ...jest.requireActual('@cdo/apps/utils'),
   navigateToHref: jest.fn(),
+}));
+
+jest.mock('@cdo/apps/lab2/utils/shareEvents', () => ({
+  reportShareMakeMyOwnClicked: jest.fn(),
+  reportShareViewCodeClicked: jest.fn(),
 }));
 
 const mockNavigateToHref = navigateToHref as jest.Mock;
@@ -33,6 +42,8 @@ describe('ShareActions', () => {
     fireEvent.click(screen.getByRole('button', {name: 'View code'}));
     expect(redirectToView).toHaveBeenCalledTimes(1);
     expect(mockNavigateToHref).not.toHaveBeenCalled();
+    expect(reportShareViewCodeClicked).toHaveBeenCalledTimes(1);
+    expect(reportShareMakeMyOwnClicked).not.toHaveBeenCalled();
   });
 
   it('starts a new project of the same kind from Make my own', () => {
@@ -42,6 +53,8 @@ describe('ShareActions', () => {
       '/projects/quest_builder/new'
     );
     expect(redirectToView).not.toHaveBeenCalled();
+    expect(reportShareMakeMyOwnClicked).toHaveBeenCalledWith('new');
+    expect(reportShareViewCodeClicked).not.toHaveBeenCalled();
   });
 
   it('shows it is working, and stops taking presses, once one is pressed', () => {

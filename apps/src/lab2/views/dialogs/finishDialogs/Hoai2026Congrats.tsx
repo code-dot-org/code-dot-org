@@ -234,6 +234,7 @@ const Hoai2026Congrats: React.FunctionComponent<Hoai2026CongratsProps> = ({
                 <CopyToClipboardButton
                   shareUrl={shareUrl}
                   projectType={projectType}
+                  source="hoai2026_finish_dialog"
                   label="Copy link"
                   iconName="link"
                   copiedIconName="check"
