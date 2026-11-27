@@ -49,7 +49,7 @@ function iconsReady(): Promise<unknown> {
   );
   return Promise.race([
     Promise.all(stylesheets).then(() =>
-      document.fonts.load('900 1em "Font Awesome 6 Pro"'),
+      document.fonts.load('900 1em "Font Awesome 7 Pro"'),
     ),
     new Promise(resolve => setTimeout(resolve, ICON_WAIT_MS)),
   ]);

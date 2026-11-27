@@ -285,7 +285,7 @@ class FieldSounds extends BlocklyCore.Field {
         height: 20,
       });
 
-      iconElement.setAttribute('style', 'font-family: "Font Awesome 6 Pro"');
+      iconElement.setAttribute('style', 'font-family: "Font Awesome 7 Pro"');
       if (!isSilent) {
         iconElement.classList.add(SoundStyle[soundType].classNameFill);
       }
