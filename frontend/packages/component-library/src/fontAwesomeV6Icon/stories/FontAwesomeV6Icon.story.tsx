@@ -48,7 +48,6 @@ export const BrandsIconExampleFontAwesomeV6Icon = MultipleTemplate.bind({});
 BrandsIconExampleFontAwesomeV6Icon.args = {
   components: [
     {
-      iconStyle: 'light',
       iconName: 'microsoft',
       iconFamily: 'brands',
       title: 'microsoft',
@@ -109,16 +108,6 @@ GroupOfStylesOfFontAwesomeV6Icon.args = {
       iconStyle: 'regular',
       iconName: 'house',
       title: 'house-regular',
-    },
-    {
-      iconStyle: 'light',
-      iconName: 'house',
-      title: 'house-light',
-    },
-    {
-      iconStyle: 'thin',
-      iconName: 'house',
-      title: 'house-thin',
     },
   ],
 };

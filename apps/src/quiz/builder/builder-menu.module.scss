@@ -61,6 +61,8 @@
 }
 
 .icon {
+  // FA 7's icon rule takes its width from --fa-width and may load after this one.
+  --fa-width: 14px;
   width: 14px;
   text-align: center;
 }

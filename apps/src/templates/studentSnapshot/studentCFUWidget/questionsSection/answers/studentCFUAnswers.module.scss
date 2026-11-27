@@ -140,6 +140,8 @@
 }
 
 .answerIcon {
+  // FA 7's icon rule takes its width from --fa-width and may load after this one.
+  --fa-width: 0.9375rem;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -5,6 +5,8 @@ body {
 }
 
 .cardIcon {
+  // FA 7's icon rule takes its width from --fa-width and may load after this one.
+  --fa-width: 45px;
   width: 45px;
   height: 40px;
   color: var(--text-brand-teal-primary);

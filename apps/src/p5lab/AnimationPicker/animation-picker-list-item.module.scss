@@ -84,6 +84,9 @@ $preview-size: $thumbnail-size - $thumbnail-root-padding - $thumbnail-inset;
 }
 
 .multiSelectIcon {
+  // FA 7's icon rule takes its width from --fa-width and may load after this one.
+  --fa-width: #{$hover-plus-size};
+
   position: absolute;
   border-style: solid;
   border-width: 2px;

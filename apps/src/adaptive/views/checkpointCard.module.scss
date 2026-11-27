@@ -41,6 +41,8 @@
 }
 
 .requirementIcon {
+  // FA 7's icon rule takes its width from --fa-width and may load after this one.
+  --fa-width: 16px;
   width: 16px;
   color: var(--text-neutral-secondary);
   text-align: center;

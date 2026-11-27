@@ -1,13 +1,17 @@
 const FONT_AWESOME_STYLESHEETS = [
-  'https://dsco.code.org/assets/font-awesome-pro/1794524361/css/fontawesome.min.css',
-  'https://dsco.code.org/assets/font-awesome-pro/1794524361/css/brands.min.css',
-  'https://dsco.code.org/assets/font-awesome-pro/1794524361/css/solid.min.css',
-  'https://dsco.code.org/assets/font-awesome-pro/1794524361/css/regular.min.css',
-  'https://dsco.code.org/assets/font-awesome-pro/1794524361/css/v4-font-face.min.css',
-  'https://dsco.code.org/assets/font-awesome-pro/1794524361/css/v4-shims.min.css',
-  'https://dsco.code.org/assets/font-awesome-pro/1794524361/css/duotone.min.css',
-  'https://dsco.code.org/assets/font-awesome-pro/1794524361/css/custom-icons.min.css',
+  'https://dsco.code.org/assets/font-awesome-pro/1795789597/css/fontawesome.min.css',
+  'https://dsco.code.org/assets/font-awesome-pro/1795789597/css/brands.min.css',
+  'https://dsco.code.org/assets/font-awesome-pro/1795789597/css/solid.min.css',
+  'https://dsco.code.org/assets/font-awesome-pro/1795789597/css/regular.min.css',
+  'https://dsco.code.org/assets/font-awesome-pro/1795789597/css/v4-font-face.min.css',
+  'https://dsco.code.org/assets/font-awesome-pro/1795789597/css/v4-shims.min.css',
+  'https://dsco.code.org/assets/font-awesome-pro/1795789597/css/duotone.min.css',
+  'https://dsco.code.org/assets/font-awesome-pro/1795789597/css/custom-icons.min.css',
 ];
+
+// FA 7 fixes every icon at 1.25em wide; size icons to their glyph instead,
+// unless they opt in with fa-fw.
+const FONT_AWESOME_OVERRIDES = ':root { --fa-width: auto; }';
 
 /**
  * Injects FontAwesome's stylesheets. Returns a promise that resolves once they
@@ -37,7 +41,7 @@ export function injectFontAwesome(
       ),
     ).then(cssTexts => {
       const style = document.createElement('style');
-      style.textContent = `@layer ${layer} {\n${cssTexts.join('\n')}\n}`;
+      style.textContent = `@layer ${layer} {\n${[...cssTexts, FONT_AWESOME_OVERRIDES].join('\n')}\n}`;
       document.head.appendChild(style);
     });
   }
@@ -48,5 +52,8 @@ export function injectFontAwesome(
     link.href = href;
     document.head.appendChild(link);
   });
+  const style = document.createElement('style');
+  style.textContent = FONT_AWESOME_OVERRIDES;
+  document.head.appendChild(style);
   return Promise.resolve();
 }

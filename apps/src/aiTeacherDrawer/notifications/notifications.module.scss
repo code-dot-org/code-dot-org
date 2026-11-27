@@ -120,6 +120,8 @@ p.date {
 }
 
 .readAt {
+  // FA 7's icon rule takes its width from --fa-width and may load after this one.
+  --fa-width: 8px;
   color: var(--background-error-primary);
   font-size: 8px;
   min-width: 8px;

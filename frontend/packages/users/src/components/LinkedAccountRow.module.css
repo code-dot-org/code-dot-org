@@ -12,6 +12,8 @@
 }
 
 .icon {
+  /* FA 7's icon rule takes its width from --fa-width and may load after this one. */
+  --fa-width: 24px;
   flex: none;
   width: 24px;
   font-size: 24px;

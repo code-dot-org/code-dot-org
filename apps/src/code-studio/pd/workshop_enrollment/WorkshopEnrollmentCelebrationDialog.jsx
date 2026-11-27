@@ -347,7 +347,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                         <FontAwesomeV6Icon
                           iconName="apple"
                           iconFamily="brands"
-                          iconStyle="light"
+                          iconStyle="regular"
                         />
                       }
                     >
@@ -364,7 +364,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                           startIcon={
                             <FontAwesomeV6Icon
                               iconName="brands fa-google"
-                              iconStyle="light"
+                              iconStyle="regular"
                             />
                           }
                         >
@@ -381,7 +381,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                           startIcon={
                             <FontAwesomeV6Icon
                               iconName="brands fa-microsoft"
-                              iconStyle="light"
+                              iconStyle="regular"
                             />
                           }
                         >
@@ -407,7 +407,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                           startIcon={
                             <FontAwesomeV6Icon
                               iconName="brands fa-google"
-                              iconStyle="light"
+                              iconStyle="regular"
                             />
                           }
                         >
@@ -430,7 +430,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
                           startIcon={
                             <FontAwesomeV6Icon
                               iconName="brands fa-microsoft"
-                              iconStyle="light"
+                              iconStyle="regular"
                             />
                           }
                         >
