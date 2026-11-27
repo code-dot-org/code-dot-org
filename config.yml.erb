@@ -553,11 +553,9 @@ branch:
 database_username:
 
 ## Redshift
+# We only connect to Redshift via the Redshift Data API, authenticating via IAM.
 redshift_cluster_id:
-# Legacy Redshift configuration (for connecting with a SQL client via the `pg` gem).
-redshift_host:
 redshift_username:
-redshift_password:
 
 ### Database configuration
 

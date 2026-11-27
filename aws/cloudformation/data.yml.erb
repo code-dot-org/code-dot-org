@@ -6,7 +6,7 @@ self.tags.push key: 'environment', value: rack_env
 AWSTemplateFormatVersion: 2010-09-09
 Description: Data layer including RedShift cluster configuration and synchronization with RDS instance.
 # Parameters can be provided via CDO.underscored_parameter, e.g. via locals.yml:
-# redshift_password: abcdef
+# redshift_admin_password: abcdef
 # Parameters are only required for initial stack creation, and reused if not provided on stack update.
 Parameters:
   ProductionAuroraClusterARN:
