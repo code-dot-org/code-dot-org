@@ -28,7 +28,7 @@
       "import": "./dist/accordion/index.mjs",
       "require": "./dist/accordion/index.js"
     },
-    "./accordrion/faqAccordion": {
+    "./accordion/faqAccordion": {
       "types": {
         "import": "./dist/accordion/faqAccordion/index.d.ts",
         "require": "./dist/accordion/faqAccordion/index.d.ts"
