@@ -92,3 +92,6 @@ address.
 
 For image details, see the [Dockerfile](Dockerfile),
 [compose file](compose.yaml), and [smoke test](smoke-test.sh).
+
+The [devcontainer](../../.devcontainer/README.md) layers its compose file
+over `compose.yaml` and reads `dev.env`, so a change to either reaches it.
