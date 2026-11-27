@@ -22,6 +22,7 @@ module ActiveJobMetrics
     after_enqueue :report_job_count
     before_perform :report_wait_time
     after_perform :report_performance
+    around_perform :report_outcome
   end
 
   protected def common_dimensions
@@ -282,5 +283,58 @@ module ActiveJobMetrics
     )
   rescue => exception
     Observability::Errors.report(exception, error_message: 'Error reporting ActiveJob metrics')
+  end
+
+  # Counts each perform attempt once, as `success` or `failure`.
+  #
+  # `success` means only that the attempt finished without raising. That
+  # includes an attempt the job's own callbacks abort or skip, so that `perform`
+  # never runs. `failure` means it raised, including an exception that
+  # `rescue_from`, `retry_on` or `discard_on` handles afterwards.
+  #
+  # Nothing but the yield and the flag belongs here: the exception has to
+  # propagate untouched, and the push helper must not raise out of `ensure`.
+  protected def report_outcome
+    succeeded = false
+    yield
+    succeeded = true
+  ensure
+    push_perform_count(succeeded ? 'success' : 'failure')
+  end
+
+  # Pushes one `PerformCount` datum, from ActiveJob worker processes only, so
+  # that the metric means "a queue worker ran this job".
+  #
+  # `Platform` is added here and not to `common_dimensions`: CloudWatch matches
+  # dimension sets exactly, so adding it there would rename every existing
+  # series.
+  #
+  # This runs from an `ensure`, so it must never raise. An error here would fail
+  # a successful job, or replace the exception of a failed one.
+  protected def push_perform_count(outcome)
+    return unless CDO.running_active_job_worker?
+
+    Cdo::Metrics.push(
+      METRICS_NAMESPACE, [
+        {
+          metric_name: 'PerformCount',
+          value: 1,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'JobName', value: self.class.name},
+            {name: 'Outcome', value: outcome},
+            {name: 'Platform', value: CDO.compute_platform},
+          ],
+        },
+      ]
+    )
+  rescue => exception
+    begin
+      Observability::Errors.report(exception, error_message: 'Error reporting ActiveJob metrics')
+    rescue
+      # Reporting failed too. Nothing here may change the job's result.
+    end
   end
 end

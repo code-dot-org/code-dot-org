@@ -13,6 +13,10 @@ data:
   # Deliberately unquoted so it renders as a Ruby symbol.
   active_job_queue_adapter: :delayed_job
 
+  # Every pod this chart renders runs on Kubernetes. The app default is `ec2`.
+  # Read as the `Platform` dimension of the ActiveJob `PerformCount` metric.
+  compute_platform: k8s
+
   build_apps: "true"
   use_my_apps: "true"
 
