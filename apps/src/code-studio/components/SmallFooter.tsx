@@ -224,7 +224,7 @@ const SmallFooter = (props: SmallFooterProps) => {
         aria-label={i18n.copyrightInfoButton()}
         type="button"
       >
-        <FontAwesomeV6Icon iconName="copyright" iconStyle="light" />
+        <FontAwesomeV6Icon iconName="copyright" iconStyle="regular" />
       </MuiIconButton>
     );
   };
