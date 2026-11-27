@@ -5,6 +5,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getLabViewPageAction} from '@cdo/apps/lab2/utils/getLabViewPageAction';
+import {reportViewPageRemixClicked} from '@cdo/apps/lab2/utils/shareEvents';
 import i18n from '@cdo/locale';
 
 import * as utils from '../../../utils';
@@ -78,6 +80,9 @@ class ProjectRemix extends React.Component {
   };
 
   remixLab2Project = () => {
+    if (getLabViewPageAction() === 'view') {
+      reportViewPageRemixClicked();
+    }
     Lab2Registry.getInstance().getProjectManager()?.saveAndRemix();
   };
 

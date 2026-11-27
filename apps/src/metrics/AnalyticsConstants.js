@@ -689,6 +689,9 @@ const EVENTS = {
   LAB2_SHARE_DIALOG_OPENED: 'lab2-share-dialog-opened',
   LAB2_SHARE_LINK_COPIED: 'lab2-share-link-copied',
   LAB2_SHARE_PAGE_VISITED: 'lab2-share-page-visited',
+  LAB2_SHARE_VIEW_CODE_CLICKED: 'lab2-share-view-code-clicked',
+  LAB2_SHARE_MAKE_MY_OWN_CLICKED: 'lab2-share-make-my-own-clicked',
+  LAB2_VIEW_PAGE_REMIX_CLICKED: 'lab2-view-page-remix-clicked',
 
   // Resource Panel
   RESOURCE_PANEL_TAB_CLICKED: 'Resource Panel Tab Clicked',

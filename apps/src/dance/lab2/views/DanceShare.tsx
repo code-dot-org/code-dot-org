@@ -5,6 +5,10 @@ import React from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  reportShareMakeMyOwnClicked,
+  reportShareViewCodeClicked,
+} from '@cdo/apps/lab2/utils/shareEvents';
 import {MusicMetadata} from '@cdo/apps/music/ai/generate/GenerateCode';
 import MusicProjectBar from '@cdo/apps/music/views/MusicProjectBar';
 import TimelineUI from '@cdo/apps/music/views/Timeline/TimelineUI';
@@ -110,9 +114,10 @@ const DanceShare: React.FC<DanceShareProps> = props => {
             variant="text"
             color="secondary"
             size="small"
-            onClick={() =>
-              Lab2Registry.getInstance().getProjectManager()?.redirectToView()
-            }
+            onClick={() => {
+              reportShareViewCodeClicked();
+              Lab2Registry.getInstance().getProjectManager()?.redirectToView();
+            }}
             type="button"
             startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="code" />}
           >
@@ -140,9 +145,10 @@ const DanceShare: React.FC<DanceShareProps> = props => {
             color="secondary"
             size="small"
             loadingPosition="start"
-            onClick={() =>
-              Lab2Registry.getInstance().getProjectManager()?.redirectToRemix()
-            }
+            onClick={() => {
+              reportShareMakeMyOwnClicked('remix');
+              Lab2Registry.getInstance().getProjectManager()?.redirectToRemix();
+            }}
             type="button"
             startIcon={
               <FontAwesomeV6Icon iconStyle="regular" iconName="pen-to-square" />

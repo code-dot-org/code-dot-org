@@ -3,10 +3,20 @@ import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedProjectRemix as ProjectRemix} from '@cdo/apps/code-studio/components/header/ProjectRemix';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getLabViewPageAction} from '@cdo/apps/lab2/utils/getLabViewPageAction';
+import {reportViewPageRemixClicked} from '@cdo/apps/lab2/utils/shareEvents';
 import * as utils from '@cdo/apps/utils';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
+
+jest.mock('@cdo/apps/lab2/utils/getLabViewPageAction', () => ({
+  getLabViewPageAction: jest.fn(),
+}));
+jest.mock('@cdo/apps/lab2/utils/shareEvents', () => ({
+  reportViewPageRemixClicked: jest.fn(),
+}));
 
 const defaultProps = {
   refreshProjectName: () => {},
@@ -133,5 +143,37 @@ describe('ProjectRemix', () => {
       .be.true;
 
     window.dashboard.project.copy.restore();
+  });
+
+  describe('for a Lab2 project', () => {
+    let saveAndRemix;
+
+    beforeEach(() => {
+      saveAndRemix = sinon.spy();
+      sinon.stub(Lab2Registry, 'hasEnabledProjects').returns(true);
+      sinon
+        .stub(Lab2Registry.getInstance(), 'getProjectManager')
+        .returns({saveAndRemix});
+      reportViewPageRemixClicked.mockClear();
+    });
+
+    afterEach(() => {
+      Lab2Registry.hasEnabledProjects.restore();
+      Lab2Registry.getInstance().getProjectManager.restore();
+    });
+
+    it('reports a press on the view page', () => {
+      getLabViewPageAction.mockReturnValue('view');
+      shallow(<ProjectRemix {...defaultProps} />).simulate('click');
+      expect(reportViewPageRemixClicked.mock.calls.length).to.equal(1);
+      expect(saveAndRemix.calledOnce).to.be.true;
+    });
+
+    it('reports no press on the edit page', () => {
+      getLabViewPageAction.mockReturnValue('edit');
+      shallow(<ProjectRemix {...defaultProps} />).simulate('click');
+      expect(reportViewPageRemixClicked.mock.calls.length).to.equal(0);
+      expect(saveAndRemix.calledOnce).to.be.true;
+    });
   });
 });

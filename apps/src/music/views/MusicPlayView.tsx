@@ -9,6 +9,10 @@ import React, {memo, useCallback, useContext, useMemo} from 'react';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
+import {
+  reportShareMakeMyOwnClicked,
+  reportShareViewCodeClicked,
+} from '@cdo/apps/lab2/utils/shareEvents';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
@@ -77,10 +81,12 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   }, [shareData, analyticsReporter]);
   const onViewCode = useCallback(() => {
     analyticsReporter?.onButtonClicked('viewCodeFromShareView');
+    reportShareViewCodeClicked();
     projectManager?.redirectToView();
   }, [projectManager, analyticsReporter]);
   const onRemix = useCallback(() => {
     analyticsReporter?.onButtonClicked('remixFromShareView');
+    reportShareMakeMyOwnClicked('remix');
     if (projectManager) {
       projectManager.flushSave().then(() => {
         projectManager.redirectToRemix();

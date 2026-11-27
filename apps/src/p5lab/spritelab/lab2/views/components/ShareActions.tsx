@@ -3,6 +3,10 @@ import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  reportShareMakeMyOwnClicked,
+  reportShareViewCodeClicked,
+} from '@cdo/apps/lab2/utils/shareEvents';
 import {navigateToHref} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 
@@ -28,8 +32,10 @@ const ShareActions: React.FunctionComponent = () => {
     setLeavingFor(destination);
     try {
       if (destination === 'view') {
+        reportShareViewCodeClicked();
         projectManager.redirectToView();
       } else {
+        reportShareMakeMyOwnClicked('new');
         // A new, empty project, not a remix of this one.
         navigateToHref(`/projects/${projectManager.getProjectType()}/new`);
       }

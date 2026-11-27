@@ -3,6 +3,10 @@ import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  reportShareMakeMyOwnClicked,
+  reportShareViewCodeClicked,
+} from '@cdo/apps/lab2/utils/shareEvents';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
@@ -24,12 +28,14 @@ const ShareButtonPanel: React.FunctionComponent<ShareButtonPanelProps> = ({
   const isBlockedAbuse = useAppSelector(state => !!state.lab.isBlockedAbuse);
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const onViewCode = () => {
+    reportShareViewCodeClicked();
     projectManager?.redirectToView();
   };
   const onRemix = () => {
     if (isBlockedAbuse) {
       return;
     }
+    reportShareMakeMyOwnClicked('remix');
     projectManager?.redirectToRemix();
   };
 
