@@ -22,6 +22,9 @@ export function isPlayerAction(value: unknown): value is PlayerAction {
 export const WALK_PERIOD_MS = 333;
 
 export interface PlayerFrame extends ObservedFrame {
+  /** A jump started since the last observed frame. A jump in the grace
+      period starts in the air, so the last frame was not grounded. */
+  jumpStarted?: boolean;
   /** The frame the character's animation shows, and how many it has. */
   animationFrame?: number;
   animationFrames?: number;
@@ -54,6 +57,7 @@ export function createPlayerActionTracker(): PlayerActionTracker {
         gravity,
         walls,
         view,
+        jumpStarted,
         animationFrame,
         animationFrames,
       },
@@ -101,7 +105,7 @@ export function createPlayerActionTracker(): PlayerActionTracker {
       // A gravity change mid-air changes what grounded means; it is not
       // a jump or a landing.
       if (gravity === last.gravity) {
-        if (last.grounded && !grounded && movedUp > 0) {
+        if ((last.grounded || jumpStarted) && !grounded && movedUp > 0) {
           actions.add('jump');
         }
         if (!last.grounded && grounded) {

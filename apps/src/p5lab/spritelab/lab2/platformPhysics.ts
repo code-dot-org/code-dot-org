@@ -70,8 +70,8 @@ export interface PhysicsSprite extends PhysicsBox {
   __slab2Prev?: {x: number; y: number};
 }
 
-// A player with its position snapshotted before any stock collide pass
-// this frame: the movement reconstruction must not see that pass's shove.
+// A player with the position this frame's movement left it at, which the
+// resolver reconstructs the movement from.
 export interface MovedPlayer {
   sprite: PhysicsSprite;
   x: number;
@@ -116,11 +116,28 @@ export function wallBox(wall: PhysicsBox): CollisionBox {
   return {x: wall.position.x, y: wall.position.y, halfW: half, halfH: half};
 }
 
-/** The box a character or object occupies for collision: its feet-anchored
-    body, as the resolver measures a player. */
-export function bodyBox(sprite: PhysicsBox): CollisionBox {
+/** The box a character or object occupies for collision: its body, as the
+    resolver measures a player. The body is anchored at the feet, which are
+    at the picture's top under upward gravity. */
+export function bodyBox(
+  sprite: PhysicsBox,
+  gravity: number = PLATFORM_GRAVITY
+): CollisionBox {
   const {halfW, halfH, drop} = playerBody(sprite);
-  return {x: sprite.position.x, y: sprite.position.y + drop, halfW, halfH};
+  return {
+    x: sprite.position.x,
+    y: sprite.position.y + (gravity < 0 ? -drop : drop),
+    halfW,
+    halfH,
+  };
+}
+
+/** Boxes that only meet at an edge do not overlap. */
+export function boxesOverlap(a: CollisionBox, b: CollisionBox): boolean {
+  return (
+    Math.abs(a.x - b.x) < a.halfW + b.halfW &&
+    Math.abs(a.y - b.y) < a.halfH + b.halfH
+  );
 }
 
 // How close a body and a wall may be, in playfield pixels, and still count
@@ -128,15 +145,94 @@ export function bodyBox(sprite: PhysicsBox): CollisionBox {
 // miss it.
 export const TOUCH_SLACK = 1;
 
+/**
+ * Pushes a sprite's body out of each wall it overlaps, the short way, and
+ * drops the sprite's speed into that wall. A body that rests on a wall does
+ * not overlap it and stays put.
+ */
+export function pushBodyOutOfWalls(
+  sprite: PhysicsSprite,
+  walls: PhysicsBox[]
+): void {
+  walls.forEach(wall => {
+    const body = bodyBox(sprite);
+    const box = wallBox(wall);
+    const overlapX = body.halfW + box.halfW - Math.abs(body.x - box.x);
+    const overlapY = body.halfH + box.halfH - Math.abs(body.y - box.y);
+    if (overlapX <= 0 || overlapY <= 0) {
+      return;
+    }
+    if (overlapX <= overlapY) {
+      const out = body.x < box.x ? -1 : 1;
+      sprite.position.x += out * overlapX;
+      if (sprite.velocity.x * out < 0) {
+        sprite.velocity.x = 0;
+      }
+    } else {
+      const out = body.y < box.y ? -1 : 1;
+      sprite.position.y += out * overlapY;
+      if (sprite.velocity.y * out < 0) {
+        sprite.velocity.y = 0;
+      }
+    }
+  });
+}
+
+// A touch needs the body and the wall to share at least this fraction of
+// the narrower one along the face where they meet, so brushing a corner is
+// not a touch.
+export const FIRM_TOUCH_SHARE = 0.25;
+
 /** Whether a sprite's body touches a wall, from any side: the boxes meet
-    or overlap, within TOUCH_SLACK. */
-export function touchesWall(sprite: PhysicsBox, wall: PhysicsBox): boolean {
-  const body = bodyBox(sprite);
+    or overlap, within TOUCH_SLACK, along enough of a face (see
+    FIRM_TOUCH_SHARE). */
+export function touchesWall(
+  sprite: PhysicsBox,
+  wall: PhysicsBox,
+  gravity: number = PLATFORM_GRAVITY
+): boolean {
+  const body = bodyBox(sprite, gravity);
   const box = wallBox(wall);
+  const overlapX = body.halfW + box.halfW - Math.abs(body.x - box.x);
+  const overlapY = body.halfH + box.halfH - Math.abs(body.y - box.y);
+  if (overlapX < -TOUCH_SLACK || overlapY < -TOUCH_SLACK) {
+    return false;
+  }
   return (
-    Math.abs(body.x - box.x) <= body.halfW + box.halfW + TOUCH_SLACK &&
-    Math.abs(body.y - box.y) <= body.halfH + box.halfH + TOUCH_SLACK
+    overlapX >= FIRM_TOUCH_SHARE * 2 * Math.min(body.halfW, box.halfW) ||
+    overlapY >= FIRM_TOUCH_SHARE * 2 * Math.min(body.halfH, box.halfH)
   );
+}
+
+// How many frames a player may be off its footing and still start a jump,
+// so a press just after walking off a ledge is not lost: about 0.1 s at the
+// game's 30 frames a second.
+export const JUMP_GRACE_FRAMES = 3;
+
+// The furthest a player can fall in the grace period. A player further than
+// this below where it last stood was moved there by the program.
+export const MAX_GRACE_DROP =
+  JUMP_GRACE_FRAMES * (TERMINAL_FALL_SPEED + PLATFORM_GRAVITY);
+
+/** Whether a jump may start: with footing, or within JUMP_GRACE_FRAMES of
+    losing it while falling. `fallSpeed` is the speed along gravity; a
+    sprite moving against gravity is in a jump already. */
+export function canStartJump(
+  supported: boolean,
+  airborneFrames: number,
+  fallSpeed: number
+): boolean {
+  return supported || (fallSpeed >= 0 && airborneFrames <= JUMP_GRACE_FRAMES);
+}
+
+/** The take-off speed for a jump that starts `drop` pixels below where a
+    jump at `speed` would start, and reaches the same height. */
+export function jumpSpeedFromBelow(
+  speed: number,
+  drop: number,
+  gravity: number
+): number {
+  return Math.sqrt(speed * speed + 2 * Math.abs(gravity) * Math.max(0, drop));
 }
 
 function flipWallsY(walls: PhysicsBox[], view: View): PhysicsBox[] {

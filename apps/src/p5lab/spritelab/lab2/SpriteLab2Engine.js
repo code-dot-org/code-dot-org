@@ -39,6 +39,12 @@ import {
   teeterTicks,
 } from './characterAnimations';
 import {
+  collisionBoxesShown,
+  collisionOverlayBoxes,
+  isCollisionBoxesShortcut,
+  toggleCollisionBoxes,
+} from './collisionOverlay';
+import {
   animationNames,
   filterAnimationsToNames,
   loadedAnimations,
@@ -56,6 +62,11 @@ import {
   PATROLLER_WEIGHTLESS_GRAVITY,
   PLATFORM_GRAVITY,
   bodyBox,
+  boxesOverlap,
+  canStartJump,
+  jumpSpeedFromBelow,
+  MAX_GRACE_DROP,
+  pushBodyOutOfWalls,
   resolvePlatformPhysics,
   touchesWall,
   usesPlatformPhysics,
@@ -119,6 +130,17 @@ const CANVAS_DENSITY_FACTOR = 2;
 const RESTART_QUIET_MS = 1000;
 // The inputEvents type a when-player hat registers.
 const PLAYER_ACTION_EVENT = 'playerAction';
+// The collision boxes overlay's fills, as [apart, touching] for each kind.
+const COLLISION_BOX_FILLS = {
+  wall: [
+    [60, 140, 255, 90],
+    [255, 60, 60, 150],
+  ],
+  body: [
+    [60, 220, 120, 110],
+    [255, 60, 60, 170],
+  ],
+};
 // How much a platform scene dims its background, so the blocks and the
 // player read against it: the alpha of a black fill over it.
 const PLATFORM_BACKGROUND_DIM = 0.25;
@@ -172,6 +194,12 @@ export default class SpriteLab2Engine extends SpriteLab {
     // animations don't keep their Blobs (legacy needs them for
     // cloneAnimation).
     setRetainBlobsOnLoad(false);
+    this.onCollisionBoxesKey_ = event => {
+      if (isCollisionBoxesShortcut(event) && !event.repeat) {
+        toggleCollisionBoxes();
+      }
+    };
+    window.addEventListener('keydown', this.onCollisionBoxesKey_);
     // captureFirstFrame() callbacks, called with the canvas as the first
     // frame of the next run is drawn (see onP5Setup and the draw loops).
     this.frameCaptureWaiters_ = [];
@@ -330,7 +358,7 @@ export default class SpriteLab2Engine extends SpriteLab {
   weatherScene_(view) {
     const bodies = Object.values(this.library.nativeSpriteMap)
       .filter(sprite => sprite.group !== 'walls' && !sprite.removed)
-      .map(bodyBox);
+      .map(sprite => bodyBox(sprite));
     return {
       ...view,
       walls: this.wallsThisFrame_(this.library).map(wallBox),
@@ -503,12 +531,19 @@ export default class SpriteLab2Engine extends SpriteLab {
     // as a move.
     this.forgetPlayer_();
     library.commands.setPlatformGravityDirection = direction => {
-      this.platformGravity_ =
+      const gravity =
         direction === 'none'
           ? 0
           : direction === 'up'
           ? -PLATFORM_GRAVITY
           : PLATFORM_GRAVITY;
+      if (gravity !== this.platformGravity_) {
+        // Footing under the old gravity gives no jump under the new one.
+        Object.values(library.nativeSpriteMap).forEach(sprite => {
+          sprite.__slab2Footing = undefined;
+        });
+      }
+      this.platformGravity_ = gravity;
       this.notifyControlsChange_();
     };
     library.commands.setPlatformJumpHeight = value => {
@@ -598,16 +633,42 @@ export default class SpriteLab2Engine extends SpriteLab {
         return gravity === 0 || test(sprite, walls, view, gravity);
       });
     };
-    // Jump against gravity if any player of the group has footing.
+    // Jump against gravity if any player of the group has footing, or lost
+    // it within the last few frames (see JUMP_GRACE_FRAMES).
     library.commands.platformJump = (speed, group = PLAYER_GROUP) => {
       // Weightless, the player is steered up and down instead.
       if (this.platformGravity_ === 0) {
         return;
       }
-      if (!footing({group}, isSupported)) {
+      const up = this.platformGravity_ < 0 ? 1 : -1;
+      const p5 = this.p5Wrapper.p5;
+      const frame = p5 ? p5.frameCount : -Infinity;
+      const supported = footing({group}, isSupported);
+      const dropOf = sprite =>
+        -up * (sprite.position.y - sprite.__slab2Footing.y);
+      // Whether this sprite stood on something within the last
+      // JUMP_GRACE_FRAMES frames, is not rising, and is no higher than, and
+      // at most MAX_GRACE_DROP below, where it stood. A key's handler runs
+      // after its frame's movement is resolved, so for a player standing
+      // this frame, __slab2Footing was written this frame.
+      const inGrace = sprite =>
+        !!sprite.__slab2Footing &&
+        canStartJump(
+          false,
+          frame - sprite.__slab2Footing.frame,
+          -up * sprite.velocity.y
+        ) &&
+        dropOf(sprite) >= -CONTACT_EPSILON &&
+        dropOf(sprite) <= MAX_GRACE_DROP;
+      // When any sprite of the group has footing, every sprite of the group
+      // jumps. When none has, only the sprites in their own grace period
+      // jump.
+      const jumpers = library
+        .getSpriteArray({group})
+        .filter(sprite => supported || inGrace(sprite));
+      if (!jumpers.length) {
         return;
       }
-      const up = this.platformGravity_ < 0 ? 1 : -1;
       // TODO: When we support configurable grid sizes (vs. just 10x10),
       // consider updating the code everywhere we have
       // library.defaultSpriteSize and cellSize(DEFAULT_SCENE_GRID_SIZE),
@@ -628,18 +689,23 @@ export default class SpriteLab2Engine extends SpriteLab {
       // player raises; a player 2 jump must not reset them.
       if (group === PLAYER_GROUP) {
         this.jumpStarts_ = new Map();
-        this.jumpImpulseFrame_ = this.p5Wrapper.p5
-          ? this.p5Wrapper.p5.frameCount
-          : -Infinity;
+        this.jumpImpulseFrame_ = frame;
       }
-      library.getSpriteArray({group}).forEach(sprite => {
+      jumpers.forEach(sprite => {
         if (group === PLAYER_GROUP) {
           this.jumpStarts_.set(sprite, {
             x: sprite.position.x,
             y: sprite.position.y,
           });
         }
-        sprite.velocity.y = up * jumpSpeed;
+        // A jump in the grace period starts below the footing it left, and
+        // still reaches the height a jump from that footing reaches.
+        const drop = inGrace(sprite) ? dropOf(sprite) : 0;
+        sprite.velocity.y =
+          up * jumpSpeedFromBelow(jumpSpeed, drop, this.platformGravity_);
+        // Without __slab2Footing, the grace period cannot start a second
+        // jump in the air.
+        sprite.__slab2Footing = undefined;
       });
     };
     // A behavior that wants gravity for its sprite marks it for the platform
@@ -758,24 +824,17 @@ export default class SpriteLab2Engine extends SpriteLab {
       const id = addSprite(opts);
       const sprite = id === undefined ? null : library.nativeSpriteMap[id];
       if (sprite) {
-        // "When touches" against a platform block: the stock overlap wants
-        // the shapes to overlap, and a body resting on a block only meets
-        // it, so a touch with a wall is judged with a little slack instead.
+        // The "when touches" block calls sprite.overlap.
         const overlap = sprite.overlap.bind(sprite);
         sprite.overlap = (target, callback) => {
-          const wall =
-            target?.group === 'walls' && sprite.group !== 'walls'
-              ? target
-              : sprite.group === 'walls' && target?.group !== 'walls'
-              ? sprite
-              : null;
-          if (wall && touchesWall(wall === target ? sprite : target, wall)) {
-            if (callback) {
-              callback(sprite, target);
-            }
-            return true;
+          const touching = this.platformTouch_(sprite, target);
+          if (touching === undefined) {
+            return overlap(target, callback);
           }
-          return overlap(target, callback);
+          if (touching && callback) {
+            callback(sprite, target);
+          }
+          return touching;
         };
       }
       return id;
@@ -1219,6 +1278,7 @@ export default class SpriteLab2Engine extends SpriteLab {
 
   destroy() {
     this.destroyed_ = true;
+    window.removeEventListener('keydown', this.onCollisionBoxesKey_);
     stopSoundEffects();
     this.reset();
     getStore().dispatch(clearPrompt());
@@ -1431,7 +1491,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         engine.drawWorld_(this, 1, cameraFocus(1, null));
         engine.settleFrameCaptures_(p5.canvas);
       }
-      engine.drawWorld_(this, zoom, focus);
+      engine.drawWorld_(this, zoom, focus, collisionBoxesShown());
       this.drawVariableBubbles();
       if (!this.isPreviewFrame()) {
         this.foregroundEffects.forEach(effect => effect.func());
@@ -1443,8 +1503,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
   }
 
-  /** Background, sprites and speech bubbles through the camera. */
-  drawWorld_(library, zoom, focus) {
+  /** Background, sprites and speech bubbles through the camera, and the
+      collision boxes if asked for. */
+  drawWorld_(library, zoom, focus, withCollisionBoxes = false) {
     const {p5} = library;
     const {camera} = p5;
     camera.off();
@@ -1454,6 +1515,9 @@ export default class SpriteLab2Engine extends SpriteLab {
     camera.position.y = focus.y;
     camera.on();
     p5.drawSprites();
+    if (withCollisionBoxes) {
+      this.drawCollisionBoxes_(library);
+    }
     this.bubbleView_ = {
       x: focus.x - APP_WIDTH / (2 * zoom),
       y: focus.y - APP_HEIGHT / (2 * zoom),
@@ -1462,6 +1526,90 @@ export default class SpriteLab2Engine extends SpriteLab {
     };
     library.drawSpeechBubbles();
     camera.off();
+  }
+
+  // Whether two sprites touch, where the engine has a rule for the pair;
+  // undefined leaves the pair to the stock overlap test.
+  platformTouch_(sprite, target) {
+    if (!target?.position) {
+      return undefined;
+    }
+    const spriteIsWall = sprite.group === 'walls';
+    const targetIsWall = target.group === 'walls';
+    if (spriteIsWall !== targetIsWall) {
+      const wall = spriteIsWall ? sprite : target;
+      const other = spriteIsWall ? target : sprite;
+      // The stock test counts any overlap of the whole picture, which is
+      // wider than the body, so it counts a corner brush. It misses a body
+      // that rests on a block without overlapping it.
+      if (touchesWall(this.measuredBox_(other), wall, this.gravityOf_(other))) {
+        return true;
+      }
+      // In a platform scene sprites are stopped where their bodies meet a
+      // block, so touchesWall alone decides. Outside one nothing stops a
+      // sprite at a block, and the stock test decides when touchesWall says
+      // no.
+      return this.usesPlatformPhysics_ ? false : undefined;
+    }
+    if (spriteIsWall || !this.usesPlatformPhysics_) {
+      return undefined;
+    }
+    return boxesOverlap(
+      bodyBox(this.measuredBox_(sprite), this.gravityOf_(sprite)),
+      bodyBox(this.measuredBox_(target), this.gravityOf_(target))
+    );
+  }
+
+  // Whether the platform physics moves this sprite: a player, or a sprite a
+  // behavior marked the last time the physics ran (see usePlatformBody).
+  resolvesMovement_(sprite) {
+    return isPlayerGroup(sprite.group) || this.prevBodies_.includes(sprite);
+  }
+
+  // The gravity that says which end of the picture a sprite's body is
+  // anchored at.
+  gravityOf_(sprite) {
+    return isPlayerGroup(sprite.group)
+      ? this.platformGravity_
+      : this.prevBodies_.includes(sprite)
+      ? this.bodyGravity_()
+      : PLATFORM_GRAVITY;
+  }
+
+  // The sprite's box for a touch. A sprite the platform physics moves is
+  // measured at the position the last frame's movement was resolved to:
+  // while events run, its position holds this frame's movement, which is
+  // not resolved yet and can be deep inside a block it will be pushed out
+  // of.
+  measuredBox_(sprite) {
+    return {
+      position:
+        (this.resolvesMovement_(sprite) && sprite.__slab2Prev) ||
+        sprite.position,
+      width: sprite.width,
+      height: sprite.height,
+      scale: sprite.scale,
+    };
+  }
+
+  drawCollisionBoxes_(library) {
+    const {p5} = library;
+    const sprites = Object.values(library.nativeSpriteMap).filter(
+      sprite => sprite.group !== 'walls' && !sprite.removed
+    );
+    p5.push();
+    p5.rectMode(p5.CENTER);
+    p5.noStroke();
+    collisionOverlayBoxes(
+      sprites,
+      this.wallsThisFrame_(library),
+      sprite => this.gravityOf_(sprite),
+      sprite => !this.resolvesMovement_(sprite)
+    ).forEach(box => {
+      p5.fill(...COLLISION_BOX_FILLS[box.kind][box.touching ? 1 : 0]);
+      p5.rect(box.x, box.y, box.halfW * 2, box.halfH * 2);
+    });
+    p5.pop();
   }
 
   /**
@@ -1489,8 +1637,8 @@ export default class SpriteLab2Engine extends SpriteLab {
       return;
     }
     const p5 = this.p5Wrapper.p5;
-    // Snapshot positions before the stock pass below: the movement
-    // reconstruction must not see its shove.
+    // Each sprite's position as this frame's movement left it, which the
+    // resolver reconstructs the movement from.
     const snapshot = sprite => ({
       sprite,
       x: sprite.position.x,
@@ -1530,19 +1678,32 @@ export default class SpriteLab2Engine extends SpriteLab {
     );
     const bodyUpright = this.bodyGravity_() < 0 ? -1 : 1;
     bodies.forEach(({sprite}) => sprite.mirrorY(bodyUpright));
-    // Other sprites keep the stock resolver; running it pre-paint means
-    // props draw already resolved. A sprite marked as passing through walls
-    // this frame is left where its behavior put it.
+    // A sprite the resolver does not move is stopped where its body meets a
+    // block, as the resolver stops the ones it moves. A sprite marked as
+    // passing through walls this frame is left where its behavior put it.
     const walls = this.library.getSpriteArray({group: 'walls'});
     this.library.getSpriteArray({group: ''}).forEach(sprite => {
       const passing = sprite.__slab2PassWalls;
       sprite.__slab2PassWalls = false;
-      if (!passing) {
-        walls.forEach(wall => sprite.collide(wall));
+      if (!passing && !bodies.some(b => b.sprite === sprite)) {
+        pushBodyOutOfWalls(sprite, walls);
       }
     });
     const view = {width: p5.width, height: p5.height};
     resolvePlatformPhysics(players, walls, view, this.platformGravity_);
+    // When and where each player last stood on something, for the jump's
+    // grace period. A player moving against gravity has jumped, so it does
+    // not count as standing.
+    const gravity = this.platformGravity_;
+    players.forEach(({sprite}) => {
+      if (
+        gravity !== 0 &&
+        sprite.velocity.y * gravity >= 0 &&
+        isSupported(sprite, walls, view, gravity)
+      ) {
+        sprite.__slab2Footing = {frame: p5.frameCount, y: sprite.position.y};
+      }
+    });
     if (bodies.length) {
       resolvePlatformPhysics(bodies, walls, view, this.bodyGravity_());
     }
@@ -1573,6 +1734,7 @@ export default class SpriteLab2Engine extends SpriteLab {
         gravity: this.platformGravity_,
         walls,
         view,
+        jumpStarted: this.jumpImpulseFrame_ >= this.p5Wrapper.p5.frameCount - 1,
         animationFrame: animation ? animation.getFrame() : undefined,
         animationFrames: animation ? animation.getLastFrame() + 1 : undefined,
       },
@@ -1722,8 +1884,8 @@ export default class SpriteLab2Engine extends SpriteLab {
    * itself (p5.play would run the whole sheet end to end) and the sprite
    * never changes costume. A player that stops with its toes over a drop
    * holds back from the edge: the jump pose's first frame for a moment,
-   * then standing; moving again re-arms it. Only players can be airborne: patrollers and
-   * props ride the stock resolver and would read as jumping at every seam.
+   * then standing; moving again re-arms it. Only players can be airborne:
+   * patrollers and props would read as jumping at every seam.
    */
   updateCharacterAnimations_() {
     const p5 = this.p5Wrapper.p5;

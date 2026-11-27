@@ -6,6 +6,14 @@ import {
   isAtEdge,
   isSupported,
   touchesWall,
+  bodyBox,
+  boxesOverlap,
+  canStartJump,
+  jumpSpeedFromBelow,
+  LEDGE_FALL_SPEED,
+  MAX_GRACE_DROP,
+  pushBodyOutOfWalls,
+  JUMP_GRACE_FRAMES,
   resolvePlatformPhysics,
   PhysicsBox,
   PhysicsSprite,
@@ -384,9 +392,129 @@ describe('platformPhysics with custom gravity', () => {
     expect(touchesWall(makeSprite(110, 325), wall)).toBe(true);
     // Head under it: body top on the underside.
     expect(touchesWall(makeSprite(75, 365), wall)).toBe(true);
+    // Well inside it.
+    expect(touchesWall(makeSprite(75, 320), wall)).toBe(true);
     // Two pixels off is a gap.
     expect(touchesWall(makeSprite(75, 273), wall)).toBe(false);
     expect(touchesWall(makeSprite(112, 325), wall)).toBe(false);
+  });
+
+  it('touchesWall needs a quarter of the body along the face it meets', () => {
+    // Cell (col 1, row 6): its left edge is at x 50, its top at y 300. The
+    // body is 20 wide, so a quarter of it is 5px.
+    const wall = wallAt(1, 6);
+    // Standing with 3px of the body over the block's top, then 5px.
+    expect(touchesWall(makeSprite(43, 275), wall)).toBe(false);
+    expect(touchesWall(makeSprite(45, 275), wall)).toBe(true);
+    // Against the right side with 3px of the body's 40px height beside it,
+    // then 10px.
+    expect(touchesWall(makeSprite(110, 278), wall)).toBe(false);
+    expect(touchesWall(makeSprite(110, 285), wall)).toBe(true);
+    // Corner to corner, and a corner 3px inside on both axes.
+    expect(touchesWall(makeSprite(40, 275), wall)).toBe(false);
+    expect(touchesWall(makeSprite(43, 278), wall)).toBe(false);
+  });
+
+  it('touchesWall measures a body anchored at the top of the picture under upward gravity', () => {
+    // Cell (col 1, row 6): its underside is at y 350. A sprite resting
+    // under it has its picture's top there, so its centre is at y 375.
+    const wall = wallAt(1, 6);
+    const resting = makeSprite(75, 375);
+    expect(touchesWall(resting, wall, -PLATFORM_GRAVITY)).toBe(true);
+    expect(bodyBox(resting, -PLATFORM_GRAVITY).y).toBe(370);
+    // Measured as if gravity were down, the body is 10px below the block.
+    expect(touchesWall(resting, wall)).toBe(false);
+  });
+
+  describe('pushBodyOutOfWalls', () => {
+    // Cell (col 1, row 6): x 50 to 100, y 300 to 350. The sprite's body is
+    // 20x40, centred 5px below the picture's centre.
+    const wall = wallAt(1, 6);
+
+    it('pushes a body that entered a side back out of it, and drops its speed into the wall', () => {
+      // Body from x 34 to 54: 4px inside the left side.
+      const sprite = makeSprite(44, 325);
+      sprite.velocity.x = 5;
+      sprite.velocity.y = 2;
+      pushBodyOutOfWalls(sprite, [wall]);
+      expect(sprite.position).toEqual({x: 40, y: 325});
+      expect(sprite.velocity).toEqual({x: 0, y: 2});
+    });
+
+    it('pushes a body that entered from above up onto the top', () => {
+      // Body bottom at y 303: 3px inside the top.
+      const sprite = makeSprite(75, 278);
+      sprite.velocity.y = 3;
+      pushBodyOutOfWalls(sprite, [wall]);
+      expect(sprite.position).toEqual({x: 75, y: 275});
+      expect(sprite.velocity.y).toBe(0);
+    });
+
+    it('keeps the speed of a body that is moving away from the wall', () => {
+      const sprite = makeSprite(44, 325);
+      sprite.velocity.x = -5;
+      pushBodyOutOfWalls(sprite, [wall]);
+      expect(sprite.velocity.x).toBe(-5);
+    });
+
+    it('does not move a body that rests on a wall, or whose picture alone overlaps it', () => {
+      const resting = makeSprite(75, 275);
+      pushBodyOutOfWalls(resting, [wall]);
+      expect(resting.position).toEqual({x: 75, y: 275});
+      // The 25px picture reaches x 51.5, the 20px body only x 49.
+      const beside = makeSprite(39, 325);
+      pushBodyOutOfWalls(beside, [wall]);
+      expect(beside.position).toEqual({x: 39, y: 325});
+    });
+  });
+
+  it('boxesOverlap is true for boxes that share area, and false for boxes that only meet', () => {
+    const at = (x: number, y: number) => ({x, y, halfW: 10, halfH: 20});
+    expect(boxesOverlap(at(0, 0), at(19, 0))).toBe(true);
+    expect(boxesOverlap(at(0, 0), at(0, 39))).toBe(true);
+    // Edge to edge on each axis, then apart.
+    expect(boxesOverlap(at(0, 0), at(20, 0))).toBe(false);
+    expect(boxesOverlap(at(0, 0), at(0, 40))).toBe(false);
+    expect(boxesOverlap(at(0, 0), at(25, 0))).toBe(false);
+    // Overlapping on one axis only.
+    expect(boxesOverlap(at(0, 0), at(5, 45))).toBe(false);
+  });
+
+  it('MAX_GRACE_DROP covers a fall at full speed for the whole grace period', () => {
+    // A falling player's step is capped at TERMINAL_FALL_SPEED, plus the
+    // gravity added after the cap.
+    let fallen = 0;
+    let speed = LEDGE_FALL_SPEED;
+    for (let frame = 0; frame < JUMP_GRACE_FRAMES; frame++) {
+      speed = Math.min(speed, TERMINAL_FALL_SPEED) + PLATFORM_GRAVITY;
+      fallen += speed;
+    }
+    expect(MAX_GRACE_DROP).toBeGreaterThanOrEqual(fallen);
+    expect(MAX_GRACE_DROP).toBeLessThan(fallen + TERMINAL_FALL_SPEED);
+  });
+
+  it('canStartJump allows a jump with footing, or just after losing it while falling', () => {
+    expect(canStartJump(true, 0, 0.75)).toBe(true);
+    expect(canStartJump(false, 1, 8.75)).toBe(true);
+    expect(canStartJump(false, JUMP_GRACE_FRAMES, 10)).toBe(true);
+    expect(canStartJump(false, JUMP_GRACE_FRAMES + 1, 10)).toBe(false);
+    // Moving against gravity: a jump is under way.
+    expect(canStartJump(false, 1, -12)).toBe(false);
+    // Never stood on anything.
+    expect(canStartJump(false, Infinity, 5)).toBe(false);
+  });
+
+  it('jumpSpeedFromBelow adds the speed that covers the drop', () => {
+    // A jump at speed v under gravity g rises v * v / (2 * g).
+    const rise = (speed: number) => (speed * speed) / (2 * PLATFORM_GRAVITY);
+    const speed = 14;
+    expect(jumpSpeedFromBelow(speed, 0, PLATFORM_GRAVITY)).toBe(speed);
+    const fromBelow = jumpSpeedFromBelow(speed, 19, PLATFORM_GRAVITY);
+    expect(rise(fromBelow)).toBeCloseTo(rise(speed) + 19);
+    // Upward gravity is the same jump mirrored.
+    expect(jumpSpeedFromBelow(speed, 19, -PLATFORM_GRAVITY)).toBe(fromBelow);
+    // A start above the footing takes no speed away.
+    expect(jumpSpeedFromBelow(speed, -5, PLATFORM_GRAVITY)).toBe(speed);
   });
 
   it('isSupported sees floor, block tops, and flipped undersides', () => {
