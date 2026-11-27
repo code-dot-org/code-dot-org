@@ -2,7 +2,8 @@
 
 <!-- 1-3 bullets: which kit was applied and what changed in the repo. -->
 
-- Applies the Code.org FontAwesome Kit v6 upload at `cdo-dsco/assets/font-awesome-pro/<ts>`.
+- Applies the Code.org FontAwesome Kit v7 upload at `cdo-dsco/assets/font-awesome-pro/<ts>`, with the v4
+  compatibility files from the Font Awesome Free release of the same version.
 - Bumps the timestamp in `component-library-styles/font.scss`, `fonts/src/fontAwesome/index.ts` and `shared/css/font.scss`.
 - Syncs `kitIcons` (`fontAwesomeV6Icon/constants/index.ts`), which the Custom Icons story renders.
 
@@ -23,7 +24,8 @@ Usages of removed icons: <!-- result of the grep in SKILL.md step 3, or "none fo
 
 ## Testing
 
-- [ ] Every stylesheet the loader and `font.scss` reference, and `webfonts/custom-icons.woff2`, under the new
+- [ ] Every stylesheet the loader and `font.scss` reference, `webfonts/custom-icons.woff2` and
+  `webfonts/fa-v4compatibility.woff2`, under the new
   prefix return 200 with `Access-Control-Allow-Origin` (sent with `Origin: https://studio.code.org`)
 - [ ] Every added icon renders in the story above (no blank squares)
 - [ ] `yarn typecheck` in `apps/`

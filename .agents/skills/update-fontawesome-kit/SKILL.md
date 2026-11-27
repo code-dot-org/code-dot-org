@@ -11,7 +11,8 @@ gate passed: ask, and continue only on an explicit yes. Do not batch gates.
 
 What a finished update must contain (all of it, or the icons are not usable):
 
-1. The kit's `css/` and `webfonts/` in `s3://cdo-dsco/assets/font-awesome-pro/<unix-ts>/`.
+1. The kit's `css/` and `webfonts/` in `s3://cdo-dsco/assets/font-awesome-pro/<unix-ts>/`, including the v4
+   compatibility files (`v4-shims`, `v4-font-face`, `fa-v4compatibility.woff2`) that curriculum content needs.
 2. The new timestamp in `frontend/packages/component-library-styles/font.scss`,
    `frontend/packages/fonts/src/fontAwesome/index.ts`, `shared/css/font.scss`.
 3. `kitIcons` in `frontend/packages/component-library/src/fontAwesomeV6Icon/constants/index.ts` matching the
@@ -23,9 +24,13 @@ What a finished update must contain (all of it, or the icons are not usable):
 
 ### 1. Operator downloads the kit (human only)
 
-Tell the operator: sign in to fontawesome.com with the shared dev account, open "Code.org FontAwesome Kit v6
-(Current)", choose Self-Host on the Web, then "Download Web Files", and give you the zip path. The repo is on
-v6. A v7 kit is uploaded archive-only: `update.mjs` detects it, uploads, and leaves repo files alone.
+Tell the operator: sign in to fontawesome.com with the shared dev account, open "Code.org FontAwesome Kit v7",
+choose Self-Host on the Web, then "Download Web Files", and give you the zip path. The repo is on Font Awesome 7;
+`update.mjs` refuses a v6 kit.
+
+The download never contains the v4 compatibility files, whatever the kit's "Compatibility with Older Versions"
+setting says. `update.mjs` adds them from the Font Awesome Free release of the kit's version (read from the
+kit's `js/fontawesome.js` header) and renames the shim's font family from Free to Pro.
 
 **GATE:** wait for the zip path. Check the file exists.
 
@@ -48,8 +53,9 @@ missing (CLI install, credentials, role).
 
 ### 3. Preview (you)
 
-`node .agents/skills/update-fontawesome-kit/update.mjs <kit.zip> --dry-run` prints the timestamp and the
-added/removed icon names; it changes nothing (the real run picks its own, later timestamp). Show the operator
+`node .agents/skills/update-fontawesome-kit/update.mjs <kit.zip> --dry-run` prints the kit version, the
+timestamp, where the v4 compatibility files came from, and the added/removed icon names; it changes nothing (the
+real run picks its own, later timestamp). It fails if the kit lacks a stylesheet the repo loads. Show the operator
 the added and removed lists. The icon names come from `.fa-kit.fa-NAME` in `custom-icons.css`; if the lists look
 absurd, check that regex first. The usage search can take a minute or more, so run it in the background.
 
@@ -70,18 +76,15 @@ match unrelated strings, so read each hit.
    - keep the icon (ask design to restore it in the kit): does not unblock; stop here.
 4. Say plainly that "unused" is not proof: class names built at runtime (`fa-${x}`) are not found.
 
-**GATE:** operator confirms the icon diff matches what design added (ask for names if unsure). For a v7 kit the
-dry run prints `n/a`; the gate is the operator confirming they want an archive-only upload.
+**GATE:** operator confirms the icon diff matches what design added (ask for names if unsure).
 
 ### 4. Apply (you)
 
 Do not run this until the operator has explicitly confirmed the step 3 gate. A dry run alone is not consent.
 
-Run the same command without `--dry-run` (add `--skip-upload` if step 2 chose it). For a v7 kit, stop after the
-upload and the step 6 check: no repo edits, no PR; report the printed URL prefix to the operator.
-
-For a v6 kit it rewrites `../webfonts`
-to the timestamped URL, syncs to S3, bumps the three URL files and rewrites `kitIcons`.
+Run the same command without `--dry-run` (add `--skip-upload` if step 2 chose it). It adds the v4
+compatibility files, rewrites `../webfonts` to the timestamped URL, syncs to S3, bumps the three URL files and
+rewrites `kitIcons`.
 
 ### 5. Manual upload, only if `--skip-upload` (operator)
 
@@ -94,9 +97,8 @@ pins one.
 
 ### 6. Verify the upload (you)
 
-For each `<ts>/css/*.min.css` the loader and `font.scss` reference and for `<ts>/webfonts/custom-icons.woff2`
-(for a v7 kit nothing references the prefix: check `<ts>/css/fontawesome.min.css` and
-`<ts>/webfonts/custom-icons.woff2`):
+For each `<ts>/css/*.min.css` the loader and `font.scss` reference, and for `<ts>/webfonts/custom-icons.woff2`
+and `<ts>/webfonts/fa-v4compatibility.woff2`:
 `curl -sI -H 'Origin: https://studio.code.org' https://dsco.code.org/assets/font-awesome-pro/<ts>/<path>` must
 return 200 with `access-control-allow-origin` (S3 sends it only when an `Origin` header is present). A missing
 CORS header means the bucket CORS config needs fixing (see the README's Slack thread link); that is an

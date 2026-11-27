@@ -38,7 +38,7 @@ If you want more information on how FontAwesome expects us to set things up, see
    Sign in with our shared dev account, find our "Code.org Kit" (as of November 2026 we are using the kit 'Code.org FontAwesome Kit v7', version 7.3.1), then click "Download Web Files" from the "Self-Host on the Web" option.
    This should produce a download of a superset of files you'll need to upload to S3 (we only use the css and webfont directories).
    The v7 download omits the v4 compatibility files even with the kit's "Compatibility with Older Versions" setting on, and curriculum content still uses v4 class names that depend on them.
-   Add them from the [Font Awesome Free release](https://github.com/FortAwesome/Font-Awesome) tag matching the kit version: `css/v4-shims{,.min}.css`, `css/v4-font-face{,.min}.css` and `webfonts/fa-v4compatibility.woff2`.
+   The skill's `update.mjs` adds them; by hand, take them from the [Font Awesome Free release](https://github.com/FortAwesome/Font-Awesome) tag matching the kit version: `css/v4-shims{,.min}.css`, `css/v4-font-face{,.min}.css` and `webfonts/fa-v4compatibility.woff2`.
    In both `v4-shims` files replace `"Font Awesome 7 Free"` with `"Font Awesome 7 Pro"`, the family our Pro `regular.css` defines.
 2. Once you've downloaded the kit, **look up the current unix timestamp and update relative paths for font files referenced in CSS to be absolute paths** to URLs where the font files will be located. You'll only need to upload the `css` and `webfonts` directories. You'll upload them to `cdo-dsco` bucket -- see an example of how updated CSS would look with absolute paths, and the folder structure in S3.
 
