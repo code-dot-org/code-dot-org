@@ -195,13 +195,7 @@ $overlay-float-min-width: 600px;
 }
 
 .answerDot {
-  flex-shrink: 0;
-  width: var(--tree-answer-dot-size);
-  height: var(--tree-answer-dot-size);
-  border-radius: 50%;
-  box-sizing: border-box;
-  border: 2px solid transparent;
-  background-color: var(--leaf-color);
+  @include mixins.leaf-dot(var(--tree-answer-dot-size));
 }
 
 .nodeText {

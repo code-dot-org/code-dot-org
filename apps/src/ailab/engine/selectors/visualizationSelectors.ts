@@ -8,6 +8,7 @@ import {
 } from '../helpers/columnDetails';
 import {
   buildDisplayTree,
+  getAnswerIndices,
   type DisplayTreeNode,
   type SerializedTree,
 } from '../helpers/displayTree';
@@ -303,6 +304,15 @@ export const getPredictionTrace = createSelector(
     const {root} = trainedModel.toJSON() as SerializedTree;
     return traceDisplayTree(tree, root!, inputs, testData);
   }
+);
+
+// The reached leaf's place in the leaf color cycle.
+export const getPredictionAnswerIndex = createSelector(
+  [getDisplayTree, getPredictionTrace],
+  (tree, trace): number | undefined =>
+    tree && trace
+      ? getAnswerIndices(tree).get(trace.path[trace.path.length - 1])
+      : undefined
 );
 
 export function getPredictionStep(

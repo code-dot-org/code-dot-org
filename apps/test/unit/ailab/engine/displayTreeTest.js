@@ -1,5 +1,6 @@
 import {
   buildDisplayTree,
+  getAnswerIndices,
   getChildNodeId,
   getDisplayTreePath,
   thresholdText,
@@ -61,6 +62,28 @@ describe('getDisplayTree on shipped datasets', () => {
 
     expect(trainedModel).toBeDefined();
     expect(getDisplayTree(state, project, trainedModel)).toBeUndefined();
+  });
+});
+
+describe('getAnswerIndices', () => {
+  const answer = prediction => ({type: 'answer', prediction});
+  const question = (left, right) => ({
+    type: 'question',
+    column: 'c',
+    branches: [
+      {kind: 'values', values: ['a'], child: left},
+      {kind: 'values', values: ['b'], child: right},
+    ],
+  });
+
+  test('numbers answers left to right, keyed by node id', () => {
+    const tree = question(question(answer(1), answer(2)), answer(3));
+
+    expect([...getAnswerIndices(tree)]).toEqual([
+      ['0.0.0', 0],
+      ['0.0.1', 1],
+      ['0.1', 2],
+    ]);
   });
 });
 
