@@ -10,6 +10,7 @@
     aspect-ratio: 1/1;
 }
 .icon {
+    // FA 7's icon rule takes its width from --fa-width and may load after this one.
     --fa-width: 30.67px;
     color: var(--background-neutral-primary, #FFF);
     width: 30.67px;

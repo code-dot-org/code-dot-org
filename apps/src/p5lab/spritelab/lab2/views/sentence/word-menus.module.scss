@@ -133,6 +133,7 @@
 
 // The icon beside a word, in the word's own color; a plain color is a dot.
 .wordIcon {
+  // FA 7's icon rule takes its width from --fa-width and may load after this one.
   --fa-width: 1.25em;
   flex: none;
   width: 1.25em;
