@@ -64,7 +64,7 @@ const CoteacherInviteNotification = ({
 
   return (
     <NotificationBanner
-      variant="primary"
+      sentiment="brand"
       className={styles.notificationContainer}
       icon={COLLABORATE_ICON}
       title={

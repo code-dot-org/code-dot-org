@@ -54,7 +54,7 @@ describe('CoteacherInviteNotification', () => {
     const wrapper = shallow(<CoteacherInviteNotification {...defaultProps} />);
     const banner = wrapper.find(NotificationBanner);
     expect(banner.length).toBe(1);
-    expect(banner.prop('variant')).toBe('primary');
+    expect(banner.prop('sentiment')).toBe('brand');
     expect(titleTextFor(banner)).toContain('The Great Pumpkin');
   });
 
@@ -64,7 +64,7 @@ describe('CoteacherInviteNotification', () => {
     );
     const banner = wrapper.find(NotificationBanner);
     expect(banner.length).toBe(1);
-    expect(banner.prop('variant')).toBe('primary');
+    expect(banner.prop('sentiment')).toBe('brand');
     expect(titleTextFor(banner)).toContain('Ms. Frizzle');
   });
 

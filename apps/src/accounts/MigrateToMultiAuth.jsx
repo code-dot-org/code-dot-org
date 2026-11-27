@@ -7,8 +7,8 @@ import i18n from '@cdo/locale';
 export default function MigrateToMultiAuth() {
   return (
     <NotificationBanner
-      variant="info"
-      style="filled"
+      sentiment="info"
+      fillStyle="color"
       title={i18n.migrateToMultiAuth_notice_v2()}
       description={i18n.migrateToMultiAuth_details_v2()}
       icon={{iconName: 'circle-info', iconStyle: 'solid'}}

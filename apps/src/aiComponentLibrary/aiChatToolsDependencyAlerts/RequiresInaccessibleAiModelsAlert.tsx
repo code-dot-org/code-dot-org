@@ -22,8 +22,8 @@ const RequiresInaccessibleAiModelsAlert: React.FC<
   RequiresInaccessibleAiModelsAlertProps
 > = ({subject}) => (
   <NotificationBanner
-    variant="error"
-    style="filled"
+    sentiment="error"
+    fillStyle="color"
     className={styles.chatToolsAlert}
     title=""
     description={
