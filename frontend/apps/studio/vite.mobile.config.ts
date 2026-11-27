@@ -7,7 +7,7 @@ import path from 'node:path';
 const FONT_AWESOME_SHEET =
   /https:\/\/dsco\.code\.org\/assets\/font-awesome-pro\/\d+\/css\/(fontawesome|solid)\.min\.css/g;
 const FONT_AWESOME_FONT =
-  /url\((https:\/\/dsco\.code\.org\/assets\/font-awesome-pro\/\d+\/webfonts\/([\w-]+\.woff2))\)\s*format\("woff2"\)(?:,\s*url\([^)]*\)\s*format\("truetype"\))?/g;
+  /url\((https:\/\/dsco\.code\.org\/assets\/font-awesome-pro\/\d+\/webfonts\/([\w-]+\.woff2))\)(?:\s*format\("woff2"\))?(?:,\s*url\([^)]*\)\s*format\("truetype"\))?/g;
 const LOCAL_FONT_AWESOME = 'assets/font-awesome-pro';
 
 // The app's offline screen draws Font Awesome Pro icons, but the WebView will
