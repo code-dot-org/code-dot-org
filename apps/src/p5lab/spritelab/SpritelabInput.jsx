@@ -228,7 +228,8 @@ const styles = {
     position: 'absolute',
     left: 10,
     paddingRight: 8,
-    paddingTop: 6,
+    // FA 7 pins fa-stack children to the padding edge; padding won't move them.
+    marginTop: 6,
     fontSize: 11,
   },
   number: {

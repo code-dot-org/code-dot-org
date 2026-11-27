@@ -60,6 +60,8 @@
           content: '\f00c';
           background-color: var(--background-brand-teal-primary);
           padding-left: 4px;
+          // FA 7 centres text on the icon, overriding the inherited left.
+          text-align: left;
         }
 
         // Unchecked styles
