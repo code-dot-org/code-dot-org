@@ -23,6 +23,8 @@ export enum Themes {
   DEUTERANOPIA_DARK = 'cdodeuteranopiadark',
   TRITANOPIA = 'cdotritanopia',
   TRITANOPIA_DARK = 'cdotritanopiadark',
+  REFRESH = 'cdorefresh',
+  REFRESH_DARK = 'cdorefreshdark',
 }
 
 export const DARK_THEME_SUFFIX = 'dark';
@@ -66,6 +68,7 @@ export const Renderers = {
   GERAS: 'cdo_renderer_geras',
   THRASOS: 'cdo_renderer_thrasos',
   ZELOS: 'cdo_renderer_zelos',
+  REFRESH: 'cdo_renderer_refresh',
   DEFAULT: 'cdo_renderer_thrasos',
 };
 
