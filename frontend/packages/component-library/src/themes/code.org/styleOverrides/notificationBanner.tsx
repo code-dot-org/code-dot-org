@@ -1,22 +1,16 @@
 /**
- * NotificationBanner style definitions.
+ * NotificationBanner colors and geometry live in
+ * notificationBanner.module.scss. The banner is a composite of Paper,
+ * Typography, and IconButton, so it does not use a Mui component override.
  *
- * NotificationBanner uses CSS Modules (notificationBanner.module.scss) for styling
- * rather than MUI theme overrides because it's a composite component built from
- * multiple MUI primitives (Paper, Stack, Typography, IconButton).
- *
- * This file is kept for documentation and potential future use if we need
- * to expose any shared style constants.
+ * Sentiment token roles, for reference:
+ * brand   border/text-fixed brand,        fill background-brand-light
+ * pink    border/text-fixed accent-pink,  fill background-accent-pink-light
+ * success border success, text fixed,     fill background-success-light
+ * error   border/text-fixed error,        fill background-error-light
+ * warning border/text-fixed warning,      fill background-warning-light
+ * info    border info, text fixed,        fill background-info-light
+ * neutral border secondary, text tertiary, fill background-neutral-secondary
  */
 
-// Variant to CSS variable prefix mapping for reference
-export const VARIANT_PREFIX_MAP: Record<string, string> = {
-  primary: 'brand-purple',
-  brand: 'brand-teal',
-  info: 'info',
-  success: 'success',
-  warning: 'warning',
-  error: 'error',
-  ai: 'brand-aqua',
-  gray: 'neutral',
-};
+export {};
