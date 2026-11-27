@@ -13,8 +13,8 @@ The override is global: it colors every MUI `Divider` rendered under
 CdoTheme, labelled ones included. MUI's deprecated `light` prop no longer
 lightens the line.
 
-The deprecated DSCO [Divider](Divider.tsx) took `color` and `margin` props.
-Plain MUI has neither; use `sx` when a call site needs them:
+The deleted DSCO `Divider` took `color` and `margin` props. Plain MUI has
+neither; use `sx` when a call site needs them:
 
 | Legacy prop       | MUI                                                      |
 | ----------------- | -------------------------------------------------------- |
@@ -25,11 +25,7 @@ Plain MUI has neither; use `sx` when a call site needs them:
 The legacy margins were 0.5rem, 1rem, 2rem and 4rem; MUI's spacing unit is
 8px, which matches them only where the root font size is 16px.
 
-The legacy component still resolves until it is deleted:
-
-```javascript
-import Divider from '@code-dot-org/component-library/divider';
-```
+The package no longer exports `@code-dot-org/component-library/divider`.
 
 See [DIVIDER_MIGRATION_TO_MUI.md](DIVIDER_MIGRATION_TO_MUI.md) for the
 migration, and DesignSystem / Divider in Storybook for examples.
