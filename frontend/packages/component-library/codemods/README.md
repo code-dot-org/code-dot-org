@@ -4,8 +4,21 @@ This directory contains automated code transformation scripts (codemods) for mig
 
 ## Available Codemods
 
-None. A component's codemod is deleted with its DSCO source, once no
-import is left for it to rewrite.
+A component's codemod is deleted with its DSCO source, once no import
+is left for it to rewrite.
+
+### `chips-to-mui-chips.ts`
+
+Moves `Chips` imports from `@code-dot-org/component-library/chips` to `MuiChips`. The props are unchanged, so only imports and `jest.mock` factories change. See `src/chips/CHIPS_MIGRATION_TO_MUI.md`.
+
+**What it does:**
+
+- Rewrites the default import (also as `{default as X}`) and the named `Chips` / `ChipsProps` imports to `MuiChips` / `MuiChipsProps`, keeping local names
+- Adds a `MuiChips` key to `jest.mock`, `jest.doMock`, `vi.mock` and `vi.doMock` factories that return one object literal, copying the `default` or `Chips` value when it is a name or a function; any other value (`jest.fn()` would become a second, separate mock), a factory with both `default` and `Chips`, or a return inside a branch is reported instead
+- Reports Enzyme string selectors that name `Chips` (`find('Chips')`, `find('.x Chips')`, `w?.find('Chips[name="x"]')`), namespace imports, re-exports and `require()` / `import()` of the entry point, for hand work
+- Idempotent; parses `.ts` files with the `ts` parser
+
+Build the package first with `yarn build`, then run it as shown under Usage.
 
 ## Usage
 
