@@ -1,7 +1,7 @@
 import {Button} from '@mui/material';
 import {Meta, StoryFn} from '@storybook/react-vite';
 import {useState} from 'react';
-import {expect, userEvent, within} from 'storybook/test';
+import {expect, userEvent, waitFor, within} from 'storybook/test';
 
 import Modal, {ModalProps} from './../index';
 
@@ -133,7 +133,7 @@ ModalInShortViewport.play = async ({canvasElement}) => {
     'dsco-dialog-description',
   )?.parentElement;
   expect(content).toHaveAttribute('tabindex', '0');
-  expect(content).toHaveFocus();
+  await waitFor(() => expect(content).toHaveFocus());
 };
 
 export const ModalWithoutSecondaryButton = SingleTemplate.bind({});
