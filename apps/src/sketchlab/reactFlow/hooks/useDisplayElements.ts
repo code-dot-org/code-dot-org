@@ -93,6 +93,7 @@ export function useDisplayElements({
     }
 
     return {
+      focusedEdgeId,
       displayNodes: nodes.map(node => {
         const isConnectSource = connectingFrom === node.id;
         const {selected: singleSelected, domAttributes} = applyDisplayProps(

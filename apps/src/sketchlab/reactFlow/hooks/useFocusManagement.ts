@@ -1,5 +1,5 @@
 import {useReactFlow} from '@xyflow/react';
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {SketchlabReactFlowEdge} from '@cdo/apps/lab2/types';
 
@@ -36,6 +36,8 @@ export function useFocusManagement(
   // than the keyboard. Mouse clicks don't auto-pan but keyboard navigation
   // does.
   const focusFromPointerRef = useRef(false);
+  // Whether the focused node or edge would match :focus-visible.
+  const [focusVisible, setFocusVisible] = useState(false);
   useEffect(() => {
     const markPointer = () => (focusFromPointerRef.current = true);
     const markKeyboard = () => (focusFromPointerRef.current = false);
@@ -119,6 +121,7 @@ export function useFocusManagement(
       if (entry && tabOrder.some(tabEntry => entriesMatch(tabEntry, entry))) {
         setLastFocusedEntry(entry);
         setNodeOrEdgeFocused(true);
+        setFocusVisible(!focusFromPointerRef.current);
         // Pan the focused element into view when it is off-screen, but only
         // for keyboard focus; a pointer click leaves it where the user aimed.
         // Deferred so it runs after React Flow finishes processing the
@@ -149,5 +152,5 @@ export function useFocusManagement(
     [tabOrder, setLastFocusedEntry, setNodeOrEdgeFocused, panToEntryIfNeeded]
   );
 
-  return {focusEntry, handleFocusCapture};
+  return {focusEntry, handleFocusCapture, focusVisible};
 }

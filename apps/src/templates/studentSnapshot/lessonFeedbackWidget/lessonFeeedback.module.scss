@@ -84,8 +84,8 @@ label.typographyLabelTwo {
   box-shadow: none !important;
 
   &:focus {
-    border-color: var(--borders-brand-teal-primary) !important;
-    box-shadow: 0 0 0 2px var(--brand-teal-50) !important;
+    border-color: var(--border-focused-primary) !important;
+    box-shadow: 0 0 0 2px var(--border-focused-primary) !important;
   }
 }
 

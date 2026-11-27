@@ -668,7 +668,7 @@ They allow you to define a set of styles that can be reused throughout your proj
 | `field-helper-section-black`   | Black text color                                        |
 | `field-error-section-black`    | Error color in black theme                              |
 | `field-read-only-white-colors` | Read-only field style for white theme                   |
-| `focus-styles`                 | Adds a `2px` solid teal border with offset              |
+| `focus-styles`                 | 2px `--border-focused-primary` outline with offset      |
 | `transition-all`               | Applies a `0.2s ease` transition to all properties      |
 
 ---

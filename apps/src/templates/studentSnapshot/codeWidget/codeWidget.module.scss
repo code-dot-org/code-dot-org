@@ -65,7 +65,7 @@
   border-bottom: 1px solid var(--borders-neutral-primary);
 
   *:focus-visible {
-    outline: var(--borders-brand-teal-primary) solid 2px;
+    outline: var(--border-focused-primary) solid 2px;
     outline-offset: 2px;
     border-radius: variables.$default-border-radius;
   }
