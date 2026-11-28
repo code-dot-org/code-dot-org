@@ -15,6 +15,7 @@ on:
   pull_request:
     paths:
       - 'docker/rails/**'
+      - '.github/actions/cdo-deps-build/**'
       - '.github/actions/cdo-deps-key/**'
       - '.github/workflows/cdo-rails-image.yml'
   push:
@@ -43,7 +44,8 @@ jobs:
   #
   # A push can arrive before that layer exists. cdo-deps-image is building it.
   # It will chain this workflow again. A push miss therefore ends the run
-  # quietly. Any other event has no such second chance and fails.
+  # quietly. A pull request cannot publish the layer, so its jobs build it
+  # from the checkout. Any other event has no such second chance and fails.
   #
   # This is also where the workflow_run chain is filtered: that event fires
   # for failed runs and for other branches, and skipping this job skips the
@@ -56,7 +58,7 @@ jobs:
       contents: read
       packages: read
     outputs:
-      digest: ${{ steps.deps.outputs.digest }}
+      image: ${{ steps.deps.outputs.image }}
     steps:
       # The key hashes the dependency inputs, so they must be in the checkout.
       - name: Checkout dependency inputs only
@@ -90,7 +92,13 @@ jobs:
           set -euo pipefail
           if digest="$(docker buildx imagetools inspect "$REF" \
             --format '{{json .Manifest.Digest}}' | tr -d '"')"; then
-            echo "digest=$digest" >> "$GITHUB_OUTPUT"
+            echo "image=${REF%:*}@$digest" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$EVENT_NAME" = pull_request ]; then
+            echo "::notice::No published dependency layer for this checkout ($REF)." \
+                 "Building it from the checkout." >&2
+            echo "image=cdo-deps:ci" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           if [ "$EVENT_NAME" = push ]; then
@@ -122,7 +130,7 @@ jobs:
       contents: read
       packages: read
     env:
-      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-deps@${{ needs.resolve-deps.outputs.digest }}
+      DEPS_IMAGE: ${{ needs.resolve-deps.outputs.image }}
     steps:
       # The full tree: this image bakes the source slice.
       - name: Checkout
@@ -144,6 +152,13 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build cdo-deps from the checkout with ${{ matrix.engine }}
+        if: env.DEPS_IMAGE == 'cdo-deps:ci'
+        uses: ./.github/actions/cdo-deps-build
+        with:
+          engine: ${{ matrix.engine }}
+          tag: ${{ env.DEPS_IMAGE }}
 
       - name: Build cdo-rails with ${{ matrix.engine }}
         run: |
@@ -176,7 +191,7 @@ jobs:
       contents: read
       packages: read
     env:
-      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-deps@${{ needs.resolve-deps.outputs.digest }}
+      DEPS_IMAGE: ${{ needs.resolve-deps.outputs.image }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -196,6 +211,13 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Build cdo-deps from the checkout
+        if: env.DEPS_IMAGE == 'cdo-deps:ci'
+        uses: ./.github/actions/cdo-deps-build
+        with:
+          engine: docker
+          tag: ${{ env.DEPS_IMAGE }}
+
       - name: Build cdo-rails
         run: |
           docker build \
@@ -212,7 +234,7 @@ jobs:
   # combine.
   build-push:
     name: build and push (${{ matrix.arch }})
-    if: github.event_name != 'pull_request' && needs.resolve-deps.outputs.digest != ''
+    if: github.event_name != 'pull_request' && needs.resolve-deps.outputs.image != ''
     needs: resolve-deps
     strategy:
       matrix:
@@ -232,7 +254,7 @@ jobs:
       contents: read
       packages: write
     env:
-      DEPS_IMAGE: ghcr.io/code-dot-org/cdo-deps@${{ needs.resolve-deps.outputs.digest }}
+      DEPS_IMAGE: ${{ needs.resolve-deps.outputs.image }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4

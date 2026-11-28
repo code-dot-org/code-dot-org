@@ -229,8 +229,10 @@ The build pulls a `cdo-deps` layer named by a content key. A push that changes
 
 On a push, a missing layer ends the run with a notice and publishes nothing.
 `cdo-deps-image` chains this workflow when the layer lands, and the build runs
-again. On any other event a missing layer is an error, because nothing will
-re-run the workflow.
+again. A pull request cannot publish the layer, so on a miss its jobs build
+`cdo-build` and `cdo-deps` from the checkout and stack the image on that. On
+any other event a missing layer is an error, because nothing will re-run the
+workflow.
 
 ## Tag contract
 
@@ -267,6 +269,7 @@ These five are an interface. Consumers of this registry are not visible from
 this directory, so a change to any of them breaks something you cannot see from
 here.
 
-The workflow resolves `cdo-deps` by the content key its own checkout implies
-and fails, loudly, if no such layer has been published. Rebase onto the staging
-push that published the dependency layer; do not reach for `latest`.
+The workflow resolves `cdo-deps` by the content key its own checkout implies.
+A publish run never builds on a layer that key does not name: a push waits for
+the layer, and a manual dispatch fails, loudly, if none has been published. Do
+not reach for `latest`.
