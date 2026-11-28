@@ -1,4 +1,5 @@
 import {
+  type AssessmentQuestionResult,
   type JsonVideoData,
   type LessonObjective,
   type MatchSolution,
@@ -9,14 +10,6 @@ import {
 } from '@code-dot-org/lesson-deep-dive';
 
 import {ResponseValidator} from '../../../util/HttpClient';
-
-export type AssessmentQuestionResult = {
-  level_id: number;
-  script_level_id: number;
-  attempts: number;
-  correct: boolean;
-  evaluation?: string;
-};
 
 export type LessonProgressCounts = {
   levelsTotalCount: number;

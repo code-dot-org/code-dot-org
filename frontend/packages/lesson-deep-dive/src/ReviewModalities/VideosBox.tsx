@@ -7,7 +7,7 @@ import {type JsonVideoData} from '../types';
 
 import styles from './videos-box.module.scss';
 
-type VideoPlayerComponent = ComponentType<{href: string}>;
+export type VideoPlayerComponent = ComponentType<{href: string}>;
 
 interface VideosBoxProps {
   jsonVideos: JsonVideoData[];
