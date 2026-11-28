@@ -45,6 +45,15 @@ class FrontendStudioControllerTest < ActionController::TestCase
     assert_response :not_found
   end
 
+  test 'index should load and configure the Google tag' do
+    DCDO.set('frontend_studio_enabled', true)
+
+    get :index
+
+    assert_select 'script[src*="googletagmanager.com/gtag/js"]', 1
+    assert_includes response.body, "gtag('config', 'G-L9HT5MZ3HD');"
+  end
+
   test 'index should stamp notice, info and alert in that order' do
     DCDO.set('frontend_studio_enabled', true)
 
