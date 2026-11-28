@@ -1,5 +1,7 @@
 import Immutable from 'immutable';
 
+import escapeSpecialCharactersForRegExp from '@cdo/apps/util/escapeSpecialCharactersForRegExp';
+
 /**
  * Given a search query, generate a results list of animationProps objects that
  * can be displayed and used to add an animation to the project.
@@ -23,7 +25,10 @@ export function searchAssets(
   // Example: searchQuery "bar"
   //   Will match: "barbell", "foo-bar", "foo_bar" or "foo bar"
   //   Will not match: "foobar", "ubar"
-  const searchRegExp = new RegExp('(?:\\s+|_|^|-)' + searchQuery, 'i');
+  const searchRegExp = new RegExp(
+    '(?:\\s+|_|^|-)' + escapeSpecialCharactersForRegExp(searchQuery),
+    'i'
+  );
 
   // Generate the set of all results associated with all matched aliases
   let resultSet = Object.keys(assetLibrary.aliases)

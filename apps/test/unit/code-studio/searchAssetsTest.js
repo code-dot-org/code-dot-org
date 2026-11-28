@@ -139,4 +139,14 @@ describe('search assets from animation library', function () {
     );
     expect(searchedData.results.length).toEqual(1);
   });
+
+  it('treats regular expression characters in the search as literal text', function () {
+    const search = query =>
+      searchAssets(query, '', testAnimationLibrary, 0, 5).results;
+
+    expect(() => search('hand****')).not.toThrow();
+    expect(search('hand****')).toEqual([]);
+    expect(() => search('(')).not.toThrow();
+    expect(search('hip.')).toEqual([]);
+  });
 });
