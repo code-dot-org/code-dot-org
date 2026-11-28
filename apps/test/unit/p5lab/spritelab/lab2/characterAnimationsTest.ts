@@ -3,6 +3,7 @@ import {
   stripCellOrigin,
   AnimationPoses,
   CHARACTER_POSE_ORDER,
+  CHARACTER_STRIP_BASE_FRAME,
   CHARACTER_STRIP_FRAME_COUNT,
   CHARACTER_STRIP_POSES,
   jumpFrame,
@@ -13,6 +14,7 @@ import {
   poseStartTick,
   poseKey,
   posesByImageName,
+  sheetStillFrame,
   teeterTicks,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 
@@ -193,6 +195,26 @@ describe('SpriteLab2 characterAnimations', () => {
     expect(CHARACTER_STRIP_POSES['jump-right']!.start).toBe(
       walk.start + walk.count
     );
+  });
+});
+
+describe('sheetStillFrame', () => {
+  const frameSize = {x: 30, y: 30};
+  it("is a character set's standing frame", () => {
+    expect(
+      sheetStillFrame({frameCount: 5, frameSize, poses: CHARACTER_STRIP_POSES})
+    ).toEqual({frameSize, index: CHARACTER_STRIP_BASE_FRAME});
+  });
+  it("is any other sheet's first frame", () => {
+    expect(sheetStillFrame({frameCount: 5, frameSize})).toEqual({
+      frameSize,
+      index: 0,
+    });
+  });
+  it('is nothing for one frame, or for a sheet whose frame size is unknown', () => {
+    expect(sheetStillFrame({frameCount: 1, frameSize})).toBeUndefined();
+    expect(sheetStillFrame({frameSize})).toBeUndefined();
+    expect(sheetStillFrame({frameCount: 5})).toBeUndefined();
   });
 });
 

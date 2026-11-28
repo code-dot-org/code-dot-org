@@ -81,6 +81,23 @@ export interface FrameSize {
   y: number;
 }
 
+/** The frame that stands for a whole sheet where one still picture is
+    shown: a character set's standing frame, any other sheet's first
+    frame. */
+export function sheetStillFrame(props: {
+  frameCount?: number;
+  frameSize?: FrameSize;
+  poses?: AnimationPoses;
+}): {frameSize: FrameSize; index: number} | undefined {
+  if (!((props.frameCount ?? 1) > 1) || !props.frameSize) {
+    return undefined;
+  }
+  return {
+    frameSize: props.frameSize,
+    index: props.poses ? CHARACTER_STRIP_BASE_FRAME : 0,
+  };
+}
+
 /** The top-left corner of frame `index`. Frames fill a row left to right
     and wrap to the next row at the image width, the same way the engine
     reads a sheet. */

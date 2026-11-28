@@ -5,7 +5,10 @@ import {
   ImageSubject,
   ImageType,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
-import {AnimationPoses} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
+import {
+  AnimationPoses,
+  sheetStillFrame,
+} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {
   galleryOrder,
   imageTypeFromCategories,
@@ -30,6 +33,13 @@ export interface ProjectImage {
   subject?: ImageSubject;
   /** The small image for the list's tile. */
   thumb?: string;
+  /** Set for a sheet with no small image: the frame the tile draws from
+      the sheet instead. */
+  tileFrame?: {
+    src: string;
+    frameSize: {x: number; y: number};
+    index: number;
+  };
   /** The full image. */
   src?: string;
   /** Pixel art upscales with hard edges. */
@@ -50,6 +60,8 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
       return [];
     }
     const src = props.dataURI || props.sourceUrl || undefined;
+    const smallImage = getImageThumbnail(props.name ?? '');
+    const stillFrame = sheetStillFrame(props);
     const imageType = imageTypeFromCategories(props.categories);
     return [
       {
@@ -66,7 +78,9 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
             : props.poses
             ? 'character'
             : props.subject ?? props.generation?.subject,
-        thumb: getImageThumbnail(props.name ?? '') || src,
+        thumb: smallImage || src,
+        tileFrame:
+          !smallImage && src && stillFrame ? {src, ...stillFrame} : undefined,
         src,
         pixelated: !!props.pixelGridSize,
         sheet:

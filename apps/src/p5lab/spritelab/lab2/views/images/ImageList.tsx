@@ -20,6 +20,7 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {PoseKey} from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import AnimatedSheetPreview from '@cdo/apps/p5lab/spritelab/lab2/views/AnimatedSheetPreview';
+import StripFrame from '@cdo/apps/p5lab/spritelab/lab2/views/StripFrame';
 
 import ImageKindMenu, {NewImageKind} from './ImageKindMenu';
 import {ProjectImage} from './projectImages';
@@ -294,6 +295,12 @@ const ImageList: React.FunctionComponent<ImageListProps> = ({
                         <AnimatedSheetPreview
                           {...playing.sheet}
                           only={playing.only}
+                        />
+                      ) : image.tileFrame ? (
+                        <StripFrame
+                          sheetSrc={image.tileFrame.src}
+                          frameSize={image.tileFrame.frameSize}
+                          index={image.tileFrame.index}
                         />
                       ) : (
                         image.thumb && (

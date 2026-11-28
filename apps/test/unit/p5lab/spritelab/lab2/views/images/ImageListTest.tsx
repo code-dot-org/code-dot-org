@@ -12,6 +12,20 @@ import {CHARACTER_STRIP_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAni
 import ImageList from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImageList';
 import {ProjectImage} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
 
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/StripFrame', () => ({
+  __esModule: true,
+  default: (props: {
+    sheetSrc: string;
+    frameSize: {x: number; y: number};
+    index: number;
+  }) => (
+    <canvas
+      data-sheet={props.sheetSrc}
+      data-frame={`${props.frameSize.x}x${props.frameSize.y} #${props.index}`}
+    />
+  ),
+}));
+
 const image = (key: string, name: string): ProjectImage => ({
   key,
   props: {name},
@@ -170,6 +184,33 @@ describe('ImageList', () => {
     expect(
       screen.getByRole('button', {name: 'Sprite 2'}).querySelector('img')
     ).toBeTruthy();
+  });
+
+  it("shows a sheet's frame in its tile until the thumbnail exists", () => {
+    const frame = {src: 'set.png', frameSize: {x: 30, y: 30}, index: 1};
+    const {rerender} = render(
+      <ImageList
+        images={[{...image('a', 'Sprite 1'), tileFrame: frame}]}
+        draft={null}
+        chosenId={null}
+        onChoose={jest.fn()}
+      />
+    );
+    const tile = screen.getByRole('button', {name: 'Sprite 1'});
+    const canvas = tile.querySelector('canvas');
+    expect(canvas?.getAttribute('data-sheet')).toBe('set.png');
+    expect(canvas?.getAttribute('data-frame')).toBe('30x30 #1');
+    expect(tile.querySelector('img')).toBeNull();
+    rerender(
+      <ImageList
+        images={[image('a', 'Sprite 1')]}
+        draft={null}
+        chosenId={null}
+        onChoose={jest.fn()}
+      />
+    );
+    expect(tile.querySelector('canvas')).toBeNull();
+    expect(tile.querySelector('img')?.getAttribute('src')).toBe('data:a');
   });
 
   it('chooses on a tile and adds on the plus', async () => {

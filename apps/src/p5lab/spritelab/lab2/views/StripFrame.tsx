@@ -1,5 +1,5 @@
-// One frame of a character set's strip, drawn into a canvas once the
-// strip's image has loaded.
+// One frame of a sheet, drawn into a canvas once the sheet's image has
+// loaded.
 
 import React, {useEffect, useRef} from 'react';
 
