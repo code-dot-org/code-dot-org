@@ -162,7 +162,7 @@ document.documentElement.dataset.brand; // 'code' | 'codeai' | 'codeai-next' | '
 
 | Theme              | File                      | Description                                           |
 | ------------------ | ------------------------- | ----------------------------------------------------- |
-| `CdoTheme`         | `./code.org/index.ts`     | Default Code.org theme                                |
+| `CdoTheme`         | `./code.org/index.ts`     | Legacy Code.org theme (`code`, `codeai`)              |
 | `CodeaiTheme`      | `./codeai/index.ts`       | CADS brand-purple palette (used for `codeai-next`)    |
 | `CodeaiAuditTheme` | `./codeai-audit/index.ts` | Hot-pink palette pairing with the pink audit CSS ramp |
 
@@ -250,7 +250,7 @@ If you need mode-specific overrides beyond what semantic tokens provide, target 
 
 | Attribute / Provider     | Set by                     | Affects                                | Scope          |
 | ------------------------ | -------------------------- | -------------------------------------- | -------------- |
-| `data-brand` on `<html>` | `createReactRoot`          | CSS color ramp (brand palette)         | Entire page    |
+| `data-brand` on `<html>` | Rails (`Cdo::Brand`)       | CSS color ramp (brand palette)         | Entire page    |
 | `MuiThemeProvider`       | `createReactRoot`          | MUI style overrides, component palette | React subtree  |
 | `SiteConfigProvider`     | `createReactRoot`          | `useBrand()` hook                      | React subtree  |
 | `data-theme` on `<div>`  | `ThemeProvider` (contexts) | CSS semantic tokens (Light/Dark)       | Component tree |
