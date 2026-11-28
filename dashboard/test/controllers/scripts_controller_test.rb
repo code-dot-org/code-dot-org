@@ -975,11 +975,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal({'is_migrated' => true}, unit.properties)
   end
 
-  test 'setting tts for unit triggers generation of tts for the unit' do
+  test 'setting tts for unit saves it' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    Unit.any_instance.stubs(:tts_update).once
 
     unit = create(:script)
     stub_file_writes(unit.name)
@@ -999,11 +997,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal true, unit.tts
   end
 
-  test 'setting tts to false does not trigger generation of tts for the unit' do
+  test 'setting tts to false clears it for the unit' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    Unit.any_instance.stubs(:tts_update).never
 
     unit = create(:script, tts: true)
     stub_file_writes(unit.name)

@@ -13,9 +13,4 @@ module Unit::TextToSpeech
   def text_to_speech_enabled?
     tts == true
   end
-
-  # Generates TTS files for each level in a unit.
-  def tts_update(update_all: false)
-    levels.each {|level| level.tts_update(update_all: update_all)}
-  end
 end
