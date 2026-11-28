@@ -1,6 +1,6 @@
 # Validate the Kubernetes manifests used by local Skaffold and k8s-gitops.
 #
-# This is currently an experimental feature, see: k8s/experimental.yaml
+# Status: see k8s/README.md#status
 
 name: k8s
 on:

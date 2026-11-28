@@ -16,6 +16,12 @@ Skaffold only describes how to build that family and deploy `cdo-rails`.
 Before building, it fetches any missing Git LFS locale files required by that
 image.
 
+## Status
+
+Kubernetes is replacing the long-running EC2 instances that Chef provisions
+([`cookbooks/`](../cookbooks/README.md)). It is past the experimental stage
+but does not yet carry production workloads; production still runs on EC2.
+
 ## Prerequisites
 
 Docker Desktop is the supported local Kubernetes provider.
