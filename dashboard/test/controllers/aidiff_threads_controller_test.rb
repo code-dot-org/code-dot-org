@@ -104,6 +104,44 @@ class AidiffThreadsControllerTest < ActionController::TestCase
       assert_equal "unit", json_response[1]["context_type"]
     end
 
+    test "index returns only the admin's own threads" do
+      create(:aidiff_thread, user: @teacher, context_type: "course")
+      admin = create(:admin)
+      create(:aidiff_thread, user: admin, context_type: "unit")
+
+      sign_in admin
+      get :index
+
+      assert_response :success
+      json_response = JSON.parse(response.body)
+      assert_equal 1, json_response.count
+      assert_equal "unit", json_response[0]["context_type"]
+    end
+
+    test "index does not query messages or artifacts once per thread" do
+      threads = create_list(:aidiff_thread, 3, user: @teacher)
+      threads.each do |thread|
+        create(:aidiff_message, aidiff_thread: thread, role: :user, content: "first #{thread.id}")
+        create(:aidiff_message, aidiff_thread: thread, content: "second #{thread.id}")
+      end
+      create(:aidiff_message, aidiff_thread: threads[1], role: :user, content: "ignored")
+      threads[2].aidiff_messages.first.update!(is_preset: true, preset_chip_text: "chip")
+      create(:aidiff_exit_ticket, aidiff_thread: threads[0], user: @teacher)
+
+      sign_in @teacher
+      queries = capture_queries {get :index}
+
+      assert_response :success
+      message_and_artifact_queries = queries.grep(/FROM `aidiff_(messages|artifacts)`/)
+      assert_operator message_and_artifact_queries.count, :<=, 3, message_and_artifact_queries.join("\n")
+
+      summaries = JSON.parse(response.body).index_by {|t| t["id"]}
+      assert_equal "first #{threads[0].id}", summaries[threads[0].id]["title"]
+      assert_equal "first #{threads[1].id}", summaries[threads[1].id]["title"]
+      assert_equal "chip", summaries[threads[2].id]["title"]
+      assert_equal([true, false, false], threads.map {|t| summaries[t.id]["has_artifact"]})
+    end
+
     test "show redirects to signin when teacher not signed in" do
       #some other user's thread
       @teacher2 = create(:teacher)

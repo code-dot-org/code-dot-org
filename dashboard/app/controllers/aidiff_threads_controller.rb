@@ -59,7 +59,8 @@ class AidiffThreadsController < ApplicationController
 
   # GET /aidiff_threads
   def index
-    render json: @aidiff_threads&.map(&:summarize)
+    # Admins can manage every thread, but the drawer lists only the user's own.
+    render json: AidiffThread.summarize_all(@aidiff_threads.where(user_id: current_user.id))
   end
 
   # GET /aidiff_threads/:id

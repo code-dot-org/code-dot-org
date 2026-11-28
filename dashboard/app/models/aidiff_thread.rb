@@ -45,14 +45,30 @@ class AidiffThread < ApplicationRecord
 
   validates :context_type, inclusion: {in: SharedConstants::AI_DIFF_CONTEXT.values}
 
-  def summarize
+  def summarize(first_message: aidiff_messages.first, has_artifact: !aidiff_artifact.nil?)
     {
       id: id,
-      title: generate_title,
+      title: generate_title(first_message),
       updated_at: updated_at,
       context_type: context_type,
-      has_artifact: !aidiff_artifact.nil?
+      has_artifact: has_artifact
     }
+  end
+
+  # Same as calling summarize on each thread, in three queries instead of
+  # two per thread.
+  def self.summarize_all(threads)
+    threads = threads.to_a
+    thread_ids = threads.map(&:id)
+    first_message_ids = AidiffMessage.where(aidiff_thread_id: thread_ids).group(:aidiff_thread_id).minimum(:id)
+    first_messages = AidiffMessage.where(id: first_message_ids.values).index_by(&:aidiff_thread_id)
+    thread_ids_with_artifact = AidiffArtifact.where(aidiff_thread_id: thread_ids).distinct.pluck(:aidiff_thread_id).to_set
+    threads.map do |thread|
+      thread.summarize(
+        first_message: first_messages[thread.id],
+        has_artifact: thread_ids_with_artifact.include?(thread.id)
+      )
+    end
   end
 
   def summarize_with_messages
@@ -64,8 +80,7 @@ class AidiffThread < ApplicationRecord
     )
   end
 
-  def generate_title
-    msg = aidiff_messages.first
+  def generate_title(msg = aidiff_messages.first)
     msg_title = msg&.is_preset && msg&.preset_chip_text ? msg&.preset_chip_text : msg&.content
     msg_title
   end
