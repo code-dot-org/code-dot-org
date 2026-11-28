@@ -2,7 +2,14 @@ import {
   useTheme,
   ThemeProvider,
 } from '@code-dot-org/component-library/common/contexts';
-import {AudioRecorder, ExplanationTypes} from '@code-dot-org/lesson-deep-dive';
+import {useApiClient} from '@code-dot-org/core/api';
+import {
+  AudioRecorder,
+  createChallengeResponse,
+  ExplanationTypes,
+  requestEvaluation,
+  uploadChallengeResponseAsset,
+} from '@code-dot-org/lesson-deep-dive';
 import {createTheme, ThemeProvider as MuiThemeProvider} from '@mui/material';
 import {ReactFlowProvider, useReactFlow} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
@@ -14,12 +21,9 @@ import {SketchlabReactFlowNode} from '@cdo/apps/lab2/types';
 import ReactFlowCanvas from '@cdo/apps/sketchlab/reactFlow/components/ReactFlowCanvas';
 import {ReactFlowSketchLabSources} from '@cdo/apps/sketchlab/reactFlow/types';
 import {createSketchSnapshotBlob} from '@cdo/apps/sketchlab/reactFlow/utils/createSketchSnapshotBlob';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createUuid} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
-
-import {requestEvaluation} from './requestEvaluation';
 
 import styles from './whiteboard-challenge.module.scss';
 
@@ -85,15 +89,6 @@ async function buildStarterImageNode(
       locked: true,
     },
   };
-}
-
-// The subset of ChallengeResponse#summarize(assets_for_upload: true) we
-// consume: the asset id to PUT the whiteboard image bytes to, and the
-// attempt number create adds.
-interface CreatedChallengeResponse {
-  id: number;
-  assets: {id: number; asset_type: string}[];
-  attempt_number: number;
 }
 
 const darkTheme = createTheme({
@@ -183,6 +178,7 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
   const timeoutRef = useRef<NodeJS.Timeout>();
 
   const reactFlow = useReactFlow();
+  const api = useApiClient();
 
   const canSubmit =
     !submitted &&
@@ -280,19 +276,13 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
       const text =
         explanationType === ExplanationTypes.TEXT ? textExplanation : null;
 
-      const response = await HttpClient.post(
-        '/challenge_responses',
-        JSON.stringify({
-          challenge_id: challengeId,
-          is_final: true,
-          assets: [{asset_type: 'whiteboard_image'}],
-          transcript: transcript,
-          student_text: text,
-        }),
-        true, // useAuthenticityToken
-        {'Content-Type': 'application/json'}
-      );
-      const created: CreatedChallengeResponse = await response.json();
+      const created = await createChallengeResponse(api.transport, {
+        challenge_id: challengeId,
+        is_final: true,
+        assets: [{asset_type: 'whiteboard_image'}],
+        transcript: transcript,
+        student_text: text,
+      });
 
       const assetId = created.assets.find(
         asset => asset.asset_type === 'whiteboard_image'
@@ -300,16 +290,16 @@ const WhiteboardChallengeContent: FC<WhiteboardChallengeProps> = ({
       if (assetId === undefined) {
         throw new Error('The server did not return a whiteboard asset.');
       }
-      await HttpClient.put(
-        `/challenge_response_assets/${assetId}/upload`,
+      await uploadChallengeResponseAsset(
+        api.transport,
+        assetId,
         blob,
-        true, // useAuthenticityToken
-        {'Content-Type': 'image/png'}
+        'image/png'
       );
 
       // Fire-and-forget: the evaluation result goes to the teacher, not the
       // student, so the submission flow does not wait on it.
-      const status = await requestEvaluation(created.id);
+      const status = await requestEvaluation(api.transport, created.id);
       setChallengeResponseId(created.id);
       setEvaluationStatus(status);
       submitCallback(true);

@@ -1,11 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {useApiClient} from '@code-dot-org/core/api';
 import {
   Challenge,
   ChallengeResponse,
   ChallengeResponseDetail,
-  challengeResponseValidator,
   EvaluationStatus,
   ExplanationTypes,
+  getChallengeResponse,
   ProjectDetailsCard,
 } from '@code-dot-org/lesson-deep-dive';
 import {Button as MuiButton, Typography} from '@mui/material';
@@ -15,7 +16,6 @@ import {useNavigate} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import SparklePulse from '../Animations/SparklePulse';
@@ -55,6 +55,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
   challenge,
   challengeType,
 }) => {
+  const api = useApiClient();
   const [submitted, setSubmitted] = useState(false);
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [explanationType, setExplanationType] = useState<string | null>(null);
@@ -157,14 +158,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
       challengeResponseId !== 0
     ) {
       const intervalId = setInterval(() => {
-        HttpClient.fetchJson<ChallengeResponse>(
-          `/challenge_responses/${challengeResponseId}`,
-          {},
-          challengeResponseValidator
-        )
-          .then(response => {
-            return response.value;
-          })
+        getChallengeResponse(api.transport, challengeResponseId)
           .then(value => {
             const status = value.evaluation_status;
             const outcome =
@@ -195,7 +189,7 @@ const ChallengeBox: FC<ChallengeBoxProps> = ({
       setPolling(false);
       setShowConfirmation(false);
     }
-  }, [polling, evaluationStatus, challengeResponseId]);
+  }, [api, polling, evaluationStatus, challengeResponseId]);
 
   const revealOutcome = () => {
     if (!pendingOutcome) {

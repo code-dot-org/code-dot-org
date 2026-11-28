@@ -1,10 +1,25 @@
 import type {Transport} from '@code-dot-org/core/api';
 
 import {
+  challengeResponseValidator,
   challengeValidator,
   type Challenge,
+  type ChallengeResponse,
+  type ChallengeResponseAsset,
   type ReflectionValue,
 } from './types';
+
+export type CreateChallengeResponseRequest = {
+  challenge_id: number;
+  is_final: boolean;
+  assets: {asset_type: ChallengeResponseAsset['asset_type']}[];
+  transcript: string | null;
+  student_text?: string | null;
+};
+
+export type CreateChallengeResponseResponse = ChallengeResponse & {
+  attempt_number: number;
+};
 
 /** GET /challenges */
 export async function listChallenges(
@@ -17,6 +32,37 @@ export async function listChallenges(
     url: `/challenges?${params.toString()}`,
   });
   return challengeValidator(raw);
+}
+
+/** POST /challenge_responses */
+export async function createChallengeResponse(
+  transport: Transport,
+  request: CreateChallengeResponseRequest,
+): Promise<CreateChallengeResponseResponse> {
+  const raw = await transport.request<Record<string, unknown>>({
+    method: 'POST',
+    url: '/challenge_responses',
+    body: request,
+  });
+  return {
+    ...challengeResponseValidator(raw),
+    attempt_number: Number(raw.attempt_number),
+  };
+}
+
+/** PUT /challenge_response_assets/:id/upload */
+export async function uploadChallengeResponseAsset(
+  transport: Transport,
+  assetId: number,
+  data: Blob,
+  contentType: string,
+): Promise<void> {
+  await transport.request<unknown>({
+    method: 'PUT',
+    url: `/challenge_response_assets/${assetId}/upload`,
+    body: data,
+    headers: {'Content-Type': contentType},
+  });
 }
 
 /** POST /user_lesson_reflections */

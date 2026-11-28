@@ -13,6 +13,7 @@ export {default as PersonalizedWelcomeBox} from './PersonalizedWelcomeBox';
 export {default as PodcastsBox} from './ReviewModalities/PodcastsBox';
 export {default as PreSkillsCheck} from './PreSkillsCheck';
 export {default as ReflectionBox} from './Reflection/ReflectionBox';
+export {requestEvaluation} from './ChallengeActivities/requestEvaluation';
 export {default as Scramble} from './SkillsCheck/QuestionTypes/Scramble';
 export {default as Sort} from './SkillsCheck/QuestionTypes/Sort';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
@@ -51,6 +52,11 @@ export type {
   Sticker,
   StickerSection,
 } from './types';
+export {
+  createChallengeResponse,
+  listChallenges,
+  uploadChallengeResponseAsset,
+} from './api';
 export {assetWithUrl} from './gallery/assetUtils';
 export {
   challengeResponseDetailValidator,

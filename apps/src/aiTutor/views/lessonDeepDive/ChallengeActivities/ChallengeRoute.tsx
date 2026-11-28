@@ -1,9 +1,9 @@
-import {Challenge, challengeValidator} from '@code-dot-org/lesson-deep-dive';
+import {useApiClient} from '@code-dot-org/core/api';
+import {Challenge, listChallenges} from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useEffect, useState} from 'react';
 import {useNavigate, useParams} from 'react-router-dom';
 
 import {useLessonDeepDiveChallengesEnabled} from '@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled';
-import HttpClient from '@cdo/apps/util/HttpClient';
 import {ChallengeTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import ChallengeBox from './ChallengeBox';
@@ -20,23 +20,18 @@ const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
     modality: string;
   }>();
   const navigate = useNavigate();
+  const api = useApiClient();
   const challengesEnabled = useLessonDeepDiveChallengesEnabled();
   const [challenge, setChallenge] = useState<Challenge | null>(null);
   const [loadFailed, setLoadFailed] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
-    const params = new URLSearchParams();
-    params.append('lesson_id', lessonId.toString());
-    HttpClient.fetchJson<Challenge[]>(
-      `/challenges?${params}`,
-      {},
-      challengeValidator
-    )
-      .then(({value}) => {
+    listChallenges(api.transport, lessonId)
+      .then(challenges => {
         if (cancelled) return;
         const id = parseInt(challengeId ?? '', 10);
-        const found = value?.find(c => c.id === id);
+        const found = challenges.find(c => c.id === id);
         if (found) {
           setChallenge(found);
         } else {
@@ -49,7 +44,7 @@ const ChallengeRoute: FC<ChallengeRouteProps> = ({lessonId}) => {
     return () => {
       cancelled = true;
     };
-  }, [lessonId, challengeId, navigate]);
+  }, [api, lessonId, challengeId, navigate]);
 
   if (!challengesEnabled) {
     return null;
