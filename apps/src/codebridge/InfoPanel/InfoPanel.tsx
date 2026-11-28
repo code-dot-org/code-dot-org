@@ -44,6 +44,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorResponseSchemaSettings,
+    aiTutorStartMode,
     tutorVideos,
     config,
     onAssetUploaded,
@@ -171,6 +172,7 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+        aiTutorStartMode={aiTutorStartMode}
         tutorVideos={tutorVideos}
         documentationUrl={documentationUrl}
         backpackProps={backpackProps}

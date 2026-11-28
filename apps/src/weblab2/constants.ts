@@ -31,6 +31,23 @@ export const DEFAULT_ANSWER_TYPES: AiTutorAnswerType[] = [
   'testCase',
 ];
 
+// Start mode offers levelbuilders every answer type, whatever the level allows students.
+export const START_MODE_ANSWER_TYPES: AiTutorAnswerType[] = [
+  'buildPage',
+  'buildHTML',
+  'buildCSS',
+  'buildJavaScript',
+  'buildJSON',
+  'ask',
+  'hint',
+  'debug',
+  'example',
+  'explainCode',
+  'documentation',
+  'pseudocode',
+  'testCase',
+];
+
 // Map of our legacy modes to their corresponding answer types. This is used to populate the answer types for levels
 // that were created with a legacy mode before we had answer types.
 export const TUTOR_MODE_TO_ANSWER_TYPE: Record<

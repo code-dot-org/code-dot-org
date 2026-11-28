@@ -21,6 +21,7 @@ import {useAppDispatch, useAppSelector} from '../util/reduxHooks';
 
 import {
   DEFAULT_ANSWER_TYPES,
+  START_MODE_ANSWER_TYPES,
   TUTOR_MODE_TO_ANSWER_TYPE,
   WEBLAB2_EDITABLE_FILE_TYPES,
   WEBLAB2_SUPPORTED_FILE_TYPES,
@@ -145,6 +146,9 @@ const Weblab2View: React.FC<
   }, [source, levelProperties.longInstructions, hasEdited, hasRun]);
 
   const systemPrompt = useMemo(() => {
+    if (getIsStartMode()) {
+      return generateAiTutorPrompt(START_MODE_ANSWER_TYPES);
+    }
     let answerTypes: AiTutorAnswerType[] | undefined =
       levelProperties.aiTutorPromptSettings?.answerTypes;
     if (
@@ -211,7 +215,8 @@ const Weblab2View: React.FC<
 
   const aiTutorResponseSchemaSettings = useAiTutorResponseSchemaSettings(
     source,
-    levelProperties?.widgetView
+    // Start mode shows the code even in widget view.
+    levelProperties?.widgetView && !getIsStartMode()
   );
 
   return (
@@ -229,6 +234,7 @@ const Weblab2View: React.FC<
           onAssetRemoved={onAssetRemoved}
           aiTutorSystemPrompt={systemPrompt}
           aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
+          aiTutorStartMode={getIsStartMode()}
           tutorVideos={weblab2VideoFiles}
           aiTutorInitialWelcomeMessage={WEBLAB2_WELCOME_CHAT_MESSAGE}
           enableUserAddedSelectionContext={true}

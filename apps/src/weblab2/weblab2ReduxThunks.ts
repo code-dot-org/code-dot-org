@@ -8,6 +8,7 @@ import {
   Notification,
 } from '@cdo/apps/aichat/types/chatEvents';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {
   markProjectEdited,
   setAiTutorVersionFiles,
@@ -56,7 +57,8 @@ export const acceptAiTutorVersion = createAsyncThunk<
     const state = thunkAPI.getState();
     const sources = state.lab2Project.projectSources;
     const channelId = state.lab.channel?.id;
-    if (!channelId || !sources) {
+    const isStartMode = getIsStartMode();
+    if (!sources || (!channelId && !isStartMode)) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logError(
@@ -106,6 +108,11 @@ export const acceptAiTutorVersion = createAsyncThunk<
       ...sources,
       source: updatedSource,
     };
+    // Start mode has no channel; the levelbuilder Save button saves the source.
+    if (isStartMode) {
+      thunkAPI.dispatch(setSource(updatedSource));
+      return;
+    }
     // Save sources before AI Tutor version if there were any changes to the project since the last saved version.
     await thunkAPI.dispatch(
       setAndSaveProjectSources(
