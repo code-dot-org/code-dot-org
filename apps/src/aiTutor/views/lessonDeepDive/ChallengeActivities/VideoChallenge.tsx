@@ -1,6 +1,8 @@
 import {
   Challenge,
   challengeResponseValidator,
+  VideoCanvas,
+  VideoCanvasMode,
 } from '@code-dot-org/lesson-deep-dive';
 import React, {FC, useCallback, useEffect, useRef, useState} from 'react';
 
@@ -10,7 +12,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {requestEvaluation} from './requestEvaluation';
-import VideoCanvas, {VideoCanvasMode} from './VideoCanvas';
+import {STICKER_SECTIONS} from './stickers';
 
 import styles from './video-challenge.module.scss';
 
@@ -192,6 +194,7 @@ const VideoChallenge: FC<VideoChallengeProps> = ({
         recordedAudioBlob={recordedAudioBlob}
         setRecordedAudioBlob={setRecordedAudioBlob}
         timeLimitSeconds={60}
+        stickerSections={STICKER_SECTIONS}
       />
     </div>
   );

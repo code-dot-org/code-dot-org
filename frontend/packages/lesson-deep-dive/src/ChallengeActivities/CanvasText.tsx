@@ -1,4 +1,4 @@
-import React, {FC, RefObject, useRef} from 'react';
+import {type ElementRef, type FC, type RefObject, useRef} from 'react';
 import {Label, Tag, Text, Transformer} from 'react-konva';
 
 import {
@@ -9,10 +9,10 @@ import {
   textStyleAttrs,
 } from './canvasTextUtils';
 
-type LabelNode = React.ElementRef<typeof Label>;
-type TextNode = React.ElementRef<typeof Text>;
-type TagNode = React.ElementRef<typeof Tag>;
-export type TransformerNode = React.ElementRef<typeof Transformer>;
+type LabelNode = ElementRef<typeof Label>;
+type TextNode = ElementRef<typeof Text>;
+type TagNode = ElementRef<typeof Tag>;
+export type TransformerNode = ElementRef<typeof Transformer>;
 
 interface CanvasTextProps {
   item: CanvasTextItem;
@@ -33,7 +33,7 @@ const CanvasText: FC<CanvasTextProps> = ({
   const {text: textAttrs, tag: tagAttrs} = textStyleAttrs(
     item.style,
     item.color,
-    item.fontSize
+    item.fontSize,
   );
 
   // Convert the transformer's scale into width and font size so text reflows
@@ -46,7 +46,7 @@ const CanvasText: FC<CanvasTextProps> = ({
     const {width, fontSize} = resizeText(
       item,
       transformer.getActiveAnchor(),
-      label.scaleX()
+      label.scaleX(),
     );
     const styled = textStyleAttrs(item.style, item.color, fontSize);
     label.scale({x: 1, y: 1});

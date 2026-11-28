@@ -16,6 +16,8 @@ export {default as Scramble} from './SkillsCheck/QuestionTypes/Scramble';
 export {default as Sort} from './SkillsCheck/QuestionTypes/Sort';
 export {default as TimeSpentBox} from './StudentLessonStats/TimeSpentBox';
 export {default as TutorSummaryBox} from './TutorSummaryBox';
+export {default as VideoCanvas} from './ChallengeActivities/VideoCanvas';
+export type {VideoCanvasMode} from './ChallengeActivities/VideoCanvas';
 export {default as ValidatedLevelsBox} from './StudentLessonStats/ValidatedLevelsBox';
 export {default as VideoRecorder} from './ChallengeActivities/VideoRecorder';
 export {default as VideosBox} from './ReviewModalities/VideosBox';
@@ -43,6 +45,8 @@ export type {
   ReflectionData,
   ReflectionValue,
   ScrambleSolution,
+  Sticker,
+  StickerSection,
 } from './types';
 export {assetWithUrl} from './gallery/assetUtils';
 export {

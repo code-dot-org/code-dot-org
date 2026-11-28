@@ -1,3 +1,5 @@
+import {type StickerSection} from '@code-dot-org/lesson-deep-dive';
+
 import alien from '@cdo/static/tutor/stickers/alien.svg';
 import backhandIndexPointingUp from '@cdo/static/tutor/stickers/backhand-index-pointing-up.svg';
 import brain from '@cdo/static/tutor/stickers/brain.svg';
@@ -49,17 +51,6 @@ import trophy from '@cdo/static/tutor/stickers/trophy.svg';
 import twoHearts from '@cdo/static/tutor/stickers/two-hearts.svg';
 import unicorn from '@cdo/static/tutor/stickers/unicorn.svg';
 import videoGame from '@cdo/static/tutor/stickers/video-game.svg';
-
-export interface Sticker {
-  // Unicode name; also the accessible name
-  name: string;
-  src: string;
-}
-
-export interface StickerSection {
-  title: string;
-  stickers: Sticker[];
-}
 
 export const STICKER_SECTIONS: StickerSection[] = [
   {

@@ -1,4 +1,4 @@
-import React, {FC, useEffect, useState} from 'react';
+import {type FC, useEffect, useState} from 'react';
 import {Image as KonvaImage} from 'react-konva';
 
 import {CanvasStickerItem} from './canvasTextUtils';
