@@ -33,9 +33,9 @@ Write PR descriptions to `.github/pull_request_template.md` and `.github/PULL_RE
 ## README hierarchy
 
 Before editing or creating files in any subdirectory, read all `README.md`
-files in the directory path from the repo root down to and including the
-target file's directory. This helps identify local patterns, conventions,
-and architecture.
+and `AGENTS.md` files in the directory path from the repo root down to and
+including the target file's directory. This helps identify local patterns,
+conventions, and architecture.
 
 **Example:** Before editing
 `dashboard/engines/observability/lib/observability/sentry.rb`, read:
