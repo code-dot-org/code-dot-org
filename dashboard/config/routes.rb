@@ -441,6 +441,13 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :ailab_datasets, only: [:create], constraints: {id: /[A-Za-z0-9_-]+/} do
+      member do
+        get :csv
+        get :metadata
+      end
+    end
+
     resources :levels do
       collection do
         get 'get_filtered_levels'
