@@ -14,7 +14,7 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
     Timecop.freeze do
       # Initial creation: No reminders
       application_hash = build(:pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id)
-      application = create(:pd_teacher_application, form_data_hash: application_hash)
+      application = create_application_with_workshop(form_data_hash: application_hash)
       Services::RegistrationReminder.send_registration_reminders!
       assert_empty application.emails.where(email_type: 'registration_reminder')
 
@@ -60,33 +60,33 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
   end
 
   test 'applications_needing_first_reminder omits applications with unsent registration email' do
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: nil)
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
   test 'applications_needing_first_reminder omits applications with recent registration email' do
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 6.days.ago)
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
   test 'applications_needing_first_reminder omits applications that already created a registration reminder' do
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: nil)
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
   test 'applications_needing_first_reminder omits teachers already enrolled' do
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
     create(:pd_enrollment, user: application.user)
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
   test 'applications_needing_first_reminder omits applications prior to year before current app year' do
-    application = create(:pd_teacher_application, application_year: Pd::Application::ActiveApplicationModels::APPLICATION_PRIOR_YEAR)
+    application = create_application_with_workshop(application_year: Pd::Application::ActiveApplicationModels::APPLICATION_PRIOR_YEAR)
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
     assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
@@ -94,14 +94,14 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
   test 'applications_needing_first_reminder includes eligible applications' do
     # This application meets all the requirements: A two-week-old registration email
     # and no enrollment or reminder
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
     assert_equal 1, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
   test 'applications_needing_first_reminder old enrollments do not make an application ineligible' do
     # An old enrollment does not render this application ineligible for a reminder email
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
     create(:pd_enrollment, user: application.user, created_at: 1.year.ago)
     assert_equal 1, Services::RegistrationReminder.applications_needing_first_reminder.count
@@ -109,7 +109,7 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
 
   test 'applications_needing_first_reminder does not double reminder emails for malformed records' do
     # This malformed application with two accepted emails should only produce one result
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
     assert_equal 1, Services::RegistrationReminder.applications_needing_first_reminder.count
@@ -120,7 +120,7 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
   end
 
   test 'applications_needing_second_reminder omits applications with unsent reminder email' do
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: nil)
@@ -128,7 +128,7 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
 
   test 'applications_needing_second_reminder omits applications with recent reminder email' do
     # Does not include applications where the first reminder was sent less than a week ago
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 6.days.ago)
     assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
@@ -136,7 +136,7 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
 
   test 'applications_needing_second_reminder omits applications with two reminder emails' do
     # An application that already created its second reminder is not eligible
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: nil)
@@ -145,7 +145,7 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
 
   test 'applications_needing_second_reminder omits teachers who already enrolled' do
     # Does not include applications where the teacher is already enrolled in a workshop
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago)
     create(:pd_enrollment, user: application.user)
@@ -155,13 +155,13 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
   test 'applications_needing_second_reminder omits malformed applications with no registration email' do
     # This malformed application with a 'registration_reminder' but no 'accepted' does
     # not receive another reminder
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago)
     assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
   end
 
   test 'applications_needing_second_reminder omits applications prior to application year' do
-    application = create(:pd_teacher_application, application_year: Pd::Application::ActiveApplicationModels::APPLICATION_PRIOR_YEAR)
+    application = create_application_with_workshop(application_year: Pd::Application::ActiveApplicationModels::APPLICATION_PRIOR_YEAR)
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago)
     assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
@@ -169,19 +169,20 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
 
   test 'applications_needing_first_reminder omits applications to deleted workshops' do
     workshop = create(:pd_workshop, deleted_at: 1.day.ago)
-    application_hash = build(:pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id)
-    application_hash[:pd_workshop_id] = workshop.id
-    application = create(:pd_teacher_application, form_data: application_hash.to_json)
-    create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
-    create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago)
-    assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
+    application = create(:pd_teacher_application, pd_workshop_id: workshop.id)
+    create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
+    assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
+  end
+
+  test 'applications_needing_first_reminder omits applications with no assigned workshop' do
+    application = create(:pd_teacher_application)
+    create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
+    assert_equal 0, Services::RegistrationReminder.applications_needing_first_reminder.count
   end
 
   test 'applications_needing_second_reminder omits applications to deleted workshops' do
     workshop = create(:pd_workshop, deleted_at: 1.day.ago)
-    application_hash = build(:pd_teacher_application_hash, regional_partner_id: create(:regional_partner).id)
-    application_hash[:pd_workshop_id] = workshop.id
-    application = create(:pd_teacher_application, form_data: application_hash.to_json)
+    application = create(:pd_teacher_application, pd_workshop_id: workshop.id)
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago)
     assert_equal 0, Services::RegistrationReminder.applications_needing_second_reminder.count
@@ -190,7 +191,7 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
   test 'applications_needing_second_reminder includes eligible applications' do
     # This application meets all the requirements: A registration email, a reminder email at least
     # a week old, and no second reminder or enrollment.
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago)
     assert_equal 1, Services::RegistrationReminder.applications_needing_second_reminder.count
@@ -198,7 +199,7 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
 
   test 'applications_needing_second_reminder old enrollments do not make an application ineligible' do
     # An old enrollment does not render this application ineligible for a reminder email
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago)
     create(:pd_enrollment, user: application.user, created_at: 1.year.ago)
@@ -207,10 +208,48 @@ class Services::RegistrationReminderTest < ActiveSupport::TestCase
 
   test 'applications_needing_second_reminder does not double reminder emails for malformed records' do
     # This malformed application with two 'accepted' emails should only produce one result
-    application = create(:pd_teacher_application)
+    application = create_application_with_workshop
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 2.weeks.ago)
     create(:pd_application_email, application: application, email_type: 'registration_reminder', sent_at: 1.week.ago)
     assert_equal 1, Services::RegistrationReminder.applications_needing_second_reminder.count
+  end
+
+  test 'send_registration_reminders! renders and sends the reminder for an application with a workshop' do
+    Pd::Application::TeacherApplication.any_instance.unstub(:deliver_email)
+    application = create_application_with_workshop
+    create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
+
+    assert_difference 'ActionMailer::Base.deliveries.count', 1 do
+      Services::RegistrationReminder.send_registration_reminders!
+    end
+    assert_equal 1, application.emails.where.not(sent_at: nil).where(email_type: 'registration_reminder').count
+  end
+
+  test 'send_registration_reminders! skips an accepted application with no assigned workshop' do
+    Pd::Application::TeacherApplication.any_instance.unstub(:deliver_email)
+    application = create(:pd_teacher_application)
+    create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
+
+    assert_no_difference 'ActionMailer::Base.deliveries.count' do
+      Services::RegistrationReminder.send_registration_reminders!
+    end
+    assert_empty application.emails.where(email_type: 'registration_reminder')
+  end
+
+  test 'send_registration_reminders! skips an accepted application whose workshop was deleted' do
+    Pd::Application::TeacherApplication.any_instance.unstub(:deliver_email)
+    application = create_application_with_workshop
+    create(:pd_application_email, application: application, email_type: 'accepted', sent_at: 1.week.ago)
+    application.workshop.destroy!
+
+    assert_no_difference 'ActionMailer::Base.deliveries.count' do
+      Services::RegistrationReminder.send_registration_reminders!
+    end
+    assert_empty application.emails.where(email_type: 'registration_reminder')
+  end
+
+  private def create_application_with_workshop(**attributes)
+    create(:pd_teacher_application, pd_workshop_id: create(:pd_workshop).id, **attributes)
   end
 end

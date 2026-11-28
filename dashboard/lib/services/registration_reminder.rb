@@ -64,9 +64,10 @@ class Services::RegistrationReminder
         on pd_applications.user_id = pd_enrollments.user_id
         and pd_enrollments.created_at >= accepted.sent_at
       SQL
+      # The reminder links to the assigned workshop, which lives in properties, not form_data.
       joins(<<~SQL.squish).
-        left outer join pd_workshops
-        on pd_workshops.id = CAST(JSON_EXTRACT(pd_applications.form_data, '$.pd_workshop_id') AS UNSIGNED)
+        inner join pd_workshops
+        on pd_workshops.id = CAST(JSON_UNQUOTE(JSON_EXTRACT(pd_applications.properties, '$.pd_workshop_id')) AS UNSIGNED)
       SQL
       where(pd_applications: {application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR}).
       where(pd_enrollments: {id: nil}).
