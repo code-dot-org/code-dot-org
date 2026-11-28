@@ -119,6 +119,9 @@ cat <<JSON > $FIRST_BOOT
       "revision": "<%=commit%>",
     <% end -%>
     "branch": "${Branch}",
+<% if repo != CdoApp::REPO -%>
+    "repo": "<%=repo%>",
+<% end -%>
     "sync": <%=!daemon%>
   },
   "cdo-secrets": {

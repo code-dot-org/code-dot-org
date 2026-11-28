@@ -13,6 +13,7 @@ namespace :adhoc do
         filename: ENV.fetch('TEMPLATE', nil),
         stack_name: ENV['STACK_NAME'].dup,
         branch: ENV['BRANCH'] || ENV.fetch('branch', nil),
+        repo: ENV['REPO'] || ENV.fetch('repo', nil),
         database: ENV.fetch('DATABASE', nil),
         frontends: ENV.fetch('FRONTENDS', nil),
         cdn_enabled: ENV.fetch('CDN_ENABLED', nil),

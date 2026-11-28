@@ -6,9 +6,10 @@
 # Chef Managed environments (staging/test/levelbuilder/production) use SSH to authenticate as the user `deploy-code-org` to GitHub.
 include_recipe 'cdo-github-access'
 has_ssh_key = node['cdo-github-access'] && node['cdo-github-access']['id_rsa'] != ''
-if has_ssh_key
-  node.override['cdo-repository']['url'] = 'git@github.com:code-dot-org/code-dot-org.git'
-end
+repo = node['cdo-repository']['repo']
+node.default['cdo-repository']['url'] = has_ssh_key ?
+  "git@github.com:#{repo}.git" :
+  "https://github.com/#{repo}.git"
 
 home_path = node[:home]
 git_path = node.default['cdo-repository']['git_path'] = File.join(home_path, node.chef_environment)

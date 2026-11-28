@@ -61,6 +61,13 @@ rescue Exception => exception
   return ''
 end
 
+# Production may deploy from a private mirror; link commits in whichever repo
+# this checkout tracks.
+def github_commit_url(sha)
+  repo = `git config --get remote.origin.url`.strip[%r{github\.com[:/](.+?)(?:\.git)?\z}, 1]
+  "https://github.com/#{repo || 'code-dot-org/code-dot-org'}/commit/#{sha}"
+end
+
 def build
   Dir.chdir(deploy_dir) do
     return 0 unless RakeUtils.git_updates_available? || File.file?(STARTED) || !CDO.daemon
@@ -76,7 +83,7 @@ def build
 
     git_revision = RakeUtils.git_revision
 
-    ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
+    ChatClient.log github_commit_url(git_revision), message_format: 'text', color: 'purple'
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
@@ -119,7 +126,7 @@ def main
     projects = 'websites' if projects.empty?
 
     commit_hash = RakeUtils.git_revision
-    commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}"
+    commit_url = github_commit_url(commit_hash)
 
     duration = Time.now.to_i - start_time.to_i
     formatted_duration = RakeUtils.format_duration(duration)
@@ -158,7 +165,7 @@ def main
         ChatClient.message 'server operations', message, color: 'green'
         ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
         DevelopersTopic.set_dtp 'yes'
-        InfraProductionTopic.set_dtp_commit GitHub.sha('production')
+        InfraProductionTopic.set_dtp_commit commit_hash[0..7]
 
         # Schedule a reminder for the dotd to check Zendesk in 2 hours
         Slack.remind(DevelopersTopic.dotd_id, Time.now.to_i + 7200, 'Reminder: check <https://codeorg.zendesk.com/agent/filters/44863373|Zendesk>')
