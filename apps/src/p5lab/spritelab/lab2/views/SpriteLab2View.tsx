@@ -236,7 +236,8 @@ const LOCKED_REASON = 'Unlocks later in the lesson.';
 
 // ?image-source=live|cached overrides the level's for a levelbuilder, and
 // ?image-cache-url= reads another cache (a local one, or a version under
-// review), for internal testing.
+// review), for internal testing. ?image-finished=true uses the cache's
+// finished pictures where it has them.
 function getImageSourceParam(): ImageSource | undefined {
   const value = queryParams('image-source');
   return isImageSource(value) ? value : undefined;
@@ -2637,6 +2638,7 @@ const SpriteLab2View: React.FunctionComponent<SpriteLab2ViewProps> = ({
                   isLevelbuilder
                 )}
                 imageCacheUrl={imageCacheUrlParam}
+                finishedImages={queryParams('image-finished') === 'true'}
               />
             </div>
           )}

@@ -135,8 +135,8 @@ export default function useImageWriter({
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const reclaimAsset = useReclaimAsset();
   const releaseRemovedImages = useReleaseRemovedImages();
-  // Uploads keyed by the result's filename, so choosing an earlier picture
-  // of the session again reuses its upload.
+  // Each picture's file address, keyed by the result's filename, so
+  // choosing an earlier picture of the session again uploads nothing.
   const uploadsRef = useRef(new Map<string, Upload>());
   // The URL of every file the session uploaded, and of every file an image
   // stopped pointing at; one file can appear under several ?t= URLs.
@@ -212,14 +212,15 @@ export default function useImageWriter({
       const dataURI = bytesToDataURI(result.uint8Array, result.mediaType);
       let uploaded = uploadsRef.current.get(result.filename);
       if (!uploaded) {
-        const sourceUrl = await upload(
-          result.filename,
-          result.uint8Array,
-          result.mediaType
-        );
+        const sourceUrl =
+          result.publishedUrl ??
+          (await upload(result.filename, result.uint8Array, result.mediaType));
         uploaded = {sourceUrl, frameSize: await measuredSize(dataURI)};
         uploadsRef.current.set(result.filename, uploaded);
-        recordSessionUrl(sourceUrl);
+        // A published file is not the project's to delete.
+        if (!result.publishedUrl) {
+          recordSessionUrl(sourceUrl);
+        }
       }
       dropHeldPixelsOf(target);
       return write(target, {

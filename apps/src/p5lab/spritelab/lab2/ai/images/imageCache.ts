@@ -15,6 +15,7 @@ import type {GeneratedFile} from 'ai';
 import {shuffle} from 'lodash';
 
 import {bytesToBase64} from './encoding';
+import type {GeneratedImageResult} from './imageGeneration';
 import {ImageStyle} from './types';
 
 /** Where a level's pictures come from: the cache (the default) or the
@@ -91,8 +92,9 @@ export function sentencePath(
 // about the same variants. A fetch that failed is asked again.
 const missing = new Set<string>();
 
-// The variants found most recently in one folder, oldest first. Finding a
-// variant in another folder starts the list again.
+// The variants found most recently under one key, oldest first: a folder of
+// raw pictures, or a folder's finished single pictures or strips. Finding a
+// variant under another key starts the list again.
 let recentlyFound: {folder: string; variants: number[]} | undefined;
 // The list keeps this many, which leaves two of a full set to choose
 // between at random. With one left, the pictures would repeat in a fixed
@@ -198,6 +200,106 @@ export async function findCachedImage(
           ? first
           : fetchRaw(fileUrl(variant, wanted));
       },
+    };
+  }
+  return undefined;
+}
+
+// Finished pictures: what the pipeline makes of a cached image, published
+// beside the raw files so a project can point at one instead of uploading
+// its own copy.
+//
+//   <base>/<version>-finished/<sentence path>/<NN>.png       single picture
+//   <base>/<version>-finished/<sentence path>/<NN>-set.png   character strip
+//   ...                                       <NN>[-set].json  its details
+//
+// A published finished file never changes: projects keep its address.
+export const FINISHED_FOLDER_SUFFIX = '-finished';
+
+/** What the pipeline reported for a finished picture when it was
+    published. */
+export type FinishedDetails = Pick<
+  GeneratedImageResult,
+  'pixelGridSize' | 'trimmed' | 'generation' | 'frames'
+>;
+
+export interface FinishedImage {
+  variant: number;
+  url: string;
+  uint8Array: Uint8Array;
+  mediaType: string;
+  details: FinishedDetails;
+}
+
+export function finishedFileStem(variant: number, set: boolean): string {
+  return `${variantName(variant)}${set ? '-set' : ''}`;
+}
+
+export interface FindFinishedImageParams
+  extends Omit<FindCachedImageParams, 'characterSet'> {
+  /** A character's strip of poses rather than one picture. */
+  set: boolean;
+}
+
+/**
+ * A finished picture of the filled sentence, chosen among the published
+ * variants as findCachedImage chooses, or undefined when none is published.
+ */
+export async function findFinishedImage(
+  params: FindFinishedImageParams
+): Promise<FinishedImage | undefined> {
+  const {
+    sentenceId,
+    wordIds,
+    style,
+    set,
+    baseUrl = IMAGE_CACHE_BASE_URL,
+    version = IMAGE_CACHE_VERSION,
+  } = params;
+  const folder = `${baseUrl}${version}${FINISHED_FOLDER_SUFFIX}/${sentencePath(
+    sentenceId,
+    wordIds,
+    style
+  )}`;
+  // Single pictures and strips in one folder each keep their own list of
+  // recently found variants.
+  const recentKey = `${folder}/${set ? 'set' : 'single'}`;
+  const variants = [...Array(VARIANT_COUNT).keys()];
+  const recent =
+    recentlyFound?.folder === recentKey ? recentlyFound.variants : [];
+  const order = [
+    ...shuffle(variants.filter(v => !recent.includes(v))),
+    ...recent,
+  ];
+  for (const variant of order) {
+    const stem = `${folder}/${finishedFileStem(variant, set)}`;
+    const detailsUrl = `${stem}.json`;
+    if (missing.has(detailsUrl)) {
+      continue;
+    }
+    const detailsResponse = await fetch(detailsUrl);
+    if (detailsResponse.status === 404) {
+      missing.add(detailsUrl);
+      continue;
+    }
+    if (!detailsResponse.ok) {
+      throw new ImageCacheMissError(detailsUrl, detailsResponse.status);
+    }
+    const details: FinishedDetails = await detailsResponse.json();
+    const url = `${stem}.png`;
+    const picture = await fetchRaw(url);
+    recentlyFound = {
+      folder: recentKey,
+      variants: [...recent.filter(v => v !== variant), variant].slice(
+        -RECENTLY_FOUND_LIMIT
+      ),
+    };
+    return {
+      variant,
+      url,
+      uint8Array: picture.uint8Array,
+      mediaType: picture.mediaType,
+      details,
     };
   }
   return undefined;

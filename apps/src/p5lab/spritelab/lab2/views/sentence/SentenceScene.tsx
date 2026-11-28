@@ -19,6 +19,8 @@ import {bytesToDataURI} from '@cdo/apps/p5lab/spritelab/lab2/ai/images/encoding'
 import {
   CachedImage,
   findCachedImage,
+  findFinishedImage,
+  FinishedImage,
   ImageSource,
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache';
 import {
@@ -68,6 +70,26 @@ import styles from './sentence-scene.module.scss';
 
 // Every picture is pixel art.
 const STYLE: ImageStyle = 'pixel';
+
+const finishedResult = (
+  finished: FinishedImage,
+  prompt: string
+): GeneratedImageResult => ({
+  ...finished.details,
+  generation: {
+    ...finished.details.generation,
+    // Replaces the prompt in the published details, so the picture records
+    // the same prompt as one the local pipeline processes.
+    prompt,
+    variant: finished.variant,
+  },
+  // The filename identifies the picture, and a published address belongs
+  // to one picture.
+  filename: finished.url,
+  uint8Array: finished.uint8Array,
+  mediaType: finished.mediaType,
+  publishedUrl: finished.url,
+});
 // The service's middle temperature.
 const TEMPERATURE = 1;
 const GENERATING_DOTS_WIDTH_PX = 48;
@@ -227,6 +249,9 @@ interface SentenceSceneProps {
   imageSource?: ImageSource;
   /** Another address to read cached pictures from (QA). */
   imageCacheUrl?: string;
+  /** Use a published finished picture where the cache has one, in place of
+      processing the raw picture and uploading the result. */
+  finishedImages?: boolean;
 }
 
 const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
@@ -253,6 +278,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
   advanced,
   imageSource = 'cached',
   imageCacheUrl,
+  finishedImages = false,
 }) => {
   const style = STYLE;
   const sentence = sentenceFor(imageType, imageSubject);
@@ -298,6 +324,17 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         baseUrl: imageCacheUrl,
       }),
     [sentence, choices, style, canAnimate, imageCacheUrl]
+  );
+  const findFinished = useCallback(
+    (): Promise<FinishedImage | undefined> =>
+      findFinishedImage({
+        sentenceId: sentence.id,
+        wordIds: sentenceWordIds(sentence, choices),
+        style,
+        set: generatesCharacterSet,
+        baseUrl: imageCacheUrl,
+      }),
+    [sentence, choices, style, generatesCharacterSet, imageCacheUrl]
   );
 
   const persist = useCallback(
@@ -358,8 +395,21 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     setError(null);
     playSound('go');
     let cached: CachedImage | undefined;
+    let finished: FinishedImage | undefined;
     let lookupFailed = false;
-    if (fromCache) {
+    if (fromCache && finishedImages) {
+      try {
+        finished = await findFinished();
+      } catch (e) {
+        // When the finished picture can't be read, the raw picture is used
+        // instead.
+        console.warn('Finished image lookup failed:', e);
+      }
+      if (run !== runRef.current) {
+        return;
+      }
+    }
+    if (fromCache && !finished) {
       try {
         cached = await findCached();
       } catch (e) {
@@ -383,13 +433,14 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         ...(typedPrompt ? {} : {sentenceId: sentence.id, choices}),
         style,
         imageSource,
-        cached: !!cached,
+        cached: !!cached || !!finished,
+        finished: !!finished,
         regenerate: !!chosenPicture || replacesGenerated,
       },
       true
     );
     // The model does not draw a filling the cache lacks.
-    if (fromCache && !cached) {
+    if (fromCache && !cached && !finished) {
       setError(
         lookupFailed
           ? "Couldn't make the picture. Try again."
@@ -428,7 +479,9 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
         generatesCharacterSet,
         bodyPlan
       );
-      const result = generatesCharacterSet
+      const result = finished
+        ? finishedResult(finished, sentPrompt)
+        : generatesCharacterSet
         ? await generateCharacterSet(sentPrompt, {
             style,
             temperature: TEMPERATURE,
@@ -440,7 +493,7 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
       if (run !== runRef.current) {
         return;
       }
-      if (cached) {
+      if (cached || finished) {
         const elapsed = Date.now() - startedAt;
         const remaining = Math.max(MIN_CACHED_GENERATING_MS - elapsed, 0);
         // Start the dots' exit MAX_LEAVING_MS before the wait ends, or at
@@ -538,6 +591,8 @@ const SentenceScene: React.FunctionComponent<SentenceSceneProps> = ({
     onReady,
     imageSource,
     findCached,
+    findFinished,
+    finishedImages,
   ]);
 
   const judge = useCallback(

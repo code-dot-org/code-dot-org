@@ -138,6 +138,9 @@ export interface GeneratedImageResult {
   filename: string;
   uint8Array: Uint8Array;
   mediaType: string;
+  /** Where these bytes are already published. A project stores this
+      address in place of uploading the bytes. */
+  publishedUrl?: string;
   /** Set when pixel-style output was normalized: physical px per art pixel. */
   pixelGridSize?: number;
   /** The image is already cropped to content: load-time trimming skips it. */

@@ -22,9 +22,11 @@ jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/characterSet', () => ({
   generateCharacterSet: (...args: unknown[]) => generateCharacterSet(...args),
 }));
 const findCachedImage = jest.fn();
+const findFinishedImage = jest.fn();
 jest.mock('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache', () => ({
   ...jest.requireActual('@cdo/apps/p5lab/spritelab/lab2/ai/images/imageCache'),
   findCachedImage: (...args: unknown[]) => findCachedImage(...args),
+  findFinishedImage: (...args: unknown[]) => findFinishedImage(...args),
 }));
 const sendEvent = jest.fn();
 jest.mock('@cdo/apps/metrics/AnalyticsReporter', () => ({
@@ -134,6 +136,7 @@ describe('SentenceScene', () => {
     generateImage.mockReset();
     generateCharacterSet.mockReset();
     findCachedImage.mockReset();
+    findFinishedImage.mockReset();
     onKeep.mockReset();
     sendEvent.mockClear();
   });
@@ -561,6 +564,87 @@ describe('SentenceScene', () => {
       expect(findCachedImage).not.toHaveBeenCalled();
       expect(generateCharacterSet.mock.calls[0][1].cached).toBeUndefined();
       expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+    });
+
+    describe('with finished pictures on', () => {
+      const FINISHED = {
+        variant: 4,
+        url: 'https://cache.test/v1-finished/character/_/cat/_/pixel/04-set.png',
+        uint8Array: new Uint8Array([1, 2]),
+        mediaType: 'image/png',
+        details: {
+          pixelGridSize: 1,
+          generation: {prompt: 'old', imageType: 'sprite', style: 'pixel'},
+        },
+      };
+      const finishWait = () =>
+        act(async () => {
+          jest.advanceTimersByTime(MIN_CACHED_GENERATING_MS);
+        });
+
+      it('keeps a finished picture by its address, without the raw picture or the pipeline', async () => {
+        findFinishedImage.mockResolvedValue(FINISHED);
+        renderCached({finishedImages: true});
+        pickCreature();
+        await generate();
+        await finishWait();
+        expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+        expect(findCachedImage).not.toHaveBeenCalled();
+        expect(generateCharacterSet).not.toHaveBeenCalled();
+        expect(onKeep.mock.calls[0][0]).toMatchObject({
+          publishedUrl: FINISHED.url,
+          filename: FINISHED.url,
+          pixelGridSize: 1,
+          generation: {variant: 4, sentenceId: 'character'},
+        });
+        expect(sendEvent).toHaveBeenCalledWith(
+          'hoai2026-image-prompt',
+          expect.objectContaining({cached: true, finished: true}),
+          true
+        );
+      });
+
+      it('processes the raw picture when no finished one is published', async () => {
+        findFinishedImage.mockResolvedValue(undefined);
+        findCachedImage.mockResolvedValue(CACHED);
+        generateCharacterSet.mockResolvedValue(RESULT);
+        renderCached({finishedImages: true});
+        pickCreature();
+        await generate();
+        await finishWait();
+        expect(generateCharacterSet.mock.calls[0][1]).toMatchObject({
+          cached: CACHED,
+        });
+        expect(onKeep.mock.calls[0][0].publishedUrl).toBeUndefined();
+        expect(sendEvent).toHaveBeenCalledWith(
+          'hoai2026-image-prompt',
+          expect.objectContaining({cached: true, finished: false}),
+          true
+        );
+      });
+
+      it('processes the raw picture when the finished one cannot be read', async () => {
+        const warn = jest.spyOn(console, 'warn').mockImplementation(() => {});
+        findFinishedImage.mockRejectedValue(new TypeError('Failed to fetch'));
+        findCachedImage.mockResolvedValue(CACHED);
+        generateCharacterSet.mockResolvedValue(RESULT);
+        renderCached({finishedImages: true});
+        pickCreature();
+        await generate();
+        await finishWait();
+        expect(screen.getByText('Your picture is ready.')).toBeTruthy();
+        expect(onKeep.mock.calls[0][0].publishedUrl).toBeUndefined();
+        warn.mockRestore();
+      });
+
+      it('never looks for one unless turned on', async () => {
+        findCachedImage.mockResolvedValue(CACHED);
+        generateCharacterSet.mockResolvedValue(RESULT);
+        renderCached();
+        pickCreature();
+        await generate();
+        expect(findFinishedImage).not.toHaveBeenCalled();
+      });
     });
   });
 });

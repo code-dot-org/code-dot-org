@@ -1,5 +1,6 @@
 import {
   findCachedImage,
+  findFinishedImage,
   frameFileName,
   ImageCacheMissError,
   resetImageCacheState,
@@ -211,5 +212,90 @@ describe('imageCache', () => {
     await expect(found.raw('jumping')).rejects.toBeInstanceOf(
       ImageCacheMissError
     );
+  });
+
+  describe('finished pictures', () => {
+    const FINISHED = `${BASE}${VERSION}-finished/character/brave/dragon/_/pixel`;
+    const DETAILS = {
+      pixelGridSize: 1,
+      generation: {
+        prompt: 'A brave dragon',
+        imageType: 'sprite',
+        style: 'pixel',
+      },
+    };
+
+    // The named file stems hold a details file and a picture; anything else
+    // is a 404.
+    function installFinished(stems: string[]) {
+      const calls: string[] = [];
+      (global as unknown as {fetch: unknown}).fetch = jest.fn(
+        async (input: RequestInfo | URL) => {
+          const url = String(input);
+          calls.push(url);
+          const stem = stems.find(s => url.startsWith(`${FINISHED}/${s}.`));
+          if (stem && url.endsWith('.json')) {
+            return new Response(JSON.stringify(DETAILS), {status: 200});
+          }
+          if (stem && url.endsWith('.png')) {
+            return new Response(new Uint8Array([9, 9]), {
+              status: 200,
+              headers: {'content-type': 'image/png'},
+            });
+          }
+          return new Response('', {status: 404});
+        }
+      );
+      return calls;
+    }
+
+    const findFinished = (set: boolean) =>
+      findFinishedImage({
+        sentenceId: 'character',
+        wordIds: ['brave', 'dragon', '_'],
+        style: 'pixel',
+        set,
+        baseUrl: BASE,
+        version: VERSION,
+      });
+
+    it("finds a character's strip, with its details and its address", async () => {
+      const calls = installFinished(['02-set']);
+      const found = await findFinished(true);
+      expect(found?.variant).toBe(2);
+      expect(found?.url).toBe(`${FINISHED}/02-set.png`);
+      expect(found?.details).toEqual(DETAILS);
+      expect(Array.from(found!.uint8Array)).toEqual([9, 9]);
+      expect(found?.mediaType).toBe('image/png');
+      expect(calls).toEqual([
+        `${FINISHED}/00-set.json`,
+        `${FINISHED}/01-set.json`,
+        `${FINISHED}/02-set.json`,
+        `${FINISHED}/02-set.png`,
+      ]);
+    });
+
+    it('finds a single picture apart from a strip of the same variant', async () => {
+      installFinished(['00', '01-set']);
+      expect((await findFinished(false))?.url).toBe(`${FINISHED}/00.png`);
+      expect((await findFinished(true))?.url).toBe(`${FINISHED}/01-set.png`);
+    });
+
+    it('has nothing when no finished picture is published, and asks each once', async () => {
+      const calls = installFinished([]);
+      expect(await findFinished(true)).toBeUndefined();
+      expect(calls).toHaveLength(VARIANT_COUNT);
+      expect(await findFinished(true)).toBeUndefined();
+      expect(calls).toHaveLength(VARIANT_COUNT);
+    });
+
+    it('says so when the details cannot be read', async () => {
+      (global as unknown as {fetch: unknown}).fetch = jest.fn(
+        async () => new Response('', {status: 503})
+      );
+      await expect(findFinished(true)).rejects.toBeInstanceOf(
+        ImageCacheMissError
+      );
+    });
   });
 });

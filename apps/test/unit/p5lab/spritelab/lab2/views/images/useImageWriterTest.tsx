@@ -208,6 +208,28 @@ describe('useImageWriter', () => {
     expect(createNamedAnimation).not.toHaveBeenCalled();
   });
 
+  it("stores a published picture's address and uploads nothing", async () => {
+    const {writer, uploadImage} = renderWriter();
+    const publishedUrl =
+      'https://cache.test/v1-finished/object/_/gem/pixel/03.png';
+    await act(async () => {
+      await writer().acceptGenerated(
+        {key: null, imageType: 'sprite'},
+        {...result(publishedUrl), publishedUrl}
+      );
+    });
+    expect(uploadImage).not.toHaveBeenCalled();
+    expect(createNamedAnimation.mock.calls[0][2]).toMatchObject({
+      sourceUrl: publishedUrl,
+      fromGeneration: true,
+      edited: false,
+    });
+    // Ending the session deletes the files it uploaded that no image
+    // points at. A published file is not one of them.
+    act(() => writer().endSession());
+    expect(httpDelete).not.toHaveBeenCalled();
+  });
+
   it('stores no generated picture whose file cannot be uploaded', async () => {
     const failing = jest.fn(async (name: string): Promise<string> => {
       throw new Error('upload failed');

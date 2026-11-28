@@ -142,6 +142,7 @@ interface ImagesTabProps {
   imageSource?: ImageSource;
   /** Another address to read cached pictures from (QA). */
   imageCacheUrl?: string;
+  finishedImages?: boolean;
 }
 
 const DRAFT_ID = 'draft';
@@ -187,6 +188,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
   ratingRequired,
   imageSource,
   imageCacheUrl,
+  finishedImages,
 }) => {
   const animationList = useAppSelector(state => state.animationList);
   // The engine trims each image after it loads and stores a thumbnail; the
@@ -686,6 +688,7 @@ const ImagesTab: React.FunctionComponent<ImagesTabProps> = ({
           onTellStory={tellStory}
           imageSource={imageSource}
           imageCacheUrl={imageCacheUrl}
+          finishedImages={finishedImages}
           advanced={
             advancedOffered
               ? {
