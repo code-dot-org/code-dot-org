@@ -12,6 +12,20 @@ import {CHARACTER_STRIP_POSES} from '@cdo/apps/p5lab/spritelab/lab2/characterAni
 import ImageList from '@cdo/apps/p5lab/spritelab/lab2/views/images/ImageList';
 import {ProjectImage} from '@cdo/apps/p5lab/spritelab/lab2/views/images/projectImages';
 
+jest.mock('@cdo/apps/p5lab/spritelab/lab2/views/StripFrame', () => ({
+  __esModule: true,
+  default: (props: {
+    sheetSrc: string;
+    frameSize: {x: number; y: number};
+    index: number;
+  }) => (
+    <canvas
+      data-sheet={props.sheetSrc}
+      data-frame={`${props.frameSize.x}x${props.frameSize.y} #${props.index}`}
+    />
+  ),
+}));
+
 const image = (key: string, name: string): ProjectImage => ({
   key,
   props: {name},
@@ -183,7 +197,9 @@ describe('ImageList', () => {
       />
     );
     const tile = screen.getByRole('button', {name: 'Sprite 1'});
-    expect(tile.querySelector('canvas')).toBeTruthy();
+    const canvas = tile.querySelector('canvas');
+    expect(canvas?.getAttribute('data-sheet')).toBe('set.png');
+    expect(canvas?.getAttribute('data-frame')).toBe('30x30 #1');
     expect(tile.querySelector('img')).toBeNull();
     rerender(
       <ImageList

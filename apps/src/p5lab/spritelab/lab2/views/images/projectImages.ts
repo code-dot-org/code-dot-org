@@ -7,7 +7,7 @@ import {
 } from '@cdo/apps/p5lab/spritelab/lab2/ai/images/types';
 import {
   AnimationPoses,
-  CHARACTER_STRIP_BASE_FRAME,
+  sheetStillFrame,
 } from '@cdo/apps/p5lab/spritelab/lab2/characterAnimations';
 import {
   galleryOrder,
@@ -61,6 +61,7 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
     }
     const src = props.dataURI || props.sourceUrl || undefined;
     const smallImage = getImageThumbnail(props.name ?? '');
+    const stillFrame = sheetStillFrame(props);
     const imageType = imageTypeFromCategories(props.categories);
     return [
       {
@@ -78,16 +79,8 @@ export function listProjectImages(list: AnimationListState): ProjectImage[] {
             ? 'character'
             : props.subject ?? props.generation?.subject,
         thumb: smallImage || src,
-        // Must match the frame trimAnimationListImages makes the small image
-        // from, so the tile does not change picture when that arrives.
         tileFrame:
-          !smallImage && src && (props.frameCount ?? 1) > 1 && props.frameSize
-            ? {
-                src,
-                frameSize: props.frameSize,
-                index: props.poses ? CHARACTER_STRIP_BASE_FRAME : 0,
-              }
-            : undefined,
+          !smallImage && src && stillFrame ? {src, ...stillFrame} : undefined,
         src,
         pixelated: !!props.pixelGridSize,
         sheet:

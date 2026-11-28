@@ -10,7 +10,7 @@ import {
   upscaleImageNearest,
 } from '@cdo/apps/pixelEditor/pixelArt';
 
-import {CHARACTER_STRIP_BASE_FRAME, drawStripCell} from './characterAnimations';
+import {drawStripCell, sheetStillFrame} from './characterAnimations';
 import {
   BACKGROUNDS_CATEGORY,
   RuntimeAnimationList,
@@ -74,7 +74,7 @@ const THUMB_PX =
   typeof window !== 'undefined' && window.devicePixelRatio > 1.5 ? 224 : 112;
 
 // Small display thumbnail per image name (border-trimmed for costumes,
-// first frame for sheets, whole image for backgrounds). Populated as
+// one frame for sheets, whole image for backgrounds). Populated as
 // animation lists get trimmed for preload.
 const thumbByName = new Map<string, string>();
 const trimListeners = new Set<() => void>();
@@ -334,7 +334,7 @@ export function filterAnimationsToNames(
  * border-trimmed. Backgrounds are left alone (they should fill the canvas).
  * So are sprite sheets: their frame grid is their geometry, and trimming
  * the sheet's border would shift every frame off it — their thumbnail is
- * their first frame instead.
+ * one of their frames instead (sheetStillFrame).
  *
  * keepNames lists every name in the project, so that a scene-scoped
  * subset doesn't prune thumbnails of images other scenes still use — a
@@ -393,24 +393,21 @@ export async function trimAnimationListImages(
         propsByKey[key] = await upscaled(props);
         return;
       }
-      const isSheet = props.frameCount > 1 && !!props.frameSize;
+      const stillFrame = sheetStillFrame(props);
       // An image cropped at save time (props.trimmed) skips the pixel scan
       // and re-encode; its stored dataURI is already what trimming makes.
-      // A character set's thumbnail is its standing frame, the picture its
-      // other poses were drawn from. Any other sheet's thumbnail is its
-      // first frame.
-      const trimmed = isSheet
+      const trimmed = stillFrame
         ? await frameThumbnail(
             props.dataURI,
-            props.frameSize,
-            props.poses ? CHARACTER_STRIP_BASE_FRAME : 0
+            stillFrame.frameSize,
+            stillFrame.index
           )
         : props.trimmed
         ? props.dataURI
         : await trimTransparentBorder(props.dataURI);
       noteThumb(props.name, await thumbnailFromDataURI(trimmed, pixelated));
       propsByKey[key] = await upscaled(
-        isSheet ? props : {...props, dataURI: trimmed}
+        stillFrame ? props : {...props, dataURI: trimmed}
       );
     })
   );

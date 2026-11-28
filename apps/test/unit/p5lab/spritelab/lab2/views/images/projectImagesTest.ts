@@ -123,6 +123,10 @@ describe('listProjectImages', () => {
       expect(strip.tileFrame?.index).toBe(0);
     });
 
+    afterEach(() => {
+      delete thumbs['Ready'];
+    });
+
     it('leaves it out once the thumbnail exists, and for a single frame', () => {
       thumbs['Ready'] = 'data:ready';
       const [ready, single] = listProjectImages({
