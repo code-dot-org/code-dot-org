@@ -5,8 +5,8 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # This script analyzes the number of standalone projects we have in our database and
 # saves that value.
 #
-# The script includes an alert which will trigger an error if the project
-# count decreases by more than 10 thousand projects.
+# In production, the script includes an alert which will trigger an error if the
+# project count decreases by more than 10 thousand projects.
 
 require 'sequel'
 require File.expand_path('../../../lib/cdo/pegasus/src/env', __FILE__)
@@ -15,6 +15,7 @@ require 'cdo/sequel'
 require 'cdo/pegasus/src/database'
 require_relative '../../deployment'
 require 'cdo/honeybadger'
+require_relative 'project_count_check'
 
 # Production database has a global max query execution timeout setting.  This 20 minute setting can be used
 # to override the timeout for a specific session or query.
@@ -30,18 +31,13 @@ DASHBOARD_DB_READER = Cdo::Sequel.database_connection_pool(
 # This default number of lines of code is from 2019-1-21.
 DEFAULT_NUMBER_OF_PROJECTS = 35_000_000
 
-NUMBER_PROJECTS_SIGNIFICANT_DECREASE = 10_000
-
 def main
   # Get the current amount of projects.
   project_count = DASHBOARD_DB_READER[:projects].where(standalone: true).count
 
   existing_project_count = Properties.get(:metrics)['project_count'] || 0
-  if (existing_project_count - project_count) >= NUMBER_PROJECTS_SIGNIFICANT_DECREASE
-    # Raise error if the project count somehow went down by more than set threshold.
-    error_message = "standalone project count decreased from #{existing_project_count} to #{project_count}"
-    raise error_message
-  end
+  # Raise error if the project count somehow went down by more than set threshold.
+  ProjectCountCheck.verify!(existing_project_count, project_count, production: rack_env?(:production))
 
   # Pull current petition_signatures and lines_of_code to keep those current values.
   time = DateTime.now
