@@ -125,6 +125,15 @@ describe('UserSettingsResponseSchema educator profile keys', () => {
     });
   });
 
+  it('camelCases the verified teacher flag', () => {
+    const settings = UserSettingsResponseSchema.parse({
+      ...TEACHER_WIRE,
+      verified_teacher: true,
+    });
+
+    expect(settings.verifiedTeacher).toBe(true);
+  });
+
   it('accepts a student payload, which omits the teacher-only keys', () => {
     const settings = UserSettingsResponseSchema.parse(STUDENT_WIRE);
 

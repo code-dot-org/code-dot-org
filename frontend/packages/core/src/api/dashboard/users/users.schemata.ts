@@ -232,6 +232,7 @@ export const UserSettingsResponseSchema = z
     educator_role: z.string().nullable().optional(),
     educator_role_options: z.array(EducatorRoleOptionSchema).optional(),
     school_info: SchoolInfoSchema.nullable().optional(),
+    verified_teacher: z.boolean().optional(),
     integrations: IntegrationsSchema,
   })
   .transform(r => ({
@@ -266,5 +267,8 @@ export const UserSettingsResponseSchema = z
       educatorRoleOptions: r.educator_role_options,
     }),
     ...(r.school_info !== undefined && {schoolInfo: r.school_info}),
+    ...(r.verified_teacher !== undefined && {
+      verifiedTeacher: r.verified_teacher,
+    }),
     integrations: r.integrations,
   }));

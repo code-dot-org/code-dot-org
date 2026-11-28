@@ -123,6 +123,7 @@ const teacher: UsersScenario = {
     integrations,
     // Teacher-only keys: a student's seed omits them, like the Rails serializer.
     educator_role: 'classroom_teacher',
+    verified_teacher: true,
     school_info: {
       school_name: 'Example Elementary School',
       school_type: 'public',

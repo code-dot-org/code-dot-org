@@ -2,6 +2,7 @@ import {Box} from '@mui/material';
 
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import {Field, useField} from '@code-dot-org/component-library/form';
+import Tags from '@code-dot-org/component-library/tags';
 import TextField from '@code-dot-org/component-library/textField';
 
 import Section from './Section';
@@ -49,6 +50,17 @@ export default function MyInformation({settings}: SectionProps) {
   return (
     <Section id="my-information" title="My Information">
       <Box sx={{display: 'flex', flexDirection: 'column', gap: 2}}>
+        {settings.verifiedTeacher && (
+          <Tags
+            size="s"
+            tagsList={[
+              {
+                label: 'Verified Teacher',
+                icon: {iconName: 'check', iconStyle: 'solid', placement: 'left'},
+              },
+            ]}
+          />
+        )}
         {isTeacher ? (
           <>
             <Field>

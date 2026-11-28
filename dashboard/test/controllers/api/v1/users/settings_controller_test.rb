@@ -52,6 +52,20 @@ class Api::V1::Users::SettingsControllerTest < ActionDispatch::IntegrationTest
         _([true, false]).must_include body['is_usa']
       end
 
+      it 'reports a teacher without the permission as not verified' do
+        get_settings
+
+        _(body['verified_teacher']).must_equal false
+      end
+
+      it 'reports a teacher with the authorized teacher permission as verified' do
+        user.permission = UserPermission::AUTHORIZED_TEACHER
+
+        get_settings
+
+        _(body['verified_teacher']).must_equal true
+      end
+
       it 'sets Cache-Control no-store' do
         get_settings
 
