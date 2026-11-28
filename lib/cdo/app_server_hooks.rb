@@ -21,7 +21,8 @@ module Cdo
       require 'dynamic_config/gatekeeper'
       require 'dynamic_config/dcdo'
 
-      if Gatekeeper.allows('enableWebServiceProcessRollingRestart')
+      # The bugcrowd adhoc runs unattended and must survive worker memory growth without a manual restart.
+      if Gatekeeper.allows('enableWebServiceProcessRollingRestart', default: CDO.stack_name == 'adhoc-bugcrowd')
         require 'puma_worker_killer'
 
         restart_period = DCDO.get('web_service_process_restart_period', 12 * 3600) # default to 12 hours
