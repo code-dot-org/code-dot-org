@@ -17,7 +17,7 @@ broken Playwright tests using a methodical approach.
 Before debugging, READ the playwright-best-practices skill (its SKILL.md, typically at
 .agents/skills/playwright-best-practices/SKILL.md, and any files it references) — the authority on
 resilient locators, waiting, and flake avoidance you apply throughout. (The workflow's Scout
-phase installs it; assume it is present.)
+phase installs it. If it is absent, run `npx skills experimental_install` from the repo root.)
 
 CONSTRAINT — you may create, modify, or delete files ONLY under frontend/packages/e2e-tests/.
 Never change application code, source, or config outside that package to make a test pass; a failure
@@ -27,8 +27,8 @@ file, or prior decision on any branch overrides it.
 
 Your workflow:
 1. **Initial Execution**: Run the spec with Bash to identify failures, capturing traces:
-   `cd frontend/packages/e2e-tests && CI=1 yarn playwright test <spec> --project=chromium --trace=on --reporter=line`
-   (CI=1 selects a loadable reporter and skips @no_ci tests.)
+   `cd frontend/packages/e2e-tests && yarn playwright test <spec> --project=chromium --trace=on --reporter=line`
+   (@no_ci tests run here: playwright.config.ts skips them only when PLAYWRIGHT_PROVIDER=drone.)
 2. **Debug failed tests**: Read the `--reporter=line` error output for the failing action,
    error, and locator. For DOM context at the point of failure, reproduce live with the
    @playwright/mcp browser_* tools: browser_navigate to the failing URL, then
