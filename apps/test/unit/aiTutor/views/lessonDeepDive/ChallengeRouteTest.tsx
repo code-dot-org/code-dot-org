@@ -1,9 +1,10 @@
 import {Challenge} from '@code-dot-org/lesson-deep-dive';
-import {render, screen, waitFor} from '@testing-library/react';
+import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 
+import AichatContextManager from '@cdo/apps/aichat/aichatContextManager';
 import ChallengeRoute from '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeRoute';
 
 import {request} from '../../../../util/stubCoreApi';
@@ -13,23 +14,32 @@ jest.mock('@cdo/apps/aiTutor/hooks/useLessonDeepDiveChallengesEnabled', () => ({
   useLessonDeepDiveChallengesEnabled: () => mockChallengesEnabled,
 }));
 
-jest.mock(
-  '@cdo/apps/aiTutor/views/lessonDeepDive/ChallengeActivities/ChallengeBox',
-  () => ({
-    __esModule: true,
-    default: ({
-      challenge,
-      challengeType,
-    }: {
-      challenge: Challenge;
-      challengeType: string;
-    }) => (
-      <div>
-        challenge-{challenge.id} type-{challengeType}
-      </div>
-    ),
-  })
-);
+const mockTranscribeAudio = jest.fn();
+jest.mock('@cdo/apps/aichat/api/client', () => ({
+  __esModule: true,
+  getClientApi: jest.fn(async () => ({transcribeAudio: mockTranscribeAudio})),
+}));
+
+const mockAudio = new Blob(['audio-bytes'], {type: 'audio/webm'});
+jest.mock('@code-dot-org/lesson-deep-dive', () => ({
+  ...jest.requireActual('@code-dot-org/lesson-deep-dive'),
+  ChallengeBox: ({
+    challenge,
+    challengeType,
+    transcribeAudio,
+  }: {
+    challenge: Challenge;
+    challengeType: string;
+    transcribeAudio: (audio: Blob) => Promise<string>;
+  }) => (
+    <div>
+      challenge-{challenge.id} type-{challengeType}
+      <button type="button" onClick={() => transcribeAudio(mockAudio)}>
+        Transcribe
+      </button>
+    </div>
+  ),
+}));
 
 const fakeChallenge: Challenge = {
   id: 7,
@@ -106,6 +116,25 @@ describe('ChallengeRoute', () => {
         screen.getByText(/Couldn't load this challenge/)
       ).toBeInTheDocument()
     );
+  });
+
+  it('transcribes audio through the aichat client in the lesson context', async () => {
+    request.mockResolvedValue([fakeChallenge]);
+    const setContext = jest.spyOn(AichatContextManager, 'setContext');
+    renderRoute();
+
+    fireEvent.click(await screen.findByRole('button', {name: 'Transcribe'}));
+
+    await waitFor(() =>
+      expect(mockTranscribeAudio).toHaveBeenCalledWith(mockAudio)
+    );
+    expect(setContext).toHaveBeenCalledWith({
+      clientType: 'lesson-deep-dive',
+      currentLevelId: null,
+      scriptId: null,
+      channelId: undefined,
+      lessonId: 42,
+    });
   });
 
   it('passes "whiteboard" as the challengeType when the URL modality is not "video"', async () => {
