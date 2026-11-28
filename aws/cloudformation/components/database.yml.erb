@@ -266,6 +266,8 @@
       TargetGroupName: default
       ConnectionPoolConfigurationInfo:
         ConnectionBorrowTimeout: 10
+        MaxConnectionsPercent: 50 # Don't let RDS Proxy consume more than half of the database instance's capacity.
+        MaxIdleConnectionsPercent: 25 # Protect against a usage spike requiring more connections to be opened.
   ReportingDBProxyEndpoint:
     Type: AWS::RDS::DBProxyEndpoint
     Properties:
@@ -294,6 +296,7 @@
         # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
         # exceed 10% of the total database connection capacity of a reader instance.
         MaxConnectionsPercent: 10
+        MaxIdleConnectionsPercent: 5
   WriterSQLUser:
     Type: Custom::SQLUser
 <%  unless rack_env?(:production)%>
