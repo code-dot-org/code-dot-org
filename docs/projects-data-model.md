@@ -1,3 +1,5 @@
+Status: historical (2015)
+
 This is the data model/technical design of a feature to support "projects" -- where a user can save their code, come back to it, play and edit it, save it again, share it etc. The initial design is in the context of artist and playlab but this will also be used in msm/algebra and csp.
 
 The user-facing design/spec for this feature is here: https://docs.google.com/a/code.org/document/d/19CikyJFeIw5ER2UBKYoE5CPHAjVrWLMhG6MxGtZt8e0/edit#
