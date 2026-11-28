@@ -8,10 +8,9 @@ every API route.
 
 ## Structure
 
-The APIs are separated more or less based on the structure of the backend into
-`domains`. So, controller actions in the backend's
-`controllers/levels_controller` will correspond to the `domains/levels/*` keys,
-queries, and schemata.
+The APIs are split by backend domain under `dashboard/<domain>/`. Controller
+actions in the backend's `controllers/levels_controller` correspond to the keys,
+queries, and schemata in `dashboard/levels/`.
 
 Within each domain, the relevant content is split across different files:
 
@@ -32,7 +31,7 @@ on the shape of that data are correct to the lab type.
 
 Depending on the type of application and its network considerations, you can
 instantiate a different `Transport`. This is the interface that actually
-performs the API call. Generally, the `HttpTransport` is the clear choice
+performs the API call. Generally, `kyTransport` is the clear choice
 since this performs a network request, but it relies on the backend server to
 be running and accessible. Other options offer different strategies that work
 well for offline or progressive situations, but may lack some features.
@@ -42,28 +41,35 @@ MSW worker before React renders. The real `kyTransport` is still used; MSW
 intercepts at the network boundary so the production code path runs. See
 `./mocks/README.md`.
 
-Here is a general way of determining a transport dynamically using an envionment
-variable:
+`DashboardApiClient` is built this way by `bootstrapApiClient.ts`, which
+selects the transport from `VITE_API_MODE`. To build a client by hand:
 
-```
+```ts
+import {CodeStudioConfig, getDashboardApiUrl} from '@code-dot-org/core';
 import {
-  createHttpTransport,
+  createApiClient,
+  createKyTransport,
   createReplayTransport,
-} from '@code-dot-org/core/api/transports';
+  resolveCsrfToken,
+} from '@code-dot-org/core/api';
 
-const apiMode = import.meta.env.VITE_API_MODE as 'rails' | 'msw' | 'replay' | 'auto';
+const mode = (import.meta.env.VITE_API_MODE ?? 'dashboard') as
+  | 'dashboard'
+  | 'msw'
+  | 'replay'
+  | 'auto';
 
-const http = createHttpTransport({
-  baseUrl: '/api',
-  getCsrfToken: () =>
-    document.querySelector<HTMLMetaElement>('meta[name="csrf-token"]')?.content ?? null,
+const http = createKyTransport({
+  baseUrl: getDashboardApiUrl(CodeStudioConfig.environment),
+  credentials: 'same-origin',
+  getCsrfToken: resolveCsrfToken,
 });
 
 const transport =
-  apiMode === 'replay'
-    ? createReplayTransport({mode: 'replay', backingTransport: http, namespace: 'vite-labs'})
-    : apiMode === 'auto'
-      ? createReplayTransport({mode: 'auto', backingTransport: http, namespace: 'vite-labs'})
-      : http;
+  mode === 'replay' || mode === 'auto'
+    ? createReplayTransport({mode, namespace: 'vite-app', backingTransport: http})
+    : http;
 // `msw` mode uses `http` directly; the worker handles interception.
+
+const client = createApiClient(transport);
 ```
