@@ -1,10 +1,28 @@
-# Resources used for monitoring and alerting on issues
-#
-# Requires ADMIN=1 to deploy IAM resources.
-# Also requires specifying parameters via
-# environment variables or locals.yml for the
-# initial stack creation.
+<%#
+  Stack:    alerting (single account-wide stack; deployed CloudFormation stack name is "alerting")
+  Profile:  codeorg-admin
+  Cadence:  rare, manual. Drift likely — lint and validate before every :start.
 
+  Always, in order:
+    export AWS_PROFILE=codeorg-admin
+    bundle exec rake stack:alerting:lint     RAILS_ENV=production
+    bundle exec rake stack:alerting:validate RAILS_ENV=production
+    ADMIN=1 bundle exec rake stack:alerting:start RAILS_ENV=production
+    unset AWS_PROFILE
+
+  ADMIN=1 is required: this stack creates IAM Roles (BasicLambdaRole) that
+  do not carry the IAM-DevPermissions PermissionsBoundary, so the default
+  CloudFormationService role is not authorized to create them.
+
+  Initial creation requires parameters HoneybadgerApiKey and
+  OffsiteAwsAccountID. Provide via locals.yml as
+  `honeybadger_api_key` / `offsite_aws_account_id` (CDO.* maps
+  snake_case locals to CamelCase CloudFormation parameters in the rendered
+  template), or as environment variables. On update, omit them to reuse
+  previous values.
+
+  Rake wiring: lib/rake/stack.rake (the `simple_stacks` loop).
+%>
 ---
 Description: Resources used for monitoring and alerting on infrastructure issues.
 

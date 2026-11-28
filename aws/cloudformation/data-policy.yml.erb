@@ -1,3 +1,20 @@
+<%#
+  CloudFormation stack policy paired with data.yml.erb.
+
+  This is NOT a stack template — it's a stack policy applied to the
+  `DATA-<rack_env>` stack during create/update. lib/cdo/aws/cloud_formation.rb
+  auto-discovers it by deriving the policy filename from the template
+  filename (`data.yml.erb` -> `data-policy.yml.erb`) and passes its
+  rendered JSON as `stack_policy_body` to the AWS SDK call.
+
+  Effect: protects the `Tableau` Redshift cluster from being replaced or
+  deleted by any subsequent stack update. If you intentionally need to
+  replace Tableau, this policy must be relaxed first (in the AWS console
+  or via aws cli) — otherwise the change will be rejected at apply time.
+
+  There is no separate rake task for this file; it ships with whatever
+  `stack:data:start` invocation applies the data stack.
+%>
 Statement:
 - Effect: Allow
   Action: 'Update:*'
