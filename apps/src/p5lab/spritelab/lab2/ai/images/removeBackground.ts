@@ -386,6 +386,27 @@ export async function cropToContent(blob: Blob): Promise<Blob> {
   return canvasToBlob(cropped);
 }
 
+/**
+ * Crop a block to a square of its shorter side, so it fills its cell: a
+ * wide block loses equal side margins, a tall one keeps its top edge, the
+ * surface a character stands on.
+ */
+export async function cropToSquare(blob: Blob): Promise<Blob> {
+  const img = await loadImageFromBlob(blob);
+  if (img.width === img.height) {
+    return blob;
+  }
+  const side = Math.min(img.width, img.height);
+  const left = Math.floor((img.width - side) / 2);
+  const canvas = document.createElement('canvas');
+  canvas.width = side;
+  canvas.height = side;
+  canvas
+    .getContext('2d')!
+    .drawImage(img, left, 0, side, side, 0, 0, side, side);
+  return canvasToBlob(canvas);
+}
+
 /** Decode an image Blob into an element ready to draw. */
 export function loadImageFromBlob(blob: Blob): Promise<HTMLImageElement> {
   return new Promise((resolve, reject) => {
