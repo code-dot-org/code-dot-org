@@ -6,8 +6,8 @@ LABEL description="Base image for Code.org Next.js frontend applications. Not su
 
 # If changing yarn versions, also update the version in frontend/package.json
 ENV YARN_VERSION=4.6.0
-# If changing Node.js versions, also update the version in frontend/.nvmrc
-ENV NODE_VERSION=20
+# If changing Node.js versions, also update .nvmrc in code-dot-org/marketing-sites
+ENV NODE_VERSION=22
 
 # If performing a Yarn upgrades, refer to frontend/package.json to the locked yarn version
 # The apt-get clean and removal of /var/lib/apt/lists is to reduce image size.
