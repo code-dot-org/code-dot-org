@@ -1,3 +1,12 @@
+## Warning!!
+
+We have entered Pixel Lock for Hour of AI! All merges to the `staging` branch from Dec 1 through Dec 11 must go through live change review and be deemed critical for supporting the Hour of AI. External contributions will not be accepted at this time.
+
+For non-critical changes, please change your base to `staging-next` and delete this warning. We will merge `staging-next` into `staging` on Dec 14, 2026.
+
+<!-- end warning -->
+
+
 ## Overview
 
 Jira: 
