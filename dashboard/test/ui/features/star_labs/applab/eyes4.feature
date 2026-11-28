@@ -41,3 +41,14 @@ Scenario: Drag to delete
   Then I see no difference for "dragging out of app deletes button"
 
   And I close my eyes
+
+Scenario: Finish button below the phone frame
+  When I open my eyes to test "App Lab finish button below phone frame"
+  And I am on "http://studio.code.org/courses/ui-test-all-the-levels/units/1/lessons/18/levels/9?noautoplay=true"
+  And I wait for the lab page to fully load
+  And I press "runButton"
+  # the last element the level's code creates
+  And I wait to see "#radioid"
+  And I wait until element "#finishButton" is visible
+  Then I see no difference for "finish button after run" within "#visualizationColumn"
+  And I close my eyes
