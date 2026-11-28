@@ -42,6 +42,59 @@ class AiGatewayAuthControllerTest < ActionController::TestCase
     payload
   end
 
+  def expect_refusal_metric(reason, client_type)
+    Cdo::Metrics.expects(:push).with do |namespace, metrics|
+      dimensions = metrics.first[:dimensions]
+      namespace == SharedConstants::AICHAT_METRICS_NAMESPACE &&
+        metrics.length == 1 &&
+        metrics.first[:metric_name] == 'AiGatewayToken.Refused' &&
+        dimensions.include?({name: 'Reason', value: reason}) &&
+        dimensions.include?({name: 'ClientType', value: client_type})
+    end
+  end
+
+  test 'counts a token refused because the user has no access' do
+    sign_in(@student)
+    User.any_instance.stubs(:can_access_aichat_chat_completion?).returns(false)
+    expect_refusal_metric('no_access', SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB])
+
+    post :get_access_token, params: @params, as: :json
+
+    assert_response :forbidden
+  end
+
+  test 'counts a token refused because the region blocks the provider' do
+    sign_in(@authorized_teacher)
+    User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
+    expect_refusal_metric('region_blocked', SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB])
+
+    post :get_access_token, params: @params, as: :json
+
+    assert_response :forbidden
+  end
+
+  test 'counts a refusal for a client type it does not know as unknown' do
+    sign_in(@student)
+    User.any_instance.stubs(:can_access_aichat_chat_completion?).returns(false)
+    @params[:aichatContext][:clientType] = 'not-a-client-type'
+    expect_refusal_metric('no_access', 'unknown')
+
+    post :get_access_token, params: @params, as: :json
+
+    assert_response :forbidden
+  end
+
+  test 'does not count a token it mints' do
+    sign_in(@authorized_teacher)
+    User.any_instance.stubs(:blocked_aichat_providers).returns([])
+    stub_jwt_encode
+    Cdo::Metrics.expects(:push).never
+
+    post :get_access_token, params: @params, as: :json
+
+    assert_response :success
+  end
+
   test 'refuses to mint a token for a blocked user while the gateway does not enforce the block' do
     sign_in(@authorized_teacher)
     User.any_instance.stubs(:blocked_aichat_providers).returns(SharedConstants::AI_CHAT_US_ONLY_PROVIDERS)
