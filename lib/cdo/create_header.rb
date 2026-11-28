@@ -53,7 +53,7 @@ class CreateHeader
     },
     quest_builder: {
       image: "quest-builder-icon.png",
-      url: CDO.studio_url("courses/quest-builder-2026/units/1/reset")
+      url: CDO.studio_url("s/quest-builder-2026/reset")
     },
     javalab: {
       image: "java-lab-icon.png"

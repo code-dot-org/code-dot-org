@@ -101,7 +101,7 @@ describe('buildCreateMenuItems', () => {
   it('leads with Quest Builder, linking to the tutorial reset route', () => {
     const [first] = buildCreateMenuItems();
     expect(first.label).toBe('Quest Builder');
-    expect(first.href).toBe('/courses/quest-builder-2026/units/1/reset');
+    expect(first.href).toBe('/s/quest-builder-2026/reset');
   });
 
   it('omits Mix & Move with AI', () => {
